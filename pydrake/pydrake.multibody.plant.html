@@ -3455,6 +3455,10 @@ pulled from the context). The previous definition shows
 of elements in 𝑠.</p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if J𝑠_w_AB_E is nullptr</strong><strong> or </strong><strong>not of size 3 x n.</strong> – </p>
@@ -3504,6 +3508,10 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>CalcJacobianCenterOfMassTranslationalVelocity(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, model_instances: list[pydrake.multibody.tree.ModelInstanceIndex], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame, frame_E: pydrake.multibody.tree.Frame) -&gt; numpy.ndarray[numpy.float64[3, n]]</p></li>
 </ol>
@@ -3551,6 +3559,10 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bᵢcm is the center of mass of
 the iᵗʰ body).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
 </div>
 </dd></dl>
 
@@ -3609,6 +3621,10 @@ Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em>any</em> point
 fixed/welded to frame A, i.e., this calculation’s result is the
 same if point Ao is replaced with any point fixed on frame A.</p>
 </div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -3650,19 +3666,29 @@ in which the Jacobian <code class="docutils literal notranslate"><span class="pr
 speeds 𝑠 (which is either q̇ or v), expressed in frame E.
 <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code> is a <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix, where n is the number of
 elements in 𝑠. The Jacobian is a function of only generalized
-positions q (which are pulled from the context). Note: The
-returned <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix stores frame B’s angular velocity
-Jacobian in A in rows 1-3 and stores point Bp’s translational
-velocity Jacobian in A in rows 4-6, i.e.,</p>
+positions q (which are pulled from the context).</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The returned <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix stores frame B’s angular velocity
+Jacobian in A in rows 1-3 and stores point Bp’s translational
+velocity Jacobian in A in rows 4-6, i.e.,</p>
+</div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_w_AB_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_V_ABp_E</span><span class="p">.</span><span class="n">topRows</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="n">J𝑠_v_ABp_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_V_ABp_E</span><span class="p">.</span><span class="n">bottomRows</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p>Note: Consider CalcJacobianTranslationalVelocity() for multiple points
+</details><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Consider CalcJacobianTranslationalVelocity() for multiple points
 fixed to frame B and consider CalcJacobianAngularVelocity() to
 calculate frame B’s angular velocity Jacobian.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if J𝑠_V_ABp_E is nullptr</strong><strong> or </strong><strong>not sized 6 x n.</strong> – </p>
@@ -3736,6 +3762,10 @@ respect to q.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>CalcJacobianPositionVector() for details on Jq_p_AoBi.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
 </div>
 </dd></dl>
 
@@ -9102,6 +9132,10 @@ pulled from the context). The previous definition shows
 of elements in 𝑠.</p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if J𝑠_w_AB_E is nullptr</strong><strong> or </strong><strong>not of size 3 x n.</strong> – </p>
@@ -9151,6 +9185,10 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>CalcJacobianCenterOfMassTranslationalVelocity(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], model_instances: list[pydrake.multibody.tree.ModelInstanceIndex], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_E: pydrake.multibody.tree.Frame_[AutoDiffXd]) -&gt; numpy.ndarray[object[3, n]]</p></li>
 </ol>
@@ -9198,6 +9236,10 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bᵢcm is the center of mass of
 the iᵗʰ body).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
 </div>
 </dd></dl>
 
@@ -9256,6 +9298,10 @@ Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em>any</em> point
 fixed/welded to frame A, i.e., this calculation’s result is the
 same if point Ao is replaced with any point fixed on frame A.</p>
 </div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -9297,19 +9343,29 @@ in which the Jacobian <code class="docutils literal notranslate"><span class="pr
 speeds 𝑠 (which is either q̇ or v), expressed in frame E.
 <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code> is a <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix, where n is the number of
 elements in 𝑠. The Jacobian is a function of only generalized
-positions q (which are pulled from the context). Note: The
-returned <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix stores frame B’s angular velocity
-Jacobian in A in rows 1-3 and stores point Bp’s translational
-velocity Jacobian in A in rows 4-6, i.e.,</p>
+positions q (which are pulled from the context).</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The returned <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix stores frame B’s angular velocity
+Jacobian in A in rows 1-3 and stores point Bp’s translational
+velocity Jacobian in A in rows 4-6, i.e.,</p>
+</div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_w_AB_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_V_ABp_E</span><span class="p">.</span><span class="n">topRows</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="n">J𝑠_v_ABp_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_V_ABp_E</span><span class="p">.</span><span class="n">bottomRows</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p>Note: Consider CalcJacobianTranslationalVelocity() for multiple points
+</details><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Consider CalcJacobianTranslationalVelocity() for multiple points
 fixed to frame B and consider CalcJacobianAngularVelocity() to
 calculate frame B’s angular velocity Jacobian.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if J𝑠_V_ABp_E is nullptr</strong><strong> or </strong><strong>not sized 6 x n.</strong> – </p>
@@ -9383,6 +9439,10 @@ respect to q.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>CalcJacobianPositionVector() for details on Jq_p_AoBi.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
 </div>
 </dd></dl>
 
@@ -14705,6 +14765,10 @@ pulled from the context). The previous definition shows
 of elements in 𝑠.</p>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if J𝑠_w_AB_E is nullptr</strong><strong> or </strong><strong>not of size 3 x n.</strong> – </p>
@@ -14754,6 +14818,10 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </ul>
 </dd>
 </dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>CalcJacobianCenterOfMassTranslationalVelocity(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], model_instances: list[pydrake.multibody.tree.ModelInstanceIndex], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame_[Expression], frame_E: pydrake.multibody.tree.Frame_[Expression]) -&gt; numpy.ndarray[object[3, n]]</p></li>
 </ol>
@@ -14801,6 +14869,10 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bᵢcm is the center of mass of
 the iᵗʰ body).</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
 </div>
 </dd></dl>
 
@@ -14859,6 +14931,10 @@ Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em>any</em> point
 fixed/welded to frame A, i.e., this calculation’s result is the
 same if point Ao is replaced with any point fixed on frame A.</p>
 </div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -14900,19 +14976,29 @@ in which the Jacobian <code class="docutils literal notranslate"><span class="pr
 speeds 𝑠 (which is either q̇ or v), expressed in frame E.
 <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code> is a <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix, where n is the number of
 elements in 𝑠. The Jacobian is a function of only generalized
-positions q (which are pulled from the context). Note: The
-returned <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix stores frame B’s angular velocity
-Jacobian in A in rows 1-3 and stores point Bp’s translational
-velocity Jacobian in A in rows 4-6, i.e.,</p>
+positions q (which are pulled from the context).</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The returned <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix stores frame B’s angular velocity
+Jacobian in A in rows 1-3 and stores point Bp’s translational
+velocity Jacobian in A in rows 4-6, i.e.,</p>
+</div>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">J𝑠_w_AB_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_V_ABp_E</span><span class="p">.</span><span class="n">topRows</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="n">J𝑠_v_ABp_E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">J𝑠_V_ABp_E</span><span class="p">.</span><span class="n">bottomRows</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p>Note: Consider CalcJacobianTranslationalVelocity() for multiple points
+</details><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Consider CalcJacobianTranslationalVelocity() for multiple points
 fixed to frame B and consider CalcJacobianAngularVelocity() to
 calculate frame B’s angular velocity Jacobian.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if J𝑠_V_ABp_E is nullptr</strong><strong> or </strong><strong>not sized 6 x n.</strong> – </p>
@@ -14986,6 +15072,10 @@ respect to q.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>CalcJacobianPositionVector() for details on Jq_p_AoBi.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See Jacobian_functions “Jacobian functions” for related functions.</p>
 </div>
 </dd></dl>
 

@@ -951,6 +951,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a029244fdbe2f10a7bfaf5c21175d834c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a029244fdbe2f10a7bfaf5c21175d834c">MakeActuatorSelectorMatrix</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;user_to_joint_index_map) const</td></tr>
 <tr class="memdesc:a029244fdbe2f10a7bfaf5c21175d834c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative signature to build an actuation selector matrix <code>Su</code> such that <code>u = Su⋅uₛ</code>, where u is the vector of actuation values for the full model (see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1cc1d71e6c2e91fcd215105ae4ed01e4" title="Returns a constant reference to the input port for external actuation for all actuated dofs.">get_actuation_input_port()</a>) and uₛ is a vector of actuation values for the actuators acting on the joints listed by <code>user_to_joint_index_map</code>.  <a href="#a029244fdbe2f10a7bfaf5c21175d834c">More...</a><br /></td></tr>
 <tr class="separator:a029244fdbe2f10a7bfaf5c21175d834c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Jacobian functions</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="Jacobian_functions"></a> Herein, a Jacobian is a matrix that contains the partial derivatives of a vector with respect to a list of scalars. The vector may be a position vector, translational velocity, angular velocity, or spatial velocity and the scalars may be the system's generalized positions q or "speeds" 𝑠 where 𝑠 is either q̇ (time-derivative of generalized positions) or v (generalized velocities).</p>
+<p>JAq_p_PQ denotes the Jacobian in a frame A of the position vector from point P to point Q with respect to the generalized positions q. It is calculated with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ac7d5973a221d0728e0c1c3e458fac9a5" title="For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi, Bi&#39;s position vector Jacobian in...">CalcJacobianPositionVector()</a>.</p>
+<p>J𝑠_w_AB denotes the angular velocity Jacobian in a frame A of a frame B with respect to "speeds" 𝑠. It is calculated with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac6058b002bdb83057539ad9785267b7" title="Calculates J𝑠_w_AB, a frame B&#39;s angular velocity Jacobian in a frame A with respect to &quot;speeds&quot; 𝑠.">CalcJacobianAngularVelocity()</a>.</p>
+<p>J𝑠_V_ABp denotes the spatial velocity Jacobian in a frame A of a point Bp of frame B with respect to "speeds" 𝑠. It is calculated with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5f39a8f68fae3de53767a281503a3313" title="For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp&#39;s spatial velocity Jacobian in fr...">CalcJacobianSpatialVelocity()</a>.</p>
+<p>J𝑠_v_ABp denotes the translational velocity Jacobian in a frame A of a point Bp of frame B with respect to "speeds" 𝑠. It is calculated with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae2516569f5a2cc27e76ee0cc8b728746" title="For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi, Bi&#39;s translational velocity Jacob...">CalcJacobianTranslationalVelocity()</a>.</p>
+<p>J𝑠_v_AScm_E denotes the translational velocity Jacobian in a frame A of a point Scm with respect to "speeds" 𝑠, where point Scm is the center of mass of a system S. It is calculated with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa4e686199a5e9ddee98538741b7a0382" title="Calculates J𝑠_v_ACcm_E, point Ccm&#39;s translational velocity Jacobian in frame A with respect to &quot;speed...">CalcJacobianCenterOfMassTranslationalVelocity()</a> </p>
+</div></td></tr>
 <tr class="memitem:a5f39a8f68fae3de53767a281503a3313"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5f39a8f68fae3de53767a281503a3313">CalcJacobianSpatialVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_B, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;p_BoBp_B, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; Js_V_ABp_E) const</td></tr>
 <tr class="memdesc:a5f39a8f68fae3de53767a281503a3313"><td class="mdescLeft">&#160;</td><td class="mdescRight">For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp's spatial velocity Jacobian in frame A with respect to "speeds" 𝑠.  <a href="#a5f39a8f68fae3de53767a281503a3313">More...</a><br /></td></tr>
 <tr class="separator:a5f39a8f68fae3de53767a281503a3313"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2971,6 +2979,7 @@ When cached values are out of sync with the state stored in context, this method
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd>See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#Jacobian_functions">Jacobian functions</a> for related functions. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>J𝑠_w_AB_E</code> is nullptr or not of size <code>3 x n</code>. </td></tr>
@@ -3042,6 +3051,7 @@ When cached values are out of sync with the state stored in context, this method
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd>See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#Jacobian_functions">Jacobian functions</a> for related functions. </dd></dl>
 
 </div>
 </div>
@@ -3115,6 +3125,7 @@ When cached values are out of sync with the state stored in context, this method
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. J𝑠_v_ACcm_ = ∑ (mᵢ Jᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances, and Jᵢ is Bᵢcm's translational velocity Jacobian in frame A, expressed in frame E (Bᵢcm is the center of mass of the iᵗʰ body). </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#Jacobian_functions">Jacobian functions</a> for related functions. </dd></dl>
 
 </div>
 </div>
@@ -3191,7 +3202,9 @@ When cached values are out of sync with the state stored in context, this method
 <dl class="section note"><dt>Note</dt><dd>Jq̇_v_ABi = Jq_p_AoBi. In other words, point Bi's velocity Jacobian in frame A with respect to q̇ is equal to point Bi's position vector Jacobian in frame A with respect to q. <pre>
 [∂(v_ABi)/∂q̇₁, ... ∂(v_ABi)/∂q̇ₙ] = [ᴬ∂(p_AoBi)/∂q₁, ... ᴬ∂(p_AoBi)/∂qₙ]
 </pre> </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae2516569f5a2cc27e76ee0cc8b728746" title="For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi, Bi&#39;s translational velocity Jacob...">CalcJacobianTranslationalVelocity()</a> for details on Jq̇_v_ABi. Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em><a class="el" href="namespacedrake.html#a624916a36af99a1ddfed08a25047cbea" title="Checks truth for at least one element in matrix m.">any</a></em> point fixed/welded to frame A, i.e., this calculation's result is the same if point Ao is replaced with <a class="el" href="namespacedrake.html#a624916a36af99a1ddfed08a25047cbea" title="Checks truth for at least one element in matrix m.">any</a> point fixed on frame A. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae2516569f5a2cc27e76ee0cc8b728746" title="For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi, Bi&#39;s translational velocity Jacob...">CalcJacobianTranslationalVelocity()</a> for details on Jq̇_v_ABi. Note: Jq_p_AaBi = Jq_p_AoBi, where point Aa is <em><a class="el" href="namespacedrake.html#a624916a36af99a1ddfed08a25047cbea" title="Checks truth for at least one element in matrix m.">any</a></em> point fixed/welded to frame A, i.e., this calculation's result is the same if point Ao is replaced with <a class="el" href="namespacedrake.html#a624916a36af99a1ddfed08a25047cbea" title="Checks truth for at least one element in matrix m.">any</a> point fixed on frame A. </dd>
+<dd>
+See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#Jacobian_functions">Jacobian functions</a> for related functions. </dd></dl>
 
 </div>
 </div>
@@ -3264,13 +3277,17 @@ When cached values are out of sync with the state stored in context, this method
     <tr><td class="paramdir">[in]</td><td class="paramname">p_BoBp_B</td><td>A position vector from Bo (frame_B's origin) to point Bp (regarded as fixed/welded to B), expressed in frame_B. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame that measures <code>v_ABp</code> (Bp's velocity in A). Note: It is natural to wonder why there is no parameter p_AoAp_A (similar to the parameter p_BoBp_B for frame_B). There is no need for p_AoAp_A because Bp's velocity in A is defined as the derivative in frame A of Bp's position vector from <em>any</em> point fixed to A. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which <code>v_ABp</code> is expressed on input and the frame in which the Jacobian <code>J𝑠_V_ABp</code> is expressed on output. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">J𝑠_V_ABp_E</td><td>Point Bp's spatial velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. <code>J𝑠_V_ABp_E</code> is a <code>6 x n</code> matrix, where n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). Note: The returned <code>6 x n</code> matrix stores frame B's angular velocity Jacobian in A in rows 1-3 and stores point Bp's translational velocity Jacobian in A in rows 4-6, i.e., <pre>
-    J𝑠_w_AB_E = J𝑠_V_ABp_E.topRows&lt;3&gt;();
-    J𝑠_v_ABp_E = J𝑠_V_ABp_E.bottomRows&lt;3&gt;();
-</pre> Note: Consider <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae2516569f5a2cc27e76ee0cc8b728746" title="For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi, Bi&#39;s translational velocity Jacob...">CalcJacobianTranslationalVelocity()</a> for multiple points fixed to frame B and consider <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac6058b002bdb83057539ad9785267b7" title="Calculates J𝑠_w_AB, a frame B&#39;s angular velocity Jacobian in a frame A with respect to &quot;speeds&quot; 𝑠.">CalcJacobianAngularVelocity()</a> to calculate frame B's angular velocity Jacobian. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">J𝑠_V_ABp_E</td><td>Point Bp's spatial velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. <code>J𝑠_V_ABp_E</code> is a <code>6 x n</code> matrix, where n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>The returned <code>6 x n</code> matrix stores frame B's angular velocity Jacobian in A in rows 1-3 and stores point Bp's translational velocity Jacobian in A in rows 4-6, i.e., <pre>
+    J𝑠_w_AB_E = J𝑠_V_ABp_E.topRows&lt;3&gt;();
+    J𝑠_v_ABp_E = J𝑠_V_ABp_E.bottomRows&lt;3&gt;();
+</pre> </dd>
+<dd>
+Consider <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae2516569f5a2cc27e76ee0cc8b728746" title="For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi, Bi&#39;s translational velocity Jacob...">CalcJacobianTranslationalVelocity()</a> for multiple points fixed to frame B and consider <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac6058b002bdb83057539ad9785267b7" title="Calculates J𝑠_w_AB, a frame B&#39;s angular velocity Jacobian in a frame A with respect to &quot;speeds&quot; 𝑠.">CalcJacobianAngularVelocity()</a> to calculate frame B's angular velocity Jacobian. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#Jacobian_functions">Jacobian functions</a> for related functions. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>J𝑠_V_ABp_E</code> is nullptr or not sized <code>6 x n</code>. </td></tr>
@@ -3362,7 +3379,9 @@ When cached values are out of sync with the state stored in context, this method
 <dl class="section note"><dt>Note</dt><dd>When 𝑠 = q̇, <code>Jq̇_v_ABi = Jq_p_AoBi</code>. In other words, point Bi's velocity Jacobian in frame A with respect to q̇ is equal to point Bi's position Jacobian from Ao (A's origin) in frame A with respect to q. <pre>
 [∂(v_ABi)/∂q̇₁,  ...  ∂(v_ABi)/∂q̇ⱼ] = [∂(p_AoBi)/∂q₁,  ...  ∂(p_AoBi)/∂qⱼ]
 </pre> Note: Each partial derivative of p_AoBi is taken in frame A. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ac7d5973a221d0728e0c1c3e458fac9a5" title="For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi, Bi&#39;s position vector Jacobian in...">CalcJacobianPositionVector()</a> for details on Jq_p_AoBi. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ac7d5973a221d0728e0c1c3e458fac9a5" title="For each point Bi affixed/welded to a frame B, calculates Jq_p_AoBi, Bi&#39;s position vector Jacobian in...">CalcJacobianPositionVector()</a> for details on Jq_p_AoBi. </dd>
+<dd>
+See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#Jacobian_functions">Jacobian functions</a> for related functions. </dd></dl>
 
 </div>
 </div>
