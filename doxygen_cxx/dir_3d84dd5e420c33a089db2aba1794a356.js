@@ -4,6 +4,7 @@ var dir_3d84dd5e420c33a089db2aba1794a356 =
     [ "affine_subspace.h", "affine__subspace_8h.html", null ],
     [ "c_iris_collision_geometry.h", "c__iris__collision__geometry_8h.html", "c__iris__collision__geometry_8h" ],
     [ "cartesian_product.h", "cartesian__product_8h.html", null ],
+    [ "convex_hull.h", "convex__hull_8h.html", null ],
     [ "convex_set.h", "convex__set_8h.html", "convex__set_8h" ],
     [ "cspace_free_box.h", "cspace__free__box_8h.html", [
       [ "CspaceFreeBox", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box" ],

@@ -43,6 +43,7 @@ var searchData=
   ['_7econtextbase',['~ContextBase',['../classdrake_1_1systems_1_1_context_base.html#ad5f6e70b9e66e7ceb7c327bd3c8f14ff',1,'drake::systems::ContextBase']]],
   ['_7econtinuousstate',['~ContinuousState',['../classdrake_1_1systems_1_1_continuous_state.html#ae17b6a0871936b2904a4c2f215047f32',1,'drake::systems::ContinuousState']]],
   ['_7econvex',['~Convex',['../classdrake_1_1geometry_1_1_convex.html#af6e6797b1b18f3012ba8f10ad734e61d',1,'drake::geometry::Convex']]],
+  ['_7econvexhull',['~ConvexHull',['../classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html#a251b707d4b019b65e3d5555e57627290',1,'drake::geometry::optimization::ConvexHull']]],
   ['_7econvexset',['~ConvexSet',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa19f9770fdca8fc14ee1dec1cec39710',1,'drake::geometry::optimization::ConvexSet']]],
   ['_7ecsdpsolver',['~CsdpSolver',['../classdrake_1_1solvers_1_1_csdp_solver.html#aac182c9c5dee71253ce7e5454e779b8c',1,'drake::solvers::CsdpSolver']]],
   ['_7ecspacefreebox',['~CspaceFreeBox',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#adfbe9a0f2e79d07d3424cdab71184985',1,'drake::geometry::optimization::CspaceFreeBox']]],

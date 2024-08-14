@@ -83,6 +83,7 @@ var searchData=
   ['continuous_5fstate_2eh',['continuous_state.h',['../continuous__state_8h.html',1,'']]],
   ['controlled_5fspring_5fmass_5fsystem_2eh',['controlled_spring_mass_system.h',['../controlled__spring__mass__system_8h.html',1,'']]],
   ['convert_5ftime_5fderivative_2eh',['convert_time_derivative.h',['../convert__time__derivative_8h.html',1,'']]],
+  ['convex_5fhull_2eh',['convex_hull.h',['../convex__hull_8h.html',1,'']]],
   ['convex_5fset_2eh',['convex_set.h',['../convex__set_8h.html',1,'']]],
   ['copyable_5funique_5fptr_2eh',['copyable_unique_ptr.h',['../copyable__unique__ptr_8h.html',1,'']]],
   ['corotated_5fmodel_2eh',['corotated_model.h',['../corotated__model_8h.html',1,'']]],

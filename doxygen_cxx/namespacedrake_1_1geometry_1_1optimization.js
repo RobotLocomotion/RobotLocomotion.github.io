@@ -4,6 +4,7 @@ var namespacedrake_1_1geometry_1_1optimization =
     [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace" ],
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product" ],
     [ "CIrisCollisionGeometry", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry" ],
+    [ "ConvexHull", "classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html", "classdrake_1_1geometry_1_1optimization_1_1_convex_hull" ],
     [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", "classdrake_1_1geometry_1_1optimization_1_1_convex_set" ],
     [ "CspaceFreeBox", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box" ],
     [ "CspaceFreePolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope" ],
