@@ -212,9 +212,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a931a45e4e9fadda50e254bac78d086bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a931a45e4e9fadda50e254bac78d086bc">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, const std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;edges_between_regions, <a class="el" href="classint.html">int</a> order, <a class="el" href="classdouble.html">double</a> h_min, <a class="el" href="classdouble.html">double</a> h_max, std::string name, const std::optional&lt; std::vector&lt; Eigen::VectorXd &gt;&gt; &amp;edge_offsets)</td></tr>
 <tr class="memdesc:a931a45e4e9fadda50e254bac78d086bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a931a45e4e9fadda50e254bac78d086bc">More...</a><br /></td></tr>
 <tr class="separator:a931a45e4e9fadda50e254bac78d086bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6ea61fbab2a0ff7fed67b5109e5ff05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ad6ea61fbab2a0ff7fed67b5109e5ff05">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, <a class="el" href="classint.html">int</a> order, <a class="el" href="classdouble.html">double</a> h_min=0, <a class="el" href="classdouble.html">double</a> h_max=20, std::string name=&quot;&quot;)</td></tr>
-<tr class="memdesc:ad6ea61fbab2a0ff7fed67b5109e5ff05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions.  <a href="#ad6ea61fbab2a0ff7fed67b5109e5ff05">More...</a><br /></td></tr>
-<tr class="separator:ad6ea61fbab2a0ff7fed67b5109e5ff05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c0185ae66f1593e99a8ee7cc5bae37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a45c0185ae66f1593e99a8ee7cc5bae37">AddRegions</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;regions, <a class="el" href="classint.html">int</a> order, <a class="el" href="classdouble.html">double</a> h_min=1e-6, double h_max=20, std::string name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a45c0185ae66f1593e99a8ee7cc5bae37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html" title="A Subgraph is a subset of the larger graph.">Subgraph</a> with the given regions.  <a href="#a45c0185ae66f1593e99a8ee7cc5bae37">More...</a><br /></td></tr>
+<tr class="separator:a45c0185ae66f1593e99a8ee7cc5bae37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88df1e80fc5caca3da4c817fc3e23338"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a88df1e80fc5caca3da4c817fc3e23338">RemoveSubgraph</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;subgraph)</td></tr>
 <tr class="memdesc:a88df1e80fc5caca3da4c817fc3e23338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a subgraph and all associated edges found in the subgraph and to and from other subgraphs.  <a href="#a88df1e80fc5caca3da4c817fc3e23338">More...</a><br /></td></tr>
 <tr class="separator:a88df1e80fc5caca3da4c817fc3e23338"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -831,8 +831,8 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
 
 </div>
 </div>
-<a id="ad6ea61fbab2a0ff7fed67b5109e5ff05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6ea61fbab2a0ff7fed67b5109e5ff05">&#9670;&nbsp;</a></span>AddRegions() <span class="overload">[3/3]</span></h2>
+<a id="a45c0185ae66f1593e99a8ee7cc5bae37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c0185ae66f1593e99a8ee7cc5bae37">&#9670;&nbsp;</a></span>AddRegions() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -853,7 +853,7 @@ Planning with Graphs of Geodesically-Convex Sets", and per the discussion in Sub
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>h_min</em> = <code>0</code>, </td>
+          <td class="paramname"><em>h_min</em> = <code>1e-6</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

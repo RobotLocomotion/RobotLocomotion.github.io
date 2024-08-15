@@ -15,7 +15,7 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimi
     [ "AddPathLengthCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a34f92ff4feccc5aa2e289b9a514486ac", null ],
     [ "AddRegions", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a411eca99787867a84b5db6f5fd6c5cbc", null ],
     [ "AddRegions", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a931a45e4e9fadda50e254bac78d086bc", null ],
-    [ "AddRegions", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ad6ea61fbab2a0ff7fed67b5109e5ff05", null ],
+    [ "AddRegions", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a45c0185ae66f1593e99a8ee7cc5bae37", null ],
     [ "AddTimeCost", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a515805314ae145e3be6b636d0986bb09", null ],
     [ "AddVelocityBounds", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#af27492cb5b0dbf8cd8ce10e792486052", null ],
     [ "continuous_revolute_joints", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a5e794da51482f4bf72e358b073b7e30e", null ],
