@@ -2143,6 +2143,55 @@ return r(s) with valid continuity.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddPathEnergyCost">
+<span class="sig-name descname"><span class="pre">AddPathEnergyCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddPathEnergyCost" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddPathEnergyCost(self: pydrake.planning.GcsTrajectoryOptimization, weight_matrix: numpy.ndarray[numpy.float64[m, n]]) -&gt; None</p></li>
+</ol>
+<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id9"><span class="problematic" id="id10">|</span></a>weight_matrix
+* (rᵢ₊₁ − rᵢ)|₂². In comparison to AddPathLength cost, this cost
+encourages control points to be evenly spaced but may result in
+greater number of regions and larger path length on the solution. It
+is recommended to use this cost only with SolveConvexRestriction when
+it becomes a quadratic cost for which some solvers show a better
+performance.</p>
+<p>This cost will be added to the entire graph. Since the path length is
+only defined for Bézier curves that have two or more control points,
+this cost will only added to all subgraphs with order greater than
+zero. Note that this cost will be applied even to subgraphs added in
+the future.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">weight_matrix</span></code>:</dt><dd><p>is the relative weight of each component for the cost. The
+diagonal of the matrix is the weight for each dimension. The
+off-diagonal elements are the weight for the cross terms, which
+can be used to penalize diagonal movement.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>weight_matrix must be of size num_positions() x num_positions().</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>AddPathEnergyCost(self: pydrake.planning.GcsTrajectoryOptimization, weight: float = 1.0) -&gt; None</p></li>
+</ol>
+<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id11"><span class="problematic" id="id12">|</span></a>(rᵢ₊₁ − rᵢ)|₂²
+with weight being applied uniformly to all dimensions. In comparison
+to AddPathLength cost, this cost encourages control points to be
+evenly spaced but may result in greater number of regions and larger
+path length on the solution. It is recommended to use this cost only
+with SolveConvexRestriction when it becomes a quadratic cost for which
+some solvers show a better performance.</p>
+<p>This cost will be added to the entire graph. Since the path length is
+only defined for Bézier curves that have two or more control points,
+this cost will only added to all subgraphs with order greater than
+zero. Note that this cost will be applied even to subgraphs added in
+the future.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">weight</span></code>:</dt><dd><p>is the relative weight of the cost.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddPathLengthCost">
 <span class="sig-name descname"><span class="pre">AddPathLengthCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddPathLengthCost" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -2152,7 +2201,7 @@ return r(s) with valid continuity.</p>
 <p>Adds multiple L2Norm Costs on the upper bound of the path length.
 Since we cannot directly compute the path length of a Bézier curve, we
 minimize the upper bound of the path integral by minimizing the sum of
-(weighted) distances between control points: ∑ <a href="#id9"><span class="problematic" id="id10">|</span></a>weight_matrix * (rᵢ₊₁
+(weighted) distances between control points: ∑ <a href="#id13"><span class="problematic" id="id14">|</span></a>weight_matrix * (rᵢ₊₁
 − rᵢ)|₂.</p>
 <p>This cost will be added to the entire graph. Since the path length is
 only defined for Bézier curves that have two or more control points,
@@ -2772,6 +2821,45 @@ return r(s) with valid continuity.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathEnergyCost">
+<span class="sig-name descname"><span class="pre">AddPathEnergyCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathEnergyCost" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddPathEnergyCost(self: pydrake.planning.GcsTrajectoryOptimization.Subgraph, weight_matrix: numpy.ndarray[numpy.float64[m, n]]) -&gt; None</p></li>
+</ol>
+<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id15"><span class="problematic" id="id16">|</span></a>weight_matrix
+* (rᵢ₊₁ − rᵢ)|₂². In comparison to AddPathLength cost, this cost
+encourages control points to be evenly spaced but may result in
+greater number of regions and larger path length on the solution. It
+is recommended to use this cost only with SolveConvexRestriction when
+it becomes a quadratic cost for which some solvers show a better
+performance.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">weight_matrix</span></code>:</dt><dd><p>is the relative weight of each component for the cost. The
+diagonal of the matrix is the weight for each dimension. The
+off-diagonal elements are the weight for the cross terms, which
+can be used to penalize diagonal movement.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>weight_matrix must be of size num_positions() x num_positions().</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>AddPathEnergyCost(self: pydrake.planning.GcsTrajectoryOptimization.Subgraph, weight: float = 1.0) -&gt; None</p></li>
+</ol>
+<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id17"><span class="problematic" id="id18">|</span></a>(rᵢ₊₁ − rᵢ)|₂²
+with weight being applied uniformly to all dimensions. In comparison
+to AddPathLength cost, this cost encourages control points to be
+evenly spaced but may result in greater number of regions and larger
+path length on the solution. It is recommended to use this cost only
+with SolveConvexRestriction when it becomes a quadratic cost for which
+some solvers show a better performance.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">weight</span></code>:</dt><dd><p>is the relative weight of the cost.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathLengthCost">
 <span class="sig-name descname"><span class="pre">AddPathLengthCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathLengthCost" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -3188,7 +3276,7 @@ point of the jerk trajectory.</p>
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.AddPathEnergyCost">
 <span class="sig-name descname"><span class="pre">AddPathEnergyCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Cost</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddPathEnergyCost" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a convex quadratic cost on an upper bound on the energy of the
-path, ∫₀¹ <a href="#id11"><span class="problematic" id="id12">|</span></a>ṙ(s)|₂² ds, by summing the squared distance between the
+path, ∫₀¹ <a href="#id19"><span class="problematic" id="id20">|</span></a>ṙ(s)|₂² ds, by summing the squared distance between the
 path control points. In the limit of infinitely many control points,
 minimizers for AddPathLengthCost and AddPathEnergyCost will follow the
 same path, but potentially with different timing. They may have
@@ -3206,8 +3294,8 @@ control point of the velocity trajectory.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.AddPathLengthCost">
 <span class="sig-name descname"><span class="pre">AddPathLengthCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_conic_constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Cost</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddPathLengthCost" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a cost on an upper bound of the length of the path, ∫₀ᵀ <a href="#id13"><span class="problematic" id="id14">|</span></a>q̇(t)|₂
-dt, or equivalently ∫₀¹ <a href="#id15"><span class="problematic" id="id16">|</span></a>ṙ(s)|₂ ds, by summing the distance between
+<dd><p>Adds a cost on an upper bound of the length of the path, ∫₀ᵀ <a href="#id21"><span class="problematic" id="id22">|</span></a>q̇(t)|₂
+dt, or equivalently ∫₀¹ <a href="#id23"><span class="problematic" id="id24">|</span></a>ṙ(s)|₂ ds, by summing the distance between
 the path control points. If <code class="docutils literal notranslate"><span class="pre">use_conic_constraint</span> <span class="pre">=</span> <span class="pre">false</span></code>, then
 costs are added via MathematicalProgram::AddL2NormCost; otherwise they
 are added via MathematicalProgram::AddL2NormCostUsingConicConstraint.</p>

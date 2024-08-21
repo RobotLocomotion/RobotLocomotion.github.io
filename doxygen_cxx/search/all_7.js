@@ -53,6 +53,7 @@ var searchData=
   ['geometry_5finfrastructure_5fdoxygen_2eh',['geometry_infrastructure_doxygen.h',['../geometry__infrastructure__doxygen_8h.html',1,'']]],
   ['geometry_5finstance_2eh',['geometry_instance.h',['../geometry__instance_8h.html',1,'']]],
   ['geometry_20optimization',['Geometry Optimization',['../group__geometry__optimization.html',1,'']]],
+  ['geodesic_20convexity',['Geodesic Convexity',['../group__geometry__optimization__geodesic__convexity.html',1,'']]],
   ['geometry_5fpair',['geometry_pair',['../structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a829d61f108407c1c5546e170f2c9d48b',1,'drake::geometry::optimization::CSpaceSeparatingPlane']]],
   ['geometry_5fproperties_2eh',['geometry_properties.h',['../geometry__properties_8h.html',1,'']]],
   ['geometry_5fpy_2eh',['geometry_py.h',['../geometry__py_8h.html',1,'']]],

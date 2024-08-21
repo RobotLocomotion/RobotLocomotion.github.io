@@ -206,9 +206,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5120b456754eef916922cd73d2ec846a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a5120b456754eef916922cd73d2ec846a">AddPathLengthCost</a> (const Eigen::MatrixXd &amp;weight_matrix)</td></tr>
 <tr class="memdesc:a5120b456754eef916922cd73d2ec846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple L2Norm Costs on the upper bound of the path length.  <a href="#a5120b456754eef916922cd73d2ec846a">More...</a><br /></td></tr>
 <tr class="separator:a5120b456754eef916922cd73d2ec846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e4396347f05f766a19a64910a338b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a26e4396347f05f766a19a64910a338b9">AddPathEnergyCost</a> (const Eigen::MatrixXd &amp;weight_matrix)</td></tr>
+<tr class="memdesc:a26e4396347f05f766a19a64910a338b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to AddPathLengthCost in usage, but minimizes ∑ |weight_matrix * (rᵢ₊₁ − rᵢ)|₂².  <a href="#a26e4396347f05f766a19a64910a338b9">More...</a><br /></td></tr>
+<tr class="separator:a26e4396347f05f766a19a64910a338b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34f92ff4feccc5aa2e289b9a514486ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a34f92ff4feccc5aa2e289b9a514486ac">AddPathLengthCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
 <tr class="memdesc:a34f92ff4feccc5aa2e289b9a514486ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds multiple L2Norm Costs on the upper bound of the path length.  <a href="#a34f92ff4feccc5aa2e289b9a514486ac">More...</a><br /></td></tr>
 <tr class="separator:a34f92ff4feccc5aa2e289b9a514486ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58fa24cbb7560c4a7551fdcb133d478"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af58fa24cbb7560c4a7551fdcb133d478">AddPathEnergyCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
+<tr class="memdesc:af58fa24cbb7560c4a7551fdcb133d478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to AddPathLengthCost in usage, but minimizes ∑ |(rᵢ₊₁ − rᵢ)|₂² with weight being applied uniformly to all dimensions.  <a href="#af58fa24cbb7560c4a7551fdcb133d478">More...</a><br /></td></tr>
+<tr class="separator:af58fa24cbb7560c4a7551fdcb133d478"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af27492cb5b0dbf8cd8ce10e792486052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af27492cb5b0dbf8cd8ce10e792486052">AddVelocityBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
 <tr class="memdesc:af27492cb5b0dbf8cd8ce10e792486052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear velocity constraint to the subgraph <code>lb</code> ≤ q̇(t) ≤ <code>ub</code>.  <a href="#af27492cb5b0dbf8cd8ce10e792486052">More...</a><br /></td></tr>
 <tr class="separator:af27492cb5b0dbf8cd8ce10e792486052"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -424,6 +430,61 @@ Friends</h2></td></tr>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the continuity order is not equal or less than the order the subgraphs. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if the continuity order is less than one since path continuity is enforced by default. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a26e4396347f05f766a19a64910a338b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e4396347f05f766a19a64910a338b9">&#9670;&nbsp;</a></span>AddPathEnergyCost() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPathEnergyCost </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>weight_matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Similar to AddPathLengthCost in usage, but minimizes ∑ |weight_matrix * (rᵢ₊₁ − rᵢ)|₂². </p>
+<p>In comparison to AddPathLength cost, this cost encourages control points to be evenly spaced but may result in greater number of regions and larger path length on the solution. It is recommended to use this cost only with SolveConvexRestriction when it becomes a quadratic cost for which some solvers show a better performance.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight_matrix</td><td>is the relative weight of each component for the cost. The diagonal of the matrix is the weight for each dimension. The off-diagonal elements are the weight for the cross terms, which can be used to penalize diagonal movement. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>weight_matrix must be of size num_positions() x num_positions(). </dd></dl>
+
+</div>
+</div>
+<a id="af58fa24cbb7560c4a7551fdcb133d478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af58fa24cbb7560c4a7551fdcb133d478">&#9670;&nbsp;</a></span>AddPathEnergyCost() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPathEnergyCost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>weight</em> = <code>1.0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Similar to AddPathLengthCost in usage, but minimizes ∑ |(rᵢ₊₁ − rᵢ)|₂² with weight being applied uniformly to all dimensions. </p>
+<p>In comparison to AddPathLength cost, this cost encourages control points to be evenly spaced but may result in greater number of regions and larger path length on the solution. It is recommended to use this cost only with SolveConvexRestriction when it becomes a quadratic cost for which some solvers show a better performance.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight</td><td>is the relative weight of the cost. </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,0 +1,585 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Geodesic Convexity</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__geometry__optimization__geodesic__convexity.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">Geodesic Convexity<div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a> &#124; <a class="el" href="group__solvers.html">Formulating and Solving Optimization Problems</a> &raquo; <a class="el" href="group__geometry__optimization.html">Geometry Optimization</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>A robot that has revolute joints without any limits has an inherently non-Euclidean configuration space, but one can still consider "geodesically-convex" sets, akin to convex sets in Euclidean space. </p>
+<p>In practice, this only requires that the width of the set along each dimension corresponding to an unbounded revolute joint be strictly less than π. These functions are primarily used by GcsTrajectoryOptimization to make motion plans for these types of robots. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga05bd75c8b08787c334065792f8532797"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga05bd75c8b08787c334065792f8532797">CheckIfSatisfiesConvexityRadius</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> &amp;convex_set, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints)</td></tr>
+<tr class="memdesc:ga05bd75c8b08787c334065792f8532797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a convex set, and a list of indices corresponding to continuous revolute joints, checks whether or not the set satisfies the convexity radius.  <a href="group__geometry__optimization__geodesic__convexity.html#ga05bd75c8b08787c334065792f8532797">More...</a><br /></td></tr>
+<tr class="separator:ga05bd75c8b08787c334065792f8532797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f945f0d43e169b238695da629d93ff7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga0f945f0d43e169b238695da629d93ff7">PartitionConvexSet</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> &amp;convex_set, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, const <a class="el" href="classdouble.html">double</a> epsilon=1e-5)</td></tr>
+<tr class="memdesc:ga0f945f0d43e169b238695da629d93ff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partitions a convex set into (smaller) convex sets whose union is the original set and that each respect the convexity radius as in CheckIfSatisfiesConvexityRadius.  <a href="group__geometry__optimization__geodesic__convexity.html#ga0f945f0d43e169b238695da629d93ff7">More...</a><br /></td></tr>
+<tr class="separator:ga0f945f0d43e169b238695da629d93ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeab8ca89c6e95c43cf9ec8c6284f395f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization__geodesic__convexity.html#gaeab8ca89c6e95c43cf9ec8c6284f395f">PartitionConvexSet</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;convex_sets, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, const <a class="el" href="classdouble.html">double</a> epsilon=1e-5)</td></tr>
+<tr class="memdesc:gaeab8ca89c6e95c43cf9ec8c6284f395f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function overload to take in a list of convex sets, and partition all so as to respect the convexity radius.  <a href="group__geometry__optimization__geodesic__convexity.html#gaeab8ca89c6e95c43cf9ec8c6284f395f">More...</a><br /></td></tr>
+<tr class="separator:gaeab8ca89c6e95c43cf9ec8c6284f395f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae773abb9ec94e4f9ff5766e2d40b7136"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization__geodesic__convexity.html#gae773abb9ec94e4f9ff5766e2d40b7136">CalcPairwiseIntersections</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets_A, const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets_B, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, bool preprocess_bbox=true)</td></tr>
+<tr class="memdesc:gae773abb9ec94e4f9ff5766e2d40b7136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the pairwise intersections edges between two lists of convex sets.  <a href="group__geometry__optimization__geodesic__convexity.html#gae773abb9ec94e4f9ff5766e2d40b7136">More...</a><br /></td></tr>
+<tr class="separator:gae773abb9ec94e4f9ff5766e2d40b7136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81f6ad0948f72e1ad26ad217aa52a86f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga81f6ad0948f72e1ad26ad217aa52a86f">CalcPairwiseIntersections</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets_A, const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets_B, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;bboxes_A, const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;bboxes_B)</td></tr>
+<tr class="memdesc:ga81f6ad0948f72e1ad26ad217aa52a86f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of <code>CalcPairwiseIntersections</code> allowing the user to supply axis- aligned bounding boxes if they're known a priori, to save on computation time.  <a href="group__geometry__optimization__geodesic__convexity.html#ga81f6ad0948f72e1ad26ad217aa52a86f">More...</a><br /></td></tr>
+<tr class="separator:ga81f6ad0948f72e1ad26ad217aa52a86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a6ca29c940201232b604c08c06fa9ec"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga1a6ca29c940201232b604c08c06fa9ec">CalcPairwiseIntersections</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, bool preprocess_bbox=true)</td></tr>
+<tr class="memdesc:ga1a6ca29c940201232b604c08c06fa9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload to compute pairwise intersections within a list of convex sets.  <a href="group__geometry__optimization__geodesic__convexity.html#ga1a6ca29c940201232b604c08c06fa9ec">More...</a><br /></td></tr>
+<tr class="separator:ga1a6ca29c940201232b604c08c06fa9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ed67b7028e693aa7ea61351656dccc6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::tuple&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga1ed67b7028e693aa7ea61351656dccc6">CalcPairwiseIntersections</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;bboxes)</td></tr>
+<tr class="memdesc:ga1ed67b7028e693aa7ea61351656dccc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of <code>CalcPairwiseIntersections</code> allowing the user to supply axis- aligned bounding boxes if they're known a priori, to save on computation time.  <a href="group__geometry__optimization__geodesic__convexity.html#ga1ed67b7028e693aa7ea61351656dccc6">More...</a><br /></td></tr>
+<tr class="separator:ga1ed67b7028e693aa7ea61351656dccc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gae773abb9ec94e4f9ff5766e2d40b7136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae773abb9ec94e4f9ff5766e2d40b7136">&#9670;&nbsp;</a></span>CalcPairwiseIntersections() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::tuple&lt;<a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd&gt; &gt; drake::geometry::optimization::CalcPairwiseIntersections </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_sets_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_sets_B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>preprocess_bbox</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the pairwise intersections edges between two lists of convex sets. </p>
+<p>Each edge is a tuple in the form [index_A, index_B, offset_A_to_B], where Each is a tuple in the form [index_A, index_B, offset_A_to_B], where index_A is the index of the list in <code>convex_sets_A</code>, index_B is the index of the list in <code>convex_sets_B</code>, and offset_A_to_B is is the translation to applied to all the points in the index_A'th set in <code>convex_sets_A</code> to align them with the index_B'th set in <code>convex_sets_B</code>. This translation may only have non-zero entries along the dimensions corresponding to <code>continuous_revolute_joints</code>. All non-zero entries are integer multiples of 2π as the translation of the sets still represents the same configurations for the indices in <code>continuous_revolute_joints</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">convex_sets_A</td><td>is a vector of convex sets. Pairwise intersections will be computed between <code>convex_sets_A</code> and <code>convex_sets_B</code>. </td></tr>
+    <tr><td class="paramname">convex_sets_B</td><td>is the other vector of convex sets. </td></tr>
+    <tr><td class="paramname">continuous_revolute_joints</td><td>is a list of joint indices corresponding to continuous revolute joints. </td></tr>
+    <tr><td class="paramname">preprocess_bbox</td><td>is a flag for whether the function should precompute axis-aligned bounding boxes (AABBs) for every set. This can speed up the pairwise intersection checks, by determining some sets to be disjoint without needing to solve an optimization problem. However, it does require some overhead to compute those bounding boxes.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>continuous_revolute_joints</code> has repeated entries, or if any entry is outside the interval [0, ambient_dimension), where ambient_dimension is the ambient dimension of the convex sets in <code>convex_sets_A</code> and <code>convex_sets_B</code>. </td></tr>
+    <tr><td class="paramname">if</td><td><code>convex_sets_A</code> or <code>convex_sets_B</code> are empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga81f6ad0948f72e1ad26ad217aa52a86f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81f6ad0948f72e1ad26ad217aa52a86f">&#9670;&nbsp;</a></span>CalcPairwiseIntersections() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::tuple&lt;<a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd&gt; &gt; drake::geometry::optimization::CalcPairwiseIntersections </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_sets_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_sets_B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bboxes_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bboxes_B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload of <code>CalcPairwiseIntersections</code> allowing the user to supply axis- aligned bounding boxes if they're known a priori, to save on computation time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bboxes_A</td><td>is a vector of Hyperrectangles, allowing the user to manually pass in the AABBs of each set in <code>convex_sets_A</code> to avoid recomputation. </td></tr>
+    <tr><td class="paramname">bboxes_B</td><td>serves the same role to <code>convex_sets_B</code> as <code>bboxes_A</code> does to <code>convex_sets_A</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>The function does not check that the entries of bboxes_A are indeed the AABBs corresponding to the sets in <code>convex_sets_A</code> (and likewise for bboxes_B).</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>convex_sets_A.size() != bboxes_A.size()</code> </td></tr>
+    <tr><td class="paramname">if</td><td><code>convex_sets_B.size() != bboxes_B.size()</code> </td></tr>
+    <tr><td class="paramname">if</td><td>not all entries of <code>convex_sets_A</code>, <code>convex_sets_B</code>, <code>bboxes_A</code>, and <code>bboxes_B</code> have the same ambient dimension. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1a6ca29c940201232b604c08c06fa9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1a6ca29c940201232b604c08c06fa9ec">&#9670;&nbsp;</a></span>CalcPairwiseIntersections() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::tuple&lt;<a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd&gt; &gt; drake::geometry::optimization::CalcPairwiseIntersections </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_sets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>preprocess_bbox</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convenience overload to compute pairwise intersections within a list of convex sets. </p>
+<p>Equivalent to calling CalcPairwiseIntersections(convex_sets, convex_sets, continuous_revolute_joints).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">convex_sets</td><td>is a vector of convex sets. Pairwise intersections will be computed within <code>convex_sets</code>. </td></tr>
+    <tr><td class="paramname">continuous_revolute_joints</td><td>is a list of joint indices corresponding to continuous revolute joints. </td></tr>
+    <tr><td class="paramname">preprocess_bbox</td><td>is a flag for whether the function should precompute axis-aligned bounding boxes for every set. This can speed up the pairwise intersection checks, by determining some sets to be disjoint without needing to solve an optimization problem.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>continuous_revolute_joints</code> has repeated entries, or if any entry is outside the interval [0, ambient_dimension), where ambient_dimension is the ambient dimension of the convex sets in <code>convex_sets</code>. </td></tr>
+    <tr><td class="paramname">if</td><td><code>convex_sets</code> is empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1ed67b7028e693aa7ea61351656dccc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ed67b7028e693aa7ea61351656dccc6">&#9670;&nbsp;</a></span>CalcPairwiseIntersections() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::tuple&lt;<a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a>, Eigen::VectorXd&gt; &gt; drake::geometry::optimization::CalcPairwiseIntersections </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_sets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bboxes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload of <code>CalcPairwiseIntersections</code> allowing the user to supply axis- aligned bounding boxes if they're known a priori, to save on computation time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bboxes</td><td>is a vector of Hyperrectangles, allowing the user to manually pass in the AABBs of each set in <code>convex_sets</code> to avoid recomputation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>The function does not check that the entries are indeed the AABBs corresponding to the sets in <code>convex_sets</code>.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>convex_sets.size() != bboxes.size()</code> </td></tr>
+    <tr><td class="paramname">if</td><td>not all entries of <code>convex_sets</code> and <code>bboxes</code> have the same ambient dimension. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga05bd75c8b08787c334065792f8532797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05bd75c8b08787c334065792f8532797">&#9670;&nbsp;</a></span>CheckIfSatisfiesConvexityRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool drake::geometry::optimization::CheckIfSatisfiesConvexityRadius </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_set</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a convex set, and a list of indices corresponding to continuous revolute joints, checks whether or not the set satisfies the convexity radius. </p>
+<p>See §6.5.3 of "A Panoramic View of Riemannian Geometry", Marcel Berger for a general definition of convexity radius. When dealing with continuous revolute joints, respecting the convexity radius entails that each convex set has a width of stricty less than π along each dimension corresponding to a continuous revolute joint. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if continuous_revolute_joints has repeated entries, or if any entry is outside the interval [0, convex_set.ambient_dimension()). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0f945f0d43e169b238695da629d93ff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f945f0d43e169b238695da629d93ff7">&#9670;&nbsp;</a></span>PartitionConvexSet() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> drake::geometry::optimization::PartitionConvexSet </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_set</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>epsilon</em> = <code>1e-5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Partitions a convex set into (smaller) convex sets whose union is the original set and that each respect the convexity radius as in CheckIfSatisfiesConvexityRadius. </p>
+<p>In practice, this is implemented as partitioning sets into pieces whose width is less than or equal to π-ϵ. Each entry in continuous_revolute_joints must be non-negative, less than num_positions, and unique. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">epsilon</td><td>is the ϵ value used for the convexity radius inequality. The partitioned sets are made by intersecting convex_set with axis-aligned bounding boxes that respect the convexity radius. These boxes are made to overlap by ϵ radians along each dimension, for numerical purposes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the vector of convex sets that each respect convexity radius. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if ϵ &lt;= 0 or ϵ &gt;= π. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the input convex set is unbounded along dimensions corresponding to continuous revolute joints. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if continuous_revolute_joints has repeated entries, or if any entry is outside the interval [0, convex_set.ambient_dimension()). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaeab8ca89c6e95c43cf9ec8c6284f395f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeab8ca89c6e95c43cf9ec8c6284f395f">&#9670;&nbsp;</a></span>PartitionConvexSet() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> drake::geometry::optimization::PartitionConvexSet </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>convex_sets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>continuous_revolute_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>epsilon</em> = <code>1e-5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function overload to take in a list of convex sets, and partition all so as to respect the convexity radius. </p>
+<p>Every set must be bounded and have the same ambient dimension. Each entry in continuous_revolute_joints must be non-negative, less than num_positions, and unique. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>unless every <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> in convex_sets has the same ambient_dimension. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if ϵ &lt;= 0 or ϵ &gt;= π. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any input convex set is unbounded along dimensions corresponding to continuous revolute joints. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if continuous_revolute_joints has repeated entries, or if any entry is outside the interval [0, ambient_dimension). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

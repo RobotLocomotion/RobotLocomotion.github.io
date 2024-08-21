@@ -1,5 +1,6 @@
 var group__geometry__optimization =
 [
+    [ "Geodesic Convexity", "group__geometry__optimization__geodesic__convexity.html", "group__geometry__optimization__geodesic__convexity" ],
     [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html", [
       [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#af32a8c64b87f80e719f3be9c5aa0acdd", null ],
       [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#aebfabf996e5f3fe5bd03f62e243335ce", null ],

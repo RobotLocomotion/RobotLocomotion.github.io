@@ -1,5 +1,9 @@
 var NAVTREEINDEX49 =
 {
+"diagram__builder_8h.html#a7616c30571f8326b1286442e69e22409":[4,0,0,12,3,12,1],
+"diagram__context_8h.html":[4,0,0,12,3,13],
+"diagram__context_8h.html#a2835cb328be8cc3d781fecd5ec488553":[4,0,0,12,3,13,1],
+"diagram__continuous__state_8h.html":[4,0,0,12,3,14],
 "diagram__continuous__state_8h.html#a6f137e93dec3290293c56f0ff55e19e8":[4,0,0,12,3,14,1],
 "diagram__discrete__values_8h.html":[4,0,0,12,3,15],
 "diagram__discrete__values_8h.html#acb660319ddbd0c7839e6e7eeddab5cfc":[4,0,0,12,3,15,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX49 =
 "eigen__pybind_8h.html":[4,0,0,0,0,1,4],
 "eigen__pybind_8h.html#a0d7582877591057ceea633df19d910fa":[4,0,0,0,0,1,4,2],
 "eigen__pybind_8h.html#a875e25ecdc84790945435e9538a6ef60":[4,0,0,0,0,1,4,0],
-"eigen__pybind_8h.html#ab9047f00f873c1cd6f00d0665365ecf5":[4,0,0,0,0,1,4,1],
-"eigen__pybind_8h.html#af5f81d7315477aaa1694d9aa02a1346b":[4,0,0,0,0,1,4,3],
-"eigen__sparse__triplet_8h.html":[4,0,0,7,13],
-"eigen__sparse__triplet_8h.html#a731362436a359883cbac2c59abf95168":[4,0,0,7,13,1],
-"eigen__sparse__triplet_8h.html#a9681555f84d48a48d09601d913246934":[4,0,0,7,13,0]
+"eigen__pybind_8h.html#ab9047f00f873c1cd6f00d0665365ecf5":[4,0,0,0,0,1,4,1]
 };
