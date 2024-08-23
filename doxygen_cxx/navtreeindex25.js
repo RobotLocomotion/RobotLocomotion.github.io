@@ -1,5 +1,10 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ada7b35ee8b161bd6ccc2709ccf3c1022":[1,4,2,1,4,19],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ae3f60fe9552c90c9a3986f023ba18a56":[1,4,2,1,4,6],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aeb432a55ef7765459155c69a539d8658":[1,4,2,1,4,26],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af3392559929281e1d5db4f104ed4b8f1":[1,4,2,1,4,20],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afcc8c6b2091ff4447ee2951bb7907de8":[1,4,2,1,4,25],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afe1106b68562afbcfec8556500df5f90":[1,4,2,1,4,5],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[1,1,0,23],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a040b81f85b87c2da89ca72d802975d7b":[1,1,0,23,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1schema_1_1_uniform_vector.html#ad196407ab2a1c2bdef6c230515b104a8":[3,0,0,12,10,6],
 "classdrake_1_1schema_1_1_uniform_vector.html#ad80934fe58016c8c45ace203e14bdc43":[3,0,0,12,10,10],
 "classdrake_1_1schema_1_1_uniform_vector.html#ae555cbd7ab2e1077d50cc922f572e4ca":[3,0,0,12,10,0],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html":[3,0,0,13,1],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a0eb00b367e40489c4c79184e172d9a61":[3,0,0,13,1,9],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a1c89886a59dfaa4862b55712c37b876b":[3,0,0,13,1,11],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a2a22a90654161042250f15296cf33643":[3,0,0,13,1,6],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a56e6fe46c8fdccc5a5945f778e80f018":[3,0,0,13,1,5],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a5ce6eb5b762cd581bb03d3a31775d1e1":[3,0,0,13,1,4]
+"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html":[3,0,0,13,1]
 };

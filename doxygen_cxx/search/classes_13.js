@@ -47,7 +47,6 @@ var searchData=
   ['typesafeindex',['TypeSafeIndex',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20abstractparametertag_20_3e',['TypeSafeIndex&lt; class AbstractParameterTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20abstractstatetag_20_3e',['TypeSafeIndex&lt; class AbstractStateTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
-  ['typesafeindex_3c_20class_20bodytag_20_3e',['TypeSafeIndex&lt; class BodyTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20cachetag_20_3e',['TypeSafeIndex&lt; class CacheTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20dependencytag_20_3e',['TypeSafeIndex&lt; class DependencyTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20discretestatetag_20_3e',['TypeSafeIndex&lt; class DiscreteStateTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
@@ -55,5 +54,6 @@ var searchData=
   ['typesafeindex_3c_20class_20jointelementtag_20_3e',['TypeSafeIndex&lt; class JointElementTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20modelinstancetag_20_3e',['TypeSafeIndex&lt; class ModelInstanceTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20numericparametertag_20_3e',['TypeSafeIndex&lt; class NumericParameterTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
-  ['typesafeindex_3c_20class_20outputporttag_20_3e',['TypeSafeIndex&lt; class OutputPortTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]]
+  ['typesafeindex_3c_20class_20outputporttag_20_3e',['TypeSafeIndex&lt; class OutputPortTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
+  ['typesafeindex_3c_20class_20rigidbodytag_20_3e',['TypeSafeIndex&lt; class RigidBodyTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]]
 ];

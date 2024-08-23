@@ -194,7 +194,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a42cd421a2f04298b8896fbd68a04df54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06d3a3035b69cbfffdb7ca9b9de8112c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a06d3a3035b69cbfffdb7ca9b9de8112c">~RigidBody</a> () override</td></tr>
 <tr class="separator:a06d3a3035b69cbfffdb7ca9b9de8112c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa64a237a5acb010f896154c45bc5407"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#afa64a237a5acb010f896154c45bc5407">index</a> () const</td></tr>
+<tr class="memitem:afa64a237a5acb010f896154c45bc5407"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#afa64a237a5acb010f896154c45bc5407">index</a> () const</td></tr>
 <tr class="memdesc:afa64a237a5acb010f896154c45bc5407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this element's unique index.  <a href="#afa64a237a5acb010f896154c45bc5407">More...</a><br /></td></tr>
 <tr class="separator:afa64a237a5acb010f896154c45bc5407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a> () const</td></tr>
@@ -819,7 +819,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>M_BBo_B spatial inertia of this rigid body B about Bo (B's origin), expressed in B. M_BBo_B contains properties related to B's mass, the position vector from Bo to Bcm (B's center of mass), and G_BBo_B (B's unit inertia about Bo expressed in B). </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by this <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by this RigidBody. </dd></dl>
 
 </div>
 </div>
@@ -1537,7 +1537,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> index </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> index </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1770,7 +1770,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This function changes B's center of mass position <b>without</b> modifying G_BBo_B (B's unit inertia about Bo, expressed in B). Since this use case is very unlikely, consider using <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918" title="For this RigidBody B, sets its SpatialInertia that is stored in context to M_Bo_B.">SetSpatialInertiaInBodyFrame()</a> or <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a1dde4f37f65bd86c368688b9ba5a8e0e" title="Sets this body&#39;s center of mass position while preserving its inertia about its center of mass.">SetCenterOfMassInBodyFrameAndPreserveCentralInertia()</a>. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by this <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by this RigidBody. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if context is null. </td></tr>
@@ -1905,7 +1905,7 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by this <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>the context makes sense for use by this RigidBody. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if context is null. </td></tr>

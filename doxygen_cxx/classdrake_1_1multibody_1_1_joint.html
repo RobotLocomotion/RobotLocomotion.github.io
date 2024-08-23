@@ -415,15 +415,18 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5f268758c7ca361722fd8526b7c32551"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a5f268758c7ca361722fd8526b7c32551">DoSetTopology</a> (const internal::MultibodyTreeTopology &amp;) override</td></tr>
 <tr class="memdesc:a5f268758c7ca361722fd8526b7c32551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb" title="Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree...">SetTopology()</a>.  <a href="#a5f268758c7ca361722fd8526b7c32551">More...</a><br /></td></tr>
 <tr class="separator:a5f268758c7ca361722fd8526b7c32551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb7bb56e3111b8b13991cc780df2a12e"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html">BluePrint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#adb7bb56e3111b8b13991cc780df2a12e">MakeImplementationBlueprint</a> () const =0</td></tr>
-<tr class="memdesc:adb7bb56e3111b8b13991cc780df2a12e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method must be implemented by derived classes in order to provide JointImplementationBuilder a <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html" title="(Advanced) Structure containing all the information needed to build the MultibodyTree implementation ...">BluePrint</a> of their internal implementation <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html" title="(Advanced) A Joint is implemented in terms of MultibodyTree elements, typically a Mobilizer.">JointImplementation</a>.  <a href="#adb7bb56e3111b8b13991cc780df2a12e">More...</a><br /></td></tr>
-<tr class="separator:adb7bb56e3111b8b13991cc780df2a12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a486050abefe61d0b8be870a4fa534f03"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html">BluePrint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a486050abefe61d0b8be870a4fa534f03">MakeImplementationBlueprint</a> (const internal::SpanningForest::Mobod &amp;mobod) const =0</td></tr>
+<tr class="memdesc:a486050abefe61d0b8be870a4fa534f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method must be implemented by derived classes in order to provide JointImplementationBuilder a <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html" title="(Advanced) Structure containing all the information needed to build the MultibodyTree implementation ...">BluePrint</a> of their internal implementation <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html" title="(Advanced) A Joint is implemented in terms of MultibodyTree elements, typically a Mobilizer.">JointImplementation</a>.  <a href="#a486050abefe61d0b8be870a4fa534f03">More...</a><br /></td></tr>
+<tr class="separator:a486050abefe61d0b8be870a4fa534f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f3539f25e5614d6783b5405d034497e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html">JointImplementation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a4f3539f25e5614d6783b5405d034497e">get_implementation</a> () const</td></tr>
 <tr class="memdesc:a4f3539f25e5614d6783b5405d034497e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the internal implementation of <code>this</code> joint.  <a href="#a4f3539f25e5614d6783b5405d034497e">More...</a><br /></td></tr>
 <tr class="separator:a4f3539f25e5614d6783b5405d034497e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29cbe17adde3122d72d7d573152b04c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a29cbe17adde3122d72d7d573152b04c8">has_implementation</a> () const</td></tr>
 <tr class="memdesc:a29cbe17adde3122d72d7d573152b04c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether <code>this</code> joint owns a particular implementation.  <a href="#a29cbe17adde3122d72d7d573152b04c8">More...</a><br /></td></tr>
 <tr class="separator:a29cbe17adde3122d72d7d573152b04c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65cc5b05381b286d81b82647ad9b9d59"><td class="memItemLeft" align="right" valign="top">std::pair&lt; const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; *, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a65cc5b05381b286d81b82647ad9b9d59">tree_frames</a> (bool use_reversed_mobilizer) const</td></tr>
+<tr class="memdesc:a65cc5b05381b286d81b82647ad9b9d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility for concrete joint implementations to use to select the inboard/outboard frames for a tree in the spanning forest, given whether they should be reversed from the parent/child frames that are members of this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> object.  <a href="#a65cc5b05381b286d81b82647ad9b9d59">More...</a><br /></td></tr>
+<tr class="separator:a65cc5b05381b286d81b82647ad9b9d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods to make a clone templated on different scalar types.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Clones this Joint (templated on T) to a joint templated on <code>double</code>.</p>
 </div></td></tr>
@@ -1767,8 +1770,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="adb7bb56e3111b8b13991cc780df2a12e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb7bb56e3111b8b13991cc780df2a12e">&#9670;&nbsp;</a></span>MakeImplementationBlueprint()</h2>
+<a id="a486050abefe61d0b8be870a4fa534f03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486050abefe61d0b8be870a4fa534f03">&#9670;&nbsp;</a></span>MakeImplementationBlueprint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1779,7 +1782,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html">BluePrint</a>&gt; MakeImplementationBlueprint </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const internal::SpanningForest::Mobod &amp;&#160;</td>
+          <td class="paramname"><em>mobod</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -2288,6 +2292,34 @@ Friends</h2></td></tr>
 
 <p>(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this Joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a> except it takes the pose as a (quaternion, translation vector) pair. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this Joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a> for more information </dd></dl>
+
+</div>
+</div>
+<a id="a65cc5b05381b286d81b82647ad9b9d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65cc5b05381b286d81b82647ad9b9d59">&#9670;&nbsp;</a></span>tree_frames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt;T&gt;*, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt;T&gt;*&gt; tree_frames </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_reversed_mobilizer</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Utility for concrete joint implementations to use to select the inboard/outboard frames for a tree in the spanning forest, given whether they should be reversed from the parent/child frames that are members of this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> object. </p>
 
 </div>
 </div>

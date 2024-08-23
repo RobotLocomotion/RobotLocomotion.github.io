@@ -8,7 +8,6 @@ var dir_be8afc369e68dd813958953d8f43add5 =
     [ "link_joint_graph_joint.h", "link__joint__graph__joint_8h.html", null ],
     [ "link_joint_graph_link.h", "link__joint__graph__link_8h.html", null ],
     [ "link_joint_graph_loop_constraint.h", "link__joint__graph__loop__constraint_8h.html", null ],
-    [ "multibody_graph.h", "multibody__graph_8h.html", null ],
     [ "spanning_forest.h", "spanning__forest_8h.html", null ],
     [ "spanning_forest_inlines.h", "spanning__forest__inlines_8h.html", null ],
     [ "spanning_forest_loop_constraint.h", "spanning__forest__loop__constraint_8h.html", null ],

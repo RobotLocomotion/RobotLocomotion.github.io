@@ -508,8 +508,8 @@ var hierarchy =
     [ "ImageTraits< systems::sensors::PixelType::kLabel16I >", "structdrake_1_1systems_1_1sensors_1_1_image_traits.html", null ],
     [ "InitializeParams", "structdrake_1_1systems_1_1_initialize_params.html", null ],
     [ "InitialValueProblem< T >", "classdrake_1_1systems_1_1_initial_value_problem.html", null ],
-    [ "MultibodyPlant< T >::InputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", null ],
     [ "MultibodyPlant< T >::OutputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html", null ],
+    [ "MultibodyPlant< T >::InputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", null ],
     [ "integral_constant", null, [
       [ "tuple_size< drake::SortedPair< T > >", "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ]
     ] ],
@@ -672,8 +672,8 @@ var hierarchy =
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
-    [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
     [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
+    [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
@@ -701,8 +701,8 @@ var hierarchy =
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
     [ "PolygonSurfaceMesh< double >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
     [ "PolygonSurfaceMeshTest< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh_test.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -793,8 +793,8 @@ var hierarchy =
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
     [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", null ],
-    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
@@ -1198,7 +1198,6 @@ var hierarchy =
     [ "TypeSafeIndex< Tag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class AbstractParameterTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class AbstractStateTag >", "classdrake_1_1_type_safe_index.html", null ],
-    [ "TypeSafeIndex< class BodyTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class CacheTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class DependencyTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class DiscreteStateTag >", "classdrake_1_1_type_safe_index.html", null ],
@@ -1207,6 +1206,7 @@ var hierarchy =
     [ "TypeSafeIndex< class ModelInstanceTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class NumericParameterTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class OutputPortTag >", "classdrake_1_1_type_safe_index.html", null ],
+    [ "TypeSafeIndex< class RigidBodyTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "uhash< HashAlgorithm >", "structdrake_1_1uhash.html", [
       [ "hash< drake::geometry::render::RenderLabel >", "structstd_1_1hash_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html", null ],
       [ "hash< drake::Identifier< Tag > >", "structstd_1_1hash_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html", null ],

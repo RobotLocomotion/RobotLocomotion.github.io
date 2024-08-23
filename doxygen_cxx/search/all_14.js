@@ -224,9 +224,10 @@ var searchData=
   ['translational',['translational',['../classdrake_1_1multibody_1_1_spatial_vector.html#a9d56e1315fbb0f8a59a83c948fcded20',1,'drake::multibody::SpatialVector::translational() const'],['../classdrake_1_1multibody_1_1_spatial_vector.html#a520e7186918c44e7d3f5971ee87ceee6',1,'drake::multibody::SpatialVector::translational()']]],
   ['translational_5facceleration',['translational_acceleration',['../classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a48c6257e6d4c4d2955b5788872dc9c1c',1,'drake::multibody::test_utilities::SpatialKinematicsPVA']]],
   ['translational_5fvelocity',['translational_velocity',['../classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a6b11517643a27a1b5633e5c017881f3f',1,'drake::multibody::test_utilities::SpatialKinematicsPVA']]],
-  ['transpose',['transpose',['../classdrake_1_1math_1_1_rotation_matrix.html#a12ff00690cd0b5145222c506a39946aa',1,'drake::math::RotationMatrix::transpose()'],['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f',1,'drake::trajectories::PiecewisePolynomial::Transpose()']]],
+  ['transpose',['Transpose',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f',1,'drake::trajectories::PiecewisePolynomial::Transpose()'],['../classdrake_1_1math_1_1_rotation_matrix.html#a12ff00690cd0b5145222c506a39946aa',1,'drake::math::RotationMatrix::transpose()']]],
   ['transposegrad',['transposeGrad',['../namespacedrake_1_1math.html#a20c21cde851510ab3ae5a7527ed62d22',1,'drake::math']]],
   ['tree',['tree',['../classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#acabb927a720a280e0de5d5a7ffc586cb',1,'drake::multibody::benchmarks::kuka_iiwa_robot::DrakeKukaIIwaRobot']]],
+  ['tree_5fframes',['tree_frames',['../classdrake_1_1multibody_1_1_joint.html#a65cc5b05381b286d81b82647ad9b9d59',1,'drake::multibody::Joint']]],
   ['tree_5fpy_2eh',['tree_py.h',['../tree__py_8h.html',1,'']]],
   ['tri_5fe_5fmn',['tri_e_MN',['../classdrake_1_1geometry_1_1_contact_surface.html#a7737bf2804d3747dc021a1ea3c4c509e',1,'drake::geometry::ContactSurface']]],
   ['tri_5fmesh_5fw',['tri_mesh_W',['../classdrake_1_1geometry_1_1_contact_surface.html#a468511b9c93cbc3a3754b93b738d90a4',1,'drake::geometry::ContactSurface']]],
@@ -272,7 +273,6 @@ var searchData=
   ['typesafeindex',['TypeSafeIndex',['../classdrake_1_1_type_safe_index.html',1,'TypeSafeIndex&lt; Tag &gt;'],['../classdrake_1_1_type_safe_index.html#af1c8cc4c8e4fcff85d9f45953f7e85ed',1,'drake::TypeSafeIndex::TypeSafeIndex()'],['../classdrake_1_1_type_safe_index.html#a86f7f7d48c6ea02f663e349218b3c040',1,'drake::TypeSafeIndex::TypeSafeIndex(int64_t index)'],['../classdrake_1_1_type_safe_index.html#ab7e5c7bb9fa9592c66eb66b3532c6743',1,'drake::TypeSafeIndex::TypeSafeIndex(const TypeSafeIndex&lt; U &gt; &amp;idx)=delete'],['../classdrake_1_1_type_safe_index.html#a77070525c55f8391d7a487cf40611ad1',1,'drake::TypeSafeIndex::TypeSafeIndex(const TypeSafeIndex &amp;)=default'],['../classdrake_1_1_type_safe_index.html#ab8fe25221514a74ab8eacfd4901b095d',1,'drake::TypeSafeIndex::TypeSafeIndex(TypeSafeIndex &amp;&amp;other) noexcept']]],
   ['typesafeindex_3c_20class_20abstractparametertag_20_3e',['TypeSafeIndex&lt; class AbstractParameterTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20abstractstatetag_20_3e',['TypeSafeIndex&lt; class AbstractStateTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
-  ['typesafeindex_3c_20class_20bodytag_20_3e',['TypeSafeIndex&lt; class BodyTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20cachetag_20_3e',['TypeSafeIndex&lt; class CacheTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20dependencytag_20_3e',['TypeSafeIndex&lt; class DependencyTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20discretestatetag_20_3e',['TypeSafeIndex&lt; class DiscreteStateTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
@@ -281,5 +281,6 @@ var searchData=
   ['typesafeindex_3c_20class_20modelinstancetag_20_3e',['TypeSafeIndex&lt; class ModelInstanceTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20numericparametertag_20_3e',['TypeSafeIndex&lt; class NumericParameterTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typesafeindex_3c_20class_20outputporttag_20_3e',['TypeSafeIndex&lt; class OutputPortTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
+  ['typesafeindex_3c_20class_20rigidbodytag_20_3e',['TypeSafeIndex&lt; class RigidBodyTag &gt;',['../classdrake_1_1_type_safe_index.html',1,'drake']]],
   ['typetoid',['TypeToId',['../classdrake_1_1solvers_1_1_solver_type_converter.html#afeb1b9ee30b99a9874507c4168fb3729',1,'drake::solvers::SolverTypeConverter']]]
 ];

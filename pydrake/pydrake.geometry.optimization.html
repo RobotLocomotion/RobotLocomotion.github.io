@@ -677,7 +677,7 @@ Annan Zhang and Russ Tedrake.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisCollisionGeometry.body_index">
-<span class="sig-name descname"><span class="pre">body_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CIrisCollisionGeometry" title="pydrake.geometry.optimization.CIrisCollisionGeometry"><span class="pre">pydrake.geometry.optimization.CIrisCollisionGeometry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::TypeSafeIndex&lt;drake::multibody::BodyTag&gt;</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisCollisionGeometry.body_index" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">body_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CIrisCollisionGeometry" title="pydrake.geometry.optimization.CIrisCollisionGeometry"><span class="pre">pydrake.geometry.optimization.CIrisCollisionGeometry</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::TypeSafeIndex&lt;drake::multibody::RigidBodyTag&gt;</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisCollisionGeometry.body_index" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1965,7 +1965,7 @@ should be added.</p>
 <span class="sig-name descname"><span class="pre">AddCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.AddCost" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, e: pydrake.symbolic.Expression, use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
+<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, e: pydrake.symbolic.Expression, use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; pydrake.solvers.Binding[Cost]</p></li>
 </ol>
 <p>Adds a cost to this edge, described by a symbolic::Expression <code class="docutils literal notranslate"><span class="pre">e</span></code>
 containing <em>only</em> elements of xu() and xv() as variables. For
@@ -1975,7 +1975,10 @@ variable and a constraint:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
-</details><dl class="simple">
+</details><p>You must use GetSolutionCost() to retrieve the cost of the solution,
+rather than evaluating the cost directly, in order to get consistent
+behavior when solving with the different GCS transcriptions.</p>
+<dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_in_transcription</span></code>:</dt><dd><p>specifies the components of the problem to which the constraint
 should be added.</p>
 </dd>
@@ -1988,7 +1991,7 @@ does not contain negative costs.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the pair &lt;ℓ, g(xu, xv)&gt;.</p>
+<dd class="field-odd"><p>the added cost, g(xu, xv).</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
@@ -1998,7 +2001,7 @@ does not contain negative costs.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: pydrake.solvers.Binding[Cost], use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
+<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: pydrake.solvers.Binding[Cost], use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; pydrake.solvers.Binding[Cost]</p></li>
 </ol>
 <p>Adds a cost to this edge. <code class="docutils literal notranslate"><span class="pre">binding</span></code> must contain <em>only</em> elements of
 xu() and xv() as variables. For technical reasons relating to being
@@ -2007,7 +2010,10 @@ eventually implemented with a slack variable and a constraint:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
-</details><dl class="simple">
+</details><p>You must use GetSolutionCost() to retrieve the cost of the solution,
+rather than evaluating the cost directly, in order to get consistent
+behavior when solving with the different GCS transcriptions.</p>
+<dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_in_transcription</span></code>:</dt><dd><p>specifies the components of the problem to which the constraint
 should be added.</p>
 </dd>
@@ -2020,7 +2026,7 @@ does not contain negative costs.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the pair &lt;ℓ, g(xu, xv)&gt;.</p>
+<dd class="field-odd"><p>the added cost, g(xu, xv).</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
@@ -2084,9 +2090,23 @@ should be retrieved.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost">
-<span class="sig-name descname"><span class="pre">GetSolutionCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the sum of the costs associated with this edge in a
+<span class="sig-name descname"><span class="pre">GetSolutionCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, result: pydrake.solvers.MathematicalProgramResult) -&gt; float</p></li>
+</ol>
+<p>Returns the sum of the costs associated with this edge in a
 solvers::MathematicalProgramResult.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, result: pydrake.solvers.MathematicalProgramResult, cost: pydrake.solvers.Binding[Cost]) -&gt; float</p></li>
+</ol>
+<p>Returns the cost associated with the <code class="docutils literal notranslate"><span class="pre">cost</span></code> binding on this edge in
+a solvers::MathematicalProgramResult.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if cost is not associated with this edge.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2531,17 +2551,20 @@ should be added.</p>
 <span class="sig-name descname"><span class="pre">AddCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.AddCost" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, e: pydrake.symbolic.Expression, use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
+<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, e: pydrake.symbolic.Expression, use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; pydrake.solvers.Binding[Cost]</p></li>
 </ol>
 <p>Adds a cost to this vertex, described by a symbolic::Expression <code class="docutils literal notranslate"><span class="pre">e</span></code>
 containing <em>only</em> elements of x() as variables. For technical reasons
 relating to being able to “turn-off” the cost on inactive vertices,
 all costs are eventually implemented with a slack variable and a
 constraint:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x).
 </pre></div>
 </div>
-</details><dl class="simple">
+</details><p>You must use GetSolutionCost() to retrieve the cost of the solution,
+rather than evaluating the cost directly, in order to get consistent
+behavior when solving with the different GCS transcriptions.</p>
+<dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_in_transcription</span></code>:</dt><dd><p>specifies the components of the problem to which the constraint
 should be added.</p>
 </dd>
@@ -2554,7 +2577,7 @@ does not contain negative costs.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the pair &lt;ℓ, g(x)&gt;.</p>
+<dd class="field-odd"><p>the added cost, g(x).</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
@@ -2564,16 +2587,19 @@ does not contain negative costs.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, binding: pydrake.solvers.Binding[Cost], use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; tuple[pydrake.symbolic.Variable, pydrake.solvers.Binding[Cost]]</p></li>
+<li><p>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, binding: pydrake.solvers.Binding[Cost], use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; pydrake.solvers.Binding[Cost]</p></li>
 </ol>
 <p>Adds a cost to this vertex. <code class="docutils literal notranslate"><span class="pre">binding</span></code> must contain <em>only</em> elements
 of x() as variables. For technical reasons relating to being able to
 “turn-off” the cost on inactive vertices, all costs are eventually
 implemented with a slack variable and a constraint:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x).
 </pre></div>
 </div>
-</details><dl class="simple">
+</details><p>You must use GetSolutionCost() to retrieve the cost of the solution,
+rather than evaluating the cost directly, in order to get consistent
+behavior when solving with the different GCS transcriptions.</p>
+<dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_in_transcription</span></code>:</dt><dd><p>specifies the components of the problem to which the constraint
 should be added.</p>
 </dd>
@@ -2586,7 +2612,7 @@ does not contain negative costs.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the pair &lt;ℓ, g(x)&gt;.</p>
+<dd class="field-odd"><p>the added cost, g(x).</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
@@ -2647,9 +2673,23 @@ return NaN than a value not contained in set().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolutionCost">
-<span class="sig-name descname"><span class="pre">GetSolutionCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolutionCost" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the sum of the costs associated with this vertex in a
+<span class="sig-name descname"><span class="pre">GetSolutionCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolutionCost" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, result: pydrake.solvers.MathematicalProgramResult) -&gt; float</p></li>
+</ol>
+<p>Returns the sum of the costs associated with this vertex in a
 solvers::MathematicalProgramResult.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, result: pydrake.solvers.MathematicalProgramResult, cost: pydrake.solvers.Binding[Cost]) -&gt; float</p></li>
+</ol>
+<p>Returns the cost associated with the <code class="docutils literal notranslate"><span class="pre">cost</span></code> binding on this vertex
+in a solvers::MathematicalProgramResult.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if cost is not associated with this vertex.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

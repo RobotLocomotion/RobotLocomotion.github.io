@@ -1,5 +1,10 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1planning_1_1_robot_clearance.html#a401263b97aa91720fbc1869951c62ddc":[1,4,2,2,5,0],
+"classdrake_1_1planning_1_1_robot_clearance.html#a409bdc1b0019f9ee9073ef5478c116c0":[1,4,2,2,5,13],
+"classdrake_1_1planning_1_1_robot_clearance.html#a729e9cd587db14316836a7480f6a3ef9":[1,4,2,2,5,3],
+"classdrake_1_1planning_1_1_robot_clearance.html#a86cbbd162c113f46a8f319d57626c6e6":[1,4,2,2,5,12],
+"classdrake_1_1planning_1_1_robot_clearance.html#a8994b635a6f7cbc3fd0e16b8ed907956":[1,4,2,2,5,6],
 "classdrake_1_1planning_1_1_robot_clearance.html#a98c1287cf09d8d1e1acbcb7b9b953b43":[1,4,2,2,5,10],
 "classdrake_1_1planning_1_1_robot_clearance.html#aa1105d39ce49db224c98e90ef7de3741":[1,4,2,2,5,1],
 "classdrake_1_1planning_1_1_robot_clearance.html#aabd02eb3026c91ba1a4ed943fd9c265d":[1,4,2,2,5,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aa04be32847a0a206b2ae988625279139":[1,4,2,1,4,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aab1f0d3cbfc0204c739cdd549d980d2b":[1,4,2,1,4,24],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ab13f393292d6592dc959f55625fe0f5d":[1,4,2,1,4,7],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[1,4,2,1,4,22],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ada7b35ee8b161bd6ccc2709ccf3c1022":[1,4,2,1,4,19],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ae3f60fe9552c90c9a3986f023ba18a56":[1,4,2,1,4,6],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aeb432a55ef7765459155c69a539d8658":[1,4,2,1,4,26],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#af3392559929281e1d5db4f104ed4b8f1":[1,4,2,1,4,20],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afcc8c6b2091ff4447ee2951bb7907de8":[1,4,2,1,4,25]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[1,4,2,1,4,22]
 };

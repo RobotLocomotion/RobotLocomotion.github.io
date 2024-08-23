@@ -190,12 +190,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a53748c9b2b03e591925478e582e14bd7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a53748c9b2b03e591925478e582e14bd7">set</a> () const</td></tr>
 <tr class="memdesc:a53748c9b2b03e591925478e582e14bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the underlying <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a>.  <a href="#a53748c9b2b03e591925478e582e14bd7">More...</a><br /></td></tr>
 <tr class="separator:a53748c9b2b03e591925478e582e14bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a39b1e3276bba1f810ecbdb36dc74e5"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a9a39b1e3276bba1f810ecbdb36dc74e5">AddCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
-<tr class="memdesc:a9a39b1e3276bba1f810ecbdb36dc74e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this vertex, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code>e</code> containing <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> as variables.  <a href="#a9a39b1e3276bba1f810ecbdb36dc74e5">More...</a><br /></td></tr>
-<tr class="separator:a9a39b1e3276bba1f810ecbdb36dc74e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07ad310a45925cd9087b4a53c448fdb0"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a07ad310a45925cd9087b4a53c448fdb0">AddCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;binding, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
-<tr class="memdesc:a07ad310a45925cd9087b4a53c448fdb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this vertex.  <a href="#a07ad310a45925cd9087b4a53c448fdb0">More...</a><br /></td></tr>
-<tr class="separator:a07ad310a45925cd9087b4a53c448fdb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9621dcbb589d9d91b7eb13b1ef08703f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a9621dcbb589d9d91b7eb13b1ef08703f">AddCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:a9621dcbb589d9d91b7eb13b1ef08703f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this vertex, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code>e</code> containing <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> as variables.  <a href="#a9621dcbb589d9d91b7eb13b1ef08703f">More...</a><br /></td></tr>
+<tr class="separator:a9621dcbb589d9d91b7eb13b1ef08703f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22ea795ef6d7d3151a5e16a310c8d66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab22ea795ef6d7d3151a5e16a310c8d66">AddCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;binding, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:ab22ea795ef6d7d3151a5e16a310c8d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this vertex.  <a href="#ab22ea795ef6d7d3151a5e16a310c8d66">More...</a><br /></td></tr>
+<tr class="separator:ab22ea795ef6d7d3151a5e16a310c8d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2df3239ac47b11ac8fab374f444240"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a4c2df3239ac47b11ac8fab374f444240">AddConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
 <tr class="memdesc:a4c2df3239ac47b11ac8fab374f444240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to this vertex.  <a href="#a4c2df3239ac47b11ac8fab374f444240">More...</a><br /></td></tr>
 <tr class="separator:a4c2df3239ac47b11ac8fab374f444240"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,6 +211,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc8440cef215ba725a47df2067e5f054"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#abc8440cef215ba725a47df2067e5f054">GetSolutionCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
 <tr class="memdesc:abc8440cef215ba725a47df2067e5f054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sum of the costs associated with this vertex in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>.  <a href="#abc8440cef215ba725a47df2067e5f054">More...</a><br /></td></tr>
 <tr class="separator:abc8440cef215ba725a47df2067e5f054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ce3bc9970a09efb0a86eb098dbf4f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ae0ce3bc9970a09efb0a86eb098dbf4f5">GetSolutionCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result, const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;cost) const</td></tr>
+<tr class="memdesc:ae0ce3bc9970a09efb0a86eb098dbf4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cost associated with the <code>cost</code> binding on this vertex in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>.  <a href="#ae0ce3bc9970a09efb0a86eb098dbf4f5">More...</a><br /></td></tr>
+<tr class="separator:ae0ce3bc9970a09efb0a86eb098dbf4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8711d41b9a7b76436bbb07bf5f19913e"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a8711d41b9a7b76436bbb07bf5f19913e">GetSolution</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
 <tr class="memdesc:a8711d41b9a7b76436bbb07bf5f19913e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the solution of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> in a MathematicalProgramResult.  <a href="#a8711d41b9a7b76436bbb07bf5f19913e">More...</a><br /></td></tr>
 <tr class="separator:a8711d41b9a7b76436bbb07bf5f19913e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -394,14 +397,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a9a39b1e3276bba1f810ecbdb36dc74e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a39b1e3276bba1f810ecbdb36dc74e5">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[1/2]</span></h2>
+<a id="a9621dcbb589d9d91b7eb13b1ef08703f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9621dcbb589d9d91b7eb13b1ef08703f">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; &gt; AddCost </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; AddCost </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;&#160;</td>
           <td class="paramname"><em>e</em>, </td>
@@ -421,15 +424,15 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds a cost to this vertex, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code>e</code> containing <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> as variables. </p>
-<p>For technical reasons relating to being able to "turn-off" the cost on inactive vertices, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
-</pre> <dl class="params"><dt>Parameters</dt><dd>
+<p>For technical reasons relating to being able to "turn-off" the cost on inactive vertices, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x).
+</pre><p> You must use <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#abc8440cef215ba725a47df2067e5f054" title="Returns the sum of the costs associated with this vertex in a solvers::MathematicalProgramResult.">GetSolutionCost()</a> to retrieve the cost of the solution, rather than evaluating the cost directly, in order to get consistent behavior when solving with the different GCS transcriptions. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Linear costs lead to negative costs if decision variables are not properly constrained. Users may want to check that the solution does not contain negative costs. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the pair &lt;ℓ, g(x)&gt;. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the added cost, g(x). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if e.GetVariables() is not a subset of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a>. </td></tr>
@@ -440,14 +443,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a07ad310a45925cd9087b4a53c448fdb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07ad310a45925cd9087b4a53c448fdb0">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[2/2]</span></h2>
+<a id="ab22ea795ef6d7d3151a5e16a310c8d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22ea795ef6d7d3151a5e16a310c8d66">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; &gt; AddCost </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a>&gt; AddCost </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>binding</em>, </td>
@@ -467,15 +470,15 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds a cost to this vertex. </p>
-<p><code>binding</code> must contain <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> as variables. For technical reasons relating to being able to "turn-off" the cost on inactive vertices, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x)
-</pre> <dl class="params"><dt>Parameters</dt><dd>
+<p><code>binding</code> must contain <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> as variables. For technical reasons relating to being able to "turn-off" the cost on inactive vertices, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x).
+</pre><p> You must use <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#abc8440cef215ba725a47df2067e5f054" title="Returns the sum of the costs associated with this vertex in a solvers::MathematicalProgramResult.">GetSolutionCost()</a> to retrieve the cost of the solution, rather than evaluating the cost directly, in order to get consistent behavior when solving with the different GCS transcriptions. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Linear costs lead to negative costs if decision variables are not properly constrained. Users may want to check that the solution does not contain negative costs. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>the pair &lt;ℓ, g(x)&gt;. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the added cost, g(x). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if binding.variables() is not a subset of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a>. </td></tr>
@@ -591,7 +594,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="abc8440cef215ba725a47df2067e5f054"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc8440cef215ba725a47df2067e5f054">&#9670;&nbsp;</a></span>GetSolutionCost()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abc8440cef215ba725a47df2067e5f054">&#9670;&nbsp;</a></span>GetSolutionCost() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -607,6 +610,42 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the sum of the costs associated with this vertex in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>. </p>
+
+</div>
+</div>
+<a id="ae0ce3bc9970a09efb0a86eb098dbf4f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ce3bc9970a09efb0a86eb098dbf4f5">&#9670;&nbsp;</a></span>GetSolutionCost() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> GetSolutionCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cost</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the cost associated with the <code>cost</code> binding on this vertex in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if cost is not associated with this vertex. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

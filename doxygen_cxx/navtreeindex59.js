@@ -1,5 +1,9 @@
 var NAVTREEINDEX59 =
 {
+"sap__solver_8h.html":[4,0,0,8,2,0,18],
+"sap__solver_8h.html#ad5c662e9b990b6ddead44c7db655f4f0":[4,0,0,8,2,0,18,0],
+"sap__solver__results_8h.html":[4,0,0,8,2,0,19],
+"sap__solver__results_8h.html#af459defac736ce951923c50f31eeca3b":[4,0,0,8,2,0,19,0],
 "sap__weld__constraint_8h.html":[4,0,0,8,2,0,20],
 "saturation_8h.html":[4,0,0,12,6,21],
 "scalar__conversion_8h.html":[4,0,0,12,3,0,3],
@@ -184,11 +188,11 @@ var NAVTREEINDEX59 =
 "sorted__triplet_8h.html":[4,0,0,4,2,56],
 "sos__basis__generator_8h.html":[4,0,0,11,59],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,59,0],
-"spanning__forest_8h.html":[4,0,0,8,13,9],
-"spanning__forest__inlines_8h.html":[4,0,0,8,13,10],
-"spanning__forest__loop__constraint_8h.html":[4,0,0,8,13,11],
-"spanning__forest__mobod_8h.html":[4,0,0,8,13,12],
-"spanning__forest__tree_8h.html":[4,0,0,8,13,13],
+"spanning__forest_8h.html":[4,0,0,8,13,8],
+"spanning__forest__inlines_8h.html":[4,0,0,8,13,9],
+"spanning__forest__loop__constraint_8h.html":[4,0,0,8,13,10],
+"spanning__forest__mobod_8h.html":[4,0,0,8,13,11],
+"spanning__forest__tree_8h.html":[4,0,0,8,13,12],
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,60],
 "sparse__linear__operator_8h.html":[4,0,0,8,2,18],
 "sparse__linear__operator_8h.html#ab3a29b7d9714447621ce21836bca9b15":[4,0,0,8,2,18,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX59 =
 "standard__operations_8h.html#a635caead0200a1eb1dc6ec8331d84ddb":[4,0,0,1,0,0,2,15],
 "standard__operations_8h.html#a6832a442af294f38835cd9bd4ae7dde4":[4,0,0,1,0,0,2,21],
 "standard__operations_8h.html#a6fe3629863ab0bd4025541189d15e809":[4,0,0,1,0,0,2,12],
-"standard__operations_8h.html#a7272b7754954f906fa0dd83e8b4cc5a5":[4,0,0,1,0,0,2,67],
-"standard__operations_8h.html#a72ad9a819f04c405db5c46af865bc922":[4,0,0,1,0,0,2,37],
-"standard__operations_8h.html#a75b6b479755021d36308792d100b03ca":[4,0,0,1,0,0,2,71],
-"standard__operations_8h.html#a7632df8e55319e7b981090fb426dcbed":[4,0,0,1,0,0,2,1],
-"standard__operations_8h.html#a792771a6da56e0b5531b542430883d34":[4,0,0,1,0,0,2,32]
+"standard__operations_8h.html#a7272b7754954f906fa0dd83e8b4cc5a5":[4,0,0,1,0,0,2,67]
 };

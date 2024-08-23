@@ -705,7 +705,7 @@ representation.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.BodyIndex">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">BodyIndex</span></span><a class="headerlink" href="#pydrake.multibody.tree.BodyIndex" title="Permalink to this definition"></a></dt>
 <dd><p>Type used to identify RigidBodies (a.k.a. Links) by index in a
-multibody system. Interchangeable with LinkIndex.</p>
+multibody plant. Interchangeable with LinkIndex.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.BodyIndex.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.BodyIndex.__init__" title="Permalink to this definition"></a></dt>
@@ -1570,8 +1570,8 @@ non-conservative forces.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.ForceElementIndex">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">ForceElementIndex</span></span><a class="headerlink" href="#pydrake.multibody.tree.ForceElementIndex" title="Permalink to this definition"></a></dt>
-<dd><p>Type used to identify force elements by index within a multibody tree
-system.</p>
+<dd><p>Type used to identify force elements by index within a multibody
+plant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.ForceElementIndex.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ForceElementIndex.__init__" title="Permalink to this definition"></a></dt>
@@ -3508,7 +3508,7 @@ name will be empty (the scope name and the element name).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.FrameIndex">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">FrameIndex</span></span><a class="headerlink" href="#pydrake.multibody.tree.FrameIndex" title="Permalink to this definition"></a></dt>
-<dd><p>Type used to identify frames by index in a multibody tree system.</p>
+<dd><p>Type used to identify frames by index in a multibody plant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.FrameIndex.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.FrameIndex.__init__" title="Permalink to this definition"></a></dt>
@@ -6067,8 +6067,7 @@ See reflected_inertia.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuatorIndex">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">JointActuatorIndex</span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuatorIndex" title="Permalink to this definition"></a></dt>
-<dd><p>Type used to identify actuators by index within a multibody tree
-system.</p>
+<dd><p>Type used to identify actuators by index within a multibody plant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuatorIndex.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.JointActuatorIndex.__init__" title="Permalink to this definition"></a></dt>
@@ -6098,7 +6097,7 @@ that doesn’t throw an exception in Debug builds.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointIndex">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">JointIndex</span></span><a class="headerlink" href="#pydrake.multibody.tree.JointIndex" title="Permalink to this definition"></a></dt>
-<dd><p>Type used to identify joints by index within a multibody tree system.</p>
+<dd><p>Type used to identify joints by index within a multibody plant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointIndex.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.JointIndex.__init__" title="Permalink to this definition"></a></dt>
@@ -8106,8 +8105,8 @@ body frame B.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.ModelInstanceIndex">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">ModelInstanceIndex</span></span><a class="headerlink" href="#pydrake.multibody.tree.ModelInstanceIndex" title="Permalink to this definition"></a></dt>
-<dd><p>Type used to identify model instances by index within a multibody tree
-system.</p>
+<dd><p>Type used to identify model instances by index within a multibody
+plant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.ModelInstanceIndex.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.ModelInstanceIndex.__init__" title="Permalink to this definition"></a></dt>
@@ -8137,7 +8136,7 @@ that doesn’t throw an exception in Debug builds.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.MultibodyConstraintId">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">MultibodyConstraintId</span></span><a class="headerlink" href="#pydrake.multibody.tree.MultibodyConstraintId" title="Permalink to this definition"></a></dt>
-<dd><p>Type used to identify constraint by id within a multibody system.</p>
+<dd><p>Type used to identify constraint by id within a multibody plant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.MultibodyConstraintId.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.MultibodyConstraintId.__init__" title="Permalink to this definition"></a></dt>
