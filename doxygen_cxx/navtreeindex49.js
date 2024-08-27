@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"detect__zero__simplex_8h.html":[4,0,0,4,2,13],
 "diagnostic__policy_8h.html":[4,0,0,1,15],
 "diagnostic__policy__test__base_8h.html":[4,0,0,1,4,0],
 "diagram_8h.html":[4,0,0,12,3,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "eigen__matrix__compare_8h.html":[4,0,0,1,4,1],
 "eigen__matrix__compare_8h.html#a487584d4d770172ae2f665bde7462de2":[4,0,0,1,4,1,0],
 "eigen__matrix__compare_8h.html#a487584d4d770172ae2f665bde7462de2a99c483e1d11b1a279a2a1a3960528487":[4,0,0,1,4,1,0,1],
-"eigen__matrix__compare_8h.html#a487584d4d770172ae2f665bde7462de2adc4d53aa0d117d8b189b36d161af4e96":[4,0,0,1,4,1,0,0],
-"eigen__matrix__compare_8h.html#a886235c479e3d60c4d088505191293bc":[4,0,0,1,4,1,1]
+"eigen__matrix__compare_8h.html#a487584d4d770172ae2f665bde7462de2adc4d53aa0d117d8b189b36d161af4e96":[4,0,0,1,4,1,0,0]
 };

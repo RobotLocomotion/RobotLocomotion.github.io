@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a359271510bcf12db604f2e7572c45839":[3,0,0,17,6,40],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a380286fadf3459a3ad22b9704ce134fa":[3,0,0,17,6,33],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a39001029f6f2e13a8890f233254c4709":[3,0,0,17,6,48],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a45001b70f1a92e1d01778b69bb61adf3":[3,0,0,17,6,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aaaead712fe7dc29c1799e7d8f77d1cfb":[3,0,2,31,10],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab128d4795c1161bafae531dd5c37e4f1":[3,0,2,31,12],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[3,0,2,31,1],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ac6b633da6524d9de1afa712a666e1c39":[3,0,2,31,8],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad20897c5c8bd47f5d4005989bead0e55":[3,0,2,31,14]
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ac6b633da6524d9de1afa712a666e1c39":[3,0,2,31,8]
 };

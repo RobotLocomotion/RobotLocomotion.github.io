@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad20897c5c8bd47f5d4005989bead0e55":[3,0,2,31,14],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aee364209a9c4b4b23c7cb32c9d0119b6":[3,0,2,31,2],
 "classvtk_command.html":[3,0,3],
 "cloth__spring__model_8h.html":[4,0,0,3,10,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "detail__urdf__geometry_8h.html":[4,0,0,8,9,20],
 "detail__urdf__parser_8h.html":[4,0,0,8,9,21],
 "detail__usd__geometry_8h.html":[4,0,0,8,9,22],
-"detail__usd__parser_8h.html":[4,0,0,8,9,23],
-"detect__zero__simplex_8h.html":[4,0,0,4,2,13]
+"detail__usd__parser_8h.html":[4,0,0,8,9,23]
 };

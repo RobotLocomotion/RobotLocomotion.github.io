@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"symbolic_2polynomial_8h.html#a1a0eab276a88883d8e2607630cb93bc5":[4,0,0,1,3,11,15],
 "symbolic_2polynomial_8h.html#a1aa3f21ab39b7fb01be90ed9255df5f9":[4,0,0,1,3,11,33],
 "symbolic_2polynomial_8h.html#a1b2eee496b130c9d1acbff60e3fd3eb1":[4,0,0,1,3,11,5],
 "symbolic_2polynomial_8h.html#a2508a6626d1a63a77670c760e4a2241e":[4,0,0,1,3,11,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX66 =
 "velocity__newmark__scheme_8h.html#af8e24ea39808c10ac1689f4a6704ece7":[4,0,0,8,3,29,0],
 "visibility__graph_8h.html":[4,0,0,10,20],
 "visibility__graph_8h.html#ac8bff5baf7217216340dc19e591cca74":[4,0,0,10,20,0],
-"visualization__config_8h.html":[4,0,0,13,5],
-"visualization__config__functions_8h.html":[4,0,0,13,6]
+"visualization__config_8h.html":[4,0,0,13,5]
 };

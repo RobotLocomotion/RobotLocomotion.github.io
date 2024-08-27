@@ -299,6 +299,7 @@ var searchData=
   ['aggregatequadraticandlinearcosts',['AggregateQuadraticAndLinearCosts',['../namespacedrake_1_1solvers.html#afd9e7d960a7e287ea283ffa9aee89d41',1,'drake::solvers']]],
   ['algorithmname',['AlgorithmName',['../classdrake_1_1solvers_1_1_nlopt_solver.html#a0546ca719971d5defbb174ec5c7ee528',1,'drake::solvers::NloptSolver']]],
   ['algorithms',['Algorithms',['../group__algorithms.html',1,'']]],
+  ['alignandconcatenate',['AlignAndConcatenate',['../classdrake_1_1trajectories_1_1_composite_trajectory.html#ad232d70c6d50a859d5081d9d093b90aa',1,'drake::trajectories::CompositeTrajectory']]],
   ['all',['all',['../namespacedrake.html#adcc2d90ce6051e150effadd72fac548c',1,'drake']]],
   ['all_2eh',['all.h',['../all_8h.html',1,'']]],
   ['all_5finput_5fports_5fticket',['all_input_ports_ticket',['../classdrake_1_1systems_1_1_system_base.html#a6d7c526102c09a75195c57ebf5f54a11',1,'drake::systems::SystemBase']]],

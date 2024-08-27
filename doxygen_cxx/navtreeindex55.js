@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"linear__distance__and__interpolation__provider_8h.html":[4,0,0,10,12],
 "linear__model__predictive__controller_8h.html":[4,0,0,12,1,6],
 "linear__operator_8h.html":[4,0,0,8,2,11],
 "linear__operator_8h.html#a987c60ae38cccb949747e42892b482bc":[4,0,0,8,2,11,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "multibody__plant__config_8h.html":[4,0,0,8,10,30],
 "multibody__plant__config__functions_8h.html":[4,0,0,8,10,31],
 "multibody__plant__config__functions_8h.html#a22ed1c510eb488cbf334e6203dfd3de8":[4,0,0,8,10,31,1],
-"multibody__plant__config__functions_8h.html#a51df2ec1bd2eb651cb428c5a950481db":[4,0,0,8,10,31,2],
-"multibody__plant__config__functions_8h.html#a7e468aa35ef6a84196ac20a13065ca0c":[4,0,0,8,10,31,0]
+"multibody__plant__config__functions_8h.html#a51df2ec1bd2eb651cb428c5a950481db":[4,0,0,8,10,31,2]
 };

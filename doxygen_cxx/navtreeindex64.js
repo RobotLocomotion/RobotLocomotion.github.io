@@ -1,5 +1,6 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1solvers_1_1_csdp_solver_details.html":[3,0,0,13,13],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd":[3,0,0,13,13,0],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,13,13,1],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb":[3,0,0,13,13,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a3c3a47e93d564d08b506d18291d5772a":[3,0,0,15,8,4,14],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a43acbf71f174bb214744379ae39d6ec5":[3,0,0,15,8,4,10],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a447b42f56ec0921186385e6863a6548d":[3,0,0,15,8,4,24],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a516e6b1994145bd1efc9ccb21bc15fdc":[3,0,0,15,8,4,22],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a51a5f94eea0e5ea757caaddb41c3eb79":[3,0,0,15,8,4,25]
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a516e6b1994145bd1efc9ccb21bc15fdc":[3,0,0,15,8,4,22]
 };

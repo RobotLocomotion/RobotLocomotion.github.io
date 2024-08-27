@@ -852,7 +852,24 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a composite trajectory from a list of Trajectories.</p>
 <dl class="simple">
+<dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].get()</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>.</p>
+</dd>
 <dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i+1].start_time()</span> <span class="pre">==</span> <span class="pre">segments[i].end_time()</span></code>.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].rows()</span> <span class="pre">==</span> <span class="pre">segments[0].rows()</span></code> and
+segments[i].cols() == segments[0].cols()`.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.CompositeTrajectory.AlignAndConcatenate">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AlignAndConcatenate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory" title="pydrake.trajectories.CompositeTrajectory"><span class="pre">pydrake.trajectories.CompositeTrajectory</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory.AlignAndConcatenate" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a composite trajectory from a list of trajectories whose
+start and end times may not coincide, by translating their start and
+end times.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].get()</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].rows()</span> <span class="pre">==</span> <span class="pre">segments[0].rows()</span></code> and
 segments[i].cols() == segments[0].cols()`.</p>
@@ -888,7 +905,24 @@ preferred if all of the segments are PiecewisePolynomial.</p>
 <span id="pydrake.trajectories.CompositeTrajectory_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory_" title="pydrake.trajectories.CompositeTrajectory_"><span class="pre">pydrake.trajectories.CompositeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a composite trajectory from a list of Trajectories.</p>
 <dl class="simple">
+<dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].get()</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>.</p>
+</dd>
 <dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i+1].start_time()</span> <span class="pre">==</span> <span class="pre">segments[i].end_time()</span></code>.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].rows()</span> <span class="pre">==</span> <span class="pre">segments[0].rows()</span></code> and
+segments[i].cols() == segments[0].cols()`.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.CompositeTrajectory_-AutoDiffXd-.AlignAndConcatenate">
+<span id="pydrake.trajectories.CompositeTrajectory_[AutoDiffXd].AlignAndConcatenate"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AlignAndConcatenate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory_" title="pydrake.trajectories.CompositeTrajectory_"><span class="pre">pydrake.trajectories.CompositeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory_-AutoDiffXd-.AlignAndConcatenate" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a composite trajectory from a list of trajectories whose
+start and end times may not coincide, by translating their start and
+end times.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].get()</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].rows()</span> <span class="pre">==</span> <span class="pre">segments[0].rows()</span></code> and
 segments[i].cols() == segments[0].cols()`.</p>
@@ -918,7 +952,24 @@ preferred if all of the segments are PiecewisePolynomial.</p>
 <span id="pydrake.trajectories.CompositeTrajectory_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory_" title="pydrake.trajectories.CompositeTrajectory_"><span class="pre">pydrake.trajectories.CompositeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a composite trajectory from a list of Trajectories.</p>
 <dl class="simple">
+<dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].get()</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>.</p>
+</dd>
 <dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i+1].start_time()</span> <span class="pre">==</span> <span class="pre">segments[i].end_time()</span></code>.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].rows()</span> <span class="pre">==</span> <span class="pre">segments[0].rows()</span></code> and
+segments[i].cols() == segments[0].cols()`.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.CompositeTrajectory_-Expression-.AlignAndConcatenate">
+<span id="pydrake.trajectories.CompositeTrajectory_[Expression].AlignAndConcatenate"></span><em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AlignAndConcatenate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">segments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.CompositeTrajectory_" title="pydrake.trajectories.CompositeTrajectory_"><span class="pre">pydrake.trajectories.CompositeTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.CompositeTrajectory_-Expression-.AlignAndConcatenate" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a composite trajectory from a list of trajectories whose
+start and end times may not coincide, by translating their start and
+end times.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].get()</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>∀i, <code class="docutils literal notranslate"><span class="pre">segments[i].rows()</span> <span class="pre">==</span> <span class="pre">segments[0].rows()</span></code> and
 segments[i].cols() == segments[0].cols()`.</p>
