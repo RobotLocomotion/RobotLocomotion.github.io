@@ -1,5 +1,9 @@
 var NAVTREEINDEX23 =
 {
+"classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#a8c4242b23451be08ae3872810d95cad0":[1,2,8,0,6],
+"classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#a9cbbf68bf3e00b24aec5c35e438366be":[1,2,8,0,9],
+"classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#aa0b0db0a24d3dc95a310482525d690f7":[1,2,8,0,8],
+"classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#aa4646132383b98e67c18eb20a55e0fc0":[1,2,8,0,5],
 "classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#ab679449f78cec66d74afbf37ddfcf7f6":[1,2,8,0,3],
 "classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#acf2685fd77ab4746970c94ed45ee0293":[1,2,8,0,0],
 "classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#ad6a32da3bd81bca8c548521f88e179c4":[1,2,8,0,7],
@@ -245,9 +249,5 @@ var NAVTREEINDEX23 =
 "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#a87e03a46bdc886f3f8bb694ee93f6d5c":[3,0,0,10,10,4],
 "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#aa8a95dfcc825536f039b08f1b12c9f0a":[3,0,0,10,10,9],
 "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#abc8a90327e579ad6a2b52df3e5656a8b":[3,0,0,10,10,5],
-"classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#ac4ff1ae758b28437ec294252e0fff250":[3,0,0,10,10,8],
-"classdrake_1_1planning_1_1_robot_clearance.html":[1,4,2,2,5],
-"classdrake_1_1planning_1_1_robot_clearance.html#a06281900a335995918a2f8da41e8b3d5":[1,4,2,2,5,2],
-"classdrake_1_1planning_1_1_robot_clearance.html#a0cff3fa19ca93e4b0eee8b906fc5a3c8":[1,4,2,2,5,14],
-"classdrake_1_1planning_1_1_robot_clearance.html#a13139e0691600bda976989de532df649":[1,4,2,2,5,11]
+"classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#ac4ff1ae758b28437ec294252e0fff250":[3,0,0,10,10,8]
 };

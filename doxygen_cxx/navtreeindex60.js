@@ -1,5 +1,9 @@
 var NAVTREEINDEX60 =
 {
+"standard__operations_8h.html#a62a8945131bf53367de9a13dc7112db3":[4,0,0,1,0,0,2,27],
+"standard__operations_8h.html#a635caead0200a1eb1dc6ec8331d84ddb":[4,0,0,1,0,0,2,15],
+"standard__operations_8h.html#a6832a442af294f38835cd9bd4ae7dde4":[4,0,0,1,0,0,2,21],
+"standard__operations_8h.html#a6fe3629863ab0bd4025541189d15e809":[4,0,0,1,0,0,2,12],
 "standard__operations_8h.html#a7272b7754954f906fa0dd83e8b4cc5a5":[4,0,0,1,0,0,2,67],
 "standard__operations_8h.html#a72ad9a819f04c405db5c46af865bc922":[4,0,0,1,0,0,2,37],
 "standard__operations_8h.html#a75b6b479755021d36308792d100b03ca":[4,0,0,1,0,0,2,71],
@@ -245,9 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html":[3,0,0,3,15,1,0],
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html#a67c8aa38df978eece62132ee8ab7cf28":[3,0,0,3,15,1,0,2],
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html#ad37917c293eb1bd5093576d92f1cbec0":[3,0,0,3,15,1,0,1],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html#ad9915843c2572471b7f550f257d0546a":[3,0,0,3,15,1,0,0],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html":[3,0,0,3,15,2],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a0e97e2acb651ea12e16c84daec5ec89e":[3,0,0,3,15,2,16],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a0f29fed6311156aa9a7efefa57dfae06":[3,0,0,3,15,2,12],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a148f4adaece02fe36243c84bafd8d467":[3,0,0,3,15,2,3]
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html#ad9915843c2572471b7f550f257d0546a":[3,0,0,3,15,1,0,0]
 };

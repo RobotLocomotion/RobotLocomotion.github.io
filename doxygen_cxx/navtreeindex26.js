@@ -1,5 +1,9 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1schema_1_1_uniform_vector.html#ad196407ab2a1c2bdef6c230515b104a8":[3,0,0,12,10,6],
+"classdrake_1_1schema_1_1_uniform_vector.html#ad80934fe58016c8c45ace203e14bdc43":[3,0,0,12,10,10],
+"classdrake_1_1schema_1_1_uniform_vector.html#ae555cbd7ab2e1077d50cc922f572e4ca":[3,0,0,12,10,0],
+"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html":[3,0,0,13,1],
 "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a0eb00b367e40489c4c79184e172d9a61":[3,0,0,13,1,9],
 "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a1c89886a59dfaa4862b55712c37b876b":[3,0,0,13,1,11],
 "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a2a22a90654161042250f15296cf33643":[3,0,0,13,1,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1solvers_1_1_gurobi_solver.html#abf6160a85e2371861c1736ab163a9b8f":[3,0,0,13,22,10],
 "classdrake_1_1solvers_1_1_gurobi_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,13,22,18],
 "classdrake_1_1solvers_1_1_gurobi_solver.html#af3ba2184b240f3d310a4931adf2842f5":[3,0,0,13,22,5],
-"classdrake_1_1solvers_1_1_gurobi_solver.html#afeb8f0b667c442e9759541d3f4c17860":[3,0,0,13,22,8],
-"classdrake_1_1solvers_1_1_ipopt_solver.html":[3,0,0,13,24],
-"classdrake_1_1solvers_1_1_ipopt_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,13,24,12],
-"classdrake_1_1solvers_1_1_ipopt_solver.html#a2319d2f85bfff59593be0f28d5e893a6":[3,0,0,13,24,0],
-"classdrake_1_1solvers_1_1_ipopt_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,13,24,6]
+"classdrake_1_1solvers_1_1_gurobi_solver.html#afeb8f0b667c442e9759541d3f4c17860":[3,0,0,13,22,8]
 };

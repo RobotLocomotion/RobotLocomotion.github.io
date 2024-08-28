@@ -1,5 +1,9 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aa04be32847a0a206b2ae988625279139":[1,4,2,1,4,2],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aab1f0d3cbfc0204c739cdd549d980d2b":[1,4,2,1,4,24],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ab13f393292d6592dc959f55625fe0f5d":[1,4,2,1,4,7],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[1,4,2,1,4,22],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ada7b35ee8b161bd6ccc2709ccf3c1022":[1,4,2,1,4,19],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ae3f60fe9552c90c9a3986f023ba18a56":[1,4,2,1,4,6],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aeb432a55ef7765459155c69a539d8658":[1,4,2,1,4,26],
@@ -245,9 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1schema_1_1_uniform_vector.html#a9331a33bd1ab934693ecdb1c096ee385":[3,0,0,12,10,11],
 "classdrake_1_1schema_1_1_uniform_vector.html#a9adf79cf3275f10c28cabad080225131":[3,0,0,12,10,3],
 "classdrake_1_1schema_1_1_uniform_vector.html#aad4b968e35b277b170084310566c8b8b":[3,0,0,12,10,8],
-"classdrake_1_1schema_1_1_uniform_vector.html#abc76c95f878dba8af54e786430d7f9f9":[3,0,0,12,10,12],
-"classdrake_1_1schema_1_1_uniform_vector.html#ad196407ab2a1c2bdef6c230515b104a8":[3,0,0,12,10,6],
-"classdrake_1_1schema_1_1_uniform_vector.html#ad80934fe58016c8c45ace203e14bdc43":[3,0,0,12,10,10],
-"classdrake_1_1schema_1_1_uniform_vector.html#ae555cbd7ab2e1077d50cc922f572e4ca":[3,0,0,12,10,0],
-"classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html":[3,0,0,13,1]
+"classdrake_1_1schema_1_1_uniform_vector.html#abc76c95f878dba8af54e786430d7f9f9":[3,0,0,12,10,12]
 };

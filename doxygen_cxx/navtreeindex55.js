@@ -1,5 +1,9 @@
 var NAVTREEINDEX55 =
 {
+"linear__constitutive__model_8h.html":[4,0,0,8,3,19],
+"linear__constitutive__model__data_8h.html":[4,0,0,8,3,20],
+"linear__corotated__model_8h.html":[4,0,0,8,3,21],
+"linear__corotated__model__data_8h.html":[4,0,0,8,3,22],
 "linear__distance__and__interpolation__provider_8h.html":[4,0,0,10,12],
 "linear__model__predictive__controller_8h.html":[4,0,0,12,1,6],
 "linear__operator_8h.html":[4,0,0,8,2,11],
@@ -245,9 +249,5 @@ var NAVTREEINDEX55 =
 "multibody__plant_8h.html#aa1d02176591187cb83e77e9ff779d679ac9a6ebef7049abc9802a9d0705a2e976":[4,0,0,8,10,29,5,2],
 "multibody__plant_8h.html#aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90":[4,0,0,8,10,29,5,0],
 "multibody__plant_8h.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec":[4,0,0,8,10,29,5,1],
-"multibody__plant_8h.html#adde8c1ff40a3ea0eb1c7bcf6fa5721df":[4,0,0,8,10,29,8],
-"multibody__plant__config_8h.html":[4,0,0,8,10,30],
-"multibody__plant__config__functions_8h.html":[4,0,0,8,10,31],
-"multibody__plant__config__functions_8h.html#a22ed1c510eb488cbf334e6203dfd3de8":[4,0,0,8,10,31,1],
-"multibody__plant__config__functions_8h.html#a51df2ec1bd2eb651cb428c5a950481db":[4,0,0,8,10,31,2]
+"multibody__plant_8h.html#adde8c1ff40a3ea0eb1c7bcf6fa5721df":[4,0,0,8,10,29,8]
 };

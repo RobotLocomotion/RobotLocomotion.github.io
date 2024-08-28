@@ -12649,7 +12649,7 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -12661,11 +12661,11 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.floating_positions_start">
 <span class="sig-name descname"><span class="pre">floating_positions_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.floating_positions_start" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of this RigidBody’s first generalized position in the vector
-q of generalized position coordinates for a MultibodyPlant model.
-Positions q for this RigidBody are then contiguous starting at this
-index. When a floating RigidBody is modeled with quaternion
+<dd><p>(Advanced) For floating base bodies (see is_floating()) this method
+returns the index of this RigidBody’s first generalized position in
+the vector q of generalized position coordinates for a MultibodyPlant
+model. Positions q for this RigidBody are then contiguous starting at
+this index. When a floating RigidBody is modeled with quaternion
 coordinates (see has_quaternion_dofs()), the four consecutive entries
 in the state starting at this index correspond to the quaternion that
 parametrizes this RigidBody’s orientation.</p>
@@ -12675,7 +12675,7 @@ parametrizes this RigidBody’s orientation.</p>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -12687,17 +12687,18 @@ parametrizes this RigidBody’s orientation.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.floating_velocities_start_in_v">
 <span class="sig-name descname"><span class="pre">floating_velocities_start_in_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.floating_velocities_start_in_v" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of this RigidBody’s first generalized velocity in the vector
-v of generalized velocities for a MultibodyPlant model. Velocities v
-for this RigidBody are then contiguous starting at this index.</p>
+<dd><p>(Advanced) For floating base bodies (see is_floating()) this method
+returns the index of this RigidBody’s first generalized velocity in
+the vector v of generalized velocities for a MultibodyPlant model.
+Velocities v for this RigidBody are then contiguous starting at this
+index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -12718,7 +12719,7 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -12756,9 +12757,9 @@ applied at body B’s origin Bo and expressed in world frame W.</p>
 <span class="sig-name descname"><span class="pre">has_quaternion_dofs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.has_quaternion_dofs" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this body’s generalized position coordinates q
 include a quaternion, which occupies the first four elements of q.
-Note that this does not imply that the body is floating since it may
-have fewer than 6 dofs or its inboard body could be something other
-than World.</p>
+Note that this does not imply that the body is floating base body
+since it may have fewer than 6 dofs or its inboard body could be
+something other than World.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
@@ -12783,7 +12784,7 @@ Mobilizer and the parent body of this body’s associated 6-dof joint is
 <code class="docutils literal notranslate"><span class="pre">world</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A floating body is not necessarily modeled with a quaternion
+<p>A floating base body is not necessarily modeled with a quaternion
 mobilizer, see has_quaternion_dofs(). Alternative options include
 a roll-pitch-yaw (rpy) parametrization of rotations, see
 RpyFloatingMobilizer.</p>
@@ -12803,7 +12804,7 @@ RpyFloatingMobilizer.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.is_locked">
 <span class="sig-name descname"><span class="pre">is_locked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.is_locked" title="Permalink to this definition"></a></dt>
 <dd><p>Determines whether this RigidBody is currently locked to its inboard
-(parent) RigidBody. This is not limited to floating bodies but
+(parent) RigidBody. This is not limited to floating base bodies but
 generally Joint::is_locked() is preferable otherwise.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -12815,11 +12816,11 @@ generally Joint::is_locked() is preferable otherwise.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.Lock">
 <span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.Lock" title="Permalink to this definition"></a></dt>
-<dd><p>For a floating RigidBody, lock its inboard joint. Its generalized
+<dd><p>For a floating base RigidBody, lock its inboard joint. Its generalized
 velocities will be 0 until it is unlocked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating base body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -12931,10 +12932,10 @@ G_Bo_B (B’s unit inertia about Bo expressed in B).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.Unlock">
 <span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.Unlock" title="Permalink to this definition"></a></dt>
-<dd><p>For a floating RigidBody, unlock its inboard joint.</p>
+<dd><p>For a floating base RigidBody, unlock its inboard joint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating base body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -13239,7 +13240,7 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -13251,11 +13252,11 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.floating_positions_start">
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].floating_positions_start"></span><span class="sig-name descname"><span class="pre">floating_positions_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.floating_positions_start" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of this RigidBody’s first generalized position in the vector
-q of generalized position coordinates for a MultibodyPlant model.
-Positions q for this RigidBody are then contiguous starting at this
-index. When a floating RigidBody is modeled with quaternion
+<dd><p>(Advanced) For floating base bodies (see is_floating()) this method
+returns the index of this RigidBody’s first generalized position in
+the vector q of generalized position coordinates for a MultibodyPlant
+model. Positions q for this RigidBody are then contiguous starting at
+this index. When a floating RigidBody is modeled with quaternion
 coordinates (see has_quaternion_dofs()), the four consecutive entries
 in the state starting at this index correspond to the quaternion that
 parametrizes this RigidBody’s orientation.</p>
@@ -13265,7 +13266,7 @@ parametrizes this RigidBody’s orientation.</p>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -13277,17 +13278,18 @@ parametrizes this RigidBody’s orientation.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.floating_velocities_start_in_v">
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].floating_velocities_start_in_v"></span><span class="sig-name descname"><span class="pre">floating_velocities_start_in_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.floating_velocities_start_in_v" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of this RigidBody’s first generalized velocity in the vector
-v of generalized velocities for a MultibodyPlant model. Velocities v
-for this RigidBody are then contiguous starting at this index.</p>
+<dd><p>(Advanced) For floating base bodies (see is_floating()) this method
+returns the index of this RigidBody’s first generalized velocity in
+the vector v of generalized velocities for a MultibodyPlant model.
+Velocities v for this RigidBody are then contiguous starting at this
+index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -13308,7 +13310,7 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -13346,9 +13348,9 @@ applied at body B’s origin Bo and expressed in world frame W.</p>
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].has_quaternion_dofs"></span><span class="sig-name descname"><span class="pre">has_quaternion_dofs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.has_quaternion_dofs" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this body’s generalized position coordinates q
 include a quaternion, which occupies the first four elements of q.
-Note that this does not imply that the body is floating since it may
-have fewer than 6 dofs or its inboard body could be something other
-than World.</p>
+Note that this does not imply that the body is floating base body
+since it may have fewer than 6 dofs or its inboard body could be
+something other than World.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
@@ -13373,7 +13375,7 @@ Mobilizer and the parent body of this body’s associated 6-dof joint is
 <code class="docutils literal notranslate"><span class="pre">world</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A floating body is not necessarily modeled with a quaternion
+<p>A floating base body is not necessarily modeled with a quaternion
 mobilizer, see has_quaternion_dofs(). Alternative options include
 a roll-pitch-yaw (rpy) parametrization of rotations, see
 RpyFloatingMobilizer.</p>
@@ -13393,7 +13395,7 @@ RpyFloatingMobilizer.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.is_locked">
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].is_locked"></span><span class="sig-name descname"><span class="pre">is_locked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.is_locked" title="Permalink to this definition"></a></dt>
 <dd><p>Determines whether this RigidBody is currently locked to its inboard
-(parent) RigidBody. This is not limited to floating bodies but
+(parent) RigidBody. This is not limited to floating base bodies but
 generally Joint::is_locked() is preferable otherwise.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -13405,11 +13407,11 @@ generally Joint::is_locked() is preferable otherwise.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.Lock">
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].Lock"></span><span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.Lock" title="Permalink to this definition"></a></dt>
-<dd><p>For a floating RigidBody, lock its inboard joint. Its generalized
+<dd><p>For a floating base RigidBody, lock its inboard joint. Its generalized
 velocities will be 0 until it is unlocked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating base body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -13521,10 +13523,10 @@ G_Bo_B (B’s unit inertia about Bo expressed in B).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.Unlock">
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].Unlock"></span><span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.Unlock" title="Permalink to this definition"></a></dt>
-<dd><p>For a floating RigidBody, unlock its inboard joint.</p>
+<dd><p>For a floating base RigidBody, unlock its inboard joint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating base body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -13823,7 +13825,7 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -13835,11 +13837,11 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-Expression-.floating_positions_start">
 <span id="pydrake.multibody.tree.RigidBody_[Expression].floating_positions_start"></span><span class="sig-name descname"><span class="pre">floating_positions_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.floating_positions_start" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of this RigidBody’s first generalized position in the vector
-q of generalized position coordinates for a MultibodyPlant model.
-Positions q for this RigidBody are then contiguous starting at this
-index. When a floating RigidBody is modeled with quaternion
+<dd><p>(Advanced) For floating base bodies (see is_floating()) this method
+returns the index of this RigidBody’s first generalized position in
+the vector q of generalized position coordinates for a MultibodyPlant
+model. Positions q for this RigidBody are then contiguous starting at
+this index. When a floating RigidBody is modeled with quaternion
 coordinates (see has_quaternion_dofs()), the four consecutive entries
 in the state starting at this index correspond to the quaternion that
 parametrizes this RigidBody’s orientation.</p>
@@ -13849,7 +13851,7 @@ parametrizes this RigidBody’s orientation.</p>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -13861,17 +13863,18 @@ parametrizes this RigidBody’s orientation.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-Expression-.floating_velocities_start_in_v">
 <span id="pydrake.multibody.tree.RigidBody_[Expression].floating_velocities_start_in_v"></span><span class="sig-name descname"><span class="pre">floating_velocities_start_in_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.floating_velocities_start_in_v" title="Permalink to this definition"></a></dt>
-<dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
-the index of this RigidBody’s first generalized velocity in the vector
-v of generalized velocities for a MultibodyPlant model. Velocities v
-for this RigidBody are then contiguous starting at this index.</p>
+<dd><p>(Advanced) For floating base bodies (see is_floating()) this method
+returns the index of this RigidBody’s first generalized velocity in
+the vector v of generalized velocities for a MultibodyPlant model.
+Velocities v for this RigidBody are then contiguous starting at this
+index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -13892,7 +13895,7 @@ identify the <code class="docutils literal notranslate"><span class="pre">k`th</
 </dd>
 </dl>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>this is a floating body</p>
+<dt>Precondition:</dt><dd><p>this is a floating base body</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -13930,9 +13933,9 @@ applied at body B’s origin Bo and expressed in world frame W.</p>
 <span id="pydrake.multibody.tree.RigidBody_[Expression].has_quaternion_dofs"></span><span class="sig-name descname"><span class="pre">has_quaternion_dofs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.has_quaternion_dofs" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, this body’s generalized position coordinates q
 include a quaternion, which occupies the first four elements of q.
-Note that this does not imply that the body is floating since it may
-have fewer than 6 dofs or its inboard body could be something other
-than World.</p>
+Note that this does not imply that the body is floating base body
+since it may have fewer than 6 dofs or its inboard body could be
+something other than World.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong> – </p>
@@ -13957,7 +13960,7 @@ Mobilizer and the parent body of this body’s associated 6-dof joint is
 <code class="docutils literal notranslate"><span class="pre">world</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A floating body is not necessarily modeled with a quaternion
+<p>A floating base body is not necessarily modeled with a quaternion
 mobilizer, see has_quaternion_dofs(). Alternative options include
 a roll-pitch-yaw (rpy) parametrization of rotations, see
 RpyFloatingMobilizer.</p>
@@ -13977,7 +13980,7 @@ RpyFloatingMobilizer.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-Expression-.is_locked">
 <span id="pydrake.multibody.tree.RigidBody_[Expression].is_locked"></span><span class="sig-name descname"><span class="pre">is_locked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.is_locked" title="Permalink to this definition"></a></dt>
 <dd><p>Determines whether this RigidBody is currently locked to its inboard
-(parent) RigidBody. This is not limited to floating bodies but
+(parent) RigidBody. This is not limited to floating base bodies but
 generally Joint::is_locked() is preferable otherwise.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -13989,11 +13992,11 @@ generally Joint::is_locked() is preferable otherwise.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-Expression-.Lock">
 <span id="pydrake.multibody.tree.RigidBody_[Expression].Lock"></span><span class="sig-name descname"><span class="pre">Lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.Lock" title="Permalink to this definition"></a></dt>
-<dd><p>For a floating RigidBody, lock its inboard joint. Its generalized
+<dd><p>For a floating base RigidBody, lock its inboard joint. Its generalized
 velocities will be 0 until it is unlocked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating base body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -14105,10 +14108,10 @@ G_Bo_B (B’s unit inertia about Bo expressed in B).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-Expression-.Unlock">
 <span id="pydrake.multibody.tree.RigidBody_[Expression].Unlock"></span><span class="sig-name descname"><span class="pre">Unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.Unlock" title="Permalink to this definition"></a></dt>
-<dd><p>For a floating RigidBody, unlock its inboard joint.</p>
+<dd><p>For a floating base RigidBody, unlock its inboard joint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating body.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if this body is not a floating base body.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>

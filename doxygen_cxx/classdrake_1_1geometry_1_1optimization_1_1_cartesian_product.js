@@ -8,10 +8,12 @@ var classdrake_1_1geometry_1_1optimization_1_1_cartesian_product =
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a251de6c17a4bc0152b26a4ad55ddf98b", null ],
     [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a8ab1489323311a9aaecb36b81d6af500", null ],
     [ "~CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#af8787c96bea07898c336a5a934e0975e", null ],
+    [ "A", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a4a77b80c23d9dc1fb34d0ef7555475bc", null ],
+    [ "b", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a21f6c2bde0b3e26497b59bf1e9d970fd", null ],
     [ "CalcVolume", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a7a2847efc4f87e996464d9d71159e27b", null ],
     [ "factor", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#ab446eba95a4fc1c18f1bb5b6b3ebc887", null ],
     [ "num_factors", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a27ef18eef844167c096ed08fbceeeb1a", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a61422fd8297062124a1aabb31f3decdb", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a2fed6723fd1b1a945e7dd0a07cca22ae", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a61422fd8297062124a1aabb31f3decdb", null ],
     [ "PointInSet", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#aa7a4d7c125954dfde3c15238c852eeed", null ]
 ];

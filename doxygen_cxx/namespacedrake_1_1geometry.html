@@ -456,9 +456,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4192d45a6ef62766081175664984a770"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a4192d45a6ef62766081175664984a770">ReadObjToTriangleSurfaceMesh</a> (const std::string &amp;filename, <a class="el" href="classdouble.html">double</a> scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={})</td></tr>
 <tr class="memdesc:a4192d45a6ef62766081175664984a770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a surface mesh from a Wavefront .obj file and optionally scales coordinates by the given scale factor.  <a href="#a4192d45a6ef62766081175664984a770">More...</a><br /></td></tr>
 <tr class="separator:a4192d45a6ef62766081175664984a770"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a434be853a96eb8f2554128917d1e1a53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a434be853a96eb8f2554128917d1e1a53">ReadObjToTriangleSurfaceMesh</a> (std::istream *input_stream, <a class="el" href="classdouble.html">double</a> scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={})</td></tr>
-<tr class="memdesc:a434be853a96eb8f2554128917d1e1a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of ReadObjToTriangleSurfaceMesh(const std::string&amp;, double) with the Wavefront .obj file given in std::istream.  <a href="#a434be853a96eb8f2554128917d1e1a53">More...</a><br /></td></tr>
-<tr class="separator:a434be853a96eb8f2554128917d1e1a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7859e92c74076c8ab00351905e44b562"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a7859e92c74076c8ab00351905e44b562">ReadObjToTriangleSurfaceMesh</a> (std::istream *input_stream, <a class="el" href="classdouble.html">double</a> scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={}, std::string_view description=&quot;from_stream&quot;)</td></tr>
+<tr class="memdesc:a7859e92c74076c8ab00351905e44b562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of ReadObjToTriangleSurfaceMesh(const std::string&amp;, double) with the Wavefront .obj file given in std::istream.  <a href="#a7859e92c74076c8ab00351905e44b562">More...</a><br /></td></tr>
+<tr class="separator:a7859e92c74076c8ab00351905e44b562"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28568bada64f8cb591afdd11c12ccc72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a28568bada64f8cb591afdd11c12ccc72">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS</a> (class <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>)</td></tr>
 <tr class="separator:a28568bada64f8cb591afdd11c12ccc72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b6e179f892df67543be3028eae06fb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a1b6e179f892df67543be3028eae06fb9">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS</a> (class <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>)</td></tr>
@@ -1557,8 +1557,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a434be853a96eb8f2554128917d1e1a53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a434be853a96eb8f2554128917d1e1a53">&#9670;&nbsp;</a></span>ReadObjToTriangleSurfaceMesh() <span class="overload">[2/2]</span></h2>
+<a id="a7859e92c74076c8ab00351905e44b562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7859e92c74076c8ab00351905e44b562">&#9670;&nbsp;</a></span>ReadObjToTriangleSurfaceMesh() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1579,7 +1579,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::function&lt; void(std::string_view)&gt;&#160;</td>
-          <td class="paramname"><em>on_warning</em> = <code>{}</code>&#160;</td>
+          <td class="paramname"><em>on_warning</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>description</em> = <code>&quot;from_stream&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

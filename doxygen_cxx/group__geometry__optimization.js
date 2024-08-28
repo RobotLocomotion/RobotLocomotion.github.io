@@ -47,11 +47,13 @@ var group__geometry__optimization =
       [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a251de6c17a4bc0152b26a4ad55ddf98b", null ],
       [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a8ab1489323311a9aaecb36b81d6af500", null ],
       [ "~CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#af8787c96bea07898c336a5a934e0975e", null ],
+      [ "A", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a4a77b80c23d9dc1fb34d0ef7555475bc", null ],
+      [ "b", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a21f6c2bde0b3e26497b59bf1e9d970fd", null ],
       [ "CalcVolume", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a7a2847efc4f87e996464d9d71159e27b", null ],
       [ "factor", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#ab446eba95a4fc1c18f1bb5b6b3ebc887", null ],
       [ "num_factors", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a27ef18eef844167c096ed08fbceeeb1a", null ],
-      [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a61422fd8297062124a1aabb31f3decdb", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a2fed6723fd1b1a945e7dd0a07cca22ae", null ],
+      [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a61422fd8297062124a1aabb31f3decdb", null ],
       [ "PointInSet", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#aa7a4d7c125954dfde3c15238c852eeed", null ]
     ] ],
     [ "ConvexHull", "classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html", [
@@ -283,6 +285,7 @@ var group__geometry__optimization =
       [ "bounding_region", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0e0bd9a6fa7b0b7a30e8330f44812655", null ],
       [ "configuration_obstacles", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6", null ],
       [ "configuration_space_margin", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db", null ],
+      [ "convexity_radius_stepback", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0d0386ea4a76c2bfe571cca98200f565", null ],
       [ "iteration_limit", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72", null ],
       [ "meshcat", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d", null ],
       [ "mixing_steps", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a111e7545f0a4fcae1b8a52fec666594a", null ],

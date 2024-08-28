@@ -4,6 +4,7 @@ var structdrake_1_1geometry_1_1optimization_1_1_iris_options =
     [ "bounding_region", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0e0bd9a6fa7b0b7a30e8330f44812655", null ],
     [ "configuration_obstacles", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6", null ],
     [ "configuration_space_margin", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db", null ],
+    [ "convexity_radius_stepback", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0d0386ea4a76c2bfe571cca98200f565", null ],
     [ "iteration_limit", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72", null ],
     [ "meshcat", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d", null ],
     [ "mixing_steps", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a111e7545f0a4fcae1b8a52fec666594a", null ],

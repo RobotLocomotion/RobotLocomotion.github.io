@@ -625,6 +625,20 @@ constructors.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CartesianProduct.A">
+<span class="sig-name descname"><span class="pre">A</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CartesianProduct" title="pydrake.geometry.optimization.CartesianProduct"><span class="pre">pydrake.geometry.optimization.CartesianProduct</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct.A" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a copy of the matrix A if it has been set, or nullopt
+otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.CartesianProduct.b">
+<span class="sig-name descname"><span class="pre">b</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CartesianProduct" title="pydrake.geometry.optimization.CartesianProduct"><span class="pre">pydrake.geometry.optimization.CartesianProduct</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct.b" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a copy of the vector b if it has been set, or nullopt
+otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CartesianProduct.factor">
 <span class="sig-name descname"><span class="pre">factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.CartesianProduct" title="pydrake.geometry.optimization.CartesianProduct"><span class="pre">pydrake.geometry.optimization.CartesianProduct</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct.factor" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a reference to the ConvexSet defining the <code class="docutils literal notranslate"><span class="pre">index</span></code> factor in
@@ -3702,7 +3716,10 @@ infinite number of faces to approximate a curved boundary.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.IrisOptions.mixing_steps">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mixing_steps</span></span><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.mixing_steps" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">mixing_steps</span></code> parameters is passed to
+HPolyhedron::UniformSample to control the total number of hit-and-run
+steps taken for each new random sample.</p>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.IrisOptions.num_additional_constraint_infeasible_samples">
@@ -3777,7 +3794,8 @@ contain the point.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.IrisOptions.solver_options">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">solver_options</span></span><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.solver_options" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>The SolverOptions used in the optimization program.</p>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.IrisOptions.starting_ellipse">

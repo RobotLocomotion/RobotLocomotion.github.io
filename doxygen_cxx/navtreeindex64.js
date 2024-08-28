@@ -1,5 +1,11 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a1d10e252e778731e59f0f71afd7e727e":[3,0,0,13,7,0],
+"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a45d6740f91111e3a9fb372c234ca2ac7":[3,0,0,13,7,2],
+"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,13,7,1],
+"structdrake_1_1solvers_1_1_clp_solver_details.html":[3,0,0,13,9],
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a56ac23a03ae7df25b7cf800be94fa964":[3,0,0,13,9,0],
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,13,9,1],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html":[3,0,0,13,13],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd":[3,0,0,13,13,0],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,13,13,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a079f690a782b18a752952851aafd792a":[3,0,0,15,8,4,23],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a0d7ddcc8efc929f872d88097097e9953":[3,0,0,15,8,4,29],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a2474a5474cbff19523a51eb1de01cda4":[3,0,0,15,8,4,27],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a338e8e961277d5a62829534f12bc69f2":[3,0,0,15,8,4,5],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a341dc613bcd25a969c8f8a285e3affcd":[3,0,0,15,8,4,32],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a356749be16e1e3f6d437f215ff3c44e6":[3,0,0,15,8,4,12],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a3c3a47e93d564d08b506d18291d5772a":[3,0,0,15,8,4,14],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a43acbf71f174bb214744379ae39d6ec5":[3,0,0,15,8,4,10],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a447b42f56ec0921186385e6863a6548d":[3,0,0,15,8,4,24],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a516e6b1994145bd1efc9ccb21bc15fdc":[3,0,0,15,8,4,22]
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a338e8e961277d5a62829534f12bc69f2":[3,0,0,15,8,4,5]
 };

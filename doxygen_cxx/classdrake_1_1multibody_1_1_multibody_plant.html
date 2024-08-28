@@ -789,44 +789,47 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a60e9928aa7802359eaddab6ef5d92763"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Working with free bodies</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="mbp_working_with_free_bodies"></a></p>
-<p>A MultibodyPlant user adds sets of <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> and <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> objects to <code>this</code> plant to build a physical representation of a mechanical model. At <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>, MultibodyPlant builds a mathematical representation of such system, consisting of a tree representation. In this representation each body is assigned a Mobilizer, which grants a certain number of degrees of freedom in accordance to the physical specification. In this regard, the modeling representation can be seen as a forest of tree structures each of which contains a single body at the root of the tree. If the root body has six degrees of freedom with respect to the world, it is called a "free body" (sometimes called a "floating body"). A user can request the set of all free bodies with a call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a6a2813d5472e88bc58bbb9c3129811f5" title="Returns the set of body indices corresponding to the free (floating) bodies in the model,...">GetFloatingBaseBodies()</a>. Alternatively, a user can query whether a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> is free (floating) or not with <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">RigidBody::is_floating()</a>. For many applications, a user might need to work with indices in the multibody state vector. For such applications, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a8e98e34e5da5ecfc7e03086b70cf5489" title="(Advanced) For floating bodies (see is_floating()) this method returns the index of this RigidBody&#39;s ...">RigidBody::floating_positions_start()</a> and <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a02779a5522ffef8547daf6c386ffb47b" title="(Advanced) For floating bodies (see is_floating()) this method returns the index of this RigidBody&#39;s ...">RigidBody::floating_velocities_start_in_v()</a> offer the additional level of introspection needed.</p>
-<p>It is sometimes convenient for users to perform operations on Bodies ubiquitously through the APIs of the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class. For that reason we implicitly construct a 6-dof joint, <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html" title="This Joint allows two bodies to move freely relatively to one another.">QuaternionFloatingJoint</a>, for all free bodies at the time of <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. Using <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> APIs to affect a free body (setting state, changing parameters, etc.) has the same effect as using the free body APIs below. Each implicitly created joint is named the same as the free body, as reported by <code><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this rigid body.">RigidBody::name()</a></code>. In the rare case that there is already some (unrelated) joint with that name, we'll prepend underscores to the name until it is unique. </p>
+<p>A MultibodyPlant user adds sets of <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> and <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> objects to <code>this</code> plant to build a physical representation of a mechanical model. At <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>, MultibodyPlant builds a mathematical representation of such system, consisting of a tree representation. In this representation each body is assigned a Mobilizer, which grants a certain number of degrees of freedom in accordance to the physical specification. In this regard, the modeling representation can be seen as a forest of tree structures each of which contains a single body at the root of the tree. The root body's parent is always the world body. If a body has <em>six</em> degrees of freedom with respect to its parent, it is called a "free body". If it also the root of a tree, such that its parent is the world body, it is a "floating base" body. Free bodies that are added to the plant without specifying a joint become floating base bodies after finalization. It is possible (and sometimes recommended) to explicitly create a 6-dof joint between two bodies. The child body would be free, because it has six degrees of freedom, but it would <em>not</em> be a "floating
+base body" because its parent is not the world. The effects of the various APIs below depend on the distinction between "free" and "floating base
+bodies". Read carefully. A user can request the set of all floating base bodies with a call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a6a2813d5472e88bc58bbb9c3129811f5" title="Returns the set of body indices corresponding to the floating base bodies in the model,...">GetFloatingBaseBodies()</a>. Alternatively, a user can query whether a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> is a floating base body or not with <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">RigidBody::is_floating()</a>. For many applications, a user might need to work with indices in the multibody state vector. For such applications, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a8e98e34e5da5ecfc7e03086b70cf5489" title="(Advanced) For floating base bodies (see is_floating()) this method returns the index of this RigidBo...">RigidBody::floating_positions_start()</a> and <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a02779a5522ffef8547daf6c386ffb47b" title="(Advanced) For floating base bodies (see is_floating()) this method returns the index of this RigidBo...">RigidBody::floating_velocities_start_in_v()</a> offer the additional level of introspection needed. These APIs only apply to floating base bodies and <em>not</em> 6-dof free bodies generally.</p>
+<p>It is sometimes convenient for users to perform operations on RigidBodies uniformly through the APIs of the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> class. For that reason the plant implicitly constructs a 6-dof joint, <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html" title="This Joint allows two bodies to move freely relatively to one another.">QuaternionFloatingJoint</a>, between the body and the world for all bodies otherwise without declared inboard joints at the time of <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. Using <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> APIs to affect a free body (setting state, changing parameters, etc.) has the same effect as using the free body APIs below. Each implicitly created joint is named the same as the free body, as reported by <code><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this rigid body.">RigidBody::name()</a></code>. In the rare case that there is already some (unrelated) joint with that name, we'll prepend underscores to the name until it is unique.</p>
+<p>The APIs below provide affordances for working with free bodies without explicitly accessing the corresponding floating joint. The pose of a free body (as it is represented in MultibodyPlant's state) is <em>always</em> the pose of the free body relative to its parent frame. That is <em>not</em> necessarily the body's pose in the world (unless the parent frame is the world frame). </p>
 </div></td></tr>
 <tr class="memitem:a6a2813d5472e88bc58bbb9c3129811f5"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; <a class="el" href="namespacedrake_1_1multibody.html#a02d233e6f0ef016f5cf02e2222a22f5c">BodyIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a6a2813d5472e88bc58bbb9c3129811f5">GetFloatingBaseBodies</a> () const</td></tr>
-<tr class="memdesc:a6a2813d5472e88bc58bbb9c3129811f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set of body indices corresponding to the free (floating) bodies in the model, in no particular order.  <a href="#a6a2813d5472e88bc58bbb9c3129811f5">More...</a><br /></td></tr>
+<tr class="memdesc:a6a2813d5472e88bc58bbb9c3129811f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set of body indices corresponding to the floating base bodies in the model, in no particular order.  <a href="#a6a2813d5472e88bc58bbb9c3129811f5">More...</a><br /></td></tr>
 <tr class="separator:a6a2813d5472e88bc58bbb9c3129811f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac60c0fd0d98299e9982b19d225996573"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ac60c0fd0d98299e9982b19d225996573">GetFreeBodyPose</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body) const</td></tr>
-<tr class="memdesc:ac60c0fd0d98299e9982b19d225996573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pose of a given <code>body</code> in the world frame W.  <a href="#ac60c0fd0d98299e9982b19d225996573">More...</a><br /></td></tr>
+<tr class="memdesc:ac60c0fd0d98299e9982b19d225996573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pose of a given <code>body</code> in the parent frame P.  <a href="#ac60c0fd0d98299e9982b19d225996573">More...</a><br /></td></tr>
 <tr class="separator:ac60c0fd0d98299e9982b19d225996573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a340bb943f8708d2c54718215f05176c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a340bb943f8708d2c54718215f05176c5">SetFreeBodyPose</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_WB) const</td></tr>
-<tr class="memdesc:a340bb943f8708d2c54718215f05176c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>context</code> to store the pose <code>X_WB</code> of a given <code>body</code> B in the world frame W.  <a href="#a340bb943f8708d2c54718215f05176c5">More...</a><br /></td></tr>
-<tr class="separator:a340bb943f8708d2c54718215f05176c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d48006a82337cf0a92dc1404fa8ede4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a6d48006a82337cf0a92dc1404fa8ede4">SetFreeBodyPose</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_WB) const</td></tr>
-<tr class="memdesc:a6d48006a82337cf0a92dc1404fa8ede4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>state</code> to store the pose <code>X_WB</code> of a given <code>body</code> B in the world frame W, for a given <code>context</code> of <code>this</code> model.  <a href="#a6d48006a82337cf0a92dc1404fa8ede4">More...</a><br /></td></tr>
-<tr class="separator:a6d48006a82337cf0a92dc1404fa8ede4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a540f9b222bb2c0716967ae10ade56fbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a540f9b222bb2c0716967ae10ade56fbe">SetDefaultFreeBodyPose</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_WB)</td></tr>
-<tr class="memdesc:a540f9b222bb2c0716967ae10ade56fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default pose of <code>body</code>.  <a href="#a540f9b222bb2c0716967ae10ade56fbe">More...</a><br /></td></tr>
-<tr class="separator:a540f9b222bb2c0716967ae10ade56fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae08d91139ee57a6f2bd77fb26b11607f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae08d91139ee57a6f2bd77fb26b11607f">SetFreeBodyPose</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_PB) const</td></tr>
+<tr class="memdesc:ae08d91139ee57a6f2bd77fb26b11607f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>context</code> to store the pose <code>X_PB</code> of a given <code>body</code> B in the parent frame P.  <a href="#ae08d91139ee57a6f2bd77fb26b11607f">More...</a><br /></td></tr>
+<tr class="separator:ae08d91139ee57a6f2bd77fb26b11607f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a87014e50988435b2750d0f10c70dda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a2a87014e50988435b2750d0f10c70dda">SetFreeBodyPose</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_PB) const</td></tr>
+<tr class="memdesc:a2a87014e50988435b2750d0f10c70dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>state</code> to store the pose <code>X_PB</code> of a given <code>body</code> B in its parent frame P, for a given <code>context</code> of <code>this</code> model.  <a href="#a2a87014e50988435b2750d0f10c70dda">More...</a><br /></td></tr>
+<tr class="separator:a2a87014e50988435b2750d0f10c70dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1c4b1852853c9cf02613bfef053d8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afd1c4b1852853c9cf02613bfef053d8e">SetDefaultFreeBodyPose</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PB)</td></tr>
+<tr class="memdesc:afd1c4b1852853c9cf02613bfef053d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default pose of <code>body</code>.  <a href="#afd1c4b1852853c9cf02613bfef053d8e">More...</a><br /></td></tr>
+<tr class="separator:afd1c4b1852853c9cf02613bfef053d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72b882a412638c133aa49052c63d5534"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a72b882a412638c133aa49052c63d5534">GetDefaultFreeBodyPose</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body) const</td></tr>
-<tr class="memdesc:a72b882a412638c133aa49052c63d5534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default pose of <code>body</code> as set by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a540f9b222bb2c0716967ae10ade56fbe" title="Sets the default pose of body.">SetDefaultFreeBodyPose()</a>.  <a href="#a72b882a412638c133aa49052c63d5534">More...</a><br /></td></tr>
+<tr class="memdesc:a72b882a412638c133aa49052c63d5534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the default pose of <code>body</code> as set by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afd1c4b1852853c9cf02613bfef053d8e" title="Sets the default pose of body.">SetDefaultFreeBodyPose()</a>.  <a href="#a72b882a412638c133aa49052c63d5534">More...</a><br /></td></tr>
 <tr class="separator:a72b882a412638c133aa49052c63d5534"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa99ba0014b077c4bbf7ae1aaa920447e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa99ba0014b077c4bbf7ae1aaa920447e">SetFreeBodySpatialVelocity</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V_WB) const</td></tr>
-<tr class="memdesc:aa99ba0014b077c4bbf7ae1aaa920447e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>context</code> to store the spatial velocity <code>V_WB</code> of a given <code>body</code> B in the world frame W.  <a href="#aa99ba0014b077c4bbf7ae1aaa920447e">More...</a><br /></td></tr>
-<tr class="separator:aa99ba0014b077c4bbf7ae1aaa920447e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed2b93b9cedf90d1e84aba6cbd397790"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aed2b93b9cedf90d1e84aba6cbd397790">SetFreeBodySpatialVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V_WB) const</td></tr>
-<tr class="memdesc:aed2b93b9cedf90d1e84aba6cbd397790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>state</code> to store the spatial velocity <code>V_WB</code> of a given <code>body</code> B in the world frame W, for a given <code>context</code> of <code>this</code> model.  <a href="#aed2b93b9cedf90d1e84aba6cbd397790">More...</a><br /></td></tr>
-<tr class="separator:aed2b93b9cedf90d1e84aba6cbd397790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b62418e9cee452711363b80ef554d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a74b62418e9cee452711363b80ef554d3">SetFreeBodySpatialVelocity</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V_PB) const</td></tr>
+<tr class="memdesc:a74b62418e9cee452711363b80ef554d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>context</code> to store the spatial velocity <code>V_PB</code> of a given <code>body</code> B in its parent frame P.  <a href="#a74b62418e9cee452711363b80ef554d3">More...</a><br /></td></tr>
+<tr class="separator:a74b62418e9cee452711363b80ef554d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7ca1596c2ea6235f5d86aa557cb0e45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae7ca1596c2ea6235f5d86aa557cb0e45">SetFreeBodySpatialVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V_PB) const</td></tr>
+<tr class="memdesc:ae7ca1596c2ea6235f5d86aa557cb0e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>state</code> to store the spatial velocity <code>V_PB</code> of a given <code>body</code> B in its parent frame P, for a given <code>context</code> of <code>this</code> model.  <a href="#ae7ca1596c2ea6235f5d86aa557cb0e45">More...</a><br /></td></tr>
+<tr class="separator:ae7ca1596c2ea6235f5d86aa557cb0e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad44332b9a38a3534af794581915407ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad44332b9a38a3534af794581915407ec">SetFreeBodyRandomTranslationDistribution</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;translation)</td></tr>
-<tr class="memdesc:ad44332b9a38a3534af794581915407ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's x-y-z <code>translation</code> with respect to World.  <a href="#ad44332b9a38a3534af794581915407ec">More...</a><br /></td></tr>
+<tr class="memdesc:ad44332b9a38a3534af794581915407ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's x-y-z <code>translation</code> with respect to its parent frame P.  <a href="#ad44332b9a38a3534af794581915407ec">More...</a><br /></td></tr>
 <tr class="separator:ad44332b9a38a3534af794581915407ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e948d3233ccb5bf0001d5bd7425062a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0e948d3233ccb5bf0001d5bd7425062a">SetFreeBodyRandomRotationDistribution</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const Eigen::Quaternion&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;rotation)</td></tr>
-<tr class="memdesc:a0e948d3233ccb5bf0001d5bd7425062a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's <code>rotation</code> with respect to World.  <a href="#a0e948d3233ccb5bf0001d5bd7425062a">More...</a><br /></td></tr>
+<tr class="memdesc:a0e948d3233ccb5bf0001d5bd7425062a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's <code>rotation</code> with respect to its parent frame.  <a href="#a0e948d3233ccb5bf0001d5bd7425062a">More...</a><br /></td></tr>
 <tr class="separator:a0e948d3233ccb5bf0001d5bd7425062a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a057dc09db3cf93f1cc47fb1db6995ca0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a057dc09db3cf93f1cc47fb1db6995ca0">SetFreeBodyRandomRotationDistributionToUniform</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body)</td></tr>
-<tr class="memdesc:a057dc09db3cf93f1cc47fb1db6995ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's rotation with respect to World using uniformly random rotations.  <a href="#a057dc09db3cf93f1cc47fb1db6995ca0">More...</a><br /></td></tr>
+<tr class="memdesc:a057dc09db3cf93f1cc47fb1db6995ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's rotation with respect to its parent frame using uniformly random rotations.  <a href="#a057dc09db3cf93f1cc47fb1db6995ca0">More...</a><br /></td></tr>
 <tr class="separator:a057dc09db3cf93f1cc47fb1db6995ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97c0546b4129dad123a33b9b84831157"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a97c0546b4129dad123a33b9b84831157">SetFreeBodyPoseInWorldFrame</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_WB) const</td></tr>
-<tr class="memdesc:a97c0546b4129dad123a33b9b84831157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>context</code> to store the pose <code>X_WB</code> of a given <code>body</code> B in the world frame W.  <a href="#a97c0546b4129dad123a33b9b84831157">More...</a><br /></td></tr>
+<tr class="memdesc:a97c0546b4129dad123a33b9b84831157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>context</code> to store the pose <code>X_WB</code> of a given <em>floating base</em> <code>body</code> B in the world frame W.  <a href="#a97c0546b4129dad123a33b9b84831157">More...</a><br /></td></tr>
 <tr class="separator:a97c0546b4129dad123a33b9b84831157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa046883a4c5530d09082bf39638c119a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa046883a4c5530d09082bf39638c119a">SetFreeBodyPoseInAnchoredFrame</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_F, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_FB) const</td></tr>
 <tr class="memdesc:aa046883a4c5530d09082bf39638c119a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates <code>context</code> to store the pose <code>X_FB</code> of a given <code>body</code> B in a frame F.  <a href="#aa046883a4c5530d09082bf39638c119a">More...</a><br /></td></tr>
@@ -5845,13 +5848,20 @@ It is required to connect this port for PD controlled model instances. </dd></dl
       </table>
 </div><div class="memdoc">
 
-<p>Gets the default pose of <code>body</code> as set by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a540f9b222bb2c0716967ae10ade56fbe" title="Sets the default pose of body.">SetDefaultFreeBodyPose()</a>. </p>
+<p>Gets the default pose of <code>body</code> as set by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afd1c4b1852853c9cf02613bfef053d8e" title="Sets the default pose of body.">SetDefaultFreeBodyPose()</a>. </p>
 <p>If no pose is specified for the body, returns the identity pose. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> whose default pose will be retrieved. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">X_PB</td><td>The pose of the free body relative to its parent frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The parent frame is not necessarily the world frame. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">above for details</a>. </dd></dl>
 
 </div>
 </div>
@@ -5973,7 +5983,7 @@ It is required to connect this port for PD controlled model instances. </dd></dl
       </table>
 </div><div class="memdoc">
 
-<p>Returns the set of body indices corresponding to the free (floating) bodies in the model, in no particular order. </p>
+<p>Returns the set of body indices corresponding to the floating base bodies in the model, in no particular order. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. </td></tr>
@@ -6127,8 +6137,8 @@ It is required to connect this port for PD controlled model instances. </dd></dl
       </table>
 </div><div class="memdoc">
 
-<p>Gets the pose of a given <code>body</code> in the world frame W. </p>
-<dl class="section note"><dt>Note</dt><dd>In general getting the pose of a body in the model would involve solving the kinematics. This method allows us to simplify this process when we know the body is free in space. </dd></dl>
+<p>Gets the pose of a given <code>body</code> in the parent frame P. </p>
+<dl class="section note"><dt>Note</dt><dd>The parent frame is not necessarily the world frame. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">above for details</a>. To acquire X_WB, regardless of what P is, kinematics need to be evaluated by calling <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0cc4f08b85970d9f44705ac25a00e140" title="Evaluate the pose X_WB of a body B in the world frame W.">EvalBodyPoseInWorld()</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
@@ -9518,8 +9528,8 @@ to allow?" There are two opposing design issues in picking a value for vₛ. On 
 
 </div>
 </div>
-<a id="a540f9b222bb2c0716967ae10ade56fbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a540f9b222bb2c0716967ae10ade56fbe">&#9670;&nbsp;</a></span>SetDefaultFreeBodyPose()</h2>
+<a id="afd1c4b1852853c9cf02613bfef053d8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1c4b1852853c9cf02613bfef053d8e">&#9670;&nbsp;</a></span>SetDefaultFreeBodyPose()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9534,7 +9544,7 @@ to allow?" There are two opposing design issues in picking a value for vₛ. On 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>X_WB</em>&#160;</td>
+          <td class="paramname"><em>X_PB</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -9545,10 +9555,11 @@ to allow?" There are two opposing design issues in picking a value for vₛ. On 
 </div><div class="memdoc">
 
 <p>Sets the default pose of <code>body</code>. </p>
-<p>If <code>body.is_floating()</code> is true, this will affect subsequent calls to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae73edc00d493b3f15ba7679cc14830a0" title="Sets state according to defaults set by the user for joints (e.g.">SetDefaultState()</a>; otherwise, the only effect of the call is that the value will be echoed back in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a72b882a412638c133aa49052c63d5534" title="Gets the default pose of body as set by SetDefaultFreeBodyPose().">GetDefaultFreeBodyPose()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If <code>body.is_floating()</code> is true, this will affect subsequent calls to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae73edc00d493b3f15ba7679cc14830a0" title="Sets state according to defaults set by the user for joints (e.g.">SetDefaultState()</a>; otherwise, the only effect of the call is that the value will be echoed back in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a72b882a412638c133aa49052c63d5534" title="Gets the default pose of body as set by SetDefaultFreeBodyPose().">GetDefaultFreeBodyPose()</a>. </p><dl class="section note"><dt>Note</dt><dd>The parent frame is not necessarily the world frame. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">above for details</a>. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> whose default pose will be set. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">X_WB</td><td>Default pose of the body. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">X_PB</td><td>Default pose of the body. </td></tr>
   </table>
   </dd>
 </dl>
@@ -9652,7 +9663,7 @@ to allow?" There are two opposing design issues in picking a value for vₛ. On 
 </div><div class="memdoc">
 
 <p>Sets <code>state</code> according to defaults set by the user for joints (e.g. </p>
-<p><a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a5608e4f04daa177004efade938e77fbf" title="Sets the default_positions of this joint (in this case a single angle).">RevoluteJoint::set_default_angle()</a>) and free bodies (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a540f9b222bb2c0716967ae10ade56fbe" title="Sets the default pose of body.">SetDefaultFreeBodyPose()</a>). If the user does not specify defaults, the state corresponds to zero generalized positions and velocities. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p><a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a5608e4f04daa177004efade938e77fbf" title="Sets the default_positions of this joint (in this case a single angle).">RevoluteJoint::set_default_angle()</a>) and free bodies (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afd1c4b1852853c9cf02613bfef053d8e" title="Sets the default pose of body.">SetDefaultFreeBodyPose()</a>). If the user does not specify defaults, the state corresponds to zero generalized positions and velocities. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. </td></tr>
   </table>
@@ -9699,8 +9710,8 @@ manager != nullptr. </dd></dl>
 
 </div>
 </div>
-<a id="a340bb943f8708d2c54718215f05176c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a340bb943f8708d2c54718215f05176c5">&#9670;&nbsp;</a></span>SetFreeBodyPose() <span class="overload">[1/2]</span></h2>
+<a id="ae08d91139ee57a6f2bd77fb26b11607f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae08d91139ee57a6f2bd77fb26b11607f">&#9670;&nbsp;</a></span>SetFreeBodyPose() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9721,7 +9732,7 @@ manager != nullptr. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>X_WB</em>&#160;</td>
+          <td class="paramname"><em>X_PB</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -9731,8 +9742,8 @@ manager != nullptr. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Sets <code>context</code> to store the pose <code>X_WB</code> of a given <code>body</code> B in the world frame W. </p>
-<dl class="section note"><dt>Note</dt><dd>In general setting the pose and/or velocity of a body in the model would involve a complex inverse kinematics problem. This method allows us to simplify this process when we know the body is free in space. </dd></dl>
+<p>Sets <code>context</code> to store the pose <code>X_PB</code> of a given <code>body</code> B in the parent frame P. </p>
+<dl class="section note"><dt>Note</dt><dd>The parent frame is not necessarily the world frame. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">above for details</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
@@ -9743,8 +9754,8 @@ manager != nullptr. </dd></dl>
 
 </div>
 </div>
-<a id="a6d48006a82337cf0a92dc1404fa8ede4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d48006a82337cf0a92dc1404fa8ede4">&#9670;&nbsp;</a></span>SetFreeBodyPose() <span class="overload">[2/2]</span></h2>
+<a id="a2a87014e50988435b2750d0f10c70dda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a87014e50988435b2750d0f10c70dda">&#9670;&nbsp;</a></span>SetFreeBodyPose() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9771,7 +9782,7 @@ manager != nullptr. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>X_WB</em>&#160;</td>
+          <td class="paramname"><em>X_PB</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -9781,8 +9792,8 @@ manager != nullptr. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Sets <code>state</code> to store the pose <code>X_WB</code> of a given <code>body</code> B in the world frame W, for a given <code>context</code> of <code>this</code> model. </p>
-<dl class="section note"><dt>Note</dt><dd>In general setting the pose and/or velocity of a body in the model would involve a complex inverse kinematics problem. This method allows us to simplify this process when we know the body is free in space. </dd></dl>
+<p>Sets <code>state</code> to store the pose <code>X_PB</code> of a given <code>body</code> B in its parent frame P, for a given <code>context</code> of <code>this</code> model. </p>
+<dl class="section note"><dt>Note</dt><dd>The parent frame is not necessarily the world frame. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">above for details</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
@@ -9875,11 +9886,11 @@ manager != nullptr. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Sets <code>context</code> to store the pose <code>X_WB</code> of a given <code>body</code> B in the world frame W. </p>
+<p>Sets <code>context</code> to store the pose <code>X_WB</code> of a given <em>floating base</em> <code>body</code> B in the world frame W. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context to store the pose <code>X_WB</code> of <code>body_B</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">body_B</td><td>The body B corresponding to the pose <code>X_WB</code> to be stored in <code>context</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body_B</td><td>The <em>floating base</em> body B corresponding to the pose <code>X_WB</code> to be stored in <code>context</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -9890,10 +9901,12 @@ manager != nullptr. </dd></dl>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>In general setting the pose and/or velocity of a body in the model would involve a complex inverse kinematics problem. This method allows us to simplify this process when we know the body is free in space. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This method only applies to "floating base" bodies; i.e., <code>body.is_floating()</code> returns <code>true</code>. I.e., not just any free body, despite the method name. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>body.is_floating()</code> returns <code>false</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -9926,7 +9939,8 @@ manager != nullptr. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's <code>rotation</code> with respect to World. </p>
+<p>Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's <code>rotation</code> with respect to its parent frame. </p>
+<dl class="section note"><dt>Note</dt><dd>The parent frame is not necessarily the world frame. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">above for details</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
@@ -9953,7 +9967,8 @@ manager != nullptr. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's rotation with respect to World using uniformly random rotations. </p>
+<p>Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's rotation with respect to its parent frame using uniformly random rotations. </p>
+<dl class="section note"><dt>Note</dt><dd>The parent frame is not necessarily the world frame. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">above for details</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
@@ -9990,7 +10005,8 @@ manager != nullptr. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's x-y-z <code>translation</code> with respect to World. </p>
+<p>Sets the distribution used by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10" title="Assigns random values to all elements of the state, by drawing samples independently for each joint/f...">SetRandomState()</a> to populate the free body's x-y-z <code>translation</code> with respect to its parent frame P. </p>
+<dl class="section note"><dt>Note</dt><dd>The parent frame is not necessarily the world frame. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">above for details</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
@@ -10001,8 +10017,8 @@ manager != nullptr. </dd></dl>
 
 </div>
 </div>
-<a id="aa99ba0014b077c4bbf7ae1aaa920447e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa99ba0014b077c4bbf7ae1aaa920447e">&#9670;&nbsp;</a></span>SetFreeBodySpatialVelocity() <span class="overload">[1/2]</span></h2>
+<a id="a74b62418e9cee452711363b80ef554d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b62418e9cee452711363b80ef554d3">&#9670;&nbsp;</a></span>SetFreeBodySpatialVelocity() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10023,7 +10039,7 @@ manager != nullptr. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>V_WB</em>&#160;</td>
+          <td class="paramname"><em>V_PB</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -10033,8 +10049,8 @@ manager != nullptr. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Sets <code>context</code> to store the spatial velocity <code>V_WB</code> of a given <code>body</code> B in the world frame W. </p>
-<dl class="section note"><dt>Note</dt><dd>In general setting the pose and/or velocity of a body in the model would involve a complex inverse kinematics problem. This method allows us to simplify this process when we know the body is free in space. </dd></dl>
+<p>Sets <code>context</code> to store the spatial velocity <code>V_PB</code> of a given <code>body</code> B in its parent frame P. </p>
+<dl class="section note"><dt>Note</dt><dd>The parent frame is not necessarily the world frame. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">above for details</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
@@ -10045,8 +10061,8 @@ manager != nullptr. </dd></dl>
 
 </div>
 </div>
-<a id="aed2b93b9cedf90d1e84aba6cbd397790"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed2b93b9cedf90d1e84aba6cbd397790">&#9670;&nbsp;</a></span>SetFreeBodySpatialVelocity() <span class="overload">[2/2]</span></h2>
+<a id="ae7ca1596c2ea6235f5d86aa557cb0e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7ca1596c2ea6235f5d86aa557cb0e45">&#9670;&nbsp;</a></span>SetFreeBodySpatialVelocity() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10073,7 +10089,7 @@ manager != nullptr. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>V_WB</em>&#160;</td>
+          <td class="paramname"><em>V_PB</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -10083,8 +10099,8 @@ manager != nullptr. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Sets <code>state</code> to store the spatial velocity <code>V_WB</code> of a given <code>body</code> B in the world frame W, for a given <code>context</code> of <code>this</code> model. </p>
-<dl class="section note"><dt>Note</dt><dd>In general setting the pose and/or velocity of a body in the model would involve a complex inverse kinematics problem. This method allows us to simplify this process when we know the body is free in space. </dd></dl>
+<p>Sets <code>state</code> to store the spatial velocity <code>V_PB</code> of a given <code>body</code> B in its parent frame P, for a given <code>context</code> of <code>this</code> model. </p>
+<dl class="section note"><dt>Note</dt><dd>The parent frame is not necessarily the world frame. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">above for details</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
