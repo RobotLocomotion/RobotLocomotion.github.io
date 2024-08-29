@@ -2107,15 +2107,15 @@ should be retrieved.</p>
 <span class="sig-name descname"><span class="pre">GetSolutionCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, result: pydrake.solvers.MathematicalProgramResult) -&gt; float</p></li>
+<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, result: pydrake.solvers.MathematicalProgramResult) -&gt; Optional[float]</p></li>
 </ol>
-<p>Returns the sum of the costs associated with this edge in a
-solvers::MathematicalProgramResult.</p>
+<p>Returns the sum of the costs associated with this edge in <code class="docutils literal notranslate"><span class="pre">result</span></code>,
+or std::nullopt if no solution for this edge is available.</p>
 <ol class="arabic simple" start="2">
-<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, result: pydrake.solvers.MathematicalProgramResult, cost: pydrake.solvers.Binding[Cost]) -&gt; float</p></li>
+<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, result: pydrake.solvers.MathematicalProgramResult, cost: pydrake.solvers.Binding[Cost]) -&gt; Optional[float]</p></li>
 </ol>
 <p>Returns the cost associated with the <code class="docutils literal notranslate"><span class="pre">cost</span></code> binding on this edge in
-a solvers::MathematicalProgramResult.</p>
+<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no solution for this edge is available.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if cost is not associated with this edge.</strong> – </p>
@@ -2125,20 +2125,24 @@ a solvers::MathematicalProgramResult.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXu">
-<span class="sig-name descname"><span class="pre">GetSolutionPhiXu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXu" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetSolutionPhiXu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXu" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the vector value of the slack variables associated with ϕxᵤ in
-a solvers::MathematicalProgramResult. This can obtain a different
-value than <code class="docutils literal notranslate"><span class="pre">result.GetSolution(edge-&gt;xu())</span></code>, which is equivalent to
-<code class="docutils literal notranslate"><span class="pre">result.GetSolution(edge-&gt;u()-&gt;x())</span></code>; in the case of a loose convex
-relaxation <code class="docutils literal notranslate"><span class="pre">result.GetSolution(edge-&gt;xu())</span></code> will be the <em>averaged</em>
-value of the edge slacks for all non-zero-flow edges.</p>
+<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no solution for this edge is available.
+This can obtain a different value than the Vertex::GetSolution(), e.g.
+from <code class="docutils literal notranslate"><span class="pre">edge-&gt;xu().GetSolution(result)</span></code>. First, a deactivated edge
+(defined by Phi ~= 0) will return the zero vector here, while
+Vertex::GetSolution() will return std::nullopt (rather than divide by
+zero to recover Xu). Second, in the case of a loose convex relaxation,
+the vertex version will return the averaged* value of the edge slacks
+for all non-zero-flow edges.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXv">
-<span class="sig-name descname"><span class="pre">GetSolutionPhiXv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXv" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetSolutionPhiXv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXv" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the vector value of the slack variables associated with ϕxᵥ in
-a solvers::MathematicalProgramResult. See GetSolutionPhiXu().</p>
+<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no solution for this edge is available.
+See GetSolutionPhiXu() for more details.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2677,12 +2681,10 @@ should be retrieved.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution">
-<span class="sig-name descname"><span class="pre">GetSolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the solution of x() in a MathematicalProgramResult. This
-solution is NaN if the vertex is not in the shortest path (or if we
-are solving the the convex relaxation and the total flow through this
-vertex at the solution is numerically close to zero). We prefer to
-return NaN than a value not contained in set().</p>
+<span class="sig-name descname"><span class="pre">GetSolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the solution of x() in <code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no
+solution for this vertex is available. std::nullopt can happen if the
+vertex is deactivated (e.g. not in the shorest path) in the solution.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2690,15 +2692,17 @@ return NaN than a value not contained in set().</p>
 <span class="sig-name descname"><span class="pre">GetSolutionCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolutionCost" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, result: pydrake.solvers.MathematicalProgramResult) -&gt; float</p></li>
+<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, result: pydrake.solvers.MathematicalProgramResult) -&gt; Optional[float]</p></li>
 </ol>
-<p>Returns the sum of the costs associated with this vertex in a
-solvers::MathematicalProgramResult.</p>
+<p>Returns the sum of the costs associated with this vertex in
+<code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no solution for this vertex is
+available.</p>
 <ol class="arabic simple" start="2">
-<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, result: pydrake.solvers.MathematicalProgramResult, cost: pydrake.solvers.Binding[Cost]) -&gt; float</p></li>
+<li><p>GetSolutionCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex, result: pydrake.solvers.MathematicalProgramResult, cost: pydrake.solvers.Binding[Cost]) -&gt; Optional[float]</p></li>
 </ol>
 <p>Returns the cost associated with the <code class="docutils literal notranslate"><span class="pre">cost</span></code> binding on this vertex
-in a solvers::MathematicalProgramResult.</p>
+in <code class="docutils literal notranslate"><span class="pre">result</span></code>, or std::nullopt if no solution for this vertex is
+available.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if cost is not associated with this vertex.</strong> – </p>

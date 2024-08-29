@@ -230,18 +230,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a063e5bb012269b6ca2cf6e4efe2ea4b5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a063e5bb012269b6ca2cf6e4efe2ea4b5">GetConstraints</a> (const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;used_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>}) const</td></tr>
 <tr class="memdesc:a063e5bb012269b6ca2cf6e4efe2ea4b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns constraints on this edge.  <a href="#a063e5bb012269b6ca2cf6e4efe2ea4b5">More...</a><br /></td></tr>
 <tr class="separator:a063e5bb012269b6ca2cf6e4efe2ea4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc8440cef215ba725a47df2067e5f054"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#abc8440cef215ba725a47df2067e5f054">GetSolutionCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
-<tr class="memdesc:abc8440cef215ba725a47df2067e5f054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sum of the costs associated with this edge in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>.  <a href="#abc8440cef215ba725a47df2067e5f054">More...</a><br /></td></tr>
-<tr class="separator:abc8440cef215ba725a47df2067e5f054"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0ce3bc9970a09efb0a86eb098dbf4f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ae0ce3bc9970a09efb0a86eb098dbf4f5">GetSolutionCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result, const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;cost) const</td></tr>
-<tr class="memdesc:ae0ce3bc9970a09efb0a86eb098dbf4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cost associated with the <code>cost</code> binding on this edge in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>.  <a href="#ae0ce3bc9970a09efb0a86eb098dbf4f5">More...</a><br /></td></tr>
-<tr class="separator:ae0ce3bc9970a09efb0a86eb098dbf4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41ea35f2dc43edde726bc0d68fb8eb54"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a41ea35f2dc43edde726bc0d68fb8eb54">GetSolutionPhiXu</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
-<tr class="memdesc:a41ea35f2dc43edde726bc0d68fb8eb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector value of the slack variables associated with ϕxᵤ in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>.  <a href="#a41ea35f2dc43edde726bc0d68fb8eb54">More...</a><br /></td></tr>
-<tr class="separator:a41ea35f2dc43edde726bc0d68fb8eb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5a517418d1cf8ab7bf2bf38605090e8"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aa5a517418d1cf8ab7bf2bf38605090e8">GetSolutionPhiXv</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
-<tr class="memdesc:aa5a517418d1cf8ab7bf2bf38605090e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector value of the slack variables associated with ϕxᵥ in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>.  <a href="#aa5a517418d1cf8ab7bf2bf38605090e8">More...</a><br /></td></tr>
-<tr class="separator:aa5a517418d1cf8ab7bf2bf38605090e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924b9c101c34203b5f451e16bfe9da00"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a924b9c101c34203b5f451e16bfe9da00">GetSolutionCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
+<tr class="memdesc:a924b9c101c34203b5f451e16bfe9da00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sum of the costs associated with this edge in <code>result</code>, or std::nullopt if no solution for this edge is available.  <a href="#a924b9c101c34203b5f451e16bfe9da00">More...</a><br /></td></tr>
+<tr class="separator:a924b9c101c34203b5f451e16bfe9da00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a801148cfda7128c1a441929c4c788bd3"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a801148cfda7128c1a441929c4c788bd3">GetSolutionCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result, const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;cost) const</td></tr>
+<tr class="memdesc:a801148cfda7128c1a441929c4c788bd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cost associated with the <code>cost</code> binding on this edge in <code>result</code>, or std::nullopt if no solution for this edge is available.  <a href="#a801148cfda7128c1a441929c4c788bd3">More...</a><br /></td></tr>
+<tr class="separator:a801148cfda7128c1a441929c4c788bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aadae29e512c9f01a80ea50f2b53b0a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a4aadae29e512c9f01a80ea50f2b53b0a">GetSolutionPhiXu</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
+<tr class="memdesc:a4aadae29e512c9f01a80ea50f2b53b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector value of the slack variables associated with ϕxᵤ in <code>result</code>, or std::nullopt if no solution for this edge is available.  <a href="#a4aadae29e512c9f01a80ea50f2b53b0a">More...</a><br /></td></tr>
+<tr class="separator:a4aadae29e512c9f01a80ea50f2b53b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f42bc8c6c4bdf7482e5c6b3b56f1c1"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a59f42bc8c6c4bdf7482e5c6b3b56f1c1">GetSolutionPhiXv</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
+<tr class="memdesc:a59f42bc8c6c4bdf7482e5c6b3b56f1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector value of the slack variables associated with ϕxᵥ in <code>result</code>, or std::nullopt if no solution for this edge is available.  <a href="#a59f42bc8c6c4bdf7482e5c6b3b56f1c1">More...</a><br /></td></tr>
+<tr class="separator:a59f42bc8c6c4bdf7482e5c6b3b56f1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:aca1e9f642a2e6fd9aa518f67e0b5fa1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aca1e9f642a2e6fd9aa518f67e0b5fa1b">Edge</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> &amp;)=delete</td></tr>
 <tr class="separator:aca1e9f642a2e6fd9aa518f67e0b5fa1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -446,7 +446,7 @@ Friends</h2></td></tr>
 
 <p>Adds a cost to this edge, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code>e</code> containing <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables. </p>
 <p>For technical reasons relating to being able to "turn-off" the cost on inactive edges, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
-</pre><p> You must use <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#abc8440cef215ba725a47df2067e5f054" title="Returns the sum of the costs associated with this edge in a solvers::MathematicalProgramResult.">GetSolutionCost()</a> to retrieve the cost of the solution, rather than evaluating the cost directly, in order to get consistent behavior when solving with the different GCS transcriptions. </p><dl class="params"><dt>Parameters</dt><dd>
+</pre><p> You must use <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a924b9c101c34203b5f451e16bfe9da00" title="Returns the sum of the costs associated with this edge in result, or std::nullopt if no solution for ...">GetSolutionCost()</a> to retrieve the cost of the solution, rather than evaluating the cost directly, in order to get consistent behavior when solving with the different GCS transcriptions. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added. </td></tr>
   </table>
@@ -492,7 +492,7 @@ Friends</h2></td></tr>
 
 <p>Adds a cost to this edge. </p>
 <p><code>binding</code> must contain <em>only</em> elements of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc" title="Returns the continuous decision variables associated with vertex v.">xv()</a> as variables. For technical reasons relating to being able to "turn-off" the cost on inactive edges, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
-</pre><p> You must use <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#abc8440cef215ba725a47df2067e5f054" title="Returns the sum of the costs associated with this edge in a solvers::MathematicalProgramResult.">GetSolutionCost()</a> to retrieve the cost of the solution, rather than evaluating the cost directly, in order to get consistent behavior when solving with the different GCS transcriptions. </p><dl class="params"><dt>Parameters</dt><dd>
+</pre><p> You must use <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a924b9c101c34203b5f451e16bfe9da00" title="Returns the sum of the costs associated with this edge in result, or std::nullopt if no solution for ...">GetSolutionCost()</a> to retrieve the cost of the solution, rather than evaluating the cost directly, in order to get consistent behavior when solving with the different GCS transcriptions. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added. </td></tr>
   </table>
@@ -614,14 +614,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="abc8440cef215ba725a47df2067e5f054"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc8440cef215ba725a47df2067e5f054">&#9670;&nbsp;</a></span>GetSolutionCost() <span class="overload">[1/2]</span></h2>
+<a id="a924b9c101c34203b5f451e16bfe9da00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a924b9c101c34203b5f451e16bfe9da00">&#9670;&nbsp;</a></span>GetSolutionCost() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> GetSolutionCost </td>
+          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; GetSolutionCost </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em></td><td>)</td>
@@ -630,18 +630,18 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the sum of the costs associated with this edge in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>. </p>
+<p>Returns the sum of the costs associated with this edge in <code>result</code>, or std::nullopt if no solution for this edge is available. </p>
 
 </div>
 </div>
-<a id="ae0ce3bc9970a09efb0a86eb098dbf4f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0ce3bc9970a09efb0a86eb098dbf4f5">&#9670;&nbsp;</a></span>GetSolutionCost() <span class="overload">[2/2]</span></h2>
+<a id="a801148cfda7128c1a441929c4c788bd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a801148cfda7128c1a441929c4c788bd3">&#9670;&nbsp;</a></span>GetSolutionCost() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> GetSolutionCost </td>
+          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; GetSolutionCost </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em>, </td>
@@ -660,7 +660,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the cost associated with the <code>cost</code> binding on this edge in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>. </p>
+<p>Returns the cost associated with the <code>cost</code> binding on this edge in <code>result</code>, or std::nullopt if no solution for this edge is available. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if cost is not associated with this edge. </td></tr>
@@ -670,14 +670,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a41ea35f2dc43edde726bc0d68fb8eb54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41ea35f2dc43edde726bc0d68fb8eb54">&#9670;&nbsp;</a></span>GetSolutionPhiXu()</h2>
+<a id="a4aadae29e512c9f01a80ea50f2b53b0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aadae29e512c9f01a80ea50f2b53b0a">&#9670;&nbsp;</a></span>GetSolutionPhiXu()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd GetSolutionPhiXu </td>
+          <td class="memname">std::optional&lt;Eigen::VectorXd&gt; GetSolutionPhiXu </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em></td><td>)</td>
@@ -686,19 +686,19 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the vector value of the slack variables associated with ϕxᵤ in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>. </p>
-<p>This can obtain a different value than <code>result.GetSolution(edge-&gt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a>)</code>, which is equivalent to <code>result.GetSolution(edge-&gt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ad2f7bac85a5ba53836843b62bea2ff2a" title="Returns a mutable reference to the &quot;left&quot; Vertex that this edge connects to.">u()</a>-&gt;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a>)</code>; in the case of a loose convex relaxation <code>result.GetSolution(edge-&gt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a>)</code> will be the <em>averaged</em> value of the edge slacks for all non-zero-flow edges. </p>
+<p>Returns the vector value of the slack variables associated with ϕxᵤ in <code>result</code>, or std::nullopt if no solution for this edge is available. </p>
+<p>This can obtain a different value than the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad25bf72f3915e373c78e7cd4682c68ad" title="Returns the solution of x() in result, or std::nullopt if no solution for this vertex is available.">Vertex::GetSolution()</a>, e.g. from <code>edge-&gt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036" title="Returns the continuous decision variables associated with vertex u.">xu()</a>.GetSolution(result)</code>. First, a deactivated edge (defined by Phi ~= 0) will return the zero vector here, while <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad25bf72f3915e373c78e7cd4682c68ad" title="Returns the solution of x() in result, or std::nullopt if no solution for this vertex is available.">Vertex::GetSolution()</a> will return std::nullopt (rather than divide by zero to recover Xu). Second, in the case of a loose convex relaxation, the vertex version will return the averaged* value of the edge slacks for all non-zero-flow edges. </p>
 
 </div>
 </div>
-<a id="aa5a517418d1cf8ab7bf2bf38605090e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5a517418d1cf8ab7bf2bf38605090e8">&#9670;&nbsp;</a></span>GetSolutionPhiXv()</h2>
+<a id="a59f42bc8c6c4bdf7482e5c6b3b56f1c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f42bc8c6c4bdf7482e5c6b3b56f1c1">&#9670;&nbsp;</a></span>GetSolutionPhiXv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::VectorXd GetSolutionPhiXv </td>
+          <td class="memname">std::optional&lt;Eigen::VectorXd&gt; GetSolutionPhiXv </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;&#160;</td>
           <td class="paramname"><em>result</em></td><td>)</td>
@@ -707,8 +707,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the vector value of the slack variables associated with ϕxᵥ in a <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html" title="The result returned by MathematicalProgram::Solve().">solvers::MathematicalProgramResult</a>. </p>
-<p>See <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a41ea35f2dc43edde726bc0d68fb8eb54" title="Returns the vector value of the slack variables associated with ϕxᵤ in a solvers::MathematicalProgram...">GetSolutionPhiXu()</a>. </p>
+<p>Returns the vector value of the slack variables associated with ϕxᵥ in <code>result</code>, or std::nullopt if no solution for this edge is available. </p>
+<p>See <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a4aadae29e512c9f01a80ea50f2b53b0a" title="Returns the vector value of the slack variables associated with ϕxᵤ in result, or std::nullopt if no ...">GetSolutionPhiXu()</a> for more details. </p>
 
 </div>
 </div>
@@ -946,7 +946,7 @@ Friends</h2></td></tr>
 
 <p>Returns the continuous decision variables associated with vertex <code>u</code>. </p>
 <p>This can be used for constructing <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> costs and constraints.</p>
-<p>See also <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a41ea35f2dc43edde726bc0d68fb8eb54" title="Returns the vector value of the slack variables associated with ϕxᵤ in a solvers::MathematicalProgram...">GetSolutionPhiXu()</a>; using <code>result.GetSolution(xu())</code> may not be what you want. </p>
+<p>See also <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a4aadae29e512c9f01a80ea50f2b53b0a" title="Returns the vector value of the slack variables associated with ϕxᵤ in result, or std::nullopt if no ...">GetSolutionPhiXu()</a>; using <code>result.GetSolution(xu())</code> may not be what you want. </p>
 
 </div>
 </div>
@@ -967,7 +967,7 @@ Friends</h2></td></tr>
 
 <p>Returns the continuous decision variables associated with vertex <code>v</code>. </p>
 <p>This can be used for constructing <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> costs and constraints.</p>
-<p>See also <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aa5a517418d1cf8ab7bf2bf38605090e8" title="Returns the vector value of the slack variables associated with ϕxᵥ in a solvers::MathematicalProgram...">GetSolutionPhiXv()</a>; using <code>result.GetSolution(xv())</code> may not be what you want. </p>
+<p>See also <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a59f42bc8c6c4bdf7482e5c6b3b56f1c1" title="Returns the vector value of the slack variables associated with ϕxᵥ in result, or std::nullopt if no ...">GetSolutionPhiXv()</a>; using <code>result.GetSolution(xv())</code> may not be what you want. </p>
 
 </div>
 </div>
