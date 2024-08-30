@@ -64,6 +64,7 @@ var searchData=
   ['evalkineticenergy',['EvalKineticEnergy',['../classdrake_1_1systems_1_1_system.html#aa60880d6e51fedbf2ad61b6f0cae8f96',1,'drake::systems::System']]],
   ['evalnonconservativepower',['EvalNonConservativePower',['../classdrake_1_1systems_1_1_system.html#ace530af4be075614218eb4bc725c1aba',1,'drake::systems::System']]],
   ['evalpointpairpenetrations',['EvalPointPairPenetrations',['../classdrake_1_1multibody_1_1_multibody_plant.html#aecf801449932225a58b7daeb64a8f911',1,'drake::multibody::MultibodyPlant']]],
+  ['evalposeinbodyframe',['EvalPoseInBodyFrame',['../classdrake_1_1multibody_1_1_frame.html#a01d348ad800fcdc9c61a2db8a00646f0',1,'drake::multibody::Frame']]],
   ['evalposeinworld',['EvalPoseInWorld',['../classdrake_1_1multibody_1_1_rigid_body.html#adb15f7a08a083af61068735632ada406',1,'drake::multibody::RigidBody']]],
   ['evalpotentialenergy',['EvalPotentialEnergy',['../classdrake_1_1systems_1_1_system.html#a432bd44170a669c140bc483e18f9e6df',1,'drake::systems::System']]],
   ['evalscenegraphinspector',['EvalSceneGraphInspector',['../classdrake_1_1multibody_1_1_multibody_plant.html#ab138232d432d7a1e454ecb479bbfd81d',1,'drake::multibody::MultibodyPlant']]],

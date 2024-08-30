@@ -1,5 +1,8 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1solvers_1_1_bound.html#abb82b111deb51f3a5917cf8780fee484":[3,0,0,13,4,0],
+"structdrake_1_1solvers_1_1_bound.html#ae0e265c074f457e193b30ff0d77c750b":[3,0,0,13,4,1],
+"structdrake_1_1solvers_1_1_clarabel_solver_details.html":[3,0,0,13,7],
 "structdrake_1_1solvers_1_1_clarabel_solver_details.html#a1d10e252e778731e59f0f71afd7e727e":[3,0,0,13,7,0],
 "structdrake_1_1solvers_1_1_clarabel_solver_details.html#a45d6740f91111e3a9fb372c234ca2ac7":[3,0,0,13,7,2],
 "structdrake_1_1solvers_1_1_clarabel_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,13,7,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,15,8,3,2],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html":[3,0,0,15,8,4],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a01a2a4e8cf420c179bc1253ca3d3a1c3":[3,0,0,15,8,4,8],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a079f690a782b18a752952851aafd792a":[3,0,0,15,8,4,23],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a0d7ddcc8efc929f872d88097097e9953":[3,0,0,15,8,4,29],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a2474a5474cbff19523a51eb1de01cda4":[3,0,0,15,8,4,27],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a338e8e961277d5a62829534f12bc69f2":[3,0,0,15,8,4,5]
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a079f690a782b18a752952851aafd792a":[3,0,0,15,8,4,23]
 };

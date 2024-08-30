@@ -1602,28 +1602,27 @@ that doesn’t throw an exception in Debug builds.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Frame">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">Frame</span></span><a class="headerlink" href="#pydrake.multibody.tree.Frame" title="Permalink to this definition"></a></dt>
 <dd><p>%Frame is an abstract class representing a <em>material frame</em> (also
-called a <em>physical frame</em>), meaning that the Frame’s origin is a
-material point of a Body.</p>
+called a <em>physical frame</em>) of its underlying RigidBody. The Frame’s
+origin is a material point of its RigidBody, and its axes have fixed
+directions in that body. A Frame’s pose (position and orientation)
+with respect to its RigidBodyFrame may be parameterized, but is fixed
+(not time or state dependent) once parameters have been set.</p>
 <p>An important characteristic of a Frame is that forces or torques
-applied to a Frame are applied to the Frame’s underlying Body.
+applied to a Frame are applied to the Frame’s underlying RigidBody.
 Force-producing elements like joints, actuators, and constraints
 usually employ two Frames, with one Frame connected to one body and
-the other connected to a different Body. Every Frame object can report
-the RigidBody to which it is attached. Despite its name, Frame is not
-the most general frame in Drake (see FrameBase for more information).</p>
+the other connected to a different body. Every Frame F can report the
+RigidBody B to which it is attached and its pose X_BF with respect to
+B’s RigidBodyFrame.</p>
 <p>A Frame’s pose in World (or relative to other frames) is always
-calculated starting with its pose relative to its underlying Body’s
-BodyFrame. Subclasses derived from Frame differ in how kinematic
+calculated starting with its pose relative to its underlying
+RigidBodyFrame. Subclasses derived from Frame differ in how kinematic
 calculations are performed. For example, the angular velocity of a
-FixedOffsetFrame or BodyFrame is identical to the angular velocity of
-its underlying body, whereas the translational velocity of a
-FixedOffsetFrame differs from that of a BodyFrame. If a Frame is
-associated with a soft body, kinematic calculations can depend on the
-soft body’s deformation state variables.</p>
-<p>A Frame object does <em>not</em> store a Context (where Context means state
-that contains the Frame’s current orientation, position, motion,
-etc.). Instead, Frame provides methods for calculating these
-Frame-properties from a Context passed to Frame methods.</p>
+FixedOffsetFrame or RigidBodyFrame is identical to the angular
+velocity of its underlying body, whereas the translational velocity of
+a FixedOffsetFrame differs from that of a RigidBodyFrame.</p>
+<p>Frame provides methods for obtaining its current orientation,
+position, motion, etc. from a Context passed to those methods.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><code class="xref py py-class docutils literal notranslate"><span class="pre">Frame_</span></code></a>
@@ -2245,28 +2244,27 @@ name will be empty (the scope name and the element name).</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Frame_-AutoDiffXd">
 <span id="pydrake.multibody.tree.Frame_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">Frame_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.tree.Frame_-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>%Frame is an abstract class representing a <em>material frame</em> (also
-called a <em>physical frame</em>), meaning that the Frame’s origin is a
-material point of a Body.</p>
+called a <em>physical frame</em>) of its underlying RigidBody. The Frame’s
+origin is a material point of its RigidBody, and its axes have fixed
+directions in that body. A Frame’s pose (position and orientation)
+with respect to its RigidBodyFrame may be parameterized, but is fixed
+(not time or state dependent) once parameters have been set.</p>
 <p>An important characteristic of a Frame is that forces or torques
-applied to a Frame are applied to the Frame’s underlying Body.
+applied to a Frame are applied to the Frame’s underlying RigidBody.
 Force-producing elements like joints, actuators, and constraints
 usually employ two Frames, with one Frame connected to one body and
-the other connected to a different Body. Every Frame object can report
-the RigidBody to which it is attached. Despite its name, Frame is not
-the most general frame in Drake (see FrameBase for more information).</p>
+the other connected to a different body. Every Frame F can report the
+RigidBody B to which it is attached and its pose X_BF with respect to
+B’s RigidBodyFrame.</p>
 <p>A Frame’s pose in World (or relative to other frames) is always
-calculated starting with its pose relative to its underlying Body’s
-BodyFrame. Subclasses derived from Frame differ in how kinematic
+calculated starting with its pose relative to its underlying
+RigidBodyFrame. Subclasses derived from Frame differ in how kinematic
 calculations are performed. For example, the angular velocity of a
-FixedOffsetFrame or BodyFrame is identical to the angular velocity of
-its underlying body, whereas the translational velocity of a
-FixedOffsetFrame differs from that of a BodyFrame. If a Frame is
-associated with a soft body, kinematic calculations can depend on the
-soft body’s deformation state variables.</p>
-<p>A Frame object does <em>not</em> store a Context (where Context means state
-that contains the Frame’s current orientation, position, motion,
-etc.). Instead, Frame provides methods for calculating these
-Frame-properties from a Context passed to Frame methods.</p>
+FixedOffsetFrame or RigidBodyFrame is identical to the angular
+velocity of its underlying body, whereas the translational velocity of
+a FixedOffsetFrame differs from that of a RigidBodyFrame.</p>
+<p>Frame provides methods for obtaining its current orientation,
+position, motion, etc. from a Context passed to those methods.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Frame_-AutoDiffXd-.__init__">
 <span id="pydrake.multibody.tree.Frame_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.Frame_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
@@ -2877,28 +2875,27 @@ name will be empty (the scope name and the element name).</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Frame_-Expression">
 <span id="pydrake.multibody.tree.Frame_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">Frame_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.tree.Frame_-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>%Frame is an abstract class representing a <em>material frame</em> (also
-called a <em>physical frame</em>), meaning that the Frame’s origin is a
-material point of a Body.</p>
+called a <em>physical frame</em>) of its underlying RigidBody. The Frame’s
+origin is a material point of its RigidBody, and its axes have fixed
+directions in that body. A Frame’s pose (position and orientation)
+with respect to its RigidBodyFrame may be parameterized, but is fixed
+(not time or state dependent) once parameters have been set.</p>
 <p>An important characteristic of a Frame is that forces or torques
-applied to a Frame are applied to the Frame’s underlying Body.
+applied to a Frame are applied to the Frame’s underlying RigidBody.
 Force-producing elements like joints, actuators, and constraints
 usually employ two Frames, with one Frame connected to one body and
-the other connected to a different Body. Every Frame object can report
-the RigidBody to which it is attached. Despite its name, Frame is not
-the most general frame in Drake (see FrameBase for more information).</p>
+the other connected to a different body. Every Frame F can report the
+RigidBody B to which it is attached and its pose X_BF with respect to
+B’s RigidBodyFrame.</p>
 <p>A Frame’s pose in World (or relative to other frames) is always
-calculated starting with its pose relative to its underlying Body’s
-BodyFrame. Subclasses derived from Frame differ in how kinematic
+calculated starting with its pose relative to its underlying
+RigidBodyFrame. Subclasses derived from Frame differ in how kinematic
 calculations are performed. For example, the angular velocity of a
-FixedOffsetFrame or BodyFrame is identical to the angular velocity of
-its underlying body, whereas the translational velocity of a
-FixedOffsetFrame differs from that of a BodyFrame. If a Frame is
-associated with a soft body, kinematic calculations can depend on the
-soft body’s deformation state variables.</p>
-<p>A Frame object does <em>not</em> store a Context (where Context means state
-that contains the Frame’s current orientation, position, motion,
-etc.). Instead, Frame provides methods for calculating these
-Frame-properties from a Context passed to Frame methods.</p>
+FixedOffsetFrame or RigidBodyFrame is identical to the angular
+velocity of its underlying body, whereas the translational velocity of
+a FixedOffsetFrame differs from that of a RigidBodyFrame.</p>
+<p>Frame provides methods for obtaining its current orientation,
+position, motion, etc. from a Context passed to those methods.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Frame_-Expression-.__init__">
 <span id="pydrake.multibody.tree.Frame_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.Frame_-Expression-.__init__" title="Permalink to this definition"></a></dt>

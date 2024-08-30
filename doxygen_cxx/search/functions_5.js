@@ -126,7 +126,6 @@ var searchData=
   ['frame_5fon_5fchild',['frame_on_child',['../classdrake_1_1multibody_1_1_joint.html#adeb59e44e49a847f2a338211882d00f6',1,'drake::multibody::Joint']]],
   ['frame_5fon_5fparent',['frame_on_parent',['../classdrake_1_1multibody_1_1_joint.html#af544171c3e9756dd27830a3b5b4ff781',1,'drake::multibody::Joint']]],
   ['framea',['frameA',['../classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a0a77b7988d6de40ca1ced003d165ceb8',1,'drake::multibody::LinearBushingRollPitchYaw']]],
-  ['framebase',['FrameBase',['../classdrake_1_1multibody_1_1_frame_base.html#a5230206d73958e479e1f2d7ce463557b',1,'drake::multibody::FrameBase']]],
   ['framec',['frameC',['../classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a493af1883d5b4eb87c796ba239ee5a88',1,'drake::multibody::LinearBushingRollPitchYaw']]],
   ['frames',['frames',['../classdrake_1_1geometry_1_1_geometry_set_tester.html#a2cc5e2c99d38dc594e01cff3c0b50a12',1,'drake::geometry::GeometrySetTester']]],
   ['frames_5fper_5fsecond',['frames_per_second',['../classdrake_1_1geometry_1_1_meshcat_animation.html#acd985b71aca03d63b0c1d3bdd924e20a',1,'drake::geometry::MeshcatAnimation']]],

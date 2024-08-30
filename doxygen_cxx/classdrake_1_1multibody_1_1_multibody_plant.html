@@ -506,7 +506,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0d2828eaa6f5e384374e3ecec1a357ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a474c90a0b3e4f9349533207026413186"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class FrameType&gt; </td></tr>
 <tr class="memitem:a474c90a0b3e4f9349533207026413186"><td class="memTemplItemLeft" align="right" valign="top">const FrameType&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a474c90a0b3e4f9349533207026413186">AddFrame</a> (std::unique_ptr&lt; FrameType&lt; T &gt;&gt; frame)</td></tr>
-<tr class="memdesc:a474c90a0b3e4f9349533207026413186"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method adds a <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> of type <code>FrameType&lt;T&gt;</code>.  <a href="#a474c90a0b3e4f9349533207026413186">More...</a><br /></td></tr>
+<tr class="memdesc:a474c90a0b3e4f9349533207026413186"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method adds a <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> of type <code>FrameType&lt;T&gt;</code>.  <a href="#a474c90a0b3e4f9349533207026413186">More...</a><br /></td></tr>
 <tr class="separator:a474c90a0b3e4f9349533207026413186"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a437f86026a2268c0fb06936b899ba8d7"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename Scalar &gt; class JointType&gt; </td></tr>
 <tr class="memitem:a437f86026a2268c0fb06936b899ba8d7"><td class="memTemplItemLeft" align="right" valign="top">const JointType&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a437f86026a2268c0fb06936b899ba8d7">AddJoint</a> (std::unique_ptr&lt; JointType&lt; T &gt;&gt; joint)</td></tr>
@@ -1099,7 +1099,7 @@ bodies". Read carefully. A user can request the set of all floating base bodies 
 <tr class="memdesc:a422dc76ecd7f6adafe2064c033283363"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of GetJointByName that returns a mutable reference.  <a href="#a422dc76ecd7f6adafe2064c033283363">More...</a><br /></td></tr>
 <tr class="separator:a422dc76ecd7f6adafe2064c033283363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada7f02e861a8f89fc0b575b2f30333d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ada7f02e861a8f89fc0b575b2f30333d3">num_frames</a> () const</td></tr>
-<tr class="memdesc:ada7f02e861a8f89fc0b575b2f30333d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> objects in this model.  <a href="#ada7f02e861a8f89fc0b575b2f30333d3">More...</a><br /></td></tr>
+<tr class="memdesc:ada7f02e861a8f89fc0b575b2f30333d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> objects in this model.  <a href="#ada7f02e861a8f89fc0b575b2f30333d3">More...</a><br /></td></tr>
 <tr class="separator:ada7f02e861a8f89fc0b575b2f30333d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95cafdc0efac53fe097f9380b955e396"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a95cafdc0efac53fe097f9380b955e396">get_frame</a> (<a class="el" href="namespacedrake_1_1multibody.html#a51c69848adb64ae45eebc1e5af5dbaa6">FrameIndex</a> frame_index) const</td></tr>
 <tr class="memdesc:a95cafdc0efac53fe097f9380b955e396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the frame with unique index <code>frame_index</code>.  <a href="#a95cafdc0efac53fe097f9380b955e396">More...</a><br /></td></tr>
@@ -1738,7 +1738,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
       </table>
 </div><div class="memdoc">
 
-<p>This method adds a <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> of type <code>FrameType&lt;T&gt;</code>. </p>
+<p>This method adds a <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> of type <code>FrameType&lt;T&gt;</code>. </p>
 <p>For more information, please see the corresponding constructor of <code>FrameType</code>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">FrameType</td><td>Template which will be instantiated on <code>T</code>. </td></tr>
@@ -1751,7 +1751,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A constant reference to the new <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> just added, which will remain valid for the lifetime of <code>this</code> MultibodyPlant. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A constant reference to the new <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> just added, which will remain valid for the lifetime of <code>this</code> MultibodyPlant. </dd></dl>
 
 </div>
 </div>
@@ -1841,7 +1841,7 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
     <tr><td class="paramdir">[in]</td><td class="paramname">X_PF</td><td>The fixed pose of frame F attached to the parent body, measured in the frame P of that body. <code>X_PF</code> is an optional parameter; empty curly braces <code>{}</code> imply that frame F <b>is</b> the same body frame P. If instead your intention is to make a frame F with pose <code>X_PF</code> equal to the identity pose, provide <code>RigidTransform&lt;double&gt;::Identity()</code> as your input. When non-nullopt, adds a <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html" title="FixedOffsetFrame represents a material frame F whose pose is fixed with respect to a parent material ...">FixedOffsetFrame</a> named <code>{name}_parent</code>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">child</td><td>The child body connected by the new joint. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">X_BM</td><td>The fixed pose of frame M attached to the child body, measured in the frame B of that body. <code>X_BM</code> is an optional parameter; empty curly braces <code>{}</code> imply that frame M <b>is</b> the same body frame B. If instead your intention is to make a frame M with pose <code>X_BM</code> equal to the identity pose, provide <code>RigidTransform&lt;double&gt;::Identity()</code> as your input. When non-nullopt, adds a <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html" title="FixedOffsetFrame represents a material frame F whose pose is fixed with respect to a parent material ...">FixedOffsetFrame</a> named <code>{name}_child</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>Zero or more parameters provided to the constructor of the new joint. It must be the case that <code>JointType&lt;T&gt;( const std::string&amp;, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a>&lt;T&gt;&amp;, args)</code> is a valid constructor. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>Zero or more parameters provided to the constructor of the new joint. It must be the case that <code>JointType&lt;T&gt;( const std::string&amp;, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a>&lt;T&gt;&amp;, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a>&lt;T&gt;&amp;, args)</code> is a valid constructor. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2978,7 +2978,7 @@ When cached values are out of sync with the state stored in context, this method
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The frame B in <code>w_AB</code> (B's angular velocity in A). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame A in <code>w_AB</code> (B's angular velocity in A). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which <code>w_AB</code> is expressed on input and the frame in which the Jacobian <code>J𝑠_w_AB</code> is expressed on output. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">J𝑠_w_AB_E</td><td><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> B's angular velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. The Jacobian is a function of only generalized positions q (which are pulled from the context). The previous definition shows <code>J𝑠_w_AB_E</code> is a matrix of size <code>3 x n</code>, where n is the number of elements in 𝑠. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">J𝑠_w_AB_E</td><td><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> B's angular velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. The Jacobian is a function of only generalized positions q (which are pulled from the context). The previous definition shows <code>J𝑠_w_AB_E</code> is a matrix of size <code>3 x n</code>, where n is the number of elements in 𝑠. </td></tr>
   </table>
   </dd>
 </dl>
@@ -8429,7 +8429,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the number of <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> objects in this model. </p>
+<p>Returns the number of <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> objects in this model. </p>
 <p>Frames include body frames associated with each of the bodies, including the <em>world</em> body. This means the minimum number of frames is one. </p>
 
 </div>
@@ -9844,7 +9844,7 @@ manager != nullptr. </dd></dl>
 </div><div class="memdoc">
 
 <p>Updates <code>context</code> to store the pose <code>X_FB</code> of a given <code>body</code> B in a frame F. </p>
-<p><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> F must be anchored, meaning that it is either directly welded to the world frame W or, more generally, that there is a kinematic path between frame F and the world frame W that only includes weld joints. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> F must be anchored, meaning that it is either directly welded to the world frame W or, more generally, that there is a kinematic path between frame F and the world frame W that only includes weld joints. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if frame F is not anchored to the world. </td></tr>

@@ -168,10 +168,11 @@ $(document).ready(function(){initNavTree('frame_8h.html','');});
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="common_2autodiff_8h.html">drake/common/autodiff.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="nice__type__name_8h.html">drake/common/nice_type_name.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="spatial__algebra_8h.html">drake/multibody/math/spatial_algebra.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="frame__base_8h.html">drake/multibody/tree/frame_base.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="frame__body__pose__cache_8h.html">drake/multibody/tree/frame_body_pose_cache.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody__element_8h.html">drake/multibody/tree/multibody_element.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody__tree__indexes_8h.html">drake/multibody/tree/multibody_tree_indexes.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody__tree__topology_8h.html">drake/multibody/tree/multibody_tree_topology.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="scoped__name_8h.html">drake/multibody/tree/scoped_name.h</a>&quot;</code><br />
@@ -194,7 +195,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The term <b>rigid body</b> implies that the deformations of the body under consideration are so small that they have no significant effect on the overall motions of the body and therefore deformations can be neglected.  <a href="classdrake_1_1multibody_1_1_rigid_body.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame is an abstract class representing a <em>material frame</em> (also called a <em>physical frame</em>), meaning that the Frame's origin is a material point of a Body.  <a href="classdrake_1_1multibody_1_1_frame.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame is an abstract class representing a <em>material frame</em> (also called a <em>physical frame</em>) of its underlying <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>.  <a href="classdrake_1_1multibody_1_1_frame.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>

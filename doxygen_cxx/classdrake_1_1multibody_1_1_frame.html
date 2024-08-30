@@ -170,10 +170,11 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_frame.html
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::multibody::Frame&lt; T &gt;</h3>
 
-<p>Frame is an abstract class representing a <em>material frame</em> (also called a <em>physical frame</em>), meaning that the Frame's origin is a material point of a Body. </p>
-<p>An important characteristic of a Frame is that forces or torques applied to a Frame are applied to the Frame's underlying Body. Force-producing elements like joints, actuators, and constraints usually employ two Frames, with one Frame connected to one body and the other connected to a different Body. Every Frame object can report the <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> to which it is attached. Despite its name, Frame is not the most general frame in Drake (see <a class="el" href="classdrake_1_1multibody_1_1_frame_base.html" title="FrameBase is an abstract representation of the concept of a frame in multibody dynamics.">FrameBase</a> for more information).</p>
-<p>A Frame's pose in World (or relative to other frames) is always calculated starting with its pose relative to its underlying Body's BodyFrame. Subclasses derived from Frame differ in how kinematic calculations are performed. For example, the angular velocity of a <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html" title="FixedOffsetFrame represents a material frame F whose pose is fixed with respect to a parent material ...">FixedOffsetFrame</a> or BodyFrame is identical to the angular velocity of its underlying body, whereas the translational velocity of a <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html" title="FixedOffsetFrame represents a material frame F whose pose is fixed with respect to a parent material ...">FixedOffsetFrame</a> differs from that of a BodyFrame. If a Frame is associated with a soft body, kinematic calculations can depend on the soft body's deformation state variables.</p>
-<p>A Frame object does <em>not</em> store a Context (where Context means state that contains the Frame's current orientation, position, motion, etc.). Instead, Frame provides methods for calculating these Frame-properties from a Context passed to Frame methods.</p>
+<p>Frame is an abstract class representing a <em>material frame</em> (also called a <em>physical frame</em>) of its underlying <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </p>
+<p>The Frame's origin is a material point of its <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>, and its axes have fixed directions in that body. A Frame's pose (position and orientation) with respect to its <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame is a material Frame that serves as the unique reference frame for a RigidBody.">RigidBodyFrame</a> may be parameterized, but is fixed (not time or state dependent) once parameters have been set.</p>
+<p>An important characteristic of a Frame is that forces or torques applied to a Frame are applied to the Frame's underlying <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. Force-producing elements like joints, actuators, and constraints usually employ two Frames, with one Frame connected to one body and the other connected to a different body. Every Frame F can report the <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> B to which it is attached and its pose X_BF with respect to B's <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame is a material Frame that serves as the unique reference frame for a RigidBody.">RigidBodyFrame</a>.</p>
+<p>A Frame's pose in World (or relative to other frames) is always calculated starting with its pose relative to its underlying <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame is a material Frame that serves as the unique reference frame for a RigidBody.">RigidBodyFrame</a>. Subclasses derived from Frame differ in how kinematic calculations are performed. For example, the angular velocity of a <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html" title="FixedOffsetFrame represents a material frame F whose pose is fixed with respect to a parent material ...">FixedOffsetFrame</a> or <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame is a material Frame that serves as the unique reference frame for a RigidBody.">RigidBodyFrame</a> is identical to the angular velocity of its underlying body, whereas the translational velocity of a <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html" title="FixedOffsetFrame represents a material frame F whose pose is fixed with respect to a parent material ...">FixedOffsetFrame</a> differs from that of a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame is a material Frame that serves as the unique reference frame for a RigidBody.">RigidBodyFrame</a>.</p>
+<p>Frame provides methods for obtaining its current orientation, position, motion, etc. from a Context passed to those methods.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -187,6 +188,9 @@ class drake::multibody::Frame&lt; T &gt;</h3>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa0f3f98e61d00d6d126bba55efbff728"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#aa0f3f98e61d00d6d126bba55efbff728">~Frame</a> () override</td></tr>
 <tr class="separator:aa0f3f98e61d00d6d126bba55efbff728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacda9c48ea6f77ab847cf27804705b04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a51c69848adb64ae45eebc1e5af5dbaa6">FrameIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#aacda9c48ea6f77ab847cf27804705b04">index</a> () const</td></tr>
+<tr class="memdesc:aacda9c48ea6f77ab847cf27804705b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this Frame's unique index.  <a href="#aacda9c48ea6f77ab847cf27804705b04">More...</a><br /></td></tr>
+<tr class="separator:aacda9c48ea6f77ab847cf27804705b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54ef649a3a7676a4a374f537f2f9bbbe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a54ef649a3a7676a4a374f537f2f9bbbe">body</a> () const</td></tr>
 <tr class="memdesc:a54ef649a3a7676a4a374f537f2f9bbbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the body associated to this Frame.  <a href="#a54ef649a3a7676a4a374f537f2f9bbbe">More...</a><br /></td></tr>
 <tr class="separator:a54ef649a3a7676a4a374f537f2f9bbbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,6 +206,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a06542e4ec7c6a884bfcd61c9b00221b4">scoped_name</a> () const</td></tr>
 <tr class="memdesc:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns scoped name of this frame.  <a href="#a06542e4ec7c6a884bfcd61c9b00221b4">More...</a><br /></td></tr>
 <tr class="separator:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d348ad800fcdc9c61a2db8a00646f0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a01d348ad800fcdc9c61a2db8a00646f0">EvalPoseInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a01d348ad800fcdc9c61a2db8a00646f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the body-relative pose X_BF giving the pose of this <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> with respect to its body's <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame is a material Frame that serves as the unique reference frame for a RigidBody.">RigidBodyFrame</a>.  <a href="#a01d348ad800fcdc9c61a2db8a00646f0">More...</a><br /></td></tr>
+<tr class="separator:a01d348ad800fcdc9c61a2db8a00646f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc1befb8e8c71bf72c44143f39ca2538"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#abc1befb8e8c71bf72c44143f39ca2538">CalcPoseInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:abc1befb8e8c71bf72c44143f39ca2538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pose <code>X_BF</code> of <code>this</code> frame F in the body frame B associated with this frame.  <a href="#abc1befb8e8c71bf72c44143f39ca2538">More...</a><br /></td></tr>
 <tr class="separator:abc1befb8e8c71bf72c44143f39ca2538"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -281,12 +288,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aced939d5919bf90594d6821ab9bf0fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a486765b5bb3145d29946d6dae95a9332"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a486765b5bb3145d29946d6dae95a9332">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a486765b5bb3145d29946d6dae95a9332"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classdrake_1_1multibody_1_1_frame_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1multibody_1_1_frame_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_frame_base.html">FrameBase&lt; T &gt;</a></td></tr>
-<tr class="memitem:aacda9c48ea6f77ab847cf27804705b04 inherit pub_methods_classdrake_1_1multibody_1_1_frame_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a51c69848adb64ae45eebc1e5af5dbaa6">FrameIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame_base.html#aacda9c48ea6f77ab847cf27804705b04">index</a> () const</td></tr>
-<tr class="memdesc:aacda9c48ea6f77ab847cf27804705b04 inherit pub_methods_classdrake_1_1multibody_1_1_frame_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this element's unique index.  <a href="classdrake_1_1multibody_1_1_frame_base.html#aacda9c48ea6f77ab847cf27804705b04">More...</a><br /></td></tr>
-<tr class="separator:aacda9c48ea6f77ab847cf27804705b04 inherit pub_methods_classdrake_1_1multibody_1_1_frame_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf63115654a9a91c3c66661f0f1c0c37 inherit pub_methods_classdrake_1_1multibody_1_1_frame_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame_base.html#acf63115654a9a91c3c66661f0f1c0c37">~FrameBase</a> () override</td></tr>
-<tr class="separator:acf63115654a9a91c3c66661f0f1c0c37 inherit pub_methods_classdrake_1_1multibody_1_1_frame_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Internal use only</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>These functions work directly with the frame body pose cache entry.</p>
+</div></td></tr>
+<tr class="memitem:ad6f622812a34d39933a4866423064123"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#ad6f622812a34d39933a4866423064123">set_body_pose_index_in_cache</a> (<a class="el" href="classint.html">int</a> body_pose_index)</td></tr>
+<tr class="memdesc:ad6f622812a34d39933a4866423064123"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) A Frame's pose-in-parent X_PF can be parameterized, the parent's pose may also be parameterized, and so on.  <a href="#ad6f622812a34d39933a4866423064123">More...</a><br /></td></tr>
+<tr class="separator:ad6f622812a34d39933a4866423064123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ba8ca46e472757c51b8b0808e3e220"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a13ba8ca46e472757c51b8b0808e3e220">get_body_pose_index_in_cache</a> () const</td></tr>
+<tr class="memdesc:a13ba8ca46e472757c51b8b0808e3e220"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Retrieve this Frame's body pose index in the cache.  <a href="#a13ba8ca46e472757c51b8b0808e3e220">More...</a><br /></td></tr>
+<tr class="separator:a13ba8ca46e472757c51b8b0808e3e220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2966de63e3697fad889b8f6c6037aaed"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a2966de63e3697fad889b8f6c6037aaed">get_X_BF</a> (const internal::FrameBodyPoseCache&lt; T &gt; &amp;frame_body_poses) const</td></tr>
+<tr class="memdesc:a2966de63e3697fad889b8f6c6037aaed"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given an already up-to-date frame body pose cache, extract X_BF for this Frame from it.  <a href="#a2966de63e3697fad889b8f6c6037aaed">More...</a><br /></td></tr>
+<tr class="separator:a2966de63e3697fad889b8f6c6037aaed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1e4c1f7aef77e2ec2ac2a34e727e24"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a5d1e4c1f7aef77e2ec2ac2a34e727e24">get_X_FB</a> (const internal::FrameBodyPoseCache&lt; T &gt; &amp;frame_body_poses) const</td></tr>
+<tr class="memdesc:a5d1e4c1f7aef77e2ec2ac2a34e727e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given an already up-to-date frame body pose cache, extract X_FB (=X_BF⁻¹) for this Frame from it.  <a href="#a5d1e4c1f7aef77e2ec2ac2a34e727e24">More...</a><br /></td></tr>
+<tr class="separator:a5d1e4c1f7aef77e2ec2ac2a34e727e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1multibody_1_1_multibody_element')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement&lt; T &gt;</a></td></tr>
 <tr class="memitem:a1703fe23765583a9ceb91bfba1adc896 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a1703fe23765583a9ceb91bfba1adc896">~MultibodyElement</a> ()</td></tr>
 <tr class="separator:a1703fe23765583a9ceb91bfba1adc896 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -343,9 +359,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a652a1d7c4d9d502fffcec5b9d27dd3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21a1267a3cceabc6d0bec7768cd6f2c7"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a21a1267a3cceabc6d0bec7768cd6f2c7">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const =0</td></tr>
 <tr class="separator:a21a1267a3cceabc6d0bec7768cd6f2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_frame_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1multibody_1_1_frame_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_frame_base.html">FrameBase&lt; T &gt;</a></td></tr>
-<tr class="memitem:a5230206d73958e479e1f2d7ce463557b inherit pro_methods_classdrake_1_1multibody_1_1_frame_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame_base.html#a5230206d73958e479e1f2d7ce463557b">FrameBase</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>)</td></tr>
-<tr class="separator:a5230206d73958e479e1f2d7ce463557b inherit pro_methods_classdrake_1_1multibody_1_1_frame_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1multibody_1_1_multibody_element')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement&lt; T &gt;</a></td></tr>
 <tr class="memitem:a7b561934ea4adacae196c9f85cfa6f13 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7b561934ea4adacae196c9f85cfa6f13">MultibodyElement</a> ()</td></tr>
 <tr class="memdesc:a7b561934ea4adacae196c9f85cfa6f13 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor made protected so that sub-classes can still declare their default constructors if they need to.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a7b561934ea4adacae196c9f85cfa6f13">More...</a><br /></td></tr>
@@ -1461,6 +1474,100 @@ When cached values are out of sync with the state stored in context, this method
 
 </div>
 </div>
+<a id="a01d348ad800fcdc9c61a2db8a00646f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d348ad800fcdc9c61a2db8a00646f0">&#9670;&nbsp;</a></span>EvalPoseInBodyFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;T&gt;&amp; EvalPoseInBodyFrame </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the body-relative pose X_BF giving the pose of this <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> with respect to its body's <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame is a material Frame that serves as the unique reference frame for a RigidBody.">RigidBodyFrame</a>. </p>
+<p>This may depend on parameters in the Context but not on time or state. The first time this is called after a parameter change will precalculate offset poses for all Frames into the Context's cache; subsequent calls on any Frame are very fast. </p>
+
+</div>
+</div>
+<a id="a13ba8ca46e472757c51b8b0808e3e220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13ba8ca46e472757c51b8b0808e3e220">&#9670;&nbsp;</a></span>get_body_pose_index_in_cache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> get_body_pose_index_in_cache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Retrieve this Frame's body pose index in the cache. </p>
+
+</div>
+</div>
+<a id="a2966de63e3697fad889b8f6c6037aaed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2966de63e3697fad889b8f6c6037aaed">&#9670;&nbsp;</a></span>get_X_BF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;T&gt;&amp; get_X_BF </td>
+          <td>(</td>
+          <td class="paramtype">const internal::FrameBodyPoseCache&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_body_poses</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Given an already up-to-date frame body pose cache, extract X_BF for this Frame from it. </p>
+<dl class="section note"><dt>Note</dt><dd>Be sure you have called MultibodyTreeSystem::EvalFrameBodyPoses() since the last parameter change; we can't check here. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">X_BF</td><td>pose of this frame in its body's frame </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5d1e4c1f7aef77e2ec2ac2a34e727e24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d1e4c1f7aef77e2ec2ac2a34e727e24">&#9670;&nbsp;</a></span>get_X_FB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;T&gt;&amp; get_X_FB </td>
+          <td>(</td>
+          <td class="paramtype">const internal::FrameBodyPoseCache&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_body_poses</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Given an already up-to-date frame body pose cache, extract X_FB (=X_BF⁻¹) for this Frame from it. </p>
+<dl class="section note"><dt>Note</dt><dd>Be sure you have called MultibodyTreeSystem::EvalFrameBodyPoses() since the last parameter change; we can't check here. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">X_FB</td><td>inverse of this frame's pose in its body's frame </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4a070ee83deb89bd6cca65946a5f8f37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a070ee83deb89bd6cca65946a5f8f37">&#9670;&nbsp;</a></span>GetFixedOffsetPoseInBody()</h2>
 
@@ -1609,6 +1716,25 @@ When cached values are out of sync with the state stored in context, this method
 
 </div>
 </div>
+<a id="aacda9c48ea6f77ab847cf27804705b04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacda9c48ea6f77ab847cf27804705b04">&#9670;&nbsp;</a></span>index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#a51c69848adb64ae45eebc1e5af5dbaa6">FrameIndex</a> index </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns this Frame's unique index. </p>
+
+</div>
+</div>
 <a id="a6681a8def9431af1311063721c46fe14"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6681a8def9431af1311063721c46fe14">&#9670;&nbsp;</a></span>is_body_frame()</h2>
 
@@ -1666,8 +1792,8 @@ When cached values are out of sync with the state stored in context, this method
 
 </div>
 </div>
-<a id="a486765b5bb3145d29946d6dae95a9332"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a486765b5bb3145d29946d6dae95a9332">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a8e197bedf7aa897596ace36baca53361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e197bedf7aa897596ace36baca53361">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1678,7 +1804,7 @@ When cached values are out of sync with the state stored in context, this method
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1692,8 +1818,8 @@ When cached values are out of sync with the state stored in context, this method
 
 </div>
 </div>
-<a id="a8e197bedf7aa897596ace36baca53361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e197bedf7aa897596ace36baca53361">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a486765b5bb3145d29946d6dae95a9332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486765b5bb3145d29946d6dae95a9332">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1704,7 +1830,7 @@ When cached values are out of sync with the state stored in context, this method
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1735,6 +1861,28 @@ When cached values are out of sync with the state stored in context, this method
 
 <p>Returns scoped name of this frame. </p>
 <p>Neither of the two pieces of the name will be empty (the scope name and the element name). </p>
+
+</div>
+</div>
+<a id="ad6f622812a34d39933a4866423064123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f622812a34d39933a4866423064123">&#9670;&nbsp;</a></span>set_body_pose_index_in_cache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_body_pose_index_in_cache </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>body_pose_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) A Frame's pose-in-parent X_PF can be parameterized, the parent's pose may also be parameterized, and so on. </p>
+<p>Thus the calculation of this frame's pose in its body (X_BF) can be expensive. There is a cache entry that holds the calculated X_BF, evaluated whenever parameters change. This allows us to grab X_BF as a const reference rather than having to extract and reformat parameters, and compose with parent and ancestor poses at runtime.</p>
+<p>At the time parameters are allocated we assign a slot in the body pose cache entry to each Frame and record its index using this function. (The index for a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame is a material Frame that serves as the unique reference frame for a RigidBody.">RigidBodyFrame</a> will refer to an identity transform.) Note that the body pose index is not necessarily the same as the Frame index because all RigidBodyFrames can share an entry. (Of course if you know you are working with a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html" title="A RigidBodyFrame is a material Frame that serves as the unique reference frame for a RigidBody.">RigidBodyFrame</a> you don't need to ask about its body pose!) </p>
 
 </div>
 </div>

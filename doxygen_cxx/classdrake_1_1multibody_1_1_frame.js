@@ -33,14 +33,20 @@ var classdrake_1_1multibody_1_1_frame =
     [ "DoDeclareFrameParameters", "classdrake_1_1multibody_1_1_frame.html#a1f059110215fa08c1fe519e29737f452", null ],
     [ "DoSetDefaultFrameParameters", "classdrake_1_1multibody_1_1_frame.html#a358afbe8ee25409df05f9979a335e1ba", null ],
     [ "EvalAngularVelocityInWorld", "classdrake_1_1multibody_1_1_frame.html#a771e61be4b212f85aa8f00951ded51e6", null ],
+    [ "EvalPoseInBodyFrame", "classdrake_1_1multibody_1_1_frame.html#a01d348ad800fcdc9c61a2db8a00646f0", null ],
+    [ "get_body_pose_index_in_cache", "classdrake_1_1multibody_1_1_frame.html#a13ba8ca46e472757c51b8b0808e3e220", null ],
+    [ "get_X_BF", "classdrake_1_1multibody_1_1_frame.html#a2966de63e3697fad889b8f6c6037aaed", null ],
+    [ "get_X_FB", "classdrake_1_1multibody_1_1_frame.html#a5d1e4c1f7aef77e2ec2ac2a34e727e24", null ],
     [ "GetFixedOffsetPoseInBody", "classdrake_1_1multibody_1_1_frame.html#a4a070ee83deb89bd6cca65946a5f8f37", null ],
     [ "GetFixedPoseInBodyFrame", "classdrake_1_1multibody_1_1_frame.html#a9f41fe43f53ca7807f256f0d5daa0734", null ],
     [ "GetFixedRotationMatrixInBody", "classdrake_1_1multibody_1_1_frame.html#aaff50422b2283b8cc9b6560092b80803", null ],
     [ "GetFixedRotationMatrixInBodyFrame", "classdrake_1_1multibody_1_1_frame.html#ab645c93960ef7dc30603102c64015644", null ],
+    [ "index", "classdrake_1_1multibody_1_1_frame.html#aacda9c48ea6f77ab847cf27804705b04", null ],
     [ "is_body_frame", "classdrake_1_1multibody_1_1_frame.html#a6681a8def9431af1311063721c46fe14", null ],
     [ "is_world_frame", "classdrake_1_1multibody_1_1_frame.html#a64d83126860c9766c12c88786177cf22", null ],
     [ "name", "classdrake_1_1multibody_1_1_frame.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_frame.html#a486765b5bb3145d29946d6dae95a9332", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_frame.html#a8e197bedf7aa897596ace36baca53361", null ],
-    [ "scoped_name", "classdrake_1_1multibody_1_1_frame.html#a06542e4ec7c6a884bfcd61c9b00221b4", null ]
+    [ "operator=", "classdrake_1_1multibody_1_1_frame.html#a486765b5bb3145d29946d6dae95a9332", null ],
+    [ "scoped_name", "classdrake_1_1multibody_1_1_frame.html#a06542e4ec7c6a884bfcd61c9b00221b4", null ],
+    [ "set_body_pose_index_in_cache", "classdrake_1_1multibody_1_1_frame.html#ad6f622812a34d39933a4866423064123", null ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/multibody/tree/frame_base.h File Reference</title>
+<title>Drake: drake/multibody/tree/frame_body_pose_cache.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('frame__base_8h.html','');});
+$(document).ready(function(){initNavTree('frame__body__pose__cache_8h.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -159,46 +159,67 @@ $(document).ready(function(){initNavTree('frame__base_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">frame_base.h File Reference</div>  </div>
+<div class="title">frame_body_pose_cache.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="multibody__element_8h.html">drake/multibody/tree/multibody_element.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="multibody__tree__indexes_8h.html">drake/multibody/tree/multibody_tree_indexes.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="default__scalars_8h.html">drake/common/default_scalars.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rigid__transform_8h.html">drake/math/rigid_transform.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for frame_base.h:</div>
+Include dependency graph for frame_body_pose_cache.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="frame__base_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="frame__body__pose__cache_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="frame__base_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="frame__body__pose__cache_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame_base.html">FrameBase&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FrameBase is an abstract representation of the concept of a <em>frame</em> in multibody dynamics.  <a href="classdrake_1_1multibody_1_1_frame_base.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1multibody"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html">drake::multibody</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acad2f45fbecc0549e1587e20043bbef6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="frame__body__pose__cache_8h.html#acad2f45fbecc0549e1587e20043bbef6">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS</a> (class ::drake::multibody::internal::FrameBodyPoseCache)</td></tr>
+<tr class="separator:acad2f45fbecc0549e1587e20043bbef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="acad2f45fbecc0549e1587e20043bbef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acad2f45fbecc0549e1587e20043bbef6">&#9670;&nbsp;</a></span>DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS </td>
+          <td>(</td>
+          <td class="paramtype">class ::drake::multibody::internal::FrameBodyPoseCache&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li><li class="navelem"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a></li><li class="navelem"><a class="el" href="frame__base_8h.html">frame_base.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li><li class="navelem"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a></li><li class="navelem"><a class="el" href="frame__body__pose__cache_8h.html">frame_body_pose_cache.h</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">
