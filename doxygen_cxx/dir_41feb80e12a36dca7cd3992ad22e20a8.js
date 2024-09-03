@@ -1,6 +1,5 @@
 var dir_41feb80e12a36dca7cd3992ad22e20a8 =
 [
-    [ "gen", "dir_a6021b360ca327887f5e14d3c39ff47a.html", "dir_a6021b360ca327887f5e14d3c39ff47a" ],
     [ "acrobot_geometry.h", "acrobot__geometry_8h.html", null ],
     [ "acrobot_input.h", "acrobot__input_8h.html", [
       [ "AcrobotInputIndices", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_input_indices.html", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_input_indices" ],

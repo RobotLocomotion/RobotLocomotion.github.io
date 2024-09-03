@@ -1,6 +1,5 @@
 var dir_47be7cb145c8f2c349a22ea5364e6acd =
 [
-    [ "gen", "dir_ad8707ec0781c04302d82846eca4df3f.html", "dir_ad8707ec0781c04302d82846eca4df3f" ],
     [ "compass_gait.h", "compass__gait_8h.html", [
       [ "CompassGait", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait" ]
     ] ],

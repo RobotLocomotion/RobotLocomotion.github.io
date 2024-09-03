@@ -1,6 +1,5 @@
 var dir_dc85ca307a056e878fb7cdf32e7a9a8e =
 [
-    [ "gen", "dir_2b059b6c5a01019525475bf449c22710.html", "dir_2b059b6c5a01019525475bf449c22710" ],
     [ "pendulum_geometry.h", "pendulum__geometry_8h.html", [
       [ "PendulumGeometry", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_geometry.html", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_geometry" ]
     ] ],

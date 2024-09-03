@@ -1,6 +1,5 @@
 var dir_68f515a9ecea1af7d296cc4b56524b28 =
 [
-    [ "gen", "dir_c6f9e2883ee485756afb68763f442631.html", "dir_c6f9e2883ee485756afb68763f442631" ],
     [ "rimless_wheel.h", "rimless__wheel_8h.html", [
       [ "RimlessWheel", "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html", "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel" ],
       [ "Traits< examples::rimless_wheel::RimlessWheel >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html", null ]

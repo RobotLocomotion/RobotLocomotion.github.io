@@ -7,7 +7,7 @@ var searchData=
   ['batch_5feval_2eh',['batch_eval.h',['../batch__eval_8h.html',1,'']]],
   ['bead_5fon_5fa_5fwire_2eh',['bead_on_a_wire.h',['../bead__on__a__wire_8h.html',1,'']]],
   ['beam_5fmodel_2eh',['beam_model.h',['../beam__model_8h.html',1,'']]],
-  ['beam_5fmodel_5fparams_2eh',['beam_model_params.h',['../beam__model__params_8h.html',1,'(Global Namespace)'],['../gen_2beam__model__params_8h.html',1,'(Global Namespace)']]],
+  ['beam_5fmodel_5fparams_2eh',['beam_model_params.h',['../beam__model__params_8h.html',1,'']]],
   ['bezier_5fcurve_2eh',['bezier_curve.h',['../bezier__curve_8h.html',1,'']]],
   ['binding_2eh',['binding.h',['../binding_8h.html',1,'']]],
   ['binomial_5fcoefficient_2eh',['binomial_coefficient.h',['../binomial__coefficient_8h.html',1,'']]],
