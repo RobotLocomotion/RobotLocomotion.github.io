@@ -197,7 +197,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad205cd89a7f7bad4df4599fbfa82ed3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1reset__after__move.html#ad205cd89a7f7bad4df4599fbfa82ed3b">reset_after_move</a> () noexcept(std::is_nothrow_default_constructible_v&lt; T &gt;)</td></tr>
 <tr class="memdesc:ad205cd89a7f7bad4df4599fbfa82ed3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reset_after_move&lt;T&gt; with a value-initialized wrapped value.  <a href="#ad205cd89a7f7bad4df4599fbfa82ed3b">More...</a><br /></td></tr>
 <tr class="separator:ad205cd89a7f7bad4df4599fbfa82ed3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8e42fc98481791a8d8ca911b820f728"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1reset__after__move.html#ac8e42fc98481791a8d8ca911b820f728">reset_after_move</a> (const T &amp;value) noexcept(std::is_nothrow_copy_constructible_v&lt; T &gt;)</td></tr>
+<tr class="memitem:ac8e42fc98481791a8d8ca911b820f728"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1reset__after__move.html#ac8e42fc98481791a8d8ca911b820f728">reset_after_move</a> (const T &amp;<a class="el" href="classdrake_1_1reset__after__move.html#a464298ad7afeafebbb149f566ecabbab">value</a>) noexcept(std::is_nothrow_copy_constructible_v&lt; T &gt;)</td></tr>
 <tr class="memdesc:ac8e42fc98481791a8d8ca911b820f728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reset_after_move&lt;T&gt; with the given wrapped value.  <a href="#ac8e42fc98481791a8d8ca911b820f728">More...</a><br /></td></tr>
 <tr class="separator:ac8e42fc98481791a8d8ca911b820f728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible,</div></td></tr>
@@ -228,6 +228,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa2e964756d74a635a00d3ece8abede3d"><td class="memTemplParams" colspan="2">template&lt;typename T1  = T&gt; </td></tr>
 <tr class="memitem:aa2e964756d74a635a00d3ece8abede3d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_pointer_v&lt; T1 &gt;, std::add_lvalue_reference_t&lt; std::remove_pointer_t&lt; T &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1reset__after__move.html#aa2e964756d74a635a00d3ece8abede3d">operator *</a> () const</td></tr>
 <tr class="separator:aa2e964756d74a635a00d3ece8abede3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Direct access to the T value.</div></td></tr>
+<tr class="memitem:a464298ad7afeafebbb149f566ecabbab"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1reset__after__move.html#a464298ad7afeafebbb149f566ecabbab">value</a> ()</td></tr>
+<tr class="separator:a464298ad7afeafebbb149f566ecabbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77c7d528ac063d870b8c8426ec81c1c3"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1reset__after__move.html#a77c7d528ac063d870b8c8426ec81c1c3">value</a> () const</td></tr>
+<tr class="separator:a77c7d528ac063d870b8c8426ec81c1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad205cd89a7f7bad4df4599fbfa82ed3b"></a>
@@ -456,6 +461,40 @@ Public Member Functions</h2></td></tr>
 <span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a464298ad7afeafebbb149f566ecabbab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a464298ad7afeafebbb149f566ecabbab">&#9670;&nbsp;</a></span>value() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77c7d528ac063d870b8c8426ec81c1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77c7d528ac063d870b8c8426ec81c1c3">&#9670;&nbsp;</a></span>value() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>

@@ -52,6 +52,9 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "is_approx_equal_abstol.h", "is__approx__equal__abstol_8h.html", "is__approx__equal__abstol_8h" ],
     [ "is_cloneable.h", "is__cloneable_8h.html", "is__cloneable_8h" ],
     [ "is_less_than_comparable.h", "is__less__than__comparable_8h.html", null ],
+    [ "memory_file.h", "memory__file_8h.html", [
+      [ "MemoryFile", "classdrake_1_1_memory_file.html", "classdrake_1_1_memory_file" ]
+    ] ],
     [ "name_value.h", "name__value_8h.html", "name__value_8h" ],
     [ "network_policy.h", "network__policy_8h.html", null ],
     [ "never_destroyed.h", "never__destroyed_8h.html", [

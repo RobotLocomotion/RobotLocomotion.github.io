@@ -311,8 +311,8 @@ linearly independent.</p>
 <li><p>__init__(self: pydrake.geometry.optimization.AffineSubspace, set: pydrake.geometry.optimization.ConvexSet, tol: float = 1e-12) -&gt; None</p></li>
 </ol>
 <p>Constructs an affine subspace as the affine hull of another convex
-set. This is done by finding a feasible point in the set, and then
-iteratively computing feasible vectors until we have a basis that
+set. The generic approach is to find a feasible point in the set, and
+then iteratively compute feasible vectors until we have a basis that
 spans the set. If you pass in a convex set whose points are
 matrix-valued (e.g. a Spectrahedron), then the affine subspace will
 work over a flattened representation of those coordinates. (So a
@@ -323,17 +323,40 @@ dimension, a pair of feasible points are constructed, so as to
 maximize the displacement in that dimension. If their displacement
 along that dimension is larger than tol, then the vector connecting
 the points is added as a basis vector.</p>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>!set.IsEmpty()</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if set is empty.</strong> – </p></li>
+<li><p><strong>RuntimeError if tol &lt; 0.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
+<p>For several subclasses of ConvexSet, there is a closed-form
+computation (or more efficient numerical computation) that is
+preferred. - AffineBall: Can be computed via a rank-revealing
+decomposition; <code class="docutils literal notranslate"><span class="pre">tol</span></code> is used as the numerical tolerance for the rank
+of the matrix. Pass <code class="docutils literal notranslate"><span class="pre">std::nullopt</span></code> for <code class="docutils literal notranslate"><span class="pre">tol</span></code> to use Eigen’s
+automatic tolerance computation. - AffineSubspace: Equivalent to the
+copy-constructor; <code class="docutils literal notranslate"><span class="pre">tol</span></code> is ignored. - CartesianProduct: Can compute
+the affine hull of each factor individually; <code class="docutils literal notranslate"><span class="pre">tol</span></code> is propagated to
+the constituent calls. (This is not done if the Cartesian product has
+an associated affine transformation.) - Hyperellipsoid: Always equal
+to the whole ambient space; <code class="docutils literal notranslate"><span class="pre">tol</span></code> is ignored. - Hyperrectangle: Can
+be computed in closed-form; <code class="docutils literal notranslate"><span class="pre">tol</span></code> has the same meaning as in the
+generic affine hull computation. - Point: Can be computed in
+closed-form; <code class="docutils literal notranslate"><span class="pre">tol</span></code> is ignored. This also encompasses sets which are
+obviously a singleton point, as determined via MaybeGetPoint. -
+VPolytope: Can be computed via a singular value decomposition; <code class="docutils literal notranslate"><span class="pre">tol</span></code>
+is used as the numerical tolerance for the rank of the matrix. Pass
+<code class="docutils literal notranslate"><span class="pre">std::nullopt</span></code> for <code class="docutils literal notranslate"><span class="pre">tol</span></code> to use Eigen’s automatic tolerance
+computation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.AffineDimension">
 <span class="sig-name descname"><span class="pre">AffineDimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.AffineDimension" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the affine dimension of this set. For an affine subspace, this
-is simply the number of columns in the <a href="#id19"><span class="problematic" id="id20">basis_</span></a> matrix. A point will
+is simply the number of columns in the <a href="#id25"><span class="problematic" id="id26">basis_</span></a> matrix. A point will
 have affine dimension zero.</p>
 </dd></dl>
 
@@ -384,7 +407,7 @@ orthogonal to this AffineSubspace.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.AffineSubspace.ToGlobalCoordinates">
 <span class="sig-name descname"><span class="pre">ToGlobalCoordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.ToGlobalCoordinates" title="Permalink to this definition"></a></dt>
 <dd><p>Given a point y in the basis of the AffineSubspace, with the zero
-point at <a href="#id21"><span class="problematic" id="id22">translation_</span></a>, returns the coordinates of y in the standard
+point at <a href="#id27"><span class="problematic" id="id28">translation_</span></a>, returns the coordinates of y in the standard
 basis of the ambient space. If the AffineSubspace is a point, it has
 an empty basis, so the only possible local coordinates are also empty
 (and should be passed in as a length-zero vector). Each column of the
@@ -402,7 +425,7 @@ its representation in the coordinate system of the ambient space.</p>
 <span class="sig-name descname"><span class="pre">ToLocalCoordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.AffineSubspace" title="pydrake.geometry.optimization.AffineSubspace"><span class="pre">pydrake.geometry.optimization.AffineSubspace</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.AffineSubspace.ToLocalCoordinates" title="Permalink to this definition"></a></dt>
 <dd><p>Given a point x in the standard basis of the ambient space, returns
 the coordinates of x in the basis of the AffineSubspace, with the zero
-point at <a href="#id23"><span class="problematic" id="id24">translation_</span></a>. The component of x that is orthogonal to the
+point at <a href="#id29"><span class="problematic" id="id30">translation_</span></a>. The component of x that is orthogonal to the
 AffineSubspace (if it exists) is discarded, so
 ToGlobalCoordinates(ToLocalCoordinates(x)) is equivalent to
 Project(x). Note that if the AffineSubspace is a point, the basis is
@@ -431,10 +454,9 @@ its representation in the local coordinates of the affine subspace.</p>
 <ol class="arabic simple">
 <li><p>CalcPairwiseIntersections(convex_sets_A: list[pydrake.geometry.optimization.ConvexSet], convex_sets_B: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], preprocess_bbox: bool = True) -&gt; list[tuple[int, int, numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
 </ol>
-<p>Computes the pairwise intersections edges between two lists of convex
-sets. Each edge is a tuple in the form [index_A, index_B,
-offset_A_to_B], where Each is a tuple in the form [index_A, index_B,
-offset_A_to_B], where index_A is the index of the list in
+<p>Computes the pairwise intersections between two lists of convex sets,
+returning a list of edges. Each edge is a tuple in the form [index_A,
+index_B, offset_A_to_B], where index_A is the index of the list in
 <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>, index_B is the index of the list in
 <code class="docutils literal notranslate"><span class="pre">convex_sets_B</span></code>, and offset_A_to_B is is the translation to applied
 to all the points in the index_A’th set in <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code> to align
@@ -467,8 +489,16 @@ boxes.</p>
 <li><p><strong>entry is outside the interval</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>ambient_dimension</strong><strong>)</strong><strong>, </strong><strong>where</strong> – </p></li>
 <li><p><strong>ambient_dimension is the ambient dimension of the convex sets in</strong> – </p></li>
 <li><p><strong>convex_sets_A` and convex_sets_B</strong> – </p></li>
-<li><p><strong>if convex_sets_A</strong><strong> or </strong><strong>convex_sets_B are empty.</strong> – </p></li>
+<li><p><strong>if convex_sets_A</strong><strong> or </strong><strong>convex_sets_B are empty. */</strong> – </p></li>
+<li><p><strong>(</strong><strong>Deprecated.</strong><strong>)</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Instead use ComputePairwiseIntersections, with return type
+std::pair&lt;std::vector&lt;std::pair&lt;int, int&gt;&gt;,
+std::vector&lt;Eigen::VectorXd&gt;&gt;. This will be removed from Drake on
+or after 2024-12-01.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -498,8 +528,16 @@ indeed the AABBs corresponding to the sets in <code class="docutils literal notr
 <li><p><strong>if convex_sets_A.size</strong><strong>(</strong><strong>) </strong><strong>!= bboxes_A.size</strong><strong>(</strong><strong>)</strong> – </p></li>
 <li><p><strong>if convex_sets_B.size</strong><strong>(</strong><strong>) </strong><strong>!= bboxes_B.size</strong><strong>(</strong><strong>)</strong> – </p></li>
 <li><p><strong>if not all entries of convex_sets_A</strong><strong>, </strong><strong>convex_sets_B</strong><strong>,</strong> – </p></li>
-<li><p><strong>bboxes_A`</strong><strong>, </strong><strong>and bboxes_B have the same ambient dimension</strong> – </p></li>
+<li><p><strong>bboxes_A`</strong><strong>, </strong><strong>and bboxes_B have the same ambient dimension. *</strong> – </p></li>
+<li><p><strong>(</strong><strong>Deprecated.</strong><strong>)</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Instead use ComputePairwiseIntersections, with return type
+std::pair&lt;std::vector&lt;std::pair&lt;int, int&gt;&gt;,
+std::vector&lt;Eigen::VectorXd&gt;&gt;. This will be removed from Drake on
+or after 2024-12-01.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
@@ -529,8 +567,15 @@ without needing to solve an optimization problem.</p>
 <li><p><strong>entry is outside the interval</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>ambient_dimension</strong><strong>)</strong><strong>, </strong><strong>where</strong> – </p></li>
 <li><p><strong>ambient_dimension is the ambient dimension of the convex sets in</strong> – </p></li>
 <li><p><strong>convex_sets`</strong> – </p></li>
-<li><p><strong>if convex_sets is empty.</strong> – </p></li>
+<li><p><strong>if convex_sets is empty. */</strong><strong> (</strong><strong>Deprecated.</strong><strong>)</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Instead use ComputePairwiseIntersections, with return type
+std::pair&lt;std::vector&lt;std::pair&lt;int, int&gt;&gt;,
+std::vector&lt;Eigen::VectorXd&gt;&gt;. This will be removed from Drake on
+or after 2024-12-01.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
@@ -555,8 +600,15 @@ corresponding to the sets in <code class="docutils literal notranslate"><span cl
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if convex_sets.size</strong><strong>(</strong><strong>) </strong><strong>!= bboxes.size</strong><strong>(</strong><strong>)</strong> – </p></li>
 <li><p><strong>if not all entries of convex_sets and bboxes have the same</strong> – </p></li>
-<li><p><strong>ambient dimension.</strong> – </p></li>
+<li><p><strong>ambient dimension. */</strong><strong> (</strong><strong>Deprecated.</strong><strong>)</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Instead use ComputePairwiseIntersections, with return type
+std::pair&lt;std::vector&lt;std::pair&lt;int, int&gt;&gt;,
+std::vector&lt;Eigen::VectorXd&gt;&gt;. This will be removed from Drake on
+or after 2024-12-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -768,6 +820,208 @@ one side of the plane.”</p>
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.CIrisGeometryType.value">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.geometry.optimization.CIrisGeometryType.value" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ComputePairwiseIntersections">
+<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">ComputePairwiseIntersections</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.ComputePairwiseIntersections" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>ComputePairwiseIntersections(convex_sets_A: list[pydrake.geometry.optimization.ConvexSet], convex_sets_B: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], preprocess_bbox: bool = True) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+</ol>
+<p>Computes the pairwise intersections between two lists of convex sets,
+returning a list of edges, and a list of their corresponding offsets.
+Each edge is a tuple in the form [index_A, index_B], where index_A is
+the index of the set in <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code> and index_B is the index of
+the set in <code class="docutils literal notranslate"><span class="pre">convex_sets_B</span></code>. The corresponding entry in the list of
+offsets (i.e., the entry at the same index) is the translation that is
+applied to all the points in the index_A’th set in <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>
+to align them with the index_B’th set in <code class="docutils literal notranslate"><span class="pre">convex_sets_B</span></code>. This
+translation may only have non-zero entries along the dimensions
+corresponding to <code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>. All non-zero entries
+are integer multiples of 2π as the translation of the sets still
+represents the same configurations for the indices in
+<code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>:</dt><dd><p>is a vector of convex sets. Pairwise intersections will be
+computed between <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code> and <code class="docutils literal notranslate"><span class="pre">convex_sets_B</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">convex_sets_B</span></code>:</dt><dd><p>is the other vector of convex sets.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>:</dt><dd><p>is a list of joint indices corresponding to continuous revolute
+joints.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">preprocess_bbox</span></code>:</dt><dd><p>is a flag for whether the function should precompute axis-aligned
+bounding boxes (AABBs) for every set. This can speed up the
+pairwise intersection checks, by determining some sets to be
+disjoint without needing to solve an optimization problem.
+However, it does require some overhead to compute those bounding
+boxes.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if continuous_revolute_joints has repeated entries</strong><strong>, or </strong><strong>if any</strong> – </p></li>
+<li><p><strong>entry is outside the interval</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>ambient_dimension</strong><strong>)</strong><strong>, </strong><strong>where</strong> – </p></li>
+<li><p><strong>ambient_dimension is the ambient dimension of the convex sets in</strong> – </p></li>
+<li><p><strong>convex_sets_A` and convex_sets_B</strong> – </p></li>
+<li><p><strong>if convex_sets_A</strong><strong> or </strong><strong>convex_sets_B are empty.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>ComputePairwiseIntersections(convex_sets_A: list[pydrake.geometry.optimization.ConvexSet], convex_sets_B: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], bboxes_A: list[pydrake.geometry.optimization.Hyperrectangle], bboxes_B: list[pydrake.geometry.optimization.Hyperrectangle]) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+</ol>
+<p>Overload of <code class="docutils literal notranslate"><span class="pre">ComputePairwiseIntersections</span></code> allowing the user to
+supply axis- aligned bounding boxes if they’re known a priori, to save
+on computation time.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bboxes_A</span></code>:</dt><dd><p>is a vector of Hyperrectangles, allowing the user to manually pass
+in the AABBs of each set in <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code> to avoid
+recomputation.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bboxes_B</span></code>:</dt><dd><p>serves the same role to <code class="docutils literal notranslate"><span class="pre">convex_sets_B</span></code> as <code class="docutils literal notranslate"><span class="pre">bboxes_A</span></code> does to
+<code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The function does not check that the entries of bboxes_A are
+indeed the AABBs corresponding to the sets in <code class="docutils literal notranslate"><span class="pre">convex_sets_A</span></code>
+(and likewise for bboxes_B).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if convex_sets_A.size</strong><strong>(</strong><strong>) </strong><strong>!= bboxes_A.size</strong><strong>(</strong><strong>)</strong> – </p></li>
+<li><p><strong>if convex_sets_B.size</strong><strong>(</strong><strong>) </strong><strong>!= bboxes_B.size</strong><strong>(</strong><strong>)</strong> – </p></li>
+<li><p><strong>if not all entries of convex_sets_A</strong><strong>, </strong><strong>convex_sets_B</strong><strong>,</strong> – </p></li>
+<li><p><strong>bboxes_A`</strong><strong>, </strong><strong>and bboxes_B have the same ambient dimension</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>ComputePairwiseIntersections(convex_sets: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], preprocess_bbox: bool = True) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+</ol>
+<p>Convenience overload to compute pairwise intersections within a list
+of convex sets. Equivalent to calling
+ComputePairwiseIntersections(convex_sets, convex_sets,
+continuous_revolute_joints).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">convex_sets</span></code>:</dt><dd><p>is a vector of convex sets. Pairwise intersections will be
+computed within <code class="docutils literal notranslate"><span class="pre">convex_sets</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">continuous_revolute_joints</span></code>:</dt><dd><p>is a list of joint indices corresponding to continuous revolute
+joints.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">preprocess_bbox</span></code>:</dt><dd><p>is a flag for whether the function should precompute axis-aligned
+bounding boxes for every set. This can speed up the pairwise
+intersection checks, by determining some sets to be disjoint
+without needing to solve an optimization problem.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if continuous_revolute_joints has repeated entries</strong><strong>, or </strong><strong>if any</strong> – </p></li>
+<li><p><strong>entry is outside the interval</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>ambient_dimension</strong><strong>)</strong><strong>, </strong><strong>where</strong> – </p></li>
+<li><p><strong>ambient_dimension is the ambient dimension of the convex sets in</strong> – </p></li>
+<li><p><strong>convex_sets`</strong> – </p></li>
+<li><p><strong>if convex_sets is empty.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>ComputePairwiseIntersections(convex_sets: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], bboxes: list[pydrake.geometry.optimization.Hyperrectangle] = []) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+</ol>
+<p>Overload of <code class="docutils literal notranslate"><span class="pre">ComputePairwiseIntersections</span></code> allowing the user to
+supply axis- aligned bounding boxes if they’re known a priori, to save
+on computation time.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bboxes</span></code>:</dt><dd><p>is a vector of Hyperrectangles, allowing the user to manually pass
+in the AABBs of each set in <code class="docutils literal notranslate"><span class="pre">convex_sets</span></code> to avoid
+recomputation.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The function does not check that the entries are indeed the AABBs
+corresponding to the sets in <code class="docutils literal notranslate"><span class="pre">convex_sets</span></code>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if convex_sets.size</strong><strong>(</strong><strong>) </strong><strong>!= bboxes.size</strong><strong>(</strong><strong>)</strong> – </p></li>
+<li><p><strong>if not all entries of convex_sets and bboxes have the same</strong> – </p></li>
+<li><p><strong>ambient dimension.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexHull">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">ConvexHull</span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexHull" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<p>Implements the convex hull of a set of convex sets. The convex hull of
+multiple sets is defined as the smallest convex set that contains all
+the sets. Given non-empty convex sets {X₁, X₂, …, Xₙ}, the convex
+hull is the set of all convex combinations of points in the sets, i.e.
+{∑ᵢ λᵢ xᵢ | xᵢ ∈ Xᵢ, λᵢ ≥ 0, ∑ᵢ λᵢ = 1}.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexHull.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexHull" title="pydrake.geometry.optimization.ConvexHull"><span class="pre">pydrake.geometry.optimization.ConvexHull</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_empty_sets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexHull.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs the convex hull from a vector of convex sets.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">sets</span></code>:</dt><dd><p>A vector of convex sets that define the convex hull.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">remove_empty_sets</span></code>:</dt><dd><p>If true, the constructor will check if any of the sets are empty
+and will not consider them. If false, the constructor will not
+check if any of the sets are empty.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If remove_empty_sets is set to false, but some of the sets are in
+fact empty, then unexpected and incorrect results may occur. Only
+set this flag to false if you are sure that your sets are
+non-empty and performance in the constructor is critical.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexHull.element">
+<span class="sig-name descname"><span class="pre">element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexHull" title="pydrake.geometry.optimization.ConvexHull"><span class="pre">pydrake.geometry.optimization.ConvexHull</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexHull.element" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a reference to the convex set at the given index (including
+empty sets).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexHull.empty_sets_removed">
+<span class="sig-name descname"><span class="pre">empty_sets_removed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexHull" title="pydrake.geometry.optimization.ConvexHull"><span class="pre">pydrake.geometry.optimization.ConvexHull</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexHull.empty_sets_removed" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if <code class="docutils literal notranslate"><span class="pre">this</span></code> was constructed with remove_empty_sets=true.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexHull.num_elements">
+<span class="sig-name descname"><span class="pre">num_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexHull" title="pydrake.geometry.optimization.ConvexHull"><span class="pre">pydrake.geometry.optimization.ConvexHull</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexHull.num_elements" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of convex sets defining the convex hull (including
+empty sets).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexHull.participating_sets">
+<span class="sig-name descname"><span class="pre">participating_sets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexHull" title="pydrake.geometry.optimization.ConvexHull"><span class="pre">pydrake.geometry.optimization.ConvexHull</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexHull.participating_sets" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the participating convex sets.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ConvexHull.sets">
+<span class="sig-name descname"><span class="pre">sets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ConvexHull" title="pydrake.geometry.optimization.ConvexHull"><span class="pre">pydrake.geometry.optimization.ConvexHull</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ConvexHull.sets" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the participating convex sets.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -2358,7 +2612,7 @@ as described in <code class="docutils literal notranslate"><span class="pre">Gra
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>A vector of paths, where each path is a vector of <a href="#id5"><span class="problematic" id="id6">`</span></a>Edge`s.</p>
+<dd class="field-odd"><p>A vector of paths, where each path is a vector of <a href="#id11"><span class="problematic" id="id12">`</span></a>Edge`s.</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>RuntimeError if options.max_rounded_path &lt; 1.</strong> – </p>
@@ -2389,7 +2643,7 @@ as described in <code class="docutils literal notranslate"><span class="pre">Gra
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>A vector of paths, where each path is a vector of <a href="#id7"><span class="problematic" id="id8">`</span></a>Edge`s.</p>
+<dd class="field-odd"><p>A vector of paths, where each path is a vector of <a href="#id13"><span class="problematic" id="id14">`</span></a>Edge`s.</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>RuntimeError if options.max_rounded_path &lt; 1.</strong> – </p>
@@ -3094,7 +3348,7 @@ upper corners.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.HPolyhedron.MakeL1Ball">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeL1Ball</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MakeL1Ball" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs the L1-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id9"><span class="problematic" id="id10">|</span></a>x|₁ &lt;= 1
+<dd><p>Constructs the L1-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id15"><span class="problematic" id="id16">|</span></a>x|₁ &lt;= 1
 }. This set is also known as the cross-polytope and is described by
 the 2ᵈⁱᵐ signed unit vectors.</p>
 </dd></dl>
@@ -3102,7 +3356,7 @@ the 2ᵈⁱᵐ signed unit vectors.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.HPolyhedron.MakeUnitBox">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeUnitBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MakeUnitBox" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id11"><span class="problematic" id="id12">|</span></a>x|∞ &lt;= 1
+<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id17"><span class="problematic" id="id18">|</span></a>x|∞ &lt;= 1
 }. This is an axis-aligned box, centered at the origin, with edge
 length 2.</p>
 </dd></dl>
@@ -3152,7 +3406,7 @@ C ≽ 0
 </pre></div>
 </div>
 </details><p>where aᵢ and bᵢ denote the ith row. This defines the ellipsoid E = {
-Cx + d | <a href="#id13"><span class="problematic" id="id14">|</span></a>x|₂ ≤ 1}.</p>
+Cx + d | <a href="#id19"><span class="problematic" id="id20">|</span></a>x|₂ ≤ 1}.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>the HPolyhedron is bounded.</p>
 </dd>
@@ -3403,7 +3657,7 @@ shorthand for <code class="docutils literal notranslate"><span class="pre">cente
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.Hyperellipsoid.MakeUnitBall">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeUnitBall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.Hyperellipsoid" title="pydrake.geometry.optimization.Hyperellipsoid"><span class="pre">pydrake.geometry.optimization.Hyperellipsoid</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MakeUnitBall" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs the L₂-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id15"><span class="problematic" id="id16">|</span></a>x|₂ &lt;= 1
+<dd><p>Constructs the L₂-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id21"><span class="problematic" id="id22">|</span></a>x|₂ &lt;= 1
 }.</p>
 </dd></dl>
 
@@ -3551,7 +3805,7 @@ the upper bounds. Returns std::nullopt if the intersection is empty.</p>
 <p>A convex set that represents the intersection of multiple sets: S = X₁
 ∩ X₂ ∩ … ∩ Xₙ = {x | x ∈ X₁, x ∈ X₂, …, x ∈ Xₙ}</p>
 <p>Special behavior for IsEmpty: The intersection of zero sets (i.e. when
-we have <a href="#id25"><span class="problematic" id="id26">sets_</span></a>.size() == 0) is always nonempty. This includes the
+we have <a href="#id31"><span class="problematic" id="id32">sets_</span></a>.size() == 0) is always nonempty. This includes the
 zero-dimensional case, which we treat as being {0}, the unique
 zero-dimensional vector space.</p>
 <dl class="py method">
@@ -3848,7 +4102,7 @@ IRIS algorithm.</p>
 X₁ ⨁ X₂ ⨁ … ⨁ Xₙ = {x₁ + x₂ + … + xₙ | x₁ ∈ X₁, x₂ ∈ X₂, …, xₙ ∈
 Xₙ}</p>
 <p>Special behavior for IsEmpty: The Minkowski sum of zero sets (i.e.
-when we have <a href="#id27"><span class="problematic" id="id28">sets_</span></a>.size() == 0) is treated as the singleton {0}, which
+when we have <a href="#id33"><span class="problematic" id="id34">sets_</span></a>.size() == 0) is treated as the singleton {0}, which
 is nonempty. This includes the zero-dimensional case.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.MinkowskiSum.__init__">
@@ -4221,10 +4475,10 @@ vertices could be strictly in the interior of the set).</p>
 set is always bounded (hence the name polytope, instead of
 polyhedron).</p>
 <p>A VPolytope is empty if and only if it is composed of zero vertices,
-i.e., if <a href="#id29"><span class="problematic" id="id30">vertices_</span></a>.cols() == 0. This includes the zero-dimensional
-case. If <a href="#id31"><span class="problematic" id="id32">vertices_</span></a>.rows() == 0 but <a href="#id33"><span class="problematic" id="id34">vertices_</span></a>.cols() &gt; 0, we treat this
+i.e., if <a href="#id35"><span class="problematic" id="id36">vertices_</span></a>.cols() == 0. This includes the zero-dimensional
+case. If <a href="#id37"><span class="problematic" id="id38">vertices_</span></a>.rows() == 0 but <a href="#id39"><span class="problematic" id="id40">vertices_</span></a>.cols() &gt; 0, we treat this
 as having one or more copies of 0 in the zero-dimensional vector space
-{0}. If <a href="#id35"><span class="problematic" id="id36">vertices_</span></a>.rows() and <a href="#id37"><span class="problematic" id="id38">vertices_</span></a>.cols() are zero, we treat this
+{0}. If <a href="#id41"><span class="problematic" id="id42">vertices_</span></a>.rows() and <a href="#id43"><span class="problematic" id="id44">vertices_</span></a>.cols() are zero, we treat this
 as no points in {0}, which is empty.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.VPolytope.__init__">
@@ -4287,7 +4541,7 @@ upper corners.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.VPolytope.MakeUnitBox">
 <em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeUnitBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.VPolytope" title="pydrake.geometry.optimization.VPolytope"><span class="pre">pydrake.geometry.optimization.VPolytope</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.MakeUnitBox" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id17"><span class="problematic" id="id18">|</span></a>x|∞ &lt;= 1
+<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id23"><span class="problematic" id="id24">|</span></a>x|∞ &lt;= 1
 }. This is an axis-aligned box, centered at the origin, with edge
 length 2.</p>
 </dd></dl>

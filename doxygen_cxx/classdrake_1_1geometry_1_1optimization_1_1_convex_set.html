@@ -161,6 +161,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ConvexSet Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a> &#124; <a class="el" href="group__solvers.html">Formulating and Solving Optimization Problems</a> &raquo; <a class="el" href="group__geometry__optimization.html">Geometry Optimization</a></div></div>  </div>
@@ -275,6 +276,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7da589d9fc72f5064b7bbc48a97d0845"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7da589d9fc72f5064b7bbc48a97d0845">HandleZeroAmbientDimensionConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;set, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&gt; *constraints) const</td></tr>
 <tr class="memdesc:a7da589d9fc72f5064b7bbc48a97d0845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances of subclasses such as <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html" title="The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯ × Xₙ = {(x₁,...">CartesianProduct</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html" title="A convex set that represents the Minkowski sum of multiple sets: S = X₁ ⨁ X₂ ⨁ ...">MinkowskiSum</a> can have constituent sets with zero ambient dimension, which much be handled in a special manner when calling methods such as DoAddPointInSetConstraints.  <a href="#a7da589d9fc72f5064b7bbc48a97d0845">More...</a><br /></td></tr>
 <tr class="separator:a7da589d9fc72f5064b7bbc48a97d0845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e651ff2ae9533733cfefa7e8fadb54"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a76e651ff2ae9533733cfefa7e8fadb54">DoAffineHullShortcut</a> (std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; tol) const</td></tr>
+<tr class="memdesc:a76e651ff2ae9533733cfefa7e8fadb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI implementation of DoAffineHullShortcut, which trivially returns null.  <a href="#a76e651ff2ae9533733cfefa7e8fadb54">More...</a><br /></td></tr>
+<tr class="separator:a76e651ff2ae9533733cfefa7e8fadb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:aee74f49fab7ccaabd8661e516c7a8d9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;)=default</td></tr>
 <tr class="separator:aee74f49fab7ccaabd8661e516c7a8d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -284,6 +288,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a8070665ccaa5579890f30fa70c1d8137"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35e9f9166891aeacbca14f74e73018f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a35e9f9166891aeacbca14f74e73018f3">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a35e9f9166891aeacbca14f74e73018f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a916fde68ec71b7be4bca34bfed181e01"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a916fde68ec71b7be4bca34bfed181e01">AffineHullShortcut</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;self, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; tol)</td></tr>
+<tr class="memdesc:a916fde68ec71b7be4bca34bfed181e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">When there is a more efficient strategy to compute the affine hull of this set, returns affine hull as an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>.  <a href="#a916fde68ec71b7be4bca34bfed181e01">More...</a><br /></td></tr>
+<tr class="separator:a916fde68ec71b7be4bca34bfed181e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa19f9770fdca8fc14ee1dec1cec39710"></a>
@@ -558,6 +568,45 @@ c' * t + d ≥ 0,
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a916fde68ec71b7be4bca34bfed181e01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916fde68ec71b7be4bca34bfed181e01">&#9670;&nbsp;</a></span>AffineHullShortcut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&gt; AffineHullShortcut </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>When there is a more efficient strategy to compute the affine hull of this set, returns affine hull as an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>. </p>
+<p>When no efficient conversion exists, returns null. The default base class implementation returns null. This method is used by the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> constructor to short-circuit the generic iterative approach. (This function is static to allow calling it from the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> constructor, but is conceptially a normal member function.) The return type is <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> to avoid a forward declaration; any non-null result must always have the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> as its runtime type. </p>
 
 </div>
 </div>
@@ -843,6 +892,35 @@ c.rows() == t.size() </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>vars.size() == <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> </dd>
 <dd>
 <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt; 0 </dd></dl>
+
+</div>
+</div>
+<a id="a76e651ff2ae9533733cfefa7e8fadb54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e651ff2ae9533733cfefa7e8fadb54">&#9670;&nbsp;</a></span>DoAffineHullShortcut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&gt; DoAffineHullShortcut </td>
+          <td>(</td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>tol</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NVI implementation of DoAffineHullShortcut, which trivially returns null. </p>
+<p>Derived classes that have efficient algorithms should override this method. </p>
 
 </div>
 </div>

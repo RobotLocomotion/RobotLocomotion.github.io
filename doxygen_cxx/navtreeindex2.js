@@ -1,5 +1,17 @@
 var NAVTREEINDEX2 =
 {
+"classdrake_1_1copyable__unique__ptr.html#ad454f66aaeaf4bff4953937c55634298":[3,0,0,21,2],
+"classdrake_1_1copyable__unique__ptr.html#ae817c604dc8ec423c4c58620ee6f8fe2":[3,0,0,21,13],
+"classdrake_1_1copyable__unique__ptr.html#af2693139bff4ad445212aa4bb73284ad":[3,0,0,21,19],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_receiver.html":[1,2,12,0,3],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_receiver.html#af52dd2558c6ca372982f412e3d83cb9b":[1,2,12,0,3,0],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_sender.html":[1,2,12,0,2],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_sender.html#aa23449b4f225e9db9a8a31b9d7a2be45":[1,2,12,0,2,0],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html":[1,2,12,0,0],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#a094e10933e025cb7026c43186ed26c09":[1,2,12,0,0,4],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#a27c32fc0e552ee64e23c338180dd85aa":[1,2,12,0,0,3],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#a4dd2977c27d577ecf7ca6e4a2b069fd4":[1,2,12,0,0,5],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#a4f1f28f89708f8434733e489159ccdee":[1,2,12,0,0,0],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#a7612586d91997ed7aebd92832466adaa":[1,2,12,0,0,6],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#a8f8aabd0e2a105389b6cee93fd52719a":[1,2,12,0,0,1],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#af52fa9ef3f3263d46ea4f329b83d5ab2":[1,2,12,0,0,2],
@@ -237,17 +249,5 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,4,1,5],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a585394090529447729b0a6d3291a1c27":[3,0,0,3,4,1,11],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a5c5da61b5d48805df6b139b783b0ad7f":[3,0,0,3,4,1,16],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a72ec3a3e2e26d92d40a9f34be39908dd":[3,0,0,3,4,1,1],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,3,4,1,9],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a964ff3471229cb8acad1626f9a624ce1":[3,0,0,3,4,1,6],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a9997827eb509e07417e06d26f16d3f1b":[3,0,0,3,4,1,19],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a99a19661994dbf6f80e6e7ce8c1e2ce3":[3,0,0,3,4,1,3],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#aafbab3c9a0e5e021b8c096b63ca542cd":[3,0,0,3,4,1,20],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#ab2a3c7375cb4a84cf713aa5a76350107":[3,0,0,3,4,1,8],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#ab48e9663fca0ae538bab834847951b52":[3,0,0,3,4,1,14],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#abf0954534d95c247a8aed75261030629":[3,0,0,3,4,1,21],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#ac66fa77c174992081c1171a62e954a39":[3,0,0,3,4,1,0],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#ad5e9d72d600753fe2c94758b3a335ed4":[3,0,0,3,4,1,4],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#aebd275d218f1be1f3a9c1387f1b4c89e":[3,0,0,3,4,1,18],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html":[3,0,0,3,4,3]
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a72ec3a3e2e26d92d40a9f34be39908dd":[3,0,0,3,4,1,1]
 };

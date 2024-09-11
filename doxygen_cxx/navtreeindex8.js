@@ -1,5 +1,17 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1geometry_1_1_scene_graph.html#a1124e1d23f8363e47ef7db90e57e4900":[1,2,13,28],
+"classdrake_1_1geometry_1_1_scene_graph.html#a14fe2ae2ffcc6ef39c82b2ebf2561e9d":[1,2,13,21],
+"classdrake_1_1geometry_1_1_scene_graph.html#a1f10536d31003363a2e3d4b5056baf5d":[1,2,13,51],
+"classdrake_1_1geometry_1_1_scene_graph.html#a1f967549c18523e7acffff7daa09bb7e":[1,2,13,41],
+"classdrake_1_1geometry_1_1_scene_graph.html#a2135ff8bc7d0e646f5cb5cf44a6afae9":[1,2,13,46],
+"classdrake_1_1geometry_1_1_scene_graph.html#a25dc47d81e495aad7dee6d2932dcd655":[1,2,13,10],
+"classdrake_1_1geometry_1_1_scene_graph.html#a26da55d64bd1dda5bda1ea5ae8b985c4":[1,2,13,20],
+"classdrake_1_1geometry_1_1_scene_graph.html#a26eded4be5dd50b32d8cba6151e850f1":[1,2,13,4],
+"classdrake_1_1geometry_1_1_scene_graph.html#a2ab7ed8e4ca812f1f02d7dce715104c4":[1,2,13,37],
+"classdrake_1_1geometry_1_1_scene_graph.html#a2bbf224327b53543c185b2c926821019":[1,2,13,24],
+"classdrake_1_1geometry_1_1_scene_graph.html#a331f7bdcffde753165cd98d7081f75d4":[1,2,13,1],
+"classdrake_1_1geometry_1_1_scene_graph.html#a3d5bf882337dfed524c1da91fb96f618":[1,2,13,17],
 "classdrake_1_1geometry_1_1_scene_graph.html#a468b8439e50231c9ee03d33a7c0611cf":[1,2,13,52],
 "classdrake_1_1geometry_1_1_scene_graph.html#a46b7433ff54eba8bae914099283a09cb":[1,2,13,47],
 "classdrake_1_1geometry_1_1_scene_graph.html#a4760eb5aabc3ba69baf1b7e98c630730":[1,2,13,49],
@@ -237,17 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a0fa3fb2441f8086f28c0d33782ea96a1":[1,5,5,1,13],
 "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a17e5c2915b25a2b230e6af8f5812bf2f":[1,1,1,1,9],
 "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a17e5c2915b25a2b230e6af8f5812bf2f":[1,5,5,1,9],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a30c80ecf16e7879f121f2df8e3297c5c":[1,1,1,1,11],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a30c80ecf16e7879f121f2df8e3297c5c":[1,5,5,1,11],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a72a0d3162014193b1fc26f0f26284a65":[1,1,1,1,6],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a72a0d3162014193b1fc26f0f26284a65":[1,5,5,1,6],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a8acfa1a4dad13eb9b0466d9ed0073fcf":[1,1,1,1,12],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a8acfa1a4dad13eb9b0466d9ed0073fcf":[1,5,5,1,12],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a8e8824802dedfbc36776227f7482b6bc":[1,1,1,1,15],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a8e8824802dedfbc36776227f7482b6bc":[1,5,5,1,15],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a9b5c051cfd6fd6edeb8253b00020e252":[1,1,1,1,3],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a9b5c051cfd6fd6edeb8253b00020e252":[1,5,5,1,3],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#aa58c2ea4eb2e0c8a696ae076a3b4fd00":[1,1,1,1,14],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#aa58c2ea4eb2e0c8a696ae076a3b4fd00":[1,5,5,1,14],
-"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#ab2294b2077bce913a4c10a31c2f19d00":[1,1,1,1,8]
+"classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a30c80ecf16e7879f121f2df8e3297c5c":[1,1,1,1,11]
 };

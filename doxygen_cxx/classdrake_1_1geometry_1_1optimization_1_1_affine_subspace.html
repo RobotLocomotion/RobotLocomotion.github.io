@@ -182,9 +182,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6154bf89e3d063bb7b29741d1914fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#af6154bf89e3d063bb7b29741d1914fd8">AffineSubspace</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a2e517d5b78e2fa08bdc06aea97a0d3b6">basis</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a4bf2b12f9c8ea0ce42173abdf5816d1b">translation</a>)</td></tr>
 <tr class="memdesc:af6154bf89e3d063bb7b29741d1914fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the affine subspace from an n-by-m matrix describing the basis, where n is the ambient dimension, and m is the dimension of the subspace, and from an n-dimensional vector describing the translation.  <a href="#af6154bf89e3d063bb7b29741d1914fd8">More...</a><br /></td></tr>
 <tr class="separator:af6154bf89e3d063bb7b29741d1914fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a811c6ee70145f6afefa6f6e87263a436"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a811c6ee70145f6afefa6f6e87263a436">AffineSubspace</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;set, <a class="el" href="classdouble.html">double</a> tol=1e-12)</td></tr>
-<tr class="memdesc:a811c6ee70145f6afefa6f6e87263a436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an affine subspace as the affine hull of another convex set.  <a href="#a811c6ee70145f6afefa6f6e87263a436">More...</a><br /></td></tr>
-<tr class="separator:a811c6ee70145f6afefa6f6e87263a436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86446bbe39292a07cc425b5802a0c5ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a86446bbe39292a07cc425b5802a0c5ff">AffineSubspace</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;set, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; tol=std::nullopt)</td></tr>
+<tr class="memdesc:a86446bbe39292a07cc425b5802a0c5ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an affine subspace as the affine hull of another convex set.  <a href="#a86446bbe39292a07cc425b5802a0c5ff">More...</a><br /></td></tr>
+<tr class="separator:a86446bbe39292a07cc425b5802a0c5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fe2f6653e76b4db7c02a2ba9c8e35cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a9fe2f6653e76b4db7c02a2ba9c8e35cd">~AffineSubspace</a> () final</td></tr>
 <tr class="separator:a9fe2f6653e76b4db7c02a2ba9c8e35cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e517d5b78e2fa08bdc06aea97a0d3b6"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a2e517d5b78e2fa08bdc06aea97a0d3b6">basis</a> () const</td></tr>
@@ -300,6 +300,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8070665ccaa5579890f30fa70c1d8137 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35e9f9166891aeacbca14f74e73018f3 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a35e9f9166891aeacbca14f74e73018f3">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a35e9f9166891aeacbca14f74e73018f3 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a></td></tr>
+<tr class="memitem:a916fde68ec71b7be4bca34bfed181e01 inherit pro_static_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a916fde68ec71b7be4bca34bfed181e01">AffineHullShortcut</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;self, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; tol)</td></tr>
+<tr class="memdesc:a916fde68ec71b7be4bca34bfed181e01 inherit pro_static_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">When there is a more efficient strategy to compute the affine hull of this set, returns affine hull as an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a916fde68ec71b7be4bca34bfed181e01">More...</a><br /></td></tr>
+<tr class="separator:a916fde68ec71b7be4bca34bfed181e01 inherit pro_static_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a69ca9f24815ca559fa2afadb9cef61fc"></a>
@@ -412,8 +416,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a811c6ee70145f6afefa6f6e87263a436"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a811c6ee70145f6afefa6f6e87263a436">&#9670;&nbsp;</a></span>AffineSubspace() <span class="overload">[5/5]</span></h2>
+<a id="a86446bbe39292a07cc425b5802a0c5ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86446bbe39292a07cc425b5802a0c5ff">&#9670;&nbsp;</a></span>AffineSubspace() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -430,8 +434,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>tol</em> = <code>1e-12</code>&#160;</td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -447,8 +451,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs an affine subspace as the affine hull of another convex set. </p>
-<p>This is done by finding a feasible point in the set, and then iteratively computing feasible vectors until we have a basis that spans the set. If you pass in a convex set whose points are matrix-valued (e.g. a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html" title="Implements a spectrahedron (the feasible set of a semidefinite program).">Spectrahedron</a>), then the affine subspace will work over a flattened representation of those coordinates. (So a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html" title="Implements a spectrahedron (the feasible set of a semidefinite program).">Spectrahedron</a> with n-by-n matrices will output an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> with ambient dimension (n * (n+1)) / 2.)</p>
-<p><code>tol</code> sets the numerical precision of the computation. For each dimension, a pair of feasible points are constructed, so as to maximize the displacement in that dimension. If their displacement along that dimension is larger than tol, then the vector connecting the points is added as a basis vector. </p><dl class="section pre"><dt>Precondition</dt><dd>!set.<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a" title="Returns true iff the set is empty.">IsEmpty()</a> </dd></dl>
+<p>The generic approach is to find a feasible point in the set, and then iteratively compute feasible vectors until we have a basis that spans the set. If you pass in a convex set whose points are matrix-valued (e.g. a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html" title="Implements a spectrahedron (the feasible set of a semidefinite program).">Spectrahedron</a>), then the affine subspace will work over a flattened representation of those coordinates. (So a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html" title="Implements a spectrahedron (the feasible set of a semidefinite program).">Spectrahedron</a> with n-by-n matrices will output an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a> with ambient dimension (n * (n+1)) / 2.)</p>
+<p><code>tol</code> sets the numerical precision of the computation. For each dimension, a pair of feasible points are constructed, so as to maximize the displacement in that dimension. If their displacement along that dimension is larger than tol, then the vector connecting the points is added as a basis vector.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>set</code> is empty. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>tol &lt; 0</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For several subclasses of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a>, there is a closed-form computation (or more efficient numerical computation) that is preferred.</p><ul>
+<li><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html" title="Implements an ellipsoidal convex set represented as an affine scaling of the unit ball {Bu + center |...">AffineBall</a>: Can be computed via a rank-revealing decomposition; <code>tol</code> is used as the numerical tolerance for the rank of the matrix. Pass <code>std::nullopt</code> for <code>tol</code> to use Eigen's automatic tolerance computation.</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html" title="An affine subspace (also known as a &quot;flat&quot;, a &quot;linear variety&quot;, or a &quot;linear manifold&quot;) is a vector s...">AffineSubspace</a>: Equivalent to the copy-constructor; <code>tol</code> is ignored.</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html" title="The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯ × Xₙ = {(x₁,...">CartesianProduct</a>: Can compute the affine hull of each factor individually; <code>tol</code> is propagated to the constituent calls. (This is not done if the Cartesian product has an associated affine transformation.)</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a>: Always equal to the whole ambient space; <code>tol</code> is ignored.</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html" title="Axis-aligned hyperrectangle in Rᵈ defined by its lower bounds and upper bounds as {x| lb ≤ x ≤ ub}.">Hyperrectangle</a>: Can be computed in closed-form; <code>tol</code> has the same meaning as in the generic affine hull computation.</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html" title="A convex set that contains exactly one element.">Point</a>: Can be computed in closed-form; <code>tol</code> is ignored. This also encompasses sets which are obviously a singleton point, as determined via MaybeGetPoint.</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a>: Can be computed via a singular value decomposition; <code>tol</code> is used as the numerical tolerance for the rank of the matrix. Pass <code>std::nullopt</code> for <code>tol</code> to use Eigen's automatic tolerance computation. </li>
+</ul>
 
 </div>
 </div>

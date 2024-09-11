@@ -9,5 +9,7 @@ var classdrake_1_1reset__after__move =
     [ "operator T &", "classdrake_1_1reset__after__move.html#ad010d15727d63310a7eca091e42e52f5", null ],
     [ "operator->", "classdrake_1_1reset__after__move.html#af4ab1c910fbe75474c2d4f1488c71497", null ],
     [ "operator=", "classdrake_1_1reset__after__move.html#aaa8482b08e4e200aee227b60381a755d", null ],
-    [ "operator=", "classdrake_1_1reset__after__move.html#a687e3e2c4ad9b6e872e73985e2579a09", null ]
+    [ "operator=", "classdrake_1_1reset__after__move.html#a687e3e2c4ad9b6e872e73985e2579a09", null ],
+    [ "value", "classdrake_1_1reset__after__move.html#a464298ad7afeafebbb149f566ecabbab", null ],
+    [ "value", "classdrake_1_1reset__after__move.html#a77c7d528ac063d870b8c8426ec81c1c3", null ]
 ];

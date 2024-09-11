@@ -237,6 +237,97 @@ removed.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">MemoryFile</span></span><a class="headerlink" href="#pydrake.common.MemoryFile" title="Permalink to this definition"></a></dt>
+<dd><p>A virtual file, stored in memory.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.MemoryFile.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.common.MemoryFile) -&gt; None</p></li>
+</ol>
+<p>Default constructor with no contents, checksum, or filename hint. In
+this case, the <code class="docutils literal notranslate"><span class="pre">checksum</span></code> will be the checksum of the empty
+contents.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.common.MemoryFile, contents: str, extension: str, filename_hint: str) -&gt; None</p></li>
+</ol>
+<p>Constructs a new file from the given <code class="docutils literal notranslate"><span class="pre">contents</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">contents</span></code>:</dt><dd><p>The contents of a file.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">extension</span></code>:</dt><dd><p>The extension typically associated with the file contents. The
+case is unimportant, but it must either be empty or of the form
+<code class="docutils literal notranslate"><span class="pre">.foo</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">filename_hint</span></code>:</dt><dd><p>A label for the file. The label is used for warning and error
+messages. Otherwise, the label has no other functional purpose. It
+need not be a valid file name, but must consist of a single line
+(no newlines).</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>An empty extension may be problematic. Many consumers of
+MemoryFile key on the extension to determine if the file is
+suitable for a purpose. Always provide an accurate, representative
+extension when possible.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if filename_hint contains newlines.</strong> – </p></li>
+<li><p><strong>RuntimeError if extension is not empty and the first character</strong> – </p></li>
+<li><p><strong>isn't '.'.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.contents">
+<span class="sig-name descname"><span class="pre">contents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#pydrake.common.MemoryFile.contents" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the file’s contents.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.extension">
+<span class="sig-name descname"><span class="pre">extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.MemoryFile.extension" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the extension (as passed to the constructor). When not empty,
+it will always be reported with a leading period and all lower case
+characters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.filename_hint">
+<span class="sig-name descname"><span class="pre">filename_hint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.MemoryFile.filename_hint" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the notional “filename” for this file`.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.Make">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Make</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></span><a class="headerlink" href="#pydrake.common.MemoryFile.Make" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an instance of MemoryFile from the file located at the given
+<code class="docutils literal notranslate"><span class="pre">path</span></code>. The filename_hint() will be the stringified path. Making a
+MemoryFile computes the hash of its contents. If all you want is the
+contents, use drake::ReadFile() or drake::ReadFileOrThrow() instead.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the file at path cannot be read.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.MemoryFile.sha256">
+<span class="sig-name descname"><span class="pre">sha256</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a></span></span><a class="headerlink" href="#pydrake.common.MemoryFile.sha256" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the checksum of <code class="docutils literal notranslate"><span class="pre">this</span></code> instance’s <code class="docutils literal notranslate"><span class="pre">contents()</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.common.Parallelism">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">Parallelism</span></span><a class="headerlink" href="#pydrake.common.Parallelism" title="Permalink to this definition"></a></dt>
 <dd><p>Specifies a desired degree of parallelism for a parallelized
@@ -413,6 +504,41 @@ does not allocate any heap memory.</p>
 <li><p>__init__(self: pydrake.common.RandomGenerator, seed: int) -&gt; None</p></li>
 </ol>
 <p>Creates a generator using given <code class="docutils literal notranslate"><span class="pre">seed</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.common.Sha256">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.</span></span><span class="sig-name descname"><span class="pre">Sha256</span></span><a class="headerlink" href="#pydrake.common.Sha256" title="Permalink to this definition"></a></dt>
+<dd><p>Represents a SHA-256 cryptographic checksum. See also
+<a class="reference external" href="https://en.wikipedia.org/wiki/SHA-2">https://en.wikipedia.org/wiki/SHA-2</a>.</p>
+<p>This class is not bound in pydrake, because Python programmers should
+prefer using <a class="reference external" href="https://docs.python.org/3/library/hashlib.html">https://docs.python.org/3/library/hashlib.html</a> instead.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Sha256.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.common.Sha256.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs an all-zero checksum. Note that this is NOT the same as the
+checksum of empty (zero-sized) data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Sha256.Checksum">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a></span></span><a class="headerlink" href="#pydrake.common.Sha256.Checksum" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the checksum of the given <code class="docutils literal notranslate"><span class="pre">data</span></code> buffer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Sha256.Parse">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.common.Sha256.Parse" title="Permalink to this definition"></a></dt>
+<dd><p>Parses the 64-character ASCII hex representation of a SHA-256
+checksum. Returns std::nullopt if the argument is an invalid checksum.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.common.Sha256.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.common.Sha256" title="pydrake.common.Sha256"><span class="pre">pydrake.common.Sha256</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.common.Sha256.to_string" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the 64-character ASCII hex representation of this checksum.</p>
 </dd></dl>
 
 </dd></dl>

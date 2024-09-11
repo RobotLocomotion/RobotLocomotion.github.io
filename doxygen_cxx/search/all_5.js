@@ -238,7 +238,7 @@ var searchData=
   ['exprnotless',['ExprNotLess',['../namespacedrake_1_1symbolic_1_1test.html#adb8b893205178f5d6b6d50f7421ec51a',1,'drake::symbolic::test']]],
   ['ext_5fjoint_5ffilter_5ftau',['ext_joint_filter_tau',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#aacb5ccf2e46cbd92a8a4e308f40bd200',1,'drake::manipulation::kuka_iiwa::IiwaDriver']]],
   ['extend',['Extend',['../classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#a4d7d8d4e3beb9d17cfe9886e62d4c5c9',1,'drake::systems::HermitianDenseOutput::IntegrationStep']]],
-  ['extension',['extension',['../classdrake_1_1geometry_1_1_convex.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea',1,'drake::geometry::Convex::extension()'],['../classdrake_1_1geometry_1_1_mesh.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea',1,'drake::geometry::Mesh::extension()']]],
+  ['extension',['extension',['../classdrake_1_1_memory_file.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea',1,'drake::MemoryFile::extension()'],['../classdrake_1_1geometry_1_1_convex.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea',1,'drake::geometry::Convex::extension()'],['../classdrake_1_1geometry_1_1_mesh.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea',1,'drake::geometry::Mesh::extension()']]],
   ['external_5ftorque',['external_torque',['../structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#a77826414918e88c005b88f3fa407148d',1,'drake::manipulation::kuka_iiwa::IiwaControlPorts']]],
   ['externally_5fapplied_5fspatial_5fforce_2eh',['externally_applied_spatial_force.h',['../externally__applied__spatial__force_8h.html',1,'']]],
   ['externally_5fapplied_5fspatial_5fforce_5fmultiplexer_2eh',['externally_applied_spatial_force_multiplexer.h',['../externally__applied__spatial__force__multiplexer_8h.html',1,'']]],

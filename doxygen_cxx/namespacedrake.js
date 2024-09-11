@@ -37,6 +37,7 @@ var namespacedrake =
     [ "is_eigen_vector_expression_double_pair", "structdrake_1_1is__eigen__vector__expression__double__pair.html", null ],
     [ "is_eigen_vector_of", "structdrake_1_1is__eigen__vector__of.html", null ],
     [ "ManualTimer", "classdrake_1_1_manual_timer.html", "classdrake_1_1_manual_timer" ],
+    [ "MemoryFile", "classdrake_1_1_memory_file.html", "classdrake_1_1_memory_file" ],
     [ "NameValue", "classdrake_1_1_name_value.html", "classdrake_1_1_name_value" ],
     [ "never_destroyed", "classdrake_1_1never__destroyed.html", "classdrake_1_1never__destroyed" ],
     [ "NiceTypeName", "classdrake_1_1_nice_type_name.html", "classdrake_1_1_nice_type_name" ],
