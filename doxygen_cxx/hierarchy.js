@@ -609,9 +609,14 @@ var hierarchy =
         [ "RevoluteSpring< T >", "classdrake_1_1multibody_1_1_revolute_spring.html", null ],
         [ "UniformGravityFieldElement< T >", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html", null ]
       ] ],
-      [ "Frame< T >", "classdrake_1_1multibody_1_1_frame.html", [
-        [ "FixedOffsetFrame< T >", "classdrake_1_1multibody_1_1_fixed_offset_frame.html", null ],
-        [ "RigidBodyFrame< T >", "classdrake_1_1multibody_1_1_rigid_body_frame.html", null ]
+      [ "FrameBase< T >", "classdrake_1_1multibody_1_1_frame_base.html", [
+        [ "Frame< T >", "classdrake_1_1multibody_1_1_frame.html", [
+          [ "FixedOffsetFrame< T >", "classdrake_1_1multibody_1_1_fixed_offset_frame.html", null ],
+          [ "RigidBodyFrame< T >", "classdrake_1_1multibody_1_1_rigid_body_frame.html", null ]
+        ] ],
+        [ "Frame< double >", "classdrake_1_1multibody_1_1_frame.html", [
+          [ "RigidBodyFrame< double >", "classdrake_1_1multibody_1_1_rigid_body_frame.html", null ]
+        ] ]
       ] ],
       [ "Joint< T >", "classdrake_1_1multibody_1_1_joint.html", [
         [ "BallRpyJoint< T >", "classdrake_1_1multibody_1_1_ball_rpy_joint.html", null ],
@@ -628,9 +633,6 @@ var hierarchy =
       [ "RigidBody< T >", "classdrake_1_1multibody_1_1_rigid_body.html", null ]
     ] ],
     [ "MultibodyElement< double >", "classdrake_1_1multibody_1_1_multibody_element.html", [
-      [ "Frame< double >", "classdrake_1_1multibody_1_1_frame.html", [
-        [ "RigidBodyFrame< double >", "classdrake_1_1multibody_1_1_rigid_body_frame.html", null ]
-      ] ],
       [ "RigidBody< double >", "classdrake_1_1multibody_1_1_rigid_body.html", null ]
     ] ],
     [ "MultibodyForces< T >", "classdrake_1_1multibody_1_1_multibody_forces.html", null ],
@@ -671,8 +673,8 @@ var hierarchy =
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
-    [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
+    [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],

@@ -1,5 +1,9 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,12,6,3,5],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#ac23c4ac1cbe9a2a85b751fc5957e40a3":[3,0,0,12,6,3,3],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[3,0,0,12,6,3,1],
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[3,0,0,13,0],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[3,0,0,13,0,1],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9":[3,0,0,13,0,3],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a":[3,0,0,13,0,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,7,15,1],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a922b853b1fa03c63528dda71698c419a":[3,0,0,15,7,15,0],
 "structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html":[3,0,0,15,8,3],
-"structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html#a3f76f92e1a9a7606cbddaaa66f9e3d87":[3,0,0,15,8,3,6],
-"structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html#a424baf8c855bbe66dbdf2d6ca6ecbdea":[3,0,0,15,8,3,3],
-"structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html#a462bc76e05b18d4d674f82c64328f63c":[3,0,0,15,8,3,5],
-"structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,15,8,3,0],
-"structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html#a5e24b16376c846326bec28aa1e40924d":[3,0,0,15,8,3,1]
+"structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html#a3f76f92e1a9a7606cbddaaa66f9e3d87":[3,0,0,15,8,3,6]
 };

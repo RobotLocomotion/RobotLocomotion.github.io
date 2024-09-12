@@ -1,5 +1,8 @@
 var NAVTREEINDEX33 =
 {
+"classdrake_1_1symbolic_1_1_formula_gt.html#abab429d0ccdf8fc9e4ad21ed00ace55c":[3,0,0,14,43,0],
+"classdrake_1_1symbolic_1_1_formula_gt.html#ad66ef14f5c0b153b91989fccf3a38920":[3,0,0,14,43,3],
+"classdrake_1_1symbolic_1_1_formula_isnan.html":[3,0,0,14,44],
 "classdrake_1_1symbolic_1_1_formula_isnan.html#a0e5484e121d74fd62503d9905d0f535c":[3,0,0,14,44,0],
 "classdrake_1_1symbolic_1_1_formula_isnan.html#a3660c96e65bec4f7831e74691a14c129":[3,0,0,14,44,2],
 "classdrake_1_1symbolic_1_1_formula_isnan.html#a5142aa659ccee8923995daf6883581ec":[3,0,0,14,44,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX33 =
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a8afb5a81b9dbf285d062d97679027d43":[3,0,0,14,59,7],
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a9a31ffe9c50866ba6fd061b37586774c":[3,0,0,14,59,15],
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aa1b2842b4735385a121a67f03ae91812":[3,0,0,14,59,5],
-"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aa34dd2b104225b2bd609be8c7ab6f49f":[3,0,0,14,59,22],
-"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aac941b4d3c5e0eab0832f9c94735bfe9":[3,0,0,14,59,3],
-"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#ab886ec02ff9fb8fa63751b76b0aa6166":[3,0,0,14,59,1],
-"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#abe0290e1ea8dbdcbd77db7c9074aabd9":[3,0,0,14,59,12]
+"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aa34dd2b104225b2bd609be8c7ab6f49f":[3,0,0,14,59,22]
 };

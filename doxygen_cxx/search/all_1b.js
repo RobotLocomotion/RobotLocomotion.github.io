@@ -101,6 +101,7 @@ var searchData=
   ['_7eforceelement',['~ForceElement',['../classdrake_1_1multibody_1_1_force_element.html#a070a81a28982a758abc93d33c50a1048',1,'drake::multibody::ForceElement']]],
   ['_7eformulacell',['~FormulaCell',['../classdrake_1_1symbolic_1_1_formula_cell.html#a10d189b10da04816cb77666bca5d94e0',1,'drake::symbolic::FormulaCell']]],
   ['_7eframe',['~Frame',['../classdrake_1_1multibody_1_1_frame.html#aa0f3f98e61d00d6d126bba55efbff728',1,'drake::multibody::Frame']]],
+  ['_7eframebase',['~FrameBase',['../classdrake_1_1multibody_1_1_frame_base.html#acf63115654a9a91c3c66661f0f1c0c37',1,'drake::multibody::FrameBase']]],
   ['_7efreebody',['~FreeBody',['../classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1b54c9510e1344d14ea980a7dc2cb9e',1,'drake::multibody::benchmarks::free_body::FreeBody']]],
   ['_7egaussian',['~Gaussian',['../classdrake_1_1schema_1_1_gaussian.html#a2478dc7e6f618e8717c9506950468987',1,'drake::schema::Gaussian']]],
   ['_7egaussianvector',['~GaussianVector',['../classdrake_1_1schema_1_1_gaussian_vector.html#a01824ef427a174f9071cc4f5e7ca6676',1,'drake::schema::GaussianVector']]],

@@ -75,6 +75,7 @@ var searchData=
   ['fovdegrees',['FovDegrees',['../structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html',1,'drake::systems::sensors::CameraConfig']]],
   ['frame',['Frame',['../classdrake_1_1multibody_1_1_frame.html',1,'drake::multibody']]],
   ['frame_3c_20double_20_3e',['Frame&lt; double &gt;',['../classdrake_1_1multibody_1_1_frame.html',1,'drake::multibody']]],
+  ['framebase',['FrameBase',['../classdrake_1_1multibody_1_1_frame_base.html',1,'drake::multibody']]],
   ['freebody',['FreeBody',['../classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html',1,'drake::multibody::benchmarks::free_body']]],
   ['fromdoubletraits',['FromDoubleTraits',['../structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html',1,'drake::systems::scalar_conversion']]],
   ['functionevaluator',['FunctionEvaluator',['../classdrake_1_1solvers_1_1_function_evaluator.html',1,'drake::solvers']]]
