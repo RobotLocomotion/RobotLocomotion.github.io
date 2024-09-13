@@ -205,6 +205,7 @@ var searchData=
   ['kmaxforce',['kMaxForce',['../structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a9160a7aa6d68703d853de8839411d8f9',1,'drake::manipulation::schunk_wsg::SchunkWsgTrajectoryGeneratorStateVectorIndices']]],
   ['kmaxiterationsreached',['kMaxIterationsReached',['../namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a',1,'drake::multibody']]],
   ['kmaxstepsize',['kMaxStepSize',['../classdrake_1_1systems_1_1_initial_value_problem.html#a3ca174f651b0bd1cabc94d7245114aba',1,'drake::systems::InitialValueProblem']]],
+  ['kmaxthreads',['kMaxThreads',['../namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40af1d12898262fdbf42df381627646ee00',1,'drake::solvers']]],
   ['kmaxunreserved',['kMaxUnreserved',['../classdrake_1_1geometry_1_1render_1_1_render_label.html#a6f83cff1e2c62a99e81cb8620399739e',1,'drake::geometry::render::RenderLabel']]],
   ['kmc',['kMc',['../structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html#a145f314a47b5c2d03e5cde2066dacebc',1,'drake::examples::multibody::cart_pole::CartPoleParamsIndices']]],
   ['kmilp',['kMILP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a41adb3a46194a70e097f15c9848b2c97',1,'drake::solvers']]],

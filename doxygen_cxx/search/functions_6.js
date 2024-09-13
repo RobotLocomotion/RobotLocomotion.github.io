@@ -275,6 +275,7 @@ var searchData=
   ['get_5fmatrix',['get_matrix',['../classdrake_1_1symbolic_1_1_formula_positive_semidefinite.html#ac9b48bde1aeef844a89978537f5f89a6',1,'drake::symbolic::FormulaPositiveSemidefinite']]],
   ['get_5fmatrix_5fin_5fpositive_5fsemidefinite',['get_matrix_in_positive_semidefinite',['../namespacedrake_1_1symbolic.html#a19aa57dcc28c59559eef51f7cbba8cba',1,'drake::symbolic']]],
   ['get_5fmax_5fforce_5foutput_5fport',['get_max_force_output_port',['../classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#a27b4919892ae615cefad15ffc586636d',1,'drake::manipulation::schunk_wsg::SchunkWsgTrajectoryGenerator']]],
+  ['get_5fmax_5fthreads',['get_max_threads',['../classdrake_1_1solvers_1_1_solver_options.html#add6975df5414067f7cf44bc932a92f5b',1,'drake::solvers::SolverOptions']]],
   ['get_5fmax_5fvalue_5fport',['get_max_value_port',['../classdrake_1_1systems_1_1_saturation.html#a061e88d354aa124ca4ab4ee1b965adb8',1,'drake::systems::Saturation']]],
   ['get_5fmaximum_5fscaling_5fto_5freport_5fstuck',['get_maximum_scaling_to_report_stuck',['../classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a086654241b97459747ca9210616e4682',1,'drake::multibody::DifferentialInverseKinematicsParameters']]],
   ['get_5fmaximum_5fstep_5fsize',['get_maximum_step_size',['../classdrake_1_1systems_1_1_integrator_base.html#a0dafbc057f2a5a4828813e7ea5e3f99e',1,'drake::systems::IntegratorBase']]],

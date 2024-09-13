@@ -1,5 +1,9 @@
 var NAVTREEINDEX48 =
 {
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a0ae5c6c04205be18238368d567627683":[3,0,2,27,4],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,2,27,0],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a225e2ed3f17775ce1451a71cc508510a":[3,0,2,27,14],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a22653ca7a051add2d056e116fffeb744":[3,0,2,27,3],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,2,27,10],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,2,27,8],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a4c7cb2cda263a8eaace8b17ec56f7f29":[3,0,2,27,15],
@@ -66,6 +70,7 @@ var NAVTREEINDEX48 =
 "common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40a222307df6fb67d2a524cade7227ca4f8":[4,0,0,11,8,1,0],
 "common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40a88b173449afee96caef8bf2715f31380":[4,0,0,11,8,1,2],
 "common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100":[4,0,0,11,8,1,1],
+"common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40af1d12898262fdbf42df381627646ee00":[4,0,0,11,8,1,3],
 "common__solver__option_8h.html#aed794af38e7da9270528fd2185861862":[4,0,0,11,8,2],
 "compass__gait_8h.html":[4,0,0,3,4,0],
 "compass__gait__continuous__state_8h.html":[4,0,0,3,4,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX48 =
 "dependency__tracker_8h.html":[4,0,0,12,3,10],
 "deprecated.html":[0],
 "deprecation__pybind_8h.html":[4,0,0,0,0,1,3],
-"deprecation__pybind_8h.html#a13cd6cd963823cafbc0068bacc7eeadd":[4,0,0,0,0,1,3,5],
-"deprecation__pybind_8h.html#a36e0f3795b29cfb57c0940ffc8780120":[4,0,0,0,0,1,3,2],
-"deprecation__pybind_8h.html#a40a674f4af53caa963b98daa8d85af39":[4,0,0,0,0,1,3,3],
-"deprecation__pybind_8h.html#a88a20567ddf6e5978a874a3cb46353f4":[4,0,0,0,0,1,3,4],
-"deprecation__pybind_8h.html#aa542768548608eefe8534a3bdc5c1cd4":[4,0,0,0,0,1,3,1],
-"deprecation__pybind_8h.html#ab0b68ce63cf178e7d4e91f95e0e483e1":[4,0,0,0,0,1,3,0]
+"deprecation__pybind_8h.html#a13cd6cd963823cafbc0068bacc7eeadd":[4,0,0,0,0,1,3,5]
 };

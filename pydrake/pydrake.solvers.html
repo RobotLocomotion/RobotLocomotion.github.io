@@ -2130,9 +2130,17 @@ infeasible. Refer to
 for more details. Often this method is called together with setting
 GRBwrite to “FILENAME.ilp” to write IIS to a file with extension
 “ilp”. Default is not to compute IIS.</p>
-<p>If the “Threads” integer solver option has not been set by the user,
-then GurobiSolver uses environment variable GUROBI_NUM_THREADS (if
-set) as a default value for “Threads”.</p>
+<p>GurobiSolver supports parallelization during Solve(). If both the
+“Threads” integer solver option and CommonSolverOption::kMaxThreads
+have been set by the user, then the value in “Threads” will be used as
+the number of threads.</p>
+<p>If neither the “Threads” integer solver option nor
+CommonSolverOption::kMaxThreads has been set by the user, then
+GurobiSolver uses the environment variable GUROBI_NUM_THREADS (if set)
+as a default value for “Threads”.</p>
+<p>If none of “Threads”, CommonSolverOption::kMaxThreads, or
+GUROBI_NUM_THREADS are set, then Drake’s default maximum parallelism
+will be used.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.GurobiSolver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.GurobiSolver" title="pydrake.solvers.GurobiSolver"><span class="pre">pydrake.solvers.GurobiSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.GurobiSolver.__init__" title="Permalink to this definition"></a></dt>
@@ -8450,6 +8458,8 @@ used in Drake.</p>
 <a class="reference external" href="https://oxfordcontrol.github.io/ClarabelDocs/stable/api_settings/">https://oxfordcontrol.github.io/ClarabelDocs/stable/api_settings/</a> Note
 that <code class="docutils literal notranslate"><span class="pre">direct_solve_method</span></code> is not supported in Drake yet. Clarabel’s
 boolean options should be passed as integers (0 or 1).</p>
+<p>“CSDP” – Parameter name and values as specified at
+<a class="reference external" href="https://manpages.ubuntu.com/manpages/focal/en/man1/csdp-randgraph.1.html">https://manpages.ubuntu.com/manpages/focal/en/man1/csdp-randgraph.1.html</a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.SolverOptions.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.__init__" title="Permalink to this definition"></a></dt>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1systems_1_1_system_scalar_converter.html#a16f9a4430d4f9d2c9dc4228524f17b5b":[3,0,0,15,113,4],
 "classdrake_1_1systems_1_1_system_scalar_converter.html#a17edf10fa38c2580f3d6aadd3b4a8b80":[3,0,0,15,113,1],
 "classdrake_1_1systems_1_1_system_scalar_converter.html#a1d80001284231c9b0e5c6580089af55f":[3,0,0,15,113,7],
 "classdrake_1_1systems_1_1_system_scalar_converter.html#a3834c7f6d8a065ef95436cfc0b0ebaa5":[3,0,0,15,113,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a1c50c03e94472e430e7e44184107ae0d":[1,4,0,0,9,1],
 "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a2edea43a5cc1cf93774961dedc8b0d2f":[1,4,0,0,9,5],
 "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a447328b1aaa3ed12450855b792983d24":[1,4,0,0,9,4],
-"classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a44af8b347885ee19f87997984afee868":[1,4,0,0,9,6],
-"classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a51cd4d7a95294abf5d4730227f4a7daf":[1,4,0,0,9,3]
+"classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a44af8b347885ee19f87997984afee868":[1,4,0,0,9,6]
 };

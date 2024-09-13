@@ -177,7 +177,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_solver_optio
 <p>"SCS" &ndash; Parameter name and values as specified in the struct SCS_SETTINGS in SCS header file <a href="https://github.com/cvxgrp/scs/blob/master/include/scs.h">https://github.com/cvxgrp/scs/blob/master/include/scs.h</a> Note that the SCS code on github master might be more up-to-date than the version used in Drake.</p>
 <p>"MOSEK<a href="/tm.html">™</a>" &ndash; Parameter name and values as specified in Mosek Reference <a href="https://docs.mosek.com/9.3/capi/parameters.html">https://docs.mosek.com/9.3/capi/parameters.html</a></p>
 <p>"OSQP" &ndash; Parameter name and values as specified in OSQP Reference <a href="https://osqp.org/docs/interfaces/solver_settings.html#solver-settings">https://osqp.org/docs/interfaces/solver_settings.html#solver-settings</a></p>
-<p>"Clarabel" &ndash; Parameter name and values as specified in Clarabel <a href="https://oxfordcontrol.github.io/ClarabelDocs/stable/api_settings/">https://oxfordcontrol.github.io/ClarabelDocs/stable/api_settings/</a> Note that <code>direct_solve_method</code> is not supported in Drake yet. Clarabel's boolean options should be passed as integers (0 or 1). </p>
+<p>"Clarabel" &ndash; Parameter name and values as specified in Clarabel <a href="https://oxfordcontrol.github.io/ClarabelDocs/stable/api_settings/">https://oxfordcontrol.github.io/ClarabelDocs/stable/api_settings/</a> Note that <code>direct_solve_method</code> is not supported in Drake yet. Clarabel's boolean options should be passed as integers (0 or 1).</p>
+<p>"CSDP" &ndash; Parameter name and values as specified at <a href="https://manpages.ubuntu.com/manpages/focal/en/man1/csdp-randgraph.1.html">https://manpages.ubuntu.com/manpages/focal/en/man1/csdp-randgraph.1.html</a> </p>
 </div>
 <p><code>#include &lt;drake/solvers/solver_options.h&gt;</code></p>
 <table class="memberdecls">
@@ -221,6 +222,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad0387089aeb1d2e2f42052740bc945cc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#ad0387089aeb1d2e2f42052740bc945cc">get_standalone_reproduction_file_name</a> () const</td></tr>
 <tr class="memdesc:ad0387089aeb1d2e2f42052740bc945cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the kStandaloneReproductionFileName set via CommonSolverOption, or else an empty string if the option has not been set.  <a href="#ad0387089aeb1d2e2f42052740bc945cc">More...</a><br /></td></tr>
 <tr class="separator:ad0387089aeb1d2e2f42052740bc945cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6975df5414067f7cf44bc932a92f5b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#add6975df5414067f7cf44bc932a92f5b">get_max_threads</a> () const</td></tr>
+<tr class="memdesc:add6975df5414067f7cf44bc932a92f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the kMaxThreads set via CommonSolverOption.  <a href="#add6975df5414067f7cf44bc932a92f5b">More...</a><br /></td></tr>
+<tr class="separator:add6975df5414067f7cf44bc932a92f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3a6a8693d5410ab5dc7ee4c98752311"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:af3a6a8693d5410ab5dc7ee4c98752311"><td class="memTemplItemLeft" align="right" valign="top">const std::unordered_map&lt; std::string, T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#af3a6a8693d5410ab5dc7ee4c98752311">GetOptions</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id) const</td></tr>
 <tr class="separator:af3a6a8693d5410ab5dc7ee4c98752311"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -423,6 +427,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="add6975df5414067f7cf44bc932a92f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add6975df5414067f7cf44bc932a92f5b">&#9670;&nbsp;</a></span>get_max_threads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classint.html">int</a>&gt; get_max_threads </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the kMaxThreads set via CommonSolverOption. </p>
+<p>Returns nullopt if kMaxThreads is unset. </p>
+
+</div>
+</div>
 <a id="ac2adda584ed29a23b6e0bced598f22c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac2adda584ed29a23b6e0bced598f22c3">&#9670;&nbsp;</a></span>get_print_file_name()</h2>
 
@@ -612,8 +636,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b3272ee1cbca61b23a0ee9c93069731"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b3272ee1cbca61b23a0ee9c93069731">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a5310559e23a1d9e46c371bc5c9451020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5310559e23a1d9e46c371bc5c9451020">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -624,7 +648,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -638,8 +662,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5310559e23a1d9e46c371bc5c9451020"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5310559e23a1d9e46c371bc5c9451020">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a7b3272ee1cbca61b23a0ee9c93069731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b3272ee1cbca61b23a0ee9c93069731">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -650,7 +674,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

@@ -122,6 +122,7 @@ var searchData=
   ['klp',['kLP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a3e3af9259f19c76c1a21cacdbd5afd4a',1,'drake::solvers']]],
   ['kmanipulationclass',['kManipulationClass',['../namespacedrake_1_1examples_1_1manipulation__station.html#a03a45bcb13e3495c10e2bbd63e351d63afabc1bfb382dd858259ae5f121328b3b',1,'drake::examples::manipulation_station']]],
   ['kmaxiterationsreached',['kMaxIterationsReached',['../namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a',1,'drake::multibody']]],
+  ['kmaxthreads',['kMaxThreads',['../namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40af1d12898262fdbf42df381627646ee00',1,'drake::solvers']]],
   ['kmilp',['kMILP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a41adb3a46194a70e097f15c9848b2c97',1,'drake::solvers']]],
   ['kminimalcoordinates',['kMinimalCoordinates',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#af532ebccf30da4696c48ec61f6b4d663a9ff3e250bc19253cd24615673cc6c378',1,'drake::examples::bead_on_a_wire::BeadOnAWire']]],
   ['kminlowerbound',['kMinLowerBound',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0af322fe68b3aa4385e65e59b4225af10b',1,'drake::solvers::MixedIntegerBranchAndBound']]],

@@ -18,5 +18,8 @@ var dir_0d10be3e24b4d05732d552ad443cc60a =
     [ "maybe_pause_for_user.h", "maybe__pause__for__user_8h.html", "maybe__pause__for__user_8h" ],
     [ "measure_execution.h", "measure__execution_8h.html", "measure__execution_8h" ],
     [ "random_polynomial_matrix.h", "random__polynomial__matrix_8h.html", "random__polynomial__matrix_8h" ],
+    [ "set_env.h", "set__env_8h.html", [
+      [ "SetEnv", "classdrake_1_1test_1_1_set_env.html", "classdrake_1_1test_1_1_set_env" ]
+    ] ],
     [ "symbolic_test_util.h", "symbolic__test__util_8h.html", "symbolic__test__util_8h" ]
 ];

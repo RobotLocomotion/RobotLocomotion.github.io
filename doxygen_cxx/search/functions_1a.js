@@ -257,6 +257,7 @@ var searchData=
   ['_7eseparationcertificateresultbase',['~SeparationCertificateResultBase',['../structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#aeff55dd0e18e3aeb13a86310e6ed35e5',1,'drake::geometry::optimization::SeparationCertificateResultBase']]],
   ['_7eserializer',['~Serializer',['../classdrake_1_1systems_1_1lcm_1_1_serializer.html#a19a46c344566fb11866cbc35541e9495',1,'drake::systems::lcm::Serializer']]],
   ['_7eserializerinterface',['~SerializerInterface',['../classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a2fccdf5e8b33a94fdaf1a9b8826aa684',1,'drake::systems::lcm::SerializerInterface']]],
+  ['_7esetenv',['~SetEnv',['../classdrake_1_1test_1_1_set_env.html#a666a6421373819c6e5d97957cf20c4b5',1,'drake::test::SetEnv']]],
   ['_7eshape',['~Shape',['../classdrake_1_1geometry_1_1_shape.html#ae7755ce81583b9f776b857856f7cc218',1,'drake::geometry::Shape']]],
   ['_7eshapereifier',['~ShapeReifier',['../classdrake_1_1geometry_1_1_shape_reifier.html#a2b9a418dcb406a2c4cd4c4b0e29d093e',1,'drake::geometry::ShapeReifier']]],
   ['_7esharedpointersystem',['~SharedPointerSystem',['../classdrake_1_1systems_1_1_shared_pointer_system.html#a5619be8f3a6cd739f7faea1c9d16651f',1,'drake::systems::SharedPointerSystem']]],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX60 =
 {
+"standard__operations_8h.html#a12086bbcf11e8d3c573c3647277b10b8":[4,0,0,1,0,0,2,55],
+"standard__operations_8h.html#a225f9f8ec6ae4f7494fdfc892eeaa761":[4,0,0,1,0,0,2,60],
+"standard__operations_8h.html#a23655b2da4e6919cc81511326f3c1235":[4,0,0,1,0,0,2,44],
+"standard__operations_8h.html#a24b8ca4f2a850dfa8eea7f408cf6a9de":[4,0,0,1,0,0,2,68],
+"standard__operations_8h.html#a253ea74fad9476e4de67b656b97ef1cb":[4,0,0,1,0,0,2,35],
+"standard__operations_8h.html#a2646ff62a13c4b182f4523ade302cddb":[4,0,0,1,0,0,2,39],
 "standard__operations_8h.html#a31d584bed99ab67ec074687a94eb7c00":[4,0,0,1,0,0,2,77],
 "standard__operations_8h.html#a3b2e82538ea517c32aaafb58eccafba2":[4,0,0,1,0,0,2,3],
 "standard__operations_8h.html#a3e188bc8317b8d45912f1d59438edb91":[4,0,0,1,0,0,2,22],
@@ -243,11 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a16c5614af40edee599284c373fba9c09":[3,0,0,3,15,0,18],
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a1b267a517e862262fc1f50dd62c48f41":[3,0,0,3,15,0,1],
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a1ea36727a50f62443fbf5770544a69d4":[3,0,0,3,15,0,13],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a29af929fcff5a59a15ac072ebe89d26e":[3,0,0,3,15,0,14],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a35881bb6864939d024dcffcef32de848":[3,0,0,3,15,0,19],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a3cde9da79a1a8aba25ee8aacdb2ffd39":[3,0,0,3,15,0,6],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a613d499d309c4906c2df5db6580dd665":[3,0,0,3,15,0,8],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a658dd9b46db6b0a4572e7d6412e6bb40":[3,0,0,3,15,0,12],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a7c4a40b91dff8e9d8d5c4d39b3e93df2":[3,0,0,3,15,0,10],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a83d22b9ce633cccb2b57d1739e59d94d":[3,0,0,3,15,0,5]
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a29af929fcff5a59a15ac072ebe89d26e":[3,0,0,3,15,0,14]
 };
