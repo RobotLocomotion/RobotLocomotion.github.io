@@ -42,11 +42,17 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "geometry_version.h", "geometry__version_8h.html", [
       [ "GeometryVersion", "classdrake_1_1geometry_1_1_geometry_version.html", "classdrake_1_1geometry_1_1_geometry_version" ]
     ] ],
+    [ "in_memory_mesh.h", "in__memory__mesh_8h.html", [
+      [ "InMemoryMesh", "classdrake_1_1geometry_1_1_in_memory_mesh.html", "classdrake_1_1geometry_1_1_in_memory_mesh" ]
+    ] ],
     [ "internal_frame.h", "internal__frame_8h.html", null ],
     [ "internal_geometry.h", "internal__geometry_8h.html", null ],
     [ "kinematics_vector.h", "kinematics__vector_8h.html", "kinematics__vector_8h" ],
     [ "make_mesh_for_deformable.h", "make__mesh__for__deformable_8h.html", null ],
     [ "mesh_deformation_interpolator.h", "mesh__deformation__interpolator_8h.html", null ],
+    [ "mesh_source.h", "mesh__source_8h.html", [
+      [ "MeshSource", "classdrake_1_1geometry_1_1_mesh_source.html", "classdrake_1_1geometry_1_1_mesh_source" ]
+    ] ],
     [ "meshcat.h", "meshcat_8h.html", [
       [ "Meshcat", "classdrake_1_1geometry_1_1_meshcat.html", "classdrake_1_1geometry_1_1_meshcat" ],
       [ "PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera" ],

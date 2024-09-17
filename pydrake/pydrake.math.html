@@ -2403,7 +2403,7 @@ coincident with Bo. Hence, the constructed RigidTransform contains an
 identity RotationMatrix and a zero position vector.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.math.RigidTransform, other: pydrake.math.RigidTransform) -&gt; None</p></li>
-<li><p>__init__(self: pydrake.math.RigidTransform, R: drake::math::RotationMatrix&lt;double&gt;, p: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RigidTransform, R: pydrake.math.RotationMatrix, p: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform from a rotation matrix and a position
 vector.</p>
@@ -2416,7 +2416,7 @@ expressed in frame A. In monogram notation p is denoted
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.math.RigidTransform, rpy: drake::math::RollPitchYaw&lt;double&gt;, p: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RigidTransform, rpy: pydrake.math.RollPitchYaw, p: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform from a RollPitchYaw and a position vector.</p>
 <dl class="simple">
@@ -2488,7 +2488,7 @@ expressed in frame A. In monogram notation p is denoted <a href="#id3"><span cla
 <p>RotationMatrix::RotationMatrix(const Eigen::AngleAxis&lt;T&gt;&amp;)</p>
 </div>
 <ol class="arabic simple" start="7">
-<li><p>__init__(self: pydrake.math.RigidTransform, R: drake::math::RotationMatrix&lt;double&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RigidTransform, R: pydrake.math.RotationMatrix) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform with a given RotationMatrix and a zero
 position vector.</p>
@@ -2586,7 +2586,7 @@ a RigidTransform constructor whose argument is an Eigen
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform.cast-AutoDiffXd">
-<span id="pydrake.math.RigidTransform.cast[AutoDiffXd]"></span><span class="sig-name descname"><span class="pre">cast[AutoDiffXd]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RigidTransform&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.cast-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<span id="pydrake.math.RigidTransform.cast[AutoDiffXd]"></span><span class="sig-name descname"><span class="pre">cast[AutoDiffXd]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.cast-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
@@ -2610,7 +2610,7 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform.cast-Expression">
-<span id="pydrake.math.RigidTransform.cast[Expression]"></span><span class="sig-name descname"><span class="pre">cast[Expression]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RigidTransform&lt;drake::symbolic::Expression&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.cast-Expression" title="Permalink to this definition"></a></dt>
+<span id="pydrake.math.RigidTransform.cast[Expression]"></span><span class="sig-name descname"><span class="pre">cast[Expression]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.cast-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RigidTransform templatized on a scalar type U from a
 RigidTransform templatized on scalar type T. For example,</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RigidTransform</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
@@ -2957,7 +2957,7 @@ see this, let <code class="docutils literal notranslate"><span class="pre">p</sp
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform.rotation">
-<span class="sig-name descname"><span class="pre">rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RotationMatrix&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.rotation" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.rotation" title="Permalink to this definition"></a></dt>
 <dd><p>Returns R_AB, the rotation matrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>:</dt><dd><p>the rotation matrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform.</p>
@@ -2967,7 +2967,7 @@ see this, let <code class="docutils literal notranslate"><span class="pre">p</sp
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform.set">
-<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.math.RigidTransform,</span> <span class="pre">R:</span> <span class="pre">drake::math::RotationMatrix&lt;double&gt;,</span> <span class="pre">p:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.set" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform.set" title="Permalink to this definition"></a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform from a RotationMatrix and a position
 vector.</p>
 <dl class="simple">
@@ -2985,7 +2985,7 @@ expressed in frame A. In monogram notation p is denoted
 <span class="sig-name descname"><span class="pre">set_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.RigidTransform.set_rotation" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>set_rotation(self: pydrake.math.RigidTransform, R: drake::math::RotationMatrix&lt;double&gt;) -&gt; None</p></li>
+<li><p>set_rotation(self: pydrake.math.RigidTransform, R: pydrake.math.RotationMatrix) -&gt; None</p></li>
 </ol>
 <p>Sets the RotationMatrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform.</p>
 <dl class="simple">
@@ -2993,7 +2993,7 @@ expressed in frame A. In monogram notation p is denoted
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>set_rotation(self: pydrake.math.RigidTransform, rpy: drake::math::RollPitchYaw&lt;double&gt;) -&gt; None</p></li>
+<li><p>set_rotation(self: pydrake.math.RigidTransform, rpy: pydrake.math.RollPitchYaw) -&gt; None</p></li>
 </ol>
 <p>Sets the rotation part of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform from a RollPitchYaw.</p>
 <dl class="simple">
@@ -3179,7 +3179,7 @@ coincident with Bo. Hence, the constructed RigidTransform contains an
 identity RotationMatrix and a zero position vector.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.math.RigidTransform_[AutoDiffXd], other: pydrake.math.RigidTransform_[AutoDiffXd]) -&gt; None</p></li>
-<li><p>__init__(self: pydrake.math.RigidTransform_[AutoDiffXd], R: drake::math::RotationMatrix&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, p: numpy.ndarray[object[3, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RigidTransform_[AutoDiffXd], R: pydrake.math.RotationMatrix_[AutoDiffXd], p: numpy.ndarray[object[3, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform from a rotation matrix and a position
 vector.</p>
@@ -3192,7 +3192,7 @@ expressed in frame A. In monogram notation p is denoted
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.math.RigidTransform_[AutoDiffXd], rpy: drake::math::RollPitchYaw&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, p: numpy.ndarray[object[3, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RigidTransform_[AutoDiffXd], rpy: pydrake.math.RollPitchYaw_[AutoDiffXd], p: numpy.ndarray[object[3, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform from a RollPitchYaw and a position vector.</p>
 <dl class="simple">
@@ -3264,7 +3264,7 @@ expressed in frame A. In monogram notation p is denoted <a href="#id5"><span cla
 <p>RotationMatrix::RotationMatrix(const Eigen::AngleAxis&lt;T&gt;&amp;)</p>
 </div>
 <ol class="arabic simple" start="7">
-<li><p>__init__(self: pydrake.math.RigidTransform_[AutoDiffXd], R: drake::math::RotationMatrix&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RigidTransform_[AutoDiffXd], R: pydrake.math.RotationMatrix_[AutoDiffXd]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform with a given RotationMatrix and a zero
 position vector.</p>
@@ -3685,7 +3685,7 @@ see this, let <code class="docutils literal notranslate"><span class="pre">p</sp
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-AutoDiffXd-.rotation">
-<span id="pydrake.math.RigidTransform_[AutoDiffXd].rotation"></span><span class="sig-name descname"><span class="pre">rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RotationMatrix&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-AutoDiffXd-.rotation" title="Permalink to this definition"></a></dt>
+<span id="pydrake.math.RigidTransform_[AutoDiffXd].rotation"></span><span class="sig-name descname"><span class="pre">rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-AutoDiffXd-.rotation" title="Permalink to this definition"></a></dt>
 <dd><p>Returns R_AB, the rotation matrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>:</dt><dd><p>the rotation matrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform.</p>
@@ -3695,7 +3695,7 @@ see this, let <code class="docutils literal notranslate"><span class="pre">p</sp
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-AutoDiffXd-.set">
-<span id="pydrake.math.RigidTransform_[AutoDiffXd].set"></span><span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.math.RigidTransform_[AutoDiffXd],</span> <span class="pre">R:</span> <span class="pre">drake::math::RotationMatrix&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;,</span> <span class="pre">p:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-AutoDiffXd-.set" title="Permalink to this definition"></a></dt>
+<span id="pydrake.math.RigidTransform_[AutoDiffXd].set"></span><span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-AutoDiffXd-.set" title="Permalink to this definition"></a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform from a RotationMatrix and a position
 vector.</p>
 <dl class="simple">
@@ -3713,7 +3713,7 @@ expressed in frame A. In monogram notation p is denoted
 <span id="pydrake.math.RigidTransform_[AutoDiffXd].set_rotation"></span><span class="sig-name descname"><span class="pre">set_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.RigidTransform_-AutoDiffXd-.set_rotation" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>set_rotation(self: pydrake.math.RigidTransform_[AutoDiffXd], R: drake::math::RotationMatrix&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; None</p></li>
+<li><p>set_rotation(self: pydrake.math.RigidTransform_[AutoDiffXd], R: pydrake.math.RotationMatrix_[AutoDiffXd]) -&gt; None</p></li>
 </ol>
 <p>Sets the RotationMatrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform.</p>
 <dl class="simple">
@@ -3721,7 +3721,7 @@ expressed in frame A. In monogram notation p is denoted
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>set_rotation(self: pydrake.math.RigidTransform_[AutoDiffXd], rpy: drake::math::RollPitchYaw&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; None</p></li>
+<li><p>set_rotation(self: pydrake.math.RigidTransform_[AutoDiffXd], rpy: pydrake.math.RollPitchYaw_[AutoDiffXd]) -&gt; None</p></li>
 </ol>
 <p>Sets the rotation part of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform from a RollPitchYaw.</p>
 <dl class="simple">
@@ -3901,7 +3901,7 @@ coincident with Bo. Hence, the constructed RigidTransform contains an
 identity RotationMatrix and a zero position vector.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.math.RigidTransform_[Expression], other: pydrake.math.RigidTransform_[Expression]) -&gt; None</p></li>
-<li><p>__init__(self: pydrake.math.RigidTransform_[Expression], R: drake::math::RotationMatrix&lt;drake::symbolic::Expression&gt;, p: numpy.ndarray[object[3, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RigidTransform_[Expression], R: pydrake.math.RotationMatrix_[Expression], p: numpy.ndarray[object[3, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform from a rotation matrix and a position
 vector.</p>
@@ -3914,7 +3914,7 @@ expressed in frame A. In monogram notation p is denoted
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>__init__(self: pydrake.math.RigidTransform_[Expression], rpy: drake::math::RollPitchYaw&lt;drake::symbolic::Expression&gt;, p: numpy.ndarray[object[3, 1]]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RigidTransform_[Expression], rpy: pydrake.math.RollPitchYaw_[Expression], p: numpy.ndarray[object[3, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform from a RollPitchYaw and a position vector.</p>
 <dl class="simple">
@@ -3986,7 +3986,7 @@ expressed in frame A. In monogram notation p is denoted <a href="#id7"><span cla
 <p>RotationMatrix::RotationMatrix(const Eigen::AngleAxis&lt;T&gt;&amp;)</p>
 </div>
 <ol class="arabic simple" start="7">
-<li><p>__init__(self: pydrake.math.RigidTransform_[Expression], R: drake::math::RotationMatrix&lt;drake::symbolic::Expression&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RigidTransform_[Expression], R: pydrake.math.RotationMatrix_[Expression]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RigidTransform with a given RotationMatrix and a zero
 position vector.</p>
@@ -4407,7 +4407,7 @@ see this, let <code class="docutils literal notranslate"><span class="pre">p</sp
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-Expression-.rotation">
-<span id="pydrake.math.RigidTransform_[Expression].rotation"></span><span class="sig-name descname"><span class="pre">rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RotationMatrix&lt;drake::symbolic::Expression&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-Expression-.rotation" title="Permalink to this definition"></a></dt>
+<span id="pydrake.math.RigidTransform_[Expression].rotation"></span><span class="sig-name descname"><span class="pre">rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-Expression-.rotation" title="Permalink to this definition"></a></dt>
 <dd><p>Returns R_AB, the rotation matrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform.</p>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">R_AB</span></code>:</dt><dd><p>the rotation matrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform.</p>
@@ -4417,7 +4417,7 @@ see this, let <code class="docutils literal notranslate"><span class="pre">p</sp
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RigidTransform_-Expression-.set">
-<span id="pydrake.math.RigidTransform_[Expression].set"></span><span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.math.RigidTransform_[Expression],</span> <span class="pre">R:</span> <span class="pre">drake::math::RotationMatrix&lt;drake::symbolic::Expression&gt;,</span> <span class="pre">p:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-Expression-.set" title="Permalink to this definition"></a></dt>
+<span id="pydrake.math.RigidTransform_[Expression].set"></span><span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.math.RigidTransform_-Expression-.set" title="Permalink to this definition"></a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform from a RotationMatrix and a position
 vector.</p>
 <dl class="simple">
@@ -4435,7 +4435,7 @@ expressed in frame A. In monogram notation p is denoted
 <span id="pydrake.math.RigidTransform_[Expression].set_rotation"></span><span class="sig-name descname"><span class="pre">set_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.RigidTransform_-Expression-.set_rotation" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>set_rotation(self: pydrake.math.RigidTransform_[Expression], R: drake::math::RotationMatrix&lt;drake::symbolic::Expression&gt;) -&gt; None</p></li>
+<li><p>set_rotation(self: pydrake.math.RigidTransform_[Expression], R: pydrake.math.RotationMatrix_[Expression]) -&gt; None</p></li>
 </ol>
 <p>Sets the RotationMatrix portion of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform.</p>
 <dl class="simple">
@@ -4443,7 +4443,7 @@ expressed in frame A. In monogram notation p is denoted
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>set_rotation(self: pydrake.math.RigidTransform_[Expression], rpy: drake::math::RollPitchYaw&lt;drake::symbolic::Expression&gt;) -&gt; None</p></li>
+<li><p>set_rotation(self: pydrake.math.RigidTransform_[Expression], rpy: pydrake.math.RollPitchYaw_[Expression]) -&gt; None</p></li>
 </ol>
 <p>Sets the rotation part of <code class="docutils literal notranslate"><span class="pre">this</span></code> RigidTransform from a RollPitchYaw.</p>
 <dl class="simple">
@@ -5782,7 +5782,7 @@ not have unit length [i.e., <code class="docutils literal notranslate"><span cla
 </dd>
 </dl>
 <ol class="arabic simple" start="6">
-<li><p>__init__(self: pydrake.math.RotationMatrix, rpy: drake::math::RollPitchYaw&lt;double&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RotationMatrix, rpy: pydrake.math.RollPitchYaw) -&gt; None</p></li>
 </ol>
 <p>Constructs a RotationMatrix from an RollPitchYaw. In other words,
 makes the RotationMatrix for a Space-fixed (extrinsic) X-Y-Z rotation
@@ -5852,7 +5852,7 @@ matrix.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix.cast-AutoDiffXd">
-<span id="pydrake.math.RotationMatrix.cast[AutoDiffXd]"></span><span class="sig-name descname"><span class="pre">cast[AutoDiffXd]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RotationMatrix&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix.cast-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<span id="pydrake.math.RotationMatrix.cast[AutoDiffXd]"></span><span class="sig-name descname"><span class="pre">cast[AutoDiffXd]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix.cast-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
@@ -5876,7 +5876,7 @@ allows cast from type double to AutoDiffXd, but not vice-versa.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix.cast-Expression">
-<span id="pydrake.math.RotationMatrix.cast[Expression]"></span><span class="sig-name descname"><span class="pre">cast[Expression]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RotationMatrix&lt;drake::symbolic::Expression&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix.cast-Expression" title="Permalink to this definition"></a></dt>
+<span id="pydrake.math.RotationMatrix.cast[Expression]"></span><span class="sig-name descname"><span class="pre">cast[Expression]</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix.cast-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a RotationMatrix templatized on a scalar type U from a
 RotationMatrix templatized on scalar type T. For example,</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RotationMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
@@ -6364,7 +6364,7 @@ this method chooses to return a canonical quaternion, i.e., with q(0)
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix.ToRollPitchYaw">
-<span class="sig-name descname"><span class="pre">ToRollPitchYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RollPitchYaw&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix.ToRollPitchYaw" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">ToRollPitchYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RollPitchYaw" title="pydrake.math.RollPitchYaw"><span class="pre">pydrake.math.RollPitchYaw</span></a></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix.ToRollPitchYaw" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a RollPitchYaw that represents <code class="docutils literal notranslate"><span class="pre">this</span></code> RotationMatrix, with
 roll-pitch-yaw angles <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> in the range <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">r</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>,
 <cite>-π/2 &lt;= p &lt;= π/2</cite>, <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">y</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>.</p>
@@ -6495,7 +6495,7 @@ not have unit length [i.e., <code class="docutils literal notranslate"><span cla
 </dd>
 </dl>
 <ol class="arabic simple" start="6">
-<li><p>__init__(self: pydrake.math.RotationMatrix_[AutoDiffXd], rpy: drake::math::RollPitchYaw&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RotationMatrix_[AutoDiffXd], rpy: pydrake.math.RollPitchYaw_[AutoDiffXd]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RotationMatrix from an RollPitchYaw. In other words,
 makes the RotationMatrix for a Space-fixed (extrinsic) X-Y-Z rotation
@@ -7029,7 +7029,7 @@ this method chooses to return a canonical quaternion, i.e., with q(0)
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix_-AutoDiffXd-.ToRollPitchYaw">
-<span id="pydrake.math.RotationMatrix_[AutoDiffXd].ToRollPitchYaw"></span><span class="sig-name descname"><span class="pre">ToRollPitchYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RollPitchYaw&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix_-AutoDiffXd-.ToRollPitchYaw" title="Permalink to this definition"></a></dt>
+<span id="pydrake.math.RotationMatrix_[AutoDiffXd].ToRollPitchYaw"></span><span class="sig-name descname"><span class="pre">ToRollPitchYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RollPitchYaw_" title="pydrake.math.RollPitchYaw_"><span class="pre">pydrake.math.RollPitchYaw_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix_-AutoDiffXd-.ToRollPitchYaw" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a RollPitchYaw that represents <code class="docutils literal notranslate"><span class="pre">this</span></code> RotationMatrix, with
 roll-pitch-yaw angles <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> in the range <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">r</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>,
 <cite>-π/2 &lt;= p &lt;= π/2</cite>, <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">y</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>.</p>
@@ -7154,7 +7154,7 @@ not have unit length [i.e., <code class="docutils literal notranslate"><span cla
 </dd>
 </dl>
 <ol class="arabic simple" start="6">
-<li><p>__init__(self: pydrake.math.RotationMatrix_[Expression], rpy: drake::math::RollPitchYaw&lt;drake::symbolic::Expression&gt;) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.math.RotationMatrix_[Expression], rpy: pydrake.math.RollPitchYaw_[Expression]) -&gt; None</p></li>
 </ol>
 <p>Constructs a RotationMatrix from an RollPitchYaw. In other words,
 makes the RotationMatrix for a Space-fixed (extrinsic) X-Y-Z rotation
@@ -7688,7 +7688,7 @@ this method chooses to return a canonical quaternion, i.e., with q(0)
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.RotationMatrix_-Expression-.ToRollPitchYaw">
-<span id="pydrake.math.RotationMatrix_[Expression].ToRollPitchYaw"></span><span class="sig-name descname"><span class="pre">ToRollPitchYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RollPitchYaw&lt;drake::symbolic::Expression&gt;</span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix_-Expression-.ToRollPitchYaw" title="Permalink to this definition"></a></dt>
+<span id="pydrake.math.RotationMatrix_[Expression].ToRollPitchYaw"></span><span class="sig-name descname"><span class="pre">ToRollPitchYaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.RotationMatrix_" title="pydrake.math.RotationMatrix_"><span class="pre">pydrake.math.RotationMatrix_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RollPitchYaw_" title="pydrake.math.RollPitchYaw_"><span class="pre">pydrake.math.RollPitchYaw_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.RotationMatrix_-Expression-.ToRollPitchYaw" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a RollPitchYaw that represents <code class="docutils literal notranslate"><span class="pre">this</span></code> RotationMatrix, with
 roll-pitch-yaw angles <code class="docutils literal notranslate"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> in the range <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">r</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>,
 <cite>-π/2 &lt;= p &lt;= π/2</cite>, <code class="docutils literal notranslate"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">y</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>.</p>
@@ -7999,7 +7999,7 @@ Graphics Gems III, pages 124-132. Academic, New York, 1992.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.math.UniformlyRandomRotationMatrix">
-<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">UniformlyRandomRotationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">generator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.html#pydrake.common.RandomGenerator" title="pydrake.common.RandomGenerator"><span class="pre">pydrake.common.RandomGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::math::RotationMatrix&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.math.UniformlyRandomRotationMatrix" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.math.</span></span><span class="sig-name descname"><span class="pre">UniformlyRandomRotationMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">generator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.html#pydrake.common.RandomGenerator" title="pydrake.common.RandomGenerator"><span class="pre">pydrake.common.RandomGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></span><a class="headerlink" href="#pydrake.math.UniformlyRandomRotationMatrix" title="Permalink to this definition"></a></dt>
 <dd><p>Generates a rotation (in the rotation matrix representation) that
 rotates a point on the unit sphere to another point on the unit sphere
 with a uniform distribution over the sphere.</p>

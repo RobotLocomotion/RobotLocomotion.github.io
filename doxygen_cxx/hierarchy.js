@@ -508,6 +508,7 @@ var hierarchy =
     [ "ImageTraits< systems::sensors::PixelType::kLabel16I >", "structdrake_1_1systems_1_1sensors_1_1_image_traits.html", null ],
     [ "InitializeParams", "structdrake_1_1systems_1_1_initialize_params.html", null ],
     [ "InitialValueProblem< T >", "classdrake_1_1systems_1_1_initial_value_problem.html", null ],
+    [ "InMemoryMesh", "classdrake_1_1geometry_1_1_in_memory_mesh.html", null ],
     [ "MultibodyPlant< T >::InputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", null ],
     [ "MultibodyPlant< T >::OutputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html", null ],
     [ "integral_constant", null, [
@@ -586,6 +587,7 @@ var hierarchy =
     [ "MeshcatParams", "structdrake_1_1geometry_1_1_meshcat_params.html", null ],
     [ "MeshcatVisualizerParams", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html", null ],
     [ "MeshFieldLinear< T, MeshType >", "classdrake_1_1geometry_1_1_mesh_field_linear.html", null ],
+    [ "MeshSource", "classdrake_1_1geometry_1_1_mesh_source.html", null ],
     [ "ImageIo::Metadata", "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html", null ],
     [ "MixedIntegerBranchAndBound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html", null ],
     [ "MixedIntegerBranchAndBoundNode", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html", null ],
@@ -748,6 +750,7 @@ var hierarchy =
     [ "reset_after_move< int64_t >", "classdrake_1_1reset__after__move.html", null ],
     [ "reset_after_move< size_t >", "classdrake_1_1reset__after__move.html", null ],
     [ "reset_after_move< std::string >", "classdrake_1_1reset__after__move.html", null ],
+    [ "reset_after_move< std::variant< drake::geometry::InMemoryMesh, std::filesystem::path > >", "classdrake_1_1reset__after__move.html", null ],
     [ "reset_on_copy< T >", "classdrake_1_1reset__on__copy.html", null ],
     [ "reset_on_copy< const internal::ContextMessageInterface * >", "classdrake_1_1reset__on__copy.html", null ],
     [ "reset_on_copy< const MeshType * >", "classdrake_1_1reset__on__copy.html", null ],

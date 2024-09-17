@@ -22,6 +22,7 @@ var searchData=
   ['reset_5fafter_5fmove_3c_20int64_5ft_20_3e',['reset_after_move&lt; int64_t &gt;',['../classdrake_1_1reset__after__move.html',1,'drake']]],
   ['reset_5fafter_5fmove_3c_20size_5ft_20_3e',['reset_after_move&lt; size_t &gt;',['../classdrake_1_1reset__after__move.html',1,'drake']]],
   ['reset_5fafter_5fmove_3c_20std_3a_3astring_20_3e',['reset_after_move&lt; std::string &gt;',['../classdrake_1_1reset__after__move.html',1,'drake']]],
+  ['reset_5fafter_5fmove_3c_20std_3a_3avariant_3c_20drake_3a_3ageometry_3a_3ainmemorymesh_2c_20std_3a_3afilesystem_3a_3apath_20_3e_20_3e',['reset_after_move&lt; std::variant&lt; drake::geometry::InMemoryMesh, std::filesystem::path &gt; &gt;',['../classdrake_1_1reset__after__move.html',1,'drake']]],
   ['reset_5fon_5fcopy',['reset_on_copy',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
   ['reset_5fon_5fcopy_3c_20const_20internal_3a_3acontextmessageinterface_20_2a_20_3e',['reset_on_copy&lt; const internal::ContextMessageInterface * &gt;',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
   ['reset_5fon_5fcopy_3c_20const_20meshtype_20_2a_20_3e',['reset_on_copy&lt; const MeshType * &gt;',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
