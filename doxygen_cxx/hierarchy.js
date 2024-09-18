@@ -828,10 +828,7 @@ var hierarchy =
       [ "Sphere", "classdrake_1_1geometry_1_1_sphere.html", null ]
     ] ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", [
-      [ "ConvexHull", "classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html", null ],
-      [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", null ],
-      [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", null ],
-      [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ]
+      [ "ConvexHull", "classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html", null ]
     ] ],
     [ "SignedDistancePair< T >", "structdrake_1_1geometry_1_1_signed_distance_pair.html", null ],
     [ "SignedDistanceToPoint< T >", "structdrake_1_1geometry_1_1_signed_distance_to_point.html", null ],
