@@ -272,9 +272,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a325184199e87f0e800c11f57995dc6dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a325184199e87f0e800c11f57995dc6dc">AddInForce</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BP_E, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;F_Bp_E, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const</td></tr>
 <tr class="memdesc:a325184199e87f0e800c11f57995dc6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html" title="This class represents a spatial force F (also called a wrench) and has 6 elements with a torque 𝛕 (3-...">SpatialForce</a> on this RigidBody B, applied at point P and expressed in a frame E into <code>forces</code>.  <a href="#a325184199e87f0e800c11f57995dc6dc">More...</a><br /></td></tr>
 <tr class="separator:a325184199e87f0e800c11f57995dc6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb3251f4cee150e826e6691f5f512c8d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#afb3251f4cee150e826e6691f5f512c8d">CalcCenterOfMassInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
-<tr class="memdesc:afb3251f4cee150e826e6691f5f512c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets this body's center of mass position from the given context.  <a href="#afb3251f4cee150e826e6691f5f512c8d">More...</a><br /></td></tr>
-<tr class="separator:afb3251f4cee150e826e6691f5f512c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64deeff69b762e9b1c6cd110d99609e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a64deeff69b762e9b1c6cd110d99609e2">CalcCenterOfMassInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a64deeff69b762e9b1c6cd110d99609e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets this body's center of mass position from the given context.  <a href="#a64deeff69b762e9b1c6cd110d99609e2">More...</a><br /></td></tr>
+<tr class="separator:a64deeff69b762e9b1c6cd110d99609e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2026c5b7ca4f16add5577e474600be34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2026c5b7ca4f16add5577e474600be34">CalcCenterOfMassTranslationalVelocityInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a2026c5b7ca4f16add5577e474600be34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Bcm's translational velocity in the world frame W.  <a href="#a2026c5b7ca4f16add5577e474600be34">More...</a><br /></td></tr>
 <tr class="separator:a2026c5b7ca4f16add5577e474600be34"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -702,14 +702,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="afb3251f4cee150e826e6691f5f512c8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb3251f4cee150e826e6691f5f512c8d">&#9670;&nbsp;</a></span>CalcCenterOfMassInBodyFrame()</h2>
+<a id="a64deeff69b762e9b1c6cd110d99609e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64deeff69b762e9b1c6cd110d99609e2">&#9670;&nbsp;</a></span>CalcCenterOfMassInBodyFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; CalcCenterOfMassInBodyFrame </td>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; CalcCenterOfMassInBodyFrame </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>

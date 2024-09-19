@@ -1,5 +1,6 @@
 var group__default__scalars =
 [
+    [ "drake", "namespacedrake.html", null ],
     [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS", "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e", null ],
     [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14", null ],
     [ "DRAKE_DEFINE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS", "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17", null ],

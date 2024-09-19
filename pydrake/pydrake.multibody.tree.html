@@ -12564,6 +12564,39 @@ Bcm (B’s center of mass), expressed in B.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.CalcCenterOfMassTranslationalAccelerationInWorld">
+<span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalAccelerationInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.CalcCenterOfMassTranslationalAccelerationInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates Bcm’s translational acceleration in the world frame W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">a_WBcm_W</span></code>:</dt><dd><p>The translational acceleration of Bcm (this rigid body’s center of
+mass) in the world frame W, expressed in W.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When cached values are out of sync with the state stored in
+context, this method performs an expensive forward dynamics
+computation, whereas once evaluated, successive calls to this
+method are inexpensive.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.CalcCenterOfMassTranslationalVelocityInWorld">
+<span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalVelocityInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.CalcCenterOfMassTranslationalVelocityInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates Bcm’s translational velocity in the world frame W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WBcm_W</span></code>:</dt><dd><p>The translational velocity of Bcm (this rigid body’s center of
+mass) in the world frame W, expressed in W.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.CalcSpatialInertiaInBodyFrame">
 <span class="sig-name descname"><span class="pre">CalcSpatialInertiaInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.CalcSpatialInertiaInBodyFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Gets this body’s spatial inertia about its origin from the given
@@ -13155,6 +13188,39 @@ Bcm (B’s center of mass), expressed in B.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.CalcCenterOfMassTranslationalAccelerationInWorld">
+<span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].CalcCenterOfMassTranslationalAccelerationInWorld"></span><span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalAccelerationInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.CalcCenterOfMassTranslationalAccelerationInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates Bcm’s translational acceleration in the world frame W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">a_WBcm_W</span></code>:</dt><dd><p>The translational acceleration of Bcm (this rigid body’s center of
+mass) in the world frame W, expressed in W.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When cached values are out of sync with the state stored in
+context, this method performs an expensive forward dynamics
+computation, whereas once evaluated, successive calls to this
+method are inexpensive.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.CalcCenterOfMassTranslationalVelocityInWorld">
+<span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].CalcCenterOfMassTranslationalVelocityInWorld"></span><span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalVelocityInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.CalcCenterOfMassTranslationalVelocityInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates Bcm’s translational velocity in the world frame W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WBcm_W</span></code>:</dt><dd><p>The translational velocity of Bcm (this rigid body’s center of
+mass) in the world frame W, expressed in W.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.CalcSpatialInertiaInBodyFrame">
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].CalcSpatialInertiaInBodyFrame"></span><span class="sig-name descname"><span class="pre">CalcSpatialInertiaInBodyFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.CalcSpatialInertiaInBodyFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Gets this body’s spatial inertia about its origin from the given
@@ -13735,6 +13801,39 @@ Bcm (B’s center of mass), expressed in B.</p>
 </dl>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>the context makes sense for use by this RigidBody.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-Expression-.CalcCenterOfMassTranslationalAccelerationInWorld">
+<span id="pydrake.multibody.tree.RigidBody_[Expression].CalcCenterOfMassTranslationalAccelerationInWorld"></span><span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalAccelerationInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.CalcCenterOfMassTranslationalAccelerationInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates Bcm’s translational acceleration in the world frame W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">a_WBcm_W</span></code>:</dt><dd><p>The translational acceleration of Bcm (this rigid body’s center of
+mass) in the world frame W, expressed in W.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When cached values are out of sync with the state stored in
+context, this method performs an expensive forward dynamics
+computation, whereas once evaluated, successive calls to this
+method are inexpensive.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-Expression-.CalcCenterOfMassTranslationalVelocityInWorld">
+<span id="pydrake.multibody.tree.RigidBody_[Expression].CalcCenterOfMassTranslationalVelocityInWorld"></span><span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalVelocityInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.CalcCenterOfMassTranslationalVelocityInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates Bcm’s translational velocity in the world frame W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context contains the state of the model.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WBcm_W</span></code>:</dt><dd><p>The translational velocity of Bcm (this rigid body’s center of
+mass) in the world frame W, expressed in W.</p>
 </dd>
 </dl>
 </dd></dl>
