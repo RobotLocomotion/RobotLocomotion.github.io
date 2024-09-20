@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1_kinematics_vector.html#ab9e616f21e1bab6297b08ff638366f6e":[3,0,0,4,29,2],
 "classdrake_1_1geometry_1_1_kinematics_vector.html#ac8bb3912a3ce86b15842e79d0b421204":[3,0,0,4,29,5],
 "classdrake_1_1geometry_1_1_kinematics_vector.html#adb0b732826563f4d13c3411c56a0d54f":[3,0,0,4,29,8],
 "classdrake_1_1geometry_1_1_kinematics_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,4,29,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1_query_object.html#ab15e2fff4faa847eb6a7ba82e1d4f035":[3,0,0,4,47,3],
 "classdrake_1_1geometry_1_1_query_object.html#ab3ead3718ecc338ebf8ffdd60f8206ed":[3,0,0,4,47,0],
 "classdrake_1_1geometry_1_1_query_object.html#aba077b59ee3574bbe9a0a602c14293c3":[3,0,0,4,47,23],
-"classdrake_1_1geometry_1_1_query_object.html#ac84d9a202933205a92cf0823b94ba512":[3,0,0,4,47,1],
-"classdrake_1_1geometry_1_1_query_object.html#aca1821eb8273800276099f5690eb8b99":[3,0,0,4,47,14]
+"classdrake_1_1geometry_1_1_query_object.html#ac84d9a202933205a92cf0823b94ba512":[3,0,0,4,47,1]
 };

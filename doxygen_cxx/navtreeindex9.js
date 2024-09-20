@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1geometry_1_1_volume_mesh.html#a6a402c8710c3a71fffbbc2223e0a8eb4":[3,0,0,4,65,6],
 "classdrake_1_1geometry_1_1_volume_mesh.html#a6aec7d49d25322d8fae54028059d27aa":[3,0,0,4,65,1],
 "classdrake_1_1geometry_1_1_volume_mesh.html#a6e573ccac8cb33547bebe17dce6f44da":[3,0,0,4,65,14],
 "classdrake_1_1geometry_1_1_volume_mesh.html#a895d67540aff2cb88a555048a1fa7e90":[3,0,0,4,65,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8869dc04a027222c1080fbf9b38cdb93":[3,0,0,4,1,6,8],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8c0df9e04099fbec99bbbe06554deb9c":[3,0,0,4,1,6,12],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8d25a6dce0135ca229e1337ae7c008b4":[3,0,0,4,1,6,6],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#adfbe9a0f2e79d07d3424cdab71184985":[3,0,0,4,1,6,7],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html":[3,0,0,4,1,6,0]
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#adfbe9a0f2e79d07d3424cdab71184985":[3,0,0,4,1,6,7]
 };

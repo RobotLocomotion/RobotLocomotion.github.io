@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_frame.html#a921f7998dbc51e8b4298b1fbb2369686":[3,0,0,8,36,0],
 "classdrake_1_1multibody_1_1_frame.html#a9520af8c4296c85b67093e09173e4f48":[3,0,0,8,36,6],
 "classdrake_1_1multibody_1_1_frame.html#a9f41fe43f53ca7807f256f0d5daa0734":[3,0,0,8,36,38],
 "classdrake_1_1multibody_1_1_frame.html#aa0f3f98e61d00d6d126bba55efbff728":[3,0,0,8,36,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_linear_spring_damper.html#a89c49c8f7ca8e6215810784c48acae23":[3,0,0,8,49,12],
 "classdrake_1_1multibody_1_1_linear_spring_damper.html#a8d3f49e4a610262e458a2bf0bbf7fd75":[3,0,0,8,49,16],
 "classdrake_1_1multibody_1_1_linear_spring_damper.html#aa86d149c16b942efb4c20ffcc90c91b0":[3,0,0,8,49,0],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#aad91b55e6b714db4ba96190e6fab07ac":[3,0,0,8,49,9],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#ac75256ab290276221390b61506773ca5":[3,0,0,8,49,4]
+"classdrake_1_1multibody_1_1_linear_spring_damper.html#aad91b55e6b714db4ba96190e6fab07ac":[3,0,0,8,49,9]
 };

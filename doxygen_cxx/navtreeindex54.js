@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"group__visualization.html#ga34c9c8f0a78446ac29edf4a3202127c3":[1,2,11,9],
 "group__visualization.html#ga732349f929601b37e30b15ad557057e7":[1,2,11,10],
 "group__yaml__serialization.html":[1,6,4],
 "gurobi__solver_8h.html":[4,0,0,11,22],
@@ -27,13 +28,13 @@ var NAVTREEINDEX54 =
 "hpolyhedron_8h.html":[4,0,0,4,1,14],
 "hwy__dynamic_8h.html":[4,0,0,1,39],
 "hwy__dynamic__impl_8h.html":[4,0,0,1,40],
-"hydroelastic__calculator_8h.html":[4,0,0,4,2,19],
+"hydroelastic__calculator_8h.html":[4,0,0,4,2,20],
 "hydroelastic__contact__forces__continuous__cache__data_8h.html":[4,0,0,8,9,23],
 "hydroelastic__contact__info_8h.html":[4,0,0,8,9,24],
 "hydroelastic__contact__info_8h.html#aa09dcbaa8fa85bd26984e3748c7c39ee":[4,0,0,8,9,24,2],
 "hydroelastic__contact__visualizer_8h.html":[4,0,0,8,6,2],
 "hydroelastic__engine_8h.html":[4,0,0,8,3,0],
-"hydroelastic__internal_8h.html":[4,0,0,4,2,20],
+"hydroelastic__internal_8h.html":[4,0,0,4,2,21],
 "hydroelastic__quadrature__point__data_8h.html":[4,0,0,8,9,25],
 "hydroelastic__quadrature__point__data_8h.html#a2bf20ea033c552f5b0b429d42a78aefa":[4,0,0,8,9,25,1],
 "hydroelastic__quadrature__point__data_8h.html#ad4dffaf093012d7be6fa1d3f36633c40":[4,0,0,8,9,25,0],
@@ -142,7 +143,7 @@ var NAVTREEINDEX54 =
 "index.html":[],
 "inertia__visualizer_8h.html":[4,0,0,13,3],
 "inertia__visualizer_8h.html#ac3899c4392068f63d78217c4634e13a1":[4,0,0,13,3,0],
-"inflate__mesh_8h.html":[4,0,0,4,2,21],
+"inflate__mesh_8h.html":[4,0,0,4,2,22],
 "initial__value__problem_8h.html":[4,0,0,12,0,9],
 "initial__value__problem_8h.html#aec4184a3d8bf137b9565c1943acd9f9a":[4,0,0,12,0,9,1],
 "initialization__test__system_8h.html":[4,0,0,12,3,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX54 =
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2af1b493f6e43ce0d1371533ee4f1199d0":[4,0,0,7,21,0,1],
 "kuka__torque__controller_8h.html":[4,0,0,3,8,2],
 "latex_8h.html":[4,0,0,1,3,7],
-"latex_8h.html#a38b1d770b9e21d7e4f36649630b10891":[4,0,0,1,3,7,2],
-"latex_8h.html#a50f946a2d656be1b946c8f2f6bf00810":[4,0,0,1,3,7,0]
+"latex_8h.html#a38b1d770b9e21d7e4f36649630b10891":[4,0,0,1,3,7,2]
 };

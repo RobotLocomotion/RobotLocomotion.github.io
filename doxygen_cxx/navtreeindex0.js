@@ -137,6 +137,7 @@ var NAVTREEINDEX0 =
 "calc__distance__and__time__derivative_8h.html#a57577cfb87838e5b949fd703e227acfc":[4,0,0,8,9,1,1],
 "calc__distance__to__surface__mesh_8h.html":[4,0,0,4,2,4],
 "calc__lame__parameters_8h.html":[4,0,0,8,2,1],
+"calc__signed__distance__to__surface__mesh_8h.html":[4,0,0,4,2,5],
 "call__python_8h.html":[4,0,0,1,1,0],
 "call__python_8h.html#a861302e6bce6e41acf42b94c21ee5020":[4,0,0,1,1,0,3],
 "call__python_8h.html#ab90532d79bea92048d0ee230ed8d4b59":[4,0,0,1,1,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_memory_file.html#a8a9f91a7db6a15fc542f14aa08c8e563":[3,0,0,37,11],
 "classdrake_1_1_memory_file.html#aac55a4c9da45bab272bb34692d583206":[3,0,0,37,5],
 "classdrake_1_1_name_value.html":[3,0,0,38],
-"classdrake_1_1_name_value.html#a04e97f285e8856cd64e112af8e379da1":[3,0,0,38,6],
-"classdrake_1_1_name_value.html#a265a253612b46abed17c61b0a5e5ce30":[3,0,0,38,0]
+"classdrake_1_1_name_value.html#a04e97f285e8856cd64e112af8e379da1":[3,0,0,38,6]
 };

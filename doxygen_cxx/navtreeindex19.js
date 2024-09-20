@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1multibody_1_1_point_pair_contact_info.html#a6d2da20c96fa99be810b28ef0705214c":[3,0,0,8,66,11],
 "classdrake_1_1multibody_1_1_point_pair_contact_info.html#a733bb4ab881021933bb4ab8c628b2db0":[3,0,0,8,66,3],
 "classdrake_1_1multibody_1_1_point_pair_contact_info.html#a9d16ca164dc5cc8fedde377dd9870eee":[3,0,0,8,66,0],
 "classdrake_1_1multibody_1_1_point_pair_contact_info.html#ab9a94e5485a94db25be84679cdb91085":[3,0,0,8,66,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1multibody_1_1_rigid_body.html#a8e98e34e5da5ecfc7e03086b70cf5489":[3,0,0,8,81,22],
 "classdrake_1_1multibody_1_1_rigid_body.html#a9c07832f25dde3f8403e98c73dd24d1b":[3,0,0,8,81,20],
 "classdrake_1_1multibody_1_1_rigid_body.html#aa50309263cd1a4f01f3cead4288a8f49":[3,0,0,8,81,2],
-"classdrake_1_1multibody_1_1_rigid_body.html#ab704aff8be7712af4b08ad4446053677":[3,0,0,8,81,9],
-"classdrake_1_1multibody_1_1_rigid_body.html#abaa244e80c13ef3c744373f3bcaec801":[3,0,0,8,81,44]
+"classdrake_1_1multibody_1_1_rigid_body.html#ab704aff8be7712af4b08ad4446053677":[3,0,0,8,81,9]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1trajectories_1_1_composite_trajectory.html#ad232d70c6d50a859d5081d9d093b90aa":[3,0,0,17,2,4],
 "classdrake_1_1trajectories_1_1_composite_trajectory.html#ad2ea83e5c3e3dacdcf10c302a1c87a8a":[3,0,0,17,2,2],
 "classdrake_1_1trajectories_1_1_composite_trajectory.html#ad6a459d5e94794486e86aacb53ecfe1b":[3,0,0,17,2,10],
 "classdrake_1_1trajectories_1_1_derivative_trajectory.html":[3,0,0,17,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#ae24510285abfa6815e8db8fb3d63784f":[1,2,11,7,9],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#af5171ca2885a603eb6092e154560a067":[1,2,11,7,2],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html":[1,2,11,8],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a09d6684491bca73b075869d7301e0f72":[1,2,11,8,0],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a1bd6cd37495850b786d7ac9896bb86a2":[1,2,11,8,1]
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a09d6684491bca73b075869d7301e0f72":[1,2,11,8,0]
 };

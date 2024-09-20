@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"drake__assertion__error_8h.html":[4,0,0,1,19],
 "drake__bool_8h.html":[4,0,0,1,20],
 "drake__bool_8h.html#a01aa931c5cbfd4b09d847cc4d7b4c699":[4,0,0,1,20,7],
 "drake__bool_8h.html#a1f1c657c4d2cf400649123a7c2573d5b":[4,0,0,1,20,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "expression_2expression_8h.html#acbfe43d34e6c71c503d4de11da53bbb7":[4,0,0,1,3,0,3,11],
 "expression_2expression_8h.html#acdaf0abb22b9280fc9622bd2d488a3e1":[4,0,0,1,3,0,3,48],
 "expression_2expression_8h.html#aceba5fef90cbd2790037fa685e3ffdce":[4,0,0,1,3,0,3,68],
-"expression_2expression_8h.html#acf922c7aec2a7797cc4c9c22dcdada1f":[4,0,0,1,3,0,3,116],
-"expression_2expression_8h.html#acfa5bc007d1b065d2afc30e2f6ced7a9":[4,0,0,1,3,0,3,49]
+"expression_2expression_8h.html#acf922c7aec2a7797cc4c9c22dcdada1f":[4,0,0,1,3,0,3,116]
 };

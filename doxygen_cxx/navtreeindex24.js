@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1planning_1_1_collision_checker_context.html#a1e7d2a81568c26350b120a592e55e174":[1,4,2,2,2,13],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a46e2ea7dcce7c4029de4eb1dda4d547d":[1,4,2,2,2,14],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a6a64fc87cab6f3a1e3e9a1a0bfceb6c4":[1,4,2,2,2,3],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a7bc6fa500c4de5a249e9c4a99257f0ba":[1,4,2,2,2,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#aa69be52668ec461d59f91ad7eaca3a89":[3,0,0,10,2,3,0,12],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#aae29721eac65539aa19e424aaef66589":[3,0,0,10,2,3,0,1],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#abf75b0f596cc9aa68c9819a4674f0269":[3,0,0,10,2,3,0,10],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ace0e9a0c85d4205f2a7d2a25aa24122c":[3,0,0,10,2,3,0,11],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ad8c6ac3db7c5565d4742881f0f6e0c32":[3,0,0,10,2,3,0,2]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ace0e9a0c85d4205f2a7d2a25aa24122c":[3,0,0,10,2,3,0,11]
 };

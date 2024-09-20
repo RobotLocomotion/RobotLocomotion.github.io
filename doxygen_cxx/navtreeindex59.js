@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a6973c9c90ce92aa52ce62a6e0fc4664d":[4,0,0,11,44,1,3],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aa059fc525d6d174e5e070c7261ff8e43":[4,0,0,11,44,1,6],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aae2b1591bba5a77450b0df77a207be8f":[4,0,0,11,44,1,10],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aca450e45c136c14aabb606a09e0775a8":[4,0,0,11,44,1,7],
@@ -235,7 +236,7 @@ var NAVTREEINDEX59 =
 "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,61,6],
 "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,61,8],
 "sorted__pair__pybind_8h.html":[4,0,0,0,0,1,7],
-"sorted__triplet_8h.html":[4,0,0,4,2,56],
+"sorted__triplet_8h.html":[4,0,0,4,2,57],
 "sos__basis__generator_8h.html":[4,0,0,11,59],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,59,0],
 "spanning__forest_8h.html":[4,0,0,8,12,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "sparse__linear__operator_8h.html#ab3a29b7d9714447621ce21836bca9b15":[4,0,0,8,1,18,0],
 "spatial__acceleration_8h.html":[4,0,0,8,5,0],
 "spatial__acceleration_8h.html#a34fc915b4c64fba1362cc960d9a27d4a":[4,0,0,8,5,0,1],
-"spatial__algebra_8h.html":[4,0,0,8,5,1],
-"spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,5,1,0]
+"spatial__algebra_8h.html":[4,0,0,8,5,1]
 };

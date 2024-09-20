@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1systems_1_1_vector_log_sink.html#adbebf78a6b8619cee90d5bffc463dfe5":[1,2,1,27,1],
 "classdrake_1_1systems_1_1_vector_log_sink.html#ae63d08ab7e3c669eec276019e4f2dbcb":[1,2,1,27,7],
 "classdrake_1_1systems_1_1_vector_log_sink.html#afc2871c939bcabe7583c01099d00747c":[1,2,1,27,6],
 "classdrake_1_1systems_1_1_vector_system.html":[3,0,0,15,129],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#aefeee400d114825d8db97204a6999101":[1,2,2,4,2],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html":[1,2,2,5],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a146f7ab66f76d0b5ca62e305cc070436":[1,2,2,5,17],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a2684fb1c9068b9503a1cfd12f7b09256":[1,2,2,5,4],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a31d6809bd4837dbc26ad2ff734737a21":[1,2,2,5,5]
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a2684fb1c9068b9503a1cfd12f7b09256":[1,2,2,5,4]
 };

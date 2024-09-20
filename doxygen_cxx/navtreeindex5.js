@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html#a51310633dfb0da91deb07a64ec22d9fe":[3,0,0,3,15,3,1],
 "classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html#a60be075a378f52a2e00349e0d61d6b48":[3,0,0,3,15,3,46],
 "classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html#a63e22b4e4f8ed33bcea380dfa57c96a8":[3,0,0,3,15,3,7],
 "classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html#a6660bedc05d5859e8fa005c376c9a448":[3,0,0,3,15,3,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "classdrake_1_1geometry_1_1_drake_visualizer.html#afef41212c6bf942f024dc6847669b4c0":[3,0,0,4,11,5],
 "classdrake_1_1geometry_1_1_drake_visualizer_test.html":[3,0,0,4,13],
 "classdrake_1_1geometry_1_1_ellipsoid.html":[3,0,0,4,14],
-"classdrake_1_1geometry_1_1_ellipsoid.html#a1bc1c8769c496c5a7280605630729ab3":[3,0,0,4,14,1],
-"classdrake_1_1geometry_1_1_ellipsoid.html#a2bbc76aeadab8a326a08ddab7aae3412":[3,0,0,4,14,6]
+"classdrake_1_1geometry_1_1_ellipsoid.html#a1bc1c8769c496c5a7280605630729ab3":[3,0,0,4,14,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html":[3,0,1,32],
 "structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html":[3,0,1,34],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,0],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,2,0,0],
@@ -166,7 +167,7 @@ var NAVTREEINDEX66 =
 "tamsi__solver_8h.html#a6f795d5f99c4812df226348de9286a4d":[4,0,0,8,9,43,4],
 "temp__directory_8h.html":[4,0,0,1,68],
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,68,0],
-"tessellation__strategy_8h.html":[4,0,0,4,2,57],
+"tessellation__strategy_8h.html":[4,0,0,4,2,58],
 "test__utilities_8h.html":[4,0,0,4,1,23],
 "text__logging_8h.html":[4,0,0,1,69],
 "text__logging_8h.html#a43a4a42dcea3143d400de1575cb5758c":[4,0,0,1,69,5],
@@ -197,10 +198,10 @@ var NAVTREEINDEX66 =
 "tree__py_8h.html":[4,0,0,0,0,6,1],
 "triangle__quadrature_8h.html":[4,0,0,8,14,1],
 "triangle__quadrature__rule_8h.html":[4,0,0,8,14,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,58],
-"triangle__surface__mesh_8h.html#a1b6e179f892df67543be3028eae06fb9":[4,0,0,4,2,58,3],
-"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,59],
-"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,59,0],
+"triangle__surface__mesh_8h.html":[4,0,0,4,2,59],
+"triangle__surface__mesh_8h.html#a1b6e179f892df67543be3028eae06fb9":[4,0,0,4,2,59,3],
+"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,60],
+"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,60,0],
 "trigonometric__polynomial_8h.html":[4,0,0,1,3,17],
 "trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44":[4,0,0,1,3,17,2],
 "trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0":[4,0,0,1,3,17,2,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX66 =
 "value__pybind_8h.html":[4,0,0,0,0,1,12],
 "value__pybind_8h.html#a210546c12706075cdd90f811470ac4b0":[4,0,0,0,0,1,12,0],
 "value__to__abstract__value_8h.html":[4,0,0,12,3,51],
-"van__der__pol_8h.html":[4,0,0,3,18,0],
-"variable_8h.html":[4,0,0,1,3,0,11]
+"van__der__pol_8h.html":[4,0,0,3,18,0]
 };

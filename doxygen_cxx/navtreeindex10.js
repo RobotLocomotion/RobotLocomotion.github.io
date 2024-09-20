@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html":[3,0,0,4,1,6,0],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a1c08c7ebb1c1958a09f1c444ee5dbef2":[3,0,0,4,1,6,0,5],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a5c13a0a2c2f59d40ee81746e82ac087e":[3,0,0,4,1,6,0,0],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a69f6cf2a4b931d5c949179c798eb39b6":[3,0,0,4,1,6,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a25459319f3911a56071855a34a38e1c9":[1,1,1,7,16],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a25459319f3911a56071855a34a38e1c9":[1,5,5,7,16],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2f010e733bd63adb8352995624362b65":[1,1,1,7,17],
-"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2f010e733bd63adb8352995624362b65":[1,5,5,7,17],
-"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a33511869af259d5a743e9cb70f0f711d":[1,1,1,7,24]
+"classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2f010e733bd63adb8352995624362b65":[1,5,5,7,17]
 };
