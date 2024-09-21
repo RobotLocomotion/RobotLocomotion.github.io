@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"spatial__algebra_8h.html":[4,0,0,8,5,1],
 "spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,5,1,0],
 "spatial__derivative_8h.html":[4,0,0,8,11,3],
 "spatial__derivative_8h.html#ace570bf1fadd64470c0fda6c73981cc9":[4,0,0,8,11,3,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html":[3,0,0,3,11,4],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a2bdd549be406df7a68a02541f0f14dff":[3,0,0,3,11,4,1],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,11,4,0],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,11,4,2],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,11,4,5]
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,11,4,2]
 };

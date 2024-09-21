@@ -118,6 +118,7 @@ var searchData=
   ['defclone',['DefClone',['../namespacedrake_1_1pydrake.html#ad48601ea388e9d2a662aff6f8b42dca4',1,'drake::pydrake']]],
   ['defcopyanddeepcopy',['DefCopyAndDeepCopy',['../namespacedrake_1_1pydrake.html#a4937c776ae795edfe27824821a0d14a5',1,'drake::pydrake']]],
   ['defer_5finitialization',['defer_initialization',['../structdrake_1_1lcm_1_1_drake_lcm_params.html#a3088c7d186c65efc9139b0d9d5772c4a',1,'drake::lcm::DrakeLcmParams']]],
+  ['defineframeworkdiagrambuilder',['DefineFrameworkDiagramBuilder',['../namespacedrake_1_1pydrake.html#ae69d9dd260ccb0152ebf2da94f03b0c1',1,'drake::pydrake']]],
   ['defineframeworkpysemantics',['DefineFrameworkPySemantics',['../namespacedrake_1_1pydrake.html#ae4b3fef8297fa00d68181a77b7da0d40',1,'drake::pydrake']]],
   ['defineframeworkpysystems',['DefineFrameworkPySystems',['../namespacedrake_1_1pydrake.html#a54960a906da6ad2f3b2509a4fd266f5b',1,'drake::pydrake']]],
   ['defineframeworkpyvalues',['DefineFrameworkPyValues',['../namespacedrake_1_1pydrake.html#ae073851bc679a64d47dc27c133b8d89d',1,'drake::pydrake']]],

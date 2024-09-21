@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,11,4,5],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[3,0,0,3,11,4,4],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ad7178daaf2b128e7576318790394a37f":[3,0,0,3,11,4,3],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html":[3,0,0,3,11,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#ab7bffa65ec11e79bbf74fc513d4407c6":[3,0,0,4,1,6,2,6],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#abc181d64361484d0aaa73ac7541b5c87":[3,0,0,4,1,6,2,1],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#adee98cdb6fa31a1d84099c44ce7c52bc":[3,0,0,4,1,6,2,2],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#ae8d129992006cb8e6a4ae11679d00376":[3,0,0,4,1,6,2,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html":[3,0,0,4,1,6,3]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#ae8d129992006cb8e6a4ae11679d00376":[3,0,0,4,1,6,2,3]
 };

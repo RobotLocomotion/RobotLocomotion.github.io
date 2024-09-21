@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html":[3,0,1,31],
 "structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html":[3,0,1,32],
 "structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html":[3,0,1,34],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX66 =
 "value__producer_8h.html":[4,0,0,12,3,50],
 "value__pybind_8h.html":[4,0,0,0,0,1,12],
 "value__pybind_8h.html#a210546c12706075cdd90f811470ac4b0":[4,0,0,0,0,1,12,0],
-"value__to__abstract__value_8h.html":[4,0,0,12,3,51],
-"van__der__pol_8h.html":[4,0,0,3,18,0]
+"value__to__abstract__value_8h.html":[4,0,0,12,3,51]
 };
