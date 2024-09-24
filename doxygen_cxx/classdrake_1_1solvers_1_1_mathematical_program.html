@@ -197,6 +197,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
 <tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of this program, listing the decision variables, costs, and constraints.  <a href="#aac993ecccd3d88aafefb6b8e3caa1dee">More...</a><br /></td></tr>
 <tr class="separator:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acde760e4bedab593fdf328530467fa4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#acde760e4bedab593fdf328530467fa4d">IsThreadSafe</a> () const</td></tr>
+<tr class="memdesc:acde760e4bedab593fdf328530467fa4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether it is safe to solve this mathematical program concurrently.  <a href="#acde760e4bedab593fdf328530467fa4d">More...</a><br /></td></tr>
+<tr class="separator:acde760e4bedab593fdf328530467fa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab8a2c8699234750a5ed6ccaac8da198"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aab8a2c8699234750a5ed6ccaac8da198">ToLatex</a> (<a class="el" href="classint.html">int</a> precision=3)</td></tr>
 <tr class="memdesc:aab8a2c8699234750a5ed6ccaac8da198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of this program in LaTeX.  <a href="#aab8a2c8699234750a5ed6ccaac8da198">More...</a><br /></td></tr>
 <tr class="separator:aab8a2c8699234750a5ed6ccaac8da198"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6604,6 +6607,26 @@ x+y &gt;= 0
 </div><div class="memdoc">
 
 <p>Getter for the initial guess. </p>
+
+</div>
+</div>
+<a id="acde760e4bedab593fdf328530467fa4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde760e4bedab593fdf328530467fa4d">&#9670;&nbsp;</a></span>IsThreadSafe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsThreadSafe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether it is safe to solve this mathematical program concurrently. </p>
+<p>A mathematical program is safe to solve concurrently if all of its cost, constraints, and visualization callbacks are marked as thread safe. </p>
 
 </div>
 </div>

@@ -194,6 +194,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5354f0e22967b675dd8623cecde51f5b"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_memory_file.html#a5354f0e22967b675dd8623cecde51f5b">filename_hint</a> () const</td></tr>
 <tr class="memdesc:a5354f0e22967b675dd8623cecde51f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the notional "filename" for this file`.  <a href="#a5354f0e22967b675dd8623cecde51f5b">More...</a><br /></td></tr>
 <tr class="separator:a5354f0e22967b675dd8623cecde51f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad337b3f5cb6821e21e26c3696144faaa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_memory_file.html#ad337b3f5cb6821e21e26c3696144faaa">to_string</a> (<a class="el" href="classint.html">int</a> contents_limit=100) const</td></tr>
+<tr class="memdesc:ad337b3f5cb6821e21e26c3696144faaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation.  <a href="#ad337b3f5cb6821e21e26c3696144faaa">More...</a><br /></td></tr>
+<tr class="separator:ad337b3f5cb6821e21e26c3696144faaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a75826baed3eae4f9970b9350dc7707ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_memory_file.html#a75826baed3eae4f9970b9350dc7707ac">MemoryFile</a> (const <a class="el" href="classdrake_1_1_memory_file.html">MemoryFile</a> &amp;)=default</td></tr>
 <tr class="separator:a75826baed3eae4f9970b9350dc7707ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -513,6 +516,27 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the checksum of <code>this</code> instance's <code><a class="el" href="classdrake_1_1_memory_file.html#aac55a4c9da45bab272bb34692d583206" title="Returns the file&#39;s contents.">contents()</a></code>. </p>
+
+</div>
+</div>
+<a id="ad337b3f5cb6821e21e26c3696144faaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad337b3f5cb6821e21e26c3696144faaa">&#9670;&nbsp;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>contents_limit</em> = <code>100</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string representation. </p>
+<p>Note: the file contents will be limited to <code>contents_limit</code> number of characters. To include the full contents, pass any number less than or equal to zero. </p>
 
 </div>
 </div>

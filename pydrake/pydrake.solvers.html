@@ -1877,6 +1877,12 @@ potentially non-zero.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.EvaluatorBase.is_thread_safe">
+<span class="sig-name descname"><span class="pre">is_thread_safe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><span class="pre">pydrake.solvers.EvaluatorBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.solvers.EvaluatorBase.is_thread_safe" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether it is safe to call Eval in parallel.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.EvaluatorBase.num_outputs">
 <span class="sig-name descname"><span class="pre">num_outputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.EvaluatorBase" title="pydrake.solvers.EvaluatorBase"><span class="pre">pydrake.solvers.EvaluatorBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.solvers.EvaluatorBase.num_outputs" title="Permalink to this definition"></a></dt>
 <dd><p>Getter for the number of outputs, namely the number of rows in y, as
@@ -5032,6 +5038,15 @@ vector containing all the indeterminates in the mathematical program.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.initial_guess">
 <span class="sig-name descname"><span class="pre">initial_guess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.initial_guess" title="Permalink to this definition"></a></dt>
 <dd><p>Getter for the initial guess</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.IsThreadSafe">
+<span class="sig-name descname"><span class="pre">IsThreadSafe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.IsThreadSafe" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether it is safe to solve this mathematical program
+concurrently. A mathematical program is safe to solve concurrently if
+all of its cost, constraints, and visualization callbacks are marked
+as thread safe.</p>
 </dd></dl>
 
 <dl class="py method">

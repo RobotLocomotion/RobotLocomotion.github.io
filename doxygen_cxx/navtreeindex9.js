@@ -1,14 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"classdrake_1_1geometry_1_1_volume_mesh.html#a6a402c8710c3a71fffbbc2223e0a8eb4":[3,0,0,4,65,6],
-"classdrake_1_1geometry_1_1_volume_mesh.html#a6aec7d49d25322d8fae54028059d27aa":[3,0,0,4,65,1],
-"classdrake_1_1geometry_1_1_volume_mesh.html#a6e573ccac8cb33547bebe17dce6f44da":[3,0,0,4,65,14],
-"classdrake_1_1geometry_1_1_volume_mesh.html#a895d67540aff2cb88a555048a1fa7e90":[3,0,0,4,65,17],
-"classdrake_1_1geometry_1_1_volume_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc":[3,0,0,4,65,12],
-"classdrake_1_1geometry_1_1_volume_mesh.html#aa53ca0dc7d58ed59d864ebf55ca42d55":[3,0,0,4,65,4],
-"classdrake_1_1geometry_1_1_volume_mesh.html#aa8388a3f4417bdec45042a7fd2166a6a":[3,0,0,4,65,19],
-"classdrake_1_1geometry_1_1_volume_mesh.html#ab4abe6216f76b9221e741cc99755defc":[3,0,0,4,65,16],
-"classdrake_1_1geometry_1_1_volume_mesh.html#ac21d9a11c5532884dc4eacbda67d7ab7":[3,0,0,4,65,11],
 "classdrake_1_1geometry_1_1_volume_mesh.html#ac685055b3b2cea1095025dd4c05465cd":[3,0,0,4,65,18],
 "classdrake_1_1geometry_1_1_volume_mesh.html#ad1233e4b20b349fa520335f175a1e2f5":[3,0,0,4,65,3],
 "classdrake_1_1geometry_1_1_volume_mesh.html#ae1f54ec7a16209f802cc46f406f5764b":[3,0,0,4,65,2],
@@ -249,5 +240,14 @@ var NAVTREEINDEX9 =
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8869dc04a027222c1080fbf9b38cdb93":[3,0,0,4,1,6,8],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8c0df9e04099fbec99bbbe06554deb9c":[3,0,0,4,1,6,12],
 "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8d25a6dce0135ca229e1337ae7c008b4":[3,0,0,4,1,6,6],
-"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#adfbe9a0f2e79d07d3424cdab71184985":[3,0,0,4,1,6,7]
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#adfbe9a0f2e79d07d3424cdab71184985":[3,0,0,4,1,6,7],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html":[3,0,0,4,1,6,0],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a1c08c7ebb1c1958a09f1c444ee5dbef2":[3,0,0,4,1,6,0,5],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a5c13a0a2c2f59d40ee81746e82ac087e":[3,0,0,4,1,6,0,0],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a69f6cf2a4b931d5c949179c798eb39b6":[3,0,0,4,1,6,0,3],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a6ba4181f08cd0d2070dffb1a6ad51c24":[3,0,0,4,1,6,0,2],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#a6c7fc9a2359a86bd410d2eb132b3458c":[3,0,0,4,1,6,0,1],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html#aa9b18898e034ce83d3570eade18412c4":[3,0,0,4,1,6,0,4],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html":[3,0,0,4,1,7],
+"classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a19da3edfe4a7542ce54e7ff1d44468f0":[3,0,0,4,1,7,16]
 };

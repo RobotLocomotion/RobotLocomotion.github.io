@@ -16,11 +16,13 @@ var classdrake_1_1solvers_1_1_evaluator_base =
     [ "Eval", "classdrake_1_1solvers_1_1_evaluator_base.html#ae573cc421e67ff0cfa10b9885ace7b93", null ],
     [ "get_description", "classdrake_1_1solvers_1_1_evaluator_base.html#a9d396aa41946b5200c405baa40542d1c", null ],
     [ "gradient_sparsity_pattern", "classdrake_1_1solvers_1_1_evaluator_base.html#a187ba29ac182f53fcfe0654e95fcb3af", null ],
+    [ "is_thread_safe", "classdrake_1_1solvers_1_1_evaluator_base.html#af0090c5864cf00d7c4ce9cb64d946194", null ],
     [ "num_outputs", "classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5", null ],
     [ "num_vars", "classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_evaluator_base.html#a5b5e198f89ef48086e1e2e8cc89292e8", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_evaluator_base.html#ab72a0677c344c7bedf3691aabe24a8e9", null ],
     [ "set_description", "classdrake_1_1solvers_1_1_evaluator_base.html#a9b582ca26190005482986c1ac7f8609f", null ],
+    [ "set_is_thread_safe", "classdrake_1_1solvers_1_1_evaluator_base.html#a74a6c787cdde493dbbd42aae82e8958a", null ],
     [ "set_num_outputs", "classdrake_1_1solvers_1_1_evaluator_base.html#a6a5844a758fb9db2cbf63e64cafe833a", null ],
     [ "SetGradientSparsityPattern", "classdrake_1_1solvers_1_1_evaluator_base.html#a604f98ac54b2b64e7dbe46efb31e9af1", null ],
     [ "ToLatex", "classdrake_1_1solvers_1_1_evaluator_base.html#ae50e80a411eaea6701020ad031a4ab0c", null ]

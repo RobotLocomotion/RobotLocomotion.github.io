@@ -503,6 +503,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a9eb383d64a842ca9002f66b2e10254aa"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a> = Eigen::Transform&lt; Scalar, 3, Eigen::Isometry &gt;</td></tr>
 <tr class="memdesc:a9eb383d64a842ca9002f66b2e10254aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">An Isometry templated on scalar type.  <a href="#a9eb383d64a842ca9002f66b2e10254aa">More...</a><br /></td></tr>
 <tr class="separator:a9eb383d64a842ca9002f66b2e10254aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08115460f0d38571bcd4445ca9d6ec18"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a08115460f0d38571bcd4445ca9d6ec18">FileSource</a> = std::variant&lt; std::filesystem::path, <a class="el" href="classdrake_1_1_memory_file.html">MemoryFile</a> &gt;</td></tr>
+<tr class="memdesc:a08115460f0d38571bcd4445ca9d6ec18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a file.  <a href="#a08115460f0d38571bcd4445ca9d6ec18">More...</a><br /></td></tr>
+<tr class="separator:a08115460f0d38571bcd4445ca9d6ec18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a11519c4c803fc3f2118df94e858e95"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a5a11519c4c803fc3f2118df94e858e95">DefaultHasher</a> = internal::FNV1aHasher</td></tr>
 <tr class="memdesc:a5a11519c4c803fc3f2118df94e858e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default HashAlgorithm concept implementation across Drake.  <a href="#a5a11519c4c803fc3f2118df94e858e95">More...</a><br /></td></tr>
 <tr class="separator:a5a11519c4c803fc3f2118df94e858e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -638,6 +641,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aa25d21a232067d56c472d508b45d90cf"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; <a class="el" href="classdouble.html">double</a>, Derived &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aa25d21a232067d56c472d508b45d90cf">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
 <tr class="memdesc:aa25d21a232067d56c472d508b45d90cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>.  <a href="#aa25d21a232067d56c472d508b45d90cf">More...</a><br /></td></tr>
 <tr class="separator:aa25d21a232067d56c472d508b45d90cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a06664749cf59912ff928bb033de21"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aa4a06664749cf59912ff928bb033de21">to_string</a> (const <a class="el" href="namespacedrake.html#a08115460f0d38571bcd4445ca9d6ec18">FileSource</a> &amp;source)</td></tr>
+<tr class="memdesc:aa4a06664749cf59912ff928bb033de21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation.  <a href="#aa4a06664749cf59912ff928bb033de21">More...</a><br /></td></tr>
+<tr class="separator:aa4a06664749cf59912ff928bb033de21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adba0205c520f270cd638f7fb39fb5576"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#adba0205c520f270cd638f7fb39fb5576">LoadedLibraryPath</a> (const std::string &amp;library_name)</td></tr>
 <tr class="memdesc:adba0205c520f270cd638f7fb39fb5576"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the absolute path of the library with the name <code>library_name</code> if that library was loaded in the current running process.  <a href="#adba0205c520f270cd638f7fb39fb5576">More...</a><br /></td></tr>
 <tr class="separator:adba0205c520f270cd638f7fb39fb5576"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -999,6 +1005,23 @@ Variables</h2></td></tr>
 
 <p>The default HashAlgorithm concept implementation across Drake. </p>
 <p>This is guaranteed to have a result_type of size_t to be compatible with std::hash. </p>
+
+</div>
+</div>
+<a id="a08115460f0d38571bcd4445ca9d6ec18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08115460f0d38571bcd4445ca9d6ec18">&#9670;&nbsp;</a></span>FileSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake.html#a08115460f0d38571bcd4445ca9d6ec18">FileSource</a> =  std::variant&lt;std::filesystem::path, <a class="el" href="classdrake_1_1_memory_file.html">MemoryFile</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Represents a file. </p>
+<p>The file can be on-disk or in-memory. </p>
 
 </div>
 </div>
@@ -3957,8 +3980,28 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aa4a06664749cf59912ff928bb033de21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a06664749cf59912ff928bb033de21">&#9670;&nbsp;</a></span>to_string() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string drake::to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a08115460f0d38571bcd4445ca9d6ec18">FileSource</a> &amp;&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string representation. </p>
+
+</div>
+</div>
 <a id="a75fb496e078e67e4dcafd6ae9e624f30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75fb496e078e67e4dcafd6ae9e624f30">&#9670;&nbsp;</a></span>to_string()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a75fb496e078e67e4dcafd6ae9e624f30">&#9670;&nbsp;</a></span>to_string() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

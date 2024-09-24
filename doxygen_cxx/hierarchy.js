@@ -508,7 +508,7 @@ var hierarchy =
     [ "ImageTraits< systems::sensors::PixelType::kLabel16I >", "structdrake_1_1systems_1_1sensors_1_1_image_traits.html", null ],
     [ "InitializeParams", "structdrake_1_1systems_1_1_initialize_params.html", null ],
     [ "InitialValueProblem< T >", "classdrake_1_1systems_1_1_initial_value_problem.html", null ],
-    [ "InMemoryMesh", "classdrake_1_1geometry_1_1_in_memory_mesh.html", null ],
+    [ "InMemoryMesh", "structdrake_1_1geometry_1_1_in_memory_mesh.html", null ],
     [ "MultibodyPlant< T >::InputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", null ],
     [ "MultibodyPlant< T >::OutputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html", null ],
     [ "integral_constant", null, [

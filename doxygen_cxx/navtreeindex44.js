@@ -1,11 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"classdrake_1_1systems_1_1_vector_log_sink.html#adbebf78a6b8619cee90d5bffc463dfe5":[1,2,1,27,1],
-"classdrake_1_1systems_1_1_vector_log_sink.html#ae63d08ab7e3c669eec276019e4f2dbcb":[1,2,1,27,7],
-"classdrake_1_1systems_1_1_vector_log_sink.html#afc2871c939bcabe7583c01099d00747c":[1,2,1,27,6],
-"classdrake_1_1systems_1_1_vector_system.html":[3,0,0,15,129],
-"classdrake_1_1systems_1_1_vector_system.html#a021b8135deba8c945c9deea3cb4ce7a0":[3,0,0,15,129,9],
-"classdrake_1_1systems_1_1_vector_system.html#a15657222d975c52638e0d03e8dddb6c9":[3,0,0,15,129,15],
 "classdrake_1_1systems_1_1_vector_system.html#a1f41f7b104ce103e57d0c461da5a6b31":[3,0,0,15,129,13],
 "classdrake_1_1systems_1_1_vector_system.html#a461dfc1e50a0637c615c5771bbd84137":[3,0,0,15,129,8],
 "classdrake_1_1systems_1_1_vector_system.html#a4addfc6da584da16d318282783b47492":[3,0,0,15,129,1],
@@ -249,5 +243,11 @@ var NAVTREEINDEX44 =
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#aefeee400d114825d8db97204a6999101":[1,2,2,4,2],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html":[1,2,2,5],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a146f7ab66f76d0b5ca62e305cc070436":[1,2,2,5,17],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a2684fb1c9068b9503a1cfd12f7b09256":[1,2,2,5,4]
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a2684fb1c9068b9503a1cfd12f7b09256":[1,2,2,5,4],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a31d6809bd4837dbc26ad2ff734737a21":[1,2,2,5,5],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a32fdf6494a6c073762c1866cf8f4fcc9":[1,2,2,5,1],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a510ef5819faf7dbd367d7bd569a9a9c8":[1,2,2,5,7],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a552a82f458c52ee18dd7fa2ed70d2b9a":[1,2,2,5,12],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a6ad075e7fee22661769d27a0ea07cb7a":[1,2,2,5,3],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a7fee45c2e5f51a3250de7293a9b6e9c0":[1,2,2,5,15]
 };

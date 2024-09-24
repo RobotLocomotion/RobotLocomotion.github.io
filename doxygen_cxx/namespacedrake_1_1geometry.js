@@ -28,7 +28,7 @@ var namespacedrake_1_1geometry =
     [ "GltfExtension", "structdrake_1_1geometry_1_1_gltf_extension.html", "structdrake_1_1geometry_1_1_gltf_extension" ],
     [ "HalfSpace", "classdrake_1_1geometry_1_1_half_space.html", "classdrake_1_1geometry_1_1_half_space" ],
     [ "IllustrationProperties", "classdrake_1_1geometry_1_1_illustration_properties.html", "classdrake_1_1geometry_1_1_illustration_properties" ],
-    [ "InMemoryMesh", "classdrake_1_1geometry_1_1_in_memory_mesh.html", "classdrake_1_1geometry_1_1_in_memory_mesh" ],
+    [ "InMemoryMesh", "structdrake_1_1geometry_1_1_in_memory_mesh.html", "structdrake_1_1geometry_1_1_in_memory_mesh" ],
     [ "KinematicsVector", "classdrake_1_1geometry_1_1_kinematics_vector.html", "classdrake_1_1geometry_1_1_kinematics_vector" ],
     [ "Mesh", "classdrake_1_1geometry_1_1_mesh.html", "classdrake_1_1geometry_1_1_mesh" ],
     [ "Meshcat", "classdrake_1_1geometry_1_1_meshcat.html", "classdrake_1_1geometry_1_1_meshcat" ],

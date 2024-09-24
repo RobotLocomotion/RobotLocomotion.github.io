@@ -35,7 +35,7 @@ var searchData=
   ['initializationtestsystem',['InitializationTestSystem',['../classdrake_1_1systems_1_1_initialization_test_system.html',1,'drake::systems']]],
   ['initializeparams',['InitializeParams',['../structdrake_1_1systems_1_1_initialize_params.html',1,'drake::systems']]],
   ['initialvalueproblem',['InitialValueProblem',['../classdrake_1_1systems_1_1_initial_value_problem.html',1,'drake::systems']]],
-  ['inmemorymesh',['InMemoryMesh',['../classdrake_1_1geometry_1_1_in_memory_mesh.html',1,'drake::geometry']]],
+  ['inmemorymesh',['InMemoryMesh',['../structdrake_1_1geometry_1_1_in_memory_mesh.html',1,'drake::geometry']]],
   ['inputport',['InputPort',['../classdrake_1_1systems_1_1_input_port.html',1,'drake::systems']]],
   ['inputport_3c_20autodiffxd_20_3e',['InputPort&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_input_port.html',1,'drake::systems']]],
   ['inputport_3c_20double_20_3e',['InputPort&lt; double &gt;',['../classdrake_1_1systems_1_1_input_port.html',1,'drake::systems']]],

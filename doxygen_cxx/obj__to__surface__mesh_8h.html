@@ -165,13 +165,16 @@ $(document).ready(function(){initNavTree('obj__to__surface__mesh_8h.html','');})
 <div class="title">obj_to_surface_mesh.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;functional&gt;</code><br />
+<div class="textblock"><code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;istream&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="diagnostic__policy_8h.html">drake/common/diagnostic_policy.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mesh__source_8h.html">drake/geometry/mesh_source.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="triangle__surface__mesh_8h.html">drake/geometry/proximity/triangle_surface_mesh.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for obj_to_surface_mesh.h:</div>
@@ -189,12 +192,15 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4192d45a6ef62766081175664984a770"><td class="memItemLeft" align="right" valign="top">TriangleSurfaceMesh&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a4192d45a6ef62766081175664984a770">ReadObjToTriangleSurfaceMesh</a> (const std::string &amp;filename, <a class="el" href="classdouble.html">double</a> scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={})</td></tr>
-<tr class="memdesc:a4192d45a6ef62766081175664984a770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a surface mesh from a Wavefront .obj file and optionally scales coordinates by the given scale factor.  <a href="namespacedrake_1_1geometry.html#a4192d45a6ef62766081175664984a770">More...</a><br /></td></tr>
-<tr class="separator:a4192d45a6ef62766081175664984a770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16053550736c40512cb94e1ee525a189"><td class="memItemLeft" align="right" valign="top">TriangleSurfaceMesh&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a16053550736c40512cb94e1ee525a189">ReadObjToTriangleSurfaceMesh</a> (const std::filesystem::path &amp;filename, <a class="el" href="classdouble.html">double</a> scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={})</td></tr>
+<tr class="memdesc:a16053550736c40512cb94e1ee525a189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a surface mesh from a Wavefront .obj file and optionally scales coordinates by the given scale factor.  <a href="namespacedrake_1_1geometry.html#a16053550736c40512cb94e1ee525a189">More...</a><br /></td></tr>
+<tr class="separator:a16053550736c40512cb94e1ee525a189"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7859e92c74076c8ab00351905e44b562"><td class="memItemLeft" align="right" valign="top">TriangleSurfaceMesh&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a7859e92c74076c8ab00351905e44b562">ReadObjToTriangleSurfaceMesh</a> (std::istream *input_stream, <a class="el" href="classdouble.html">double</a> scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={}, std::string_view description=&quot;from_stream&quot;)</td></tr>
 <tr class="memdesc:a7859e92c74076c8ab00351905e44b562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of ReadObjToTriangleSurfaceMesh(const std::string&amp;, double) with the Wavefront .obj file given in std::istream.  <a href="namespacedrake_1_1geometry.html#a7859e92c74076c8ab00351905e44b562">More...</a><br /></td></tr>
 <tr class="separator:a7859e92c74076c8ab00351905e44b562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2260cf3ba667393b29c3660bc26f29d"><td class="memItemLeft" align="right" valign="top">TriangleSurfaceMesh&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#ab2260cf3ba667393b29c3660bc26f29d">ReadObjToTriangleSurfaceMesh</a> (const MeshSource &amp;mesh_source, <a class="el" href="classdouble.html">double</a> scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={})</td></tr>
+<tr class="memdesc:ab2260cf3ba667393b29c3660bc26f29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of <a class="el" href="namespacedrake_1_1geometry.html#a16053550736c40512cb94e1ee525a189">ReadObjToTriangleSurfaceMesh</a>(const std::filesystem::path&amp;, double) with the Wavefront .obj in a <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> shape specification.  <a href="namespacedrake_1_1geometry.html#ab2260cf3ba667393b29c3660bc26f29d">More...</a><br /></td></tr>
+<tr class="separator:ab2260cf3ba667393b29c3660bc26f29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

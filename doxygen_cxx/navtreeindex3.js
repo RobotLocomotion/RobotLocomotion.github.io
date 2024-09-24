@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a585394090529447729b0a6d3291a1c27":[3,0,0,3,4,1,11],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a5c5da61b5d48805df6b139b783b0ad7f":[3,0,0,3,4,1,16],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a72ec3a3e2e26d92d40a9f34be39908dd":[3,0,0,3,4,1,1],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,3,4,1,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a6b3cd41728a7fb854f6bc59780f0e945":[3,0,0,3,11,3,4],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a6d217e40bd5df0b6cec00b7b7b07fee4":[3,0,0,3,11,3,22],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a73d268d1fe613ae0d996b6a9b4546fa8":[3,0,0,3,11,3,23],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a78f8a5009023d4e60d553f7ee14e4a8e":[3,0,0,3,11,3,17],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a88b536b3c07bd1c1173686fd37129596":[3,0,0,3,11,3,12]
+"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a78f8a5009023d4e60d553f7ee14e4a8e":[3,0,0,3,11,3,17]
 };

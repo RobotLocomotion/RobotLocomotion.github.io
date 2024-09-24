@@ -43,7 +43,7 @@ var dir_d739e095b49d8b72164589d00310017d =
       [ "GeometryVersion", "classdrake_1_1geometry_1_1_geometry_version.html", "classdrake_1_1geometry_1_1_geometry_version" ]
     ] ],
     [ "in_memory_mesh.h", "in__memory__mesh_8h.html", [
-      [ "InMemoryMesh", "classdrake_1_1geometry_1_1_in_memory_mesh.html", "classdrake_1_1geometry_1_1_in_memory_mesh" ]
+      [ "InMemoryMesh", "structdrake_1_1geometry_1_1_in_memory_mesh.html", "structdrake_1_1geometry_1_1_in_memory_mesh" ]
     ] ],
     [ "internal_frame.h", "internal__frame_8h.html", null ],
     [ "internal_geometry.h", "internal__geometry_8h.html", null ],

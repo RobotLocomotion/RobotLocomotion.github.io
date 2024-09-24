@@ -169,6 +169,7 @@ var group__solvers =
       [ "indeterminates", "classdrake_1_1solvers_1_1_mathematical_program.html#abaa1d35a078980665b4cabac09dd235b", null ],
       [ "indeterminates_index", "classdrake_1_1solvers_1_1_mathematical_program.html#a0c27da874a5e06bccfb91ff25ec05fb9", null ],
       [ "initial_guess", "classdrake_1_1solvers_1_1_mathematical_program.html#a8d203a1789d8fe03eeaaacdb49a267d4", null ],
+      [ "IsThreadSafe", "classdrake_1_1solvers_1_1_mathematical_program.html#acde760e4bedab593fdf328530467fa4d", null ],
       [ "l2norm_costs", "classdrake_1_1solvers_1_1_mathematical_program.html#af5e169f4d4bb63dd56bcd7cc89a561a1", null ],
       [ "linear_complementarity_constraints", "classdrake_1_1solvers_1_1_mathematical_program.html#a1d9e00f78efde184f9f7377ed0a42700", null ],
       [ "linear_constraints", "classdrake_1_1solvers_1_1_mathematical_program.html#a5febe285490e9ce74e824de29f2ecd9f", null ],

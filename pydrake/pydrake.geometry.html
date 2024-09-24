@@ -3668,36 +3668,33 @@ drake_visualizer_role_consumer “drake::geometry::DrakeVisualizer”</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.InMemoryMesh">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">InMemoryMesh</span></span><a class="headerlink" href="#pydrake.geometry.InMemoryMesh" title="Permalink to this definition"></a></dt>
-<dd><p>Representation of a mesh file stored in memory. Eventually, this will
-also include a family of supporting files (e.g., material files, image
-files, etc.)</p>
+<dd><p>Representation of a mesh file stored in memory. At a minimum it
+includes the contents of a mesh file. If that mesh file makes
+reference to additional files (e.g., a .obj file can reference a .mtl
+which in turn references a .png file), then those files <em>can</em> be
+included in <code class="docutils literal notranslate"><span class="pre">this</span></code> InMemoryMesh’s supporting files. Each supporting
+file is represented by a key-value pair. The key is the
+file-referencing string as it appears in the referencing file and the
+value is a FileSource. All supporting files can be located on disk;
+only the main mesh file is strictly required to be in memory. Failure
+to provide the supporting files may or may not lead to errors; it
+depends on the context in which the mesh data is used.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.InMemoryMesh.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.InMemoryMesh.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>__init__(self: pydrake.geometry.InMemoryMesh) -&gt; None</p></li>
-</ol>
-<p>Constructs an empty file.</p>
-<ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.geometry.InMemoryMesh, mesh_file: pydrake.common.MemoryFile) -&gt; None</p></li>
-</ol>
-<p>Constructs a file from the given mesh file.</p>
-<ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.geometry.InMemoryMesh, other: pydrake.geometry.InMemoryMesh) -&gt; None</p></li>
-</ol>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.InMemoryMesh" title="pydrake.geometry.InMemoryMesh"><span class="pre">pydrake.geometry.InMemoryMesh</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.InMemoryMesh.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.geometry.InMemoryMesh.empty">
-<span class="sig-name descname"><span class="pre">empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.InMemoryMesh" title="pydrake.geometry.InMemoryMesh"><span class="pre">pydrake.geometry.InMemoryMesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.InMemoryMesh.empty" title="Permalink to this definition"></a></dt>
-<dd><p>Reports if the mesh is empty.</p>
-</dd></dl>
-
-<dl class="py method">
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.InMemoryMesh.mesh_file">
-<span class="sig-name descname"><span class="pre">mesh_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.InMemoryMesh" title="pydrake.geometry.InMemoryMesh"><span class="pre">pydrake.geometry.InMemoryMesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.common.html#pydrake.common.MemoryFile" title="pydrake.common.MemoryFile"><span class="pre">pydrake.common.MemoryFile</span></a></span></span><a class="headerlink" href="#pydrake.geometry.InMemoryMesh.mesh_file" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the base mesh file.</p>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mesh_file</span></span><a class="headerlink" href="#pydrake.geometry.InMemoryMesh.mesh_file" title="Permalink to this definition"></a></dt>
+<dd><p>The main mesh file’s contents (e.g., a .obj or .gltf file, but not a
+.mtl or .bin).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.InMemoryMesh.supporting_files">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">supporting_files</span></span><a class="headerlink" href="#pydrake.geometry.InMemoryMesh.supporting_files" title="Permalink to this definition"></a></dt>
+<dd><p>The optional collection of supporting files.</p>
 </dd></dl>
 
 </dd></dl>
@@ -9364,7 +9361,7 @@ the indicated parent frame P.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.geometry.ReadObjToTriangleSurfaceMesh">
-<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">ReadObjToTriangleSurfaceMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.TriangleSurfaceMesh" title="pydrake.geometry.TriangleSurfaceMesh"><span class="pre">pydrake.geometry.TriangleSurfaceMesh</span></a></span></span><a class="headerlink" href="#pydrake.geometry.ReadObjToTriangleSurfaceMesh" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">ReadObjToTriangleSurfaceMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.TriangleSurfaceMesh" title="pydrake.geometry.TriangleSurfaceMesh"><span class="pre">pydrake.geometry.TriangleSurfaceMesh</span></a></span></span><a class="headerlink" href="#pydrake.geometry.ReadObjToTriangleSurfaceMesh" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs a surface mesh from a Wavefront .obj file and optionally
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
@@ -9382,10 +9379,7 @@ drake::log() will be used.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if filename doesn't have a valid file path</strong><strong>, </strong><strong>or</strong> – </p></li>
-<li><p><strong>the file has no faces.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if there is an error reading the mesh data.</strong> – </p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>surface mesh</p>

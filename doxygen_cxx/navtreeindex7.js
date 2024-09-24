@@ -1,14 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"classdrake_1_1geometry_1_1_kinematics_vector.html#ab9e616f21e1bab6297b08ff638366f6e":[3,0,0,4,29,2],
-"classdrake_1_1geometry_1_1_kinematics_vector.html#ac8bb3912a3ce86b15842e79d0b421204":[3,0,0,4,29,5],
-"classdrake_1_1geometry_1_1_kinematics_vector.html#adb0b732826563f4d13c3411c56a0d54f":[3,0,0,4,29,8],
-"classdrake_1_1geometry_1_1_kinematics_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,4,29,12],
-"classdrake_1_1geometry_1_1_kinematics_vector.html#afa31ec21de4026953a4add92ab0e025b":[3,0,0,4,29,6],
-"classdrake_1_1geometry_1_1_mesh.html":[3,0,0,4,30],
-"classdrake_1_1geometry_1_1_mesh.html#a0d3626df50b3182819a2dba3433f8327":[3,0,0,4,30,7],
-"classdrake_1_1geometry_1_1_mesh.html#a18553ad65730d9f09bd921809e552efe":[3,0,0,4,30,1],
-"classdrake_1_1geometry_1_1_mesh.html#a400cb114fa04653b48ea257e5dd397e4":[3,0,0,4,30,3],
 "classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10":[3,0,0,4,30,9],
 "classdrake_1_1geometry_1_1_mesh.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea":[3,0,0,4,30,4],
 "classdrake_1_1geometry_1_1_mesh.html#a64b4c300fe95c104df48d1328b1d381e":[3,0,0,4,30,5],
@@ -249,5 +240,14 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1_query_object.html#ab15e2fff4faa847eb6a7ba82e1d4f035":[3,0,0,4,47,3],
 "classdrake_1_1geometry_1_1_query_object.html#ab3ead3718ecc338ebf8ffdd60f8206ed":[3,0,0,4,47,0],
 "classdrake_1_1geometry_1_1_query_object.html#aba077b59ee3574bbe9a0a602c14293c3":[3,0,0,4,47,23],
-"classdrake_1_1geometry_1_1_query_object.html#ac84d9a202933205a92cf0823b94ba512":[3,0,0,4,47,1]
+"classdrake_1_1geometry_1_1_query_object.html#ac84d9a202933205a92cf0823b94ba512":[3,0,0,4,47,1],
+"classdrake_1_1geometry_1_1_query_object.html#aca1821eb8273800276099f5690eb8b99":[3,0,0,4,47,14],
+"classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f":[3,0,0,4,47,6],
+"classdrake_1_1geometry_1_1_rgba.html":[3,0,0,4,51],
+"classdrake_1_1geometry_1_1_rgba.html#a159d0bf2911ffc1c08db924ae3eb90ac":[3,0,0,4,51,19],
+"classdrake_1_1geometry_1_1_rgba.html#a2158ad8213f28ce9ad6c74b562deecca":[3,0,0,4,51,13],
+"classdrake_1_1geometry_1_1_rgba.html#a2bbc76aeadab8a326a08ddab7aae3412":[3,0,0,4,51,6],
+"classdrake_1_1geometry_1_1_rgba.html#a3a4f465549d621827b30f0a7e8e5ffc4":[3,0,0,4,51,5],
+"classdrake_1_1geometry_1_1_rgba.html#a3b56194686433cadff14e87b2a01d9dd":[3,0,0,4,51,9],
+"classdrake_1_1geometry_1_1_rgba.html#a492ffea19b46861a1cd76de2f1550aa6":[3,0,0,4,51,12]
 };
