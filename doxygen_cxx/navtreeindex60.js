@@ -1,5 +1,12 @@
 var NAVTREEINDEX60 =
 {
+"sparse__and__dense__matrix_8h.html":[4,0,0,11,60],
+"sparse__linear__operator_8h.html":[4,0,0,8,1,18],
+"sparse__linear__operator_8h.html#ab3a29b7d9714447621ce21836bca9b15":[4,0,0,8,1,18,0],
+"spatial__acceleration_8h.html":[4,0,0,8,5,0],
+"spatial__acceleration_8h.html#a34fc915b4c64fba1362cc960d9a27d4a":[4,0,0,8,5,0,1],
+"spatial__algebra_8h.html":[4,0,0,8,5,1],
+"spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,5,1,0],
 "spatial__derivative_8h.html":[4,0,0,8,11,3],
 "spatial__derivative_8h.html#ace570bf1fadd64470c0fda6c73981cc9":[4,0,0,8,11,3,1],
 "spatial__derivative_8h.html#afebf465d77636f970101b962f87460af":[4,0,0,8,11,3,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,10,0,1,5],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html":[3,0,0,3,11,2],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,11,2,0],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,11,2,1],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#af5e75c7c989429561a52b4b759b947c0":[3,0,0,3,11,2,2],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html":[3,0,0,3,11,4],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a2bdd549be406df7a68a02541f0f14dff":[3,0,0,3,11,4,1],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,11,4,0],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,11,4,2],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,11,4,5],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[3,0,0,3,11,4,4]
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,11,2,1]
 };

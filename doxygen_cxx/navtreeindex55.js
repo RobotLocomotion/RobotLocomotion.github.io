@@ -1,5 +1,12 @@
 var NAVTREEINDEX55 =
 {
+"knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50":[4,0,0,7,21,0,0],
+"knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2af1b493f6e43ce0d1371533ee4f1199d0":[4,0,0,7,21,0,1],
+"kuka__torque__controller_8h.html":[4,0,0,3,8,2],
+"latex_8h.html":[4,0,0,1,3,7],
+"latex_8h.html#a38b1d770b9e21d7e4f36649630b10891":[4,0,0,1,3,7,2],
+"latex_8h.html#a50f946a2d656be1b946c8f2f6bf00810":[4,0,0,1,3,7,0],
+"latex_8h.html#aa14d755813030ea14c7207a4e0e71f9f":[4,0,0,1,3,7,3],
 "latex_8h.html#accb78ec8e49199eaff087d9637301041":[4,0,0,1,3,7,1],
 "lcm__buses_8h.html":[4,0,0,12,4,0],
 "lcm__config__functions_8h.html":[4,0,0,12,4,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX55 =
 "model__directives_8h.html":[4,0,0,8,8,24],
 "model__instance_8h.html":[4,0,0,8,13,22],
 "model__instance_8h.html#a53146d5855c7f411182552f0449a7aa4":[4,0,0,8,13,22,0],
-"model__instance__info_8h.html":[4,0,0,8,8,25],
-"model__values_8h.html":[4,0,0,12,3,29],
-"modules.html":[1],
-"monomial_8h.html":[4,0,0,1,3,8],
-"monomial_8h.html#a791475e9d37a8e5fd5f1314045428997":[4,0,0,1,3,8,2],
-"monomial_8h.html#a8505db5f6e70df16a3cecda394bdcb24":[4,0,0,1,3,8,3],
-"monomial_8h.html#a8b3d409cea5e6c6495394208c8c8c6ee":[4,0,0,1,3,8,4],
-"monomial__basis__element_8h.html":[4,0,0,1,3,9]
+"model__instance__info_8h.html":[4,0,0,8,8,25]
 };

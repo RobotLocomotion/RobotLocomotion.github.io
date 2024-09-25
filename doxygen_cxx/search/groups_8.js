@@ -2,6 +2,7 @@ var searchData=
 [
   ['modeling_20compliant_20contact',['Modeling Compliant Contact',['../group__compliant__contact.html',1,'']]],
   ['modeling_20of_20dry_20friction',['Modeling of Dry Friction',['../group__friction__model.html',1,'']]],
+  ['margin_20for_20hydroelastic_20contact',['Margin for Hydroelastic Contact',['../group__hydro__margin.html',1,'']]],
   ['manipulation_20station',['Manipulation Station',['../group__manipulation__station__systems.html',1,'']]],
   ['manipulation',['Manipulation',['../group__manipulation__systems.html',1,'']]],
   ['message_20passing',['Message Passing',['../group__message__passing.html',1,'']]],

@@ -1478,8 +1478,12 @@ parsed. Upon loading it in SceneGraph it can be scaled around the
 origin of C by a given <code class="docutils literal notranslate"><span class="pre">scale</span></code> amount.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Convex.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Convex" title="pydrake.geometry.Convex"><span class="pre">pydrake.geometry.Convex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Convex.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs a convex shape specification from the file located at the
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Convex.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.Convex, filename: os.PathLike, scale: float = 1.0) -&gt; None</p></li>
+</ol>
+<p>Constructs a convex shape specification from the file located at the
 given file path. Optionally uniformly scaled by the given scale
 factor.</p>
 <p>The mesh file referenced can be an .obj, .gltf, or a tetrahedral .vtk.</p>
@@ -1499,6 +1503,35 @@ relative to the current working directory.</p>
 <li><p><strong>8 orders of magnitude should be plenty without considering</strong> – </p></li>
 <li><p><strong>revisiting the model itself.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.geometry.Convex, mesh_data: pydrake.geometry.InMemoryMesh, scale: float = 1.0) -&gt; None</p></li>
+</ol>
+<p>(Internal use only) Constructs a convex shape specification from the
+contents of a Drake-supported mesh file type.</p>
+<p>The mesh is defined by the contents of a supported_file_types “mesh
+file format supported by Drake”. Those contents are passed in as
+<code class="docutils literal notranslate"><span class="pre">mesh_data</span></code>. For Convex, the only supporting files required are
+those necessary to define vertex positions (e.g., a glTF’s .bin file);
+material and texture files, if provided, are ignored and are therefore
+unnecessary.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mesh_data</span></code>:</dt><dd><p>The in-memory file contents that define the vertex data for this
+shape.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt><dd><p>An optional scale to coordinates.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.geometry.Convex, source: pydrake.geometry.MeshSource, scale: float = 1.0) -&gt; None</p></li>
+</ol>
+<p>(Internal use only) Constructs a convex shape specification from the
+given <code class="docutils literal notranslate"><span class="pre">source</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source</span></code>:</dt><dd><p>The source for the mesh data.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt><dd><p>An optional scale to coordinates.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1540,6 +1573,17 @@ All subsequent invocations should have an O(1) cost.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.Convex.scale">
 <span class="sig-name descname"><span class="pre">scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Convex" title="pydrake.geometry.Convex"><span class="pre">pydrake.geometry.Convex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.Convex.scale" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Convex.source">
+<span class="sig-name descname"><span class="pre">source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Convex" title="pydrake.geometry.Convex"><span class="pre">pydrake.geometry.Convex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.MeshSource" title="pydrake.geometry.MeshSource"><span class="pre">pydrake.geometry.MeshSource</span></a></span></span><a class="headerlink" href="#pydrake.geometry.Convex.source" title="Permalink to this definition"></a></dt>
+<dd><p>(Internal use only) Returns the source for this specification’s mesh
+data. When working with Convex, this API should only be used for
+introspection. The contract for Convex is that the convex hull is
+always used in place of whatever underlying mesh declaration is
+provided. For all functional geometric usage, exclusively use the
+convex hull returned by GetConvexHull().</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -3963,8 +4007,12 @@ parsed. Upon loading it in SceneGraph it can be scaled around the
 origin of C by a given <code class="docutils literal notranslate"><span class="pre">scale</span></code> amount.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Mesh.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Mesh" title="pydrake.geometry.Mesh"><span class="pre">pydrake.geometry.Mesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Mesh.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs a mesh shape specification from the mesh file located at
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Mesh.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.Mesh, filename: os.PathLike, scale: float = 1.0) -&gt; None</p></li>
+</ol>
+<p>Constructs a mesh shape specification from the mesh file located at
 the given file path. Optionally uniformly scaled by the given scale
 factor.</p>
 <p>The mesh file referenced can be an .obj, a volume mesh in a .vtk, or a
@@ -3987,6 +4035,34 @@ relative to the current working directory.</p>
 <li><p><strong>8 orders of magnitude should be plenty without considering</strong> – </p></li>
 <li><p><strong>revisiting the model itself.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.geometry.Mesh, mesh_data: pydrake.geometry.InMemoryMesh, scale: float = 1.0) -&gt; None</p></li>
+</ol>
+<p>(Internal use only) Constructs a mesh shape specification from the
+contents of a Drake-supported mesh file type.</p>
+<p>The mesh is defined by the contents of a supported_file_types “mesh
+file format supported by Drake”. Those contents are passed in as
+<code class="docutils literal notranslate"><span class="pre">mesh_data</span></code>. The mesh data should include the main mesh file’s
+contents as well as any supporting file contents as needed. See
+InMemoryMesh.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mesh_data</span></code>:</dt><dd><p>The in-memory file contents that define the mesh data for this
+shape.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt><dd><p>An optional scale to coordinates.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.geometry.Mesh, source: pydrake.geometry.MeshSource, scale: float = 1.0) -&gt; None</p></li>
+</ol>
+<p>(Internal use only) Constructs a mesh shape specification from the
+given <code class="docutils literal notranslate"><span class="pre">source</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source</span></code>:</dt><dd><p>The source for the mesh data.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt><dd><p>An optional scale to coordinates.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4028,6 +4104,13 @@ All subsequent invocations should have an O(1) cost.</p>
 <dt class="sig sig-object py" id="pydrake.geometry.Mesh.scale">
 <span class="sig-name descname"><span class="pre">scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Mesh" title="pydrake.geometry.Mesh"><span class="pre">pydrake.geometry.Mesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.Mesh.scale" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Mesh.source">
+<span class="sig-name descname"><span class="pre">source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Mesh" title="pydrake.geometry.Mesh"><span class="pre">pydrake.geometry.Mesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.MeshSource" title="pydrake.geometry.MeshSource"><span class="pre">pydrake.geometry.MeshSource</span></a></span></span><a class="headerlink" href="#pydrake.geometry.Mesh.source" title="Permalink to this definition"></a></dt>
+<dd><p>(Internal use only) Returns the source for this specification’s mesh
+data.</p>
+</dd></dl>
 
 </dd></dl>
 

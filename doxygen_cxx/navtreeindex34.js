@@ -1,5 +1,11 @@
 var NAVTREEINDEX34 =
 {
+"classdrake_1_1symbolic_1_1_polynomial.html#ab168243ddedae6540dc7fe18e0fd6f53":[3,0,0,14,58,44],
+"classdrake_1_1symbolic_1_1_polynomial.html#ab3a790dc3e4b639bd6e958b6e220904f":[3,0,0,14,58,9],
+"classdrake_1_1symbolic_1_1_polynomial.html#ab548898f3e47ba517d0513f8ef974da7":[3,0,0,14,58,27],
+"classdrake_1_1symbolic_1_1_polynomial.html#acaa87c27bae38b0daed338c482de9a0e":[3,0,0,14,58,17],
+"classdrake_1_1symbolic_1_1_polynomial.html#acc4910bf00dec7e9b5ea6b91530ab79a":[3,0,0,14,58,30],
+"classdrake_1_1symbolic_1_1_polynomial.html#ad4fc8f2e6a67575f78cb74e9163fd5e3":[3,0,0,14,58,3],
 "classdrake_1_1symbolic_1_1_polynomial.html#ad7a3fb26530d992d7b2278a5f6281c09":[3,0,0,14,58,36],
 "classdrake_1_1symbolic_1_1_polynomial.html#adb6379c53bbbfcac28d757e0ef4d9bc3":[3,0,0,14,58,20],
 "classdrake_1_1symbolic_1_1_polynomial.html#adeaa4f722744d397b42ff26f50f443bf":[3,0,0,14,58,43],
@@ -243,11 +249,5 @@ var NAVTREEINDEX34 =
 "classdrake_1_1systems_1_1_basic_vector.html#a3af2a9627832a75b332069b2b4d3ed0b":[3,0,0,15,14,8],
 "classdrake_1_1systems_1_1_basic_vector.html#a4d33aecde019e5f62d662aa2ef142b34":[3,0,0,15,14,14],
 "classdrake_1_1systems_1_1_basic_vector.html#a4d5c1dbf38d4dbac58fa767531c56f3c":[3,0,0,15,14,4],
-"classdrake_1_1systems_1_1_basic_vector.html#a507b47abedbb153bf6181e04f74fbb2f":[3,0,0,15,14,2],
-"classdrake_1_1systems_1_1_basic_vector.html#a68ceb363c7e5f7fc11b5bbfb4540fb4d":[3,0,0,15,14,1],
-"classdrake_1_1systems_1_1_basic_vector.html#a80e395d80129f9b68a6b4aa76e962db4":[3,0,0,15,14,18],
-"classdrake_1_1systems_1_1_basic_vector.html#a853b29d4ee4164ddca9a50f6307f9301":[3,0,0,15,14,16],
-"classdrake_1_1systems_1_1_basic_vector.html#a89016949fcd40cb3c6e53aeb44d51c84":[3,0,0,15,14,20],
-"classdrake_1_1systems_1_1_basic_vector.html#a95cee47ba175ab6b8fd8f7cb2f82ab96":[3,0,0,15,14,22],
-"classdrake_1_1systems_1_1_basic_vector.html#aa57f612223d19eff9d2b523b5895f5d9":[3,0,0,15,14,3]
+"classdrake_1_1systems_1_1_basic_vector.html#a507b47abedbb153bf6181e04f74fbb2f":[3,0,0,15,14,2]
 };

@@ -297,6 +297,19 @@ Properties for hydroelastic contact</h3>
 <li>See <a class="el" href="group__compliant__contact.html#mbp_dissipation_model">Modeling Dissipation</a> for details.</li>
 </ul>
 </li>
+<li>Margin (m), see <a class="el" href="group__hydro__margin.html">Margin for Hydroelastic Contact</a><ul>
+<li>A non-negative real value.</li>
+<li>Used in discrete mode to mitigate spurious oscillations in the contact of nearly flat surfaces.</li>
+<li>Notes on choosing a value:<ul>
+<li>For typical simulations in robotics, a good start is a margin value of δ = 10⁻⁴ m.</li>
+<li>How to estimate margin is thoroughly explained in <a class="el" href="group__hydro__margin.html#margin_how_much">But How Much Margin?</a>.</li>
+<li>The scale of the system matters. For small mechanical components, a new value might need to be estimated based on the analysis in <a class="el" href="group__hydro__margin.html#margin_how_much">But How Much Margin?</a>.</li>
+<li>A value of zero means that no speculative constraints are added, see <a class="el" href="group__hydro__margin.html#speculative_constraints">Speculative Contact Constraints</a>.</li>
+<li>The default value is set in <a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#ada2ca25da33c3b3bf317fc190210df77" title="(Advanced) Specifies a thin layer of thickness &quot;margin&quot; (in meters) around each geometry.">drake::geometry::DefaultProximityProperties::margin</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Slab thickness<ul>
 <li>A positive real value in meters</li>
 <li>Only used for compliant half spaces. Declaring a half space to be compliant but lacking a value for slab thickness will cause the simulation to error out.</li>

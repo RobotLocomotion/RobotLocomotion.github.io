@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"classdrake_1_1geometry_1_1_drake_visualizer.html#afef41212c6bf942f024dc6847669b4c0":[3,0,0,4,11,5],
+"classdrake_1_1geometry_1_1_drake_visualizer_test.html":[3,0,0,4,13],
+"classdrake_1_1geometry_1_1_ellipsoid.html":[3,0,0,4,14],
 "classdrake_1_1geometry_1_1_ellipsoid.html#a1bc1c8769c496c5a7280605630729ab3":[3,0,0,4,14,1],
 "classdrake_1_1geometry_1_1_ellipsoid.html#a2bbc76aeadab8a326a08ddab7aae3412":[3,0,0,4,14,6],
 "classdrake_1_1geometry_1_1_ellipsoid.html#a689e23eefd20b186b769cd2b2d36d613":[3,0,0,4,14,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX6 =
 "classdrake_1_1geometry_1_1_kinematics_vector.html#adb0b732826563f4d13c3411c56a0d54f":[3,0,0,4,29,8],
 "classdrake_1_1geometry_1_1_kinematics_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,4,29,12],
 "classdrake_1_1geometry_1_1_kinematics_vector.html#afa31ec21de4026953a4add92ab0e025b":[3,0,0,4,29,6],
-"classdrake_1_1geometry_1_1_mesh.html":[3,0,0,4,30],
-"classdrake_1_1geometry_1_1_mesh.html#a0d3626df50b3182819a2dba3433f8327":[3,0,0,4,30,7],
-"classdrake_1_1geometry_1_1_mesh.html#a18553ad65730d9f09bd921809e552efe":[3,0,0,4,30,1],
-"classdrake_1_1geometry_1_1_mesh.html#a400cb114fa04653b48ea257e5dd397e4":[3,0,0,4,30,3]
+"classdrake_1_1geometry_1_1_mesh.html":[3,0,0,4,30]
 };
