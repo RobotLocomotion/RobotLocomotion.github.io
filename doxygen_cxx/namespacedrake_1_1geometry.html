@@ -497,6 +497,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a331f457a6ce0d146213faa844725dcda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a331f457a6ce0d146213faa844725dcda">AddCompliantHydroelasticPropertiesForHalfSpace</a> (<a class="el" href="classdouble.html">double</a> slab_thickness, <a class="el" href="classdouble.html">double</a> hydroelastic_modulus, <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *properties)</td></tr>
 <tr class="memdesc:a331f457a6ce0d146213faa844725dcda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compliant half spaces are handled as a special case; they do not get tessellated.  <a href="#a331f457a6ce0d146213faa844725dcda">More...</a><br /></td></tr>
 <tr class="separator:a331f457a6ce0d146213faa844725dcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b789c32326520c1e9836f1717b24ed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1_in_memory_mesh.html">InMemoryMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a5b789c32326520c1e9836f1717b24ed8">ReadGltfToMemory</a> (const std::filesystem::path &amp;gltf_path)</td></tr>
+<tr class="memdesc:a5b789c32326520c1e9836f1717b24ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a file path to a .gltf file, loads the .gltf file contents into memory.  <a href="#a5b789c32326520c1e9836f1717b24ed8">More...</a><br /></td></tr>
+<tr class="separator:a5b789c32326520c1e9836f1717b24ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a822ce4b4810855c6f6fe7a025d8372f7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a822ce4b4810855c6f6fe7a025d8372f7">MakeRenderEngineGl</a> (<a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html">RenderEngineGlParams</a> params={})</td></tr>
 <tr class="memdesc:a822ce4b4810855c6f6fe7a025d8372f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a RenderEngine implementation which uses a purely OpenGL renderer.  <a href="#a822ce4b4810855c6f6fe7a025d8372f7">More...</a><br /></td></tr>
 <tr class="separator:a822ce4b4810855c6f6fe7a025d8372f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1512,6 +1515,28 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b789c32326520c1e9836f1717b24ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b789c32326520c1e9836f1717b24ed8">&#9670;&nbsp;</a></span>ReadGltfToMemory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1_in_memory_mesh.html">InMemoryMesh</a> drake::geometry::ReadGltfToMemory </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>gltf_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a file path to a .gltf file, loads the .gltf file contents into memory. </p>
+<p>All named .bin and image files are loaded into its supporting files as path-valued FileSource instances (i.e., absolute paths for the external files are included).</p>
+<p>Note: the path-valued supporting files are not validated with respect to their accessibility or even their existence. </p>
 
 </div>
 </div>

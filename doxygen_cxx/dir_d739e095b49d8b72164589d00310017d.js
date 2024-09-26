@@ -83,6 +83,7 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "query_object.h", "query__object_8h.html", [
       [ "QueryObject", "classdrake_1_1geometry_1_1_query_object.html", "classdrake_1_1geometry_1_1_query_object" ]
     ] ],
+    [ "read_gltf_to_memory.h", "read__gltf__to__memory_8h.html", "read__gltf__to__memory_8h" ],
     [ "read_obj.h", "read__obj_8h.html", null ],
     [ "rgba.h", "rgba_8h.html", [
       [ "Rgba", "classdrake_1_1geometry_1_1_rgba.html", "classdrake_1_1geometry_1_1_rgba" ]

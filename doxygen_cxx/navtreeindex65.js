@@ -1,5 +1,7 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a267538df8d3c6c1cf0dcd83eafa308ca":[3,0,0,15,2,1,8],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a29017aee3204b230b5884faaf2fac289":[3,0,0,15,2,1,0],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a4242c7dc34593f02bccbbd0dd44585f2":[3,0,0,15,2,1,4],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a4c74c519e42f88117207f1fffef290c7":[3,0,0,15,2,1,2],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a6734a991d96eb572b943a06ce7f5188c":[3,0,0,15,2,1,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX65 =
 "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html":[3,0,1,16],
 "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html":[3,0,1,17],
 "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_approach_01_4.html":[3,0,1,18],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html":[3,0,1,19],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html":[3,0,1,20],
-"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html":[3,0,1,21]
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html":[3,0,1,19]
 };

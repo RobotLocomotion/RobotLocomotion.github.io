@@ -1,5 +1,7 @@
 var NAVTREEINDEX66 =
 {
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html":[3,0,1,20],
+"structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html":[3,0,1,21],
 "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,1,22],
 "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_options_01_4.html":[3,0,1,23],
 "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html":[3,0,1,24],
@@ -247,7 +249,5 @@ var NAVTREEINDEX66 =
 "universal__joint_8h.html":[4,0,0,8,13,53],
 "universal__joint_8h.html#ac58991c64ca70263f0f74f8efbbe1251":[4,0,0,8,13,53,1],
 "universal__mobilizer_8h.html":[4,0,0,8,13,54],
-"universal__mobilizer_8h.html#a6f154f7cc4574478f4eb2af570d32c78":[4,0,0,8,13,54,0],
-"unrevised__lemke__solver_8h.html":[4,0,0,11,61],
-"unused_8h.html":[4,0,0,1,73]
+"universal__mobilizer_8h.html#a6f154f7cc4574478f4eb2af570d32c78":[4,0,0,8,13,54,0]
 };

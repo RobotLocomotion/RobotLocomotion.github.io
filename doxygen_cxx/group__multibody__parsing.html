@@ -277,6 +277,7 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_ellipsoid">drake:ellipsoid</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_gear_ratio">drake:gear_ratio</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_hunt_crossley_dissipation">drake:hunt_crossley_dissipation</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_hydroelastic_margin">drake:hydroelastic_margin</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_hydroelastic_modulus">drake:hydroelastic_modulus</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_ignored_collision_filter_group">drake:ignored_collision_filter_group</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_joint">drake:joint</a></li>
@@ -565,6 +566,17 @@ drake:hunt_crossley_dissipation</h2>
 Semantics</h3>
 <p>If present, this element provides a value (units of inverse of velocity, i.e. s/m) for the Hunt-Crossley dissipation model. It is stored in a ProximityProperties object under <code>(material, hunt_crossley_dissipation)</code>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a>, <a class="el" href="group__compliant__contact.html#hydro_model_parameters">Hydroelastic contact parameters</a>, <a class="el" href="group__compliant__contact.html#mbp_dissipation_model">Modeling Dissipation</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_hydroelastic_margin"></a>
+drake:hydroelastic_margin</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/collision/drake:proximity_properties/drake:hydroelastic_margin</code></li>
+<li>URDF path: <code>/robot/link/collision/drake:proximity_properties/drake:hydroelastic_margin/@value</code></li>
+<li>Syntax: Non-negative floating point value.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_hydroelastic_margin_semantics"></a>
+Semantics</h3>
+<p>If present, this element provides a value (units of length, i.e. m) for the hydroelastic margin. It is stored in a ProximityProperties object under <code>(hydroelastic, margin)</code>.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a>, <a class="el" href="group__compliant__contact.html#hydro_model_parameters">Hydroelastic contact parameters</a>, <a class="el" href="group__hydroelastic__user__guide.html#hug_properties">Properties for hydroelastic contact</a>, <a class="el" href="group__hydro__margin.html">Margin for Hydroelastic Contact</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_hydroelastic_modulus"></a>
 drake:hydroelastic_modulus</h2>
 <ul>
