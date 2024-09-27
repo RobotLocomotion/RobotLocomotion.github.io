@@ -335,6 +335,9 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 : <a class="el" href="structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e">DrakeVisualizerParams</a>
 , <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e">MeshcatVisualizerParams</a>
 </li>
+<li>default_color_render_camera()
+: <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a36e0cc8f3c6cd15bb09c9d234a3d6dce">RgbdSensor</a>
+</li>
 <li>default_com()
 : <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad23b378c3ceb3cef4d3a586f48710d92">RigidBody&lt; T &gt;</a>
 </li>
@@ -348,6 +351,9 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 </li>
 <li>default_damping_vector()
 : <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a23a1a2447cbaf3453ff7e1e6adbe310e">Joint&lt; T &gt;</a>
+</li>
+<li>default_depth_render_camera()
+: <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a7186354408f709775dc36ee6e4b6a127">RgbdSensor</a>
 </li>
 <li>default_diffuse
 : <a class="el" href="structdrake_1_1geometry_1_1_render_engine_gl_params.html#abbdc8937e3fab606a545e2a6749ee459">RenderEngineGlParams</a>
@@ -370,6 +376,9 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 </li>
 <li>default_mass()
 : <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a3bdd63fb5910bcde78fa33d67b5b873c">RigidBody&lt; T &gt;</a>
+</li>
+<li>default_parent_frame_id()
+: <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab48e62e87afc69ffa0b512656936128d">RgbdSensor</a>
 </li>
 <li>default_positions()
 : <a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2">Joint&lt; T &gt;</a>
@@ -407,6 +416,9 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 </li>
 <li>default_unit_inertia()
 : <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a2974f916c9cac2e4a8b6700829c86148">RigidBody&lt; T &gt;</a>
+</li>
+<li>default_X_PB()
+: <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a35bd983b923e8e4f86210737dfb41de7">RgbdSensor</a>
 </li>
 <li>DefaultImplementGeometry()
 : <a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a0e6b2bb959894e5de3e0a10b9dac5663">ShapeReifier</a>
@@ -883,7 +895,7 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 : <a class="el" href="classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#a484d869aa10472f25557eb673d4a0987">LinearDistanceAndInterpolationProvider</a>
 </li>
 <li>DistanceAndInterpolationProvider()
-: <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a4fe9bfd018e668efb790ac336a86eb32">DistanceAndInterpolationProvider</a>
+: <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a1d783e049011415c69a3f653f71eed5c">DistanceAndInterpolationProvider</a>
 </li>
 <li>DistanceConstraint()
 : <a class="el" href="classdrake_1_1multibody_1_1_distance_constraint.html#aa2ac8bf926f4c4b19a02873f753c344c">DistanceConstraint</a>
@@ -1151,7 +1163,7 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 , <a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#ad2bc3e678132547a0fb97d486067c0e5">UnimplementedCollisionChecker</a>
 </li>
 <li>DoCheckSatisfied()
-: <a class="el" href="classdrake_1_1solvers_1_1_constraint.html#a6fd97e484becea31ff7c240d1ea523e5">Constraint</a>
+: <a class="el" href="classdrake_1_1solvers_1_1_constraint.html#ac7c521a6b409f26ad65848a980286992">Constraint</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a29f6449aaebf59f64315a99f426430c8">LinearComplementarityConstraint</a>
 </li>
 <li>DoClassifyContextBodyCollisions()
@@ -1194,12 +1206,12 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 </li>
 <li>DoCloneToScalar()
 : <a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#a4e415d777b3ac3e7e0071578d6ec62c9">DoorHinge&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a5bbfff93bcd19af35f85733af71224f7">FixedOffsetFrame&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#aed0eeb663f377076dab1ae0ab44be5aa">FixedOffsetFrame&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a0703b02d2de4f463389e773f8a058253">ForceElement&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a0162ba098d0c07be12d3a7244914de38">Frame&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a016d32cb724a4dbc9a9aff7b2c75855b">Joint&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html#a89c49c8f7ca8e6215810784c48acae23">LinearSpringDamper&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_revolute_spring.html#a89c49c8f7ca8e6215810784c48acae23">RevoluteSpring&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html#a189a1cc898965e60756ef7fe82b6c112">LinearSpringDamper&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_revolute_spring.html#a4e415d777b3ac3e7e0071578d6ec62c9">RevoluteSpring&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a5bbfff93bcd19af35f85733af71224f7">RigidBodyFrame&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a89c49c8f7ca8e6215810784c48acae23">UniformGravityFieldElement&lt; T &gt;</a>
 </li>
@@ -1252,20 +1264,20 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 : <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a1d985b9afd6444973d176f246d937e09">RollPitchYaw&lt; T &gt;</a>
 </li>
 <li>DoEval()
-: <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a5eea9354674efc1c07bf537319628ead">DirectCollocationConstraint</a>
+: <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a863f7df9d3ee10378794b4c6842a4377">DirectCollocationConstraint</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a515e0d153b83bd7133f6a4bbf5e4534e">EvaluatorBase</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_evaluator_cost.html#aa2431c2dbd82437d8f621033d8af8231">EvaluatorCost&lt; EvaluatorType &gt;</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_exponential_cone_constraint.html#a863f7df9d3ee10378794b4c6842a4377">ExponentialConeConstraint</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_expression_constraint.html#a863f7df9d3ee10378794b4c6842a4377">ExpressionConstraint</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_expression_cost.html#a5eea9354674efc1c07bf537319628ead">ExpressionCost</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_l1_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377">L1NormCost</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#aa2431c2dbd82437d8f621033d8af8231">L2NormCost</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a863f7df9d3ee10378794b4c6842a4377">LinearComplementarityConstraint</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_l1_norm_cost.html#a5eea9354674efc1c07bf537319628ead">L1NormCost</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377">L2NormCost</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a5eea9354674efc1c07bf537319628ead">LinearComplementarityConstraint</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#aa2431c2dbd82437d8f621033d8af8231">LinearConstraint</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html#aa2431c2dbd82437d8f621033d8af8231">LinearCost</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a5eea9354674efc1c07bf537319628ead">LinearMatrixInequalityConstraint</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a863f7df9d3ee10378794b4c6842a4377">LinearMatrixInequalityConstraint</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a5eea9354674efc1c07bf537319628ead">LInfNormCost</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a863f7df9d3ee10378794b4c6842a4377">PerspectiveQuadraticCost</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#aa2431c2dbd82437d8f621033d8af8231">PerspectiveQuadraticCost</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2431c2dbd82437d8f621033d8af8231">PositiveSemidefiniteConstraint</a>
 , <a class="el" href="classdrake_1_1systems_1_1_output_port.html#af88e845c5cd35ef910521ea4cfc4978a">OutputPort&lt; T &gt;</a>
 </li>
@@ -1303,11 +1315,11 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 , <a class="el" href="classdrake_1_1systems_1_1_scalar_view_dense_output.html#a79ad533d2da285c4be700c651f72392a">ScalarViewDenseOutput&lt; T &gt;</a>
 </li>
 <li>DoGetAtIndexChecked()
-: <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#afde9e3e5646700550315ebaa3a789e9c">BasicVector&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1systems_1_1_vector_base.html#a487b2857071e5fefee941a9b9f39a5bb">VectorBase&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a231bafed6568f8fc83a4ae79e3ea3f90">BasicVector&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1systems_1_1_vector_base.html#ab8b65615b7a17723177ea016cd5521a0">VectorBase&lt; T &gt;</a>
 </li>
 <li>DoGetAtIndexUnchecked()
-: <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#adde7e8b36d83e491ad99d514e5e2d01a">BasicVector&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ac2c19d7f23c9a1b94e52ebba1559a498">BasicVector&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1systems_1_1_vector_base.html#afd5f03561f8acae4788b65a50f1f3976">VectorBase&lt; T &gt;</a>
 </li>
 <li>DoGetDefaultPosePair()
@@ -1413,8 +1425,8 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 <li>DoMergeBasisElementInPlace()
 : <a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a63a88047b7daee8ad1cabeeca1dfe111">PolynomialBasisElement</a>
 </li>
-<li>DoorHinge()
-: <a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#a1c1522be243a3ab3eeca60c8c56696ce">DoorHinge&lt; T &gt;</a>
+<li>DoorHinge
+: <a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#a14f1e33beb90541be76fcb45dea6af74">DoorHinge&lt; T &gt;</a>
 </li>
 <li>DoorHingeConfig()
 : <a class="el" href="structdrake_1_1multibody_1_1_door_hinge_config.html#a1a3999d885274e660c1c7415c8dd9062">DoorHingeConfig</a>
@@ -1555,25 +1567,25 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 : <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a8bd6ca8a128bb2663ebaa27d6851c68d">LeafSystem&lt; T &gt;</a>
 </li>
 <li>DrakeKukaIIwaRobot()
-: <a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ab01f43989767b1d4836d5ed824e121cd">DrakeKukaIIwaRobot&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a765c17a1b88356c2d9d9b20659d4292d">DrakeKukaIIwaRobot&lt; T &gt;</a>
 </li>
 <li>DrakeLcm()
-: <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a967614050b3110b0dcf4c5d632826c2a">DrakeLcm</a>
+: <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a6a8336aee2fe2421bb23d59d145238f2">DrakeLcm</a>
 </li>
 <li>DrakeLcmBase()
-: <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_base.html#a5d7298ce7b78cab27f63d50c914ed358">DrakeLcmBase</a>
+: <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_base.html#a268aa9ef3d7d5c7d7cf1aacd13e75d1a">DrakeLcmBase</a>
 </li>
 <li>DrakeLcmInterface()
-: <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#af378b6404815e2045e3c1a3909e34eb1">DrakeLcmInterface</a>
+: <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#aada32d80b0f84c33c4f4b78967bcfeb9">DrakeLcmInterface</a>
 </li>
 <li>DrakeLcmLog()
-: <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a101e1a0d1cad7440599a48f707c98562">DrakeLcmLog</a>
+: <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#aecca52377a3a88d3601b08d71cd7022a">DrakeLcmLog</a>
 </li>
 <li>DrakeLcmTester
 : <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#ab89da93f23549481dfbe2463f10c8f7b">DrakeLcm</a>
 </li>
 <li>DrakeSubscriptionInterface()
-: <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html#a961f10260228f1032a44b281fa1531ed">DrakeSubscriptionInterface</a>
+: <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html#a81cd7606d39abebb4d8722b17db1365e">DrakeSubscriptionInterface</a>
 </li>
 <li>DrakeVisualizer()
 : <a class="el" href="classdrake_1_1geometry_1_1_drake_visualizer.html#a063bba7329e7434bd8e6d2a6324dd63f">DrakeVisualizer&lt; T &gt;</a>

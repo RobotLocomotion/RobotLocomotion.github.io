@@ -2710,9 +2710,9 @@ both color/label and depth cameras.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.systems.sensors.RgbdSensor, parent_id: pydrake.geometry.FrameId, X_PB: pydrake.math.RigidTransform, depth_camera: pydrake.geometry.DepthRenderCamera, show_window: bool = False) -&gt; None</p></li>
 </ol>
-<p>Constructs an RgbdSensor with fully specified render camera models for
-both the depth camera. The color camera in inferred from the
-<code class="docutils literal notranslate"><span class="pre">depth_camera</span></code>; it shares the same
+<p>Constructs an RgbdSensor using a fully specified depth render camera,
+inferring the color settings based on depth. The color camera in
+inferred from the <code class="docutils literal notranslate"><span class="pre">depth_camera</span></code>; it shares the same
 geometry::render::RenderCameraCore and is configured to show the
 window based on the value of <code class="docutils literal notranslate"><span class="pre">show_color_window</span></code>.</p>
 </dd></dl>
@@ -2727,7 +2727,12 @@ which reports the pose of the body in the world frame (X_WB).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.color_camera_info">
 <span class="sig-name descname"><span class="pre">color_camera_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.sensors.CameraInfo" title="pydrake.systems.sensors.CameraInfo"><span class="pre">pydrake.systems.sensors.CameraInfo</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.color_camera_info" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the intrinsics properties of the color camera model.</p>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use default_color_render_camera().core().intrinsics() instead.
+This will be removed from Drake on or after 2025-01-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2737,9 +2742,38 @@ which reports the pose of the body in the world frame (X_WB).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.default_color_render_camera">
+<span class="sig-name descname"><span class="pre">default_color_render_camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.ColorRenderCamera" title="pydrake.geometry.ColorRenderCamera"><span class="pre">pydrake.geometry.ColorRenderCamera</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.default_color_render_camera" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the default render camera for color/label renderings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.default_depth_render_camera">
+<span class="sig-name descname"><span class="pre">default_depth_render_camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.DepthRenderCamera" title="pydrake.geometry.DepthRenderCamera"><span class="pre">pydrake.geometry.DepthRenderCamera</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.default_depth_render_camera" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the default render camera for depth renderings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.default_parent_frame_id">
+<span class="sig-name descname"><span class="pre">default_parent_frame_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.default_parent_frame_id" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the default id of the frame to which the body is affixed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.default_X_PB">
+<span class="sig-name descname"><span class="pre">default_X_PB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.default_X_PB" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the default <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.depth_camera_info">
 <span class="sig-name descname"><span class="pre">depth_camera_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.sensors.CameraInfo" title="pydrake.systems.sensors.CameraInfo"><span class="pre">pydrake.systems.sensors.CameraInfo</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.depth_camera_info" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the intrinsics properties of the depth camera model.</p>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use default_depth_render_camera().core().intrinsics() instead.
+This will be removed from Drake on or after 2025-01-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2754,6 +2788,32 @@ ImageDepth16U.</p>
 <span class="sig-name descname"><span class="pre">depth_image_32F_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.depth_image_32F_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the abstract-valued output port that contains an
 ImageDepth32F.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.GetColorRenderCamera">
+<span class="sig-name descname"><span class="pre">GetColorRenderCamera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.ColorRenderCamera" title="pydrake.geometry.ColorRenderCamera"><span class="pre">pydrake.geometry.ColorRenderCamera</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.GetColorRenderCamera" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the context dependent render camera for color/label
+renderings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.GetDepthRenderCamera">
+<span class="sig-name descname"><span class="pre">GetDepthRenderCamera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.DepthRenderCamera" title="pydrake.geometry.DepthRenderCamera"><span class="pre">pydrake.geometry.DepthRenderCamera</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.GetDepthRenderCamera" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the context dependent render camera for depth renderings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.GetParentFrameId">
+<span class="sig-name descname"><span class="pre">GetParentFrameId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.GetParentFrameId" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the context dependent id of the frame to which the body is
+affixed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.GetX_PB">
+<span class="sig-name descname"><span class="pre">GetX_PB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.GetX_PB" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the context dependent <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2775,7 +2835,12 @@ ImageLabel16I.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.parent_frame_id">
 <span class="sig-name descname"><span class="pre">parent_frame_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.parent_frame_id" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the id of the frame to which the body is affixed.</p>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use default_parent_frame_id() instead. This will be removed from
+Drake on or after 2025-01-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2785,21 +2850,89 @@ ImageLabel16I.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.set_default_color_render_camera">
+<span class="sig-name descname"><span class="pre">set_default_color_render_camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_camera</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.ColorRenderCamera" title="pydrake.geometry.ColorRenderCamera"><span class="pre">pydrake.geometry.ColorRenderCamera</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.set_default_color_render_camera" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default render camera for color/label renderings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.set_default_depth_render_camera">
+<span class="sig-name descname"><span class="pre">set_default_depth_render_camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth_camera</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.DepthRenderCamera" title="pydrake.geometry.DepthRenderCamera"><span class="pre">pydrake.geometry.DepthRenderCamera</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.set_default_depth_render_camera" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default render camera for depth renderings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.set_default_parent_frame_id">
+<span class="sig-name descname"><span class="pre">set_default_parent_frame_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.set_default_parent_frame_id" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default id of the frame to which the body is affixed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.set_default_X_PB">
+<span class="sig-name descname"><span class="pre">set_default_X_PB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor_pose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.set_default_X_PB" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.SetColorRenderCamera">
+<span class="sig-name descname"><span class="pre">SetColorRenderCamera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_camera</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.ColorRenderCamera" title="pydrake.geometry.ColorRenderCamera"><span class="pre">pydrake.geometry.ColorRenderCamera</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.SetColorRenderCamera" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the render camera for color/label renderings, as stored as
+parameters in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.SetDepthRenderCamera">
+<span class="sig-name descname"><span class="pre">SetDepthRenderCamera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth_camera</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.DepthRenderCamera" title="pydrake.geometry.DepthRenderCamera"><span class="pre">pydrake.geometry.DepthRenderCamera</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.SetDepthRenderCamera" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the render camera for depth renderings, as stored as parameters
+in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.SetParentFrameId">
+<span class="sig-name descname"><span class="pre">SetParentFrameId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.SetParentFrameId" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the id of the frame to which the body is affixed, as stored as
+parameters in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.SetX_PB">
+<span class="sig-name descname"><span class="pre">SetX_PB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor_pose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.SetX_PB" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>, as stored as parameters in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.X_BC">
 <span class="sig-name descname"><span class="pre">X_BC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.X_BC" title="Permalink to this definition"></a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">X_BC</span></code>.</p>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use
+default_color_render_camera().core().sensor_pose_in_camera_body()
+instead. This will be removed from Drake on or after 2025-01-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.X_BD">
 <span class="sig-name descname"><span class="pre">X_BD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.X_BD" title="Permalink to this definition"></a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">X_BD</span></code>.</p>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use
+default_depth_render_camera().core().sensor_pose_in_camera_body()
+instead. This will be removed from Drake on or after 2025-01-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.RgbdSensor.X_PB">
 <span class="sig-name descname"><span class="pre">X_PB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.RgbdSensor" title="pydrake.systems.sensors.RgbdSensor"><span class="pre">pydrake.systems.sensors.RgbdSensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.X_PB" title="Permalink to this definition"></a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>.</p>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use default_X_PB() instead. This will be removed from Drake on or
+after 2025-01-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

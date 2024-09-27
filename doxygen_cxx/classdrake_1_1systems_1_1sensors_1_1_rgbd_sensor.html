@@ -216,34 +216,58 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab40d8904907330979955091b2b778a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an RgbdSensor with fully specified render camera models for both color/label and depth cameras.  <a href="#ab40d8904907330979955091b2b778a5e">More...</a><br /></td></tr>
 <tr class="separator:ab40d8904907330979955091b2b778a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3be54cd4c90c63d4351d27943d87b319"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a3be54cd4c90c63d4351d27943d87b319">RgbdSensor</a> (<a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a> parent_id, const math::RigidTransformd &amp;<a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acfe6bdbdc50d1b6bff27e133688a4230">X_PB</a>, const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a> &amp;depth_camera, bool show_color_window=false)</td></tr>
-<tr class="memdesc:a3be54cd4c90c63d4351d27943d87b319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an RgbdSensor with fully specified render camera models for both the depth camera.  <a href="#a3be54cd4c90c63d4351d27943d87b319">More...</a><br /></td></tr>
+<tr class="memdesc:a3be54cd4c90c63d4351d27943d87b319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an RgbdSensor using a fully specified depth render camera, inferring the color settings based on depth.  <a href="#a3be54cd4c90c63d4351d27943d87b319">More...</a><br /></td></tr>
 <tr class="separator:a3be54cd4c90c63d4351d27943d87b319"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fb071bc0c53a418967bb936b59a9f9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a3fb071bc0c53a418967bb936b59a9f9e">~RgbdSensor</a> ()=default</td></tr>
-<tr class="separator:a3fb071bc0c53a418967bb936b59a9f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a705ec3567a892f2c558988b4ac3c351f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">CameraInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a705ec3567a892f2c558988b4ac3c351f">color_camera_info</a> () const</td></tr>
-<tr class="memdesc:a705ec3567a892f2c558988b4ac3c351f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the intrinsics properties of the color camera model.  <a href="#a705ec3567a892f2c558988b4ac3c351f">More...</a><br /></td></tr>
-<tr class="separator:a705ec3567a892f2c558988b4ac3c351f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b92b9d4b4aa8e028888b01fd2f659dd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">CameraInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a5b92b9d4b4aa8e028888b01fd2f659dd">depth_camera_info</a> () const</td></tr>
-<tr class="memdesc:a5b92b9d4b4aa8e028888b01fd2f659dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the intrinsics properties of the depth camera model.  <a href="#a5b92b9d4b4aa8e028888b01fd2f659dd">More...</a><br /></td></tr>
-<tr class="separator:a5b92b9d4b4aa8e028888b01fd2f659dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaff289a0608d413a89eac135a4c8790"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acaff289a0608d413a89eac135a4c8790">color_render_camera</a> () const</td></tr>
-<tr class="memdesc:acaff289a0608d413a89eac135a4c8790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the render camera for color/label renderings.  <a href="#acaff289a0608d413a89eac135a4c8790">More...</a><br /></td></tr>
-<tr class="separator:acaff289a0608d413a89eac135a4c8790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b7e6767e2c01173872ad2b1d0a0f9ca"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a2b7e6767e2c01173872ad2b1d0a0f9ca">depth_render_camera</a> () const</td></tr>
-<tr class="memdesc:a2b7e6767e2c01173872ad2b1d0a0f9ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the render camera for depth renderings.  <a href="#a2b7e6767e2c01173872ad2b1d0a0f9ca">More...</a><br /></td></tr>
-<tr class="separator:a2b7e6767e2c01173872ad2b1d0a0f9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfe6bdbdc50d1b6bff27e133688a4230"><td class="memItemLeft" align="right" valign="top">const math::RigidTransformd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acfe6bdbdc50d1b6bff27e133688a4230">X_PB</a> () const</td></tr>
-<tr class="memdesc:acfe6bdbdc50d1b6bff27e133688a4230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>X_PB</code>.  <a href="#acfe6bdbdc50d1b6bff27e133688a4230">More...</a><br /></td></tr>
-<tr class="separator:acfe6bdbdc50d1b6bff27e133688a4230"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8817bc0f987f64e506b92be652d5644"><td class="memItemLeft" align="right" valign="top">const math::RigidTransformd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab8817bc0f987f64e506b92be652d5644">X_BC</a> () const</td></tr>
-<tr class="memdesc:ab8817bc0f987f64e506b92be652d5644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>X_BC</code>.  <a href="#ab8817bc0f987f64e506b92be652d5644">More...</a><br /></td></tr>
-<tr class="separator:ab8817bc0f987f64e506b92be652d5644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad83228b39a7566b1cf862392f1e5e19a"><td class="memItemLeft" align="right" valign="top">const math::RigidTransformd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a">X_BD</a> () const</td></tr>
-<tr class="memdesc:ad83228b39a7566b1cf862392f1e5e19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>X_BD</code>.  <a href="#ad83228b39a7566b1cf862392f1e5e19a">More...</a><br /></td></tr>
-<tr class="separator:ad83228b39a7566b1cf862392f1e5e19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22ff82441df0b9b743906c4304135783"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a22ff82441df0b9b743906c4304135783">parent_frame_id</a> () const</td></tr>
-<tr class="memdesc:a22ff82441df0b9b743906c4304135783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the id of the frame to which the body is affixed.  <a href="#a22ff82441df0b9b743906c4304135783">More...</a><br /></td></tr>
-<tr class="separator:a22ff82441df0b9b743906c4304135783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51b60f94a242fcb7ec79ef99a68a4fb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a51b60f94a242fcb7ec79ef99a68a4fb0">~RgbdSensor</a> ()</td></tr>
+<tr class="separator:a51b60f94a242fcb7ec79ef99a68a4fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e0cc8f3c6cd15bb09c9d234a3d6dce"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a36e0cc8f3c6cd15bb09c9d234a3d6dce">default_color_render_camera</a> () const</td></tr>
+<tr class="memdesc:a36e0cc8f3c6cd15bb09c9d234a3d6dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default render camera for color/label renderings.  <a href="#a36e0cc8f3c6cd15bb09c9d234a3d6dce">More...</a><br /></td></tr>
+<tr class="separator:a36e0cc8f3c6cd15bb09c9d234a3d6dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf8b397adeef0d9e13a0a53c62136d51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#adf8b397adeef0d9e13a0a53c62136d51">set_default_color_render_camera</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a> &amp;color_camera)</td></tr>
+<tr class="memdesc:adf8b397adeef0d9e13a0a53c62136d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default render camera for color/label renderings.  <a href="#adf8b397adeef0d9e13a0a53c62136d51">More...</a><br /></td></tr>
+<tr class="separator:adf8b397adeef0d9e13a0a53c62136d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8ced90c0234a90b285576ec42186e1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a4b8ced90c0234a90b285576ec42186e1">GetColorRenderCamera</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a4b8ced90c0234a90b285576ec42186e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the context dependent render camera for color/label renderings.  <a href="#a4b8ced90c0234a90b285576ec42186e1">More...</a><br /></td></tr>
+<tr class="separator:a4b8ced90c0234a90b285576ec42186e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1453972e7ad9c6875d0d92183386d7dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a1453972e7ad9c6875d0d92183386d7dd">SetColorRenderCamera</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *context, const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a> &amp;color_camera) const</td></tr>
+<tr class="memdesc:a1453972e7ad9c6875d0d92183386d7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the render camera for color/label renderings, as stored as parameters in <code>context</code>.  <a href="#a1453972e7ad9c6875d0d92183386d7dd">More...</a><br /></td></tr>
+<tr class="separator:a1453972e7ad9c6875d0d92183386d7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7186354408f709775dc36ee6e4b6a127"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a7186354408f709775dc36ee6e4b6a127">default_depth_render_camera</a> () const</td></tr>
+<tr class="memdesc:a7186354408f709775dc36ee6e4b6a127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default render camera for depth renderings.  <a href="#a7186354408f709775dc36ee6e4b6a127">More...</a><br /></td></tr>
+<tr class="separator:a7186354408f709775dc36ee6e4b6a127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1813625234e156c21ae2848fd3ab72c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a1813625234e156c21ae2848fd3ab72c9">set_default_depth_render_camera</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a> &amp;depth_camera)</td></tr>
+<tr class="memdesc:a1813625234e156c21ae2848fd3ab72c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default render camera for depth renderings.  <a href="#a1813625234e156c21ae2848fd3ab72c9">More...</a><br /></td></tr>
+<tr class="separator:a1813625234e156c21ae2848fd3ab72c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a167422becbec19e75c610f6844b792ab"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a167422becbec19e75c610f6844b792ab">GetDepthRenderCamera</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a167422becbec19e75c610f6844b792ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the context dependent render camera for depth renderings.  <a href="#a167422becbec19e75c610f6844b792ab">More...</a><br /></td></tr>
+<tr class="separator:a167422becbec19e75c610f6844b792ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad549682e5c5bcb4dbb2ac06e31841275"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad549682e5c5bcb4dbb2ac06e31841275">SetDepthRenderCamera</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *context, const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a> &amp;depth_camera) const</td></tr>
+<tr class="memdesc:ad549682e5c5bcb4dbb2ac06e31841275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the render camera for depth renderings, as stored as parameters in <code>context</code>.  <a href="#ad549682e5c5bcb4dbb2ac06e31841275">More...</a><br /></td></tr>
+<tr class="separator:ad549682e5c5bcb4dbb2ac06e31841275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35bd983b923e8e4f86210737dfb41de7"><td class="memItemLeft" align="right" valign="top">const math::RigidTransformd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a35bd983b923e8e4f86210737dfb41de7">default_X_PB</a> () const</td></tr>
+<tr class="memdesc:a35bd983b923e8e4f86210737dfb41de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default <code>X_PB</code>.  <a href="#a35bd983b923e8e4f86210737dfb41de7">More...</a><br /></td></tr>
+<tr class="separator:a35bd983b923e8e4f86210737dfb41de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4004bbc0c945bc7ee869b59e8fc0e25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab4004bbc0c945bc7ee869b59e8fc0e25">set_default_X_PB</a> (const math::RigidTransformd &amp;sensor_pose)</td></tr>
+<tr class="memdesc:ab4004bbc0c945bc7ee869b59e8fc0e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default <code>X_PB</code>.  <a href="#ab4004bbc0c945bc7ee869b59e8fc0e25">More...</a><br /></td></tr>
+<tr class="separator:ab4004bbc0c945bc7ee869b59e8fc0e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7fd8eec1c6814e5a8a537d2f3283108"><td class="memItemLeft" align="right" valign="top">const math::RigidTransformd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab7fd8eec1c6814e5a8a537d2f3283108">GetX_PB</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context) const</td></tr>
+<tr class="memdesc:ab7fd8eec1c6814e5a8a537d2f3283108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the context dependent <code>X_PB</code>.  <a href="#ab7fd8eec1c6814e5a8a537d2f3283108">More...</a><br /></td></tr>
+<tr class="separator:ab7fd8eec1c6814e5a8a537d2f3283108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10ba3a29244ce373004b00819265470"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#aa10ba3a29244ce373004b00819265470">SetX_PB</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *context, const math::RigidTransformd &amp;sensor_pose) const</td></tr>
+<tr class="memdesc:aa10ba3a29244ce373004b00819265470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <code>X_PB</code>, as stored as parameters in <code>context</code>.  <a href="#aa10ba3a29244ce373004b00819265470">More...</a><br /></td></tr>
+<tr class="separator:aa10ba3a29244ce373004b00819265470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48e62e87afc69ffa0b512656936128d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab48e62e87afc69ffa0b512656936128d">default_parent_frame_id</a> () const</td></tr>
+<tr class="memdesc:ab48e62e87afc69ffa0b512656936128d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default id of the frame to which the body is affixed.  <a href="#ab48e62e87afc69ffa0b512656936128d">More...</a><br /></td></tr>
+<tr class="separator:ab48e62e87afc69ffa0b512656936128d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad0b7699c3a1b44d023ee1c454ac2e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a1ad0b7699c3a1b44d023ee1c454ac2e1">set_default_parent_frame_id</a> (<a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a> id)</td></tr>
+<tr class="memdesc:a1ad0b7699c3a1b44d023ee1c454ac2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default id of the frame to which the body is affixed.  <a href="#a1ad0b7699c3a1b44d023ee1c454ac2e1">More...</a><br /></td></tr>
+<tr class="separator:a1ad0b7699c3a1b44d023ee1c454ac2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ace9f6058eade222fdc602d377fd307"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a4ace9f6058eade222fdc602d377fd307">GetParentFrameId</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a4ace9f6058eade222fdc602d377fd307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the context dependent id of the frame to which the body is affixed.  <a href="#a4ace9f6058eade222fdc602d377fd307">More...</a><br /></td></tr>
+<tr class="separator:a4ace9f6058eade222fdc602d377fd307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a456c167b9f443fa79213712ba3eac0ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a456c167b9f443fa79213712ba3eac0ed">SetParentFrameId</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *context, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a> id) const</td></tr>
+<tr class="memdesc:a456c167b9f443fa79213712ba3eac0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the id of the frame to which the body is affixed, as stored as parameters in <code>context</code>.  <a href="#a456c167b9f443fa79213712ba3eac0ed">More...</a><br /></td></tr>
+<tr class="separator:a456c167b9f443fa79213712ba3eac0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf4572bb00056a157be83e44f7f41523"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#adf4572bb00056a157be83e44f7f41523">query_object_input_port</a> () const</td></tr>
 <tr class="memdesc:adf4572bb00056a157be83e44f7f41523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the geometry::QueryObject&lt;double&gt;-valued input port.  <a href="#adf4572bb00056a157be83e44f7f41523">More...</a><br /></td></tr>
 <tr class="separator:adf4572bb00056a157be83e44f7f41523"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,6 +289,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a96a36d6a07e828f5d59df2fd3f254495"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a96a36d6a07e828f5d59df2fd3f254495">image_time_output_port</a> () const</td></tr>
 <tr class="memdesc:a96a36d6a07e828f5d59df2fd3f254495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector-valued output port (with size == 1) that reports the current simulation time, in seconds.  <a href="#a96a36d6a07e828f5d59df2fd3f254495">More...</a><br /></td></tr>
 <tr class="separator:a96a36d6a07e828f5d59df2fd3f254495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705ec3567a892f2c558988b4ac3c351f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">CameraInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a705ec3567a892f2c558988b4ac3c351f">color_camera_info</a> () const</td></tr>
+<tr class="memdesc:a705ec3567a892f2c558988b4ac3c351f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a705ec3567a892f2c558988b4ac3c351f">More...</a><br /></td></tr>
+<tr class="separator:a705ec3567a892f2c558988b4ac3c351f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b92b9d4b4aa8e028888b01fd2f659dd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">CameraInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a5b92b9d4b4aa8e028888b01fd2f659dd">depth_camera_info</a> () const</td></tr>
+<tr class="memdesc:a5b92b9d4b4aa8e028888b01fd2f659dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a5b92b9d4b4aa8e028888b01fd2f659dd">More...</a><br /></td></tr>
+<tr class="separator:a5b92b9d4b4aa8e028888b01fd2f659dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaff289a0608d413a89eac135a4c8790"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acaff289a0608d413a89eac135a4c8790">color_render_camera</a> () const</td></tr>
+<tr class="memdesc:acaff289a0608d413a89eac135a4c8790"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#acaff289a0608d413a89eac135a4c8790">More...</a><br /></td></tr>
+<tr class="separator:acaff289a0608d413a89eac135a4c8790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b7e6767e2c01173872ad2b1d0a0f9ca"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a2b7e6767e2c01173872ad2b1d0a0f9ca">depth_render_camera</a> () const</td></tr>
+<tr class="memdesc:a2b7e6767e2c01173872ad2b1d0a0f9ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a2b7e6767e2c01173872ad2b1d0a0f9ca">More...</a><br /></td></tr>
+<tr class="separator:a2b7e6767e2c01173872ad2b1d0a0f9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfe6bdbdc50d1b6bff27e133688a4230"><td class="memItemLeft" align="right" valign="top">const math::RigidTransformd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acfe6bdbdc50d1b6bff27e133688a4230">X_PB</a> () const</td></tr>
+<tr class="memdesc:acfe6bdbdc50d1b6bff27e133688a4230"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#acfe6bdbdc50d1b6bff27e133688a4230">More...</a><br /></td></tr>
+<tr class="separator:acfe6bdbdc50d1b6bff27e133688a4230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8817bc0f987f64e506b92be652d5644"><td class="memItemLeft" align="right" valign="top">const math::RigidTransformd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab8817bc0f987f64e506b92be652d5644">X_BC</a> () const</td></tr>
+<tr class="memdesc:ab8817bc0f987f64e506b92be652d5644"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ab8817bc0f987f64e506b92be652d5644">More...</a><br /></td></tr>
+<tr class="separator:ab8817bc0f987f64e506b92be652d5644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83228b39a7566b1cf862392f1e5e19a"><td class="memItemLeft" align="right" valign="top">const math::RigidTransformd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a">X_BD</a> () const</td></tr>
+<tr class="memdesc:ad83228b39a7566b1cf862392f1e5e19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ad83228b39a7566b1cf862392f1e5e19a">More...</a><br /></td></tr>
+<tr class="separator:ad83228b39a7566b1cf862392f1e5e19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ff82441df0b9b743906c4304135783"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a22ff82441df0b9b743906c4304135783">parent_frame_id</a> () const</td></tr>
+<tr class="memdesc:a22ff82441df0b9b743906c4304135783"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a22ff82441df0b9b743906c4304135783">More...</a><br /></td></tr>
+<tr class="separator:a22ff82441df0b9b743906c4304135783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a85d28c4753a0ad6977a19678dc614ba4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a85d28c4753a0ad6977a19678dc614ba4">RgbdSensor</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html">RgbdSensor</a> &amp;)=delete</td></tr>
 <tr class="separator:a85d28c4753a0ad6977a19678dc614ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1412,19 +1460,16 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs an RgbdSensor with fully specified render camera models for both the depth camera. </p>
+<p>Constructs an RgbdSensor using a fully specified depth render camera, inferring the color settings based on depth. </p>
 <p>The color camera in inferred from the <code>depth_camera</code>; it shares the same <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_camera_core.html" title="Collection of core parameters for modeling a pinhole-model camera in a RenderEngine.">geometry::render::RenderCameraCore</a> and is configured to show the window based on the value of <code>show_color_window</code>. </p>
 
 </div>
 </div>
-<a id="a3fb071bc0c53a418967bb936b59a9f9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fb071bc0c53a418967bb936b59a9f9e">&#9670;&nbsp;</a></span>~RgbdSensor()</h2>
+<a id="a51b60f94a242fcb7ec79ef99a68a4fb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b60f94a242fcb7ec79ef99a68a4fb0">&#9670;&nbsp;</a></span>~RgbdSensor()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">~<a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html">RgbdSensor</a> </td>
@@ -1433,11 +1478,6 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -1477,7 +1517,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the intrinsics properties of the color camera model. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>Use default_color_render_camera().core().intrinsics() instead. <br />
+ This will be removed from Drake on or after 2025-01-01.</dd></dl>
 
 </div>
 </div>
@@ -1515,7 +1557,85 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the render camera for color/label renderings. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>Use default_color_render_camera() instead. <br />
+ This will be removed from Drake on or after 2025-01-01.</dd></dl>
+
+</div>
+</div>
+<a id="a36e0cc8f3c6cd15bb09c9d234a3d6dce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36e0cc8f3c6cd15bb09c9d234a3d6dce">&#9670;&nbsp;</a></span>default_color_render_camera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a>&amp; default_color_render_camera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the default render camera for color/label renderings. </p>
+
+</div>
+</div>
+<a id="a7186354408f709775dc36ee6e4b6a127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7186354408f709775dc36ee6e4b6a127">&#9670;&nbsp;</a></span>default_depth_render_camera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a>&amp; default_depth_render_camera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the default render camera for depth renderings. </p>
+
+</div>
+</div>
+<a id="ab48e62e87afc69ffa0b512656936128d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48e62e87afc69ffa0b512656936128d">&#9670;&nbsp;</a></span>default_parent_frame_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a> default_parent_frame_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the default id of the frame to which the body is affixed. </p>
+
+</div>
+</div>
+<a id="a35bd983b923e8e4f86210737dfb41de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35bd983b923e8e4f86210737dfb41de7">&#9670;&nbsp;</a></span>default_X_PB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const math::RigidTransformd&amp; default_X_PB </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the default <code>X_PB</code>. </p>
 
 </div>
 </div>
@@ -1534,7 +1654,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the intrinsics properties of the depth camera model. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>Use default_depth_render_camera().core().intrinsics() instead. <br />
+ This will be removed from Drake on or after 2025-01-01.</dd></dl>
 
 </div>
 </div>
@@ -1591,7 +1713,89 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the render camera for depth renderings. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Use default_depth_render_camera() instead. <br />
+ This will be removed from Drake on or after 2025-01-01.</dd></dl>
+
+</div>
+</div>
+<a id="a4b8ced90c0234a90b285576ec42186e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b8ced90c0234a90b285576ec42186e1">&#9670;&nbsp;</a></span>GetColorRenderCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a>&amp; GetColorRenderCamera </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the context dependent render camera for color/label renderings. </p>
+
+</div>
+</div>
+<a id="a167422becbec19e75c610f6844b792ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a167422becbec19e75c610f6844b792ab">&#9670;&nbsp;</a></span>GetDepthRenderCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a>&amp; GetDepthRenderCamera </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the context dependent render camera for depth renderings. </p>
+
+</div>
+</div>
+<a id="a4ace9f6058eade222fdc602d377fd307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ace9f6058eade222fdc602d377fd307">&#9670;&nbsp;</a></span>GetParentFrameId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a> GetParentFrameId </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the context dependent id of the frame to which the body is affixed. </p>
+
+</div>
+</div>
+<a id="ab7fd8eec1c6814e5a8a537d2f3283108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7fd8eec1c6814e5a8a537d2f3283108">&#9670;&nbsp;</a></span>GetX_PB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const math::RigidTransformd&amp; GetX_PB </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the context dependent <code>X_PB</code>. </p>
 
 </div>
 </div>
@@ -1701,7 +1905,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the id of the frame to which the body is affixed. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>Use default_parent_frame_id() instead. <br />
+ This will be removed from Drake on or after 2025-01-01.</dd></dl>
 
 </div>
 </div>
@@ -1724,6 +1930,206 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="adf8b397adeef0d9e13a0a53c62136d51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf8b397adeef0d9e13a0a53c62136d51">&#9670;&nbsp;</a></span>set_default_color_render_camera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_default_color_render_camera </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a> &amp;&#160;</td>
+          <td class="paramname"><em>color_camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the default render camera for color/label renderings. </p>
+
+</div>
+</div>
+<a id="a1813625234e156c21ae2848fd3ab72c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1813625234e156c21ae2848fd3ab72c9">&#9670;&nbsp;</a></span>set_default_depth_render_camera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_default_depth_render_camera </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a> &amp;&#160;</td>
+          <td class="paramname"><em>depth_camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the default render camera for depth renderings. </p>
+
+</div>
+</div>
+<a id="a1ad0b7699c3a1b44d023ee1c454ac2e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ad0b7699c3a1b44d023ee1c454ac2e1">&#9670;&nbsp;</a></span>set_default_parent_frame_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_default_parent_frame_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the default id of the frame to which the body is affixed. </p>
+
+</div>
+</div>
+<a id="ab4004bbc0c945bc7ee869b59e8fc0e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4004bbc0c945bc7ee869b59e8fc0e25">&#9670;&nbsp;</a></span>set_default_X_PB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_default_X_PB </td>
+          <td>(</td>
+          <td class="paramtype">const math::RigidTransformd &amp;&#160;</td>
+          <td class="paramname"><em>sensor_pose</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the default <code>X_PB</code>. </p>
+
+</div>
+</div>
+<a id="a1453972e7ad9c6875d0d92183386d7dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1453972e7ad9c6875d0d92183386d7dd">&#9670;&nbsp;</a></span>SetColorRenderCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetColorRenderCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">geometry::render::ColorRenderCamera</a> &amp;&#160;</td>
+          <td class="paramname"><em>color_camera</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the render camera for color/label renderings, as stored as parameters in <code>context</code>. </p>
+
+</div>
+</div>
+<a id="ad549682e5c5bcb4dbb2ac06e31841275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad549682e5c5bcb4dbb2ac06e31841275">&#9670;&nbsp;</a></span>SetDepthRenderCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDepthRenderCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">geometry::render::DepthRenderCamera</a> &amp;&#160;</td>
+          <td class="paramname"><em>depth_camera</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the render camera for depth renderings, as stored as parameters in <code>context</code>. </p>
+
+</div>
+</div>
+<a id="a456c167b9f443fa79213712ba3eac0ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a456c167b9f443fa79213712ba3eac0ed">&#9670;&nbsp;</a></span>SetParentFrameId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetParentFrameId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the id of the frame to which the body is affixed, as stored as parameters in <code>context</code>. </p>
+
+</div>
+</div>
+<a id="aa10ba3a29244ce373004b00819265470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa10ba3a29244ce373004b00819265470">&#9670;&nbsp;</a></span>SetX_PB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetX_PB </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;&#160;</td>
+          <td class="paramname"><em>sensor_pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the <code>X_PB</code>, as stored as parameters in <code>context</code>. </p>
+
+</div>
+</div>
 <a id="ab8817bc0f987f64e506b92be652d5644"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab8817bc0f987f64e506b92be652d5644">&#9670;&nbsp;</a></span>X_BC()</h2>
 
@@ -1739,7 +2145,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns <code>X_BC</code>. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Use default_color_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
+ This will be removed from Drake on or after 2025-01-01.</dd></dl>
 
 </div>
 </div>
@@ -1758,7 +2166,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns <code>X_BD</code>. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Use default_depth_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
+ This will be removed from Drake on or after 2025-01-01.</dd></dl>
 
 </div>
 </div>
@@ -1777,7 +2187,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns <code>X_PB</code>. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Use default_X_PB() instead. <br />
+ This will be removed from Drake on or after 2025-01-01.</dd></dl>
 
 </div>
 </div>

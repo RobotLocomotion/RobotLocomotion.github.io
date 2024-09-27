@@ -217,6 +217,30 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_parser.html#a6ff0ade340da12810522723bf3749152">Parser::collision_filter_groups</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000008"></a>Use GetCollisionFilterGroups() instead. Note that the return type is  changed to by-value in the new method; callers may need to store the  return value in a variable with an appropriate lifetime. <br />
  This will be removed from Drake on or after 2024-10-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a705ec3567a892f2c558988b4ac3c351f">RgbdSensor::color_camera_info</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000022"></a>Use default_color_render_camera().core().intrinsics() instead. <br />
+ This will be removed from Drake on or after 2025-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acaff289a0608d413a89eac135a4c8790">RgbdSensor::color_render_camera</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000024"></a>Use default_color_render_camera() instead. <br />
+ This will be removed from Drake on or after 2025-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a5b92b9d4b4aa8e028888b01fd2f659dd">RgbdSensor::depth_camera_info</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000023"></a>Use default_depth_render_camera().core().intrinsics() instead. <br />
+ This will be removed from Drake on or after 2025-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a2b7e6767e2c01173872ad2b1d0a0f9ca">RgbdSensor::depth_render_camera</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000025"></a>Use default_depth_render_camera() instead. <br />
+ This will be removed from Drake on or after 2025-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a22ff82441df0b9b743906c4304135783">RgbdSensor::parent_frame_id</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000029"></a>Use default_parent_frame_id() instead. <br />
+ This will be removed from Drake on or after 2025-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab8817bc0f987f64e506b92be652d5644">RgbdSensor::X_BC</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000027"></a>Use default_color_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
+ This will be removed from Drake on or after 2025-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a">RgbdSensor::X_BD</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000028"></a>Use default_depth_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
+ This will be removed from Drake on or after 2025-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acfe6bdbdc50d1b6bff27e133688a4230">RgbdSensor::X_PB</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000026"></a>Use default_X_PB() instead. <br />
+ This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a6e9c573b8e817fdaccbbcbdd29810ae7">SpatialInertia&lt; T &gt;::SpatialInertia</a>  ()=default</dt>
 <dd><a class="anchor" id="_deprecated000016"></a>The default constructor is deprecated. If you really want NaNs, then  call the SpatialInertia&lt;T&gt;::NaN() factory function. If you were only  calling this constructor as part of adding a RigidBody to  MultibodyPlant, then instead you should omit the SpatialInertia  argument from MultibodyPlant::AddRigidBody(); it now defaults to zero. <br />
  This will be removed from Drake on or after 2024-10-01. </dd>
