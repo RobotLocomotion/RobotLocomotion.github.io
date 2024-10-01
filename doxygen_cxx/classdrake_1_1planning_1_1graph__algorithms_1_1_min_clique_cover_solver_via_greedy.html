@@ -1,0 +1,427 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: MinCliqueCoverSolverViaGreedy Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">MinCliqueCoverSolverViaGreedy Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Approximately solves the min clique cover problem via a greedy heuristic. </p>
+<p>At each step, the largest clique found by the provided max clique solver is added to the clique cover. These vertices are then removed from graph and max clique is solved again. This loop continues until a clique is found which is smaller than the min clique size.</p>
+<dl class="section note"><dt>Note</dt><dd>if min clique size &gt; 1, then this class will not strictly compute a clique cover since not all vertices will be covered. </dd></dl>
+</div>
+<p><code>#include &lt;drake/planning/graph_algorithms/min_clique_cover_solver_via_greedy.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a27eb7cb9510386a5e417ed036ab21a95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a27eb7cb9510386a5e417ed036ab21a95">MinCliqueCoverSolverViaGreedy</a> (const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &amp;max_clique_solver, <a class="el" href="classint.html">int</a> min_clique_size=1)</td></tr>
+<tr class="separator:a27eb7cb9510386a5e417ed036ab21a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860dbf4e01e8b9b4c57e9ce68dfce185"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a860dbf4e01e8b9b4c57e9ce68dfce185">set_min_clique_size</a> (const <a class="el" href="classint.html">int</a> min_clique_size)</td></tr>
+<tr class="memdesc:a860dbf4e01e8b9b4c57e9ce68dfce185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum clique size.  <a href="#a860dbf4e01e8b9b4c57e9ce68dfce185">More...</a><br /></td></tr>
+<tr class="separator:a860dbf4e01e8b9b4c57e9ce68dfce185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac747abd4c51c3400c6747e0fccc0b582"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#ac747abd4c51c3400c6747e0fccc0b582">get_min_clique_size</a> () const</td></tr>
+<tr class="separator:ac747abd4c51c3400c6747e0fccc0b582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:a41ed890b19a982e4dc1d1fb6f3b5cc31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a41ed890b19a982e4dc1d1fb6f3b5cc31">MinCliqueCoverSolverViaGreedy</a> (const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> &amp;)=delete</td></tr>
+<tr class="separator:a41ed890b19a982e4dc1d1fb6f3b5cc31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d0c3c906d7d4270f14d069272f3d979"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a9d0c3c906d7d4270f14d069272f3d979">operator=</a> (const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> &amp;)=delete</td></tr>
+<tr class="separator:a9d0c3c906d7d4270f14d069272f3d979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7198f346abeb875d1d927c4cc8f9b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#aec7198f346abeb875d1d927c4cc8f9b8">MinCliqueCoverSolverViaGreedy</a> (<a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:aec7198f346abeb875d1d927c4cc8f9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e365ed9ffe05aabde263307b504509f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#a0e365ed9ffe05aabde263307b504509f">operator=</a> (<a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a0e365ed9ffe05aabde263307b504509f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html">MinCliqueCoverSolverBase</a></td></tr>
+<tr class="memitem:a80dacd714707bd5ee7907e8050dd0591 inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a80dacd714707bd5ee7907e8050dd0591">~MinCliqueCoverSolverBase</a> ()</td></tr>
+<tr class="separator:a80dacd714707bd5ee7907e8050dd0591 inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c4c76fc276c73aab5b57ff96025ece0 inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::set&lt; <a class="el" href="classint.html">int</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a2c4c76fc276c73aab5b57ff96025ece0">SolveMinCliqueCover</a> (const Eigen::SparseMatrix&lt; bool &gt; &amp;adjacency_matrix, bool partition=false)</td></tr>
+<tr class="memdesc:a2c4c76fc276c73aab5b57ff96025ece0 inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the adjacency matrix of an undirected graph, finds a (potentially approximate) minimum clique cover of the graph.  <a href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a2c4c76fc276c73aab5b57ff96025ece0">More...</a><br /></td></tr>
+<tr class="separator:a2c4c76fc276c73aab5b57ff96025ece0 inherit pub_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html">MinCliqueCoverSolverBase</a></td></tr>
+<tr class="memitem:ad11f040de09d44f5a0980097bfe25577 inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#ad11f040de09d44f5a0980097bfe25577">MinCliqueCoverSolverBase</a> ()=default</td></tr>
+<tr class="separator:ad11f040de09d44f5a0980097bfe25577 inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18dfeb5c73a4018374841c2ed557d440 inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a18dfeb5c73a4018374841c2ed557d440">MinCliqueCoverSolverBase</a> (const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html">MinCliqueCoverSolverBase</a> &amp;)=default</td></tr>
+<tr class="separator:a18dfeb5c73a4018374841c2ed557d440 inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa35857328ce45796b4f34298e879f84a inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html">MinCliqueCoverSolverBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#aa35857328ce45796b4f34298e879f84a">operator=</a> (const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html">MinCliqueCoverSolverBase</a> &amp;)=default</td></tr>
+<tr class="separator:aa35857328ce45796b4f34298e879f84a inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc44d796217f9f0e56cfafb3cb3b2a9 inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#acfc44d796217f9f0e56cfafb3cb3b2a9">MinCliqueCoverSolverBase</a> (<a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html">MinCliqueCoverSolverBase</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:acfc44d796217f9f0e56cfafb3cb3b2a9 inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d91926bee8d42ac96890804d5a4e9c inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html">MinCliqueCoverSolverBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a67d91926bee8d42ac96890804d5a4e9c">operator=</a> (<a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html">MinCliqueCoverSolverBase</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a67d91926bee8d42ac96890804d5a4e9c inherit pro_methods_classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a41ed890b19a982e4dc1d1fb6f3b5cc31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ed890b19a982e4dc1d1fb6f3b5cc31">&#9670;&nbsp;</a></span>MinCliqueCoverSolverViaGreedy() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec7198f346abeb875d1d927c4cc8f9b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7198f346abeb875d1d927c4cc8f9b8">&#9670;&nbsp;</a></span>MinCliqueCoverSolverViaGreedy() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27eb7cb9510386a5e417ed036ab21a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27eb7cb9510386a5e417ed036ab21a95">&#9670;&nbsp;</a></span>MinCliqueCoverSolverViaGreedy() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &amp;&#160;</td>
+          <td class="paramname"><em>max_clique_solver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>min_clique_size</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac747abd4c51c3400c6747e0fccc0b582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac747abd4c51c3400c6747e0fccc0b582">&#9670;&nbsp;</a></span>get_min_clique_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> get_min_clique_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e365ed9ffe05aabde263307b504509f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e365ed9ffe05aabde263307b504509f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d0c3c906d7d4270f14d069272f3d979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d0c3c906d7d4270f14d069272f3d979">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a860dbf4e01e8b9b4c57e9ce68dfce185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a860dbf4e01e8b9b4c57e9ce68dfce185">&#9670;&nbsp;</a></span>set_min_clique_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_min_clique_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>min_clique_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the minimum clique size. </p>
+<p>Throws if this is less than 1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min_clique_size</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/planning/graph_algorithms/<a class="el" href="min__clique__cover__solver__via__greedy_8h.html">min_clique_cover_solver_via_greedy.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1planning.html">planning</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1planning_1_1graph__algorithms.html">graph_algorithms</a></li><li class="navelem"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html">MinCliqueCoverSolverViaGreedy</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

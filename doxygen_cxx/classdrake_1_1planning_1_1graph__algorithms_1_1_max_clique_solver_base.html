@@ -179,6 +179,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a019e058b6da8feacf8c4ffb122de77a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#a019e058b6da8feacf8c4ffb122de77a3">SolveMaxClique</a> (const Eigen::SparseMatrix&lt; bool &gt; &amp;adjacency_matrix) const</td></tr>
 <tr class="memdesc:a019e058b6da8feacf8c4ffb122de77a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the adjacency matrix of an undirected graph, find the maximum clique within the graph.  <a href="#a019e058b6da8feacf8c4ffb122de77a3">More...</a><br /></td></tr>
 <tr class="separator:a019e058b6da8feacf8c4ffb122de77a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1850b70c0a1556b78e2d2378d6f8c7d"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html#aa1850b70c0a1556b78e2d2378d6f8c7d">Clone</a> () const</td></tr>
+<tr class="memdesc:aa1850b70c0a1556b78e2d2378d6f8c7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a unique deep copy of this set.  <a href="#aa1850b70c0a1556b78e2d2378d6f8c7d">More...</a><br /></td></tr>
+<tr class="separator:aa1850b70c0a1556b78e2d2378d6f8c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -298,8 +301,27 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a120e77908ffe6f81c21ab850652e2303"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a120e77908ffe6f81c21ab850652e2303">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aa1850b70c0a1556b78e2d2378d6f8c7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1850b70c0a1556b78e2d2378d6f8c7d">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a>&gt; Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a unique deep copy of this set. </p>
+
+</div>
+</div>
+<a id="a3489a20754f0dfdaa890e42f4f77d237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3489a20754f0dfdaa890e42f4f77d237">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +332,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -324,8 +346,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3489a20754f0dfdaa890e42f4f77d237"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3489a20754f0dfdaa890e42f4f77d237">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a120e77908ffe6f81c21ab850652e2303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120e77908ffe6f81c21ab850652e2303">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -336,7 +358,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">MaxCliqueSolverBase</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -368,7 +390,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Given the adjacency matrix of an undirected graph, find the maximum clique within the graph. </p>
 <p>A clique is a collection of vertices in a graph such that each pair of vertices is connected by an edge (i.e. a fully connected subgraph). This problem is known to be NP-complete, and so the concrete implementation of the solver determines whether the return of this function is the true maximum clique in the graph (which may take very long to compute), or only an approximate solution found via heuristics.</p>
-<p>This method throws if the adjacency matrix is not symmetric and may throw depending on the concrete implmementation of the solver.</p>
+<p>This method throws if the adjacency matrix is not symmetric and may throw depending on the concrete implementation of the solver.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">adjacency_matrix</td><td>a symmetric binary matrix encoding the edge relationship. </td></tr>

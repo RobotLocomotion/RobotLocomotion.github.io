@@ -23,5 +23,7 @@ var searchData=
   ['volumemesh',['VolumeMesh',['../classdrake_1_1geometry_1_1_volume_mesh.html',1,'drake::geometry']]],
   ['volumemeshtester',['VolumeMeshTester',['../classdrake_1_1geometry_1_1_volume_mesh_tester.html',1,'drake::geometry']]],
   ['vpolytope',['VPolytope',['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html',1,'drake::geometry::optimization']]],
-  ['vtkcommand',['vtkCommand',['../classvtk_command.html',1,'']]]
+  ['vtkcommand',['vtkCommand',['../classvtk_command.html',1,'']]],
+  ['vtkgltfuriloader',['VtkGltfUriLoader',['../classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_vtk_gltf_uri_loader.html',1,'drake::geometry::DRAKE_NO_EXPORT']]],
+  ['vtkuriloader',['vtkURILoader',['../classvtk_u_r_i_loader.html',1,'']]]
 ];

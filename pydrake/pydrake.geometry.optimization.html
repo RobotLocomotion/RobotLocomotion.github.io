@@ -4071,6 +4071,18 @@ hyperellipsoid between iterations is less that this threshold. This
 termination condition can be disabled by setting to a negative value.</p>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.IrisOptions.verify_domain_boundedness">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">verify_domain_boundedness</span></span><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.verify_domain_boundedness" title="Permalink to this definition"></a></dt>
+<dd><p>If the user knows the intersection of bounding_region and the domain
+(for IRIS) or plant joint limits (for IrisInConfigurationSpace) is
+bounded, setting this flag to <code class="docutils literal notranslate"><span class="pre">False</span></code> will skip the boundedness
+check that IRIS and IrisInConfigurationSpace perform (leading to a
+small speedup, as checking boundedness requires solving optimization
+problems). If the intersection turns out to be unbounded, this will
+lead to undefined behavior.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py function">

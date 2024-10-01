@@ -1339,6 +1339,10 @@
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.MaxCliqueSolverViaMip.__init__">(pydrake.planning.MaxCliqueSolverViaMip method)</a>
 </li>
+        <li><a href="pydrake.planning.html#pydrake.planning.MinCliqueCoverSolverBase.__init__">(pydrake.planning.MinCliqueCoverSolverBase method)</a>
+</li>
+        <li><a href="pydrake.planning.html#pydrake.planning.MinCliqueCoverSolverViaGreedy.__init__">(pydrake.planning.MinCliqueCoverSolverViaGreedy method)</a>
+</li>
         <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.__init__">(pydrake.planning.MultipleShooting method)</a>
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.RobotClearance.__init__">(pydrake.planning.RobotClearance method)</a>
@@ -8428,14 +8432,6 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_pose_output_port">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.get_geometry_poses_output_port">get_geometry_poses_output_port() (pydrake.multibody.plant.MultibodyPlant method)</a>
-
-      <ul>
-        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_poses_output_port">(pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd] method)</a>
-</li>
-        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_poses_output_port">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
-</li>
-      </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.get_geometry_query_input_port">get_geometry_query_input_port() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
       <ul>
@@ -8627,6 +8623,8 @@
       <li><a href="pydrake.math.html#pydrake.math.BarycentricMesh.get_mesh_point">get_mesh_point() (pydrake.math.BarycentricMesh method)</a>
 </li>
       <li><a href="pydrake.manipulation.html#pydrake.manipulation.IiwaCommandReceiver.get_message_input_port">get_message_input_port() (pydrake.manipulation.IiwaCommandReceiver method)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.MinCliqueCoverSolverViaGreedy.get_min_clique_size">get_min_clique_size() (pydrake.planning.MinCliqueCoverSolverViaGreedy method)</a>
 </li>
       <li><a href="pydrake.examples.html#pydrake.examples.CompassGait.get_minimal_state_output_port">get_minimal_state_output_port() (pydrake.examples.CompassGait method)</a>
 
@@ -14186,10 +14184,10 @@
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatVisualizer_-AutoDiffXd">MeshcatVisualizer_[AutoDiffXd] (class in pydrake.geometry)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatVisualizerParams">MeshcatVisualizerParams (class in pydrake.geometry)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshSource">MeshSource (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.math.html#pydrake.math.BarycentricMesh.MeshValuesFrom">MeshValuesFrom() (pydrake.math.BarycentricMesh method)</a>
@@ -14235,6 +14233,10 @@
       <li><a href="pydrake.geometry.html#pydrake.geometry.DepthRange.min_depth">min_depth() (pydrake.geometry.DepthRange method)</a>
 </li>
       <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.CalcGridPointsOptions.min_points">min_points (pydrake.multibody.optimization.CalcGridPointsOptions property)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.MinCliqueCoverSolverBase">MinCliqueCoverSolverBase (class in pydrake.planning)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.MinCliqueCoverSolverViaGreedy">MinCliqueCoverSolverViaGreedy (class in pydrake.planning)</a>
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.IrisFromCliqueCoverOptions.minimum_clique_size">minimum_clique_size (pydrake.planning.IrisFromCliqueCoverOptions property)</a>
 </li>
@@ -18477,6 +18479,8 @@
         <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.IntegratorBase_-Expression-.set_maximum_step_size">(pydrake.systems.analysis.IntegratorBase_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.planning.html#pydrake.planning.MinCliqueCoverSolverViaGreedy.set_min_clique_size">set_min_clique_size() (pydrake.planning.MinCliqueCoverSolverViaGreedy method)</a>
+</li>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.Simulator.set_monitor">set_monitor() (pydrake.systems.analysis.Simulator method)</a>
 
       <ul>
@@ -20329,6 +20333,8 @@
       </ul></li>
       <li><a href="pydrake.planning.html#pydrake.planning.MaxCliqueSolverBase.SolveMaxClique">SolveMaxClique() (pydrake.planning.MaxCliqueSolverBase method)</a>
 </li>
+      <li><a href="pydrake.planning.html#pydrake.planning.MinCliqueCoverSolverBase.SolveMinCliqueCover">SolveMinCliqueCover() (pydrake.planning.MinCliqueCoverSolverBase method)</a>
+</li>
       <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.SolvePath">SolvePath() (pydrake.planning.GcsTrajectoryOptimization method)</a>
 </li>
       <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.Toppra.SolvePathParameterization">SolvePathParameterization() (pydrake.multibody.optimization.Toppra method)</a>
@@ -21883,10 +21889,10 @@
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity">Value[list[SpatialVelocity]] (class in pydrake.common.value)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity_-AutoDiffXd">Value[list[SpatialVelocity_[AutoDiffXd]]] (class in pydrake.common.value)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity_-Expression">Value[list[SpatialVelocity_[Expression]]] (class in pydrake.common.value)</a>
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-ModelInstanceIndex">Value[ModelInstanceIndex] (class in pydrake.common.value)</a>
@@ -22141,6 +22147,8 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngineGltfClientParams.verbose">(pydrake.geometry.RenderEngineGltfClientParams property)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.IrisOptions.verify_domain_boundedness">verify_domain_boundedness (pydrake.geometry.optimization.IrisOptions property)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.PolygonSurfaceMesh.vertex">vertex() (pydrake.geometry.PolygonSurfaceMesh method)</a>
 
       <ul>

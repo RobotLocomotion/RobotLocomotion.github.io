@@ -477,9 +477,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a595655796fe729cca5af338d9702bdfb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a595655796fe729cca5af338d9702bdfb">get_geometry_pose_output_port</a> () const</td></tr>
 <tr class="memdesc:a595655796fe729cca5af338d9702bdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port of frames' poses to communicate with a SceneGraph.  <a href="#a595655796fe729cca5af338d9702bdfb">More...</a><br /></td></tr>
 <tr class="separator:a595655796fe729cca5af338d9702bdfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f20f6e2e2de42a5225e86baff2ca0e5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1f20f6e2e2de42a5225e86baff2ca0e5">get_geometry_poses_output_port</a> () const</td></tr>
-<tr class="memdesc:a1f20f6e2e2de42a5225e86baff2ca0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a1f20f6e2e2de42a5225e86baff2ca0e5">More...</a><br /></td></tr>
-<tr class="separator:a1f20f6e2e2de42a5225e86baff2ca0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0835e38aebf432f9389e5be0ca06a5c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0835e38aebf432f9389e5be0ca06a5c4">get_deformable_body_configuration_output_port</a> () const</td></tr>
 <tr class="memdesc:a0835e38aebf432f9389e5be0ca06a5c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port for vertex positions (configurations), measured and expressed in the World frame, of the deformable bodies in <code>this</code> plant as a GeometryConfigurationVector.  <a href="#a0835e38aebf432f9389e5be0ca06a5c4">More...</a><br /></td></tr>
 <tr class="separator:a0835e38aebf432f9389e5be0ca06a5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -852,9 +849,6 @@ bodies". Read carefully. A user can request the set of all floating base bodies 
 <tr class="memitem:a725008fd74cc0c6c30e938eeaaf902e2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a725008fd74cc0c6c30e938eeaaf902e2">EvalBodySpatialAccelerationInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body_B) const</td></tr>
 <tr class="memdesc:a725008fd74cc0c6c30e938eeaaf902e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates A_WB, body B's spatial acceleration in the world frame W.  <a href="#a725008fd74cc0c6c30e938eeaaf902e2">More...</a><br /></td></tr>
 <tr class="separator:a725008fd74cc0c6c30e938eeaaf902e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecf801449932225a58b7daeb64a8f911"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html">geometry::PenetrationAsPointPair</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aecf801449932225a58b7daeb64a8f911">EvalPointPairPenetrations</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
-<tr class="memdesc:aecf801449932225a58b7daeb64a8f911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates all point pairs of contact for a given state of the model stored in <code>context</code>.  <a href="#aecf801449932225a58b7daeb64a8f911">More...</a><br /></td></tr>
-<tr class="separator:aecf801449932225a58b7daeb64a8f911"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e86b07e42fb4ce047ffecd82f263571"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5e86b07e42fb4ce047ffecd82f263571">CalcRelativeTransform</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_B) const</td></tr>
 <tr class="memdesc:a5e86b07e42fb4ce047ffecd82f263571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the rigid transform (pose) <code>X_AB</code> relating frame A and frame B.  <a href="#a5e86b07e42fb4ce047ffecd82f263571">More...</a><br /></td></tr>
 <tr class="separator:a5e86b07e42fb4ce047ffecd82f263571"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4145,37 +4139,6 @@ See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#Jacobia
 
 </div>
 </div>
-<a id="aecf801449932225a58b7daeb64a8f911"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecf801449932225a58b7daeb64a8f911">&#9670;&nbsp;</a></span>EvalPointPairPenetrations()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt;<a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html">geometry::PenetrationAsPointPair</a>&lt;T&gt; &gt;&amp; EvalPointPairPenetrations </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>context</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Evaluates all point pairs of contact for a given state of the model stored in <code>context</code>. </p>
-<p>Each entry in the returned vector corresponds to a single point pair corresponding to two interpenetrating bodies A and B. The size of the returned vector corresponds to the total number of contact penetration pairs. If no geometry was registered, the output vector is empty. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_geometry">Geometry</a> for <a class="el" href="namespacedrake_1_1geometry.html">geometry</a> registration. </dd>
-<dd>
-PenetrationAsPointPair for further details on the returned data. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>We anticipate that after the deprecation date, MultibodyPlant will no  longer provide public access access to its cached contact information.  To inquire about collisions, ask the SceneGraph's QueryObject directly. <br />
- This will be removed from Drake on or after 2024-10-01.</dd></dl>
-
-</div>
-</div>
 <a id="ab138232d432d7a1e454ecb479bbfd81d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab138232d432d7a1e454ecb479bbfd81d">&#9670;&nbsp;</a></span>EvalSceneGraphInspector()</h2>
 
@@ -4958,27 +4921,6 @@ It is required to connect this port for PD controlled model instances. </dd></dl
 </div><div class="memdoc">
 
 <p>Returns the output port of frames' poses to communicate with a SceneGraph. </p>
-
-</div>
-</div>
-<a id="a1f20f6e2e2de42a5225e86baff2ca0e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f20f6e2e2de42a5225e86baff2ca0e5">&#9670;&nbsp;</a></span>get_geometry_poses_output_port()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt;T&gt;&amp; get_geometry_poses_output_port </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>Use get_geometry_pose_output_port() instead (note no 's' plural).  If you were only using this port to connect it to a SceneGraph,  instead should you should use the AddMultibodyPlantSceneGraph() or  AddMultibodyPlant(MultibodyPlantConfig) to add the plant and scene  graph to a DiagramBuilder, already wired up correctly. <br />
- This will be removed from Drake on or after 2024-10-01.</dd></dl>
 
 </div>
 </div>
@@ -9312,7 +9254,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
  This will be removed from Drake on or after 2024-04-01.</dd></dl>
 
 </div>

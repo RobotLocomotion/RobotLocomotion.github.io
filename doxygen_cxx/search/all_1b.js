@@ -168,6 +168,7 @@ var searchData=
   ['_7emeshcatposesliders',['~MeshcatPoseSliders',['../classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a87b644f91479935ab6f674550c53f1dc',1,'drake::visualization::MeshcatPoseSliders']]],
   ['_7emeshsource',['~MeshSource',['../classdrake_1_1geometry_1_1_mesh_source.html#aec2dc22b2946fc94708d1f162a17d51c',1,'drake::geometry::MeshSource']]],
   ['_7emidpointintegrationconstraint',['~MidPointIntegrationConstraint',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a63969a3ff95f039bca49c87905e30bd1',1,'drake::planning::trajectory_optimization::MidPointIntegrationConstraint']]],
+  ['_7emincliquecoversolverbase',['~MinCliqueCoverSolverBase',['../classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a80dacd714707bd5ee7907e8050dd0591',1,'drake::planning::graph_algorithms::MinCliqueCoverSolverBase']]],
   ['_7eminimumdistancelowerboundconstraint',['~MinimumDistanceLowerBoundConstraint',['../classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint.html#aa01b1681d4b631e438e240fc32d78a32',1,'drake::multibody::MinimumDistanceLowerBoundConstraint']]],
   ['_7eminimumdistanceupperboundconstraint',['~MinimumDistanceUpperBoundConstraint',['../classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#a20562b686f3edb1cc56056f761655acf',1,'drake::multibody::MinimumDistanceUpperBoundConstraint']]],
   ['_7eminimumvaluelowerboundconstraint',['~MinimumValueLowerBoundConstraint',['../classdrake_1_1solvers_1_1_minimum_value_lower_bound_constraint.html#a9ce52600486d65b1bb119694bcf13911',1,'drake::solvers::MinimumValueLowerBoundConstraint']]],
@@ -311,6 +312,7 @@ var searchData=
   ['_7evelocityimpliciteulerintegrator',['~VelocityImplicitEulerIntegrator',['../classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a6cfdb1188fe401e8397af9ed6e80b309',1,'drake::systems::VelocityImplicitEulerIntegrator']]],
   ['_7evertex',['~Vertex',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#aecaad09aa3b66b2a436c6afeabdc49e7',1,'drake::geometry::optimization::GraphOfConvexSets::Vertex']]],
   ['_7evpolytope',['~VPolytope',['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#af39035d161c3b21e796ed5ed8ee960da',1,'drake::geometry::optimization::VPolytope']]],
+  ['_7evtkgltfuriloader',['~VtkGltfUriLoader',['../classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_vtk_gltf_uri_loader.html#ae719e13c3e8319be7d0de90f0183d779',1,'drake::geometry::DRAKE_NO_EXPORT::VtkGltfUriLoader']]],
   ['_7eweldjoint',['~WeldJoint',['../classdrake_1_1multibody_1_1_weld_joint.html#a40a0f999d2cc42a0088088ba65484f2c',1,'drake::multibody::WeldJoint']]],
   ['_7ewing',['~Wing',['../classdrake_1_1multibody_1_1_wing.html#a41b07ba63cfdc3c42033697bad5e149b',1,'drake::multibody::Wing']]],
   ['_7ezeroorderhold',['~ZeroOrderHold',['../classdrake_1_1systems_1_1_zero_order_hold.html#a709c0abe05f56d7498c71bbcb4279b97',1,'drake::systems::ZeroOrderHold']]]

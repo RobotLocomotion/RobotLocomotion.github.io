@@ -65,6 +65,8 @@ var searchData=
   ['meshcat_5fvisualizer_2eh',['meshcat_visualizer.h',['../meshcat__visualizer_8h.html',1,'']]],
   ['meshcat_5fvisualizer_5fparams_2eh',['meshcat_visualizer_params.h',['../meshcat__visualizer__params_8h.html',1,'']]],
   ['meshing_5futilities_2eh',['meshing_utilities.h',['../meshing__utilities_8h.html',1,'']]],
+  ['min_5fclique_5fcover_5fsolver_5fbase_2eh',['min_clique_cover_solver_base.h',['../min__clique__cover__solver__base_8h.html',1,'']]],
+  ['min_5fclique_5fcover_5fsolver_5fvia_5fgreedy_2eh',['min_clique_cover_solver_via_greedy.h',['../min__clique__cover__solver__via__greedy_8h.html',1,'']]],
   ['minimum_5fdegree_5fordering_2eh',['minimum_degree_ordering.h',['../minimum__degree__ordering_8h.html',1,'']]],
   ['minimum_5fdistance_5flower_5fbound_5fconstraint_2eh',['minimum_distance_lower_bound_constraint.h',['../minimum__distance__lower__bound__constraint_8h.html',1,'']]],
   ['minimum_5fdistance_5fupper_5fbound_5fconstraint_2eh',['minimum_distance_upper_bound_constraint.h',['../minimum__distance__upper__bound__constraint_8h.html',1,'']]],

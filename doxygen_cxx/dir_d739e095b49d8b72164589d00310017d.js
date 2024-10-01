@@ -97,5 +97,8 @@ var dir_d739e095b49d8b72164589d00310017d =
       [ "SceneGraphInspector", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", "classdrake_1_1geometry_1_1_scene_graph_inspector" ]
     ] ],
     [ "shape_specification.h", "shape__specification_8h.html", "shape__specification_8h" ],
-    [ "utilities.h", "utilities_8h.html", null ]
+    [ "utilities.h", "utilities_8h.html", null ],
+    [ "vtk_gltf_uri_loader.h", "vtk__gltf__uri__loader_8h.html", [
+      [ "VtkGltfUriLoader", "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_vtk_gltf_uri_loader.html", "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_vtk_gltf_uri_loader" ]
+    ] ]
 ];

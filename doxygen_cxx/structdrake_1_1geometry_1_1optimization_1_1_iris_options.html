@@ -207,6 +207,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0e0bd9a6fa7b0b7a30e8330f44812655"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0e0bd9a6fa7b0b7a30e8330f44812655">bounding_region</a> {}</td></tr>
 <tr class="memdesc:a0e0bd9a6fa7b0b7a30e8330f44812655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally allows the caller to restrict the space within which IRIS regions are allowed to grow.  <a href="#a0e0bd9a6fa7b0b7a30e8330f44812655">More...</a><br /></td></tr>
 <tr class="separator:a0e0bd9a6fa7b0b7a30e8330f44812655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7e372f75bda41909e27f92c1e7a7cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0c7e372f75bda41909e27f92c1e7a7cd">verify_domain_boundedness</a> {true}</td></tr>
+<tr class="memdesc:a0c7e372f75bda41909e27f92c1e7a7cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the user knows the intersection of bounding_region and the domain (for IRIS) or plant joint limits (for IrisInConfigurationSpace) is bounded, setting this flag to <code>false</code> will skip the boundedness check that IRIS and IrisInConfigurationSpace perform (leading to a small speedup, as checking boundedness requires solving optimization problems).  <a href="#a0c7e372f75bda41909e27f92c1e7a7cd">More...</a><br /></td></tr>
+<tr class="separator:a0c7e372f75bda41909e27f92c1e7a7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafcf4ea1cbea01d087cc559402acddf2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2">prog_with_additional_constraints</a> {}</td></tr>
 <tr class="memdesc:aafcf4ea1cbea01d087cc559402acddf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default, IRIS in configuration space certifies regions for collision avoidance constraints and joint limits.  <a href="#aafcf4ea1cbea01d087cc559402acddf2">More...</a><br /></td></tr>
 <tr class="separator:aafcf4ea1cbea01d087cc559402acddf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -539,6 +542,23 @@ Public Attributes</h2></td></tr>
 
 <p>IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this threshold. </p>
 <p>This termination condition can be disabled by setting to a negative value. </p>
+
+</div>
+</div>
+<a id="a0c7e372f75bda41909e27f92c1e7a7cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c7e372f75bda41909e27f92c1e7a7cd">&#9670;&nbsp;</a></span>verify_domain_boundedness</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool verify_domain_boundedness {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If the user knows the intersection of bounding_region and the domain (for IRIS) or plant joint limits (for IrisInConfigurationSpace) is bounded, setting this flag to <code>false</code> will skip the boundedness check that IRIS and IrisInConfigurationSpace perform (leading to a small speedup, as checking boundedness requires solving optimization problems). </p>
+<p>If the intersection turns out to be unbounded, this will lead to undefined behavior. </p>
 
 </div>
 </div>

@@ -18597,25 +18597,8 @@ for the list of instantiations.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.SpatialInertia) -&gt; None</p></li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>The default constructor is deprecated. If you really want NaNs,
-then call the SpatialInertia&lt;T&gt;::NaN() factory function. If you
-were only calling this constructor as part of adding a RigidBody
-to MultibodyPlant, then instead you should omit the SpatialInertia
-argument from MultibodyPlant::AddRigidBody(); it now defaults to
-zero. This will be removed from Drake on or after 2024-10-01.</p>
-</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.SpatialInertia, mass: float, p_PScm_E: numpy.ndarray[numpy.float64[3, 1]], G_SP_E: pydrake.multibody.tree.UnitInertia, skip_validity_check: bool = False) -&gt; None</p></li>
-</ol>
-<p>Constructs a spatial inertia for a physical body or composite body S
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia" title="pydrake.multibody.tree.SpatialInertia"><span class="pre">pydrake.multibody.tree.SpatialInertia</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_PScm_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G_SP_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia" title="pydrake.multibody.tree.UnitInertia"><span class="pre">pydrake.multibody.tree.UnitInertia</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_validity_check</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a spatial inertia for a physical body or composite body S
 about a point P from a given mass, center of mass and rotational
 inertia. The center of mass is specified by the position vector
 <code class="docutils literal notranslate"><span class="pre">p_PScm_E</span></code> from point P to the center of mass point <code class="docutils literal notranslate"><span class="pre">Scm</span></code>,
@@ -19524,25 +19507,8 @@ MultibodyPlant::CalcSpatialInertia().</p>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.__init__">
-<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.SpatialInertia_[AutoDiffXd]) -&gt; None</p></li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>The default constructor is deprecated. If you really want NaNs,
-then call the SpatialInertia&lt;T&gt;::NaN() factory function. If you
-were only calling this constructor as part of adding a RigidBody
-to MultibodyPlant, then instead you should omit the SpatialInertia
-argument from MultibodyPlant::AddRigidBody(); it now defaults to
-zero. This will be removed from Drake on or after 2024-10-01.</p>
-</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.SpatialInertia_[AutoDiffXd], mass: pydrake.autodiffutils.AutoDiffXd, p_PScm_E: numpy.ndarray[object[3, 1]], G_SP_E: pydrake.multibody.tree.UnitInertia_[AutoDiffXd], skip_validity_check: bool = False) -&gt; None</p></li>
-</ol>
-<p>Constructs a spatial inertia for a physical body or composite body S
+<span id="pydrake.multibody.tree.SpatialInertia_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_PScm_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G_SP_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_validity_check</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a spatial inertia for a physical body or composite body S
 about a point P from a given mass, center of mass and rotational
 inertia. The center of mass is specified by the position vector
 <code class="docutils literal notranslate"><span class="pre">p_PScm_E</span></code> from point P to the center of mass point <code class="docutils literal notranslate"><span class="pre">Scm</span></code>,
@@ -20445,25 +20411,8 @@ MultibodyPlant::CalcSpatialInertia().</p>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.SpatialInertia_-Expression-.__init__">
-<span id="pydrake.multibody.tree.SpatialInertia_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.tree.SpatialInertia_[Expression]) -&gt; None</p></li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>The default constructor is deprecated. If you really want NaNs,
-then call the SpatialInertia&lt;T&gt;::NaN() factory function. If you
-were only calling this constructor as part of adding a RigidBody
-to MultibodyPlant, then instead you should omit the SpatialInertia
-argument from MultibodyPlant::AddRigidBody(); it now defaults to
-zero. This will be removed from Drake on or after 2024-10-01.</p>
-</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.multibody.tree.SpatialInertia_[Expression], mass: pydrake.symbolic.Expression, p_PScm_E: numpy.ndarray[object[3, 1]], G_SP_E: pydrake.multibody.tree.UnitInertia_[Expression], skip_validity_check: bool = False) -&gt; None</p></li>
-</ol>
-<p>Constructs a spatial inertia for a physical body or composite body S
+<span id="pydrake.multibody.tree.SpatialInertia_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.SpatialInertia_" title="pydrake.multibody.tree.SpatialInertia_"><span class="pre">pydrake.multibody.tree.SpatialInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_PScm_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G_SP_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_validity_check</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.SpatialInertia_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a spatial inertia for a physical body or composite body S
 about a point P from a given mass, center of mass and rotational
 inertia. The center of mass is specified by the position vector
 <code class="docutils literal notranslate"><span class="pre">p_PScm_E</span></code> from point P to the center of mass point <code class="docutils literal notranslate"><span class="pre">Scm</span></code>,

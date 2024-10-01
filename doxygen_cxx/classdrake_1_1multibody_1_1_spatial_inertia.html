@@ -212,9 +212,6 @@ To create spatial inertia for a set of bodies, see <a class="el" href="classdrak
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6e9c573b8e817fdaccbbcbdd29810ae7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a6e9c573b8e817fdaccbbcbdd29810ae7">SpatialInertia</a> ()=default</td></tr>
-<tr class="memdesc:a6e9c573b8e817fdaccbbcbdd29810ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a6e9c573b8e817fdaccbbcbdd29810ae7">More...</a><br /></td></tr>
-<tr class="separator:a6e9c573b8e817fdaccbbcbdd29810ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d7aa4145ca54c5ab8e45728648f7c5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a6d7aa4145ca54c5ab8e45728648f7c5b">SpatialInertia</a> (const T &amp;mass, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PScm_E, const <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt; &amp;G_SP_E, const bool skip_validity_check=false)</td></tr>
 <tr class="memdesc:a6d7aa4145ca54c5ab8e45728648f7c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spatial inertia for a physical body or composite body S about a point P from a given mass, center of mass and rotational inertia.  <a href="#a6d7aa4145ca54c5ab8e45728648f7c5b">More...</a><br /></td></tr>
 <tr class="separator:a6d7aa4145ca54c5ab8e45728648f7c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -398,7 +395,7 @@ Related Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8f02d78a11a4fd918699c75b48573520"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f02d78a11a4fd918699c75b48573520">&#9670;&nbsp;</a></span>SpatialInertia() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f02d78a11a4fd918699c75b48573520">&#9670;&nbsp;</a></span>SpatialInertia() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -424,7 +421,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="a423681189f9dd1726b750876f67dafe9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a423681189f9dd1726b750876f67dafe9">&#9670;&nbsp;</a></span>SpatialInertia() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a423681189f9dd1726b750876f67dafe9">&#9670;&nbsp;</a></span>SpatialInertia() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,37 +446,8 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6e9c573b8e817fdaccbbcbdd29810ae7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e9c573b8e817fdaccbbcbdd29810ae7">&#9670;&nbsp;</a></span>SpatialInertia() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html">SpatialInertia</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd>The default constructor is deprecated. If you really want NaNs, then  call the SpatialInertia&lt;T&gt;::NaN() factory function. If you were only  calling this constructor as part of adding a RigidBody to  MultibodyPlant, then instead you should omit the SpatialInertia  argument from MultibodyPlant::AddRigidBody(); it now defaults to zero. <br />
- This will be removed from Drake on or after 2024-10-01.</dd></dl>
-
-</div>
-</div>
 <a id="a6d7aa4145ca54c5ab8e45728648f7c5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d7aa4145ca54c5ab8e45728648f7c5b">&#9670;&nbsp;</a></span>SpatialInertia() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d7aa4145ca54c5ab8e45728648f7c5b">&#9670;&nbsp;</a></span>SpatialInertia() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

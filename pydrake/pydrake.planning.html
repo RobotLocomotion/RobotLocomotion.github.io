@@ -2074,7 +2074,8 @@ e.g., a continuous revolute joint. This edge offset corresponds to
 the translation component of the affine map τ_uv in equation (11)
 of “Non-Euclidean Motion Planning with Graphs of
 Geodesically-Convex Sets”, and per the discussion in Subsection VI
-A, τ_uv has no rotation component.</p>
+A, τ_uv has no rotation component. If edge_offsets is nullptr, it
+will instead be computed automatically.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -2281,7 +2282,9 @@ along some dimension, due to, e.g., a continuous revolute joint.
 This edge offset corresponds to the translation component of the
 affine map τ_uv in equation (11) of “Non-Euclidean Motion Planning
 with Graphs of Geodesically-Convex Sets”, and per the discussion
-in Subsection VI A, τ_uv has no rotation component.</p>
+in Subsection VI A, τ_uv has no rotation component. If
+edge_offsets is nullptr, it will instead be computed
+automatically.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -3565,7 +3568,7 @@ the return of this function is the true maximum clique in the graph
 (which may take very long to compute), or only an approximate solution
 found via heuristics.</p>
 <p>This method throws if the adjacency matrix is not symmetric and may
-throw depending on the concrete implmementation of the solver.</p>
+throw depending on the concrete implementation of the solver.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">adjacency_matrix</span></code>:</dt><dd><p>a symmetric binary matrix encoding the edge relationship.</p>
 </dd>
@@ -3649,6 +3652,86 @@ those solvers if possible
 <dt class="sig sig-object py" id="pydrake.planning.MaxCliqueSolverViaMip.SetSolverOptions">
 <span class="sig-name descname"><span class="pre">SetSolverOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MaxCliqueSolverViaMip" title="pydrake.planning.MaxCliqueSolverViaMip"><span class="pre">pydrake.planning.MaxCliqueSolverViaMip</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.MaxCliqueSolverViaMip.SetSolverOptions" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.MinCliqueCoverSolverBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MinCliqueCoverSolverBase</span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverBase" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MinCliqueCoverSolverBase.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MinCliqueCoverSolverBase" title="pydrake.planning.MinCliqueCoverSolverBase"><span class="pre">pydrake.planning.MinCliqueCoverSolverBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverBase.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MinCliqueCoverSolverBase.SolveMinCliqueCover">
+<span class="sig-name descname"><span class="pre">SolveMinCliqueCover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MinCliqueCoverSolverBase" title="pydrake.planning.MinCliqueCoverSolverBase"><span class="pre">pydrake.planning.MinCliqueCoverSolverBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">adjacency_matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverBase.SolveMinCliqueCover" title="Permalink to this definition"></a></dt>
+<dd><p>Given the adjacency matrix of an undirected graph, finds a
+(potentially approximate) minimum clique cover of the graph. A clique
+is a collection of vertices in a graph such that each pair of vertices
+is connected by an edge (i.e. a fully connected subgraph). A clique
+cover is a collection of cliques where each vertex in the graph is in
+at least one of the cliques. This problem is known to be NP-complete,
+and so the concrete implementation of the solver determines whether
+the return of this function is the true minimum clique cover of the
+graph (which may take very long to compute), or only an approximate
+solution found via heuristics.</p>
+<p>This method throws if the adjacency matrix is not symmetric and may
+throw depending on the concrete implementation of the solver.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">adjacency_matrix</span></code>:</dt><dd><p>a symmetric binary matrix encoding the edge relationship.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">partition</span></code>:</dt><dd><p>If true, then every vertex is allowed to be covered exactly once.
+Otherwise, the same vertex may be covered multiple times.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A binary vector with the same indexing as the adjacency matrix,
+with true indicating membership in the clique.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The ith entry of the returned vector is a vector containing the
+indices of the ith clique.</p>
+</dd>
+</dl>
+<p>Note that this method is intentionally not-const because some solvers
+may use randomized algorithms.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.MinCliqueCoverSolverViaGreedy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">MinCliqueCoverSolverViaGreedy</span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverViaGreedy" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MinCliqueCoverSolverBase" title="pydrake.planning.MinCliqueCoverSolverBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.MinCliqueCoverSolverBase</span></code></a></p>
+<p>Approximately solves the min clique cover problem via a greedy
+heuristic.</p>
+<p>At each step, the largest clique found by the provided max clique
+solver is added to the clique cover. These vertices are then removed
+from graph and max clique is solved again. This loop continues until a
+clique is found which is smaller than the min clique size.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if min clique size &gt; 1, then this class will not strictly compute
+a clique cover since not all vertices will be covered.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MinCliqueCoverSolverViaGreedy.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MinCliqueCoverSolverViaGreedy" title="pydrake.planning.MinCliqueCoverSolverViaGreedy"><span class="pre">pydrake.planning.MinCliqueCoverSolverViaGreedy</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_clique_solver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MaxCliqueSolverBase" title="pydrake.planning.MaxCliqueSolverBase"><span class="pre">pydrake.planning.MaxCliqueSolverBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_clique_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverViaGreedy.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MinCliqueCoverSolverViaGreedy.get_min_clique_size">
+<span class="sig-name descname"><span class="pre">get_min_clique_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MinCliqueCoverSolverViaGreedy" title="pydrake.planning.MinCliqueCoverSolverViaGreedy"><span class="pre">pydrake.planning.MinCliqueCoverSolverViaGreedy</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverViaGreedy.get_min_clique_size" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.MinCliqueCoverSolverViaGreedy.set_min_clique_size">
+<span class="sig-name descname"><span class="pre">set_min_clique_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.MinCliqueCoverSolverViaGreedy" title="pydrake.planning.MinCliqueCoverSolverViaGreedy"><span class="pre">pydrake.planning.MinCliqueCoverSolverViaGreedy</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_clique_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.MinCliqueCoverSolverViaGreedy.set_min_clique_size" title="Permalink to this definition"></a></dt>
+<dd><p>Set the minimum clique size. Throws if this is less than 1.</p>
+<p>Parameter <code class="docutils literal notranslate"><span class="pre">min_clique_size</span></code>:</p>
+</dd></dl>
 
 </dd></dl>
 

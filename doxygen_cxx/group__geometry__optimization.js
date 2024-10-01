@@ -184,7 +184,6 @@ var group__geometry__optimization =
       [ "Edges", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ac4e8d040d8171719e0225a8067634429", null ],
       [ "Edges", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a22d9ed4306dc8b33178c4ba7255fbeca", null ],
       [ "GetGraphvizString", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a83e922bd80ce2192fb2cee1c9b92f63a", null ],
-      [ "GetGraphvizString", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a6fc8acedce1c59e14d44f19ce01fbfe8", null ],
       [ "GetSolutionPath", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ab615e29dafcd98a50d5b22314cfd9f3d", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5a86ee0b1b2dea70ae192ecb3acb9ca7", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a788cd0d235aa941ef4fa5c923ef9607b", null ],
@@ -300,7 +299,8 @@ var group__geometry__optimization =
       [ "solver_options", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a6c4438afbf2190941ebeae2f8e16dd11", null ],
       [ "starting_ellipse", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48", null ],
       [ "termination_func", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a087724eb9045117415e4d5a93db67ab1", null ],
-      [ "termination_threshold", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca", null ]
+      [ "termination_threshold", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca", null ],
+      [ "verify_domain_boundedness", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0c7e372f75bda41909e27f92c1e7a7cd", null ]
     ] ],
     [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", [
       [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#ac52e0c9482a129ef814ff2ab5e9b1607", null ],

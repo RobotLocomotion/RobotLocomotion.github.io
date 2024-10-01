@@ -27,6 +27,8 @@ var searchData=
   ['meshsource',['MeshSource',['../classdrake_1_1geometry_1_1_mesh_source.html',1,'drake::geometry']]],
   ['metadata',['Metadata',['../structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html',1,'drake::systems::sensors::ImageIo']]],
   ['midpointintegrationconstraint',['MidPointIntegrationConstraint',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html',1,'drake::planning::trajectory_optimization']]],
+  ['mincliquecoversolverbase',['MinCliqueCoverSolverBase',['../classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html',1,'drake::planning::graph_algorithms']]],
+  ['mincliquecoversolverviagreedy',['MinCliqueCoverSolverViaGreedy',['../classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html',1,'drake::planning::graph_algorithms']]],
   ['minimumdistancelowerboundconstraint',['MinimumDistanceLowerBoundConstraint',['../classdrake_1_1multibody_1_1_minimum_distance_lower_bound_constraint.html',1,'drake::multibody']]],
   ['minimumdistanceupperboundconstraint',['MinimumDistanceUpperBoundConstraint',['../classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html',1,'drake::multibody']]],
   ['minimumvaluelowerboundconstraint',['MinimumValueLowerBoundConstraint',['../classdrake_1_1solvers_1_1_minimum_value_lower_bound_constraint.html',1,'drake::solvers']]],

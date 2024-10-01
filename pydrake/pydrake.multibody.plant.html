@@ -4733,21 +4733,6 @@ SceneGraph.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_geometry_poses_output_port">
-<span class="sig-name descname"><span class="pre">get_geometry_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_geometry_poses_output_port" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use get_geometry_pose_output_port() instead (note no ‘s’ plural).
-If you were only using this port to connect it to a SceneGraph,
-instead should you should use the AddMultibodyPlantSceneGraph() or
-AddMultibodyPlant(MultibodyPlantConfig) to add the plant and scene
-graph to a DiagramBuilder, already wired up correctly. This will
-be removed from Drake on or after 2024-10-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_geometry_query_input_port">
 <span class="sig-name descname"><span class="pre">get_geometry_query_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_geometry_query_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the input port used to perform
@@ -10508,21 +10493,6 @@ SceneGraph.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_poses_output_port">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_geometry_poses_output_port"></span><span class="sig-name descname"><span class="pre">get_geometry_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_poses_output_port" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use get_geometry_pose_output_port() instead (note no ‘s’ plural).
-If you were only using this port to connect it to a SceneGraph,
-instead should you should use the AddMultibodyPlantSceneGraph() or
-AddMultibodyPlant(MultibodyPlantConfig) to add the plant and scene
-graph to a DiagramBuilder, already wired up correctly. This will
-be removed from Drake on or after 2024-10-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_query_input_port">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_geometry_query_input_port"></span><span class="sig-name descname"><span class="pre">get_geometry_query_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_geometry_query_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a constant reference to the input port used to perform
@@ -16236,21 +16206,6 @@ yet taken a step, the output value will be all zeros.</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_geometry_pose_output_port"></span><span class="sig-name descname"><span class="pre">get_geometry_pose_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_pose_output_port" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the output port of frames’ poses to communicate with a
 SceneGraph.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_poses_output_port">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_geometry_poses_output_port"></span><span class="sig-name descname"><span class="pre">get_geometry_poses_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_geometry_poses_output_port" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use get_geometry_pose_output_port() instead (note no ‘s’ plural).
-If you were only using this port to connect it to a SceneGraph,
-instead should you should use the AddMultibodyPlantSceneGraph() or
-AddMultibodyPlant(MultibodyPlantConfig) to add the plant and scene
-graph to a DiagramBuilder, already wired up correctly. This will
-be removed from Drake on or after 2024-10-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">

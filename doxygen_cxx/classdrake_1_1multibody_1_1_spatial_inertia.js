@@ -2,7 +2,6 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
 [
     [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a8f02d78a11a4fd918699c75b48573520", null ],
     [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a423681189f9dd1726b750876f67dafe9", null ],
-    [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a6e9c573b8e817fdaccbbcbdd29810ae7", null ],
     [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a6d7aa4145ca54c5ab8e45728648f7c5b", null ],
     [ "CalcComMoment", "classdrake_1_1multibody_1_1_spatial_inertia.html#a3a1c2e2b7b334839c460e022d4686f54", null ],
     [ "CalcMinimumPhysicalLength", "classdrake_1_1multibody_1_1_spatial_inertia.html#ac8e8046a1dd852107b5f6a213b0cf2c5", null ],
