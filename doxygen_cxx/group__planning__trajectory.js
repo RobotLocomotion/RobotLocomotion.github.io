@@ -16,7 +16,7 @@ var group__planning__trajectory =
       [ "CalcGridPoints", "classdrake_1_1multibody_1_1_toppra.html#ac05332bb6e89f996e9501a52af6e307f", null ],
       [ "operator=", "classdrake_1_1multibody_1_1_toppra.html#a57c0c591fef12ba0135b9576f4344974", null ],
       [ "operator=", "classdrake_1_1multibody_1_1_toppra.html#ab013d8e5872653e5d10eaae0f3daa3dc", null ],
-      [ "SolvePathParameterization", "classdrake_1_1multibody_1_1_toppra.html#a243a423bdac8eca7742c66d6a85960b1", null ]
+      [ "SolvePathParameterization", "classdrake_1_1multibody_1_1_toppra.html#a71ae71e801a2c27f272cf1493aaa82df", null ]
     ] ],
     [ "ZmpPlanner", "classdrake_1_1planning_1_1_zmp_planner.html", [
       [ "ZmpPlanner", "classdrake_1_1planning_1_1_zmp_planner.html#a3bcc365fc2bb05ffe3b2501e66794e73", null ],

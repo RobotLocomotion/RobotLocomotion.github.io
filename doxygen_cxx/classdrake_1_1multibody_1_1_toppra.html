@@ -181,9 +181,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac9fc9da3b84296fbc0292963ecffb699"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#ac9fc9da3b84296fbc0292963ecffb699">Toppra</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;path, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;gridpoints)</td></tr>
 <tr class="memdesc:ac9fc9da3b84296fbc0292963ecffb699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an inverse kinematics problem for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="#ac9fc9da3b84296fbc0292963ecffb699">More...</a><br /></td></tr>
 <tr class="separator:ac9fc9da3b84296fbc0292963ecffb699"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a243a423bdac8eca7742c66d6a85960b1"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a243a423bdac8eca7742c66d6a85960b1">SolvePathParameterization</a> ()</td></tr>
-<tr class="memdesc:a243a423bdac8eca7742c66d6a85960b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the TOPPRA optimization and returns the time optimized path parameterization s(t).  <a href="#a243a423bdac8eca7742c66d6a85960b1">More...</a><br /></td></tr>
-<tr class="separator:a243a423bdac8eca7742c66d6a85960b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ae71e801a2c27f272cf1493aaa82df"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#a71ae71e801a2c27f272cf1493aaa82df">SolvePathParameterization</a> (<a class="el" href="classdouble.html">double</a> s_dot_start=0, <a class="el" href="classdouble.html">double</a> s_dot_end=0)</td></tr>
+<tr class="memdesc:a71ae71e801a2c27f272cf1493aaa82df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the TOPPRA optimization and returns the time optimized path parameterization s(t).  <a href="#a71ae71e801a2c27f272cf1493aaa82df">More...</a><br /></td></tr>
+<tr class="separator:a71ae71e801a2c27f272cf1493aaa82df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6404ed212fab2af0bad98457df07d16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html#aa6404ed212fab2af0bad98457df07d16">AddJointVelocityLimit</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lower_limit, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;upper_limit)</td></tr>
 <tr class="memdesc:aa6404ed212fab2af0bad98457df07d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a velocity limit to all the degrees of freedom in the plant.  <a href="#aa6404ed212fab2af0bad98457df07d16">More...</a><br /></td></tr>
 <tr class="separator:aa6404ed212fab2af0bad98457df07d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -804,8 +804,8 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
 
 </div>
 </div>
-<a id="a243a423bdac8eca7742c66d6a85960b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a243a423bdac8eca7742c66d6a85960b1">&#9670;&nbsp;</a></span>SolvePathParameterization()</h2>
+<a id="a71ae71e801a2c27f272cf1493aaa82df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ae71e801a2c27f272cf1493aaa82df">&#9670;&nbsp;</a></span>SolvePathParameterization()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -813,14 +813,31 @@ The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reac
         <tr>
           <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; SolvePathParameterization </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>s_dot_start</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>s_dot_end</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Solves the TOPPRA optimization and returns the time optimized path parameterization s(t). </p>
-<p>This can be used with the original path q(s) to generate a time parameterized trajectory. The path parameterization has the same start time as the original path's starting break. </p>
+<p>This can be used with the original path q(s) to generate a time parameterized trajectory. The path parameterization has the same start time as the original path's starting break. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s_dot_start</td><td>ṡ(0). The default value is zero (trajectory starts at zero velocity). </td></tr>
+    <tr><td class="paramname">s_dot_end</td><td>ṡ(T), where T is the end break of the path. The default value is zero (trajectory ends at zero velocity). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

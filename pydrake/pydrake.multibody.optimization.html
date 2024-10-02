@@ -850,11 +850,19 @@ path.start_time() and path.end_time().</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.SolvePathParameterization">
-<span class="sig-name descname"><span class="pre">SolvePathParameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.Toppra" title="pydrake.multibody.optimization.Toppra"><span class="pre">pydrake.multibody.optimization.Toppra</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial" title="pydrake.trajectories.PiecewisePolynomial"><span class="pre">pydrake.trajectories.PiecewisePolynomial</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.SolvePathParameterization" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">SolvePathParameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.Toppra" title="pydrake.multibody.optimization.Toppra"><span class="pre">pydrake.multibody.optimization.Toppra</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_dot_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_dot_end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial" title="pydrake.trajectories.PiecewisePolynomial"><span class="pre">pydrake.trajectories.PiecewisePolynomial</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.SolvePathParameterization" title="Permalink to this definition"></a></dt>
 <dd><p>Solves the TOPPRA optimization and returns the time optimized path
 parameterization s(t). This can be used with the original path q(s) to
 generate a time parameterized trajectory. The path parameterization
 has the same start time as the original path’s starting break.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">s_dot_start</span></code>:</dt><dd><p>ṡ(0). The default value is zero (trajectory starts at zero
+velocity).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">s_dot_end</span></code>:</dt><dd><p>ṡ(T), where T is the end break of the path. The default value is
+zero (trajectory ends at zero velocity).</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
