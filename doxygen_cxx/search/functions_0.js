@@ -47,7 +47,7 @@ var searchData=
   ['addaccelerationbounds',['AddAccelerationBounds',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a712d19c4728dc4e70244c8c192377032',1,'drake::planning::trajectory_optimization::KinematicTrajectoryOptimization']]],
   ['addanglebetweenvectorsconstraint',['AddAngleBetweenVectorsConstraint',['../classdrake_1_1multibody_1_1_inverse_kinematics.html#ada2be002de90894ce104c602cf7273da',1,'drake::multibody::InverseKinematics']]],
   ['addanglebetweenvectorscost',['AddAngleBetweenVectorsCost',['../classdrake_1_1multibody_1_1_inverse_kinematics.html#a3f807d94ba2f45f3e53d6cb80f5de97e',1,'drake::multibody::InverseKinematics']]],
-  ['addballconstraint',['AddBallConstraint',['../classdrake_1_1multibody_1_1_multibody_plant.html#a96297e1da044e189d5c339c8683e091e',1,'drake::multibody::MultibodyPlant']]],
+  ['addballconstraint',['AddBallConstraint',['../classdrake_1_1multibody_1_1_multibody_plant.html#a4667f3ff4e3ed344080b8ae16ace4ff5',1,'drake::multibody::MultibodyPlant']]],
   ['addballplatebodies',['AddBallPlateBodies',['../namespacedrake_1_1examples_1_1ball__plate.html#a0061409fa0e55bf3724f4267240ef6ec',1,'drake::examples::ball_plate']]],
   ['addbilinearproductmccormickenvelopemultiplechoice',['AddBilinearProductMcCormickEnvelopeMultipleChoice',['../namespacedrake_1_1solvers.html#a81f7d44186352e1090de1343d468cad2',1,'drake::solvers']]],
   ['addbilinearproductmccormickenvelopesos2',['AddBilinearProductMcCormickEnvelopeSos2',['../namespacedrake_1_1solvers.html#a1c2dee1da65ed555024f9d2f7ba82141',1,'drake::solvers']]],
