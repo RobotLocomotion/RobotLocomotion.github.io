@@ -200,6 +200,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a152cd9dac97b61e35faa07fd4f1d2472"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a152cd9dac97b61e35faa07fd4f1d2472">MinimumUniformScalingToTouch</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;other) const</td></tr>
 <tr class="memdesc:a152cd9dac97b61e35faa07fd4f1d2472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the smallest uniform scaling of this ellipsoid for which it still intersects <code>other</code>.  <a href="#a152cd9dac97b61e35faa07fd4f1d2472">More...</a><br /></td></tr>
 <tr class="separator:a152cd9dac97b61e35faa07fd4f1d2472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae50b295015eb16d78a1c75b55847aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a2ae50b295015eb16d78a1c75b55847aa">Scale</a> (<a class="el" href="classdouble.html">double</a> scale) const</td></tr>
+<tr class="memdesc:a2ae50b295015eb16d78a1c75b55847aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Results a new <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> that is a scaled version of <code>this</code> about the center.  <a href="#a2ae50b295015eb16d78a1c75b55847aa">More...</a><br /></td></tr>
+<tr class="separator:a2ae50b295015eb16d78a1c75b55847aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
 <tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
@@ -798,6 +801,27 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ae50b295015eb16d78a1c75b55847aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae50b295015eb16d78a1c75b55847aa">&#9670;&nbsp;</a></span>Scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a> Scale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>scale</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Results a new <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> that is a scaled version of <code>this</code> about the center. </p>
+<p>Any point on the boundary of the ellipsoid, x, is now translated to a new point, x*, such that ||x* - center|| = ||x - center|| * pow(scale, 1.0/ambient_dimension()). The volume of the resulting shape is scaled up by 'scale'. </p><dl class="section pre"><dt>Precondition</dt><dd><code>scale</code> &gt; 0. </dd></dl>
 
 </div>
 </div>

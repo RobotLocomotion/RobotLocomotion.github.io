@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"solver__options_8h.html":[4,0,0,11,56],
+"solver__options_8h.html#a16445fc3b260d8c58ea9082a3594f85f":[4,0,0,11,56,3],
 "solver__options_8h.html#ad58cede9876421e050ac44deee7804ff":[4,0,0,11,56,2],
 "solver__type_8h.html":[4,0,0,11,57],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ec":[4,0,0,11,57,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX60 =
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a5d0e7d91df6b1a261375b231fc678acd":[3,0,0,3,0,10,2],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a99f66380688774b2de4d3fc48d6f1213":[3,0,0,3,0,10,4],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,0,10,1],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aed7f375ae98cea9475fefc18eac57e2e":[3,0,0,3,0,10,5],
-"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html":[3,0,0,3,0,15],
-"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#a11a30e11b3a51224cdbcb61741681e36":[3,0,0,3,0,15,2]
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aed7f375ae98cea9475fefc18eac57e2e":[3,0,0,3,0,10,5]
 };

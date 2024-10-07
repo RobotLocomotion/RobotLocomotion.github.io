@@ -1,5 +1,7 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1planning_1_1_collision_checker_context.html":[1,4,2,2,2],
+"classdrake_1_1planning_1_1_collision_checker_context.html#a130213e985622308e422772f75461973":[1,4,2,2,2,7],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a1e7d2a81568c26350b120a592e55e174":[1,4,2,2,2,13],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a46e2ea7dcce7c4029de4eb1dda4d547d":[1,4,2,2,2,14],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a6a64fc87cab6f3a1e3e9a1a0bfceb6c4":[1,4,2,2,2,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a9e725d3d3b1c11c6760e99faeaa0aa35":[3,0,0,10,2,3,29],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aab2a40c54ac922ec7bbc12641dadf08a":[3,0,0,10,2,3,7],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[3,0,0,10,2,3,25],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ac7f436a97eef7126a7cd5136848ff459":[3,0,0,10,2,3,31],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ad515c3a3a5a3ad8e6f2ad33059021f48":[3,0,0,10,2,3,4],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ae8e736f8d73a8dec8b0f3b653f5f0145":[3,0,0,10,2,3,21]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ac7f436a97eef7126a7cd5136848ff459":[3,0,0,10,2,3,31]
 };

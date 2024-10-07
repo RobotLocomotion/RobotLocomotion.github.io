@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1visualization_1_1_colorize_depth_image.html#aafb8971762a28257598a30f08031b53e":[1,2,11,4,1],
+"classdrake_1_1visualization_1_1_colorize_depth_image.html#ab182668c7189b0a48787d990b1773aa0":[1,2,11,4,5],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#accd5e33fc91c644a938d014c26026f78":[1,2,11,4,4],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#ae35d904a52a563fef78643d4e612d2fd":[1,2,11,4,3],
 "classdrake_1_1visualization_1_1_colorize_label_image.html":[1,2,11,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "cspace__free__polytope__base_8h.html":[4,0,0,4,1,9],
 "cspace__free__structs_8h.html":[4,0,0,4,1,10],
 "cspace__separating__plane_8h.html":[4,0,0,4,1,11],
-"cspace__separating__plane_8h.html#a0a6bfeb13bf4fc1924f61f81051d7561":[4,0,0,4,1,11,2],
-"cspace__separating__plane_8h.html#a6d1ae826ab17a7ccd2b08fab3222813d":[4,0,0,4,1,11,4],
-"cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089":[4,0,0,4,1,11,1]
+"cspace__separating__plane_8h.html#a0a6bfeb13bf4fc1924f61f81051d7561":[4,0,0,4,1,11,2]
 };

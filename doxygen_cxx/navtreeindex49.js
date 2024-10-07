@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"cspace__separating__plane_8h.html#a6d1ae826ab17a7ccd2b08fab3222813d":[4,0,0,4,1,11,4],
+"cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089":[4,0,0,4,1,11,1],
 "cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927":[4,0,0,4,1,11,1,0],
 "cspace__separating__plane_8h.html#ac176296e2c3b79a9f480c7a38b0842b0":[4,0,0,4,1,11,3],
 "cubic__scalar__system_8h.html":[4,0,0,12,0,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html":[4,0,0,4,2],
 "direct__collocation_8h.html":[4,0,0,10,4,0],
 "direct__collocation_8h.html#adbb6bc996413925c93dca6d2f5e2bb3d":[4,0,0,10,4,0,0],
-"direct__transcription_8h.html":[4,0,0,10,4,1],
-"dirichlet__boundary__condition_8h.html":[4,0,0,8,2,8],
-"dirichlet__boundary__condition_8h.html#a30f7635fdfd5c32323992a6ae496d5ca":[4,0,0,8,2,8,0]
+"direct__transcription_8h.html":[4,0,0,10,4,1]
 };

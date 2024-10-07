@@ -1,5 +1,7 @@
 var NAVTREEINDEX66 =
 {
+"structdrake_1_1visualization_1_1_visualization_config.html#a2c434dc8a30fc66fa14527eca76f38b5":[3,0,0,18,5,12],
+"structdrake_1_1visualization_1_1_visualization_config.html#a324b46940b15edda09af1d2d82f5125e":[3,0,0,18,5,6],
 "structdrake_1_1visualization_1_1_visualization_config.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,18,5,11],
 "structdrake_1_1visualization_1_1_visualization_config.html#a5d44e8cac1128d4f529473b3cd0526cf":[3,0,0,18,5,4],
 "structdrake_1_1visualization_1_1_visualization_config.html#a6cc253079efa6db9739c1cea2ded8862":[3,0,0,18,5,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX66 =
 "transform_8h.html":[4,0,0,1,2,2],
 "tree__py_8h.html":[4,0,0,0,0,6,1],
 "triangle__quadrature_8h.html":[4,0,0,8,14,1],
-"triangle__quadrature__rule_8h.html":[4,0,0,8,14,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,59],
-"triangle__surface__mesh_8h.html#a1b6e179f892df67543be3028eae06fb9":[4,0,0,4,2,59,3]
+"triangle__quadrature__rule_8h.html":[4,0,0,8,14,2]
 };

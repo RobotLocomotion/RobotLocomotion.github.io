@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"group__planning__kinematics.html#ga6e3a66e37411b9d8358efc00ec510a33":[1,4,2,0,4],
+"group__planning__kinematics.html#ga7ab1374802ca61f12cd1447cc77a695f":[1,4,2,0,7],
 "group__planning__kinematics.html#gac15a6d2dc75b3cdcf0d54550894a97b3":[1,4,2,0,5],
 "group__planning__kinematics.html#gafd57fd1045276e8221f6f0a4fac36c82":[1,4,2,0,6],
 "group__planning__trajectory.html":[1,4,2,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "is__cloneable_8h.html#a158f68939b94f6c2c5ea353d652919da":[4,0,0,1,44,0],
 "is__dynamic__castable_8h.html":[4,0,0,1,4,6],
 "is__dynamic__castable_8h.html#a120160cb3dd89c5c7ae2543a3de457e8":[4,0,0,1,4,6,1],
-"is__dynamic__castable_8h.html#ab9decd0aba05654d37c4d7f3d82655c6":[4,0,0,1,4,6,0],
-"is__dynamic__castable_8h.html#ada20909a7ef482cf1fecbe11bbcf67d4":[4,0,0,1,4,6,2],
-"is__less__than__comparable_8h.html":[4,0,0,1,45]
+"is__dynamic__castable_8h.html#ab9decd0aba05654d37c4d7f3d82655c6":[4,0,0,1,4,6,0]
 };
