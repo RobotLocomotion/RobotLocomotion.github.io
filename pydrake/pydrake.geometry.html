@@ -6255,7 +6255,9 @@ Validation occurs where the MeshSource’s path is <em>used</em>.</p>
 <span class="sig-name descname"><span class="pre">description</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshSource" title="pydrake.geometry.MeshSource"><span class="pre">pydrake.geometry.MeshSource</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshSource.description" title="Permalink to this definition"></a></dt>
 <dd><p>Provides a source-agnostic description of the mesh. If is_path() is
 true, it is the path. If is_in_memory() is true, it is the
-filename_hint for the in-memory mesh file.</p>
+filename_hint for the in-memory mesh file. If the in-memory mesh file
+has an empty filename hint, the description will explicitly
+communicate that; the empty string will <em>never</em> be returned.</p>
 </dd></dl>
 
 <dl class="py method">
