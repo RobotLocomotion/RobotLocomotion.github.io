@@ -3,7 +3,7 @@ var classdrake_1_1trajectories_1_1_path_parameterized_trajectory =
     [ "PathParameterizedTrajectory", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a58fd4c3b54d164206645161e187bac25", null ],
     [ "PathParameterizedTrajectory", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a822fbbf4dc76a7f195ce7e2c06579afb", null ],
     [ "PathParameterizedTrajectory", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a1ffe41e9d9d04dc5cd0b0dd097435ebc", null ],
-    [ "~PathParameterizedTrajectory", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a6fbaa53b8b33b541654542c8e60c393e", null ],
+    [ "~PathParameterizedTrajectory", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#aab6d7d662da5e5b59a7302fd3be3cc0e", null ],
     [ "Clone", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a0d37069b2edc37d7662aa809b6070e4e", null ],
     [ "cols", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#adca8eca2ee324f57170dedfb4b06160b", null ],
     [ "end_time", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a641bfb18296d6976a000cf31c213dfdf", null ],

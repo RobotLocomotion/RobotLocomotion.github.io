@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"triangle__quadrature__rule_8h.html":[4,0,0,8,14,2],
 "triangle__surface__mesh_8h.html":[4,0,0,4,2,59],
 "triangle__surface__mesh_8h.html#a1b6e179f892df67543be3028eae06fb9":[4,0,0,4,2,59,3],
 "triangle__surface__mesh__field_8h.html":[4,0,0,4,2,60],

@@ -7,7 +7,7 @@ var classdrake_1_1trajectories_1_1_piecewise_polynomial =
     [ "PiecewisePolynomial", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a838cb1725eb9ba7896158fa9032ecdcc", null ],
     [ "PiecewisePolynomial", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9145f61319cb888cb71fc58cebc8fe38", null ],
     [ "PiecewisePolynomial", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a481736a225b93bd2343445f02c8eafec", null ],
-    [ "~PiecewisePolynomial", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5dc4d107b331f4e33f2893826c44be27", null ],
+    [ "~PiecewisePolynomial", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a646ed6ef900b960b978fcf9a4646700e", null ],
     [ "AppendCubicHermiteSegment", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac93013774f250920857c17c083350b57", null ],
     [ "AppendFirstOrderSegment", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a603a4e747fb099305c01f8762e8cff23", null ],
     [ "Block", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a45001b70f1a92e1d01778b69bb61adf3", null ],

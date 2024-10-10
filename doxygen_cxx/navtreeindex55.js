@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"is__dynamic__castable_8h.html#ab9decd0aba05654d37c4d7f3d82655c6":[4,0,0,1,4,6,0],
 "is__dynamic__castable_8h.html#ada20909a7ef482cf1fecbe11bbcf67d4":[4,0,0,1,4,6,2],
 "is__less__than__comparable_8h.html":[4,0,0,1,45],
 "is__memcpy__movable_8h.html":[4,0,0,1,4,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "meshcat__types__internal_8h.html":[4,0,0,4,40],
 "meshcat__types__internal_8h.html#afe8ec907f964a8766d5919a30f60cc57":[4,0,0,4,40,0],
 "meshcat__visualizer_8h.html":[4,0,0,4,41],
-"meshcat__visualizer_8h.html#acfc5928f9ddabb01ca8a0f2cdabbffa3":[4,0,0,4,41,2],
-"meshcat__visualizer_8h.html#af0be5cf994a2c139318cfaa61769db04":[4,0,0,4,41,3]
+"meshcat__visualizer_8h.html#acfc5928f9ddabb01ca8a0f2cdabbffa3":[4,0,0,4,41,2]
 };

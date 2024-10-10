@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"point__contact__data_8h.html":[4,0,0,8,1,16],
 "point__contact__data_8h.html#a931a41c68e1ab557471d5772d8c37822":[4,0,0,8,1,16,0],
 "point__contact__visualizer_8h.html":[4,0,0,8,6,4],
 "point__pair__contact__info_8h.html":[4,0,0,8,9,36],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "rigid__body_8h.html#a7f0a405774254de6133e7aa5d3960150":[4,0,0,8,13,42,3],
 "rigid__body_8h.html#ae79415446189cc2def19eed2a9713d66":[4,0,0,8,13,42,4],
 "rigid__body__on__compliant__ground_8h.html":[4,0,0,8,9,0,1],
-"rigid__transform_8h.html":[4,0,0,7,28],
-"rigid__transform_8h.html#aa7b1534bec3a3bcf63686133f87fb80e":[4,0,0,7,28,2]
+"rigid__transform_8h.html":[4,0,0,7,28]
 };

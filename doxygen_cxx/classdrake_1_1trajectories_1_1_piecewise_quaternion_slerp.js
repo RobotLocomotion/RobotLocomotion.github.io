@@ -7,7 +7,7 @@ var classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp =
     [ "PiecewiseQuaternionSlerp", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a320fae9dc5f8cb947997f9fdb205ec9c", null ],
     [ "PiecewiseQuaternionSlerp", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#add41849231c25a154e54d762f55c488c", null ],
     [ "PiecewiseQuaternionSlerp", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a24948d1f75d0b7f6118b535e655ada09", null ],
-    [ "~PiecewiseQuaternionSlerp", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a847303eb7ec2b752d7eee59d3f07ea0e", null ],
+    [ "~PiecewiseQuaternionSlerp", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a09c6db09339a9110dc729332f8c71949", null ],
     [ "angular_acceleration", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#af2a0658eb97b715c3c7066f1b24dd00b", null ],
     [ "angular_velocity", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a37135ec545f4025fc50aba0017d8566d", null ],
     [ "Append", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a4a93c5b33b420280509114f8a9ac86aa", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#a9444f7e141745392f1b3cd3c5667b41e":[1,4,2,2,1,0,0],
 "structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#ab92ffdff0f2d44b618e368df195d3185":[1,4,2,2,1,0,1],
 "structdrake_1_1planning_1_1_collision_checker_params.html":[1,4,2,2,3],
 "structdrake_1_1planning_1_1_collision_checker_params.html#a2c29aca77709a64d537303e01282e71f":[1,4,2,2,3,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html":[3,0,0,15,0,2],
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a01c236fa6e3060a824670259f007511a":[3,0,0,15,0,2,3],
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a56768addea5ab57a9e5d7e37e66460af":[3,0,0,15,0,2,6],
-"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a6c4438afbf2190941ebeae2f8e16dd11":[3,0,0,15,0,2,4],
-"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,15,0,2,1]
+"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a6c4438afbf2190941ebeae2f8e16dd11":[3,0,0,15,0,2,4]
 };

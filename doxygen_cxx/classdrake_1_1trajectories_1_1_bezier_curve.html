@@ -189,8 +189,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab46b3b961a9a0e0baff74272179e7744"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#ab46b3b961a9a0e0baff74272179e7744">BezierCurve</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#ae09cf8e8ad481f69f3cc1969ef491d60">start_time</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a641bfb18296d6976a000cf31c213dfdf">end_time</a>, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;<a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a07c5c6d262d1976bc5f747cbb00e26fb">control_points</a>)</td></tr>
 <tr class="memdesc:ab46b3b961a9a0e0baff74272179e7744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a Bézier curve over the interval t ∈ [<code>start_time</code>, <code>end_time</code>] with control points defined in the columns of <code>control_points</code>.  <a href="#ab46b3b961a9a0e0baff74272179e7744">More...</a><br /></td></tr>
 <tr class="separator:ab46b3b961a9a0e0baff74272179e7744"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab36054abe833a388fc4386dd782b8b5b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#ab36054abe833a388fc4386dd782b8b5b">~BezierCurve</a> ()=default</td></tr>
-<tr class="separator:ab36054abe833a388fc4386dd782b8b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d59ef210b6ca3228f9db0b66f47cb9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a6d59ef210b6ca3228f9db0b66f47cb9e">~BezierCurve</a> () override</td></tr>
+<tr class="separator:a6d59ef210b6ca3228f9db0b66f47cb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcc41a4e499b9ebcdc71c5e213c7c22f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#abcc41a4e499b9ebcdc71c5e213c7c22f">order</a> () const</td></tr>
 <tr class="memdesc:abcc41a4e499b9ebcdc71c5e213c7c22f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the order of the curve (1 for linear, 2 for quadratic, etc.).  <a href="#abcc41a4e499b9ebcdc71c5e213c7c22f">More...</a><br /></td></tr>
 <tr class="separator:abcc41a4e499b9ebcdc71c5e213c7c22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,8 +232,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac710ab3203207dbdd70dd26d52234258"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html">BezierCurve</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#ac710ab3203207dbdd70dd26d52234258">operator=</a> (<a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html">BezierCurve</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:ac710ab3203207dbdd70dd26d52234258"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1trajectories_1_1_trajectory')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory&lt; T &gt;</a></td></tr>
-<tr class="memitem:aec58a75947d06ba435adda6fd990678e inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#aec58a75947d06ba435adda6fd990678e">~Trajectory</a> ()=default</td></tr>
-<tr class="separator:aec58a75947d06ba435adda6fd990678e inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab987e6d84bde821d7e3c212c48b99ce7 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#ab987e6d84bde821d7e3c212c48b99ce7">~Trajectory</a> ()</td></tr>
+<tr class="separator:ab987e6d84bde821d7e3c212c48b99ce7 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7607cc5c56514557ed9441479ae70e71 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71">vector_values</a> (const std::vector&lt; T &gt; &amp;t) const</td></tr>
 <tr class="memdesc:a7607cc5c56514557ed9441479ae70e71 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0e99f338d336c4da23d6d773f4463a52">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71">More...</a><br /></td></tr>
 <tr class="separator:a7607cc5c56514557ed9441479ae70e71 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -374,8 +374,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab36054abe833a388fc4386dd782b8b5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab36054abe833a388fc4386dd782b8b5b">&#9670;&nbsp;</a></span>~BezierCurve()</h2>
+<a id="a6d59ef210b6ca3228f9db0b66f47cb9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d59ef210b6ca3228f9db0b66f47cb9e">&#9670;&nbsp;</a></span>~BezierCurve()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -384,7 +384,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~<a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html">BezierCurve</a> </td>
+          <td class="memname">~<a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html">BezierCurve</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -392,7 +392,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

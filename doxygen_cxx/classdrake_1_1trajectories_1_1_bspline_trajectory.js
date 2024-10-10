@@ -5,7 +5,7 @@ var classdrake_1_1trajectories_1_1_bspline_trajectory =
     [ "BsplineTrajectory", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7f8590290a608aae75e64e1037063a1e", null ],
     [ "BsplineTrajectory", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#acbd23484e581d27a21f383141f164980", null ],
     [ "BsplineTrajectory", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a3d0f848e23c2d6e2ff99c8838ad439f8", null ],
-    [ "~BsplineTrajectory", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a9066afc9f6c06932c20b1f9688523603", null ],
+    [ "~BsplineTrajectory", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a1d9f3ee959d2240b375c769ceffc7696", null ],
     [ "basis", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a576612a037dee8597b5975d3525b3a48", null ],
     [ "Clone", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a0d37069b2edc37d7662aa809b6070e4e", null ],
     [ "cols", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#adca8eca2ee324f57170dedfb4b06160b", null ],

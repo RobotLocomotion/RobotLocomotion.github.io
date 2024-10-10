@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aed7f375ae98cea9475fefc18eac57e2e":[3,0,0,3,0,10,5],
 "structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html":[3,0,0,3,0,15],
 "structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#a11a30e11b3a51224cdbcb61741681e36":[3,0,0,3,0,15,2],
 "structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,0,15,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1geometry_1_1_signed_distance_pair.html":[3,0,0,4,57],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#a01b0d3895f2cd2cbeed07c2b2af575e6":[3,0,0,4,57,4],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[3,0,0,4,57,6],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a26d83b56e8bc142afd669d7bf865b4cb":[3,0,0,4,57,7],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a3720ec8b826234c6e32a484ec2b23d43":[3,0,0,4,57,5]
+"structdrake_1_1geometry_1_1_signed_distance_pair.html#a26d83b56e8bc142afd669d7bf865b4cb":[3,0,0,4,57,7]
 };

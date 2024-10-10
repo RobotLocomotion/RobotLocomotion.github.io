@@ -4,6 +4,7 @@ var classdrake_1_1trajectories_1_1_piecewise_pose =
     [ "PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#aec3c151ab7b4b34d667c50ec9d229003", null ],
     [ "PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a3e8a6ff52ba38aeedc2104d69acb7057", null ],
     [ "PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#abe9bbc905bd05580ba6943a89d530b4b", null ],
+    [ "~PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a3a9502f64e801bd5f5199245f3b8880b", null ],
     [ "Clone", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a8743b4bccdaf5d24987b1f76403bbe41", null ],
     [ "cols", "classdrake_1_1trajectories_1_1_piecewise_pose.html#adca8eca2ee324f57170dedfb4b06160b", null ],
     [ "get_orientation_trajectory", "classdrake_1_1trajectories_1_1_piecewise_pose.html#ac80c5bfd4c7165e52988d167dc3f24dc", null ],
