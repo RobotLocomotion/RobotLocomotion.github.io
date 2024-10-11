@@ -1,5 +1,10 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a1f94d1c2b9f9f4bfba53ce45e3ec917e":[1,2,2,2,8],
+"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a2daeb6c0489e788aa3d6df8735ce9464":[1,2,2,2,7],
+"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a4e565ffad315e3a3537ead6663db6203":[1,2,2,2,11],
+"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a58a569e52bd3a03537d3326907f19880":[1,2,2,2,1],
+"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a60e25dc7600f5538ee43c0ae6025d162":[1,2,2,2,10],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a858610accf2d286848a06043538f3c94":[1,2,2,2,4],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#aa28328eb9d4bce20371ea403960122fb":[1,2,2,2,6],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#aa6d468524ab47bb2e702b6025140c701":[1,2,2,2,12],
@@ -244,10 +249,5 @@ var NAVTREEINDEX45 =
 "classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,15,8,2,14],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#a8fe9d55b577e541bc797898aa5b4966b":[3,0,0,15,8,2,18],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#a964ff3471229cb8acad1626f9a624ce1":[3,0,0,15,8,2,7],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#a99fe0b99c5ce38ad60c2c7888ba7faa8":[3,0,0,15,8,2,6],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#aa77585d95fbdf873db234e0ded69b82f":[3,0,0,15,8,2,2],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#aadcff61f41496c4d0e0c65c1a78d89ce":[3,0,0,15,8,2,4],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#ab48e9663fca0ae538bab834847951b52":[3,0,0,15,8,2,20],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#ab9a890cd251bb5486fa19e0967dad0da":[3,0,0,15,8,2,16],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#ac1883f8cb80e33376a3e1f2396e24036":[3,0,0,15,8,2,19]
+"classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#a99fe0b99c5ce38ad60c2c7888ba7faa8":[3,0,0,15,8,2,6]
 };

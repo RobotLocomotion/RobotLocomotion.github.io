@@ -6624,7 +6624,8 @@ y is sampled from u with a fixed period (and optional offset).</p>
 </pre></div>
 </div>
 </details><p>where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given
-value for abstract-valued ZeroOrderHold.</p>
+value for abstract-valued ZeroOrderHold. Use SetVectorState() to set
+xₙ in the context for vector-valued ZeroOrderHold.</p>
 <p>See discrete_systems “Discrete Systems” for general information about
 discrete systems in Drake, including how they interact with continuous
 systems.</p>
@@ -6679,6 +6680,14 @@ update occurs at t=offset_sec, which must be &gt;= 0.</p>
 <dd><p>Reports the period of this hold (in seconds).</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.ZeroOrderHold.SetVectorState">
+<span class="sig-name descname"><span class="pre">SetVectorState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.ZeroOrderHold" title="pydrake.systems.primitives.ZeroOrderHold"><span class="pre">pydrake.systems.primitives.ZeroOrderHold</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold.SetVectorState" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the value of the state by modifying it in the context. <code class="docutils literal notranslate"><span class="pre">value</span></code>
+must be a column vector of the appropriate size. This can only be used
+to initialize a vector-valued state.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py template">
@@ -6701,7 +6710,8 @@ y is sampled from u with a fixed period (and optional offset).</p>
 </pre></div>
 </div>
 </details><p>where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given
-value for abstract-valued ZeroOrderHold.</p>
+value for abstract-valued ZeroOrderHold. Use SetVectorState() to set
+xₙ in the context for vector-valued ZeroOrderHold.</p>
 <p>See discrete_systems “Discrete Systems” for general information about
 discrete systems in Drake, including how they interact with continuous
 systems.</p>
@@ -6751,6 +6761,14 @@ update occurs at t=offset_sec, which must be &gt;= 0.</p>
 <dd><p>Reports the period of this hold (in seconds).</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.ZeroOrderHold_-AutoDiffXd-.SetVectorState">
+<span id="pydrake.systems.primitives.ZeroOrderHold_[AutoDiffXd].SetVectorState"></span><span class="sig-name descname"><span class="pre">SetVectorState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.ZeroOrderHold_" title="pydrake.systems.primitives.ZeroOrderHold_"><span class="pre">pydrake.systems.primitives.ZeroOrderHold_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold_-AutoDiffXd-.SetVectorState" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the value of the state by modifying it in the context. <code class="docutils literal notranslate"><span class="pre">value</span></code>
+must be a column vector of the appropriate size. This can only be used
+to initialize a vector-valued state.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -6767,7 +6785,8 @@ y is sampled from u with a fixed period (and optional offset).</p>
 </pre></div>
 </div>
 </details><p>where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given
-value for abstract-valued ZeroOrderHold.</p>
+value for abstract-valued ZeroOrderHold. Use SetVectorState() to set
+xₙ in the context for vector-valued ZeroOrderHold.</p>
 <p>See discrete_systems “Discrete Systems” for general information about
 discrete systems in Drake, including how they interact with continuous
 systems.</p>
@@ -6815,6 +6834,14 @@ update occurs at t=offset_sec, which must be &gt;= 0.</p>
 <dt class="sig sig-object py" id="pydrake.systems.primitives.ZeroOrderHold_-Expression-.period">
 <span id="pydrake.systems.primitives.ZeroOrderHold_[Expression].period"></span><span class="sig-name descname"><span class="pre">period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.ZeroOrderHold_" title="pydrake.systems.primitives.ZeroOrderHold_"><span class="pre">pydrake.systems.primitives.ZeroOrderHold_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold_-Expression-.period" title="Permalink to this definition"></a></dt>
 <dd><p>Reports the period of this hold (in seconds).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.ZeroOrderHold_-Expression-.SetVectorState">
+<span id="pydrake.systems.primitives.ZeroOrderHold_[Expression].SetVectorState"></span><span class="sig-name descname"><span class="pre">SetVectorState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.ZeroOrderHold_" title="pydrake.systems.primitives.ZeroOrderHold_"><span class="pre">pydrake.systems.primitives.ZeroOrderHold_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.ZeroOrderHold_-Expression-.SetVectorState" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the value of the state by modifying it in the context. <code class="docutils literal notranslate"><span class="pre">value</span></code>
+must be a column vector of the appropriate size. This can only be used
+to initialize a vector-valued state.</p>
 </dd></dl>
 
 </dd></dl>

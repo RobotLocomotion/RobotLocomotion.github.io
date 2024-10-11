@@ -1,5 +1,10 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1visualization_1_1_colorize_depth_image.html#a240a15b8455ae37da1da08127a021e5e":[1,2,11,4,6],
+"classdrake_1_1visualization_1_1_colorize_depth_image.html#a2826b4556c9c5a9d785c0b2635cdf9f5":[1,2,11,4,7],
+"classdrake_1_1visualization_1_1_colorize_depth_image.html#a2d90d1217dd06d5701b6bab4ec2089c2":[1,2,11,4,9],
+"classdrake_1_1visualization_1_1_colorize_depth_image.html#a35453e37bd96fa7047e43de7b001b50d":[1,2,11,4,2],
+"classdrake_1_1visualization_1_1_colorize_depth_image.html#a464b23416d0f90503c911b811b45ca8e":[1,2,11,4,0],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#a5e7b31fe2330206fa59826b2e35083ce":[1,2,11,4,8],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#aafb8971762a28257598a30f08031b53e":[1,2,11,4,1],
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#ab182668c7189b0a48787d990b1773aa0":[1,2,11,4,5],
@@ -244,10 +249,5 @@ var NAVTREEINDEX48 =
 "csdp__solver_8h.html":[4,0,0,11,14],
 "csdp__solver__error__handling_8h.html":[4,0,0,11,15],
 "csdp__solver__internal_8h.html":[4,0,0,11,16],
-"cspace__free__box_8h.html":[4,0,0,4,1,6],
-"cspace__free__internal_8h.html":[4,0,0,4,1,7],
-"cspace__free__polytope_8h.html":[4,0,0,4,1,8],
-"cspace__free__polytope__base_8h.html":[4,0,0,4,1,9],
-"cspace__free__structs_8h.html":[4,0,0,4,1,10],
-"cspace__separating__plane_8h.html":[4,0,0,4,1,11]
+"cspace__free__box_8h.html":[4,0,0,4,1,6]
 };

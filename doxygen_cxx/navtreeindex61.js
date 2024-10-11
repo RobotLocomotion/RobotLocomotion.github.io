@@ -1,5 +1,11 @@
 var NAVTREEINDEX61 =
 {
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html":[3,0,0,3,0,10],
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,0,10,0],
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a574197988c880f73533a3b3c68fd0067":[3,0,0,3,0,10,3],
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a5d0e7d91df6b1a261375b231fc678acd":[3,0,0,3,0,10,2],
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a99f66380688774b2de4d3fc48d6f1213":[3,0,0,3,0,10,4],
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,0,10,1],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aed7f375ae98cea9475fefc18eac57e2e":[3,0,0,3,0,10,5],
 "structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html":[3,0,0,3,0,15],
 "structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#a11a30e11b3a51224cdbcb61741681e36":[3,0,0,3,0,15,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ab0128f21da79318f9d8a2da1d4d3a684":[3,0,0,4,50,3],
 "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ad84a8836b437a560f61b53e899a80fc4":[3,0,0,4,50,4],
 "structdrake_1_1geometry_1_1_scene_graph_config.html":[3,0,0,4,53],
-"structdrake_1_1geometry_1_1_scene_graph_config.html#a4d119daf7f94bcd7666aa36b8794fd64":[3,0,0,4,53,2],
-"structdrake_1_1geometry_1_1_scene_graph_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,53,0],
-"structdrake_1_1geometry_1_1_scene_graph_config.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[3,0,0,4,53,1],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html":[3,0,0,4,57],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a01b0d3895f2cd2cbeed07c2b2af575e6":[3,0,0,4,57,4],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[3,0,0,4,57,6],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a26d83b56e8bc142afd669d7bf865b4cb":[3,0,0,4,57,7]
+"structdrake_1_1geometry_1_1_scene_graph_config.html#a4d119daf7f94bcd7666aa36b8794fd64":[3,0,0,4,53,2]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a334620a6471bf6b3a9306a48d6fbe9e7":[3,0,0,3,4,1,13],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a4730f9914db4053666dc516680c2dd19":[3,0,0,3,4,1,12],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a4aeaefb9d242923d73e88fb296762cd2":[3,0,0,3,4,1,10],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,4,1,5],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a585394090529447729b0a6d3291a1c27":[3,0,0,3,4,1,11],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a5c5da61b5d48805df6b139b783b0ad7f":[3,0,0,3,4,1,16],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a72ec3a3e2e26d92d40a9f34be39908dd":[3,0,0,3,4,1,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a3f39695723c4f9a1324ed912228f501d":[3,0,0,3,11,3,13],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a3f7117f0a5e567992391c8b150241b5c":[3,0,0,3,11,3,1],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,11,3,6],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a696cdb96dfd46089153c469a09a82014":[3,0,0,3,11,3,20],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a6b3cd41728a7fb854f6bc59780f0e945":[3,0,0,3,11,3,4],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a6d217e40bd5df0b6cec00b7b7b07fee4":[3,0,0,3,11,3,22],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a73d268d1fe613ae0d996b6a9b4546fa8":[3,0,0,3,11,3,23],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a78f8a5009023d4e60d553f7ee14e4a8e":[3,0,0,3,11,3,17]
+"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a696cdb96dfd46089153c469a09a82014":[3,0,0,3,11,3,20]
 };

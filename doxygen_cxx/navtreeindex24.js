@@ -1,5 +1,9 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1planning_1_1_collision_checker.html#af8423473a4d7b2c2b37c7f9c8108c7a3":[1,4,2,2,1,85],
+"classdrake_1_1planning_1_1_collision_checker.html#af9df46cf7a999edaee7b5461a38a8e0d":[1,4,2,2,1,84],
+"classdrake_1_1planning_1_1_collision_checker.html#afa782a122b868c688b6c7bce870a7c93":[1,4,2,2,1,54],
+"classdrake_1_1planning_1_1_collision_checker.html#afef8ab83612978d5deeb7cd6fc413b80":[1,4,2,2,1,83],
 "classdrake_1_1planning_1_1_collision_checker_context.html":[1,4,2,2,2],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a130213e985622308e422772f75461973":[1,4,2,2,2,7],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a1e7d2a81568c26350b120a592e55e174":[1,4,2,2,2,13],
@@ -245,9 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a74601e7a7d4fab817e64e564b96e98bd":[3,0,0,10,2,3,3],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a88df1e80fc5caca3da4c817fc3e23338":[3,0,0,10,2,3,28],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249":[3,0,0,10,2,3,30],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a9c41ee6c46e4e39173da8e589408b9ef":[3,0,0,10,2,3,5],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a9e725d3d3b1c11c6760e99faeaa0aa35":[3,0,0,10,2,3,29],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aab2a40c54ac922ec7bbc12641dadf08a":[3,0,0,10,2,3,7],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[3,0,0,10,2,3,25],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#ac7f436a97eef7126a7cd5136848ff459":[3,0,0,10,2,3,31]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a9c41ee6c46e4e39173da8e589408b9ef":[3,0,0,10,2,3,5]
 };

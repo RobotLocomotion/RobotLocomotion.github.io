@@ -183,7 +183,7 @@ class drake::systems::ZeroOrderHold&lt; T &gt;</h3>
 </table>
 </td></tr>
 </table>
-<p>The discrete state space dynamics of ZeroOrderHold is: </p><div class="fragment"><div class="line">xₙ₊₁ = uₙ     <span class="comment">// update</span></div><div class="line">yₙ   = xₙ     <span class="comment">// output</span></div><div class="line">x₀   = xᵢₙᵢₜ  <span class="comment">// initialize</span></div></div><!-- fragment --><p> where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given value for abstract-valued ZeroOrderHold.</p>
+<p>The discrete state space dynamics of ZeroOrderHold is: </p><div class="fragment"><div class="line">xₙ₊₁ = uₙ     <span class="comment">// update</span></div><div class="line">yₙ   = xₙ     <span class="comment">// output</span></div><div class="line">x₀   = xᵢₙᵢₜ  <span class="comment">// initialize</span></div></div><!-- fragment --><p> where xᵢₙᵢₜ = 0 for vector-valued ZeroOrderHold, and xᵢₙᵢₜ is a given value for abstract-valued ZeroOrderHold. Use <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#a696569e9fa87b3f2b37594d647909409" title="Sets the value of the state by modifying it in the context.">SetVectorState()</a> to set xₙ in the context for vector-valued ZeroOrderHold.</p>
 <p>See <a class="el" href="group__discrete__systems.html">Discrete Systems</a> for general information about discrete systems in Drake, including how they interact with continuous systems.</p>
 <dl class="section note"><dt>Note</dt><dd>This system defaults to a periodic update with zero offset, in which case the first update occurs at t=0. When used with a <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>, the output port is equal to xᵢₙᵢₜ after simulator.Initialize(), but is immediately updated to u₀ at the start of the first step. If you want to force that initial update, use simulator.AdvanceTo(0.0).</dd>
 <dd>
@@ -217,6 +217,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a96ffc785b7b2135c7980c985883ffdd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#a96ffc785b7b2135c7980c985883ffdd3">offset</a> () const</td></tr>
 <tr class="memdesc:a96ffc785b7b2135c7980c985883ffdd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the first update time of this hold (in seconds).  <a href="#a96ffc785b7b2135c7980c985883ffdd3">More...</a><br /></td></tr>
 <tr class="separator:a96ffc785b7b2135c7980c985883ffdd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a696569e9fa87b3f2b37594d647909409"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#a696569e9fa87b3f2b37594d647909409">SetVectorState</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;value) const</td></tr>
+<tr class="memdesc:a696569e9fa87b3f2b37594d647909409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of the state by modifying it in the context.  <a href="#a696569e9fa87b3f2b37594d647909409">More...</a><br /></td></tr>
+<tr class="separator:a696569e9fa87b3f2b37594d647909409"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fd85a9651ee5246cc2e24cebe853e7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html#a5fd85a9651ee5246cc2e24cebe853e7e">LatchInputPortToState</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a5fd85a9651ee5246cc2e24cebe853e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Manually sample the input port and copy ("latch") the value into the state.  <a href="#a5fd85a9651ee5246cc2e24cebe853e7e">More...</a><br /></td></tr>
 <tr class="separator:a5fd85a9651ee5246cc2e24cebe853e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1503,8 +1506,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1ecb34469b6cdf7869eeee8e45b4524e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ecb34469b6cdf7869eeee8e45b4524e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a0107dc9af2f9d73bd74da521cfb393f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0107dc9af2f9d73bd74da521cfb393f5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1515,7 +1518,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html">ZeroOrderHold</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html">ZeroOrderHold</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html">ZeroOrderHold</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1529,8 +1532,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0107dc9af2f9d73bd74da521cfb393f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0107dc9af2f9d73bd74da521cfb393f5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a1ecb34469b6cdf7869eeee8e45b4524e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ecb34469b6cdf7869eeee8e45b4524e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1541,7 +1544,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html">ZeroOrderHold</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html">ZeroOrderHold</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html">ZeroOrderHold</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1571,6 +1574,37 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reports the period of this hold (in seconds). </p>
+
+</div>
+</div>
+<a id="a696569e9fa87b3f2b37594d647909409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a696569e9fa87b3f2b37594d647909409">&#9670;&nbsp;</a></span>SetVectorState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetVectorState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the value of the state by modifying it in the context. </p>
+<p><code>value</code> must be a column vector of the appropriate size. This can only be used to initialize a vector-valued state. </p>
 
 </div>
 </div>

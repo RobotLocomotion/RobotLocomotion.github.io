@@ -1,5 +1,11 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1multibody_1_1test_1_1_robot_model_config.html#a875c49188c36656e3e66c5375b3174f9":[3,0,0,8,4,2,3],
+"structdrake_1_1multibody_1_1test_1_1_robot_model_config.html#a8ceeb8e7065ce2fe74be453772656aeb":[3,0,0,8,4,2,1],
+"structdrake_1_1ostream__formatter.html":[3,0,0,41],
+"structdrake_1_1ostream__formatter.html#aab8f913d74288ae04ca146910ed303bf":[3,0,0,41,0],
+"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html":[1,4,2,2,1,0],
+"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#a58556183e6b44a317abcf3d0a8e0e2b4":[1,4,2,2,1,0,2],
 "structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#a9444f7e141745392f1b3cd3c5667b41e":[1,4,2,2,1,0,0],
 "structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#ab92ffdff0f2d44b618e368df195d3185":[1,4,2,2,1,0,1],
 "structdrake_1_1planning_1_1_collision_checker_params.html":[1,4,2,2,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a47943f73244ca117fa9bf9234cbed317":[3,0,0,15,0,1,6],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a851bc403edb0b8b04e35246843c4524c":[3,0,0,15,0,1,5],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#ab27bfaf29de254557149cb0bafeca4e3":[3,0,0,15,0,1,3],
-"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#ac01d62b0af939b47796b39f4229572b2":[3,0,0,15,0,1,4],
-"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#af1172cb338cfb5f609bf5d636b3cd68d":[3,0,0,15,0,1,2],
-"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#afc6ccda8d28bae6d00dcdff55bfc7e6b":[3,0,0,15,0,1,1],
-"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html":[3,0,0,15,0,2],
-"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a01c236fa6e3060a824670259f007511a":[3,0,0,15,0,2,3],
-"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a56768addea5ab57a9e5d7e37e66460af":[3,0,0,15,0,2,6],
-"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a6c4438afbf2190941ebeae2f8e16dd11":[3,0,0,15,0,2,4]
+"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#ac01d62b0af939b47796b39f4229572b2":[3,0,0,15,0,1,4]
 };

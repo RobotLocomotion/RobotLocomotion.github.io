@@ -1,5 +1,9 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1systems_1_1_vector_log.html#a0533954b4eb29aa69d4078b0512e518f":[3,0,0,15,127,3],
+"classdrake_1_1systems_1_1_vector_log.html#a0b517e025fbc2265483bad85efb28e65":[3,0,0,15,127,11],
+"classdrake_1_1systems_1_1_vector_log.html#a16f68e98d0fe5d308ee4afee21efce3c":[3,0,0,15,127,7],
+"classdrake_1_1systems_1_1_vector_log.html#a2092a77a3f3f240841ef25c810342769":[3,0,0,15,127,8],
 "classdrake_1_1systems_1_1_vector_log.html#a68d774a585cf94543a4a9930f7e9efc2":[3,0,0,15,127,5],
 "classdrake_1_1systems_1_1_vector_log.html#a8cebbbcba14a806da45600ccc3443095":[3,0,0,15,127,12],
 "classdrake_1_1systems_1_1_vector_log.html#aa71d36872f416feaa853788a7a7a7ef8":[3,0,0,15,127,4],
@@ -87,12 +91,13 @@ var NAVTREEINDEX44 =
 "classdrake_1_1systems_1_1_wrap_to_system.html#a9faf5ed7e350ab9a7b3873aa3df4c16c":[1,2,1,28,2],
 "classdrake_1_1systems_1_1_wrap_to_system.html#ae5d33e1b76fd695a8f12ce8b9c62a034":[1,2,1,28,3],
 "classdrake_1_1systems_1_1_zero_order_hold.html":[1,2,1,29],
-"classdrake_1_1systems_1_1_zero_order_hold.html#a0107dc9af2f9d73bd74da521cfb393f5":[1,2,1,29,9],
-"classdrake_1_1systems_1_1_zero_order_hold.html#a0d112baac097caa5fed5378a07d423ce":[1,2,1,29,11],
-"classdrake_1_1systems_1_1_zero_order_hold.html#a1ecb34469b6cdf7869eeee8e45b4524e":[1,2,1,29,8],
+"classdrake_1_1systems_1_1_zero_order_hold.html#a0107dc9af2f9d73bd74da521cfb393f5":[1,2,1,29,8],
+"classdrake_1_1systems_1_1_zero_order_hold.html#a0d112baac097caa5fed5378a07d423ce":[1,2,1,29,12],
+"classdrake_1_1systems_1_1_zero_order_hold.html#a1ecb34469b6cdf7869eeee8e45b4524e":[1,2,1,29,9],
 "classdrake_1_1systems_1_1_zero_order_hold.html#a5ae4ab5e2ebbb46c574d1f0531d86d66":[1,2,1,29,10],
 "classdrake_1_1systems_1_1_zero_order_hold.html#a5fd85a9651ee5246cc2e24cebe853e7e":[1,2,1,29,6],
 "classdrake_1_1systems_1_1_zero_order_hold.html#a60f9f8ef37a7bab7cce2d0600de116f8":[1,2,1,29,4],
+"classdrake_1_1systems_1_1_zero_order_hold.html#a696569e9fa87b3f2b37594d647909409":[1,2,1,29,11],
 "classdrake_1_1systems_1_1_zero_order_hold.html#a709c0abe05f56d7498c71bbcb4279b97":[1,2,1,29,5],
 "classdrake_1_1systems_1_1_zero_order_hold.html#a76e36269d760776c11822e19076aace4":[1,2,1,29,3],
 "classdrake_1_1systems_1_1_zero_order_hold.html#a96ffc785b7b2135c7980c985883ffdd3":[1,2,1,29,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ae10ee2e8047baecf8bce8236dd9ff428":[1,2,2,1,4],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#aeffde4e51c0d89f2fd83d04032100d1f":[1,2,2,1,2],
 "classdrake_1_1systems_1_1controllers_1_1_joint_impedance_controller.html":[1,2,2,3],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html":[1,2,2,2],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a1f94d1c2b9f9f4bfba53ce45e3ec917e":[1,2,2,2,8],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a2daeb6c0489e788aa3d6df8735ce9464":[1,2,2,2,7],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a4e565ffad315e3a3537ead6663db6203":[1,2,2,2,11],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a58a569e52bd3a03537d3326907f19880":[1,2,2,2,1],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a60e25dc7600f5538ee43c0ae6025d162":[1,2,2,2,10]
+"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html":[1,2,2,2]
 };
