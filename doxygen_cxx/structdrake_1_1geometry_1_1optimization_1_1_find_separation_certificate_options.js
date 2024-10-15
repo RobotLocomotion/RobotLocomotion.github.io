@@ -3,7 +3,7 @@ var structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_opti
     [ "FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#aa3f477fcaa93d20401b8984bf79120b4", null ],
     [ "FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a04ad562ce5e7bc2487b5ec98cf38b0fe", null ],
     [ "FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a277d81c8e1df90b999ae693f460ab7f7", null ],
-    [ "~FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#abedcc218b1bc6c9ac6384a50d835733a", null ],
+    [ "~FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ad487e5a276f7f8f97b616a81d7ce28dd", null ],
     [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a32442a6353b886748a5053c445412660", null ],
     [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#a94b2fa6bd78e869a41f1b92030a2e777", null ],
     [ "parallelism", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html#ad56caacfcfc31a58bbbce672c955e976", null ],

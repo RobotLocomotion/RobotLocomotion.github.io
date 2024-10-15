@@ -1,6 +1,7 @@
 var classdrake_1_1symbolic_1_1_expression_tanh =
 [
     [ "ExpressionTanh", "classdrake_1_1symbolic_1_1_expression_tanh.html#a177775c48999e87c6fe8ff8b719a1fa2", null ],
+    [ "~ExpressionTanh", "classdrake_1_1symbolic_1_1_expression_tanh.html#a8b45ef28f11b1ea6dc804e7a28e491e1", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression_tanh.html#a72ae45ea810c2e68f74e59000dca8337", null ],
     [ "Display", "classdrake_1_1symbolic_1_1_expression_tanh.html#ab022b2a7bc26750aab90eeafb49c2d8a", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_expression_tanh.html#a4d63adf08b5325e905027f6f2c14b433", null ],

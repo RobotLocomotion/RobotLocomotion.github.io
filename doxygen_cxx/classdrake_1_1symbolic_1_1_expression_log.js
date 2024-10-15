@@ -1,6 +1,7 @@
 var classdrake_1_1symbolic_1_1_expression_log =
 [
     [ "ExpressionLog", "classdrake_1_1symbolic_1_1_expression_log.html#ad657e2eb1e2795d3abeece277bc5952e", null ],
+    [ "~ExpressionLog", "classdrake_1_1symbolic_1_1_expression_log.html#a8c3624b773249a3c6b14bcc2d90d4574", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression_log.html#a72ae45ea810c2e68f74e59000dca8337", null ],
     [ "Display", "classdrake_1_1symbolic_1_1_expression_log.html#ab022b2a7bc26750aab90eeafb49c2d8a", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_expression_log.html#a4d63adf08b5325e905027f6f2c14b433", null ],

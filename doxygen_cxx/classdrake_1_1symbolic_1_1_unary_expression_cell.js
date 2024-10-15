@@ -1,5 +1,6 @@
 var classdrake_1_1symbolic_1_1_unary_expression_cell =
 [
+    [ "~UnaryExpressionCell", "classdrake_1_1symbolic_1_1_unary_expression_cell.html#a8bf8c9a626f6e1cea0a808ed1a002dc2", null ],
     [ "UnaryExpressionCell", "classdrake_1_1symbolic_1_1_unary_expression_cell.html#a1846b343a25f0364bb0468dc20b6a98a", null ],
     [ "DoEvaluate", "classdrake_1_1symbolic_1_1_unary_expression_cell.html#a11c1076642ac67c42128ec9349f6d789", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_unary_expression_cell.html#a17a687a22fc3792625f3e48fff7f0269", null ],

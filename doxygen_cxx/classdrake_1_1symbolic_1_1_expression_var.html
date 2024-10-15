@@ -172,11 +172,14 @@ $(document).ready(function(){initNavTree('classdrake_1_1symbolic_1_1_expression_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5142aa659ccee8923995daf6883581ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html#a5142aa659ccee8923995daf6883581ec">HashAppendDetail</a> (<a class="el" href="structdrake_1_1_delegating_hasher.html">DelegatingHasher</a> *) const override</td></tr>
-<tr class="memdesc:a5142aa659ccee8923995daf6883581ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an expression from <code>var</code>.  <a href="#a5142aa659ccee8923995daf6883581ec">More...</a><br /></td></tr>
-<tr class="separator:a5142aa659ccee8923995daf6883581ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a394ebf0f4ba5635912e2857881211e14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html#a394ebf0f4ba5635912e2857881211e14">ExpressionVar</a> (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> v)</td></tr>
+<tr class="memdesc:a394ebf0f4ba5635912e2857881211e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an expression from <code>var</code>.  <a href="#a394ebf0f4ba5635912e2857881211e14">More...</a><br /></td></tr>
 <tr class="separator:a394ebf0f4ba5635912e2857881211e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac20ef6b05de93e623c32be2d57bcfa6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html#ac20ef6b05de93e623c32be2d57bcfa6e">~ExpressionVar</a> () override</td></tr>
+<tr class="separator:ac20ef6b05de93e623c32be2d57bcfa6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5142aa659ccee8923995daf6883581ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html#a5142aa659ccee8923995daf6883581ec">HashAppendDetail</a> (<a class="el" href="structdrake_1_1_delegating_hasher.html">DelegatingHasher</a> *) const override</td></tr>
+<tr class="memdesc:a5142aa659ccee8923995daf6883581ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends all hash-relevant bytes for this <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html" title="Represents an abstract class which is the base of concrete symbolic-expression classes.">ExpressionCell</a> type into the given hasher, per the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept &ndash; except for <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a9294eeb528bb3beaa480bf17ac5e971d" title="Returns expression kind.">get_kind()</a>, because <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> already sends that.  <a href="#a5142aa659ccee8923995daf6883581ec">More...</a><br /></td></tr>
+<tr class="separator:a5142aa659ccee8923995daf6883581ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c50b7aca81d20f8ecd6821a4357bf92"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html#a8c50b7aca81d20f8ecd6821a4357bf92">get_variable</a> () const</td></tr>
 <tr class="separator:a8c50b7aca81d20f8ecd6821a4357bf92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05fdc56be2bae58a250b0528b539f0ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html#a05fdc56be2bae58a250b0528b539f0ad">GetVariables</a> () const override</td></tr>
@@ -261,6 +264,34 @@ Additional Inherited Members</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an expression from <code>var</code>. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>var</code> is not a BOOLEAN variable. </dd></dl>
+
+</div>
+</div>
+<a id="ac20ef6b05de93e623c32be2d57bcfa6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac20ef6b05de93e623c32be2d57bcfa6e">&#9670;&nbsp;</a></span>~ExpressionVar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html">ExpressionVar</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -541,8 +572,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs an expression from <code>var</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>var</code> is not a BOOLEAN variable. </dd></dl>
+<p>Sends all hash-relevant bytes for this <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html" title="Represents an abstract class which is the base of concrete symbolic-expression classes.">ExpressionCell</a> type into the given hasher, per the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept &ndash; except for <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a9294eeb528bb3beaa480bf17ac5e971d" title="Returns expression kind.">get_kind()</a>, because <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> already sends that. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html#a277754f15697553a1007dbd3180a30b3">ExpressionCell</a>.</p>
 

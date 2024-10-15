@@ -4,6 +4,7 @@ var classdrake_1_1geometry_1_1_meshcat_visualizer =
     [ "MeshcatVisualizer", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#abe71b163d45afc59b04f0b98dbd71e4c", null ],
     [ "MeshcatVisualizer", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#af4a2674628e3459dae2b777dbce5e5d3", null ],
     [ "MeshcatVisualizer", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a3e2c68dd6b16c5d8696d1aebeb166607", null ],
+    [ "~MeshcatVisualizer", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a1385c24eb6eddc855708d048ec19f36f", null ],
     [ "AddToBuilder", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a737291fe2f178eb125c8e9cb746af966", null ],
     [ "AddToBuilder", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a2bfc53849f26bf84bc4556bcc0757097", null ],
     [ "Delete", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a02a874939f6aa43e29fc929d223dfb76", null ],

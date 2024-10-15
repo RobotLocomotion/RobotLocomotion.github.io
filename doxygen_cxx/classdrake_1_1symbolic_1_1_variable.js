@@ -15,6 +15,7 @@ var classdrake_1_1symbolic_1_1_variable =
     [ "Variable", "classdrake_1_1symbolic_1_1_variable.html#ae66ae8ada34dafb779ee60b39f58459b", null ],
     [ "Variable", "classdrake_1_1symbolic_1_1_variable.html#ae3ae0a370426bdec708902b75342d71d", null ],
     [ "Variable", "classdrake_1_1symbolic_1_1_variable.html#ab80a68408132bf57b854b0252aefb80a", null ],
+    [ "~Variable", "classdrake_1_1symbolic_1_1_variable.html#aca3ec61adeebe1195830deb61573d76d", null ],
     [ "equal_to", "classdrake_1_1symbolic_1_1_variable.html#afb7e03e3f21dcaed2c1fb3ade24e1dfa", null ],
     [ "get_id", "classdrake_1_1symbolic_1_1_variable.html#af5bc2131313b060e441972d85d917314", null ],
     [ "get_name", "classdrake_1_1symbolic_1_1_variable.html#a0789ba541bd61b1b394ff4d411a40790", null ],

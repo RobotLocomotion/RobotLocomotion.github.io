@@ -10,6 +10,7 @@ var classdrake_1_1symbolic_1_1_variables =
     [ "Variables", "classdrake_1_1symbolic_1_1_variables.html#a64ff4b8fcecd4010f7b951969169e52c", null ],
     [ "Variables", "classdrake_1_1symbolic_1_1_variables.html#a2f80ef2ee2e40042f3b89a2a66a9eef5", null ],
     [ "Variables", "classdrake_1_1symbolic_1_1_variables.html#ade320564b4b2ad763dfc12279fd97f79", null ],
+    [ "~Variables", "classdrake_1_1symbolic_1_1_variables.html#ab18fd2f843ca0be1e617186ef00b8432", null ],
     [ "begin", "classdrake_1_1symbolic_1_1_variables.html#ad69bd11391be1a1dba5c8202259664f8", null ],
     [ "begin", "classdrake_1_1symbolic_1_1_variables.html#a29305669b60ca1680752e2fc3592ba99", null ],
     [ "cbegin", "classdrake_1_1symbolic_1_1_variables.html#a39112ae08f6ffc7ee58c6aa79772e094", null ],

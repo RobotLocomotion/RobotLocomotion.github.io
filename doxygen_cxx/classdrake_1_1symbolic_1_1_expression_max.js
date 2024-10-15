@@ -1,6 +1,7 @@
 var classdrake_1_1symbolic_1_1_expression_max =
 [
     [ "ExpressionMax", "classdrake_1_1symbolic_1_1_expression_max.html#ab3a92661d2af7cd72e65c394c90cef3f", null ],
+    [ "~ExpressionMax", "classdrake_1_1symbolic_1_1_expression_max.html#a7c679205a38429f3b7dabc235cee715c", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression_max.html#a72ae45ea810c2e68f74e59000dca8337", null ],
     [ "Display", "classdrake_1_1symbolic_1_1_expression_max.html#ab022b2a7bc26750aab90eeafb49c2d8a", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_expression_max.html#a4d63adf08b5325e905027f6f2c14b433", null ],

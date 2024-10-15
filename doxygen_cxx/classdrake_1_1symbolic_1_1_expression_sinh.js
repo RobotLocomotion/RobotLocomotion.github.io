@@ -1,6 +1,7 @@
 var classdrake_1_1symbolic_1_1_expression_sinh =
 [
     [ "ExpressionSinh", "classdrake_1_1symbolic_1_1_expression_sinh.html#a5d65e3e3daf5f8ed19a81c96ab4f4b1b", null ],
+    [ "~ExpressionSinh", "classdrake_1_1symbolic_1_1_expression_sinh.html#a602d9502bb68018779a1019fc5e366ed", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression_sinh.html#a72ae45ea810c2e68f74e59000dca8337", null ],
     [ "Display", "classdrake_1_1symbolic_1_1_expression_sinh.html#ab022b2a7bc26750aab90eeafb49c2d8a", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_expression_sinh.html#a4d63adf08b5325e905027f6f2c14b433", null ],

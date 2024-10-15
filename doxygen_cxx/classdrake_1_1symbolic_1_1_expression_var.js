@@ -1,6 +1,7 @@
 var classdrake_1_1symbolic_1_1_expression_var =
 [
     [ "ExpressionVar", "classdrake_1_1symbolic_1_1_expression_var.html#a394ebf0f4ba5635912e2857881211e14", null ],
+    [ "~ExpressionVar", "classdrake_1_1symbolic_1_1_expression_var.html#ac20ef6b05de93e623c32be2d57bcfa6e", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression_var.html#a72ae45ea810c2e68f74e59000dca8337", null ],
     [ "Display", "classdrake_1_1symbolic_1_1_expression_var.html#ab022b2a7bc26750aab90eeafb49c2d8a", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_expression_var.html#a17a687a22fc3792625f3e48fff7f0269", null ],

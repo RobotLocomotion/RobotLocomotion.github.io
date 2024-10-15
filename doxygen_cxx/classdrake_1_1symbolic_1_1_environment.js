@@ -12,6 +12,7 @@ var classdrake_1_1symbolic_1_1_environment =
     [ "Environment", "classdrake_1_1symbolic_1_1_environment.html#ae4a058bb65df76e4078e8fcb764ee144", null ],
     [ "Environment", "classdrake_1_1symbolic_1_1_environment.html#aa78859b4ed9397a69493467bdcba622e", null ],
     [ "Environment", "classdrake_1_1symbolic_1_1_environment.html#a320bbed240a1470cd9be984ab1fbbb50", null ],
+    [ "~Environment", "classdrake_1_1symbolic_1_1_environment.html#a497cdaf9cdf0fdd1d90355f5af48bc5d", null ],
     [ "begin", "classdrake_1_1symbolic_1_1_environment.html#ad69bd11391be1a1dba5c8202259664f8", null ],
     [ "begin", "classdrake_1_1symbolic_1_1_environment.html#a29305669b60ca1680752e2fc3592ba99", null ],
     [ "cbegin", "classdrake_1_1symbolic_1_1_environment.html#a39112ae08f6ffc7ee58c6aa79772e094", null ],

@@ -1,6 +1,7 @@
 var classdrake_1_1symbolic_1_1_expression_pow =
 [
     [ "ExpressionPow", "classdrake_1_1symbolic_1_1_expression_pow.html#ab58f8982cc9ca4f77663b8a45a322261", null ],
+    [ "~ExpressionPow", "classdrake_1_1symbolic_1_1_expression_pow.html#a8d6c287c0e2ec0864d4ca0b4e520d4ff", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression_pow.html#a72ae45ea810c2e68f74e59000dca8337", null ],
     [ "Display", "classdrake_1_1symbolic_1_1_expression_pow.html#ab022b2a7bc26750aab90eeafb49c2d8a", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_expression_pow.html#a4d63adf08b5325e905027f6f2c14b433", null ],

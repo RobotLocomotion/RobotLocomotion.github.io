@@ -9,6 +9,7 @@ var classdrake_1_1symbolic_1_1_monomial_basis_element =
     [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html#ac6ad3cf2fe58617e46208382afe88bef", null ],
     [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html#af324ed6f376e80b76707254946bfcc44", null ],
     [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html#ae5d7b913b75c38b332f0163672ab4fa7", null ],
+    [ "~MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html#a722554239ac2b28d372c1c257f837248", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_monomial_basis_element.html#aa28872d27dba2220ce53918b928570e8", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_monomial_basis_element.html#abc490dea065b64db08b04253b74d06cd", null ],
     [ "Integrate", "classdrake_1_1symbolic_1_1_monomial_basis_element.html#ac7c7f8c2b9718d628757298ace94e6ec", null ],

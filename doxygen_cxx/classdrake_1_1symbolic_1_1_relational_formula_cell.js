@@ -4,6 +4,7 @@ var classdrake_1_1symbolic_1_1_relational_formula_cell =
     [ "RelationalFormulaCell", "classdrake_1_1symbolic_1_1_relational_formula_cell.html#a9dd3b8b6c5c08d626d82bf23eb1c5b32", null ],
     [ "RelationalFormulaCell", "classdrake_1_1symbolic_1_1_relational_formula_cell.html#acedfc9467a1f4992845d7b07237a63dd", null ],
     [ "RelationalFormulaCell", "classdrake_1_1symbolic_1_1_relational_formula_cell.html#a497a2b8d5206c3c4e454924543894e61", null ],
+    [ "~RelationalFormulaCell", "classdrake_1_1symbolic_1_1_relational_formula_cell.html#af1a65dfa13fd05a2fcb4a8dfc9bd703b", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_relational_formula_cell.html#a3660c96e65bec4f7831e74691a14c129", null ],
     [ "get_lhs_expression", "classdrake_1_1symbolic_1_1_relational_formula_cell.html#ab552a834944cb1a7614906974bca1039", null ],
     [ "get_rhs_expression", "classdrake_1_1symbolic_1_1_relational_formula_cell.html#a13a552c54d8097cec945ab76b0c94c9e", null ],

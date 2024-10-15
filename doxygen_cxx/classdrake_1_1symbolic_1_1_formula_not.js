@@ -1,6 +1,7 @@
 var classdrake_1_1symbolic_1_1_formula_not =
 [
     [ "FormulaNot", "classdrake_1_1symbolic_1_1_formula_not.html#a8062d93e4e8c721ca7cb327bcd511a28", null ],
+    [ "~FormulaNot", "classdrake_1_1symbolic_1_1_formula_not.html#ae34ac4958cdea6e81f86723e63ca50ea", null ],
     [ "Display", "classdrake_1_1symbolic_1_1_formula_not.html#ab022b2a7bc26750aab90eeafb49c2d8a", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_formula_not.html#a3660c96e65bec4f7831e74691a14c129", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_formula_not.html#a9dcdd6bf4debc6328cfd48051c2cbcbe", null ],

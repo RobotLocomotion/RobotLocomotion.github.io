@@ -395,9 +395,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3af3f4e27821f5f1630844a5cf4e39be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a3af3f4e27821f5f1630844a5cf4e39be">GetButtonClicks</a> (std::string_view name) const</td></tr>
 <tr class="memdesc:a3af3f4e27821f5f1630844a5cf4e39be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of times the button <code>name</code> has been clicked in the GUI, from the time that it was added to <code>this</code>.  <a href="#a3af3f4e27821f5f1630844a5cf4e39be">More...</a><br /></td></tr>
 <tr class="separator:a3af3f4e27821f5f1630844a5cf4e39be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aece8086277995b5f6b9fabc80aee7e20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aece8086277995b5f6b9fabc80aee7e20">DeleteButton</a> (std::string name)</td></tr>
-<tr class="memdesc:aece8086277995b5f6b9fabc80aee7e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the button <code>name</code> from the GUI.  <a href="#aece8086277995b5f6b9fabc80aee7e20">More...</a><br /></td></tr>
-<tr class="separator:aece8086277995b5f6b9fabc80aee7e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac172758aaf85fb60ce5db0534c57fa04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ac172758aaf85fb60ce5db0534c57fa04">DeleteButton</a> (std::string name, bool strict=true)</td></tr>
+<tr class="memdesc:ac172758aaf85fb60ce5db0534c57fa04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the button <code>name</code> from the GUI.  <a href="#ac172758aaf85fb60ce5db0534c57fa04">More...</a><br /></td></tr>
+<tr class="separator:ac172758aaf85fb60ce5db0534c57fa04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43359df502fdd09710254663b75adeca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a43359df502fdd09710254663b75adeca">AddSlider</a> (std::string name, <a class="el" href="classdouble.html">double</a> min, <a class="el" href="classdouble.html">double</a> max, <a class="el" href="classdouble.html">double</a> step, <a class="el" href="classdouble.html">double</a> value, std::string decrement_keycode=&quot;&quot;, std::string increment_keycode=&quot;&quot;)</td></tr>
 <tr class="memdesc:a43359df502fdd09710254663b75adeca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a slider with the label <code>name</code> to the meshcat browser controls GUI.  <a href="#a43359df502fdd09710254663b75adeca">More...</a><br /></td></tr>
 <tr class="separator:a43359df502fdd09710254663b75adeca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -410,9 +410,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9467e50cd74bd9b61b47d1b4d329f4df"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a9467e50cd74bd9b61b47d1b4d329f4df">GetSliderNames</a> () const</td></tr>
 <tr class="memdesc:a9467e50cd74bd9b61b47d1b4d329f4df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the names of all sliders.  <a href="#a9467e50cd74bd9b61b47d1b4d329f4df">More...</a><br /></td></tr>
 <tr class="separator:a9467e50cd74bd9b61b47d1b4d329f4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50fc49ac1d55ac00b10946b748db02dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a50fc49ac1d55ac00b10946b748db02dc">DeleteSlider</a> (std::string name)</td></tr>
-<tr class="memdesc:a50fc49ac1d55ac00b10946b748db02dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the slider <code>name</code> from the GUI.  <a href="#a50fc49ac1d55ac00b10946b748db02dc">More...</a><br /></td></tr>
-<tr class="separator:a50fc49ac1d55ac00b10946b748db02dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168c1fa504a6e4051608933933402858"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a168c1fa504a6e4051608933933402858">DeleteSlider</a> (std::string name, bool strict=true)</td></tr>
+<tr class="memdesc:a168c1fa504a6e4051608933933402858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the slider <code>name</code> from the GUI.  <a href="#a168c1fa504a6e4051608933933402858">More...</a><br /></td></tr>
+<tr class="separator:a168c1fa504a6e4051608933933402858"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af1bb2f8edfd7ee327ff24ad088e1c607">DeleteAddedControls</a> ()</td></tr>
 <tr class="memdesc:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all buttons and sliders from the GUI that have been registered by this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance.  <a href="#af1bb2f8edfd7ee327ff24ad088e1c607">More...</a><br /></td></tr>
 <tr class="separator:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -720,26 +720,37 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aece8086277995b5f6b9fabc80aee7e20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aece8086277995b5f6b9fabc80aee7e20">&#9670;&nbsp;</a></span>DeleteButton()</h2>
+<a id="ac172758aaf85fb60ce5db0534c57fa04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac172758aaf85fb60ce5db0534c57fa04">&#9670;&nbsp;</a></span>DeleteButton()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void DeleteButton </td>
+          <td class="memname">bool DeleteButton </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>strict</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Removes the button <code>name</code> from the GUI. </p>
+<dl class="section return"><dt>Returns</dt><dd>true iff the button was removed. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>name</code> is not a registered button. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>strict</code> is true and <code>name</code> is not a registered button. </td></tr>
   </table>
   </dd>
 </dl>
@@ -766,26 +777,37 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a50fc49ac1d55ac00b10946b748db02dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50fc49ac1d55ac00b10946b748db02dc">&#9670;&nbsp;</a></span>DeleteSlider()</h2>
+<a id="a168c1fa504a6e4051608933933402858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a168c1fa504a6e4051608933933402858">&#9670;&nbsp;</a></span>DeleteSlider()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void DeleteSlider </td>
+          <td class="memname">bool DeleteSlider </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>strict</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Removes the slider <code>name</code> from the GUI. </p>
+<dl class="section return"><dt>Returns</dt><dd>true iff the slider was removed. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>name</code> is not a registered slider. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>strict</code> is true and <code>name</code> is not a registered slider. </td></tr>
   </table>
   </dd>
 </dl>

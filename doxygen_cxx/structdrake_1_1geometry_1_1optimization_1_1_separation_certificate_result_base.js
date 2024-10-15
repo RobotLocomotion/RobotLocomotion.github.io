@@ -1,7 +1,7 @@
 var structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base =
 [
-    [ "SeparationCertificateResultBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a7dc410c05ba6ca93696709bee9242a6d", null ],
-    [ "~SeparationCertificateResultBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#aeff55dd0e18e3aeb13a86310e6ed35e5", null ],
+    [ "SeparationCertificateResultBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a089288eeb5d195cc79f6da0f23cea769", null ],
+    [ "~SeparationCertificateResultBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a152731d5ba3e33738ada7882f0ff650c", null ],
     [ "SeparationCertificateResultBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a746afa5ed1772820723903386c20143d", null ],
     [ "SeparationCertificateResultBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a7537ffd73509fb56cff43f5effb4a4c3", null ],
     [ "operator=", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ac57821371edcae4eaee405d04a76ae66", null ],

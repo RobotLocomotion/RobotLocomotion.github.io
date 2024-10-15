@@ -258,6 +258,7 @@ var group__geometry__optimization =
       [ "Hyperrectangle", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a90043987d047b66b2b1761f931a4ebc0", null ],
       [ "Hyperrectangle", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a76414bece6e7dfd551e66a54eb052f7f", null ],
       [ "Hyperrectangle", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#abca5d6fae4aea9a48056aa8b4ddbdafe", null ],
+      [ "~Hyperrectangle", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a6bf72da48f2548ce5f0f515be648e5df", null ],
       [ "Center", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a621852108208d835ec699ee7ba6a0eea", null ],
       [ "lb", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a48e40be6382b66a7fd0cdf4ac8aad2a6", null ],
       [ "MakeHPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a81d2c6f97c9bf2239759c056d36a7251", null ],

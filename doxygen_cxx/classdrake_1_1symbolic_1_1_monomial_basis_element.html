@@ -195,6 +195,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae5d7b913b75c38b332f0163672ab4fa7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_monomial_basis_element.html#ae5d7b913b75c38b332f0163672ab4fa7">MonomialBasisElement</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a57c09c7813b347ff0419a64ca7642e92">degree</a>)</td></tr>
 <tr class="memdesc:ae5d7b913b75c38b332f0163672ab4fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a monomial basis element with only one variable, and the degree of that variable is given by <code>degree</code>.  <a href="#ae5d7b913b75c38b332f0163672ab4fa7">More...</a><br /></td></tr>
 <tr class="separator:ae5d7b913b75c38b332f0163672ab4fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722554239ac2b28d372c1c257f837248"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_monomial_basis_element.html#a722554239ac2b28d372c1c257f837248">~MonomialBasisElement</a> () override</td></tr>
+<tr class="separator:a722554239ac2b28d372c1c257f837248"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc490dea065b64db08b04253b74d06cd"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="classdouble.html">double</a>, <a class="el" href="classdrake_1_1symbolic_1_1_monomial_basis_element.html">MonomialBasisElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_monomial_basis_element.html#abc490dea065b64db08b04253b74d06cd">EvaluatePartial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
 <tr class="memdesc:abc490dea065b64db08b04253b74d06cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partially evaluates using a given environment <code>env</code>.  <a href="#abc490dea065b64db08b04253b74d06cd">More...</a><br /></td></tr>
 <tr class="separator:abc490dea065b64db08b04253b74d06cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,8 +241,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3dddab471291810b11a1b6594f7dd3e3 inherit pub_methods_classdrake_1_1symbolic_1_1_polynomial_basis_element"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a3dddab471291810b11a1b6594f7dd3e3">PolynomialBasisElement</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;&gt; &amp;vars, const Eigen::Ref&lt; const Eigen::VectorXi &gt; &amp;degrees)</td></tr>
 <tr class="memdesc:a3dddab471291810b11a1b6594f7dd3e3 inherit pub_methods_classdrake_1_1symbolic_1_1_polynomial_basis_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a polynomial basis, such that it contains the variable-to-degree map vars(i)→degrees(i).  <a href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a3dddab471291810b11a1b6594f7dd3e3">More...</a><br /></td></tr>
 <tr class="separator:a3dddab471291810b11a1b6594f7dd3e3 inherit pub_methods_classdrake_1_1symbolic_1_1_polynomial_basis_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1b2842b4735385a121a67f03ae91812 inherit pub_methods_classdrake_1_1symbolic_1_1_polynomial_basis_element"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aa1b2842b4735385a121a67f03ae91812">~PolynomialBasisElement</a> ()=default</td></tr>
-<tr class="separator:aa1b2842b4735385a121a67f03ae91812 inherit pub_methods_classdrake_1_1symbolic_1_1_polynomial_basis_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59d1cc13780df4d610a6b490dabc7946 inherit pub_methods_classdrake_1_1symbolic_1_1_polynomial_basis_element"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a59d1cc13780df4d610a6b490dabc7946">~PolynomialBasisElement</a> ()</td></tr>
+<tr class="separator:a59d1cc13780df4d610a6b490dabc7946 inherit pub_methods_classdrake_1_1symbolic_1_1_polynomial_basis_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa34dd2b104225b2bd609be8c7ab6f49f inherit pub_methods_classdrake_1_1symbolic_1_1_polynomial_basis_element"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aa34dd2b104225b2bd609be8c7ab6f49f">var_to_degree_map</a> () const</td></tr>
 <tr class="separator:aa34dd2b104225b2bd609be8c7ab6f49f inherit pub_methods_classdrake_1_1symbolic_1_1_polynomial_basis_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d0553f396185535b2ba95351ac4902c inherit pub_methods_classdrake_1_1symbolic_1_1_polynomial_basis_element"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a1d0553f396185535b2ba95351ac4902c">get_powers</a> () const</td></tr>
@@ -549,6 +551,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a monomial basis element with only one variable, and the degree of that variable is given by <code>degree</code>. </p>
+
+</div>
+</div>
+<a id="a722554239ac2b28d372c1c257f837248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a722554239ac2b28d372c1c257f837248">&#9670;&nbsp;</a></span>~MonomialBasisElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1symbolic_1_1_monomial_basis_element.html">MonomialBasisElement</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

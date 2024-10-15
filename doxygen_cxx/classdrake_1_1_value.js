@@ -6,7 +6,7 @@ var classdrake_1_1_value =
     [ "Value", "classdrake_1_1_value.html#ac46df528297cdbfbb2b9ef7e3971f595", null ],
     [ "Value", "classdrake_1_1_value.html#a5e4f41065c5ad9a1fdaa398787b61ed9", null ],
     [ "Value", "classdrake_1_1_value.html#ac5d2f9cf8eb37db651ca00d8abb9cd33", null ],
-    [ "~Value", "classdrake_1_1_value.html#aa3faad85c8dfe39333a78904c77e4ade", null ],
+    [ "~Value", "classdrake_1_1_value.html#a7052ccc35e9cc60dcaf1603424f017ad", null ],
     [ "Clone", "classdrake_1_1_value.html#ac1f5ee3e1751898e1266598c8a3fa240", null ],
     [ "get_mutable_value", "classdrake_1_1_value.html#a9e5a570db58475e2c920336cfaa390df", null ],
     [ "get_value", "classdrake_1_1_value.html#a7ad3233d4fae798b42a98e9074cf0dbf", null ],

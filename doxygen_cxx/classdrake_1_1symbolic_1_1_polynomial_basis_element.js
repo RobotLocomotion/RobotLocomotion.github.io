@@ -5,7 +5,7 @@ var classdrake_1_1symbolic_1_1_polynomial_basis_element =
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a071a669b72be2962a38ce2d5142495ed", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aac941b4d3c5e0eab0832f9c94735bfe9", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a3dddab471291810b11a1b6594f7dd3e3", null ],
-    [ "~PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aa1b2842b4735385a121a67f03ae91812", null ],
+    [ "~PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a59d1cc13780df4d610a6b490dabc7946", null ],
     [ "degree", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a57c09c7813b347ff0419a64ca7642e92", null ],
     [ "DoEvaluatePartial", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a8afb5a81b9dbf285d062d97679027d43", null ],
     [ "DoMergeBasisElementInPlace", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a63a88047b7daee8ad1cabeeca1dfe111", null ],

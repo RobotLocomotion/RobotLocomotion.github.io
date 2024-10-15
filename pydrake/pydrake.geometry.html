@@ -4334,11 +4334,17 @@ set in the meshcat browser (e.g. for cameras and lights).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Meshcat.DeleteButton">
-<span class="sig-name descname"><span class="pre">DeleteButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.DeleteButton" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DeleteButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.DeleteButton" title="Permalink to this definition"></a></dt>
 <dd><p>Removes the button <code class="docutils literal notranslate"><span class="pre">name</span></code> from the GUI.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if name is not a registered button.</strong> – </p>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true iff the button was removed.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if strict is true and name is not a</strong> – </p></li>
+<li><p><strong>registered button.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -4354,11 +4360,17 @@ invalid. This does not* currently remove the animation from Meshcat.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Meshcat.DeleteSlider">
-<span class="sig-name descname"><span class="pre">DeleteSlider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.DeleteSlider" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">DeleteSlider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.DeleteSlider" title="Permalink to this definition"></a></dt>
 <dd><p>Removes the slider <code class="docutils literal notranslate"><span class="pre">name</span></code> from the GUI.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if name is not a registered slider.</strong> – </p>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true iff the slider was removed.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if strict is true and name is not a</strong> – </p></li>
+<li><p><strong>registered slider.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

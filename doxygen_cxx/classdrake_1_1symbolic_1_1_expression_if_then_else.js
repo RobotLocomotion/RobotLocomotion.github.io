@@ -1,6 +1,7 @@
 var classdrake_1_1symbolic_1_1_expression_if_then_else =
 [
     [ "ExpressionIfThenElse", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a2e651ea95f82c46049d7b75ae4480786", null ],
+    [ "~ExpressionIfThenElse", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a809fdb57f1b6b70085843ce257461c5e", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a72ae45ea810c2e68f74e59000dca8337", null ],
     [ "Display", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#ab022b2a7bc26750aab90eeafb49c2d8a", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a17a687a22fc3792625f3e48fff7f0269", null ],

@@ -1,7 +1,7 @@
 var classdrake_1_1geometry_1_1_geometry_properties =
 [
     [ "Group", "classdrake_1_1geometry_1_1_geometry_properties.html#a1094a6990819e25b5d259c0d35affe66", null ],
-    [ "~GeometryProperties", "classdrake_1_1geometry_1_1_geometry_properties.html#a94116c2953fa02aea8b4398148685e82", null ],
+    [ "~GeometryProperties", "classdrake_1_1geometry_1_1_geometry_properties.html#adc0376813bd4cbe81ce36cdd9b5ab391", null ],
     [ "GeometryProperties", "classdrake_1_1geometry_1_1_geometry_properties.html#ad86db1a9e167f7f17c42d65edca84383", null ],
     [ "GeometryProperties", "classdrake_1_1geometry_1_1_geometry_properties.html#a985605d92e6d5ae06e51f2b3ad109c14", null ],
     [ "GeometryProperties", "classdrake_1_1geometry_1_1_geometry_properties.html#a32edcdb0f6338ecb9342d79d03035bcc", null ],

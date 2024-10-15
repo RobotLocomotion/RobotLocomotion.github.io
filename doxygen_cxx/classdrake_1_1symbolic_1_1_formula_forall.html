@@ -176,6 +176,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ea1960b099973d4445f2068ea9aa81b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_forall.html#a4ea1960b099973d4445f2068ea9aa81b">FormulaForall</a> (<a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> vars, <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> f)</td></tr>
 <tr class="memdesc:a4ea1960b099973d4445f2068ea9aa81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs from <code>vars</code> and <code>f</code>.  <a href="#a4ea1960b099973d4445f2068ea9aa81b">More...</a><br /></td></tr>
 <tr class="separator:a4ea1960b099973d4445f2068ea9aa81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accbd5d6d896cfdc30c2d78537532cb7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_forall.html#accbd5d6d896cfdc30c2d78537532cb7d">~FormulaForall</a> () override</td></tr>
+<tr class="separator:accbd5d6d896cfdc30c2d78537532cb7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5142aa659ccee8923995daf6883581ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_forall.html#a5142aa659ccee8923995daf6883581ec">HashAppendDetail</a> (<a class="el" href="structdrake_1_1_delegating_hasher.html">DelegatingHasher</a> *) const override</td></tr>
 <tr class="memdesc:a5142aa659ccee8923995daf6883581ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends all hash-relevant bytes for this <a class="el" href="classdrake_1_1symbolic_1_1_formula_cell.html" title="Represents an abstract class which is the base of concrete symbolic-formula classes (i....">FormulaCell</a> type into the given hasher, per the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept &ndash; except for <a class="el" href="classdrake_1_1symbolic_1_1_formula_cell.html#a8c07b2aea2c19c00e26628dd1af884f7" title="Returns kind of formula.">get_kind()</a>, because <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">Formula</a> already sends that.  <a href="#a5142aa659ccee8923995daf6883581ec">More...</a><br /></td></tr>
 <tr class="separator:a5142aa659ccee8923995daf6883581ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,9 +231,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a2855bdd2316319ade8b3c344aeb41704 inherit pro_methods_classdrake_1_1symbolic_1_1_formula_cell"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_cell.html#a2855bdd2316319ade8b3c344aeb41704">FormulaCell</a> (<a class="el" href="namespacedrake_1_1symbolic.html#a6869e7044dd90be5d972ee7dd4e821b6">FormulaKind</a> k)</td></tr>
 <tr class="memdesc:a2855bdd2316319ade8b3c344aeb41704 inherit pro_methods_classdrake_1_1symbolic_1_1_formula_cell"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="classdrake_1_1symbolic_1_1_formula_cell.html" title="Represents an abstract class which is the base of concrete symbolic-formula classes (i....">FormulaCell</a> of kind <code>k</code>.  <a href="classdrake_1_1symbolic_1_1_formula_cell.html#a2855bdd2316319ade8b3c344aeb41704">More...</a><br /></td></tr>
 <tr class="separator:a2855bdd2316319ade8b3c344aeb41704 inherit pro_methods_classdrake_1_1symbolic_1_1_formula_cell"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10d189b10da04816cb77666bca5d94e0 inherit pro_methods_classdrake_1_1symbolic_1_1_formula_cell"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_cell.html#a10d189b10da04816cb77666bca5d94e0">~FormulaCell</a> ()=default</td></tr>
-<tr class="memdesc:a10d189b10da04816cb77666bca5d94e0 inherit pro_methods_classdrake_1_1symbolic_1_1_formula_cell"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="classdrake_1_1symbolic_1_1_formula_cell.html#a10d189b10da04816cb77666bca5d94e0">More...</a><br /></td></tr>
-<tr class="separator:a10d189b10da04816cb77666bca5d94e0 inherit pro_methods_classdrake_1_1symbolic_1_1_formula_cell"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cff5ac570f2c2b3f5d2482fe4bd9871 inherit pro_methods_classdrake_1_1symbolic_1_1_formula_cell"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_formula_cell.html#a6cff5ac570f2c2b3f5d2482fe4bd9871">~FormulaCell</a> ()</td></tr>
+<tr class="memdesc:a6cff5ac570f2c2b3f5d2482fe4bd9871 inherit pro_methods_classdrake_1_1symbolic_1_1_formula_cell"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="classdrake_1_1symbolic_1_1_formula_cell.html#a6cff5ac570f2c2b3f5d2482fe4bd9871">More...</a><br /></td></tr>
+<tr class="separator:a6cff5ac570f2c2b3f5d2482fe4bd9871 inherit pro_methods_classdrake_1_1symbolic_1_1_formula_cell"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4ea1960b099973d4445f2068ea9aa81b"></a>
@@ -261,6 +263,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs from <code>vars</code> and <code>f</code>. </p>
+
+</div>
+</div>
+<a id="accbd5d6d896cfdc30c2d78537532cb7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accbd5d6d896cfdc30c2d78537532cb7d">&#9670;&nbsp;</a></span>~FormulaForall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1symbolic_1_1_formula_forall.html">FormulaForall</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

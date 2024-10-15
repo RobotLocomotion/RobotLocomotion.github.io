@@ -6,6 +6,7 @@ var classdrake_1_1symbolic_1_1_formula =
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html#a2432e9208d372f955c14f2465cea9512", null ],
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html#a5f23d222418bc539e0c3255ea2deda46", null ],
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html#a73ef07e11393268fcdf71d676c552939", null ],
+    [ "~Formula", "classdrake_1_1symbolic_1_1_formula.html#af462aaca744d5bc1d517b189f754b6b3", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_formula.html#a32fa0662fcc31778496f4e440014c67e", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_formula.html#acd49712c0b5fa2c1b2013663e81e2721", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_formula.html#aa298b19670905b746326f75d9cb5fe67", null ],

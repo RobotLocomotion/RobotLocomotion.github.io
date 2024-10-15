@@ -1,6 +1,7 @@
 var classdrake_1_1symbolic_1_1_expression_uninterpreted_function =
 [
     [ "ExpressionUninterpretedFunction", "classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html#abd3fe857715eed6378d27109fc02e870", null ],
+    [ "~ExpressionUninterpretedFunction", "classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html#a4a64ceef6e744fdd3aa0e55ca49f1c21", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html#a72ae45ea810c2e68f74e59000dca8337", null ],
     [ "Display", "classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html#ab022b2a7bc26750aab90eeafb49c2d8a", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html#a17a687a22fc3792625f3e48fff7f0269", null ],

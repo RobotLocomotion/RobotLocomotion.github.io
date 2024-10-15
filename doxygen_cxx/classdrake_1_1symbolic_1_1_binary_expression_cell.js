@@ -1,5 +1,6 @@
 var classdrake_1_1symbolic_1_1_binary_expression_cell =
 [
+    [ "~BinaryExpressionCell", "classdrake_1_1symbolic_1_1_binary_expression_cell.html#ace6c328d85c17d572d811e6b23c829cf", null ],
     [ "BinaryExpressionCell", "classdrake_1_1symbolic_1_1_binary_expression_cell.html#a43abe8b5ecec7cde1c6805a9b3e434aa", null ],
     [ "DoEvaluate", "classdrake_1_1symbolic_1_1_binary_expression_cell.html#a77aca70a37c5d9f504ee1c11a772fddd", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_binary_expression_cell.html#a17a687a22fc3792625f3e48fff7f0269", null ],

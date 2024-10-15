@@ -220,10 +220,10 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4721709aa25422b1dcaeb0abad1eefef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a4721709aa25422b1dcaeb0abad1eefef">~CspaceFreePolytope</a> () override=default</td></tr>
-<tr class="separator:a4721709aa25422b1dcaeb0abad1eefef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae20d0541a965cdc1c28944bc2fb4229a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#ae20d0541a965cdc1c28944bc2fb4229a">CspaceFreePolytope</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a73ee6610b18791fddf6176c0fb38f2d7">scene_graph</a>, <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089">SeparatingPlaneOrder</a> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a0f8dcce2c5fdfcc41effdec6a3280aa0">plane_order</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_star, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html">Options</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html">Options</a>{})</td></tr>
 <tr class="separator:ae20d0541a965cdc1c28944bc2fb4229a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951c05eca049028edbbedb7a101897cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a951c05eca049028edbbedb7a101897cb">~CspaceFreePolytope</a> () override</td></tr>
+<tr class="separator:a951c05eca049028edbbedb7a101897cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ef170719d3fadd87796728deb31d571"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a6ef170719d3fadd87796728deb31d571">FindSeparationCertificateGivenPolytope</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;C, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;d, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a409fd33166e0e4d6bf8967bac91676df">IgnoredCollisionPairs</a> &amp;ignored_collision_pairs, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html">FindSeparationCertificateGivenPolytopeOptions</a> &amp;options, std::unordered_map&lt; <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> &gt;, <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html">SeparationCertificateResult</a> &gt; *certificates) const</td></tr>
 <tr class="memdesc:a6ef170719d3fadd87796728deb31d571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the certificates that the C-space polytope {s | C*s&lt;=d, s_lower &lt;= s &lt;= s_upper} is collision free.  <a href="#a6ef170719d3fadd87796728deb31d571">More...</a><br /></td></tr>
 <tr class="separator:a6ef170719d3fadd87796728deb31d571"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -421,31 +421,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a4721709aa25422b1dcaeb0abad1eefef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4721709aa25422b1dcaeb0abad1eefef">&#9670;&nbsp;</a></span>~CspaceFreePolytope()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">~<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html">CspaceFreePolytope</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ae20d0541a965cdc1c28944bc2fb4229a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae20d0541a965cdc1c28944bc2fb4229a">&#9670;&nbsp;</a></span>CspaceFreePolytope() <span class="overload">[3/3]</span></h2>
 
@@ -499,6 +474,31 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html" title="This class tries to find large convex polytopes in the tangential-configuration space,...">CspaceFreePolytope</a> knows nothing about contexts. The plant and scene_graph must be fully configured before instantiating this class. </dd></dl>
+
+</div>
+</div>
+<a id="a951c05eca049028edbbedb7a101897cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951c05eca049028edbbedb7a101897cb">&#9670;&nbsp;</a></span>~CspaceFreePolytope()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html">CspaceFreePolytope</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

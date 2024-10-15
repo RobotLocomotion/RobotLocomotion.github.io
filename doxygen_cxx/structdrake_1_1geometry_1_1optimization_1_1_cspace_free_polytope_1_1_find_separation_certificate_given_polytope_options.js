@@ -1,5 +1,5 @@
 var structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options =
 [
-    [ "~FindSeparationCertificateGivenPolytopeOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html#aa435fc27c0cdc3bf251313acb02f499f", null ],
+    [ "~FindSeparationCertificateGivenPolytopeOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html#a26379363e3033619e66eef812aa5d404", null ],
     [ "ignore_redundant_C", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html#ad174bf3a68f2afc5a998eddf1fbbe860", null ]
 ];

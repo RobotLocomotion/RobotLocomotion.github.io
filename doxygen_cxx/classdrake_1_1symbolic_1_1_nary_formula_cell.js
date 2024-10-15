@@ -4,6 +4,7 @@ var classdrake_1_1symbolic_1_1_nary_formula_cell =
     [ "NaryFormulaCell", "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a354a0cb01b43bbf435b2d32173e6a085", null ],
     [ "NaryFormulaCell", "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a8965adfb0f3378b303f93371ab14cc83", null ],
     [ "NaryFormulaCell", "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a69ac76ce8d1fe99d9612523631ffc87e", null ],
+    [ "~NaryFormulaCell", "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a92478f27b956d9f5dc6f2b325f9e00fd", null ],
     [ "DisplayWithOp", "classdrake_1_1symbolic_1_1_nary_formula_cell.html#ab937adab3cb05b8a1d32bf0bdc6df9e6", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a3660c96e65bec4f7831e74691a14c129", null ],
     [ "get_operands", "classdrake_1_1symbolic_1_1_nary_formula_cell.html#a78ad216e5cf16bc699065f13e4d6e854", null ],
