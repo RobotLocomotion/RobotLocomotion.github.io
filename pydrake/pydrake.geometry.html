@@ -9887,6 +9887,22 @@ application will need to logging::set_log_level() to <code class="docutils liter
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.backend">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">backend</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.backend" title="Permalink to this definition"></a></dt>
+<dd><p>Controls which graphics library will be used to perform the rendering.</p>
+<p>Permissible values are the empty string (default), “GLX”, “EGL”, and
+“Cocoa”. Any other value will throw an error.</p>
+<p>By default (i.e., when set to the empty string) the render engine will
+choose which library to use. At the moment the default is “Cocoa” on
+macOS and “GLX” on Linux, but we anticipate changing the default in
+the future.</p>
+<p>If the option is set to one of the permissible values but the related
+graphics library has not been compiled into current build (e.g., “GLX”
+on macOS), then the default choice (empty string) will be used
+instead, with a warning.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.cast_shadows">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cast_shadows</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.cast_shadows" title="Permalink to this definition"></a></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, <em>all</em> lights that are <em>able</em> to cast shadows will do so.</p>

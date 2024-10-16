@@ -1,5 +1,7 @@
 var NAVTREEINDEX61 =
 {
+"stiff__double__mass__spring__system_8h.html":[4,0,0,12,0,0,18],
+"stochastic_8h.html":[4,0,0,1,2,1],
 "stochastic_8h.html#a025af5d6df759f4a5bdb396846dcca74":[4,0,0,1,2,1,20],
 "stochastic_8h.html#a0611532f6e53d2b3eb39986468ad1399":[4,0,0,1,2,1,9],
 "stochastic_8h.html#a0d1c5da87f4161d4e6a493411c26976a":[4,0,0,1,2,1,24],
@@ -247,7 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1geometry_1_1_in_memory_mesh.html":[3,0,0,4,28],
 "structdrake_1_1geometry_1_1_in_memory_mesh.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,4,28,0],
 "structdrake_1_1geometry_1_1_in_memory_mesh.html#ac3a3ff7b051c94f3156fea38f24b1902":[3,0,0,4,28,2],
-"structdrake_1_1geometry_1_1_in_memory_mesh.html#ade2976c447838418353b04479e971d5a":[3,0,0,4,28,1],
-"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html":[3,0,0,4,31,0],
-"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a28cb55393e1523165dc2b4f624437e29":[3,0,0,4,31,0,2]
+"structdrake_1_1geometry_1_1_in_memory_mesh.html#ade2976c447838418353b04479e971d5a":[3,0,0,4,28,1]
 };

@@ -251,5 +251,6 @@ var searchData=
   ['extractprincipalsubmatrix',['ExtractPrincipalSubmatrix',['../namespacedrake_1_1math.html#ace1aea0ef245e52e5bc2f91d553ef096',1,'drake::math']]],
   ['extractsimulatorconfig',['ExtractSimulatorConfig',['../group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6',1,'drake::systems']]],
   ['extractvalue',['ExtractValue',['../namespacedrake_1_1math.html#ac74b322064f97efb2b143fe01b832ab1',1,'drake::math']]],
-  ['extractvariablesfromexpression',['ExtractVariablesFromExpression',['../namespacedrake_1_1symbolic.html#a4f9f98ac0c3db06d72227b0502cf8934',1,'drake::symbolic::ExtractVariablesFromExpression(const symbolic::Expression &amp;e)'],['../namespacedrake_1_1symbolic.html#acd9ab6787ea570003b69621c52bfa5cc',1,'drake::symbolic::ExtractVariablesFromExpression(const Eigen::Ref&lt; const VectorX&lt; Expression &gt;&gt; &amp;expressions)']]]
+  ['extractvariablesfromexpression',['ExtractVariablesFromExpression',['../namespacedrake_1_1symbolic.html#a4f9f98ac0c3db06d72227b0502cf8934',1,'drake::symbolic::ExtractVariablesFromExpression(const symbolic::Expression &amp;e)'],['../namespacedrake_1_1symbolic.html#acd9ab6787ea570003b69621c52bfa5cc',1,'drake::symbolic::ExtractVariablesFromExpression(const Eigen::Ref&lt; const VectorX&lt; Expression &gt;&gt; &amp;expressions)']]],
+  ['estimation_20of_20hydroelastic_20parameters',['Estimation of Hydroelastic Parameters',['../group__hydro__params.html',1,'']]]
 ];

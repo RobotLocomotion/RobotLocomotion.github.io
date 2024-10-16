@@ -268,17 +268,14 @@ Properties for hydroelastic contact</h3>
 </li>
 <li>Hydroelastic modulus (Pa (N/m²))<ul>
 <li>This is the measure of how stiff the material is. It directly defines how much pressure is exerted given a certain amount of penetration. More pressure leads to greater forces. Larger values create stiffer objects. An infinite modulus is mathematically equivalent to a “rigid” object. (Although, it is definitely better, in that case, to simply declare it “rigid”.)</li>
-<li>This is <em>only</em> required for shapes declared to be “compliant”. It can be defined for shapes declared as “rigid”, but the value will be ignored. (It can be convenient to always define it to enable tests where one might toggle the classification between rigid and compliant such that the compliant declaration is always well formed.)</li>
-<li>Declaring a geometry to be compliant but not providing a valid hydroelastic modulus will produce an error at the time the geometry is added to <code>SceneGraph</code>.</li>
-<li>This is similar to something like Young’s modulus but it is not identical.<ul>
-<li>The primary distinction is this isn’t purely a material property. The value is entangled with the geometry. It essentially scales the force based on the <em>percentage</em> of penetration into an object (i.e., strain). So, a fixed modulus value might lead to a 1cm penetration on one sphere. But if the sphere were scaled up by a factor of 10, the penetration would become 10cm. So, if there are constraints on penetration depth, the modulus would have to increase with the scale of the geometry.</li>
-</ul>
-</li>
+<li><a class="el" href="group__hydro__params.html">Estimation of Hydroelastic Parameters</a> shows how to estimate the hydroelastic modulus using analytical formulas.</li>
 <li>Notes on choosing a value:<ul>
-<li>Starting with the value for Young’s modulus is not unreasonable. Empirical evidence suggests that the hydroelastic modulus tends to be smaller depending on the size of the objects.</li>
+<li>Starting with the value for Young’s modulus is not unreasonable. However, large values (corresponding for instance to the Young’s modulus of metals) can cause numerical problems. In practice, values as high or larger than 10⁸ Pa are seldom used. Refer to <a class="el" href="group__hydro__params.html">Estimation of Hydroelastic Parameters</a> for further details.</li>
 <li>For large modulus values, the resolution of the representations matter more. A very high modulus will keep the contact near the surface of the geometry, exposing tessellation artifacts. A smaller modulus has a smoothing effect.</li>
 </ul>
 </li>
+<li>This is <em>only</em> required for shapes declared to be “compliant”. It can be defined for shapes declared as “rigid”, but the value will be ignored. (It can be convenient to always define it to enable tests where one might toggle the classification between rigid and compliant such that the compliant declaration is always well formed.)</li>
+<li>Declaring a geometry to be compliant but not providing a valid hydroelastic modulus will produce an error at the time the geometry is added to <code>SceneGraph</code>.</li>
 </ul>
 </li>
 <li>Hunt-Crossley dissipation (s/m)<ul>

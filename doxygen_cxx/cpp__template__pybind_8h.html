@@ -165,7 +165,8 @@ $(document).ready(function(){initNavTree('cpp__template__pybind_8h.html','');});
 <div class="title">cpp_template_pybind.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;optional&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &quot;<a class="el" href="cpp__param__pybind_8h.html">drake/bindings/pydrake/common/cpp_param_pybind.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pydrake__pybind_8h.html">drake/bindings/pydrake/pydrake_pybind.h</a>&quot;</code><br />
@@ -199,10 +200,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a85dae944dd94ece7b256c9c46215268d"><td class="memItemLeft" align="right" valign="top">py::object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a85dae944dd94ece7b256c9c46215268d">AddTemplateClass</a> (py::handle scope, const std::string &amp;template_name, py::handle py_class, py::tuple param, bool skip_rename=false)</td></tr>
 <tr class="memdesc:a85dae944dd94ece7b256c9c46215268d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a template class instantiation.  <a href="namespacedrake_1_1pydrake.html#a85dae944dd94ece7b256c9c46215268d">More...</a><br /></td></tr>
 <tr class="separator:a85dae944dd94ece7b256c9c46215268d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8504fe03e622fa78dbbd4e7ce19fdb6"><td class="memTemplParams" colspan="2">template&lt;typename Class , typename... Options&gt; </td></tr>
-<tr class="memitem:ab8504fe03e622fa78dbbd4e7ce19fdb6"><td class="memTemplItemLeft" align="right" valign="top">py::class_&lt; Class, Options... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#ab8504fe03e622fa78dbbd4e7ce19fdb6">DefineTemplateClassWithDefault</a> (py::handle scope, const std::string &amp;default_name, py::tuple param, const char *doc_string=&quot;&quot;, const std::string &amp;template_suffix=&quot;_&quot;)</td></tr>
-<tr class="memdesc:ab8504fe03e622fa78dbbd4e7ce19fdb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a convenience wrapper for defining a template class instantiation and a default instantiation (if not already defined).  <a href="namespacedrake_1_1pydrake.html#ab8504fe03e622fa78dbbd4e7ce19fdb6">More...</a><br /></td></tr>
-<tr class="separator:ab8504fe03e622fa78dbbd4e7ce19fdb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe5aba035d48c052690fe1d1b4a3f414"><td class="memTemplParams" colspan="2">template&lt;typename Class , typename... Options&gt; </td></tr>
+<tr class="memitem:abe5aba035d48c052690fe1d1b4a3f414"><td class="memTemplItemLeft" align="right" valign="top">py::class_&lt; Class, Options... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#abe5aba035d48c052690fe1d1b4a3f414">DefineTemplateClassWithDefault</a> (py::handle scope, const std::string &amp;default_name, py::tuple param, const char *doc_string=&quot;&quot;, const std::optional&lt; std::string &gt; &amp;template_suffix={}, std::optional&lt; py::dynamic_attr &gt; dynamic_attr={})</td></tr>
+<tr class="memdesc:abe5aba035d48c052690fe1d1b4a3f414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a convenience wrapper for defining a template class instantiation and a default instantiation (if not already defined).  <a href="namespacedrake_1_1pydrake.html#abe5aba035d48c052690fe1d1b4a3f414">More...</a><br /></td></tr>
+<tr class="separator:abe5aba035d48c052690fe1d1b4a3f414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a590ec0531f7c675e373909bb758740db"><td class="memTemplParams" colspan="2">template&lt;typename Func , typename... Extra&gt; </td></tr>
 <tr class="memitem:a590ec0531f7c675e373909bb758740db"><td class="memTemplItemLeft" align="right" valign="top">py::object&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a590ec0531f7c675e373909bb758740db">AddTemplateFunction</a> (py::handle scope, const std::string &amp;name, Func &amp;&amp;func, py::tuple param, Extra &amp;&amp;... extra)</td></tr>
 <tr class="memdesc:a590ec0531f7c675e373909bb758740db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a template function.  <a href="namespacedrake_1_1pydrake.html#a590ec0531f7c675e373909bb758740db">More...</a><br /></td></tr>

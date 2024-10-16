@@ -204,6 +204,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8bf916e4d1f76c306700035b58b08842"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a4730f000053dc13014d5e316c6f91201">string_map</a>&lt; <a class="el" href="structdrake_1_1geometry_1_1_gltf_extension.html">GltfExtension</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8bf916e4d1f76c306700035b58b08842">gltf_extensions</a></td></tr>
 <tr class="memdesc:a8bf916e4d1f76c306700035b58b08842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from the name of a glTF extension (e.g., "KHR_materials_sheen") to render engine settings related to that extension.  <a href="#a8bf916e4d1f76c306700035b58b08842">More...</a><br /></td></tr>
 <tr class="separator:a8bf916e4d1f76c306700035b58b08842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea4310382b496e8e4efc05c73409cbc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8ea4310382b496e8e4efc05c73409cbc">backend</a></td></tr>
+<tr class="memdesc:a8ea4310382b496e8e4efc05c73409cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls which graphics library will be used to perform the rendering.  <a href="#a8ea4310382b496e8e4efc05c73409cbc">More...</a><br /></td></tr>
+<tr class="separator:a8ea4310382b496e8e4efc05c73409cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -228,6 +231,25 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8ea4310382b496e8e4efc05c73409cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ea4310382b496e8e4efc05c73409cbc">&#9670;&nbsp;</a></span>backend</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string backend</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controls which graphics library will be used to perform the rendering. </p>
+<p>Permissible values are the empty string (default), "GLX", "EGL", and "Cocoa". Any other value will throw an error.</p>
+<p>By default (i.e., when set to the empty string) the render engine will choose which library to use. At the moment the default is "Cocoa" on macOS and "GLX" on Linux, but we anticipate changing the default in the future.</p>
+<p>If the option is set to one of the permissible values but the related graphics library has not been compiled into current build (e.g., "GLX" on macOS), then the default choice (empty string) will be used instead, with a warning. </p>
+
+</div>
+</div>
 <a id="a606a9df3866a52308dad9851d88e2488"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a606a9df3866a52308dad9851d88e2488">&#9670;&nbsp;</a></span>cast_shadows</h2>
 

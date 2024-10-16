@@ -1,0 +1,287 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Estimation of Hydroelastic Parameters</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__hydro__params.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Estimation of Hydroelastic Parameters<div class="ingroups"><a class="el" href="group__multibody.html">Multibody Kinematics and Dynamics</a> &raquo; <a class="el" href="group__drake__contacts.html">Contact Modeling in Drake</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Similarly to Hertz theory of contact mechanics, in this section we derive analytical formulas to estimate the elastic force that establishes between two bodies in contact. </p>
+<p>As in Hertz theory, we assume small deformations, allowing us to introduce geometrical approximations.</p>
+<p>The next section presents a table of analytical formulas to estimate the contact force between two compliant bodies given their geometry and elastic moduli. A Drake user can use these formulas to estimate hydroelastic parameters for their particular model. Below we provide a <a class="el" href="group__hydro__params.html#hydro_params_study_case">Study Case</a> to show with an example how to estimate hydroelastic moduli using these formulas.</p>
+<p>Those readers interested on the theory behind, can keep reading further into the sections that follow.</p>
+<h1><a class="anchor" id="hydro_params_formulas"></a>
+Analytical Formulas</h1>
+<p>In <a class="el" href="group__hydro__params.html#hydro_params_analytical">Analytical Solutions</a> we show that a hydroelastic object of modulus E behaves as an <a class="el" href="group__hydro__params.html#hydro_params_efm">Elastic Foundation</a> of depth H (established by the particular geometry). At small penetrations, the hydroelastic contact force fₙ between two compliant objects can be estimated from </p><pre>
+  fₙ = κ⋅V,
+</pre><p> where <code>V</code> is the overlap volume or volume of intersection and κ = κᵃ⋅κᵇ/(κᵃ+κᵇ) is the effective stiffness, with κᵃ = Eᵃ/Hᵃ and κᵇ = Eᵇ/Hᵇ the stiffness of bodies A and B respectively.</p>
+<p>The table below summarizes analytical formulas to compute the contact force between a body of a given geometric shape with a half-space. These formulas are obtained by substituting an estimate of the intersection volume as a function of a small interpenetration distance <code>x</code>, see column "Overlap Volume V" in the table below. Column "Foundation Depth H" shows the value used by Drake given its choice of hydroelastic pressure field (where pressure equals E at the point of maximum signed distance). For a conic indenter of radius R and apex angle θ, the signed distance is maximum at the incenter of its triangular cross section (an isosceles triangle of base 2R and height R/tan(θ)). With a pressure field linear with the signed distance and with maximum value E at the incenter, the foundation depth equals the radius of the incircle.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Geometry  </th><th class="markdownTableHeadCenter">Foundation Depth H  </th><th class="markdownTableHeadCenter">Overlap Volume V  </th><th class="markdownTableHeadLeft">Contact Force fₙ   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Cylindrical punchᵃ  </td><td class="markdownTableBodyCenter">R  </td><td class="markdownTableBodyCenter">\(\pi R^2 x\)  </td><td class="markdownTableBodyLeft">\(\pi E R x\)   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Sphereᵇ  </td><td class="markdownTableBodyCenter">R  </td><td class="markdownTableBodyCenter">\(\pi R x^2\)  </td><td class="markdownTableBodyLeft">\(\pi E x^2\)   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Conic indenterᶜ  </td><td class="markdownTableBodyCenter">\(R\left(\frac{1-\sin(\theta)}{1+\sin(\theta)}\right)^{1/2}\)  </td><td class="markdownTableBodyCenter">\(\pi/3\tan^2(\theta)x^3\)  </td><td class="markdownTableBodyLeft">\(\frac{\pi}{3}\frac{E}{R}x^3\tan^2(\theta)\left(\frac{1+\sin(\theta)}{1-\sin(\theta)}\right)^{1/2}\)   </td></tr>
+</table>
+<p>ᵃ Compliant cylinder of radius R and length L &gt; R. Rigid half-space.</p>
+<p>ᵇ Compliant sphere of radius R. Rigid half-space.</p>
+<p>ᶜ Rigid conic indenter of radius R and apex angle θ. Compliant half-space. The foundation depth H equals the radius of the incircle of its triangular cross section.</p>
+<p>One final observation. As with Hertz contact theory, the contact force between two compliant spheres A and B can be computed by considering the contact between a sphere of effective radius R = Rᵃ⋅Rᵇ/(Rᵃ+Rᵇ) and a half-space.</p>
+<h2><a class="anchor" id="hydro_params_study_case"></a>
+Study Case: Manipuland resting on a table</h2>
+<p>We estimate the penetration <code>x</code> for a typical household object of mass 1 kg (9.81 N). We make this estimation for two extreme geometric cases: a cylinder, a blunt object generating a flat contact surface, and a sphere, a smooth object generating a smoother (spherical) contact surface.</p>
+<p>The table below summarizes penetration <code>x</code> in millimeters for different values of hydroelastic modulus E.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">E [Pa]  </th><th class="markdownTableHeadCenter">Sphere  </th><th class="markdownTableHeadLeft">Cylinder   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">10⁶  </td><td class="markdownTableBodyCenter">1.767  </td><td class="markdownTableBodyLeft">6.2 × 10⁻²   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">10⁷  </td><td class="markdownTableBodyCenter">0.559  </td><td class="markdownTableBodyLeft">6.2 × 10⁻³   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">10⁸  </td><td class="markdownTableBodyCenter">0.177  </td><td class="markdownTableBodyLeft">6.2 × 10⁻⁴   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">10⁹  </td><td class="markdownTableBodyCenter">0.056  </td><td class="markdownTableBodyLeft">6.2 × 10⁻⁵   </td></tr>
+</table>
+<p>While the Hydroelastic modulus is not the Young's modulus, we can still use values of Young's modulus as a reference. For instance, steel has a Young's modulus of about E ≈ 200 GPa (2 × 10¹¹ Pa), while E ≈ 1 GPa would correspond to a soft wood.</p>
+<p>For simulation of rigid (stiff in reality) objects, the choice of hydroelastic modulus is a tradeoff between an <em>acceptable</em> amount of penetration and numerical conditioning. Good numerical conditioning translates in practice to better performance and robustness. Very large values of hydroelastic modulus can degrade numerical conditioning and therefore users must choose a value that is acceptable for their application. Experience shows that for modeling "rigid" (once again, stiff) objects, there is not much gain in accurately resolving penetrations below the submillimeter range (~10⁻⁴ m). Therefore moduli in the order of 10⁷-10⁸ Pa will be more than enough, with no good practical reason to use larger values.</p>
+<p>Notice that for the very typical flat contact case (a mug, a plate, the foot of a robot), the cylinder estimation with E = 10⁷ Pa leads to penetrations well under submillimeter scales. We find this value a good starting point for most models. Most often, users won't use a larger value but will want instead to lower this value to model rubber padded surfaces (robotic feet or grippers).</p>
+<h1><a class="anchor" id="hydro_params_efm"></a>
+Winkler's Elastic Foundation</h1>
+<p>Before describing our derivation, we first need to understand how Hydroelastic Contact relates Winkler's Elastic Foundation Model (EFM), <a class="el" href="group__drake__contacts.html#Johnson1987">[Johnson, 1987; §4.3]</a>. This will allows us to make a connection to previous work by <a class="el" href="group__drake__contacts.html#Gonthier2007">[Gonthier, 2007; §4.3]</a>, who derived a model of compliant contact with EFM as the starting point.</p>
+<p>EFM provides a simple approximation for the contact pressure distribution. The key idea is to model a compliant layer or <em>foundation</em> of thickness H over a rigid core, see Fig. 1. This compliant layer can be seen as a bed of linear springs that gets pushed when a second object comes into contact. Integrating the effect of all springs over the contact area produces the net force among the two contacting bodies.</p>
+<div class="image">
+<object type="image/svg+xml" data="elastic_foundation.svg" width="35%">elastic_foundation.svg</object>
+<div class="caption">
+Figure 1: Elastic Foundation Model.</div></div>
+<p>Denoting with <code>ϕ(r)</code> the penetrated distance at a location <code>r</code>, Fig. 1, EFM models the pressure due to contact at <code>r</code> as </p><pre>
+  p(r) = E⋅ϕ(r)/H,                                                          (1)
+</pre><p> where H is the <em>elastic foundation</em> depth (the thickness of the compliant layer) and <code>E</code> is the elastic modulus. We use E for the elastic modulus in analogy to Young's modulus from elasticity theory (we do the same for Hydroelastic contact). Keep in mind that these models are different and their moduli parameters are not expected to match, though we often use Young's modulus as a starting point for estimation. Though an approximation of reality, the model (1) has the nice property that is fully algebraic, not requiring the solution of complex integral equations as with Hertz contact theory.</p>
+<h1><a class="anchor" id="hydro_params_efm_analogy"></a>
+Hydroelastic Contact and Elastic Foundation</h1>
+<p>Similarly to EFM, the <a class="el" href="group__compliant__contact.html#hydro_contact">Hydroelastic Contact Model</a> also proposes an approximation of the contact pressure. In fact, we can see hydroelastic contact as a modern rendition of EFM in which the pressures generated by (1) are precomputed into a <em>hydroelastic pressure field</em>, see <a class="el" href="group__compliant__contact.html#hydro_contact">Hydroelastic Contact</a>. These precomputed pressure fields are then used at runtime for an efficient computation of contact surface and forces.</p>
+<p>Designing the hydroelastic pressure field allows for some flexibility, but the EFM approximation (1) is typically used, especially in Drake. This choice is supported by extensive literature and practical experience with EFM. Additionally, the coarse meshes used to discretize hydroelastic geometries yield only linear approximations, making a pressure field linear in the distance function a natural choice.</p>
+<p>While this connection to EFM is strong, Hydroelastic contact presents several advantages over traditional EFM</p><ul>
+<li>Hydroelastic contact generalizes to arbitrary non-convex geometry</li>
+<li>Large "deformations" (interpenetration) are allowed</li>
+<li>Efficient algorithm to compute continuous contact patches</li>
+<li>Continuously differentiable contact forces</li>
+</ul>
+<h1><a class="anchor" id="hydro_params_analytical"></a>
+Analytical Solutions</h1>
+<p>Given the clear connection between hydroelastic contact and EFM, we use this analogy to derive an analytical formula to estimate contact forces. More precisely, we follow the work by <a class="el" href="group__drake__contacts.html#Gonthier2007">[Gonthier, 2007; §4.3]</a>, who by using the approximation in (1) derives analytical formula for the computation of contact forces between two compliant bodies A and B, Fig. 2.</p>
+<div class="image">
+<object type="image/svg+xml" data="hydro_analytic.svg" width="35%">hydro_analytic.svg</object>
+<div class="caption">
+Figure 2: Hydroelastic contact. Signed distances and balance of pressure.</div></div>
+<h2><a class="anchor" id="hydro_params_gonthier"></a>
+Gonthier's derivation</h2>
+<p>At small deformations, <a class="el" href="group__drake__contacts.html#Gonthier2007">[Gonthier, 2007]</a> assumes a planar contact surface. This assumption allows to compute the elastic forces on each body separately, as if they interacted with a rigid separating plane. The true contact force is obtained by making both forces equal. Using this assumption and the EFM model (1), <a class="el" href="group__drake__contacts.html#Gonthier2007">[Gonthier, 2007]</a> finds a generic expression for the elastic force pushing bodies A and B. The result is remarkably simple and beautiful, only involving the overlapping volume of the original undeformed geometries </p><pre>
+  fₙ = κ⋅V,                                                                 (2)
+</pre><p> where κ = κᵃ⋅κᵇ/(κᵃ+κᵇ) is the effective stiffness and κᵃ = Eᵃ/Hᵃ and κᵇ = Eᵇ/Hᵇ are the stiffness of bodies A and B respectively. V is the volume the original geometries would overlap if they did not deform.</p>
+<h2><a class="anchor" id="hydro_params_analytical"></a>
+Analytical Solutions</h2>
+<p>We present an alternative derivation that more closely resembles the Hydroelastic contact model, where the balance of normal stresses (pressure) determines the location of the contact surface. Still, we find that this derivation leads to exactly the same result in (2).</p>
+<p>At small deformations, Fig. 2, we approximate the distance between the two bodies as </p><pre>
+  ϕ(r) = ϕᵃ(r) + ϕᵇ(r),                                                     (3)
+</pre><p>We use the EFM approximation (1) to model the normal stress (pressure) that results from deforming each body A and B amounts ϕᵃ(r) and ϕᵇ(r) respectively. With this, the balance of pressure at each point on the contact surface is </p><pre>
+  p(r) = pᵃ(r) = pᵇ(r), or
+  p(r) = κᵃ⋅ϕᵃ(r) = κᵇ⋅ϕᵇ(r).                                               (4)
+</pre><p>We can solve for the contact pressure p(r) from (3) and (4) as </p><pre>
+  p(r) = κ⋅ϕ(r),                                                            (5)
+</pre><p> with the same stiffness κ found by <a class="el" href="group__drake__contacts.html#Gonthier2007">[Gonthier, 2007]</a>'s alternative method in (2).</p>
+<p>The total contact force is found by integrating (5) over the contact surface </p><pre>
+  fₙ(r) = ∫p(r)d²r = κ⋅∫ϕ(r)d²r.                                            (6)
+</pre><p>Given the small deformations assumption we see in Fig. 2 that this last integral can be approximated as the volume of intersection between the two undeformed geometries, leading to the same result found by <a class="el" href="group__drake__contacts.html#Gonthier2007">[Gonthier, 2007]</a> in Eq. (2). </p>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>
