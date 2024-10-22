@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"stepwise__dense__output_8h.html#ac63f86fd8744281284fd18e143109605":[4,0,0,12,0,30,1],
 "stiff__double__mass__spring__system_8h.html":[4,0,0,12,0,0,18],
 "stochastic_8h.html":[4,0,0,1,2,1],
 "stochastic_8h.html#a025af5d6df759f4a5bdb396846dcca74":[4,0,0,1,2,1,20],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1geometry_1_1_gltf_extension.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,25,0],
 "structdrake_1_1geometry_1_1_in_memory_mesh.html":[3,0,0,4,28],
 "structdrake_1_1geometry_1_1_in_memory_mesh.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,4,28,0],
-"structdrake_1_1geometry_1_1_in_memory_mesh.html#ac3a3ff7b051c94f3156fea38f24b1902":[3,0,0,4,28,2],
-"structdrake_1_1geometry_1_1_in_memory_mesh.html#ade2976c447838418353b04479e971d5a":[3,0,0,4,28,1]
+"structdrake_1_1geometry_1_1_in_memory_mesh.html#ac3a3ff7b051c94f3156fea38f24b1902":[3,0,0,4,28,2]
 };

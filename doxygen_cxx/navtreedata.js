@@ -126,14 +126,14 @@ var NAVTREEINDEX =
 "penetration__as__point__pair__callback_8h.html",
 "random__polynomial__matrix_8h.html",
 "sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc",
-"stiff__double__mass__spring__system_8h.html",
-"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html",
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db",
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab702e2f7530d6172eea3780d8923bd71",
-"structdrake_1_1solvers_1_1_new_variable_names.html",
-"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a4f2427d3a98172966c1dbc169ed89c27",
-"symbolic_2polynomial_8h.html#ae9423440606bd13d4767c72dd97ec6a2",
-"wrap__pybind_8h.html#a3a22cfe187c4d2e58dacdc4fddf69843"
+"stepwise__dense__output_8h.html#ac63f86fd8744281284fd18e143109605",
+"structdrake_1_1geometry_1_1_in_memory_mesh.html#ade2976c447838418353b04479e971d5a",
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html",
+"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#a372de693ad40b3f42839c8ec6ac845f4",
+"structdrake_1_1solvers_1_1_new_symmetric_variable_names.html",
+"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a2474a5474cbff19523a51eb1de01cda4",
+"symbolic_2polynomial_8h.html#ae3b6eea79253234902bbcf4643e34d81",
+"wrap__pybind_8h.html#a03d8c49a4502029d0167c2aa50f4b624"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[3,0,0,13,48],
 "structdrake_1_1solvers_1_1_new_variable_names.html":[3,0,0,13,49],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[3,0,0,13,50],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,13,51],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html#a0d49d74db4c035719c3867723cf7e779":[3,0,0,15,8,8,0,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html#a854352f53b148adc24983a58a1866d66":[3,0,0,15,8,8,0,1],
 "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html":[3,0,0,15,8,8,1],
-"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a178795099d0608972755dfef8d8367e3":[3,0,0,15,8,8,1,1],
-"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a2474a5474cbff19523a51eb1de01cda4":[3,0,0,15,8,8,1,6]
+"structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_metadata.html#a178795099d0608972755dfef8d8367e3":[3,0,0,15,8,8,1,1]
 };

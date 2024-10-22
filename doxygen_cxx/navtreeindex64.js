@@ -1,5 +1,6 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#a372de693ad40b3f42839c8ec6ac845f4":[3,0,0,8,99,0],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab702e2f7530d6172eea3780d8923bd71":[3,0,0,8,99,3],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab789f8c5c51c6c3bbd3d2d7737c95b29":[3,0,0,8,99,1],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acad1162320925e1bba6171c41831504e":[3,0,0,8,99,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1solvers_1_1_mosek_solver_details.html":[3,0,0,13,47],
 "structdrake_1_1solvers_1_1_mosek_solver_details.html#a049167e80a2c377c18ea0185894e0003":[3,0,0,13,47,1],
 "structdrake_1_1solvers_1_1_mosek_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,13,47,0],
-"structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0":[3,0,0,13,47,2],
-"structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[3,0,0,13,48]
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0":[3,0,0,13,47,2]
 };

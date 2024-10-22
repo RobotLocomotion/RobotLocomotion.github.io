@@ -112,6 +112,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     ] ],
     [ "sos_basis_generator.h", "sos__basis__generator_8h.html", "sos__basis__generator_8h" ],
     [ "sparse_and_dense_matrix.h", "sparse__and__dense__matrix_8h.html", null ],
+    [ "specific_options.h", "specific__options_8h.html", null ],
     [ "unrevised_lemke_solver.h", "unrevised__lemke__solver_8h.html", [
       [ "UnrevisedLemkeSolverId", "classdrake_1_1solvers_1_1_unrevised_lemke_solver_id.html", "classdrake_1_1solvers_1_1_unrevised_lemke_solver_id" ],
       [ "UnrevisedLemkeSolver", "classdrake_1_1solvers_1_1_unrevised_lemke_solver.html", "classdrake_1_1solvers_1_1_unrevised_lemke_solver" ]

@@ -148,6 +148,7 @@ var NAVTREEINDEX60 =
 "spatial__velocity_8h.html":[4,0,0,8,5,5],
 "spatial__velocity_8h.html#a5dda4428e98fb18ea25e36b0ab733aae":[4,0,0,8,5,5,1],
 "spatial__velocity__constraint_8h.html":[4,0,0,8,7,6],
+"specific__options_8h.html":[4,0,0,11,61],
 "spectrahedron_8h.html":[4,0,0,4,1,22],
 "spong__controller_8h.html":[4,0,0,3,0,6],
 "spong__controller__params_8h.html":[4,0,0,3,0,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "static__friction__cone__constraint_8h.html":[4,0,0,8,7,10],
 "stationary__system_8h.html":[4,0,0,12,0,0,17],
 "stationary__system_8h.html#af049a2e4a758fda07c5de7b35e50fea2":[4,0,0,12,0,0,17,1],
-"stepwise__dense__output_8h.html":[4,0,0,12,0,30],
-"stepwise__dense__output_8h.html#ac63f86fd8744281284fd18e143109605":[4,0,0,12,0,30,1]
+"stepwise__dense__output_8h.html":[4,0,0,12,0,30]
 };

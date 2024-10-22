@@ -1,5 +1,6 @@
 var NAVTREEINDEX62 =
 {
+"structdrake_1_1geometry_1_1_in_memory_mesh.html#ade2976c447838418353b04479e971d5a":[3,0,0,4,28,1],
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html":[3,0,0,4,31,0],
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a28cb55393e1523165dc2b4f624437e29":[3,0,0,4,31,0,2],
 "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,31,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ab41a3270130e638897f5c67f2cae3705":[3,0,0,4,1,13,9],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#abb7b16d4d092f7b7572de4c058b30d96":[3,0,0,4,1,13,10],
 "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#acf69707f5aa6d2853d36600958706ef0":[3,0,0,4,1,13,6],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,1,1,11],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,5,5,11]
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,1,1,11]
 };
