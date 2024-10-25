@@ -1161,6 +1161,134 @@ for the list of instantiations.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.trajectories.FunctionHandleTrajectory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">FunctionHandleTrajectory</span></span><a class="headerlink" href="#pydrake.trajectories.FunctionHandleTrajectory" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory</span></code></a></p>
+<p>FunctionHandleTrajectory takes a function, value = f(t), and provides
+a Trajectory interface.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.trajectories.FunctionHandleTrajectory_" title="pydrake.trajectories.FunctionHandleTrajectory_"><code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionHandleTrajectory_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.FunctionHandleTrajectory.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.FunctionHandleTrajectory" title="pydrake.trajectories.FunctionHandleTrajectory"><span class="pre">pydrake.trajectories.FunctionHandleTrajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-</span> <span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">inf</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.FunctionHandleTrajectory.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the FunctionHandleTrajectory.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">func</span></code>:</dt><dd><p>The function to be used to evaluate the trajectory.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt><dd><p>The number of rows in the output of the function.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cols</span></code>:</dt><dd><p>The number of columns in the output of the function.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">start_time</span></code>:</dt><dd><p>The start time of the trajectory.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">end_time</span></code>:</dt><dd><p>The end time of the trajectory.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if func == nullptr</strong><strong>, </strong><strong>rows &lt; 0</strong><strong>, </strong><strong>cols &lt; 0</strong><strong>, </strong><strong>start_time &gt;</strong> – </p></li>
+<li><p><strong>end_time</strong><strong>, or </strong><strong>if the function returns a matrix of the wrong size.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.FunctionHandleTrajectory.Clone">
+<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.FunctionHandleTrajectory" title="pydrake.trajectories.FunctionHandleTrajectory"><span class="pre">pydrake.trajectories.FunctionHandleTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.FunctionHandleTrajectory.Clone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.trajectories.FunctionHandleTrajectory_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">FunctionHandleTrajectory_</span></span><a class="headerlink" href="#pydrake.trajectories.FunctionHandleTrajectory_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionHandleTrajectory_[float]</span></code>, <a class="reference internal" href="#pydrake.trajectories.FunctionHandleTrajectory_-AutoDiffXd" title="pydrake.trajectories.FunctionHandleTrajectory_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionHandleTrajectory_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.trajectories.FunctionHandleTrajectory_-Expression" title="pydrake.trajectories.FunctionHandleTrajectory_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionHandleTrajectory_[Expression]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.trajectories.FunctionHandleTrajectory_-AutoDiffXd">
+<span id="pydrake.trajectories.FunctionHandleTrajectory_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">FunctionHandleTrajectory_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.trajectories.FunctionHandleTrajectory_-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory_-AutoDiffXd" title="pydrake.trajectories.Trajectory_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory_[AutoDiffXd]</span></code></a></p>
+<p>FunctionHandleTrajectory takes a function, value = f(t), and provides
+a Trajectory interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.FunctionHandleTrajectory_-AutoDiffXd-.__init__">
+<span id="pydrake.trajectories.FunctionHandleTrajectory_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.FunctionHandleTrajectory_" title="pydrake.trajectories.FunctionHandleTrajectory_"><span class="pre">pydrake.trajectories.FunctionHandleTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-</span> <span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">inf</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.FunctionHandleTrajectory_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the FunctionHandleTrajectory.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">func</span></code>:</dt><dd><p>The function to be used to evaluate the trajectory.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt><dd><p>The number of rows in the output of the function.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cols</span></code>:</dt><dd><p>The number of columns in the output of the function.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">start_time</span></code>:</dt><dd><p>The start time of the trajectory.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">end_time</span></code>:</dt><dd><p>The end time of the trajectory.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if func == nullptr</strong><strong>, </strong><strong>rows &lt; 0</strong><strong>, </strong><strong>cols &lt; 0</strong><strong>, </strong><strong>start_time &gt;</strong> – </p></li>
+<li><p><strong>end_time</strong><strong>, or </strong><strong>if the function returns a matrix of the wrong size.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.FunctionHandleTrajectory_-AutoDiffXd-.Clone">
+<span id="pydrake.trajectories.FunctionHandleTrajectory_[AutoDiffXd].Clone"></span><span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.FunctionHandleTrajectory_" title="pydrake.trajectories.FunctionHandleTrajectory_"><span class="pre">pydrake.trajectories.FunctionHandleTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.FunctionHandleTrajectory_-AutoDiffXd-.Clone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.trajectories.FunctionHandleTrajectory_-Expression">
+<span id="pydrake.trajectories.FunctionHandleTrajectory_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">FunctionHandleTrajectory_[Expression]</span></span><a class="headerlink" href="#pydrake.trajectories.FunctionHandleTrajectory_-Expression" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory_-Expression" title="pydrake.trajectories.Trajectory_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory_[Expression]</span></code></a></p>
+<p>FunctionHandleTrajectory takes a function, value = f(t), and provides
+a Trajectory interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.FunctionHandleTrajectory_-Expression-.__init__">
+<span id="pydrake.trajectories.FunctionHandleTrajectory_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.FunctionHandleTrajectory_" title="pydrake.trajectories.FunctionHandleTrajectory_"><span class="pre">pydrake.trajectories.FunctionHandleTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-</span> <span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">inf</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.trajectories.FunctionHandleTrajectory_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the FunctionHandleTrajectory.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">func</span></code>:</dt><dd><p>The function to be used to evaluate the trajectory.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt><dd><p>The number of rows in the output of the function.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cols</span></code>:</dt><dd><p>The number of columns in the output of the function.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">start_time</span></code>:</dt><dd><p>The start time of the trajectory.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">end_time</span></code>:</dt><dd><p>The end time of the trajectory.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if func == nullptr</strong><strong>, </strong><strong>rows &lt; 0</strong><strong>, </strong><strong>cols &lt; 0</strong><strong>, </strong><strong>start_time &gt;</strong> – </p></li>
+<li><p><strong>end_time</strong><strong>, or </strong><strong>if the function returns a matrix of the wrong size.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.FunctionHandleTrajectory_-Expression-.Clone">
+<span id="pydrake.trajectories.FunctionHandleTrajectory_[Expression].Clone"></span><span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.FunctionHandleTrajectory_" title="pydrake.trajectories.FunctionHandleTrajectory_"><span class="pre">pydrake.trajectories.FunctionHandleTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.trajectories.Trajectory_" title="pydrake.trajectories.Trajectory_"><span class="pre">pydrake.trajectories.Trajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.FunctionHandleTrajectory_-Expression-.Clone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.trajectories.PathParameterizedTrajectory">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.trajectories.</span></span><span class="sig-name descname"><span class="pre">PathParameterizedTrajectory</span></span><a class="headerlink" href="#pydrake.trajectories.PathParameterizedTrajectory" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.trajectories.Trajectory</span></code></a></p>

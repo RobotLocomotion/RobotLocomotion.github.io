@@ -36,7 +36,6 @@ var searchData=
   ['formatter_3c_20drake_3a_3apolynomial_3c_20double_20_3e_3a_3amonomial_20_3e',['formatter&lt; drake::Polynomial&lt; double &gt;::Monomial &gt;',['../structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3apolynomial_3c_20t_20_3e_20_3e',['formatter&lt; drake::Polynomial&lt; T &gt; &gt;',['../structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3asolvers_3a_3abinding_3c_20c_20_3e_20_3e',['formatter&lt; drake::solvers::Binding&lt; C &gt; &gt;',['../structfmt_1_1formatter_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html',1,'fmt']]],
-  ['formatter_3c_20drake_3a_3asolvers_3a_3acommonsolveroption_20_3e',['formatter&lt; drake::solvers::CommonSolverOption &gt;',['../structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3asolvers_3a_3amixedintegerrotationconstraintgenerator_3a_3aapproach_20_3e',['formatter&lt; drake::solvers::MixedIntegerRotationConstraintGenerator::Approach &gt;',['../structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_approach_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3asolvers_3a_3aprogramattribute_20_3e',['formatter&lt; drake::solvers::ProgramAttribute &gt;',['../structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html',1,'fmt']]],
   ['formatter_3c_20drake_3a_3asolvers_3a_3aprogramattributes_20_3e',['formatter&lt; drake::solvers::ProgramAttributes &gt;',['../structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html',1,'fmt']]],
@@ -78,5 +77,6 @@ var searchData=
   ['framebase',['FrameBase',['../classdrake_1_1multibody_1_1_frame_base.html',1,'drake::multibody']]],
   ['freebody',['FreeBody',['../classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html',1,'drake::multibody::benchmarks::free_body']]],
   ['fromdoubletraits',['FromDoubleTraits',['../structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html',1,'drake::systems::scalar_conversion']]],
-  ['functionevaluator',['FunctionEvaluator',['../classdrake_1_1solvers_1_1_function_evaluator.html',1,'drake::solvers']]]
+  ['functionevaluator',['FunctionEvaluator',['../classdrake_1_1solvers_1_1_function_evaluator.html',1,'drake::solvers']]],
+  ['functionhandletrajectory',['FunctionHandleTrajectory',['../classdrake_1_1trajectories_1_1_function_handle_trajectory.html',1,'drake::trajectories']]]
 ];

@@ -151,6 +151,7 @@ var searchData=
   ['_7eframe',['~Frame',['../classdrake_1_1multibody_1_1_frame.html#aa0f3f98e61d00d6d126bba55efbff728',1,'drake::multibody::Frame']]],
   ['_7eframebase',['~FrameBase',['../classdrake_1_1multibody_1_1_frame_base.html#acf63115654a9a91c3c66661f0f1c0c37',1,'drake::multibody::FrameBase']]],
   ['_7efreebody',['~FreeBody',['../classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1b54c9510e1344d14ea980a7dc2cb9e',1,'drake::multibody::benchmarks::free_body::FreeBody']]],
+  ['_7efunctionhandletrajectory',['~FunctionHandleTrajectory',['../classdrake_1_1trajectories_1_1_function_handle_trajectory.html#a43aeb39c75a161bbe11551e73edcd9ea',1,'drake::trajectories::FunctionHandleTrajectory']]],
   ['_7egaussian',['~Gaussian',['../classdrake_1_1schema_1_1_gaussian.html#a2478dc7e6f618e8717c9506950468987',1,'drake::schema::Gaussian']]],
   ['_7egaussianvector',['~GaussianVector',['../classdrake_1_1schema_1_1_gaussian_vector.html#a01824ef427a174f9071cc4f5e7ca6676',1,'drake::schema::GaussianVector']]],
   ['_7egazetargetconstraint',['~GazeTargetConstraint',['../classdrake_1_1multibody_1_1_gaze_target_constraint.html#a0bed703bbca132825b38d9f2fac2464e',1,'drake::multibody::GazeTargetConstraint']]],

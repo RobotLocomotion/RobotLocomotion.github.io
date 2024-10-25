@@ -2380,6 +2380,13 @@ variables. For more details,</p>
 <dt class="sig sig-object py" id="pydrake.solvers.IpoptSolver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">IpoptSolver</span></span><a class="headerlink" href="#pydrake.solvers.IpoptSolver" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<p>A wrapper to call &lt;a href=”<a class="reference external" href="https://coin-or.github.io/Ipopt/">https://coin-or.github.io/Ipopt/</a>”&gt;Ipopt&lt;/a&gt;
+using Drake’s MathematicalProgram.</p>
+<p>The IpoptSolver is NOT threadsafe to call in parallel. This is due to
+Ipopt’s reliance on the MUMPs linear solver which is not safe to call
+concurrently (see <a class="reference external" href="https://github.com/coin-or/Ipopt/issues/733">https://github.com/coin-or/Ipopt/issues/733</a>). This
+can be resolved by enabling the SPRAL solver (see Drake issue
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/21476">https://github.com/RobotLocomotion/drake/issues/21476</a>).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.IpoptSolver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.IpoptSolver" title="pydrake.solvers.IpoptSolver"><span class="pre">pydrake.solvers.IpoptSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.IpoptSolver.__init__" title="Permalink to this definition"></a></dt>
@@ -8302,6 +8309,71 @@ argument to Solve</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>result The result of solving the program through the solver.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.solvers.SolveInParallel">
+<span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">SolveInParallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.SolveInParallel" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SolveInParallel(progs: list[pydrake.solvers.MathematicalProgram], initial_guesses: Optional[list[Optional[numpy.ndarray[numpy.float64[m, 1]]]]] = None, solver_options: Optional[list[Optional[pydrake.solvers.SolverOptions]]] = None, solver_ids: Optional[list[Optional[pydrake.solvers.SolverId]]] = None, parallelism: pydrake.common.Parallelism = Parallelism(num_threads=16), dynamic_schedule: bool = False) -&gt; list[pydrake.solvers.MathematicalProgramResult]</p></li>
+</ol>
+<p>Solves progs[i] into result[i], optionally using initial_guess[i] and
+solver_options[i] if given, by invoking the solver at solver_ids[i] if
+provided. If solver_ids[i] is nullopt then the best available solver
+is selected for progs[i] depending on the availability of the solver
+and the problem formulation. If solver_ids == nullptr then this is
+done for every progs[i].</p>
+<p>Uses at most parallelism cores, with static scheduling by default.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">dynamic_schedule</span></code>:</dt><dd><p>If dynamic_schedule is false then static scheduling is used and so
+each core will solve approximately 1/parallelism of the programs.
+This is most efficient when all the programs take approximately
+the same amount of time to solve. If dynamic_schedule is true,
+then dynamic scheduling is used and all the programs are queued
+into a single pool and each core will take the next program off
+the queue when it becomes available. This is best when each
+program takes a dramatically different amount of time to solve.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When using a proprietary solver (e.g. Mosek) your organization may
+have limited license seats. It is recommended that the number of
+parallel solves does not exceed the total number of license seats.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only programs which are thread safe are solved concurrently.
+Programs that are not thread safe will be solved sequentially in a
+thread safe manner.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if initial_guess and solver_options are provided and</strong> – </p></li>
+<li><p><strong>not the same size as progs.</strong> – </p></li>
+<li><p><strong>RuntimeError if any of the progs are nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if any of the programs cannot be solved.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SolveInParallel(progs: list[pydrake.solvers.MathematicalProgram], initial_guesses: Optional[list[Optional[numpy.ndarray[numpy.float64[m, 1]]]]] = None, solver_options: pydrake.solvers.SolverOptions = None, solver_id: Optional[pydrake.solvers.SolverId] = None, parallelism: pydrake.common.Parallelism = Parallelism(num_threads=16), dynamic_schedule: bool = False) -&gt; list[pydrake.solvers.MathematicalProgramResult]</p></li>
+</ol>
+<p>Provides the same functionality as SolveInParallel, but allows for
+specifying a single solver id and solver option that is used when
+solving all programs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the provided solver cannot solve all of progs.</strong> – </p></li>
+<li><p><strong>RuntimeError if initial_guesses are provided and not the same size</strong> – </p></li>
+<li><p><strong>as progs.</strong> – </p></li>
+<li><p><strong>RuntimeError if any of the progs are nullptr.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

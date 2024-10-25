@@ -399,7 +399,6 @@ var hierarchy =
         [ "formatter< drake::Polynomial< double >::Monomial >", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html", null ],
         [ "formatter< drake::Polynomial< T > >", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html", null ],
         [ "formatter< drake::solvers::Binding< C > >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html", null ],
-        [ "formatter< drake::solvers::CommonSolverOption >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html", null ],
         [ "formatter< drake::solvers::MixedIntegerRotationConstraintGenerator::Approach >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_approach_01_4.html", null ],
         [ "formatter< drake::solvers::ProgramAttribute >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html", null ],
         [ "formatter< drake::solvers::ProgramAttributes >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html", null ],
@@ -802,8 +801,8 @@ var hierarchy =
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
     [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", null ],
-    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
@@ -1162,6 +1161,7 @@ var hierarchy =
       [ "BezierCurve< T >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],
       [ "BsplineTrajectory< T >", "classdrake_1_1trajectories_1_1_bspline_trajectory.html", null ],
       [ "DerivativeTrajectory< T >", "classdrake_1_1trajectories_1_1_derivative_trajectory.html", null ],
+      [ "FunctionHandleTrajectory< T >", "classdrake_1_1trajectories_1_1_function_handle_trajectory.html", null ],
       [ "PathParameterizedTrajectory< T >", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html", null ],
       [ "PiecewiseTrajectory< T >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "CompositeTrajectory< T >", "classdrake_1_1trajectories_1_1_composite_trajectory.html", null ],

@@ -17,7 +17,6 @@ var namespacefmt =
     [ "formatter< drake::Polynomial< double >::Monomial >", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html", null ],
     [ "formatter< drake::Polynomial< T > >", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html", null ],
     [ "formatter< drake::solvers::Binding< C > >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html", null ],
-    [ "formatter< drake::solvers::CommonSolverOption >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html", null ],
     [ "formatter< drake::solvers::MixedIntegerRotationConstraintGenerator::Approach >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_approach_01_4.html", null ],
     [ "formatter< drake::solvers::ProgramAttribute >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html", null ],
     [ "formatter< drake::solvers::ProgramAttributes >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html", null ],

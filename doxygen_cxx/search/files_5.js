@@ -41,5 +41,6 @@ var searchData=
   ['framework_5fpy_5fsystems_2eh',['framework_py_systems.h',['../framework__py__systems_8h.html',1,'']]],
   ['framework_5fpy_5fvalues_2eh',['framework_py_values.h',['../framework__py__values_8h.html',1,'']]],
   ['free_5fbody_2eh',['free_body.h',['../free__body_8h.html',1,'']]],
-  ['function_2eh',['function.h',['../function_8h.html',1,'']]]
+  ['function_2eh',['function.h',['../function_8h.html',1,'']]],
+  ['function_5fhandle_5ftrajectory_2eh',['function_handle_trajectory.h',['../function__handle__trajectory_8h.html',1,'']]]
 ];

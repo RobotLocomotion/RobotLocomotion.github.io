@@ -168,6 +168,7 @@ $(document).ready(function(){initNavTree('solve_8h.html','');});
 <div class="textblock"><code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="parallelism_8h.html">drake/common/parallelism.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mathematical__program_8h.html">drake/solvers/mathematical_program.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mathematical__program__result_8h.html">drake/solvers/mathematical_program_result.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="solver__base_8h.html">drake/solvers/solver_base.h</a>&quot;</code><br />
@@ -195,6 +196,12 @@ Functions</h2></td></tr>
 <tr class="separator:a78328b8267370289c8c653bc67efde5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f8160cf69cc8a3cd41dfec1fb08a8fa"><td class="memItemLeft" align="right" valign="top">MathematicalProgramResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a6f8160cf69cc8a3cd41dfec1fb08a8fa">Solve</a> (const MathematicalProgram &amp;prog)</td></tr>
 <tr class="separator:a6f8160cf69cc8a3cd41dfec1fb08a8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7411fe5d588d0bd68b7b9bb30f1e4d09"><td class="memItemLeft" align="right" valign="top">std::vector&lt; MathematicalProgramResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a7411fe5d588d0bd68b7b9bb30f1e4d09">SolveInParallel</a> (const std::vector&lt; const MathematicalProgram * &gt; &amp;progs, const std::vector&lt; const Eigen::VectorXd * &gt; *initial_guesses, const std::vector&lt; const SolverOptions * &gt; *solver_options, const std::vector&lt; std::optional&lt; SolverId &gt;&gt; *solver_ids, Parallelism parallelism=Parallelism::Max(), bool dynamic_schedule=false)</td></tr>
+<tr class="memdesc:a7411fe5d588d0bd68b7b9bb30f1e4d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves progs[i] into result[i], optionally using initial_guess[i] and solver_options[i] if given, by invoking the solver at solver_ids[i] if provided.  <a href="namespacedrake_1_1solvers.html#a7411fe5d588d0bd68b7b9bb30f1e4d09">More...</a><br /></td></tr>
+<tr class="separator:a7411fe5d588d0bd68b7b9bb30f1e4d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a432743d40e298cda4d1104734324b69d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; MathematicalProgramResult &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a432743d40e298cda4d1104734324b69d">SolveInParallel</a> (const std::vector&lt; const MathematicalProgram * &gt; &amp;progs, const std::vector&lt; const Eigen::VectorXd * &gt; *initial_guesses=nullptr, const SolverOptions *solver_options=nullptr, const std::optional&lt; SolverId &gt; &amp;solver_id=std::nullopt, Parallelism parallelism=Parallelism::Max(), bool dynamic_schedule=false)</td></tr>
+<tr class="memdesc:a432743d40e298cda4d1104734324b69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the same functionality as SolveInParallel, but allows for specifying a single solver id and solver option that is used when solving all programs.  <a href="namespacedrake_1_1solvers.html#a432743d40e298cda4d1104734324b69d">More...</a><br /></td></tr>
+<tr class="separator:a432743d40e298cda4d1104734324b69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -8,6 +8,9 @@ var dir_5f7a2023092b91a1e02609fa2c012f50 =
     [ "exponential_plus_piecewise_polynomial.h", "exponential__plus__piecewise__polynomial_8h.html", [
       [ "ExponentialPlusPiecewisePolynomial", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial" ]
     ] ],
+    [ "function_handle_trajectory.h", "function__handle__trajectory_8h.html", [
+      [ "FunctionHandleTrajectory", "classdrake_1_1trajectories_1_1_function_handle_trajectory.html", "classdrake_1_1trajectories_1_1_function_handle_trajectory" ]
+    ] ],
     [ "path_parameterized_trajectory.h", "path__parameterized__trajectory_8h.html", "path__parameterized__trajectory_8h" ],
     [ "piecewise_polynomial.h", "piecewise__polynomial_8h.html", "piecewise__polynomial_8h" ],
     [ "piecewise_pose.h", "piecewise__pose_8h.html", "piecewise__pose_8h" ],

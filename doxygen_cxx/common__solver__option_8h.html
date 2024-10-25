@@ -159,7 +159,6 @@ $(document).ready(function(){initNavTree('common__solver__option_8h.html','');})
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
@@ -168,13 +167,15 @@ $(document).ready(function(){initNavTree('common__solver__option_8h.html','');})
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;optional&gt;</code><br />
-<code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="fmt__ostream_8h.html">drake/common/fmt_ostream.h</a>&quot;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fmt_8h.html">drake/common/fmt.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for common_solver_option.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="common__solver__option_8h__incl.svg" width="100%" height="507"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="common__solver__option_8h__incl.svg" width="656" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -184,18 +185,11 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01drake_1_1solvers_1_1_common_solver_option_01_4.html">formatter&lt; drake::solvers::CommonSolverOption &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1solvers"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html">drake::solvers</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacefmt"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefmt.html">fmt</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -210,8 +204,12 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aed794af38e7da9270528fd2185861862"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#aed794af38e7da9270528fd2185861862">operator&lt;&lt;</a> (std::ostream &amp;os, CommonSolverOption common_solver_option)</td></tr>
-<tr class="separator:aed794af38e7da9270528fd2185861862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fcc3bade23f2b91cf296153f915c1e1"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a4fcc3bade23f2b91cf296153f915c1e1">to_string</a> (CommonSolverOption)</td></tr>
+<tr class="memdesc:a4fcc3bade23f2b91cf296153f915c1e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the short, unadorned name of the option, e.g., <code>kPrintFileName</code>.  <a href="namespacedrake_1_1solvers.html#a4fcc3bade23f2b91cf296153f915c1e1">More...</a><br /></td></tr>
+<tr class="separator:a4fcc3bade23f2b91cf296153f915c1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd53f528ca9bb8a0f0f11d1bab1869e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a2dd53f528ca9bb8a0f0f11d1bab1869e">operator&lt;&lt;</a> (std::ostream &amp;, CommonSolverOption)</td></tr>
+<tr class="memdesc:a2dd53f528ca9bb8a0f0f11d1bab1869e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1solvers.html#a2dd53f528ca9bb8a0f0f11d1bab1869e">More...</a><br /></td></tr>
+<tr class="separator:a2dd53f528ca9bb8a0f0f11d1bab1869e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
