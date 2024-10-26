@@ -1,5 +1,7 @@
 var NAVTREEINDEX66 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#afae8fde9f81370fb4851c9e1de452a7f":[3,0,0,15,8,4,31],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html":[3,0,0,15,8,4,0],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a5260647c6d73b9af547424968d24da09":[3,0,0,15,8,4,0,0],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,15,8,4,0,2],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#aa1d16b9fcf585fe75becb5357c74ba72":[3,0,0,15,8,4,0,1],
@@ -217,7 +219,7 @@ var NAVTREEINDEX66 =
 "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,29],
 "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#a9b731d88a685b1ec76623274cccf7d33":[3,0,2,29,0],
 "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,2,30],
-"submodules__py_8h.html":[4,0,0,0,0,1,8],
+"submodules__py_8h.html":[4,0,0,0,0,1,9],
 "subvector_8h.html":[4,0,0,12,3,37],
 "subvector_8h.html#a7a943137086b7efeb07642846ea8ea37":[4,0,0,12,3,37,1],
 "suction__cup__controller_8h.html":[4,0,0,3,11,2,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX66 =
 "symbolic_2polynomial_8h.html#a5ee4b0876c4a92c7bd3030b193ce0dbd":[4,0,0,1,3,11,27],
 "symbolic_2polynomial_8h.html#a7664d13fc20b1e7e30ebb16f3dfdeaac":[4,0,0,1,3,11,18],
 "symbolic_2polynomial_8h.html#a812892dbfc6443dc1eed055e1915f5e4":[4,0,0,1,3,11,12],
-"symbolic_2polynomial_8h.html#a84d4982fe5eb3fd118c9a1cfed0f8efa":[4,0,0,1,3,11,46],
-"symbolic_2polynomial_8h.html#a8dd958cf7990638bdd2576c2ab62ad43":[4,0,0,1,3,11,25],
-"symbolic_2polynomial_8h.html#a8fa3b0259a14e44faf2d959f540e9446":[4,0,0,1,3,11,50]
+"symbolic_2polynomial_8h.html#a84d4982fe5eb3fd118c9a1cfed0f8efa":[4,0,0,1,3,11,46]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"quaternion_8h.html#ae2ef93ff1fa2dc788507d6eadb4bb78f":[4,0,0,7,26,10],
 "quaternion__floating__joint_8h.html":[4,0,0,8,13,37],
 "quaternion__floating__joint_8h.html#ab083e1c71efaf056be34040355ede455":[4,0,0,8,13,37,1],
 "quaternion__floating__mobilizer_8h.html":[4,0,0,8,13,38],
@@ -62,6 +63,7 @@ var NAVTREEINDEX59 =
 "read__gltf__to__memory_8h.html#a5b789c32326520c1e9836f1717b24ed8":[4,0,0,4,46,0],
 "read__obj_8h.html":[4,0,0,4,47],
 "realtime__rate__calculator_8h.html":[4,0,0,12,0,14],
+"ref__cycle__pybind_8h.html":[4,0,0,0,0,1,6],
 "region__of__attraction_8h.html":[4,0,0,12,0,15],
 "region__of__attraction_8h.html#gaafb17ca05a19fe7365d28f8a105cff76":[4,0,0,12,0,15,1],
 "render__benchmark__doxygen_8h.html":[4,0,0,4,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a":[4,0,0,6,2,6,0,0],
 "schunk__wsg__position__controller_8h.html":[4,0,0,6,2,7],
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,2,8],
-"schunk__wsg__trajectory__generator__state__vector_8h.html":[4,0,0,6,2,9],
-"scope__exit_8h.html":[4,0,0,1,59],
-"scoped__name_8h.html":[4,0,0,8,13,47]
+"schunk__wsg__trajectory__generator__state__vector_8h.html":[4,0,0,6,2,9]
 };

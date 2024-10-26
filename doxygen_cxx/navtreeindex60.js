@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"scope__exit_8h.html":[4,0,0,1,59],
+"scoped__name_8h.html":[4,0,0,8,13,47],
 "scoped__names_8h.html":[4,0,0,8,8,30],
 "scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,8,30,1],
 "scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,8,30,0],
@@ -25,10 +27,10 @@ var NAVTREEINDEX60 =
 "semidefinite__relaxation__internal_8h.html":[4,0,0,11,49],
 "sensors__py_8h.html":[4,0,0,0,0,10,5],
 "sequential__expression__manager_8h.html":[4,0,0,10,4,6],
-"serialize__pybind_8h.html":[4,0,0,0,0,1,6],
-"serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,1,6,0],
-"serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,1,6,1],
-"serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,1,6,2],
+"serialize__pybind_8h.html":[4,0,0,0,0,1,7],
+"serialize__pybind_8h.html#a0b3e8f87bda821cd1fa9a52586e25f1e":[4,0,0,0,0,1,7,0],
+"serialize__pybind_8h.html#a68be3d37cf9d6c6fcc2afb98d04c046f":[4,0,0,0,0,1,7,1],
+"serialize__pybind_8h.html#aa9814a507ba70a62d61b467c3ba06cce":[4,0,0,0,0,1,7,2],
 "serializer_8h.html":[4,0,0,12,4,8],
 "set__env_8h.html":[4,0,0,1,4,12],
 "sha256_8h.html":[4,0,0,1,61],
@@ -136,7 +138,7 @@ var NAVTREEINDEX60 =
 "sorted__pair_8h.html#aaaa975aac6050ca9507bf9761707c383":[4,0,0,1,62,10],
 "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,62,6],
 "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,62,8],
-"sorted__pair__pybind_8h.html":[4,0,0,0,0,1,7],
+"sorted__pair__pybind_8h.html":[4,0,0,0,0,1,8],
 "sorted__triplet_8h.html":[4,0,0,4,2,57],
 "sos__basis__generator_8h.html":[4,0,0,11,59],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,59,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX60 =
 "standard__operations_8h.html#ae44e54592a38f223146ee6362a44320e":[4,0,0,1,0,0,2,46],
 "standard__operations_8h.html#ae521245b6aec25f233036d952061fb5b":[4,0,0,1,0,0,2,24],
 "standard__operations_8h.html#ae9c0dd77c635dceb7612cfeea18f258b":[4,0,0,1,0,0,2,40],
-"standard__operations_8h.html#aeb2505be9197ae5fe3dc22623d663e44":[4,0,0,1,0,0,2,51],
-"standard__operations_8h.html#aeb6bf33add06bc05bd046c803bf6da00":[4,0,0,1,0,0,2,72],
-"standard__operations_8h.html#aee4f16bc60e54f5c9f818f2b3698362b":[4,0,0,1,0,0,2,64]
+"standard__operations_8h.html#aeb2505be9197ae5fe3dc22623d663e44":[4,0,0,1,0,0,2,51]
 };

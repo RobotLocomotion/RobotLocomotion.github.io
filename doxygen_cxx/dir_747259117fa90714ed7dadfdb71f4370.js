@@ -6,6 +6,7 @@ var dir_747259117fa90714ed7dadfdb71f4370 =
     [ "deprecation_pybind.h", "deprecation__pybind_8h.html", "deprecation__pybind_8h" ],
     [ "eigen_pybind.h", "eigen__pybind_8h.html", "eigen__pybind_8h" ],
     [ "identifier_pybind.h", "identifier__pybind_8h.html", "identifier__pybind_8h" ],
+    [ "ref_cycle_pybind.h", "ref__cycle__pybind_8h.html", null ],
     [ "serialize_pybind.h", "serialize__pybind_8h.html", "serialize__pybind_8h" ],
     [ "sorted_pair_pybind.h", "sorted__pair__pybind_8h.html", null ],
     [ "submodules_py.h", "submodules__py_8h.html", null ],
