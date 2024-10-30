@@ -839,7 +839,9 @@ getter methods for documentation of parameters.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.ColorRenderCamera.show_window">
 <span class="sig-name descname"><span class="pre">show_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.ColorRenderCamera" title="pydrake.geometry.ColorRenderCamera"><span class="pre">pydrake.geometry.ColorRenderCamera</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.ColorRenderCamera.show_window" title="Permalink to this definition"></a></dt>
-<dd><p>If true, requests that the RenderEngine display the rendered image.</p>
+<dd><p>If true, requests that the RenderEngine display the rendered image.
+Whether or not the image is able to be displayed depends on the
+specific render engine and its configuration.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3947,6 +3949,12 @@ renderer.</p>
 obey render::ColorRenderCamera::show_window when it’s set to
 <code class="docutils literal notranslate"><span class="pre">True</span></code>. Refer to issue <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/20144">#20144</a> for
 further discussion.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Ubuntu, render::ColorRenderCamera::show_window only shows a
+window when RenderEngineVtkParams::backend is set to “GLX”; the
+default backend value of “EGL” cannot show a window.</p>
 </div>
 <p>This RenderEngine implementation looks for the following properties
 when registering visual geometry, categorized by rendered image type.</p>
@@ -9896,8 +9904,7 @@ application will need to logging::set_log_level() to <code class="docutils liter
 “Cocoa”. Any other value will throw an error.</p>
 <p>By default (i.e., when set to the empty string) the render engine will
 choose which library to use. At the moment the default is “Cocoa” on
-macOS and “GLX” on Linux, but we anticipate changing the default in
-the future.</p>
+macOS and “EGL” on Linux.</p>
 <p>If the option is set to one of the permissible values but the related
 graphics library has not been compiled into current build (e.g., “GLX”
 on macOS), then the default choice (empty string) will be used
