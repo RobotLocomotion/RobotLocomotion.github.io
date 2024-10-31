@@ -1,5 +1,7 @@
 var NAVTREEINDEX59 =
 {
+"quaternion_8h.html#ac76b7fdc13fe823e119b891df82688ae":[4,0,0,7,26,5],
+"quaternion_8h.html#ad298b049679492bf3e846165c6c7e023":[4,0,0,7,26,11],
 "quaternion_8h.html#ae2ef93ff1fa2dc788507d6eadb4bb78f":[4,0,0,7,26,10],
 "quaternion__floating__joint_8h.html":[4,0,0,8,13,37],
 "quaternion__floating__joint_8h.html#ab083e1c71efaf056be34040355ede455":[4,0,0,8,13,37,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcb":[4,0,0,6,2,6,0],
 "schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcba5f1cd95b5107d0b426a753a484765cc9":[4,0,0,6,2,6,0,1],
 "schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a":[4,0,0,6,2,6,0,0],
-"schunk__wsg__position__controller_8h.html":[4,0,0,6,2,7],
-"schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,2,8],
-"schunk__wsg__trajectory__generator__state__vector_8h.html":[4,0,0,6,2,9]
+"schunk__wsg__position__controller_8h.html":[4,0,0,6,2,7]
 };

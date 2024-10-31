@@ -1,5 +1,7 @@
 var NAVTREEINDEX66 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,15,8,4,20],
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ae3b978041e97c1025818e7f4e79345fa":[3,0,0,15,8,4,28],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#afae8fde9f81370fb4851c9e1de452a7f":[3,0,0,15,8,4,31],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html":[3,0,0,15,8,4,0],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a5260647c6d73b9af547424968d24da09":[3,0,0,15,8,4,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX66 =
 "symbolic_2polynomial_8h.html#a52a4be02d87d5a6d31efbbcb5d3ba934":[4,0,0,1,3,11,21],
 "symbolic_2polynomial_8h.html#a5e355d7c9eb6bff11199a94c16ed5c8a":[4,0,0,1,3,11,7],
 "symbolic_2polynomial_8h.html#a5ee4b0876c4a92c7bd3030b193ce0dbd":[4,0,0,1,3,11,27],
-"symbolic_2polynomial_8h.html#a7664d13fc20b1e7e30ebb16f3dfdeaac":[4,0,0,1,3,11,18],
-"symbolic_2polynomial_8h.html#a812892dbfc6443dc1eed055e1915f5e4":[4,0,0,1,3,11,12],
-"symbolic_2polynomial_8h.html#a84d4982fe5eb3fd118c9a1cfed0f8efa":[4,0,0,1,3,11,46]
+"symbolic_2polynomial_8h.html#a7664d13fc20b1e7e30ebb16f3dfdeaac":[4,0,0,1,3,11,18]
 };

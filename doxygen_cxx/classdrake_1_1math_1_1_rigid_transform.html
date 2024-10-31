@@ -246,10 +246,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e77b1e5fde8184fd5d18a62d00297bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a6e77b1e5fde8184fd5d18a62d00297bf">SetFromIsometry3</a> (const <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; T &gt; &amp;pose)</td></tr>
 <tr class="memdesc:a6e77b1e5fde8184fd5d18a62d00297bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>this</code> RigidTransform from an Eigen Isometry3.  <a href="#a6e77b1e5fde8184fd5d18a62d00297bf">More...</a><br /></td></tr>
 <tr class="separator:a6e77b1e5fde8184fd5d18a62d00297bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bc2d96e26802c52ea92f21a40540681"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr class="memitem:a1bc2d96e26802c52ea92f21a40540681"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a1bc2d96e26802c52ea92f21a40540681">cast</a> () const</td></tr>
-<tr class="memdesc:a1bc2d96e26802c52ea92f21a40540681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a RigidTransform templatized on a scalar type U from a RigidTransform templatized on scalar type T.  <a href="#a1bc2d96e26802c52ea92f21a40540681">More...</a><br /></td></tr>
-<tr class="separator:a1bc2d96e26802c52ea92f21a40540681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2579f0349094f6901bff094442800451"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a2579f0349094f6901bff094442800451"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a2579f0349094f6901bff094442800451">cast</a> () const requires <a class="el" href="group__default__scalars.html#gaf140364db7046208e67d85327722d34a">is_default_scalar</a>&lt; U &gt;</td></tr>
+<tr class="memdesc:a2579f0349094f6901bff094442800451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a RigidTransform templatized on a scalar type U from a RigidTransform templatized on scalar type T.  <a href="#a2579f0349094f6901bff094442800451">More...</a><br /></td></tr>
+<tr class="separator:a2579f0349094f6901bff094442800451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbb70b2d5e20b8e9a4ffe2e21c7bf8fd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#acbb70b2d5e20b8e9a4ffe2e21c7bf8fd">rotation</a> () const</td></tr>
 <tr class="memdesc:acbb70b2d5e20b8e9a4ffe2e21c7bf8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns R_AB, the rotation matrix portion of <code>this</code> RigidTransform.  <a href="#acbb70b2d5e20b8e9a4ffe2e21c7bf8fd">More...</a><br /></td></tr>
 <tr class="separator:acbb70b2d5e20b8e9a4ffe2e21c7bf8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -885,8 +885,8 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1bc2d96e26802c52ea92f21a40540681"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bc2d96e26802c52ea92f21a40540681">&#9670;&nbsp;</a></span>cast()</h2>
+<a id="a2579f0349094f6901bff094442800451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2579f0349094f6901bff094442800451">&#9670;&nbsp;</a></span>cast()</h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -159,7 +159,8 @@ $(document).ready(function(){initNavTree('group__default__scalars.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Default Scalars<div class="ingroups"><a class="el" href="group__technical__notes.html">Technical Notes</a></div></div>  </div>
 </div><!--header-->
@@ -186,6 +187,12 @@ $(document).ready(function(){initNavTree('group__default__scalars.html','');});
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:gaf140364db7046208e67d85327722d34a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaf140364db7046208e67d85327722d34a"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__default__scalars.html#gaf140364db7046208e67d85327722d34a">is_default_scalar</a></td></tr>
+<tr class="separator:gaf140364db7046208e67d85327722d34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Class template instantiation macros</h2></td></tr>
@@ -360,6 +367,21 @@ Function template instantiation macros</h2></td></tr>
 <p>Defines template instantiations for Drake's default scalars. </p>
 <p>This should only be used in .cc files, never in .h files. </p>
 
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="gaf140364db7046208e67d85327722d34a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf140364db7046208e67d85327722d34a">&#9670;&nbsp;</a></span>is_default_scalar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_default_scalar</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    std::is_same_v&lt;T, double&gt; || std::is_same_v&lt;T, drake::AutoDiffXd&gt; ||</div><div class="line">    std::is_same_v&lt;T, drake::symbolic::Expression&gt;</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -14,7 +14,7 @@ var classdrake_1_1math_1_1_rigid_transform =
     [ "RigidTransform", "classdrake_1_1math_1_1_rigid_transform.html#aca9bb867abe5a56d1f4f9ae9c62df07b", null ],
     [ "RigidTransform", "classdrake_1_1math_1_1_rigid_transform.html#a5d2232216392f2045d6907a99fa0b423", null ],
     [ "RigidTransform", "classdrake_1_1math_1_1_rigid_transform.html#ac7b8a89a54006ff4502298b5907f7e28", null ],
-    [ "cast", "classdrake_1_1math_1_1_rigid_transform.html#a1bc2d96e26802c52ea92f21a40540681", null ],
+    [ "cast", "classdrake_1_1math_1_1_rigid_transform.html#a2579f0349094f6901bff094442800451", null ],
     [ "GetAsIsometry3", "classdrake_1_1math_1_1_rigid_transform.html#a58717dcdc71536116684f6dc53bab9b9", null ],
     [ "GetAsMatrix34", "classdrake_1_1math_1_1_rigid_transform.html#a89d3b170a7e3621ad02fe72ee7218a10", null ],
     [ "GetAsMatrix4", "classdrake_1_1math_1_1_rigid_transform.html#a605ec47e36e257f4661d7c86a7f2ac8c", null ],

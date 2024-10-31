@@ -8,7 +8,7 @@ var classdrake_1_1math_1_1_rotation_matrix =
     [ "RotationMatrix", "classdrake_1_1math_1_1_rotation_matrix.html#aeb8205e6418bc644739b23879344135b", null ],
     [ "RotationMatrix", "classdrake_1_1math_1_1_rotation_matrix.html#a05183386f55111df27e380877a9f11b2", null ],
     [ "RotationMatrix", "classdrake_1_1math_1_1_rotation_matrix.html#a2f9b6932fb53dba370feb79ae6f567fe", null ],
-    [ "cast", "classdrake_1_1math_1_1_rotation_matrix.html#a78cc72469524b8fe0750e667ab9adc6b", null ],
+    [ "cast", "classdrake_1_1math_1_1_rotation_matrix.html#ac3937318f50c0b017a1a519e6cb66e7d", null ],
     [ "col", "classdrake_1_1math_1_1_rotation_matrix.html#a7af450eebe5d5ac5cf5ee49aab783609", null ],
     [ "get_internal_tolerance_for_orthonormality", "classdrake_1_1math_1_1_rotation_matrix.html#a2013671d440f9093574739914d147280", null ],
     [ "GetMaximumAbsoluteDifference", "classdrake_1_1math_1_1_rotation_matrix.html#a94f554d89721df33e9d6fd2a2fb73ff9", null ],
