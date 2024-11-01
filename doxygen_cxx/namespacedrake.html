@@ -672,10 +672,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a6258405e5b172f610aed5709af48bd3a"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a6258405e5b172f610aed5709af48bd3a">fmt_floating_point</a> (T <a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
 <tr class="memdesc:a6258405e5b172f610aed5709af48bd3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>fmt::to_string(x)</code> but always with at least one digit after the decimal point.  <a href="#a6258405e5b172f610aed5709af48bd3a">More...</a><br /></td></tr>
 <tr class="separator:a6258405e5b172f610aed5709af48bd3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fb0d186143cc761895c310885f3ebe9"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a0fb0d186143cc761895c310885f3ebe9"><td class="memTemplItemLeft" align="right" valign="top">internal::fmt_eigen_ref&lt; Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a0fb0d186143cc761895c310885f3ebe9">fmt_eigen</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
-<tr class="memdesc:a0fb0d186143cc761895c310885f3ebe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake's custom formatter for Eigen types.  <a href="#a0fb0d186143cc761895c310885f3ebe9">More...</a><br /></td></tr>
-<tr class="separator:a0fb0d186143cc761895c310885f3ebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aade4911b7e8d691ef345a2706012a878"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:aade4911b7e8d691ef345a2706012a878"><td class="memTemplItemLeft" align="right" valign="top">internal::fmt_eigen_ref&lt; typename Derived::Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aade4911b7e8d691ef345a2706012a878">fmt_eigen</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:aade4911b7e8d691ef345a2706012a878"><td class="mdescLeft">&#160;</td><td class="mdescRight">When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake's custom formatter for Eigen types.  <a href="#aade4911b7e8d691ef345a2706012a878">More...</a><br /></td></tr>
+<tr class="separator:aade4911b7e8d691ef345a2706012a878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad285f98e4bc5cb78edaeb95800d56726"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad285f98e4bc5cb78edaeb95800d56726"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ad285f98e4bc5cb78edaeb95800d56726">fmt_streamed</a> (const T &amp;ref)</td></tr>
 <tr class="memdesc:ad285f98e4bc5cb78edaeb95800d56726"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 9, this is an alias for <a href="https://fmt.dev/latest/api.html#ostream-api">fmt::streamed</a>.  <a href="#ad285f98e4bc5cb78edaeb95800d56726">More...</a><br /></td></tr>
@@ -2488,14 +2488,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a0fb0d186143cc761895c310885f3ebe9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fb0d186143cc761895c310885f3ebe9">&#9670;&nbsp;</a></span>fmt_eigen()</h2>
+<a id="aade4911b7e8d691ef345a2706012a878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aade4911b7e8d691ef345a2706012a878">&#9670;&nbsp;</a></span>fmt_eigen()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">internal::fmt_eigen_ref&lt;Derived&gt; drake::fmt_eigen </td>
+          <td class="memname">internal::fmt_eigen_ref&lt;typename Derived::Scalar&gt; drake::fmt_eigen </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>matrix</em></td><td>)</td>
@@ -2506,7 +2506,7 @@ Variables</h2></td></tr>
 
 <p>When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake's custom formatter for Eigen types. </p>
 <p>Within Drake, when formatting an Eigen matrix into a string you must wrap the Eigen object as <code>fmt_eigen(M)</code>. This holds true whether it be for logging, error messages, debugging, or etc.</p>
-<p>For example: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!CheckValid(M)) {</div><div class="line">  <span class="keywordflow">throw</span> std::logic_error(fmt::format(<span class="stringliteral">&quot;Invalid M = {}&quot;</span>, <a class="code" href="namespacedrake.html#a0fb0d186143cc761895c310885f3ebe9">fmt_eigen</a>(M)));</div><div class="line">}</div></div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>The return value of this function should only ever be used as a temporary object, i.e., in a fmt argument list or a logging statement argument list. Never store it as a local variable, member field, etc.</dd></dl>
+<p>For example: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!CheckValid(M)) {</div><div class="line">  <span class="keywordflow">throw</span> std::logic_error(fmt::format(<span class="stringliteral">&quot;Invalid M = {}&quot;</span>, <a class="code" href="namespacedrake.html#aade4911b7e8d691ef345a2706012a878">fmt_eigen</a>(M)));</div><div class="line">}</div></div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>The return value of this function should only ever be used as a temporary object, i.e., in a fmt argument list or a logging statement argument list. Never store it as a local variable, member field, etc.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>To ensure floating-point data is formatted without losing any digits, Drake's code is compiled using -DEIGEN_NO_IO, which enforces that nothing within Drake is allowed to use Eigen's <code>operator&lt;&lt;</code>. Downstream code that calls into Drake is not required to use that option; it is only enforced by Drake's build system, not by Drake's headers. </dd></dl>
 
 </div>

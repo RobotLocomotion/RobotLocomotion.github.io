@@ -1,6 +1,5 @@
 var NAVTREEINDEX11 =
 {
-"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab22ea795ef6d7d3151a5e16a310c8d66":[1,5,5,6,1,6],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab7cfc90f4347f8ddf6e8cb5b3b18260d":[1,1,1,6,1,17],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab7cfc90f4347f8ddf6e8cb5b3b18260d":[1,5,5,6,1,17],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#abb9f5d6d225259efadbda849e14a9045":[1,1,1,6,1,14],
@@ -249,5 +248,6 @@ var NAVTREEINDEX11 =
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a85a602ef50d783e64d33edb40c5f0d51":[1,1,1,14,3],
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a8903411eeb232b2276ed151a94b7a672":[1,5,5,14,6],
 "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a8903411eeb232b2276ed151a94b7a672":[1,1,1,14,6],
-"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a9bc53f612e5e6bdf85ae5adae0776fdc":[1,5,5,14,0]
+"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a9bc53f612e5e6bdf85ae5adae0776fdc":[1,5,5,14,0],
+"classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a9bc53f612e5e6bdf85ae5adae0776fdc":[1,1,1,14,0]
 };
