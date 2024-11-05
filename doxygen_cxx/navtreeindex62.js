@@ -1,5 +1,7 @@
 var NAVTREEINDEX62 =
 {
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,4,12,1],
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a802a9c3334d60afa02164d2d559365e8":[3,0,0,4,12,5],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,12,0],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[3,0,0,4,12,4],
 "structdrake_1_1geometry_1_1_environment_map.html":[3,0,0,4,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#a1a9723fb8137a293ffccbfa0a713f6f4":[3,0,0,4,1,11,3],
 "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#a200703e93f7d02f55f0bcb3d22711706":[3,0,0,4,1,11,5],
 "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,1,11,0],
-"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#aa95455ed52a8459fad69509a4a0411b5":[3,0,0,4,1,11,1],
-"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#ac77d4fccbc7dd5a3d8c20fc64b8090fc":[3,0,0,4,1,11,4],
-"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#ae1cae86879a197bb61d6519204b56535":[3,0,0,4,1,11,2]
+"structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#aa95455ed52a8459fad69509a4a0411b5":[3,0,0,4,1,11,1]
 };

@@ -11,6 +11,7 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
     [ "CalcRotationalInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#a025a1eb3a6fcfd673edc15b7ba85de9e", null ],
     [ "cast", "classdrake_1_1multibody_1_1_spatial_inertia.html#a751136a22e2d0980679dd41429d54c62", null ],
     [ "CopyToFullMatrix6", "classdrake_1_1multibody_1_1_spatial_inertia.html#a413ff91e8caf0498a96e5b1e06da9cd1", null ],
+    [ "CriticizeNotPhysicallyValid", "classdrake_1_1multibody_1_1_spatial_inertia.html#ad1e539cc1eba1e97ebf0fbedfe30ac09", null ],
     [ "get_com", "classdrake_1_1multibody_1_1_spatial_inertia.html#a1d857a6e2165c421949804eb2afbe7c7", null ],
     [ "get_mass", "classdrake_1_1multibody_1_1_spatial_inertia.html#a1664b38f6c4fad624a7ab777c9642a7e", null ],
     [ "get_unit_inertia", "classdrake_1_1multibody_1_1_spatial_inertia.html#aa7fbc3778a7090443b7b5102861ebe9a", null ],

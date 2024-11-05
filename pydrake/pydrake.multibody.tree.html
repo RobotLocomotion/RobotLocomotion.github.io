@@ -792,11 +792,23 @@ satisfy certain requirements:</p>
 <ul class="simple">
 <li><p>The mesh must <em>fully</em> enclose a volume (no cracks, no open manifolds,</p></li>
 </ul>
-<p>etc.)
+<p>etc.).
 - All triangles must be “wound” such that their normals point outward
 (according to the right-hand rule based on vertex winding).</p>
-<p>If these requirements are not met, a value <em>will</em> be returned, but its
-value is meaningless.</p>
+<p>Drake currently doesn’t validate these requirements on the mesh.
+Instead, it does a best-faith effort to compute a spatial inertia. For
+some “bad” meshes, the SpatialInertia will be objectively physically
+invalid. For others, the SpatialInertia will appear physically valid,
+but be meaningless because it does not accurately represent the mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the resulting spatial inertia is obviously</strong> – </p></li>
+<li><p><strong>physically invalid. See</strong> – </p></li>
+<li><p><strong>multibody::SpatialInertia::IsPhysicallyValid</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">

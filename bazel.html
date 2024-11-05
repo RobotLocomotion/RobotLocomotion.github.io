@@ -275,20 +275,6 @@ prerequisite libraries are also compiled and linked in <code class="language-pla
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel test bindings/pydrake:py/symbolic_test --test_output=streamed --nocache_test_results --test_arg=--trace=user --test_arg=TestSymbolicVariable
 </code></pre></div></div>
 
-<h2 id="debugging-on-macos">Debugging on macOS</h2>
-
-<p>On macOS, DWARF debug symbols are emitted to a <code class="language-plaintext highlighter-rouge">.dSYM</code> file.  The Bazel
-<code class="language-plaintext highlighter-rouge">cc_binary</code> and <code class="language-plaintext highlighter-rouge">cc_test</code> rules do not natively generate or expose this
-file, so we have implemented a workaround in Drake, <code class="language-plaintext highlighter-rouge">--config=apple_debug</code>.
-This config turns off sandboxing, which allows a <code class="language-plaintext highlighter-rouge">genrule</code> to access the
-<code class="language-plaintext highlighter-rouge">.o</code> files and process them into a <code class="language-plaintext highlighter-rouge">.dSYM</code>.  Use as follows:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel build --config=apple_debug path/to/my:binary_or_test_dsym
-lldb ./bazel-bin/path/to/my/binary_or_test
-</code></pre></div></div>
-
-<p>For more information, see <a href="https://github.com/bazelbuild/bazel/issues/2537">https://github.com/bazelbuild/bazel/issues/2537</a>.</p>
-
 <h1 id="updating-build-files">Updating BUILD files</h1>
 
 <p>Please use the “<code class="language-plaintext highlighter-rouge">buildifier</code>” tool to format edits to <code class="language-plaintext highlighter-rouge">BUILD</code> files (in the

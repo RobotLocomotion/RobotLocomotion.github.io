@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#ae2f8a49b642aecb5c19ef3625be5e61d":[3,0,0,17,8,13],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#aec3c151ab7b4b34d667c50ec9d229003":[3,0,0,17,8,1],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#af33e9a993aeb52079b4310e7fd43638e":[3,0,0,17,8,15],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#af3ed665c279c199edc05b05413deb70b":[3,0,0,17,8,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "cond_8h.html#a0b6d557a3ef060688cb028f17975ffca":[4,0,0,1,11,0],
 "cond_8h.html#ac20110c691980f564476914e3fda5991":[4,0,0,1,11,1],
 "conex__supernodal__solver_8h.html":[4,0,0,8,1,6],
-"constant__value__source_8h.html":[4,0,0,12,6,3],
-"constant__value__source_8h.html#a6ea7c5d25d3383ac5d04462fcb808840":[4,0,0,12,6,3,0]
+"constant__value__source_8h.html":[4,0,0,12,6,3]
 };

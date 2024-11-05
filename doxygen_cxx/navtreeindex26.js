@@ -1,5 +1,6 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1schema_1_1_gaussian.html#aa4cd1241f20f836cbf5facbf2d8379e4":[3,0,0,12,4,2],
 "classdrake_1_1schema_1_1_gaussian.html#aa5c75cdae385741a33c63dcfdc89b4be":[3,0,0,12,4,6],
 "classdrake_1_1schema_1_1_gaussian.html#aa77a831a9989407ffea0304416c7ae5c":[3,0,0,12,4,10],
 "classdrake_1_1schema_1_1_gaussian.html#abb40a2ee28b839fb572e161c68141faf":[3,0,0,12,4,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1solvers_1_1_evaluator_base.html#a9b582ca26190005482986c1ac7f8609f":[3,0,0,13,15,21],
 "classdrake_1_1solvers_1_1_evaluator_base.html#a9d396aa41946b5200c405baa40542d1c":[3,0,0,13,15,14],
 "classdrake_1_1solvers_1_1_evaluator_base.html#ab708ca2f145a64e8a8a30a36582414a9":[3,0,0,13,15,1],
-"classdrake_1_1solvers_1_1_evaluator_base.html#ab72a0677c344c7bedf3691aabe24a8e9":[3,0,0,13,15,20],
-"classdrake_1_1solvers_1_1_evaluator_base.html#adf337592a3f79f4797aa0856cf72865f":[3,0,0,13,15,12]
+"classdrake_1_1solvers_1_1_evaluator_base.html#ab72a0677c344c7bedf3691aabe24a8e9":[3,0,0,13,15,20]
 };

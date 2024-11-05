@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1systems_1_1_linear_transform_density.html#a93360445a007ffa8fb557cfa08e8782d":[1,2,1,15,13],
 "classdrake_1_1systems_1_1_linear_transform_density.html#a93b5bd77534754a50796493cd9884e0e":[1,2,1,15,2],
 "classdrake_1_1systems_1_1_linear_transform_density.html#aafef02ce0c7ee9bbd4418d817d7809c6":[1,2,1,15,7],
 "classdrake_1_1systems_1_1_linear_transform_density.html#ab19a00e16ca27beb0f2bb5f675ed0bec":[1,2,1,15,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX40 =
 "classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a53dbca07d2c73e1ce8cd5a4007eac320":[1,4,0,0,6,3],
 "classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a6feb774094471a9ae52b7611699f11c6":[1,4,0,0,6,2],
 "classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a7932e0cc0f116b8a625cb025616d73ab":[1,4,0,0,6,4],
-"classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a79fa9cee8048c3c70860a5e881eee447":[1,4,0,0,6,0],
-"classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a9690b81e16988da984312a341d3c1c64":[1,4,0,0,6,5]
+"classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a79fa9cee8048c3c70860a5e881eee447":[1,4,0,0,6,0]
 };

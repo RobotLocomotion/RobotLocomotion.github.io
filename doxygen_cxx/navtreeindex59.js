@@ -1,5 +1,7 @@
 var NAVTREEINDEX59 =
 {
+"quaternion__floating__mobilizer_8h.html":[4,0,0,8,13,38],
+"quaternion__floating__mobilizer_8h.html#afd449a6bd8e0e04f8cc9f9bedc9ddcf9":[4,0,0,8,13,38,0],
 "quaternion__integration__constraint_8h.html":[4,0,0,8,7,4],
 "query__object_8h.html":[4,0,0,4,45],
 "quintic__scalar__system_8h.html":[4,0,0,12,0,0,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "schunk__wsg__trajectory__generator__state__vector_8h.html":[4,0,0,6,2,9],
 "scope__exit_8h.html":[4,0,0,1,59],
 "scoped__name_8h.html":[4,0,0,8,13,47],
-"scoped__names_8h.html":[4,0,0,8,8,30],
-"scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,8,30,1],
-"scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,8,30,0]
+"scoped__names_8h.html":[4,0,0,8,8,30]
 };
