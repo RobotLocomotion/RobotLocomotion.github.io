@@ -213,6 +213,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7add202067720eb1a04fac8f1781c87"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;, math::RigidTransformd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af7add202067720eb1a04fac8f1781c87">ToShapeWithPose</a> () const</td></tr>
 <tr class="memdesc:af7add202067720eb1a04fac8f1781c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html" title="Definition of an ellipsoid.">Ellipsoid</a> shape description of this set.  <a href="#af7add202067720eb1a04fac8f1781c87">More...</a><br /></td></tr>
 <tr class="separator:af7add202067720eb1a04fac8f1781c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92797706c9c2adb6329f1dce4c672d59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a92797706c9c2adb6329f1dce4c672d59">IsBounded</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a7eba2010dfc9482ef2ae0bb0539a3083">Parallelism::None</a>()) const</td></tr>
+<tr class="memdesc:a92797706c9c2adb6329f1dce4c672d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> is bounded if the kernel of A is rank-zero.  <a href="#a92797706c9c2adb6329f1dce4c672d59">More...</a><br /></td></tr>
+<tr class="separator:a92797706c9c2adb6329f1dce4c672d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:ab2d820db43b35a0fc84379b6a4aa0242"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#ab2d820db43b35a0fc84379b6a4aa0242">Hyperellipsoid</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a> &amp;)=default</td></tr>
 <tr class="separator:ab2d820db43b35a0fc84379b6a4aa0242"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,9 +237,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9cf0f6eaece284fabedbab39956a0938 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a9cf0f6eaece284fabedbab39956a0938">IntersectsWith</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;other) const</td></tr>
 <tr class="memdesc:a9cf0f6eaece284fabedbab39956a0938 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the intersection between <code>this</code> and <code>other</code> is non-empty.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a9cf0f6eaece284fabedbab39956a0938">More...</a><br /></td></tr>
 <tr class="separator:a9cf0f6eaece284fabedbab39956a0938 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f010e733bd63adb8352995624362b65 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65">IsBounded</a> () const</td></tr>
-<tr class="memdesc:a2f010e733bd63adb8352995624362b65 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65">More...</a><br /></td></tr>
-<tr class="separator:a2f010e733bd63adb8352995624362b65 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92797706c9c2adb6329f1dce4c672d59 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a92797706c9c2adb6329f1dce4c672d59">IsBounded</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a7eba2010dfc9482ef2ae0bb0539a3083">Parallelism::None</a>()) const</td></tr>
+<tr class="memdesc:a92797706c9c2adb6329f1dce4c672d59 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a92797706c9c2adb6329f1dce4c672d59">More...</a><br /></td></tr>
+<tr class="separator:a92797706c9c2adb6329f1dce4c672d59 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e12342fc420701fbffd97025421575a inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a">IsEmpty</a> () const</td></tr>
 <tr class="memdesc:a8e12342fc420701fbffd97025421575a inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is empty.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a">More...</a><br /></td></tr>
 <tr class="separator:a8e12342fc420701fbffd97025421575a inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,6 +302,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
 <tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements non-virtual base class serialization.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
 <tr class="separator:a8e8824802dedfbc36776227f7482b6bc inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed64b9f6964c517f8404829282b3184 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaed64b9f6964c517f8404829282b3184">DoIsBoundedShortcutParallel</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>) const</td></tr>
+<tr class="memdesc:aaed64b9f6964c517f8404829282b3184 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaed64b9f6964c517f8404829282b3184" title="Non-virtual interface implementation for DoIsBoundedShortcutParallel().">DoIsBoundedShortcutParallel()</a>.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaed64b9f6964c517f8404829282b3184">More...</a><br /></td></tr>
+<tr class="separator:aaed64b9f6964c517f8404829282b3184 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaacbd0a682d985194c7d94d6acdb50f3 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaacbd0a682d985194c7d94d6acdb50f3">DoProjectionShortcut</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::MatrixXd &gt; projected_points) const</td></tr>
 <tr class="memdesc:aaacbd0a682d985194c7d94d6acdb50f3 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaacbd0a682d985194c7d94d6acdb50f3" title="Non-virtual interface implementation for DoProjectionShortcut().">DoProjectionShortcut()</a>.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaacbd0a682d985194c7d94d6acdb50f3">More...</a><br /></td></tr>
 <tr class="separator:aaacbd0a682d985194c7d94d6acdb50f3 inherit pro_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -559,6 +565,29 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the center of the ellipsoid. </p>
+
+</div>
+</div>
+<a id="a92797706c9c2adb6329f1dce4c672d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92797706c9c2adb6329f1dce4c672d59">&#9670;&nbsp;</a></span>IsBounded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsBounded</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">Hyperellipsoid</a> is bounded if the kernel of A is rank-zero. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parallelism</td><td>Ignored &ndash; no parallelization is used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>See <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a92797706c9c2adb6329f1dce4c672d59">parent class's documentation</a> for more details. </dd></dl>
 
 </div>
 </div>

@@ -8,6 +8,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_affine_ball =
     [ "~AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#ae9f9cc83a60f52fc3597f8218d0762a7", null ],
     [ "B", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a72a0d3162014193b1fc26f0f26284a65", null ],
     [ "center", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a0436b14a80630bf60e18fdc56ce3171e", null ],
+    [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a92797706c9c2adb6329f1dce4c672d59", null ],
     [ "MakeAffineBallFromLineSegment", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#ab2294b2077bce913a4c10a31c2f19d00", null ],
     [ "MakeAxisAligned", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a17e5c2915b25a2b230e6af8f5812bf2f", null ],
     [ "MakeHypersphere", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a07d8fa8b6d642e20a04f2e89813403be", null ],

@@ -9,6 +9,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid =
     [ "~Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a80aa27d77264976c6203489880a9aafd", null ],
     [ "A", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#ace583a472a3bdc1b67f05d6a6571a903", null ],
     [ "center", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a0436b14a80630bf60e18fdc56ce3171e", null ],
+    [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a92797706c9c2adb6329f1dce4c672d59", null ],
     [ "MakeAxisAligned", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#aa387db1ae26c3af1935048402cb8c146", null ],
     [ "MakeHypersphere", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#aaeda19ebf3b289e78f7bc3740dbd4275", null ],
     [ "MakeUnitBall", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a84c2ba9e34cf02155736ab87a70342cd", null ],

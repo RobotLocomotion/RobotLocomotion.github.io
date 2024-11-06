@@ -1,0 +1,539 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: ImplicitGraphOfConvexSets Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">ImplicitGraphOfConvexSets Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a> &#124; <a class="el" href="group__solvers.html">Formulating and Solving Optimization Problems</a> &raquo; <a class="el" href="group__geometry__optimization.html">Geometry Optimization</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A base class to define the interface to an implicit graph of convex sets. </p>
+<p>Implementations of this class must implement DoSuccesors() and provide some method of accessing at least one vertex in the graph.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+</div>
+<p><code>#include &lt;drake/geometry/optimization/implicit_graph_of_convex_sets.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:afab681b1477a14fdb1f50cd8bfcdd491"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#afab681b1477a14fdb1f50cd8bfcdd491">~ImplicitGraphOfConvexSets</a> ()</td></tr>
+<tr class="separator:afab681b1477a14fdb1f50cd8bfcdd491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ca3e55f72b7fb8c3a643e4d5348b06"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">GraphOfConvexSets::Edge</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#a78ca3e55f72b7fb8c3a643e4d5348b06">Successors</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">GraphOfConvexSets::Vertex</a> *v)</td></tr>
+<tr class="memdesc:a78ca3e55f72b7fb8c3a643e4d5348b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the outgoing edges from <code>v</code>, which defines the "successors" of <code>v</code> in the common notation of implicit graph search.  <a href="#a78ca3e55f72b7fb8c3a643e4d5348b06">More...</a><br /></td></tr>
+<tr class="separator:a78ca3e55f72b7fb8c3a643e4d5348b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee27611542f04bbe9f750e7e8082ba0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#a6ee27611542f04bbe9f750e7e8082ba0">ExpandRecursively</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">GraphOfConvexSets::Vertex</a> *v, <a class="el" href="classint.html">int</a> max_successor_calls=1000)</td></tr>
+<tr class="memdesc:a6ee27611542f04bbe9f750e7e8082ba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes repeated recursive calls to <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#a78ca3e55f72b7fb8c3a643e4d5348b06" title="Returns the outgoing edges from v, which defines the &quot;successors&quot; of v in the common notation of impl...">Successors()</a> until no new vertices will be added to the graph, or <code>max_successor_calls</code> has been reached.  <a href="#a6ee27611542f04bbe9f750e7e8082ba0">More...</a><br /></td></tr>
+<tr class="separator:a6ee27611542f04bbe9f750e7e8082ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad698ad9e16c30c988cf99b578b5d5ab7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ad698ad9e16c30c988cf99b578b5d5ab7">gcs</a> () const</td></tr>
+<tr class="separator:ad698ad9e16c30c988cf99b578b5d5ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
+<tr class="memitem:aa97d683641b18d9a45e4b1d7136b783e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#aa97d683641b18d9a45e4b1d7136b783e">ImplicitGraphOfConvexSets</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> &amp;)=delete</td></tr>
+<tr class="separator:aa97d683641b18d9a45e4b1d7136b783e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6422bce39c5e0ac187199b512b6c557b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#a6422bce39c5e0ac187199b512b6c557b">operator=</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> &amp;)=delete</td></tr>
+<tr class="separator:a6422bce39c5e0ac187199b512b6c557b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb0fcca809c3b0a7043d564cd33408a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#addb0fcca809c3b0a7043d564cd33408a">ImplicitGraphOfConvexSets</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:addb0fcca809c3b0a7043d564cd33408a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac06458a6a505f40665b32d87da7eac7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ac06458a6a505f40665b32d87da7eac7d">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:ac06458a6a505f40665b32d87da7eac7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a363d4e62b507d1639288fc2f2289291f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#a363d4e62b507d1639288fc2f2289291f">ImplicitGraphOfConvexSets</a> ()</td></tr>
+<tr class="memdesc:a363d4e62b507d1639288fc2f2289291f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the (empty) implicit GCS.  <a href="#a363d4e62b507d1639288fc2f2289291f">More...</a><br /></td></tr>
+<tr class="separator:a363d4e62b507d1639288fc2f2289291f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab601ea9af645ce82b2a01551d646eb5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ab601ea9af645ce82b2a01551d646eb5c">mutable_gcs</a> ()</td></tr>
+<tr class="separator:ab601ea9af645ce82b2a01551d646eb5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2822887fda36975010450cf0900b06c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#af2822887fda36975010450cf0900b06c">Expand</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">GraphOfConvexSets::Vertex</a> *v)=0</td></tr>
+<tr class="memdesc:af2822887fda36975010450cf0900b06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands a vertex <code>v</code> by adding its outgoing edges (and the vertices that they point to) to the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ab601ea9af645ce82b2a01551d646eb5c">mutable_gcs()</a>, calling <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ab601ea9af645ce82b2a01551d646eb5c">mutable_gcs()</a>.AddVertex() and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ab601ea9af645ce82b2a01551d646eb5c">mutable_gcs()</a>.AddEdge() as needed.  <a href="#af2822887fda36975010450cf0900b06c">More...</a><br /></td></tr>
+<tr class="separator:af2822887fda36975010450cf0900b06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa97d683641b18d9a45e4b1d7136b783e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa97d683641b18d9a45e4b1d7136b783e">&#9670;&nbsp;</a></span>ImplicitGraphOfConvexSets() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addb0fcca809c3b0a7043d564cd33408a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb0fcca809c3b0a7043d564cd33408a">&#9670;&nbsp;</a></span>ImplicitGraphOfConvexSets() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afab681b1477a14fdb1f50cd8bfcdd491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afab681b1477a14fdb1f50cd8bfcdd491">&#9670;&nbsp;</a></span>~ImplicitGraphOfConvexSets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a363d4e62b507d1639288fc2f2289291f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a363d4e62b507d1639288fc2f2289291f">&#9670;&nbsp;</a></span>ImplicitGraphOfConvexSets() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the (empty) implicit GCS. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af2822887fda36975010450cf0900b06c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2822887fda36975010450cf0900b06c">&#9670;&nbsp;</a></span>Expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Expand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">GraphOfConvexSets::Vertex</a> *&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expands a vertex <code>v</code> by adding its outgoing edges (and the vertices that they point to) to the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ab601ea9af645ce82b2a01551d646eb5c">mutable_gcs()</a>, calling <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ab601ea9af645ce82b2a01551d646eb5c">mutable_gcs()</a>.AddVertex() and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ab601ea9af645ce82b2a01551d646eb5c">mutable_gcs()</a>.AddEdge() as needed. </p>
+<p>Due to a caching mechanism, implementations can assume that Expand(v) will only be called once for each <code>v</code>. </p>
+
+</div>
+</div>
+<a id="a6ee27611542f04bbe9f750e7e8082ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ee27611542f04bbe9f750e7e8082ba0">&#9670;&nbsp;</a></span>ExpandRecursively()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ExpandRecursively </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">GraphOfConvexSets::Vertex</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>max_successor_calls</em> = <code>1000</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Makes repeated recursive calls to <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#a78ca3e55f72b7fb8c3a643e4d5348b06" title="Returns the outgoing edges from v, which defines the &quot;successors&quot; of v in the common notation of impl...">Successors()</a> until no new vertices will be added to the graph, or <code>max_successor_calls</code> has been reached. </p>
+<p>Note: <code>v</code> is mutable because exanding a vertex requires changes to the underlying vertex object.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>v</code> is not already registered with the graph. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad698ad9e16c30c988cf99b578b5d5ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad698ad9e16c30c988cf99b578b5d5ab7">&#9670;&nbsp;</a></span>gcs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a>&amp; gcs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab601ea9af645ce82b2a01551d646eb5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab601ea9af645ce82b2a01551d646eb5c">&#9670;&nbsp;</a></span>mutable_gcs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a>&amp; mutable_gcs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac06458a6a505f40665b32d87da7eac7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac06458a6a505f40665b32d87da7eac7d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6422bce39c5e0ac187199b512b6c557b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6422bce39c5e0ac187199b512b6c557b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78ca3e55f72b7fb8c3a643e4d5348b06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78ca3e55f72b7fb8c3a643e4d5348b06">&#9670;&nbsp;</a></span>Successors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">GraphOfConvexSets::Edge</a>*&gt; Successors </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">GraphOfConvexSets::Vertex</a> *&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the outgoing edges from <code>v</code>, which defines the "successors" of <code>v</code> in the common notation of implicit graph search. </p>
+<p>The internal <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ad698ad9e16c30c988cf99b578b5d5ab7">gcs()</a> object is expanded as needed to include the edges (and the vertices they point to) that are returned.</p>
+<p>Note: The input arguments are mutable because expanding a vertex requires changes to the underlying vertex object. Similarly, the output is mutable because callers will need to get mutable vertex pointers from the returned edges to expand them further.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>v</code> is not already registered with the graph. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/optimization/<a class="el" href="implicit__graph__of__convex__sets_8h.html">implicit_graph_of_convex_sets.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a></li><li class="navelem"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html">ImplicitGraphOfConvexSets</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

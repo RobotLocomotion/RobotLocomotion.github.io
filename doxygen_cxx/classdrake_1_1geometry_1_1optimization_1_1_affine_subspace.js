@@ -9,6 +9,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_affine_subspace =
     [ "AffineDimension", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a941a95906ac84cc920167e46af9fc2dd", null ],
     [ "basis", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a2e517d5b78e2fa08bdc06aea97a0d3b6", null ],
     [ "ContainedIn", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#acc52b1cf2090f143dfeda40221474fb3", null ],
+    [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a92797706c9c2adb6329f1dce4c672d59", null ],
     [ "IsNearlyEqualTo", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a5d6c9e843c1772c0cade2a7ae80f3773", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#aec46116411b87b5a8824ff5aa0d7e194", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a9ef622cde6496d9c85941241b4f061a6", null ],

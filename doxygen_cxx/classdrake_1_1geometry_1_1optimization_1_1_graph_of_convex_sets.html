@@ -179,7 +179,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 <li><a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> Relaxation: The relaxation of the binary variables (edge activations) and perspective operations on the convex cost/constraints leads to a convex problem that considers the graph as a whole.</li>
 <li>Rounding: After solving the relaxation, a randomized rounding scheme is applied to obtain a feasible solution for the original problem. We interpret the relaxed flow variables as edge probabilities to guide the maximum likelyhood depth first search from the source to target vertices. Each rounding is calling SolveConvexRestriction.</li>
 </ul>
-<p>To handle non-convex constraints, one can provide convex surrogates to the relaxation and the true non-convex constraints to the rounding problem. These surrogates approximate the non-convex constraints, making the relaxation solvable as a convex optimization to guide the non-convex rounding. This can be controlled by the Transcription enum in the AddConstraint method. We encourage users to provide a strong convex surrogate, when possible, to better approximate the original non-convex problem. </p>
+<p>To handle non-convex constraints, one can provide convex surrogates to the relaxation and the true non-convex constraints to the rounding problem. These surrogates approximate the non-convex constraints, making the relaxation solvable as a convex optimization to guide the non-convex rounding. This can be controlled by the Transcription enum in the AddConstraint method. We encourage users to provide a strong convex surrogate, when possible, to better approximate the original non-convex problem.</p>
+<p>Users can also specify a GCS implicitly, which can be important for very large or infinite graphs, by deriving from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html" title="A base class to define the interface to an implicit graph of convex sets.">ImplicitGraphOfConvexSets</a>. </p>
 </div>
 <p><code>#include &lt;drake/geometry/optimization/graph_of_convex_sets.h&gt;</code></p>
 <table class="memberdecls">
@@ -224,18 +225,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4a8e888889d95b9ad42a70d3eff08801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4a8e888889d95b9ad42a70d3eff08801">RemoveEdge</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> *edge)</td></tr>
 <tr class="memdesc:a4a8e888889d95b9ad42a70d3eff08801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes edge <code>edge</code> from the graph.  <a href="#a4a8e888889d95b9ad42a70d3eff08801">More...</a><br /></td></tr>
 <tr class="separator:a4a8e888889d95b9ad42a70d3eff08801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a319e621fc359dd8daad48247f95b12fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a319e621fc359dd8daad48247f95b12fa">num_vertices</a> () const</td></tr>
+<tr class="separator:a319e621fc359dd8daad48247f95b12fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a398b8f00a51ced684a0759baaf58eadf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a398b8f00a51ced684a0759baaf58eadf">num_edges</a> () const</td></tr>
+<tr class="separator:a398b8f00a51ced684a0759baaf58eadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3afd44d1f388580db86e3a8603363714"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a3afd44d1f388580db86e3a8603363714">Vertices</a> ()</td></tr>
 <tr class="memdesc:a3afd44d1f388580db86e3a8603363714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable pointers to the vertices stored in the graph.  <a href="#a3afd44d1f388580db86e3a8603363714">More...</a><br /></td></tr>
 <tr class="separator:a3afd44d1f388580db86e3a8603363714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4371f3be108a7d70f7e797633b60c910"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4371f3be108a7d70f7e797633b60c910">Vertices</a> () const</td></tr>
 <tr class="memdesc:a4371f3be108a7d70f7e797633b60c910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointers to the vertices stored in the graph.  <a href="#a4371f3be108a7d70f7e797633b60c910">More...</a><br /></td></tr>
 <tr class="separator:a4371f3be108a7d70f7e797633b60c910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3eddbd1a9f658734ada7fd2d3eb1af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#acb3eddbd1a9f658734ada7fd2d3eb1af">IsValid</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;v) const</td></tr>
+<tr class="memdesc:acb3eddbd1a9f658734ada7fd2d3eb1af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff <code>v</code> is registered as a vertex with <code>this</code>.  <a href="#acb3eddbd1a9f658734ada7fd2d3eb1af">More...</a><br /></td></tr>
+<tr class="separator:acb3eddbd1a9f658734ada7fd2d3eb1af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4e8d040d8171719e0225a8067634429"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ac4e8d040d8171719e0225a8067634429">Edges</a> ()</td></tr>
 <tr class="memdesc:ac4e8d040d8171719e0225a8067634429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable pointers to the edges stored in the graph.  <a href="#ac4e8d040d8171719e0225a8067634429">More...</a><br /></td></tr>
 <tr class="separator:ac4e8d040d8171719e0225a8067634429"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22d9ed4306dc8b33178c4ba7255fbeca"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a22d9ed4306dc8b33178c4ba7255fbeca">Edges</a> () const</td></tr>
 <tr class="memdesc:a22d9ed4306dc8b33178c4ba7255fbeca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointers to the edges stored in the graph.  <a href="#a22d9ed4306dc8b33178c4ba7255fbeca">More...</a><br /></td></tr>
 <tr class="separator:a22d9ed4306dc8b33178c4ba7255fbeca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278d09b44f0001d420492e3898abe7d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a278d09b44f0001d420492e3898abe7d8">IsValid</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> &amp;e) const</td></tr>
+<tr class="memdesc:a278d09b44f0001d420492e3898abe7d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff <code>e</code> is registered as an edge with <code>this</code>.  <a href="#a278d09b44f0001d420492e3898abe7d8">More...</a><br /></td></tr>
+<tr class="separator:a278d09b44f0001d420492e3898abe7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3d4326967d3460e7a5fd585dbdde489"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#af3d4326967d3460e7a5fd585dbdde489">ClearAllPhiConstraints</a> ()</td></tr>
 <tr class="memdesc:af3d4326967d3460e7a5fd585dbdde489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all constraints added to any edge with AddPhiConstraint.  <a href="#af3d4326967d3460e7a5fd585dbdde489">More...</a><br /></td></tr>
 <tr class="separator:af3d4326967d3460e7a5fd585dbdde489"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -660,6 +671,80 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="acb3eddbd1a9f658734ada7fd2d3eb1af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb3eddbd1a9f658734ada7fd2d3eb1af">&#9670;&nbsp;</a></span>IsValid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsValid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff <code>v</code> is registered as a vertex with <code>this</code>. </p>
+
+</div>
+</div>
+<a id="a278d09b44f0001d420492e3898abe7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a278d09b44f0001d420492e3898abe7d8">&#9670;&nbsp;</a></span>IsValid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsValid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff <code>e</code> is registered as an edge with <code>this</code>. </p>
+
+</div>
+</div>
+<a id="a398b8f00a51ced684a0759baaf58eadf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398b8f00a51ced684a0759baaf58eadf">&#9670;&nbsp;</a></span>num_edges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_edges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a319e621fc359dd8daad48247f95b12fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a319e621fc359dd8daad48247f95b12fa">&#9670;&nbsp;</a></span>num_vertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_vertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

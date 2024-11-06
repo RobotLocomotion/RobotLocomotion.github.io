@@ -185,9 +185,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9cf0f6eaece284fabedbab39956a0938"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a9cf0f6eaece284fabedbab39956a0938">IntersectsWith</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;other) const</td></tr>
 <tr class="memdesc:a9cf0f6eaece284fabedbab39956a0938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the intersection between <code>this</code> and <code>other</code> is non-empty.  <a href="#a9cf0f6eaece284fabedbab39956a0938">More...</a><br /></td></tr>
 <tr class="separator:a9cf0f6eaece284fabedbab39956a0938"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f010e733bd63adb8352995624362b65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65">IsBounded</a> () const</td></tr>
-<tr class="memdesc:a2f010e733bd63adb8352995624362b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set.  <a href="#a2f010e733bd63adb8352995624362b65">More...</a><br /></td></tr>
-<tr class="separator:a2f010e733bd63adb8352995624362b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92797706c9c2adb6329f1dce4c672d59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a92797706c9c2adb6329f1dce4c672d59">IsBounded</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a7eba2010dfc9482ef2ae0bb0539a3083">Parallelism::None</a>()) const</td></tr>
+<tr class="memdesc:a92797706c9c2adb6329f1dce4c672d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set.  <a href="#a92797706c9c2adb6329f1dce4c672d59">More...</a><br /></td></tr>
+<tr class="separator:a92797706c9c2adb6329f1dce4c672d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e12342fc420701fbffd97025421575a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8e12342fc420701fbffd97025421575a">IsEmpty</a> () const</td></tr>
 <tr class="memdesc:a8e12342fc420701fbffd97025421575a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is empty.  <a href="#a8e12342fc420701fbffd97025421575a">More...</a><br /></td></tr>
 <tr class="separator:a8e12342fc420701fbffd97025421575a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,6 +240,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2cac663c667a539d3fa44c3f5c933d6b"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b">DoIsBoundedShortcut</a> () const</td></tr>
 <tr class="memdesc:a2cac663c667a539d3fa44c3f5c933d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b" title="Non-virtual interface implementation for DoIsBoundedShortcut().">DoIsBoundedShortcut()</a>.  <a href="#a2cac663c667a539d3fa44c3f5c933d6b">More...</a><br /></td></tr>
 <tr class="separator:a2cac663c667a539d3fa44c3f5c933d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed64b9f6964c517f8404829282b3184"><td class="memItemLeft" align="right" valign="top">virtual std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaed64b9f6964c517f8404829282b3184">DoIsBoundedShortcutParallel</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>) const</td></tr>
+<tr class="memdesc:aaed64b9f6964c517f8404829282b3184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaed64b9f6964c517f8404829282b3184" title="Non-virtual interface implementation for DoIsBoundedShortcutParallel().">DoIsBoundedShortcutParallel()</a>.  <a href="#aaed64b9f6964c517f8404829282b3184">More...</a><br /></td></tr>
+<tr class="separator:aaed64b9f6964c517f8404829282b3184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaacbd0a682d985194c7d94d6acdb50f3"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaacbd0a682d985194c7d94d6acdb50f3">DoProjectionShortcut</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;points, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; Eigen::MatrixXd &gt; projected_points) const</td></tr>
 <tr class="memdesc:aaacbd0a682d985194c7d94d6acdb50f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaacbd0a682d985194c7d94d6acdb50f3" title="Non-virtual interface implementation for DoProjectionShortcut().">DoProjectionShortcut()</a>.  <a href="#aaacbd0a682d985194c7d94d6acdb50f3">More...</a><br /></td></tr>
 <tr class="separator:aaacbd0a682d985194c7d94d6acdb50f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1007,6 +1010,35 @@ c.rows() == t.size() </dd></dl>
 
 </div>
 </div>
+<a id="aaed64b9f6964c517f8404829282b3184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed64b9f6964c517f8404829282b3184">&#9670;&nbsp;</a></span>DoIsBoundedShortcutParallel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::optional&lt;bool&gt; DoIsBoundedShortcutParallel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Non-virtual interface implementation for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaed64b9f6964c517f8404829282b3184" title="Non-virtual interface implementation for DoIsBoundedShortcutParallel().">DoIsBoundedShortcutParallel()</a>. </p>
+<p>Trivially returns std::nullopt. This allows a derived class to implement its own boundedness checks that leverage parallelization, to potentially avoid the more expensive base class checks. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> &gt;= 0 </dd></dl>
+
+</div>
+</div>
 <a id="a1cc320d6088c2debb29de0d55001596f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1cc320d6088c2debb29de0d55001596f">&#9670;&nbsp;</a></span>DoIsEmpty()</h2>
 
@@ -1342,8 +1374,8 @@ distances.size() == points.cols() </dd></dl>
 
 </div>
 </div>
-<a id="a2f010e733bd63adb8352995624362b65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f010e733bd63adb8352995624362b65">&#9670;&nbsp;</a></span>IsBounded()</h2>
+<a id="a92797706c9c2adb6329f1dce4c672d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92797706c9c2adb6329f1dce4c672d59">&#9670;&nbsp;</a></span>IsBounded()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1351,14 +1383,21 @@ distances.size() == points.cols() </dd></dl>
         <tr>
           <td class="memname">bool IsBounded </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelism</em> = <code><a class="el" href="classdrake_1_1_parallelism.html#a7eba2010dfc9482ef2ae0bb0539a3083">Parallelism::None</a>()</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Returns true iff the set is bounded, e.g., there exists an element-wise finite lower and upper bound for the set. </p>
-<p>Note: for some derived classes, this check is trivial, but for others it can require solving an (typically small) optimization problem. Check the derived class documentation for any notes. </p>
+<p>Note: for some derived classes, this check is trivial, but for others it can require solving a number of (typically small) optimization problems. Each derived class documents the cost of its boundedness test and whether it honors the request for parallelism. (Derived classes which do not have a specialized check will, by default, honor parallelism requests.) Note that the overhead of multithreading may lead to slower runtimes for simple, low-dimensional sets, but can enable major speedups for more challenging problems.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parallelism</td><td>requests the number of cores to use when solving mathematical programs to check boundedness, subject to whether a particular derived class honors parallelism. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

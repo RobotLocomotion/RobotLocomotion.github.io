@@ -29,6 +29,7 @@ var searchData=
   ['imagetraits_3c_20systems_3a_3asensors_3a_3apixeltype_3a_3aklabel16i_20_3e',['ImageTraits&lt; systems::sensors::PixelType::kLabel16I &gt;',['../structdrake_1_1systems_1_1sensors_1_1_image_traits.html',1,'drake::systems::sensors']]],
   ['imagewriter',['ImageWriter',['../classdrake_1_1systems_1_1sensors_1_1_image_writer.html',1,'drake::systems::sensors']]],
   ['impliciteulerintegrator',['ImplicitEulerIntegrator',['../classdrake_1_1systems_1_1_implicit_euler_integrator.html',1,'drake::systems']]],
+  ['implicitgraphofconvexsets',['ImplicitGraphOfConvexSets',['../classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html',1,'drake::geometry::optimization']]],
   ['implicitintegrator',['ImplicitIntegrator',['../classdrake_1_1systems_1_1_implicit_integrator.html',1,'drake::systems']]],
   ['implicitintegratortest',['ImplicitIntegratorTest',['../classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html',1,'drake::systems::analysis_test']]],
   ['inertiavisualizer',['InertiaVisualizer',['../classdrake_1_1visualization_1_1_inertia_visualizer.html',1,'drake::visualization']]],

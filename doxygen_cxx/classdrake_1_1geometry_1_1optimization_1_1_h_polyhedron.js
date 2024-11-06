@@ -17,7 +17,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron =
     [ "ContainedIn", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aacc2366f3e031a58db12d6b57d911e37", null ],
     [ "FindRedundant", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a89f4027e84df413eb25359332513c464", null ],
     [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a25459319f3911a56071855a34a38e1c9", null ],
-    [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2f010e733bd63adb8352995624362b65", null ],
+    [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a92797706c9c2adb6329f1dce4c672d59", null ],
     [ "MakeBox", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a90a3c53754fc20d77419aae25ed1b1c1", null ],
     [ "MakeL1Ball", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a20de73193ff05f0d332edba9e48a4aee", null ],
     [ "MakeUnitBox", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad362319489a2c5507a34d9b5c0a6e696", null ],

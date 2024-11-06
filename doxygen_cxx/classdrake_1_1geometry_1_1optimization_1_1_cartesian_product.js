@@ -12,8 +12,9 @@ var classdrake_1_1geometry_1_1optimization_1_1_cartesian_product =
     [ "b", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a21f6c2bde0b3e26497b59bf1e9d970fd", null ],
     [ "CalcVolume", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a7a2847efc4f87e996464d9d71159e27b", null ],
     [ "factor", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#ab446eba95a4fc1c18f1bb5b6b3ebc887", null ],
+    [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a92797706c9c2adb6329f1dce4c672d59", null ],
     [ "num_factors", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a27ef18eef844167c096ed08fbceeeb1a", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a2fed6723fd1b1a945e7dd0a07cca22ae", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a61422fd8297062124a1aabb31f3decdb", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a2fed6723fd1b1a945e7dd0a07cca22ae", null ],
     [ "PointInSet", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#aa7a4d7c125954dfde3c15238c852eeed", null ]
 ];

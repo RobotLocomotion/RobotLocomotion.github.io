@@ -479,6 +479,7 @@ var searchData=
   ['doinitialize',['DoInitialize',['../classdrake_1_1systems_1_1_integrator_base.html#ae1949ad54a9dc1dc95f632a066aa12e6',1,'drake::systems::IntegratorBase']]],
   ['dointerpolatebetweenconfigurations',['DoInterpolateBetweenConfigurations',['../classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a17740edbe8630391dc5e5a96bdde2776',1,'drake::planning::DistanceAndInterpolationProvider']]],
   ['doisboundedshortcut',['DoIsBoundedShortcut',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2cac663c667a539d3fa44c3f5c933d6b',1,'drake::geometry::optimization::ConvexSet']]],
+  ['doisboundedshortcutparallel',['DoIsBoundedShortcutParallel',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaed64b9f6964c517f8404829282b3184',1,'drake::geometry::optimization::ConvexSet']]],
   ['doisempty',['DoIsEmpty',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1cc320d6088c2debb29de0d55001596f',1,'drake::geometry::optimization::ConvexSet']]],
   ['domain',['domain',['../classdrake_1_1symbolic_1_1_environment.html#aaa0a3a993236363f9cc3f1d7b040a52d',1,'drake::symbolic::Environment']]],
   ['domakederivative',['DoMakeDerivative',['../classdrake_1_1trajectories_1_1_trajectory.html#ac51b842ba9d2ee39e9398c86fdc38a75',1,'drake::trajectories::Trajectory']]],

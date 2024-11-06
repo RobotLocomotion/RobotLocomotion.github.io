@@ -6,6 +6,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle =
     [ "Hyperrectangle", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#abca5d6fae4aea9a48056aa8b4ddbdafe", null ],
     [ "~Hyperrectangle", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a6bf72da48f2548ce5f0f515be648e5df", null ],
     [ "Center", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a621852108208d835ec699ee7ba6a0eea", null ],
+    [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a92797706c9c2adb6329f1dce4c672d59", null ],
     [ "lb", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a48e40be6382b66a7fd0cdf4ac8aad2a6", null ],
     [ "MakeHPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a81d2c6f97c9bf2239759c056d36a7251", null ],
     [ "MaybeCalcAxisAlignedBoundingBox", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a9dfab9560439ed928be99e4ceb8e6ee7", null ],

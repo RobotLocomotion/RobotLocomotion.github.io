@@ -7,6 +7,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum =
     [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aefdee5e8d315d573207fd1cd6711353e", null ],
     [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#acf3359a9ffe54d19027766e2e2520218", null ],
     [ "~MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#ab329d54101a6da1d831312618012bf8f", null ],
+    [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a92797706c9c2adb6329f1dce4c672d59", null ],
     [ "num_terms", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a7ffbc0928c59ef6d1ed744bcfea6be0b", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aeb9d125fc472d3d8b44a2f410f3ffb18", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a939869561d2b6d2a404bf1f48d513d5f", null ],
