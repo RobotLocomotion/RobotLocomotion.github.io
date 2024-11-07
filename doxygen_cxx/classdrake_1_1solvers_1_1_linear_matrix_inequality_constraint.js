@@ -11,5 +11,6 @@ var classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint =
     [ "F", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#aa36ab394854328438f9f23a05efcd0c4", null ],
     [ "matrix_rows", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#ac070804dddf0300f7245aa6692940d95", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a110e13a03117327c96ccb37092fbde8a", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a81d38df57d93852344ee376f7d29f275", null ]
+    [ "operator=", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a81d38df57d93852344ee376f7d29f275", null ],
+    [ "WarnOnSmallMatrixSize", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a36439246736ce57d04811336f146d275", null ]
 ];

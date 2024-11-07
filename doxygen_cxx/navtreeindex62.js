@@ -1,5 +1,8 @@
 var NAVTREEINDEX62 =
 {
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#ad7420fd6adfed409f3fc8551d0decb96":[3,0,0,3,15,0,17],
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d":[3,0,0,3,15,0,16],
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#afd507a76abfe6745b786bbe0da7f5f89":[3,0,0,3,15,0,15],
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html":[3,0,0,3,15,1,0],
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html#a67c8aa38df978eece62132ee8ab7cf28":[3,0,0,3,15,1,0,2],
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html#ad37917c293eb1bd5093576d92f1cbec0":[3,0,0,3,15,1,0,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a3f5e525b55e7919db6fd454ca67c1566":[3,0,0,4,1,7,2,9],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a5c097b20e11ea360a2d2c13c02452ac6":[3,0,0,4,1,7,2,5],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a6c4438afbf2190941ebeae2f8e16dd11":[3,0,0,4,1,7,2,12],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a8e259636d4640dcfdbbcb906f1ea5479":[3,0,0,4,1,7,2,0],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#ab21155b4481169f8b54e65a4858fb047":[3,0,0,4,1,7,2,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#ab33e404245eaa2fad3341ef9018bb54e":[3,0,0,4,1,7,2,11],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#ac35d552a2c46297c20f8d2e467111e2d":[3,0,0,4,1,7,2,4]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a8e259636d4640dcfdbbcb906f1ea5479":[3,0,0,4,1,7,2,0]
 };

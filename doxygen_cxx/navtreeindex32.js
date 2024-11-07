@@ -1,5 +1,8 @@
 var NAVTREEINDEX32 =
 {
+"classdrake_1_1symbolic_1_1_expression_abs.html#a72ae45ea810c2e68f74e59000dca8337":[3,0,0,14,7,2],
+"classdrake_1_1symbolic_1_1_expression_abs.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,14,7,3],
+"classdrake_1_1symbolic_1_1_expression_abs.html#ae4fb457c881d49e1e698120eae9e4c52":[3,0,0,14,7,5],
 "classdrake_1_1symbolic_1_1_expression_abs.html#ae897689cf53055bc3307cb51fd4e0cc1":[3,0,0,14,7,0],
 "classdrake_1_1symbolic_1_1_expression_acos.html":[3,0,0,14,8],
 "classdrake_1_1symbolic_1_1_expression_acos.html#a008a73e1d2390dc2325d70175fb5410e":[3,0,0,14,8,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX32 =
 "classdrake_1_1symbolic_1_1_expression_sqrt.html":[3,0,0,14,31],
 "classdrake_1_1symbolic_1_1_expression_sqrt.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,14,31,6],
 "classdrake_1_1symbolic_1_1_expression_sqrt.html#a2522d748c56d22bdcfc91eb6129ea561":[3,0,0,14,31,1],
-"classdrake_1_1symbolic_1_1_expression_sqrt.html#a4d63adf08b5325e905027f6f2c14b433":[3,0,0,14,31,4],
-"classdrake_1_1symbolic_1_1_expression_sqrt.html#a72ae45ea810c2e68f74e59000dca8337":[3,0,0,14,31,2],
-"classdrake_1_1symbolic_1_1_expression_sqrt.html#a79e1b5d9aadd56991632f40804d4bf93":[3,0,0,14,31,7],
-"classdrake_1_1symbolic_1_1_expression_sqrt.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,14,31,3]
+"classdrake_1_1symbolic_1_1_expression_sqrt.html#a4d63adf08b5325e905027f6f2c14b433":[3,0,0,14,31,4]
 };

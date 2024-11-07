@@ -184,6 +184,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a606f4db084fea67dad1e32fd17d580e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac070804dddf0300f7245aa6692940d95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#ac070804dddf0300f7245aa6692940d95">matrix_rows</a> () const</td></tr>
 <tr class="separator:ac070804dddf0300f7245aa6692940d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36439246736ce57d04811336f146d275"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a36439246736ce57d04811336f146d275">WarnOnSmallMatrixSize</a> () const</td></tr>
+<tr class="memdesc:a36439246736ce57d04811336f146d275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw a warning if the matrix size is either 1x1 or 2x2.  <a href="#a36439246736ce57d04811336f146d275">More...</a><br /></td></tr>
+<tr class="separator:a36439246736ce57d04811336f146d275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a93b9495de294e391dc2411455d35125c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a93b9495de294e391dc2411455d35125c">PositiveSemidefiniteConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html">PositiveSemidefiniteConstraint</a> &amp;)=delete</td></tr>
 <tr class="separator:a93b9495de294e391dc2411455d35125c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -617,8 +620,34 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="af6182a9803c81d9ef793685fd891082f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6182a9803c81d9ef793685fd891082f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html">PositiveSemidefiniteConstraint</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html">PositiveSemidefiniteConstraint</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2ef19e543f4121af42e8d3f5e66ce4fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ef19e543f4121af42e8d3f5e66ce4fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef19e543f4121af42e8d3f5e66ce4fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -643,29 +672,22 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af6182a9803c81d9ef793685fd891082f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6182a9803c81d9ef793685fd891082f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a36439246736ce57d04811336f146d275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36439246736ce57d04811336f146d275">&#9670;&nbsp;</a></span>WarnOnSmallMatrixSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html">PositiveSemidefiniteConstraint</a>&amp; operator= </td>
+          <td class="memname">void WarnOnSmallMatrixSize </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html">PositiveSemidefiniteConstraint</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Throw a warning if the matrix size is either 1x1 or 2x2. </p>
 
 </div>
 </div>

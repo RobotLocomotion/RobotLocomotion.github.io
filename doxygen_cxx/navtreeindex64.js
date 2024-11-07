@@ -1,5 +1,8 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a727f367eb7b4a0d5d2b9ba7c72bcfb23":[3,0,0,8,30,5],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a8268d3340ff301fdeb101f319116b2ff":[3,0,0,8,30,7],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,30,1],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#a952e3892ae1c82e97ef660d78fba0db2":[3,0,0,8,30,6],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#aacf351ea5aed0b77d57004ad6f67c5f1":[3,0,0,8,30,3],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#aba281299fb18e40f37c6e1b5dd692da7":[3,0,0,8,30,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44":[3,0,0,12,6,0,7],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a4932525a5cc773e1fc8e9364a1b6775b":[3,0,0,12,6,0,4],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,12,6,0,6],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[3,0,0,12,6,0,0],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,12,6,0,5],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html":[3,0,0,12,6,1],
-"structdrake_1_1schema_1_1_rotation_1_1_identity.html#a9336cad52b9b1498eaa3a95c00dca7c4":[3,0,0,12,6,1,2]
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[3,0,0,12,6,0,0]
 };

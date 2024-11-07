@@ -216,6 +216,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa28404dc624e8c707b31e562883f713e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1schema_1_1_rotation.html#aa28404dc624e8c707b31e562883f713e">ToSymbolic</a> () const</td></tr>
 <tr class="memdesc:aa28404dc624e8c707b31e562883f713e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbolic form of this rotation.  <a href="#aa28404dc624e8c707b31e562883f713e">More...</a><br /></td></tr>
 <tr class="separator:aa28404dc624e8c707b31e562883f713e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053e7760e943b889078ecc885659d645"><td class="memItemLeft" align="right" valign="top">math::RotationMatrixd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1schema_1_1_rotation.html#a053e7760e943b889078ecc885659d645">Sample</a> (<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator) const</td></tr>
+<tr class="memdesc:a053e7760e943b889078ecc885659d645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Samples this <a class="el" href="classdrake_1_1schema_1_1_rotation.html" title="A specification for an SO(3) rotation, to be used for serialization purposes, e.g....">Rotation</a>.  <a href="#a053e7760e943b889078ecc885659d645">More...</a><br /></td></tr>
+<tr class="separator:a053e7760e943b889078ecc885659d645"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0af6024b49102086643f32d1f175a273"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1schema_1_1_rotation.html#a0af6024b49102086643f32d1f175a273">set_rpy_deg</a> (const Eigen::Vector3d &amp;rpy_deg)</td></tr>
 <tr class="memdesc:a0af6024b49102086643f32d1f175a273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this value to the given deterministic RPY, in degrees.  <a href="#a0af6024b49102086643f32d1f175a273">More...</a><br /></td></tr>
 <tr class="separator:a0af6024b49102086643f32d1f175a273"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -482,6 +485,27 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a053e7760e943b889078ecc885659d645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053e7760e943b889078ecc885659d645">&#9670;&nbsp;</a></span>Sample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">math::RotationMatrixd Sample </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *&#160;</td>
+          <td class="paramname"><em>generator</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Samples this <a class="el" href="classdrake_1_1schema_1_1_rotation.html" title="A specification for an SO(3) rotation, to be used for serialization purposes, e.g....">Rotation</a>. </p>
+<p>If this is deterministic, the result is the same as GetDeterministicValue. </p>
 
 </div>
 </div>

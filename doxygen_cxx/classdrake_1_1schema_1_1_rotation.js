@@ -14,6 +14,7 @@ var classdrake_1_1schema_1_1_rotation =
     [ "IsDeterministic", "classdrake_1_1schema_1_1_rotation.html#a4034e07fad8c97f6d5466d48b8bbcdc3", null ],
     [ "operator=", "classdrake_1_1schema_1_1_rotation.html#adf23692ae0869efd76f73a2ee54ecad0", null ],
     [ "operator=", "classdrake_1_1schema_1_1_rotation.html#a2420ac9dadffdc94f504a1ac146def9c", null ],
+    [ "Sample", "classdrake_1_1schema_1_1_rotation.html#a053e7760e943b889078ecc885659d645", null ],
     [ "Serialize", "classdrake_1_1schema_1_1_rotation.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "set_rpy_deg", "classdrake_1_1schema_1_1_rotation.html#a0af6024b49102086643f32d1f175a273", null ],
     [ "ToSymbolic", "classdrake_1_1schema_1_1_rotation.html#aa28404dc624e8c707b31e562883f713e", null ],

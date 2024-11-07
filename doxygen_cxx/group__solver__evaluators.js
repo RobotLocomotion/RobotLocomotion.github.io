@@ -389,8 +389,9 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
       [ "DoToLatex", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "matrix_rows", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#ac070804dddf0300f7245aa6692940d95", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#af6182a9803c81d9ef793685fd891082f", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a2ef19e543f4121af42e8d3f5e66ce4fa", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#af6182a9803c81d9ef793685fd891082f", null ]
+      [ "WarnOnSmallMatrixSize", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a36439246736ce57d04811336f146d275", null ]
     ] ],
     [ "LinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html", [
       [ "LinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a4797a69a4a7f9a8301f07cb92c227117", null ],
@@ -404,7 +405,8 @@ var group__solver__evaluators =
       [ "F", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#aa36ab394854328438f9f23a05efcd0c4", null ],
       [ "matrix_rows", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#ac070804dddf0300f7245aa6692940d95", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a110e13a03117327c96ccb37092fbde8a", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a81d38df57d93852344ee376f7d29f275", null ]
+      [ "operator=", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a81d38df57d93852344ee376f7d29f275", null ],
+      [ "WarnOnSmallMatrixSize", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a36439246736ce57d04811336f146d275", null ]
     ] ],
     [ "ExpressionConstraint", "classdrake_1_1solvers_1_1_expression_constraint.html", [
       [ "ExpressionConstraint", "classdrake_1_1solvers_1_1_expression_constraint.html#a46caf4fead07a0f09be7a6658294bb39", null ],

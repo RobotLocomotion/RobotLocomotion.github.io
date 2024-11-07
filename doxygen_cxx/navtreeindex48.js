@@ -1,5 +1,8 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a54d2cefdc8e6443b9710b195b914b680":[3,0,0,17,7,43],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f":[3,0,0,17,7,57],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7":[3,0,0,17,7,31],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a603a4e747fb099305c01f8762e8cff23":[3,0,0,17,7,9],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a60ecdbaf41d941ec12c0b6add7cc32d9":[3,0,0,17,7,17],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a644718bb2fb240de962dc3c9a1fdf0dc":[3,0,0,17,7,23],
@@ -246,8 +249,5 @@ var NAVTREEINDEX48 =
 "classvtk_command.html":[3,0,4],
 "classvtk_u_r_i_loader.html":[3,0,5],
 "cloth__spring__model_8h.html":[4,0,0,3,10,0],
-"cloth__spring__model__geometry_8h.html":[4,0,0,3,10,1],
-"cloth__spring__model__params_8h.html":[4,0,0,3,10,2],
-"clp__solver_8h.html":[4,0,0,11,7],
-"codegen_8h.html":[4,0,0,1,3,3]
+"cloth__spring__model__geometry_8h.html":[4,0,0,3,10,1]
 };

@@ -2,6 +2,7 @@ var searchData=
 [
   ['waitformessage',['WaitForMessage',['../classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ac456d9170ae4b25ded776deffac5f039',1,'drake::systems::lcm::LcmSubscriberSystem']]],
   ['warndeprecated',['WarnDeprecated',['../namespacedrake_1_1pydrake.html#a88a20567ddf6e5978a874a3cb46353f4',1,'drake::pydrake']]],
+  ['warnonsmallmatrixsize',['WarnOnSmallMatrixSize',['../classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a36439246736ce57d04811336f146d275',1,'drake::solvers::PositiveSemidefiniteConstraint::WarnOnSmallMatrixSize()'],['../classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a36439246736ce57d04811336f146d275',1,'drake::solvers::LinearMatrixInequalityConstraint::WarnOnSmallMatrixSize()']]],
   ['web_5furl',['web_url',['../classdrake_1_1geometry_1_1_meshcat.html#a3dfb466d67a1d1d068c1b8017b2d14c5',1,'drake::geometry::Meshcat']]],
   ['weights',['weights',['../classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#ae29fd4c3e258ed5911347b41bcf0c3f5',1,'drake::multibody::TriangleQuadratureRule']]],
   ['weldframes',['WeldFrames',['../classdrake_1_1multibody_1_1_multibody_plant.html#a6636bf1e0900fb58b6a2e465c404fa8d',1,'drake::multibody::MultibodyPlant']]],

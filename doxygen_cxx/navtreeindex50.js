@@ -1,5 +1,8 @@
 var NAVTREEINDEX50 =
 {
+"detect__zero__simplex_8h.html":[4,0,0,4,2,14],
+"diagnostic__policy_8h.html":[4,0,0,1,15],
+"diagnostic__policy__test__base_8h.html":[4,0,0,1,4,0],
 "diagram_8h.html":[4,0,0,12,3,11],
 "diagram_8h.html#aa5050c5d3ea4f3d4691875a0eae0a4c0":[4,0,0,12,3,11,2],
 "diagram__builder_8h.html":[4,0,0,12,3,12],
@@ -246,8 +249,5 @@ var NAVTREEINDEX50 =
 "eigen__pybind_8h.html#a0d7582877591057ceea633df19d910fa":[4,0,0,0,0,1,4,2],
 "eigen__pybind_8h.html#a875e25ecdc84790945435e9538a6ef60":[4,0,0,0,0,1,4,0],
 "eigen__pybind_8h.html#ab9047f00f873c1cd6f00d0665365ecf5":[4,0,0,0,0,1,4,1],
-"eigen__pybind_8h.html#af5f81d7315477aaa1694d9aa02a1346b":[4,0,0,0,0,1,4,3],
-"eigen__sparse__triplet_8h.html":[4,0,0,7,13],
-"eigen__sparse__triplet_8h.html#a731362436a359883cbac2c59abf95168":[4,0,0,7,13,1],
-"eigen__sparse__triplet_8h.html#a9681555f84d48a48d09601d913246934":[4,0,0,7,13,0]
+"eigen__pybind_8h.html#af5f81d7315477aaa1694d9aa02a1346b":[4,0,0,0,0,1,4,3]
 };

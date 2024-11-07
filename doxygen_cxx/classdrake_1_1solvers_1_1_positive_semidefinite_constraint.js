@@ -9,6 +9,7 @@ var classdrake_1_1solvers_1_1_positive_semidefinite_constraint =
     [ "DoEval", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
     [ "DoToLatex", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
     [ "matrix_rows", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#ac070804dddf0300f7245aa6692940d95", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#af6182a9803c81d9ef793685fd891082f", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a2ef19e543f4121af42e8d3f5e66ce4fa", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#af6182a9803c81d9ef793685fd891082f", null ]
+    [ "WarnOnSmallMatrixSize", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a36439246736ce57d04811336f146d275", null ]
 ];
