@@ -6840,11 +6840,47 @@ property of type CoulombFriction&lt;double&gt;.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.RegisterVisualGeometry">
-<span class="sig-name descname"><span class="pre">RegisterVisualGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BG</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diffuse_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.RegisterVisualGeometry" title="Permalink to this definition"></a></dt>
-<dd><p>Overload for visual geometry registration; it converts the
-<code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
-geometry::DrakeVisualizer-compatible set of
-geometry::IllustrationProperties.</p>
+<span class="sig-name descname"><span class="pre">RegisterVisualGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.RegisterVisualGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant, body: pydrake.multibody.tree.RigidBody, X_BG: pydrake.math.RigidTransform, shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]]) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>Overload for visual geometry registration. The following properties
+are set: - (“phong”, “diffuse”) = <code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> in both sets of
+properties. - (“label”, “id”) in perception properties as documented
+above.</p>
+<p>See mbp_geometry “the overview” for more details.</p>
+<ol class="arabic simple" start="2">
+<li><p>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant, body: pydrake.multibody.tree.RigidBody, geometry_instance: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>Registers the given <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code> in a SceneGraph to be used
+for visualization of a given <code class="docutils literal notranslate"><span class="pre">body</span></code>.</p>
+<p>The roles that <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code> gets assigned
+(illustration/perception) in SceneGraph depend solely on the
+properties that have <em>already</em> been assigned to <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code>.
+If <em>any</em> visual roles have been assigned, those will be the only roles
+used. If <em>no</em> visual roles have been assigned, then both roles will be
+assigned using the default set of property values.</p>
+<p>If the registered geometry has the perception role, it will have the
+(“label”, “id”) property. Possibly assigned as documented above.</p>
+<p>See mbp_geometry “the overview” for more details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>The body for which geometry is being registered.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code>:</dt><dd><p>The geometry to associate with the visual appearance of <code class="docutils literal notranslate"><span class="pre">body</span></code>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_instance is null.</strong> – </p></li>
+<li><p><strong>RuntimeError if called post-finalize.</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the id for the registered geometry.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -12566,11 +12602,47 @@ property of type CoulombFriction&lt;double&gt;.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RegisterVisualGeometry">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RegisterVisualGeometry"></span><span class="sig-name descname"><span class="pre">RegisterVisualGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BG</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diffuse_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RegisterVisualGeometry" title="Permalink to this definition"></a></dt>
-<dd><p>Overload for visual geometry registration; it converts the
-<code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
-geometry::DrakeVisualizer-compatible set of
-geometry::IllustrationProperties.</p>
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RegisterVisualGeometry"></span><span class="sig-name descname"><span class="pre">RegisterVisualGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.RegisterVisualGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], body: pydrake.multibody.tree.RigidBody_[AutoDiffXd], X_BG: pydrake.math.RigidTransform, shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]]) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>Overload for visual geometry registration. The following properties
+are set: - (“phong”, “diffuse”) = <code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> in both sets of
+properties. - (“label”, “id”) in perception properties as documented
+above.</p>
+<p>See mbp_geometry “the overview” for more details.</p>
+<ol class="arabic simple" start="2">
+<li><p>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], body: pydrake.multibody.tree.RigidBody_[AutoDiffXd], geometry_instance: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>Registers the given <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code> in a SceneGraph to be used
+for visualization of a given <code class="docutils literal notranslate"><span class="pre">body</span></code>.</p>
+<p>The roles that <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code> gets assigned
+(illustration/perception) in SceneGraph depend solely on the
+properties that have <em>already</em> been assigned to <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code>.
+If <em>any</em> visual roles have been assigned, those will be the only roles
+used. If <em>no</em> visual roles have been assigned, then both roles will be
+assigned using the default set of property values.</p>
+<p>If the registered geometry has the perception role, it will have the
+(“label”, “id”) property. Possibly assigned as documented above.</p>
+<p>See mbp_geometry “the overview” for more details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>The body for which geometry is being registered.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code>:</dt><dd><p>The geometry to associate with the visual appearance of <code class="docutils literal notranslate"><span class="pre">body</span></code>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_instance is null.</strong> – </p></li>
+<li><p><strong>RuntimeError if called post-finalize.</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the id for the registered geometry.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -18286,11 +18358,47 @@ property of type CoulombFriction&lt;double&gt;.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.RegisterVisualGeometry">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].RegisterVisualGeometry"></span><span class="sig-name descname"><span class="pre">RegisterVisualGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BG</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diffuse_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.RegisterVisualGeometry" title="Permalink to this definition"></a></dt>
-<dd><p>Overload for visual geometry registration; it converts the
-<code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
-geometry::DrakeVisualizer-compatible set of
-geometry::IllustrationProperties.</p>
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].RegisterVisualGeometry"></span><span class="sig-name descname"><span class="pre">RegisterVisualGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.RegisterVisualGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[Expression], body: pydrake.multibody.tree.RigidBody_[Expression], X_BG: pydrake.math.RigidTransform, shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]]) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>Overload for visual geometry registration. The following properties
+are set: - (“phong”, “diffuse”) = <code class="docutils literal notranslate"><span class="pre">diffuse_color</span></code> in both sets of
+properties. - (“label”, “id”) in perception properties as documented
+above.</p>
+<p>See mbp_geometry “the overview” for more details.</p>
+<ol class="arabic simple" start="2">
+<li><p>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[Expression], body: pydrake.multibody.tree.RigidBody_[Expression], geometry_instance: pydrake.geometry.GeometryInstance) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>Registers the given <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code> in a SceneGraph to be used
+for visualization of a given <code class="docutils literal notranslate"><span class="pre">body</span></code>.</p>
+<p>The roles that <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code> gets assigned
+(illustration/perception) in SceneGraph depend solely on the
+properties that have <em>already</em> been assigned to <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code>.
+If <em>any</em> visual roles have been assigned, those will be the only roles
+used. If <em>no</em> visual roles have been assigned, then both roles will be
+assigned using the default set of property values.</p>
+<p>If the registered geometry has the perception role, it will have the
+(“label”, “id”) property. Possibly assigned as documented above.</p>
+<p>See mbp_geometry “the overview” for more details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>The body for which geometry is being registered.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code>:</dt><dd><p>The geometry to associate with the visual appearance of <code class="docutils literal notranslate"><span class="pre">body</span></code>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_instance is null.</strong> – </p></li>
+<li><p><strong>RuntimeError if called post-finalize.</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the id for the registered geometry.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

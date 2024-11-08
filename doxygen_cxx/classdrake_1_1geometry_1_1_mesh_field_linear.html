@@ -220,6 +220,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af09a2f7929d7594846bd53881d3017d4"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#af09a2f7929d7594846bd53881d3017d4">EvaluateAtVertex</a> (<a class="el" href="classint.html">int</a> v) const</td></tr>
 <tr class="memdesc:af09a2f7929d7594846bd53881d3017d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the field value at a vertex.  <a href="#af09a2f7929d7594846bd53881d3017d4">More...</a><br /></td></tr>
 <tr class="separator:af09a2f7929d7594846bd53881d3017d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bc3a16499ddaaa80a906e48be687244"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a3bc3a16499ddaaa80a906e48be687244">EvaluateMin</a> (<a class="el" href="classint.html">int</a> e) const</td></tr>
+<tr class="memdesc:a3bc3a16499ddaaa80a906e48be687244"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Evaluates the minimum field value on an element.  <a href="#a3bc3a16499ddaaa80a906e48be687244">More...</a><br /></td></tr>
+<tr class="separator:a3bc3a16499ddaaa80a906e48be687244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabefbb7d4ac222516562df4e819028c1"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#aabefbb7d4ac222516562df4e819028c1">EvaluateMax</a> (<a class="el" href="classint.html">int</a> e) const</td></tr>
+<tr class="memdesc:aabefbb7d4ac222516562df4e819028c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Evaluates the maximum field value on an element.  <a href="#aabefbb7d4ac222516562df4e819028c1">More...</a><br /></td></tr>
+<tr class="separator:aabefbb7d4ac222516562df4e819028c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a4676050a0bc1a166b1dcee16d3f570"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a8a4676050a0bc1a166b1dcee16d3f570">EvaluateAtMo</a> (<a class="el" href="classint.html">int</a> e) const</td></tr>
+<tr class="memdesc:a8a4676050a0bc1a166b1dcee16d3f570"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Evaluates the linear function associated with element e at the mesh origin Mo.  <a href="#a8a4676050a0bc1a166b1dcee16d3f570">More...</a><br /></td></tr>
+<tr class="separator:a8a4676050a0bc1a166b1dcee16d3f570"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35bcea3e2b594a0fb11a70cbb3467d14"><td class="memTemplParams" colspan="2">template&lt;typename B &gt; </td></tr>
 <tr class="memitem:a35bcea3e2b594a0fb11a70cbb3467d14"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; B, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a35bcea3e2b594a0fb11a70cbb3467d14">Evaluate</a> (<a class="el" href="classint.html">int</a> e, const typename MeshType::template Barycentric&lt; B &gt; &amp;b) const</td></tr>
 <tr class="memdesc:a35bcea3e2b594a0fb11a70cbb3467d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the field value at a location on an element.  <a href="#a35bcea3e2b594a0fb11a70cbb3467d14">More...</a><br /></td></tr>
@@ -238,9 +247,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a433c7703963d53693d7a42dd3bca5e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy to a new MeshFieldLinear and set the new MeshFieldLinear to use a new compatible mesh.  <a href="#a433c7703963d53693d7a42dd3bca5e88">More...</a><br /></td></tr>
 <tr class="separator:a433c7703963d53693d7a42dd3bca5e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac41d1bc48208a47ffceb25d417eea442"><td class="memItemLeft" align="right" valign="top">const MeshType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442">mesh</a> () const</td></tr>
+<tr class="memdesc:ac41d1bc48208a47ffceb25d417eea442"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mesh M to which this field refers.  <a href="#ac41d1bc48208a47ffceb25d417eea442">More...</a><br /></td></tr>
 <tr class="separator:ac41d1bc48208a47ffceb25d417eea442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab061f844471bd39fe7260db6700079aa"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ab061f844471bd39fe7260db6700079aa">values</a> () const</td></tr>
+<tr class="memdesc:ab061f844471bd39fe7260db6700079aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The field value at each vertex.  <a href="#ab061f844471bd39fe7260db6700079aa">More...</a><br /></td></tr>
 <tr class="separator:ab061f844471bd39fe7260db6700079aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49cd9615d9dd88d8c1b9806453749ddd"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a49cd9615d9dd88d8c1b9806453749ddd">min_values</a> () const</td></tr>
+<tr class="memdesc:a49cd9615d9dd88d8c1b9806453749ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimum field value on each element.  <a href="#a49cd9615d9dd88d8c1b9806453749ddd">More...</a><br /></td></tr>
+<tr class="separator:a49cd9615d9dd88d8c1b9806453749ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad483fabd78b61279152bf462ea686955"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ad483fabd78b61279152bf462ea686955">max_values</a> () const</td></tr>
+<tr class="memdesc:ad483fabd78b61279152bf462ea686955"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum field value on each element.  <a href="#ad483fabd78b61279152bf462ea686955">More...</a><br /></td></tr>
+<tr class="separator:ad483fabd78b61279152bf462ea686955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae39783d3824c4bd4fd07bf8ee7310638"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ae39783d3824c4bd4fd07bf8ee7310638">Equal</a> (const <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a>&lt; T, MeshType &gt; &amp;field) const</td></tr>
 <tr class="memdesc:ae39783d3824c4bd4fd07bf8ee7310638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a> object is equal via deep exact comparison.  <a href="#ae39783d3824c4bd4fd07bf8ee7310638">More...</a><br /></td></tr>
 <tr class="separator:ae39783d3824c4bd4fd07bf8ee7310638"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -472,6 +489,35 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a8a4676050a0bc1a166b1dcee16d3f570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4676050a0bc1a166b1dcee16d3f570">&#9670;&nbsp;</a></span>EvaluateAtMo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; EvaluateAtMo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Evaluates the linear function associated with element e at the mesh origin Mo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>e ∈ [0, this-&gt;<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442" title="The mesh M to which this field refers.">mesh()</a>.num_elements()). </dd>
+<dd>
+The field has valid gradients. </dd></dl>
+
+</div>
+</div>
 <a id="af09a2f7929d7594846bd53881d3017d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af09a2f7929d7594846bd53881d3017d4">&#9670;&nbsp;</a></span>EvaluateAtVertex()</h2>
 
@@ -495,7 +541,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>v ∈ [0, this-&gt;<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442">mesh()</a>.num_vertices()). </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>v ∈ [0, this-&gt;<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442" title="The mesh M to which this field refers.">mesh()</a>.num_vertices()). </dd></dl>
 
 </div>
 </div>
@@ -572,6 +618,60 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aabefbb7d4ac222516562df4e819028c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabefbb7d4ac222516562df4e819028c1">&#9670;&nbsp;</a></span>EvaluateMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; EvaluateMax </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Evaluates the maximum field value on an element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>e ∈ [0, this-&gt;<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442" title="The mesh M to which this field refers.">mesh()</a>.num_elements()). </dd></dl>
+
+</div>
+</div>
+<a id="a3bc3a16499ddaaa80a906e48be687244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc3a16499ddaaa80a906e48be687244">&#9670;&nbsp;</a></span>EvaluateMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; EvaluateMin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Evaluates the minimum field value on an element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>e ∈ [0, this-&gt;<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442" title="The mesh M to which this field refers.">mesh()</a>.num_elements()). </dd></dl>
+
+</div>
+</div>
 <a id="a3f68cddb7189743795032263fdfa4509"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f68cddb7189743795032263fdfa4509">&#9670;&nbsp;</a></span>is_gradient_field_degenerate()</h2>
 
@@ -590,6 +690,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad483fabd78b61279152bf462ea686955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad483fabd78b61279152bf462ea686955">&#9670;&nbsp;</a></span>max_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;T&gt;&amp; max_values </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The maximum field value on each element. </p>
+
+</div>
+</div>
 <a id="ac41d1bc48208a47ffceb25d417eea442"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac41d1bc48208a47ffceb25d417eea442">&#9670;&nbsp;</a></span>mesh()</h2>
 
@@ -604,6 +723,27 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The mesh M to which this field refers. </p>
+
+</div>
+</div>
+<a id="a49cd9615d9dd88d8c1b9806453749ddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49cd9615d9dd88d8c1b9806453749ddd">&#9670;&nbsp;</a></span>min_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;T&gt;&amp; min_values </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The minimum field value on each element. </p>
 
 </div>
 </div>
@@ -669,6 +809,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The field value at each vertex. </p>
 
 </div>
 </div>

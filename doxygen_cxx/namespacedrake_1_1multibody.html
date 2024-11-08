@@ -577,6 +577,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:aa1d02176591187cb83e77e9ff779d679"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the contact approximation used for a discrete MultibodyPlant model.  <a href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679">More...</a><br /></td></tr>
 <tr class="separator:aa1d02176591187cb83e77e9ff779d679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab69d6cd821353ffa5ba779a02269852d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852d">BaseBodyJointType</a> { <a class="el" href="namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852da280e7e1407e229994454217707eea0f2">kQuaternionFloatingJoint</a>, 
+<a class="el" href="namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852dada2f61fd68e95aaecc17b103368756c0">kRpyFloatingJoint</a>, 
+<a class="el" href="namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852da63621c7802fd07aed5d98eae5df3bdd4">kWeldJoint</a>
+ }</td></tr>
+<tr class="memdesc:ab69d6cd821353ffa5ba779a02269852d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The kind of joint to be used to connect base bodies to world at Finalize().  <a href="namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852d">More...</a><br /></td></tr>
+<tr class="separator:ab69d6cd821353ffa5ba779a02269852d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6144c2c8d4494bcb283f3f9e5841bfd2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2">TamsiSolverResult</a> { <a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782">kSuccess</a> = 0, 
 <a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a">kMaxIterationsReached</a> = 1, 
 <a class="el" href="namespacedrake_1_1multibody.html#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727">kLinearSolverFailed</a> = 2, 
@@ -906,6 +912,39 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ab69d6cd821353ffa5ba779a02269852d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69d6cd821353ffa5ba779a02269852d">&#9670;&nbsp;</a></span>BaseBodyJointType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852d">BaseBodyJointType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The kind of joint to be used to connect base bodies to world at Finalize(). </p>
+<p>See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_working_with_free_bodies">Working with free bodies</a> for definitions and discussion. </p><dl class="section see"><dt>See also</dt><dd>SetBaseBodyJointType() for details. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab69d6cd821353ffa5ba779a02269852da280e7e1407e229994454217707eea0f2"></a>kQuaternionFloatingJoint&#160;</td><td class="fielddoc"><p>6 dofs, unrestricted orientation. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab69d6cd821353ffa5ba779a02269852dada2f61fd68e95aaecc17b103368756c0"></a>kRpyFloatingJoint&#160;</td><td class="fielddoc"><p>6 dofs using 3 angles; has singularity. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab69d6cd821353ffa5ba779a02269852da63621c7802fd07aed5d98eae5df3bdd4"></a>kWeldJoint&#160;</td><td class="fielddoc"><p>0 dofs, fixed to World. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a6f6e054758d34b83e86bea87d65dfe4e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f6e054758d34b83e86bea87d65dfe4e">&#9670;&nbsp;</a></span>ContactModel</h2>
 

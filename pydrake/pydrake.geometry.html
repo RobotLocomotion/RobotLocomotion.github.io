@@ -3727,7 +3727,7 @@ drake_visualizer_role_consumer “drake::geometry::DrakeVisualizer”</p>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.geometry.IllustrationProperties) -&gt; None</p></li>
-<li><p>__init__(self: pydrake.geometry.IllustrationProperties, other: pydrake.geometry.IllustrationProperties) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.geometry.IllustrationProperties, other: pydrake.geometry.GeometryProperties) -&gt; None</p></li>
 </ol>
 <p>Creates a copy of the properties</p>
 </dd></dl>
@@ -6549,7 +6549,7 @@ render::RenderEngineVtk</p>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.geometry.PerceptionProperties) -&gt; None</p></li>
-<li><p>__init__(self: pydrake.geometry.PerceptionProperties, other: pydrake.geometry.PerceptionProperties) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.geometry.PerceptionProperties, other: pydrake.geometry.GeometryProperties) -&gt; None</p></li>
 </ol>
 <p>Creates a copy of the properties</p>
 </dd></dl>
@@ -7232,7 +7232,7 @@ corresponding triangle.</p>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.geometry.ProximityProperties) -&gt; None</p></li>
-<li><p>__init__(self: pydrake.geometry.ProximityProperties, other: pydrake.geometry.ProximityProperties) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.geometry.ProximityProperties, other: pydrake.geometry.GeometryProperties) -&gt; None</p></li>
 </ol>
 <p>Creates a copy of the properties</p>
 </dd></dl>
@@ -16426,6 +16426,12 @@ vertices.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.VolumeElement.num_vertices">
+<span class="sig-name descname"><span class="pre">num_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.VolumeElement" title="pydrake.geometry.VolumeElement"><span class="pre">pydrake.geometry.VolumeElement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.VolumeElement.num_vertices" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of vertices in this element.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.VolumeElement.vertex">
 <span class="sig-name descname"><span class="pre">vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.VolumeElement" title="pydrake.geometry.VolumeElement"><span class="pre">pydrake.geometry.VolumeElement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.VolumeElement.vertex" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the vertex index in VolumeMesh of the i-th vertex of this
@@ -16495,7 +16501,7 @@ however, some bᵢ will be negative.</p>
 i.e., it can be negative depending on the order of the four vertices
 of the tetrahedron.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">num_elements())</span></code>.</p>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">e</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">num_elements())</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -16505,6 +16511,30 @@ of the tetrahedron.</p>
 <span class="sig-name descname"><span class="pre">CalcVolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.VolumeMesh" title="pydrake.geometry.VolumeMesh"><span class="pre">pydrake.geometry.VolumeMesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.VolumeMesh.CalcVolume" title="Permalink to this definition"></a></dt>
 <dd><p>Calculates the volume of <code class="docutils literal notranslate"><span class="pre">this</span></code> mesh by taking the sum of the volume
 of each tetrahedral element.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.VolumeMesh.edge_vector">
+<span class="sig-name descname"><span class="pre">edge_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.VolumeMesh" title="pydrake.geometry.VolumeMesh"><span class="pre">pydrake.geometry.VolumeMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.VolumeMesh.edge_vector" title="Permalink to this definition"></a></dt>
+<dd><p>Returns p_AB_M, the position vector from vertex A to vertex B in M,
+where A and B are specified by the element local indices a and b of
+element e.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt><dd><p>The index of the element.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>The element local index of vertex A.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>The element local index of vertex B.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>e ∈ [0, num_elements())</p>
+</dd>
+<dt>Precondition:</dt><dd><p>a ∈ [0, 4)</p>
+</dd>
+<dt>Precondition:</dt><dd><p>b ∈ [0, 4)</p>
+</dd>
+<dt>Precondition:</dt><dd><p>a &lt; b</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -16530,6 +16560,23 @@ equal.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the given mesh is equal.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.VolumeMesh.inward_normal">
+<span class="sig-name descname"><span class="pre">inward_normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.VolumeMesh" title="pydrake.geometry.VolumeMesh"><span class="pre">pydrake.geometry.VolumeMesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.VolumeMesh.inward_normal" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the inward facing normal of face f of element e.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt><dd><p>The index of the element.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">f</span></code>:</dt><dd><p>The index of the triangular face of the tetrahedral element e
+formed by the vertices [(f + 1) % 4, (f + 2) % 4, (f + 3) % 4].</p>
+</dd>
+<dt>Precondition:</dt><dd><p>e ∈ [0, num_elements())</p>
+</dd>
+<dt>Precondition:</dt><dd><p>f ∈ [0, 4)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -16626,7 +16673,7 @@ however, some bᵢ will be negative.</p>
 i.e., it can be negative depending on the order of the four vertices
 of the tetrahedron.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">num_elements())</span></code>.</p>
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">e</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">num_elements())</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -16636,6 +16683,30 @@ of the tetrahedron.</p>
 <span id="pydrake.geometry.VolumeMesh_[AutoDiffXd].CalcVolume"></span><span class="sig-name descname"><span class="pre">CalcVolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.VolumeMesh_" title="pydrake.geometry.VolumeMesh_"><span class="pre">pydrake.geometry.VolumeMesh_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.geometry.VolumeMesh_-AutoDiffXd-.CalcVolume" title="Permalink to this definition"></a></dt>
 <dd><p>Calculates the volume of <code class="docutils literal notranslate"><span class="pre">this</span></code> mesh by taking the sum of the volume
 of each tetrahedral element.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.VolumeMesh_-AutoDiffXd-.edge_vector">
+<span id="pydrake.geometry.VolumeMesh_[AutoDiffXd].edge_vector"></span><span class="sig-name descname"><span class="pre">edge_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.VolumeMesh_" title="pydrake.geometry.VolumeMesh_"><span class="pre">pydrake.geometry.VolumeMesh_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.VolumeMesh_-AutoDiffXd-.edge_vector" title="Permalink to this definition"></a></dt>
+<dd><p>Returns p_AB_M, the position vector from vertex A to vertex B in M,
+where A and B are specified by the element local indices a and b of
+element e.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt><dd><p>The index of the element.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt><dd><p>The element local index of vertex A.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>The element local index of vertex B.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>e ∈ [0, num_elements())</p>
+</dd>
+<dt>Precondition:</dt><dd><p>a ∈ [0, 4)</p>
+</dd>
+<dt>Precondition:</dt><dd><p>b ∈ [0, 4)</p>
+</dd>
+<dt>Precondition:</dt><dd><p>a &lt; b</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -16661,6 +16732,23 @@ equal.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the given mesh is equal.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.VolumeMesh_-AutoDiffXd-.inward_normal">
+<span id="pydrake.geometry.VolumeMesh_[AutoDiffXd].inward_normal"></span><span class="sig-name descname"><span class="pre">inward_normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.VolumeMesh_" title="pydrake.geometry.VolumeMesh_"><span class="pre">pydrake.geometry.VolumeMesh_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.VolumeMesh_-AutoDiffXd-.inward_normal" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the inward facing normal of face f of element e.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt><dd><p>The index of the element.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">f</span></code>:</dt><dd><p>The index of the triangular face of the tetrahedral element e
+formed by the vertices [(f + 1) % 4, (f + 2) % 4, (f + 3) % 4].</p>
+</dd>
+<dt>Precondition:</dt><dd><p>e ∈ [0, num_elements())</p>
+</dd>
+<dt>Precondition:</dt><dd><p>f ∈ [0, 4)</p>
 </dd>
 </dl>
 </dd></dl>

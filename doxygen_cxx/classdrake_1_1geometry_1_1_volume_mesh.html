@@ -190,6 +190,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa8388a3f4417bdec45042a7fd2166a6a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#aa8388a3f4417bdec45042a7fd2166a6a">vertex</a> (<a class="el" href="classint.html">int</a> v) const</td></tr>
 <tr class="memdesc:aa8388a3f4417bdec45042a7fd2166a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertex identified by a given index.  <a href="#aa8388a3f4417bdec45042a7fd2166a6a">More...</a><br /></td></tr>
 <tr class="separator:aa8388a3f4417bdec45042a7fd2166a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4028bfb2570ac2f6bf3b5f41428cbdf8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a4028bfb2570ac2f6bf3b5f41428cbdf8">inward_normal</a> (<a class="el" href="classint.html">int</a> e, <a class="el" href="classint.html">int</a> f) const</td></tr>
+<tr class="memdesc:a4028bfb2570ac2f6bf3b5f41428cbdf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the inward facing normal of face f of element e.  <a href="#a4028bfb2570ac2f6bf3b5f41428cbdf8">More...</a><br /></td></tr>
+<tr class="separator:a4028bfb2570ac2f6bf3b5f41428cbdf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdeab57ac3f35d2f2c7a36bc9e1a847b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#abdeab57ac3f35d2f2c7a36bc9e1a847b">edge_vector</a> (<a class="el" href="classint.html">int</a> e, <a class="el" href="classint.html">int</a> a, <a class="el" href="classint.html">int</a> b) const</td></tr>
+<tr class="memdesc:abdeab57ac3f35d2f2c7a36bc9e1a847b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns p_AB_M, the position vector from vertex A to vertex B in M, where A and B are specified by the element local indices a and b of element e.  <a href="#abdeab57ac3f35d2f2c7a36bc9e1a847b">More...</a><br /></td></tr>
+<tr class="separator:abdeab57ac3f35d2f2c7a36bc9e1a847b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7f810a1d8f914db3d27e1fb817e7341"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#ae7f810a1d8f914db3d27e1fb817e7341">vertices</a> () const</td></tr>
 <tr class="separator:ae7f810a1d8f914db3d27e1fb817e7341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a895d67540aff2cb88a555048a1fa7e90"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a895d67540aff2cb88a555048a1fa7e90">tetrahedra</a> () const</td></tr>
@@ -467,7 +473,7 @@ Mesh type traits</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculates volume of a tetrahedral element. </p>
-<p>It is a signed volume, i.e., it can be negative depending on the order of the four vertices of the tetrahedron. </p><dl class="section pre"><dt>Precondition</dt><dd><code>f ∈ [0, <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc" title="Returns the number of tetrahedral elements in the mesh.">num_elements()</a>)</code>. </dd></dl>
+<p>It is a signed volume, i.e., it can be negative depending on the order of the four vertices of the tetrahedron. </p><dl class="section pre"><dt>Precondition</dt><dd><code>e ∈ [0, <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc" title="Returns the number of tetrahedral elements in the mesh.">num_elements()</a>)</code>. </dd></dl>
 
 </div>
 </div>
@@ -487,6 +493,57 @@ Mesh type traits</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculates the volume of <code>this</code> mesh by taking the sum of the volume of each tetrahedral element. </p>
+
+</div>
+</div>
+<a id="abdeab57ac3f35d2f2c7a36bc9e1a847b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdeab57ac3f35d2f2c7a36bc9e1a847b">&#9670;&nbsp;</a></span>edge_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt;&amp; edge_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns p_AB_M, the position vector from vertex A to vertex B in M, where A and B are specified by the element local indices a and b of element e. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
+    <tr><td class="paramname">a</td><td>The element local index of vertex A. </td></tr>
+    <tr><td class="paramname">b</td><td>The element local index of vertex B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>e ∈ [0, <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc" title="Returns the number of tetrahedral elements in the mesh.">num_elements()</a>) </dd>
+<dd>
+a ∈ [0, 4) </dd>
+<dd>
+b ∈ [0, 4) </dd>
+<dd>
+a &lt; b </dd></dl>
 
 </div>
 </div>
@@ -543,6 +600,46 @@ Mesh type traits</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the given mesh is equal. </dd></dl>
+
+</div>
+</div>
+<a id="a4028bfb2570ac2f6bf3b5f41428cbdf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4028bfb2570ac2f6bf3b5f41428cbdf8">&#9670;&nbsp;</a></span>inward_normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt;&amp; inward_normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the inward facing normal of face f of element e. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
+    <tr><td class="paramname">f</td><td>The index of the triangular face of the tetrahedral element e formed by the vertices [(f + 1) % 4, (f + 2) % 4, (f + 3) % 4]. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>e ∈ [0, <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc" title="Returns the number of tetrahedral elements in the mesh.">num_elements()</a>) </dd>
+<dd>
+f ∈ [0, 4) </dd></dl>
 
 </div>
 </div>

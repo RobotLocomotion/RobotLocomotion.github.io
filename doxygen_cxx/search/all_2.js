@@ -23,6 +23,7 @@ var searchData=
   ['base_5fframe',['base_frame',['../classdrake_1_1schema_1_1_transform.html#a7949c87cb24606e2acb5b5e95fbb657c',1,'drake::schema::Transform']]],
   ['base_5foutput_5f',['base_output_',['../classdrake_1_1systems_1_1_scalar_view_dense_output.html#a396d4a0bf3d7b4b85a0858caae313368',1,'drake::systems::ScalarViewDenseOutput']]],
   ['base_5furl',['base_url',['../structdrake_1_1geometry_1_1_render_engine_gltf_client_params.html#a6120129a500ee5f5fb32836c1ad5bbc0',1,'drake::geometry::RenderEngineGltfClientParams']]],
+  ['basebodyjointtype',['BaseBodyJointType',['../namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852d',1,'drake::multibody']]],
   ['basefield',['BaseField',['../namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af',1,'drake::perception::pc_flags']]],
   ['basefieldt',['BaseFieldT',['../namespacedrake_1_1perception_1_1pc__flags.html#a84b827aabb8c80aa66feec1c385aa6a3',1,'drake::perception::pc_flags']]],
   ['basic_5fvector_2eh',['basic_vector.h',['../basic__vector_8h.html',1,'']]],

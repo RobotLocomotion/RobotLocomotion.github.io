@@ -297,12 +297,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaa791aaf45d7556c3af317fb6040bb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef0c3fc03c4f63ba216cf67bb7d4ce51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aef0c3fc03c4f63ba216cf67bb7d4ce51">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:aef0c3fc03c4f63ba216cf67bb7d4ce51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Methods to get and set the limits of &lt;tt&gt;this&lt;/tt&gt; joint. For position</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>limits, the layout is the same as the generalized position's.</p>
-<p>For velocity and acceleration limits, the layout is the same as the generalized velocity's. A limit with value +/- ∞ implies no upper or lower limit.</p>
-<p>Returns the position lower limits. </p>
+<tr><td colspan="2"><div class="groupHeader">Methods to get and set limits</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>For position limits, the layout is the same as the generalized positions q.</p>
+<p>For velocity and acceleration limits, the layout is the same as the generalized velocities v. A limit with value +/- ∞ implies no upper or lower limit. </p>
 </div></td></tr>
 <tr class="memitem:aa36685cdf67af4255bffc827eebb0575"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa36685cdf67af4255bffc827eebb0575">position_lower_limits</a> () const</td></tr>
+<tr class="memdesc:aa36685cdf67af4255bffc827eebb0575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position lower limits.  <a href="#aa36685cdf67af4255bffc827eebb0575">More...</a><br /></td></tr>
 <tr class="separator:aa36685cdf67af4255bffc827eebb0575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab439f0c4dd275d8dd9abff2a114a4961"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ab439f0c4dd275d8dd9abff2a114a4961">position_upper_limits</a> () const</td></tr>
 <tr class="memdesc:ab439f0c4dd275d8dd9abff2a114a4961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position upper limits.  <a href="#ab439f0c4dd275d8dd9abff2a114a4961">More...</a><br /></td></tr>
@@ -319,9 +319,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a31334d7081ca78d14f4681702b072a27"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a31334d7081ca78d14f4681702b072a27">acceleration_upper_limits</a> () const</td></tr>
 <tr class="memdesc:a31334d7081ca78d14f4681702b072a27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the acceleration upper limits.  <a href="#a31334d7081ca78d14f4681702b072a27">More...</a><br /></td></tr>
 <tr class="separator:a31334d7081ca78d14f4681702b072a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7e3799ff0a2d7f2dd697c7f71e522a2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2">default_positions</a> () const</td></tr>
-<tr class="memdesc:aa7e3799ff0a2d7f2dd697c7f71e522a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default positions.  <a href="#aa7e3799ff0a2d7f2dd697c7f71e522a2">More...</a><br /></td></tr>
-<tr class="separator:aa7e3799ff0a2d7f2dd697c7f71e522a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afde50cf98836177d8391d03fee84734d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#afde50cf98836177d8391d03fee84734d">set_position_limits</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;upper_limits)</td></tr>
 <tr class="memdesc:afde50cf98836177d8391d03fee84734d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position limits to <code>lower_limits</code> and <code>upper_limits</code>.  <a href="#afde50cf98836177d8391d03fee84734d">More...</a><br /></td></tr>
 <tr class="separator:afde50cf98836177d8391d03fee84734d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,21 +328,62 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a03980282fa5be97bfe6bd86f2d6c186a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a03980282fa5be97bfe6bd86f2d6c186a">set_acceleration_limits</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;upper_limits)</td></tr>
 <tr class="memdesc:a03980282fa5be97bfe6bd86f2d6c186a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the acceleration limits to <code>lower_limits</code> and <code>upper_limits</code>.  <a href="#a03980282fa5be97bfe6bd86f2d6c186a">More...</a><br /></td></tr>
 <tr class="separator:a03980282fa5be97bfe6bd86f2d6c186a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Methods to set and get pose and velocity</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Joints have both a default state q₀, v₀ (stored here) and a runtime state q, v (stored in a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>).</p>
+<p>The default state is the value that is used to initialize the runtime state when a Context is first created. (The default velocity v₀ for a joint is always zero so is not settable here.) There are several ways to set these values:</p><ul>
+<li>If you understand a joint's state representation q and v, you can directly set them using methods below. The specific choice of generalized coordinates q and generalized velocities v is defined by the particular joint type; see documentation for the joint type.</li>
+<li>Alternatively you can provide a generic pose X_FM and spatial velocity V_FM in which case the joint will set q and v to match or approximate those quantities. In particular, Drake's "floating" (6 degree of freedom) joints can represent any pose and spatial velocity.</li>
+<li>Particular joint types may provide additional joint-specific functions for setting pose and velocity; see their documentation. </li>
+</ul>
+</div></td></tr>
 <tr class="memitem:a44881086f20ce7908347f2b6d0e77c2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a">set_default_positions</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2">default_positions</a>)</td></tr>
-<tr class="memdesc:a44881086f20ce7908347f2b6d0e77c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default positions to <code>default_positions</code>.  <a href="#a44881086f20ce7908347f2b6d0e77c2a">More...</a><br /></td></tr>
+<tr class="memdesc:a44881086f20ce7908347f2b6d0e77c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default generalized position coordinates q₀ to <code>default_positions</code>.  <a href="#a44881086f20ce7908347f2b6d0e77c2a">More...</a><br /></td></tr>
 <tr class="separator:a44881086f20ce7908347f2b6d0e77c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7e3799ff0a2d7f2dd697c7f71e522a2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2">default_positions</a> () const</td></tr>
+<tr class="memdesc:aa7e3799ff0a2d7f2dd697c7f71e522a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default generalized position coordinates q₀.  <a href="#aa7e3799ff0a2d7f2dd697c7f71e522a2">More...</a><br /></td></tr>
+<tr class="separator:aa7e3799ff0a2d7f2dd697c7f71e522a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf9a7ab53b4b80886513bfc4bbf97f2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aaf9a7ab53b4b80886513bfc4bbf97f2c">SetPositions</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;positions) const</td></tr>
+<tr class="memdesc:aaf9a7ab53b4b80886513bfc4bbf97f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets in the given <code>context</code> the generalized position coordinates q for this joint to <code>positions</code>.  <a href="#aaf9a7ab53b4b80886513bfc4bbf97f2c">More...</a><br /></td></tr>
+<tr class="separator:aaf9a7ab53b4b80886513bfc4bbf97f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ea2466986389d6492bcabcc9fbd50f"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a32ea2466986389d6492bcabcc9fbd50f">GetPositions</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a32ea2466986389d6492bcabcc9fbd50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current value in the given <code>context</code> of the generalized coordinates q for this joint.  <a href="#a32ea2466986389d6492bcabcc9fbd50f">More...</a><br /></td></tr>
+<tr class="separator:a32ea2466986389d6492bcabcc9fbd50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e5b18beb43f58abd885d2f23d76f75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a43e5b18beb43f58abd885d2f23d76f75">SetVelocities</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;velocities) const</td></tr>
+<tr class="memdesc:a43e5b18beb43f58abd885d2f23d76f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets in the given <code>context</code> the generalized velocity coordinates v for this joint to <code>velocities</code>.  <a href="#a43e5b18beb43f58abd885d2f23d76f75">More...</a><br /></td></tr>
+<tr class="separator:a43e5b18beb43f58abd885d2f23d76f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f09dbe8d193add682c21bf5e9174fd"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ab8f09dbe8d193add682c21bf5e9174fd">GetVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:ab8f09dbe8d193add682c21bf5e9174fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current value in the given <code>context</code> of the generalized velocities v for this joint.  <a href="#ab8f09dbe8d193add682c21bf5e9174fd">More...</a><br /></td></tr>
+<tr class="separator:ab8f09dbe8d193add682c21bf5e9174fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae155f82972080dcf9791c63cb7dcfe1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a">SetDefaultPose</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_FM)</td></tr>
-<tr class="memdesc:ae155f82972080dcf9791c63cb7dcfe1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this Joint's default generalized positions q₀ such that the pose of the child frame M in the parent frame F best matches the given pose.  <a href="#ae155f82972080dcf9791c63cb7dcfe1a">More...</a><br /></td></tr>
+<tr class="memdesc:ae155f82972080dcf9791c63cb7dcfe1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this joint's default generalized positions q₀ such that the pose of the child frame M in the parent frame F best matches the given pose.  <a href="#ae155f82972080dcf9791c63cb7dcfe1a">More...</a><br /></td></tr>
 <tr class="separator:ae155f82972080dcf9791c63cb7dcfe1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d2e2bfd579e1b01cf613ec13845d0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c">GetDefaultPose</a> () const</td></tr>
-<tr class="memdesc:a62d2e2bfd579e1b01cf613ec13845d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this Joint's default pose as a RigidTransform X_FM.  <a href="#a62d2e2bfd579e1b01cf613ec13845d0c">More...</a><br /></td></tr>
+<tr class="memdesc:a62d2e2bfd579e1b01cf613ec13845d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this joint's default pose as a RigidTransform X_FM.  <a href="#a62d2e2bfd579e1b01cf613ec13845d0c">More...</a><br /></td></tr>
 <tr class="separator:a62d2e2bfd579e1b01cf613ec13845d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5afd5cef9d6cae21d5c4bec0b5aa031"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad5afd5cef9d6cae21d5c4bec0b5aa031">SetPose</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_FM) const</td></tr>
+<tr class="memdesc:ad5afd5cef9d6cae21d5c4bec0b5aa031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets in the given <code>context</code> this joint's generalized positions q such that the pose of the child frame M in the parent frame F best matches the given pose.  <a href="#ad5afd5cef9d6cae21d5c4bec0b5aa031">More...</a><br /></td></tr>
+<tr class="separator:ad5afd5cef9d6cae21d5c4bec0b5aa031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac698d80df068cadbde2883f52fd7ad96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ac698d80df068cadbde2883f52fd7ad96">GetPose</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:ac698d80df068cadbde2883f52fd7ad96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this joint's current pose using its position coordinates q taken from the given <code>context</code> and converting that to a RigidTransform X_FM(q).  <a href="#ac698d80df068cadbde2883f52fd7ad96">More...</a><br /></td></tr>
+<tr class="separator:ac698d80df068cadbde2883f52fd7ad96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3615774b161aa0d9c1469d9ae8537069"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a3615774b161aa0d9c1469d9ae8537069">SetSpatialVelocity</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V_FM) const</td></tr>
+<tr class="memdesc:a3615774b161aa0d9c1469d9ae8537069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets in the given <code>context</code> this joint's generalized velocities v such that the spatial velocity of the child frame M in the parent frame F best matches the given spatial velocity.  <a href="#a3615774b161aa0d9c1469d9ae8537069">More...</a><br /></td></tr>
+<tr class="separator:a3615774b161aa0d9c1469d9ae8537069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0390174a56904aa6b959b9ead44a173"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae0390174a56904aa6b959b9ead44a173">GetSpatialVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:ae0390174a56904aa6b959b9ead44a173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the generalized positions q and generalized velocities v for this joint in the given <code>context</code>, returns the cross-joint spatial velocity V_FM.  <a href="#ae0390174a56904aa6b959b9ead44a173">More...</a><br /></td></tr>
+<tr class="separator:ae0390174a56904aa6b959b9ead44a173"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab8ba624f8ab4bb90ff038be18d549b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aab8ba624f8ab4bb90ff038be18d549b8">SetDefaultPosePair</a> (const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;q_FM, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_FM)</td></tr>
-<tr class="memdesc:aab8ba624f8ab4bb90ff038be18d549b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this Joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a> except it takes the pose as a (quaternion, translation vector) pair.  <a href="#aab8ba624f8ab4bb90ff038be18d549b8">More...</a><br /></td></tr>
+<tr class="memdesc:aab8ba624f8ab4bb90ff038be18d549b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a> except it takes the pose as a (quaternion, translation vector) pair.  <a href="#aab8ba624f8ab4bb90ff038be18d549b8">More...</a><br /></td></tr>
 <tr class="separator:aab8ba624f8ab4bb90ff038be18d549b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4b163d3aa70bd087f75e7987a59f5e3"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::Quaternion&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ab4b163d3aa70bd087f75e7987a59f5e3">GetDefaultPosePair</a> () const</td></tr>
-<tr class="memdesc:ab4b163d3aa70bd087f75e7987a59f5e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c" title="Returns this Joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a> except it returns this Joint's default pose as a (quaternion, translation vector) pair.  <a href="#ab4b163d3aa70bd087f75e7987a59f5e3">More...</a><br /></td></tr>
+<tr class="memdesc:ab4b163d3aa70bd087f75e7987a59f5e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c" title="Returns this joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a> except it returns this joint's default pose as a (quaternion, translation vector) pair.  <a href="#ab4b163d3aa70bd087f75e7987a59f5e3">More...</a><br /></td></tr>
 <tr class="separator:ab4b163d3aa70bd087f75e7987a59f5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e4ec901207524cac799d437be27a7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a14e4ec901207524cac799d437be27a7a">SetPosePair</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; T &gt; &amp;q_FM, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_FM) const</td></tr>
+<tr class="memdesc:a14e4ec901207524cac799d437be27a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad5afd5cef9d6cae21d5c4bec0b5aa031" title="Sets in the given context this joint&#39;s generalized positions q such that the pose of the child frame ...">SetPose()</a> except it takes the pose as a (quaternion, translation vector) pair.  <a href="#a14e4ec901207524cac799d437be27a7a">More...</a><br /></td></tr>
+<tr class="separator:a14e4ec901207524cac799d437be27a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f6ab51230e7d1a1e2814d188bcdea8b"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::Quaternion&lt; T &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a6f6ab51230e7d1a1e2814d188bcdea8b">GetPosePair</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a6f6ab51230e7d1a1e2814d188bcdea8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ac698d80df068cadbde2883f52fd7ad96" title="Returns this joint&#39;s current pose using its position coordinates q taken from the given context and c...">GetPose()</a> except it returns this joint's pose in the given <code>context</code> as a (quaternion, translation vector) pair.  <a href="#a6f6ab51230e7d1a1e2814d188bcdea8b">More...</a><br /></td></tr>
+<tr class="separator:a6f6ab51230e7d1a1e2814d188bcdea8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1multibody_1_1_multibody_element')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement&lt; T &gt;</a></td></tr>
 <tr class="memitem:a1703fe23765583a9ceb91bfba1adc896 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a1703fe23765583a9ceb91bfba1adc896">~MultibodyElement</a> ()</td></tr>
 <tr class="separator:a1703fe23765583a9ceb91bfba1adc896 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -392,13 +430,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a9d890273ed7f3558445686959beb1e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#acae7d6c5a271c9ae91c0184390aeb430" title="Returns a string suffix (e.g.">velocity_suffix()</a>, see <a class="el" href="classdrake_1_1multibody_1_1_joint.html#acae7d6c5a271c9ae91c0184390aeb430" title="Returns a string suffix (e.g.">velocity_suffix()</a> for details.  <a href="#a9d890273ed7f3558445686959beb1e35">More...</a><br /></td></tr>
 <tr class="separator:a9d890273ed7f3558445686959beb1e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a173513e6bfdeb8698d4e8b75685d986f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a173513e6bfdeb8698d4e8b75685d986f">do_set_default_positions</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2">default_positions</a>)=0</td></tr>
-<tr class="memdesc:a173513e6bfdeb8698d4e8b75685d986f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default positions to default_positions.">set_default_positions()</a>, see <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default positions to default_positions.">set_default_positions()</a> for details.  <a href="#a173513e6bfdeb8698d4e8b75685d986f">More...</a><br /></td></tr>
+<tr class="memdesc:a173513e6bfdeb8698d4e8b75685d986f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default generalized position coordinates q₀ to default_positions.">set_default_positions()</a>, see <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default generalized position coordinates q₀ to default_positions.">set_default_positions()</a> for details.  <a href="#a173513e6bfdeb8698d4e8b75685d986f">More...</a><br /></td></tr>
 <tr class="separator:a173513e6bfdeb8698d4e8b75685d986f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdd227553c00c5305fcbb8263eb3955f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#acdd227553c00c5305fcbb8263eb3955f">DoSetDefaultPosePair</a> (const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;q_FM, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_FM)</td></tr>
-<tr class="memdesc:acdd227553c00c5305fcbb8263eb3955f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this Joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a>.  <a href="#acdd227553c00c5305fcbb8263eb3955f">More...</a><br /></td></tr>
+<tr class="memdesc:acdd227553c00c5305fcbb8263eb3955f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a>.  <a href="#acdd227553c00c5305fcbb8263eb3955f">More...</a><br /></td></tr>
 <tr class="separator:acdd227553c00c5305fcbb8263eb3955f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05d9548a126b7daf088abb89a8469557"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; Eigen::Quaternion&lt; <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a05d9548a126b7daf088abb89a8469557">DoGetDefaultPosePair</a> () const</td></tr>
-<tr class="memdesc:a05d9548a126b7daf088abb89a8469557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c" title="Returns this Joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a>.  <a href="#a05d9548a126b7daf088abb89a8469557">More...</a><br /></td></tr>
+<tr class="memdesc:a05d9548a126b7daf088abb89a8469557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c" title="Returns this joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a>.  <a href="#a05d9548a126b7daf088abb89a8469557">More...</a><br /></td></tr>
 <tr class="separator:a05d9548a126b7daf088abb89a8469557"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55fbeff7bf8dcabddc072a224f42a8ac"><td class="memItemLeft" align="right" valign="top">virtual const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a55fbeff7bf8dcabddc072a224f42a8ac">DoGetOnePosition</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;) const</td></tr>
 <tr class="memdesc:a55fbeff7bf8dcabddc072a224f42a8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#add9135620b29f9786358b2e8aa146827" title="Returns the position coordinate for joints with a single degree of freedom.">GetOnePosition()</a> that must only be implemented by those joint subclasses that have a single degree of freedom.  <a href="#a55fbeff7bf8dcabddc072a224f42a8ac">More...</a><br /></td></tr>
@@ -606,7 +644,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a joint between two <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> objects which imposes a given kinematic relation between frame F attached on the parent body P and frame M attached on the child body B. </p>
-<p>The joint will be initialized to the model instance from <code>frame_on_child</code> (this is the typical convention for joints between the world and a model, or between two models (e.g. an arm to a gripper)). See this class's documentation for further details.</p>
+<p>The joint will be assigned to the model instance from <code>frame_on_child</code> (this is the typical convention for joints between the world and a model, or between two models (e.g. an arm to a gripper)). See this class's documentation for further details.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>A string with a name identifying <code>this</code> joint. </td></tr>
@@ -947,7 +985,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the default positions. </p>
+<p>Returns the default generalized position coordinates q₀. </p>
+<p>These will be the values set with <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default generalized position coordinates q₀ to default_positions.">set_default_positions()</a> if any; otherwise, they will be the "zero configuration" for this joint type (as defined by the particular joint type). </p><dl class="section note"><dt>Note</dt><dd>The default generalized velocities v₀ are zero for every joint. </dd></dl>
 
 </div>
 </div>
@@ -1145,7 +1184,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default positions to default_positions.">set_default_positions()</a>, see <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default positions to default_positions.">set_default_positions()</a> for details. </p>
+<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default generalized position coordinates q₀ to default_positions.">set_default_positions()</a>, see <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default generalized position coordinates q₀ to default_positions.">set_default_positions()</a> for details. </p>
 <p>It is the responsibility of the subclass to ensure that its joint implementation (i.e., mobilizer), should it have one, is updated with <code>default_positions</code>. Note that the Joint base class also stores default_positions (as a VectorX); the implementing mobilizer should have the same value but as a fixed-size vector. </p><dl class="section note"><dt>Note</dt><dd>Implementations must meet the styleguide requirements for snake_case accessor methods. </dd></dl>
 
 </div>
@@ -1347,7 +1386,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c" title="Returns this Joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a>. </p>
+<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c" title="Returns this joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a>. </p>
 <p>This is optional for Joint subclasses <em>except</em> for floating (6 dof) Joints. The subclass should convert its default_positions to pose X_FM and return that as a (quaternion, translation) pair. If the subclass already uses (quaternion, translation) as generalized coordinates (i.e. it's a quaternion_floating_joint) it must return those exactly (don't convert to a transform first). </p>
 
 </div>
@@ -1444,8 +1483,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this Joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a>. </p>
-<p>This is optional for Joint subclasses <em>except</em> for floating (6 dof) Joints. The subclass should convert the input to the closest equivalent in generalized coordinates and invoke <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default positions to default_positions.">set_default_positions()</a> to record them. If the subclass already uses (quaternion, translation) as generalized coordinates (i.e. it's a quaternion_floating_joint) it must store those exactly. </p>
+<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a>. </p>
+<p>This is optional for Joint subclasses <em>except</em> for floating (6 dof) Joints. The subclass should convert the input to the closest equivalent in generalized coordinates and invoke <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a" title="Sets the default generalized position coordinates q₀ to default_positions.">set_default_positions()</a> to record them. If the subclass already uses (quaternion, translation) as generalized coordinates (i.e. it's a quaternion_floating_joint) it must store those exactly. </p>
 
 </div>
 </div>
@@ -1587,11 +1626,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns this Joint's default pose as a RigidTransform X_FM. </p>
+<p>Returns this joint's default pose as a RigidTransform X_FM. </p>
 <dl class="section note"><dt>Note</dt><dd>Currently this is implemented only for floating (6 dof) joints which can represent any pose. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if called for any Joint type that does not implement this function. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called for any joint type that does not implement this function. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1601,7 +1640,9 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd>get_default_positions() to see the generalized positions q₀ that this joint used to generate the returned transform. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2" title="Returns the default generalized position coordinates q₀.">default_positions()</a> to see the generalized positions q₀ that this joint used to generate the returned transform. </dd>
+<dd>
+<a class="el" href="classdrake_1_1multibody_1_1_joint.html#ab4b163d3aa70bd087f75e7987a59f5e3" title="(Advanced) This is the same as GetDefaultPose() except it returns this joint&#39;s default pose as a (qua...">GetDefaultPosePair()</a> for an alternative using a quaternion </dd></dl>
 
 </div>
 </div>
@@ -1620,14 +1661,23 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c" title="Returns this Joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a> except it returns this Joint's default pose as a (quaternion, translation vector) pair. </p>
+<p>(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c" title="Returns this joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a> except it returns this joint's default pose as a (quaternion, translation vector) pair. </p>
+<dl class="section note"><dt>Note</dt><dd>Currently this is implemented only for floating (6 dof) joints which can represent any pose. </dd>
+<dd>
+For a <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html" title="This Joint allows two bodies to move freely relatively to one another.">QuaternionFloatingJoint</a> the return will be bit-identical to the pose provided to <a class="el" href="classdrake_1_1multibody_1_1_joint.html#aab8ba624f8ab4bb90ff038be18d549b8" title="(Advanced) This is the same as SetDefaultPose() except it takes the pose as a (quaternion,...">SetDefaultPosePair()</a>. For any other floating (6 dof) joint the pose will be numerically equivalent (i.e. within roundoff) but not identical. For other joint types it will be some approximation. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">q_FM,p_FM</td><td>The default pose as a (quaternion, translation) pair. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c" title="Returns this Joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a> for more information </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called for any joint type that does not implement this function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c" title="Returns this joint&#39;s default pose as a RigidTransform X_FM.">GetDefaultPose()</a> </dd></dl>
 
 </div>
 </div>
@@ -1677,6 +1727,164 @@ Friends</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the joint does not have a single degree of freedom. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac698d80df068cadbde2883f52fd7ad96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac698d80df068cadbde2883f52fd7ad96">&#9670;&nbsp;</a></span>GetPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;T&gt; GetPose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns this joint's current pose using its position coordinates q taken from the given <code>context</code> and converting that to a RigidTransform X_FM(q). </p>
+<dl class="section note"><dt>Note</dt><dd>The returned pose may not match the transform that was supplied to <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad5afd5cef9d6cae21d5c4bec0b5aa031" title="Sets in the given context this joint&#39;s generalized positions q such that the pose of the child frame ...">SetPose()</a> since in general joints (other than 6 dof joints) cannot represent arbitrary poses. </dd>
+<dd>
+All joint types support this function. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called for any joint type that does not implement this function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">X_FM</td><td>The current pose as a rigid transform. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a32ea2466986389d6492bcabcc9fbd50f" title="Returns the current value in the given context of the generalized coordinates q for this joint.">GetPositions()</a> to see the generalized positions q that this joint used to generate the returned transform. </dd></dl>
+
+</div>
+</div>
+<a id="a6f6ab51230e7d1a1e2814d188bcdea8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f6ab51230e7d1a1e2814d188bcdea8b">&#9670;&nbsp;</a></span>GetPosePair()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;Eigen::Quaternion&lt;T&gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; &gt; GetPosePair </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ac698d80df068cadbde2883f52fd7ad96" title="Returns this joint&#39;s current pose using its position coordinates q taken from the given context and c...">GetPose()</a> except it returns this joint's pose in the given <code>context</code> as a (quaternion, translation vector) pair. </p>
+<dl class="section note"><dt>Note</dt><dd>All joint types support this function. </dd>
+<dd>
+For a <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html" title="This Joint allows two bodies to move freely relatively to one another.">QuaternionFloatingJoint</a> the return will be bit-identical to the pose provided to <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a14e4ec901207524cac799d437be27a7a" title="(Advanced) This is the same as SetPose() except it takes the pose as a (quaternion,...">SetPosePair()</a>. For any other floating (6 dof) joint the pose will be numerically equivalent (i.e. within roundoff) but not identical. For other joint types it will be some approximation. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">q_FM,p_FM</td><td>The pose as a (quaternion, translation) pair. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the containing <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> has not yet been finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ac698d80df068cadbde2883f52fd7ad96" title="Returns this joint&#39;s current pose using its position coordinates q taken from the given context and c...">GetPose()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a32ea2466986389d6492bcabcc9fbd50f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32ea2466986389d6492bcabcc9fbd50f">&#9670;&nbsp;</a></span>GetPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Ref&lt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; GetPositions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current value in the given <code>context</code> of the generalized coordinates q for this joint. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the containing <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> has not yet been finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae0390174a56904aa6b959b9ead44a173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0390174a56904aa6b959b9ead44a173">&#9670;&nbsp;</a></span>GetSpatialVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt;T&gt; GetSpatialVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given the generalized positions q and generalized velocities v for this joint in the given <code>context</code>, returns the cross-joint spatial velocity V_FM. </p>
+<dl class="section note"><dt>Note</dt><dd>All joint types support this function. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">V_FM</td><td>the spatial velocity across this joint. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the containing <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> has not yet been finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ab8f09dbe8d193add682c21bf5e9174fd" title="Returns the current value in the given context of the generalized velocities v for this joint.">GetVelocities()</a> to see the generalized velocities v that this joint used to generate the returned spatial velocity. </dd></dl>
+
+</div>
+</div>
+<a id="ab8f09dbe8d193add682c21bf5e9174fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f09dbe8d193add682c21bf5e9174fd">&#9670;&nbsp;</a></span>GetVelocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Ref&lt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; GetVelocities </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current value in the given <code>context</code> of the generalized velocities v for this joint. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the containing <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> has not yet been finalized. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1961,6 +2169,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the position lower limits. </p>
+
 </div>
 </div>
 <a id="a0ba1e0f8f4e9c00d58e4bc53e6ff346f"></a>
@@ -2103,14 +2313,16 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the default positions to <code>default_positions</code>. </p>
-<p><a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> subclasses are expected to implement the <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a173513e6bfdeb8698d4e8b75685d986f" title="Implementation of the NVI set_default_positions(), see set_default_positions() for details.">do_set_default_positions()</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>Sets the default generalized position coordinates q₀ to <code>default_positions</code>. </p>
+<dl class="section note"><dt>Note</dt><dd>The values in <code>default_positions</code> are NOT constrained to be within <a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa36685cdf67af4255bffc827eebb0575" title="Returns the position lower limits.">position_lower_limits()</a> and <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ab439f0c4dd275d8dd9abff2a114a4961" title="Returns the position upper limits.">position_upper_limits()</a>. </dd>
+<dd>
+The default generalized velocities v₀ are zero for every joint. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the dimension of <code>default_positions</code> does not match <a class="el" href="classdrake_1_1multibody_1_1_joint.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the number of generalized positions describing this joint.">num_positions()</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The values in <code>default_positions</code> are NOT constrained to be within <code><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa36685cdf67af4255bffc827eebb0575">position_lower_limits()</a></code> and <code><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ab439f0c4dd275d8dd9abff2a114a4961" title="Returns the position upper limits.">position_upper_limits()</a></code>. </dd></dl>
 
 </div>
 </div>
@@ -2148,7 +2360,7 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Setting the position limits does not affect the <code><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2" title="Returns the default positions.">default_positions()</a></code>, regardless of whether the current <code><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2" title="Returns the default positions.">default_positions()</a></code> satisfy the new position limits. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Setting the position limits does not affect the <code><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2" title="Returns the default generalized position coordinates q₀.">default_positions()</a></code>, regardless of whether the current <code><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2" title="Returns the default generalized position coordinates q₀.">default_positions()</a></code> satisfy the new position limits. </dd></dl>
 
 </div>
 </div>
@@ -2250,15 +2462,15 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets this Joint's default generalized positions q₀ such that the pose of the child frame M in the parent frame F best matches the given pose. </p>
-<p>The pose is given by a RigidTransform <code>X_FM</code>, but a Joint will represent pose differently. </p><dl class="section note"><dt>Note</dt><dd>Currently this is implemented only for floating (6 dof) joints which can represent any pose. </dd></dl>
+<p>Sets this joint's default generalized positions q₀ such that the pose of the child frame M in the parent frame F best matches the given pose. </p>
+<p>The pose is given by a RigidTransform <code>X_FM</code>, but a joint will represent pose differently. </p><dl class="section note"><dt>Note</dt><dd>Currently this is implemented only for floating (6 dof) joints which can represent any pose. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if called for any Joint type that does not implement this function. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called for any joint type that does not implement this function. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd>get_default_positions() to see the resulting q₀ after this call. </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2" title="Returns the default generalized position coordinates q₀.">default_positions()</a> to see the resulting q₀ after this call. </dd>
 <dd>
 <a class="el" href="classdrake_1_1multibody_1_1_joint.html#aab8ba624f8ab4bb90ff038be18d549b8" title="(Advanced) This is the same as SetDefaultPose() except it takes the pose as a (quaternion,...">SetDefaultPosePair()</a> for an alternative using a quaternion </dd></dl>
 
@@ -2290,8 +2502,222 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this Joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a> except it takes the pose as a (quaternion, translation vector) pair. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this Joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a> for more information </dd></dl>
+<p>(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a> except it takes the pose as a (quaternion, translation vector) pair. </p>
+<p>A <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html" title="This Joint allows two bodies to move freely relatively to one another.">QuaternionFloatingJoint</a> will store this pose bit-identically; an <a class="el" href="classdrake_1_1multibody_1_1_rpy_floating_joint.html" title="This Joint allows a rigid body to move freely with respect to its parent rigid body.">RpyFloatingJoint</a> will store it to within floating point precision; any other joint will approximate it consistent with that joint's mobility. </p><dl class="section note"><dt>Note</dt><dd>Currently this is implemented only for floating (6 dof) joints which can represent any pose. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called for any joint type that does not implement this function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad5afd5cef9d6cae21d5c4bec0b5aa031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5afd5cef9d6cae21d5c4bec0b5aa031">&#9670;&nbsp;</a></span>SetPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X_FM</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets in the given <code>context</code> this joint's generalized positions q such that the pose of the child frame M in the parent frame F best matches the given pose. </p>
+<p>The pose is given by a RigidTransform X_FM, but a joint will represent pose differently. Drake's "floating" (6 dof) joints can represent any pose, but other joints may only be able to approximate X_FM. See the individual joint descriptions for specifics.</p>
+<dl class="section note"><dt>Note</dt><dd>Currently this is implemented only for floating (6 dof) joints which can represent any pose. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called for any joint type that does not implement this function. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the containing <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> has not yet been finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>context</code> is not null. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a32ea2466986389d6492bcabcc9fbd50f" title="Returns the current value in the given context of the generalized coordinates q for this joint.">GetPositions()</a> to see the resulting q after this call. </dd>
+<dd>
+<a class="el" href="classdrake_1_1multibody_1_1_joint.html#a14e4ec901207524cac799d437be27a7a" title="(Advanced) This is the same as SetPose() except it takes the pose as a (quaternion,...">SetPosePair()</a> for an alternative using a quaternion. </dd></dl>
+
+</div>
+</div>
+<a id="a14e4ec901207524cac799d437be27a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14e4ec901207524cac799d437be27a7a">&#9670;&nbsp;</a></span>SetPosePair()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPosePair </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q_FM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_FM</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) This is the same as <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad5afd5cef9d6cae21d5c4bec0b5aa031" title="Sets in the given context this joint&#39;s generalized positions q such that the pose of the child frame ...">SetPose()</a> except it takes the pose as a (quaternion, translation vector) pair. </p>
+<p>A <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.html" title="This Joint allows two bodies to move freely relatively to one another.">QuaternionFloatingJoint</a> will store this pose bit-identically; any other joint will approximate it. </p><dl class="section note"><dt>Note</dt><dd>Currently this is implemented only for floating (6 dof) joints which can represent any pose. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called for any joint type that does not implement this function. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the containing <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> has not yet been finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>context</code> is not null. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad5afd5cef9d6cae21d5c4bec0b5aa031" title="Sets in the given context this joint&#39;s generalized positions q such that the pose of the child frame ...">SetPose()</a> </dd></dl>
+
+</div>
+</div>
+<a id="aaf9a7ab53b4b80886513bfc4bbf97f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf9a7ab53b4b80886513bfc4bbf97f2c">&#9670;&nbsp;</a></span>SetPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPositions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>positions</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets in the given <code>context</code> the generalized position coordinates q for this joint to <code>positions</code>. </p>
+<dl class="section note"><dt>Note</dt><dd>The values in <code>positions</code> are NOT constrained to be within <a class="el" href="classdrake_1_1multibody_1_1_joint.html#aa36685cdf67af4255bffc827eebb0575" title="Returns the position lower limits.">position_lower_limits()</a> and <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ab439f0c4dd275d8dd9abff2a114a4961" title="Returns the position upper limits.">position_upper_limits()</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the dimension of <code>positions</code> does not match <a class="el" href="classdrake_1_1multibody_1_1_joint.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the number of generalized positions describing this joint.">num_positions()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the containing <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> has not yet been finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>context</code> is not null. </dd></dl>
+
+</div>
+</div>
+<a id="a3615774b161aa0d9c1469d9ae8537069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3615774b161aa0d9c1469d9ae8537069">&#9670;&nbsp;</a></span>SetSpatialVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetSpatialVelocity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V_FM</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets in the given <code>context</code> this joint's generalized velocities v such that the spatial velocity of the child frame M in the parent frame F best matches the given spatial velocity. </p>
+<p>The velocity is provided as a spatial velocity V_FM, but a joint may represent velocity differently. Drake's "floating" (6 dof) joints can represent any spatial velocity, but other joints may only be able to approximate V_FM. See the individual joint descriptions for specifics. </p><dl class="section note"><dt>Note</dt><dd>Currently this is implemented only for floating (6 dof) joints which can represent any spatial velocity. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called for any joint type that does not implement this function. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the containing <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> has not yet been finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>context</code> is not null. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ab8f09dbe8d193add682c21bf5e9174fd" title="Returns the current value in the given context of the generalized velocities v for this joint.">GetVelocities()</a> to see the resulting v after this call. </dd></dl>
+
+</div>
+</div>
+<a id="a43e5b18beb43f58abd885d2f23d76f75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e5b18beb43f58abd885d2f23d76f75">&#9670;&nbsp;</a></span>SetVelocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetVelocities </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>velocities</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets in the given <code>context</code> the generalized velocity coordinates v for this joint to <code>velocities</code>. </p>
+<dl class="section note"><dt>Note</dt><dd>The values in <code>velocities</code> are NOT constrained to be within <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a2d019d4421eedd35dfb908591266f6c1" title="Returns the velocity lower limits.">velocity_lower_limits()</a> and <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a56f15ee767f00dc5716de4468c8a1aac" title="Returns the velocity upper limits.">velocity_upper_limits()</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the dimension of <code>velocities</code> does not match <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae0163ac0976659d811e3337647ff0313" title="Returns the number of generalized velocities describing this joint.">num_velocities()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the containing <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> has not yet been finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>context</code> is not null. </dd></dl>
 
 </div>
 </div>

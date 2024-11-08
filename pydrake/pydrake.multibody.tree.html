@@ -3769,7 +3769,14 @@ further details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.default_positions">
 <span class="sig-name descname"><span class="pre">default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.default_positions" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the default positions.</p>
+<dd><p>Returns the default generalized position coordinates q₀. These will be
+the values set with set_default_positions() if any; otherwise, they
+will be the “zero configuration” for this joint type (as defined by
+the particular joint type).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default generalized velocities v₀ are zero for every joint.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -3801,7 +3808,7 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.GetDefaultPose">
 <span class="sig-name descname"><span class="pre">GetDefaultPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.GetDefaultPose" title="Permalink to this definition"></a></dt>
-<dd><p>Returns this Joint’s default pose as a RigidTransform X_FM.</p>
+<dd><p>Returns this joint’s default pose as a RigidTransform X_FM.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently this is implemented only for floating (6 dof) joints
@@ -3810,7 +3817,7 @@ which can represent any pose.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called for any Joint type that does not implement</strong> – </p></li>
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
 <li><p><strong>this function.</strong> – </p></li>
 </ul>
 </dd>
@@ -3821,8 +3828,12 @@ which can represent any pose.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>get_default_positions() to see the generalized positions q₀ that
-this joint used to generate the returned transform.</p>
+<p>default_positions() to see the generalized positions q₀ that this
+joint used to generate the returned transform.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetDefaultPosePair() for an alternative using a quaternion</p>
 </div>
 </dd></dl>
 
@@ -3830,14 +3841,35 @@ this joint used to generate the returned transform.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.GetDefaultPosePair">
 <span class="sig-name descname"><span class="pre">GetDefaultPosePair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.GetDefaultPosePair" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) This is the same as GetDefaultPose() except it returns this
-Joint’s default pose as a (quaternion, translation vector) pair.</p>
+joint’s default pose as a (quaternion, translation vector) pair.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently this is implemented only for floating (6 dof) joints
+which can represent any pose.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For a QuaternionFloatingJoint the return will be bit-identical to
+the pose provided to SetDefaultPosePair(). For any other floating
+(6 dof) joint the pose will be numerically equivalent (i.e. within
+roundoff) but not identical. For other joint types it will be some
+approximation.</p>
+</div>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>:</dt><dd><p>,p_FM The default pose as a (quaternion, translation) pair.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
+<li><p><strong>this function.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>GetDefaultPose() for more information</p>
+<p>GetDefaultPose()</p>
 </div>
 </dd></dl>
 
@@ -3936,11 +3968,7 @@ unlocked.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.position_lower_limits">
 <span class="sig-name descname"><span class="pre">position_lower_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.position_lower_limits" title="Permalink to this definition"></a></dt>
-<dd><p>&#64;name Methods to get and set the limits of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint. For
-position limits, the layout is the same as the generalized position’s.
-For velocity and acceleration limits, the layout is the same as the
-generalized velocity’s. A limit with value +/- ∞ implies no upper or
-lower limit. Returns the position lower limits.</p>
+<dd><p>Returns the position lower limits.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4007,8 +4035,17 @@ joint. Refer to default_damping_vector() for details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.set_default_positions">
 <span class="sig-name descname"><span class="pre">set_default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.set_default_positions" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the default positions to <code class="docutils literal notranslate"><span class="pre">default_positions</span></code>. Joint subclasses
-are expected to implement the do_set_default_positions().</p>
+<dd><p>Sets the default generalized position coordinates q₀ to
+<code class="docutils literal notranslate"><span class="pre">default_positions</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The values in <code class="docutils literal notranslate"><span class="pre">default_positions</span></code> are NOT constrained to be
+within position_lower_limits() and position_upper_limits().</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default generalized velocities v₀ are zero for every joint.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4017,12 +4054,6 @@ are expected to implement the do_set_default_positions().</p>
 </ul>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The values in <code class="docutils literal notranslate"><span class="pre">default_positions</span></code> are NOT constrained to be
-within <code class="docutils literal notranslate"><span class="pre">position_lower_limits()</span></code> and
-<code class="docutils literal notranslate"><span class="pre">position_upper_limits()</span></code>.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">
@@ -4100,9 +4131,9 @@ information.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.SetDefaultPose">
 <span class="sig-name descname"><span class="pre">SetDefaultPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.SetDefaultPose" title="Permalink to this definition"></a></dt>
-<dd><p>Sets this Joint’s default generalized positions q₀ such that the pose
+<dd><p>Sets this joint’s default generalized positions q₀ such that the pose
 of the child frame M in the parent frame F best matches the given
-pose. The pose is given by a RigidTransform <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>, but a Joint will
+pose. The pose is given by a RigidTransform <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>, but a joint will
 represent pose differently.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -4112,14 +4143,14 @@ which can represent any pose.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called for any Joint type that does not implement</strong> – </p></li>
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
 <li><p><strong>this function.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>get_default_positions() to see the resulting q₀ after this call.</p>
+<p>default_positions() to see the resulting q₀ after this call.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -4131,10 +4162,26 @@ which can represent any pose.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint.SetDefaultPosePair">
 <span class="sig-name descname"><span class="pre">SetDefaultPosePair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><span class="pre">pydrake.multibody.tree.Joint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint.SetDefaultPosePair" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) This is the same as SetDefaultPose() except it takes the
-pose as a (quaternion, translation vector) pair.</p>
+pose as a (quaternion, translation vector) pair. A
+QuaternionFloatingJoint will store this pose bit-identically; an
+RpyFloatingJoint will store it to within floating point precision; any
+other joint will approximate it consistent with that joint’s mobility.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently this is implemented only for floating (6 dof) joints
+which can represent any pose.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
+<li><p><strong>this function.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SetDefaultPose() for more information</p>
+<p>SetDefaultPose()</p>
 </div>
 </dd></dl>
 
@@ -4358,7 +4405,14 @@ further details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.default_positions">
 <span id="pydrake.multibody.tree.Joint_[AutoDiffXd].default_positions"></span><span class="sig-name descname"><span class="pre">default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.default_positions" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the default positions.</p>
+<dd><p>Returns the default generalized position coordinates q₀. These will be
+the values set with set_default_positions() if any; otherwise, they
+will be the “zero configuration” for this joint type (as defined by
+the particular joint type).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default generalized velocities v₀ are zero for every joint.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -4390,7 +4444,7 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.GetDefaultPose">
 <span id="pydrake.multibody.tree.Joint_[AutoDiffXd].GetDefaultPose"></span><span class="sig-name descname"><span class="pre">GetDefaultPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.GetDefaultPose" title="Permalink to this definition"></a></dt>
-<dd><p>Returns this Joint’s default pose as a RigidTransform X_FM.</p>
+<dd><p>Returns this joint’s default pose as a RigidTransform X_FM.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently this is implemented only for floating (6 dof) joints
@@ -4399,7 +4453,7 @@ which can represent any pose.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called for any Joint type that does not implement</strong> – </p></li>
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
 <li><p><strong>this function.</strong> – </p></li>
 </ul>
 </dd>
@@ -4410,8 +4464,12 @@ which can represent any pose.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>get_default_positions() to see the generalized positions q₀ that
-this joint used to generate the returned transform.</p>
+<p>default_positions() to see the generalized positions q₀ that this
+joint used to generate the returned transform.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetDefaultPosePair() for an alternative using a quaternion</p>
 </div>
 </dd></dl>
 
@@ -4419,14 +4477,35 @@ this joint used to generate the returned transform.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.GetDefaultPosePair">
 <span id="pydrake.multibody.tree.Joint_[AutoDiffXd].GetDefaultPosePair"></span><span class="sig-name descname"><span class="pre">GetDefaultPosePair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.GetDefaultPosePair" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) This is the same as GetDefaultPose() except it returns this
-Joint’s default pose as a (quaternion, translation vector) pair.</p>
+joint’s default pose as a (quaternion, translation vector) pair.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently this is implemented only for floating (6 dof) joints
+which can represent any pose.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For a QuaternionFloatingJoint the return will be bit-identical to
+the pose provided to SetDefaultPosePair(). For any other floating
+(6 dof) joint the pose will be numerically equivalent (i.e. within
+roundoff) but not identical. For other joint types it will be some
+approximation.</p>
+</div>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>:</dt><dd><p>,p_FM The default pose as a (quaternion, translation) pair.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
+<li><p><strong>this function.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>GetDefaultPose() for more information</p>
+<p>GetDefaultPose()</p>
 </div>
 </dd></dl>
 
@@ -4525,11 +4604,7 @@ unlocked.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.position_lower_limits">
 <span id="pydrake.multibody.tree.Joint_[AutoDiffXd].position_lower_limits"></span><span class="sig-name descname"><span class="pre">position_lower_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.position_lower_limits" title="Permalink to this definition"></a></dt>
-<dd><p>&#64;name Methods to get and set the limits of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint. For
-position limits, the layout is the same as the generalized position’s.
-For velocity and acceleration limits, the layout is the same as the
-generalized velocity’s. A limit with value +/- ∞ implies no upper or
-lower limit. Returns the position lower limits.</p>
+<dd><p>Returns the position lower limits.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4596,8 +4671,17 @@ joint. Refer to default_damping_vector() for details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.set_default_positions">
 <span id="pydrake.multibody.tree.Joint_[AutoDiffXd].set_default_positions"></span><span class="sig-name descname"><span class="pre">set_default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.set_default_positions" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the default positions to <code class="docutils literal notranslate"><span class="pre">default_positions</span></code>. Joint subclasses
-are expected to implement the do_set_default_positions().</p>
+<dd><p>Sets the default generalized position coordinates q₀ to
+<code class="docutils literal notranslate"><span class="pre">default_positions</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The values in <code class="docutils literal notranslate"><span class="pre">default_positions</span></code> are NOT constrained to be
+within position_lower_limits() and position_upper_limits().</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default generalized velocities v₀ are zero for every joint.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4606,12 +4690,6 @@ are expected to implement the do_set_default_positions().</p>
 </ul>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The values in <code class="docutils literal notranslate"><span class="pre">default_positions</span></code> are NOT constrained to be
-within <code class="docutils literal notranslate"><span class="pre">position_lower_limits()</span></code> and
-<code class="docutils literal notranslate"><span class="pre">position_upper_limits()</span></code>.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">
@@ -4689,9 +4767,9 @@ information.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.SetDefaultPose">
 <span id="pydrake.multibody.tree.Joint_[AutoDiffXd].SetDefaultPose"></span><span class="sig-name descname"><span class="pre">SetDefaultPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.SetDefaultPose" title="Permalink to this definition"></a></dt>
-<dd><p>Sets this Joint’s default generalized positions q₀ such that the pose
+<dd><p>Sets this joint’s default generalized positions q₀ such that the pose
 of the child frame M in the parent frame F best matches the given
-pose. The pose is given by a RigidTransform <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>, but a Joint will
+pose. The pose is given by a RigidTransform <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>, but a joint will
 represent pose differently.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -4701,14 +4779,14 @@ which can represent any pose.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called for any Joint type that does not implement</strong> – </p></li>
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
 <li><p><strong>this function.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>get_default_positions() to see the resulting q₀ after this call.</p>
+<p>default_positions() to see the resulting q₀ after this call.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -4720,10 +4798,26 @@ which can represent any pose.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-AutoDiffXd-.SetDefaultPosePair">
 <span id="pydrake.multibody.tree.Joint_[AutoDiffXd].SetDefaultPosePair"></span><span class="sig-name descname"><span class="pre">SetDefaultPosePair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-AutoDiffXd-.SetDefaultPosePair" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) This is the same as SetDefaultPose() except it takes the
-pose as a (quaternion, translation vector) pair.</p>
+pose as a (quaternion, translation vector) pair. A
+QuaternionFloatingJoint will store this pose bit-identically; an
+RpyFloatingJoint will store it to within floating point precision; any
+other joint will approximate it consistent with that joint’s mobility.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently this is implemented only for floating (6 dof) joints
+which can represent any pose.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
+<li><p><strong>this function.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SetDefaultPose() for more information</p>
+<p>SetDefaultPose()</p>
 </div>
 </dd></dl>
 
@@ -4941,7 +5035,14 @@ further details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.default_positions">
 <span id="pydrake.multibody.tree.Joint_[Expression].default_positions"></span><span class="sig-name descname"><span class="pre">default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.default_positions" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the default positions.</p>
+<dd><p>Returns the default generalized position coordinates q₀. These will be
+the values set with set_default_positions() if any; otherwise, they
+will be the “zero configuration” for this joint type (as defined by
+the particular joint type).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default generalized velocities v₀ are zero for every joint.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -4973,7 +5074,7 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.GetDefaultPose">
 <span id="pydrake.multibody.tree.Joint_[Expression].GetDefaultPose"></span><span class="sig-name descname"><span class="pre">GetDefaultPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.GetDefaultPose" title="Permalink to this definition"></a></dt>
-<dd><p>Returns this Joint’s default pose as a RigidTransform X_FM.</p>
+<dd><p>Returns this joint’s default pose as a RigidTransform X_FM.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently this is implemented only for floating (6 dof) joints
@@ -4982,7 +5083,7 @@ which can represent any pose.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called for any Joint type that does not implement</strong> – </p></li>
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
 <li><p><strong>this function.</strong> – </p></li>
 </ul>
 </dd>
@@ -4993,8 +5094,12 @@ which can represent any pose.</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>get_default_positions() to see the generalized positions q₀ that
-this joint used to generate the returned transform.</p>
+<p>default_positions() to see the generalized positions q₀ that this
+joint used to generate the returned transform.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetDefaultPosePair() for an alternative using a quaternion</p>
 </div>
 </dd></dl>
 
@@ -5002,14 +5107,35 @@ this joint used to generate the returned transform.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.GetDefaultPosePair">
 <span id="pydrake.multibody.tree.Joint_[Expression].GetDefaultPosePair"></span><span class="sig-name descname"><span class="pre">GetDefaultPosePair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.GetDefaultPosePair" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) This is the same as GetDefaultPose() except it returns this
-Joint’s default pose as a (quaternion, translation vector) pair.</p>
+joint’s default pose as a (quaternion, translation vector) pair.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently this is implemented only for floating (6 dof) joints
+which can represent any pose.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For a QuaternionFloatingJoint the return will be bit-identical to
+the pose provided to SetDefaultPosePair(). For any other floating
+(6 dof) joint the pose will be numerically equivalent (i.e. within
+roundoff) but not identical. For other joint types it will be some
+approximation.</p>
+</div>
 <dl class="simple">
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">q_FM</span></code>:</dt><dd><p>,p_FM The default pose as a (quaternion, translation) pair.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
+<li><p><strong>this function.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>GetDefaultPose() for more information</p>
+<p>GetDefaultPose()</p>
 </div>
 </dd></dl>
 
@@ -5108,11 +5234,7 @@ unlocked.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.position_lower_limits">
 <span id="pydrake.multibody.tree.Joint_[Expression].position_lower_limits"></span><span class="sig-name descname"><span class="pre">position_lower_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.position_lower_limits" title="Permalink to this definition"></a></dt>
-<dd><p>&#64;name Methods to get and set the limits of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint. For
-position limits, the layout is the same as the generalized position’s.
-For velocity and acceleration limits, the layout is the same as the
-generalized velocity’s. A limit with value +/- ∞ implies no upper or
-lower limit. Returns the position lower limits.</p>
+<dd><p>Returns the position lower limits.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5179,8 +5301,17 @@ joint. Refer to default_damping_vector() for details.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.set_default_positions">
 <span id="pydrake.multibody.tree.Joint_[Expression].set_default_positions"></span><span class="sig-name descname"><span class="pre">set_default_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.set_default_positions" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the default positions to <code class="docutils literal notranslate"><span class="pre">default_positions</span></code>. Joint subclasses
-are expected to implement the do_set_default_positions().</p>
+<dd><p>Sets the default generalized position coordinates q₀ to
+<code class="docutils literal notranslate"><span class="pre">default_positions</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The values in <code class="docutils literal notranslate"><span class="pre">default_positions</span></code> are NOT constrained to be
+within position_lower_limits() and position_upper_limits().</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default generalized velocities v₀ are zero for every joint.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5189,12 +5320,6 @@ are expected to implement the do_set_default_positions().</p>
 </ul>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The values in <code class="docutils literal notranslate"><span class="pre">default_positions</span></code> are NOT constrained to be
-within <code class="docutils literal notranslate"><span class="pre">position_lower_limits()</span></code> and
-<code class="docutils literal notranslate"><span class="pre">position_upper_limits()</span></code>.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">
@@ -5272,9 +5397,9 @@ information.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.SetDefaultPose">
 <span id="pydrake.multibody.tree.Joint_[Expression].SetDefaultPose"></span><span class="sig-name descname"><span class="pre">SetDefaultPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.SetDefaultPose" title="Permalink to this definition"></a></dt>
-<dd><p>Sets this Joint’s default generalized positions q₀ such that the pose
+<dd><p>Sets this joint’s default generalized positions q₀ such that the pose
 of the child frame M in the parent frame F best matches the given
-pose. The pose is given by a RigidTransform <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>, but a Joint will
+pose. The pose is given by a RigidTransform <code class="docutils literal notranslate"><span class="pre">X_FM</span></code>, but a joint will
 represent pose differently.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -5284,14 +5409,14 @@ which can represent any pose.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if called for any Joint type that does not implement</strong> – </p></li>
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
 <li><p><strong>this function.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>get_default_positions() to see the resulting q₀ after this call.</p>
+<p>default_positions() to see the resulting q₀ after this call.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -5303,10 +5428,26 @@ which can represent any pose.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.Joint_-Expression-.SetDefaultPosePair">
 <span id="pydrake.multibody.tree.Joint_[Expression].SetDefaultPosePair"></span><span class="sig-name descname"><span class="pre">SetDefaultPosePair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Joint_" title="pydrake.multibody.tree.Joint_"><span class="pre">pydrake.multibody.tree.Joint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.Quaternion" title="pydrake.common.eigen_geometry.Quaternion"><span class="pre">pydrake.common.eigen_geometry.Quaternion</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_FM</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.Joint_-Expression-.SetDefaultPosePair" title="Permalink to this definition"></a></dt>
 <dd><p>(Advanced) This is the same as SetDefaultPose() except it takes the
-pose as a (quaternion, translation vector) pair.</p>
+pose as a (quaternion, translation vector) pair. A
+QuaternionFloatingJoint will store this pose bit-identically; an
+RpyFloatingJoint will store it to within floating point precision; any
+other joint will approximate it consistent with that joint’s mobility.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently this is implemented only for floating (6 dof) joints
+which can represent any pose.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called for any joint type that does not implement</strong> – </p></li>
+<li><p><strong>this function.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>SetDefaultPose() for more information</p>
+<p>SetDefaultPose()</p>
 </div>
 </dd></dl>
 

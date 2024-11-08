@@ -179,6 +179,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a47038d265182dd7798b16d75514c3836"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_element.html#a47038d265182dd7798b16d75514c3836">VolumeElement</a> (const <a class="el" href="classint.html">int</a> v[4])</td></tr>
 <tr class="memdesc:a47038d265182dd7798b16d75514c3836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html" title="VolumeElement represents a tetrahedral element in a VolumeMesh.">VolumeElement</a>.  <a href="#a47038d265182dd7798b16d75514c3836">More...</a><br /></td></tr>
 <tr class="separator:a47038d265182dd7798b16d75514c3836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a319e621fc359dd8daad48247f95b12fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_element.html#a319e621fc359dd8daad48247f95b12fa">num_vertices</a> () const</td></tr>
+<tr class="memdesc:a319e621fc359dd8daad48247f95b12fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of vertices in this element.  <a href="#a319e621fc359dd8daad48247f95b12fa">More...</a><br /></td></tr>
+<tr class="separator:a319e621fc359dd8daad48247f95b12fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc9f496f717b32bceb3fdeff1a2051b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_element.html#abc9f496f717b32bceb3fdeff1a2051b5">vertex</a> (<a class="el" href="classint.html">int</a> i) const</td></tr>
 <tr class="memdesc:abc9f496f717b32bceb3fdeff1a2051b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertex index in <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html" title="VolumeMesh represents a tetrahedral volume mesh.">VolumeMesh</a> of the i-th vertex of this element.  <a href="#abc9f496f717b32bceb3fdeff1a2051b5">More...</a><br /></td></tr>
 <tr class="separator:abc9f496f717b32bceb3fdeff1a2051b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -355,6 +358,25 @@ Public Member Functions</h2></td></tr>
 
 <p>Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html" title="VolumeElement represents a tetrahedral element in a VolumeMesh.">VolumeElement</a> use the same four indices in the same order. </p>
 <p>We check for equality to the last bit consistently with <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a106843ecf8c1cd5203dfacb5817bc41d" title="Checks to see whether the given VolumeMesh object is equal via deep comparison (up to a tolerance).">VolumeMesh::Equal()</a>. Two permutations of the four vertex indices of a tetrahedron are considered different tetrahedra even though they span the same space. </p>
+
+</div>
+</div>
+<a id="a319e621fc359dd8daad48247f95b12fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a319e621fc359dd8daad48247f95b12fa">&#9670;&nbsp;</a></span>num_vertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_vertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of vertices in this element. </p>
 
 </div>
 </div>
