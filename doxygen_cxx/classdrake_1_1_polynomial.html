@@ -255,6 +255,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3cb360c5667c073fe8f1b8a1271e56ba"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html">Monomial</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html#a3cb360c5667c073fe8f1b8a1271e56ba">GetMonomials</a> () const</td></tr>
 <tr class="separator:a3cb360c5667c073fe8f1b8a1271e56ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af304ab17a1173c29f1f0c59c74432cf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html#af304ab17a1173c29f1f0c59c74432cf1">GetCoefficients</a> () const</td></tr>
+<tr class="memdesc:af304ab17a1173c29f1f0c59c74432cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector of the coefficients of the polynomial in the order of powers of the variable - the [i]th element is the coefficient of the variable raised to the ith power.  <a href="#af304ab17a1173c29f1f0c59c74432cf1">More...</a><br /></td></tr>
 <tr class="separator:af304ab17a1173c29f1f0c59c74432cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8f06a2189317404f196cec68b81fac4"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classdrake_1_1_polynomial.html#adb36a6e938f851b1a5d1a443c2dadb8a">VarType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial.html#ac8f06a2189317404f196cec68b81fac4">GetVariables</a> () const</td></tr>
 <tr class="memdesc:ac8f06a2189317404f196cec68b81fac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a set of all of the variables present in this <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>.  <a href="#ac8f06a2189317404f196cec68b81fac4">More...</a><br /></td></tr>
@@ -918,6 +919,14 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the vector of the coefficients of the polynomial in the order of powers of the variable - the [i]th element is the coefficient of the variable raised to the ith power. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if this <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> is not univariate. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

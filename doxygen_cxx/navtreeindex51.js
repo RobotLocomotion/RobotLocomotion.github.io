@@ -1,5 +1,16 @@
 var NAVTREEINDEX51 =
 {
+"drake__lcm__interface_8h.html#ac0dd1948e81c44942a67677e6cc43d07":[4,0,0,5,2,5],
+"drake__lcm__log_8h.html":[4,0,0,5,3],
+"drake__lcm__params_8h.html":[4,0,0,5,4],
+"drake__marker_8h.html":[4,0,0,1,24],
+"drake__path_8h.html":[4,0,0,1,25],
+"drake__path_8h.html#a3d3b9fa09763df2a9013eec2cf87df7b":[4,0,0,1,25,0],
+"drake__throw_8h.html":[4,0,0,1,26],
+"drake__throw_8h.html#a4d9c29b101212c8a886c7f4f1a8b71ca":[4,0,0,1,26,0],
+"drake__visualizer_8h.html":[4,0,0,4,12],
+"drake__visualizer_8h.html#a25bbce5543d108e2a4675813e3d6c5f1":[4,0,0,4,12,4],
+"drake__visualizer_8h.html#acbab8995daa433cebfc335ffe8ae8fd0":[4,0,0,4,12,3],
 "drake__visualizer__params_8h.html":[4,0,0,4,13],
 "dummy__physical__model_8h.html":[4,0,0,8,9,18],
 "dummy__physical__model_8h.html#a62f76d0e3f734aa4c0443f71f30cbbfe":[4,0,0,8,9,18,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX51 =
 "expression_2expression_8h.html#af5a94b6eea9d24d8415703bfc07a1c05":[4,0,0,1,3,0,3,50],
 "expression_2expression_8h.html#af785f16951e394debcd11a9225ef469c":[4,0,0,1,3,0,3,29],
 "expression_2expression_8h.html#afe3d5ca2b76943558837ffa2a47162e1":[4,0,0,1,3,0,3,32],
-"expression_8h.html":[4,0,0,1,3,5],
-"expression__cell_8h.html":[4,0,0,1,3,0,4],
-"expression__cell_8h.html#a0169dcd3572d7e3c626f154d1db8b7a3":[4,0,0,1,3,0,4,50],
-"expression__cell_8h.html#a0373300d4207624b99351d0f7c347b85":[4,0,0,1,3,0,4,54],
-"expression__cell_8h.html#a1633315c1c26cbd8411a7ea0d860a9c2":[4,0,0,1,3,0,4,42],
-"expression__cell_8h.html#a19a56ae8b296df9d9285c93e00b82dc7":[4,0,0,1,3,0,4,49],
-"expression__cell_8h.html#a1ae3c8118eef15cc3a9dafe14c6d48c2":[4,0,0,1,3,0,4,52],
-"expression__cell_8h.html#a2196a9e544a94c2e7c277b18c7b7716b":[4,0,0,1,3,0,4,60],
-"expression__cell_8h.html#a358f01574b969ec8e0b75498929b9d95":[4,0,0,1,3,0,4,38],
-"expression__cell_8h.html#a409d972b3926adbbb031a5c3aef3d153":[4,0,0,1,3,0,4,47],
-"expression__cell_8h.html#a429537da181b9861e8e1b51648691059":[4,0,0,1,3,0,4,48],
-"expression__cell_8h.html#a568d4712bfb6ef78d4908efce797ebd2":[4,0,0,1,3,0,4,43]
+"expression_8h.html":[4,0,0,1,3,5]
 };

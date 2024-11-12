@@ -227,6 +227,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a028f009e523ba70f19975c58f6b0bb6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a028f009e523ba70f19975c58f6b0bb6d">AddContinuityConstraints</a> (<a class="el" href="classint.html">int</a> continuity_order)</td></tr>
 <tr class="memdesc:a028f009e523ba70f19975c58f6b0bb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforces derivative continuity constraints on the subgraph.  <a href="#a028f009e523ba70f19975c58f6b0bb6d">More...</a><br /></td></tr>
 <tr class="separator:a028f009e523ba70f19975c58f6b0bb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946bfce15380ca699f5f6c191b4dfc80"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a946bfce15380ca699f5f6c191b4dfc80">vertex_duration</a> () const</td></tr>
+<tr class="memdesc:a946bfce15380ca699f5f6c191b4dfc80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a placeholder decision variable (not actually declared as a decision variable in the MathematicalProgram) associated with the time scaling of the trajectory in a set within this subgraph.  <a href="#a946bfce15380ca699f5f6c191b4dfc80">More...</a><br /></td></tr>
+<tr class="separator:a946bfce15380ca699f5f6c191b4dfc80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26b79694b87a59f161f3b31d5671683c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">solvers::MatrixXDecisionVariable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a26b79694b87a59f161f3b31d5671683c">vertex_control_points</a> () const</td></tr>
+<tr class="memdesc:a26b79694b87a59f161f3b31d5671683c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a placeholder decision variable (not actually declared as a decision variable in the MathematicalProgram) associated with the control points of the trajectory in a set within this subgraph.  <a href="#a26b79694b87a59f161f3b31d5671683c">More...</a><br /></td></tr>
+<tr class="separator:a26b79694b87a59f161f3b31d5671683c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b51957c411d399072530eb48dff2ee9"><td class="memItemLeft" align="right" valign="top">const std::pair&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a5b51957c411d399072530eb48dff2ee9">edge_constituent_vertex_durations</a> () const</td></tr>
+<tr class="memdesc:a5b51957c411d399072530eb48dff2ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pair of placeholder decision variables (not actually declared as decision variables in the MathematicalProgram) associated with the time scaling of the trajectory in two sets within this subgraph that are connected by an internal edge.  <a href="#a5b51957c411d399072530eb48dff2ee9">More...</a><br /></td></tr>
+<tr class="separator:a5b51957c411d399072530eb48dff2ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86490898d05aa2f43822780ba93a0956"><td class="memItemLeft" align="right" valign="top">const std::pair&lt; <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">solvers::MatrixXDecisionVariable</a>, <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">solvers::MatrixXDecisionVariable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a86490898d05aa2f43822780ba93a0956">edge_constituent_vertex_control_points</a> () const</td></tr>
+<tr class="memdesc:a86490898d05aa2f43822780ba93a0956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pair of placeholder decision variables (not actually declared as decision variables in the MathematicalProgram) associated with the control points of the trajectory in two sets within this subgraph that are connected by an internal edge.  <a href="#a86490898d05aa2f43822780ba93a0956">More...</a><br /></td></tr>
+<tr class="separator:a86490898d05aa2f43822780ba93a0956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136fc37e55a85fae60db95faad72fd1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a136fc37e55a85fae60db95faad72fd1c">AddVertexCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">geometry::optimization::GraphOfConvexSets::Transcription</a> &gt; &amp;used_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">geometry::optimization::GraphOfConvexSets::Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">geometry::optimization::GraphOfConvexSets::Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">geometry::optimization::GraphOfConvexSets::Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:a136fc37e55a85fae60db95faad72fd1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an arbitrary user-defined cost to every vertex in the subgraph.  <a href="#a136fc37e55a85fae60db95faad72fd1c">More...</a><br /></td></tr>
+<tr class="separator:a136fc37e55a85fae60db95faad72fd1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d1ca22937e37f7a57ddf160c66ac33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a61d1ca22937e37f7a57ddf160c66ac33">AddVertexConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;e, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">geometry::optimization::GraphOfConvexSets::Transcription</a> &gt; &amp;used_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">geometry::optimization::GraphOfConvexSets::Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">geometry::optimization::GraphOfConvexSets::Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">geometry::optimization::GraphOfConvexSets::Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:a61d1ca22937e37f7a57ddf160c66ac33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an arbitrary user-defined constraint to every vertex in the subgraph.  <a href="#a61d1ca22937e37f7a57ddf160c66ac33">More...</a><br /></td></tr>
+<tr class="separator:a61d1ca22937e37f7a57ddf160c66ac33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23d2f58fd8ff3faab92f854c30032fee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a23d2f58fd8ff3faab92f854c30032fee">AddEdgeCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">geometry::optimization::GraphOfConvexSets::Transcription</a> &gt; &amp;used_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">geometry::optimization::GraphOfConvexSets::Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">geometry::optimization::GraphOfConvexSets::Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">geometry::optimization::GraphOfConvexSets::Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:a23d2f58fd8ff3faab92f854c30032fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an arbitrary user-defined cost to every internal edge within the subgraph.  <a href="#a23d2f58fd8ff3faab92f854c30032fee">More...</a><br /></td></tr>
+<tr class="separator:a23d2f58fd8ff3faab92f854c30032fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b06c4ec4a2143d73f8d54cbf3f40b78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a5b06c4ec4a2143d73f8d54cbf3f40b78">AddEdgeConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;e, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">geometry::optimization::GraphOfConvexSets::Transcription</a> &gt; &amp;used_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">geometry::optimization::GraphOfConvexSets::Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">geometry::optimization::GraphOfConvexSets::Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">geometry::optimization::GraphOfConvexSets::Transcription::kRestriction</a>})</td></tr>
+<tr class="memdesc:a5b06c4ec4a2143d73f8d54cbf3f40b78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an arbitrary user-defined constraint to every internal edge within the subgraph.  <a href="#a5b06c4ec4a2143d73f8d54cbf3f40b78">More...</a><br /></td></tr>
+<tr class="separator:a5b06c4ec4a2143d73f8d54cbf3f40b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:af9772f89f467b3eb25e91de87a3d4ee8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#af9772f89f467b3eb25e91de87a3d4ee8">Subgraph</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html">Subgraph</a> &amp;)=delete</td></tr>
 <tr class="separator:af9772f89f467b3eb25e91de87a3d4ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -345,6 +369,82 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a5b06c4ec4a2143d73f8d54cbf3f40b78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b06c4ec4a2143d73f8d54cbf3f40b78">&#9670;&nbsp;</a></span>AddEdgeConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddEdgeConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">geometry::optimization::GraphOfConvexSets::Transcription</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>used_in_transcription</em> = <code>{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">geometry::optimization::GraphOfConvexSets::Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">geometry::optimization::GraphOfConvexSets::Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">geometry::optimization::GraphOfConvexSets::Transcription::kRestriction</a>}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an arbitrary user-defined constraint to every internal edge within the subgraph. </p>
+<p>The constraint should be defined using the placeholder control point variables (obtained from <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a86490898d05aa2f43822780ba93a0956" title="Returns a pair of placeholder decision variables (not actually declared as decision variables in the ...">edge_constituent_vertex_control_points()</a>) and the placeholder time scaling variables (obtained from <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a5b51957c411d399072530eb48dff2ee9" title="Returns a pair of placeholder decision variables (not actually declared as decision variables in the ...">edge_constituent_vertex_durations()</a>). This enables greater modeling freedom, but we cannot guarantee a feasible solution for all possible constraints.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any variables besides those from <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a5b51957c411d399072530eb48dff2ee9">edge_constituent_vertex_durations</a> and <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a86490898d05aa2f43822780ba93a0956">edge_constituent_vertex_control_points</a> are used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Constraints which do not support the perspective operation cannot be used with Transcription::kMIP or Transcription::kRelaxation. Consider providing an appropriate "convex surrogate" that is supported within GraphOfConvexSets, or exclusively using the SolveConvexRestriction method. </p>
+
+</div>
+</div>
+<a id="a23d2f58fd8ff3faab92f854c30032fee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23d2f58fd8ff3faab92f854c30032fee">&#9670;&nbsp;</a></span>AddEdgeCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddEdgeCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">geometry::optimization::GraphOfConvexSets::Transcription</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>used_in_transcription</em> = <code>{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">geometry::optimization::GraphOfConvexSets::Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">geometry::optimization::GraphOfConvexSets::Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">geometry::optimization::GraphOfConvexSets::Transcription::kRestriction</a>}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an arbitrary user-defined cost to every internal edge within the subgraph. </p>
+<p>The cost should be defined using the placeholder control point variables (obtained from <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a86490898d05aa2f43822780ba93a0956" title="Returns a pair of placeholder decision variables (not actually declared as decision variables in the ...">edge_constituent_vertex_control_points()</a>) and the placeholder time scaling variables (obtained from <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a5b51957c411d399072530eb48dff2ee9" title="Returns a pair of placeholder decision variables (not actually declared as decision variables in the ...">edge_constituent_vertex_durations()</a>). This enables greater modeling freedom, but we cannot guarantee a feasible solution for all possible costs.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any variables besides those from <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a5b51957c411d399072530eb48dff2ee9">edge_constituent_vertex_durations</a> and <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a86490898d05aa2f43822780ba93a0956">edge_constituent_vertex_control_points</a> are used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Costs which do not support the perspective operation cannot be used with Transcription::kMIP or Transcription::kRelaxation. Consider providing an appropriate "convex surrogate" that is supported within GraphOfConvexSets, or exclusively using the SolveConvexRestriction method. </p>
 
 </div>
 </div>
@@ -616,6 +716,122 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a61d1ca22937e37f7a57ddf160c66ac33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d1ca22937e37f7a57ddf160c66ac33">&#9670;&nbsp;</a></span>AddVertexConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddVertexConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">geometry::optimization::GraphOfConvexSets::Transcription</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>used_in_transcription</em> = <code>{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">geometry::optimization::GraphOfConvexSets::Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">geometry::optimization::GraphOfConvexSets::Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">geometry::optimization::GraphOfConvexSets::Transcription::kRestriction</a>}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an arbitrary user-defined constraint to every vertex in the subgraph. </p>
+<p>The constraint should be defined using the placeholder control point variables (obtained from <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a26b79694b87a59f161f3b31d5671683c" title="Returns a placeholder decision variable (not actually declared as a decision variable in the Mathemat...">vertex_control_points()</a>) and the placeholder time scaling variable (obtained from vertex_time()). This enables greater modeling freedom, but we cannot guarantee a feasible solution for all possible constraints.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any variables besides those from <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a946bfce15380ca699f5f6c191b4dfc80">vertex_duration</a> and <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a26b79694b87a59f161f3b31d5671683c">vertex_control_points</a> are used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Constraints which do not support the perspective operation cannot be used with Transcription::kMIP or Transcription::kRelaxation. Consider providing an appropriate "convex surrogate" that is supported within GraphOfConvexSets, or exclusively using the SolveConvexRestriction method. </p>
+
+</div>
+</div>
+<a id="a136fc37e55a85fae60db95faad72fd1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a136fc37e55a85fae60db95faad72fd1c">&#9670;&nbsp;</a></span>AddVertexCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddVertexCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">geometry::optimization::GraphOfConvexSets::Transcription</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>used_in_transcription</em> = <code>{&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">geometry::optimization::GraphOfConvexSets::Transcription::kMIP</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">geometry::optimization::GraphOfConvexSets::Transcription::kRelaxation</a>,&#160;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">geometry::optimization::GraphOfConvexSets::Transcription::kRestriction</a>}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an arbitrary user-defined cost to every vertex in the subgraph. </p>
+<p>The cost should be defined using the placeholder control point variables (obtained from <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a26b79694b87a59f161f3b31d5671683c" title="Returns a placeholder decision variable (not actually declared as a decision variable in the Mathemat...">vertex_control_points()</a>) and the placeholder time scaling variable (obtained from vertex_time()). This enables greater modeling freedom, but we cannot guarantee a feasible solution for all possible costs.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any variables besides those from <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a946bfce15380ca699f5f6c191b4dfc80">vertex_duration</a> and <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a26b79694b87a59f161f3b31d5671683c">vertex_control_points</a> are used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Costs which do not support the perspective operation cannot be used with Transcription::kMIP or Transcription::kRelaxation. Consider providing an appropriate "convex surrogate" that is supported within GraphOfConvexSets, or exclusively using the SolveConvexRestriction method. </p>
+
+</div>
+</div>
+<a id="a86490898d05aa2f43822780ba93a0956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86490898d05aa2f43822780ba93a0956">&#9670;&nbsp;</a></span>edge_constituent_vertex_control_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::pair&lt;<a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">solvers::MatrixXDecisionVariable</a>, <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">solvers::MatrixXDecisionVariable</a>&gt;&amp; edge_constituent_vertex_control_points </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pair of placeholder decision variables (not actually declared as decision variables in the MathematicalProgram) associated with the control points of the trajectory in two sets within this subgraph that are connected by an internal edge. </p>
+<p>Each variable will be of shape (num_positions(), order+1), where the ith column is the ith control point. This variable will be substituted for real decision variables in methods like AddEdgeCost and AddEdgeConstraint. Passing this variable directly into objectives/constraints will result in an error. </p>
+
+</div>
+</div>
+<a id="a5b51957c411d399072530eb48dff2ee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b51957c411d399072530eb48dff2ee9">&#9670;&nbsp;</a></span>edge_constituent_vertex_durations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::pair&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;&amp; edge_constituent_vertex_durations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pair of placeholder decision variables (not actually declared as decision variables in the MathematicalProgram) associated with the time scaling of the trajectory in two sets within this subgraph that are connected by an internal edge. </p>
+<p>This variable will be substituted for real decision variables in methods like AddEdgeCost and AddEdgeConstraint. Passing this variable directly into objectives/constraints will result in an error. </p>
+
+</div>
+</div>
 <a id="a9f886e6ef274f450d24dd134729d1f99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f886e6ef274f450d24dd134729d1f99">&#9670;&nbsp;</a></span>Edges() <span class="overload">[1/2]</span></h2>
 
@@ -779,6 +995,46 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the number of vertices in the subgraph. </p>
+
+</div>
+</div>
+<a id="a26b79694b87a59f161f3b31d5671683c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26b79694b87a59f161f3b31d5671683c">&#9670;&nbsp;</a></span>vertex_control_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">solvers::MatrixXDecisionVariable</a>&amp; vertex_control_points </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a placeholder decision variable (not actually declared as a decision variable in the MathematicalProgram) associated with the control points of the trajectory in a set within this subgraph. </p>
+<p>The variable will be of shape (num_positions(), order+1), where the ith column is the ith control point. This variable will be substituted for real decision variables in methods like AddVertexCost and AddVertexConstraint. Passing this variable directly into objectives/constraints will result in an error. </p>
+
+</div>
+</div>
+<a id="a946bfce15380ca699f5f6c191b4dfc80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a946bfce15380ca699f5f6c191b4dfc80">&#9670;&nbsp;</a></span>vertex_duration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&amp; vertex_duration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a placeholder decision variable (not actually declared as a decision variable in the MathematicalProgram) associated with the time scaling of the trajectory in a set within this subgraph. </p>
+<p>This variable will be substituted for real decision variables in methods like AddVertexCost and AddVertexConstraint. Passing this variable directly into objectives/constraints will result in an error. </p>
 
 </div>
 </div>

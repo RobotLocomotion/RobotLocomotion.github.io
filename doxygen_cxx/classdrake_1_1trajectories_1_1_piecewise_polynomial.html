@@ -298,6 +298,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a728995759fa06a8d1a2b967d313b6d6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a728995759fa06a8d1a2b967d313b6d6b">shiftRight</a> (const T &amp;offset)</td></tr>
 <tr class="memdesc:a728995759fa06a8d1a2b967d313b6d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <code>offset</code> to all of the breaks.  <a href="#a728995759fa06a8d1a2b967d313b6d6b">More...</a><br /></td></tr>
 <tr class="separator:a728995759fa06a8d1a2b967d313b6d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6697b9094ce308f8a5445604076181e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6697b9094ce308f8a5445604076181e8">AddBreak</a> (const T &amp;new_break)</td></tr>
+<tr class="memdesc:a6697b9094ce308f8a5445604076181e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a break at the specified time.  <a href="#a6697b9094ce308f8a5445604076181e8">More...</a><br /></td></tr>
+<tr class="separator:a6697b9094ce308f8a5445604076181e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0edf720069e60d0da73fba82dec2fa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ab0edf720069e60d0da73fba82dec2fa2">SliceByTime</a> (const T &amp;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a1019f41dcfe440c98c91029f4b0b0bc0">start_time</a>, const T &amp;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4c1604e170d921c073e4fba715622507">end_time</a>) const</td></tr>
+<tr class="memdesc:ab0edf720069e60d0da73fba82dec2fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slices the trajectory within a specified time range.  <a href="#ab0edf720069e60d0da73fba82dec2fa2">More...</a><br /></td></tr>
+<tr class="separator:ab0edf720069e60d0da73fba82dec2fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a7863e6bf8a3ccb5335563370305add"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9a7863e6bf8a3ccb5335563370305add">setPolynomialMatrixBlock</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9c5cbf1ba95055937fdb8283769df797">PolynomialMatrix</a> &amp;replacement, <a class="el" href="classint.html">int</a> segment_index, Eigen::Index row_start=0, Eigen::Index col_start=0)</td></tr>
 <tr class="memdesc:a9a7863e6bf8a3ccb5335563370305add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the specified block of the PolynomialMatrix at the given segment index.  <a href="#a9a7863e6bf8a3ccb5335563370305add">More...</a><br /></td></tr>
 <tr class="separator:a9a7863e6bf8a3ccb5335563370305add"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -676,6 +682,34 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6697b9094ce308f8a5445604076181e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6697b9094ce308f8a5445604076181e8">&#9670;&nbsp;</a></span>AddBreak()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> AddBreak </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>new_break</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a break at the specified time. </p>
+<p>It does not change the value of the trajectory at any point but the number of segments increases by 1. </p><dl class="section return"><dt>Returns</dt><dd>the index of the new break. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>new_break</code> is not within the trajectory's time range. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>If <code>new_break</code> is within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from an existing break, the new break will be silently ignored. Returns the index of the existing break. </dd></dl>
+
+</div>
+</div>
 <a id="ac93013774f250920857c17c083350b57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac93013774f250920857c17c083350b57">&#9670;&nbsp;</a></span>AppendCubicHermiteSegment()</h2>
 
@@ -1943,8 +1977,8 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 
 </div>
 </div>
-<a id="a97030415f23deb1b1244d33b95c1b0fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97030415f23deb1b1244d33b95c1b0fb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a0295b8466f7ead211653b8cddafd8815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0295b8466f7ead211653b8cddafd8815">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1955,7 +1989,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1969,8 +2003,8 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 
 </div>
 </div>
-<a id="a0295b8466f7ead211653b8cddafd8815"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0295b8466f7ead211653b8cddafd8815">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a97030415f23deb1b1244d33b95c1b0fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97030415f23deb1b1244d33b95c1b0fb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1981,7 +2015,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2276,6 +2310,42 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 
 <p>Returns the PiecewisePolynomial comprising the <code>num_segments</code> segments starting at the specified <code>start_segment_index</code>. </p>
 <dl class="section note"><dt>Note</dt><dd>Calls <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0a4ac30a258a47b6ea610f16f4accece">PiecewiseTrajectory&lt;T&gt;::segment_number_range_check()</a> to validate <code>segment_index</code>. </dd></dl>
+
+</div>
+</div>
+<a id="ab0edf720069e60d0da73fba82dec2fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0edf720069e60d0da73fba82dec2fa2">&#9670;&nbsp;</a></span>SliceByTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a> SliceByTime </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>start_time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>end_time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Slices the trajectory within a specified time range. </p>
+<p>q = p.SliceByTime(t1, t2) returns a <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html" title="A scalar multi-variate piecewise polynomial.">PiecewisePolynomial</a> q such that q.start_time() = t1, q.end_time() = t2, and q(t) = p(t) for t1 &lt;= t &lt;= t2. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>start_time</code> or <code>end_time</code> is not within the trajectory's time range. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
