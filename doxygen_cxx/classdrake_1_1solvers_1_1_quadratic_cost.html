@@ -198,6 +198,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8c35d27fe08f9f0273d03bbd7f3f940"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#ad8c35d27fe08f9f0273d03bbd7f3f940">UpdateCoefficients</a> (const Eigen::MatrixBase&lt; DerivedQ &gt; &amp;new_Q, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;new_b, <a class="el" href="classdouble.html">double</a> new_c=0., std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
 <tr class="memdesc:ad8c35d27fe08f9f0273d03bbd7f3f940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the quadratic and linear term of the constraint.  <a href="#ad8c35d27fe08f9f0273d03bbd7f3f940">More...</a><br /></td></tr>
 <tr class="separator:ad8c35d27fe08f9f0273d03bbd7f3f940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f846f79e4923e53ed72e1ae26ba9186"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#a7f846f79e4923e53ed72e1ae26ba9186">UpdateHessianEntry</a> (<a class="el" href="classint.html">int</a> i, <a class="el" href="classint.html">int</a> j, <a class="el" href="classdouble.html">double</a> val, std::optional&lt; bool &gt; is_hessian_psd=std::nullopt)</td></tr>
+<tr class="memdesc:a7f846f79e4923e53ed72e1ae26ba9186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates both Q(i, j) and Q(j, i) to val.  <a href="#a7f846f79e4923e53ed72e1ae26ba9186">More...</a><br /></td></tr>
+<tr class="separator:a7f846f79e4923e53ed72e1ae26ba9186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af987f18f72fb2baf141b5e8ba2b1bfc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#af987f18f72fb2baf141b5e8ba2b1bfc1">update_linear_coefficient_entry</a> (<a class="el" href="classint.html">int</a> i, <a class="el" href="classdouble.html">double</a> val)</td></tr>
+<tr class="memdesc:af987f18f72fb2baf141b5e8ba2b1bfc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates b(i)=val.  <a href="#af987f18f72fb2baf141b5e8ba2b1bfc1">More...</a><br /></td></tr>
+<tr class="separator:af987f18f72fb2baf141b5e8ba2b1bfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c0e8157f1c037e371eb99a6a2a908d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#ab3c0e8157f1c037e371eb99a6a2a908d">update_constant_term</a> (<a class="el" href="classdouble.html">double</a> new_c)</td></tr>
+<tr class="memdesc:ab3c0e8157f1c037e371eb99a6a2a908d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the constant term to <code>new_c</code>.  <a href="#ab3c0e8157f1c037e371eb99a6a2a908d">More...</a><br /></td></tr>
+<tr class="separator:ab3c0e8157f1c037e371eb99a6a2a908d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a5d0e5a700eda002bf8f524771927e6b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html#a5d0e5a700eda002bf8f524771927e6b4">QuadraticCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &amp;)=delete</td></tr>
 <tr class="separator:a5d0e5a700eda002bf8f524771927e6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -469,8 +478,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1f026d85c472f48ef6699c79b3b6016e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f026d85c472f48ef6699c79b3b6016e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aed1b16458dc1fd342f9c87f6ef477258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed1b16458dc1fd342f9c87f6ef477258">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -481,7 +490,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -495,8 +504,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aed1b16458dc1fd342f9c87f6ef477258"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed1b16458dc1fd342f9c87f6ef477258">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a1f026d85c472f48ef6699c79b3b6016e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f026d85c472f48ef6699c79b3b6016e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -507,7 +516,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -537,6 +546,56 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the symmetric matrix Q, as the Hessian of the cost. </p>
+
+</div>
+</div>
+<a id="ab3c0e8157f1c037e371eb99a6a2a908d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c0e8157f1c037e371eb99a6a2a908d">&#9670;&nbsp;</a></span>update_constant_term()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_constant_term </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>new_c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the constant term to <code>new_c</code>. </p>
+
+</div>
+</div>
+<a id="af987f18f72fb2baf141b5e8ba2b1bfc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af987f18f72fb2baf141b5e8ba2b1bfc1">&#9670;&nbsp;</a></span>update_linear_coefficient_entry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_linear_coefficient_entry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates b(i)=val. </p>
 
 </div>
 </div>
@@ -588,6 +647,55 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a7f846f79e4923e53ed72e1ae26ba9186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f846f79e4923e53ed72e1ae26ba9186">&#9670;&nbsp;</a></span>UpdateHessianEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateHessianEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; bool &gt;&#160;</td>
+          <td class="paramname"><em>is_hessian_psd</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates both Q(i, j) and Q(j, i) to val. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_hessian_psd</td><td>If this is <code>nullopt</code>, the new Hessian is checked (possibly expensively) for PSD-ness. If this is set true/false, the cost's convexity is updated to that value without checking (it is the user's responsibility to make sure the flag is set correctly). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If you have multiple entries in the Hessian matrix to update, and you don't specify is_hessian_psd, then it is much faster to call UpdateCoefficients(new_A, new_b) where new_A contains all the updated entries. </dd></dl>
 
 </div>
 </div>

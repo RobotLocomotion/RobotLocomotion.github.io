@@ -828,7 +828,7 @@ one side of the plane.”</p>
 <span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">ComputePairwiseIntersections</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.ComputePairwiseIntersections" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>ComputePairwiseIntersections(convex_sets_A: list[pydrake.geometry.optimization.ConvexSet], convex_sets_B: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], preprocess_bbox: bool = True) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+<li><p>ComputePairwiseIntersections(convex_sets_A: list[pydrake.geometry.optimization.ConvexSet], convex_sets_B: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], preprocess_bbox: bool = True, parallelism: pydrake.common.Parallelism = Parallelism(num_threads=16)) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
 </ol>
 <p>Computes the pairwise intersections between two lists of convex sets,
 returning a list of edges, and a list of their corresponding offsets.
@@ -859,6 +859,8 @@ disjoint without needing to solve an optimization problem.
 However, it does require some overhead to compute those bounding
 boxes.</p>
 </dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parallelism</span></code>:</dt><dd><p>specifies the number of threads to use.</p>
+</dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -872,7 +874,7 @@ boxes.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>ComputePairwiseIntersections(convex_sets_A: list[pydrake.geometry.optimization.ConvexSet], convex_sets_B: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], bboxes_A: list[pydrake.geometry.optimization.Hyperrectangle], bboxes_B: list[pydrake.geometry.optimization.Hyperrectangle]) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+<li><p>ComputePairwiseIntersections(convex_sets_A: list[pydrake.geometry.optimization.ConvexSet], convex_sets_B: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], bboxes_A: list[pydrake.geometry.optimization.Hyperrectangle], bboxes_B: list[pydrake.geometry.optimization.Hyperrectangle], parallelism: pydrake.common.Parallelism = Parallelism(num_threads=16)) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
 </ol>
 <p>Overload of <code class="docutils literal notranslate"><span class="pre">ComputePairwiseIntersections</span></code> allowing the user to
 supply axis- aligned bounding boxes if they’re known a priori, to save
@@ -903,7 +905,7 @@ indeed the AABBs corresponding to the sets in <code class="docutils literal notr
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>ComputePairwiseIntersections(convex_sets: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], preprocess_bbox: bool = True) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+<li><p>ComputePairwiseIntersections(convex_sets: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], preprocess_bbox: bool = True, parallelism: pydrake.common.Parallelism = Parallelism(num_threads=16)) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
 </ol>
 <p>Convenience overload to compute pairwise intersections within a list
 of convex sets. Equivalent to calling
@@ -921,6 +923,8 @@ bounding boxes for every set. This can speed up the pairwise
 intersection checks, by determining some sets to be disjoint
 without needing to solve an optimization problem.</p>
 </dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parallelism</span></code>:</dt><dd><p>specifies the number of threads to use.</p>
+</dd>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -934,7 +938,7 @@ without needing to solve an optimization problem.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
-<li><p>ComputePairwiseIntersections(convex_sets: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], bboxes: list[pydrake.geometry.optimization.Hyperrectangle] = []) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
+<li><p>ComputePairwiseIntersections(convex_sets: list[pydrake.geometry.optimization.ConvexSet], continuous_revolute_joints: list[int], bboxes: list[pydrake.geometry.optimization.Hyperrectangle] = [], parallelism: pydrake.common.Parallelism = Parallelism(num_threads=16)) -&gt; tuple[list[tuple[int, int]], list[numpy.ndarray[numpy.float64[m, 1]]]]</p></li>
 </ol>
 <p>Overload of <code class="docutils literal notranslate"><span class="pre">ComputePairwiseIntersections</span></code> allowing the user to
 supply axis- aligned bounding boxes if they’re known a priori, to save

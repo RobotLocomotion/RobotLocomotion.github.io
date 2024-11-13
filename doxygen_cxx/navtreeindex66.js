@@ -1,5 +1,13 @@
 var NAVTREEINDEX66 =
 {
+"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html":[3,0,0,15,1,7],
+"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a06b4bf90f560eba55ebfe4c6c87092a4":[3,0,0,15,1,7,2],
+"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a231a08c109ea1cc7dacf351a1c291cb7":[3,0,0,15,1,7,0],
+"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a2dddadb7fdc7410ae7d2d76e4934ff38":[3,0,0,15,1,7,1],
+"structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a410d487b09fd6b0a0a8cdc7b43b3a831":[3,0,0,15,1,7,3],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html":[3,0,0,15,2,0],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23":[3,0,0,15,2,0,7],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,15,2,0,5],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c":[3,0,0,15,2,0,2],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[3,0,0,15,2,0,1],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6":[3,0,0,15,2,0,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX66 =
 "structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d":[3,0,0,19,0,3],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#a41075284801afdfd502cd4c5f73f363d":[3,0,0,19,0,0],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aa4ca52e888e12f7fd01ae981e6b63275":[3,0,0,19,0,1],
-"structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[3,0,0,19,0,2],
-"structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html":[3,0,1,34],
-"structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html":[3,0,1,0],
-"structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[3,0,1,5],
-"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html":[3,0,1,15],
-"structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html":[3,0,1,14],
-"structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,1,32],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,1,1],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_properties_01_4.html":[3,0,1,2]
+"structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[3,0,0,19,0,2]
 };

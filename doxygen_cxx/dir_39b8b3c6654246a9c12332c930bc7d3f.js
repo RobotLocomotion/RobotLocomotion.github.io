@@ -7,6 +7,7 @@ var dir_39b8b3c6654246a9c12332c930bc7d3f =
     [ "inverse_kinematics", "dir_da11cd43e7bab310171e778f62212487.html", "dir_da11cd43e7bab310171e778f62212487" ],
     [ "math", "dir_7d55c3d5b8b0444a3d9934d2594c5211.html", "dir_7d55c3d5b8b0444a3d9934d2594c5211" ],
     [ "meshcat", "dir_4e7f59081b2683f4314b7e1101ce9a3e.html", "dir_4e7f59081b2683f4314b7e1101ce9a3e" ],
+    [ "mpm", "dir_22059c66c4637800ce3b83a700bc187d.html", "dir_22059c66c4637800ce3b83a700bc187d" ],
     [ "optimization", "dir_bd08a370beeb74038c8d9ad70b7a29c4.html", "dir_bd08a370beeb74038c8d9ad70b7a29c4" ],
     [ "parsing", "dir_e56f4370c0abfd94d0eb867c3946e12e.html", "dir_e56f4370c0abfd94d0eb867c3946e12e" ],
     [ "plant", "dir_656f7d340c0f5b4ecaf881820f2aea38.html", "dir_656f7d340c0f5b4ecaf881820f2aea38" ],

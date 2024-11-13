@@ -1,5 +1,10 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aaed8ebf240db4f3111b9853820024b1f":[3,0,0,15,132,11],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aef7c55391ae2a9db556ad98420557713":[3,0,0,15,132,13],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#afbe08f2e3275f85c38d7d8510e377aa3":[3,0,0,15,132,9],
+"classdrake_1_1systems_1_1_wrap_to_system.html":[1,2,1,28],
+"classdrake_1_1systems_1_1_wrap_to_system.html#a1e619ed14fa786ff7fc329b2f5c92625":[1,2,1,28,5],
 "classdrake_1_1systems_1_1_wrap_to_system.html#a1f97e1da44446079e68078d247231f91":[1,2,1,28,1],
 "classdrake_1_1systems_1_1_wrap_to_system.html#a2e3f67b0509721761ae52c5882482e86":[1,2,1,28,4],
 "classdrake_1_1systems_1_1_wrap_to_system.html#a4bced31ddbcc84104bed479e0ee246d9":[1,2,1,28,6],
@@ -244,10 +249,5 @@ var NAVTREEINDEX45 =
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a789215f20f4dd16718b9003d08daf99d":[1,2,3,0,5],
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a93700584c5d48070d9704f4ad7f83f8a":[1,2,3,0,3],
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aad627f771b16f15ab12904fde13e5f86":[1,2,3,0,1],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#ad99fec330effea7b0b0952ec31cd5f82":[1,2,3,0,4],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#ae52a989887be360ba54d28e89362caad":[1,2,3,0,7],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aebe74a87d7957f9ab354177ba42f5a78":[1,2,3,0,6],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aec8654f6fef2f02fae53910ff4319980":[1,2,3,0,2],
-"classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html":[3,0,0,15,4,0],
-"classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8":[3,0,0,15,4,0,4]
+"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#ad99fec330effea7b0b0952ec31cd5f82":[1,2,3,0,4]
 };

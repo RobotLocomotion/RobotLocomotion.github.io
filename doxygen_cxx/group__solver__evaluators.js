@@ -457,8 +457,10 @@ var group__solver__evaluators =
       [ "DoEval", "classdrake_1_1solvers_1_1_linear_cost.html#a5eea9354674efc1c07bf537319628ead", null ],
       [ "DoToLatex", "classdrake_1_1solvers_1_1_linear_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "GetSparseMatrix", "classdrake_1_1solvers_1_1_linear_cost.html#aa1b2d558d5487acf11ff7efb46fd76e8", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_linear_cost.html#a46863ada967e178fad6be79d2e8dd3d7", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_linear_cost.html#a96660bcd5033480cd109da1361670f26", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_linear_cost.html#a46863ada967e178fad6be79d2e8dd3d7", null ],
+      [ "update_coefficient_entry", "classdrake_1_1solvers_1_1_linear_cost.html#a6890a7dd9536f98464e56e31267c1ef9", null ],
+      [ "update_constant_term", "classdrake_1_1solvers_1_1_linear_cost.html#ad53d00d4ea818abfcf3d8035ea8385d1", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_linear_cost.html#a083d486bad895d52d44b5ae214379ec0", null ]
     ] ],
     [ "QuadraticCost", "classdrake_1_1solvers_1_1_quadratic_cost.html", [
@@ -469,10 +471,13 @@ var group__solver__evaluators =
       [ "b", "classdrake_1_1solvers_1_1_quadratic_cost.html#aae45694d3595659922653fd027d15cb6", null ],
       [ "c", "classdrake_1_1solvers_1_1_quadratic_cost.html#adef0fed0cb1426f67a076769f9867786", null ],
       [ "is_convex", "classdrake_1_1solvers_1_1_quadratic_cost.html#a8542e0956a41902b653789fa2298c960", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_quadratic_cost.html#a1f026d85c472f48ef6699c79b3b6016e", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_quadratic_cost.html#aed1b16458dc1fd342f9c87f6ef477258", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_quadratic_cost.html#a1f026d85c472f48ef6699c79b3b6016e", null ],
       [ "Q", "classdrake_1_1solvers_1_1_quadratic_cost.html#a12ae196564e0fc7d445a35031ce5bfd7", null ],
-      [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_quadratic_cost.html#ad8c35d27fe08f9f0273d03bbd7f3f940", null ]
+      [ "update_constant_term", "classdrake_1_1solvers_1_1_quadratic_cost.html#ab3c0e8157f1c037e371eb99a6a2a908d", null ],
+      [ "update_linear_coefficient_entry", "classdrake_1_1solvers_1_1_quadratic_cost.html#af987f18f72fb2baf141b5e8ba2b1bfc1", null ],
+      [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_quadratic_cost.html#ad8c35d27fe08f9f0273d03bbd7f3f940", null ],
+      [ "UpdateHessianEntry", "classdrake_1_1solvers_1_1_quadratic_cost.html#a7f846f79e4923e53ed72e1ae26ba9186", null ]
     ] ],
     [ "L1NormCost", "classdrake_1_1solvers_1_1_l1_norm_cost.html", [
       [ "L1NormCost", "classdrake_1_1solvers_1_1_l1_norm_cost.html#af07bddc22f2b1e732e919385ef1c3d4d", null ],

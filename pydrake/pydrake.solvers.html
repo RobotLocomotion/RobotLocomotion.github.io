@@ -2768,6 +2768,24 @@ Constraint::UpdateUpperBound, as in LinearConstraint.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.LinearCost.update_coefficient_entry">
+<span class="sig-name descname"><span class="pre">update_coefficient_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.LinearCost" title="pydrake.solvers.LinearCost"><span class="pre">pydrake.solvers.LinearCost</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.LinearCost.update_coefficient_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Updates one entry in the coefficient of the cost. a[i] = val.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">i</span></code>:</dt><dd><p>The index of the coefficient to be updated.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">val</span></code>:</dt><dd><p>The value of that updated entry.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.LinearCost.update_constant_term">
+<span class="sig-name descname"><span class="pre">update_constant_term</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.LinearCost" title="pydrake.solvers.LinearCost"><span class="pre">pydrake.solvers.LinearCost</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.LinearCost.update_constant_term" title="Permalink to this definition"></a></dt>
+<dd><p>Updates the constant term in the cost to <code class="docutils literal notranslate"><span class="pre">new_b</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.LinearCost.UpdateCoefficients">
 <span class="sig-name descname"><span class="pre">UpdateCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.LinearCost" title="pydrake.solvers.LinearCost"><span class="pre">pydrake.solvers.LinearCost</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.LinearCost.UpdateCoefficients" title="Permalink to this definition"></a></dt>
 <dd><p>Updates the coefficients of the cost. Note that the number of
@@ -7805,6 +7823,18 @@ only if its Hessian matrix Q is positive semidefinite.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticCost.update_constant_term">
+<span class="sig-name descname"><span class="pre">update_constant_term</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.QuadraticCost" title="pydrake.solvers.QuadraticCost"><span class="pre">pydrake.solvers.QuadraticCost</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.QuadraticCost.update_constant_term" title="Permalink to this definition"></a></dt>
+<dd><p>Updates the constant term to <code class="docutils literal notranslate"><span class="pre">new_c</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticCost.update_linear_coefficient_entry">
+<span class="sig-name descname"><span class="pre">update_linear_coefficient_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.QuadraticCost" title="pydrake.solvers.QuadraticCost"><span class="pre">pydrake.solvers.QuadraticCost</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.QuadraticCost.update_linear_coefficient_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Updates b(i)=val.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.QuadraticCost.UpdateCoefficients">
 <span class="sig-name descname"><span class="pre">UpdateCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.QuadraticCost" title="pydrake.solvers.QuadraticCost"><span class="pre">pydrake.solvers.QuadraticCost</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_convex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.QuadraticCost.UpdateCoefficients" title="Permalink to this definition"></a></dt>
 <dd><p>Updates the quadratic and linear term of the constraint. The new
@@ -7825,6 +7855,26 @@ std::nullopt. To speed up the computation, set is_hessian_psd to
 either true or false.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticCost.UpdateHessianEntry">
+<span class="sig-name descname"><span class="pre">UpdateHessianEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.QuadraticCost" title="pydrake.solvers.QuadraticCost"><span class="pre">pydrake.solvers.QuadraticCost</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_hessian_psd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.QuadraticCost.UpdateHessianEntry" title="Permalink to this definition"></a></dt>
+<dd><p>Updates both Q(i, j) and Q(j, i) to val</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">is_hessian_psd</span></code>:</dt><dd><p>If this is <code class="docutils literal notranslate"><span class="pre">nullopt</span></code>, the new Hessian is checked (possibly
+expensively) for PSD-ness. If this is set true/false, the cost’s
+convexity is updated to that value without checking (it is the
+user’s responsibility to make sure the flag is set correctly).</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have multiple entries in the Hessian matrix to update, and
+you don’t specify is_hessian_psd, then it is much faster to call
+UpdateCoefficients(new_A, new_b) where new_A contains all the
+updated entries.</p>
+</div>
 </dd></dl>
 
 </dd></dl>

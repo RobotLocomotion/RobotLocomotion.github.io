@@ -7,8 +7,11 @@ var classdrake_1_1solvers_1_1_quadratic_cost =
     [ "b", "classdrake_1_1solvers_1_1_quadratic_cost.html#aae45694d3595659922653fd027d15cb6", null ],
     [ "c", "classdrake_1_1solvers_1_1_quadratic_cost.html#adef0fed0cb1426f67a076769f9867786", null ],
     [ "is_convex", "classdrake_1_1solvers_1_1_quadratic_cost.html#a8542e0956a41902b653789fa2298c960", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_quadratic_cost.html#a1f026d85c472f48ef6699c79b3b6016e", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_quadratic_cost.html#aed1b16458dc1fd342f9c87f6ef477258", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_quadratic_cost.html#a1f026d85c472f48ef6699c79b3b6016e", null ],
     [ "Q", "classdrake_1_1solvers_1_1_quadratic_cost.html#a12ae196564e0fc7d445a35031ce5bfd7", null ],
-    [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_quadratic_cost.html#ad8c35d27fe08f9f0273d03bbd7f3f940", null ]
+    [ "update_constant_term", "classdrake_1_1solvers_1_1_quadratic_cost.html#ab3c0e8157f1c037e371eb99a6a2a908d", null ],
+    [ "update_linear_coefficient_entry", "classdrake_1_1solvers_1_1_quadratic_cost.html#af987f18f72fb2baf141b5e8ba2b1bfc1", null ],
+    [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_quadratic_cost.html#ad8c35d27fe08f9f0273d03bbd7f3f940", null ],
+    [ "UpdateHessianEntry", "classdrake_1_1solvers_1_1_quadratic_cost.html#a7f846f79e4923e53ed72e1ae26ba9186", null ]
 ];

@@ -193,6 +193,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a083d486bad895d52d44b5ae214379ec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html#a083d486bad895d52d44b5ae214379ec0">UpdateCoefficients</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_a, <a class="el" href="classdouble.html">double</a> new_b=0.)</td></tr>
 <tr class="memdesc:a083d486bad895d52d44b5ae214379ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the coefficients of the cost.  <a href="#a083d486bad895d52d44b5ae214379ec0">More...</a><br /></td></tr>
 <tr class="separator:a083d486bad895d52d44b5ae214379ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6890a7dd9536f98464e56e31267c1ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html#a6890a7dd9536f98464e56e31267c1ef9">update_coefficient_entry</a> (<a class="el" href="classint.html">int</a> i, <a class="el" href="classdouble.html">double</a> val)</td></tr>
+<tr class="memdesc:a6890a7dd9536f98464e56e31267c1ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates one entry in the coefficient of the cost.  <a href="#a6890a7dd9536f98464e56e31267c1ef9">More...</a><br /></td></tr>
+<tr class="separator:a6890a7dd9536f98464e56e31267c1ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad53d00d4ea818abfcf3d8035ea8385d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html#ad53d00d4ea818abfcf3d8035ea8385d1">update_constant_term</a> (<a class="el" href="classdouble.html">double</a> new_b)</td></tr>
+<tr class="memdesc:ad53d00d4ea818abfcf3d8035ea8385d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the constant term in the cost to <code>new_b</code>.  <a href="#ad53d00d4ea818abfcf3d8035ea8385d1">More...</a><br /></td></tr>
+<tr class="separator:ad53d00d4ea818abfcf3d8035ea8385d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a93525196254bc68d569c78064eadb500"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html#a93525196254bc68d569c78064eadb500">LinearCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &amp;)=delete</td></tr>
 <tr class="separator:a93525196254bc68d569c78064eadb500"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -687,8 +693,34 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a96660bcd5033480cd109da1361670f26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96660bcd5033480cd109da1361670f26">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a46863ada967e178fad6be79d2e8dd3d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46863ada967e178fad6be79d2e8dd3d7">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a46863ada967e178fad6be79d2e8dd3d7">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -713,29 +745,60 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a96660bcd5033480cd109da1361670f26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96660bcd5033480cd109da1361670f26">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a6890a7dd9536f98464e56e31267c1ef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6890a7dd9536f98464e56e31267c1ef9">&#9670;&nbsp;</a></span>update_coefficient_entry()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a>&amp; operator= </td>
+          <td class="memname">void update_coefficient_entry </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates one entry in the coefficient of the cost. </p>
+<p>a[i] = val. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>The index of the coefficient to be updated. </td></tr>
+    <tr><td class="paramname">val</td><td>The value of that updated entry. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad53d00d4ea818abfcf3d8035ea8385d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad53d00d4ea818abfcf3d8035ea8385d1">&#9670;&nbsp;</a></span>update_constant_term()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_constant_term </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>new_b</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Updates the constant term in the cost to <code>new_b</code>. </p>
 
 </div>
 </div>
