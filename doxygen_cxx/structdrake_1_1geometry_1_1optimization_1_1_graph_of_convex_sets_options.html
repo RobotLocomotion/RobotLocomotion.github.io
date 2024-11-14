@@ -214,6 +214,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1becd1e36f21ad0e73dd5886f911e551"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a1becd1e36f21ad0e73dd5886f911e551">preprocessing_solver_options</a></td></tr>
 <tr class="memdesc:a1becd1e36f21ad0e73dd5886f911e551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional solver options to be used by preprocessing_solver in the preprocessing stage of GCS, which is used in SolveShortestPath.  <a href="#a1becd1e36f21ad0e73dd5886f911e551">More...</a><br /></td></tr>
 <tr class="separator:a1becd1e36f21ad0e73dd5886f911e551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56caacfcfc31a58bbbce672c955e976"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ad56caacfcfc31a58bbbce672c955e976">parallelism</a> {<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()}</td></tr>
+<tr class="memdesc:ad56caacfcfc31a58bbbce672c955e976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some steps in GCS can be parallelized.  <a href="#ad56caacfcfc31a58bbbce672c955e976">More...</a><br /></td></tr>
+<tr class="separator:ad56caacfcfc31a58bbbce672c955e976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -303,6 +306,23 @@ Public Attributes</h2></td></tr>
 
 <p>Maximum number of trials to find a novel path during random rounding. </p>
 <p>If convex_relaxation is false or max_rounded_paths is less than or equal to zero, this option is ignored. </p>
+
+</div>
+</div>
+<a id="ad56caacfcfc31a58bbbce672c955e976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56caacfcfc31a58bbbce672c955e976">&#9670;&nbsp;</a></span>parallelism</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism {<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Some steps in GCS can be parallelized. </p>
+<p>This is the maximum number of threads used in all places in the algorithm. </p><dl class="section note"><dt>Note</dt><dd>Some solvers will choose their own level of parallelization, independent of this setting. To limit the number of threads, add <a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40af1d12898262fdbf42df381627646ee00">solvers::CommonSolverOption::kMaxThreads</a> to the solver_options. </dd></dl>
 
 </div>
 </div>

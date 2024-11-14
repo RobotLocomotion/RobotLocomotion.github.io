@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[3,0,0,19,0,2],
 "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html":[3,0,1,34],
 "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html":[3,0,1,0],
 "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[3,0,1,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX67 =
 "type__pack_8h.html#a1becf7d91b4613c259a888ef35590d76":[4,0,0,0,0,1,11,9],
 "type__pack_8h.html#a23e81e154cbda13ce43322ccfcedb7ed":[4,0,0,0,0,1,11,11],
 "type__pack_8h.html#a2f8fb09132c1375ac50b011cd4c47559":[4,0,0,0,0,1,11,10],
-"type__pack_8h.html#a7421f3f5801e3e393c7a52105aeb876e":[4,0,0,0,0,1,11,12],
-"type__pack_8h.html#aca2ad496fcfd4aab65f4f9eaf50759cb":[4,0,0,0,0,1,11,8]
+"type__pack_8h.html#a7421f3f5801e3e393c7a52105aeb876e":[4,0,0,0,0,1,11,12]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ac98a640b01d5b96481a3999a25506e0e":[3,0,0,10,9,0],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ad56caacfcfc31a58bbbce672c955e976":[3,0,0,10,9,6],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#adcdf0a6717afd726d071ce59a6d12c3e":[3,0,0,10,9,8],
 "structdrake_1_1planning_1_1_zmp_test_traj.html":[3,0,0,10,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#a1b06560e0e01a806b92c2386220d0b57":[3,0,0,15,1,2,1],
 "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#a30adb6d6693854cc7960d38461bbaf1d":[3,0,0,15,1,2,3],
 "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#a7cac66374092242d495c2d0716281a9b":[3,0,0,15,1,2,0],
-"structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ac311d812bd6451ebf2924a6eb37c66f7":[3,0,0,15,1,2,4],
-"structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ad8b2d6d03c5f48ff4e9f2b5607386d2d":[3,0,0,15,1,2,2]
+"structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#ac311d812bd6451ebf2924a6eb37c66f7":[3,0,0,15,1,2,4]
 };

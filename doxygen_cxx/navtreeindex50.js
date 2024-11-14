@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"demultiplexer_8h.html":[4,0,0,12,6,5],
 "dense__output_8h.html":[4,0,0,12,0,4],
 "dense__output_8h.html#af65c4797cddbf4abac85fe690440e045":[4,0,0,12,0,4,1],
 "dense__supernodal__solver_8h.html":[4,0,0,8,1,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "drake__copyable_8h.html#ae6322b9e40935343a422cbdfb41e310e":[4,0,0,1,21,1],
 "drake__deprecated_8h.html":[4,0,0,1,22],
 "drake__deprecated_8h.html#a847d827d084f28e4ae1788a0ae75be96":[4,0,0,1,22,0],
-"drake__export_8h.html":[4,0,0,1,23],
-"drake__export_8h.html#a4ee2bff9f11e1bfd6a05cc85d4bc31dc":[4,0,0,1,23,0]
+"drake__export_8h.html":[4,0,0,1,23]
 };

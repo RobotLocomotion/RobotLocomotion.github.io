@@ -1,5 +1,6 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,6,2,12,0],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a545ea0a14e5556c967186d82b2829ddd":[3,0,0,6,2,12,1],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a9160a7aa6d68703d853de8839411d8f9":[3,0,0,6,2,12,3],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,6,2,12,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a3754739dd44505520db4cea655b8fe48":[3,0,0,10,9,4],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a75331f55e794b47e39cf30f0a76b7a5c":[3,0,0,10,9,3],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a8555f4e7f3c1da51eca8fd2aaa072597":[3,0,0,10,9,1],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[3,0,0,10,9,2],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ac98a640b01d5b96481a3999a25506e0e":[3,0,0,10,9,0]
+"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[3,0,0,10,9,2]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"drake__export_8h.html#a4ee2bff9f11e1bfd6a05cc85d4bc31dc":[4,0,0,1,23,0],
 "drake__kuka__iiwa__robot_8h.html":[4,0,0,8,0,3,0],
 "drake__lcm_8h.html":[4,0,0,5,0],
 "drake__lcm__base_8h.html":[4,0,0,5,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "expression_2expression_8h.html#aed2857d827b306fc80cf6c23e14f211c":[4,0,0,1,3,0,3,121],
 "expression_2expression_8h.html#aee491180204fc8aa2b1c73da8ca18b85":[4,0,0,1,3,0,3,91],
 "expression_2expression_8h.html#aee7c3de3be1c5f350b439dcdc7e8b24d":[4,0,0,1,3,0,3,64],
-"expression_2expression_8h.html#aef684b8834080c14e7dc13d497db9c22":[4,0,0,1,3,0,3,66],
-"expression_2expression_8h.html#af0d832cf6612451c3eaa079df9ef8ec9":[4,0,0,1,3,0,3,88]
+"expression_2expression_8h.html#aef684b8834080c14e7dc13d497db9c22":[4,0,0,1,3,0,3,66]
 };

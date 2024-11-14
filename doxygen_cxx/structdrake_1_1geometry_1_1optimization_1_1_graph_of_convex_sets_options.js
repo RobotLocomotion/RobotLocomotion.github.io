@@ -5,6 +5,7 @@ var structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options =
     [ "flow_tolerance", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#aa3fa9cf3c24726cbf70d03c92300b70c", null ],
     [ "max_rounded_paths", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6a1701a8da6d555793295539e9d4fda4", null ],
     [ "max_rounding_trials", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a6430583dae0d07964009a4345136d8ca", null ],
+    [ "parallelism", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#ad56caacfcfc31a58bbbce672c955e976", null ],
     [ "preprocessing", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a65b45f8fcf0383f8ecccfd94c3b7cd47", null ],
     [ "preprocessing_solver", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#acf69707f5aa6d2853d36600958706ef0", null ],
     [ "preprocessing_solver_options", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#a1becd1e36f21ad0e73dd5886f911e551", null ],

@@ -25,6 +25,7 @@ var classdrake_1_1systems_1_1_diagram_builder =
     [ "empty", "classdrake_1_1systems_1_1_diagram_builder.html#a644718bb2fb240de962dc3c9a1fdf0dc", null ],
     [ "ExportInput", "classdrake_1_1systems_1_1_diagram_builder.html#a1db762bc34903d5e5eb8f1c26ec2f255", null ],
     [ "ExportOutput", "classdrake_1_1systems_1_1_diagram_builder.html#a1eb25ed5b825b50aadf96f3c0f0e54d6", null ],
+    [ "get_mutable_life_support", "classdrake_1_1systems_1_1_diagram_builder.html#af64273d4092313788a3e256973ac766c", null ],
     [ "GetDowncastSubsystemByName", "classdrake_1_1systems_1_1_diagram_builder.html#a8733b5799e3a872764125e9c031dae57", null ],
     [ "GetMutableDowncastSubsystemByName", "classdrake_1_1systems_1_1_diagram_builder.html#a7cadce2d85acbc42089b6778d041258a", null ],
     [ "GetMutableSubsystemByName", "classdrake_1_1systems_1_1_diagram_builder.html#a50253d2cda68aa3b3189e83081734607", null ],
@@ -35,7 +36,7 @@ var classdrake_1_1systems_1_1_diagram_builder =
     [ "IsConnectedOrExported", "classdrake_1_1systems_1_1_diagram_builder.html#acd8bf3d351848a5e2344865a6e4b932e", null ],
     [ "num_input_ports", "classdrake_1_1systems_1_1_diagram_builder.html#a94a6d73c74c7268734792b3703e8600d", null ],
     [ "num_output_ports", "classdrake_1_1systems_1_1_diagram_builder.html#a7ceec1b22b6b1b25fc675234e78e71be", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a1c4553ec1b3caebff0d951e5795fd617", null ],
     [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a9707232e37c28463f285aaab01f88c49", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a1c4553ec1b3caebff0d951e5795fd617", null ],
     [ "RemoveSystem", "classdrake_1_1systems_1_1_diagram_builder.html#ae7701a7c380b6015ae152d136fd61e5b", null ]
 ];

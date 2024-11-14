@@ -326,6 +326,7 @@ var searchData=
   ['get_5fmutable_5fjacobian',['get_mutable_jacobian',['../classdrake_1_1systems_1_1_implicit_integrator.html#a13d5ecb2f20c8d56121051076f203220',1,'drake::systems::ImplicitIntegrator']]],
   ['get_5fmutable_5fjoint',['get_mutable_joint',['../classdrake_1_1multibody_1_1_multibody_plant.html#ab56a3621a122cdff1729f71b756a75d0',1,'drake::multibody::MultibodyPlant']]],
   ['get_5fmutable_5fjoint_5factuator',['get_mutable_joint_actuator',['../classdrake_1_1multibody_1_1_multibody_plant.html#a0ad497de6bf8c15e696649c2a51d0b3a',1,'drake::multibody::MultibodyPlant']]],
+  ['get_5fmutable_5flife_5fsupport',['get_mutable_life_support',['../classdrake_1_1systems_1_1_diagram_builder.html#af64273d4092313788a3e256973ac766c',1,'drake::systems::DiagramBuilder']]],
   ['get_5fmutable_5fmisc_5fcontinuous_5fstate',['get_mutable_misc_continuous_state',['../classdrake_1_1systems_1_1_continuous_state.html#aa7eb2e24e194284af170d923c9017729',1,'drake::systems::ContinuousState']]],
   ['get_5fmutable_5fmisc_5fstate_5fweight_5fvector',['get_mutable_misc_state_weight_vector',['../classdrake_1_1systems_1_1_integrator_base.html#a80ee60f8a8a649e684340a9d19133098',1,'drake::systems::IntegratorBase']]],
   ['get_5fmutable_5fmultibody_5fplant',['get_mutable_multibody_plant',['../classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a9ef9bcc1fa2f4f3250cd5d3f93f16c54',1,'drake::examples::manipulation_station::ManipulationStation']]],

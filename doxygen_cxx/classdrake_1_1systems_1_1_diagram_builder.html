@@ -296,6 +296,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ceec1b22b6b1b25fc675234e78e71be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a7ceec1b22b6b1b25fc675234e78e71be">num_output_ports</a> () const</td></tr>
 <tr class="memdesc:a7ceec1b22b6b1b25fc675234e78e71be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current number of diagram output outputs.  <a href="#a7ceec1b22b6b1b25fc675234e78e71be">More...</a><br /></td></tr>
 <tr class="separator:a7ceec1b22b6b1b25fc675234e78e71be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af64273d4092313788a3e256973ac766c"><td class="memItemLeft" align="right" valign="top">internal::DiagramLifeSupport &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#af64273d4092313788a3e256973ac766c">get_mutable_life_support</a> ()</td></tr>
+<tr class="memdesc:af64273d4092313788a3e256973ac766c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only).  <a href="#af64273d4092313788a3e256973ac766c">More...</a><br /></td></tr>
+<tr class="separator:af64273d4092313788a3e256973ac766c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:aa3171750ccde03a5c67ba3acb598435a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aa3171750ccde03a5c67ba3acb598435a">DiagramBuilder</a> (const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a> &amp;)=delete</td></tr>
 <tr class="separator:aa3171750ccde03a5c67ba3acb598435a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1018,6 +1021,26 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
+<a id="af64273d4092313788a3e256973ac766c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af64273d4092313788a3e256973ac766c">&#9670;&nbsp;</a></span>get_mutable_life_support()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::DiagramLifeSupport&amp; get_mutable_life_support </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only). </p>
+<p>Returns a mutable reference to life support data for the diagram. The data will be moved to the diagram at <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aa4aef2b1fed54592b99071ee8df81f76" title="Builds the Diagram that has been described by the calls to Connect, ExportInput, and ExportOutput.">Build()</a> time. Data stored here will have a life-cycle that is the union of the builder and the diagram. </p>
+
+</div>
+</div>
 <a id="a8733b5799e3a872764125e9c031dae57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8733b5799e3a872764125e9c031dae57">&#9670;&nbsp;</a></span>GetDowncastSubsystemByName()</h2>
 
@@ -1275,8 +1298,8 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
-<a id="a1c4553ec1b3caebff0d951e5795fd617"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a9707232e37c28463f285aaab01f88c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1287,7 +1310,7 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1301,8 +1324,8 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
-<a id="a9707232e37c28463f285aaab01f88c49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a1c4553ec1b3caebff0d951e5795fd617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1313,7 +1336,7 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
