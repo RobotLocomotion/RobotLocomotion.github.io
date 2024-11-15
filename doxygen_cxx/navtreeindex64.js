@@ -1,5 +1,6 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,6,2,4,0],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#ad2d9c7d6abd602591381050367ed506e":[3,0,0,6,2,4,2],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,6,2,4,1],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html":[3,0,0,6,2,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226":[1,4,2,2,3,3],
 "structdrake_1_1planning_1_1_collision_checker_params.html#afec931281f813128526846e5ee611e03":[1,4,2,2,3,1],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html":[3,0,0,10,9],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a03126f4334d01ba5ea7523abb9ce334d":[3,0,0,10,9,5],
-"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a10ad4072717f25576b867d014fcb6591":[3,0,0,10,9,7]
+"structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#a03126f4334d01ba5ea7523abb9ce334d":[3,0,0,10,9,5]
 };

@@ -672,6 +672,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a6258405e5b172f610aed5709af48bd3a"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a6258405e5b172f610aed5709af48bd3a">fmt_floating_point</a> (T <a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
 <tr class="memdesc:a6258405e5b172f610aed5709af48bd3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>fmt::to_string(x)</code> but always with at least one digit after the decimal point.  <a href="#a6258405e5b172f610aed5709af48bd3a">More...</a><br /></td></tr>
 <tr class="separator:a6258405e5b172f610aed5709af48bd3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae46fc519bd6eb9cce38978cf135db800"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae46fc519bd6eb9cce38978cf135db800">fmt_debug_string</a> (std::string_view <a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:ae46fc519bd6eb9cce38978cf135db800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>fmt::("{:?}", x)</code>, i.e, using fmt's "debug string format"; see <a href="https://fmt.dev">https://fmt.dev</a> docs for the '?' presentation type for details.  <a href="#ae46fc519bd6eb9cce38978cf135db800">More...</a><br /></td></tr>
+<tr class="separator:ae46fc519bd6eb9cce38978cf135db800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aade4911b7e8d691ef345a2706012a878"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:aade4911b7e8d691ef345a2706012a878"><td class="memTemplItemLeft" align="right" valign="top">internal::fmt_eigen_ref&lt; typename Derived::Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aade4911b7e8d691ef345a2706012a878">fmt_eigen</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
 <tr class="memdesc:aade4911b7e8d691ef345a2706012a878"><td class="mdescLeft">&#160;</td><td class="mdescRight">When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake's custom formatter for Eigen types.  <a href="#aade4911b7e8d691ef345a2706012a878">More...</a><br /></td></tr>
@@ -2485,6 +2488,27 @@ Variables</h2></td></tr>
 
 <p>(Advanced.) Returns the absolute path to the given resource_path from Bazel runfiles, or else an error message when not found. </p>
 <p>When <a class="el" href="namespacedrake.html#a9bdf00a0f32970352a90afbae0f4114a" title="(Advanced.) Returns true iff this process has Bazel runfiles available.">HasRunfiles()</a> is false, returns an error. The <code>resource_path</code> looks like <code>workspace/pkg/subpkg/file.ext</code>, e.g., "drake/common/foo.txt". </p>
+
+</div>
+</div>
+<a id="ae46fc519bd6eb9cce38978cf135db800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46fc519bd6eb9cce38978cf135db800">&#9670;&nbsp;</a></span>fmt_debug_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string drake::fmt_debug_string </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>fmt::("{:?}", x)</code>, i.e, using fmt's "debug string format"; see <a href="https://fmt.dev">https://fmt.dev</a> docs for the '?' presentation type for details. </p>
+<p>We provide this wrapper because not all of our supported platforms have a new-enough fmt to rely on it. On platforms with older fmt, we use a Drake re-implementation of the feature that does NOT handle unicode correctly. </p>
 
 </div>
 </div>

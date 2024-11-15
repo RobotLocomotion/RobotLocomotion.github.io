@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"roll__pitch__yaw_8h.html#ac39d336cc75f72da711800581b00bcf5":[4,0,0,7,29,3],
 "rotary__encoders_8h.html":[4,0,0,12,8,20],
 "rotary__encoders_8h.html#a649d32a80f8b07b33895faf8f969b712":[4,0,0,12,8,20,0],
 "rotation_8h.html":[4,0,0,1,2,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,62,8],
 "sorted__pair__pybind_8h.html":[4,0,0,0,0,1,8],
 "sorted__triplet_8h.html":[4,0,0,4,2,57],
-"sos__basis__generator_8h.html":[4,0,0,11,59],
-"sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,59,0]
+"sos__basis__generator_8h.html":[4,0,0,11,59]
 };

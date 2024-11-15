@@ -1,5 +1,6 @@
 var NAVTREEINDEX56 =
 {
+"latex_8h.html#aa14d755813030ea14c7207a4e0e71f9f":[4,0,0,1,3,7,3],
 "latex_8h.html#accb78ec8e49199eaff087d9637301041":[4,0,0,1,3,7,1],
 "lcm__buses_8h.html":[4,0,0,12,4,0],
 "lcm__config__functions_8h.html":[4,0,0,12,4,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "model__values_8h.html":[4,0,0,12,3,29],
 "modules.html":[1],
 "monomial_8h.html":[4,0,0,1,3,8],
-"monomial_8h.html#a791475e9d37a8e5fd5f1314045428997":[4,0,0,1,3,8,2],
-"monomial_8h.html#a8505db5f6e70df16a3cecda394bdcb24":[4,0,0,1,3,8,3]
+"monomial_8h.html#a791475e9d37a8e5fd5f1314045428997":[4,0,0,1,3,8,2]
 };

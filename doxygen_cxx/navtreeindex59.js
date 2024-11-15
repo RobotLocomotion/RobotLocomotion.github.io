@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"position__cost_8h.html":[4,0,0,8,4,21],
 "position__kinematics__cache_8h.html":[4,0,0,8,14,33],
 "position__kinematics__cache_8h.html#a30a0a0642ab02f09f71d4ea3e99f2198":[4,0,0,8,14,33,0],
 "prismatic__joint_8h.html":[4,0,0,8,14,34],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "rod2d_8h.html":[4,0,0,3,16,2],
 "rod2d__geometry_8h.html":[4,0,0,3,16,3],
 "rod2d__state__vector_8h.html":[4,0,0,3,16,4],
-"roll__pitch__yaw_8h.html":[4,0,0,7,29],
-"roll__pitch__yaw_8h.html#ac39d336cc75f72da711800581b00bcf5":[4,0,0,7,29,3]
+"roll__pitch__yaw_8h.html":[4,0,0,7,29]
 };

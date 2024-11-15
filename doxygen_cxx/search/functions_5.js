@@ -78,6 +78,7 @@ var searchData=
   ['floor',['floor',['../namespacedrake_1_1ad.html#a6fe3629863ab0bd4025541189d15e809',1,'drake::ad::floor()'],['../namespacedrake_1_1symbolic.html#a56b28c66fdf5d2b582a677660936abca',1,'drake::symbolic::floor()']]],
   ['flush',['Flush',['../classdrake_1_1geometry_1_1_meshcat.html#a548a7b441b7900dcbd5481778c7dec9f',1,'drake::geometry::Meshcat']]],
   ['flushdiagnostics',['FlushDiagnostics',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html#a6d5853322f54a85d66a637e6d9bc32f0',1,'drake::test::DiagnosticPolicyTestBase']]],
+  ['fmt_5fdebug_5fstring',['fmt_debug_string',['../namespacedrake.html#ae46fc519bd6eb9cce38978cf135db800',1,'drake']]],
   ['fmt_5feigen',['fmt_eigen',['../namespacedrake.html#aade4911b7e8d691ef345a2706012a878',1,'drake']]],
   ['fmt_5ffloating_5fpoint',['fmt_floating_point',['../namespacedrake.html#a6258405e5b172f610aed5709af48bd3a',1,'drake']]],
   ['fmt_5fruntime',['fmt_runtime',['../namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce',1,'drake']]],
