@@ -2558,6 +2558,10 @@
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.AddEdge">AddEdge() (pydrake.geometry.optimization.GraphOfConvexSets method)</a>
 </li>
+      <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddEdgeConstraint">AddEdgeConstraint() (pydrake.planning.GcsTrajectoryOptimization.Subgraph method)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddEdgeCost">AddEdgeCost() (pydrake.planning.GcsTrajectoryOptimization.Subgraph method)</a>
+</li>
       <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.AddEdges">AddEdges() (pydrake.planning.GcsTrajectoryOptimization method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddEqualityConstraintBetweenPolynomials">AddEqualityConstraintBetweenPolynomials() (pydrake.solvers.MathematicalProgram method)</a>
@@ -2951,6 +2955,10 @@
       <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.AddVelocityConstraintAtNormalizedTime">AddVelocityConstraintAtNormalizedTime() (pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.AddVertex">AddVertex() (pydrake.geometry.optimization.GraphOfConvexSets method)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddVertexConstraint">AddVertexConstraint() (pydrake.planning.GcsTrajectoryOptimization.Subgraph method)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddVertexCost">AddVertexCost() (pydrake.planning.GcsTrajectoryOptimization.Subgraph method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.AddVisualizationCallback">AddVisualizationCallback() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
@@ -6548,6 +6556,10 @@
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.Subgraph.edge_constituent_vertex_control_points">edge_constituent_vertex_control_points() (pydrake.planning.GcsTrajectoryOptimization.Subgraph method)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.Subgraph.edge_constituent_vertex_durations">edge_constituent_vertex_durations() (pydrake.planning.GcsTrajectoryOptimization.Subgraph method)</a>
+</li>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionCheckerParams.edge_step_size">edge_step_size (pydrake.planning.CollisionCheckerParams property)</a>
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.edge_step_size">edge_step_size() (pydrake.planning.CollisionChecker method)</a>
@@ -6862,6 +6874,8 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.EvalSceneGraphInspector">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody.EvalSpatialAccelerationInWorld">EvalSpatialAccelerationInWorld() (pydrake.multibody.tree.RigidBody method)</a>
 
       <ul>
@@ -6870,8 +6884,6 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_-Expression-.EvalSpatialAccelerationInWorld">(pydrake.multibody.tree.RigidBody_[Expression] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody.EvalSpatialVelocityInWorld">EvalSpatialVelocityInWorld() (pydrake.multibody.tree.RigidBody method)</a>
 
       <ul>
@@ -21965,10 +21977,10 @@
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity_-AutoDiffXd">Value[list[SpatialVelocity_[AutoDiffXd]]] (class in pydrake.common.value)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity_-Expression">Value[list[SpatialVelocity_[Expression]]] (class in pydrake.common.value)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-ModelInstanceIndex">Value[ModelInstanceIndex] (class in pydrake.common.value)</a>
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-MosekSolverDetails">Value[MosekSolverDetails] (class in pydrake.common.value)</a>
@@ -22243,6 +22255,10 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.VolumeMesh_-AutoDiffXd-.vertex">(pydrake.geometry.VolumeMesh_[AutoDiffXd] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.Subgraph.vertex_control_points">vertex_control_points() (pydrake.planning.GcsTrajectoryOptimization.Subgraph method)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.Subgraph.vertex_duration">vertex_duration() (pydrake.planning.GcsTrajectoryOptimization.Subgraph method)</a>
+</li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Vertices">Vertices() (pydrake.geometry.optimization.GraphOfConvexSets method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.VPolytope.vertices">vertices() (pydrake.geometry.optimization.VPolytope method)</a>

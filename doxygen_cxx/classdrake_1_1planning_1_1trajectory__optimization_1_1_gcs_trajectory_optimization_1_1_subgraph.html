@@ -808,7 +808,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a pair of placeholder decision variables (not actually declared as decision variables in the MathematicalProgram) associated with the control points of the trajectory in two sets within this subgraph that are connected by an internal edge. </p>
-<p>Each variable will be of shape (num_positions(), order+1), where the ith column is the ith control point. This variable will be substituted for real decision variables in methods like AddEdgeCost and AddEdgeConstraint. Passing this variable directly into objectives/constraints will result in an error. </p>
+<p>Each variable will be of shape (num_positions(), order+1), where the ith column is the ith control point. These variables will be substituted for real decision variables in methods like AddEdgeCost and AddEdgeConstraint. Passing this variable directly into objectives/constraints will result in an error. </p>
 
 </div>
 </div>
@@ -828,7 +828,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a pair of placeholder decision variables (not actually declared as decision variables in the MathematicalProgram) associated with the time scaling of the trajectory in two sets within this subgraph that are connected by an internal edge. </p>
-<p>This variable will be substituted for real decision variables in methods like AddEdgeCost and AddEdgeConstraint. Passing this variable directly into objectives/constraints will result in an error. </p>
+<p>These variables will be substituted for real decision variables in methods like AddEdgeCost and AddEdgeConstraint. Passing this variable directly into objectives/constraints will result in an error. </p>
 
 </div>
 </div>

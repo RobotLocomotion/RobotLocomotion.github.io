@@ -1,5 +1,9 @@
 var NAVTREEINDEX60 =
 {
+"rotary__encoders_8h.html":[4,0,0,12,8,20],
+"rotary__encoders_8h.html#a649d32a80f8b07b33895faf8f969b712":[4,0,0,12,8,20,0],
+"rotation_8h.html":[4,0,0,1,2,0],
+"rotation__constraint_8h.html":[4,0,0,11,44],
 "rotation__constraint_8h.html#a0c7466e7ce1b8db6de94ad0524f8106d":[4,0,0,11,44,2],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74":[4,0,0,11,44,1],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a27402335e74462e03adf2c79e903705e":[4,0,0,11,44,1,8],
@@ -245,9 +249,5 @@ var NAVTREEINDEX60 =
 "sorted__pair__pybind_8h.html":[4,0,0,0,0,1,8],
 "sorted__triplet_8h.html":[4,0,0,4,2,57],
 "sos__basis__generator_8h.html":[4,0,0,11,59],
-"sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,59,0],
-"spanning__forest_8h.html":[4,0,0,8,13,8],
-"spanning__forest__inlines_8h.html":[4,0,0,8,13,9],
-"spanning__forest__loop__constraint_8h.html":[4,0,0,8,13,10],
-"spanning__forest__mobod_8h.html":[4,0,0,8,13,11]
+"sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,59,0]
 };
