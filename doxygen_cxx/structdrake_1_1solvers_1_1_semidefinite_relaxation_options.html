@@ -184,14 +184,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5e07222e141a6d4295e5d0773357d868"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#a5e07222e141a6d4295e5d0773357d868">add_implied_linear_equality_constraints</a> = true</td></tr>
+<tr class="memitem:a5e07222e141a6d4295e5d0773357d868"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#a5e07222e141a6d4295e5d0773357d868">add_implied_linear_equality_constraints</a> {true}</td></tr>
 <tr class="memdesc:a5e07222e141a6d4295e5d0773357d868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a program with the linear constraints Ay ≤ b, sets whether to add the implied linear constraints [A,-b]X[A,-b]ᵀ ≤ 0 to the semidefinite relaxation.  <a href="#a5e07222e141a6d4295e5d0773357d868">More...</a><br /></td></tr>
 <tr class="separator:a5e07222e141a6d4295e5d0773357d868"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf57444ce2685aa6f70ca6e44b7a783"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#afcf57444ce2685aa6f70ca6e44b7a783">add_implied_linear_constraints</a> = true</td></tr>
+<tr class="memitem:afcf57444ce2685aa6f70ca6e44b7a783"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#afcf57444ce2685aa6f70ca6e44b7a783">add_implied_linear_constraints</a> {true}</td></tr>
 <tr class="memdesc:afcf57444ce2685aa6f70ca6e44b7a783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a program with the linear equality constraints Ay = b, sets whether to add the implied linear constraints [A, -b]X = 0 to the semidefinite relaxation.  <a href="#afcf57444ce2685aa6f70ca6e44b7a783">More...</a><br /></td></tr>
 <tr class="separator:afcf57444ce2685aa6f70ca6e44b7a783"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d0ed785e8b4d09c5a15770af0067ab9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#a2d0ed785e8b4d09c5a15770af0067ab9">preserve_convex_quadratic_constraints</a> = false</td></tr>
-<tr class="memdesc:a2d0ed785e8b4d09c5a15770af0067ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a program with convex quadratic constraints, sets whether equivalent rotated second order cone constraints are enforced on the last column of X in the semidefinite relaxation.  <a href="#a2d0ed785e8b4d09c5a15770af0067ab9">More...</a><br /></td></tr>
+<tr class="memitem:a2d0ed785e8b4d09c5a15770af0067ab9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#a2d0ed785e8b4d09c5a15770af0067ab9">preserve_convex_quadratic_constraints</a> {false}</td></tr>
+<tr class="memdesc:a2d0ed785e8b4d09c5a15770af0067ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">2025-04-01 DEPRECATION NOTICE: The convex quadratic constraints are already implied by a linear constraint that is always added to the semidefinite relaxation.  <a href="#a2d0ed785e8b4d09c5a15770af0067ab9">More...</a><br /></td></tr>
 <tr class="separator:a2d0ed785e8b4d09c5a15770af0067ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -243,7 +243,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool add_implied_linear_constraints = true</td>
+          <td class="memname">bool add_implied_linear_constraints {true}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -259,7 +259,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool add_implied_linear_equality_constraints = true</td>
+          <td class="memname">bool add_implied_linear_equality_constraints {true}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -275,13 +275,14 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool preserve_convex_quadratic_constraints = false</td>
+          <td class="memname">bool preserve_convex_quadratic_constraints {false}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Given a program with convex quadratic constraints, sets whether equivalent rotated second order cone constraints are enforced on the last column of X in the semidefinite relaxation. </p>
-<p>This ensures that the last column of X, which are a relaxation of the original program's variables satisfy the original progam's quadratic constraints. </p>
+<p>2025-04-01 DEPRECATION NOTICE: The convex quadratic constraints are already implied by a linear constraint that is always added to the semidefinite relaxation. </p>
+<p>Therefore, this flag has no effect on the solution to the overall program and will be deprecated on April 1st, 2025.</p>
+<p>Given a convex quadratic constraint xᵀP x + xᵀq + r &lt;= 0 it is always stronger to add the linearized constraint Tr(PX) + xᵀq + r &lt;= 0 (as is already done for all convex and nonconvex quadratic constraints), rendering the original convex quadratic constraints unnecessary. </p>
 
 </div>
 </div>

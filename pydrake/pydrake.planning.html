@@ -2428,6 +2428,58 @@ them by the size of the sets.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddEdgeConstraint">
+<span class="sig-name descname"><span class="pre">AddEdgeConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e:</span> <span class="pre">pydrake.symbolic.Formula</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_in_transcription:</span> <span class="pre">set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription]</span> <span class="pre">=</span> <span class="pre">{&lt;Transcription.kMIP:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRelaxation:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRestriction:</span> <span class="pre">2&gt;}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddEdgeConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Adds an arbitrary user-defined constraint to every edge within the
+EdgesBetweenSubgraphs. The constraint should be defined using the
+placeholder control point variables (obtained from
+edge_constituent_vertex_control_points()) and the placeholder time
+scaling variables (obtained from edge_constituent_vertex_durations()).
+This enables greater modeling freedom, but we cannot guarantee a
+feasible solution for all possible constraints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any variables besides those from</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_durations and</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_control_points are used.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Constraints which do not support the perspective operation cannot be
+used with Transcription::kMIP or Transcription::kRelaxation. Consider
+providing an appropriate “convex surrogate” that is supported within
+GraphOfConvexSets, or exclusively using the SolveConvexRestriction
+method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddEdgeCost">
+<span class="sig-name descname"><span class="pre">AddEdgeCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e:</span> <span class="pre">pydrake.symbolic.Expression</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_in_transcription:</span> <span class="pre">set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription]</span> <span class="pre">=</span> <span class="pre">{&lt;Transcription.kMIP:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRelaxation:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRestriction:</span> <span class="pre">2&gt;}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddEdgeCost" title="Permalink to this definition"></a></dt>
+<dd><p>Adds an arbitrary user-defined cost to every edge within the
+EdgesBetweenSubgraphs. The cost should be defined using the
+placeholder control point variables (obtained from
+edge_constituent_vertex_control_points()) and the placeholder time
+scaling variables (obtained from edge_constituent_vertex_durations()).
+This enables greater modeling freedom, but we cannot guarantee a
+feasible solution for all possible costs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any variables besides those from</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_durations and</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_control_points are used.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Costs which do not support the perspective operation cannot be used
+with Transcription::kMIP or Transcription::kRelaxation. Consider
+providing an appropriate “convex surrogate” that is supported within
+GraphOfConvexSets, or exclusively using the SolveConvexRestriction
+method.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddNonlinearDerivativeBounds">
 <span class="sig-name descname"><span class="pre">AddNonlinearDerivativeBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddNonlinearDerivativeBounds" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a nonlinear derivative constraints to the control point
@@ -2531,6 +2583,33 @@ trajectory r(s). Hence this constraint is convex.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.edge_constituent_vertex_control_points">
+<span class="sig-name descname"><span class="pre">edge_constituent_vertex_control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.edge_constituent_vertex_control_points" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a pair of placeholder decision variables (not actually
+declared as decision variables in the MathematicalProgram) associated
+with the control points of the trajectory in two sets that are
+connected by an edge from this EdgesBetweenSubgraphs. Each variable
+will be of shape (num_positions(), order+1), where the ith column is
+the ith control point. (Note that the first and second variable will
+have different shapes if the order of the two subgraphs is different.)
+These variables will be substituted for real decision variables in
+methods like AddEdgeCost and AddEdgeConstraint. Passing this variable
+directly into objectives/constraints will result in an error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.edge_constituent_vertex_durations">
+<span class="sig-name descname"><span class="pre">edge_constituent_vertex_durations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">pydrake.symbolic.Variable</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Variable" title="pydrake.symbolic.Variable"><span class="pre">pydrake.symbolic.Variable</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.edge_constituent_vertex_durations" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a pair of placeholder decision variables (not actually
+declared as decision variables in the MathematicalProgram) associated
+with the time scaling of the trajectory in two sets that are connected
+by an edge from this EdgesBetweenSubgraphs. These variables will be
+substituted for real decision variables in methods like AddEdgeCost
+and AddEdgeConstraint. Passing this variable directly into
+objectives/constraints will result in an error.</p>
 </dd></dl>
 
 <dl class="py method">

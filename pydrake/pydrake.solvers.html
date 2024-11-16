@@ -1588,9 +1588,41 @@ SolverOptions::SetOption(kStandaloneReproductionFileName,
 “reproduction.txt”). To disable, use
 SolverOptions::SetOption(kStandaloneReproductionFileName, “”), where
 the empty string “” indicates that no file should be written.</p>
+<blockquote>
+<div><p>kMaxThreads : Many solvers are multi-threaded. The user can request the maximum</p>
+</div></blockquote>
+<p>number of threads used by the solver with this <code class="docutils literal notranslate"><span class="pre">int</span></code> option. When
+not set, the value defaults to Parallelism.Max().num_threads(), which
+can be controlled via the drake::Parallelism “DRAKE_NUM_THREADS”
+environment variable.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>The number of threads must be greater than 0.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Setting this value higher than the actual hardware concurrency may
+result in a degraded performance. It is recommended to set this
+value lower than or equal to Parallelism.Max().num_threads().</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A solver may choose to use fewer threads than the value specified.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This options does NOT disable multi-threading in BLAS/LAPACK which
+is used by many solvers under the hood. Therefore, some internal
+operations of the solvers may still be multi-core.</p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.CommonSolverOption.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.CommonSolverOption" title="pydrake.solvers.CommonSolverOption"><span class="pre">pydrake.solvers.CommonSolverOption</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.CommonSolverOption.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.CommonSolverOption.kMaxThreads">
+<span class="sig-name descname"><span class="pre">kMaxThreads</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CommonSolverOption.kMaxThreads:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.solvers.CommonSolverOption.kMaxThreads" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -3073,7 +3105,7 @@ available, throws a RuntimeError.</p>
 <span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">MakeSemidefiniteRelaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.MakeSemidefiniteRelaxation" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>MakeSemidefiniteRelaxation(prog: pydrake.solvers.MathematicalProgram, options: pydrake.solvers.SemidefiniteRelaxationOptions = SemidefiniteRelaxationOptions(add_implied_linear_equality_constraints=True, add_implied_linear_constraints=True, preserve_convex_quadratic_constraints=False)) -&gt; pydrake.solvers.MathematicalProgram</p></li>
+<li><p>MakeSemidefiniteRelaxation(prog: pydrake.solvers.MathematicalProgram, options: pydrake.solvers.SemidefiniteRelaxationOptions = SemidefiniteRelaxationOptions(add_implied_linear_equality_constraints=True, add_implied_linear_constraints=True)) -&gt; pydrake.solvers.MathematicalProgram</p></li>
 </ol>
 <p>Constructs a new MathematicalProgram which represents the semidefinite
 programming convex relaxation of the (likely nonconvex) program
@@ -3095,7 +3127,7 @@ LinearEqualityConstraint.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>MakeSemidefiniteRelaxation(prog: pydrake.solvers.MathematicalProgram, variable_groups: list[pydrake.symbolic.Variables], options: pydrake.solvers.SemidefiniteRelaxationOptions = SemidefiniteRelaxationOptions(add_implied_linear_equality_constraints=True, add_implied_linear_constraints=True, preserve_convex_quadratic_constraints=False)) -&gt; pydrake.solvers.MathematicalProgram</p></li>
+<li><p>MakeSemidefiniteRelaxation(prog: pydrake.solvers.MathematicalProgram, variable_groups: list[pydrake.symbolic.Variables], options: pydrake.solvers.SemidefiniteRelaxationOptions = SemidefiniteRelaxationOptions(add_implied_linear_equality_constraints=True, add_implied_linear_constraints=True)) -&gt; pydrake.solvers.MathematicalProgram</p></li>
 </ol>
 <p>A version of MakeSemidefiniteRelaxation that allows for specifying the
 sparsity of the relaxation.</p>
@@ -5831,6 +5863,12 @@ the provided solver options.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.solver_options">
+<span class="sig-name descname"><span class="pre">solver_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.solver_options" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the solver options stored inside MathematicalProgram.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.TightenPsdConstraintToDd">
 <span class="sig-name descname"><span class="pre">TightenPsdConstraintToDd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.PositiveSemidefiniteConstraint" title="pydrake.solvers.PositiveSemidefiniteConstraint"><span class="pre">PositiveSemidefiniteConstraint</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.TightenPsdConstraintToDd" title="Permalink to this definition"></a></dt>
 <dd><p>1. Tightens the positive semidefinite <code class="docutils literal notranslate"><span class="pre">constraint</span></code> with a positive
@@ -8150,11 +8188,20 @@ semidefinite relaxation.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.SemidefiniteRelaxationOptions.preserve_convex_quadratic_constraints">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preserve_convex_quadratic_constraints</span></span><a class="headerlink" href="#pydrake.solvers.SemidefiniteRelaxationOptions.preserve_convex_quadratic_constraints" title="Permalink to this definition"></a></dt>
-<dd><p>Given a program with convex quadratic constraints, sets whether
-equivalent rotated second order cone constraints are enforced on the
-last column of X in the semidefinite relaxation. This ensures that the
-last column of X, which are a relaxation of the original program’s
-variables satisfy the original progam’s quadratic constraints.</p>
+<dd><p>The convex quadratic constraints are
+already implied by a linear constraint that is always added to the
+semidefinite relaxation. Therefore, this flag has no effect on the
+solution to the overall program and will be deprecated on April 1st,
+2025.</p>
+<p>Given a convex quadratic constraint xᵀP x + xᵀq + r &lt;= 0 it is always
+stronger to add the linearized constraint Tr(PX) + xᵀq + r &lt;= 0 (as is
+already done for all convex and nonconvex quadratic constraints),
+rendering the original convex quadratic constraints unnecessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>2025-04-01 DEPRECATION NOTICE</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -8616,6 +8663,13 @@ boolean options should be passed as integers (0 or 1).</p>
 <span class="sig-name descname"><span class="pre">common_solver_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.CommonSolverOption" title="pydrake.solvers.CommonSolverOption"><span class="pre">pydrake.solvers.CommonSolverOption</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.common_solver_options" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the common options for all solvers. Refer to CommonSolverOption
 for more details.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.SolverOptions.get_max_threads">
+<span class="sig-name descname"><span class="pre">get_max_threads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.get_max_threads" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the kMaxThreads set via CommonSolverOption. Returns nullopt if
+kMaxThreads is unset.</p>
 </dd></dl>
 
 <dl class="py method">
