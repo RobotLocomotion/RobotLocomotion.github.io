@@ -36,6 +36,8 @@ var classdrake_1_1multibody_1_1_joint =
     [ "frame_on_child", "classdrake_1_1multibody_1_1_joint.html#adeb59e44e49a847f2a338211882d00f6", null ],
     [ "frame_on_parent", "classdrake_1_1multibody_1_1_joint.html#af544171c3e9756dd27830a3b5b4ff781", null ],
     [ "get_implementation", "classdrake_1_1multibody_1_1_joint.html#a4f3539f25e5614d6783b5405d034497e", null ],
+    [ "get_mobilizer_downcast", "classdrake_1_1multibody_1_1_joint.html#a8a436543dcb9111fce01536d0faa9a7f", null ],
+    [ "get_mutable_mobilizer_downcast", "classdrake_1_1multibody_1_1_joint.html#acce6119b1f6245103bade4b6e88c5f51", null ],
     [ "GetDampingVector", "classdrake_1_1multibody_1_1_joint.html#aca5a7652c185aaa3175292e6624cb627", null ],
     [ "GetDefaultPose", "classdrake_1_1multibody_1_1_joint.html#a62d2e2bfd579e1b01cf613ec13845d0c", null ],
     [ "GetDefaultPosePair", "classdrake_1_1multibody_1_1_joint.html#ab4b163d3aa70bd087f75e7987a59f5e3", null ],
