@@ -7,6 +7,7 @@ var decompose_8h =
     [ "DecomposeLinearExpressions", "decompose_8h.html#aa6c01361f464b3eae396f7d1a0e92c85", null ],
     [ "DecomposeLumpedParameters", "decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c", null ],
     [ "DecomposeQuadraticPolynomial", "decompose_8h.html#a168045cc4df5fee36f317095c2a9f891", null ],
+    [ "ExtractAndAppendVariablesFromExpression", "decompose_8h.html#a5bfdbf915c3b1d2d0d13fa2110c97066", null ],
     [ "ExtractAndAppendVariablesFromExpression", "decompose_8h.html#ad528f8f92173863f5029b979b9c5f36b", null ],
     [ "ExtractVariablesFromExpression", "decompose_8h.html#a4f9f98ac0c3db06d72227b0502cf8934", null ],
     [ "ExtractVariablesFromExpression", "decompose_8h.html#acd9ab6787ea570003b69621c52bfa5cc", null ],

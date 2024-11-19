@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"group__visualization.html#ga732349f929601b37e30b15ad557057e7":[1,2,11,10],
 "group__yaml__serialization.html":[1,6,4],
 "gurobi__solver_8h.html":[4,0,0,11,22],
 "gurobi__solver__internal_8h.html":[4,0,0,11,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2":[4,0,0,7,21,0],
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50":[4,0,0,7,21,0,0],
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2af1b493f6e43ce0d1371533ee4f1199d0":[4,0,0,7,21,0,1],
-"kuka__torque__controller_8h.html":[4,0,0,3,8,2],
-"latex_8h.html":[4,0,0,1,3,7]
+"kuka__torque__controller_8h.html":[4,0,0,3,8,2]
 };

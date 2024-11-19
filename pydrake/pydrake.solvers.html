@@ -1562,34 +1562,31 @@ to errors - 5: stopped by event handler</p>
 example, many solvers support printing out the progress in each
 iteration). CommonSolverOption contain the names of these supported
 options. The user can use these options as “key” in
-SolverOption::SetOption().</p>
+SolverOption::SetOption(). If the solver doesn’t support the option,
+the option is ignored.</p>
 <p>Members:</p>
 <blockquote>
 <div><p>kPrintFileName : Many solvers support printing the progress of each iteration to a</p>
 </div></blockquote>
 <p>file. The user can call SolverOptions::SetOption(kPrintFileName,
-file_name) where file_name is a string. If the user doesn’t want to
-print to a file, then use SolverOptions::SetOption(kPrintFileName,
-“”), where the empty string “” indicates no print.</p>
+“filename.log”) to enable this. To disable, set the option to the
+empty string <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>, which indicates that no file should be written.</p>
 <blockquote>
 <div><p>kPrintToConsole : Many solvers support printing the progress of each iteration to the</p>
 </div></blockquote>
-<p>console, the user can call SolverOptions::SetOption(kPrintToConsole,
-1) to turn on printing to the console, or
-SolverOptions::SetOption(kPrintToConsole, 0) to turn off printing to
-the console.</p>
+<p>console. The user can call <code class="docutils literal notranslate"><span class="pre">SolverOptions::SetOption(kPrintToConsole,</span>
+<span class="pre">1)</span></code> to enable this, or use <code class="docutils literal notranslate"><span class="pre">0</span></code> to turn off printing to the console.</p>
 <blockquote>
-<div><p>kStandaloneReproductionFileName : Some of our solver interfaces support writing a standalone (e.g. it</p>
+<div><p>kStandaloneReproductionFileName : Some solvers support writing a standalone (e.g., it does not depend on</p>
 </div></blockquote>
-<p>does not depend on Drake) minimal reproduction of the problem to a
-file. This is especially useful for sending bug reports upstream to
-the developers of the solver. To enable this, use e.g.
-SolverOptions::SetOption(kStandaloneReproductionFileName,
-“reproduction.txt”). To disable, use
-SolverOptions::SetOption(kStandaloneReproductionFileName, “”), where
-the empty string “” indicates that no file should be written.</p>
+<p>Drake) minimal reproduction of the problem to a file. This is
+especially useful for sending bug reports upstream to the developers
+of the solver. The user can call
+<code class="docutils literal notranslate"><span class="pre">SolverOptions::SetOption(kStandaloneReproductionFileName,</span>
+<span class="pre">&quot;filename.txt&quot;)</span></code> to enable this. To disable, set the option to the
+empty string <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>, which indicates that no file should be written.</p>
 <blockquote>
-<div><p>kMaxThreads : Many solvers are multi-threaded. The user can request the maximum</p>
+<div><p>kMaxThreads : Some solvers are multi-threaded. The user can request the maximum</p>
 </div></blockquote>
 <p>number of threads used by the solver with this <code class="docutils literal notranslate"><span class="pre">int</span></code> option. When
 not set, the value defaults to Parallelism.Max().num_threads(), which

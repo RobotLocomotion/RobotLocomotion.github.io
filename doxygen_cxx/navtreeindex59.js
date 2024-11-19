@@ -1,6 +1,8 @@
 var NAVTREEINDEX59 =
 {
-"posed__half__space_8h.html":[4,0,0,4,2,54],
+"port__switch_8h.html":[4,0,0,12,6,19],
+"port__switch_8h.html#af1f0385e14fedbed6579aa142e240ef3":[4,0,0,12,6,19,0],
+"posed__half__space_8h.html":[4,0,0,4,2,55],
 "position__constraint_8h.html":[4,0,0,8,4,20],
 "position__cost_8h.html":[4,0,0,8,4,21],
 "position__kinematics__cache_8h.html":[4,0,0,8,14,33],
@@ -60,7 +62,7 @@ var NAVTREEINDEX59 =
 "program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,11,43,10],
 "propeller_8h.html":[4,0,0,8,10,38],
 "propeller_8h.html#a32977dd1d582be75b79734dd5f8c2272":[4,0,0,8,10,38,1],
-"proximity__doxygen_8h.html":[4,0,0,4,2,55],
+"proximity__doxygen_8h.html":[4,0,0,4,2,56],
 "proximity__engine_8h.html":[4,0,0,4,43],
 "proximity__properties_8h.html":[4,0,0,4,44],
 "proximity__properties_8h.html#a331f457a6ce0d146213faa844725dcda":[4,0,0,4,44,1],
@@ -68,13 +70,13 @@ var NAVTREEINDEX59 =
 "proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe":[4,0,0,4,44,0],
 "proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,44,4],
 "proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,44,3],
-"proximity__utilities_8h.html":[4,0,0,4,2,56],
-"proximity__utilities_8h.html#a4f24aa7e86f9331b9bd72b84a7672963":[4,0,0,4,2,56,2],
-"proximity__utilities_8h.html#a54e88575f94080e2f54bd4b79ac25f5d":[4,0,0,4,2,56,5],
-"proximity__utilities_8h.html#a80a8ed53b2aebbfe932e097efa7d4da3":[4,0,0,4,2,56,4],
-"proximity__utilities_8h.html#a8f106b9c67eabf12f6e34a632561cd26":[4,0,0,4,2,56,1],
-"proximity__utilities_8h.html#a9181fb586ba454606318ae13d07b6517":[4,0,0,4,2,56,3],
-"proximity__utilities_8h.html#aa157ce1fbdd1dfbf0f83de850a4dc009":[4,0,0,4,2,56,6],
+"proximity__utilities_8h.html":[4,0,0,4,2,57],
+"proximity__utilities_8h.html#a4f24aa7e86f9331b9bd72b84a7672963":[4,0,0,4,2,57,2],
+"proximity__utilities_8h.html#a54e88575f94080e2f54bd4b79ac25f5d":[4,0,0,4,2,57,5],
+"proximity__utilities_8h.html#a80a8ed53b2aebbfe932e097efa7d4da3":[4,0,0,4,2,57,4],
+"proximity__utilities_8h.html#a8f106b9c67eabf12f6e34a632561cd26":[4,0,0,4,2,57,1],
+"proximity__utilities_8h.html#a9181fb586ba454606318ae13d07b6517":[4,0,0,4,2,57,3],
+"proximity__utilities_8h.html#aa157ce1fbdd1dfbf0f83de850a4dc009":[4,0,0,4,2,57,6],
 "pydrake__doxygen_8h.html":[4,0,0,0,0,15],
 "pydrake__pybind_8h.html":[4,0,0,0,0,16],
 "pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,16,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "robot__plan__utils_8h.html":[4,0,0,6,3,5],
 "robot__plan__utils_8h.html#a03defeaacd8e6e4a43260eb910c1913c":[4,0,0,6,3,5,0],
 "robot__plan__utils_8h.html#a34dd83b8c99f86f80129b54cf879beda":[4,0,0,6,3,5,1],
-"robot__plan__utils_8h.html#a8cac2550a9a52551ff82e51b3d5b29e3":[4,0,0,6,3,5,2],
-"rod2d_8h.html":[4,0,0,3,16,2],
-"rod2d__geometry_8h.html":[4,0,0,3,16,3]
+"robot__plan__utils_8h.html#a8cac2550a9a52551ff82e51b3d5b29e3":[4,0,0,6,3,5,2]
 };

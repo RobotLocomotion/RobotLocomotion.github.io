@@ -39,6 +39,7 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "make_mesh_from_vtk.h", "make__mesh__from__vtk_8h.html", null ],
     [ "make_sphere_field.h", "make__sphere__field_8h.html", null ],
     [ "make_sphere_mesh.h", "make__sphere__mesh_8h.html", null ],
+    [ "mesh_distance_boundary.h", "mesh__distance__boundary_8h.html", null ],
     [ "mesh_field_linear.h", "mesh__field__linear_8h.html", "mesh__field__linear_8h" ],
     [ "mesh_half_space_intersection.h", "mesh__half__space__intersection_8h.html", null ],
     [ "mesh_intersection.h", "mesh__intersection_8h.html", null ],

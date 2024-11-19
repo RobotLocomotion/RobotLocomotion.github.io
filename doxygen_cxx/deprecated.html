@@ -164,55 +164,58 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_convex.html#a94c732bb0f167eab349228237a8fbe3c">Convex::filename</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>Convex shapes can be defined from a file path or in memory data. Use  Convex::source() to determine if a filename is available. <br />
+<dd><a class="anchor" id="_deprecated000007"></a>Convex shapes can be defined from a file path or in memory data. Use  Convex::source() to determine if a filename is available. <br />
  This will be removed from Drake on or after 2025-04-01. </dd>
-<dt>Member <a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga1a6ca29c940201232b604c08c06fa9ec">drake::geometry::optimization::CalcPairwiseIntersections</a>  (const ConvexSets &amp;convex_sets, const std::vector&lt; int &gt; &amp;continuous_revolute_joints, bool preprocess_bbox=true)</dt>
+<dt>Member <a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga81f6ad0948f72e1ad26ad217aa52a86f">drake::geometry::optimization::CalcPairwiseIntersections</a>  (const ConvexSets &amp;convex_sets_A, const ConvexSets &amp;convex_sets_B, const std::vector&lt; int &gt; &amp;continuous_revolute_joints, const std::vector&lt; geometry::optimization::Hyperrectangle &gt; &amp;bboxes_A, const std::vector&lt; geometry::optimization::Hyperrectangle &gt; &amp;bboxes_B)</dt>
 <dd><a class="anchor" id="_deprecated000003"></a>Instead use ComputePairwiseIntersections, with return type  std::pair&lt;std::vector&lt;std::pair&lt;int, int&gt;&gt;,  std::vector&lt;Eigen::VectorXd&gt;&gt;. <br />
  This will be removed from Drake on or after 2024-12-01. </dd>
-<dt>Member <a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga1ed67b7028e693aa7ea61351656dccc6">drake::geometry::optimization::CalcPairwiseIntersections</a>  (const ConvexSets &amp;convex_sets, const std::vector&lt; int &gt; &amp;continuous_revolute_joints, const std::vector&lt; geometry::optimization::Hyperrectangle &gt; &amp;bboxes)</dt>
+<dt>Member <a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga1a6ca29c940201232b604c08c06fa9ec">drake::geometry::optimization::CalcPairwiseIntersections</a>  (const ConvexSets &amp;convex_sets, const std::vector&lt; int &gt; &amp;continuous_revolute_joints, bool preprocess_bbox=true)</dt>
 <dd><a class="anchor" id="_deprecated000004"></a>Instead use ComputePairwiseIntersections, with return type  std::pair&lt;std::vector&lt;std::pair&lt;int, int&gt;&gt;,  std::vector&lt;Eigen::VectorXd&gt;&gt;. <br />
  This will be removed from Drake on or after 2024-12-01. </dd>
-<dt>Member <a class="el" href="group__geometry__optimization__geodesic__convexity.html#gae773abb9ec94e4f9ff5766e2d40b7136">drake::geometry::optimization::CalcPairwiseIntersections</a>  (const ConvexSets &amp;convex_sets_A, const ConvexSets &amp;convex_sets_B, const std::vector&lt; int &gt; &amp;continuous_revolute_joints, bool preprocess_bbox=true)</dt>
-<dd><a class="anchor" id="_deprecated000001"></a>Instead use ComputePairwiseIntersections, with return type  std::pair&lt;std::vector&lt;std::pair&lt;int, int&gt;&gt;,  std::vector&lt;Eigen::VectorXd&gt;&gt;. <br />
+<dt>Member <a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga1ed67b7028e693aa7ea61351656dccc6">drake::geometry::optimization::CalcPairwiseIntersections</a>  (const ConvexSets &amp;convex_sets, const std::vector&lt; int &gt; &amp;continuous_revolute_joints, const std::vector&lt; geometry::optimization::Hyperrectangle &gt; &amp;bboxes)</dt>
+<dd><a class="anchor" id="_deprecated000005"></a>Instead use ComputePairwiseIntersections, with return type  std::pair&lt;std::vector&lt;std::pair&lt;int, int&gt;&gt;,  std::vector&lt;Eigen::VectorXd&gt;&gt;. <br />
  This will be removed from Drake on or after 2024-12-01. </dd>
-<dt>Member <a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga81f6ad0948f72e1ad26ad217aa52a86f">drake::geometry::optimization::CalcPairwiseIntersections</a>  (const ConvexSets &amp;convex_sets_A, const ConvexSets &amp;convex_sets_B, const std::vector&lt; int &gt; &amp;continuous_revolute_joints, const std::vector&lt; geometry::optimization::Hyperrectangle &gt; &amp;bboxes_A, const std::vector&lt; geometry::optimization::Hyperrectangle &gt; &amp;bboxes_B)</dt>
+<dt>Member <a class="el" href="group__geometry__optimization__geodesic__convexity.html#gae773abb9ec94e4f9ff5766e2d40b7136">drake::geometry::optimization::CalcPairwiseIntersections</a>  (const ConvexSets &amp;convex_sets_A, const ConvexSets &amp;convex_sets_B, const std::vector&lt; int &gt; &amp;continuous_revolute_joints, bool preprocess_bbox=true)</dt>
 <dd><a class="anchor" id="_deprecated000002"></a>Instead use ComputePairwiseIntersections, with return type  std::pair&lt;std::vector&lt;std::pair&lt;int, int&gt;&gt;,  std::vector&lt;Eigen::VectorXd&gt;&gt;. <br />
  This will be removed from Drake on or after 2024-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1geometry.html#a7859e92c74076c8ab00351905e44b562">drake::geometry::ReadObjToTriangleSurfaceMesh</a>  (std::istream *input_stream, double scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={}, std::string_view description="from_stream")</dt>
-<dd><a class="anchor" id="_deprecated000005"></a>Please use ReadObjToTriangleSurfaceMesh(const MeshSource&amp;) instead. <br />
+<dd><a class="anchor" id="_deprecated000006"></a>Please use ReadObjToTriangleSurfaceMesh(const MeshSource&amp;) instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1solvers.html#a2dd53f528ca9bb8a0f0f11d1bab1869e">drake::solvers::operator&lt;&lt;</a>  (std::ostream &amp;, CommonSolverOption)</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>Use to_string(), instead. <br />
+<dd><a class="anchor" id="_deprecated000010"></a>Use to_string(), instead. <br />
  This will be removed from Drake on or after 2025-05-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#ad528f8f92173863f5029b979b9c5f36b">drake::symbolic::ExtractAndAppendVariablesFromExpression</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> &amp;e, VectorX&lt; Variable &gt; *vars, std::unordered_map&lt; symbolic::Variable::Id, int &gt; *map_var_to_index)</dt>
+<dd><a class="anchor" id="_deprecated000001"></a>Use the overloaded function with std::vector&lt;Variable&gt;  instead of VectorX&lt;Variable&gt; <br />
+ This will be removed from Drake on or after 2024-05-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a94c732bb0f167eab349228237a8fbe3c">Mesh::filename</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>Meshes can be defined from a file path or in memory data. Use  Mesh::source() to determine if a filename is available. <br />
+<dd><a class="anchor" id="_deprecated000008"></a>Meshes can be defined from a file path or in memory data. Use  Mesh::source() to determine if a filename is available. <br />
  This will be removed from Drake on or after 2025-04-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be">MultibodyPlant&lt; T &gt;::set_discrete_contact_solver</a>  (DiscreteContactSolver contact_solver)</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
+<dd><a class="anchor" id="_deprecated000009"></a>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
  This will be removed from Drake on or after 2024-04-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a705ec3567a892f2c558988b4ac3c351f">RgbdSensor::color_camera_info</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>Use default_color_render_camera().core().intrinsics() instead. <br />
+<dd><a class="anchor" id="_deprecated000011"></a>Use default_color_render_camera().core().intrinsics() instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acaff289a0608d413a89eac135a4c8790">RgbdSensor::color_render_camera</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Use default_color_render_camera() instead. <br />
+<dd><a class="anchor" id="_deprecated000013"></a>Use default_color_render_camera() instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a5b92b9d4b4aa8e028888b01fd2f659dd">RgbdSensor::depth_camera_info</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>Use default_depth_render_camera().core().intrinsics() instead. <br />
+<dd><a class="anchor" id="_deprecated000012"></a>Use default_depth_render_camera().core().intrinsics() instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a2b7e6767e2c01173872ad2b1d0a0f9ca">RgbdSensor::depth_render_camera</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>Use default_depth_render_camera() instead. <br />
+<dd><a class="anchor" id="_deprecated000014"></a>Use default_depth_render_camera() instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a22ff82441df0b9b743906c4304135783">RgbdSensor::parent_frame_id</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000017"></a>Use default_parent_frame_id() instead. <br />
+<dd><a class="anchor" id="_deprecated000018"></a>Use default_parent_frame_id() instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab8817bc0f987f64e506b92be652d5644">RgbdSensor::X_BC</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000015"></a>Use default_color_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
+<dd><a class="anchor" id="_deprecated000016"></a>Use default_color_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a">RgbdSensor::X_BD</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000016"></a>Use default_depth_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
+<dd><a class="anchor" id="_deprecated000017"></a>Use default_depth_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acfe6bdbdc50d1b6bff27e133688a4230">RgbdSensor::X_PB</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>Use default_X_PB() instead. <br />
+<dd><a class="anchor" id="_deprecated000015"></a>Use default_X_PB() instead. <br />
  This will be removed from Drake on or after 2025-01-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

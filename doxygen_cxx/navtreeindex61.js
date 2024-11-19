@@ -1,6 +1,8 @@
 var NAVTREEINDEX61 =
 {
-"sorted__triplet_8h.html":[4,0,0,4,2,57],
+"sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,62,8],
+"sorted__pair__pybind_8h.html":[4,0,0,0,0,1,8],
+"sorted__triplet_8h.html":[4,0,0,4,2,58],
 "sos__basis__generator_8h.html":[4,0,0,11,59],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,59,0],
 "spanning__forest_8h.html":[4,0,0,8,13,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,9,3,0],
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a5c1d918dc22b5ef6cf169eb681e7eecf":[3,0,0,3,9,3,1],
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,9,3,2],
-"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a905b0fa1fb0e4a5334581d565fb2f8ec":[3,0,0,3,9,3,3],
-"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,9,3,5],
-"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[3,0,0,3,9,3,4]
+"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a905b0fa1fb0e4a5334581d565fb2f8ec":[3,0,0,3,9,3,3]
 };

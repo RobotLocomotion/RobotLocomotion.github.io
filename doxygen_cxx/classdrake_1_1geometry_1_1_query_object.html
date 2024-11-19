@@ -854,7 +854,7 @@ Friends</h2></td></tr>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">Scalar  </th><th class="markdownTableHeadCenter">Box  </th><th class="markdownTableHeadCenter">Capsule  </th><th class="markdownTableHeadCenter">Convex  </th><th class="markdownTableHeadCenter">Cylinder  </th><th class="markdownTableHeadCenter">Ellipsoid  </th><th class="markdownTableHeadCenter">HalfSpace  </th><th class="markdownTableHeadCenter">Mesh  </th><th class="markdownTableHeadCenter">Sphere   </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">double  </td><td class="markdownTableBodyCenter">2e-15  </td><td class="markdownTableBodyCenter">4e-15  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">3e-15  </td><td class="markdownTableBodyCenter">3e-5ᵇ  </td><td class="markdownTableBodyCenter">5e-15  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">4e-15   </td></tr>
+<td class="markdownTableBodyCenter">double  </td><td class="markdownTableBodyCenter">2e-15  </td><td class="markdownTableBodyCenter">4e-15  </td><td class="markdownTableBodyCenter">5e-15  </td><td class="markdownTableBodyCenter">3e-15  </td><td class="markdownTableBodyCenter">3e-5ᵇ  </td><td class="markdownTableBodyCenter">5e-15  </td><td class="markdownTableBodyCenter">5e-15ᶜ  </td><td class="markdownTableBodyCenter">4e-15   </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter">AutoDiffXd  </td><td class="markdownTableBodyCenter">1e-15  </td><td class="markdownTableBodyCenter">4e-15  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">5e-15  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">3e-15   </td></tr>
 <tr class="markdownTableRowOdd">
@@ -864,7 +864,11 @@ Friends</h2></td></tr>
 <ul>
 <li>ᵃ Unsupported geometry/scalar combinations are simply ignored; no results are reported for that geometry.</li>
 <li>ᵇ This uses an <em>iterative</em> algorithm which introduces a relatively large and variable error. For example, as the eccentricity of the ellipsoid increases, this error may get worse. It also depends on the location of the projection of the query point on the ellipsoid; the closer that point is to the high curvature area, the bigger the effect. It is not immediately clear how much worse the answer will get.</li>
+<li>ᶜ Only supports OBJ and tetrahedral VTK meshes. Unsupported meshes are simply ignored; no results are reported for that geometry. For OBJ meshes the surface mesh must satisfy specific requirements (see below). Unlike the other Shapes, witness points and gradients can be discontinuous on a mesh's exterior if it is non-convex.</li>
 </ul>
+<dl class="section pre"><dt>Precondition</dt><dd>The Mesh of a triangular surface mesh must be a closed manifold without duplicate vertices or self-intersection, and every triangle's face winding gives an outward-pointing face normal. Drake does not currently validate the input mesh with respect to these properties. Instead, it does a good-faith computation assuming the properties, possibly returning incorrect results. Non-compliant meshes will introduce regions in which the query point will report the wrong sign (and, therefore, the wrong gradient) due to a misclassification of being inside or outside. This leads to discontinuities in the distance field across the boundaries of these regions; the distance sign will flip while the magnitude of the distance value is arbitrarily far away from zero. For open meshes, the same principle holds. The open mesh, which has no true concept of "inside", will nevertheless report some query points as being inside.</dd>
+<dd>
+The Mesh of a tetrahedral volume mesh has positive-volume tetrahedra, no duplicate vertices, no self-intersection, and any two tetrahedra intersect in a common triangular face, edge, or vertex or not at all. A "tetrahedron soup" is, in general, non-compliant to this condition. Violating meshes will introduce areas inside the volumes that are incorrectly treated as boundary surfaces. The query points near such problematic areas will report the wrong nearest points, distances, and gradients.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>For a sphere G, the signed distance function φᵢ(p) has an undefined gradient vector at the center of the sphere&ndash;every point on the sphere's surface has the same distance to the center. In this case, we will assign ∇φᵢ(p) the unit vector Gx (x-directional vector of G's frame) expressed in World frame.</dd>
 <dd>
 For a box, at a point p on an edge or a corner of the box, the signed distance function φᵢ(p) has an undefined gradient vector. In this case, we will assign a unit vector in the direction of the average of the outward face unit normals of the incident faces of the edge or the corner. A point p is considered being on a face, or an edge, or a corner of the box if it lies within a certain tolerance from them.</dd>
@@ -883,7 +887,13 @@ For a convex object, outside the object at positive distance from the boundary, 
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">signed_distances</td><td>A vector populated with per-object signed distance values (and supporting data) for every supported geometry as shown in the table. See <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_to_point.html" title="The data for reporting the signed distance from a query point to a geometry.">SignedDistanceToPoint</a>. The ordering of the results is guaranteed to be consistent &ndash; for fixed geometry poses, the results will remain the same. </td></tr>
+    <tr><td class="paramname">signed_distances</td><td>A vector populated with per-object signed distance values (and supporting data) for every supported geometry as shown in the table. See <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_to_point.html" title="The data for reporting the signed distance from a query point to a geometry.">SignedDistanceToPoint</a>. The ordering of the results is guaranteed to be consistent &ndash; for fixed geometry poses, the results will remain the same.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if there are meshes with extremely sharp features where the calculation of feature normals become unstable. </td></tr>
   </table>
   </dd>
 </dl>
