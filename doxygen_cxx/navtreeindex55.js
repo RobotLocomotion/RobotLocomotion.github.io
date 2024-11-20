@@ -1,5 +1,9 @@
 var NAVTREEINDEX55 =
 {
+"group__templates.html":[1,6,5],
+"group__terminology__and__notation.html":[1,0],
+"group__visualization.html":[1,2,11],
+"group__visualization.html#ga34c9c8f0a78446ac29edf4a3202127c3":[1,2,11,9],
 "group__visualization.html#ga732349f929601b37e30b15ad557057e7":[1,2,11,10],
 "group__yaml__serialization.html":[1,6,4],
 "gurobi__solver_8h.html":[4,0,0,11,22],
@@ -245,9 +249,5 @@ var NAVTREEINDEX55 =
 "kinematics__vector_8h.html":[4,0,0,4,28],
 "kinematics__vector_8h.html#aa4d02909b70fea4c7cb0d0e62fa220a4":[4,0,0,4,28,1],
 "kinematics__vector_8h.html#ae94262ef74be53331dd7db2d6ffb246a":[4,0,0,4,28,2],
-"knot__vector__type_8h.html":[4,0,0,7,21],
-"knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2":[4,0,0,7,21,0],
-"knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50":[4,0,0,7,21,0,0],
-"knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2af1b493f6e43ce0d1371533ee4f1199d0":[4,0,0,7,21,0,1],
-"kuka__torque__controller_8h.html":[4,0,0,3,8,2]
+"knot__vector__type_8h.html":[4,0,0,7,21]
 };

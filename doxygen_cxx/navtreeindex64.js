@@ -1,5 +1,9 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html#af62d3b14337abc57cf36b03723d2724c":[3,0,0,6,1,2,1],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html":[3,0,0,6,1,3],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,6,1,3,0],
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#aacb5ccf2e46cbd92a8a4e308f40bd200":[3,0,0,6,1,3,2],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,6,1,3,4],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#ad60094399cbb136de80929f28b04b752":[3,0,0,6,1,3,1],
 "structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#af735af20e44916b94f485b352c97b308":[3,0,0,6,1,3,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#ab92ffdff0f2d44b618e368df195d3185":[1,4,2,2,1,0,1],
 "structdrake_1_1planning_1_1_collision_checker_params.html":[1,4,2,2,3],
 "structdrake_1_1planning_1_1_collision_checker_params.html#a2c29aca77709a64d537303e01282e71f":[1,4,2,2,3,5],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a35dcc56f9ad09e0a13d0bbb111554f32":[1,4,2,2,3,0],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a3a158076de3363e9927786d4732f3197":[1,4,2,2,3,7],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884":[1,4,2,2,3,2],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a97e6971c2938a484343028417a4614c9":[1,4,2,2,3,4],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a9e6dd7347da1885477cd5b895b47ce9a":[1,4,2,2,3,6]
+"structdrake_1_1planning_1_1_collision_checker_params.html#a35dcc56f9ad09e0a13d0bbb111554f32":[1,4,2,2,3,0]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX61 =
 {
+"sorted__pair_8h.html#a87d5210878ec865ee82bb87786eb996d":[4,0,0,1,62,4],
+"sorted__pair_8h.html#a98c59bc997ae44eeb4d45bc371b26f0a":[4,0,0,1,62,11],
+"sorted__pair_8h.html#aaaa975aac6050ca9507bf9761707c383":[4,0,0,1,62,10],
+"sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,62,6],
 "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,62,8],
 "sorted__pair__pybind_8h.html":[4,0,0,0,0,1,8],
 "sorted__triplet_8h.html":[4,0,0,4,2,58],
@@ -245,9 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ae48fdaa0013a64a07e1caaf8a6b66ec7":[3,0,0,3,4,5,5],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#af2ec6e39cde2a2ebae13657d96462b72":[3,0,0,3,4,5,1],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#afb6eb259e3f5d5095695d320b31e40d5":[3,0,0,3,4,5,3],
-"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html":[3,0,0,3,9,3],
-"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,9,3,0],
-"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a5c1d918dc22b5ef6cf169eb681e7eecf":[3,0,0,3,9,3,1],
-"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,9,3,2],
-"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a905b0fa1fb0e4a5334581d565fb2f8ec":[3,0,0,3,9,3,3]
+"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html":[3,0,0,3,9,3]
 };
