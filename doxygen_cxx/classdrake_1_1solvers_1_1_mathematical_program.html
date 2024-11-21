@@ -606,6 +606,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2d8cb6f80df46da27addddb91b9916b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html">LinearMatrixInequalityConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a2d8cb6f80df46da27addddb91b9916b8">AddLinearMatrixInequalityConstraint</a> (std::vector&lt; Eigen::MatrixXd &gt; F, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;vars)</td></tr>
 <tr class="memdesc:a2d8cb6f80df46da27addddb91b9916b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear matrix inequality constraint to the program.  <a href="#a2d8cb6f80df46da27addddb91b9916b8">More...</a><br /></td></tr>
 <tr class="separator:a2d8cb6f80df46da27addddb91b9916b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99404b6f3df6bf8650a59215803c5e75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html">LinearMatrixInequalityConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a99404b6f3df6bf8650a59215803c5e75">AddLinearMatrixInequalityConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;X)</td></tr>
+<tr class="memdesc:a99404b6f3df6bf8650a59215803c5e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear matrix inequality constraint on a symmetric matrix of symbolic expressions <code>X</code>, namely <code>X</code> is positive semidefinite, and each entry in <code>X</code> is a linear (affine) expression of decision variables.  <a href="#a99404b6f3df6bf8650a59215803c5e75">More...</a><br /></td></tr>
+<tr class="separator:a99404b6f3df6bf8650a59215803c5e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ef1689f39c06dc1a2520276fcd47c5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a5ef1689f39c06dc1a2520276fcd47c5b">AddPositiveDiagonallyDominantMatrixConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;X)</td></tr>
 <tr class="memdesc:a5ef1689f39c06dc1a2520276fcd47c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that a symmetric matrix is diagonally dominant with non-negative diagonal entries.  <a href="#a5ef1689f39c06dc1a2520276fcd47c5b">More...</a><br /></td></tr>
 <tr class="separator:a5ef1689f39c06dc1a2520276fcd47c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3675,7 +3678,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div>
 </div>
 <a id="a0a4cde582b9ec69ee068837000c1aff4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a4cde582b9ec69ee068837000c1aff4">&#9670;&nbsp;</a></span>AddLinearMatrixInequalityConstraint() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a4cde582b9ec69ee068837000c1aff4">&#9670;&nbsp;</a></span>AddLinearMatrixInequalityConstraint() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3705,7 +3708,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div>
 </div>
 <a id="a2d8cb6f80df46da27addddb91b9916b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d8cb6f80df46da27addddb91b9916b8">&#9670;&nbsp;</a></span>AddLinearMatrixInequalityConstraint() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d8cb6f80df46da27addddb91b9916b8">&#9670;&nbsp;</a></span>AddLinearMatrixInequalityConstraint() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3731,6 +3734,36 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div><div class="memdoc">
 
 <p>Adds a linear matrix inequality constraint to the program. </p>
+
+</div>
+</div>
+<a id="a99404b6f3df6bf8650a59215803c5e75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99404b6f3df6bf8650a59215803c5e75">&#9670;&nbsp;</a></span>AddLinearMatrixInequalityConstraint() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html">LinearMatrixInequalityConstraint</a>&gt; AddLinearMatrixInequalityConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>X</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a linear matrix inequality constraint on a symmetric matrix of symbolic expressions <code>X</code>, namely <code>X</code> is positive semidefinite, and each entry in <code>X</code> is a linear (affine) expression of decision variables. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X</td><td>Imposes constraint "X is positive semidefinite". </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>X is symmetric. </dd>
+<dd>
+X(i, j) is linear (affine) for all i, j</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The newly added linear matrix inequality constraint. </dd></dl>
 
 </div>
 </div>
@@ -4520,10 +4553,9 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>{1. e is symmetric.<ol type="1">
-<li>e(i, j) is linear for all i, j } </li>
-</ol>
-</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>e is symmetric. </dd>
+<dd>
+e(i, j) is linear for all i, j</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The newly added positive semidefinite constraint, with the bound variable M that are also newly added.</dd></dl>
 <p>For example, to add a constraint that </p><pre class="fragment">⌈x + 1  2x + 3 x+y⌉
 |2x+ 3       2   0| is positive semidefinite

@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html":[3,0,0,15,1,1],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a03438bfa4d94bde06f020fd03bf119f7":[3,0,0,15,1,1,4],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a06b4bf90f560eba55ebfe4c6c87092a4":[3,0,0,15,1,1,2],
 "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a2dddadb7fdc7410ae7d2d76e4934ff38":[3,0,0,15,1,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX66 =
 "structdrake_1_1visualization_1_1_visualization_config.html":[3,0,0,18,5],
 "structdrake_1_1visualization_1_1_visualization_config.html#a2c434dc8a30fc66fa14527eca76f38b5":[3,0,0,18,5,12],
 "structdrake_1_1visualization_1_1_visualization_config.html#a324b46940b15edda09af1d2d82f5125e":[3,0,0,18,5,6],
-"structdrake_1_1visualization_1_1_visualization_config.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,18,5,11],
-"structdrake_1_1visualization_1_1_visualization_config.html#a5d44e8cac1128d4f529473b3cd0526cf":[3,0,0,18,5,4]
+"structdrake_1_1visualization_1_1_visualization_config.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,18,5,11]
 };

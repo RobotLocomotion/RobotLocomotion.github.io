@@ -280,6 +280,7 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_hydroelastic_margin">drake:hydroelastic_margin</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_hydroelastic_modulus">drake:hydroelastic_modulus</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_ignored_collision_filter_group">drake:ignored_collision_filter_group</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_illustration_properties">drake:illustration_properties</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_joint">drake:joint</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_linear_bushing_rpy">drake:linear_bushing_rpy</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_member">drake:member</a></li>
@@ -289,12 +290,14 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_mu_dynamic">drake:mu_dynamic</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_mu_static">drake:mu_static</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_parent">drake:parent</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_perception_properties">drake:perception_properties</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_point_contact_stiffness">drake:point_contact_stiffness</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_proximity_properties">drake:proximity_properties</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_relaxation_time">drake:relaxation_time</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_rigid_hydroelastic">drake:rigid_hydroelastic</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_rotor_inertia">drake:rotor_inertia</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_screw_thread_pitch">drake:screw_thread_pitch</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_visual">drake:visual</a></li>
 </ul>
 <h2><a class="anchor" id="tag_drake_acceleration"></a>
 drake:acceleration</h2>
@@ -323,6 +326,8 @@ Semantics</h3>
 <li>Multiple instances of this tag are allowed. Each instance adds a renderer to the list of targeted renderers.</li>
 </ul>
 <p>This feature is one way to provide multiple visual representations of a body.</p>
+<p>Specifying this tag for a visual whose perception role has been disabled will emit a warning.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_perception_properties">drake:perception_properties</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_ball_constraint"></a>
 drake:ball_constraint</h2>
 <ul>
@@ -600,6 +605,20 @@ Semantics</h3>
 <p>The string names a collision filter group that will be paired with the parent group when constructing filtering rules. It may name the parent group.</p>
 <p>In SDFormat files only, the name may refer to a group within a nested model (either URDF or SDFormat) by using a scoped name.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_collision_filter_group">drake:collision_filter_group</a>, <a class="el" href="group__multibody__parsing.html#scoped_names">Scoped names</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_illustration_properties"></a>
+drake:illustration_properties</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/visual/drake:illustration_properties</code></li>
+<li>URDF path: n/a</li>
+<li>Syntax: Single attribute: <code>enabled</code> (bool).</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_illustration_properties_semantics"></a>
+Semantics</h3>
+<p><code>&lt;visual&gt;</code> geometries are assigned illustration roles by default. Their appearance in visualizers reflect the materials associated with the <code>&lt;visual&gt;</code> tag (or, as for meshes, the materials associated with the mesh). If no materials are defined, then they pick up whatever default materials the visualizers define. A <code>&lt;visual&gt;</code> tag can <em>opt out</em> of the illustration role by setting the <code>enabled</code> attribute to <code>false</code>. Setting it to <code>true</code> is equivalent to omitting the tag completely.</p>
+<p>Note: if a <code>&lt;visual&gt;</code> tag has disabled both illustration properties <em>and</em> perception properties, a warning will be emitted. Essentially, the model defines a geometry that would be consumed by typical loaders, but it has been completely disabled for Drake. The definition for Drake should <em>refine</em> the more generic model, but it shouldn't consist of an arbitrarily different set of visuals.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_perception_properties">drake:perception_properties</a> </dd>
+<dd>
+<a class="el" href="group__multibody__parsing.html#tag_drake_visual">drake:visual</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_joint"></a>
 drake:joint</h2>
 <ul>
@@ -699,6 +718,20 @@ drake:parent</h2>
 <li>URDF path: N/A</li>
 <li>Syntax: String.</li>
 </ul>
+<h2><a class="anchor" id="tag_drake_perception_properties"></a>
+drake:perception_properties</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/visual/drake:perception_properties</code></li>
+<li>URDF path: n/a</li>
+<li>Syntax: Single attribute: <code>enabled</code> (bool).</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_perception_properties_semantics"></a>
+Semantics</h3>
+<p><code>&lt;visual&gt;</code> geometries are assigned perception roles by default. Their appearance in renderers reflect the materials associated with the <code>&lt;visual&gt;</code> tag (or, as for meshes, the materials associated with the mesh). If no materials are defined, then they pick up whatever default materials the renderers define. A <code>&lt;visual&gt;</code> tag can <em>opt out</em> of the perception role by setting the <code>enabled</code> attribute to <code>false</code>. Setting it to <code>true</code> is equivalent to omitting the tag completely.</p>
+<p>Note: if a <code>&lt;visual&gt;</code> tag has disabled both perception properties <em>and</em> illustration properties, a warning will be emitted. Essentially, the model defines a geometry that would be consumed by typical loaders, but it has been completely disabled for Drake. The definition for Drake should <em>refine</em> the more generic model, but it shouldn't consist of an arbitrarily different set of visuals.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_illustration_properties">drake:illustration_properties</a> </dd>
+<dd>
+<a class="el" href="group__multibody__parsing.html#tag_drake_visual">drake:visual</a></dd></dl>
 <h3><a class="anchor" id="tag_drake_parent_semantics"></a>
 Semantics</h3>
 <p>The string names a frame (defined elsewhere in the model) that is associated with the parent link of the joint being defined.</p>
@@ -778,7 +811,30 @@ drake:screw_thread_pitch</h2>
 <h3><a class="anchor" id="tag_drake_screw_thread_pitch_semantics"></a>
 Semantics</h3>
 <p>Applies the indicated thread pitch value to the appropriate ScrewJoint object. This kinematic parameter specifies the axial distance traveled for each revolution of the joint. Units are m/revolution, with a positive value corresponding to a right-handed thread.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html" title="This joint models a screw joint allowing two bodies to rotate about one axis while translating along ...">drake::multibody::ScrewJoint</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html" title="This joint models a screw joint allowing two bodies to rotate about one axis while translating along ...">drake::multibody::ScrewJoint</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_visual"></a>
+drake:visual</h2>
+<ul>
+<li>SDFormat path: <code>//model/link</code></li>
+<li>URDF path: n/a</li>
+<li>Syntax: Identical to SDFormat's <code>&lt;visual&gt;</code> tag, but with the <code>drake</code> namespace prepended. All tags that can be found under the <code>&lt;visual&gt;</code> tag (e.g., <code>&lt;pose&gt;</code>, <code>&lt;geometry&gt;</code>, <code>&lt;sphere&gt;</code>, etc.) can be included under the <code>&lt;drake:visual&gt;</code> tag, provided they have the <code>drake</code> namespace affixed (e.g., <code>&lt;drake:pose&gt;</code>, <code>&lt;drake:geometry&gt;</code>, <code>&lt;drake:sphere&gt;</code>, etc.).</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_visual_semantics"></a>
+Semantics</h3>
+<p>The <code>&lt;drake:visual&gt;</code> tag is provided for the purpose of defining visual elements that only Drake will consume. This could be used to do Drake-specific augmentation of a model. But the main intended use case is for associating <em>different</em> geometries with a link based on its role. Use one geometry for the illustration role and another for the perception role. To use different geometries per role:</p>
+<ol type="1">
+<li>Choose the illustration and perception geometries.</li>
+<li>Decide which geometry you want to serve as the default geometry in other SDFormat loaders.</li>
+<li>Use the SDFormat <code>&lt;visual&gt;</code> tag for that default geometry (including all typical descendant tags).</li>
+<li>In the <code>&lt;visual&gt;</code> tag, include the <code>&lt;drake:??_properties&gt;</code> tag of the role this visual should <em>not</em> serve. Set its <code>enabled</code> attribute to <code>false</code>. Remember, by default the visual would get both roles, so you have to opt out of the role you don't want the geometry to have.</li>
+<li>As a sibling to that main <code>&lt;visual&gt;</code>, add a <code>&lt;drake:visual&gt;</code> tag and define its subtree as you normally would (making sure to prefix everything with the <code>drake:</code> namespace).</li>
+<li>Under the <code>&lt;drake:visual&gt;</code> tag, include the <em>other</em> <code>&lt;drake:??_properties&gt;</code> tag and set its <code>enabled</code> tag to <code>false</code>.</li>
+</ol>
+<p>This will allow Drake to use different visual representations for each visual role but still keep a more general SDFormat definition for other loaders.</p>
+<p>Note: disabling both visual roles on a <code>&lt;drake:visual&gt;</code> element will <em>not</em> emit a warning as it would for doing the same to a <code>&lt;visual&gt;</code> tag.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_perception_properties">drake:perception_properties</a> </dd>
+<dd>
+<a class="el" href="group__multibody__parsing.html#tag_drake_illustration_properties">drake:illustration_properties</a> </dd></dl>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

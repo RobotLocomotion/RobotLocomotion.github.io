@@ -8,7 +8,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_v_polytope =
     [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ab0523f84331ef73195b38a43b8d24519", null ],
     [ "~VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#af39035d161c3b21e796ed5ed8ee960da", null ],
     [ "CalcVolume", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a7a2847efc4f87e996464d9d71159e27b", null ],
-    [ "GetMinimalRepresentation", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ad5d589780714066f1e6a1118a8e5a83e", null ],
+    [ "GetMinimalRepresentation", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ab77cdc3c65cb978d81270a8f352e4287", null ],
     [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a92797706c9c2adb6329f1dce4c672d59", null ],
     [ "MakeBox", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a3f9ab23e6550deb5b0aed63101cac134", null ],
     [ "MakeUnitBox", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a35f094b504e82e46e049d81f5e39cc2f", null ],

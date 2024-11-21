@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"group__technical__notes.html":[1,6],
 "group__templates.html":[1,6,5],
 "group__terminology__and__notation.html":[1,0],
 "group__visualization.html":[1,2,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "kinematic__trajectory__optimization_8h.html":[4,0,0,10,4,4],
 "kinematics__vector_8h.html":[4,0,0,4,28],
 "kinematics__vector_8h.html#aa4d02909b70fea4c7cb0d0e62fa220a4":[4,0,0,4,28,1],
-"kinematics__vector_8h.html#ae94262ef74be53331dd7db2d6ffb246a":[4,0,0,4,28,2],
-"knot__vector__type_8h.html":[4,0,0,7,21]
+"kinematics__vector_8h.html#ae94262ef74be53331dd7db2d6ffb246a":[4,0,0,4,28,2]
 };

@@ -85,6 +85,7 @@ var classdrake_1_1solvers_1_1_mathematical_program =
     [ "AddLinearEqualityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a7ca8d2a20e1ba47d1c658613569eb447", null ],
     [ "AddLinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a0a4cde582b9ec69ee068837000c1aff4", null ],
     [ "AddLinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a2d8cb6f80df46da27addddb91b9916b8", null ],
+    [ "AddLinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a99404b6f3df6bf8650a59215803c5e75", null ],
     [ "AddLogDeterminantLowerBoundConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a7e35c9b87926fae59b8ff7995d70c8f6", null ],
     [ "AddLorentzConeConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#aa74cba04584b596f2c2ea8cb61c3539a", null ],
     [ "AddLorentzConeConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a9684f622903a0e38d1bf1ef8af6fcd51", null ],

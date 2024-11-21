@@ -4644,13 +4644,16 @@ used with commercial solvers (e.g. Gurobi and Mosek).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.VPolytope.GetMinimalRepresentation">
-<span class="sig-name descname"><span class="pre">GetMinimalRepresentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.VPolytope" title="pydrake.geometry.optimization.VPolytope"><span class="pre">pydrake.geometry.optimization.VPolytope</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.VPolytope" title="pydrake.geometry.optimization.VPolytope"><span class="pre">pydrake.geometry.optimization.VPolytope</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.GetMinimalRepresentation" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetMinimalRepresentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.VPolytope" title="pydrake.geometry.optimization.VPolytope"><span class="pre">pydrake.geometry.optimization.VPolytope</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1e-09</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.VPolytope" title="pydrake.geometry.optimization.VPolytope"><span class="pre">pydrake.geometry.optimization.VPolytope</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.GetMinimalRepresentation" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a new VPolytope whose vertices are guaranteed to be minimal,
 i.e., if we remove any point from its vertices, then the convex hull
 of the remaining vertices is a strict subset of the polytope. In the
 2D case the vertices of the new VPolytope are ordered
 counter-clockwise from the negative X axis. For all other cases an
-order is not guaranteed.</p>
+order is not guaranteed. If the VPolytope is not full-dimensional, we
+perform computations in a coordinate system of its affine hull.
+<code class="docutils literal notranslate"><span class="pre">tol</span></code> specifies the numerical tolerance used in the computation of
+the affine hull.</p>
 </dd></dl>
 
 <dl class="py method">

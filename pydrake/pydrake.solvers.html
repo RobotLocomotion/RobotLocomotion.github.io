@@ -3856,8 +3856,32 @@ bound variables.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddLinearMatrixInequalityConstraint">
-<span class="sig-name descname"><span class="pre">AddLinearMatrixInequalityConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">F</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.LinearMatrixInequalityConstraint" title="pydrake.solvers.LinearMatrixInequalityConstraint"><span class="pre">LinearMatrixInequalityConstraint</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddLinearMatrixInequalityConstraint" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a linear matrix inequality constraint to the program.</p>
+<span class="sig-name descname"><span class="pre">AddLinearMatrixInequalityConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.MathematicalProgram.AddLinearMatrixInequalityConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddLinearMatrixInequalityConstraint(self: pydrake.solvers.MathematicalProgram, F: list[numpy.ndarray[numpy.float64[m, n]]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.Binding[LinearMatrixInequalityConstraint]</p></li>
+</ol>
+<p>Adds a linear matrix inequality constraint to the program.</p>
+<ol class="arabic simple" start="2">
+<li><p>AddLinearMatrixInequalityConstraint(self: pydrake.solvers.MathematicalProgram, X: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.Binding[LinearMatrixInequalityConstraint]</p></li>
+</ol>
+<p>Adds a linear matrix inequality constraint on a symmetric matrix of
+symbolic expressions <code class="docutils literal notranslate"><span class="pre">X</span></code>, namely <code class="docutils literal notranslate"><span class="pre">X</span></code> is positive semidefinite, and
+each entry in <code class="docutils literal notranslate"><span class="pre">X</span></code> is a linear (affine) expression of decision
+variables.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X</span></code>:</dt><dd><p>Imposes constraint “X is positive semidefinite”.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>X is symmetric.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>X(i, j) is linear (affine) for all i, j</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The newly added linear matrix inequality constraint.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -4204,7 +4228,9 @@ constraint e == M.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt><dd><p>Imposes constraint “e is positive semidefinite”.</p>
 </dd>
-<dt>Precondition:</dt><dd><p>{1. e is symmetric. 2. e(i, j) is linear for all i, j }</p>
+<dt>Precondition:</dt><dd><p>e is symmetric.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>e(i, j) is linear for all i, j</p>
 </dd>
 </dl>
 <dl class="field-list simple">

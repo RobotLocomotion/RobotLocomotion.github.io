@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"structdrake_1_1visualization_1_1_visualization_config.html#a5d44e8cac1128d4f529473b3cd0526cf":[3,0,0,18,5,4],
 "structdrake_1_1visualization_1_1_visualization_config.html#a6cc253079efa6db9739c1cea2ded8862":[3,0,0,18,5,5],
 "structdrake_1_1visualization_1_1_visualization_config.html#a7c5955d58750f444fbad0c39fb6f7672":[3,0,0,18,5,1],
 "structdrake_1_1visualization_1_1_visualization_config.html#a8de496c6a641ed6fd4fa5d78bfcb73a9":[3,0,0,18,5,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX67 =
 "triangle__surface__mesh_8h.html":[4,0,0,4,2,60],
 "triangle__surface__mesh_8h.html#a1b6e179f892df67543be3028eae06fb9":[4,0,0,4,2,60,3],
 "triangle__surface__mesh__field_8h.html":[4,0,0,4,2,61],
-"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,61,0],
-"trigonometric__polynomial_8h.html":[4,0,0,1,3,17]
+"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,61,0]
 };
