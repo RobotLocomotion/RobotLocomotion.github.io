@@ -200,6 +200,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_from_clique_cover_options.html">IrisFromCliqueCoverOptions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html" title="IrisZoOptions collects all parameters for the IRIS-ZO algorithm.">IrisZoOptions</a> collects all parameters for the IRIS-ZO algorithm.  <a href="structdrake_1_1planning_1_1_iris_zo_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html">LinearDistanceAndInterpolationProvider</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents a basic "linear" implementation of <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a>.  <a href="classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,6 +255,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ace53f3f8045d8eb96867bcd6eda63ed0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ace53f3f8045d8eb96867bcd6eda63ed0">IrisInConfigurationSpaceFromCliqueCover</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;checker, const <a class="el" href="structdrake_1_1planning_1_1_iris_from_clique_cover_options.html">IrisFromCliqueCoverOptions</a> &amp;options, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &gt; *sets, const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">planning::graph_algorithms::MaxCliqueSolverBase</a> *max_clique_solver=nullptr)</td></tr>
 <tr class="memdesc:ace53f3f8045d8eb96867bcd6eda63ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cover the configuration space in Iris regions using the Visibility Clique Cover Algorithm as described in.  <a href="#ace53f3f8045d8eb96867bcd6eda63ed0">More...</a><br /></td></tr>
 <tr class="separator:ace53f3f8045d8eb96867bcd6eda63ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a0dc24bc708c206708b8af86c38baff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#a7a0dc24bc708c206708b8af86c38baff">IrisZo</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;checker, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">geometry::optimization::Hyperellipsoid</a> &amp;starting_ellipsoid, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &amp;domain, const <a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a> &amp;options=<a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a>())</td></tr>
+<tr class="memdesc:a7a0dc24bc708c206708b8af86c38baff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IRIS-ZO (Iterative Regional Inflation by Semidefinite programming - Zero Order) algorithm, as described in.  <a href="#a7a0dc24bc708c206708b8af86c38baff">More...</a><br /></td></tr>
+<tr class="separator:a7a0dc24bc708c206708b8af86c38baff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae64c8241a2f657927f3bd69119e3ba4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1planning_1_1_zmp_test_traj.html">ZmpTestTraj</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1planning.html#ae64c8241a2f657927f3bd69119e3ba4b">SimulateZmpPolicy</a> (const <a class="el" href="classdrake_1_1planning_1_1_zmp_planner.html">ZmpPlanner</a> &amp;zmp_planner, const Eigen::Vector4d &amp;x0, <a class="el" href="classdouble.html">double</a> dt, <a class="el" href="classdouble.html">double</a> extra_time_at_the_end)</td></tr>
 <tr class="memdesc:ae64c8241a2f657927f3bd69119e3ba4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward simulation using the linear policy from <code>zmp_planner</code> starting from the initial condition <code>x0</code> using explicit Euler integration.  <a href="#ae64c8241a2f657927f3bd69119e3ba4b">More...</a><br /></td></tr>
 <tr class="separator:ae64c8241a2f657927f3bd69119e3ba4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -424,6 +430,63 @@ T: 3 * ss + 2 * ds, knots: fs[2]
 </dl>
 <p>If nullptr is passed as the <code>max_clique_solver</code>, then max clique will be solved using an instance of MaxCliqueSolverViaGreedy, which is a fast heuristic. If higher quality cliques are desired, consider changing the solver to an instance of MaxCliqueSolverViaMip. Currently, the padding in the collision checker is not forwarded to the algorithm, and therefore the final regions do not necessarily respect this padding. Effectively, this means that the regions are generated as if the padding is set to 0. This behavior may be adjusted in the future at the resolution of #18830.</p>
 <p>Note that MaxCliqueSolverViaMip requires the availability of a Mixed-Integer Linear Programming solver (e.g. Gurobi and/or Mosek). We recommend enabling those solvers if possible because they produce higher quality cliques (<a href="https://drake.mit.edu/bazel.html#proprietary_solvers">https://drake.mit.edu/bazel.html#proprietary_solvers</a>). The method will throw if <code>max_clique_solver</code> cannot solve the max clique problem. </p>
+
+</div>
+</div>
+<a id="a7a0dc24bc708c206708b8af86c38baff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a0dc24bc708c206708b8af86c38baff">&#9670;&nbsp;</a></span>IrisZo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> drake::planning::IrisZo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;&#160;</td>
+          <td class="paramname"><em>checker</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">geometry::optimization::Hyperellipsoid</a> &amp;&#160;</td>
+          <td class="paramname"><em>starting_ellipsoid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &amp;&#160;</td>
+          <td class="paramname"><em>domain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The IRIS-ZO (Iterative Regional Inflation by Semidefinite programming - Zero Order) algorithm, as described in. </p>
+<p>P. Werner, T. Cohn*, R. H. Jiang*, T. Seyde, M. Simchowitz, R. Tedrake, and D. Rus, "Faster Algorithms for Growing Collision-Free Convex Polytopes in Robot
+Configuration Space," &#160;* Denotes equal contribution.</p>
+<p><a href="https://groups.csail.mit.edu/robotics-center/public_papers/Werner24.pdf">https://groups.csail.mit.edu/robotics-center/public_papers/Werner24.pdf</a></p>
+<p>This algorithm constructs probabilistically collision-free polytopes in robot configuration space while only relying on a collision checker. The sets are constructed using a simple parallel zero-order optimization strategy. The produced polytope P is probabilistically collision-free in the sense that one gets to control the probability δ that the fraction of the volume-in-collision is larger than ε</p>
+<p>Pr[λ(P\Cfree)/λ(P) &gt; ε] ⋞ δ.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">starting_ellipsoid</td><td>provides the initial ellipsoid around which to grow the region. This is typically a small ball around a collision-free configuration (e.g. Hyperellipsoid::MakeHyperSphere(radius, seed_point)). The center of this ellipsoid is required to be collision-free. </td></tr>
+    <tr><td class="paramname">domain</td><td>describes the total region of interest; computed IRIS regions will be inside this domain. It must be bounded, and is typically a simple bounding box representing joint limits (e.g. from HPolyhedron::MakeBox). </td></tr>
+    <tr><td class="paramname">options</td><td>contains algorithm parameters such as the desired collision-free fraction, confidence level, and various algorithmic settings.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>starting_ellipsoid</code> and <code>domain</code> must describe elements in the same ambient dimension as the configuration space of the robot. </p><dl class="section return"><dt>Returns</dt><dd>A HPolyhedron representing the computed collision-free region in configuration space.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
 
 </div>
 </div>

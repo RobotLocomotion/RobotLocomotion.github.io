@@ -10,6 +10,7 @@ var namespacedrake_1_1planning =
     [ "DistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html", "classdrake_1_1planning_1_1_distance_and_interpolation_provider" ],
     [ "EdgeMeasure", "classdrake_1_1planning_1_1_edge_measure.html", "classdrake_1_1planning_1_1_edge_measure" ],
     [ "IrisFromCliqueCoverOptions", "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html", "structdrake_1_1planning_1_1_iris_from_clique_cover_options" ],
+    [ "IrisZoOptions", "structdrake_1_1planning_1_1_iris_zo_options.html", "structdrake_1_1planning_1_1_iris_zo_options" ],
     [ "LinearDistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html", "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider" ],
     [ "RobotClearance", "classdrake_1_1planning_1_1_robot_clearance.html", "classdrake_1_1planning_1_1_robot_clearance" ],
     [ "RobotDiagram", "classdrake_1_1planning_1_1_robot_diagram.html", "classdrake_1_1planning_1_1_robot_diagram" ],

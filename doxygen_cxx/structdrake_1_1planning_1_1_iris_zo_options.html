@@ -1,0 +1,622 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: IrisZoOptions Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdrake_1_1planning_1_1_iris_zo_options.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structdrake_1_1planning_1_1_iris_zo_options-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">IrisZoOptions Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html" title="IrisZoOptions collects all parameters for the IRIS-ZO algorithm.">IrisZoOptions</a> collects all parameters for the IRIS-ZO algorithm. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1planning.html#a7a0dc24bc708c206708b8af86c38baff" title="The IRIS-ZO (Iterative Regional Inflation by Semidefinite programming - Zero Order) algorithm,...">IrisZo</a> for more details. </dd></dl>
+</div>
+<p><code>#include &lt;drake/planning/iris/iris_zo.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
+<tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54c52842ea8daec426a70226d67c0f7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a54c52842ea8daec426a70226d67c0f7d">IrisZoOptions</a> ()=default</td></tr>
+<tr class="separator:a54c52842ea8daec426a70226d67c0f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:acf574bc864f7f0fc111320f1d6c449d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#acf574bc864f7f0fc111320f1d6c449d5">num_particles</a> = 1e3</td></tr>
+<tr class="memdesc:acf574bc864f7f0fc111320f1d6c449d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of particles used to estimate the closest collision.  <a href="#acf574bc864f7f0fc111320f1d6c449d5">More...</a><br /></td></tr>
+<tr class="separator:acf574bc864f7f0fc111320f1d6c449d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f7c26321910a384f6f0d37910858a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#ae5f7c26321910a384f6f0d37910858a2">tau</a> = 0.5</td></tr>
+<tr class="memdesc:ae5f7c26321910a384f6f0d37910858a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decision threshold for the unadaptive test.  <a href="#ae5f7c26321910a384f6f0d37910858a2">More...</a><br /></td></tr>
+<tr class="separator:ae5f7c26321910a384f6f0d37910858a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea1a8f5ef3e6d20b362385e1288c72c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a9ea1a8f5ef3e6d20b362385e1288c72c">delta</a> = 5e-2</td></tr>
+<tr class="memdesc:a9ea1a8f5ef3e6d20b362385e1288c72c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper bound on the probability the returned region has a fraction-in-collision greater than <code>epsilon</code>.  <a href="#a9ea1a8f5ef3e6d20b362385e1288c72c">More...</a><br /></td></tr>
+<tr class="separator:a9ea1a8f5ef3e6d20b362385e1288c72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4904cc82627458fdf6672ccc0b2802c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a4904cc82627458fdf6672ccc0b2802c7">epsilon</a> = 1e-2</td></tr>
+<tr class="memdesc:a4904cc82627458fdf6672ccc0b2802c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Admissible fraction of the region volume allowed to be in collision.  <a href="#a4904cc82627458fdf6672ccc0b2802c7">More...</a><br /></td></tr>
+<tr class="separator:a4904cc82627458fdf6672ccc0b2802c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac936df25b000061667b0f6222488ece8"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#ac936df25b000061667b0f6222488ece8">containment_points</a> {std::nullopt}</td></tr>
+<tr class="memdesc:ac936df25b000061667b0f6222488ece8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Points that are guaranteed to be contained in the final region provided their convex hull is collision free.  <a href="#ac936df25b000061667b0f6222488ece8">More...</a><br /></td></tr>
+<tr class="separator:ac936df25b000061667b0f6222488ece8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82eead8e5a402b5c5da8b449073bad45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a82eead8e5a402b5c5da8b449073bad45">max_iterations</a> {3}</td></tr>
+<tr class="memdesc:a82eead8e5a402b5c5da8b449073bad45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of alternations between the ellipsoid and the separating planes step (a.k.a.  <a href="#a82eead8e5a402b5c5da8b449073bad45">More...</a><br /></td></tr>
+<tr class="separator:a82eead8e5a402b5c5da8b449073bad45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8c4127673f3ded233ec38b010ef8f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#aae8c4127673f3ded233ec38b010ef8f4">max_iterations_separating_planes</a> {20}</td></tr>
+<tr class="memdesc:aae8c4127673f3ded233ec38b010ef8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of rounds of adding faces to the polytope per outer iteration.  <a href="#aae8c4127673f3ded233ec38b010ef8f4">More...</a><br /></td></tr>
+<tr class="separator:aae8c4127673f3ded233ec38b010ef8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a453b11ce4f8e1460d19b014b83569257"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a453b11ce4f8e1460d19b014b83569257">max_separating_planes_per_iteration</a> {-1}</td></tr>
+<tr class="memdesc:a453b11ce4f8e1460d19b014b83569257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of faces to add per inner iteration.  <a href="#a453b11ce4f8e1460d19b014b83569257">More...</a><br /></td></tr>
+<tr class="separator:a453b11ce4f8e1460d19b014b83569257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8087faf86b2fa08aae91525960c7b32f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a8087faf86b2fa08aae91525960c7b32f">bisection_steps</a> {10}</td></tr>
+<tr class="memdesc:a8087faf86b2fa08aae91525960c7b32f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of bisection steps.  <a href="#a8087faf86b2fa08aae91525960c7b32f">More...</a><br /></td></tr>
+<tr class="separator:a8087faf86b2fa08aae91525960c7b32f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56caacfcfc31a58bbbce672c955e976"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#ad56caacfcfc31a58bbbce672c955e976">parallelism</a> {<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()}</td></tr>
+<tr class="memdesc:ad56caacfcfc31a58bbbce672c955e976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of threads to use when updating the particles.  <a href="#ad56caacfcfc31a58bbbce672c955e976">More...</a><br /></td></tr>
+<tr class="separator:ad56caacfcfc31a58bbbce672c955e976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3f078684998b83967d507d0f453f454"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#ab3f078684998b83967d507d0f453f454">verbose</a> {false}</td></tr>
+<tr class="memdesc:ab3f078684998b83967d507d0f453f454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables print statements indicating the progress of IrisZo.  <a href="#ab3f078684998b83967d507d0f453f454">More...</a><br /></td></tr>
+<tr class="separator:ab3f078684998b83967d507d0f453f454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20906a34b629e819d5d8a8df41638c2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a20906a34b629e819d5d8a8df41638c2d">require_sample_point_is_contained</a> {true}</td></tr>
+<tr class="memdesc:a20906a34b629e819d5d8a8df41638c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The initial polytope is guaranteed to contain the point if that point is collision-free.  <a href="#a20906a34b629e819d5d8a8df41638c2d">More...</a><br /></td></tr>
+<tr class="separator:a20906a34b629e819d5d8a8df41638c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033befdd75124d17abb45b56c75a71db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a033befdd75124d17abb45b56c75a71db">configuration_space_margin</a> {1e-2}</td></tr>
+<tr class="memdesc:a033befdd75124d17abb45b56c75a71db"><td class="mdescLeft">&#160;</td><td class="mdescRight">We retreat by this margin from each C-space obstacle in order to avoid the possibility of requiring an infinite number of faces to approximate a curved boundary.  <a href="#a033befdd75124d17abb45b56c75a71db">More...</a><br /></td></tr>
+<tr class="separator:a033befdd75124d17abb45b56c75a71db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a479517bfa7e6c3d669c72380924ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a11a479517bfa7e6c3d669c72380924ca">termination_threshold</a> {2e-2}</td></tr>
+<tr class="memdesc:a11a479517bfa7e6c3d669c72380924ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this threshold.  <a href="#a11a479517bfa7e6c3d669c72380924ca">More...</a><br /></td></tr>
+<tr class="separator:a11a479517bfa7e6c3d669c72380924ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49f1367efbb0c0efddaec6ed273e8bb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a49f1367efbb0c0efddaec6ed273e8bb7">relative_termination_threshold</a> {1e-3}</td></tr>
+<tr class="memdesc:a49f1367efbb0c0efddaec6ed273e8bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this percent of the previous best volume.  <a href="#a49f1367efbb0c0efddaec6ed273e8bb7">More...</a><br /></td></tr>
+<tr class="separator:a49f1367efbb0c0efddaec6ed273e8bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9059bc845096b2f05414a66c836b4ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#ad9059bc845096b2f05414a66c836b4ee">random_seed</a> {1234}</td></tr>
+<tr class="memdesc:ad9059bc845096b2f05414a66c836b4ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">This option sets the random seed for random sampling throughout the algorithm.  <a href="#ad9059bc845096b2f05414a66c836b4ee">More...</a><br /></td></tr>
+<tr class="separator:ad9059bc845096b2f05414a66c836b4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a111e7545f0a4fcae1b8a52fec666594a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a111e7545f0a4fcae1b8a52fec666594a">mixing_steps</a> {50}</td></tr>
+<tr class="memdesc:a111e7545f0a4fcae1b8a52fec666594a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of mixing steps used for hit-and-run sampling.  <a href="#a111e7545f0a4fcae1b8a52fec666594a">More...</a><br /></td></tr>
+<tr class="separator:a111e7545f0a4fcae1b8a52fec666594a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d3f3fe2646745a5ac6eea6e3692c1c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html#a48d3f3fe2646745a5ac6eea6e3692c1c">meshcat</a> {}</td></tr>
+<tr class="memdesc:a48d3f3fe2646745a5ac6eea6e3692c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passing a meshcat instance may enable debugging visualizations; this currently and when the configuration space is &lt;= 3 dimensional.  <a href="#a48d3f3fe2646745a5ac6eea6e3692c1c">More...</a><br /></td></tr>
+<tr class="separator:a48d3f3fe2646745a5ac6eea6e3692c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a54c52842ea8daec426a70226d67c0f7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54c52842ea8daec426a70226d67c0f7d">&#9670;&nbsp;</a></span>IrisZoOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. Note: This only serializes options that are YAML built-in types. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8087faf86b2fa08aae91525960c7b32f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8087faf86b2fa08aae91525960c7b32f">&#9670;&nbsp;</a></span>bisection_steps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> bisection_steps {10}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of bisection steps. </p>
+
+</div>
+</div>
+<a id="a033befdd75124d17abb45b56c75a71db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a033befdd75124d17abb45b56c75a71db">&#9670;&nbsp;</a></span>configuration_space_margin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> configuration_space_margin {1e-2}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>We retreat by this margin from each C-space obstacle in order to avoid the possibility of requiring an infinite number of faces to approximate a curved boundary. </p>
+
+</div>
+</div>
+<a id="ac936df25b000061667b0f6222488ece8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac936df25b000061667b0f6222488ece8">&#9670;&nbsp;</a></span>containment_points</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;Eigen::MatrixXd&gt; containment_points {std::nullopt}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Points that are guaranteed to be contained in the final region provided their convex hull is collision free. </p>
+<p>Note that if the containment points are closer than configuration_margin to an obstacle we will relax the margin in favor of including the containment points. The matrix <code>containment_points</code> is expected to be of the shape dimension times number of points. IrisZo throws if the center of the starting ellipsoid is not contained in the convex hull of these containment points. </p>
+
+</div>
+</div>
+<a id="a9ea1a8f5ef3e6d20b362385e1288c72c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea1a8f5ef3e6d20b362385e1288c72c">&#9670;&nbsp;</a></span>delta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> delta = 5e-2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Upper bound on the probability the returned region has a fraction-in-collision greater than <code>epsilon</code>. </p>
+
+</div>
+</div>
+<a id="a4904cc82627458fdf6672ccc0b2802c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4904cc82627458fdf6672ccc0b2802c7">&#9670;&nbsp;</a></span>epsilon</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> epsilon = 1e-2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Admissible fraction of the region volume allowed to be in collision. </p>
+
+</div>
+</div>
+<a id="a82eead8e5a402b5c5da8b449073bad45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82eead8e5a402b5c5da8b449073bad45">&#9670;&nbsp;</a></span>max_iterations</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> max_iterations {3}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of alternations between the ellipsoid and the separating planes step (a.k.a. </p>
+<p>outer iterations). </p>
+
+</div>
+</div>
+<a id="aae8c4127673f3ded233ec38b010ef8f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae8c4127673f3ded233ec38b010ef8f4">&#9670;&nbsp;</a></span>max_iterations_separating_planes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> max_iterations_separating_planes {20}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of rounds of adding faces to the polytope per outer iteration. </p>
+
+</div>
+</div>
+<a id="a453b11ce4f8e1460d19b014b83569257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a453b11ce4f8e1460d19b014b83569257">&#9670;&nbsp;</a></span>max_separating_planes_per_iteration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> max_separating_planes_per_iteration {-1}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum number of faces to add per inner iteration. </p>
+<p>Setting the value to -1 means there is no limit to the number of faces that can be added. </p>
+
+</div>
+</div>
+<a id="a48d3f3fe2646745a5ac6eea6e3692c1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d3f3fe2646745a5ac6eea6e3692c1c">&#9670;&nbsp;</a></span>meshcat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a>&gt; meshcat {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passing a meshcat instance may enable debugging visualizations; this currently and when the configuration space is &lt;= 3 dimensional. </p>
+
+</div>
+</div>
+<a id="a111e7545f0a4fcae1b8a52fec666594a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111e7545f0a4fcae1b8a52fec666594a">&#9670;&nbsp;</a></span>mixing_steps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> mixing_steps {50}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of mixing steps used for hit-and-run sampling. </p>
+
+</div>
+</div>
+<a id="acf574bc864f7f0fc111320f1d6c449d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf574bc864f7f0fc111320f1d6c449d5">&#9670;&nbsp;</a></span>num_particles</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_particles = 1e3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of particles used to estimate the closest collision. </p>
+
+</div>
+</div>
+<a id="ad56caacfcfc31a58bbbce672c955e976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56caacfcfc31a58bbbce672c955e976">&#9670;&nbsp;</a></span>parallelism</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism {<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>()}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of threads to use when updating the particles. </p>
+<p>If the user requests more threads than the <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> supports, that number of threads will be used instead. </p>
+
+</div>
+</div>
+<a id="ad9059bc845096b2f05414a66c836b4ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9059bc845096b2f05414a66c836b4ee">&#9670;&nbsp;</a></span>random_seed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> random_seed {1234}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This option sets the random seed for random sampling throughout the algorithm. </p>
+
+</div>
+</div>
+<a id="a49f1367efbb0c0efddaec6ed273e8bb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49f1367efbb0c0efddaec6ed273e8bb7">&#9670;&nbsp;</a></span>relative_termination_threshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> relative_termination_threshold {1e-3}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this percent of the previous best volume. </p>
+<p>This termination condition can be disabled by setting to a negative value. </p>
+
+</div>
+</div>
+<a id="a20906a34b629e819d5d8a8df41638c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20906a34b629e819d5d8a8df41638c2d">&#9670;&nbsp;</a></span>require_sample_point_is_contained</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool require_sample_point_is_contained {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The initial polytope is guaranteed to contain the point if that point is collision-free. </p>
+
+</div>
+</div>
+<a id="ae5f7c26321910a384f6f0d37910858a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f7c26321910a384f6f0d37910858a2">&#9670;&nbsp;</a></span>tau</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> tau = 0.5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decision threshold for the unadaptive test. </p>
+<p>Choosing a small value increases both the cost and the power statistical test. Increasing the value of <code>tau</code> makes running an individual test cheaper but decreases its power to accept a polytope. We find choosing a value of 0.5 a good trade-off. </p>
+
+</div>
+</div>
+<a id="a11a479517bfa7e6c3d669c72380924ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a479517bfa7e6c3d669c72380924ca">&#9670;&nbsp;</a></span>termination_threshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> termination_threshold {2e-2}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this threshold. </p>
+<p>This termination condition can be disabled by setting to a negative value. </p>
+
+</div>
+</div>
+<a id="ab3f078684998b83967d507d0f453f454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f078684998b83967d507d0f453f454">&#9670;&nbsp;</a></span>verbose</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool verbose {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables print statements indicating the progress of IrisZo. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>drake/planning/iris/<a class="el" href="iris__zo_8h.html">iris_zo.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1planning.html">planning</a></li><li class="navelem"><a class="el" href="structdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

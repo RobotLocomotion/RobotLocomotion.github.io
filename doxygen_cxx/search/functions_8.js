@@ -100,6 +100,8 @@ var searchData=
   ['iris',['Iris',['../group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6',1,'drake::geometry::optimization']]],
   ['irisinconfigurationspace',['IrisInConfigurationSpace',['../group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8',1,'drake::geometry::optimization']]],
   ['irisinconfigurationspacefromcliquecover',['IrisInConfigurationSpaceFromCliqueCover',['../namespacedrake_1_1planning.html#ace53f3f8045d8eb96867bcd6eda63ed0',1,'drake::planning']]],
+  ['iriszo',['IrisZo',['../namespacedrake_1_1planning.html#a7a0dc24bc708c206708b8af86c38baff',1,'drake::planning']]],
+  ['iriszooptions',['IrisZoOptions',['../structdrake_1_1planning_1_1_iris_zo_options.html#a54c52842ea8daec426a70226d67c0f7d',1,'drake::planning::IrisZoOptions']]],
   ['is_5fabs',['is_abs',['../namespacedrake_1_1symbolic.html#a942b47a07cae421b3152f11536e6579c',1,'drake::symbolic::is_abs(const Expression &amp;e)'],['../namespacedrake_1_1symbolic.html#a8e6c5829257cf5c28c162ffad2bd3f58',1,'drake::symbolic::is_abs(const ExpressionCell &amp;c)']]],
   ['is_5facos',['is_acos',['../namespacedrake_1_1symbolic.html#ac2fcf1da78e47a4afb20e0a4e85ac7dd',1,'drake::symbolic::is_acos(const Expression &amp;e)'],['../namespacedrake_1_1symbolic.html#aa70b034dae56512552b00315c20edaf4',1,'drake::symbolic::is_acos(const ExpressionCell &amp;c)']]],
   ['is_5faddition',['is_addition',['../namespacedrake_1_1symbolic.html#acdaf0abb22b9280fc9622bd2d488a3e1',1,'drake::symbolic::is_addition(const Expression &amp;e)'],['../namespacedrake_1_1symbolic.html#ae9dfc929a3e771ece5e5d20312e96abd',1,'drake::symbolic::is_addition(const ExpressionCell &amp;c)']]],

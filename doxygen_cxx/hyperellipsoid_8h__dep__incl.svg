@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 732;
+var viewWidth = 914;
 var viewHeight = 240;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,14 +54,14 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>drake/geometry/optimization/hyperellipsoid.h</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-236 728,-236 728,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-236 910,-236 910,4 -4,4"/>
 <!-- Node176 -->
 <g id="node1" class="node">
 <title>Node176</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="440,-201.5 440,-231.5 598,-231.5 598,-201.5 440,-201.5"/>
-<text text-anchor="start" x="448" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/optimization</text>
-<text text-anchor="middle" x="519" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">/hyperellipsoid.h</text>
+<polygon fill="#bfbfbf" stroke="black" points="641,-201.5 641,-231.5 799,-231.5 799,-201.5 641,-201.5"/>
+<text text-anchor="start" x="649" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/optimization</text>
+<text text-anchor="middle" x="720" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">/hyperellipsoid.h</text>
 </a>
 </g>
 </g>
@@ -69,33 +69,49 @@ var sectionId = 'dynsection-1';
 <g id="node2" class="node">
 <title>Node177</title>
 <g id="a_node2"><a xlink:href="hpolyhedron_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="352,-134.5 352,-164.5 510,-164.5 510,-134.5 352,-134.5"/>
-<text text-anchor="start" x="360" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/optimization</text>
-<text text-anchor="middle" x="431" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/hpolyhedron.h</text>
+<polygon fill="white" stroke="black" points="459,-134.5 459,-164.5 617,-164.5 617,-134.5 459,-134.5"/>
+<text text-anchor="start" x="467" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/optimization</text>
+<text text-anchor="middle" x="538" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/hpolyhedron.h</text>
 </a>
 </g>
 </g>
 <!-- Node176&#45;&gt;Node177 -->
 <g id="edge1" class="edge">
 <title>Node176&#45;&gt;Node177</title>
-<path fill="none" stroke="midnightblue" d="M491.86,-195.45C478.32,-185.45 462.27,-173.6 450.06,-164.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="489.78,-198.27 499.91,-201.4 493.94,-192.64 489.78,-198.27"/>
+<path fill="none" stroke="midnightblue" d="M670.87,-197.96C641.56,-187.48 604.82,-174.37 577.41,-164.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="669.91,-201.33 680.51,-201.4 672.27,-194.74 669.91,-201.33"/>
 </g>
 <!-- Node184 -->
 <g id="node9" class="node">
 <title>Node184</title>
-<g id="a_node9"><a xlink:href="iris__internal_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="528,-134.5 528,-164.5 686,-164.5 686,-134.5 528,-134.5"/>
-<text text-anchor="start" x="536" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/optimization</text>
-<text text-anchor="middle" x="607" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/iris_internal.h</text>
+<g id="a_node9"><a xlink:href="iris__zo_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="741.5,-67.5 741.5,-97.5 848.5,-97.5 848.5,-67.5 741.5,-67.5"/>
+<text text-anchor="start" x="749.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/planning/iris</text>
+<text text-anchor="middle" x="795" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/iris_zo.h</text>
 </a>
 </g>
 </g>
 <!-- Node176&#45;&gt;Node184 -->
-<g id="edge9" class="edge">
+<g id="edge11" class="edge">
 <title>Node176&#45;&gt;Node184</title>
-<path fill="none" stroke="midnightblue" d="M546.14,-195.45C559.68,-185.45 575.73,-173.6 587.94,-164.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="544.06,-192.64 538.09,-201.4 548.22,-198.27 544.06,-192.64"/>
+<path fill="none" stroke="midnightblue" d="M721.83,-191.06C723.99,-174.07 728.7,-151.45 739,-134 747.65,-119.34 761.95,-106.55 773.94,-97.51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="718.32,-190.98 720.74,-201.29 725.28,-191.71 718.32,-190.98"/>
+</g>
+<!-- Node185 -->
+<g id="node10" class="node">
+<title>Node185</title>
+<g id="a_node10"><a xlink:href="iris__internal_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="748,-134.5 748,-164.5 906,-164.5 906,-134.5 748,-134.5"/>
+<text text-anchor="start" x="756" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/geometry/optimization</text>
+<text text-anchor="middle" x="827" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/iris_internal.h</text>
+</a>
+</g>
+</g>
+<!-- Node176&#45;&gt;Node185 -->
+<g id="edge10" class="edge">
+<title>Node176&#45;&gt;Node185</title>
+<path fill="none" stroke="midnightblue" d="M752.08,-196.02C768.73,-185.9 788.69,-173.77 803.83,-164.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="749.95,-193.21 743.22,-201.4 753.58,-199.2 749.95,-193.21"/>
 </g>
 <!-- Node178 -->
 <g id="node3" class="node">
@@ -110,8 +126,8 @@ var sectionId = 'dynsection-1';
 <!-- Node177&#45;&gt;Node178 -->
 <g id="edge2" class="edge">
 <title>Node177&#45;&gt;Node178</title>
-<path fill="none" stroke="midnightblue" d="M345.16,-132.65C287.07,-121.92 211.04,-107.88 155.11,-97.55"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="344.59,-136.1 355.05,-134.48 345.86,-129.22 344.59,-136.1"/>
+<path fill="none" stroke="midnightblue" d="M448.29,-137C373.09,-127.2 262.93,-112.43 167,-98 164.09,-97.56 161.13,-97.11 158.14,-96.65"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="448.29,-140.53 458.66,-138.35 449.2,-133.59 448.29,-140.53"/>
 </g>
 <!-- Node179 -->
 <g id="node4" class="node">
@@ -126,8 +142,8 @@ var sectionId = 'dynsection-1';
 <!-- Node177&#45;&gt;Node179 -->
 <g id="edge3" class="edge">
 <title>Node177&#45;&gt;Node179</title>
-<path fill="none" stroke="midnightblue" d="M383.12,-130.82C354.83,-120.37 319.51,-107.32 293.11,-97.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="382.22,-134.21 392.81,-134.4 384.64,-127.65 382.22,-134.21"/>
+<path fill="none" stroke="midnightblue" d="M466.97,-132.19C420.62,-121.54 360.73,-107.78 316.44,-97.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="466.41,-135.65 476.94,-134.48 467.98,-128.83 466.41,-135.65"/>
 </g>
 <!-- Node181 -->
 <g id="node6" class="node">
@@ -142,8 +158,8 @@ var sectionId = 'dynsection-1';
 <!-- Node177&#45;&gt;Node181 -->
 <g id="edge5" class="edge">
 <title>Node177&#45;&gt;Node181</title>
-<path fill="none" stroke="midnightblue" d="M431,-124.11C431,-115.15 431,-105.32 431,-97.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="427.5,-124.4 431,-134.4 434.5,-124.4 427.5,-124.4"/>
+<path fill="none" stroke="midnightblue" d="M505.92,-129.02C489.27,-118.9 469.31,-106.77 454.17,-97.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="504.42,-132.2 514.78,-134.4 508.05,-126.21 504.42,-132.2"/>
 </g>
 <!-- Node182 -->
 <g id="node7" class="node">
@@ -158,8 +174,8 @@ var sectionId = 'dynsection-1';
 <!-- Node177&#45;&gt;Node182 -->
 <g id="edge8" class="edge">
 <title>Node177&#45;&gt;Node182</title>
-<path fill="none" stroke="midnightblue" d="M483.89,-129.7C497.75,-122.09 511.03,-111.75 519,-98 532.04,-75.48 512.61,-47.17 497.9,-30.54"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="482.09,-126.69 474.75,-134.32 485.25,-132.93 482.09,-126.69"/>
+<path fill="none" stroke="midnightblue" d="M534.83,-124.43C532.06,-107.78 527.17,-85.41 519,-67 513.12,-53.74 503.61,-40.32 495.98,-30.64"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="531.39,-125.08 536.36,-134.44 538.31,-124.02 531.39,-125.08"/>
 </g>
 <!-- Node183 -->
 <g id="node8" class="node">
@@ -174,8 +190,14 @@ var sectionId = 'dynsection-1';
 <!-- Node177&#45;&gt;Node183 -->
 <g id="edge7" class="edge">
 <title>Node177&#45;&gt;Node183</title>
-<path fill="none" stroke="midnightblue" d="M487.15,-131.44C521.84,-120.91 565.82,-107.55 598.54,-97.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="485.72,-128.22 477.17,-134.48 487.76,-134.92 485.72,-128.22"/>
+<path fill="none" stroke="midnightblue" d="M570.08,-129.02C586.73,-118.9 606.69,-106.77 621.83,-97.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="567.95,-126.21 561.22,-134.4 571.58,-132.2 567.95,-126.21"/>
+</g>
+<!-- Node177&#45;&gt;Node184 -->
+<g id="edge9" class="edge">
+<title>Node177&#45;&gt;Node184</title>
+<path fill="none" stroke="midnightblue" d="M603.2,-132.01C645.97,-121.19 701.21,-107.22 741.41,-97.05"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="602.29,-128.63 593.45,-134.48 604,-135.42 602.29,-128.63"/>
 </g>
 <!-- Node180 -->
 <g id="node5" class="node">

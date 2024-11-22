@@ -3433,6 +3433,201 @@ will throw if <code class="docutils literal notranslate"><span class="pre">max_c
 problem.</p>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZo">
+<span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisZo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><span class="pre">pydrake.planning.CollisionChecker</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_ellipsoid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Hyperellipsoid" title="pydrake.geometry.optimization.Hyperellipsoid"><span class="pre">pydrake.geometry.optimization.Hyperellipsoid</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">IrisZoOptions(num_particles=1000,</span> <span class="pre">tau=0.5,</span> <span class="pre">delta=0.05,</span> <span class="pre">epsilon=0.01,</span> <span class="pre">max_iterations=3,</span> <span class="pre">max_iterations_separating_planes=20,</span> <span class="pre">max_separating_planes_per_iteration=-</span> <span class="pre">1,</span> <span class="pre">bisection_steps=10,</span> <span class="pre">parallelism=Parallelism(num_threads=16),</span> <span class="pre">verbose=False,</span> <span class="pre">require_sample_point_is_contained=True,</span> <span class="pre">configuration_space_margin=0.01,</span> <span class="pre">termination_threshold=0.02,</span> <span class="pre">relative_termination_threshold=0.001,</span> <span class="pre">random_seed=1234,</span> <span class="pre">mixing_steps=50)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></span><a class="headerlink" href="#pydrake.planning.IrisZo" title="Permalink to this definition"></a></dt>
+<dd><p>The IRIS-ZO (Iterative Regional Inflation by Semidefinite programming
+- Zero Order) algorithm, as described in</p>
+<p>P. Werner, T. Cohn*, R. H. Jiang*, T. Seyde, M. Simchowitz, R.
+Tedrake, and D. Rus, “Faster Algorithms for Growing Collision-Free
+Convex Polytopes in Robot Configuration Space,” &amp;nbsp;* Denotes equal
+contribution.</p>
+<p><a class="reference external" href="https://groups.csail.mit.edu/robotics-center/public_papers/Werner24.pdf">https://groups.csail.mit.edu/robotics-center/public_papers/Werner24.pdf</a></p>
+<p>This algorithm constructs probabilistically collision-free polytopes
+in robot configuration space while only relying on a collision
+checker. The sets are constructed using a simple parallel zero-order
+optimization strategy. The produced polytope P is probabilistically
+collision-free in the sense that one gets to control the probability δ
+that the fraction of the volume-in-collision is larger than ε</p>
+<p>Pr[λ(PCfree)/λ(P) &gt; ε] ⋞ δ.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">starting_ellipsoid</span></code>:</dt><dd><p>provides the initial ellipsoid around which to grow the region.
+This is typically a small ball around a collision-free
+configuration (e.g. Hyperellipsoid::MakeHyperSphere(radius,
+seed_point)). The center of this ellipsoid is required to be
+collision-free.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">domain</span></code>:</dt><dd><p>describes the total region of interest; computed IRIS regions will
+be inside this domain. It must be bounded, and is typically a
+simple bounding box representing joint limits (e.g. from
+HPolyhedron::MakeBox).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>contains algorithm parameters such as the desired collision-free
+fraction, confidence level, and various algorithmic settings.</p>
+</dd>
+</dl>
+<p>The <code class="docutils literal notranslate"><span class="pre">starting_ellipsoid</span></code> and <code class="docutils literal notranslate"><span class="pre">domain</span></code> must describe elements in
+the same ambient dimension as the configuration space of the robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A HPolyhedron representing the computed collision-free region in
+configuration space. $Warning:</p>
+</dd>
+</dl>
+<p>This feature is considered to be <strong>experimental</strong> and may change or be
+removed at any time, without any deprecation notice ahead of time.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisZoOptions</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions" title="Permalink to this definition"></a></dt>
+<dd><p>IrisZoOptions collects all parameters for the IRIS-ZO algorithm.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>IrisZo for more details.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.bisection_steps">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bisection_steps</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.bisection_steps" title="Permalink to this definition"></a></dt>
+<dd><p>Maximum number of bisection steps.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.configuration_space_margin">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configuration_space_margin</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.configuration_space_margin" title="Permalink to this definition"></a></dt>
+<dd><p>We retreat by this margin from each C-space obstacle in order to avoid
+the possibility of requiring an infinite number of faces to
+approximate a curved boundary.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.containment_points">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">containment_points</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.containment_points" title="Permalink to this definition"></a></dt>
+<dd><p>Points that are guaranteed to be contained in the final region
+provided their convex hull is collision free. Note that if the
+containment points are closer than configuration_margin to an obstacle
+we will relax the margin in favor of including the containment points.
+The matrix <code class="docutils literal notranslate"><span class="pre">containment_points</span></code> is expected to be of the shape
+dimension times number of points. IrisZo throws if the center of the
+starting ellipsoid is not contained in the convex hull of these
+containment points.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.delta">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delta</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.delta" title="Permalink to this definition"></a></dt>
+<dd><p>Upper bound on the probability the returned region has a
+fraction-in-collision greater than <code class="docutils literal notranslate"><span class="pre">epsilon</span></code>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.epsilon">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epsilon</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.epsilon" title="Permalink to this definition"></a></dt>
+<dd><p>Admissible fraction of the region volume allowed to be in collision.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.max_iterations">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.max_iterations" title="Permalink to this definition"></a></dt>
+<dd><p>Maximum number of alternations between the ellipsoid and the
+separating planes step (a.k.a. outer iterations).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.max_iterations_separating_planes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations_separating_planes</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.max_iterations_separating_planes" title="Permalink to this definition"></a></dt>
+<dd><p>Maximum number of rounds of adding faces to the polytope per outer
+iteration.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.max_separating_planes_per_iteration">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_separating_planes_per_iteration</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.max_separating_planes_per_iteration" title="Permalink to this definition"></a></dt>
+<dd><p>Maximum number of faces to add per inner iteration. Setting the value
+to -1 means there is no limit to the number of faces that can be
+added.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.mixing_steps">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mixing_steps</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.mixing_steps" title="Permalink to this definition"></a></dt>
+<dd><p>Number of mixing steps used for hit-and-run sampling.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.num_particles">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_particles</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.num_particles" title="Permalink to this definition"></a></dt>
+<dd><p>Number of particles used to estimate the closest collision.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.parallelism">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelism</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.parallelism" title="Permalink to this definition"></a></dt>
+<dd><p>Number of threads to use when updating the particles. If the user
+requests more threads than the CollisionChecker supports, that number
+of threads will be used instead.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.random_seed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">random_seed</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.random_seed" title="Permalink to this definition"></a></dt>
+<dd><p>This option sets the random seed for random sampling throughout the
+algorithm.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.relative_termination_threshold">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">relative_termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.relative_termination_threshold" title="Permalink to this definition"></a></dt>
+<dd><p>IRIS will terminate if the change in the <em>volume</em> of the
+hyperellipsoid between iterations is less that this percent of the
+previous best volume. This termination condition can be disabled by
+setting to a negative value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.require_sample_point_is_contained">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">require_sample_point_is_contained</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.require_sample_point_is_contained" title="Permalink to this definition"></a></dt>
+<dd><p>The initial polytope is guaranteed to contain the point if that point
+is collision-free.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.tau">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tau</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.tau" title="Permalink to this definition"></a></dt>
+<dd><p>Decision threshold for the unadaptive test. Choosing a small value
+increases both the cost and the power statistical test. Increasing the
+value of <code class="docutils literal notranslate"><span class="pre">tau</span></code> makes running an individual test cheaper but
+decreases its power to accept a polytope. We find choosing a value of
+0.5 a good trade-off.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.termination_threshold">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.termination_threshold" title="Permalink to this definition"></a></dt>
+<dd><p>IRIS will terminate if the change in the <em>volume</em> of the
+hyperellipsoid between iterations is less that this threshold. This
+termination condition can be disabled by setting to a negative value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.verbose">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.verbose" title="Permalink to this definition"></a></dt>
+<dd><p>Enables print statements indicating the progress of IrisZo.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">KinematicTrajectoryOptimization</span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization" title="Permalink to this definition"></a></dt>

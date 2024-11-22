@@ -208,6 +208,8 @@ var NAVTREEINDEX55 =
 "iris__from__clique__cover_8h.html":[4,0,0,10,1,0],
 "iris__from__clique__cover_8h.html#ace53f3f8045d8eb96867bcd6eda63ed0":[4,0,0,10,1,0,1],
 "iris__internal_8h.html":[4,0,0,4,1,20],
+"iris__zo_8h.html":[4,0,0,10,1,1],
+"iris__zo_8h.html#a7a0dc24bc708c206708b8af86c38baff":[4,0,0,10,1,1,1],
 "is__approx__equal__abstol_8h.html":[4,0,0,1,43],
 "is__approx__equal__abstol_8h.html#a3cd8151cc95b5b95de9a9b882e27ed84":[4,0,0,1,43,0],
 "is__approx__equal__abstol_8h.html#ab8c3f5f0514513155be9f674f2c2cd63":[4,0,0,1,43,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX55 =
 "kalman__filter_8h.html#gaffc5a5eabe473ebd57f96b0310d70ed8":[4,0,0,12,2,0,2],
 "kinematic__evaluator__utilities_8h.html":[4,0,0,8,4,12],
 "kinematic__trajectory__optimization_8h.html":[4,0,0,10,4,4],
-"kinematics__vector_8h.html":[4,0,0,4,28],
-"kinematics__vector_8h.html#aa4d02909b70fea4c7cb0d0e62fa220a4":[4,0,0,4,28,1],
-"kinematics__vector_8h.html#ae94262ef74be53331dd7db2d6ffb246a":[4,0,0,4,28,2]
+"kinematics__vector_8h.html":[4,0,0,4,28]
 };

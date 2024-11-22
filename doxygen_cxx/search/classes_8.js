@@ -55,6 +55,7 @@ var searchData=
   ['ipoptsolverdetails',['IpoptSolverDetails',['../structdrake_1_1solvers_1_1_ipopt_solver_details.html',1,'drake::solvers']]],
   ['irisfromcliquecoveroptions',['IrisFromCliqueCoverOptions',['../structdrake_1_1planning_1_1_iris_from_clique_cover_options.html',1,'drake::planning']]],
   ['irisoptions',['IrisOptions',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html',1,'drake::geometry::optimization']]],
+  ['iriszooptions',['IrisZoOptions',['../structdrake_1_1planning_1_1_iris_zo_options.html',1,'drake::planning']]],
   ['is_5feigen_5fnonvector_5fexpression_5fdouble_5fpair',['is_eigen_nonvector_expression_double_pair',['../structdrake_1_1is__eigen__nonvector__expression__double__pair.html',1,'drake']]],
   ['is_5feigen_5fnonvector_5fof',['is_eigen_nonvector_of',['../structdrake_1_1is__eigen__nonvector__of.html',1,'drake']]],
   ['is_5feigen_5fscalar_5fsame',['is_eigen_scalar_same',['../structdrake_1_1is__eigen__scalar__same.html',1,'drake']]],
