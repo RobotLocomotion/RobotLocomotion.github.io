@@ -106,7 +106,7 @@ var classdrake_1_1solvers_1_1_mathematical_program =
     [ "AddPositiveSemidefiniteConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a4d8e0acb745cee5f6b8bb25248511406", null ],
     [ "AddPositiveSemidefiniteConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a8f8ae66a7dc32a53fad92f348f127439", null ],
     [ "AddPrincipalSubmatrixIsPsdConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a7401191d71f583717a795aeb2c689845", null ],
-    [ "AddPrincipalSubmatrixIsPsdConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a7c8272bd2661933757cd8a0ae5c036b8", null ],
+    [ "AddPrincipalSubmatrixIsPsdConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a99cba841165e2f839e0c16cbe47adc41", null ],
     [ "AddQuadraticAsRotatedLorentzConeConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a7b12192393b9a53b4fd484ede7d52381", null ],
     [ "AddQuadraticConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a5e9c7c53a27e3daa802449b105d51b71", null ],
     [ "AddQuadraticConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a5dc247437ed57ce071d93220f28d801f", null ],

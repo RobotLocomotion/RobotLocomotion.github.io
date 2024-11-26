@@ -594,9 +594,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7401191d71f583717a795aeb2c689845"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html">PositiveSemidefiniteConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a7401191d71f583717a795aeb2c689845">AddPrincipalSubmatrixIsPsdConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a> &gt; &amp;symmetric_matrix_var, const std::set&lt; <a class="el" href="classint.html">int</a> &gt; &amp;minor_indices)</td></tr>
 <tr class="memdesc:a7401191d71f583717a795aeb2c689845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint that the principal submatrix of a symmetric matrix composed of the indices in minor_indices is positive semidefinite.  <a href="#a7401191d71f583717a795aeb2c689845">More...</a><br /></td></tr>
 <tr class="separator:a7401191d71f583717a795aeb2c689845"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c8272bd2661933757cd8a0ae5c036b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html">PositiveSemidefiniteConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a7c8272bd2661933757cd8a0ae5c036b8">AddPrincipalSubmatrixIsPsdConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;e, const std::set&lt; <a class="el" href="classint.html">int</a> &gt; &amp;minor_indices)</td></tr>
-<tr class="memdesc:a7c8272bd2661933757cd8a0ae5c036b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint the that the principal submatrix of a symmetric matrix of expressions composed of the indices in minor_indices is positive semidefinite.  <a href="#a7c8272bd2661933757cd8a0ae5c036b8">More...</a><br /></td></tr>
-<tr class="separator:a7c8272bd2661933757cd8a0ae5c036b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99cba841165e2f839e0c16cbe47adc41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html">LinearMatrixInequalityConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a99cba841165e2f839e0c16cbe47adc41">AddPrincipalSubmatrixIsPsdConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;e, const std::set&lt; <a class="el" href="classint.html">int</a> &gt; &amp;minor_indices)</td></tr>
+<tr class="memdesc:a99cba841165e2f839e0c16cbe47adc41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint the that the principal submatrix of a symmetric matrix of expressions composed of the indices in minor_indices is positive semidefinite.  <a href="#a99cba841165e2f839e0c16cbe47adc41">More...</a><br /></td></tr>
+<tr class="separator:a99cba841165e2f839e0c16cbe47adc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a204ca1afa3b89cbcacb88162fb4007d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html">LinearMatrixInequalityConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a204ca1afa3b89cbcacb88162fb4007d7">AddConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html">LinearMatrixInequalityConstraint</a> &gt; &amp;binding)</td></tr>
 <tr class="memdesc:a204ca1afa3b89cbcacb88162fb4007d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear matrix inequality constraint to the program.  <a href="#a204ca1afa3b89cbcacb88162fb4007d7">More...</a><br /></td></tr>
 <tr class="separator:a204ca1afa3b89cbcacb88162fb4007d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4560,7 +4560,8 @@ e(i, j) is linear for all i, j</dd></dl>
 <p>For example, to add a constraint that </p><pre class="fragment">⌈x + 1  2x + 3 x+y⌉
 |2x+ 3       2   0| is positive semidefinite
 ⌊x + y       0   x⌋
-</pre><p> The user could call </p><div class="fragment"><div class="line">Matrix3&lt;symbolic::Expression&gt; e</div><div class="line">e &lt;&lt; <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>+1, 2*<a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>+3, <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>+y,</div><div class="line">     2*<a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>+3,   2,   0,</div><div class="line">     <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>+y,     0,   <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>;</div><div class="line">prog.AddPositiveSemidefiniteConstraint(e);</div></div><!-- fragment --> 
+</pre><p> The user could call </p><div class="fragment"><div class="line">Matrix3&lt;symbolic::Expression&gt; e</div><div class="line">e &lt;&lt; <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>+1, 2*<a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>+3, <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>+y,</div><div class="line">     2*<a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>+3,   2,   0,</div><div class="line">     <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>+y,     0,   <a class="code" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>;</div><div class="line">prog.AddPositiveSemidefiniteConstraint(e);</div></div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>This function will add additional variables and linear equality constraints. Consider calling AddLinearMatrixInequalityConstraint(e), which doesn't introduce new variables or linear equality constraints. </dd></dl>
+
 </div>
 </div>
 <a id="a7401191d71f583717a795aeb2c689845"></a>
@@ -4599,18 +4600,18 @@ All values in <code>minor_indices</code> lie in the range [0, symmetric_matrix_v
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a4d8e0acb745cee5f6b8bb25248511406" title="Adds a positive semidefinite constraint on a symmetric matrix.">AddPositiveSemidefiniteConstraint</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a4d8e0acb745cee5f6b8bb25248511406" title="Adds a positive semidefinite constraint on a symmetric matrix.">AddPositiveSemidefiniteConstraint</a> </dd></dl>
 
 </div>
 </div>
-<a id="a7c8272bd2661933757cd8a0ae5c036b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c8272bd2661933757cd8a0ae5c036b8">&#9670;&nbsp;</a></span>AddPrincipalSubmatrixIsPsdConstraint() <span class="overload">[2/2]</span></h2>
+<a id="a99cba841165e2f839e0c16cbe47adc41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99cba841165e2f839e0c16cbe47adc41">&#9670;&nbsp;</a></span>AddPrincipalSubmatrixIsPsdConstraint() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html">PositiveSemidefiniteConstraint</a>&gt; AddPrincipalSubmatrixIsPsdConstraint </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html">LinearMatrixInequalityConstraint</a>&gt; AddPrincipalSubmatrixIsPsdConstraint </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>e</em>, </td>
@@ -4639,7 +4640,8 @@ All values in <code>minor_indices</code> lie in the range [0, symmetric_matrix_v
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a4d8e0acb745cee5f6b8bb25248511406" title="Adds a positive semidefinite constraint on a symmetric matrix.">AddPositiveSemidefiniteConstraint</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a0a4cde582b9ec69ee068837000c1aff4" title="Adds a linear matrix inequality constraint to the program.">AddLinearMatrixInequalityConstraint</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>the return type is Binding&lt;LinearMatrixInequalityConstraint&gt;, different from the overloaded function above which returns Binding&lt;PositiveSemidefiniteConstraint&gt;. We impose the constraint as an LMI so as to add fewer additional variables and constraints. </dd></dl>
 
 </div>
 </div>

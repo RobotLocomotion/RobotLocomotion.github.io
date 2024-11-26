@@ -4250,7 +4250,14 @@ The user could call</p>
 <span class="n">prog</span><span class="p">.</span><span class="n">AddPositiveSemidefiniteConstraint</span><span class="p">(</span><span class="n">e</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details></dd></dl>
+</details><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function will add additional variables and linear equality
+constraints. Consider calling
+AddLinearMatrixInequalityConstraint(e), which doesn’t introduce
+new variables or linear equality constraints.</p>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.MathematicalProgram.AddPrincipalSubmatrixIsPsdConstraint">
@@ -4272,10 +4279,10 @@ symmetric_matrix_var.rows() - 1].</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>AddPositiveSemidefiniteConstraint.</p>
+<p>AddPositiveSemidefiniteConstraint</p>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>AddPrincipalSubmatrixIsPsdConstraint(self: pydrake.solvers.MathematicalProgram, arg0: numpy.ndarray[object[m, n], flags.f_contiguous], arg1: set[int]) -&gt; pydrake.solvers.Binding[PositiveSemidefiniteConstraint]</p></li>
+<li><p>AddPrincipalSubmatrixIsPsdConstraint(self: pydrake.solvers.MathematicalProgram, arg0: numpy.ndarray[object[m, n], flags.f_contiguous], arg1: set[int]) -&gt; pydrake.solvers.Binding[LinearMatrixInequalityConstraint]</p></li>
 </ol>
 <p>Adds a constraint the that the principal submatrix of a symmetric
 matrix of expressions composed of the indices in minor_indices is
@@ -4291,7 +4298,14 @@ symmetric_matrix_var.rows() - 1].</p>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>AddPositiveSemidefiniteConstraint.</p>
+<p>AddLinearMatrixInequalityConstraint.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the return type is Binding&lt;LinearMatrixInequalityConstraint&gt;,
+different from the overloaded function above which returns
+Binding&lt;PositiveSemidefiniteConstraint&gt;. We impose the constraint
+as an LMI so as to add fewer additional variables and constraints.</p>
 </div>
 </dd></dl>
 
