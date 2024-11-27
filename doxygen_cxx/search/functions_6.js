@@ -777,7 +777,7 @@ var searchData=
   ['getparameters',['GetParameters',['../classdrake_1_1systems_1_1_multilayer_perceptron.html#a5bdd4d4f07c9c594d136288d3156ed57',1,'drake::systems::MultilayerPerceptron']]],
   ['getparentframe',['GetParentFrame',['../classdrake_1_1geometry_1_1_geometry_state.html#aca30abcce190c0618f4b6e57f7f56658',1,'drake::geometry::GeometryState::GetParentFrame()'],['../classdrake_1_1geometry_1_1_scene_graph_inspector.html#aca30abcce190c0618f4b6e57f7f56658',1,'drake::geometry::SceneGraphInspector::GetParentFrame()']]],
   ['getparentframeid',['GetParentFrameId',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a4ace9f6058eade222fdc602d377fd307',1,'drake::systems::sensors::RgbdSensor']]],
-  ['getparentplant',['GetParentPlant',['../classdrake_1_1multibody_1_1_multibody_element.html#a310da1a776ff08627f2f658ff2a6da11',1,'drake::multibody::MultibodyElement']]],
+  ['getparentplant',['GetParentPlant',['../classdrake_1_1multibody_1_1_multibody_element.html#a2a52d0e7da46a2d5f8e43812c2a0c389',1,'drake::multibody::MultibodyElement']]],
   ['getparenttreesystem',['GetParentTreeSystem',['../classdrake_1_1multibody_1_1_multibody_element.html#a3df812307c45b93543b2cef9fec2c3be',1,'drake::multibody::MultibodyElement']]],
   ['getpath',['GetPath',['../classdrake_1_1multibody_1_1_package_map.html#a92aba2d00ca04be3c0d858b2c4d862b5',1,'drake::multibody::PackageMap']]],
   ['getpathdescription',['GetPathDescription',['../classdrake_1_1systems_1_1_cache_entry_value.html#afc308e75ca3c442b81fe13a2d985a77b',1,'drake::systems::CacheEntryValue::GetPathDescription()'],['../classdrake_1_1systems_1_1_dependency_tracker.html#afc308e75ca3c442b81fe13a2d985a77b',1,'drake::systems::DependencyTracker::GetPathDescription()']]],

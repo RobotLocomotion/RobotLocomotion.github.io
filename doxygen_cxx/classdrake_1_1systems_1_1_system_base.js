@@ -58,6 +58,7 @@ var classdrake_1_1systems_1_1_system_base =
     [ "implicit_time_derivatives_residual_size", "classdrake_1_1systems_1_1_system_base.html#aba0bd9017cbe1fbf0f02912f0d45fd10", null ],
     [ "InitializeContextBase", "classdrake_1_1systems_1_1_system_base.html#a0eb74936487f1ae4658b54979195fa1b", null ],
     [ "input_port_ticket", "classdrake_1_1systems_1_1_system_base.html#a191b7cb5dcbfee51a62fa042ec14561f", null ],
+    [ "IsObviouslyNotInputDependent", "classdrake_1_1systems_1_1_system_base.html#ae0773c5cc1799bd669111705a476b052", null ],
     [ "ke_ticket", "classdrake_1_1systems_1_1_system_base.html#a66e1d9af27119011a497b78df6907b1a", null ],
     [ "kinematics_ticket", "classdrake_1_1systems_1_1_system_base.html#a1291b5091aa55dbd03c9b5944dbced09", null ],
     [ "MakeFixInputPortTypeChecker", "classdrake_1_1systems_1_1_system_base.html#a68edc113d25e053c138ab15996332664", null ],

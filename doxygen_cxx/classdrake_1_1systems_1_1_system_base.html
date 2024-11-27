@@ -339,6 +339,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a161f7073ea98c0a25ca55f5dd4186dca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a161f7073ea98c0a25ca55f5dd4186dca">assign_next_dependency_ticket</a> ()</td></tr>
 <tr class="memdesc:a161f7073ea98c0a25ca55f5dd4186dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Assigns the next unused dependency ticket number, unique only within a particular system.  <a href="#a161f7073ea98c0a25ca55f5dd4186dca">More...</a><br /></td></tr>
 <tr class="separator:a161f7073ea98c0a25ca55f5dd4186dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0773c5cc1799bd669111705a476b052"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ae0773c5cc1799bd669111705a476b052">IsObviouslyNotInputDependent</a> (<a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> dependency_ticket) const</td></tr>
+<tr class="memdesc:ae0773c5cc1799bd669111705a476b052"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Checks if a ticket depends on (any) input port.  <a href="#ae0773c5cc1799bd669111705a476b052">More...</a><br /></td></tr>
+<tr class="separator:ae0773c5cc1799bd669111705a476b052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68edc113d25e053c138ab15996332664"><td class="memItemLeft" align="right" valign="top">virtual std::function&lt; void(const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a68edc113d25e053c138ab15996332664">MakeFixInputPortTypeChecker</a> (<a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> port_index) const =0</td></tr>
 <tr class="memdesc:a68edc113d25e053c138ab15996332664"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given a <code>port_index</code>, returns a function to be called when validating <a class="el" href="classdrake_1_1systems_1_1_context_base.html#a415588e5494582fba4c5504ccc2ae795" title="(Advanced) Connects the input port at index to a FixedInputPortValue with the given abstract value.">Context::FixInputPort</a> requests.  <a href="#a68edc113d25e053c138ab15996332664">More...</a><br /></td></tr>
 <tr class="separator:a68edc113d25e053c138ab15996332664"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2208,6 +2211,35 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 <p>Returns a ticket indicating dependence on input port uᵢ indicated by <code>index</code>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code>index</code> selects an existing input port of this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ae0773c5cc1799bd669111705a476b052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0773c5cc1799bd669111705a476b052">&#9670;&nbsp;</a></span>IsObviouslyNotInputDependent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsObviouslyNotInputDependent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td>
+          <td class="paramname"><em>dependency_ticket</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Checks if a ticket depends on (any) input port. </p>
+<p>When this returns "true" the ticket MUST NOT depend on input. When this returns "false", it just means that we're not sure. This is intended to be an inexpensive check, withough searching the entire graph. </p>
 
 </div>
 </div>

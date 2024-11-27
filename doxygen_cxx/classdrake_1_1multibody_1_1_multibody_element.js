@@ -13,7 +13,7 @@ var classdrake_1_1multibody_1_1_multibody_element =
     [ "DoSetDefaultParameters", "classdrake_1_1multibody_1_1_multibody_element.html#ac10aa21a51e7dc4d31f33397cce842a3", null ],
     [ "DoSetTopology", "classdrake_1_1multibody_1_1_multibody_element.html#a7a5738fd3df2c9ea052b3c8312262071", null ],
     [ "get_parent_tree", "classdrake_1_1multibody_1_1_multibody_element.html#acf452ebe0b6b98c3ee73e04b6963feba", null ],
-    [ "GetParentPlant", "classdrake_1_1multibody_1_1_multibody_element.html#a310da1a776ff08627f2f658ff2a6da11", null ],
+    [ "GetParentPlant", "classdrake_1_1multibody_1_1_multibody_element.html#a2a52d0e7da46a2d5f8e43812c2a0c389", null ],
     [ "GetParentTreeSystem", "classdrake_1_1multibody_1_1_multibody_element.html#a3df812307c45b93543b2cef9fec2c3be", null ],
     [ "index_impl", "classdrake_1_1multibody_1_1_multibody_element.html#aded9a9cca94a35fc5ab0eb794ecfb6f9", null ],
     [ "model_instance", "classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50", null ],

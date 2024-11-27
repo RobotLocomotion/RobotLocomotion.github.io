@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"polynomial__basis_8h.html#a83a29f70485ada14c4bba67192ac4efc":[4,0,0,1,3,12,0],
 "polynomial__basis__element_8h.html":[4,0,0,1,3,13],
 "polynomial__types__pybind_8h.html":[4,0,0,0,0,14],
 "populate__ball__plant_8h.html":[4,0,0,3,11,3,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "robot__model_8h.html#ac72a634e745e32ca2633a8dbd7081f78":[4,0,0,8,12,2,4],
 "robot__model_8h.html#aeb2cfc6c945092ef6e7101b9c7d66434":[4,0,0,8,12,2,3],
 "robot__plan__interpolator_8h.html":[4,0,0,6,3,4],
-"robot__plan__interpolator_8h.html#ab43604da4098c31437718f710e587e4f":[4,0,0,6,3,4,0],
-"robot__plan__interpolator_8h.html#ab43604da4098c31437718f710e587e4fa8232d35debc647f3ab20f0c31e9beb8c":[4,0,0,6,3,4,0,0]
+"robot__plan__interpolator_8h.html#ab43604da4098c31437718f710e587e4f":[4,0,0,6,3,4,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"structdrake_1_1test_1_1_limit_malloc_params.html#a34a5b591b64e647d30fcae67a24564df":[3,0,0,16,2,1],
 "structdrake_1_1test_1_1_limit_malloc_params.html#a55bdaee9c2cac50e78a415ab477cf4e2":[3,0,0,16,2,0],
 "structdrake_1_1test_1_1_limit_malloc_params.html#a7febc78e5aba3a9f8f0b9a89f4537b25":[3,0,0,16,2,2],
 "structdrake_1_1type__at.html":[3,0,0,55],
@@ -248,6 +249,5 @@ var NAVTREEINDEX67 =
 "text__logging_8h.html#abc074aead70b88bf38e18993bf9c28c3":[4,0,0,1,70,6],
 "text__logging_8h.html#ae0fe856459e2ca7ef105677ef381da55":[4,0,0,1,70,3],
 "text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,70,2],
-"text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,70,7],
-"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,70,1]
+"text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,70,7]
 };
