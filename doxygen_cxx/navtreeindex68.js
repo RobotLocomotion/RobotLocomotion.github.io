@@ -1,5 +1,6 @@
 var NAVTREEINDEX68 =
 {
+"text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,70,7],
 "text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,70,1],
 "text__logging__pybind_8h.html":[4,0,0,0,0,1,10],
 "timer_8h.html":[4,0,0,1,71],

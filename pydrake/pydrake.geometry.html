@@ -10083,6 +10083,27 @@ value if it seems “washed out”.</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.force_to_pbr">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">force_to_pbr</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.force_to_pbr" title="Permalink to this definition"></a></dt>
+<dd><p>Phong or
+Physically based rendering (PBR). It defaults to Phong. However, it
+automatically switches to PBR if:</p>
+<ul class="simple">
+<li><p>an environment map is added, or</p></li>
+<li><p>a glTF mesh is added.</p></li>
+</ul>
+<p>If <code class="docutils literal notranslate"><span class="pre">force_to_pbr</span></code> is set to true, it switches the engine to use PBR
+regardless of the scene’s contents.</p>
+<p>Be aware, switching to PBR will lead to a qualitative change in
+rendered images even if literally nothing else changes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>RenderEngineVtk can use one of two illumination models</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.gltf_extensions">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gltf_extensions</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.gltf_extensions" title="Permalink to this definition"></a></dt>
 <dd><p>Map from the name of a glTF extension (e.g., “KHR_materials_sheen”) to
