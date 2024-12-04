@@ -1,17 +1,5 @@
 var NAVTREEINDEX68 =
 {
-"text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,70,7],
-"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,70,1],
-"text__logging__pybind_8h.html":[4,0,0,0,0,1,10],
-"timer_8h.html":[4,0,0,1,71],
-"toppra_8h.html":[4,0,0,8,8,11],
-"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082":[4,0,0,8,8,11,1],
-"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a":[4,0,0,8,8,11,1,0],
-"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d":[4,0,0,8,8,11,1,1],
-"trajectory_8h.html":[4,0,0,1,5,13],
-"trajectory_8h.html#a7276b145ef6c7007c321cd281efbc1ee":[4,0,0,1,5,13,1],
-"trajectory__affine__system_8h.html":[4,0,0,12,6,25],
-"trajectory__affine__system_8h.html#a3dc38dfe429e69ee8da289e9e402e263":[4,0,0,12,6,25,1],
 "trajectory__linear__system_8h.html":[4,0,0,12,6,26],
 "trajectory__linear__system_8h.html#a40f29e5352777cff93f1fc7de18213a7":[4,0,0,12,6,26,1],
 "trajectory__source_8h.html":[4,0,0,12,6,27],

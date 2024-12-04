@@ -2429,8 +2429,12 @@ them by the size of the sets.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddEdgeConstraint">
-<span class="sig-name descname"><span class="pre">AddEdgeConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e:</span> <span class="pre">pydrake.symbolic.Formula</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_in_transcription:</span> <span class="pre">set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription]</span> <span class="pre">=</span> <span class="pre">{&lt;Transcription.kMIP:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRelaxation:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRestriction:</span> <span class="pre">2&gt;}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddEdgeConstraint" title="Permalink to this definition"></a></dt>
-<dd><p>Adds an arbitrary user-defined constraint to every edge within the
+<span class="sig-name descname"><span class="pre">AddEdgeConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddEdgeConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddEdgeConstraint(self: pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs, e: pydrake.symbolic.Formula, use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; None</p></li>
+</ol>
+<p>Adds an arbitrary user-defined constraint to every edge within the
 EdgesBetweenSubgraphs. The constraint should be defined using the
 placeholder control point variables (obtained from
 edge_constituent_vertex_control_points()) and the placeholder time
@@ -2451,12 +2455,30 @@ used with Transcription::kMIP or Transcription::kRelaxation. Consider
 providing an appropriate “convex surrogate” that is supported within
 GraphOfConvexSets, or exclusively using the SolveConvexRestriction
 method.</p>
+<ol class="arabic simple" start="2">
+<li><p>AddEdgeConstraint(self: pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs, binding: pydrake.solvers.Binding[Constraint], use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; None</p></li>
+</ol>
+<p>Convenience overload of AddEdgeConstraint to take in a
+Binding&lt;Constraint&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any variables besides those from</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_durations and</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_control_points are used.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddEdgeCost">
-<span class="sig-name descname"><span class="pre">AddEdgeCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e:</span> <span class="pre">pydrake.symbolic.Expression</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_in_transcription:</span> <span class="pre">set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription]</span> <span class="pre">=</span> <span class="pre">{&lt;Transcription.kMIP:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRelaxation:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">&lt;Transcription.kRestriction:</span> <span class="pre">2&gt;}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddEdgeCost" title="Permalink to this definition"></a></dt>
-<dd><p>Adds an arbitrary user-defined cost to every edge within the
+<span class="sig-name descname"><span class="pre">AddEdgeCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddEdgeCost" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddEdgeCost(self: pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs, e: pydrake.symbolic.Expression, use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; None</p></li>
+</ol>
+<p>Adds an arbitrary user-defined cost to every edge within the
 EdgesBetweenSubgraphs. The cost should be defined using the
 placeholder control point variables (obtained from
 edge_constituent_vertex_control_points()) and the placeholder time
@@ -2477,6 +2499,19 @@ with Transcription::kMIP or Transcription::kRelaxation. Consider
 providing an appropriate “convex surrogate” that is supported within
 GraphOfConvexSets, or exclusively using the SolveConvexRestriction
 method.</p>
+<ol class="arabic simple" start="2">
+<li><p>AddEdgeCost(self: pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs, binding: pydrake.solvers.Binding[Cost], use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; None</p></li>
+</ol>
+<p>Convenience overload of AddEdgeCost to take in a Binding&lt;Cost&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any variables besides those from</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_durations and</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_control_points are used.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2878,6 +2913,15 @@ method.</p>
 </ol>
 <p>Convenience overload of AddEdgeConstraint to take in a
 Binding&lt;Constraint&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any variables besides those from</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_durations and</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_control_points are used.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2912,6 +2956,15 @@ method.</p>
 <li><p>AddEdgeCost(self: pydrake.planning.GcsTrajectoryOptimization.Subgraph, binding: pydrake.solvers.Binding[Cost], use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; None</p></li>
 </ol>
 <p>Convenience overload of AddEdgeCost to take in a Binding&lt;Cost&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any variables besides those from</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_durations and</strong> – </p></li>
+<li><p><strong>edge_constituent_vertex_control_points are used.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -3111,6 +3164,14 @@ method.</p>
 </ol>
 <p>Convenience overload of AddVertexConstraint to take in a
 Binding&lt;Constraint&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any variables besides those from vertex_duration</strong> – </p></li>
+<li><p><strong>and vertex_control_points are used.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -3143,6 +3204,14 @@ method.</p>
 <li><p>AddVertexCost(self: pydrake.planning.GcsTrajectoryOptimization.Subgraph, binding: pydrake.solvers.Binding[Cost], use_in_transcription: set[pydrake.geometry.optimization.GraphOfConvexSets.Transcription] = {&lt;Transcription.kMIP: 0&gt;, &lt;Transcription.kRelaxation: 1&gt;, &lt;Transcription.kRestriction: 2&gt;}) -&gt; None</p></li>
 </ol>
 <p>Convenience overload of AddVertexCost to take in a Binding&lt;Cost&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any variables besides those from vertex_duration</strong> – </p></li>
+<li><p><strong>and vertex_control_points are used.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

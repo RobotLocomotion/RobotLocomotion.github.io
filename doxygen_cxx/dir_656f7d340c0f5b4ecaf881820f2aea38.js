@@ -32,7 +32,7 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     [ "hydroelastic_contact_forces_continuous_cache_data.h", "hydroelastic__contact__forces__continuous__cache__data_8h.html", null ],
     [ "hydroelastic_contact_info.h", "hydroelastic__contact__info_8h.html", "hydroelastic__contact__info_8h" ],
     [ "hydroelastic_parameters_doxygen.h", "hydroelastic__parameters__doxygen_8h.html", null ],
-    [ "hydroelastic_quadrature_point_data.h", "hydroelastic__quadrature__point__data_8h.html", "hydroelastic__quadrature__point__data_8h" ],
+    [ "hydroelastic_quadrature_point_data.h", "hydroelastic__quadrature__point__data_8h.html", null ],
     [ "hydroelastic_traction_calculator.h", "hydroelastic__traction__calculator_8h.html", "hydroelastic__traction__calculator_8h" ],
     [ "internal_geometry_names.h", "internal__geometry__names_8h.html", null ],
     [ "make_discrete_update_manager.h", "make__discrete__update__manager_8h.html", null ],

@@ -1,17 +1,5 @@
 var NAVTREEINDEX67 =
 {
-"structdrake_1_1test_1_1_limit_malloc_params.html":[3,0,0,16,2],
-"structdrake_1_1test_1_1_limit_malloc_params.html#a34a5b591b64e647d30fcae67a24564df":[3,0,0,16,2,1],
-"structdrake_1_1test_1_1_limit_malloc_params.html#a55bdaee9c2cac50e78a415ab477cf4e2":[3,0,0,16,2,0],
-"structdrake_1_1test_1_1_limit_malloc_params.html#a7febc78e5aba3a9f8f0b9a89f4537b25":[3,0,0,16,2,2],
-"structdrake_1_1type__at.html":[3,0,0,55],
-"structdrake_1_1type__at.html#ae186135b13d8acdaf385d1ff052f0d82":[3,0,0,55,0],
-"structdrake_1_1type__check__different__from.html":[3,0,0,56],
-"structdrake_1_1type__check__different__from.html#a0860509034ec6a8bc624149afad18d42":[3,0,0,56,0],
-"structdrake_1_1type__pack.html":[3,0,0,57],
-"structdrake_1_1type__pack.html#a0d7ec463ea247ebd6d235632c14544ba":[3,0,0,57,1],
-"structdrake_1_1type__pack.html#a3d3a828636762306b3bf4b16e74236cb":[3,0,0,57,0],
-"structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172":[3,0,0,57,2],
 "structdrake_1_1type__tag.html":[3,0,0,58],
 "structdrake_1_1type__tag.html#a834c467da58ea1d81821952d3c473b64":[3,0,0,58,0],
 "structdrake_1_1type__visit__with__default.html":[3,0,0,59],
@@ -249,5 +237,17 @@ var NAVTREEINDEX67 =
 "text__logging_8h.html#a9cae370466ffb304c10aebea42eca26b":[4,0,0,1,70,0],
 "text__logging_8h.html#abc074aead70b88bf38e18993bf9c28c3":[4,0,0,1,70,6],
 "text__logging_8h.html#ae0fe856459e2ca7ef105677ef381da55":[4,0,0,1,70,3],
-"text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,70,2]
+"text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,70,2],
+"text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,70,7],
+"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,70,1],
+"text__logging__pybind_8h.html":[4,0,0,0,0,1,10],
+"timer_8h.html":[4,0,0,1,71],
+"toppra_8h.html":[4,0,0,8,8,11],
+"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082":[4,0,0,8,8,11,1],
+"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a":[4,0,0,8,8,11,1,0],
+"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d":[4,0,0,8,8,11,1,1],
+"trajectory_8h.html":[4,0,0,1,5,13],
+"trajectory_8h.html#a7276b145ef6c7007c321cd281efbc1ee":[4,0,0,1,5,13,1],
+"trajectory__affine__system_8h.html":[4,0,0,12,6,25],
+"trajectory__affine__system_8h.html#a3dc38dfe429e69ee8da289e9e402e263":[4,0,0,12,6,25,1]
 };
