@@ -418,6 +418,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ace1aea0ef245e52e5bc2f91d553ef096"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; typename Derived::Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ace1aea0ef245e52e5bc2f91d553ef096">ExtractPrincipalSubmatrix</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;mat, const std::set&lt; <a class="el" href="classint.html">int</a> &gt; &amp;indices)</td></tr>
 <tr class="memdesc:ace1aea0ef245e52e5bc2f91d553ef096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the principal submatrix from the ordered set of indices.  <a href="#ace1aea0ef245e52e5bc2f91d553ef096">More...</a><br /></td></tr>
 <tr class="separator:ace1aea0ef245e52e5bc2f91d553ef096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68b2a972e142231b7dd1fb0221354e6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#af68b2a972e142231b7dd1fb0221354e6">GeneratePythonCsc</a> (const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;mat, std::string_view name)</td></tr>
+<tr class="memdesc:af68b2a972e142231b7dd1fb0221354e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the python statement to construct scipy.sparse matrix.  <a href="#af68b2a972e142231b7dd1fb0221354e6">More...</a><br /></td></tr>
+<tr class="separator:af68b2a972e142231b7dd1fb0221354e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48484009086db12d881bea6bcaab2514"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a48484009086db12d881bea6bcaab2514"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a48484009086db12d881bea6bcaab2514">NormalizeVector</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, typename Derived::PlainObject &amp;x_norm, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 1 &gt;::type *dx_norm=nullptr, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 2 &gt;::type *ddx_norm=nullptr)</td></tr>
 <tr class="memdesc:a48484009086db12d881bea6bcaab2514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the normalized vector, optionally with its gradient and second derivative.  <a href="#a48484009086db12d881bea6bcaab2514">More...</a><br /></td></tr>
@@ -1881,6 +1884,44 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Drake provides several similar functions: <a class="el" href="namespacedrake_1_1math.html#a68e6b946837028263ddbf020d182fee0" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient()</a> is specialized so that it can be applied to a <code>Matrix&lt;T&gt;</code> where T could be an AutoDiffScalar or an ordinary double, in which case it returns the original matrix at no cost. <a class="el" href="namespacedrake_1_1math.html#afe3277d7c068b3f82ccb6b025d44ab11" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient()</a> is similar but requires that the discarded gradient was zero. <a class="el" href="namespacedrake.html#aa9721f3a5897b05ef2168f7a6d886dc8" title="Returns the autodiff scalar&#39;s value() as a double.">drake::ExtractDoubleOrThrow()</a> has many specializations, including one for <code>Matrix&lt;AutoDiffScalar&gt;</code> that behaves identically to <a class="el" href="namespacedrake_1_1math.html#ac74b322064f97efb2b143fe01b832ab1" title="Extracts the value() portion from a matrix of AutoDiffScalar entries.">ExtractValue()</a>.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a68e6b946837028263ddbf020d182fee0" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient()</a>, <a class="el" href="namespacedrake.html#aa9721f3a5897b05ef2168f7a6d886dc8" title="Returns the autodiff scalar&#39;s value() as a double.">drake::ExtractDoubleOrThrow()</a> </dd></dl>
+
+</div>
+</div>
+<a id="af68b2a972e142231b7dd1fb0221354e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68b2a972e142231b7dd1fb0221354e6">&#9670;&nbsp;</a></span>GeneratePythonCsc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string drake::math::GeneratePythonCsc </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the python statement to construct scipy.sparse matrix. </p>
+<p>The generated code will call sparse.csc_matrix() directly (please make sure you have imported the module through <code>from scipy import sparse</code>), and will end with a newline. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mat</td><td>The Eigen matrix to be generated to python code. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the python variable for the sparse matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the generated python code </dd></dl>
 
 </div>
 </div>

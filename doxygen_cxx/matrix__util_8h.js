@@ -2,6 +2,7 @@ var matrix__util_8h =
 [
     [ "EigenToStdVector", "matrix__util_8h.html#aedd054648f2874f8e5a37769758a132b", null ],
     [ "ExtractPrincipalSubmatrix", "matrix__util_8h.html#ace1aea0ef245e52e5bc2f91d553ef096", null ],
+    [ "GeneratePythonCsc", "matrix__util_8h.html#af68b2a972e142231b7dd1fb0221354e6", null ],
     [ "IsPositiveDefinite", "matrix__util_8h.html#a8a6d10bc0b3dfc5902d0a06f186dba8f", null ],
     [ "IsSymmetric", "matrix__util_8h.html#a84760cbea23b50efdbe9a85f3967f098", null ],
     [ "IsSymmetric", "matrix__util_8h.html#a141ec70804c105e09ab3b0a855152b8b", null ],

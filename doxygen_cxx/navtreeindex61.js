@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"sos__basis__generator_8h.html":[4,0,0,11,59],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,11,59,0],
 "spanning__forest_8h.html":[4,0,0,8,13,8],
 "spanning__forest__inlines_8h.html":[4,0,0,8,13,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a905b0fa1fb0e4a5334581d565fb2f8ec":[3,0,0,3,9,3,3],
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,9,3,5],
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[3,0,0,3,9,3,4],
-"structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html":[3,0,0,3,10,0,1],
-"structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html#a0fc88bcaf966910a9887f332d596603b":[3,0,0,3,10,0,1,4]
+"structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html":[3,0,0,3,10,0,1]
 };
