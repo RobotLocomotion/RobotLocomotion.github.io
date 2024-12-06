@@ -212,17 +212,17 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a3e38e6cb42b54dab9e928c6166949782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4cce1d859d70cf4b5b9620ea36b7a42"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#ad4cce1d859d70cf4b5b9620ea36b7a42">static_friction</a> {0.5}</td></tr>
 <tr class="separator:ad4cce1d859d70cf4b5b9620ea36b7a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42fb9f60338529459fa05fee8d4c4d2e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e">hunt_crossley_dissipation</a></td></tr>
-<tr class="memdesc:a42fb9f60338529459fa05fee8d4c4d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls energy damping from contact, for contact models <em>other than</em> <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>.  <a href="#a42fb9f60338529459fa05fee8d4c4d2e">More...</a><br /></td></tr>
+<tr class="memitem:a42fb9f60338529459fa05fee8d4c4d2e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e">hunt_crossley_dissipation</a> {50.0}</td></tr>
+<tr class="memdesc:a42fb9f60338529459fa05fee8d4c4d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls energy dissipation from contact, for contact approximations other than* <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>.  <a href="#a42fb9f60338529459fa05fee8d4c4d2e">More...</a><br /></td></tr>
 <tr class="separator:a42fb9f60338529459fa05fee8d4c4d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af27f062b2892a8a4f0c782238e1936a3"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#af27f062b2892a8a4f0c782238e1936a3">relaxation_time</a></td></tr>
+<tr class="memitem:af27f062b2892a8a4f0c782238e1936a3"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#af27f062b2892a8a4f0c782238e1936a3">relaxation_time</a> {0.1}</td></tr>
 <tr class="memdesc:af27f062b2892a8a4f0c782238e1936a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls energy damping from contact, <em>only for</em> <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>.  <a href="#af27f062b2892a8a4f0c782238e1936a3">More...</a><br /></td></tr>
 <tr class="separator:af27f062b2892a8a4f0c782238e1936a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Point Contact Properties</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These properties affect point contact only.</p>
 <p>For complete descriptions of the numeric parameters, See <a class="el" href="group__compliant__contact.html#point_forces_modeling">Compliant Point Contact Forces</a>, <a class="el" href="namespacedrake_1_1geometry.html#a524d11f70b0594572404257e3f8640ee" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial</a>. </p>
 </div></td></tr>
-<tr class="memitem:a724e701eb8bbecc4fbf5bb77227a5ab7"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#a724e701eb8bbecc4fbf5bb77227a5ab7">point_stiffness</a></td></tr>
+<tr class="memitem:a724e701eb8bbecc4fbf5bb77227a5ab7"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#a724e701eb8bbecc4fbf5bb77227a5ab7">point_stiffness</a> {1e6}</td></tr>
 <tr class="memdesc:a724e701eb8bbecc4fbf5bb77227a5ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A measure of material stiffness, in units of Newtons per meter.  <a href="#a724e701eb8bbecc4fbf5bb77227a5ab7">More...</a><br /></td></tr>
 <tr class="separator:a724e701eb8bbecc4fbf5bb77227a5ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -313,13 +313,15 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; hunt_crossley_dissipation</td>
+          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; hunt_crossley_dissipation {50.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Controls energy damping from contact, for contact models <em>other than</em> <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>. </p>
-<p>Units are seconds per meter. </p>
+<p>Controls energy dissipation from contact, for contact approximations other than* <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">multibody::DiscreteContactApproximation::kSap</a>. </p>
+<p>Units are seconds per meter.</p>
+<p>If a non-deformable geometry is missing a value for dissipation, MultibodyPlant will generate a default value (based on <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f" title="Configures the MultibodyPlant::set_penetration_allowance().">multibody::MultibodyPlantConfig::penetration_allowance</a>). However, this behavior will be going away. Therefore, we recommend guaranteeing that every geometry has a dissipation value either by assigning the property directly to the geometry or by providing a non-null value here.</p>
+<p>Please refer to <a class="el" href="group__contact__defaults.html">Default Contact Parameters</a> for more details on Drake's defaults along with guidelines on how to estimate parameters specific to your model. </p>
 
 </div>
 </div>
@@ -368,12 +370,14 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; point_stiffness</td>
+          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; point_stiffness {1e6}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>A measure of material stiffness, in units of Newtons per meter. </p>
+<p>If a non-deformable geometry is missing a value for stiffness, MultibodyPlant will generate a default value (based on <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f" title="Configures the MultibodyPlant::set_penetration_allowance().">multibody::MultibodyPlantConfig::penetration_allowance</a>). However, this behavior will be going away. Therefore, we recommend guaranteeing that every geometry has a stiffness value either by assigning the property directly to the geometry or by providing a non-null value here.</p>
+<p>Please refer to <a class="el" href="group__contact__defaults.html">Default Contact Parameters</a> for more details on Drake's defaults along with guidelines on how to estimate parameters specific to your model. </p>
 
 </div>
 </div>
@@ -384,7 +388,7 @@ Currently margin only applies to <em>compliant</em> hydroelastic contact and it 
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; relaxation_time</td>
+          <td class="memname">std::optional&lt;<a class="el" href="classdouble.html">double</a>&gt; relaxation_time {0.1}</td>
         </tr>
       </table>
 </div><div class="memdoc">

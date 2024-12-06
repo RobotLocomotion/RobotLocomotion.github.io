@@ -184,6 +184,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a89cbf472729e62d082afc8a4b2f8f57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3ba02c661d1f13cf2059642d34b5792"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ipopt_solver.html#ae3ba02c661d1f13cf2059642d34b5792">~IpoptSolver</a> () final</td></tr>
 <tr class="separator:ae3ba02c661d1f13cf2059642d34b5792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe21f1240ff88d0b6854712d75f0dbb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ipopt_solver.html#afe21f1240ff88d0b6854712d75f0dbb8">SetDefaultLinearSolver</a> (std::string linear_solver)</td></tr>
+<tr class="memdesc:afe21f1240ff88d0b6854712d75f0dbb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the default value for Ipopt's "linerar_solver" solver option.  <a href="#afe21f1240ff88d0b6854712d75f0dbb8">More...</a><br /></td></tr>
+<tr class="separator:afe21f1240ff88d0b6854712d75f0dbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00b55f8b4c1c4f19b45621a84deed66c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ipopt_solver.html#a00b55f8b4c1c4f19b45621a84deed66c">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess=std::nullopt, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;solver_options=std::nullopt) const</td></tr>
 <tr class="memdesc:a00b55f8b4c1c4f19b45621a84deed66c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec" title="Solves an optimization program with optional initial guess and solver options.">SolverInterface::Solve()</a>, but the result is a return value instead of an output argument.  <a href="#a00b55f8b4c1c4f19b45621a84deed66c">More...</a><br /></td></tr>
 <tr class="separator:a00b55f8b4c1c4f19b45621a84deed66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -533,8 +536,45 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="afe21f1240ff88d0b6854712d75f0dbb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe21f1240ff88d0b6854712d75f0dbb8">&#9670;&nbsp;</a></span>SetDefaultLinearSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDefaultLinearSolver </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>linear_solver</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the default value for Ipopt's "linerar_solver" solver option. </p>
+<p>This is the lowest precedence default &ndash; setting the "linear_solver" option in <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html" title="Stores options for multiple solvers.">SolverOptions</a> will override this default. </p><dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+
+</div>
+</div>
+<a id="a00b55f8b4c1c4f19b45621a84deed66c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00b55f8b4c1c4f19b45621a84deed66c">&#9670;&nbsp;</a></span>Solve() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> Solve</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Like <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec" title="Solves an optimization program with optional initial guess and solver options.">SolverInterface::Solve()</a>, but the result is a return value instead of an output argument. </p>
+
+</div>
+</div>
 <a id="af2ff6a250a78bb79ef64f7527c51b01c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2ff6a250a78bb79ef64f7527c51b01c">&#9670;&nbsp;</a></span>Solve() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af2ff6a250a78bb79ef64f7527c51b01c">&#9670;&nbsp;</a></span>Solve() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -552,22 +592,6 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a00b55f8b4c1c4f19b45621a84deed66c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00b55f8b4c1c4f19b45621a84deed66c">&#9670;&nbsp;</a></span>Solve() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> Solve</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Like <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec" title="Solves an optimization program with optional initial guess and solver options.">SolverInterface::Solve()</a>, but the result is a return value instead of an output argument. </p>
 
 </div>
 </div>

@@ -7105,10 +7105,22 @@ all model instances.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.set_penetration_allowance">
 <span class="sig-name descname"><span class="pre">set_penetration_allowance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">penetration_allowance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_penetration_allowance" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the penetration allowance used to estimate the coefficients in
-the penalty method used to impose non-penetration among bodies. Refer
-to the section point_contact_defaults “Point Contact Default
-Parameters” for further details.</p>
+<dd><p>Sets a penetration allowance used to estimate the point contact
+stiffness and Hunt &amp; Crossley dissipation parameters. Refer to the
+section point_contact_defaults “Point Contact Default Parameters” for
+further details.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will be deprecated. Prefer using defaults specified in
+geometry::DefaultProximityProperties.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Values provided in geometry::DefaultProximityProperties have
+precedence. If values estimated based on penetration allowance are
+desired, set defaults in geometry::DefaultProximityProperties to
+std::nullopt.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if penetration_allowance is not positive.</strong> – </p>
@@ -12801,10 +12813,22 @@ all model instances.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_penetration_allowance">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_penetration_allowance"></span><span class="sig-name descname"><span class="pre">set_penetration_allowance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penetration_allowance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_penetration_allowance" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the penetration allowance used to estimate the coefficients in
-the penalty method used to impose non-penetration among bodies. Refer
-to the section point_contact_defaults “Point Contact Default
-Parameters” for further details.</p>
+<dd><p>Sets a penetration allowance used to estimate the point contact
+stiffness and Hunt &amp; Crossley dissipation parameters. Refer to the
+section point_contact_defaults “Point Contact Default Parameters” for
+further details.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will be deprecated. Prefer using defaults specified in
+geometry::DefaultProximityProperties.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Values provided in geometry::DefaultProximityProperties have
+precedence. If values estimated based on penetration allowance are
+desired, set defaults in geometry::DefaultProximityProperties to
+std::nullopt.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if penetration_allowance is not positive.</strong> – </p>
@@ -18491,10 +18515,22 @@ all model instances.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_penetration_allowance">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_penetration_allowance"></span><span class="sig-name descname"><span class="pre">set_penetration_allowance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penetration_allowance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_penetration_allowance" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the penetration allowance used to estimate the coefficients in
-the penalty method used to impose non-penetration among bodies. Refer
-to the section point_contact_defaults “Point Contact Default
-Parameters” for further details.</p>
+<dd><p>Sets a penetration allowance used to estimate the point contact
+stiffness and Hunt &amp; Crossley dissipation parameters. Refer to the
+section point_contact_defaults “Point Contact Default Parameters” for
+further details.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will be deprecated. Prefer using defaults specified in
+geometry::DefaultProximityProperties.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Values provided in geometry::DefaultProximityProperties have
+precedence. If values estimated based on penetration allowance are
+desired, set defaults in geometry::DefaultProximityProperties to
+std::nullopt.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if penetration_allowance is not positive.</strong> – </p>

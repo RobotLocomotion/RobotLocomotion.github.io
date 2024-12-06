@@ -327,7 +327,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0e13800a4b7f21903141dbe4c0102720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forms the 3 principal moments of inertia and their 3 associated principal directions for <code>this</code> rotational inertia.  <a href="#a0e13800a4b7f21903141dbe4c0102720">More...</a><br /></td></tr>
 <tr class="separator:a0e13800a4b7f21903141dbe4c0102720"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03e71eb4bd2a7648a411e1cbaf94812b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b">CouldBePhysicallyValid</a> () const</td></tr>
-<tr class="memdesc:a03e71eb4bd2a7648a411e1cbaf94812b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs several necessary checks to verify whether <code>this</code> rotational inertia <em>could</em> be physically valid, including:  <a href="#a03e71eb4bd2a7648a411e1cbaf94812b">More...</a><br /></td></tr>
+<tr class="memdesc:a03e71eb4bd2a7648a411e1cbaf94812b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs several checks to verify whether <code>this</code> rotational inertia <em>could</em> be physically valid, including:  <a href="#a03e71eb4bd2a7648a411e1cbaf94812b">More...</a><br /></td></tr>
 <tr class="separator:a03e71eb4bd2a7648a411e1cbaf94812b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af397b4c3403d23ab61a128dbeaa1c3aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#af397b4c3403d23ab61a128dbeaa1c3aa">ReExpressInPlace</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE)</td></tr>
 <tr class="memdesc:af397b4c3403d23ab61a128dbeaa1c3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-expresses <code>this</code> rotational inertia <code>I_BP_E</code> in place to <code>I_BP_A</code>.  <a href="#af397b4c3403d23ab61a128dbeaa1c3aa">More...</a><br /></td></tr>
@@ -517,7 +517,7 @@ Related Functions</h2></td></tr>
 <p>Creates a rotational inertia with moments of inertia <code>Ixx</code>, <code>Iyy</code>, <code>Izz</code>, and with each product of inertia set to zero. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if not <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if not <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -577,7 +577,7 @@ Related Functions</h2></td></tr>
 <p>Creates a rotational inertia with moments of inertia <code>Ixx</code>, <code>Iyy</code>, <code>Izz</code>, and with products of inertia <code>Ixy</code>, <code>Ixz</code>, <code>Iyz</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if not <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if not <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -627,7 +627,7 @@ Related Functions</h2></td></tr>
 <dl class="section remark"><dt>Remarks</dt><dd>Negating the position vector p_PQ_E has no affect on the result. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if not <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if not <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -795,18 +795,18 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Performs several necessary checks to verify whether <code>this</code> rotational inertia <em>could</em> be physically valid, including: </p>
+<p>Performs several checks to verify whether <code>this</code> rotational inertia <em>could</em> be physically valid, including: </p>
 <ul>
 <li>No NaN moments or products of inertia.</li>
 <li>Ixx, Iyy, Izz and principal moments are all non-negative.</li>
 <li>Ixx, Iyy Izz and principal moments satisfy the triangle inequality:<ul>
-<li><code>Ixx + Iyy &gt;= Izz</code></li>
-<li><code>Ixx + Izz &gt;= Iyy</code></li>
-<li><code>Iyy + Izz &gt;= Ixx</code></li>
+<li><code>Ixx + Iyy ≥ Izz</code></li>
+<li><code>Ixx + Izz ≥ Iyy</code></li>
+<li><code>Iyy + Izz ≥ Ixx</code></li>
 </ul>
 </li>
 </ul>
-<dl class="section warning"><dt>Warning</dt><dd>These checks are necessary (but NOT sufficient) conditions for a rotational inertia to be physically valid. The sufficient condition requires a rotational inertia to satisfy the above checks <em>after</em> <code>this</code> is shifted to the center of mass, i.e., the sufficient condition requires calling <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a> when the about-point is Bcm (the body's center of mass). Note: this class does not know its about-point or its center of mass location.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>These checks are necessary (but NOT sufficient) conditions for a rotational inertia to be physically valid. The sufficient condition requires a rotational inertia to satisfy the above checks <em>after</em> <code>this</code> is shifted to the center of mass, i.e., the sufficient condition requires calling <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a> when the about-point is Bcm (the body's center of mass). Note: this class does not know its about-point or its center of mass location.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> for a plausible rotational inertia passing the above necessary but insufficient checks and <code>false</code> otherwise. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
@@ -1003,13 +1003,13 @@ Related Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">Ixx,Iyy,Izz</td><td>Moments of inertia. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">Ixy,Ixz,Iyz</td><td>Products of inertia. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">skip_validity_check</td><td>If set to false, the rotational inertia is checked via <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a> to ensure it is physically valid. If set to true (not generally recommended), the check is skipped (which reduces some computational cost). The default value is false. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">skip_validity_check</td><td>If set to false, the rotational inertia is checked via <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a> to ensure it is physically valid. If set to true (not generally recommended), the check is skipped (which reduces some computational cost). The default value is false. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if skip_validity_check is false and <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a> fails. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if skip_validity_check is false and <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a> fails. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1281,7 +1281,7 @@ Related Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The subtraction of <code>I_BP_E</code> from <code>this</code> rotational inertia. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if not <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if not <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1316,7 +1316,7 @@ Related Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A reference to <code>this</code> rotational inertia. <code>this</code> changes since rotational inertia <code>I_BP_E</code> has been subtracted from it. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if not <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if not <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1464,7 +1464,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is re-expressed-in frame A violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is re-expressed-in frame A violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1498,7 +1498,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is re-expressed-in frame A violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is re-expressed-in frame A violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1607,7 +1607,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point Q violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point Q violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1651,7 +1651,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point Q violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point Q violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1701,7 +1701,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point <code>Bcm</code> violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point <code>Bcm</code> violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1745,7 +1745,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point <code>Bcm</code> violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point <code>Bcm</code> violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1802,7 +1802,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point Q violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point Q violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1853,7 +1853,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point Q violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for Debug builds if the rotational inertia that is shifted to about-point Q violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>. </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,0 +1,288 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Default Contact Parameters</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__contact__defaults.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Default Contact Parameters<div class="ingroups"><a class="el" href="group__multibody.html">Multibody Kinematics and Dynamics</a> &raquo; <a class="el" href="group__drake__contacts.html">Contact Modeling in Drake</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>In Drake, <a class="el" href="group__drake__contacts.html#why_rigid">contacts are modeled as compliant</a>. While some may view the absence of rigid contact modeling as a limitation, it's essential to understand that rigid contact is itself an approximation; real physical objects are not truly rigid but simply very stiff. Compliant contact offers an excellent approximation of rigid contact while often providing better numerical stability <a class="el" href="group__drake__contacts.html#Castro2023">[Castro et al., 2023]</a>.</p>
+<p>Although our solvers can handle stiffness values far exceeding those of real materials <a class="el" href="group__drake__contacts.html#Castro2023">[Castro et al., 2023]</a>, excessively high stiffness can lead to numerical ill-conditioning, degraded performance, or even solver failure. This underscores the importance of carefully selecting contact parameters—particularly stiffness—to balance robustness and accuracy in simulations.</p>
+<p>To address this, Drake provides default contact parameters specifically designed to approximate rigid contact while maintaining numerical stability. Below, we summarize the key parameters most relevant to stiffness and numerical performance:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Property [units]  </th><th class="markdownTableHeadCenter">Units  </th><th class="markdownTableHeadCenter">Default value   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Point stiffness  </td><td class="markdownTableBodyCenter">N/m  </td><td class="markdownTableBodyCenter"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#a724e701eb8bbecc4fbf5bb77227a5ab7">Defined here</a>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Hydroelastic modulus  </td><td class="markdownTableBodyCenter">Pa  </td><td class="markdownTableBodyCenter"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#ad67da500a161dc406336020e2f3be598">Defined here</a>   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Hunt &amp; Crossley dissipation  </td><td class="markdownTableBodyCenter">s/m  </td><td class="markdownTableBodyCenter"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e">Defined here</a>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Friction  </td><td class="markdownTableBodyCenter">-  </td><td class="markdownTableBodyCenter"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#a3e38e6cb42b54dab9e928c6166949782">Defined here</a>   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Stiction tolerance  </td><td class="markdownTableBodyCenter">m/s  </td><td class="markdownTableBodyCenter"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a0f73b758fdc6b763190aa6ea76e014c2">Defined here</a>   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Marginᵃ  </td><td class="markdownTableBodyCenter">m  </td><td class="markdownTableBodyCenter"><a class="el" href="structdrake_1_1geometry_1_1_default_proximity_properties.html#ada2ca25da33c3b3bf317fc190210df77">Defined here</a>   </td></tr>
+</table>
+<p>ᵃ Margin has no default yet, this is the recommended value. Refer to <a class="el" href="group__hydro__margin.html#margin_how_much">But How Much Margin?</a> for details.</p>
+<p>Users can change these defaults in <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html#a4d119daf7f94bcd7666aa36b8794fd64" title="Provides SceneGraph-wide contact material values to use when none have been otherwise specified.">drake::geometry::SceneGraphConfig::default_proximity_properties</a>, with the exception being the stiction tolerance, defined in <a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html" title="The set of configurable properties on a MultibodyPlant.">drake::multibody::MultibodyPlantConfig</a>.</p>
+<h3>Margin</h3>
+<p>Though margin and stiction tolerance are not physical parameters, we include them here since its a set of parameters users should be aware of. For most cases users will not need to change them. Refer to <a class="el" href="group__hydro__margin.html">Margin for Hydroelastic Contact</a> for a thorough discussion of margin and to <a class="el" href="group__hydro__margin.html#margin_how_much">But How Much Margin?</a> for a discussion on estimation and recommended values.</p>
+<h3>Stiction tolerance</h3>
+<p>The stiction tolerance parameterizes our model of regularized friction, see <a class="el" href="group__drake__contacts.html#Castro2023">[Castro et al., 2023]</a> for details. While a smaller value produces a tighter approximation of stiction, it can lead to numerical stiffness and ill conditioning. The recommended default works for most robotics applications including the modeling of challenging manipulation tasks, without sacrificing performance.</p>
+<h3>Friction</h3>
+<p>We like to think that friction coefficients can generally be categorized into three ranges: less than 0.2 for slippery surfaces, 0.2 - 0.4 for moderately smooth surfaces, and greater than 0.5 for rough surfaces. While there is no theoretical upper limit to the friction coefficient, we'll rarely need a value larger than 1.0, a good estimate to model very rough or rubber-like surfaces. We summarize our guideline as follows:</p><ol type="1">
+<li><b>&lt; 0.2</b> for slippery surfaces,</li>
+<li><b>0.2-0.4</b> for medium-smooth surfaces,</li>
+<li><b>&gt;0.5</b> for rough surfaces.</li>
+</ol>
+<h3>Contact dissipation</h3>
+<p>The Hunt &amp; Crossley dissipation parameter is theoretically linked to energy dissipation during impact and the coefficient of restitution, <a class="el" href="group__drake__contacts.html#HuntCrossley1975">[Hunt and Crossley 1975]</a>. Practically, we estimate this parameter using a simple guideline: the inverse of the dissipation parameter, d, is the maximum bounce speed after contact. For instance, to limit the bounce speed to 0.1 m/s, set d = 10 s/m.</p>
+<p>In robotics, bouncing is often undesirable, and hardware typically favors inelastic contact. While purely inelastic contact requires d = ∞, values around 40 - 50 s/m effectively approximate this behavior in most applications.</p>
+<h1><a class="anchor" id="Proposed"></a>
+Modeling Workflow</h1>
+<p>When authoring a new model, this is the workflow we encourage:</p>
+<ol type="1">
+<li>Author a first pass of your model without specifying contact parameters. Drake will default to parameters in <a class="el" href="structdrake_1_1geometry_1_1_scene_graph_config.html" title="The set of configurable properties on a SceneGraph.">drake::geometry::SceneGraphConfig</a>.</li>
+<li>Simulate your model and verify the behavior. For many cases, this will be enough (e.g. manipulands, anchored bodies, robots, etc.)</li>
+<li>Adjust model-specific parameters. For instance, rubber pads in a gripper or robotic feet are better modeled using lower contact stiffnesses. A good way to estimate stiffness is from known values of deformation (penetration) for a given force (say weight or gripper effort limit).</li>
+<li>Friction coefficients might need to be adjusted for modeling smoother surfaces</li>
+<li>Iterate between 2 and 4 to better match your application.</li>
+</ol>
+<p>For completeness, the next section shows how default contact parameters are estimated. These notes might be useful for the customized parameter estimations in your models.</p>
+<h1><a class="anchor" id="contact_defaults_estimating"></a>
+Estimating Contact Stiffness</h1>
+<p>This section shows how we can estimate stiffness. These guidelines are used to provide Drake's default values above, but you can also use them to estimate custom values for your application.</p>
+<p>Experience shows that for very stiff objects, increasing material stiffness beyond a certain large value results in negligible changes in behavior. For example, when modeling a household object like a mug, the stiffness of diamond, steel, or wood often yields indistinguishable results for most applications. However, extremely high stiffness values can cause numerical issues such as ill-conditioning, poor performance, or even solver failure. As a result, selecting stiffness to approximate rigid objects involves balancing model accuracy with numerical stability.</p>
+<p>Drake’s default material stiffness values are chosen to provide a practical approximation of rigid contact. Rigidity is measured based on an acceptable level of interpenetration, with reasonable bounds set to balance precision and performance. For instance, there is no benefit in limiting interpenetration to atomic scales, as it exceeds practical measurement capabilities and significantly impacts solver performance.</p>
+<p>We consider both <a class="el" href="group__compliant__contact.html#compliant_point_contact">compliant point contact</a> and <a class="el" href="group__compliant__contact.html#hydro_contact">hydroelastic contact</a>. For these estimates, we consider a half-space in contact with a sphere of radius R and water's density, and a cylinder of radius R and length 4/3⋅R so that it has the same mass as the sphere.</p>
+<p>Algebraic formulas for the contact force and volume in these configurations is given below:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Geometry  </th><th class="markdownTableHeadCenter">Volume V  </th><th class="markdownTableHeadCenter">Point Contact  </th><th class="markdownTableHeadLeft">Hydroelastic Contact   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Cylinder  </td><td class="markdownTableBodyCenter">V = 4/3⋅π⋅R³  </td><td class="markdownTableBodyCenter">fₙ = k⋅x  </td><td class="markdownTableBodyLeft">fₙ=π⋅E⋅R⋅x   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Sphere  </td><td class="markdownTableBodyCenter">V = 4/3⋅π⋅R³  </td><td class="markdownTableBodyCenter">fₙ = k⋅x  </td><td class="markdownTableBodyLeft">fₙ=π⋅E⋅x²   </td></tr>
+</table>
+<p>The volume (and mass) of these objects is the same since the length of the cylinder is 4/3⋅R. For the point contact model, the contact force is independent of contact area and it is always linear with penetration depth x. For hydroelastic contact, the area of the contact patch is considered and thus the force is linear with penetration for the cylinder (constant area at small penetrations) and quadratic for the sphere, refer to the section on <a class="el" href="group__hydro__params.html#hydro_params_formulas">analytical formulas for hydroelastic</a> for derivations and details.</p>
+<p>Therefore, for these objects in contact with a flat surface, the expected amount of penetration under the influence of their own weight is:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Geometry  </th><th class="markdownTableHeadCenter">Point Contact  </th><th class="markdownTableHeadLeft">Hydroelastic Contact   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Cylinder  </td><td class="markdownTableBodyCenter">x = 4/3⋅π⋅ρ⋅g/k⋅R³  </td><td class="markdownTableBodyLeft">x = (4/3⋅ρ⋅g/E) ⋅ R²   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Sphere  </td><td class="markdownTableBodyCenter">x = 4/3⋅π⋅ρ⋅g/k⋅R³  </td><td class="markdownTableBodyLeft">x = (4/3⋅ρ⋅g/E)¹⸍²⋅R³⸍²   </td></tr>
+</table>
+<p>where g is the acceleration of gravity.</p>
+<p>As examples, we consider an object of radius 0.05 m, a typical household object of about half a kilogram, and an object of radius 0.30 m, that with the density of water, has about 110 kilograms (the mass of a typical humanoid robot).</p>
+<p>For point contact, the table below shows the amount of penetration (in meters) for point contact stiffness k = 10⁶ N/m (Drake's default) and k = 10⁷ N/m (in parentheses):</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Geometry  </th><th class="markdownTableHeadCenter">R = 0.05 m  </th><th class="markdownTableHeadLeft">R = 0.3 m   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Cylinder  </td><td class="markdownTableBodyCenter">5.1⋅10⁻⁶ (5.1⋅10⁻⁷)  </td><td class="markdownTableBodyLeft">1.1⋅10⁻³ (1.1⋅10⁻⁴)   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Sphere  </td><td class="markdownTableBodyCenter">5.1⋅10⁻⁶ (5.1⋅10⁻⁷)  </td><td class="markdownTableBodyLeft">1.1⋅10⁻³ (1.1⋅10⁻⁴)   </td></tr>
+</table>
+<p>For hydroelastic contact, the table below shows the amount of penetration (in meters) for hydroelastic modulus E = 10⁷ Pa (Drake's default) and E = 10⁸ Pa (in parentheses):</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Geometry  </th><th class="markdownTableHeadCenter">R = 0.05 m  </th><th class="markdownTableHeadLeft">R = 0.3 m   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Cylinder  </td><td class="markdownTableBodyCenter">3.3⋅10⁻⁶ (3.3⋅10⁻⁷)  </td><td class="markdownTableBodyLeft">1.2⋅10⁻⁴ (1.2⋅10⁻⁵)   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Sphere  </td><td class="markdownTableBodyCenter">4.0⋅10⁻⁴ (1.3⋅10⁻⁴)  </td><td class="markdownTableBodyLeft">5.9⋅10⁻³ (1.9⋅10⁻³)   </td></tr>
+</table>
+<p>From these numerical values we see that Drake's defaults are chosen so that penetrations are a few submillimeters for household objects and in the millimeters range for large mobile robots the size of a humanoid. Stiffer values can be used, but this set of parameters is a good starting point that effectively trades off a practical approximation of rigid contact with numerical stiffness. </p>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

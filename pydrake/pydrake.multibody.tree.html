@@ -14879,15 +14879,15 @@ matrix.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia.CouldBePhysicallyValid">
 <span class="sig-name descname"><span class="pre">CouldBePhysicallyValid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia" title="pydrake.multibody.tree.RotationalInertia"><span class="pre">pydrake.multibody.tree.RotationalInertia</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia.CouldBePhysicallyValid" title="Permalink to this definition"></a></dt>
-<dd><p>Performs several necessary checks to verify whether <code class="docutils literal notranslate"><span class="pre">this</span></code>
-rotational inertia <em>could</em> be physically valid, including:</p>
+<dd><p>Performs several checks to verify whether <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia
+<em>could</em> be physically valid, including:</p>
 <ul class="simple">
 <li><p>No NaN moments or products of inertia.</p></li>
 <li><p>Ixx, Iyy, Izz and principal moments are all non-negative.</p></li>
 <li><p>Ixx, Iyy  Izz and principal moments satisfy the triangle inequality:
-- <code class="docutils literal notranslate"><span class="pre">Ixx</span> <span class="pre">+</span> <span class="pre">Iyy</span> <span class="pre">&gt;=</span> <span class="pre">Izz</span></code>
-- <cite>Ixx + Izz &gt;= Iyy</cite>
-- <code class="docutils literal notranslate"><span class="pre">Iyy</span> <span class="pre">+</span> <span class="pre">Izz</span> <span class="pre">&gt;=</span> <span class="pre">Ixx</span></code></p></li>
+- <code class="docutils literal notranslate"><span class="pre">Ixx</span> <span class="pre">+</span> <span class="pre">Iyy</span> <span class="pre">≥</span> <span class="pre">Izz</span></code>
+- <cite>Ixx + Izz ≥ Iyy</cite>
+- <code class="docutils literal notranslate"><span class="pre">Iyy</span> <span class="pre">+</span> <span class="pre">Izz</span> <span class="pre">≥</span> <span class="pre">Ixx</span></code></p></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -15471,15 +15471,15 @@ matrix.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia_-AutoDiffXd-.CouldBePhysicallyValid">
 <span id="pydrake.multibody.tree.RotationalInertia_[AutoDiffXd].CouldBePhysicallyValid"></span><span class="sig-name descname"><span class="pre">CouldBePhysicallyValid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_-AutoDiffXd-.CouldBePhysicallyValid" title="Permalink to this definition"></a></dt>
-<dd><p>Performs several necessary checks to verify whether <code class="docutils literal notranslate"><span class="pre">this</span></code>
-rotational inertia <em>could</em> be physically valid, including:</p>
+<dd><p>Performs several checks to verify whether <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia
+<em>could</em> be physically valid, including:</p>
 <ul class="simple">
 <li><p>No NaN moments or products of inertia.</p></li>
 <li><p>Ixx, Iyy, Izz and principal moments are all non-negative.</p></li>
 <li><p>Ixx, Iyy  Izz and principal moments satisfy the triangle inequality:
-- <code class="docutils literal notranslate"><span class="pre">Ixx</span> <span class="pre">+</span> <span class="pre">Iyy</span> <span class="pre">&gt;=</span> <span class="pre">Izz</span></code>
-- <cite>Ixx + Izz &gt;= Iyy</cite>
-- <code class="docutils literal notranslate"><span class="pre">Iyy</span> <span class="pre">+</span> <span class="pre">Izz</span> <span class="pre">&gt;=</span> <span class="pre">Ixx</span></code></p></li>
+- <code class="docutils literal notranslate"><span class="pre">Ixx</span> <span class="pre">+</span> <span class="pre">Iyy</span> <span class="pre">≥</span> <span class="pre">Izz</span></code>
+- <cite>Ixx + Izz ≥ Iyy</cite>
+- <code class="docutils literal notranslate"><span class="pre">Iyy</span> <span class="pre">+</span> <span class="pre">Izz</span> <span class="pre">≥</span> <span class="pre">Ixx</span></code></p></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -16057,15 +16057,15 @@ matrix.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RotationalInertia_-Expression-.CouldBePhysicallyValid">
 <span id="pydrake.multibody.tree.RotationalInertia_[Expression].CouldBePhysicallyValid"></span><span class="sig-name descname"><span class="pre">CouldBePhysicallyValid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.RotationalInertia_-Expression-.CouldBePhysicallyValid" title="Permalink to this definition"></a></dt>
-<dd><p>Performs several necessary checks to verify whether <code class="docutils literal notranslate"><span class="pre">this</span></code>
-rotational inertia <em>could</em> be physically valid, including:</p>
+<dd><p>Performs several checks to verify whether <code class="docutils literal notranslate"><span class="pre">this</span></code> rotational inertia
+<em>could</em> be physically valid, including:</p>
 <ul class="simple">
 <li><p>No NaN moments or products of inertia.</p></li>
 <li><p>Ixx, Iyy, Izz and principal moments are all non-negative.</p></li>
 <li><p>Ixx, Iyy  Izz and principal moments satisfy the triangle inequality:
-- <code class="docutils literal notranslate"><span class="pre">Ixx</span> <span class="pre">+</span> <span class="pre">Iyy</span> <span class="pre">&gt;=</span> <span class="pre">Izz</span></code>
-- <cite>Ixx + Izz &gt;= Iyy</cite>
-- <code class="docutils literal notranslate"><span class="pre">Iyy</span> <span class="pre">+</span> <span class="pre">Izz</span> <span class="pre">&gt;=</span> <span class="pre">Ixx</span></code></p></li>
+- <code class="docutils literal notranslate"><span class="pre">Ixx</span> <span class="pre">+</span> <span class="pre">Iyy</span> <span class="pre">≥</span> <span class="pre">Izz</span></code>
+- <cite>Ixx + Izz ≥ Iyy</cite>
+- <code class="docutils literal notranslate"><span class="pre">Iyy</span> <span class="pre">+</span> <span class="pre">Izz</span> <span class="pre">≥</span> <span class="pre">Ixx</span></code></p></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>

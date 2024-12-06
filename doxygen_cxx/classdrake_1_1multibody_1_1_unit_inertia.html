@@ -334,7 +334,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0e13800a4b7f21903141dbe4c0102720 inherit pub_methods_classdrake_1_1multibody_1_1_rotational_inertia"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forms the 3 principal moments of inertia and their 3 associated principal directions for <code>this</code> rotational inertia.  <a href="classdrake_1_1multibody_1_1_rotational_inertia.html#a0e13800a4b7f21903141dbe4c0102720">More...</a><br /></td></tr>
 <tr class="separator:a0e13800a4b7f21903141dbe4c0102720 inherit pub_methods_classdrake_1_1multibody_1_1_rotational_inertia"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03e71eb4bd2a7648a411e1cbaf94812b inherit pub_methods_classdrake_1_1multibody_1_1_rotational_inertia"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b">CouldBePhysicallyValid</a> () const</td></tr>
-<tr class="memdesc:a03e71eb4bd2a7648a411e1cbaf94812b inherit pub_methods_classdrake_1_1multibody_1_1_rotational_inertia"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs several necessary checks to verify whether <code>this</code> rotational inertia <em>could</em> be physically valid, including:  <a href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b">More...</a><br /></td></tr>
+<tr class="memdesc:a03e71eb4bd2a7648a411e1cbaf94812b inherit pub_methods_classdrake_1_1multibody_1_1_rotational_inertia"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs several checks to verify whether <code>this</code> rotational inertia <em>could</em> be physically valid, including:  <a href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b">More...</a><br /></td></tr>
 <tr class="separator:a03e71eb4bd2a7648a411e1cbaf94812b inherit pub_methods_classdrake_1_1multibody_1_1_rotational_inertia"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af397b4c3403d23ab61a128dbeaa1c3aa inherit pub_methods_classdrake_1_1multibody_1_1_rotational_inertia"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#af397b4c3403d23ab61a128dbeaa1c3aa">ReExpressInPlace</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_AE)</td></tr>
 <tr class="memdesc:af397b4c3403d23ab61a128dbeaa1c3aa inherit pub_methods_classdrake_1_1multibody_1_1_rotational_inertia"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-expresses <code>this</code> rotational inertia <code>I_BP_E</code> in place to <code>I_BP_A</code>.  <a href="classdrake_1_1multibody_1_1_rotational_inertia.html#af397b4c3403d23ab61a128dbeaa1c3aa">More...</a><br /></td></tr>
@@ -545,7 +545,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a unit inertia with moments of inertia <code>Ixx</code>, <code>Iyy</code>, <code>Izz</code>, and with each product of inertia set to zero. </p>
-<p>In debug builds, throws std::exception if unit inertia constructed from these arguments violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">RotationalInertia::CouldBePhysicallyValid()</a>. </p>
+<p>In debug builds, throws std::exception if unit inertia constructed from these arguments violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">RotationalInertia::CouldBePhysicallyValid()</a>. </p>
 
 </div>
 </div>
@@ -600,7 +600,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a unit inertia with moments of inertia <code>Ixx</code>, <code>Iyy</code>, <code>Izz</code>, and with products of inertia <code>Ixy</code>, <code>Ixz</code>, <code>Iyz</code>. </p>
-<p>In debug builds, throws std::exception if unit inertia constructed from these arguments violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">RotationalInertia::CouldBePhysicallyValid()</a>. </p>
+<p>In debug builds, throws std::exception if unit inertia constructed from these arguments violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">RotationalInertia::CouldBePhysicallyValid()</a>. </p>
 
 </div>
 </div>
@@ -695,7 +695,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>B's unit inertia about Bp is axially symmetric, meaning B has an equal moment of inertia about any line that both passes through Bp and is perpendicular to unit_vector. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if moment_parallel (J) or moment_perpendicular (K) is negative or if J &gt; 2 K (violates the triangle inequality, see <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>) or ‖unit_vector‖ is not within 1.0E-14 of 1.0. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if moment_parallel (J) or moment_perpendicular (K) is negative or if J &gt; 2 K (violates the triangle inequality, see <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several checks to verify whether this rotational inertia could be physically valid,...">CouldBePhysicallyValid()</a>) or ‖unit_vector‖ is not within 1.0E-14 of 1.0. </td></tr>
   </table>
   </dd>
 </dl>

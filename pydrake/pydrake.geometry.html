@@ -1716,9 +1716,19 @@ quantities are unitless.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.hunt_crossley_dissipation">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hunt_crossley_dissipation</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.hunt_crossley_dissipation" title="Permalink to this definition"></a></dt>
-<dd><p>Controls energy damping from contact, for contact models <em>other than</em>
-multibody::DiscreteContactApproximation::kSap. Units are seconds per
-meter.</p>
+<dd><p>Controls energy dissipation from contact, for contact approximations
+other than* multibody::DiscreteContactApproximation::kSap. Units are
+seconds per meter.</p>
+<p>If a non-deformable geometry is missing a value for dissipation,
+MultibodyPlant will generate a default value (based on
+multibody::MultibodyPlantConfig::penetration_allowance). However, this
+behavior will be going away. Therefore, we recommend guaranteeing that
+every geometry has a dissipation value either by assigning the
+property directly to the geometry or by providing a non-null value
+here.</p>
+<p>Please refer to contact_defaults “Default Contact Parameters” for more
+details on Drake’s defaults along with guidelines on how to estimate
+parameters specific to your model.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -1769,11 +1779,16 @@ and it does not affect point contact.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.geometry.DefaultProximityProperties.point_stiffness">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">point_stiffness</span></span><a class="headerlink" href="#pydrake.geometry.DefaultProximityProperties.point_stiffness" title="Permalink to this definition"></a></dt>
-<dd><p>&#64;name Point Contact Properties</p>
-<p>These properties affect point contact only. For complete descriptions
-of the numeric parameters, See point_forces_modeling “Compliant Point
-Contact Forces”, geometry::AddContactMaterial. A measure of material
-stiffness, in units of Newtons per meter.</p>
+<dd><p>A measure of material stiffness, in units of Newtons per meter.</p>
+<p>If a non-deformable geometry is missing a value for stiffness,
+MultibodyPlant will generate a default value (based on
+multibody::MultibodyPlantConfig::penetration_allowance). However, this
+behavior will be going away. Therefore, we recommend guaranteeing that
+every geometry has a stiffness value either by assigning the property
+directly to the geometry or by providing a non-null value here.</p>
+<p>Please refer to contact_defaults “Default Contact Parameters” for more
+details on Drake’s defaults along with guidelines on how to estimate
+parameters specific to your model.</p>
 </dd></dl>
 
 <dl class="py property">

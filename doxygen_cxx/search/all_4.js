@@ -14,6 +14,7 @@ var searchData=
   ['cart_5fpole',['cart_pole',['../namespacedrake_1_1examples_1_1multibody_1_1cart__pole.html',1,'drake::examples::multibody']]],
   ['common',['common',['../namespacedrake_1_1common.html',1,'drake']]],
   ['compass_5fgait',['compass_gait',['../namespacedrake_1_1examples_1_1compass__gait.html',1,'drake::examples']]],
+  ['default_20contact_20parameters',['Default Contact Parameters',['../group__contact__defaults.html',1,'']]],
   ['contact_5fsolvers',['contact_solvers',['../namespacedrake_1_1multibody_1_1contact__solvers.html',1,'drake::multibody']]],
   ['controllers',['controllers',['../namespacedrake_1_1systems_1_1controllers.html',1,'drake::systems']]],
   ['controllers_5ftest',['controllers_test',['../namespacedrake_1_1systems_1_1controllers__test.html',1,'drake::systems']]],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,17,4,11],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9f9ca6881495c3e9ce261df8ca9b5514":[3,0,0,17,4,0],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#ab72583d843169e9123e0aa7b87439bda":[3,0,0,17,4,9],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,17,4,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a87b644f91479935ab6f674550c53f1dc":[1,2,11,8,3],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ab9a884ab71a576b2fdb10c31f1501ece":[1,2,11,8,6],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ac2e5aab0612d67400354a4fe71278a21":[1,2,11,8,4],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ad869cd6ef2e796607d92e63fdc374112":[1,2,11,8,7],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ae66e8448b66859a6593a973875a61c9c":[1,2,11,8,5]
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ad869cd6ef2e796607d92e63fdc374112":[1,2,11,8,7]
 };

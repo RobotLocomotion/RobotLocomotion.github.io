@@ -188,9 +188,9 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a64a4087244dd4a8102ef1bb4abafecc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#adb2f51f2f513478a97b0175bff3a65ae" title="(Advanced) For a discrete-time plant, configures whether the output ports are sampled (the default) o...">MultibodyPlant::SetUseSampledOutputPorts()</a>.  <a href="#a64a4087244dd4a8102ef1bb4abafecc4">More...</a><br /></td></tr>
 <tr class="separator:a64a4087244dd4a8102ef1bb4abafecc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36743d8dd30dc7ff0ca3778564e2a90f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f">penetration_allowance</a> {0.001}</td></tr>
-<tr class="memdesc:a36743d8dd30dc7ff0ca3778564e2a90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose...">MultibodyPlant::set_penetration_allowance()</a>.  <a href="#a36743d8dd30dc7ff0ca3778564e2a90f">More...</a><br /></td></tr>
+<tr class="memdesc:a36743d8dd30dc7ff0ca3778564e2a90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets a penetration allowance used to estimate the point contact stiffness and Hunt &amp; Crossley dissipa...">MultibodyPlant::set_penetration_allowance()</a>.  <a href="#a36743d8dd30dc7ff0ca3778564e2a90f">More...</a><br /></td></tr>
 <tr class="separator:a36743d8dd30dc7ff0ca3778564e2a90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f73b758fdc6b763190aa6ea76e014c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a0f73b758fdc6b763190aa6ea76e014c2">stiction_tolerance</a> {0.001}</td></tr>
+<tr class="memitem:a0f73b758fdc6b763190aa6ea76e014c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#a0f73b758fdc6b763190aa6ea76e014c2">stiction_tolerance</a> {1.0e-4}</td></tr>
 <tr class="memdesc:a0f73b758fdc6b763190aa6ea76e014c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074">MultibodyPlant::set_stiction_tolerance()</a>.  <a href="#a0f73b758fdc6b763190aa6ea76e014c2">More...</a><br /></td></tr>
 <tr class="separator:a0f73b758fdc6b763190aa6ea76e014c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0f273688f2f9252eca8098377a5ea10"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html#aa0f273688f2f9252eca8098377a5ea10">contact_model</a> {&quot;hydroelastic_with_fallback&quot;}</td></tr>
@@ -351,7 +351,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose...">MultibodyPlant::set_penetration_allowance()</a>. </p>
+<p>Configures the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets a penetration allowance used to estimate the point contact stiffness and Hunt &amp; Crossley dissipa...">MultibodyPlant::set_penetration_allowance()</a>. </p>
 
 </div>
 </div>
@@ -382,7 +382,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdouble.html">double</a> stiction_tolerance {0.001}</td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> stiction_tolerance {1.0e-4}</td>
         </tr>
       </table>
 </div><div class="memdoc">
