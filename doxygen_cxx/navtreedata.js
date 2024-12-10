@@ -124,16 +124,16 @@ var NAVTREEINDEX =
 "latex_8h.html",
 "model__instance__info_8h.html",
 "namespacedrake_1_1systems_1_1controllers__test.html",
-"port__base_8h.html",
-"robot__plan__utils_8h.html#a8cac2550a9a52551ff82e51b3d5b29e3",
-"sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3",
-"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a905b0fa1fb0e4a5334581d565fb2f8ec",
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a2027b3136775228e993fb7e57ee68c5d",
-"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html#a8e8824802dedfbc36776227f7482b6bc",
-"structdrake_1_1planning_1_1_collision_checker_params.html#a97e6971c2938a484343028417a4614c9",
-"structdrake_1_1systems_1_1_system_type_tag.html#a379e6a18189f3ab144292c07cd2cd1d9",
-"structdrake_1_1type__check__different__from.html#a0860509034ec6a8bc624149afad18d42",
-"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d"
+"populate__cylinder__plant_8h.html#a5a816161acad2f3ad08d68e4507ee9de",
+"robot__plan__utils_8h.html#a34dd83b8c99f86f80129b54cf879beda",
+"sorted__pair_8h.html#aaaa975aac6050ca9507bf9761707c383",
+"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f",
+"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a17e04d21a0a53ce5c7047c2c4bd796e9",
+"structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html",
+"structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884",
+"structdrake_1_1systems_1_1_system_type_tag.html",
+"structdrake_1_1type__check__different__from.html",
+"toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

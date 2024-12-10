@@ -76,6 +76,7 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "meshcat_visualizer_params.h", "meshcat__visualizer__params_8h.html", [
       [ "MeshcatVisualizerParams", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html", "structdrake_1_1geometry_1_1_meshcat_visualizer_params" ]
     ] ],
+    [ "poisson_disk.h", "poisson__disk_8h.html", null ],
     [ "proximity_engine.h", "proximity__engine_8h.html", [
       [ "GeometryState", "classdrake_1_1geometry_1_1_geometry_state.html", "classdrake_1_1geometry_1_1_geometry_state" ]
     ] ],

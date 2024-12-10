@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884":[1,4,2,2,3,2],
 "structdrake_1_1planning_1_1_collision_checker_params.html#a97e6971c2938a484343028417a4614c9":[1,4,2,2,3,4],
 "structdrake_1_1planning_1_1_collision_checker_params.html#a9e6dd7347da1885477cd5b895b47ce9a":[1,4,2,2,3,6],
 "structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226":[1,4,2,2,3,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a27aa238f9753bd35e7fc5b8c9d015b6b":[3,0,0,15,107,2,2],
 "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a64b012804e2f584e03341f0d03ce2593":[3,0,0,15,107,2,3],
 "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a6aac2cea9e3a7eab48aa0569a827edf7":[3,0,0,15,107,2,0],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#ac1c5908eb40cf50e444c52cac89b6856":[3,0,0,15,107,2,1],
-"structdrake_1_1systems_1_1_system_type_tag.html":[3,0,0,15,115]
+"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#ac1c5908eb40cf50e444c52cac89b6856":[3,0,0,15,107,2,1]
 };
