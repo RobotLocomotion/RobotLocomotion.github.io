@@ -1047,13 +1047,13 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <p>CommonSolverOption contain the names of these supported options. The user can use these options as "key" in SolverOption::SetOption(). If the solver doesn't support the option, the option is ignored. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40a222307df6fb67d2a524cade7227ca4f8"></a>kPrintFileName&#160;</td><td class="fielddoc"><p>Many solvers support printing the progress of each iteration to a file. </p>
-<p>The user can call <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a64f5a75df2c33b77454e88fae4d08047" title="Sets a double-valued solver option for a specific solver.">SolverOptions::SetOption</a>(kPrintFileName, "filename.log") to enable this. To disable, set the option to the empty string <code>""</code>, which indicates that no file should be written. </p>
+<p>The user can call <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02" title="Sets a solver option for a specific solver.">SolverOptions::SetOption</a>(kPrintFileName, "filename.log") to enable this. To disable, set the option to the empty string <code>""</code>, which indicates that no file should be written. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100"></a>kPrintToConsole&#160;</td><td class="fielddoc"><p>Many solvers support printing the progress of each iteration to the console. </p>
 <p>The user can call <code>SolverOptions::SetOption(kPrintToConsole, 1)</code> to enable this, or use <code>0</code> to turn off printing to the console. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40a88b173449afee96caef8bf2715f31380"></a>kStandaloneReproductionFileName&#160;</td><td class="fielddoc"><p>Some solvers support writing a standalone (e.g., it does not depend on Drake) minimal reproduction of the problem to a file. </p>
-<p>This is especially useful for sending bug reports upstream to the developers of the solver. The user can call <code><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a64f5a75df2c33b77454e88fae4d08047" title="Sets a double-valued solver option for a specific solver.">SolverOptions::SetOption</a>(kStandaloneReproductionFileName, "filename.txt")</code> to enable this. To disable, set the option to the empty string <code>""</code>, which indicates that no file should be written. </p>
+<p>This is especially useful for sending bug reports upstream to the developers of the solver. The user can call <code><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02" title="Sets a solver option for a specific solver.">SolverOptions::SetOption</a>(kStandaloneReproductionFileName, "filename.txt")</code> to enable this. To disable, set the option to the empty string <code>""</code>, which indicates that no file should be written. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40af1d12898262fdbf42df381627646ee00"></a>kMaxThreads&#160;</td><td class="fielddoc"><p>Some solvers are multi-threaded. </p>
 <p>The user can request the maximum number of threads used by the solver with this <code>int</code> option. When not set, the value defaults to <a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819" title="Constructs a Parallelism with the maximum number of threads.">Parallelism.Max()</a>.num_threads(), which can be controlled via the <a class="el" href="classdrake_1_1_parallelism.html">DRAKE_NUM_THREADS</a> environment variable. </p><dl class="section pre"><dt>Precondition</dt><dd>The number of threads must be greater than 0. </dd></dl>
@@ -3349,36 +3349,8 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 </div>
 </div>
-<a id="a6c59daf7e576403f76128d2063303e9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c59daf7e576403f76128d2063303e9b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[9/12]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285">IntervalBinning</a> &amp;&#160;</td>
-          <td class="paramname"><em>binning</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad58cede9876421e050ac44deee7804ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad58cede9876421e050ac44deee7804ff">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[10/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58cede9876421e050ac44deee7804ff">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[9/12]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3394,6 +3366,34 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
           <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c59daf7e576403f76128d2063303e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c59daf7e576403f76128d2063303e9b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[10/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285">IntervalBinning</a> &amp;&#160;</td>
+          <td class="paramname"><em>binning</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3877,26 +3877,8 @@ Only programs which are thread safe are solved concurrently. Programs that are n
 
 </div>
 </div>
-<a id="afc62e1bcb70d02de2cb87f7bea20bc77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc62e1bcb70d02de2cb87f7bea20bc77">&#9670;&nbsp;</a></span>to_string() <span class="overload">[7/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string drake::solvers::to_string </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285">IntervalBinning</a>&#160;</td>
-          <td class="paramname"><em>interval_binning</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a16445fc3b260d8c58ea9082a3594f85f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16445fc3b260d8c58ea9082a3594f85f">&#9670;&nbsp;</a></span>to_string() <span class="overload">[8/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a16445fc3b260d8c58ea9082a3594f85f">&#9670;&nbsp;</a></span>to_string() <span class="overload">[7/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3906,6 +3888,24 @@ Only programs which are thread safe are solved concurrently. Programs that are n
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc62e1bcb70d02de2cb87f7bea20bc77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc62e1bcb70d02de2cb87f7bea20bc77">&#9670;&nbsp;</a></span>to_string() <span class="overload">[8/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string drake::solvers::to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285">IntervalBinning</a>&#160;</td>
+          <td class="paramname"><em>interval_binning</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

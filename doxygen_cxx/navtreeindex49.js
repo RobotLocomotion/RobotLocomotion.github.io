@@ -1,7 +1,5 @@
 var NAVTREEINDEX49 =
 {
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ae66e8448b66859a6593a973875a61c9c":[1,2,11,8,5],
-"classes.html":[3,1],
 "classprocess__attribute__default.html":[3,0,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03f87782de17fa3cc06eae968fe10b34":[3,0,2,3,12],
@@ -249,5 +247,7 @@ var NAVTREEINDEX49 =
 "default__scalars__pybind_8h.html#aa69fa97ca5615e75170ca0274e32cba2":[4,0,0,0,0,1,2,1],
 "default__scalars__pybind_8h.html#ad65f25e300d8d606958b3df57c29f5fe":[4,0,0,0,0,1,2,4],
 "deformable__body__config_8h.html":[4,0,0,8,2,6],
-"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7a":[4,0,0,8,2,6,1]
+"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7a":[4,0,0,8,2,6,1],
+"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f":[4,0,0,8,2,6,1,1],
+"deformable__body__config_8h.html#ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385":[4,0,0,8,2,6,1,2]
 };

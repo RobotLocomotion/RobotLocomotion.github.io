@@ -1,7 +1,5 @@
 var NAVTREEINDEX47 =
 {
-"classdrake_1_1systems_1_1sensors_1_1_image_io.html#a096d5dcfc84429a709d4b012ed39d325":[3,0,0,15,8,8,6],
-"classdrake_1_1systems_1_1sensors_1_1_image_io.html#a0d3b574d360af1cd0cae88c46e3dbb3c":[3,0,0,15,8,8,2],
 "classdrake_1_1systems_1_1sensors_1_1_image_io.html#a0f9c6e229e909f2b46e07afa668b0ad7":[3,0,0,15,8,8,7],
 "classdrake_1_1systems_1_1sensors_1_1_image_io.html#a120b415b19d67ad56d9eeb5517a98e9d":[3,0,0,15,8,8,8],
 "classdrake_1_1systems_1_1sensors_1_1_image_io.html#a21d02063514fa3c5d10c619fb835319c":[3,0,0,15,8,8,17],
@@ -249,5 +247,7 @@ var NAVTREEINDEX47 =
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a489f89c546fea3e35bac6689e00be0db":[3,0,0,17,4,1],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a518b6f39638b5dcca07dd2f721c7ac70":[3,0,0,17,4,3],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a572ac255b92c7756d32106a39fc568d4":[3,0,0,17,4,5],
-"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,17,4,6]
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,17,4,6],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,17,4,11],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9f9ca6881495c3e9ce261df8ca9b5514":[3,0,0,17,4,0]
 };

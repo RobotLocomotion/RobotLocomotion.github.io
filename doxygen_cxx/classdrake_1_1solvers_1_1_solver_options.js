@@ -20,8 +20,6 @@ var classdrake_1_1solvers_1_1_solver_options =
     [ "operator=", "classdrake_1_1solvers_1_1_solver_options.html#a5310559e23a1d9e46c371bc5c9451020", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_solver_options.html#a7b3272ee1cbca61b23a0ee9c93069731", null ],
     [ "operator==", "classdrake_1_1solvers_1_1_solver_options.html#a75ae4b0e55acd123d4dd077a31e8b0ff", null ],
-    [ "SetOption", "classdrake_1_1solvers_1_1_solver_options.html#a64f5a75df2c33b77454e88fae4d08047", null ],
-    [ "SetOption", "classdrake_1_1solvers_1_1_solver_options.html#ac1ab5717db6c3382362d3622a187cfaa", null ],
-    [ "SetOption", "classdrake_1_1solvers_1_1_solver_options.html#a258cce4598dc127dfe730f366371a8f4", null ],
+    [ "SetOption", "classdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02", null ],
     [ "SetOption", "classdrake_1_1solvers_1_1_solver_options.html#ac54f45d8221218d66a7f603bee90d21f", null ]
 ];

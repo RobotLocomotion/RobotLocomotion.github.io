@@ -1,7 +1,5 @@
 var NAVTREEINDEX52 =
 {
-"expression_2expression_8h.html#acfa5bc007d1b065d2afc30e2f6ced7a9":[4,0,0,1,3,0,3,49],
-"expression_2expression_8h.html#acfe3f1787c60c08adf6af1e1f29ff6cf":[4,0,0,1,3,0,3,71],
 "expression_2expression_8h.html#acffaee70b54f60b4d1b9f1771f78ddf7":[4,0,0,1,3,0,3,30],
 "expression_2expression_8h.html#ad0f56048cec3e53d98346a36df54a006":[4,0,0,1,3,0,3,78],
 "expression_2expression_8h.html#adac78e96efaa07849f158591192b2dca":[4,0,0,1,3,0,3,92],
@@ -249,5 +247,7 @@ var NAVTREEINDEX52 =
 "formula_8h.html#afc6dff8519d02993c6699ddb3ebb28cf":[4,0,0,1,3,0,7,37],
 "formula_8h.html#afef2e4ae842f5cec22644a1627929c20":[4,0,0,1,3,0,7,7],
 "formula_8h.html#aff01b0d18262c1673124bd659870a3a4":[4,0,0,1,3,0,7,18],
-"formula__cell_8h.html":[4,0,0,1,3,0,8]
+"formula__cell_8h.html":[4,0,0,1,3,0,8],
+"formula__cell_8h.html#a09ce3ca5629e2672f177ff3c0cc088ae":[4,0,0,1,3,0,8,20],
+"formula__cell_8h.html#a0aab22ba7b7baeb20a13b0aa90172fc1":[4,0,0,1,3,0,8,23]
 };

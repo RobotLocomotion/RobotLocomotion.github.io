@@ -8741,23 +8741,29 @@ set.</p>
 <span class="sig-name descname"><span class="pre">SetOption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.SolverOptions.SetOption" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>SetOption(self: pydrake.solvers.SolverOptions, solver_id: drake::solvers::SolverId, solver_option: str, option_value: float) -&gt; None</p></li>
+<li><p>SetOption(self: pydrake.solvers.SolverOptions, solver_id: drake::solvers::SolverId, key: str, value: Union[float, int, str]) -&gt; None</p></li>
 </ol>
-<p>Sets a double-valued solver option for a specific solver.</p>
+<p>Sets a solver option for a specific solver. If the solver doesn’t
+support the option, it will throw an exception during the Solve (not
+when setting the option here).</p>
 <ol class="arabic simple" start="2">
-<li><p>SetOption(self: pydrake.solvers.SolverOptions, solver_id: drake::solvers::SolverId, solver_option: str, option_value: int) -&gt; None</p></li>
-</ol>
-<p>Sets an integer-valued solver option for a specific solver.</p>
-<ol class="arabic simple" start="3">
-<li><p>SetOption(self: pydrake.solvers.SolverOptions, solver_id: drake::solvers::SolverId, solver_option: str, option_value: str) -&gt; None</p></li>
-</ol>
-<p>Sets a string-valued solver option for a specific solver.</p>
-<ol class="arabic simple" start="4">
 <li><p>SetOption(self: pydrake.solvers.SolverOptions, key: pydrake.solvers.CommonSolverOption, value: Union[float, int, str]) -&gt; None</p></li>
 </ol>
 <p>Sets a common option for all solvers supporting that option (for
 example, printing the progress in each iteration). If the solver
 doesn’t support the option, the option is ignored.</p>
+<ol class="arabic simple" start="3">
+<li><p>SetOption(self: pydrake.solvers.SolverOptions, solver_id: drake::solvers::SolverId, solver_option: str, option_value: float) -&gt; None</p></li>
+</ol>
+<p>The kwarg names for SolverOptions.SetOption have changed; the new names are <cite>key</cite> and <cite>value</cite> not <cite>solver_option</cite> and <cite>option_value</cite>; the old names are deprecated and will be removed from Drake on or after 2025-05-01.</p>
+<ol class="arabic simple" start="4">
+<li><p>SetOption(self: pydrake.solvers.SolverOptions, solver_id: drake::solvers::SolverId, solver_option: str, option_value: int) -&gt; None</p></li>
+</ol>
+<p>The kwarg names for SolverOptions.SetOption have changed; the new names are <cite>key</cite> and <cite>value</cite> not <cite>solver_option</cite> and <cite>option_value</cite>; the old names are deprecated and will be removed from Drake on or after 2025-05-01.</p>
+<ol class="arabic simple" start="5">
+<li><p>SetOption(self: pydrake.solvers.SolverOptions, solver_id: drake::solvers::SolverId, solver_option: str, option_value: str) -&gt; None</p></li>
+</ol>
+<p>The kwarg names for SolverOptions.SetOption have changed; the new names are <cite>key</cite> and <cite>value</cite> not <cite>solver_option</cite> and <cite>option_value</cite>; the old names are deprecated and will be removed from Drake on or after 2025-05-01.</p>
 </dd></dl>
 
 </dd></dl>
