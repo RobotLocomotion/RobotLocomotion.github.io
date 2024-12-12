@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1multibody_1_1_quaternion_floating_joint.html#acbe025471edf1a97493cb093467b659d":[3,0,0,8,77,1],
 "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#ad5a0b40a5cf322408e40c47f883bbcf1":[3,0,0,8,77,11],
 "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#ae13697cc7b985ee4e21a82f39d53b873":[3,0,0,8,77,26],
 "classdrake_1_1multibody_1_1_quaternion_floating_joint.html#ae24bf1ddac317b629f326fba2119d296":[3,0,0,8,77,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1multibody_1_1_screw_joint.html#a1a9edeaf067e5f6eab08d29f65e23bf5":[3,0,0,8,86,21],
 "classdrake_1_1multibody_1_1_screw_joint.html#a1afd87f9af71c38de81ebfa078a30042":[3,0,0,8,86,8],
 "classdrake_1_1multibody_1_1_screw_joint.html#a24d17fc9f230c674c64f03e3c2621242":[3,0,0,8,86,23],
-"classdrake_1_1multibody_1_1_screw_joint.html#a46c1152817528426d83470b735e91fd9":[3,0,0,8,86,25],
-"classdrake_1_1multibody_1_1_screw_joint.html#a46d36f83173141cb9d58c6a3d111ae41":[3,0,0,8,86,28]
+"classdrake_1_1multibody_1_1_screw_joint.html#a46c1152817528426d83470b735e91fd9":[3,0,0,8,86,25]
 };

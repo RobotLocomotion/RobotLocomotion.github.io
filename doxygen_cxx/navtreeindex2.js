@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"classdrake_1_1copyable__unique__ptr.html#a67bca368e89b4408972a3f54c09eaab3":[3,0,0,21,18],
 "classdrake_1_1copyable__unique__ptr.html#a76c791981969a90b67778f87036b032e":[3,0,0,21,9],
 "classdrake_1_1copyable__unique__ptr.html#a9efa09fdc8aad69db06b649c447d9806":[3,0,0,21,3],
 "classdrake_1_1copyable__unique__ptr.html#abf98f86aa60c05f0a546ca78c2a2e857":[3,0,0,21,22],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#aef28bc73020e22faa0023063a2b7140d":[3,0,0,3,4,0,6],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html":[3,0,0,3,4,1],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a019cb7cbcdd87619a067ab548e78c5c7":[3,0,0,3,4,1,17],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a078b25197b9f48eec818cf515da6db06":[3,0,0,3,4,1,22],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a089bb5a985033b9a117490e1b12fe430":[3,0,0,3,4,1,7]
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html#a078b25197b9f48eec818cf515da6db06":[3,0,0,3,4,1,22]
 };

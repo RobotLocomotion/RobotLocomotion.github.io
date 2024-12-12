@@ -1,5 +1,13 @@
 var NAVTREEINDEX62 =
 {
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ae48fdaa0013a64a07e1caaf8a6b66ec7":[3,0,0,3,4,5,5],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#af2ec6e39cde2a2ebae13657d96462b72":[3,0,0,3,4,5,1],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#afb6eb259e3f5d5095695d320b31e40d5":[3,0,0,3,4,5,3],
+"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html":[3,0,0,3,9,3],
+"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,9,3,0],
+"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a5c1d918dc22b5ef6cf169eb681e7eecf":[3,0,0,3,9,3,1],
+"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,9,3,2],
+"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a905b0fa1fb0e4a5334581d565fb2f8ec":[3,0,0,3,9,3,3],
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,9,3,5],
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[3,0,0,3,9,3,4],
 "structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html":[3,0,0,3,10,0,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a7fa789c84df3efe720c9070acd56c1ce":[3,0,0,4,58,5],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[3,0,0,4,58,2],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[3,0,0,4,58,8],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[3,0,0,4,58,0],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,4,58,1],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,4,58,3],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html":[3,0,0,4,1,9],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a03924fec23a67a542cf129700a52949a":[3,0,0,4,1,9,6],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a0d3adebc3343af4468bf27a14bba93ae":[3,0,0,4,1,9,13],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a1762c600d095ebf4fc9c1dc730d2f186":[3,0,0,4,1,9,11],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a17e04d21a0a53ce5c7047c2c4bd796e9":[3,0,0,4,1,9,8],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a2027b3136775228e993fb7e57ee68c5d":[3,0,0,4,1,9,12]
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[3,0,0,4,58,0]
 };

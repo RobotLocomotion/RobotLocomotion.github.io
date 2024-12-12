@@ -186,6 +186,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa5b39fa8a919e6eadaaa144a69c6dde6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43aeb39c75a161bbe11551e73edcd9ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html#a43aeb39c75a161bbe11551e73edcd9ea">~FunctionHandleTrajectory</a> () final</td></tr>
 <tr class="separator:a43aeb39c75a161bbe11551e73edcd9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a9219ab1dbf34bbcc41ae2c6a781fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html#ac0a9219ab1dbf34bbcc41ae2c6a781fa">set_derivative</a> (std::function&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;(const T &amp;, <a class="el" href="classint.html">int</a>)&gt; func)</td></tr>
+<tr class="memdesc:ac0a9219ab1dbf34bbcc41ae2c6a781fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a callback function that returns the derivative of the function.  <a href="#ac0a9219ab1dbf34bbcc41ae2c6a781fa">More...</a><br /></td></tr>
+<tr class="separator:ac0a9219ab1dbf34bbcc41ae2c6a781fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef16c3e234e70a22d89678041a6bda57"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html#aef16c3e234e70a22d89678041a6bda57">Clone</a> () const final</td></tr>
 <tr class="separator:aef16c3e234e70a22d89678041a6bda57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adca2766204b86212e8ed2b91faa97775"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html#adca2766204b86212e8ed2b91faa97775">value</a> (const T &amp;t) const final</td></tr>
@@ -232,10 +235,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1trajectories_1_1_trajectory')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory&lt; T &gt;</a></td></tr>
 <tr class="memitem:a0d2a23aec55910c9e1102de7ab8c3249 inherit pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0d2a23aec55910c9e1102de7ab8c3249">Trajectory</a> ()=default</td></tr>
 <tr class="separator:a0d2a23aec55910c9e1102de7ab8c3249 inherit pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbddf9c56911aa6014253b5800fbff83 inherit pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#afbddf9c56911aa6014253b5800fbff83">DoEvalDerivative</a> (const T &amp;t, <a class="el" href="classint.html">int</a> derivative_order) const</td></tr>
-<tr class="separator:afbddf9c56911aa6014253b5800fbff83 inherit pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac51b842ba9d2ee39e9398c86fdc38a75 inherit pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#ac51b842ba9d2ee39e9398c86fdc38a75">DoMakeDerivative</a> (<a class="el" href="classint.html">int</a> derivative_order) const</td></tr>
-<tr class="separator:ac51b842ba9d2ee39e9398c86fdc38a75 inherit pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b15b4592b800d6cf4d9273f46a2774b inherit pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a6b15b4592b800d6cf4d9273f46a2774b">Trajectory</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a> &amp;)=default</td></tr>
 <tr class="separator:a6b15b4592b800d6cf4d9273f46a2774b inherit pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51223614aa5ad65e500cce2625aaf328 inherit pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a51223614aa5ad65e500cce2625aaf328">operator=</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a> &amp;)=default</td></tr>
@@ -343,6 +342,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates the <a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html" title="FunctionHandleTrajectory takes a function, value = f(t), and provides a Trajectory interface.">FunctionHandleTrajectory</a>. </p>
+<p>By default the created trajectory does not provide derivatives. If trajectory derivatives are required, call <code>set_derivative</code> to provide the function's derivatives.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">func</td><td>The function to be used to evaluate the trajectory. </td></tr>
@@ -471,8 +471,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a91f12eeb5a65ec18decef64094e1efb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91f12eeb5a65ec18decef64094e1efb5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a6a8121fd509d4b7ac45f0a9932f1e1fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a8121fd509d4b7ac45f0a9932f1e1fd">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -483,7 +483,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html">FunctionHandleTrajectory</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html">FunctionHandleTrajectory</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html">FunctionHandleTrajectory</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -497,8 +497,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a6a8121fd509d4b7ac45f0a9932f1e1fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a8121fd509d4b7ac45f0a9932f1e1fd">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a91f12eeb5a65ec18decef64094e1efb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91f12eeb5a65ec18decef64094e1efb5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -509,7 +509,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html">FunctionHandleTrajectory</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html">FunctionHandleTrajectory</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html">FunctionHandleTrajectory</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -548,6 +548,28 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The number of rows in the matrix returned by <a class="el" href="classdrake_1_1trajectories_1_1_function_handle_trajectory.html#adca2766204b86212e8ed2b91faa97775" title="Evaluates the trajectory at the given time t.">value()</a>. </dd></dl>
 
 <p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a857db071d9bf847d026ba7046aa9744e">Trajectory&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ac0a9219ab1dbf34bbcc41ae2c6a781fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a9219ab1dbf34bbcc41ae2c6a781fa">&#9670;&nbsp;</a></span>set_derivative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_derivative </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;(const T &amp;, <a class="el" href="classint.html">int</a>)&gt;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a callback function that returns the derivative of the function. </p>
+<p><code>func(t,order)</code> will only be called with <code>order &gt; 0</code>. It is recommended that if the derivatives are not implemented for the requested order, the callback should throw an exception.</p>
+<p>The size of the output of <code>func</code> will be checked each time the derivative is evaluated, and a std::exception will be thrown if the size is incorrect. </p>
 
 </div>
 </div>

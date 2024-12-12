@@ -493,6 +493,8 @@ var group__solver__evaluators =
       [ "DoToLatex", "classdrake_1_1solvers_1_1_l1_norm_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a17be3710c66eca9567f09c640fd2ba41", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a9a99f0ecef212a5e3d88790649f6a032", null ],
+      [ "update_A_entry", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a2e01310c2db1c98782b5fa3d0ad9f87b", null ],
+      [ "update_b_entry", "classdrake_1_1solvers_1_1_l1_norm_cost.html#af0e469d5862fcbd74594f47e7c2608bb", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
     ] ],
     [ "L2NormCost", "classdrake_1_1solvers_1_1_l2_norm_cost.html", [
@@ -528,6 +530,8 @@ var group__solver__evaluators =
       [ "DoToLatex", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ab6304fd980ebd27b25e88b5d2cfec5e8", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ab765f2102252bded1d21b19ac5184576", null ],
+      [ "update_A_entry", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a2e01310c2db1c98782b5fa3d0ad9f87b", null ],
+      [ "update_b_entry", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#af0e469d5862fcbd74594f47e7c2608bb", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
     ] ],
     [ "PerspectiveQuadraticCost", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html", [
@@ -544,6 +548,8 @@ var group__solver__evaluators =
       [ "DoToLatex", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#af32fe83b5bd0308ba9deac5a0331b76b", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#acd63f52880d3aad51f3d675636b4832c", null ],
+      [ "update_A_entry", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a2e01310c2db1c98782b5fa3d0ad9f87b", null ],
+      [ "update_b_entry", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#af0e469d5862fcbd74594f47e7c2608bb", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
     ] ],
     [ "EvaluatorCost", "classdrake_1_1solvers_1_1_evaluator_cost.html", [

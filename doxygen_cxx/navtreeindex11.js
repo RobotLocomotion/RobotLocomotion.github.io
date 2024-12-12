@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html":[1,1,1,6,1],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html":[1,5,5,6,1],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a063e5bb012269b6ca2cf6e4efe2ea4b5":[1,1,1,6,1,8],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a063e5bb012269b6ca2cf6e4efe2ea4b5":[1,5,5,6,1,8],
@@ -241,13 +242,12 @@ var NAVTREEINDEX11 =
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#aecaa71c6fa73805192424c08eed6db2b":[1,5,5,11,0],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html":[1,1,1,13],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html":[1,5,5,13],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a2813b808767f3b4dd18af5e9ba522c42":[1,1,1,13,2],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a2813b808767f3b4dd18af5e9ba522c42":[1,5,5,13,2],
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a2813b808767f3b4dd18af5e9ba522c42":[1,1,1,13,2],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a66c0758e1fb9ac2f946857bdeae490fc":[1,5,5,13,12],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a66c0758e1fb9ac2f946857bdeae490fc":[1,1,1,13,12],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a7ffbc0928c59ef6d1ed744bcfea6be0b":[1,5,5,13,8],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a7ffbc0928c59ef6d1ed744bcfea6be0b":[1,1,1,13,8],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a92797706c9c2adb6329f1dce4c672d59":[1,5,5,13,7],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a92797706c9c2adb6329f1dce4c672d59":[1,1,1,13,7],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a939869561d2b6d2a404bf1f48d513d5f":[1,5,5,13,10]
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a92797706c9c2adb6329f1dce4c672d59":[1,1,1,13,7]
 };

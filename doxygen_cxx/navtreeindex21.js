@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1multibody_1_1_screw_joint.html#a46d36f83173141cb9d58c6a3d111ae41":[3,0,0,8,86,28],
 "classdrake_1_1multibody_1_1_screw_joint.html#a47c9c178dbbe338d4ef11a6dcfbf3f90":[3,0,0,8,86,19],
 "classdrake_1_1multibody_1_1_screw_joint.html#a5cc13f9bc5254c723bf7ce65b3f74db1":[3,0,0,8,86,1],
 "classdrake_1_1multibody_1_1_screw_joint.html#a663d4e5c0ea17804db0824246381a47f":[3,0,0,8,86,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1multibody_1_1_toppra.html#aa6404ed212fab2af0bad98457df07d16":[1,4,2,1,0,11],
 "classdrake_1_1multibody_1_1_toppra.html#ab013d8e5872653e5d10eaae0f3daa3dc":[1,4,2,1,0,14],
 "classdrake_1_1multibody_1_1_toppra.html#ac05332bb6e89f996e9501a52af6e307f":[1,4,2,1,0,12],
-"classdrake_1_1multibody_1_1_toppra.html#ac6962da0cfeb19c216cf5920469e7926":[1,4,2,1,0,0],
-"classdrake_1_1multibody_1_1_toppra.html#ac9fc9da3b84296fbc0292963ecffb699":[1,4,2,1,0,3]
+"classdrake_1_1multibody_1_1_toppra.html#ac6962da0cfeb19c216cf5920469e7926":[1,4,2,1,0,0]
 };

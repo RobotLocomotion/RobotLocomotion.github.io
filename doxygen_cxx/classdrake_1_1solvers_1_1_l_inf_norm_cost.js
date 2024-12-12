@@ -13,5 +13,7 @@ var classdrake_1_1solvers_1_1_l_inf_norm_cost =
     [ "DoToLatex", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ab6304fd980ebd27b25e88b5d2cfec5e8", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ab765f2102252bded1d21b19ac5184576", null ],
+    [ "update_A_entry", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a2e01310c2db1c98782b5fa3d0ad9f87b", null ],
+    [ "update_b_entry", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#af0e469d5862fcbd74594f47e7c2608bb", null ],
     [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
 ];

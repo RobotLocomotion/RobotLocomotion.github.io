@@ -23,7 +23,7 @@ var classdrake_1_1multibody_1_1_physical_model =
     [ "mutable_scene_graph", "classdrake_1_1multibody_1_1_physical_model.html#a0d1596ed4273e0c56065638de34b95e0", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_physical_model.html#aeacadf3b446b21a270ea303c3ae675ac", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_physical_model.html#a51234009d59ed832d580c9ac84d9c519", null ],
-    [ "plant", "classdrake_1_1multibody_1_1_physical_model.html#a208fb8b999d2a234339e911892f24369", null ],
+    [ "plant", "classdrake_1_1multibody_1_1_physical_model.html#ab8cc6237eaa898941ec89897b9fd0414", null ],
     [ "ThrowIfSystemResourcesDeclared", "classdrake_1_1multibody_1_1_physical_model.html#a946f0c9e4f20c87fbea0cb1b534d8fd7", null ],
     [ "ThrowIfSystemResourcesNotDeclared", "classdrake_1_1multibody_1_1_physical_model.html#a130f2b2cf6ab11021a6e502071715ddb", null ],
     [ "ToPhysicalModelPointerVariant", "classdrake_1_1multibody_1_1_physical_model.html#a2a5ebecfc441ca76e53598e424761b9c", null ]

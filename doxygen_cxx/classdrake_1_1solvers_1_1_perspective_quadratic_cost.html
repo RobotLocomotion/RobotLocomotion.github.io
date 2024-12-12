@@ -190,6 +190,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5c62a9fdaa320f7568a7ab93a80180dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc">UpdateCoefficients</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;new_A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_b)</td></tr>
 <tr class="memdesc:a5c62a9fdaa320f7568a7ab93a80180dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the coefficients of the cost.  <a href="#a5c62a9fdaa320f7568a7ab93a80180dc">More...</a><br /></td></tr>
 <tr class="separator:a5c62a9fdaa320f7568a7ab93a80180dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e01310c2db1c98782b5fa3d0ad9f87b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a2e01310c2db1c98782b5fa3d0ad9f87b">update_A_entry</a> (<a class="el" href="classint.html">int</a> i, <a class="el" href="classint.html">int</a> j, <a class="el" href="classdouble.html">double</a> val)</td></tr>
+<tr class="memdesc:a2e01310c2db1c98782b5fa3d0ad9f87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates A(i, j) = val.  <a href="#a2e01310c2db1c98782b5fa3d0ad9f87b">More...</a><br /></td></tr>
+<tr class="separator:a2e01310c2db1c98782b5fa3d0ad9f87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e469d5862fcbd74594f47e7c2608bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#af0e469d5862fcbd74594f47e7c2608bb">update_b_entry</a> (<a class="el" href="classint.html">int</a> i, <a class="el" href="classdouble.html">double</a> val)</td></tr>
+<tr class="memdesc:af0e469d5862fcbd74594f47e7c2608bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates b(i) = val.  <a href="#af0e469d5862fcbd74594f47e7c2608bb">More...</a><br /></td></tr>
+<tr class="separator:af0e469d5862fcbd74594f47e7c2608bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a7753f51736cfaf47d79cccf47af3e6b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a7753f51736cfaf47d79cccf47af3e6b7">PerspectiveQuadraticCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_perspective_quadratic_cost.html">PerspectiveQuadraticCost</a> &amp;)=delete</td></tr>
 <tr class="separator:a7753f51736cfaf47d79cccf47af3e6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -716,6 +722,84 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e01310c2db1c98782b5fa3d0ad9f87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e01310c2db1c98782b5fa3d0ad9f87b">&#9670;&nbsp;</a></span>update_A_entry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_A_entry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates A(i, j) = val. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>i or j are invalid indices. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af0e469d5862fcbd74594f47e7c2608bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0e469d5862fcbd74594f47e7c2608bb">&#9670;&nbsp;</a></span>update_b_entry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_b_entry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates b(i) = val. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>i is an invalid index. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
