@@ -191,6 +191,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a971dd32d59c1f10be6e792f066953b"><td class="memTemplItemLeft" align="right" valign="top">const std::vector&lt; Data &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a5a971dd32d59c1f10be6e792f066953b">EvalElementData</a> (const <a class="el" href="namespacedrake_1_1systems.html#a06ac9ad764b14ccff79b6feb393be498">systems::CacheIndex</a> cache_index) const</td></tr>
 <tr class="memdesc:a5a971dd32d59c1f10be6e792f066953b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an std::vector of per-element data in <code>this</code> FemState.  <a href="#a5a971dd32d59c1f10be6e792f066953b">More...</a><br /></td></tr>
 <tr class="separator:a5a971dd32d59c1f10be6e792f066953b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3198a83714ef51b38aa05fccf40c0325"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a3198a83714ef51b38aa05fccf40c0325">CopyFrom</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:a3198a83714ef51b38aa05fccf40c0325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes <code>this</code> FemState an exact copy of the given <code>other</code> FemState.  <a href="#a3198a83714ef51b38aa05fccf40c0325">More...</a><br /></td></tr>
+<tr class="separator:a3198a83714ef51b38aa05fccf40c0325"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4e031e8d885172740f7f66f07234f7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#af4e031e8d885172740f7f66f07234f7f">num_dofs</a> () const</td></tr>
 <tr class="memdesc:af4e031e8d885172740f7f66f07234f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of degrees of freedom in the FEM model and state.  <a href="#af4e031e8d885172740f7f66f07234f7f">More...</a><br /></td></tr>
 <tr class="separator:af4e031e8d885172740f7f66f07234f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,6 +369,33 @@ system and context are compatible. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns an identical copy of <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html" title="FemState provides access to private workspace FEM state and per-element state-dependent data.">FemState</a>. </p>
+
+</div>
+</div>
+<a id="a3198a83714ef51b38aa05fccf40c0325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3198a83714ef51b38aa05fccf40c0325">&#9670;&nbsp;</a></span>CopyFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Makes <code>this</code> FemState an exact copy of the given <code>other</code> FemState. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html#af4e031e8d885172740f7f66f07234f7f" title="Returns the number of degrees of freedom in the FEM model and state.">num_dofs()</a> of <code>this</code> FemState and <code>other</code> FemState are not the same. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> FemState is not owned (see class documentation). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

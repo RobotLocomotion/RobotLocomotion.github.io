@@ -248,6 +248,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a0d1596ed4273e0c56065638de34b95e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a812249a29d2c4215aba7e1adc6ed8a34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a812249a29d2c4215aba7e1adc6ed8a34">DeclareDiscreteState</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;model_value)</td></tr>
 <tr class="separator:a812249a29d2c4215aba7e1adc6ed8a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7a6c835c80b1bc639d66203e1bf723"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a86b350169906f6d5e07e9db46e36d57a">systems::AbstractParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a4b7a6c835c80b1bc639d66203e1bf723">DeclareAbstractParameter</a> (const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;model_value)</td></tr>
+<tr class="separator:a4b7a6c835c80b1bc639d66203e1bf723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac448d2cea01da91d11a1f6c6b42539c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ac448d2cea01da91d11a1f6c6b42539c2">DeclareAbstractOutputPort</a> (std::string name, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::AllocCallback alloc_function, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcCallback calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt;::all_sources_ticket()})</td></tr>
 <tr class="separator:ac448d2cea01da91d11a1f6c6b42539c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb4eb788998948eb146247a83136f56e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#acb4eb788998948eb146247a83136f56e">DeclareVectorOutputPort</a> (std::string name, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcVectorCallback vector_calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt;::all_sources_ticket()})</td></tr>
@@ -516,6 +518,32 @@ Protected Member Functions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b7a6c835c80b1bc639d66203e1bf723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7a6c835c80b1bc639d66203e1bf723">&#9670;&nbsp;</a></span>DeclareAbstractParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#a86b350169906f6d5e07e9db46e36d57a">systems::AbstractParameterIndex</a> DeclareAbstractParameter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;&#160;</td>
+          <td class="paramname"><em>model_value</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>

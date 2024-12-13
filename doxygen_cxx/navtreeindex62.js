@@ -1,5 +1,14 @@
 var NAVTREEINDEX62 =
 {
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#ad3a9de967b42c67c5e4489f9ca98ced8":[3,0,0,3,4,2,5],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#ae0c57b94ab902583cca99ddbb8438e41":[3,0,0,3,4,2,4],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#af07dfcb34968cb33074bae14513b2dbc":[3,0,0,3,4,2,2],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html":[3,0,0,3,4,5],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,4,5,0],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,4,5,2],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a8f1de8fc4e62056740911bc73aaa3a3d":[3,0,0,3,4,5,4],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,4,5,6],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[3,0,0,3,4,5,7],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ae48fdaa0013a64a07e1caaf8a6b66ec7":[3,0,0,3,4,5,5],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#af2ec6e39cde2a2ebae13657d96462b72":[3,0,0,3,4,5,1],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#afb6eb259e3f5d5095695d320b31e40d5":[3,0,0,3,4,5,3],
@@ -240,14 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ab2f3197be7cd4b4cecd2d173e15561fd":[3,0,0,4,57,1],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ac7b001303ef94448442c885d0854f99e":[3,0,0,4,57,2],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ad7be539d413dd4d5146310c350a2d858":[3,0,0,4,57,3],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28":[3,0,0,4,57,12],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html":[3,0,0,4,58],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[3,0,0,4,58,9],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a26d83b56e8bc142afd669d7bf865b4cb":[3,0,0,4,58,6],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a626901b6c287f89574769a9297dcee45":[3,0,0,4,58,4],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a79cdf6ba5fded027dba5f24168719ef1":[3,0,0,4,58,7],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a7fa789c84df3efe720c9070acd56c1ce":[3,0,0,4,58,5],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[3,0,0,4,58,2],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[3,0,0,4,58,8],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[3,0,0,4,58,0]
+"structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28":[3,0,0,4,57,12]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#abec7b1f5c2c6face018616992476881f":[3,0,0,17,3,9],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#adca2766204b86212e8ed2b91faa97775":[3,0,0,17,3,11],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#aef16c3e234e70a22d89678041a6bda57":[3,0,0,17,3,4],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html":[3,0,0,17,4],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8":[3,0,0,17,4,13],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a1b0dc2e082a27d735c084f0c39c47bad":[3,0,0,17,4,10],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a489f89c546fea3e35bac6689e00be0db":[3,0,0,17,4,1],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a518b6f39638b5dcca07dd2f721c7ac70":[3,0,0,17,4,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#a920edba4b207049d7ce573d4ff8b96bf":[1,2,11,7,0],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#a9a2e0e4083590b0ce302bc8dd23d985b":[1,2,11,7,4],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#aae4a07b05d13e93beed877b8119042f5":[1,2,11,7,5],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#ac589bc8397bf7d9c4d695830cb1b9c2f":[1,2,11,7,6],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#ae24510285abfa6815e8db8fb3d63784f":[1,2,11,7,9],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#af5171ca2885a603eb6092e154560a067":[1,2,11,7,2],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html":[1,2,11,8],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a09d6684491bca73b075869d7301e0f72":[1,2,11,8,0],
-"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a1bd6cd37495850b786d7ac9896bb86a2":[1,2,11,8,1]
+"classdrake_1_1visualization_1_1_inertia_visualizer.html#ac589bc8397bf7d9c4d695830cb1b9c2f":[1,2,11,7,6]
 };

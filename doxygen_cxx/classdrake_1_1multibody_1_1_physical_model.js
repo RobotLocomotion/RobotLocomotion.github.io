@@ -9,6 +9,7 @@ var classdrake_1_1multibody_1_1_physical_model =
     [ "CloneToScalar", "classdrake_1_1multibody_1_1_physical_model.html#ab81c3c69cdd33842c0b9a1927d2d6e4e", null ],
     [ "CloneToSymbolic", "classdrake_1_1multibody_1_1_physical_model.html#a5756da817101e6548e2ca7481f6a590d", null ],
     [ "DeclareAbstractOutputPort", "classdrake_1_1multibody_1_1_physical_model.html#ac448d2cea01da91d11a1f6c6b42539c2", null ],
+    [ "DeclareAbstractParameter", "classdrake_1_1multibody_1_1_physical_model.html#a4b7a6c835c80b1bc639d66203e1bf723", null ],
     [ "DeclareDiscreteState", "classdrake_1_1multibody_1_1_physical_model.html#a812249a29d2c4215aba7e1adc6ed8a34", null ],
     [ "DeclareSceneGraphPorts", "classdrake_1_1multibody_1_1_physical_model.html#aeac673af572017abd863d759450110b7", null ],
     [ "DeclareSystemResources", "classdrake_1_1multibody_1_1_physical_model.html#a4488af419a2128b0d862f52a79a2d83b", null ],

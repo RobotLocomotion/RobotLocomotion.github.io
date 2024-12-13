@@ -5,6 +5,7 @@ var classdrake_1_1multibody_1_1fem_1_1_fem_state =
     [ "FemState", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#ab8b3914bdaf13625c45535e14a684e0e", null ],
     [ "FemState", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a7ccc196f482ed8a8fa7cf7e64dc68534", null ],
     [ "Clone", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#ab44de568403b27335f2ea6c695c0544b", null ],
+    [ "CopyFrom", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a3198a83714ef51b38aa05fccf40c0325", null ],
     [ "EvalElementData", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a5a971dd32d59c1f10be6e792f066953b", null ],
     [ "GetAccelerations", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#ac3718f30fa970d62edce3c8ea33d6ee6", null ],
     [ "GetPositions", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html#a50b8b2feed94c4edd1174b6b3fd01640", null ],

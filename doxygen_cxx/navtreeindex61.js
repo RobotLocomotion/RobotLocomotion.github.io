@@ -1,5 +1,14 @@
 var NAVTREEINDEX61 =
 {
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecabc8ddfb8a00bb405e68545ce187ac238":[4,0,0,11,57,0,3],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecabd0a61a2cf9acec23fccd41c7402ef56":[4,0,0,11,57,0,6],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecad1ddb13aaaf649f197e0f6549596571c":[4,0,0,11,57,0,11],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecae654b0ad8f79045aff33844a0c3cdf81":[4,0,0,11,57,0,1],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaebb0e280cb0e7da8a3868247749a4d9d":[4,0,0,11,57,0,5],
+"solver__type__converter_8h.html":[4,0,0,11,58],
+"solvers__py_8h.html":[4,0,0,0,0,8,0],
+"solvers__pybind_8h.html":[4,0,0,0,0,8,1],
+"solvers__pybind_8h.html#ab20a1ef3e56f4759c3fae832d66332f0":[4,0,0,0,0,8,1,0],
 "sorted__pair_8h.html":[4,0,0,1,62],
 "sorted__pair_8h.html#a140ed52150ccb7d8a9194eec633ba50d":[4,0,0,1,62,9],
 "sorted__pair_8h.html#a642a411b9ac97aefd67450fd5717a890":[4,0,0,1,62,5],
@@ -41,7 +50,7 @@ var NAVTREEINDEX61 =
 "spatial__velocity__constraint_8h.html":[4,0,0,8,8,6],
 "specific__options_8h.html":[4,0,0,11,61],
 "spectrahedron_8h.html":[4,0,0,4,1,23],
-"spgrid_8h.html":[4,0,0,8,7,1],
+"spgrid_8h.html":[4,0,0,8,7,2],
 "spong__controller_8h.html":[4,0,0,3,0,6],
 "spong__controller__params_8h.html":[4,0,0,3,0,7],
 "spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
@@ -240,14 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html":[3,0,0,3,4,2],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,4,2,0],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#a923a3136a01f740f0f947c4efaed50cc":[3,0,0,3,4,2,3],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,4,2,1],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#ad3a9de967b42c67c5e4489f9ca98ced8":[3,0,0,3,4,2,5],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#ae0c57b94ab902583cca99ddbb8438e41":[3,0,0,3,4,2,4],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#af07dfcb34968cb33074bae14513b2dbc":[3,0,0,3,4,2,2],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html":[3,0,0,3,4,5],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,4,5,0],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,4,5,2],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#a8f1de8fc4e62056740911bc73aaa3a3d":[3,0,0,3,4,5,4],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,4,5,6],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[3,0,0,3,4,5,7]
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,4,2,1]
 };

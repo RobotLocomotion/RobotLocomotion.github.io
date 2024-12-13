@@ -1,5 +1,14 @@
 var NAVTREEINDEX59 =
 {
+"polygon__to__triangle__mesh_8h.html":[4,0,0,4,2,54],
+"polyhedron__constraint_8h.html":[4,0,0,8,4,19],
+"polynomial_8h.html":[4,0,0,1,55],
+"polynomial_8h.html#a00cbebcd97766579bb36e35abcf44acf":[4,0,0,1,55,7],
+"polynomial_8h.html#a95cb9413bd3124511459d856f6eef5f3":[4,0,0,1,55,10],
+"polynomial_8h.html#ab0a2621977171e1d2d5b64c55141b9b2":[4,0,0,1,55,6],
+"polynomial_8h.html#ad2b506cc6aeddf8e5f52b327382d0b13":[4,0,0,1,55,9],
+"polynomial_8h.html#af3578a3c0daaaeea6e12f173c5419540":[4,0,0,1,55,8],
+"polynomial__basis_8h.html":[4,0,0,1,3,12],
 "polynomial__basis_8h.html#a83a29f70485ada14c4bba67192ac4efc":[4,0,0,1,3,12,0],
 "polynomial__basis__element_8h.html":[4,0,0,1,3,13],
 "polynomial__types__pybind_8h.html":[4,0,0,0,0,14],
@@ -240,14 +249,5 @@ var NAVTREEINDEX59 =
 "robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7acc814d0e7a27814a2db5ff00d3d84a2e":[4,0,0,10,15,0,2],
 "robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7ad435a021513720293cbdafd945533b2f":[4,0,0,10,15,0,1],
 "robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7ae9e690a25422e7ed157a6f924b06c20c":[4,0,0,10,15,0,0],
-"robot__diagram_8h.html":[4,0,0,10,16],
-"robot__diagram_8h.html#ab1888b757b993ce8d7580175d57f2910":[4,0,0,10,16,0],
-"robot__diagram__builder_8h.html":[4,0,0,10,17],
-"robot__diagram__builder_8h.html#adde72392908bca688b9fc7a24117523c":[4,0,0,10,17,0],
-"robot__model_8h.html":[4,0,0,8,12,2],
-"robot__model_8h.html#a46f77ff61b1fffd0bdc8785c761da030":[4,0,0,8,12,2,2],
-"robot__model_8h.html#ac72a634e745e32ca2633a8dbd7081f78":[4,0,0,8,12,2,4],
-"robot__model_8h.html#aeb2cfc6c945092ef6e7101b9c7d66434":[4,0,0,8,12,2,3],
-"robot__plan__interpolator_8h.html":[4,0,0,6,3,4],
-"robot__plan__interpolator_8h.html#ab43604da4098c31437718f710e587e4f":[4,0,0,6,3,4,0]
+"robot__diagram_8h.html":[4,0,0,10,16]
 };

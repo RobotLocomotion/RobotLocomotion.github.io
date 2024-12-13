@@ -209,6 +209,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0522dd997904b1a3c75fce34250b63a7"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; const <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html">ForceDensityField</a>&lt; T &gt; * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a0522dd997904b1a3c75fce34250b63a7">GetExternalForces</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:a0522dd997904b1a3c75fce34250b63a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the force density fields acting on the deformable body with the given <code>id</code>.  <a href="#a0522dd997904b1a3c75fce34250b63a7">More...</a><br /></td></tr>
 <tr class="separator:a0522dd997904b1a3c75fce34250b63a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5ab302b3f0c9972be6ae03491f5637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a5e5ab302b3f0c9972be6ae03491f5637">Disable</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
+<tr class="memdesc:a5e5ab302b3f0c9972be6ae03491f5637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the deformable body with the given <code>id</code> in the given context.  <a href="#a5e5ab302b3f0c9972be6ae03491f5637">More...</a><br /></td></tr>
+<tr class="separator:a5e5ab302b3f0c9972be6ae03491f5637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353669419721dddf2c20ad6b980eaff6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a353669419721dddf2c20ad6b980eaff6">Enable</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
+<tr class="memdesc:a353669419721dddf2c20ad6b980eaff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the deformable body with the given <code>id</code> in the given context.  <a href="#a353669419721dddf2c20ad6b980eaff6">More...</a><br /></td></tr>
+<tr class="separator:a353669419721dddf2c20ad6b980eaff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a872b20edcf3403791a845a96ba351"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ac0a872b20edcf3403791a845a96ba351">is_enabled</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="separator:ac0a872b20edcf3403791a845a96ba351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dcc2aacf14abcecaaa220ceda00d7eb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">fem::FemModel</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a0dcc2aacf14abcecaaa220ceda00d7eb">GetFemModel</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:a0dcc2aacf14abcecaaa220ceda00d7eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the FemModel for the body with <code>id</code>.  <a href="#a0dcc2aacf14abcecaaa220ceda00d7eb">More...</a><br /></td></tr>
 <tr class="separator:a0dcc2aacf14abcecaaa220ceda00d7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -317,6 +325,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a0d1596ed4273e0c56065638de34b95e0 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a812249a29d2c4215aba7e1adc6ed8a34 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a812249a29d2c4215aba7e1adc6ed8a34">DeclareDiscreteState</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;model_value)</td></tr>
 <tr class="separator:a812249a29d2c4215aba7e1adc6ed8a34 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7a6c835c80b1bc639d66203e1bf723 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a86b350169906f6d5e07e9db46e36d57a">systems::AbstractParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#a4b7a6c835c80b1bc639d66203e1bf723">DeclareAbstractParameter</a> (const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;model_value)</td></tr>
+<tr class="separator:a4b7a6c835c80b1bc639d66203e1bf723 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac448d2cea01da91d11a1f6c6b42539c2 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#ac448d2cea01da91d11a1f6c6b42539c2">DeclareAbstractOutputPort</a> (std::string name, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::AllocCallback alloc_function, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcCallback calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt;::all_sources_ticket()})</td></tr>
 <tr class="separator:ac448d2cea01da91d11a1f6c6b42539c2 inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb4eb788998948eb146247a83136f56e inherit pro_methods_classdrake_1_1multibody_1_1_physical_model"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#acb4eb788998948eb146247a83136f56e">DeclareVectorOutputPort</a> (std::string name, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">systems::LeafOutputPort</a>&lt; T &gt;::CalcVectorCallback vector_calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">systems::DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt;::all_sources_ticket()})</td></tr>
@@ -551,6 +561,84 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called before <code><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#aeac673af572017abd863d759450110b7" title="(Internal only) Declares zero or more output ports in the owning MultibodyPlant to communicate with a...">DeclareSceneGraphPorts()</a></code> is called. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5e5ab302b3f0c9972be6ae03491f5637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e5ab302b3f0c9972be6ae03491f5637">&#9670;&nbsp;</a></span>Disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disables the deformable body with the given <code>id</code> in the given context. </p>
+<p>Disabling a deformable body sets its vertex velocities and accelerations to zero and freezes its vertex positions. A disabled deformable body is not subject to any constraint (e.g. frictional contact constraint or fixed constraint); it does not move under the influence of external forces (e.g. gravity); and it does not necessarily satisfy the prescribed boundary condition (if any). On the flip side, a disabled deformable body does not affect the dynamics of other bodies, even if the collision between the disabled body's geometry and other geometries is not filtered. Effectively, the physics of the deformable body stop being computed. The deformable body can be enabled by calling <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a353669419721dddf2c20ad6b980eaff6" title="Enables the deformable body with the given id in the given context.">Enable()</a>. Calling <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a5e5ab302b3f0c9972be6ae03491f5637" title="Disables the deformable body with the given id in the given context.">Disable()</a> on a body which is already disabled has no effect. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a353669419721dddf2c20ad6b980eaff6" title="Enables the deformable body with the given id in the given context.">Enable()</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the passed in context isn't compatible with the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> associated with this DeformableModel. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if a deformable body with the given id is not registered. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if context is null. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a353669419721dddf2c20ad6b980eaff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a353669419721dddf2c20ad6b980eaff6">&#9670;&nbsp;</a></span>Enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables the deformable body with the given <code>id</code> in the given context. </p>
+<p>Calling <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a353669419721dddf2c20ad6b980eaff6" title="Enables the deformable body with the given id in the given context.">Enable()</a> on a body which is already enabled has no effect. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a5e5ab302b3f0c9972be6ae03491f5637" title="Disables the deformable body with the given id in the given context.">Disable()</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the passed in context isn't compatible with the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> associated with this DeformableModel. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if a deformable body with the given id is not registered. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if context is null. </td></tr>
   </table>
   </dd>
 </dl>
@@ -929,6 +1017,42 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
+<a id="ac0a872b20edcf3403791a845a96ba351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a872b20edcf3403791a845a96ba351">&#9670;&nbsp;</a></span>is_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_enabled </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true if and only if the deformable body with the given id is enabled. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the passed in context isn't compatible with the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> associated with this DeformableModel. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if a deformable body with the given id is not registered. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af92b53211e54243aff4490a700168eb4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af92b53211e54243aff4490a700168eb4">&#9670;&nbsp;</a></span>num_bodies()</h2>
 
@@ -948,8 +1072,8 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
-<a id="a68fd2d05f3e8b6982ddb2ab108275688"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68fd2d05f3e8b6982ddb2ab108275688">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a6f045b3a39c4d8397fc55b2cb4e48f01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f045b3a39c4d8397fc55b2cb4e48f01">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -960,7 +1084,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -974,8 +1098,8 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
-<a id="a6f045b3a39c4d8397fc55b2cb4e48f01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f045b3a39c4d8397fc55b2cb4e48f01">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a68fd2d05f3e8b6982ddb2ab108275688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68fd2d05f3e8b6982ddb2ab108275688">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -986,7 +1110,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

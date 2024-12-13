@@ -1,5 +1,14 @@
 var NAVTREEINDEX67 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_grey_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,34,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_label_01_4.html":[3,0,0,15,8,35],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_label_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,35,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4.html":[3,0,0,15,8,36],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,36,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html":[3,0,0,15,8,37],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,8,37,0],
+"structdrake_1_1template__single__tag.html":[3,0,0,53],
+"structdrake_1_1template__single__tag.html#a0b59870d7a48aad480f84b0f2423dfb2":[3,0,0,53,0],
 "structdrake_1_1test_1_1_limit_malloc_params.html":[3,0,0,16,2],
 "structdrake_1_1test_1_1_limit_malloc_params.html#a34a5b591b64e647d30fcae67a24564df":[3,0,0,16,2,1],
 "structdrake_1_1test_1_1_limit_malloc_params.html#a55bdaee9c2cac50e78a415ab477cf4e2":[3,0,0,16,2,0],
@@ -117,7 +126,7 @@ var NAVTREEINDEX67 =
 "submodules__py_8h.html":[4,0,0,0,0,1,9],
 "subvector_8h.html":[4,0,0,12,3,37],
 "subvector_8h.html#a7a943137086b7efeb07642846ea8ea37":[4,0,0,12,3,37,1],
-"suction__cup__controller_8h.html":[4,0,0,3,11,2,2],
+"suction__cup__controller_8h.html":[4,0,0,3,11,2,3],
 "supernodal__solver_8h.html":[4,0,0,8,1,19],
 "supervector_8h.html":[4,0,0,12,3,38],
 "supervector_8h.html#a1a6c3f2cc0c6b06738a4b393b90b811c":[4,0,0,12,3,38,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX67 =
 "tamsi__solver_8h.html#a6f795d5f99c4812df226348de9286a4d":[4,0,0,8,10,45,4],
 "temp__directory_8h.html":[4,0,0,1,69],
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,69,0],
-"tessellation__strategy_8h.html":[4,0,0,4,2,59],
-"test__utilities_8h.html":[4,0,0,4,1,24],
-"text__logging_8h.html":[4,0,0,1,70],
-"text__logging_8h.html#a43a4a42dcea3143d400de1575cb5758c":[4,0,0,1,70,5],
-"text__logging_8h.html#a60321c9dbf7c1ebe763371ab00262d68":[4,0,0,1,70,8],
-"text__logging_8h.html#a83987c1d52b74115b933adef64972af7":[4,0,0,1,70,4],
-"text__logging_8h.html#a9cae370466ffb304c10aebea42eca26b":[4,0,0,1,70,0],
-"text__logging_8h.html#abc074aead70b88bf38e18993bf9c28c3":[4,0,0,1,70,6],
-"text__logging_8h.html#ae0fe856459e2ca7ef105677ef381da55":[4,0,0,1,70,3],
-"text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,70,2]
+"tessellation__strategy_8h.html":[4,0,0,4,2,59]
 };
