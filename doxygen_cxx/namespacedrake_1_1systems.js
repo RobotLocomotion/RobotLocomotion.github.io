@@ -98,6 +98,7 @@ var namespacedrake_1_1systems =
     [ "SimulatorStatus", "classdrake_1_1systems_1_1_simulator_status.html", "classdrake_1_1systems_1_1_simulator_status" ],
     [ "Sine", "classdrake_1_1systems_1_1_sine.html", "classdrake_1_1systems_1_1_sine" ],
     [ "SingleOutputVectorSource", "classdrake_1_1systems_1_1_single_output_vector_source.html", "classdrake_1_1systems_1_1_single_output_vector_source" ],
+    [ "SparseMatrixGain", "classdrake_1_1systems_1_1_sparse_matrix_gain.html", "classdrake_1_1systems_1_1_sparse_matrix_gain" ],
     [ "SpringMassStateVector", "classdrake_1_1systems_1_1_spring_mass_state_vector.html", "classdrake_1_1systems_1_1_spring_mass_state_vector" ],
     [ "SpringMassSystem", "classdrake_1_1systems_1_1_spring_mass_system.html", "classdrake_1_1systems_1_1_spring_mass_system" ],
     [ "State", "classdrake_1_1systems_1_1_state.html", "classdrake_1_1systems_1_1_state" ],

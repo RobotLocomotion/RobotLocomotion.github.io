@@ -246,8 +246,8 @@ var NAVTREEINDEX11 =
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a2813b808767f3b4dd18af5e9ba522c42":[1,1,1,13,2],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a66c0758e1fb9ac2f946857bdeae490fc":[1,5,5,13,12],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a66c0758e1fb9ac2f946857bdeae490fc":[1,1,1,13,12],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a7ffbc0928c59ef6d1ed744bcfea6be0b":[1,5,5,13,8],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a7ffbc0928c59ef6d1ed744bcfea6be0b":[1,1,1,13,8],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a92797706c9c2adb6329f1dce4c672d59":[1,5,5,13,7],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a92797706c9c2adb6329f1dce4c672d59":[1,1,1,13,7]
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a7ffbc0928c59ef6d1ed744bcfea6be0b":[1,5,5,13,8],
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a92797706c9c2adb6329f1dce4c672d59":[1,1,1,13,7],
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a92797706c9c2adb6329f1dce4c672d59":[1,5,5,13,7]
 };

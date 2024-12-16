@@ -1,5 +1,16 @@
 var NAVTREEINDEX62 =
 {
+"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html":[3,0,0,3,0,15],
+"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#a11a30e11b3a51224cdbcb61741681e36":[3,0,0,3,0,15,2],
+"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,0,15,0],
+"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#a7637c784521ce7dd6156114f812e13ac":[3,0,0,3,0,15,4],
+"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,0,15,5],
+"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#ab6a21c79c3054c4e96630bf9e0a4a418":[3,0,0,3,0,15,1],
+"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#abac42d8691d943a26b419e1a97190b61":[3,0,0,3,0,15,3],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html":[3,0,0,3,4,2],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,4,2,0],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#a923a3136a01f740f0f947c4efaed50cc":[3,0,0,3,4,2,3],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,4,2,1],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#ad3a9de967b42c67c5e4489f9ca98ced8":[3,0,0,3,4,2,5],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#ae0c57b94ab902583cca99ddbb8438e41":[3,0,0,3,4,2,4],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#af07dfcb34968cb33074bae14513b2dbc":[3,0,0,3,4,2,2],
@@ -238,16 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1geometry_1_1_scene_graph_config.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[3,0,0,4,53,1],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html":[3,0,0,4,57],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#a01b0d3895f2cd2cbeed07c2b2af575e6":[3,0,0,4,57,4],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[3,0,0,4,57,6],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a26d83b56e8bc142afd669d7bf865b4cb":[3,0,0,4,57,7],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a3720ec8b826234c6e32a484ec2b23d43":[3,0,0,4,57,5],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a403021311aaf56bf9bec819dbbc08932":[3,0,0,4,57,8],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a4363c84b7dd5fd7fa52fc4367809ca08":[3,0,0,4,57,10],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a46d806554c238e27db8575ae5965b55e":[3,0,0,4,57,11],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#a6a81fe1b9849db6994426e8a756f2ff5":[3,0,0,4,57,0],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#aa439b0d89e38b17d00d217c56b047737":[3,0,0,4,57,9],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#ab2f3197be7cd4b4cecd2d173e15561fd":[3,0,0,4,57,1],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#ac7b001303ef94448442c885d0854f99e":[3,0,0,4,57,2],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#ad7be539d413dd4d5146310c350a2d858":[3,0,0,4,57,3],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28":[3,0,0,4,57,12]
+"structdrake_1_1geometry_1_1_signed_distance_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[3,0,0,4,57,6]
 };

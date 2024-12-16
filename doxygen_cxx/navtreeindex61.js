@@ -1,5 +1,15 @@
 var NAVTREEINDEX61 =
 {
+"solver__type_8h.html":[4,0,0,11,57],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ec":[4,0,0,11,57,0],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6":[4,0,0,11,57,0,12],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca18bc9cbd9bb764958e636263b1b53a9d":[4,0,0,11,57,0,7],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca64e0ff0ce277a08ed59a9fe9140a8fd7":[4,0,0,11,57,0,8],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca6619293bd01e7ea8efb3682f16bf55c4":[4,0,0,11,57,0,10],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca6e645ae8d30d672d9800a422f4be4c9d":[4,0,0,11,57,0,9],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca71cedba88b736e372f499099329d5173":[4,0,0,11,57,0,2],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaa1f0780f88b19c3a73710b47fc57d795":[4,0,0,11,57,0,4],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaa71a8c0a25fe7a3d777fc06d50bada13":[4,0,0,11,57,0,0],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecabc8ddfb8a00bb405e68545ce187ac238":[4,0,0,11,57,0,3],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecabd0a61a2cf9acec23fccd41c7402ef56":[4,0,0,11,57,0,6],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecad1ddb13aaaf649f197e0f6549596571c":[4,0,0,11,57,0,11],
@@ -30,6 +40,7 @@ var NAVTREEINDEX61 =
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,60],
 "sparse__linear__operator_8h.html":[4,0,0,8,1,18],
 "sparse__linear__operator_8h.html#ab3a29b7d9714447621ce21836bca9b15":[4,0,0,8,1,18,0],
+"sparse__matrix__gain_8h.html":[4,0,0,12,6,24],
 "spatial__acceleration_8h.html":[4,0,0,8,5,0],
 "spatial__acceleration_8h.html#a34fc915b4c64fba1362cc960d9a27d4a":[4,0,0,8,5,0,1],
 "spatial__algebra_8h.html":[4,0,0,8,5,1],
@@ -238,16 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a5d0e7d91df6b1a261375b231fc678acd":[3,0,0,3,0,10,2],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a99f66380688774b2de4d3fc48d6f1213":[3,0,0,3,0,10,4],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,0,10,1],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aed7f375ae98cea9475fefc18eac57e2e":[3,0,0,3,0,10,5],
-"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html":[3,0,0,3,0,15],
-"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#a11a30e11b3a51224cdbcb61741681e36":[3,0,0,3,0,15,2],
-"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,0,15,0],
-"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#a7637c784521ce7dd6156114f812e13ac":[3,0,0,3,0,15,4],
-"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,0,15,5],
-"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#ab6a21c79c3054c4e96630bf9e0a4a418":[3,0,0,3,0,15,1],
-"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html#abac42d8691d943a26b419e1a97190b61":[3,0,0,3,0,15,3],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html":[3,0,0,3,4,2],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,4,2,0],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#a923a3136a01f740f0f947c4efaed50cc":[3,0,0,3,4,2,3],
-"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,4,2,1]
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aed7f375ae98cea9475fefc18eac57e2e":[3,0,0,3,0,10,5]
 };

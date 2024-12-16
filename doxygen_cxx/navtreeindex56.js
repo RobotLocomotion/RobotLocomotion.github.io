@@ -1,5 +1,15 @@
 var NAVTREEINDEX56 =
 {
+"jaco__status__sender_8h.html":[4,0,0,6,0,4],
+"jacobian_8h.html":[4,0,0,7,21],
+"jacobian_8h.html#a57457683becdddf605a55be881c065b4":[4,0,0,7,21,1],
+"jacobian_8h.html#a6dce37732e3e532f7b87cd517789da7f":[4,0,0,7,21,0],
+"joint_8h.html":[4,0,0,8,14,16],
+"joint__actuator_8h.html":[4,0,0,8,14,17],
+"joint__actuator_8h.html#a1def3023081b586c7139e10c3eacf81e":[4,0,0,8,14,17,3],
+"joint__sliders_8h.html":[4,0,0,8,6,3],
+"joint__sliders_8h.html#a90528b02307ab3b885075c1a46df2e7c":[4,0,0,8,6,3,0],
+"joint__stiffness__controller_8h.html":[4,0,0,12,1,5],
 "joint__stiffness__controller_8h.html#ae1242cfbf00814ed6dcbd11d2f052e88":[4,0,0,12,1,5,0],
 "kalman__filter_8h.html":[4,0,0,12,2,0],
 "kalman__filter_8h.html#ga3949eebe88ae99b71a997dfa0bad5cff":[4,0,0,12,2,0,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX56 =
 "minimum__value__constraint_8h.html#a0d06c693e90f6849f70d4b549f015e1e":[4,0,0,11,33,3],
 "minimum__value__constraint_8h.html#a5c445985c8e0f84a2f88f2e70c8f9983":[4,0,0,11,33,4],
 "minimum__value__constraint_8h.html#adc2a57e87ae4e4088e12967a25a7c229":[4,0,0,11,33,2],
-"minkowski__sum_8h.html":[4,0,0,4,1,21],
-"mixed__integer__optimization__util_8h.html":[4,0,0,11,34],
-"mixed__integer__optimization__util_8h.html#a1c2dee1da65ed555024f9d2f7ba82141":[4,0,0,11,34,3],
-"mixed__integer__optimization__util_8h.html#a2f7d6f23d494612f72e8efc99b87143c":[4,0,0,11,34,9],
-"mixed__integer__optimization__util_8h.html#a5cbd203e51076aa08e497620f11187b4":[4,0,0,11,34,6],
-"mixed__integer__optimization__util_8h.html#a6297509967536d29159910e5c51fd285":[4,0,0,11,34,1],
-"mixed__integer__optimization__util_8h.html#a6297509967536d29159910e5c51fd285a5bff8e60dc42878e194fb2d87460ed29":[4,0,0,11,34,1,0],
-"mixed__integer__optimization__util_8h.html#a6297509967536d29159910e5c51fd285aac97f0008bcf7c7fe4f2ff94160e1385":[4,0,0,11,34,1,1],
-"mixed__integer__optimization__util_8h.html#a6a8dc4e6bf90d7180583c31a7c06381b":[4,0,0,11,34,5],
-"mixed__integer__optimization__util_8h.html#a6c59daf7e576403f76128d2063303e9b":[4,0,0,11,34,10],
-"mixed__integer__optimization__util_8h.html#a81f7d44186352e1090de1343d468cad2":[4,0,0,11,34,2]
+"minkowski__sum_8h.html":[4,0,0,4,1,21]
 };

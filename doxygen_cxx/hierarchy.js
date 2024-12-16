@@ -804,8 +804,8 @@ var hierarchy =
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
     [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", null ],
-    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
@@ -991,6 +991,7 @@ var hierarchy =
               [ "ConstantVectorSource< T >", "classdrake_1_1systems_1_1_constant_vector_source.html", null ],
               [ "TrajectorySource< T >", "classdrake_1_1systems_1_1_trajectory_source.html", null ]
             ] ],
+            [ "SparseMatrixGain< T >", "classdrake_1_1systems_1_1_sparse_matrix_gain.html", null ],
             [ "SpringMassSystem< T >", "classdrake_1_1systems_1_1_spring_mass_system.html", [
               [ "MySpringMassSystem< T >", "classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html", null ],
               [ "SpringMassDamperSystem< T >", "classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html", [

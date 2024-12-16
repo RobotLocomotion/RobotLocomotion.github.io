@@ -1,5 +1,15 @@
 var NAVTREEINDEX53 =
 {
+"formula_8h.html#aaea3ce465525b0c357d1c5115e49a626":[4,0,0,1,3,0,7,40],
+"formula_8h.html#aafc2f3979d06df08b80d2b280b9728c7":[4,0,0,1,3,0,7,78],
+"formula_8h.html#abce383d57808e711c1517e9bd461cde2":[4,0,0,1,3,0,7,26],
+"formula_8h.html#abcebff63e5d9aa57da4a45df326a2acf":[4,0,0,1,3,0,7,27],
+"formula_8h.html#ac1b8a2415edb336f8f0362518bbf183f":[4,0,0,1,3,0,7,64],
+"formula_8h.html#ac41223d30845a91ba757f6277ad8f8a1":[4,0,0,1,3,0,7,77],
+"formula_8h.html#ac460ea048a6b4cddcaf88672a6abcf46":[4,0,0,1,3,0,7,34],
+"formula_8h.html#ac4ac705adb39eafdc363379ce4ea950c":[4,0,0,1,3,0,7,63],
+"formula_8h.html#ac5c1c4bfd4434de52e240126b78853c0":[4,0,0,1,3,0,7,44],
+"formula_8h.html#ac66d112b9b6d693ee82d08c7a01f7a14":[4,0,0,1,3,0,7,35],
 "formula_8h.html#ac9f34a1136227779b18433cd0a2f4dde":[4,0,0,1,3,0,7,43],
 "formula_8h.html#acbfcc66d64e8756ae983891059050205":[4,0,0,1,3,0,7,11],
 "formula_8h.html#ad0de903abee4a9e39dbc9148d86c770c":[4,0,0,1,3,0,7,58],
@@ -97,8 +107,8 @@ var NAVTREEINDEX53 =
 "functions_enum.html":[3,3,4],
 "functions_eval.html":[3,3,5],
 "functions_f.html":[3,3,0,5],
-"functions_func.html":[3,3,1],
 "functions_func.html":[3,3,1,0],
+"functions_func.html":[3,3,1],
 "functions_func_b.html":[3,3,1,1],
 "functions_func_c.html":[3,3,1,2],
 "functions_func_d.html":[3,3,1,3],
@@ -239,15 +249,5 @@ var NAVTREEINDEX53 =
 "generic__polynomial_8h.html#abb122f4c4c5c71d0734c3b517a146df9":[4,0,0,1,3,6,27],
 "generic__polynomial_8h.html#aca14414fd5dcd3628a3a5aff79eabebc":[4,0,0,1,3,6,8],
 "generic__polynomial_8h.html#acf8ec1d6463a6936e7865e8cef04082f":[4,0,0,1,3,6,4],
-"generic__polynomial_8h.html#ad6ff0b6772551662f2b02b77b5889504":[4,0,0,1,3,6,29],
-"generic__polynomial_8h.html#adfcadf9b33656022c0c071a8af3fd85e":[4,0,0,1,3,6,33],
-"generic__polynomial_8h.html#aed13274bad687cfe8b3a1effa40d3117":[4,0,0,1,3,6,24],
-"generic__polynomial_8h.html#afc778273d730c518678796b632e4de8f":[4,0,0,1,3,6,31],
-"geodesic__convexity_8h.html":[4,0,0,4,1,12],
-"geodesic__convexity_8h.html#ga05bd75c8b08787c334065792f8532797":[4,0,0,4,1,12,0],
-"geodesic__convexity_8h.html#ga0f945f0d43e169b238695da629d93ff7":[4,0,0,4,1,12,5],
-"geodesic__convexity_8h.html#ga1c6d3fc1c7396ee8eee575958044071b":[4,0,0,4,1,12,3],
-"geodesic__convexity_8h.html#ga2e109ef92fec8f68a785b2edbd380021":[4,0,0,4,1,12,1],
-"geodesic__convexity_8h.html#ga33ea6cefa0958e76eb228ecab2bbeba5":[4,0,0,4,1,12,2],
-"geodesic__convexity_8h.html#ga60002c174b2106139e2b219a0e0fb3f0":[4,0,0,4,1,12,4]
+"generic__polynomial_8h.html#ad6ff0b6772551662f2b02b77b5889504":[4,0,0,1,3,6,29]
 };

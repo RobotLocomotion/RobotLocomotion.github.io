@@ -28,6 +28,7 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
     [ "saturation.h", "saturation_8h.html", null ],
     [ "shared_pointer_system.h", "shared__pointer__system_8h.html", "shared__pointer__system_8h" ],
     [ "sine.h", "sine_8h.html", "sine_8h" ],
+    [ "sparse_matrix_gain.h", "sparse__matrix__gain_8h.html", null ],
     [ "symbolic_vector_system.h", "symbolic__vector__system_8h.html", "symbolic__vector__system_8h" ],
     [ "trajectory_affine_system.h", "trajectory__affine__system_8h.html", "trajectory__affine__system_8h" ],
     [ "trajectory_linear_system.h", "trajectory__linear__system_8h.html", "trajectory__linear__system_8h" ],

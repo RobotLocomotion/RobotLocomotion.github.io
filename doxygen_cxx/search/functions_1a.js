@@ -336,6 +336,7 @@ var searchData=
   ['_7esolverid',['~SolverId',['../classdrake_1_1solvers_1_1_solver_id.html#ad62019b121b0c7878b560a1bd0f8a84c',1,'drake::solvers::SolverId']]],
   ['_7esolverinterface',['~SolverInterface',['../classdrake_1_1solvers_1_1_solver_interface.html#abf3f7966f1746f4f30c609c769f8b906',1,'drake::solvers::SolverInterface']]],
   ['_7esolvertypeconverter',['~SolverTypeConverter',['../classdrake_1_1solvers_1_1_solver_type_converter.html#a8cfb5efc2e1a6588ac3d83e16610b0d8',1,'drake::solvers::SolverTypeConverter']]],
+  ['_7esparsematrixgain',['~SparseMatrixGain',['../classdrake_1_1systems_1_1_sparse_matrix_gain.html#a63a0d9356eb588c3d90c1b2bc5395404',1,'drake::systems::SparseMatrixGain']]],
   ['_7espatialvelocityconstraint',['~SpatialVelocityConstraint',['../classdrake_1_1multibody_1_1_spatial_velocity_constraint.html#abc3a5832c60c022fe7df7ce732b1dc17',1,'drake::multibody::SpatialVelocityConstraint']]],
   ['_7espectrahedron',['~Spectrahedron',['../classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html#a512dd87ba076d58143a01deb27246a05',1,'drake::geometry::optimization::Spectrahedron']]],
   ['_7esphere',['~Sphere',['../classdrake_1_1geometry_1_1_sphere.html#a3737c041fe08efe2cb6c53383c1ba697',1,'drake::geometry::Sphere']]],

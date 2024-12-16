@@ -1,5 +1,15 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html":[3,0,0,17,3],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#a36a49cd33376d5faa9480d3bdfdd4459":[3,0,0,17,3,2],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#a3cb5eb6604c6f975e8505b4c87b96660":[3,0,0,17,3,8],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#a44dfb5b341956f09dd1c10e63b3c0d68":[3,0,0,17,3,3],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#a6179321a607612fc5869c1b869bd0b4d":[3,0,0,17,3,0],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#a655341dee6b153e420bb23b68229a930":[3,0,0,17,3,1],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#a67132081ac654cacdf3adefd7e95a2f7":[3,0,0,17,3,10],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#a6f3379a2754487a0ec8bf752912a41bf":[3,0,0,17,3,5],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#aa5d99be5008ebc6e7d004d54cf0a713a":[3,0,0,17,3,7],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#ab191f8ee68c549c494a6d49b0c381944":[3,0,0,17,3,6],
 "classdrake_1_1trajectories_1_1_derivative_trajectory.html#abec7b1f5c2c6face018616992476881f":[3,0,0,17,3,9],
 "classdrake_1_1trajectories_1_1_derivative_trajectory.html#adca2766204b86212e8ed2b91faa97775":[3,0,0,17,3,11],
 "classdrake_1_1trajectories_1_1_derivative_trajectory.html#aef16c3e234e70a22d89678041a6bda57":[3,0,0,17,3,4],
@@ -239,15 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1visualization_1_1_concatenate_images.html#a694ac7926701e834ca36db268753a478":[1,2,11,6,5],
 "classdrake_1_1visualization_1_1_concatenate_images.html#a8ea656dc79df76cace8b9610b81f8de3":[1,2,11,6,4],
 "classdrake_1_1visualization_1_1_concatenate_images.html#aa51be17f000d46bed06ece0616b469bb":[1,2,11,6,0],
-"classdrake_1_1visualization_1_1_concatenate_images.html#aaf8b99a6fe41856154a5af0a731be6ec":[1,2,11,6,2],
-"classdrake_1_1visualization_1_1_concatenate_images.html#ab424db4973cded51901239852b4a3443":[1,2,11,6,3],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html":[1,2,11,7],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a35e4757607fba787b9450627f6112166":[1,2,11,7,3],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a6b25925ec5f7044f7ed092ee3180f38d":[1,2,11,7,7],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a73f8cf9a55941586846beae0ef7f94a8":[1,2,11,7,1],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a8b091eb5e79051e855367de4106c9739":[1,2,11,7,8],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a920edba4b207049d7ce573d4ff8b96bf":[1,2,11,7,0],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#a9a2e0e4083590b0ce302bc8dd23d985b":[1,2,11,7,4],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#aae4a07b05d13e93beed877b8119042f5":[1,2,11,7,5],
-"classdrake_1_1visualization_1_1_inertia_visualizer.html#ac589bc8397bf7d9c4d695830cb1b9c2f":[1,2,11,7,6]
+"classdrake_1_1visualization_1_1_concatenate_images.html#aaf8b99a6fe41856154a5af0a731be6ec":[1,2,11,6,2]
 };

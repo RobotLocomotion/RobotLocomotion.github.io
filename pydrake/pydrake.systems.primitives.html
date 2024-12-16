@@ -4759,6 +4759,125 @@ an input port is created.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">SparseMatrixGain</span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>A variant of MatrixGain which supports multiplication by SparseMatrix,
+<code class="docutils literal notranslate"><span class="pre">D</span></code>. Specifically, given an input signal <code class="docutils literal notranslate"><span class="pre">u</span></code> and a state <code class="docutils literal notranslate"><span class="pre">x</span></code>,
+the output of this system, <code class="docutils literal notranslate"><span class="pre">y</span></code>, is:</p>
+<div class="math notranslate nohighlight">
+\[y = D u\]</div>
+<p>Note that, unlike MatrixGain, this system is not derived from
+LinearSystem (which does not yet support sparse matrices). However, we
+use <code class="docutils literal notranslate"><span class="pre">D</span></code> as the name for the gain matrix here to be consistent.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SparseMatrixGain</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>MatrixGain</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain_" title="pydrake.systems.primitives.SparseMatrixGain_"><code class="xref py py-class docutils literal notranslate"><span class="pre">SparseMatrixGain_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain" title="pydrake.systems.primitives.SparseMatrixGain"><span class="pre">pydrake.systems.primitives.SparseMatrixGain</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>A constructor where the gain matrix <code class="docutils literal notranslate"><span class="pre">D</span></code> is <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain.D">
+<span class="sig-name descname"><span class="pre">D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain" title="pydrake.systems.primitives.SparseMatrixGain"><span class="pre">pydrake.systems.primitives.SparseMatrixGain</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain.D" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for the gain matrix <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain.set_D">
+<span class="sig-name descname"><span class="pre">set_D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain" title="pydrake.systems.primitives.SparseMatrixGain"><span class="pre">pydrake.systems.primitives.SparseMatrixGain</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain.set_D" title="Permalink to this definition"></a></dt>
+<dd><p>Setter for the gain matrix <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">SparseMatrixGain_</span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">SparseMatrixGain_[float]</span></code>, <a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain_-AutoDiffXd" title="pydrake.systems.primitives.SparseMatrixGain_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SparseMatrixGain_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain_-Expression" title="pydrake.systems.primitives.SparseMatrixGain_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">SparseMatrixGain_[Expression]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain_-AutoDiffXd">
+<span id="pydrake.systems.primitives.SparseMatrixGain_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">SparseMatrixGain_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain_-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>A variant of MatrixGain which supports multiplication by SparseMatrix,
+<code class="docutils literal notranslate"><span class="pre">D</span></code>. Specifically, given an input signal <code class="docutils literal notranslate"><span class="pre">u</span></code> and a state <code class="docutils literal notranslate"><span class="pre">x</span></code>,
+the output of this system, <code class="docutils literal notranslate"><span class="pre">y</span></code>, is:</p>
+<div class="math notranslate nohighlight">
+\[y = D u\]</div>
+<p>Note that, unlike MatrixGain, this system is not derived from
+LinearSystem (which does not yet support sparse matrices). However, we
+use <code class="docutils literal notranslate"><span class="pre">D</span></code> as the name for the gain matrix here to be consistent.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SparseMatrixGain</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>MatrixGain</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain_-AutoDiffXd-.__init__">
+<span id="pydrake.systems.primitives.SparseMatrixGain_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain_" title="pydrake.systems.primitives.SparseMatrixGain_"><span class="pre">pydrake.systems.primitives.SparseMatrixGain_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>A constructor where the gain matrix <code class="docutils literal notranslate"><span class="pre">D</span></code> is <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain_-AutoDiffXd-.D">
+<span id="pydrake.systems.primitives.SparseMatrixGain_[AutoDiffXd].D"></span><span class="sig-name descname"><span class="pre">D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain_" title="pydrake.systems.primitives.SparseMatrixGain_"><span class="pre">pydrake.systems.primitives.SparseMatrixGain_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain_-AutoDiffXd-.D" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for the gain matrix <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain_-AutoDiffXd-.set_D">
+<span id="pydrake.systems.primitives.SparseMatrixGain_[AutoDiffXd].set_D"></span><span class="sig-name descname"><span class="pre">set_D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain_" title="pydrake.systems.primitives.SparseMatrixGain_"><span class="pre">pydrake.systems.primitives.SparseMatrixGain_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain_-AutoDiffXd-.set_D" title="Permalink to this definition"></a></dt>
+<dd><p>Setter for the gain matrix <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain_-Expression">
+<span id="pydrake.systems.primitives.SparseMatrixGain_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">SparseMatrixGain_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain_-Expression" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<p>A variant of MatrixGain which supports multiplication by SparseMatrix,
+<code class="docutils literal notranslate"><span class="pre">D</span></code>. Specifically, given an input signal <code class="docutils literal notranslate"><span class="pre">u</span></code> and a state <code class="docutils literal notranslate"><span class="pre">x</span></code>,
+the output of this system, <code class="docutils literal notranslate"><span class="pre">y</span></code>, is:</p>
+<div class="math notranslate nohighlight">
+\[y = D u\]</div>
+<p>Note that, unlike MatrixGain, this system is not derived from
+LinearSystem (which does not yet support sparse matrices). However, we
+use <code class="docutils literal notranslate"><span class="pre">D</span></code> as the name for the gain matrix here to be consistent.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SparseMatrixGain</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>MatrixGain</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain_-Expression-.__init__">
+<span id="pydrake.systems.primitives.SparseMatrixGain_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain_" title="pydrake.systems.primitives.SparseMatrixGain_"><span class="pre">pydrake.systems.primitives.SparseMatrixGain_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>A constructor where the gain matrix <code class="docutils literal notranslate"><span class="pre">D</span></code> is <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain_-Expression-.D">
+<span id="pydrake.systems.primitives.SparseMatrixGain_[Expression].D"></span><span class="sig-name descname"><span class="pre">D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain_" title="pydrake.systems.primitives.SparseMatrixGain_"><span class="pre">pydrake.systems.primitives.SparseMatrixGain_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain_-Expression-.D" title="Permalink to this definition"></a></dt>
+<dd><p>Getter for the gain matrix <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SparseMatrixGain_-Expression-.set_D">
+<span id="pydrake.systems.primitives.SparseMatrixGain_[Expression].set_D"></span><span class="sig-name descname"><span class="pre">set_D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SparseMatrixGain_" title="pydrake.systems.primitives.SparseMatrixGain_"><span class="pre">pydrake.systems.primitives.SparseMatrixGain_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SparseMatrixGain_-Expression-.set_D" title="Permalink to this definition"></a></dt>
+<dd><p>Setter for the gain matrix <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">StateInterpolatorWithDiscreteDerivative</span></span><a class="headerlink" href="#pydrake.systems.primitives.StateInterpolatorWithDiscreteDerivative" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>

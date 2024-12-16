@@ -102,6 +102,7 @@ var searchData=
   ['spanning_5fforest_5ftree_2eh',['spanning_forest_tree.h',['../spanning__forest__tree_8h.html',1,'']]],
   ['sparse_5fand_5fdense_5fmatrix_2eh',['sparse_and_dense_matrix.h',['../sparse__and__dense__matrix_8h.html',1,'']]],
   ['sparse_5flinear_5foperator_2eh',['sparse_linear_operator.h',['../sparse__linear__operator_8h.html',1,'']]],
+  ['sparse_5fmatrix_5fgain_2eh',['sparse_matrix_gain.h',['../sparse__matrix__gain_8h.html',1,'']]],
   ['spatial_5facceleration_2eh',['spatial_acceleration.h',['../spatial__acceleration_8h.html',1,'']]],
   ['spatial_5falgebra_2eh',['spatial_algebra.h',['../spatial__algebra_8h.html',1,'']]],
   ['spatial_5fderivative_2eh',['spatial_derivative.h',['../spatial__derivative_8h.html',1,'']]],
