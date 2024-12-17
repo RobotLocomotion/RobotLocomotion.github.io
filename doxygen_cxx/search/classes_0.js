@@ -32,7 +32,6 @@ var searchData=
   ['affineball',['AffineBall',['../classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html',1,'drake::geometry::optimization']]],
   ['affinesubspace',['AffineSubspace',['../classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html',1,'drake::geometry::optimization']]],
   ['affinesystem',['AffineSystem',['../classdrake_1_1systems_1_1_affine_system.html',1,'drake::systems']]],
-  ['affinesystem_3c_20double_20_3e',['AffineSystem&lt; double &gt;',['../classdrake_1_1systems_1_1_affine_system.html',1,'drake::systems']]],
   ['allegrocommandreceiver',['AllegroCommandReceiver',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_command_receiver.html',1,'drake::examples::allegro_hand']]],
   ['allegrohandmotionstate',['AllegroHandMotionState',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html',1,'drake::examples::allegro_hand']]],
   ['allegrostatussender',['AllegroStatusSender',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html',1,'drake::examples::allegro_hand']]],

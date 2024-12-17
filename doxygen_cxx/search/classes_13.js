@@ -8,7 +8,6 @@ var searchData=
   ['timer',['Timer',['../classdrake_1_1_timer.html',1,'drake']]],
   ['timestep',['TimeStep',['../structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html',1,'drake::planning::trajectory_optimization']]],
   ['timevaryingaffinesystem',['TimeVaryingAffineSystem',['../classdrake_1_1systems_1_1_time_varying_affine_system.html',1,'drake::systems']]],
-  ['timevaryingaffinesystem_3c_20double_20_3e',['TimeVaryingAffineSystem&lt; double &gt;',['../classdrake_1_1systems_1_1_time_varying_affine_system.html',1,'drake::systems']]],
   ['timevaryinglinearsystem',['TimeVaryingLinearSystem',['../classdrake_1_1systems_1_1_time_varying_linear_system.html',1,'drake::systems']]],
   ['toppra',['Toppra',['../classdrake_1_1multibody_1_1_toppra.html',1,'drake::multibody']]],
   ['traits',['Traits',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html',1,'drake::systems::scalar_conversion']]],

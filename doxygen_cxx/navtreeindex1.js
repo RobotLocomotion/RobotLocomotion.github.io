@@ -2,9 +2,10 @@ var NAVTREEINDEX1 =
 {
 "classdrake_1_1_memory_file.html#a75826baed3eae4f9970b9350dc7707ac":[3,0,0,37,0],
 "classdrake_1_1_memory_file.html#a81daa72dc68344320d26d46e72699489":[3,0,0,37,1],
-"classdrake_1_1_memory_file.html#a8a9f91a7db6a15fc542f14aa08c8e563":[3,0,0,37,11],
+"classdrake_1_1_memory_file.html#a8a9f91a7db6a15fc542f14aa08c8e563":[3,0,0,37,12],
+"classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,37,11],
 "classdrake_1_1_memory_file.html#aac55a4c9da45bab272bb34692d583206":[3,0,0,37,5],
-"classdrake_1_1_memory_file.html#ad337b3f5cb6821e21e26c3696144faaa":[3,0,0,37,12],
+"classdrake_1_1_memory_file.html#ad337b3f5cb6821e21e26c3696144faaa":[3,0,0,37,13],
 "classdrake_1_1_name_value.html":[3,0,0,38],
 "classdrake_1_1_name_value.html#a04e97f285e8856cd64e112af8e379da1":[3,0,0,38,6],
 "classdrake_1_1_name_value.html#a265a253612b46abed17c61b0a5e5ce30":[3,0,0,38,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classdrake_1_1copyable__unique__ptr.html#a4d4078720893b915d022bd734f6eb5e9":[3,0,0,21,14],
 "classdrake_1_1copyable__unique__ptr.html#a53f1739bcedb13183285a9995d3b9daf":[3,0,0,21,21],
 "classdrake_1_1copyable__unique__ptr.html#a5a34341a71b340b3af3ee3d18e9d09bc":[3,0,0,21,6],
-"classdrake_1_1copyable__unique__ptr.html#a5d014005bde7838a248d7129023b999c":[3,0,0,21,16],
-"classdrake_1_1copyable__unique__ptr.html#a60fa4971dcefe82f931084653b196a55":[3,0,0,21,20]
+"classdrake_1_1copyable__unique__ptr.html#a5d014005bde7838a248d7129023b999c":[3,0,0,21,16]
 };

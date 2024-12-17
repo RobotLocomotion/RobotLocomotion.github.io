@@ -28,7 +28,6 @@ var searchData=
   ['linear_5fcorotated_5fmodel_2eh',['linear_corotated_model.h',['../linear__corotated__model_8h.html',1,'']]],
   ['linear_5fcorotated_5fmodel_5fdata_2eh',['linear_corotated_model_data.h',['../linear__corotated__model__data_8h.html',1,'']]],
   ['linear_5fdistance_5fand_5finterpolation_5fprovider_2eh',['linear_distance_and_interpolation_provider.h',['../linear__distance__and__interpolation__provider_8h.html',1,'']]],
-  ['linear_5fmodel_5fpredictive_5fcontroller_2eh',['linear_model_predictive_controller.h',['../linear__model__predictive__controller_8h.html',1,'']]],
   ['linear_5foperator_2eh',['linear_operator.h',['../linear__operator_8h.html',1,'']]],
   ['linear_5fquadratic_5fregulator_2eh',['linear_quadratic_regulator.h',['../linear__quadratic__regulator_8h.html',1,'']]],
   ['linear_5fscalar_5fsystem_2eh',['linear_scalar_system.h',['../linear__scalar__system_8h.html',1,'']]],

@@ -12,6 +12,7 @@ var dir_5f7a2023092b91a1e02609fa2c012f50 =
       [ "FunctionHandleTrajectory", "classdrake_1_1trajectories_1_1_function_handle_trajectory.html", "classdrake_1_1trajectories_1_1_function_handle_trajectory" ]
     ] ],
     [ "path_parameterized_trajectory.h", "path__parameterized__trajectory_8h.html", "path__parameterized__trajectory_8h" ],
+    [ "piecewise_constant_curvature_trajectory.h", "piecewise__constant__curvature__trajectory_8h.html", "piecewise__constant__curvature__trajectory_8h" ],
     [ "piecewise_polynomial.h", "piecewise__polynomial_8h.html", "piecewise__polynomial_8h" ],
     [ "piecewise_pose.h", "piecewise__pose_8h.html", "piecewise__pose_8h" ],
     [ "piecewise_quaternion.h", "piecewise__quaternion_8h.html", "piecewise__quaternion_8h" ],

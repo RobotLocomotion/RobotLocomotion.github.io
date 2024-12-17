@@ -804,10 +804,10 @@ var hierarchy =
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
     [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", null ],
-    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
-    [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
+    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
+    [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
       [ "CspaceFreeBox::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html", null ],
       [ "CspaceFreePolytope::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html", null ]
@@ -967,7 +967,6 @@ var hierarchy =
             [ "ConstantValueSource< T >", "classdrake_1_1systems_1_1_constant_value_source.html", null ],
             [ "InverseDynamics< T >", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html", null ],
             [ "JointStiffnessController< T >", "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html", null ],
-            [ "LinearModelPredictiveController< T >", "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html", null ],
             [ "PidController< T >", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html", null ],
             [ "Demultiplexer< T >", "classdrake_1_1systems_1_1_demultiplexer.html", null ],
             [ "DiscreteDerivative< T >", "classdrake_1_1systems_1_1_discrete_derivative.html", null ],
@@ -1113,12 +1112,7 @@ var hierarchy =
                 [ "DiscontinuousSpringMassDamperSystem< double >", "classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html", null ]
               ] ]
             ] ],
-            [ "StiffDoubleMassSpringSystem< double >", "classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html", null ],
-            [ "TimeVaryingAffineSystem< double >", "classdrake_1_1systems_1_1_time_varying_affine_system.html", [
-              [ "AffineSystem< double >", "classdrake_1_1systems_1_1_affine_system.html", [
-                [ "LinearSystem< double >", "classdrake_1_1systems_1_1_linear_system.html", null ]
-              ] ]
-            ] ]
+            [ "StiffDoubleMassSpringSystem< double >", "classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html", null ]
           ] ]
         ] ],
         [ "System< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_system.html", null ],
@@ -1170,6 +1164,7 @@ var hierarchy =
       [ "PiecewiseTrajectory< T >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "CompositeTrajectory< T >", "classdrake_1_1trajectories_1_1_composite_trajectory.html", null ],
         [ "ExponentialPlusPiecewisePolynomial< T >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],
+        [ "PiecewiseConstantCurvatureTrajectory< T >", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html", null ],
         [ "PiecewisePolynomial< T >", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html", null ],
         [ "PiecewisePose< T >", "classdrake_1_1trajectories_1_1_piecewise_pose.html", null ],
         [ "PiecewiseQuaternionSlerp< T >", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html", null ]

@@ -1124,6 +1124,13 @@ parser.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.scene_graph">
+<span class="sig-name descname"><span class="pre">scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::SceneGraph&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.scene_graph" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a mutable pointer to the SceneGraph that will be modified by this
+parser, or nullptr if this parser does not have a SceneGraph.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.SetAutoRenaming">
 <span class="sig-name descname"><span class="pre">SetAutoRenaming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.SetAutoRenaming" title="Permalink to this definition"></a></dt>
 <dd><p>Enable or disable auto-renaming. It is disabled by default.</p>

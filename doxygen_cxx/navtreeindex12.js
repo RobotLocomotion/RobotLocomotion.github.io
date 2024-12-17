@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a92797706c9c2adb6329f1dce4c672d59":[1,1,1,13,7],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a939869561d2b6d2a404bf1f48d513d5f":[1,5,5,13,10],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a939869561d2b6d2a404bf1f48d513d5f":[1,1,1,13,10],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aa7a4d7c125954dfde3c15238c852eeed":[1,5,5,13,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1lcm_1_1_drake_lcm_interface.html#af378b6404815e2045e3c1a3909e34eb1":[3,0,0,5,2,5],
 "classdrake_1_1lcm_1_1_drake_lcm_log.html":[3,0,0,5,3],
 "classdrake_1_1lcm_1_1_drake_lcm_log.html#a101e1a0d1cad7440599a48f707c98562":[3,0,0,5,3,0],
-"classdrake_1_1lcm_1_1_drake_lcm_log.html#a15fc920a34211ee4dfe6a9ccd51b8a02":[3,0,0,5,3,7],
-"classdrake_1_1lcm_1_1_drake_lcm_log.html#a16db47193b9958a05c3566ab54f01b76":[3,0,0,5,3,13]
+"classdrake_1_1lcm_1_1_drake_lcm_log.html#a15fc920a34211ee4dfe6a9ccd51b8a02":[3,0,0,5,3,7]
 };

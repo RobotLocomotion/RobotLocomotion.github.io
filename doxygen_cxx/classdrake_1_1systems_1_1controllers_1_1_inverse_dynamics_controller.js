@@ -11,6 +11,7 @@ var classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller =
     [ "get_input_port_estimated_state", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a0892a07c842f924653542d20b8f3b09e", null ],
     [ "get_multibody_plant_for_control", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a9eaeb325edf73e4d054274da0d684fd1", null ],
     [ "get_output_port_control", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#aad42796928b031670dc843a51e1967c2", null ],
+    [ "get_output_port_generalized_force", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ae1296b665521a703cc08e6d98f5b6f64", null ],
     [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a97a3685bc3186e92bfaaab2967b89ba7", null ],
     [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a2024ba983bc0f2f2a3bdbed2ae532ce4", null ],
     [ "set_integral_value", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ab31e6c294928ac7c131675fad3777073", null ]

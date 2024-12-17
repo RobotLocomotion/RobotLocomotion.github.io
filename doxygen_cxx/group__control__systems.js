@@ -31,6 +31,7 @@ var group__control__systems =
       [ "get_input_port_estimated_state", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a0892a07c842f924653542d20b8f3b09e", null ],
       [ "get_multibody_plant_for_control", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a9eaeb325edf73e4d054274da0d684fd1", null ],
       [ "get_output_port_control", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#aad42796928b031670dc843a51e1967c2", null ],
+      [ "get_output_port_generalized_force", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ae1296b665521a703cc08e6d98f5b6f64", null ],
       [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a97a3685bc3186e92bfaaab2967b89ba7", null ],
       [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a2024ba983bc0f2f2a3bdbed2ae532ce4", null ],
       [ "set_integral_value", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ab31e6c294928ac7c131675fad3777073", null ]
@@ -51,15 +52,6 @@ var group__control__systems =
       [ "JointStiffnessController", "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#aa6d468524ab47bb2e702b6025140c701", null ]
     ] ],
     [ "JointImpedanceController", "classdrake_1_1systems_1_1controllers_1_1_joint_impedance_controller.html", null ],
-    [ "LinearModelPredictiveController", "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html", [
-      [ "LinearModelPredictiveController", "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#ae549539f28012cd0081d886d117aed5a", null ],
-      [ "LinearModelPredictiveController", "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a5c008dea690853955447d85df934fa82", null ],
-      [ "LinearModelPredictiveController", "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#aefeee400d114825d8db97204a6999101", null ],
-      [ "get_control_port", "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a3ed94567c4365ecb7253a9f4b0df5cc6", null ],
-      [ "get_state_port", "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a575cafd239d48f8fe814d550d368b1bf", null ],
-      [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a3229f07b7f9c224cc442fe7921cfb44a", null ],
-      [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#acdebbe41c8d9735aeee1920ac69b07e1", null ]
-    ] ],
     [ "PidControlledSystem", "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html", [
       [ "ConnectResult", "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html", [
         [ "control_input_port", "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31", null ],

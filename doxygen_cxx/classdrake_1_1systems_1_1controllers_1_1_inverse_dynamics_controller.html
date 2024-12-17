@@ -169,11 +169,12 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1controllers_1
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::systems::controllers::InverseDynamicsController&lt; T &gt;</h3>
 
-<p>A state feedback controller that uses a <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html" title="Implements the PID controller.">PidController</a> to generate desired accelerations, which are then converted into torques using <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html" title="Solves inverse dynamics with no consideration for joint actuator force limits.">InverseDynamics</a>. </p>
+<p>A state feedback controller that uses a <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html" title="Implements the PID controller.">PidController</a> to generate desired accelerations, which are then converted into MultibodyPlant actuation inputs using <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html" title="Solves inverse dynamics with no consideration for joint actuator force limits.">InverseDynamics</a>. </p>
 <p>More specifically, the output of this controller is: </p><pre>
-  force = inverse_dynamics(q, v, vd_command), where
+  actuation = B⁻¹ generalized_force, and
+  generalized_force = inverse_dynamics(q, v, vd_command), where
   vd_command = kp(q_d - q) + kd(v_d - v) + ki int(q_d - q) + vd_d.
-</pre><p> Here <code>q</code> and <code>v</code> stand for the generalized position and velocity, and <code>vd</code> is the generalized acceleration. The subscript <code>_d</code> indicates desired values, and <code>vd_command</code> indicates the acceleration command (which includes the stabilization terms) passed to the inverse dynamics computation.</p>
+</pre><p> Here <code>q</code> and <code>v</code> stand for the generalized position and velocity, and <code>vd</code> is the generalized acceleration, and <code>B</code> is the actuation matrix. The subscript <code>_d</code> indicates desired values, and <code>vd_command</code> indicates the acceleration command (which includes the stabilization terms) passed to the inverse dynamics computation.</p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
@@ -185,6 +186,8 @@ class drake::systems::controllers::InverseDynamicsController&lt; T &gt;</h3>
 <td align="right" style="padding:5px 0px 5px 0px"><span style="color:gray">desired_acceleration</span>&rarr;</td></tr>
 </table>
 </td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html" title="A state feedback controller that uses a PidController to generate desired accelerations,...">InverseDynamicsController</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; actuation</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; generalized_force</td></tr>
 </table>
@@ -229,8 +232,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac1f946b742285b20a12ed0e0e2ebad9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the input port for the desired state.  <a href="#ac1f946b742285b20a12ed0e0e2ebad9d">More...</a><br /></td></tr>
 <tr class="separator:ac1f946b742285b20a12ed0e0e2ebad9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad42796928b031670dc843a51e1967c2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#aad42796928b031670dc843a51e1967c2">get_output_port_control</a> () const final</td></tr>
-<tr class="memdesc:aad42796928b031670dc843a51e1967c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port for computed control.  <a href="#aad42796928b031670dc843a51e1967c2">More...</a><br /></td></tr>
+<tr class="memdesc:aad42796928b031670dc843a51e1967c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port for computed actuation/control.  <a href="#aad42796928b031670dc843a51e1967c2">More...</a><br /></td></tr>
 <tr class="separator:aad42796928b031670dc843a51e1967c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1296b665521a703cc08e6d98f5b6f64"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ae1296b665521a703cc08e6d98f5b6f64">get_output_port_generalized_force</a> () const</td></tr>
+<tr class="memdesc:ae1296b665521a703cc08e6d98f5b6f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port for computed generalized_force.  <a href="#ae1296b665521a703cc08e6d98f5b6f64">More...</a><br /></td></tr>
+<tr class="separator:ae1296b665521a703cc08e6d98f5b6f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eaeb325edf73e4d054274da0d684fd1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a9eaeb325edf73e4d054274da0d684fd1">get_multibody_plant_for_control</a> () const</td></tr>
 <tr class="memdesc:a9eaeb325edf73e4d054274da0d684fd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant pointer to the MultibodyPlant used for control.  <a href="#a9eaeb325edf73e4d054274da0d684fd1">More...</a><br /></td></tr>
 <tr class="separator:a9eaeb325edf73e4d054274da0d684fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1509,9 +1515,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the output port for computed control. </p>
+<p>Returns the output port for computed actuation/control. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a67f3d3a0113ead3e42a7424f58420f5c">StateFeedbackControllerInterface&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ae1296b665521a703cc08e6d98f5b6f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1296b665521a703cc08e6d98f5b6f64">&#9670;&nbsp;</a></span>get_output_port_generalized_force()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;T&gt;&amp; get_output_port_generalized_force </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the output port for computed generalized_force. </p>
 
 </div>
 </div>

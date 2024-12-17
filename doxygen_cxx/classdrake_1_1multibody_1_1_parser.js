@@ -15,6 +15,7 @@ var classdrake_1_1multibody_1_1_parser =
     [ "operator=", "classdrake_1_1multibody_1_1_parser.html#a07d3b27db39a9a28d3ae2fc018ba9288", null ],
     [ "package_map", "classdrake_1_1multibody_1_1_parser.html#afb031b4b56411c477d6f19f9f1dc65f0", null ],
     [ "plant", "classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971", null ],
+    [ "scene_graph", "classdrake_1_1multibody_1_1_parser.html#a3a3f9fedb65b4959f6f3ba8e1457bc4f", null ],
     [ "SetAutoRenaming", "classdrake_1_1multibody_1_1_parser.html#ac47a5df0bd6f07e684133c4183be1b4e", null ],
     [ "SetStrictParsing", "classdrake_1_1multibody_1_1_parser.html#a80f0b282c1e0ed11863458fa49b448ae", null ],
     [ "internal::CompositeParse", "classdrake_1_1multibody_1_1_parser.html#adfb86885998c02cab386d0df367719e3", null ]
