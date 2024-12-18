@@ -1,6 +1,5 @@
 var NAVTREEINDEX64 =
 {
-"structdrake_1_1geometry_1_1promoted__numerical.html":[3,0,0,4,45],
 "structdrake_1_1geometry_1_1promoted__numerical.html#ac7ff24def79100330b2186638f93afe1":[3,0,0,4,45,0],
 "structdrake_1_1geometry_1_1render_1_1_light_parameter.html":[3,0,0,4,2,4],
 "structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a0dc037cf2bcfb547da23636bd58f37dd":[3,0,0,4,2,4,3],
@@ -134,16 +133,15 @@ var NAVTREEINDEX64 =
 "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a497ba947ec5f475c2de347175fb488a5":[3,0,0,8,46,1,3],
 "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a8a2e7198dc47a29051d2896858f0f721":[3,0,0,8,46,1,2],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html":[3,0,0,8,56],
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#a0f73b758fdc6b763190aa6ea76e014c2":[3,0,0,8,56,8],
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f":[3,0,0,8,56,6],
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#a64a4087244dd4a8102ef1bb4abafecc4":[3,0,0,8,56,10],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#a0f73b758fdc6b763190aa6ea76e014c2":[3,0,0,8,56,7],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#a36743d8dd30dc7ff0ca3778564e2a90f":[3,0,0,8,56,5],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#a64a4087244dd4a8102ef1bb4abafecc4":[3,0,0,8,56,9],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#a662fe783b3fe8423c76e73ea8910a544":[3,0,0,8,56,3],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#a80e753afd58d6c37211d1e1caed32b24":[3,0,0,8,56,1],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,56,0],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#aa0f273688f2f9252eca8098377a5ea10":[3,0,0,8,56,2],
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#aa216048ea5d8bbcef641752b6d744ba8":[3,0,0,8,56,9],
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#ab293e1ad65932eebf57568303f28c326":[3,0,0,8,56,5],
-"structdrake_1_1multibody_1_1_multibody_plant_config.html#ac7ad2e65450c6bf4784df0da7dc1ac10":[3,0,0,8,56,7],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#aa216048ea5d8bbcef641752b6d744ba8":[3,0,0,8,56,8],
+"structdrake_1_1multibody_1_1_multibody_plant_config.html#ac7ad2e65450c6bf4784df0da7dc1ac10":[3,0,0,8,56,6],
 "structdrake_1_1multibody_1_1_multibody_plant_config.html#acfc94098ab828c8207b52f78ca3a1d51":[3,0,0,8,56,4],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html":[3,0,0,8,61,0],
 "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a306ada97a24c8198c1a0c9c3c5b0bb25":[3,0,0,8,61,0,6],
@@ -249,5 +247,7 @@ var NAVTREEINDEX64 =
 "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html":[3,0,0,8,3,5],
 "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a36dbe2aa2c05a792070d7b44d5c06e87":[3,0,0,8,3,5,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a6651775aae5fef2c3cc30dd91b7018ff":[3,0,0,8,3,5,4],
-"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a79e9374608093db77a9d533b2af3f11a":[3,0,0,8,3,5,2]
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a79e9374608093db77a9d533b2af3f11a":[3,0,0,8,3,5,2],
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,3,5,1],
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,8,3,5,0]
 };

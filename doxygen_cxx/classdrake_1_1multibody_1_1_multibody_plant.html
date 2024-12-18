@@ -1284,9 +1284,6 @@ Contact modeling</h2></td></tr>
 <tr class="memitem:ad253ab790ff8e142080cedd210e982da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad253ab790ff8e142080cedd210e982da">set_contact_model</a> (<a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4e">ContactModel</a> model)</td></tr>
 <tr class="memdesc:ad253ab790ff8e142080cedd210e982da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the contact model to be used by <code>this</code> MultibodyPlant, see ContactModel for available options.  <a href="#ad253ab790ff8e142080cedd210e982da">More...</a><br /></td></tr>
 <tr class="separator:ad253ab790ff8e142080cedd210e982da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a217d8aa9218c9d981b7bc2e8a983c4be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be">set_discrete_contact_solver</a> (<a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8d">DiscreteContactSolver</a> contact_solver)</td></tr>
-<tr class="memdesc:a217d8aa9218c9d981b7bc2e8a983c4be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the contact solver type used for discrete MultibodyPlant models.  <a href="#a217d8aa9218c9d981b7bc2e8a983c4be">More...</a><br /></td></tr>
-<tr class="separator:a217d8aa9218c9d981b7bc2e8a983c4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7698366750a09e383106a17bf9009a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8d">DiscreteContactSolver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad7698366750a09e383106a17bf9009a2">get_discrete_contact_solver</a> () const</td></tr>
 <tr class="memdesc:ad7698366750a09e383106a17bf9009a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contact solver type used for discrete MultibodyPlant models.  <a href="#ad7698366750a09e383106a17bf9009a2">More...</a><br /></td></tr>
 <tr class="separator:ad7698366750a09e383106a17bf9009a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -8662,8 +8659,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8674,7 +8671,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -8688,8 +8685,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8700,7 +8697,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -9300,7 +9297,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 </div><div class="memdoc">
 
 <p>Sets the discrete contact model approximation. </p>
-<dl class="section note"><dt>Note</dt><dd>Calling this method also sets the contact solver type (see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a217d8aa9218c9d981b7bc2e8a983c4be" title="Sets the contact solver type used for discrete MultibodyPlant models.">set_discrete_contact_solver()</a>) according to:<ul>
+<dl class="section note"><dt>Note</dt><dd>Calling this method also sets the contact solver type (see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad7698366750a09e383106a17bf9009a2" title="Returns the contact solver type used for discrete MultibodyPlant models.">get_discrete_contact_solver()</a>) according to:<ul>
 <li><a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90" title="TAMSI solver, see [Castro et al., 2019].">DiscreteContactApproximation::kTamsi</a> sets the solver to <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90" title="TAMSI solver, see [Castro et al., 2019].">DiscreteContactSolver::kTamsi</a>.</li>
 <li><a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">DiscreteContactApproximation::kSap</a>, <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679ac9a6ebef7049abc9802a9d0705a2e976" title="Similarity approximation found in [Castro et al., 2023].">DiscreteContactApproximation::kSimilar</a> and <a class="el" href="namespacedrake_1_1multibody.html#aa1d02176591187cb83e77e9ff779d679a22387111372cb701adbd49eaa6a28261" title="Approximation in which the normal force is lagged in Coulomb&#39;s law, such that ‖γₜ‖ ≤ μ γₙ₀,...">DiscreteContactApproximation::kLagged</a> set the solver to <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">DiscreteContactSolver::kSap</a>.</li>
 </ul>
@@ -9312,40 +9309,6 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a217d8aa9218c9d981b7bc2e8a983c4be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a217d8aa9218c9d981b7bc2e8a983c4be">&#9670;&nbsp;</a></span>set_discrete_contact_solver()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void set_discrete_contact_solver </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8d">DiscreteContactSolver</a>&#160;</td>
-          <td class="paramname"><em>contact_solver</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the contact solver type used for discrete MultibodyPlant models. </p>
-<dl class="section note"><dt>Note</dt><dd>Calling this method also sets a default discrete approximation of contact (see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9b3f429ca991bd1028f4f60d6d5f2e61" title="Sets the discrete contact model approximation.">set_discrete_contact_approximation()</a>) according to:<ul>
-<li><a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90" title="TAMSI solver, see [Castro et al., 2019].">DiscreteContactSolver::kTamsi</a> sets the approximation to <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad454de89727cb520148830aa54cb3a90" title="TAMSI solver, see [Castro et al., 2019].">DiscreteContactApproximation::kTamsi</a>.</li>
-<li><a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">DiscreteContactSolver::kSap</a> sets the approximation to <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">DiscreteContactApproximation::kSap</a>.</li>
-</ul>
-</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This function is a no-op for continuous models (when is_discrete() is false.) </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>iff called post-finalize. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use set_discrete_contact_approximation() to set the contact model  approximation. The underlying solver will be inferred automatically. <br />
- This will be removed from Drake on or after 2024-04-01.</dd></dl>
 
 </div>
 </div>

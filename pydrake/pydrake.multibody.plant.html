@@ -7033,7 +7033,7 @@ explanation of default values.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Calling this method also sets the contact solver type (see
-set_discrete_contact_solver()) according to: -
+get_discrete_contact_solver()) according to: -
 DiscreteContactApproximation::kTamsi sets the solver to
 DiscreteContactSolver::kTamsi. -
 DiscreteContactApproximation::kSap,
@@ -7048,38 +7048,6 @@ DiscreteContactSolver::kSap.</p>
 <li><p><strong>False`.</strong> – </p></li>
 <li><p><strong>RuntimeError iff called post-finalize.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_solver">
-<span class="sig-name descname"><span class="pre">set_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_solver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_discrete_contact_solver" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Calling this method also sets a default discrete approximation of
-contact (see set_discrete_contact_approximation()) according to: -
-DiscreteContactSolver::kTamsi sets the approximation to
-DiscreteContactApproximation::kTamsi. -
-DiscreteContactSolver::kSap sets the approximation to
-DiscreteContactApproximation::kSap.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This function is a no-op for continuous models (when is_discrete()
-is false.)</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError iff called post-finalize.</strong><strong> (</strong><strong>Deprecated.</strong><strong>)</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use set_discrete_contact_approximation() to set the contact model
-approximation. The underlying solver will be inferred
-automatically. This will be removed from Drake on or after
-2024-04-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -12741,7 +12709,7 @@ explanation of default values.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Calling this method also sets the contact solver type (see
-set_discrete_contact_solver()) according to: -
+get_discrete_contact_solver()) according to: -
 DiscreteContactApproximation::kTamsi sets the solver to
 DiscreteContactSolver::kTamsi. -
 DiscreteContactApproximation::kSap,
@@ -12756,38 +12724,6 @@ DiscreteContactSolver::kSap.</p>
 <li><p><strong>False`.</strong> – </p></li>
 <li><p><strong>RuntimeError iff called post-finalize.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_discrete_contact_solver">
-<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_discrete_contact_solver"></span><span class="sig-name descname"><span class="pre">set_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_solver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_discrete_contact_solver" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Calling this method also sets a default discrete approximation of
-contact (see set_discrete_contact_approximation()) according to: -
-DiscreteContactSolver::kTamsi sets the approximation to
-DiscreteContactApproximation::kTamsi. -
-DiscreteContactSolver::kSap sets the approximation to
-DiscreteContactApproximation::kSap.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This function is a no-op for continuous models (when is_discrete()
-is false.)</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError iff called post-finalize.</strong><strong> (</strong><strong>Deprecated.</strong><strong>)</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use set_discrete_contact_approximation() to set the contact model
-approximation. The underlying solver will be inferred
-automatically. This will be removed from Drake on or after
-2024-04-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -18443,7 +18379,7 @@ explanation of default values.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Calling this method also sets the contact solver type (see
-set_discrete_contact_solver()) according to: -
+get_discrete_contact_solver()) according to: -
 DiscreteContactApproximation::kTamsi sets the solver to
 DiscreteContactSolver::kTamsi. -
 DiscreteContactApproximation::kSap,
@@ -18458,38 +18394,6 @@ DiscreteContactSolver::kSap.</p>
 <li><p><strong>False`.</strong> – </p></li>
 <li><p><strong>RuntimeError iff called post-finalize.</strong> – </p></li>
 </ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_discrete_contact_solver">
-<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_discrete_contact_solver"></span><span class="sig-name descname"><span class="pre">set_discrete_contact_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_solver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DiscreteContactSolver" title="pydrake.multibody.plant.DiscreteContactSolver"><span class="pre">pydrake.multibody.plant.DiscreteContactSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_discrete_contact_solver" title="Permalink to this definition"></a></dt>
-<dd><p>Sets the contact solver type used for discrete MultibodyPlant models.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Calling this method also sets a default discrete approximation of
-contact (see set_discrete_contact_approximation()) according to: -
-DiscreteContactSolver::kTamsi sets the approximation to
-DiscreteContactApproximation::kTamsi. -
-DiscreteContactSolver::kSap sets the approximation to
-DiscreteContactApproximation::kSap.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This function is a no-op for continuous models (when is_discrete()
-is false.)</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError iff called post-finalize.</strong><strong> (</strong><strong>Deprecated.</strong><strong>)</strong> – </p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use set_discrete_contact_approximation() to set the contact model
-approximation. The underlying solver will be inferred
-automatically. This will be removed from Drake on or after
-2024-04-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -18994,38 +18898,6 @@ Refer to drake::multibody::DiscreteContactApproximation for details.
 Valid strings are: - “tamsi” - “sap” - “similar” - “lagged”</p>
 <p>Refer to MultibodyPlant::set_discrete_contact_approximation() and the
 references therein for further details.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If empty, the contact approximation is determined by
-discrete_contact_solver, see set_discrete_contact_solver(). If
-both discrete_contact_solver and discrete_contact_approximation
-are empty, the default model (and solver) is TAMSI.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_solver">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discrete_contact_solver</span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_solver" title="Permalink to this definition"></a></dt>
-<dd><p>Configures the MultibodyPlant::set_discrete_contact_solver(). Refer to
-drake::multibody::DiscreteContactSolver for details. Valid strings
-are: - “tamsi”, uses the TAMSI model approximation. - “sap” , uses the
-SAP model approximation.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If empty, the contact solver is determined by
-discrete_contact_approximation, see
-MultibodyPlant::set_discrete_contact_approximation(). If both
-discrete_contact_solver and discrete_contact_approximation are
-empty, the default model (and solver) is TAMSI.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>discrete_contact_solver is deprecated. Use
-discrete_contact_approximation to set the contact model
-approximation. The underlying solver will be inferred
-automatically. The deprecated code will be removed from Drake on
-or after 2024-04-01.</p>
-</div>
 </dd></dl>
 
 <dl class="py property">

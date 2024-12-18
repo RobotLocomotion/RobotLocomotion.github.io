@@ -309,7 +309,6 @@ var searchData=
   ['discrete_5fcontact_5fapproximation',['discrete_contact_approximation',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#acfc94098ab828c8207b52f78ca3a1d51',1,'drake::multibody::MultibodyPlantConfig']]],
   ['discrete_5fcontact_5fdata_2eh',['discrete_contact_data.h',['../discrete__contact__data_8h.html',1,'']]],
   ['discrete_5fcontact_5fpair_2eh',['discrete_contact_pair.h',['../discrete__contact__pair_8h.html',1,'']]],
-  ['discrete_5fcontact_5fsolver',['discrete_contact_solver',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#ab293e1ad65932eebf57568303f28c326',1,'drake::multibody::MultibodyPlantConfig']]],
   ['discrete_5fderivative_2eh',['discrete_derivative.h',['../discrete__derivative_8h.html',1,'']]],
   ['discrete_5flyapunov_5fequation_2eh',['discrete_lyapunov_equation.h',['../discrete__lyapunov__equation_8h.html',1,'']]],
   ['discrete_5fstate',['discrete_state',['../classdrake_1_1systems_1_1_system_symbolic_inspector.html#a6b777b78d78d419146fa3c0d80efcff9',1,'drake::systems::SystemSymbolicInspector']]],

@@ -1,7 +1,5 @@
 var NAVTREEINDEX65 =
 {
-"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,3,5,1],
-"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,8,3,5,0],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html":[3,0,0,8,3,6],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a1795d69bef5da9e944055bb2b383a108":[3,0,0,8,3,6,2],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a2a5d37b46d7a2fe94a06ae57bc3109a2":[3,0,0,8,3,6,6],
@@ -249,5 +247,7 @@ var NAVTREEINDEX65 =
 "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,14,54,0],
 "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[3,0,0,14,58,0],
 "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af29303862b440941e562a6b6a11de551":[3,0,0,14,58,0,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af3841474533d8bd1db7c131548d0bc27":[3,0,0,14,58,0,1]
+"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af3841474533d8bd1db7c131548d0bc27":[3,0,0,14,58,0,1],
+"structdrake_1_1symbolic_1_1_sin_cos.html":[3,0,0,14,63],
+"structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f":[3,0,0,14,63,7]
 };
