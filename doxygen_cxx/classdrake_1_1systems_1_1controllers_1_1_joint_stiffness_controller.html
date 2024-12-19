@@ -193,6 +193,7 @@ class drake::systems::controllers::JointStiffnessController&lt; T &gt;</h3>
 </td></tr>
 </table>
 <p>Note that the joint impedance control as implemented on Kuka's iiwa and Franka' Panda is best modeled as a stiffness controller (unless one were to model the actual elastic joints and rotor-inertia shaping). See <a href="https://manipulation.csail.mit.edu/force.html">https://manipulation.csail.mit.edu/force.html</a> for more details.</p>
+<dl class="section note"><dt>Note</dt><dd>As an alternative to adding a separate controller system to your diagram, you can model a JointStiffness controller using MultibodyPlant APIs. Refer to MultibodyPlant::set_gravity_enabled() as an alternative to modeling gravity compensation (unless the gravity compensation terms need to be accounted for when computing effort limits). To model PD controlled actuators, refer to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_actuation">Actuation</a>.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
