@@ -295,7 +295,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type wrapper that performs value-initialization on copy construction or assignment.  <a href="classdrake_1_1reset__on__copy.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_rlocation_or_error.html">RlocationOrError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) The return type of <a class="el" href="namespacedrake.html#ae65839d11c343c02ff41aec068e4ff28" title="(Advanced.) Returns the absolute path to the given resource_path from Bazel runfiles,...">FindRunfile()</a>.  <a href="structdrake_1_1_rlocation_or_error.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) The return type of <a class="el" href="namespacedrake.html#a31959859534962fde58709578f0df9b5" title="(Advanced.) Returns the absolute path to the given resource_path from Bazel runfiles,...">FindRunfile()</a>.  <a href="structdrake_1_1_rlocation_or_error.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1scalar__predicate.html">scalar_predicate</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A traits struct that describes the return type of predicates over a scalar type (named <code>T</code>).  <a href="structdrake_1_1scalar__predicate.html#details">More...</a><br /></td></tr>
@@ -662,9 +662,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9bdf00a0f32970352a90afbae0f4114a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a9bdf00a0f32970352a90afbae0f4114a">HasRunfiles</a> ()</td></tr>
 <tr class="memdesc:a9bdf00a0f32970352a90afbae0f4114a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns true iff this process has Bazel runfiles available.  <a href="#a9bdf00a0f32970352a90afbae0f4114a">More...</a><br /></td></tr>
 <tr class="separator:a9bdf00a0f32970352a90afbae0f4114a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae65839d11c343c02ff41aec068e4ff28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1_rlocation_or_error.html">RlocationOrError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae65839d11c343c02ff41aec068e4ff28">FindRunfile</a> (const std::string &amp;resource_path)</td></tr>
-<tr class="memdesc:ae65839d11c343c02ff41aec068e4ff28"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns the absolute path to the given resource_path from Bazel runfiles, or else an error message when not found.  <a href="#ae65839d11c343c02ff41aec068e4ff28">More...</a><br /></td></tr>
-<tr class="separator:ae65839d11c343c02ff41aec068e4ff28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31959859534962fde58709578f0df9b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1_rlocation_or_error.html">RlocationOrError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a31959859534962fde58709578f0df9b5">FindRunfile</a> (const std::string &amp;resource_path, const std::string &amp;source_repository={})</td></tr>
+<tr class="memdesc:a31959859534962fde58709578f0df9b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns the absolute path to the given <code>resource_path</code> from Bazel runfiles, or else an error message when not found.  <a href="#a31959859534962fde58709578f0df9b5">More...</a><br /></td></tr>
+<tr class="separator:a31959859534962fde58709578f0df9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a81e617b6a0e80e141a49c7a5bd2b5cce">fmt_runtime</a> (std::string_view s)</td></tr>
 <tr class="memdesc:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using fmt &gt;= 8, this is an alias for <a href="https://fmt.dev/latest/api.html#compile-time-format-string-checks">fmt::runtime</a>.  <a href="#a81e617b6a0e80e141a49c7a5bd2b5cce">More...</a><br /></td></tr>
 <tr class="separator:a81e617b6a0e80e141a49c7a5bd2b5cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2470,8 +2470,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae65839d11c343c02ff41aec068e4ff28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae65839d11c343c02ff41aec068e4ff28">&#9670;&nbsp;</a></span>FindRunfile()</h2>
+<a id="a31959859534962fde58709578f0df9b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31959859534962fde58709578f0df9b5">&#9670;&nbsp;</a></span>FindRunfile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2480,14 +2480,32 @@ Variables</h2></td></tr>
           <td class="memname"><a class="el" href="structdrake_1_1_rlocation_or_error.html">RlocationOrError</a> drake::FindRunfile </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>resource_path</em></td><td>)</td>
+          <td class="paramname"><em>resource_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>source_repository</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced.) Returns the absolute path to the given resource_path from Bazel runfiles, or else an error message when not found. </p>
-<p>When <a class="el" href="namespacedrake.html#a9bdf00a0f32970352a90afbae0f4114a" title="(Advanced.) Returns true iff this process has Bazel runfiles available.">HasRunfiles()</a> is false, returns an error. The <code>resource_path</code> looks like <code>workspace/pkg/subpkg/file.ext</code>, e.g., "drake/common/foo.txt". </p>
+<p>(Advanced.) Returns the absolute path to the given <code>resource_path</code> from Bazel runfiles, or else an error message when not found. </p>
+<p>When <a class="el" href="namespacedrake.html#a9bdf00a0f32970352a90afbae0f4114a" title="(Advanced.) Returns true iff this process has Bazel runfiles available.">HasRunfiles()</a> is false, returns an error.</p>
+<dl class="section note"><dt>Note</dt><dd>For Drake Developers, note that in an installed copy of Drake (e.g., in a binary release) the <a class="el" href="namespacedrake.html#a9bdf00a0f32970352a90afbae0f4114a" title="(Advanced.) Returns true iff this process has Bazel runfiles available.">HasRunfiles()</a> check will return <code>false</code>, so this function will return an error. That means it's generally ill-advised to call this function from library code inside Drake, or if you do you'll need to have a fallback plan in case of an error. Typically our library code should be calling <a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb" title="(Advanced) Attempts to locate a Drake resource named by the given resource_path.">FindResource()</a> not <a class="el" href="namespacedrake.html#a31959859534962fde58709578f0df9b5" title="(Advanced.) Returns the absolute path to the given resource_path from Bazel runfiles,...">FindRunfile()</a>. On the other hand, for our private code like unit tests and benchmarks, it's fine to call this function and in those programs it's also fine to leave the source_repository defaulted (empty).</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resource_path</td><td>The path to find, formulated as the repository name followed by package and filename, e.g., "repository/topdir/subdir/file.ext". Drake resource paths look like "drake/common/foo.txt".</td></tr>
+    <tr><td class="paramname">source_repository</td><td>When looking up a Drake runfile, this value is ignored (and therefore may be set to anything). Otherwise, it should be set to the value of the preprocessor definition <code>BAZEL_CURRENT_REPOSITORY</code> or else when running with bzlmod enabled you risk using an incorrect repo_mapping. That preprocessor definition is Bazel magic that takes on <em>different values</em> depending on which translation unit is being compiled (and is undefined unless you add Bazel's runfiles library to your own library's <code>deps = ...</code> directly), so cannot be used as the default value here. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

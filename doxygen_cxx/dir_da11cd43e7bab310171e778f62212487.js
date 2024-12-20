@@ -1,5 +1,6 @@
 var dir_da11cd43e7bab310171e778f62212487 =
 [
+    [ "add_multibody_plant_constraints.h", "add__multibody__plant__constraints_8h.html", "add__multibody__plant__constraints_8h" ],
     [ "angle_between_vectors_constraint.h", "angle__between__vectors__constraint_8h.html", null ],
     [ "angle_between_vectors_cost.h", "angle__between__vectors__cost_8h.html", null ],
     [ "com_in_polyhedron_constraint.h", "com__in__polyhedron__constraint_8h.html", [

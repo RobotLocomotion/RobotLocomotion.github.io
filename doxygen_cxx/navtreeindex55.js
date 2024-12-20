@@ -1,5 +1,8 @@
 var NAVTREEINDEX55 =
 {
+"group__planning__kinematics.html#gac15a6d2dc75b3cdcf0d54550894a97b3":[1,4,2,0,5],
+"group__planning__kinematics.html#gafd57fd1045276e8221f6f0a4fac36c82":[1,4,2,0,6],
+"group__planning__trajectory.html":[1,4,2,1],
 "group__primitive__systems.html":[1,2,1],
 "group__primitive__systems.html#ga14e2725af4ae2110baaf69555a49b591":[1,2,1,31],
 "group__primitive__systems.html#ga80a6af98e4258a474416aae6ab3abdd8":[1,2,1,32],
@@ -225,7 +228,7 @@ var NAVTREEINDEX55 =
 "inverse__dynamics_8h.html#ab8e5eb907c64b2b8b8210b3c4ab8e0c1":[4,0,0,12,1,3,0],
 "inverse__dynamics__controller_8h.html":[4,0,0,12,1,4],
 "inverse__dynamics__controller_8h.html#acb2509cd1030995853cb3a3e74c14b3e":[4,0,0,12,1,4,0],
-"inverse__kinematics_8h.html":[4,0,0,8,4,11],
+"inverse__kinematics_8h.html":[4,0,0,8,4,12],
 "inverse__kinematics__py_8h.html":[4,0,0,0,0,6,0],
 "ipopt__solver_8h.html":[4,0,0,11,27],
 "ipopt__solver__internal_8h.html":[4,0,0,11,28],
@@ -246,8 +249,5 @@ var NAVTREEINDEX55 =
 "is__cloneable_8h.html":[4,0,0,1,44],
 "is__cloneable_8h.html#a158f68939b94f6c2c5ea353d652919da":[4,0,0,1,44,0],
 "is__dynamic__castable_8h.html":[4,0,0,1,4,6],
-"is__dynamic__castable_8h.html#a120160cb3dd89c5c7ae2543a3de457e8":[4,0,0,1,4,6,1],
-"is__dynamic__castable_8h.html#ab9decd0aba05654d37c4d7f3d82655c6":[4,0,0,1,4,6,0],
-"is__dynamic__castable_8h.html#ada20909a7ef482cf1fecbe11bbcf67d4":[4,0,0,1,4,6,2],
-"is__less__than__comparable_8h.html":[4,0,0,1,45]
+"is__dynamic__castable_8h.html#a120160cb3dd89c5c7ae2543a3de457e8":[4,0,0,1,4,6,1]
 };

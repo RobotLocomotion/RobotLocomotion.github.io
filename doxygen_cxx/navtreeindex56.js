@@ -1,5 +1,8 @@
 var NAVTREEINDEX56 =
 {
+"is__dynamic__castable_8h.html#ab9decd0aba05654d37c4d7f3d82655c6":[4,0,0,1,4,6,0],
+"is__dynamic__castable_8h.html#ada20909a7ef482cf1fecbe11bbcf67d4":[4,0,0,1,4,6,2],
+"is__less__than__comparable_8h.html":[4,0,0,1,45],
 "is__memcpy__movable_8h.html":[4,0,0,1,4,7],
 "is__memcpy__movable_8h.html#a6f982e28ff81290b698e4d73e2fb6751":[4,0,0,1,4,7,0],
 "isoparametric__element_8h.html":[4,0,0,8,2,18],
@@ -27,7 +30,7 @@ var NAVTREEINDEX56 =
 "kalman__filter_8h.html#ga3949eebe88ae99b71a997dfa0bad5cff":[4,0,0,12,2,0,1],
 "kalman__filter_8h.html#ga483f8a39c210ad058dfc19ae26d93e16":[4,0,0,12,2,0,0],
 "kalman__filter_8h.html#gaffc5a5eabe473ebd57f96b0310d70ed8":[4,0,0,12,2,0,2],
-"kinematic__evaluator__utilities_8h.html":[4,0,0,8,4,12],
+"kinematic__evaluator__utilities_8h.html":[4,0,0,8,4,13],
 "kinematic__trajectory__optimization_8h.html":[4,0,0,10,4,4],
 "kinematics__vector_8h.html":[4,0,0,4,28],
 "kinematics__vector_8h.html#aa4d02909b70fea4c7cb0d0e62fa220a4":[4,0,0,4,28,1],
@@ -57,10 +60,10 @@ var NAVTREEINDEX56 =
 "lcm__messages_8h.html#adcda0f8a699ead06121a53903686013d":[4,0,0,5,5,2],
 "lcm__plan__interpolator_8h.html":[4,0,0,3,8,3],
 "lcm__publisher__system_8h.html":[4,0,0,12,4,4],
-"lcm__py__bind__cpp__serializers_8h.html":[4,0,0,0,0,10,3],
-"lcm__py__bind__cpp__serializers_8h.html#abd25f3ebd433d0bd7632152eb8bcd108":[4,0,0,0,0,10,3,0],
-"lcm__pybind_8h.html":[4,0,0,0,0,10,4],
-"lcm__pybind_8h.html#a693c3984e0969506fd589ff21f08409b":[4,0,0,0,0,10,4,0],
+"lcm__py__bind__cpp__serializers_8h.html":[4,0,0,0,0,10,4],
+"lcm__py__bind__cpp__serializers_8h.html#abd25f3ebd433d0bd7632152eb8bcd108":[4,0,0,0,0,10,4,0],
+"lcm__pybind_8h.html":[4,0,0,0,0,10,5],
+"lcm__pybind_8h.html#a693c3984e0969506fd589ff21f08409b":[4,0,0,0,0,10,5,0],
 "lcm__scope__system_8h.html":[4,0,0,12,4,5],
 "lcm__subscriber__system_8h.html":[4,0,0,12,4,6],
 "lcm__system__graphviz_8h.html":[4,0,0,12,4,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX56 =
 "meshcat__recording__internal_8h.html":[4,0,0,4,39],
 "meshcat__types__internal_8h.html":[4,0,0,4,40],
 "meshcat__types__internal_8h.html#afe8ec907f964a8766d5919a30f60cc57":[4,0,0,4,40,0],
-"meshcat__visualizer_8h.html":[4,0,0,4,41],
-"meshcat__visualizer_8h.html#acfc5928f9ddabb01ca8a0f2cdabbffa3":[4,0,0,4,41,2],
-"meshcat__visualizer_8h.html#af0be5cf994a2c139318cfaa61769db04":[4,0,0,4,41,3],
-"meshcat__visualizer__params_8h.html":[4,0,0,4,42]
+"meshcat__visualizer_8h.html":[4,0,0,4,41]
 };

@@ -19,6 +19,8 @@ var NAVTREEINDEX0 =
 "acrobot__state_8h.html":[4,0,0,3,0,5],
 "add__fixed__objects__to__plant_8h.html":[4,0,0,8,12,0],
 "add__fixed__objects__to__plant_8h.html#a6a2faff4d58a2704dd29573c3fd20921":[4,0,0,8,12,0,0],
+"add__multibody__plant__constraints_8h.html":[4,0,0,8,4,0],
+"add__multibody__plant__constraints_8h.html#a2b475a845f1e7eed70697af7a34868f8":[4,0,0,8,4,0,0],
 "adder_8h.html":[4,0,0,12,6,0],
 "affine__ball_8h.html":[4,0,0,4,1,0],
 "affine__subspace_8h.html":[4,0,0,4,1,1],
@@ -39,8 +41,8 @@ var NAVTREEINDEX0 =
 "allegro__common_8h.html#a79e599c5f17d0fc2e46e6d7e8f9c48b4":[4,0,0,3,1,0,3],
 "allegro__lcm_8h.html":[4,0,0,3,1,1],
 "allegro__lcm_8h.html#a4cfe0e130688b9fbe28a6a401caff04c":[4,0,0,3,1,1,2],
-"angle__between__vectors__constraint_8h.html":[4,0,0,8,4,0],
-"angle__between__vectors__cost_8h.html":[4,0,0,8,4,1],
+"angle__between__vectors__constraint_8h.html":[4,0,0,8,4,1],
+"angle__between__vectors__cost_8h.html":[4,0,0,8,4,2],
 "annotated.html":[3,0],
 "antiderivative__function_8h.html":[4,0,0,12,0,1],
 "antiderivative__function_8h.html#a4bf587397776d269c44bdd6d7270772e":[4,0,0,12,0,1,1],
@@ -123,6 +125,7 @@ var NAVTREEINDEX0 =
 "build__iiwa__control_8h.html#ad3720de284f34533b4dbbaa0710637b4":[4,0,0,6,1,0,1],
 "build__schunk__wsg__control_8h.html":[4,0,0,6,2,0],
 "build__schunk__wsg__control_8h.html#a14a60a2f02484fb53b2d71953545c202":[4,0,0,6,2,0,0],
+"builder__life__support__pybind_8h.html":[4,0,0,0,0,10,0],
 "bvh_8h.html":[4,0,0,4,2,2],
 "bvh__updater_8h.html":[4,0,0,4,2,3],
 "c__iris__collision__geometry_8h.html":[4,0,0,4,1,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_memory_file.html#a4c4d06064edcbb136da7216c72914dcd":[3,0,0,37,2],
 "classdrake_1_1_memory_file.html#a52cbc778bee172892c53e442067d3cdc":[3,0,0,37,4],
 "classdrake_1_1_memory_file.html#a5354f0e22967b675dd8623cecde51f5b":[3,0,0,37,7],
-"classdrake_1_1_memory_file.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea":[3,0,0,37,6],
-"classdrake_1_1_memory_file.html#a5af83f187188dde845cd7a38142d508c":[3,0,0,37,3],
-"classdrake_1_1_memory_file.html#a633efe7c29146d85642c875e653a2229":[3,0,0,37,8],
-"classdrake_1_1_memory_file.html#a709dc7d281f0dcc7d76101a41c1321f5":[3,0,0,37,10]
+"classdrake_1_1_memory_file.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea":[3,0,0,37,6]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX61 =
 {
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b":[4,0,0,11,51,0,7],
+"solution__result_8h.html#acb1201a087105dc635e2bd748486171c":[4,0,0,11,51,2],
+"solve_8h.html":[4,0,0,11,52],
+"solve_8h.html#a07bf1722e3e347d7878ae44be98b4b92":[4,0,0,11,52,0],
 "solve_8h.html#a432743d40e298cda4d1104734324b69d":[4,0,0,11,52,4],
 "solve_8h.html#a6f8160cf69cc8a3cd41dfec1fb08a8fa":[4,0,0,11,52,2],
 "solve_8h.html#a7411fe5d588d0bd68b7b9bb30f1e4d09":[4,0,0,11,52,3],
@@ -74,7 +78,7 @@ var NAVTREEINDEX61 =
 "spatial__velocity__constraint_8h.html":[4,0,0,8,8,6],
 "specific__options_8h.html":[4,0,0,11,61],
 "spectrahedron_8h.html":[4,0,0,4,1,23],
-"spgrid_8h.html":[4,0,0,8,7,2],
+"spgrid_8h.html":[4,0,0,8,7,3],
 "spong__controller_8h.html":[4,0,0,3,0,6],
 "spong__controller__params_8h.html":[4,0,0,3,0,7],
 "spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
@@ -245,9 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html":[3,0,0,3,0,6],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a13ffcb3765784df37691a53be4495dcc":[3,0,0,3,0,6,9],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a3f15ca4376273b0f0017865984081443":[3,0,0,3,0,6,4],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,0,6,0],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a569a31c7c4345220b5319a602dccfffa":[3,0,0,3,0,6,8],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a79f9607ebbb94dd08b872913cc3429a1":[3,0,0,3,0,6,11],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,0,6,3],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a9ddfac784dce5e9a670c6fd1b40a2f40":[3,0,0,3,0,6,2]
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,0,6,0]
 };

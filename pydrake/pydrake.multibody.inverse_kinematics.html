@@ -141,11 +141,44 @@
 <span id="pydrake-multibody-inverse-kinematics"></span><h1>pydrake.multibody.inverse_kinematics<a class="headerlink" href="#module-pydrake.multibody.inverse_kinematics" title="Permalink to this headline"></a></h1>
 <p>InverseKinematics module</p>
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.AddMultibodyPlantConstraints">
+<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">AddMultibodyPlantConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Constraint</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AddMultibodyPlantConstraints" title="Permalink to this definition"></a></dt>
+<dd><p>For unit quaternion and (holonomic) constraints registered with
+<code class="docutils literal notranslate"><span class="pre">plant</span></code> adds a corresponding solver::Constraint to <code class="docutils literal notranslate"><span class="pre">prog</span></code>, using
+decision variables <code class="docutils literal notranslate"><span class="pre">q</span></code> to represent the generalized positions of the
+plant.</p>
+<p>Adds constraints for coupler, distance, ball, and weld constraints.
+The distance constraint is implemented here as a hard kinematic
+constraint (i.e., d(q) == d₀), instead of a soft “spring” force.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>AddUnitQuaternionConstraintOnPlant() for the unit quaternion
+constraints.</p>
+</div>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>plant.is_finalized() == true.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if plant has constraints registered that are not</strong> – </p></li>
+<li><p><strong>yet supported by this method.</strong> – </p></li>
+<li><p><strong>RuntimeError if prog is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if plant_context is nullptr and one of the</strong> – </p></li>
+<li><p><strong>MultibodyPlant constraints requires it.</strong><strong> (</strong><strong>unit quaternion</strong> – </p></li>
+<li><p><strong>constraints and coupler constraints do not</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.AddUnitQuaternionConstraintOnPlant">
 <span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">AddUnitQuaternionConstraintOnPlant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AddUnitQuaternionConstraintOnPlant" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddUnitQuaternionConstraintOnPlant(plant: pydrake.multibody.plant.MultibodyPlant, q_vars: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.MathematicalProgram) -&gt; None</p></li>
+<li><p>AddUnitQuaternionConstraintOnPlant(plant: pydrake.multibody.plant.MultibodyPlant, q_vars: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.MathematicalProgram) -&gt; list[pydrake.solvers.Binding[Constraint]]</p></li>
 </ol>
 <p>Add unit length constraints to all the variables representing
 quaternion in <code class="docutils literal notranslate"><span class="pre">q_vars</span></code>. Namely the quaternions for floating base
@@ -163,7 +196,7 @@ solver avoid singularities.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>AddUnitQuaternionConstraintOnPlant(plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], q_vars: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.MathematicalProgram) -&gt; None</p></li>
+<li><p>AddUnitQuaternionConstraintOnPlant(plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], q_vars: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.MathematicalProgram) -&gt; list[pydrake.solvers.Binding[Constraint]]</p></li>
 </ol>
 <p>Add unit length constraints to all the variables representing
 quaternion in <code class="docutils literal notranslate"><span class="pre">q_vars</span></code>. Namely the quaternions for floating base

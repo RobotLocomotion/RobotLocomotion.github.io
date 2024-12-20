@@ -1,5 +1,8 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1multibody_1_1_toppra.html#a5cee3da4435b14492b675df2a473f611":[1,4,2,1,0,6],
+"classdrake_1_1multibody_1_1_toppra.html#a68128c4e24b7fb5ced993cc55f2453a6":[1,4,2,1,0,9],
+"classdrake_1_1multibody_1_1_toppra.html#a71ae71e801a2c27f272cf1493aaa82df":[1,4,2,1,0,15],
 "classdrake_1_1multibody_1_1_toppra.html#a9024708d5314cf3655e2b72c5c138a39":[1,4,2,1,0,2],
 "classdrake_1_1multibody_1_1_toppra.html#aa6404ed212fab2af0bad98457df07d16":[1,4,2,1,0,11],
 "classdrake_1_1multibody_1_1_toppra.html#ab013d8e5872653e5d10eaae0f3daa3dc":[1,4,2,1,0,14],
@@ -246,8 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1multibody_1_1fem_1_1_damping_model.html#a92fc5f62ebd60ae740cf3820ae95ebda":[3,0,0,8,1,0,5],
 "classdrake_1_1multibody_1_1fem_1_1_damping_model.html#aa244069969fa102d54cccacc207808c4":[3,0,0,8,1,0,0],
 "classdrake_1_1multibody_1_1fem_1_1_damping_model.html#aa6a18a1b58417f8d4f8a7838bb470fc7":[3,0,0,8,1,0,3],
-"classdrake_1_1multibody_1_1fem_1_1_damping_model.html#ab2b276774befbd68c810a4d7792ff376":[3,0,0,8,1,0,1],
-"classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html":[3,0,0,8,1,1],
-"classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a220b34cff05e3d9969b48779570a938f":[3,0,0,8,1,1,16],
-"classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a36f6f1956598f6943525242776e0e36d":[3,0,0,8,1,1,4]
+"classdrake_1_1multibody_1_1fem_1_1_damping_model.html#ab2b276774befbd68c810a4d7792ff376":[3,0,0,8,1,0,1]
 };

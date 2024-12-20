@@ -167,6 +167,7 @@ $(document).ready(function(){initNavTree('unit__quaternion__constraint_8h.html',
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="constraint_8h.html">drake/solvers/constraint.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mathematical__program_8h.html">drake/solvers/mathematical_program.h</a>&quot;</code><br />
@@ -192,10 +193,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4a29f222bbff1590d2fa6ecb35f87492"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a4a29f222bbff1590d2fa6ecb35f87492"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a4a29f222bbff1590d2fa6ecb35f87492">AddUnitQuaternionConstraintOnPlant</a> (const MultibodyPlant&lt; T &gt; &amp;plant, const Eigen::Ref&lt; const VectorX&lt; symbolic::Variable &gt;&gt; &amp;q_vars, solvers::MathematicalProgram *prog)</td></tr>
-<tr class="memdesc:a4a29f222bbff1590d2fa6ecb35f87492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add unit length constraints to all the variables representing quaternion in <code>q_vars</code>.  <a href="namespacedrake_1_1multibody.html#a4a29f222bbff1590d2fa6ecb35f87492">More...</a><br /></td></tr>
-<tr class="separator:a4a29f222bbff1590d2fa6ecb35f87492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b628f5e0da2fa821a5db041e4075212"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6b628f5e0da2fa821a5db041e4075212"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; solvers::Binding&lt; solvers::Constraint &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a6b628f5e0da2fa821a5db041e4075212">AddUnitQuaternionConstraintOnPlant</a> (const MultibodyPlant&lt; T &gt; &amp;plant, const Eigen::Ref&lt; const VectorX&lt; symbolic::Variable &gt;&gt; &amp;q_vars, solvers::MathematicalProgram *prog)</td></tr>
+<tr class="memdesc:a6b628f5e0da2fa821a5db041e4075212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add unit length constraints to all the variables representing quaternion in <code>q_vars</code>.  <a href="namespacedrake_1_1multibody.html#a6b628f5e0da2fa821a5db041e4075212">More...</a><br /></td></tr>
+<tr class="separator:a6b628f5e0da2fa821a5db041e4075212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
