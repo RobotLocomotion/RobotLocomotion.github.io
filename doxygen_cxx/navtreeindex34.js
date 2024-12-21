@@ -1,6 +1,5 @@
 var NAVTREEINDEX34 =
 {
-"classdrake_1_1symbolic_1_1_formula_leq.html#a15d2d1758b943e1fd2a0da3c6b381215":[3,0,0,14,45,1],
 "classdrake_1_1symbolic_1_1_formula_leq.html#a187e996f061e3e56460d2afa3ae0c7df":[3,0,0,14,45,0],
 "classdrake_1_1symbolic_1_1_formula_leq.html#a9dcdd6bf4debc6328cfd48051c2cbcbe":[3,0,0,14,45,3],
 "classdrake_1_1symbolic_1_1_formula_leq.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,14,45,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX34 =
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aa34dd2b104225b2bd609be8c7ab6f49f":[3,0,0,14,59,22],
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#aac941b4d3c5e0eab0832f9c94735bfe9":[3,0,0,14,59,3],
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#ab886ec02ff9fb8fa63751b76b0aa6166":[3,0,0,14,59,1],
-"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#abe0290e1ea8dbdcbd77db7c9074aabd9":[3,0,0,14,59,12]
+"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#abe0290e1ea8dbdcbd77db7c9074aabd9":[3,0,0,14,59,12],
+"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#ac2d58ad161597c14ea8cbd1ba03f448c":[3,0,0,14,59,9]
 };

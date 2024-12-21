@@ -1,6 +1,5 @@
 var NAVTREEINDEX14 =
 {
-"classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a487c366fa52b064dbf0c29627e7aba03":[3,0,0,6,3,0,7],
 "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a6c3225dd9dee1bc94666ddbf82162d3b":[3,0,0,6,3,0,4],
 "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a7426149695dc6d09303cb351b3d84201":[3,0,0,6,3,0,8],
 "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a744c267b9b8a615aacbee9a2465f2487":[3,0,0,6,3,0,5],
@@ -249,5 +248,6 @@ var NAVTREEINDEX14 =
 "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#adba084715ab226cf720bf91c93cb7664":[1,1,0,1,6],
 "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#ae3852336466ee945d4185ebeb8180d7b":[1,1,0,1,5],
 "classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#aee65c9787c0060ee07bd31b9e1200d16":[1,1,0,1,3],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html":[3,0,0,8,9]
+"classdrake_1_1multibody_1_1_articulated_body_inertia.html":[3,0,0,8,9],
+"classdrake_1_1multibody_1_1_articulated_body_inertia.html#a05bea6e19974f4c24d747976ada0efef":[3,0,0,8,9,1]
 };

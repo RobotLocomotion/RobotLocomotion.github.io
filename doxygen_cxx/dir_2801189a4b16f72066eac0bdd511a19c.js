@@ -1,8 +1,5 @@
 var dir_2801189a4b16f72066eac0bdd511a19c =
 [
-    [ "builder_life_support_pybind.h", "builder__life__support__pybind_8h.html", [
-      [ "DiagramBuilder", "classdrake_1_1systems_1_1_diagram_builder.html", "classdrake_1_1systems_1_1_diagram_builder" ]
-    ] ],
     [ "framework_py_semantics.h", "framework__py__semantics_8h.html", "framework__py__semantics_8h" ],
     [ "framework_py_systems.h", "framework__py__systems_8h.html", "framework__py__systems_8h" ],
     [ "framework_py_values.h", "framework__py__values_8h.html", "framework__py__values_8h" ],
