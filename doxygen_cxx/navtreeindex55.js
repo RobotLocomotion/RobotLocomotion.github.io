@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"group__planning__kinematics.html#gac15a6d2dc75b3cdcf0d54550894a97b3":[1,4,2,0,5],
 "group__planning__kinematics.html#gafd57fd1045276e8221f6f0a4fac36c82":[1,4,2,0,6],
 "group__planning__trajectory.html":[1,4,2,1],
 "group__primitive__systems.html":[1,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "is__cloneable_8h.html":[4,0,0,1,44],
 "is__cloneable_8h.html#a158f68939b94f6c2c5ea353d652919da":[4,0,0,1,44,0],
 "is__dynamic__castable_8h.html":[4,0,0,1,4,6],
-"is__dynamic__castable_8h.html#a120160cb3dd89c5c7ae2543a3de457e8":[4,0,0,1,4,6,1],
-"is__dynamic__castable_8h.html#ab9decd0aba05654d37c4d7f3d82655c6":[4,0,0,1,4,6,0]
+"is__dynamic__castable_8h.html#a120160cb3dd89c5c7ae2543a3de457e8":[4,0,0,1,4,6,1]
 };

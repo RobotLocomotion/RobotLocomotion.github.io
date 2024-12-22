@@ -125,6 +125,7 @@ var NAVTREEINDEX0 =
 "build__iiwa__control_8h.html#ad3720de284f34533b4dbbaa0710637b4":[4,0,0,6,1,0,1],
 "build__schunk__wsg__control_8h.html":[4,0,0,6,2,0],
 "build__schunk__wsg__control_8h.html#a14a60a2f02484fb53b2d71953545c202":[4,0,0,6,2,0,0],
+"builder__life__support__pybind_8h.html":[4,0,0,0,0,10,0],
 "bvh_8h.html":[4,0,0,4,2,2],
 "bvh__updater_8h.html":[4,0,0,4,2,3],
 "c__iris__collision__geometry_8h.html":[4,0,0,4,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_memory_file.html#a4c4d06064edcbb136da7216c72914dcd":[3,0,0,37,2],
 "classdrake_1_1_memory_file.html#a52cbc778bee172892c53e442067d3cdc":[3,0,0,37,4],
 "classdrake_1_1_memory_file.html#a5354f0e22967b675dd8623cecde51f5b":[3,0,0,37,7],
-"classdrake_1_1_memory_file.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea":[3,0,0,37,6],
-"classdrake_1_1_memory_file.html#a5af83f187188dde845cd7a38142d508c":[3,0,0,37,3]
+"classdrake_1_1_memory_file.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea":[3,0,0,37,6]
 };
