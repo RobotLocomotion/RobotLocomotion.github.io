@@ -782,7 +782,7 @@ must be a column vector of the appropriate size.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">JointStiffnessController</span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
 <p>Implements a joint-space stiffness controller of the form</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>τ_control = −τ_g(q) − τ_app + kp⊙(q_d − q) + kd⊙(v_d − v)
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>τ_control = B⁻¹[−τ_g(q) − τ_app + kp⊙(q_d − q) + kd⊙(v_d − v)]
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">Kp</span></code> and <code class="docutils literal notranslate"><span class="pre">Kd</span></code> are the joint stiffness and damping
@@ -790,9 +790,10 @@ coefficients, respectively, <code class="docutils literal notranslate"><span cla
 forces due to gravity, and <code class="docutils literal notranslate"><span class="pre">τ_app</span></code> contains applied forces from
 force elements added to the multibody model (this can include damping,
 springs, etc. See MultibodyPlant::CalcForceElementsContribution()).
-<code class="docutils literal notranslate"><span class="pre">q_d</span></code> and <code class="docutils literal notranslate"><span class="pre">v_d</span></code> are the desired (setpoint) values for the
-multibody positions and velocities, respectively. <code class="docutils literal notranslate"><span class="pre">kd</span></code> and <code class="docutils literal notranslate"><span class="pre">kp</span></code>
-are taken as vectors, and ⊙ represents elementwise multiplication.</p>
+B⁻¹ is the inverse of the actuation matrix. <code class="docutils literal notranslate"><span class="pre">q_d</span></code> and <code class="docutils literal notranslate"><span class="pre">v_d</span></code> are
+the desired (setpoint) values for the multibody positions and
+velocities, respectively. <code class="docutils literal notranslate"><span class="pre">kd</span></code> and <code class="docutils literal notranslate"><span class="pre">kp</span></code> are taken as vectors, and
+⊙ represents elementwise multiplication.</p>
 <p>The goal of this controller is to produce a closed-loop dynamics that
 resembles a spring-damper dynamics at the joints around the setpoint:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>M(q)v̇ + C(q,v)v + kp⊙(q - q_d) + kd⊙(v - v_d) = τ_ext,
@@ -804,7 +805,7 @@ can arise, e.g. from contact forces.</p>
 <p>The controller currently requires that plant.num_positions() ==
 plant.num_velocities() == plant.num_actuated_dofs() and that
 plant.IsVelocityEqualToQDot() is true.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>JointStiffnessController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_force</td></tr></table></td></tr></table><p>Note that the joint impedance control as implemented on Kuka’s iiwa
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>JointStiffnessController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; actuation</td></tr></table></td></tr></table><p>Note that the joint impedance control as implemented on Kuka’s iiwa
 and Franka’ Panda is best modeled as a stiffness controller (unless
 one were to model the actual elastic joints and rotor-inertia
 shaping). See <a class="reference external" href="https://manipulation.csail.mit.edu/force.html">https://manipulation.csail.mit.edu/force.html</a> for more
@@ -857,10 +858,24 @@ plant.num_actuated_dofs() == kp.size() == kd.size()</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController.get_output_port_actuation">
+<span class="sig-name descname"><span class="pre">get_output_port_actuation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.JointStiffnessController" title="pydrake.systems.controllers.JointStiffnessController"><span class="pre">pydrake.systems.controllers.JointStiffnessController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.get_output_port_actuation" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the output port implementing the control in the form (and
+order) expected for the plant’s actuation input port.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController.get_output_port_generalized_force">
 <span class="sig-name descname"><span class="pre">get_output_port_generalized_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.JointStiffnessController" title="pydrake.systems.controllers.JointStiffnessController"><span class="pre">pydrake.systems.controllers.JointStiffnessController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.get_output_port_generalized_force" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the output port for the generalized forces implementing the
-control.</p>
+control. <a href="#id7"><span class="problematic" id="id8">*</span></a>/ (Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use get_output_port_actuation() instead, which multiplies the
+generalized force by B⁻¹ to be consumed by MultibodyPlant’s
+actuation input port. This will be removed from Drake on or after
+2025-04-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

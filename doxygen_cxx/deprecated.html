@@ -175,32 +175,35 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#ad528f8f92173863f5029b979b9c5f36b">drake::symbolic::ExtractAndAppendVariablesFromExpression</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> &amp;e, VectorX&lt; Variable &gt; *vars, std::unordered_map&lt; symbolic::Variable::Id, int &gt; *map_var_to_index)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>Use the overloaded function with std::vector&lt;Variable&gt;  instead of VectorX&lt;Variable&gt; <br />
  This will be removed from Drake on or after 2024-05-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#ae1296b665521a703cc08e6d98f5b6f64">JointStiffnessController&lt; T &gt;::get_output_port_generalized_force</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>Use get_output_port_actuation() instead, which multiplies  the generalized force by B⁻¹ to be consumed by  MultibodyPlant's actuation input port. <br />
+ This will be removed from Drake on or after 2025-04-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a94c732bb0f167eab349228237a8fbe3c">Mesh::filename</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000004"></a>Meshes can be defined from a file path or in memory data. Use  Mesh::source() to determine if a filename is available. <br />
  This will be removed from Drake on or after 2025-04-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a705ec3567a892f2c558988b4ac3c351f">RgbdSensor::color_camera_info</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>Use default_color_render_camera().core().intrinsics() instead. <br />
+<dd><a class="anchor" id="_deprecated000007"></a>Use default_color_render_camera().core().intrinsics() instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acaff289a0608d413a89eac135a4c8790">RgbdSensor::color_render_camera</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>Use default_color_render_camera() instead. <br />
+<dd><a class="anchor" id="_deprecated000009"></a>Use default_color_render_camera() instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a5b92b9d4b4aa8e028888b01fd2f659dd">RgbdSensor::depth_camera_info</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>Use default_depth_render_camera().core().intrinsics() instead. <br />
+<dd><a class="anchor" id="_deprecated000008"></a>Use default_depth_render_camera().core().intrinsics() instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a2b7e6767e2c01173872ad2b1d0a0f9ca">RgbdSensor::depth_render_camera</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>Use default_depth_render_camera() instead. <br />
+<dd><a class="anchor" id="_deprecated000010"></a>Use default_depth_render_camera() instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a22ff82441df0b9b743906c4304135783">RgbdSensor::parent_frame_id</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>Use default_parent_frame_id() instead. <br />
+<dd><a class="anchor" id="_deprecated000014"></a>Use default_parent_frame_id() instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab8817bc0f987f64e506b92be652d5644">RgbdSensor::X_BC</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>Use default_color_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
+<dd><a class="anchor" id="_deprecated000012"></a>Use default_color_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a">RgbdSensor::X_BD</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Use default_depth_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
+<dd><a class="anchor" id="_deprecated000013"></a>Use default_depth_render_camera().core().sensor_pose_in_camera_body()  instead. <br />
  This will be removed from Drake on or after 2025-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acfe6bdbdc50d1b6bff27e133688a4230">RgbdSensor::X_PB</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>Use default_X_PB() instead. <br />
+<dd><a class="anchor" id="_deprecated000011"></a>Use default_X_PB() instead. <br />
  This will be removed from Drake on or after 2025-01-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

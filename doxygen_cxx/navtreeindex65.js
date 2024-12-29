@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a36dbe2aa2c05a792070d7b44d5c06e87":[3,0,0,8,3,5,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a6651775aae5fef2c3cc30dd91b7018ff":[3,0,0,8,3,5,4],
 "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a79e9374608093db77a9d533b2af3f11a":[3,0,0,8,3,5,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,3,5,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html":[3,0,0,14,0],
 "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html#a27f28cb60a97c16b3dd9b30cb72b2a8f":[3,0,0,14,0,0],
 "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html":[3,0,0,14,54],
-"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,14,54,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[3,0,0,14,58,0]
+"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,14,54,0]
 };
