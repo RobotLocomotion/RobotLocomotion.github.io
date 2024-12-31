@@ -12,6 +12,6 @@ var classdrake_1_1systems_1_1_initial_value_problem =
     [ "reset_integrator", "classdrake_1_1systems_1_1_initial_value_problem.html#aaf92f89ed3fb6ea7acde795d33645a3c", null ],
     [ "Solve", "classdrake_1_1systems_1_1_initial_value_problem.html#a2701c9f87d1ebd0c067ce240ae31e137", null ],
     [ "kDefaultAccuracy", "classdrake_1_1systems_1_1_initial_value_problem.html#a35ff185e17772e89c9353aa86ef63c83", null ],
-    [ "kInitialStepSize", "classdrake_1_1systems_1_1_initial_value_problem.html#a65a1dfc9f24c0d2e21e9cfcdf3565ee5", null ],
-    [ "kMaxStepSize", "classdrake_1_1systems_1_1_initial_value_problem.html#a3ca174f651b0bd1cabc94d7245114aba", null ]
+    [ "kInitialStepSize", "classdrake_1_1systems_1_1_initial_value_problem.html#a8f67f255a64440ff0c6edb8a73ef022b", null ],
+    [ "kMaxStepSize", "classdrake_1_1systems_1_1_initial_value_problem.html#ad0982751dac3585352c27701a63b30a5", null ]
 ];
