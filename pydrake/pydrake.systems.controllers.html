@@ -662,8 +662,9 @@ identical to the dimensionality of the generalized velocities.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
 <p>A state feedback controller that uses a PidController to generate
 desired accelerations, which are then converted into MultibodyPlant
-actuation inputs using InverseDynamics. More specifically, the output
-of this controller is:</p>
+actuation inputs using InverseDynamics (with <code class="docutils literal notranslate"><span class="pre">mode</span> <span class="pre">=</span></code>
+InverseDynamics::kInverseDynamics). More specifically, the output of
+this controller is:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>actuation = B⁻¹ generalized_force, and
   generalized_force = inverse_dynamics(q, v, vd_command), where
   vd_command = kp(q_d - q) + kd(v_d - v) + ki int(q_d - q) + vd_d.
@@ -680,9 +681,10 @@ arguments passed to the constructor.</p>
 <p>Note that this class assumes the robot is fully actuated, its position
 and velocity have the same dimension, and it does not have a floating
 base. If violated, the program will abort. This controller was not
-designed for closed-loop systems: the controller accounts for neither
-constraint forces nor actuator forces applied at loop constraints. Use
-on such systems is not recommended.</p>
+designed for use with a constrained plant (e.g.
+multibody::MultibodyPlant::num_constraints() &gt; 0): the controller does
+not account for any constraint forces. Use on such systems is not
+recommended.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>InverseDynamics for an accounting of all forces incorporated into

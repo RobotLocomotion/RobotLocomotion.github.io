@@ -37,7 +37,6 @@ var namespacedrake_1_1multibody =
     [ "ForceDensityField", "classdrake_1_1multibody_1_1_force_density_field.html", "classdrake_1_1multibody_1_1_force_density_field" ],
     [ "ForceElement", "classdrake_1_1multibody_1_1_force_element.html", "classdrake_1_1multibody_1_1_force_element" ],
     [ "Frame", "classdrake_1_1multibody_1_1_frame.html", "classdrake_1_1multibody_1_1_frame" ],
-    [ "FrameBase", "classdrake_1_1multibody_1_1_frame_base.html", "classdrake_1_1multibody_1_1_frame_base" ],
     [ "GaussianTriangleQuadratureRule", "classdrake_1_1multibody_1_1_gaussian_triangle_quadrature_rule.html", "classdrake_1_1multibody_1_1_gaussian_triangle_quadrature_rule" ],
     [ "GazeTargetConstraint", "classdrake_1_1multibody_1_1_gaze_target_constraint.html", "classdrake_1_1multibody_1_1_gaze_target_constraint" ],
     [ "GeometryPairContactWrenchEvaluatorBinding", "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html", "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding" ],

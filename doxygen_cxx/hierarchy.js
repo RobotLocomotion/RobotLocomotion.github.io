@@ -509,8 +509,8 @@ var hierarchy =
     [ "InitializeParams", "structdrake_1_1systems_1_1_initialize_params.html", null ],
     [ "InitialValueProblem< T >", "classdrake_1_1systems_1_1_initial_value_problem.html", null ],
     [ "InMemoryMesh", "structdrake_1_1geometry_1_1_in_memory_mesh.html", null ],
-    [ "MultibodyPlant< T >::InputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", null ],
     [ "MultibodyPlant< T >::OutputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html", null ],
+    [ "MultibodyPlant< T >::InputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", null ],
     [ "integral_constant", null, [
       [ "tuple_size< drake::SortedPair< T > >", "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ]
     ] ],
@@ -615,14 +615,9 @@ var hierarchy =
         [ "RevoluteSpring< T >", "classdrake_1_1multibody_1_1_revolute_spring.html", null ],
         [ "UniformGravityFieldElement< T >", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html", null ]
       ] ],
-      [ "FrameBase< T >", "classdrake_1_1multibody_1_1_frame_base.html", [
-        [ "Frame< T >", "classdrake_1_1multibody_1_1_frame.html", [
-          [ "FixedOffsetFrame< T >", "classdrake_1_1multibody_1_1_fixed_offset_frame.html", null ],
-          [ "RigidBodyFrame< T >", "classdrake_1_1multibody_1_1_rigid_body_frame.html", null ]
-        ] ],
-        [ "Frame< double >", "classdrake_1_1multibody_1_1_frame.html", [
-          [ "RigidBodyFrame< double >", "classdrake_1_1multibody_1_1_rigid_body_frame.html", null ]
-        ] ]
+      [ "Frame< T >", "classdrake_1_1multibody_1_1_frame.html", [
+        [ "FixedOffsetFrame< T >", "classdrake_1_1multibody_1_1_fixed_offset_frame.html", null ],
+        [ "RigidBodyFrame< T >", "classdrake_1_1multibody_1_1_rigid_body_frame.html", null ]
       ] ],
       [ "Joint< T >", "classdrake_1_1multibody_1_1_joint.html", [
         [ "BallRpyJoint< T >", "classdrake_1_1multibody_1_1_ball_rpy_joint.html", null ],
@@ -639,6 +634,9 @@ var hierarchy =
       [ "RigidBody< T >", "classdrake_1_1multibody_1_1_rigid_body.html", null ]
     ] ],
     [ "MultibodyElement< double >", "classdrake_1_1multibody_1_1_multibody_element.html", [
+      [ "Frame< double >", "classdrake_1_1multibody_1_1_frame.html", [
+        [ "RigidBodyFrame< double >", "classdrake_1_1multibody_1_1_rigid_body_frame.html", null ]
+      ] ],
       [ "RigidBody< double >", "classdrake_1_1multibody_1_1_rigid_body.html", null ]
     ] ],
     [ "MultibodyForces< T >", "classdrake_1_1multibody_1_1_multibody_forces.html", null ],
@@ -679,8 +677,8 @@ var hierarchy =
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
-    [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
+    [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
@@ -804,8 +802,8 @@ var hierarchy =
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
     [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", null ],
-    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [

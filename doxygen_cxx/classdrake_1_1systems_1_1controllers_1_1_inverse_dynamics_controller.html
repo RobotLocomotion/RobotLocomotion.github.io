@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1controllers_1
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::systems::controllers::InverseDynamicsController&lt; T &gt;</h3>
 
-<p>A state feedback controller that uses a <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html" title="Implements the PID controller.">PidController</a> to generate desired accelerations, which are then converted into MultibodyPlant actuation inputs using <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html" title="Solves inverse dynamics with no consideration for joint actuator force limits.">InverseDynamics</a>. </p>
+<p>A state feedback controller that uses a <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html" title="Implements the PID controller.">PidController</a> to generate desired accelerations, which are then converted into MultibodyPlant actuation inputs using <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html" title="Solves inverse dynamics with no consideration for joint actuator force limits.">InverseDynamics</a> (with <code>mode =</code> <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a39bd80e96eb6f2fe4aeee4e62c04dd8aa590c94008feb665db8020f3b53d3f32f" title="Full inverse computation mode.">InverseDynamics::kInverseDynamics</a>). </p>
 <p>More specifically, the output of this controller is: </p><pre>
   actuation = B⁻¹ generalized_force, and
   generalized_force = inverse_dynamics(q, v, vd_command), where
@@ -194,7 +194,7 @@ class drake::systems::controllers::InverseDynamicsController&lt; T &gt;</h3>
 </td></tr>
 </table>
 <p>The desired acceleration port shown in <span style="color:gray">gray</span> may be absent, depending on the arguments passed to the constructor.</p>
-<p>Note that this class assumes the robot is fully actuated, its position and velocity have the same dimension, and it does not have a floating base. If violated, the program will abort. This controller was not designed for closed-loop systems: the controller accounts for neither constraint forces nor actuator forces applied at loop constraints. Use on such systems is not recommended.</p>
+<p>Note that this class assumes the robot is fully actuated, its position and velocity have the same dimension, and it does not have a floating base. If violated, the program will abort. This controller was not designed for use with a constrained plant (e.g. <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a23f1475b0c301d9d78814fce265fd6ea" title="Returns the total number of constraints specified by the user.">multibody::MultibodyPlant::num_constraints()</a> &gt; 0): the controller does not account for any constraint forces. Use on such systems is not recommended.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html" title="Solves inverse dynamics with no consideration for joint actuator force limits.">InverseDynamics</a> for an accounting of <a class="el" href="namespacedrake.html#adcc2d90ce6051e150effadd72fac548c" title="Checks truth for all elements in matrix m.">all</a> forces incorporated into the inverse dynamics computation.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">

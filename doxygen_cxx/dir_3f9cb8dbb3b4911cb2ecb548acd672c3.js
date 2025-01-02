@@ -18,9 +18,6 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
       [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
       [ "Frame", "classdrake_1_1multibody_1_1_frame.html", "classdrake_1_1multibody_1_1_frame" ]
     ] ],
-    [ "frame_base.h", "frame__base_8h.html", [
-      [ "FrameBase", "classdrake_1_1multibody_1_1_frame_base.html", "classdrake_1_1multibody_1_1_frame_base" ]
-    ] ],
     [ "frame_body_pose_cache.h", "frame__body__pose__cache_8h.html", "frame__body__pose__cache_8h" ],
     [ "geometry_spatial_inertia.h", "geometry__spatial__inertia_8h.html", "geometry__spatial__inertia_8h" ],
     [ "joint.h", "joint_8h.html", [

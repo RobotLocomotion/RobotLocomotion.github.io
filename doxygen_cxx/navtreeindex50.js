@@ -1,16 +1,5 @@
 var NAVTREEINDEX50 =
 {
-"cspace__separating__plane_8h.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927":[4,0,0,4,1,11,1,0],
-"cspace__separating__plane_8h.html#ac176296e2c3b79a9f480c7a38b0842b0":[4,0,0,4,1,11,3],
-"cubic__scalar__system_8h.html":[4,0,0,12,0,0,1],
-"damping__model_8h.html":[4,0,0,8,2,5],
-"damping__model_8h.html#a637b32bd5b13e55117670a553e19c54f":[4,0,0,8,2,5,1],
-"decision__variable_8h.html":[4,0,0,11,17],
-"decision__variable_8h.html#a062b182db5c52f5a71221a4c5958ea0b":[4,0,0,11,17,3],
-"decision__variable_8h.html#a8f304c33d467b0bf0ad02e25a2ced143":[4,0,0,11,17,6],
-"decision__variable_8h.html#aa20d09ae94d1e722c2961fbaca37f967":[4,0,0,11,17,4],
-"decision__variable_8h.html#aa708f80d971209e3d46c1e41f05c1393":[4,0,0,11,17,0],
-"decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,11,17,2],
 "decision__variable_8h.html#aca924499b3b011a50d3bd9d051295efa":[4,0,0,11,17,5],
 "decision__variable_8h.html#acf84184cb10b49233b007295d1880e17":[4,0,0,11,17,1],
 "decompose_8h.html":[4,0,0,1,3,4],
@@ -249,5 +238,16 @@ var NAVTREEINDEX50 =
 "dir_f46c9d8bac432799f621aa951345f12b.html":[4,0,0,6,3],
 "dir_fa973aef359a666fa59c209acc8a7d72.html":[4,0,0,8,0,3],
 "dir_fc0178d6978c9fa2cad6ef3e048a60a7.html":[4,0,0,7],
-"dir_fd5a8b80375bde94b1137be9b3ceb9fd.html":[4,0,0,0,0,8]
+"dir_fd5a8b80375bde94b1137be9b3ceb9fd.html":[4,0,0,0,0,8],
+"dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html":[4,0,0,4,2],
+"direct__collocation_8h.html":[4,0,0,10,4,0],
+"direct__collocation_8h.html#adbb6bc996413925c93dca6d2f5e2bb3d":[4,0,0,10,4,0,0],
+"direct__transcription_8h.html":[4,0,0,10,4,1],
+"dirichlet__boundary__condition_8h.html":[4,0,0,8,2,8],
+"dirichlet__boundary__condition_8h.html#a30f7635fdfd5c32323992a6ae496d5ca":[4,0,0,8,2,8,0],
+"discontinuous__spring__mass__damper__system_8h.html":[4,0,0,12,0,0,2],
+"discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,11],
+"discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,11,0],
+"discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,11,1],
+"discrete__contact__data_8h.html":[4,0,0,8,10,15]
 };

@@ -35,7 +35,6 @@ var searchData=
   ['formula_5fvisitor_2eh',['formula_visitor.h',['../formula__visitor_8h.html',1,'']]],
   ['fourth_5forder_5ftensor_2eh',['fourth_order_tensor.h',['../fourth__order__tensor_8h.html',1,'']]],
   ['frame_2eh',['frame.h',['../frame_8h.html',1,'']]],
-  ['frame_5fbase_2eh',['frame_base.h',['../frame__base_8h.html',1,'']]],
   ['frame_5fbody_5fpose_5fcache_2eh',['frame_body_pose_cache.h',['../frame__body__pose__cache_8h.html',1,'']]],
   ['framework_5fcommon_2eh',['framework_common.h',['../framework__common_8h.html',1,'']]],
   ['framework_5fpy_5fsemantics_2eh',['framework_py_semantics.h',['../framework__py__semantics_8h.html',1,'']]],

@@ -1,16 +1,5 @@
 var NAVTREEINDEX51 =
 {
-"dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html":[4,0,0,4,2],
-"direct__collocation_8h.html":[4,0,0,10,4,0],
-"direct__collocation_8h.html#adbb6bc996413925c93dca6d2f5e2bb3d":[4,0,0,10,4,0,0],
-"direct__transcription_8h.html":[4,0,0,10,4,1],
-"dirichlet__boundary__condition_8h.html":[4,0,0,8,2,8],
-"dirichlet__boundary__condition_8h.html#a30f7635fdfd5c32323992a6ae496d5ca":[4,0,0,8,2,8,0],
-"discontinuous__spring__mass__damper__system_8h.html":[4,0,0,12,0,0,2],
-"discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,11],
-"discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,11,0],
-"discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,11,1],
-"discrete__contact__data_8h.html":[4,0,0,8,10,15],
 "discrete__contact__pair_8h.html":[4,0,0,8,10,16],
 "discrete__derivative_8h.html":[4,0,0,12,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,12],
@@ -249,5 +238,16 @@ var NAVTREEINDEX51 =
 "expression_2expression_8h.html#a8dd352ee762ef421653cd8941fa5ce22":[4,0,0,1,3,0,3,72],
 "expression_2expression_8h.html#a8f0355c03127b4d0312e5f761a0f530a":[4,0,0,1,3,0,3,24],
 "expression_2expression_8h.html#a8f5dcbc71dc0b20b3debbeafdd5f1614":[4,0,0,1,3,0,3,61],
-"expression_2expression_8h.html#a901d5aa27994e415a1eb4145968dc25c":[4,0,0,1,3,0,3,41]
+"expression_2expression_8h.html#a901d5aa27994e415a1eb4145968dc25c":[4,0,0,1,3,0,3,41],
+"expression_2expression_8h.html#a9084a43cdfa02b10cb216c7bfff0dcb3":[4,0,0,1,3,0,3,100],
+"expression_2expression_8h.html#a90efdc7cf4be8bddc1fa365fb78b8e4a":[4,0,0,1,3,0,3,113],
+"expression_2expression_8h.html#a911dd37b6ac155198d923500bbc97135":[4,0,0,1,3,0,3,63],
+"expression_2expression_8h.html#a92b9f0534ca861f03dbaa96ec1712f7f":[4,0,0,1,3,0,3,65],
+"expression_2expression_8h.html#a93e09e7b40ee56f60a121014f02603fb":[4,0,0,1,3,0,3,56],
+"expression_2expression_8h.html#a942b47a07cae421b3152f11536e6579c":[4,0,0,1,3,0,3,46],
+"expression_2expression_8h.html#a96d1119f8ec23bd6d918a984ce5820b9":[4,0,0,1,3,0,3,114],
+"expression_2expression_8h.html#a979582c00c744ebe1c719e57c6f738b8":[4,0,0,1,3,0,3,26],
+"expression_2expression_8h.html#a986094e62cf81f5b0c1d4f33df8f8e3f":[4,0,0,1,3,0,3,122],
+"expression_2expression_8h.html#a993384c5125c55ca3f5a11586a9bb675":[4,0,0,1,3,0,3,54],
+"expression_2expression_8h.html#a996064aacae33fb26d67c20617c764ee":[4,0,0,1,3,0,3,95]
 };
