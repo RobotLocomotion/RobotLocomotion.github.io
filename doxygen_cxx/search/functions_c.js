@@ -11,6 +11,7 @@ var searchData=
   ['make_5ferror',['make_error',['../classdrake_1_1_find_resource_result.html#a9ccfdaf003ff3bdd26c2113946a20df4',1,'drake::FindResourceResult']]],
   ['make_5fname',['make_name',['../classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a0ce12746baa534e50bbaf7d77c309247',1,'drake::systems::lcm::LcmPublisherSystem::make_name()'],['../classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#a0ce12746baa534e50bbaf7d77c309247',1,'drake::systems::lcm::LcmSubscriberSystem::make_name()']]],
   ['make_5fsuccess',['make_success',['../classdrake_1_1_find_resource_result.html#a90d3862b7dcabae5f69c38a1bd307748',1,'drake::FindResourceResult']]],
+  ['make_5funowned_5fshared_5fptr_5ffrom_5fraw',['make_unowned_shared_ptr_from_raw',['../namespacedrake_1_1pydrake.html#a303d4b3541bf8120fd6cabfdb40a61ef',1,'drake::pydrake']]],
   ['makeacrobotplant',['MakeAcrobotPlant',['../namespacedrake_1_1multibody_1_1benchmarks_1_1acrobot.html#a71f510705bd91a2b7a0440a62dc4df47',1,'drake::multibody::benchmarks::acrobot']]],
   ['makeactuationmatrix',['MakeActuationMatrix',['../classdrake_1_1multibody_1_1_multibody_plant.html#a78463f908367335926f461a19978d89b',1,'drake::multibody::MultibodyPlant']]],
   ['makeactuationmatrixpseudoinverse',['MakeActuationMatrixPseudoinverse',['../classdrake_1_1multibody_1_1_multibody_plant.html#a46d75f530d3a4affed6a20fd26b9fd8f',1,'drake::multibody::MultibodyPlant']]],

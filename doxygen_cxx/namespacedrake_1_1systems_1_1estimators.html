@@ -195,13 +195,59 @@ Functions</h2></td></tr>
 </p>
 <p> The process noise, w, and the measurement noise, v, are assumed to be iid mean-zero Gaussian.  <a href="group__estimator__systems.html#ga483f8a39c210ad058dfc19ae26d93e16">More...</a><br /></td></tr>
 <tr class="separator:ga483f8a39c210ad058dfc19ae26d93e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3949eebe88ae99b71a997dfa0bad5cff"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimator__systems.html#ga3949eebe88ae99b71a997dfa0bad5cff">SteadyStateKalmanFilter</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; system, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
-<tr class="memdesc:ga3949eebe88ae99b71a997dfa0bad5cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Luenberger observer system using the optimal steady-state Kalman filter gain matrix, L, as described above.  <a href="group__estimator__systems.html#ga3949eebe88ae99b71a997dfa0bad5cff">More...</a><br /></td></tr>
-<tr class="separator:ga3949eebe88ae99b71a997dfa0bad5cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaffc5a5eabe473ebd57f96b0310d70ed8"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimator__systems.html#gaffc5a5eabe473ebd57f96b0310d70ed8">SteadyStateKalmanFilter</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; system, std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
-<tr class="memdesc:gaffc5a5eabe473ebd57f96b0310d70ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Luenberger observer system using the steady-state Kalman filter observer gain.  <a href="group__estimator__systems.html#gaffc5a5eabe473ebd57f96b0310d70ed8">More...</a><br /></td></tr>
-<tr class="separator:gaffc5a5eabe473ebd57f96b0310d70ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7c4307c228661d355148e7f72a6b53dc"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimator__systems.html#ga7c4307c228661d355148e7f72a6b53dc">SteadyStateKalmanFilter</a> (std::shared_ptr&lt; const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; system, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
+<tr class="memdesc:ga7c4307c228661d355148e7f72a6b53dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Luenberger observer system using the optimal steady-state Kalman filter gain matrix, L, as described above.  <a href="group__estimator__systems.html#ga7c4307c228661d355148e7f72a6b53dc">More...</a><br /></td></tr>
+<tr class="separator:ga7c4307c228661d355148e7f72a6b53dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4fb2e563d9ca3996eed28b0bac18bb67"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimator__systems.html#ga4fb2e563d9ca3996eed28b0bac18bb67">SteadyStateKalmanFilter</a> (std::shared_ptr&lt; const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
+<tr class="memdesc:ga4fb2e563d9ca3996eed28b0bac18bb67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Luenberger observer system using the steady-state Kalman filter observer gain.  <a href="group__estimator__systems.html#ga4fb2e563d9ca3996eed28b0bac18bb67">More...</a><br /></td></tr>
+<tr class="separator:ga4fb2e563d9ca3996eed28b0bac18bb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc5a5eabe473ebd57f96b0310d70ed8"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1estimators.html#affc5a5eabe473ebd57f96b0310d70ed8">SteadyStateKalmanFilter</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; system, std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
+<tr class="memdesc:affc5a5eabe473ebd57f96b0310d70ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(To be deprecated) An overload that accepts <code>context</code> by unique_ptr.  <a href="#affc5a5eabe473ebd57f96b0310d70ed8">More...</a><br /></td></tr>
+<tr class="separator:affc5a5eabe473ebd57f96b0310d70ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="affc5a5eabe473ebd57f96b0310d70ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affc5a5eabe473ebd57f96b0310d70ed8">&#9670;&nbsp;</a></span>SteadyStateKalmanFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; drake::systems::estimators::SteadyStateKalmanFilter </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>W</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(To be deprecated) An overload that accepts <code>context</code> by unique_ptr. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

@@ -205,12 +205,12 @@ class drake::systems::estimators::LuenbergerObserver&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a093753797574399c626da5a418464fbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a093753797574399c626da5a418464fbe">LuenbergerObserver</a> (std::shared_ptr&lt; const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt;&gt; observed_system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;observed_system_context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a2d369537575baf5f2628190a821155ce">observer_gain</a>)</td></tr>
+<tr class="memdesc:a093753797574399c626da5a418464fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the observer.  <a href="#a093753797574399c626da5a418464fbe">More...</a><br /></td></tr>
+<tr class="separator:a093753797574399c626da5a418464fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec8654f6fef2f02fae53910ff4319980"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aec8654f6fef2f02fae53910ff4319980">LuenbergerObserver</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;observed_system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;observed_system_context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a2d369537575baf5f2628190a821155ce">observer_gain</a>)</td></tr>
-<tr class="memdesc:aec8654f6fef2f02fae53910ff4319980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the observer.  <a href="#aec8654f6fef2f02fae53910ff4319980">More...</a><br /></td></tr>
+<tr class="memdesc:aec8654f6fef2f02fae53910ff4319980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the observer, without claiming ownership of <code>observed_system</code>.  <a href="#aec8654f6fef2f02fae53910ff4319980">More...</a><br /></td></tr>
 <tr class="separator:aec8654f6fef2f02fae53910ff4319980"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93700584c5d48070d9704f4ad7f83f8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a93700584c5d48070d9704f4ad7f83f8a">LuenbergerObserver</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt;&gt; observed_system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;observed_system_context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a2d369537575baf5f2628190a821155ce">observer_gain</a>)</td></tr>
-<tr class="memdesc:a93700584c5d48070d9704f4ad7f83f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the observer, taking ownership of <code>observed_system</code>.  <a href="#a93700584c5d48070d9704f4ad7f83f8a">More...</a><br /></td></tr>
-<tr class="separator:a93700584c5d48070d9704f4ad7f83f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a789215f20f4dd16718b9003d08daf99d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a789215f20f4dd16718b9003d08daf99d">get_observed_system_input_input_port</a> () const</td></tr>
 <tr class="separator:a789215f20f4dd16718b9003d08daf99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebe74a87d7957f9ab354177ba42f5a78"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aebe74a87d7957f9ab354177ba42f5a78">get_observed_system_output_input_port</a> () const</td></tr>
@@ -1331,8 +1331,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aec8654f6fef2f02fae53910ff4319980"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec8654f6fef2f02fae53910ff4319980">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[3/4]</span></h2>
+<a id="a093753797574399c626da5a418464fbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a093753797574399c626da5a418464fbe">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1340,7 +1340,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt;&gt;&#160;</td>
           <td class="paramname"><em>observed_system</em>, </td>
         </tr>
         <tr>
@@ -1372,13 +1372,12 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>The observed_system output port must be vector-valued.</dd></dl>
-<p>Note: The <code>observed_system</code> reference must remain valid for the lifetime of this system. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>The observed_system output port must be vector-valued. </dd></dl>
 
 </div>
 </div>
-<a id="a93700584c5d48070d9704f4ad7f83f8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93700584c5d48070d9704f4ad7f83f8a">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[4/4]</span></h2>
+<a id="aec8654f6fef2f02fae53910ff4319980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec8654f6fef2f02fae53910ff4319980">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1386,7 +1385,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a> </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>observed_system</em>, </td>
         </tr>
         <tr>
@@ -1409,7 +1408,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs the observer, taking ownership of <code>observed_system</code>. </p>
+<p>Constructs the observer, without claiming ownership of <code>observed_system</code>. </p>
+<p>Note: The <code>observed_system</code> reference must remain valid for the lifetime of this system. </p>
 
 </div>
 </div>

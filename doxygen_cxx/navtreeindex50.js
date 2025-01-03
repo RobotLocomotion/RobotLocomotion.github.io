@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"decision__variable_8h.html#aa708f80d971209e3d46c1e41f05c1393":[4,0,0,11,17,0],
+"decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,11,17,2],
 "decision__variable_8h.html#aca924499b3b011a50d3bd9d051295efa":[4,0,0,11,17,5],
 "decision__variable_8h.html#acf84184cb10b49233b007295d1880e17":[4,0,0,11,17,1],
 "decompose_8h.html":[4,0,0,1,3,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "dirichlet__boundary__condition_8h.html#a30f7635fdfd5c32323992a6ae496d5ca":[4,0,0,8,2,8,0],
 "discontinuous__spring__mass__damper__system_8h.html":[4,0,0,12,0,0,2],
 "discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,11],
-"discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,11,0],
-"discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,11,1],
-"discrete__contact__data_8h.html":[4,0,0,8,10,15]
+"discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,11,0]
 };

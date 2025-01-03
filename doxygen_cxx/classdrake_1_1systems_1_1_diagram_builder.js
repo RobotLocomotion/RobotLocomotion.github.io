@@ -6,9 +6,11 @@ var classdrake_1_1systems_1_1_diagram_builder =
     [ "DiagramBuilder", "classdrake_1_1systems_1_1_diagram_builder.html#ae8a44a2dfe05cf9e0ffce42b77187427", null ],
     [ "DiagramBuilder", "classdrake_1_1systems_1_1_diagram_builder.html#a9d9bf2010c6e99cac26349048fb86cfd", null ],
     [ "~DiagramBuilder", "classdrake_1_1systems_1_1_diagram_builder.html#ae74eb7987f52b47808ad6c45c1603a88", null ],
+    [ "AddNamedSystem", "classdrake_1_1systems_1_1_diagram_builder.html#aed21a04905c05032d7819394cc2bccd8", null ],
     [ "AddNamedSystem", "classdrake_1_1systems_1_1_diagram_builder.html#ac2406fa4aa713e91b017bc9021c21292", null ],
     [ "AddNamedSystem", "classdrake_1_1systems_1_1_diagram_builder.html#ab972ee083dd933333ec5f482d0688bba", null ],
     [ "AddNamedSystem", "classdrake_1_1systems_1_1_diagram_builder.html#a3719d800b823430686b15c36adee248d", null ],
+    [ "AddSystem", "classdrake_1_1systems_1_1_diagram_builder.html#a9079ad970bdc0638e0ee7e5efc4d59a4", null ],
     [ "AddSystem", "classdrake_1_1systems_1_1_diagram_builder.html#aefdbf77412fa81b7e31861e53b25a5c3", null ],
     [ "AddSystem", "classdrake_1_1systems_1_1_diagram_builder.html#af30592f15d5a84b740aee7776465a1af", null ],
     [ "AddSystem", "classdrake_1_1systems_1_1_diagram_builder.html#a8ed05ca1f1221a69481364de26aa614a", null ],
@@ -36,7 +38,7 @@ var classdrake_1_1systems_1_1_diagram_builder =
     [ "IsConnectedOrExported", "classdrake_1_1systems_1_1_diagram_builder.html#acd8bf3d351848a5e2344865a6e4b932e", null ],
     [ "num_input_ports", "classdrake_1_1systems_1_1_diagram_builder.html#a94a6d73c74c7268734792b3703e8600d", null ],
     [ "num_output_ports", "classdrake_1_1systems_1_1_diagram_builder.html#a7ceec1b22b6b1b25fc675234e78e71be", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a9707232e37c28463f285aaab01f88c49", null ],
     [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a1c4553ec1b3caebff0d951e5795fd617", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_diagram_builder.html#a9707232e37c28463f285aaab01f88c49", null ],
     [ "RemoveSystem", "classdrake_1_1systems_1_1_diagram_builder.html#ae7701a7c380b6015ae152d136fd61e5b", null ]
 ];

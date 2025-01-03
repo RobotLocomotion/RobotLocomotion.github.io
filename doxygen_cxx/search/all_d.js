@@ -40,6 +40,7 @@ var searchData=
   ['make_5fsphere_5ffield_2eh',['make_sphere_field.h',['../make__sphere__field_8h.html',1,'']]],
   ['make_5fsphere_5fmesh_2eh',['make_sphere_mesh.h',['../make__sphere__mesh_8h.html',1,'']]],
   ['make_5fsuccess',['make_success',['../classdrake_1_1_find_resource_result.html#a90d3862b7dcabae5f69c38a1bd307748',1,'drake::FindResourceResult']]],
+  ['make_5funowned_5fshared_5fptr_5ffrom_5fraw',['make_unowned_shared_ptr_from_raw',['../namespacedrake_1_1pydrake.html#a303d4b3541bf8120fd6cabfdb40a61ef',1,'drake::pydrake']]],
   ['makeacrobotplant',['MakeAcrobotPlant',['../namespacedrake_1_1multibody_1_1benchmarks_1_1acrobot.html#a71f510705bd91a2b7a0440a62dc4df47',1,'drake::multibody::benchmarks::acrobot']]],
   ['makeactuationmatrix',['MakeActuationMatrix',['../classdrake_1_1multibody_1_1_multibody_plant.html#a78463f908367335926f461a19978d89b',1,'drake::multibody::MultibodyPlant']]],
   ['makeactuationmatrixpseudoinverse',['MakeActuationMatrixPseudoinverse',['../classdrake_1_1multibody_1_1_multibody_plant.html#a46d75f530d3a4affed6a20fd26b9fd8f',1,'drake::multibody::MultibodyPlant']]],

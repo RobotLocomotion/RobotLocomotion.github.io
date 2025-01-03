@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#adca2766204b86212e8ed2b91faa97775":[3,0,0,17,3,11],
+"classdrake_1_1trajectories_1_1_derivative_trajectory.html#aef16c3e234e70a22d89678041a6bda57":[3,0,0,17,3,4],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html":[3,0,0,17,4],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8":[3,0,0,17,4,13],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a1b0dc2e082a27d735c084f0c39c47bad":[3,0,0,17,4,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1visualization_1_1_colorize_label_image.html#aa9c3795e276d0ab7b36b76c75d5fe5f6":[1,2,11,5,6],
 "classdrake_1_1visualization_1_1_colorize_label_image.html#abd8d604309d403783711fbf9e51cd74d":[1,2,11,5,4],
 "classdrake_1_1visualization_1_1_colorize_label_image.html#abfe0764e04080a30f928a361a7c326a7":[1,2,11,5,8],
-"classdrake_1_1visualization_1_1_colorize_label_image.html#acecf55696410560fc4eed5db953cceef":[1,2,11,5,5],
-"classdrake_1_1visualization_1_1_concatenate_images.html":[1,2,11,6],
-"classdrake_1_1visualization_1_1_concatenate_images.html#a0f1225f891e1839cdf92c86b7423b8b8":[1,2,11,6,1]
+"classdrake_1_1visualization_1_1_colorize_label_image.html#acecf55696410560fc4eed5db953cceef":[1,2,11,5,5]
 };

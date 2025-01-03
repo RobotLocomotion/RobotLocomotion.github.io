@@ -198,6 +198,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d9bf2010c6e99cac26349048fb86cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae74eb7987f52b47808ad6c45c1603a88"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#ae74eb7987f52b47808ad6c45c1603a88">~DiagramBuilder</a> ()</td></tr>
 <tr class="separator:ae74eb7987f52b47808ad6c45c1603a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9079ad970bdc0638e0ee7e5efc4d59a4"><td class="memTemplParams" colspan="2">template&lt;class S &gt; </td></tr>
+<tr class="memitem:a9079ad970bdc0638e0ee7e5efc4d59a4"><td class="memTemplItemLeft" align="right" valign="top">S *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a9079ad970bdc0638e0ee7e5efc4d59a4">AddSystem</a> (std::shared_ptr&lt; S &gt; system)</td></tr>
+<tr class="memdesc:a9079ad970bdc0638e0ee7e5efc4d59a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes ownership of <code>system</code> and adds it to the builder.  <a href="#a9079ad970bdc0638e0ee7e5efc4d59a4">More...</a><br /></td></tr>
+<tr class="separator:a9079ad970bdc0638e0ee7e5efc4d59a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefdbf77412fa81b7e31861e53b25a5c3"><td class="memTemplParams" colspan="2">template&lt;class S &gt; </td></tr>
 <tr class="memitem:aefdbf77412fa81b7e31861e53b25a5c3"><td class="memTemplItemLeft" align="right" valign="top">S *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aefdbf77412fa81b7e31861e53b25a5c3">AddSystem</a> (std::unique_ptr&lt; S &gt; system)</td></tr>
 <tr class="memdesc:aefdbf77412fa81b7e31861e53b25a5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes ownership of <code>system</code> and adds it to the builder.  <a href="#aefdbf77412fa81b7e31861e53b25a5c3">More...</a><br /></td></tr>
@@ -210,9 +214,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ed05ca1f1221a69481364de26aa614a"><td class="memTemplItemLeft" align="right" valign="top">S&lt; T &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a8ed05ca1f1221a69481364de26aa614a">AddSystem</a> (Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a8ed05ca1f1221a69481364de26aa614a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new system with the given <code>args</code>, and adds it to the builder, which retains ownership.  <a href="#a8ed05ca1f1221a69481364de26aa614a">More...</a><br /></td></tr>
 <tr class="separator:a8ed05ca1f1221a69481364de26aa614a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed21a04905c05032d7819394cc2bccd8"><td class="memTemplParams" colspan="2">template&lt;class S &gt; </td></tr>
+<tr class="memitem:aed21a04905c05032d7819394cc2bccd8"><td class="memTemplItemLeft" align="right" valign="top">S *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aed21a04905c05032d7819394cc2bccd8">AddNamedSystem</a> (const std::string &amp;name, std::shared_ptr&lt; S &gt; system)</td></tr>
+<tr class="memdesc:aed21a04905c05032d7819394cc2bccd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes ownership of <code>system</code>, sets its name to <code>name</code>, and adds it to the builder.  <a href="#aed21a04905c05032d7819394cc2bccd8">More...</a><br /></td></tr>
+<tr class="separator:aed21a04905c05032d7819394cc2bccd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2406fa4aa713e91b017bc9021c21292"><td class="memTemplParams" colspan="2">template&lt;class S &gt; </td></tr>
 <tr class="memitem:ac2406fa4aa713e91b017bc9021c21292"><td class="memTemplItemLeft" align="right" valign="top">S *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#ac2406fa4aa713e91b017bc9021c21292">AddNamedSystem</a> (const std::string &amp;name, std::unique_ptr&lt; S &gt; system)</td></tr>
-<tr class="memdesc:ac2406fa4aa713e91b017bc9021c21292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes ownership of <code>system</code>, applies <code>name</code> to it, and adds it to the builder.  <a href="#ac2406fa4aa713e91b017bc9021c21292">More...</a><br /></td></tr>
+<tr class="memdesc:ac2406fa4aa713e91b017bc9021c21292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes ownership of <code>system</code>, sets its name to <code>name</code>, and adds it to the builder.  <a href="#ac2406fa4aa713e91b017bc9021c21292">More...</a><br /></td></tr>
 <tr class="separator:ac2406fa4aa713e91b017bc9021c21292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab972ee083dd933333ec5f482d0688bba"><td class="memTemplParams" colspan="2">template&lt;class S , typename... Args&gt; </td></tr>
 <tr class="memitem:ab972ee083dd933333ec5f482d0688bba"><td class="memTemplItemLeft" align="right" valign="top">S *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#ab972ee083dd933333ec5f482d0688bba">AddNamedSystem</a> (const std::string &amp;name, Args &amp;&amp;... args)</td></tr>
@@ -438,8 +446,40 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aed21a04905c05032d7819394cc2bccd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed21a04905c05032d7819394cc2bccd8">&#9670;&nbsp;</a></span>AddNamedSystem() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">S* AddNamedSystem </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; S &gt;&#160;</td>
+          <td class="paramname"><em>system</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Takes ownership of <code>system</code>, sets its name to <code>name</code>, and adds it to the builder. </p>
+<p>Returns a bare pointer to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>, which will remain valid for the lifetime of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> built by this builder.</p>
+<dl class="section warning"><dt>Warning</dt><dd>a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> may only be added to at most one <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a>. Multiple <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> instances cannot share the same <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </dd></dl>
+
+</div>
+</div>
 <a id="ac2406fa4aa713e91b017bc9021c21292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2406fa4aa713e91b017bc9021c21292">&#9670;&nbsp;</a></span>AddNamedSystem() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2406fa4aa713e91b017bc9021c21292">&#9670;&nbsp;</a></span>AddNamedSystem() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -464,20 +504,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Takes ownership of <code>system</code>, applies <code>name</code> to it, and adds it to the builder. </p>
-<p>Returns a bare pointer to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>, which will remain valid for the lifetime of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> built by this builder.</p>
-<div class="fragment"><div class="line">DiagramBuilder&lt;T&gt; builder;</div><div class="line"><span class="keyword">auto</span> bar = builder.AddNamedSystem(<span class="stringliteral">&quot;bar&quot;</span>, std::make_unique&lt;Bar&lt;T&gt;&gt;());</div></div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">S</td><td>The type of system to add. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section post"><dt>Postcondition</dt><dd>The system's name is <code>name</code>. </dd></dl>
+<p>Takes ownership of <code>system</code>, sets its name to <code>name</code>, and adds it to the builder. </p>
+<p>Returns a bare pointer to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>, which will remain valid for the lifetime of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> built by this builder. </p>
 
 </div>
 </div>
 <a id="ab972ee083dd933333ec5f482d0688bba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab972ee083dd933333ec5f482d0688bba">&#9670;&nbsp;</a></span>AddNamedSystem() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab972ee083dd933333ec5f482d0688bba">&#9670;&nbsp;</a></span>AddNamedSystem() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,7 +550,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a3719d800b823430686b15c36adee248d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3719d800b823430686b15c36adee248d">&#9670;&nbsp;</a></span>AddNamedSystem() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3719d800b823430686b15c36adee248d">&#9670;&nbsp;</a></span>AddNamedSystem() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -556,8 +589,31 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9079ad970bdc0638e0ee7e5efc4d59a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9079ad970bdc0638e0ee7e5efc4d59a4">&#9670;&nbsp;</a></span>AddSystem() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">S* AddSystem </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; S &gt;&#160;</td>
+          <td class="paramname"><em>system</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Takes ownership of <code>system</code> and adds it to the builder. </p>
+<p>Returns a bare pointer to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>, which will remain valid for the lifetime of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> built by this builder.</p>
+<p>If the system's name is unset, sets it to <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a9714aaf76aca9169da6de7fbcb8339fb" title="Returns a name for this System based on a stringification of its type name and memory address.">System::GetMemoryObjectName()</a> as a default in order to have unique names within the diagram.</p>
+<dl class="section warning"><dt>Warning</dt><dd>a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> may only be added to at most one <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a>. Multiple <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> instances cannot share the same <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </dd></dl>
+
+</div>
+</div>
 <a id="aefdbf77412fa81b7e31861e53b25a5c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefdbf77412fa81b7e31861e53b25a5c3">&#9670;&nbsp;</a></span>AddSystem() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aefdbf77412fa81b7e31861e53b25a5c3">&#9670;&nbsp;</a></span>AddSystem() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -574,18 +630,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Takes ownership of <code>system</code> and adds it to the builder. </p>
 <p>Returns a bare pointer to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>, which will remain valid for the lifetime of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> built by this builder.</p>
-<p>If the system's name is unset, sets it to <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a9714aaf76aca9169da6de7fbcb8339fb" title="Returns a name for this System based on a stringification of its type name and memory address.">System::GetMemoryObjectName()</a> as a default in order to have unique names within the diagram.</p>
-<div class="fragment"><div class="line">DiagramBuilder&lt;T&gt; builder;</div><div class="line"><span class="keyword">auto</span> foo = builder.AddSystem(std::make_unique&lt;Foo&lt;T&gt;&gt;());</div></div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">S</td><td>The type of system to add. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>If the system's name is unset, sets it to <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a9714aaf76aca9169da6de7fbcb8339fb" title="Returns a name for this System based on a stringification of its type name and memory address.">System::GetMemoryObjectName()</a> as a default in order to have unique names within the diagram. </p>
 
 </div>
 </div>
 <a id="af30592f15d5a84b740aee7776465a1af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af30592f15d5a84b740aee7776465a1af">&#9670;&nbsp;</a></span>AddSystem() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af30592f15d5a84b740aee7776465a1af">&#9670;&nbsp;</a></span>AddSystem() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -603,8 +653,7 @@ Public Member Functions</h2></td></tr>
 <p>Constructs a new system with the given <code>args</code>, and adds it to the builder, which retains ownership. </p>
 <p>Returns a bare pointer to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>, which will remain valid for the lifetime of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> built by this builder.</p>
 <div class="fragment"><div class="line">DiagramBuilder&lt;double&gt; builder;</div><div class="line"><span class="keyword">auto</span> foo = builder.AddSystem&lt;Foo&lt;double&gt;&gt;(<span class="stringliteral">&quot;name&quot;</span>, 3.14);</div></div><!-- fragment --><p>Note that for dependent names you must use the template keyword:</p>
-<div class="fragment"><div class="line">DiagramBuilder&lt;T&gt; builder;</div><div class="line"><span class="keyword">auto</span> foo = builder.template AddSystem&lt;Foo&lt;T&gt;&gt;(<span class="stringliteral">&quot;name&quot;</span>, 3.14);</div></div><!-- fragment --><p>You may prefer the <code>unique_ptr</code> variant instead.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
+<div class="fragment"><div class="line">DiagramBuilder&lt;T&gt; builder;</div><div class="line"><span class="keyword">auto</span> foo = builder.template AddSystem&lt;Foo&lt;T&gt;&gt;(<span class="stringliteral">&quot;name&quot;</span>, 3.14);</div></div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">S</td><td>The type of <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> to construct. Must subclass System&lt;T&gt;. </td></tr>
   </table>
@@ -614,7 +663,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a8ed05ca1f1221a69481364de26aa614a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ed05ca1f1221a69481364de26aa614a">&#9670;&nbsp;</a></span>AddSystem() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ed05ca1f1221a69481364de26aa614a">&#9670;&nbsp;</a></span>AddSystem() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -632,8 +681,7 @@ Public Member Functions</h2></td></tr>
 <p>Constructs a new system with the given <code>args</code>, and adds it to the builder, which retains ownership. </p>
 <p>Returns a bare pointer to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>, which will remain valid for the lifetime of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> built by this builder.</p>
 <div class="fragment"><div class="line">DiagramBuilder&lt;double&gt; builder;</div><div class="line"><span class="comment">// Foo must be a template.</span></div><div class="line"><span class="keyword">auto</span> foo = builder.AddSystem&lt;Foo&gt;(<span class="stringliteral">&quot;name&quot;</span>, 3.14);</div></div><!-- fragment --><p>Note that for dependent names you must use the template keyword:</p>
-<div class="fragment"><div class="line">DiagramBuilder&lt;T&gt; builder;</div><div class="line"><span class="keyword">auto</span> foo = builder.template AddSystem&lt;Foo&gt;(<span class="stringliteral">&quot;name&quot;</span>, 3.14);</div></div><!-- fragment --><p>You may prefer the <code>unique_ptr</code> variant instead.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
+<div class="fragment"><div class="line">DiagramBuilder&lt;T&gt; builder;</div><div class="line"><span class="keyword">auto</span> foo = builder.template AddSystem&lt;Foo&gt;(<span class="stringliteral">&quot;name&quot;</span>, 3.14);</div></div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">S</td><td>A template for the type of <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> to construct. The template will be specialized on the scalar type T of this builder. </td></tr>
   </table>
@@ -1298,8 +1346,8 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
-<a id="a9707232e37c28463f285aaab01f88c49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a1c4553ec1b3caebff0d951e5795fd617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1310,7 +1358,7 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1324,8 +1372,8 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
-<a id="a1c4553ec1b3caebff0d951e5795fd617"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a9707232e37c28463f285aaab01f88c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1336,7 +1384,7 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

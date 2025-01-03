@@ -173,8 +173,6 @@ evaluate the system.</p>
 <dt>Precondition:</dt><dd><p>The observed_system output port must be vector-valued.</p>
 </dd>
 </dl>
-<p>Note: The <code class="docutils literal notranslate"><span class="pre">observed_system</span></code> reference must remain valid for the
-lifetime of this system.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -253,9 +251,7 @@ num_outputs.</p>
 <p>Creates a Luenberger observer system using the optimal steady-state
 Kalman filter gain matrix, L, as described above.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>A unique_ptr to a LinearSystem describing the system to be
-observed. The new observer will take and maintain ownership of
-this pointer.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The LinearSystem describing the system to be observed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">W</span></code>:</dt><dd><p>The process noise covariance matrix, E[ww’], of size num_states x
 num_states.</p>
@@ -265,7 +261,7 @@ num_states.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>A unique_ptr to the constructed observer system.</p>
+<dd class="field-odd"><p>The constructed observer system.</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>RuntimeError if V is not positive definite.</strong> – </p>
@@ -283,13 +279,10 @@ estimated state and the gain matrix, L, is designed as a steady-state
 Kalman filter using a linearization of f(x,u) at <code class="docutils literal notranslate"><span class="pre">context</span></code> as
 described above.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>A unique_ptr to a System describing the system to be observed. The
-new observer will take and maintain ownership of this pointer.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The System describing the system to be observed.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>A unique_ptr to the context describing a fixed-point of the system
-(plus any additional parameters). The new observer will take and
-maintain ownership of this pointer for use in its internal forward
-simulation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context describing a fixed-point of the system (plus any
+additional parameters).</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">W</span></code>:</dt><dd><p>The process noise covariance matrix, E[ww’], of size num_states x
 num_states.</p>
@@ -299,7 +292,7 @@ num_states.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>A unique_ptr to the constructed observer system.</p>
+<dd class="field-odd"><p>The constructed observer system.</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>RuntimeError if V is not positive definite.</strong> – </p>

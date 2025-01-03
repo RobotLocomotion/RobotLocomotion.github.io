@@ -356,6 +356,10 @@ Functions</h2></td></tr>
 <tr class="memitem:aa8cec9d64f8d0017db630acd8740021e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#aa8cec9d64f8d0017db630acd8740021e">ExecuteExtraPythonCode</a> (py::module m, bool use_subdir=false)</td></tr>
 <tr class="memdesc:aa8cec9d64f8d0017db630acd8740021e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes Python code to introduce additional symbols for a given module.  <a href="#aa8cec9d64f8d0017db630acd8740021e">More...</a><br /></td></tr>
 <tr class="separator:aa8cec9d64f8d0017db630acd8740021e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303d4b3541bf8120fd6cabfdb40a61ef"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a303d4b3541bf8120fd6cabfdb40a61ef"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a303d4b3541bf8120fd6cabfdb40a61ef">make_unowned_shared_ptr_from_raw</a> (T *raw)</td></tr>
+<tr class="memdesc:a303d4b3541bf8120fd6cabfdb40a61ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a raw pointer, returns a shared_ptr wrapper around it that doesn't own anything &ndash; it's managed object is null, so there is no reference counting.  <a href="#a303d4b3541bf8120fd6cabfdb40a61ef">More...</a><br /></td></tr>
+<tr class="separator:a303d4b3541bf8120fd6cabfdb40a61ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4b3fef8297fa00d68181a77b7da0d40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#ae4b3fef8297fa00d68181a77b7da0d40">DefineFrameworkPySemantics</a> (py::module m)</td></tr>
 <tr class="separator:ae4b3fef8297fa00d68181a77b7da0d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae69d9dd260ccb0152ebf2da94f03b0c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#ae69d9dd260ccb0152ebf2da94f03b0c1">DefineFrameworkDiagramBuilder</a> (py::module m)</td></tr>
@@ -1479,6 +1483,27 @@ Variables</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>Ts must be public symbols. </dd>
 <dd>
 Ts cannot be a <code>py::</code> symbol (e.g. <code>py::object</code>). On Mac, this may cause failure depending on import order (e.g. trying to use <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;py::object&gt;</code> between different modules). See #8704 and #13207 for more details. </dd></dl>
+
+</div>
+</div>
+<a id="a303d4b3541bf8120fd6cabfdb40a61ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a303d4b3541bf8120fd6cabfdb40a61ef">&#9670;&nbsp;</a></span>make_unowned_shared_ptr_from_raw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto drake::pydrake::make_unowned_shared_ptr_from_raw </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>raw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a raw pointer, returns a shared_ptr wrapper around it that doesn't own anything &ndash; it's managed object is null, so there is no reference counting. </p>
+<p>Calling get() on the result will return <code>raw</code>. </p>
 
 </div>
 </div>

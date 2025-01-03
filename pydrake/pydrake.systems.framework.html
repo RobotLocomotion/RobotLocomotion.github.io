@@ -3842,19 +3842,14 @@ for the list of instantiations.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder.AddNamedSystem">
 <span class="sig-name descname"><span class="pre">AddNamedSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder.AddNamedSystem" title="Permalink to this definition"></a></dt>
-<dd><p>Takes ownership of <code class="docutils literal notranslate"><span class="pre">system</span></code>, applies <code class="docutils literal notranslate"><span class="pre">name</span></code> to it, and adds it to
-the builder. Returns a bare pointer to the System, which will remain
-valid for the lifetime of the Diagram built by this builder.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddNamedSystem</span><span class="p">(</span><span class="s">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Bar</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">());</span><span class="w"></span>
-</pre></div>
+<dd><p>Takes ownership of <code class="docutils literal notranslate"><span class="pre">system</span></code>, sets its name to <code class="docutils literal notranslate"><span class="pre">name</span></code>, and adds it
+to the builder. Returns a bare pointer to the System, which will
+remain valid for the lifetime of the Diagram built by this builder.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>a System may only be added to at most one DiagramBuilder. Multiple
+Diagram instances cannot share the same System.</p>
 </div>
-</details><dl class="simple">
-<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">S</span></code>:</dt><dd><p>The type of system to add.</p>
-</dd>
-<dt>Postcondition:</dt><dd><p>The system’s name is <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -3866,14 +3861,11 @@ of the Diagram built by this builder.</p>
 <p>If the system’s name is unset, sets it to
 System::GetMemoryObjectName() as a default in order to have unique
 names within the diagram.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">());</span><span class="w"></span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>a System may only be added to at most one DiagramBuilder. Multiple
+Diagram instances cannot share the same System.</p>
 </div>
-</details><dl class="simple">
-<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">S</span></code>:</dt><dd><p>The type of system to add.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -4206,19 +4198,14 @@ shortcut for outputs that do not depend on any inputs.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.AddNamedSystem">
 <span id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].AddNamedSystem"></span><span class="sig-name descname"><span class="pre">AddNamedSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-AutoDiffXd-.AddNamedSystem" title="Permalink to this definition"></a></dt>
-<dd><p>Takes ownership of <code class="docutils literal notranslate"><span class="pre">system</span></code>, applies <code class="docutils literal notranslate"><span class="pre">name</span></code> to it, and adds it to
-the builder. Returns a bare pointer to the System, which will remain
-valid for the lifetime of the Diagram built by this builder.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddNamedSystem</span><span class="p">(</span><span class="s">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Bar</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">());</span><span class="w"></span>
-</pre></div>
+<dd><p>Takes ownership of <code class="docutils literal notranslate"><span class="pre">system</span></code>, sets its name to <code class="docutils literal notranslate"><span class="pre">name</span></code>, and adds it
+to the builder. Returns a bare pointer to the System, which will
+remain valid for the lifetime of the Diagram built by this builder.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>a System may only be added to at most one DiagramBuilder. Multiple
+Diagram instances cannot share the same System.</p>
 </div>
-</details><dl class="simple">
-<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">S</span></code>:</dt><dd><p>The type of system to add.</p>
-</dd>
-<dt>Postcondition:</dt><dd><p>The system’s name is <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -4230,14 +4217,11 @@ of the Diagram built by this builder.</p>
 <p>If the system’s name is unset, sets it to
 System::GetMemoryObjectName() as a default in order to have unique
 names within the diagram.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">());</span><span class="w"></span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>a System may only be added to at most one DiagramBuilder. Multiple
+Diagram instances cannot share the same System.</p>
 </div>
-</details><dl class="simple">
-<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">S</span></code>:</dt><dd><p>The type of system to add.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -4564,19 +4548,14 @@ shortcut for outputs that do not depend on any inputs.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.DiagramBuilder_-Expression-.AddNamedSystem">
 <span id="pydrake.systems.framework.DiagramBuilder_[Expression].AddNamedSystem"></span><span class="sig-name descname"><span class="pre">AddNamedSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_" title="pydrake.systems.framework.DiagramBuilder_"><span class="pre">pydrake.systems.framework.DiagramBuilder_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_-Expression-.AddNamedSystem" title="Permalink to this definition"></a></dt>
-<dd><p>Takes ownership of <code class="docutils literal notranslate"><span class="pre">system</span></code>, applies <code class="docutils literal notranslate"><span class="pre">name</span></code> to it, and adds it to
-the builder. Returns a bare pointer to the System, which will remain
-valid for the lifetime of the Diagram built by this builder.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddNamedSystem</span><span class="p">(</span><span class="s">&quot;bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Bar</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">());</span><span class="w"></span>
-</pre></div>
+<dd><p>Takes ownership of <code class="docutils literal notranslate"><span class="pre">system</span></code>, sets its name to <code class="docutils literal notranslate"><span class="pre">name</span></code>, and adds it
+to the builder. Returns a bare pointer to the System, which will
+remain valid for the lifetime of the Diagram built by this builder.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>a System may only be added to at most one DiagramBuilder. Multiple
+Diagram instances cannot share the same System.</p>
 </div>
-</details><dl class="simple">
-<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">S</span></code>:</dt><dd><p>The type of system to add.</p>
-</dd>
-<dt>Postcondition:</dt><dd><p>The system’s name is <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -4588,14 +4567,11 @@ of the Diagram built by this builder.</p>
 <p>If the system’s name is unset, sets it to
 System::GetMemoryObjectName() as a default in order to have unique
 names within the diagram.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">());</span><span class="w"></span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>a System may only be added to at most one DiagramBuilder. Multiple
+Diagram instances cannot share the same System.</p>
 </div>
-</details><dl class="simple">
-<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">S</span></code>:</dt><dd><p>The type of system to add.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">

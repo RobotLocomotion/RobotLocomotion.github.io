@@ -2412,7 +2412,7 @@ variables. For more details,</p>
 <p>A wrapper to call &lt;a href=”<a class="reference external" href="https://coin-or.github.io/Ipopt/">https://coin-or.github.io/Ipopt/</a>”&gt;Ipopt&lt;/a&gt;
 using Drake’s MathematicalProgram.</p>
 <p>The IpoptSolver is NOT threadsafe to call in parallel. This is due to
-Ipopt’s reliance on the MUMPs linear solver which is not safe to call
+Ipopt’s reliance on the MUMPS linear solver which is not safe to call
 concurrently (see <a class="reference external" href="https://github.com/coin-or/Ipopt/issues/733">https://github.com/coin-or/Ipopt/issues/733</a>). This
 can be resolved by enabling the SPRAL solver (see Drake issue
 <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/21476">https://github.com/RobotLocomotion/drake/issues/21476</a>).</p>
