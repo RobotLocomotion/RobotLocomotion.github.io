@@ -168,7 +168,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_ipopt_solver
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A wrapper to call <a href="https://coin-or.github.io/Ipopt/">Ipopt</a> using Drake's <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>. </p>
-<p>The <a class="el" href="classdrake_1_1solvers_1_1_ipopt_solver.html" title="A wrapper to call Ipopt using Drake&#39;s MathematicalProgram.">IpoptSolver</a> is NOT threadsafe to call in parallel. This is due to Ipopt's reliance on the MUMPS linear solver which is not safe to call concurrently (see <a href="https://github.com/coin-or/Ipopt/issues/733">https://github.com/coin-or/Ipopt/issues/733</a>). This can be resolved by enabling the SPRAL solver (see Drake issue <a href="https://github.com/RobotLocomotion/drake/issues/21476">https://github.com/RobotLocomotion/drake/issues/21476</a>). </p>
+<dl class="section warning"><dt>Warning</dt><dd>Setting the Ipopt option "linear_solver" to "mumps" is deprecated and will be removed on or after 2025-05-01. Using MUMPS is NOT threadsafe (see <a href="https://github.com/coin-or/Ipopt/issues/733">https://github.com/coin-or/Ipopt/issues/733</a>). </dd></dl>
 </div>
 <p><code>#include &lt;drake/solvers/ipopt_solver.h&gt;</code></p>
 <table class="memberdecls">

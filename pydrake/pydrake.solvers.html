@@ -2411,11 +2411,12 @@ variables. For more details,</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
 <p>A wrapper to call &lt;a href=”<a class="reference external" href="https://coin-or.github.io/Ipopt/">https://coin-or.github.io/Ipopt/</a>”&gt;Ipopt&lt;/a&gt;
 using Drake’s MathematicalProgram.</p>
-<p>The IpoptSolver is NOT threadsafe to call in parallel. This is due to
-Ipopt’s reliance on the MUMPS linear solver which is not safe to call
-concurrently (see <a class="reference external" href="https://github.com/coin-or/Ipopt/issues/733">https://github.com/coin-or/Ipopt/issues/733</a>). This
-can be resolved by enabling the SPRAL solver (see Drake issue
-<a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/21476">https://github.com/RobotLocomotion/drake/issues/21476</a>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Setting the Ipopt option “linear_solver” to “mumps” is deprecated
+and will be removed on or after 2025-05-01. Using MUMPS is NOT
+threadsafe (see <a class="reference external" href="https://github.com/coin-or/Ipopt/issues/733">https://github.com/coin-or/Ipopt/issues/733</a>).</p>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.IpoptSolver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.IpoptSolver" title="pydrake.solvers.IpoptSolver"><span class="pre">pydrake.solvers.IpoptSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.IpoptSolver.__init__" title="Permalink to this definition"></a></dt>
