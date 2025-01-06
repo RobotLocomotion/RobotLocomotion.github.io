@@ -8,13 +8,10 @@ var classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory =
     [ "CalcPose", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#adfa1acb11b9a6296c79275adeac9b6f2", null ],
     [ "CalcSpatialAcceleration", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a9c16f458090e923d6a419602f530f659", null ],
     [ "CalcSpatialVelocity", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a84d9ba906dfe3476c3112019de27db04", null ],
-    [ "Clone", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a8743b4bccdaf5d24987b1f76403bbe41", null ],
-    [ "cols", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#adca8eca2ee324f57170dedfb4b06160b", null ],
     [ "IsNearlyPeriodic", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#abbae6db5c296a6f3f059d9764ab05452", null ],
     [ "length", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a319b1046f6f739132918623ea8aa25d8", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a13775f15ccac8d15b55ebac5232818b4", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a49c54d6b75561787901ec5de8d831979", null ],
-    [ "rows", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9", null ],
-    [ "value", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a9c1ada6dfb329a5064605dfa8e6a0fdd", null ],
+    [ "value", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a6c7298f213adae5ec61e76d94d67d3ae", null ],
     [ "PiecewiseConstantCurvatureTrajectory", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a34eda3a0d1a4264f6c3463af5e457707", null ]
 ];

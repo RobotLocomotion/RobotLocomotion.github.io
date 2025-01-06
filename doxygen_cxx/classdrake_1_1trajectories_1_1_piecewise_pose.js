@@ -4,9 +4,7 @@ var classdrake_1_1trajectories_1_1_piecewise_pose =
     [ "PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#aec3c151ab7b4b34d667c50ec9d229003", null ],
     [ "PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a3e8a6ff52ba38aeedc2104d69acb7057", null ],
     [ "PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#abe9bbc905bd05580ba6943a89d530b4b", null ],
-    [ "~PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a3a9502f64e801bd5f5199245f3b8880b", null ],
-    [ "Clone", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a8743b4bccdaf5d24987b1f76403bbe41", null ],
-    [ "cols", "classdrake_1_1trajectories_1_1_piecewise_pose.html#adca8eca2ee324f57170dedfb4b06160b", null ],
+    [ "~PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a1708a0b0ada4aa6ab01b1af40745c5fe", null ],
     [ "get_orientation_trajectory", "classdrake_1_1trajectories_1_1_piecewise_pose.html#ac80c5bfd4c7165e52988d167dc3f24dc", null ],
     [ "get_position_trajectory", "classdrake_1_1trajectories_1_1_piecewise_pose.html#af3ed665c279c199edc05b05413deb70b", null ],
     [ "GetAcceleration", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a6002daeeb77b73b37291f8b8ef9d36c5", null ],
@@ -16,7 +14,5 @@ var classdrake_1_1trajectories_1_1_piecewise_pose =
     [ "MakeCubicLinearWithEndLinearVelocity", "classdrake_1_1trajectories_1_1_piecewise_pose.html#ae2f8a49b642aecb5c19ef3625be5e61d", null ],
     [ "MakeLinear", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a5200b41e6c52f4bc8cbc0c0e75cb4d79", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_pose.html#af33e9a993aeb52079b4310e7fd43638e", null ],
-    [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a4f39af106df0162d8c0029cfa72e5c04", null ],
-    [ "rows", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9", null ],
-    [ "value", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a19b632df0f98f9aaf224e534fac69ec8", null ]
+    [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a4f39af106df0162d8c0029cfa72e5c04", null ]
 ];

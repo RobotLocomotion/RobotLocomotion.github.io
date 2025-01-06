@@ -171,11 +171,11 @@ $(document).ready(function(){initNavTree('classdrake_1_1trajectories_1_1_piecewi
 class drake::trajectories::PiecewisePolynomial&lt; T &gt;</h3>
 
 <p>A scalar multi-variate piecewise polynomial. </p>
-<p>PiecewisePolynomial represents a list of contiguous segments in a scalar independent variable (typically corresponding to time) with Polynomials defined at each segment. We call the output from evaluating the PiecewisePolynomial at the scalar independent variable "the output", and that output can be either a Eigen MatrixX&lt;T&gt; (if evaluated using <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>) or a scalar (if evaluated using scalar_value()).</p>
+<p>PiecewisePolynomial represents a list of contiguous segments in a scalar independent variable (typically corresponding to time) with Polynomials defined at each segment. We call the output from evaluating the PiecewisePolynomial at the scalar independent variable "the output", and that output can be either a Eigen MatrixX&lt;T&gt; (if evaluated using <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca2766204b86212e8ed2b91faa97775" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>) or a scalar (if evaluated using scalar_value()).</p>
 <p>An example of a piecewise polynomial is a function of m segments in time, where a different polynomial is defined for each segment. For a specific example, consider the absolute value function over the interval [-1, 1]. We can define a PiecewisePolynomial over this interval using breaks at t = { -1.0, 0.0, 1.0 }, and "samples" of abs(t).</p>
 <div class="fragment"><div class="line"><span class="comment">// Construct the PiecewisePolynomial.</span></div><div class="line"><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a> = { -1.0, 0.0, 1.0 };</div><div class="line">std::vector&lt;Eigen::MatrixXd&gt; samples(3);</div><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; static_cast&lt;int&gt;(<a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>.size()); ++i) {</div><div class="line">  samples[i].resize(1, 1);</div><div class="line">  samples[i](0, 0) = <a class="code" href="namespacedrake_1_1ad.html#acb7ba0716b6d1d6ee2ee41e0bcf1a134">std::abs</a>(<a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>[i]);</div><div class="line">}</div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> pp =</div><div class="line">     <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6ec39e8128c0da804f03d8fbd17fd843">PiecewisePolynomial&lt;double&gt;::FirstOrderHold</a>(<a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>, samples);</div><div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> row = 0, col = 0;</div><div class="line"></div><div class="line"><span class="comment">// Evaluate the PiecewisePolynomial at some values.</span></div><div class="line">std::cout &lt;&lt; pp.value(-.5)(row, col) &lt;&lt; std::endl;    <span class="comment">// Outputs 0.5.</span></div><div class="line">std::cout &lt;&lt; pp.value(0.0)(row, col) &lt;&lt; std::endl;    <span class="comment">// Outputs 0.0;</span></div><div class="line"></div><div class="line"><span class="comment">// Show how we can evaluate the first derivative (outputs -1.0).</span></div><div class="line">std::cout &lt;&lt; pp.derivative(1).value(-.5)(row, col) &lt;&lt; std::endl;</div></div><!-- fragment --><p>A note on terminology. For piecewise-polynomial interpolation, we use <code>breaks</code> to indicate the scalar (e.g. times) which form the boundary of each segment. We use <code>samples</code> to indicate the function value at the <code>breaks</code>, e.g. <code>p(breaks[i]) = samples[i]</code>. The term <code>knot</code> should be reserved for the "(x,y)" coordinate, here <code>knot[i] = (breaks[i], samples[i])</code>, though it is used inconsistently in the interpolation literature (sometimes for <code>breaks</code>, sometimes for <code>samples</code>), so we try to mostly avoid it here.</p>
 <p><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html" title="A scalar multi-variate piecewise polynomial.">PiecewisePolynomial</a> objects can be added, subtracted, and multiplied. They cannot be divided because Polynomials are not closed under division.</p>
-<dl class="section warning"><dt>Warning</dt><dd>PiecewisePolynomial silently clips input evaluations outside of the range defined by the breaks. So <code>pp.value(-2.0, row, col)</code> in the example above would evaluate to -1.0. See <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>PiecewisePolynomial silently clips input evaluations outside of the range defined by the breaks. So <code>pp.value(-2.0, row, col)</code> in the example above would evaluate to -1.0. See <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca2766204b86212e8ed2b91faa97775" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -199,10 +199,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a838cb1725eb9ba7896158fa9032ecdcc"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a838cb1725eb9ba7896158fa9032ecdcc">PiecewisePolynomial</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;constant_value)</td></tr>
 <tr class="memdesc:a838cb1725eb9ba7896158fa9032ecdcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single segment, constant value constructor over the interval [-∞, ∞].  <a href="#a838cb1725eb9ba7896158fa9032ecdcc">More...</a><br /></td></tr>
 <tr class="separator:a838cb1725eb9ba7896158fa9032ecdcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a646ed6ef900b960b978fcf9a4646700e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a646ed6ef900b960b978fcf9a4646700e">~PiecewisePolynomial</a> () override</td></tr>
-<tr class="separator:a646ed6ef900b960b978fcf9a4646700e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8743b4bccdaf5d24987b1f76403bbe41"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8743b4bccdaf5d24987b1f76403bbe41">Clone</a> () const override</td></tr>
-<tr class="separator:a8743b4bccdaf5d24987b1f76403bbe41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04aa32f958635709b5a538f99c092ba0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a04aa32f958635709b5a538f99c092ba0">~PiecewisePolynomial</a> () final</td></tr>
+<tr class="separator:a04aa32f958635709b5a538f99c092ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d7f5289922d84e6f35f96bb29ddd09c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6d7f5289922d84e6f35f96bb29ddd09c">derivative</a> (<a class="el" href="classint.html">int</a> derivative_order=1) const</td></tr>
 <tr class="memdesc:a6d7f5289922d84e6f35f96bb29ddd09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a PiecewisePolynomial where each segment is the specified derivative of the corresponding segment in <code>this</code>.  <a href="#a6d7f5289922d84e6f35f96bb29ddd09c">More...</a><br /></td></tr>
 <tr class="separator:a6d7f5289922d84e6f35f96bb29ddd09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,9 +216,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16274d0c316c76ded4b85111b38ece15"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a16274d0c316c76ded4b85111b38ece15">scalarValue</a> (const T &amp;t, Eigen::Index row=0, Eigen::Index col=0) const</td></tr>
 <tr class="memdesc:a16274d0c316c76ded4b85111b38ece15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the trajectory at the given time without returning the entire matrix.  <a href="#a16274d0c316c76ded4b85111b38ece15">More...</a><br /></td></tr>
 <tr class="separator:a16274d0c316c76ded4b85111b38ece15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19b632df0f98f9aaf224e534fac69ec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8">value</a> (const T &amp;t) const override</td></tr>
-<tr class="memdesc:a19b632df0f98f9aaf224e534fac69ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the PiecewisePolynomial at the given time t.  <a href="#a19b632df0f98f9aaf224e534fac69ec8">More...</a><br /></td></tr>
-<tr class="separator:a19b632df0f98f9aaf224e534fac69ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adca2766204b86212e8ed2b91faa97775"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca2766204b86212e8ed2b91faa97775">value</a> (const T &amp;t) const final</td></tr>
+<tr class="memdesc:adca2766204b86212e8ed2b91faa97775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the PiecewisePolynomial at the given time t.  <a href="#adca2766204b86212e8ed2b91faa97775">More...</a><br /></td></tr>
+<tr class="separator:adca2766204b86212e8ed2b91faa97775"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a069eb195b8a30965d09c68e4ab65f4f4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9c5cbf1ba95055937fdb8283769df797">PolynomialMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a069eb195b8a30965d09c68e4ab65f4f4">getPolynomialMatrix</a> (<a class="el" href="classint.html">int</a> segment_index) const</td></tr>
 <tr class="memdesc:a069eb195b8a30965d09c68e4ab65f4f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the matrix of Polynomials corresponding to the given segment index.  <a href="#a069eb195b8a30965d09c68e4ab65f4f4">More...</a><br /></td></tr>
 <tr class="separator:a069eb195b8a30965d09c68e4ab65f4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -230,14 +228,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa5a111a1944f16bb21873433d4b7b31d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa5a111a1944f16bb21873433d4b7b31d">getSegmentPolynomialDegree</a> (<a class="el" href="classint.html">int</a> segment_index, Eigen::Index row=0, Eigen::Index col=0) const</td></tr>
 <tr class="memdesc:aa5a111a1944f16bb21873433d4b7b31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the degree of the <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> with the given matrix row and column index that corresponds to the given segment index.  <a href="#aa5a111a1944f16bb21873433d4b7b31d">More...</a><br /></td></tr>
 <tr class="separator:aa5a111a1944f16bb21873433d4b7b31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aa1f1cfff6dcb352d5fbb15a80ee1a9"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9">rows</a> () const override</td></tr>
-<tr class="memdesc:a9aa1f1cfff6dcb352d5fbb15a80ee1a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the row count of the output matrices.  <a href="#a9aa1f1cfff6dcb352d5fbb15a80ee1a9">More...</a><br /></td></tr>
-<tr class="separator:a9aa1f1cfff6dcb352d5fbb15a80ee1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adca8eca2ee324f57170dedfb4b06160b"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b">cols</a> () const override</td></tr>
-<tr class="memdesc:adca8eca2ee324f57170dedfb4b06160b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the column count of the output matrices.  <a href="#adca8eca2ee324f57170dedfb4b06160b">More...</a><br /></td></tr>
-<tr class="separator:adca8eca2ee324f57170dedfb4b06160b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39001029f6f2e13a8890f233254c4709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a39001029f6f2e13a8890f233254c4709">Reshape</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9">rows</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b">cols</a>)</td></tr>
-<tr class="memdesc:a39001029f6f2e13a8890f233254c4709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reshapes the dimensions of the Eigen::MatrixX&lt;T&gt; returned by <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>, <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#af2e2fa698b2c37469f44381ec7ae3344" title="Evaluates the derivative of this at the given time t.">EvalDerivative()</a>, etc.  <a href="#a39001029f6f2e13a8890f233254c4709">More...</a><br /></td></tr>
+<tr class="memitem:abec7b1f5c2c6face018616992476881f"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#abec7b1f5c2c6face018616992476881f">rows</a> () const final</td></tr>
+<tr class="memdesc:abec7b1f5c2c6face018616992476881f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the row count of the output matrices.  <a href="#abec7b1f5c2c6face018616992476881f">More...</a><br /></td></tr>
+<tr class="separator:abec7b1f5c2c6face018616992476881f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3379a2754487a0ec8bf752912a41bf"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6f3379a2754487a0ec8bf752912a41bf">cols</a> () const final</td></tr>
+<tr class="memdesc:a6f3379a2754487a0ec8bf752912a41bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the column count of the output matrices.  <a href="#a6f3379a2754487a0ec8bf752912a41bf">More...</a><br /></td></tr>
+<tr class="separator:a6f3379a2754487a0ec8bf752912a41bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39001029f6f2e13a8890f233254c4709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a39001029f6f2e13a8890f233254c4709">Reshape</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#abec7b1f5c2c6face018616992476881f">rows</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6f3379a2754487a0ec8bf752912a41bf">cols</a>)</td></tr>
+<tr class="memdesc:a39001029f6f2e13a8890f233254c4709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reshapes the dimensions of the Eigen::MatrixX&lt;T&gt; returned by <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca2766204b86212e8ed2b91faa97775" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>, <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#af2e2fa698b2c37469f44381ec7ae3344" title="Evaluates the derivative of this at the given time t.">EvalDerivative()</a>, etc.  <a href="#a39001029f6f2e13a8890f233254c4709">More...</a><br /></td></tr>
 <tr class="separator:a39001029f6f2e13a8890f233254c4709"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59f4f35bd9afa91ca14283e7c865918f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f">Transpose</a> () const</td></tr>
 <tr class="memdesc:a59f4f35bd9afa91ca14283e7c865918f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html" title="A scalar multi-variate piecewise polynomial.">PiecewisePolynomial</a> for which value(t) == this.value(t).transpose().  <a href="#a59f4f35bd9afa91ca14283e7c865918f">More...</a><br /></td></tr>
@@ -325,7 +323,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0295b8466f7ead211653b8cddafd8815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Polynomial-based construction methods.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="polynomial_construction_methods"></a> Various methods for constructing a PiecewisePolynomial using vectors of matrices of polynomials, one for each output dimension. Unlike the coefficient-based methods, the number of polynomials must equal the number of segments, which will be one fewer than the number of breaks.</p>
-<p>The following shows how such a PiecewisePolynomial might be constructed and used: </p><div class="fragment"><div class="line"><span class="comment">// Construct the PiecewisePolynomial.</span></div><div class="line"><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a> = { -1.0, 0.0, 1.0 };</div><div class="line"><a class="code" href="namespacedrake.html#ab0a2621977171e1d2d5b64c55141b9b2">Polynomiald</a> t(<span class="stringliteral">&quot;t&quot;</span>);</div><div class="line">std::vector&lt;Polynomiald&gt; polynomials = { -(t*t), (t*t) };</div><div class="line"><span class="keyword">const</span> PiecewisePolynomial&lt;double&gt; pp(polynomials, <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>);</div><div class="line"></div><div class="line"><span class="comment">// Evaluate the PiecewisePolynomial at some values.</span></div><div class="line">std::cout &lt;&lt; pp.scalar_value(-1.0) &lt;&lt; std::endl;    <span class="comment">// Outputs -1.0</span></div><div class="line">std::cout &lt;&lt; pp.scalar_value(1.0) &lt;&lt; std::endl;     <span class="comment">// Outputs 1.0</span></div></div><!-- fragment --><p><a class="anchor" id="polynomial_warning"></a><b>WARNING:</b> For robust floating point arithmetic, the polynomial for a segment will be evaluated (using <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>) by first subtracting the break time from the evaluation time. In other words, when t lies in the half-open interval <code>[breaks[i], breaks[i+1])</code> then: </p><div class="fragment"><div class="line"><a class="code" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8">value</a>(t) == polynomials[i].eval(t - <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>[i])</div></div><!-- fragment --><p> meaning that constructing the polynomial like: </p><div class="fragment"><div class="line"><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a> = { 0.0, 1.0, 2.0 };</div><div class="line"><a class="code" href="namespacedrake.html#ab0a2621977171e1d2d5b64c55141b9b2">Polynomiald</a> t(<span class="stringliteral">&quot;t&quot;</span>);</div><div class="line">std::vector&lt;Polynomiald&gt; polynomials = { (t*t), (t*t) };</div><div class="line"><span class="keyword">const</span> PiecewisePolynomial&lt;double&gt; pp(polynomials, <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>);</div></div><!-- fragment --><p> would give the following result: </p><div class="fragment"><div class="line"><span class="comment">// Evaluate the PiecewisePolynomial on both sides of a break.</span></div><div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> row = 0, col = 0;</div><div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> eps = 0.5 * std::numeric_limits&lt;double&gt;::epsilon();</div><div class="line">std::cout &lt;&lt; pp.value(1.0-eps)(row, col) &lt;&lt; std::endl;    <span class="comment">// Outputs 1.0</span></div><div class="line">std::cout &lt;&lt; pp.value(1.0+eps)(row, col) &lt;&lt; std::endl;    <span class="comment">// Outputs 1e-32</span></div></div><!-- fragment --><p> because the second polynomial will be evaluated at 1.0+eps minus the break time for that polynomial (1.0), i.e., t=eps. The intended result for the above example can be obtained by shifting the piecewise polynomial like so: </p><div class="fragment"><div class="line"><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a> = { 0.0, 1.0, 2.0 };</div><div class="line"><a class="code" href="namespacedrake.html#ab0a2621977171e1d2d5b64c55141b9b2">Polynomiald</a> t(<span class="stringliteral">&quot;t&quot;</span>);</div><div class="line">std::vector&lt;Polynomiald&gt; polynomials = { (t*t),</div><div class="line">    ((t+<a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>[1])*(t+<a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>[1])) };</div><div class="line"><span class="keyword">const</span> PiecewisePolynomial&lt;double&gt; pp(polynomials, <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>);</div><div class="line"></div><div class="line"><span class="comment">// Evaluate the PiecewisePolynomial on both sides of a break.</span></div><div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> eps = 0.5 * std::numeric_limits&lt;double&gt;::epsilon();</div><div class="line">std::cout &lt;&lt; pp.value(1.0-eps)(row, col) &lt;&lt; std::endl;    <span class="comment">// Outputs 1.0</span></div><div class="line">std::cout &lt;&lt; pp.value(1.0+eps)(row, col) &lt;&lt; std::endl;    <span class="comment">// Outputs 1.0</span></div></div><!-- fragment --> </div></td></tr>
+<p>The following shows how such a PiecewisePolynomial might be constructed and used: </p><div class="fragment"><div class="line"><span class="comment">// Construct the PiecewisePolynomial.</span></div><div class="line"><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a> = { -1.0, 0.0, 1.0 };</div><div class="line"><a class="code" href="namespacedrake.html#ab0a2621977171e1d2d5b64c55141b9b2">Polynomiald</a> t(<span class="stringliteral">&quot;t&quot;</span>);</div><div class="line">std::vector&lt;Polynomiald&gt; polynomials = { -(t*t), (t*t) };</div><div class="line"><span class="keyword">const</span> PiecewisePolynomial&lt;double&gt; pp(polynomials, <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>);</div><div class="line"></div><div class="line"><span class="comment">// Evaluate the PiecewisePolynomial at some values.</span></div><div class="line">std::cout &lt;&lt; pp.scalar_value(-1.0) &lt;&lt; std::endl;    <span class="comment">// Outputs -1.0</span></div><div class="line">std::cout &lt;&lt; pp.scalar_value(1.0) &lt;&lt; std::endl;     <span class="comment">// Outputs 1.0</span></div></div><!-- fragment --><p><a class="anchor" id="polynomial_warning"></a><b>WARNING:</b> For robust floating point arithmetic, the polynomial for a segment will be evaluated (using <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca2766204b86212e8ed2b91faa97775" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>) by first subtracting the break time from the evaluation time. In other words, when t lies in the half-open interval <code>[breaks[i], breaks[i+1])</code> then: </p><div class="fragment"><div class="line"><a class="code" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca2766204b86212e8ed2b91faa97775">value</a>(t) == polynomials[i].eval(t - <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>[i])</div></div><!-- fragment --><p> meaning that constructing the polynomial like: </p><div class="fragment"><div class="line"><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a> = { 0.0, 1.0, 2.0 };</div><div class="line"><a class="code" href="namespacedrake.html#ab0a2621977171e1d2d5b64c55141b9b2">Polynomiald</a> t(<span class="stringliteral">&quot;t&quot;</span>);</div><div class="line">std::vector&lt;Polynomiald&gt; polynomials = { (t*t), (t*t) };</div><div class="line"><span class="keyword">const</span> PiecewisePolynomial&lt;double&gt; pp(polynomials, <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>);</div></div><!-- fragment --><p> would give the following result: </p><div class="fragment"><div class="line"><span class="comment">// Evaluate the PiecewisePolynomial on both sides of a break.</span></div><div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span> row = 0, col = 0;</div><div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> eps = 0.5 * std::numeric_limits&lt;double&gt;::epsilon();</div><div class="line">std::cout &lt;&lt; pp.value(1.0-eps)(row, col) &lt;&lt; std::endl;    <span class="comment">// Outputs 1.0</span></div><div class="line">std::cout &lt;&lt; pp.value(1.0+eps)(row, col) &lt;&lt; std::endl;    <span class="comment">// Outputs 1e-32</span></div></div><!-- fragment --><p> because the second polynomial will be evaluated at 1.0+eps minus the break time for that polynomial (1.0), i.e., t=eps. The intended result for the above example can be obtained by shifting the piecewise polynomial like so: </p><div class="fragment"><div class="line"><span class="keyword">const</span> std::vector&lt;double&gt; <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a> = { 0.0, 1.0, 2.0 };</div><div class="line"><a class="code" href="namespacedrake.html#ab0a2621977171e1d2d5b64c55141b9b2">Polynomiald</a> t(<span class="stringliteral">&quot;t&quot;</span>);</div><div class="line">std::vector&lt;Polynomiald&gt; polynomials = { (t*t),</div><div class="line">    ((t+<a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>[1])*(t+<a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>[1])) };</div><div class="line"><span class="keyword">const</span> PiecewisePolynomial&lt;double&gt; pp(polynomials, <a class="code" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>);</div><div class="line"></div><div class="line"><span class="comment">// Evaluate the PiecewisePolynomial on both sides of a break.</span></div><div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> eps = 0.5 * std::numeric_limits&lt;double&gt;::epsilon();</div><div class="line">std::cout &lt;&lt; pp.value(1.0-eps)(row, col) &lt;&lt; std::endl;    <span class="comment">// Outputs 1.0</span></div><div class="line">std::cout &lt;&lt; pp.value(1.0+eps)(row, col) &lt;&lt; std::endl;    <span class="comment">// Outputs 1.0</span></div></div><!-- fragment --> </div></td></tr>
 <tr class="memitem:a9145f61319cb888cb71fc58cebc8fe38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9145f61319cb888cb71fc58cebc8fe38">PiecewisePolynomial</a> (const std::vector&lt; <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9c5cbf1ba95055937fdb8283769df797">PolynomialMatrix</a> &gt; &amp;polynomials_matrix, const std::vector&lt; T &gt; &amp;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>)</td></tr>
 <tr class="memdesc:a9145f61319cb888cb71fc58cebc8fe38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a PiecewisePolynomial using matrix-output Polynomials defined over each segment.  <a href="#a9145f61319cb888cb71fc58cebc8fe38">More...</a><br /></td></tr>
 <tr class="separator:a9145f61319cb888cb71fc58cebc8fe38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -343,10 +341,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4c1604e170d921c073e4fba715622507 inherit pub_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af88c3d4b35f53401069500f721083309 inherit pub_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309">duration</a> (<a class="el" href="classint.html">int</a> segment_number) const</td></tr>
 <tr class="separator:af88c3d4b35f53401069500f721083309 inherit pub_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae09cf8e8ad481f69f3cc1969ef491d60 inherit pub_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60">start_time</a> () const override</td></tr>
-<tr class="separator:ae09cf8e8ad481f69f3cc1969ef491d60 inherit pub_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a641bfb18296d6976a000cf31c213dfdf inherit pub_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a641bfb18296d6976a000cf31c213dfdf">end_time</a> () const override</td></tr>
-<tr class="separator:a641bfb18296d6976a000cf31c213dfdf inherit pub_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a854d7d9baf86ffadcceca2620d4b347d inherit pub_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a854d7d9baf86ffadcceca2620d4b347d">is_time_in_range</a> (const T &amp;t) const</td></tr>
 <tr class="memdesc:a854d7d9baf86ffadcceca2620d4b347d inherit pub_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff <code>t &gt;= getStartTime() &amp;&amp; t &lt;= getEndTime()</code>.  <a href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a854d7d9baf86ffadcceca2620d4b347d">More...</a><br /></td></tr>
 <tr class="separator:a854d7d9baf86ffadcceca2620d4b347d inherit pub_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -359,11 +353,13 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1trajectories_1_1_trajectory')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory&lt; T &gt;</a></td></tr>
 <tr class="memitem:ab987e6d84bde821d7e3c212c48b99ce7 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#ab987e6d84bde821d7e3c212c48b99ce7">~Trajectory</a> ()</td></tr>
 <tr class="separator:ab987e6d84bde821d7e3c212c48b99ce7 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a571a2e3240913dc18cdbcbc251579d inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1a571a2e3240913dc18cdbcbc251579d">Clone</a> () const</td></tr>
+<tr class="separator:a1a571a2e3240913dc18cdbcbc251579d inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7607cc5c56514557ed9441479ae70e71 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71">vector_values</a> (const std::vector&lt; T &gt; &amp;t) const</td></tr>
-<tr class="memdesc:a7607cc5c56514557ed9441479ae70e71 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0e99f338d336c4da23d6d773f4463a52">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71">More...</a><br /></td></tr>
+<tr class="memdesc:a7607cc5c56514557ed9441479ae70e71 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1f3e7e7cb50900a1f3e9ec7d845ff517">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71">More...</a><br /></td></tr>
 <tr class="separator:a7607cc5c56514557ed9441479ae70e71 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25c4e76b745f136bea7dc723d62650c0 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a25c4e76b745f136bea7dc723d62650c0">vector_values</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;t) const</td></tr>
-<tr class="memdesc:a25c4e76b745f136bea7dc723d62650c0 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0e99f338d336c4da23d6d773f4463a52">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a25c4e76b745f136bea7dc723d62650c0">More...</a><br /></td></tr>
+<tr class="memdesc:a25c4e76b745f136bea7dc723d62650c0 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1f3e7e7cb50900a1f3e9ec7d845ff517">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a25c4e76b745f136bea7dc723d62650c0">More...</a><br /></td></tr>
 <tr class="separator:a25c4e76b745f136bea7dc723d62650c0 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9507f1cc6b538dc632d20e3d681bbaba inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba">has_derivative</a> () const</td></tr>
 <tr class="memdesc:a9507f1cc6b538dc632d20e3d681bbaba inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a> provides and implementation for <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#af2e2fa698b2c37469f44381ec7ae3344" title="Evaluates the derivative of this at the given time t.">EvalDerivative()</a> and <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2" title="Takes the derivative of this Trajectory.">MakeDerivative()</a>.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba">More...</a><br /></td></tr>
@@ -374,6 +370,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0a945567d9505ef681194f053ef5a1c2 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2">MakeDerivative</a> (<a class="el" href="classint.html">int</a> derivative_order=1) const</td></tr>
 <tr class="memdesc:a0a945567d9505ef681194f053ef5a1c2 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes the derivative of this <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a>.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2">More...</a><br /></td></tr>
 <tr class="separator:a0a945567d9505ef681194f053ef5a1c2 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044e156bc756977905efc3f2a6a5c282 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a044e156bc756977905efc3f2a6a5c282">start_time</a> () const</td></tr>
+<tr class="separator:a044e156bc756977905efc3f2a6a5c282 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3160ec1cbd29e1f171d05c5b6cc11c5 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#ac3160ec1cbd29e1f171d05c5b6cc11c5">end_time</a> () const</td></tr>
+<tr class="separator:ac3160ec1cbd29e1f171d05c5b6cc11c5 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -444,6 +444,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a205b86a6552919d515ba544c185c04c3 inherit pro_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a205b86a6552919d515ba544c185c04c3">PiecewiseTrajectory</a> (const std::vector&lt; T &gt; &amp;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>)</td></tr>
 <tr class="memdesc:a205b86a6552919d515ba544c185c04c3 inherit pro_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>breaks</code> increments must be greater or equal to kEpsilonTime.  <a href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a205b86a6552919d515ba544c185c04c3">More...</a><br /></td></tr>
 <tr class="separator:a205b86a6552919d515ba544c185c04c3 inherit pro_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8973617cd17ac27655d3fd7d9d970d56 inherit pro_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a8973617cd17ac27655d3fd7d9d970d56">do_start_time</a> () const override</td></tr>
+<tr class="separator:a8973617cd17ac27655d3fd7d9d970d56 inherit pro_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc66a15124c3d9cfce830865935d3013 inherit pro_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#afc66a15124c3d9cfce830865935d3013">do_end_time</a> () const override</td></tr>
+<tr class="separator:afc66a15124c3d9cfce830865935d3013 inherit pro_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1bc48c32072f8a84aa295528a66440 inherit pro_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0f1bc48c32072f8a84aa295528a66440">SegmentTimesEqual</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html">PiecewiseTrajectory</a> &amp;b, <a class="el" href="classdouble.html">double</a> tol=<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401">kEpsilonTime</a>) const</td></tr>
 <tr class="separator:a0f1bc48c32072f8a84aa295528a66440 inherit pro_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1a71ddfb9ab85211d522ad0e948c426 inherit pro_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a> () const</td></tr>
@@ -656,8 +660,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a646ed6ef900b960b978fcf9a4646700e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a646ed6ef900b960b978fcf9a4646700e">&#9670;&nbsp;</a></span>~PiecewisePolynomial()</h2>
+<a id="a04aa32f958635709b5a538f99c092ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04aa32f958635709b5a538f99c092ba0">&#9670;&nbsp;</a></span>~PiecewisePolynomial()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -674,7 +678,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -748,7 +752,7 @@ Additional Inherited Members</h2></td></tr>
 <dd>
 <code>time</code> &gt; <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4c1604e170d921c073e4fba715622507">end_time()</a> </dd>
 <dd>
-<code>sample</code> and <code>sample_dot</code> must have size <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9" title="Returns the row count of the output matrices.">rows()</a> x <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b" title="Returns the column count of the output matrices.">cols()</a>. </dd></dl>
+<code>sample</code> and <code>sample_dot</code> must have size <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#abec7b1f5c2c6face018616992476881f" title="Returns the row count of the output matrices.">rows()</a> x <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6f3379a2754487a0ec8bf752912a41bf" title="Returns the column count of the output matrices.">cols()</a>. </dd></dl>
 
 </div>
 </div>
@@ -825,36 +829,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a8743b4bccdaf5d24987b1f76403bbe41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8743b4bccdaf5d24987b1f76403bbe41">&#9670;&nbsp;</a></span>Clone()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt;T&gt; &gt; Clone </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>A deep copy of this <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a>. </dd></dl>
-
-<p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a5921e7a9f7532c682fd111d829f0258e">Trajectory&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="adca8eca2ee324f57170dedfb4b06160b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adca8eca2ee324f57170dedfb4b06160b">&#9670;&nbsp;</a></span>cols()</h2>
+<a id="a6f3379a2754487a0ec8bf752912a41bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f3379a2754487a0ec8bf752912a41bf">&#9670;&nbsp;</a></span>cols()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -871,7 +847,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -884,7 +860,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0e99f338d336c4da23d6d773f4463a52">Trajectory&lt; T &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1f3e7e7cb50900a1f3e9ec7d845ff517">Trajectory&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -914,7 +890,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if trajectories' dimensions do not match each other (either <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9" title="Returns the row count of the output matrices.">rows()</a> or <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b" title="Returns the column count of the output matrices.">cols()</a> does not match between this and <code>other</code>). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if trajectories' dimensions do not match each other (either <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#abec7b1f5c2c6face018616992476881f" title="Returns the row count of the output matrices.">rows()</a> or <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6f3379a2754487a0ec8bf752912a41bf" title="Returns the column count of the output matrices.">cols()</a> does not match between this and <code>other</code>). </td></tr>
     <tr><td class="paramname">std::exception</td><td>if <code>this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4c1604e170d921c073e4fba715622507">end_time()</a></code> and <code>other-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a1019f41dcfe440c98c91029f4b0b0bc0">start_time()</a></code> are not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory&lt;T&gt;::kEpsilonTime</a> from each other. </td></tr>
   </table>
   </dd>
@@ -1977,8 +1953,8 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 
 </div>
 </div>
-<a id="a0295b8466f7ead211653b8cddafd8815"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0295b8466f7ead211653b8cddafd8815">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a97030415f23deb1b1244d33b95c1b0fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97030415f23deb1b1244d33b95c1b0fb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1989,7 +1965,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2003,8 +1979,8 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 
 </div>
 </div>
-<a id="a97030415f23deb1b1244d33b95c1b0fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97030415f23deb1b1244d33b95c1b0fb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a0295b8466f7ead211653b8cddafd8815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0295b8466f7ead211653b8cddafd8815">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2015,7 +1991,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2075,7 +2051,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
       </table>
 </div><div class="memdoc">
 
-<p>Reshapes the dimensions of the Eigen::MatrixX&lt;T&gt; returned by <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>, <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#af2e2fa698b2c37469f44381ec7ae3344" title="Evaluates the derivative of this at the given time t.">EvalDerivative()</a>, etc. </p>
+<p>Reshapes the dimensions of the Eigen::MatrixX&lt;T&gt; returned by <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca2766204b86212e8ed2b91faa97775" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>, <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#af2e2fa698b2c37469f44381ec7ae3344" title="Evaluates the derivative of this at the given time t.">EvalDerivative()</a>, etc. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code>rows</code> x <code>cols</code> must equal this.rows() * this.cols(). </dd></dl>
 <dl class="section see"><dt>See also</dt><dd>Eigen::PlainObjectBase::resize(). </dd></dl>
 
@@ -2101,8 +2077,8 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 
 </div>
 </div>
-<a id="a9aa1f1cfff6dcb352d5fbb15a80ee1a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aa1f1cfff6dcb352d5fbb15a80ee1a9">&#9670;&nbsp;</a></span>rows()</h2>
+<a id="abec7b1f5c2c6face018616992476881f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec7b1f5c2c6face018616992476881f">&#9670;&nbsp;</a></span>rows()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2119,7 +2095,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2132,7 +2108,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a857db071d9bf847d026ba7046aa9744e">Trajectory&lt; T &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#acc63489a1a8b80a033e43e7165c45e0d">Trajectory&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -2169,7 +2145,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 </div><div class="memdoc">
 
 <p>Evaluates the trajectory at the given time without returning the entire matrix. </p>
-<p>Equivalent to value(t)(row, col). </p><dl class="section warning"><dt>Warning</dt><dd>See warnings in <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>. </dd></dl>
+<p>Equivalent to value(t)(row, col). </p><dl class="section warning"><dt>Warning</dt><dd>See warnings in <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca2766204b86212e8ed2b91faa97775" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>. </dd></dl>
 
 </div>
 </div>
@@ -2368,8 +2344,8 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 
 </div>
 </div>
-<a id="a19b632df0f98f9aaf224e534fac69ec8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19b632df0f98f9aaf224e534fac69ec8">&#9670;&nbsp;</a></span>value()</h2>
+<a id="adca2766204b86212e8ed2b91faa97775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adca2766204b86212e8ed2b91faa97775">&#9670;&nbsp;</a></span>value()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2387,7 +2363,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2405,7 +2381,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 <dd>
 See warning in the <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#polynomial_warning">constructor overview</a> above. </dd></dl>
 
-<p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a50929a6273d23c3db2a0ba8d431fa9d9">Trajectory&lt; T &gt;</a>.</p>
+<p>Reimplemented from <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a274fb2a3734486e697904177dc90fe20">Trajectory&lt; T &gt;</a>.</p>
 
 </div>
 </div>

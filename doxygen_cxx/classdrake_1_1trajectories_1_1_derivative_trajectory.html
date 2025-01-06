@@ -171,7 +171,7 @@ class drake::trajectories::DerivativeTrajectory&lt; T &gt;</h3>
 
 <p><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a> objects provide derivatives by implementing <code>DoEvalDerivative</code> <em>and</em> <code>DoMakeDerivative</code>. </p>
 <p><code>DoEvalDerivative</code> evaluates the derivative value at a point in time. <code>DoMakeDerivative</code> returns a new <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a> object which represents the derivative.</p>
-<p>In some cases, it is easy to implement <code>DoEvalDerivative</code>, but difficult or inefficient to implement <code>DoMakeDerivative</code> natively. And it may be just as efficient to use <code>DoEvalDerivative</code> even in repeated evaluations of the derivative. The DerivativeTrajectory class helps with this case &ndash; given a <code>nominal</code> <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a>, it provides a <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a> interface that calls <code>nominal.EvalDerivative()</code> to implement <code><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a50929a6273d23c3db2a0ba8d431fa9d9" title="Evaluates the trajectory at the given time t.">Trajectory::value()</a></code>.</p>
+<p>In some cases, it is easy to implement <code>DoEvalDerivative</code>, but difficult or inefficient to implement <code>DoMakeDerivative</code> natively. And it may be just as efficient to use <code>DoEvalDerivative</code> even in repeated evaluations of the derivative. The DerivativeTrajectory class helps with this case &ndash; given a <code>nominal</code> <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a>, it provides a <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a> interface that calls <code>nominal.EvalDerivative()</code> to implement <code><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a274fb2a3734486e697904177dc90fe20" title="Evaluates the trajectory at the given time t.">Trajectory::value()</a></code>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -188,19 +188,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a36a49cd33376d5faa9480d3bdfdd4459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44dfb5b341956f09dd1c10e63b3c0d68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#a44dfb5b341956f09dd1c10e63b3c0d68">~DerivativeTrajectory</a> () final</td></tr>
 <tr class="separator:a44dfb5b341956f09dd1c10e63b3c0d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef16c3e234e70a22d89678041a6bda57"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#aef16c3e234e70a22d89678041a6bda57">Clone</a> () const final</td></tr>
-<tr class="separator:aef16c3e234e70a22d89678041a6bda57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adca2766204b86212e8ed2b91faa97775"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#adca2766204b86212e8ed2b91faa97775">value</a> (const T &amp;t) const final</td></tr>
-<tr class="memdesc:adca2766204b86212e8ed2b91faa97775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the trajectory at the given time <code>t</code>.  <a href="#adca2766204b86212e8ed2b91faa97775">More...</a><br /></td></tr>
-<tr class="separator:adca2766204b86212e8ed2b91faa97775"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abec7b1f5c2c6face018616992476881f"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#abec7b1f5c2c6face018616992476881f">rows</a> () const final</td></tr>
-<tr class="separator:abec7b1f5c2c6face018616992476881f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f3379a2754487a0ec8bf752912a41bf"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#a6f3379a2754487a0ec8bf752912a41bf">cols</a> () const final</td></tr>
-<tr class="separator:a6f3379a2754487a0ec8bf752912a41bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67132081ac654cacdf3adefd7e95a2f7"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#a67132081ac654cacdf3adefd7e95a2f7">start_time</a> () const final</td></tr>
-<tr class="separator:a67132081ac654cacdf3adefd7e95a2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab191f8ee68c549c494a6d49b0c381944"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#ab191f8ee68c549c494a6d49b0c381944">end_time</a> () const final</td></tr>
-<tr class="separator:ab191f8ee68c549c494a6d49b0c381944"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a6179321a607612fc5869c1b869bd0b4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#a6179321a607612fc5869c1b869bd0b4d">DerivativeTrajectory</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html">DerivativeTrajectory</a> &amp;)=default</td></tr>
 <tr class="separator:a6179321a607612fc5869c1b869bd0b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,11 +200,16 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1trajectories_1_1_trajectory')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory&lt; T &gt;</a></td></tr>
 <tr class="memitem:ab987e6d84bde821d7e3c212c48b99ce7 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#ab987e6d84bde821d7e3c212c48b99ce7">~Trajectory</a> ()</td></tr>
 <tr class="separator:ab987e6d84bde821d7e3c212c48b99ce7 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a571a2e3240913dc18cdbcbc251579d inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1a571a2e3240913dc18cdbcbc251579d">Clone</a> () const</td></tr>
+<tr class="separator:a1a571a2e3240913dc18cdbcbc251579d inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a274fb2a3734486e697904177dc90fe20 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a274fb2a3734486e697904177dc90fe20">value</a> (const T &amp;t) const</td></tr>
+<tr class="memdesc:a274fb2a3734486e697904177dc90fe20 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the trajectory at the given time <code>t</code>.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a274fb2a3734486e697904177dc90fe20">More...</a><br /></td></tr>
+<tr class="separator:a274fb2a3734486e697904177dc90fe20 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7607cc5c56514557ed9441479ae70e71 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71">vector_values</a> (const std::vector&lt; T &gt; &amp;t) const</td></tr>
-<tr class="memdesc:a7607cc5c56514557ed9441479ae70e71 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0e99f338d336c4da23d6d773f4463a52">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71">More...</a><br /></td></tr>
+<tr class="memdesc:a7607cc5c56514557ed9441479ae70e71 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1f3e7e7cb50900a1f3e9ec7d845ff517">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71">More...</a><br /></td></tr>
 <tr class="separator:a7607cc5c56514557ed9441479ae70e71 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25c4e76b745f136bea7dc723d62650c0 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a25c4e76b745f136bea7dc723d62650c0">vector_values</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;t) const</td></tr>
-<tr class="memdesc:a25c4e76b745f136bea7dc723d62650c0 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0e99f338d336c4da23d6d773f4463a52">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a25c4e76b745f136bea7dc723d62650c0">More...</a><br /></td></tr>
+<tr class="memdesc:a25c4e76b745f136bea7dc723d62650c0 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1f3e7e7cb50900a1f3e9ec7d845ff517">cols()</a>==1, then evaluates the trajectory at each time <code>t</code>, and returns the results as a Matrix with the ith column corresponding to the ith time.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a25c4e76b745f136bea7dc723d62650c0">More...</a><br /></td></tr>
 <tr class="separator:a25c4e76b745f136bea7dc723d62650c0 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9507f1cc6b538dc632d20e3d681bbaba inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba">has_derivative</a> () const</td></tr>
 <tr class="memdesc:a9507f1cc6b538dc632d20e3d681bbaba inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a> provides and implementation for <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#af2e2fa698b2c37469f44381ec7ae3344" title="Evaluates the derivative of this at the given time t.">EvalDerivative()</a> and <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2" title="Takes the derivative of this Trajectory.">MakeDerivative()</a>.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba">More...</a><br /></td></tr>
@@ -228,6 +220,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0a945567d9505ef681194f053ef5a1c2 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2">MakeDerivative</a> (<a class="el" href="classint.html">int</a> derivative_order=1) const</td></tr>
 <tr class="memdesc:a0a945567d9505ef681194f053ef5a1c2 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes the derivative of this <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a>.  <a href="classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2">More...</a><br /></td></tr>
 <tr class="separator:a0a945567d9505ef681194f053ef5a1c2 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc63489a1a8b80a033e43e7165c45e0d inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#acc63489a1a8b80a033e43e7165c45e0d">rows</a> () const</td></tr>
+<tr class="separator:acc63489a1a8b80a033e43e7165c45e0d inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f3e7e7cb50900a1f3e9ec7d845ff517 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1f3e7e7cb50900a1f3e9ec7d845ff517">cols</a> () const</td></tr>
+<tr class="separator:a1f3e7e7cb50900a1f3e9ec7d845ff517 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044e156bc756977905efc3f2a6a5c282 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a044e156bc756977905efc3f2a6a5c282">start_time</a> () const</td></tr>
+<tr class="separator:a044e156bc756977905efc3f2a6a5c282 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3160ec1cbd29e1f171d05c5b6cc11c5 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#ac3160ec1cbd29e1f171d05c5b6cc11c5">end_time</a> () const</td></tr>
+<tr class="separator:ac3160ec1cbd29e1f171d05c5b6cc11c5 inherit pub_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -331,7 +331,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a <a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html" title="Trajectory objects provide derivatives by implementing DoEvalDerivative and DoMakeDerivative.">DerivativeTrajectory</a> representing the <code>derivative_order</code> derivatives of <code>nominal</code>. </p>
-<p>This constructor makes a <a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#aef16c3e234e70a22d89678041a6bda57">Clone()</a> of <code>nominal</code> and does not hold on to the reference.</p>
+<p>This constructor makes a <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1a571a2e3240913dc18cdbcbc251579d">Clone()</a> of <code>nominal</code> and does not hold on to the reference.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>!nominal.<a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba" title="Returns true iff the Trajectory provides and implementation for EvalDerivative() and MakeDerivative()...">has_derivative()</a></code>. </td></tr>
@@ -368,117 +368,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aef16c3e234e70a22d89678041a6bda57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef16c3e234e70a22d89678041a6bda57">&#9670;&nbsp;</a></span>Clone()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt;T&gt; &gt; Clone </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>A deep copy of this <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html" title="A Trajectory represents a time-varying matrix, indexed by a single scalar time.">Trajectory</a>. </dd></dl>
-
-<p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a5921e7a9f7532c682fd111d829f0258e">Trajectory&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a6f3379a2754487a0ec8bf752912a41bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f3379a2754487a0ec8bf752912a41bf">&#9670;&nbsp;</a></span>cols()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::Index cols </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The number of columns in the matrix returned by <a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#adca2766204b86212e8ed2b91faa97775" title="Evaluates the trajectory at the given time t.">value()</a>. </dd></dl>
-
-<p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0e99f338d336c4da23d6d773f4463a52">Trajectory&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="ab191f8ee68c549c494a6d49b0c381944"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab191f8ee68c549c494a6d49b0c381944">&#9670;&nbsp;</a></span>end_time()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T end_time </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1b212bc051048c39dc23d9437d7cd188">Trajectory&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="aa5d99be5008ebc6e7d004d54cf0a713a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5d99be5008ebc6e7d004d54cf0a713a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html">DerivativeTrajectory</a>&amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html">DerivativeTrajectory</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a3cb5eb6604c6f975e8505b4c87b96660"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cb5eb6604c6f975e8505b4c87b96660">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb5eb6604c6f975e8505b4c87b96660">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -503,8 +394,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="abec7b1f5c2c6face018616992476881f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abec7b1f5c2c6face018616992476881f">&#9670;&nbsp;</a></span>rows()</h2>
+<a id="aa5d99be5008ebc6e7d004d54cf0a713a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5d99be5008ebc6e7d004d54cf0a713a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,85 +404,19 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::Index rows </td>
+          <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html">DerivativeTrajectory</a>&amp; operator= </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html">DerivativeTrajectory</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The number of rows in the matrix returned by <a class="el" href="classdrake_1_1trajectories_1_1_derivative_trajectory.html#adca2766204b86212e8ed2b91faa97775" title="Evaluates the trajectory at the given time t.">value()</a>. </dd></dl>
-
-<p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a857db071d9bf847d026ba7046aa9744e">Trajectory&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a67132081ac654cacdf3adefd7e95a2f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67132081ac654cacdf3adefd7e95a2f7">&#9670;&nbsp;</a></span>start_time()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T start_time </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a0a8606a2bfd8a6ecade8bf4f95fb40c5">Trajectory&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="adca2766204b86212e8ed2b91faa97775"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adca2766204b86212e8ed2b91faa97775">&#9670;&nbsp;</a></span>value()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;T&gt; value </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>t</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Evaluates the trajectory at the given time <code>t</code>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">t</td><td>The time at which to evaluate the trajectory. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The matrix of evaluated values. </dd></dl>
-
-<p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a50929a6273d23c3db2a0ba8d431fa9d9">Trajectory&lt; T &gt;</a>.</p>
 
 </div>
 </div>
