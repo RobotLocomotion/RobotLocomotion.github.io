@@ -26,6 +26,7 @@ var hierarchy =
     [ "AugmentedLagrangianNonsmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html", null ],
     [ "AugmentedLagrangianSmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html", null ],
     [ "AutoDiff", "classdrake_1_1ad_1_1_auto_diff.html", null ],
+    [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html", null ],
     [ "BarycentricMesh< T >", "classdrake_1_1math_1_1_barycentric_mesh.html", null ],
     [ "BasisElementGradedReverseLexOrder< VariableOrder, BasisElement >", "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html", null ],
     [ "BeamModelParamsIndices", "structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html", null ],
@@ -947,9 +948,7 @@ var hierarchy =
             [ "ContactResultsToLcmSystem< T >", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", null ],
             [ "ExternallyAppliedSpatialForceMultiplexer< T >", "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html", null ],
             [ "MultibodyTreeSystem< T >", null, [
-              [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", [
-                [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html", null ]
-              ] ],
+              [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ],
               [ "MultibodyPlant< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
             ] ],
             [ "ContactVisualizer< T >", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html", null ],

@@ -2029,10 +2029,12 @@ provide feedforward actuation, both for the MultibodyPlant as a whole
 (see get_actuation_input_port()) and for each individual
 model_instances “model instance” in the MultibodyPlant (see
 get_actuation_input_port(ModelInstanceIndex)const
-“get_actuation_input_port(ModelInstanceIndex)”). Any actuation input
-ports not connected are assumed to be zero. Actuation values from the
-full MultibodyPlant model port (get_actuation_input_port()) and from
-the per model-instance ports (
+“get_actuation_input_port(ModelInstanceIndex)”). - Actuation inputs
+and actuation effort limits are taken to be in joint coordinates (they
+are not affected by the actuator gear ratio). - Any actuation input
+ports not connected are assumed to be zero. - Actuation values from
+the full MultibodyPlant model port (get_actuation_input_port()) and
+from the per model-instance ports (
 get_actuation_input_port(ModelInstanceIndex)const
 “get_actuation_input_port(ModelInstanceIndex)”) are summed up.</p>
 <div class="admonition note">
@@ -2416,6 +2418,11 @@ declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
 welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <em>any</em> collision filters on deformable bodies.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Subclassing MultibodyPlant is deprecated; it will be marked
+<code class="docutils literal notranslate"><span class="pre">final</span></code> or or after 2025-05-01.</p>
+</div>
 <p><a href="#id25"><span class="problematic" id="id26">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
@@ -7774,10 +7781,12 @@ provide feedforward actuation, both for the MultibodyPlant as a whole
 (see get_actuation_input_port()) and for each individual
 model_instances “model instance” in the MultibodyPlant (see
 get_actuation_input_port(ModelInstanceIndex)const
-“get_actuation_input_port(ModelInstanceIndex)”). Any actuation input
-ports not connected are assumed to be zero. Actuation values from the
-full MultibodyPlant model port (get_actuation_input_port()) and from
-the per model-instance ports (
+“get_actuation_input_port(ModelInstanceIndex)”). - Actuation inputs
+and actuation effort limits are taken to be in joint coordinates (they
+are not affected by the actuator gear ratio). - Any actuation input
+ports not connected are assumed to be zero. - Actuation values from
+the full MultibodyPlant model port (get_actuation_input_port()) and
+from the per model-instance ports (
 get_actuation_input_port(ModelInstanceIndex)const
 “get_actuation_input_port(ModelInstanceIndex)”) are summed up.</p>
 <div class="admonition note">
@@ -8161,6 +8170,11 @@ declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
 welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <em>any</em> collision filters on deformable bodies.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Subclassing MultibodyPlant is deprecated; it will be marked
+<code class="docutils literal notranslate"><span class="pre">final</span></code> or or after 2025-05-01.</p>
+</div>
 <p><a href="#id59"><span class="problematic" id="id60">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
@@ -13470,10 +13484,12 @@ provide feedforward actuation, both for the MultibodyPlant as a whole
 (see get_actuation_input_port()) and for each individual
 model_instances “model instance” in the MultibodyPlant (see
 get_actuation_input_port(ModelInstanceIndex)const
-“get_actuation_input_port(ModelInstanceIndex)”). Any actuation input
-ports not connected are assumed to be zero. Actuation values from the
-full MultibodyPlant model port (get_actuation_input_port()) and from
-the per model-instance ports (
+“get_actuation_input_port(ModelInstanceIndex)”). - Actuation inputs
+and actuation effort limits are taken to be in joint coordinates (they
+are not affected by the actuator gear ratio). - Any actuation input
+ports not connected are assumed to be zero. - Actuation values from
+the full MultibodyPlant model port (get_actuation_input_port()) and
+from the per model-instance ports (
 get_actuation_input_port(ModelInstanceIndex)const
 “get_actuation_input_port(ModelInstanceIndex)”) are summed up.</p>
 <div class="admonition note">
@@ -13857,6 +13873,11 @@ declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
 welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <em>any</em> collision filters on deformable bodies.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Subclassing MultibodyPlant is deprecated; it will be marked
+<code class="docutils literal notranslate"><span class="pre">final</span></code> or or after 2025-05-01.</p>
+</div>
 <p><a href="#id93"><span class="problematic" id="id94">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>

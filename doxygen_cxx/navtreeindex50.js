@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"deformable__mesh__with__bvh_8h.html":[4,0,0,4,11],
 "deformable__model_8h.html":[4,0,0,8,10,14],
 "deformation__gradient__data_8h.html":[4,0,0,8,2,7],
 "demultiplexer_8h.html":[4,0,0,12,6,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "drake__copyable_8h.html":[4,0,0,1,21],
 "drake__copyable_8h.html#a3ee22789c29a46dddd6a7fd2b982731c":[4,0,0,1,21,2],
 "drake__copyable_8h.html#a8d60a299683340853a6c62040721c9a0":[4,0,0,1,21,0],
-"drake__copyable_8h.html#ae6322b9e40935343a422cbdfb41e310e":[4,0,0,1,21,1],
-"drake__deprecated_8h.html":[4,0,0,1,22]
+"drake__copyable_8h.html#ae6322b9e40935343a422cbdfb41e310e":[4,0,0,1,21,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad909a0d6f40d56faad5e3f60fe0326c5":[3,0,2,3,14],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aee44966b6c6ff31b5e49a515bea53295":[3,0,2,3,4],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,27],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a0ae5c6c04205be18238368d567627683":[3,0,2,27,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "deformable__ids_8h.html":[4,0,0,8,10,13],
 "deformable__ids_8h.html#ad6f28f9f3c7b71cc803442f421b26352":[4,0,0,8,10,13,1],
 "deformable__ids_8h.html#ae810ad4b839c5925c285d08b4d269a56":[4,0,0,8,10,13,0],
-"deformable__mesh__intersection_8h.html":[4,0,0,4,2,13],
-"deformable__mesh__with__bvh_8h.html":[4,0,0,4,11]
+"deformable__mesh__intersection_8h.html":[4,0,0,4,2,13]
 };
