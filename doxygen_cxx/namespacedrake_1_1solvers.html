@@ -406,8 +406,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface used by implementations of individual solvers.  <a href="classdrake_1_1solvers_1_1_solver_interface.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores options for multiple solvers.  <a href="classdrake_1_1solvers_1_1_solver_options.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores options for multiple solvers.  <a href="structdrake_1_1solvers_1_1_solver_options.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_type_converter.html">SolverTypeConverter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts between SolverType and <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a>.  <a href="classdrake_1_1solvers_1_1_solver_type_converter.html#details">More...</a><br /></td></tr>
@@ -763,7 +763,7 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <tr class="separator:acb1201a087105dc635e2bd748486171c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a269b7066a168f80390ed6c496829ffcd"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a269b7066a168f80390ed6c496829ffcd">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> solution_result)</td></tr>
 <tr class="separator:a269b7066a168f80390ed6c496829ffcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07bf1722e3e347d7878ae44be98b4b92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;solver_options)</td></tr>
+<tr class="memitem:a07bf1722e3e347d7878ae44be98b4b92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess, const std::optional&lt; <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;solver_options)</td></tr>
 <tr class="memdesc:a07bf1722e3e347d7878ae44be98b4b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an optimization program, with optional initial guess and solver options.  <a href="#a07bf1722e3e347d7878ae44be98b4b92">More...</a><br /></td></tr>
 <tr class="separator:a07bf1722e3e347d7878ae44be98b4b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78328b8267370289c8c653bc67efde5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a78328b8267370289c8c653bc67efde5e">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;initial_guess)</td></tr>
@@ -771,10 +771,10 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <tr class="separator:a78328b8267370289c8c653bc67efde5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f8160cf69cc8a3cd41dfec1fb08a8fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a6f8160cf69cc8a3cd41dfec1fb08a8fa">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog)</td></tr>
 <tr class="separator:a6f8160cf69cc8a3cd41dfec1fb08a8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7411fe5d588d0bd68b7b9bb30f1e4d09"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a7411fe5d588d0bd68b7b9bb30f1e4d09">SolveInParallel</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> * &gt; &amp;progs, const std::vector&lt; const Eigen::VectorXd * &gt; *initial_guesses, const std::vector&lt; const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> * &gt; *solver_options, const std::vector&lt; std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &gt;&gt; *solver_ids, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>(), bool dynamic_schedule=false)</td></tr>
+<tr class="memitem:a7411fe5d588d0bd68b7b9bb30f1e4d09"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a7411fe5d588d0bd68b7b9bb30f1e4d09">SolveInParallel</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> * &gt; &amp;progs, const std::vector&lt; const Eigen::VectorXd * &gt; *initial_guesses, const std::vector&lt; const <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> * &gt; *solver_options, const std::vector&lt; std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &gt;&gt; *solver_ids, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>(), bool dynamic_schedule=false)</td></tr>
 <tr class="memdesc:a7411fe5d588d0bd68b7b9bb30f1e4d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves progs[i] into result[i], optionally using initial_guess[i] and solver_options[i] if given, by invoking the solver at solver_ids[i] if provided.  <a href="#a7411fe5d588d0bd68b7b9bb30f1e4d09">More...</a><br /></td></tr>
 <tr class="separator:a7411fe5d588d0bd68b7b9bb30f1e4d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a432743d40e298cda4d1104734324b69d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a432743d40e298cda4d1104734324b69d">SolveInParallel</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> * &gt; &amp;progs, const std::vector&lt; const Eigen::VectorXd * &gt; *initial_guesses=nullptr, const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> *solver_options=nullptr, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &gt; &amp;solver_id=std::nullopt, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>(), bool dynamic_schedule=false)</td></tr>
+<tr class="memitem:a432743d40e298cda4d1104734324b69d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a432743d40e298cda4d1104734324b69d">SolveInParallel</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> * &gt; &amp;progs, const std::vector&lt; const Eigen::VectorXd * &gt; *initial_guesses=nullptr, const <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> *solver_options=nullptr, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &gt; &amp;solver_id=std::nullopt, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>(), bool dynamic_schedule=false)</td></tr>
 <tr class="memdesc:a432743d40e298cda4d1104734324b69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the same functionality as SolveInParallel, but allows for specifying a single solver id and solver option that is used when solving all programs.  <a href="#a432743d40e298cda4d1104734324b69d">More...</a><br /></td></tr>
 <tr class="separator:a432743d40e298cda4d1104734324b69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8463238715a273b4709959e9bf23b9af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a8463238715a273b4709959e9bf23b9af">operator==</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;, const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;)</td></tr>
@@ -783,9 +783,11 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <tr class="separator:a710dbb02b7a2ce05760b1534cd7b32d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af22da0124afc42f58ae6e42e1a97b724"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#af22da0124afc42f58ae6e42e1a97b724">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;)</td></tr>
 <tr class="separator:af22da0124afc42f58ae6e42e1a97b724"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16445fc3b260d8c58ea9082a3594f85f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a16445fc3b260d8c58ea9082a3594f85f">to_string</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;)</td></tr>
+<tr class="memitem:a16445fc3b260d8c58ea9082a3594f85f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a16445fc3b260d8c58ea9082a3594f85f">to_string</a> (const <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;)</td></tr>
+<tr class="memdesc:a16445fc3b260d8c58ea9082a3594f85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a16445fc3b260d8c58ea9082a3594f85f">More...</a><br /></td></tr>
 <tr class="separator:a16445fc3b260d8c58ea9082a3594f85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad58cede9876421e050ac44deee7804ff"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#ad58cede9876421e050ac44deee7804ff">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;)</td></tr>
+<tr class="memitem:ad58cede9876421e050ac44deee7804ff"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#ad58cede9876421e050ac44deee7804ff">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;)</td></tr>
+<tr class="memdesc:ad58cede9876421e050ac44deee7804ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ad58cede9876421e050ac44deee7804ff">More...</a><br /></td></tr>
 <tr class="separator:ad58cede9876421e050ac44deee7804ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6703c1f6f99f3e06a86f6a54e7dbd63d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a6703c1f6f99f3e06a86f6a54e7dbd63d">ConstructMonomialBasis</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">drake::symbolic::Polynomial</a> &amp;p)</td></tr>
 <tr class="memdesc:a6703c1f6f99f3e06a86f6a54e7dbd63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given input polynomial p, outputs a set M of monomials with the following guarantee: if p = f1*f1 + f2*f2 + ...  <a href="#a6703c1f6f99f3e06a86f6a54e7dbd63d">More...</a><br /></td></tr>
@@ -1047,13 +1049,13 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <p>CommonSolverOption contain the names of these supported options. The user can use these options as "key" in SolverOption::SetOption(). If the solver doesn't support the option, the option is ignored. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40a222307df6fb67d2a524cade7227ca4f8"></a>kPrintFileName&#160;</td><td class="fielddoc"><p>Many solvers support printing the progress of each iteration to a file. </p>
-<p>The user can call <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02" title="Sets a solver option for a specific solver.">SolverOptions::SetOption</a>(kPrintFileName, "filename.log") to enable this. To disable, set the option to the empty string <code>""</code>, which indicates that no file should be written. </p>
+<p>The user can call <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02" title="Sets a solver option for a specific solver.">SolverOptions::SetOption</a>(kPrintFileName, "filename.log") to enable this. To disable, set the option to the empty string <code>""</code>, which indicates that no file should be written. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100"></a>kPrintToConsole&#160;</td><td class="fielddoc"><p>Many solvers support printing the progress of each iteration to the console. </p>
 <p>The user can call <code>SolverOptions::SetOption(kPrintToConsole, 1)</code> to enable this, or use <code>0</code> to turn off printing to the console. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40a88b173449afee96caef8bf2715f31380"></a>kStandaloneReproductionFileName&#160;</td><td class="fielddoc"><p>Some solvers support writing a standalone (e.g., it does not depend on Drake) minimal reproduction of the problem to a file. </p>
-<p>This is especially useful for sending bug reports upstream to the developers of the solver. The user can call <code><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02" title="Sets a solver option for a specific solver.">SolverOptions::SetOption</a>(kStandaloneReproductionFileName, "filename.txt")</code> to enable this. To disable, set the option to the empty string <code>""</code>, which indicates that no file should be written. </p>
+<p>This is especially useful for sending bug reports upstream to the developers of the solver. The user can call <code><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02" title="Sets a solver option for a specific solver.">SolverOptions::SetOption</a>(kStandaloneReproductionFileName, "filename.txt")</code> to enable this. To disable, set the option to the empty string <code>""</code>, which indicates that no file should be written. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40af1d12898262fdbf42df381627646ee00"></a>kMaxThreads&#160;</td><td class="fielddoc"><p>Some solvers are multi-threaded. </p>
 <p>The user can request the maximum number of threads used by the solver with this <code>int</code> option. When not set, the value defaults to <a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819" title="Constructs a Parallelism with the maximum number of threads.">Parallelism.Max()</a>.num_threads(), which can be controlled via the <a class="el" href="classdrake_1_1_parallelism.html">DRAKE_NUM_THREADS</a> environment variable. </p><dl class="section pre"><dt>Precondition</dt><dd>The number of threads must be greater than 0. </dd></dl>
@@ -3349,36 +3351,8 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 </div>
 </div>
-<a id="ad58cede9876421e050ac44deee7804ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad58cede9876421e050ac44deee7804ff">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[9/12]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6c59daf7e576403f76128d2063303e9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c59daf7e576403f76128d2063303e9b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[10/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c59daf7e576403f76128d2063303e9b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[9/12]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3402,6 +3376,38 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad58cede9876421e050ac44deee7804ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58cede9876421e050ac44deee7804ff">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[10/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use options.to_string(), instead. <br />
+ This will be removed from Drake on or after 2025-09-01.</dd></dl>
 
 </div>
 </div>
@@ -3554,7 +3560,7 @@ Labels." by Jason Rennie and Nathan Srebro, Proceedings of IJCAI multidisciplina
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>solver_options</em>&#160;</td>
         </tr>
         <tr>
@@ -3653,7 +3659,7 @@ Labels." by Jason Rennie and Nathan Srebro, Proceedings of IJCAI multidisciplina
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> * &gt; *&#160;</td>
+          <td class="paramtype">const std::vector&lt; const <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> * &gt; *&#160;</td>
           <td class="paramname"><em>solver_options</em>, </td>
         </tr>
         <tr>
@@ -3726,7 +3732,7 @@ Only programs which are thread safe are solved concurrently. Programs that are n
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> *&#160;</td>
           <td class="paramname"><em>solver_options</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
@@ -3877,26 +3883,8 @@ Only programs which are thread safe are solved concurrently. Programs that are n
 
 </div>
 </div>
-<a id="a16445fc3b260d8c58ea9082a3594f85f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16445fc3b260d8c58ea9082a3594f85f">&#9670;&nbsp;</a></span>to_string() <span class="overload">[7/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string drake::solvers::to_string </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="afc62e1bcb70d02de2cb87f7bea20bc77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc62e1bcb70d02de2cb87f7bea20bc77">&#9670;&nbsp;</a></span>to_string() <span class="overload">[8/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afc62e1bcb70d02de2cb87f7bea20bc77">&#9670;&nbsp;</a></span>to_string() <span class="overload">[7/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3910,6 +3898,28 @@ Only programs which are thread safe are solved concurrently. Programs that are n
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16445fc3b260d8c58ea9082a3594f85f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16445fc3b260d8c58ea9082a3594f85f">&#9670;&nbsp;</a></span>to_string() <span class="overload">[8/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string drake::solvers::to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use options.to_string(), instead. <br />
+ This will be removed from Drake on or after 2025-09-01.</dd></dl>
 
 </div>
 </div>

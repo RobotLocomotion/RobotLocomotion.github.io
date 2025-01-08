@@ -1,10 +1,5 @@
 var NAVTREEINDEX68 =
 {
-"transform_8h.html":[4,0,0,1,2,2],
-"tree__py_8h.html":[4,0,0,0,0,6,1],
-"triangle__quadrature_8h.html":[4,0,0,8,15,1],
-"triangle__quadrature__rule_8h.html":[4,0,0,8,15,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,60],
 "triangle__surface__mesh_8h.html#a1b6e179f892df67543be3028eae06fb9":[4,0,0,4,2,60,3],
 "triangle__surface__mesh__field_8h.html":[4,0,0,4,2,61],
 "triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,61,0],

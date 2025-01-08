@@ -22,7 +22,6 @@ var namespacefmt =
     [ "formatter< drake::solvers::ProgramAttributes >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html", null ],
     [ "formatter< drake::solvers::ProgramType >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html", null ],
     [ "formatter< drake::solvers::SolverId >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_id_01_4.html", null ],
-    [ "formatter< drake::solvers::SolverOptions >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_options_01_4.html", null ],
     [ "formatter< drake::symbolic::ChebyshevBasisElement >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html", null ],
     [ "formatter< drake::symbolic::ChebyshevPolynomial >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html", null ],
     [ "formatter< drake::symbolic::GenericPolynomial< BasisElement > >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html", null ],

@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_options_01_4.html','');});
+$(document).ready(function(){initNavTree('structdrake_1_1solvers_1_1_solver_options.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -159,13 +159,32 @@ $(document).ready(function(){initNavTree('structfmt_1_1formatter_3_01drake_1_1so
 
 <div class="header">
   <div class="headertitle">
-<div class="title">formatter&lt; drake::solvers::SolverOptions &gt; Member List</div>  </div>
+<div class="title">SolverOptions Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_options_01_4.html">formatter&lt; drake::solvers::SolverOptions &gt;</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1ostream__formatter.html#aab8f913d74288ae04ca146910ed303bf">format</a>(const T &amp;value, FormatContext &amp;ctx) DRAKE_FMT8_CONST</td><td class="entry"><a class="el" href="structdrake_1_1ostream__formatter.html">ostream_formatter</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a2b58e2b5bf8bb445762bf2c692c957c5">CheckOptionKeysForSolver</a>(const SolverId &amp;solver_id, const std::unordered_set&lt; std::string &gt; &amp;allowable_double_keys, const std::unordered_set&lt; std::string &gt; &amp;allowable_int_keys, const std::unordered_set&lt; std::string &gt; &amp;allowable_str_keys) const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#adec03288ff360572725cdcc7a5fba5f5">common_solver_options</a>() const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#add6975df5414067f7cf44bc932a92f5b">get_max_threads</a>() const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#ac2adda584ed29a23b6e0bced598f22c3">get_print_file_name</a>() const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a2894ce2c8df835376f1df65dabc7d321">get_print_to_console</a>() const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#ad0387089aeb1d2e2f42052740bc945cc">get_standalone_reproduction_file_name</a>() const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a1e73a3a8b89000d249540b40a93a173a">GetOptions</a>(const SolverId &amp;solver_id) const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a31681641f7d2a35f22c39eb4247dd50f">GetOptionsDouble</a>(const SolverId &amp;solver_id) const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a4bf6e41b18bd68978f288df2adcd6c05">GetOptionsInt</a>(const SolverId &amp;solver_id) const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a9e12607058c5231c94d2a2d915b052b7">GetOptionsStr</a>(const SolverId &amp;solver_id) const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#aac20432da1daa9805e9448e151f2b552">GetSolverIds</a>() const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a9df62381db112d3b359cd2a5e1111fdf">Merge</a>(const SolverOptions &amp;other)</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a4854617fe031ba629b37432796068c64">operator!=</a>(const SolverOptions &amp;other) const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a75ae4b0e55acd123d4dd077a31e8b0ff">operator==</a>(const SolverOptions &amp;other) const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a1fc2cc6e45f26adfe5216d4eba566cd8">options</a></td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20">OptionValue</a> typedef</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a>(Archive *a)</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#af4c4c08922e737f18d2f1960f4f93e02">SetOption</a>(const SolverId &amp;solver_id, std::string key, OptionValue value)</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#ac54f45d8221218d66a7f603bee90d21f">SetOption</a>(CommonSolverOption key, OptionValue value)</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a>() const</td><td class="entry"><a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
