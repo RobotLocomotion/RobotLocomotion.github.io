@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ae9472d3bcadcdc5e3845fdea8de7438d":[1,1,1,6,0,8],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ae9472d3bcadcdc5e3845fdea8de7438d":[1,5,5,6,0,8],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036":[1,1,1,6,0,25],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036":[1,5,5,6,0,25],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#afadd51793f68302ecae5d19071082409":[1,1,1,6,0,17],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html":[1,1,1,13],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html":[1,5,5,13],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a2813b808767f3b4dd18af5e9ba522c42":[1,5,5,13,2],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a2813b808767f3b4dd18af5e9ba522c42":[1,1,1,13,2],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a66c0758e1fb9ac2f946857bdeae490fc":[1,5,5,13,12],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a66c0758e1fb9ac2f946857bdeae490fc":[1,1,1,13,12]
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a2813b808767f3b4dd18af5e9ba522c42":[1,1,1,13,2]
 };

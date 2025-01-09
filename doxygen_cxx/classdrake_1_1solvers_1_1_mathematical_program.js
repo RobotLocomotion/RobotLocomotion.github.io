@@ -115,6 +115,8 @@ var classdrake_1_1solvers_1_1_mathematical_program =
     [ "AddQuadraticCost", "classdrake_1_1solvers_1_1_mathematical_program.html#abdcdb1ab2b9211c869331a8b0af3e22c", null ],
     [ "AddQuadraticCost", "classdrake_1_1solvers_1_1_mathematical_program.html#ab631304ac72255c66ae90542de6542e0", null ],
     [ "AddQuadraticCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a9ee00f39c8fbbaab930492dec3e05ffe", null ],
+    [ "AddQuadraticErrorCost", "classdrake_1_1solvers_1_1_mathematical_program.html#af9e480a3daaf296b5597b19df9f88e72", null ],
+    [ "AddQuadraticErrorCost", "classdrake_1_1solvers_1_1_mathematical_program.html#aff1dec7a0a110ed8551948963a99ce85", null ],
     [ "AddQuadraticErrorCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a1ae7eae6436a037740a2b8b7ba31f123", null ],
     [ "AddQuadraticErrorCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a7d57f46afbdd9192bae0d803fc7be404", null ],
     [ "AddRotatedLorentzConeConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a12a0bbb8698b6c9015f06ef81f29e472", null ],

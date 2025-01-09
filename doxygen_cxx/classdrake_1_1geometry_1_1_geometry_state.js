@@ -4,7 +4,7 @@ var classdrake_1_1geometry_1_1_geometry_state =
     [ "GeometryState", "classdrake_1_1geometry_1_1_geometry_state.html#a74d61e236854868478ec1213e02f9c25", null ],
     [ "GeometryState", "classdrake_1_1geometry_1_1_geometry_state.html#ac78aaecc0c0fce32f05da2879fde24a6", null ],
     [ "GeometryState", "classdrake_1_1geometry_1_1_geometry_state.html#a8d0d78e60bcdc0948d45eb96af6a08e0", null ],
-    [ "AddRenderer", "classdrake_1_1geometry_1_1_geometry_state.html#a72f7d830f6776bb7403c6bbc66d1d676", null ],
+    [ "AddRenderer", "classdrake_1_1geometry_1_1_geometry_state.html#af27b40988be607be51656f17005b8be0", null ],
     [ "ApplyProximityDefaults", "classdrake_1_1geometry_1_1_geometry_state.html#a1eaab55510b7048bcb1ff8cc496b209a", null ],
     [ "ApplyProximityDefaults", "classdrake_1_1geometry_1_1_geometry_state.html#a10ebad56cca3b1b6bf060f21f655e7a2", null ],
     [ "AssignRole", "classdrake_1_1geometry_1_1_geometry_state.html#aeade10fc590b6d8a19f7172c2bd366a3", null ],

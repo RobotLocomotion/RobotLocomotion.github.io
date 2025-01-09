@@ -18,5 +18,6 @@ var dir_5f7a2023092b91a1e02609fa2c012f50 =
     [ "piecewise_quaternion.h", "piecewise__quaternion_8h.html", "piecewise__quaternion_8h" ],
     [ "piecewise_trajectory.h", "piecewise__trajectory_8h.html", "piecewise__trajectory_8h" ],
     [ "stacked_trajectory.h", "stacked__trajectory_8h.html", "stacked__trajectory_8h" ],
-    [ "trajectory.h", "trajectory_8h.html", "trajectory_8h" ]
+    [ "trajectory.h", "trajectory_8h.html", "trajectory_8h" ],
+    [ "wrapped_trajectory.h", "wrapped__trajectory_8h.html", "wrapped__trajectory_8h" ]
 ];

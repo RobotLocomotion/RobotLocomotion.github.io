@@ -196,9 +196,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad2a9a7e5598e01601a09921bba6765ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d8ed3640dbe0fda6c09bfed6704ad16"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a0d8ed3640dbe0fda6c09bfed6704ad16">~RenderEngine</a> ()</td></tr>
 <tr class="separator:a0d8ed3640dbe0fda6c09bfed6704ad16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1c2b3c069f0ace538832db43e945fc0"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#ae1c2b3c069f0ace538832db43e945fc0">Clone</a> () const</td></tr>
-<tr class="memdesc:ae1c2b3c069f0ace538832db43e945fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones the render engine &ndash; making the RenderEngine compatible with <a class="el" href="classdrake_1_1copyable__unique__ptr.html" title="A smart pointer with deep copy semantics.">copyable_unique_ptr</a>.  <a href="#ae1c2b3c069f0ace538832db43e945fc0">More...</a><br /></td></tr>
-<tr class="separator:ae1c2b3c069f0ace538832db43e945fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2df94afa6f50029dc60fefe29fa6c0a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a2df94afa6f50029dc60fefe29fa6c0a9">RemoveGeometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id)</td></tr>
 <tr class="memdesc:a2df94afa6f50029dc60fefe29fa6c0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the geometry indicated by the given <code>id</code> from the engine.  <a href="#a2df94afa6f50029dc60fefe29fa6c0a9">More...</a><br /></td></tr>
 <tr class="separator:a2df94afa6f50029dc60fefe29fa6c0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,8 +216,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a88a7096a316e3d2340941ddcc0a89832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the render label value this render engine has been configured to use.  <a href="#a88a7096a316e3d2340941ddcc0a89832">More...</a><br /></td></tr>
 <tr class="separator:a88a7096a316e3d2340941ddcc0a89832"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Registering geometry with the engine</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>These methods allow for requests to register new visual geometries to <code>this</code> RenderEngine.</p>
-<p>The geometry is uniquely identified by the given <code>id</code>. The renderer is allowed to examine the given <code>properties</code> and choose to <em>not</em> register the geometry.</p>
+<tr><td colspan="2"><div class="groupText"><p>Clones the render engine.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Result</td><td>must be either <code>std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a>&gt;</code> or <code>std::shared_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a>&gt;</code>. In C++, it defaults to unique_ptr; in Python, it's hard-coded to shared_ptr.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if Result is unique_ptr but this particular class only supports cloning for shared_ptr.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>These methods allow for requests to register new visual geometries to <code>this</code> RenderEngine. The geometry is uniquely identified by the given <code>id</code>. The renderer is allowed to examine the given <code>properties</code> and choose to <em>not</em> register the geometry.</p>
 <p>Typically, derived classes will attempt to validate the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value stored in the <code>(label, id)</code> property (or its configured default value if no such property exists). In that case, attempting to assign <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a52e35c3e406b848a0b2f35560d66f450" title="See Reserved labels.">RenderLabel::kEmpty</a> or <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a> will cause an exception to be thrown (as <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#reserved_render_label">documented</a>). </p>
 </div></td></tr>
 <tr class="memitem:a850b373dc1690b399188c34205487876"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a850b373dc1690b399188c34205487876">RegisterVisual</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html">PerceptionProperties</a> &amp;properties, const math::RigidTransformd &amp;X_WG, bool needs_updates=true)</td></tr>
@@ -260,8 +269,11 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ade97bf7ef53a4bdd2cdcb52eac2bfdc6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#ade97bf7ef53a4bdd2cdcb52eac2bfdc6">DoRemoveGeometry</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id)=0</td></tr>
 <tr class="memdesc:ade97bf7ef53a4bdd2cdcb52eac2bfdc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for removing the geometry with the given <code>id</code>.  <a href="#ade97bf7ef53a4bdd2cdcb52eac2bfdc6">More...</a><br /></td></tr>
 <tr class="separator:ade97bf7ef53a4bdd2cdcb52eac2bfdc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69814f08fe3bcc032af4fcad59138900"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a69814f08fe3bcc032af4fcad59138900">DoCloneShared</a> () const</td></tr>
+<tr class="memdesc:a69814f08fe3bcc032af4fcad59138900"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for cloning this render engine as a shared_ptr.  <a href="#a69814f08fe3bcc032af4fcad59138900">More...</a><br /></td></tr>
+<tr class="separator:a69814f08fe3bcc032af4fcad59138900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9db015dacce22c75992bd3c0a0b39af7"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a9db015dacce22c75992bd3c0a0b39af7">DoClone</a> () const =0</td></tr>
-<tr class="memdesc:a9db015dacce22c75992bd3c0a0b39af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for cloning this render engine.  <a href="#a9db015dacce22c75992bd3c0a0b39af7">More...</a><br /></td></tr>
+<tr class="memdesc:a9db015dacce22c75992bd3c0a0b39af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for cloning this render engine as a unique_ptr.  <a href="#a9db015dacce22c75992bd3c0a0b39af7">More...</a><br /></td></tr>
 <tr class="separator:a9db015dacce22c75992bd3c0a0b39af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a05e57a0c1352d5b7bf21ec5b040848"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a3a05e57a0c1352d5b7bf21ec5b040848">DoRenderColorImage</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">ColorRenderCamera</a> &amp;camera, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af5afae0f791341ac7ad11eb6bcb092bd">systems::sensors::ImageRgba8U</a> *color_image_out) const</td></tr>
 <tr class="memdesc:a3a05e57a0c1352d5b7bf21ec5b040848"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for rendering color with a fully-specified camera.  <a href="#a3a05e57a0c1352d5b7bf21ec5b040848">More...</a><br /></td></tr>
@@ -424,25 +436,6 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae1c2b3c069f0ace538832db43e945fc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1c2b3c069f0ace538832db43e945fc0">&#9670;&nbsp;</a></span>Clone()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a>&gt; Clone </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clones the render engine &ndash; making the RenderEngine compatible with <a class="el" href="classdrake_1_1copyable__unique__ptr.html" title="A smart pointer with deep copy semantics.">copyable_unique_ptr</a>. </p>
-
-</div>
-</div>
 <a id="a88a7096a316e3d2340941ddcc0a89832"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88a7096a316e3d2340941ddcc0a89832">&#9670;&nbsp;</a></span>default_render_label()</h2>
 
@@ -485,7 +478,36 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The NVI-function for cloning this render engine. </p>
+<p>The NVI-function for cloning this render engine as a unique_ptr. </p>
+<p>It must always be overridden, but in case a subclass does not support cloning into a unique_ptr, it may throw an exception. </p>
+
+</div>
+</div>
+<a id="a69814f08fe3bcc032af4fcad59138900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69814f08fe3bcc032af4fcad59138900">&#9670;&nbsp;</a></span>DoCloneShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a>&gt; DoCloneShared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for cloning this render engine as a shared_ptr. </p>
+<p>When not overridden, this base class implementation will call <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a9db015dacce22c75992bd3c0a0b39af7" title="The NVI-function for cloning this render engine as a unique_ptr.">DoClone()</a> to construct a unique_ptr clone and then promote that to a shared_ptr upon return. Note that in Python this is bound as simply "DoClone" not "DoCloneShared", because the unique_ptr flavor is nonsense in Python. </p>
 
 </div>
 </div>
@@ -983,8 +1005,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a3dab418ee39075dd18acab2e85f5cf47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dab418ee39075dd18acab2e85f5cf47">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="ab4eef0722f7588b5eb35efe4600731ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4eef0722f7588b5eb35efe4600731ab">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -995,7 +1017,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1009,8 +1031,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ab4eef0722f7588b5eb35efe4600731ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4eef0722f7588b5eb35efe4600731ab">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a3dab418ee39075dd18acab2e85f5cf47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dab418ee39075dd18acab2e85f5cf47">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1021,7 +1043,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

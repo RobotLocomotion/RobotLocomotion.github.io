@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"classdrake_1_1multibody_1_1_angle_between_vectors_cost.html#aee65c9787c0060ee07bd31b9e1200d16":[1,1,0,1,3],
+"classdrake_1_1multibody_1_1_articulated_body_inertia.html":[3,0,0,8,9],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a05bea6e19974f4c24d747976ada0efef":[3,0,0,8,9,1],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a148bc958b5d02693bd0136917046b68e":[3,0,0,8,9,11],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a413ff91e8caf0498a96e5b1e06da9cd1":[3,0,0,8,9,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1_door_hinge.html#a0b35f9a15174cdbc86feb93ab4191cf2":[3,0,0,8,29,8],
 "classdrake_1_1multibody_1_1_door_hinge.html#a14f1e33beb90541be76fcb45dea6af74":[3,0,0,8,29,21],
 "classdrake_1_1multibody_1_1_door_hinge.html#a1a3872435692d59007761e82cb48b17e":[3,0,0,8,29,6],
-"classdrake_1_1multibody_1_1_door_hinge.html#a1c1522be243a3ab3eeca60c8c56696ce":[3,0,0,8,29,1],
-"classdrake_1_1multibody_1_1_door_hinge.html#a23c73f4faed4d94c062ef26f1143c9ea":[3,0,0,8,29,5],
-"classdrake_1_1multibody_1_1_door_hinge.html#a4623cd61fedc3c25436ca083bbbac34a":[3,0,0,8,29,12]
+"classdrake_1_1multibody_1_1_door_hinge.html#a1c1522be243a3ab3eeca60c8c56696ce":[3,0,0,8,29,1]
 };

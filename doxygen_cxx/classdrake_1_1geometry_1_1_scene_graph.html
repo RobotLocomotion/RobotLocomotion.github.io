@@ -379,11 +379,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1f967549c18523e7acffff7daa09bb7e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#afd98b48bb76635a3f5055f418908912d" title="Removes the given geometry G (indicated by geometry_id) from the given source&#39;s registered geometries...">RemoveGeometry()</a>.  <a href="#a1f967549c18523e7acffff7daa09bb7e">More...</a><br /></td></tr>
 <tr class="separator:a1f967549c18523e7acffff7daa09bb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Managing RenderEngine instances</div></td></tr>
+<tr class="memitem:a7acc35fe63b16403d1c8e177cfed0b7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7acc35fe63b16403d1c8e177cfed0b7b">AddRenderer</a> (std::string name, const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &amp;renderer)</td></tr>
+<tr class="memdesc:a7acc35fe63b16403d1c8e177cfed0b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new render engine to this SceneGraph.  <a href="#a7acc35fe63b16403d1c8e177cfed0b7b">More...</a><br /></td></tr>
+<tr class="separator:a7acc35fe63b16403d1c8e177cfed0b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaef744aa4e912e158ab2840515cc734e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#aaef744aa4e912e158ab2840515cc734e">AddRenderer</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, std::string name, const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &amp;renderer) const</td></tr>
+<tr class="memdesc:aaef744aa4e912e158ab2840515cc734e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7acc35fe63b16403d1c8e177cfed0b7b" title="Adds a new render engine to this SceneGraph.">AddRenderer()</a>.  <a href="#aaef744aa4e912e158ab2840515cc734e">More...</a><br /></td></tr>
+<tr class="separator:aaef744aa4e912e158ab2840515cc734e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72f7d830f6776bb7403c6bbc66d1d676"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676">AddRenderer</a> (std::string name, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt; renderer)</td></tr>
-<tr class="memdesc:a72f7d830f6776bb7403c6bbc66d1d676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new render engine to this SceneGraph.  <a href="#a72f7d830f6776bb7403c6bbc66d1d676">More...</a><br /></td></tr>
+<tr class="memdesc:a72f7d830f6776bb7403c6bbc66d1d676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-copying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7acc35fe63b16403d1c8e177cfed0b7b" title="Adds a new render engine to this SceneGraph.">AddRenderer()</a>.  <a href="#a72f7d830f6776bb7403c6bbc66d1d676">More...</a><br /></td></tr>
 <tr class="separator:a72f7d830f6776bb7403c6bbc66d1d676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae60cd9b530abb0d20df2bd313cfbceec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ae60cd9b530abb0d20df2bd313cfbceec">AddRenderer</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, std::string name, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt; renderer) const</td></tr>
-<tr class="memdesc:ae60cd9b530abb0d20df2bd313cfbceec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676" title="Adds a new render engine to this SceneGraph.">AddRenderer()</a>.  <a href="#ae60cd9b530abb0d20df2bd313cfbceec">More...</a><br /></td></tr>
+<tr class="memdesc:ae60cd9b530abb0d20df2bd313cfbceec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-copying, context-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7acc35fe63b16403d1c8e177cfed0b7b" title="Adds a new render engine to this SceneGraph.">AddRenderer()</a>.  <a href="#ae60cd9b530abb0d20df2bd313cfbceec">More...</a><br /></td></tr>
 <tr class="separator:ae60cd9b530abb0d20df2bd313cfbceec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa0f71e9327ba0ba58b653046ca8619"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#acaa0f71e9327ba0ba58b653046ca8619">RemoveRenderer</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:acaa0f71e9327ba0ba58b653046ca8619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an existing renderer from this SceneGraph.  <a href="#acaa0f71e9327ba0ba58b653046ca8619">More...</a><br /></td></tr>
@@ -1701,8 +1707,91 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7acc35fe63b16403d1c8e177cfed0b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7acc35fe63b16403d1c8e177cfed0b7b">&#9670;&nbsp;</a></span>AddRenderer() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddRenderer </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new render engine to this SceneGraph. </p>
+<p>The render engine's name should be referenced in the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">ColorRenderCamera</a> or <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">DepthRenderCamera</a> provided in the render queries (see <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a4cfc105838770263cb1e1ca3a6934945" title="Renders an RGB image for the given camera posed with respect to the indicated parent frame P.">QueryObject::RenderColorImage()</a> as an example).</p>
+<p>There is no restriction on when a renderer is added relative to geometry registration and role assignment. Given a representative sequence of registration and perception role assignment, the addition of the renderer can be introduced anywhere in the sequence and the end result would be the same.</p>
+<div class="fragment"><div class="line">GeometryId id1 = scene_graph.RegisterGeometry(source_id, ...);</div><div class="line">scene_graph.AssignRole(source_id, id1, PerceptionProperties());</div><div class="line">GeometryId id2 = scene_graph.RegisterGeometry(source_id, ...);</div><div class="line">scene_graph.AssignRole(source_id, id2, PerceptionProperties());</div><div class="line">GeometryId id3 = scene_graph.RegisterGeometry(source_id, ...);</div><div class="line">scene_graph.AssignRole(source_id, id3, PerceptionProperties());</div></div><!-- fragment --><p>Modifies the perception version if <code>renderer</code> accepts any previously existing geometries (see <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_versioning">Detecting changes</a>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The unique name of the renderer. </td></tr>
+    <tr><td class="paramname">renderer</td><td>The <code>renderer</code> to add. (It will be copied / cloned, which means the lifetime of the argument need not extend past this call.) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the name is not unique. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaef744aa4e912e158ab2840515cc734e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaef744aa4e912e158ab2840515cc734e">&#9670;&nbsp;</a></span>AddRenderer() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddRenderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &amp;&#160;</td>
+          <td class="paramname"><em>renderer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7acc35fe63b16403d1c8e177cfed0b7b" title="Adds a new render engine to this SceneGraph.">AddRenderer()</a>. </p>
+<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p>
+
+</div>
+</div>
 <a id="a72f7d830f6776bb7403c6bbc66d1d676"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72f7d830f6776bb7403c6bbc66d1d676">&#9670;&nbsp;</a></span>AddRenderer() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f7d830f6776bb7403c6bbc66d1d676">&#9670;&nbsp;</a></span>AddRenderer() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1727,28 +1816,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds a new render engine to this SceneGraph. </p>
-<p>The SceneGraph owns the render engine. The render engine's name should be referenced in the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">ColorRenderCamera</a> or <a class="el" href="classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html">DepthRenderCamera</a> provided in the render queries (see <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a4cfc105838770263cb1e1ca3a6934945" title="Renders an RGB image for the given camera posed with respect to the indicated parent frame P.">QueryObject::RenderColorImage()</a> as an example).</p>
-<p>There is no restriction on when a renderer is added relative to geometry registration and role assignment. Given a representative sequence of registration and perception role assignment, the addition of the renderer can be introduced anywhere in the sequence and the end result would be the same.</p>
-<div class="fragment"><div class="line">GeometryId id1 = scene_graph.RegisterGeometry(source_id, ...);</div><div class="line">scene_graph.AssignRole(source_id, id1, PerceptionProperties());</div><div class="line">GeometryId id2 = scene_graph.RegisterGeometry(source_id, ...);</div><div class="line">scene_graph.AssignRole(source_id, id2, PerceptionProperties());</div><div class="line">GeometryId id3 = scene_graph.RegisterGeometry(source_id, ...);</div><div class="line">scene_graph.AssignRole(source_id, id3, PerceptionProperties());</div></div><!-- fragment --><p>Modifies the perception version if <code>renderer</code> accepts any previously existing geometries (see <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_versioning">Detecting changes</a>).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>The unique name of the renderer. </td></tr>
-    <tr><td class="paramname">renderer</td><td>The <code>renderer</code> to add. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the name is not unique. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Non-copying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7acc35fe63b16403d1c8e177cfed0b7b" title="Adds a new render engine to this SceneGraph.">AddRenderer()</a>. </p>
+<p>The SceneGraph takes ownership the render engine instead of copying it. The calling code must not retain a raw pointer to the renderer. </p>
 
 </div>
 </div>
 <a id="ae60cd9b530abb0d20df2bd313cfbceec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae60cd9b530abb0d20df2bd313cfbceec">&#9670;&nbsp;</a></span>AddRenderer() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae60cd9b530abb0d20df2bd313cfbceec">&#9670;&nbsp;</a></span>AddRenderer() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1779,8 +1853,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676" title="Adds a new render engine to this SceneGraph.">AddRenderer()</a>. </p>
-<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p>
+<p>Non-copying, context-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7acc35fe63b16403d1c8e177cfed0b7b" title="Adds a new render engine to this SceneGraph.">AddRenderer()</a>. </p>
+<p>The SceneGraph takes ownership the render engine instead of copying it. The calling code must not retain a raw pointer to the renderer. </p>
 
 </div>
 </div>

@@ -464,9 +464,9 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Render Queries</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>See <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#render_queries">Render Queries</a> for more details.</p>
 </div></td></tr>
-<tr class="memitem:a72f7d830f6776bb7403c6bbc66d1d676"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a72f7d830f6776bb7403c6bbc66d1d676">AddRenderer</a> (std::string name, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt; renderer)</td></tr>
-<tr class="memdesc:a72f7d830f6776bb7403c6bbc66d1d676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676" title="Adds a new render engine to this SceneGraph.">SceneGraph::AddRenderer()</a>.  <a href="#a72f7d830f6776bb7403c6bbc66d1d676">More...</a><br /></td></tr>
-<tr class="separator:a72f7d830f6776bb7403c6bbc66d1d676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27b40988be607be51656f17005b8be0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#af27b40988be607be51656f17005b8be0">AddRenderer</a> (std::string name, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt; renderer)</td></tr>
+<tr class="memdesc:af27b40988be607be51656f17005b8be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7acc35fe63b16403d1c8e177cfed0b7b" title="Adds a new render engine to this SceneGraph.">SceneGraph::AddRenderer()</a>.  <a href="#af27b40988be607be51656f17005b8be0">More...</a><br /></td></tr>
+<tr class="separator:af27b40988be607be51656f17005b8be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa0f71e9327ba0ba58b653046ca8619"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#acaa0f71e9327ba0ba58b653046ca8619">RemoveRenderer</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:acaa0f71e9327ba0ba58b653046ca8619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#acaa0f71e9327ba0ba58b653046ca8619" title="Removes an existing renderer from this SceneGraph.">SceneGraph::RemoveRenderer()</a>.  <a href="#acaa0f71e9327ba0ba58b653046ca8619">More...</a><br /></td></tr>
 <tr class="separator:acaa0f71e9327ba0ba58b653046ca8619"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -605,8 +605,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a72f7d830f6776bb7403c6bbc66d1d676"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72f7d830f6776bb7403c6bbc66d1d676">&#9670;&nbsp;</a></span>AddRenderer()</h2>
+<a id="af27b40988be607be51656f17005b8be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af27b40988be607be51656f17005b8be0">&#9670;&nbsp;</a></span>AddRenderer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -620,7 +620,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">render::RenderEngine</a> &gt;&#160;</td>
           <td class="paramname"><em>renderer</em>&#160;</td>
         </tr>
         <tr>
@@ -631,7 +631,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676" title="Adds a new render engine to this SceneGraph.">SceneGraph::AddRenderer()</a>. </p>
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7acc35fe63b16403d1c8e177cfed0b7b" title="Adds a new render engine to this SceneGraph.">SceneGraph::AddRenderer()</a>. </p>
 
 </div>
 </div>

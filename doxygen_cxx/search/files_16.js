@@ -7,5 +7,6 @@ var searchData=
   ['wrap_5ffunction_2eh',['wrap_function.h',['../wrap__function_8h.html',1,'']]],
   ['wrap_5fpybind_2eh',['wrap_pybind.h',['../wrap__pybind_8h.html',1,'']]],
   ['wrap_5fto_2eh',['wrap_to.h',['../wrap__to_8h.html',1,'']]],
-  ['wrap_5fto_5fsystem_2eh',['wrap_to_system.h',['../wrap__to__system_8h.html',1,'']]]
+  ['wrap_5fto_5fsystem_2eh',['wrap_to_system.h',['../wrap__to__system_8h.html',1,'']]],
+  ['wrapped_5ftrajectory_2eh',['wrapped_trajectory.h',['../wrapped__trajectory_8h.html',1,'']]]
 ];

@@ -20,6 +20,8 @@ var group__systems =
       [ "SceneGraph", "classdrake_1_1geometry_1_1_scene_graph.html#a5d11622a921913afacfcd62a4fa8ee7f", null ],
       [ "SceneGraph", "classdrake_1_1geometry_1_1_scene_graph.html#a26eded4be5dd50b32d8cba6151e850f1", null ],
       [ "~SceneGraph", "classdrake_1_1geometry_1_1_scene_graph.html#a501e0cb17bd7045989598772a2518778", null ],
+      [ "AddRenderer", "classdrake_1_1geometry_1_1_scene_graph.html#a7acc35fe63b16403d1c8e177cfed0b7b", null ],
+      [ "AddRenderer", "classdrake_1_1geometry_1_1_scene_graph.html#aaef744aa4e912e158ab2840515cc734e", null ],
       [ "AddRenderer", "classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676", null ],
       [ "AddRenderer", "classdrake_1_1geometry_1_1_scene_graph.html#ae60cd9b530abb0d20df2bd313cfbceec", null ],
       [ "AssignRole", "classdrake_1_1geometry_1_1_scene_graph.html#aeade10fc590b6d8a19f7172c2bd366a3", null ],

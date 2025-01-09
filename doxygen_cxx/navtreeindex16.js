@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_door_hinge.html#a23c73f4faed4d94c062ef26f1143c9ea":[3,0,0,8,29,5],
+"classdrake_1_1multibody_1_1_door_hinge.html#a4623cd61fedc3c25436ca083bbbac34a":[3,0,0,8,29,12],
 "classdrake_1_1multibody_1_1_door_hinge.html#a4e415d777b3ac3e7e0071578d6ec62c9":[3,0,0,8,29,17],
 "classdrake_1_1multibody_1_1_door_hinge.html#a5e203c1a0451b21d8eb3013e29793b88":[3,0,0,8,29,3],
 "classdrake_1_1multibody_1_1_door_hinge.html#a94043d3a62a5730d350b5299627853ae":[3,0,0,8,29,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_joint.html#a81331638a2f578c7636dbebb383e09b1":[3,0,0,8,45,85],
 "classdrake_1_1multibody_1_1_joint.html#a8152c34c2684e7b492b2076f1c5762b4":[3,0,0,8,45,11],
 "classdrake_1_1multibody_1_1_joint.html#a85e53f9d887c5aeb5ad206c430e14a0d":[3,0,0,8,45,19],
-"classdrake_1_1multibody_1_1_joint.html#a8a436543dcb9111fce01536d0faa9a7f":[3,0,0,8,45,36],
-"classdrake_1_1multibody_1_1_joint.html#a8ed5ee2256ac8372e493caa547cbeb1e":[3,0,0,8,45,25],
-"classdrake_1_1multibody_1_1_joint.html#a942f6233f066e3e1efaef4168b40585b":[3,0,0,8,45,10]
+"classdrake_1_1multibody_1_1_joint.html#a8a436543dcb9111fce01536d0faa9a7f":[3,0,0,8,45,36]
 };

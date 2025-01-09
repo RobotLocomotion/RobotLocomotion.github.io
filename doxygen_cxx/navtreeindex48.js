@@ -1,5 +1,9 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a84d9ba906dfe3476c3112019de27db04":[3,0,0,17,7,7],
+"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a944aeffdb9d0381d2b3d12b0d496a0a0":[3,0,0,17,7,4],
+"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a9c16f458090e923d6a419602f530f659":[3,0,0,17,7,6],
+"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#abbae6db5c296a6f3f059d9764ab05452":[3,0,0,17,7,8],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#ad421fac36aaf1c6312dde83733ac83ef":[3,0,0,17,7,1],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#ad7f7d068f40e11c84d79db38d5710c90":[3,0,0,17,7,3],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#adfa1acb11b9a6296c79275adeac9b6f2":[3,0,0,17,7,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX48 =
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#acc28ec4073a854a2d907085ecedd2cd3":[3,0,2,27,2],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad20897c5c8bd47f5d4005989bead0e55":[3,0,2,27,13],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,31],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03fe2fcbb54b17038f831ae97017f9a3":[3,0,2,31,13],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,2,31,0],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,2,31,11],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2e58e3553fbff5f9ba05acba0daa7753":[3,0,2,31,15],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,2,31,9]
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03fe2fcbb54b17038f831ae97017f9a3":[3,0,2,31,13]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX60 =
 {
+"rotation__matrix_8h.html":[4,0,0,7,32],
+"rotation__matrix_8h.html#a3e79d002774aeaba84ca0b645621d7f4":[4,0,0,7,32,1],
+"rotation__matrix_8h.html#ab095ea87a1517bb9bae78d221f5d34da":[4,0,0,7,32,2],
+"rotational__inertia_8h.html":[4,0,0,8,14,42],
 "rotational__inertia_8h.html#aa59ab5d10d13a388ce2e9c80929a31b3":[4,0,0,8,14,42,2],
 "rpc__pipe__temp__directory_8h.html":[4,0,0,1,1,1],
 "rpc__pipe__temp__directory_8h.html#a650cbe453cd80d0752cc0c91e857789a":[4,0,0,1,1,1,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX60 =
 "spatial__momentum_8h.html":[4,0,0,8,5,3],
 "spatial__momentum_8h.html#a656bebe8588828ae235b12c3772e54d8":[4,0,0,8,5,3,2],
 "spatial__vector_8h.html":[4,0,0,8,5,4],
-"spatial__velocity_8h.html":[4,0,0,8,5,5],
-"spatial__velocity_8h.html#a5dda4428e98fb18ea25e36b0ab733aae":[4,0,0,8,5,5,1],
-"spatial__velocity__constraint_8h.html":[4,0,0,8,8,6],
-"specific__options_8h.html":[4,0,0,11,61],
-"spectrahedron_8h.html":[4,0,0,4,1,23]
+"spatial__velocity_8h.html":[4,0,0,8,5,5]
 };
