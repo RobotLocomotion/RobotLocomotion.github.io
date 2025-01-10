@@ -13,7 +13,7 @@ var classdrake_1_1solvers_1_1_moby_l_c_p_solver =
     [ "operator=", "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html#ac1f77847e110cce8b14e9ae35ce949ba", null ],
     [ "ProgramAttributesSatisfied", "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html#a793b4bef71b184ac87f03d80b21c04d2", null ],
     [ "reset_num_pivots", "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html#a940b243c1e6bc23203756a73f2c80c6b", null ],
-    [ "SetLoggingEnabled", "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html#aac324298c671d9098ebbfacb0fdc3644", null ],
+    [ "SetLoggingEnabled", "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html#a660e092f9afa82d245a7f942ae8a0d1c", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html#a00b55f8b4c1c4f19b45621a84deed66c", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html#af2ff6a250a78bb79ef64f7527c51b01c", null ],
     [ "SolveLcpFast", "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html#a8e270f319dccd9f904773b7bb86cc8b9", null ],

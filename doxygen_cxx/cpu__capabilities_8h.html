@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: Environment Variables</title>
+<title>Drake: drake/common/cpu_capabilities.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('group__environment__variables.html','');});
+$(document).ready(function(){initNavTree('cpu__capabilities_8h.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -159,46 +159,28 @@ $(document).ready(function(){initNavTree('group__environment__variables.html',''
 
 <div class="header">
   <div class="summary">
-<a href="#groups">Modules</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">Environment Variables<div class="ingroups"><a class="el" href="group__technical__notes.html">Technical Notes</a></div></div>  </div>
+<div class="title">cpu_capabilities.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>This section provides an inventory of environment variables relevant to Drake. </p>
-<ul>
-<li><b><a class="el" href="group__allow__network.html">DRAKE_ALLOW_NETWORK</a></b></li>
-<li><b><a class="el" href="group__drake__disable__cpu__features.html">DRAKE_DISABLE_CPU_FEATURES</a></b></li>
-<li><b><a class="el" href="classdrake_1_1_parallelism.html">DRAKE_NUM_THREADS</a></b></li>
-<li><b><a class="el" href="group__pydrake__python__logging.html">DRAKE_PYTHON_LOGGING</a></b></li>
-<li><b><a class="el" href="namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb">DRAKE_RESOURCE_ROOT</a></b></li>
-<li><b><a class="el" href="classdrake_1_1solvers_1_1_snopt_solver.html">DRAKE_SNOPT_SOLVER_ENABLED</a></b></li>
-<li><b><a class="el" href="classdrake_1_1solvers_1_1_gurobi_solver.html">GRB_LICENSE_FILE</a></b> (see also <a href="https://support.gurobi.com/hc/en-us/articles/360013417211-Where-do-I-place-the-Gurobi-license-file-gurobi-lic-">upstream documentation</a>)</li>
-<li><b><a class="el" href="classdrake_1_1solvers_1_1_gurobi_solver.html">GUROBI_NUM_THREADS</a></b></li>
-<li><b>HOME</b></li>
-<li><b><a class="el" href="classdrake_1_1solvers_1_1_mosek_solver.html">MOSEKLM_LICENSE_FILE</a></b> (see also <a href="https://docs.mosek.com/latest/licensing/client-setup.html">upstream documentation</a>)</li>
-<li><b><a class="el" href="group__drake__disable__cpu__features.html">NPY_DISABLE_CPU_FEATURES</a></b></li>
-<li><b>OMP_NUM_THREADS</b> (see <a href="https://www.openmp.org/spec-html/5.0/openmpse50.html">upstream documentation</a>)</li>
-<li><b><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a82b086143ce943e2318a7b2added1313">ROS_PACKAGE_PATH</a></b> (see also <a href="http://wiki.ros.org/ROS/EnvironmentVariables">upstream documentation)</a></li>
-<li><b>RUNFILES_DIR</b> (see <a href="https://github.com/bazelbuild/bazel/blob/6.1.1/tools/python/runfiles/runfiles.py#L77">upstream documentation)</a></li>
-<li><b>RUNFILES_MANIFEST_FILE</b> (see <a href="https://github.com/bazelbuild/bazel/blob/6.1.1/tools/python/runfiles/runfiles.py#L77">upstream documentation)</a></li>
-<li><b>TEST_SRCDIR</b> (see <a href="https://bazel.build/reference/test-encyclopedia#initial-conditions">upstream documentation</a>)</li>
-<li><b><a class="el" href="namespacedrake.html#a107ff2f218f356d05f8cdc3b7d254eb2">TEST_TMPDIR</a></b> (see also <a href="https://bazel.build/reference/test-encyclopedia#initial-conditions">upstream documentation</a>)</li>
-<li><b><a class="el" href="namespacedrake.html#a107ff2f218f356d05f8cdc3b7d254eb2">TMPDIR</a></b></li>
-<li><b>USER</b></li>
-<li><b>XDG_CACHE_HOME</b> (see <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">upstream documentation</a>) </li>
-</ul>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:group__pydrake__python__logging"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pydrake__python__logging.html">DRAKE_PYTHON_LOGGING</a></td></tr>
-<tr class="memdesc:group__pydrake__python__logging"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default, pydrake will redirect spdlog logging (from C++) to Python's <code>logging</code> module. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__drake__disable__cpu__features"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__drake__disable__cpu__features.html">DRAKE_DISABLE_CPU_FEATURES</a></td></tr>
-<tr class="memdesc:group__drake__disable__cpu__features"><td class="mdescLeft">&#160;</td><td class="mdescRight">Certain low-level code in Drake will scan for available CPU features at runtime and dispatch to CPU-optimized implementations. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group__allow__network"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__allow__network.html">DRAKE_ALLOW_NETWORK</a></td></tr>
-<tr class="memdesc:group__allow__network"><td class="mdescLeft">&#160;</td><td class="mdescRight">Users can set the environment variable <code>DRAKE_ALLOW_NETWORK</code> to a colon-separated list to limit which components are permitted network access. <br /></td></tr>
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for cpu_capabilities.h:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cpu__capabilities_8h__incl.svg" width="251" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="cpu__capabilities_8h__dep__incl.svg" width="251" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -206,6 +188,7 @@ Modules</h2></td></tr>
 <!-- footer -->
 <div class="navpath">
   <ul>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a class="el" href="cpu__capabilities_8h.html">cpu_capabilities.h</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">

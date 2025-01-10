@@ -568,6 +568,7 @@ var searchData=
   ['drake_5fdemand',['DRAKE_DEMAND',['../drake__assert_8h.html#a90a6aa22721ddd3bc514c45d8e1d8674',1,'drake_assert.h']]],
   ['drake_5fdeprecated',['DRAKE_DEPRECATED',['../drake__deprecated_8h.html#a847d827d084f28e4ae1788a0ae75be96',1,'drake_deprecated.h']]],
   ['drake_5fdeprecated_2eh',['drake_deprecated.h',['../drake__deprecated_8h.html',1,'']]],
+  ['drake_5fdisable_5fcpu_5ffeatures',['DRAKE_DISABLE_CPU_FEATURES',['../group__drake__disable__cpu__features.html',1,'']]],
   ['drake_5fexpect_5fno_5fthrow',['DRAKE_EXPECT_NO_THROW',['../expect__no__throw_8h.html#ae8eedd9e4d5d0114603862cd217cb469',1,'expect_no_throw.h']]],
   ['drake_5fexpect_5fthrows_5fmessage',['DRAKE_EXPECT_THROWS_MESSAGE',['../expect__throws__message_8h.html#a3032825862f840191f81ddc8ca53072e',1,'expect_throws_message.h']]],
   ['drake_5fexpect_5fthrows_5fmessage_5fif_5farmed',['DRAKE_EXPECT_THROWS_MESSAGE_IF_ARMED',['../expect__throws__message_8h.html#abe6fd77a193e735aab16e277f20ab7d1',1,'expect_throws_message.h']]],

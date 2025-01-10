@@ -158,6 +158,7 @@ var NAVTREEINDEX49 =
 "cpp__template__pybind_8h.html#a85dae944dd94ece7b256c9c46215268d":[4,0,0,0,0,1,1,0],
 "cpp__template__pybind_8h.html#a9ab5a60c764576412e9362aaf18cad93":[4,0,0,0,0,1,1,2],
 "cpp__template__pybind_8h.html#abe5aba035d48c052690fe1d1b4a3f414":[4,0,0,0,0,1,1,3],
+"cpu__capabilities_8h.html":[4,0,0,1,14],
 "create__constraint_8h.html":[4,0,0,11,11],
 "create__cost_8h.html":[4,0,0,11,12],
 "cross__product_8h.html":[4,0,0,7,9],
@@ -202,8 +203,8 @@ var NAVTREEINDEX49 =
 "decompose_8h.html#ad528f8f92173863f5029b979b9c5f36b":[4,0,0,1,3,4,8],
 "decompose_8h.html#ae3c6a31812dc3e509644dbbc95c9778e":[4,0,0,1,3,4,2],
 "decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c":[4,0,0,1,3,4,5],
-"default__scalars_8h.html":[4,0,0,1,14],
-"default__scalars_8h.html#gaf140364db7046208e67d85327722d34a":[4,0,0,1,14,6],
+"default__scalars_8h.html":[4,0,0,1,15],
+"default__scalars_8h.html#gaf140364db7046208e67d85327722d34a":[4,0,0,1,15,6],
 "default__scalars__pybind_8h.html":[4,0,0,0,0,1,2],
 "default__scalars__pybind_8h.html#a52292ed585da63084b8914356a744d04":[4,0,0,0,0,1,2,0],
 "default__scalars__pybind_8h.html#a6294e82ee237c93a7e6cbc2fb4d924b2":[4,0,0,0,0,1,2,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "depth__image__to__point__cloud_8h.html":[4,0,0,9,0],
 "depth__shaders_8h.html":[4,0,0,4,4,0,0],
 "depth__shaders_8h.html#a5a1001f7895bceeeb06a6944b0789691":[4,0,0,4,4,0,0,1],
-"depth__shaders_8h.html#a7e1ae93b96cfb8ae4df5ee57a3371be2":[4,0,0,4,4,0,0,0],
-"derivative__trajectory_8h.html":[4,0,0,1,5,3]
+"depth__shaders_8h.html#a7e1ae93b96cfb8ae4df5ee57a3371be2":[4,0,0,4,4,0,0,0]
 };
