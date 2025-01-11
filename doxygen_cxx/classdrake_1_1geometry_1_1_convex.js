@@ -5,6 +5,7 @@ var classdrake_1_1geometry_1_1_convex =
     [ "Convex", "classdrake_1_1geometry_1_1_convex.html#a24e345e85109f3f7668ad7013ee0e4cb", null ],
     [ "Convex", "classdrake_1_1geometry_1_1_convex.html#a97cb69e3fb41a01cfd3fefd8269fc72c", null ],
     [ "Convex", "classdrake_1_1geometry_1_1_convex.html#a134c365d94b310aca50374ea8362f712", null ],
+    [ "Convex", "classdrake_1_1geometry_1_1_convex.html#a7105962ee7be952dc44eede29bc5ccaa", null ],
     [ "~Convex", "classdrake_1_1geometry_1_1_convex.html#af6e6797b1b18f3012ba8f10ad734e61d", null ],
     [ "extension", "classdrake_1_1geometry_1_1_convex.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea", null ],
     [ "filename", "classdrake_1_1geometry_1_1_convex.html#a94c732bb0f167eab349228237a8fbe3c", null ],

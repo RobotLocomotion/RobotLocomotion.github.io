@@ -199,6 +199,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8852ee82563dc11b173a57ff08863820"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a8852ee82563dc11b173a57ff08863820">WriteObj</a> (const std::filesystem::path &amp;filename) const</td></tr>
 <tr class="memdesc:a8852ee82563dc11b173a57ff08863820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses qhull to compute the Delaunay triangulation and then writes the vertices and faces to <code>filename</code> in the Wavefront Obj format.  <a href="#a8852ee82563dc11b173a57ff08863820">More...</a><br /></td></tr>
 <tr class="separator:a8852ee82563dc11b173a57ff08863820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e77b56ed66ffabc0e12442c7e4a485"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a67e77b56ed66ffabc0e12442c7e4a485">ToShapeConvex</a> (const std::string &amp;convex_label=&quot;convex_from_vpolytope&quot;) const</td></tr>
+<tr class="memdesc:a67e77b56ed66ffabc0e12442c7e4a485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">geometry::Convex</a> shape using the vertices of this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a>.  <a href="#a67e77b56ed66ffabc0e12442c7e4a485">More...</a><br /></td></tr>
+<tr class="separator:a67e77b56ed66ffabc0e12442c7e4a485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7a4d7c125954dfde3c15238c852eeed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#aa7a4d7c125954dfde3c15238c852eeed">PointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, <a class="el" href="classdouble.html">double</a> tol=0) const</td></tr>
 <tr class="memdesc:aa7a4d7c125954dfde3c15238c852eeed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the point is within <code>tol</code> of the set under the L∞-norm.  <a href="#aa7a4d7c125954dfde3c15238c852eeed">More...</a><br /></td></tr>
 <tr class="separator:aa7a4d7c125954dfde3c15238c852eeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -714,6 +717,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns true if the point is within <code>tol</code> of the set under the L∞-norm. </p>
 <p>Note: This requires the solution of a linear program; the achievable tolerance may be dependent on your specific solver and solver parameters. </p><dl class="section see"><dt>See also</dt><dd>ConvexSet::set_solver </dd></dl>
+
+</div>
+</div>
+<a id="a67e77b56ed66ffabc0e12442c7e4a485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e77b56ed66ffabc0e12442c7e4a485">&#9670;&nbsp;</a></span>ToShapeConvex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a> ToShapeConvex </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>convex_label</em> = <code>&quot;convex_from_vpolytope&quot;</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">geometry::Convex</a> shape using the vertices of this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a>. </p>
+<p>The convex_label is passed as the 'label' of the <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a> object. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> == 3. </dd></dl>
 
 </div>
 </div>

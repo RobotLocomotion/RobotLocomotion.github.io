@@ -1,5 +1,8 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1":[3,0,0,7,6,0],
+"structdrake_1_1math_1_1_mat_grad_mult.html":[3,0,0,7,8],
+"structdrake_1_1math_1_1_mat_grad_mult.html#aace3454f69205e3b95dfe4e1176647ac":[3,0,0,7,8,0],
 "structdrake_1_1math_1_1_mat_grad_mult_mat.html":[3,0,0,7,9],
 "structdrake_1_1math_1_1_mat_grad_mult_mat.html#a21269c8d264a02b47f4bb4da4e41ec3d":[3,0,0,7,9,0],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html":[3,0,0,8,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1planning_1_1_iris_zo_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[3,0,0,10,10,15],
 "structdrake_1_1planning_1_1_iris_zo_options.html#a54c52842ea8daec426a70226d67c0f7d":[3,0,0,10,10,0],
 "structdrake_1_1planning_1_1_iris_zo_options.html#a8087faf86b2fa08aae91525960c7b32f":[3,0,0,10,10,2],
-"structdrake_1_1planning_1_1_iris_zo_options.html#a82eead8e5a402b5c5da8b449073bad45":[3,0,0,10,10,7],
-"structdrake_1_1planning_1_1_iris_zo_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,10,10,1],
-"structdrake_1_1planning_1_1_iris_zo_options.html#a9ea1a8f5ef3e6d20b362385e1288c72c":[3,0,0,10,10,5],
-"structdrake_1_1planning_1_1_iris_zo_options.html#aae8c4127673f3ded233ec38b010ef8f4":[3,0,0,10,10,8]
+"structdrake_1_1planning_1_1_iris_zo_options.html#a82eead8e5a402b5c5da8b449073bad45":[3,0,0,10,10,7]
 };

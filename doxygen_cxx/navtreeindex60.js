@@ -1,5 +1,8 @@
 var NAVTREEINDEX60 =
 {
+"rotation__constraint_8h.html#a9202a27d1c86559e9496ec01fde853e9":[4,0,0,11,44,4],
+"rotation__conversion__gradient_8h.html":[4,0,0,7,31],
+"rotation__conversion__gradient_8h.html#aab4da46e9584c24120f902e3fecc51fb":[4,0,0,7,31,1],
 "rotation__conversion__gradient_8h.html#abe28f719aff9b89fe73db9e01e32dbb0":[4,0,0,7,31,0],
 "rotation__conversion__gradient_8h.html#af2483613453a61188f0ff474a6280f41":[4,0,0,7,31,2],
 "rotation__matrix_8h.html":[4,0,0,7,32],
@@ -246,8 +249,5 @@ var NAVTREEINDEX60 =
 "spatial__force_8h.html":[4,0,0,8,5,2],
 "spatial__force_8h.html#ab01e3bfd2969f7633ec1ab14c3474d59":[4,0,0,8,5,2,2],
 "spatial__inertia_8h.html":[4,0,0,8,14,49],
-"spatial__inertia_8h.html#acfa0fb944ca6f5e790292bf6eacaa811":[4,0,0,8,14,49,2],
-"spatial__kinematics_8h.html":[4,0,0,8,12,4],
-"spatial__momentum_8h.html":[4,0,0,8,5,3],
-"spatial__momentum_8h.html#a656bebe8588828ae235b12c3772e54d8":[4,0,0,8,5,3,2]
+"spatial__inertia_8h.html#acfa0fb944ca6f5e790292bf6eacaa811":[4,0,0,8,14,49,2]
 };

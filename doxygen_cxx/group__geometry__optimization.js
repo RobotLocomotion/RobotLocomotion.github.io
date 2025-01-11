@@ -386,6 +386,7 @@ var group__geometry__optimization =
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a27ac7192a38685b7263b3d5a225f7b9d", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a76bd48df66d7ff6d91b9fa645da35d1f", null ],
       [ "PointInSet", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#aa7a4d7c125954dfde3c15238c852eeed", null ],
+      [ "ToShapeConvex", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a67e77b56ed66ffabc0e12442c7e4a485", null ],
       [ "vertices", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a893af2ada07d691fd0f87888cc3f9ca4", null ],
       [ "WriteObj", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a8852ee82563dc11b173a57ff08863820", null ]
     ] ],
