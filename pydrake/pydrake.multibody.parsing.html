@@ -934,7 +934,7 @@ this feature.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.multibody.parsing.Parser, plant: drake::multibody::MultibodyPlant&lt;double&gt;, scene_graph: drake::geometry::SceneGraph&lt;double&gt; = None, model_name_prefix: str = ‘’) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.multibody.parsing.Parser, plant: drake::multibody::MultibodyPlant&lt;double&gt;, scene_graph: pydrake.geometry.SceneGraph = None, model_name_prefix: str = ‘’) -&gt; None</p></li>
 </ol>
 <p>Creates a Parser that adds models to the given plant and scene_graph.
 The resulting parser will apply <code class="docutils literal notranslate"><span class="pre">model_name_prefix</span></code> to the names of
@@ -1125,7 +1125,7 @@ parser.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.scene_graph">
-<span class="sig-name descname"><span class="pre">scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::geometry::SceneGraph&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.scene_graph" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.scene_graph" title="Permalink to this definition"></a></dt>
 <dd><p>Gets a mutable pointer to the SceneGraph that will be modified by this
 parser, or nullptr if this parser does not have a SceneGraph.</p>
 </dd></dl>

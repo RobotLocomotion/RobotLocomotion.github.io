@@ -2344,7 +2344,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div><div class="memdoc">
 
 <p>Adds an exponential cone constraint, that z = A * vars + b should be in the exponential cone. </p>
-<p>Namely {z₀, z₁, z₂ | z₀ ≥ z₁ * exp(z₂ / z₁), z₁ &gt; 0}. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Namely {z₀, z₁, z₂ | z₀ ≥ z₁ * exp(z₂ / z₁), z₁ &gt; 0}, or equivalently (using the logarithm function), {z₀, z₁, z₂ | z₂ ≤ z₁ * log(z₀ / z₁), z₀ &gt; 0, z₁ &gt; 0}. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>The A matrix in the documentation above. A must have 3 rows. </td></tr>
     <tr><td class="paramname">b</td><td>The b vector in the documentation above. </td></tr>

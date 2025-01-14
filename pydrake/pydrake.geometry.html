@@ -1535,6 +1535,32 @@ shape.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt><dd><p>An optional scale to coordinates.</p>
 </dd>
 </dl>
+<ol class="arabic simple" start="4">
+<li><p>__init__(self: pydrake.geometry.Convex, points: numpy.ndarray[numpy.float64[3, n]], label: str, scale: float = 1.0) -&gt; None</p></li>
+</ol>
+<p>Constructs an in-memory convex shape specification from the given
+points.</p>
+<p>The convex hull is computed from the points provided. The points are
+expected to be in the canonical frame of the shape. Optionally
+uniformly scaled by the given scale factor.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">points</span></code>:</dt><dd><p>The points whose convex hull define the shape.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">label</span></code>:</dt><dd><p>A label for the object. The label is used for warning and error
+messages. Otherwise, the label has no other functional purpose. It
+must consist of a single line.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt><dd><p>An optional scale to coordinates.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if label contains newlines.</strong> – </p></li>
+<li><p><strong>RuntimeError if scale &lt; 1e-8.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

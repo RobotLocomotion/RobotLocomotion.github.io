@@ -171,7 +171,7 @@ Drake Model Directives Support</h1>
 <p>Drake Model Directives is a Drake-native model description format, primarily intended for combining models written in other formats into complex scenes. It is YAML based, and follows a limited data schema. See <code>multibody/parsing/README_model_directives.md</code> for more detail.</p>
 <h1><a class="anchor" id="multibody_parsing_mjcf"></a>
 MJCF (Mujoco XML) Support</h1>
-<p>There is limited, undocumented support for parsing MJCF (Mujoco XML) files. The files are recognized by an .xml file extension. The scope of features that are actually supported still need to be documented.</p>
+<p>There is basic support for parsing MJCF (Mujoco XML) files. The files are recognized by an .xml file extension. The scope of features that are actually supported still need to be documented here, but the parser does log warnings for any unsupported MuJoCo XML elements or attributes at runtime.</p>
 <h1><a class="anchor" id="multibody_parsing_sdf"></a>
 SDFormat Support</h1>
 <p>Drake supports SDFormat files following the specification at <a href="http://sdformat.org/spec">http://sdformat.org/spec</a>. As of this writing, the supported spec version is 1.9, but check also the Drake release notes for current status.</p>

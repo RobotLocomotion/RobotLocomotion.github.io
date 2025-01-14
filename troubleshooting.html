@@ -85,6 +85,8 @@ analysis.
             
               <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb" class="site-menu-item">Tutorials</a>
             
+              <a href="/troubleshooting.html" class="site-menu-item">Troubleshooting</a>
+            
               <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
             
               <a href="/developers.html" class="site-menu-item">For Developers</a>
@@ -148,6 +150,7 @@ See "Caveats" in drake/doc/README.txt.
     <h5>Table of Contents</h5>
 <ul id="markdown-toc">
   <li><a href="#multibodyplant" id="markdown-toc-multibodyplant">MultibodyPlant</a>    <ul>
+      <li><a href="#mbp-parsing" id="markdown-toc-mbp-parsing">Parsing</a></li>
       <li><a href="#mbp-unconnected-query-object-port" id="markdown-toc-mbp-unconnected-query-object-port">Unconnected QueryObject port</a></li>
     </ul>
   </li>
@@ -174,6 +177,18 @@ See "Caveats" in drake/doc/README.txt.
 problems.</p>
 
   <h1 id="multibodyplant">MultibodyPlant</h1>
+
+  <h2 id="mbp-parsing">Parsing</h2>
+
+  <p>If you have a model file (e.g., .urdf, .sdf, .xml, .usd, etc.) that you are loading into a <code class="language-plaintext highlighter-rouge">MultibodyPlant</code> using the <code class="language-plaintext highlighter-rouge">Parser</code> class, and the model is not loading properly, then there are a few useful resources you might consider.</p>
+
+  <p>Documentation for the specific XML elements and attributes supported by the parser can be found <a href="https://drake.mit.edu/doxygen_cxx/group__multibody__parsing.html">here</a>.</p>
+
+  <p>If you do run into some of the known limitations in Drake’s parsing support, you may consider using the <a href="https://manipulation.mit.edu/python/make_drake_compatible_model.html"><code class="language-plaintext highlighter-rouge">make_drake_compatible_model</code></a> tool to convert your model file and assets into a format that Drake can parse. It is available in the <a href="https://manipulation.mit.edu/">manipulation</a> Python package, and be used via e.g.:</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv venv
+venv/bin/pip <span class="nb">install </span>manipulation[mesh] <span class="nt">--extra-index-url</span> https://drake-packages.csail.mit.edu/whl/nightly/
+venv/bin/python <span class="nt">-m</span> manipulation.make_drake_compatible_model <span class="o">{</span>input_file<span class="o">}</span> <span class="o">{</span>output_file<span class="o">}</span>
+</code></pre></div>  </div>
 
   <h2 id="mbp-unconnected-query-object-port">Unconnected QueryObject port</h2>
 

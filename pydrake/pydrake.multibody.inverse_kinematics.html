@@ -143,10 +143,12 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.multibody.inverse_kinematics.AddMultibodyPlantConstraints">
 <span class="sig-prename descclassname"><span class="pre">pydrake.multibody.inverse_kinematics.</span></span><span class="sig-name descname"><span class="pre">AddMultibodyPlantConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prog</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Constraint</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AddMultibodyPlantConstraints" title="Permalink to this definition"></a></dt>
-<dd><p>For unit quaternion and (holonomic) constraints registered with
-<code class="docutils literal notranslate"><span class="pre">plant</span></code> adds a corresponding solver::Constraint to <code class="docutils literal notranslate"><span class="pre">prog</span></code>, using
-decision variables <code class="docutils literal notranslate"><span class="pre">q</span></code> to represent the generalized positions of the
-plant.</p>
+<dd><p>For all kinematic constraints associated with <code class="docutils literal notranslate"><span class="pre">plant</span></code> adds a
+corresponding solver::Constraint to <code class="docutils literal notranslate"><span class="pre">prog</span></code>, using decision variables
+<code class="docutils literal notranslate"><span class="pre">q</span></code> to represent the generalized positions of the plant.</p>
+<p>Adds joint limits constraints, unit quaternion constraints, and
+constraints for any locked joints (via Joint::Lock()). Note that you
+must pass a valid <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> to use joint locking.</p>
 <p>Adds constraints for coupler, distance, ball, and weld constraints.
 The distance constraint is implemented here as a hard kinematic
 constraint (i.e., d(q) == d₀), instead of a soft “spring” force.</p>
@@ -1508,9 +1510,9 @@ constructor will create and own a context for</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The robot on which the inverse kinematics problem will be solved.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_joint_limits</span></code>:</dt><dd><p>If set to true, then the constructor imposes the joint limit
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_joint_limits</span></code>:</dt><dd><p>If set to true, then the constructor imposes the joint limits
 (obtained from plant.GetPositionLowerLimits() and
-plant.GetPositionUpperLimits(). If set to false, then the
+plant.GetPositionUpperLimits()). If set to false, then the
 constructor does not impose the joint limit constraints in the
 constructor.</p>
 </dd>
@@ -1564,11 +1566,11 @@ result.GetSolution(ik.q()). The user could then use this context to
 perform kinematic computation (like computing the position of the
 end-effector etc.).</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_joint_limits</span></code>:</dt><dd><p>If set to true, then the constructor imposes the joint limit
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_joint_limits</span></code>:</dt><dd><p>If set to true, then the constructor imposes the joint limits
 (obtained from plant.GetPositionLowerLimits() and
-plant.GetPositionUpperLimits(). If set to false, then the
-constructor does not impose the joint limit constraints in the
-constructor.</p>
+plant.GetPositionUpperLimits(), and from any body/joint locks set
+in <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>). If set to false, then the constructor does
+not impose the joint limit constraints in the constructor.</p>
 </dd>
 </dl>
 </dd></dl>
