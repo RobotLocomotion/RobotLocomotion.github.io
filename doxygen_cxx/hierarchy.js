@@ -621,6 +621,7 @@ var hierarchy =
       ] ],
       [ "Joint< T >", "classdrake_1_1multibody_1_1_joint.html", [
         [ "BallRpyJoint< T >", "classdrake_1_1multibody_1_1_ball_rpy_joint.html", null ],
+        [ "CurvilinearJoint< T >", "classdrake_1_1multibody_1_1_curvilinear_joint.html", null ],
         [ "PlanarJoint< T >", "classdrake_1_1multibody_1_1_planar_joint.html", null ],
         [ "PrismaticJoint< T >", "classdrake_1_1multibody_1_1_prismatic_joint.html", null ],
         [ "QuaternionFloatingJoint< T >", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html", null ],
@@ -802,8 +803,8 @@ var hierarchy =
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
     [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", null ],
-    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
@@ -1177,6 +1178,7 @@ var hierarchy =
       [ "BezierCurve< double >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],
       [ "PiecewiseTrajectory< double >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "ExponentialPlusPiecewisePolynomial< double >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],
+        [ "PiecewiseConstantCurvatureTrajectory< double >", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html", null ],
         [ "PiecewisePolynomial< double >", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html", null ]
       ] ]
     ] ],

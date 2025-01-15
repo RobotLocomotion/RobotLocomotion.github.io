@@ -51,6 +51,7 @@ var searchData=
   ['_7ecspacefreebox',['~CspaceFreeBox',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#adfbe9a0f2e79d07d3424cdab71184985',1,'drake::geometry::optimization::CspaceFreeBox']]],
   ['_7ecspacefreepolytope',['~CspaceFreePolytope',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a951c05eca049028edbbedb7a101897cb',1,'drake::geometry::optimization::CspaceFreePolytope']]],
   ['_7ecspacefreepolytopebase',['~CspaceFreePolytopeBase',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#a3a359fad0b1271df5b9bff4ae64ae160',1,'drake::geometry::optimization::CspaceFreePolytopeBase']]],
+  ['_7ecurvilinearjoint',['~CurvilinearJoint',['../classdrake_1_1multibody_1_1_curvilinear_joint.html#a7424fcf0209628463ef799c41ed5193b',1,'drake::multibody::CurvilinearJoint']]],
   ['_7ecylinder',['~Cylinder',['../classdrake_1_1geometry_1_1_cylinder.html#a8c6205a5a634260cf6ea48b964671816',1,'drake::geometry::Cylinder']]],
   ['_7edeformablecontactinfo',['~DeformableContactInfo',['../classdrake_1_1multibody_1_1_deformable_contact_info.html#a6698439b0d9254c7a0c7880b1e6c12da',1,'drake::multibody::DeformableContactInfo']]],
   ['_7edeformablemodel',['~DeformableModel',['../classdrake_1_1multibody_1_1_deformable_model.html#aa67160df8616d99a24a65769c1a72f26',1,'drake::multibody::DeformableModel']]],

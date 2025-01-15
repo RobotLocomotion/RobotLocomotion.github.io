@@ -32,6 +32,7 @@ var searchData=
   ['pidcontrolledsystem',['PidControlledSystem',['../classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html',1,'drake::systems::controllers']]],
   ['pidcontroller',['PidController',['../classdrake_1_1systems_1_1controllers_1_1_pid_controller.html',1,'drake::systems::controllers']]],
   ['piecewiseconstantcurvaturetrajectory',['PiecewiseConstantCurvatureTrajectory',['../classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html',1,'drake::trajectories']]],
+  ['piecewiseconstantcurvaturetrajectory_3c_20double_20_3e',['PiecewiseConstantCurvatureTrajectory&lt; double &gt;',['../classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html',1,'drake::trajectories']]],
   ['piecewisepolynomial',['PiecewisePolynomial',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html',1,'drake::trajectories']]],
   ['piecewisepolynomial_3c_20autodiffxd_20_3e',['PiecewisePolynomial&lt; AutoDiffXd &gt;',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html',1,'drake::trajectories']]],
   ['piecewisepolynomial_3c_20double_20_3e',['PiecewisePolynomial&lt; double &gt;',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html',1,'drake::trajectories']]],

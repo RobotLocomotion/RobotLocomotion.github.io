@@ -108,5 +108,7 @@ var searchData=
   ['cspace_5ffree_5fpolytope_5fbase_2eh',['cspace_free_polytope_base.h',['../cspace__free__polytope__base_8h.html',1,'']]],
   ['cspace_5ffree_5fstructs_2eh',['cspace_free_structs.h',['../cspace__free__structs_8h.html',1,'']]],
   ['cspace_5fseparating_5fplane_2eh',['cspace_separating_plane.h',['../cspace__separating__plane_8h.html',1,'']]],
-  ['cubic_5fscalar_5fsystem_2eh',['cubic_scalar_system.h',['../cubic__scalar__system_8h.html',1,'']]]
+  ['cubic_5fscalar_5fsystem_2eh',['cubic_scalar_system.h',['../cubic__scalar__system_8h.html',1,'']]],
+  ['curvilinear_5fjoint_2eh',['curvilinear_joint.h',['../curvilinear__joint_8h.html',1,'']]],
+  ['curvilinear_5fmobilizer_2eh',['curvilinear_mobilizer.h',['../curvilinear__mobilizer_8h.html',1,'']]]
 ];

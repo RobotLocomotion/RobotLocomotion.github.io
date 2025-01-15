@@ -23,6 +23,7 @@ var namespacedrake_1_1multibody =
     [ "ContactWrenchEvaluator", "classdrake_1_1multibody_1_1_contact_wrench_evaluator.html", "classdrake_1_1multibody_1_1_contact_wrench_evaluator" ],
     [ "ContactWrenchFromForceInWorldFrameEvaluator", "classdrake_1_1multibody_1_1_contact_wrench_from_force_in_world_frame_evaluator.html", "classdrake_1_1multibody_1_1_contact_wrench_from_force_in_world_frame_evaluator" ],
     [ "CoulombFriction", "classdrake_1_1multibody_1_1_coulomb_friction.html", "classdrake_1_1multibody_1_1_coulomb_friction" ],
+    [ "CurvilinearJoint", "classdrake_1_1multibody_1_1_curvilinear_joint.html", "classdrake_1_1multibody_1_1_curvilinear_joint" ],
     [ "DeformableContactInfo", "classdrake_1_1multibody_1_1_deformable_contact_info.html", "classdrake_1_1multibody_1_1_deformable_contact_info" ],
     [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html", "classdrake_1_1multibody_1_1_deformable_model" ],
     [ "DifferentialInverseKinematicsIntegrator", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator" ],

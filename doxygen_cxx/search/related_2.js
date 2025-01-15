@@ -19,5 +19,6 @@ var searchData=
   ['cspacefreeboxtester',['CspaceFreeBoxTester',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#a8c0df9e04099fbec99bbbe06554deb9c',1,'drake::geometry::optimization::CspaceFreeBox']]],
   ['cspacefreepolytope',['CspaceFreePolytope',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html#acce586461fb915663896b9d3272ee6eb',1,'drake::geometry::optimization::CspaceFreePolytope::SearchResult']]],
   ['cspacefreepolytopebasetester',['CspaceFreePolytopeBaseTester',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#af4e1918cec99d405674aa4e1524ceee9',1,'drake::geometry::optimization::CspaceFreePolytopeBase']]],
-  ['cspacefreepolytopetester',['CspaceFreePolytopeTester',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#aa65d053d1747dc4762143c36bc00f93e',1,'drake::geometry::optimization::CspaceFreePolytope']]]
+  ['cspacefreepolytopetester',['CspaceFreePolytopeTester',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#aa65d053d1747dc4762143c36bc00f93e',1,'drake::geometry::optimization::CspaceFreePolytope']]],
+  ['curvilinearjoint',['CurvilinearJoint',['../classdrake_1_1multibody_1_1_curvilinear_joint.html#aa29a193478996c1ccd4bc579895b338b',1,'drake::multibody::CurvilinearJoint']]]
 ];

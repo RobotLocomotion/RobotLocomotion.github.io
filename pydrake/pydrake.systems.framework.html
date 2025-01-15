@@ -214,7 +214,7 @@ for both leaf Systems and diagrams.</p>
 </ol>
 <p>Constructs an empty AbstractValues.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.systems.framework.AbstractValues, arg0: list[pydrake.common.value.AbstractValue]) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.systems.framework.AbstractValues, data: list[pydrake.common.value.AbstractValue]) -&gt; None</p></li>
 </ol>
 <p>Constructs an AbstractValues that does not own the underlying data.</p>
 </dd></dl>
@@ -2933,12 +2933,38 @@ for the list of instantiations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.ContinuousState.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.framework.ContinuousState) -&gt; None</p></li>
+</ol>
+<p>Constructs a zero-length ContinuousState.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.framework.ContinuousState, state: pydrake.systems.framework.BasicVector) -&gt; None</p></li>
+</ol>
+<p>Constructs a ContinuousState for a system that does not have
+second-order structure. The <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> partitions are empty; all
+of the state <code class="docutils literal notranslate"><span class="pre">xc</span></code> is miscellaneous continuous state <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.systems.framework.ContinuousState, state: pydrake.systems.framework.BasicVector, num_q: int, num_v: int, num_z: int) -&gt; None</p></li>
+</ol>
+<p>Constructs a ContinuousState that exposes second-order structure.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">state</span></code>:</dt><dd><p>The source xc of continuous state information.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_q</span></code>:</dt><dd><p>The number of position variables q.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_v</span></code>:</dt><dd><p>The number of velocity variables v.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_z</span></code>:</dt><dd><p>The number of other continuous variables z.</p>
+</dd>
+</dl>
+<p>We require that <code class="docutils literal notranslate"><span class="pre">num_q</span> <span class="pre">≥</span> <span class="pre">num_v</span></code> and that the sum of the partition
+sizes adds up to the size of <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p>
+<ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.systems.framework.ContinuousState, state: pydrake.systems.framework.VectorBase) -&gt; None</p></li>
 </ol>
 <p>Constructs a ContinuousState for a system that does not have
 second-order structure. The <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> partitions are empty; all
 of the state <code class="docutils literal notranslate"><span class="pre">xc</span></code> is miscellaneous continuous state <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.systems.framework.ContinuousState, state: pydrake.systems.framework.VectorBase, num_q: int, num_v: int, num_z: int) -&gt; None</p></li>
 </ol>
 <p>Constructs a ContinuousState that exposes second-order structure.</p>
@@ -2954,10 +2980,6 @@ of the state <code class="docutils literal notranslate"><span class="pre">xc</sp
 </dl>
 <p>We require that <code class="docutils literal notranslate"><span class="pre">num_q</span> <span class="pre">≥</span> <span class="pre">num_v</span></code> and that the sum of the partition
 sizes adds up to the size of <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p>
-<ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.framework.ContinuousState) -&gt; None</p></li>
-</ol>
-<p>Constructs a zero-length ContinuousState.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3135,12 +3157,38 @@ guarantee contiguous storage.</p>
 <span id="pydrake.systems.framework.ContinuousState_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.ContinuousState_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.framework.ContinuousState_[AutoDiffXd]) -&gt; None</p></li>
+</ol>
+<p>Constructs a zero-length ContinuousState.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.framework.ContinuousState_[AutoDiffXd], state: pydrake.systems.framework.BasicVector_[AutoDiffXd]) -&gt; None</p></li>
+</ol>
+<p>Constructs a ContinuousState for a system that does not have
+second-order structure. The <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> partitions are empty; all
+of the state <code class="docutils literal notranslate"><span class="pre">xc</span></code> is miscellaneous continuous state <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.systems.framework.ContinuousState_[AutoDiffXd], state: pydrake.systems.framework.BasicVector_[AutoDiffXd], num_q: int, num_v: int, num_z: int) -&gt; None</p></li>
+</ol>
+<p>Constructs a ContinuousState that exposes second-order structure.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">state</span></code>:</dt><dd><p>The source xc of continuous state information.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_q</span></code>:</dt><dd><p>The number of position variables q.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_v</span></code>:</dt><dd><p>The number of velocity variables v.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_z</span></code>:</dt><dd><p>The number of other continuous variables z.</p>
+</dd>
+</dl>
+<p>We require that <code class="docutils literal notranslate"><span class="pre">num_q</span> <span class="pre">≥</span> <span class="pre">num_v</span></code> and that the sum of the partition
+sizes adds up to the size of <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p>
+<ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.systems.framework.ContinuousState_[AutoDiffXd], state: pydrake.systems.framework.VectorBase_[AutoDiffXd]) -&gt; None</p></li>
 </ol>
 <p>Constructs a ContinuousState for a system that does not have
 second-order structure. The <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> partitions are empty; all
 of the state <code class="docutils literal notranslate"><span class="pre">xc</span></code> is miscellaneous continuous state <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.systems.framework.ContinuousState_[AutoDiffXd], state: pydrake.systems.framework.VectorBase_[AutoDiffXd], num_q: int, num_v: int, num_z: int) -&gt; None</p></li>
 </ol>
 <p>Constructs a ContinuousState that exposes second-order structure.</p>
@@ -3156,10 +3204,6 @@ of the state <code class="docutils literal notranslate"><span class="pre">xc</sp
 </dl>
 <p>We require that <code class="docutils literal notranslate"><span class="pre">num_q</span> <span class="pre">≥</span> <span class="pre">num_v</span></code> and that the sum of the partition
 sizes adds up to the size of <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p>
-<ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.framework.ContinuousState_[AutoDiffXd]) -&gt; None</p></li>
-</ol>
-<p>Constructs a zero-length ContinuousState.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3331,12 +3375,38 @@ guarantee contiguous storage.</p>
 <span id="pydrake.systems.framework.ContinuousState_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.ContinuousState_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li><p>__init__(self: pydrake.systems.framework.ContinuousState_[Expression]) -&gt; None</p></li>
+</ol>
+<p>Constructs a zero-length ContinuousState.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.systems.framework.ContinuousState_[Expression], state: pydrake.systems.framework.BasicVector_[Expression]) -&gt; None</p></li>
+</ol>
+<p>Constructs a ContinuousState for a system that does not have
+second-order structure. The <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> partitions are empty; all
+of the state <code class="docutils literal notranslate"><span class="pre">xc</span></code> is miscellaneous continuous state <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.systems.framework.ContinuousState_[Expression], state: pydrake.systems.framework.BasicVector_[Expression], num_q: int, num_v: int, num_z: int) -&gt; None</p></li>
+</ol>
+<p>Constructs a ContinuousState that exposes second-order structure.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">state</span></code>:</dt><dd><p>The source xc of continuous state information.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_q</span></code>:</dt><dd><p>The number of position variables q.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_v</span></code>:</dt><dd><p>The number of velocity variables v.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_z</span></code>:</dt><dd><p>The number of other continuous variables z.</p>
+</dd>
+</dl>
+<p>We require that <code class="docutils literal notranslate"><span class="pre">num_q</span> <span class="pre">≥</span> <span class="pre">num_v</span></code> and that the sum of the partition
+sizes adds up to the size of <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p>
+<ol class="arabic simple" start="4">
 <li><p>__init__(self: pydrake.systems.framework.ContinuousState_[Expression], state: pydrake.systems.framework.VectorBase_[Expression]) -&gt; None</p></li>
 </ol>
 <p>Constructs a ContinuousState for a system that does not have
 second-order structure. The <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> partitions are empty; all
 of the state <code class="docutils literal notranslate"><span class="pre">xc</span></code> is miscellaneous continuous state <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.systems.framework.ContinuousState_[Expression], state: pydrake.systems.framework.VectorBase_[Expression], num_q: int, num_v: int, num_z: int) -&gt; None</p></li>
 </ol>
 <p>Constructs a ContinuousState that exposes second-order structure.</p>
@@ -3352,10 +3422,6 @@ of the state <code class="docutils literal notranslate"><span class="pre">xc</sp
 </dl>
 <p>We require that <code class="docutils literal notranslate"><span class="pre">num_q</span> <span class="pre">≥</span> <span class="pre">num_v</span></code> and that the sum of the partition
 sizes adds up to the size of <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p>
-<ol class="arabic simple" start="3">
-<li><p>__init__(self: pydrake.systems.framework.ContinuousState_[Expression]) -&gt; None</p></li>
-</ol>
-<p>Constructs a zero-length ContinuousState.</p>
 </dd></dl>
 
 <dl class="py method">

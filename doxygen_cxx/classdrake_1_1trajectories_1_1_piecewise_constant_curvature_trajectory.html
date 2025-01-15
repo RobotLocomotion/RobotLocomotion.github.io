@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1trajectories_1_1_piecewi
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory-members.html">List of all members</a>  </div>
@@ -173,10 +174,11 @@ class drake::trajectories::PiecewiseConstantCurvatureTrajectory&lt; T &gt;</h3>
 <p>A piecewise constant curvature trajectory within an arbitrary three-dimensional plane. </p>
 <p>The trajectory is defined by the position vector r(s): ℝ → ℝ³, parameterized by arclength s, and lies in a plane with normal vector p̂. The parameterization is C¹, i.e. position r(s) and tangent vector t̂(s) = dr(s)/ds are continuous functions of arclength s. The trajectory's length is divided into segments s₀ &lt; s₁ &lt; ... &lt; sₙ, where each interval [sᵢ, sᵢ₊₁) has constant curvature determined by the turning rate ρᵢ (with units of 1/m). The turning rate is defined such that curvature is κᵢ = |ρᵢ|, with its sign indicating the curve's direction around p̂ according ot the right-hand rule (counterclockwise if positive and clockwise if negative) . For ρᵢ = 0, the segment is a straight line.</p>
 <p>Given the tangent vector t̂(s) = dr(s)/ds and the plane's normal p̂, we define the <em>normal</em> vector along the curve as n̂(s) = p̂ × t̂(s). These three vectors are used to define a frame F along the curve with basis vectors Fx, Fy, Fz coincident with vectors t̂, n̂, p̂, respectively.</p>
+<p>A trajectory is said to be periodic if the pose X_AF of frame F is a periodic function of arclength, i.e. X_AF(s) = X_AF(s + k⋅L) ∀ k ∈ ℤ, where L is the length of a single cycle along the trajectory. Periodicity is determined at construction.</p>
 <dl class="section note"><dt>Note</dt><dd>Though similar, frame F is distinct from the Frenet–Serret frame defined by the tangent-normal-binormal vectors T̂, N̂, B̂ See <a href="https://en.wikipedia.org/wiki/Frenet%E2%80%93Serret_formulas">Frenet–Serret formulas</a> for further reading.</dd></dl>
 <p>For constant curvature paths on a plane, the <a href="https://en.wikipedia.org/wiki/Frenet%E2%80%93Serret_formulas">Frenet–Serret formulas</a> simplify and we can write: </p><pre>
-    dFx/ds(s) =  ρ(s)⋅ Fy(s)
-    dFy/ds(s) = -ρ(s)⋅ Fx(s)
+    dFx/ds(s) =  ρ(s)⋅Fy(s)
+    dFy/ds(s) = -ρ(s)⋅Fx(s)
     dFz/ds(s) =  0
 </pre><p> for the entire trajectory.</p>
 <p>The spatial orientation of the curve is defined by the plane's normal p̂ and the initial tangent vector t̂₀ at s = 0. At construction, these are provided in a reference frame A, defining the pose X_AF₀ at s = 0. This class provides functions to compute the curve's kinematics given by its position vector r(s) = p_AoFo_A(s), pose X_AF(s), spatial velocity V_AF(s) and spatial acceleration A_AF(s).</p>
@@ -190,20 +192,28 @@ class drake::trajectories::PiecewiseConstantCurvatureTrajectory&lt; T &gt;</h3>
 </div>
 <p><code>#include &lt;drake/common/trajectories/piecewise_constant_curvature_trajectory.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1de84b778ac214eba7920572ace0200d"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a1de84b778ac214eba7920572ace0200d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a1de84b778ac214eba7920572ace0200d">ScalarValueConverter</a> = typename systems::scalar_conversion::template ValueConverter&lt; T, U &gt;</td></tr>
+<tr class="separator:a1de84b778ac214eba7920572ace0200d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7afd8ab9f8d0562fe877a4fb3cb298a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a7afd8ab9f8d0562fe877a4fb3cb298a5">PiecewiseConstantCurvatureTrajectory</a> ()=default</td></tr>
 <tr class="memdesc:a7afd8ab9f8d0562fe877a4fb3cb298a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">An empty piecewise constant curvature trajectory.  <a href="#a7afd8ab9f8d0562fe877a4fb3cb298a5">More...</a><br /></td></tr>
 <tr class="separator:a7afd8ab9f8d0562fe877a4fb3cb298a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7f7d068f40e11c84d79db38d5710c90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#ad7f7d068f40e11c84d79db38d5710c90">PiecewiseConstantCurvatureTrajectory</a> (const std::vector&lt; T &gt; &amp;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>, const std::vector&lt; T &gt; &amp;turning_rates, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;initial_curve_tangent, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;plane_normal, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;initial_position)</td></tr>
-<tr class="memdesc:ad7f7d068f40e11c84d79db38d5710c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a piecewise constant curvature trajectory.  <a href="#ad7f7d068f40e11c84d79db38d5710c90">More...</a><br /></td></tr>
-<tr class="separator:ad7f7d068f40e11c84d79db38d5710c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9493490c478a0bc33feda6bcf4c757"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#afb9493490c478a0bc33feda6bcf4c757">PiecewiseConstantCurvatureTrajectory</a> (const std::vector&lt; T &gt; &amp;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426">breaks</a>, const std::vector&lt; T &gt; &amp;turning_rates, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;initial_curve_tangent, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;plane_normal, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;initial_position, <a class="el" href="classdouble.html">double</a> periodicity_tolerance=1e-8)</td></tr>
+<tr class="memdesc:afb9493490c478a0bc33feda6bcf4c757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a piecewise constant curvature trajectory.  <a href="#afb9493490c478a0bc33feda6bcf4c757">More...</a><br /></td></tr>
+<tr class="separator:afb9493490c478a0bc33feda6bcf4c757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a944aeffdb9d0381d2b3d12b0d496a0a0"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a944aeffdb9d0381d2b3d12b0d496a0a0"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a944aeffdb9d0381d2b3d12b0d496a0a0">PiecewiseConstantCurvatureTrajectory</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html">PiecewiseConstantCurvatureTrajectory</a>&lt; U &gt; other)</td></tr>
 <tr class="memdesc:a944aeffdb9d0381d2b3d12b0d496a0a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar conversion constructor.  <a href="#a944aeffdb9d0381d2b3d12b0d496a0a0">More...</a><br /></td></tr>
 <tr class="separator:a944aeffdb9d0381d2b3d12b0d496a0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a319b1046f6f739132918623ea8aa25d8"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a319b1046f6f739132918623ea8aa25d8">length</a> () const</td></tr>
 <tr class="separator:a319b1046f6f739132918623ea8aa25d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade440970557ec90243a03ce4e1d588db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#ade440970557ec90243a03ce4e1d588db">is_periodic</a> () const</td></tr>
+<tr class="separator:ade440970557ec90243a03ce4e1d588db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfa1acb11b9a6296c79275adeac9b6f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#adfa1acb11b9a6296c79275adeac9b6f2">CalcPose</a> (const T &amp;s) const</td></tr>
 <tr class="memdesc:adfa1acb11b9a6296c79275adeac9b6f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the trajectory's pose X_AF(s) at the given arclength s.  <a href="#adfa1acb11b9a6296c79275adeac9b6f2">More...</a><br /></td></tr>
 <tr class="separator:adfa1acb11b9a6296c79275adeac9b6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -333,6 +343,21 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a6a03dfabaf0999ebcae4cbf8cde49083 inherit pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a6a03dfabaf0999ebcae4cbf8cde49083">operator=</a> (<a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a6a03dfabaf0999ebcae4cbf8cde49083 inherit pro_methods_classdrake_1_1trajectories_1_1_trajectory"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a1de84b778ac214eba7920572ace0200d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de84b778ac214eba7920572ace0200d">&#9670;&nbsp;</a></span>ScalarValueConverter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a1de84b778ac214eba7920572ace0200d">ScalarValueConverter</a> =  typename systems::scalar_conversion::template ValueConverter&lt;T, U&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2af6a12c70f17c952a1369665d0fc02a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2af6a12c70f17c952a1369665d0fc02a">&#9670;&nbsp;</a></span>PiecewiseConstantCurvatureTrajectory() <span class="overload">[1/5]</span></h2>
@@ -413,8 +438,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ad7f7d068f40e11c84d79db38d5710c90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7f7d068f40e11c84d79db38d5710c90">&#9670;&nbsp;</a></span>PiecewiseConstantCurvatureTrajectory() <span class="overload">[4/5]</span></h2>
+<a id="afb9493490c478a0bc33feda6bcf4c757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb9493490c478a0bc33feda6bcf4c757">&#9670;&nbsp;</a></span>PiecewiseConstantCurvatureTrajectory() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -447,7 +472,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>initial_position</em>&#160;</td>
+          <td class="paramname"><em>initial_position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>periodicity_tolerance</em> = <code>1e-8</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -467,7 +498,8 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">turning_rates</td><td>A vector of n-1 turning rates ρᵢ for each segment. </td></tr>
     <tr><td class="paramname">initial_curve_tangent</td><td>The initial tangent of the curve expressed in the parent frame, t̂_A(s₀). </td></tr>
     <tr><td class="paramname">plane_normal</td><td>The normal axis of the 2D plane in which the curve lies, expressed in the parent frame, p̂_A. </td></tr>
-    <tr><td class="paramname">initial_position</td><td>The initial position of the curve expressed in the parent frame, p_AoFo_A(s₀).</td></tr>
+    <tr><td class="paramname">initial_position</td><td>The initial position of the curve expressed in the parent frame, p_AoFo_A(s₀). </td></tr>
+    <tr><td class="paramname">periodicity_tolerance</td><td>Tolerance used to determine if the resulting trajectory is periodic, according to the metric defined by <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#abbae6db5c296a6f3f059d9764ab05452">IsNearlyPeriodic()</a>. If IsNearlyPeriodic(periodicity_tolerance) is true, then the newly constructed trajectory will be periodic. That is, X_AF(s) = X_AF(s + k⋅L) ∀ k ∈ ℤ, where L equals <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a319b1046f6f739132918623ea8aa25d8">length()</a>. Subsequent calls to <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#ade440970557ec90243a03ce4e1d588db">is_periodic()</a> will return <code>true</code>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -632,6 +664,23 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The spatial velocity V_AF_A(s) at s. </dd></dl>
+
+</div>
+</div>
+<a id="ade440970557ec90243a03ce4e1d588db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade440970557ec90243a03ce4e1d588db">&#9670;&nbsp;</a></span>is_periodic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt;T&gt; is_periodic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
