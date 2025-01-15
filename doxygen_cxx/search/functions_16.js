@@ -1,6 +1,7 @@
 var searchData=
 [
   ['waitformessage',['WaitForMessage',['../classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ac456d9170ae4b25ded776deffac5f039',1,'drake::systems::lcm::LcmSubscriberSystem']]],
+  ['warn',['Warn',['../structdrake_1_1logging_1_1_warn.html#adfebb4989e81d5d715e9ef669de87dfe',1,'drake::logging::Warn']]],
   ['warndeprecated',['WarnDeprecated',['../namespacedrake_1_1pydrake.html#ad64efa5d584964d8c233e48c107eae84',1,'drake::pydrake']]],
   ['warnonsmallmatrixsize',['WarnOnSmallMatrixSize',['../classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a36439246736ce57d04811336f146d275',1,'drake::solvers::PositiveSemidefiniteConstraint::WarnOnSmallMatrixSize()'],['../classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a36439246736ce57d04811336f146d275',1,'drake::solvers::LinearMatrixInequalityConstraint::WarnOnSmallMatrixSize()']]],
   ['web_5furl',['web_url',['../classdrake_1_1geometry_1_1_meshcat.html#a3dfb466d67a1d1d068c1b8017b2d14c5',1,'drake::geometry::Meshcat']]],

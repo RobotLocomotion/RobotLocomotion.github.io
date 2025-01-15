@@ -1956,7 +1956,7 @@ this.value(t).transpose().</p>
 <li><p>ZeroOrderHold(breaks: list[float], samples: list[list[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</p></li>
 </ol>
 <p>Version of ZeroOrderHold(breaks, samples) that uses vector samples and
-Eigen VectorXd/MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
+<code class="docutils literal notranslate"><span class="pre">Eigen::VectorX&lt;T&gt;/MatrixX&lt;T&gt;</span></code> arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
 represents a sample point.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">samples.cols()</span> <span class="pre">==</span> <span class="pre">breaks.size()</span></code></p>
@@ -2559,7 +2559,7 @@ this.value(t).transpose().</p>
 <li><p>ZeroOrderHold(breaks: list[pydrake.autodiffutils.AutoDiffXd], samples: list[list[pydrake.autodiffutils.AutoDiffXd]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]</p></li>
 </ol>
 <p>Version of ZeroOrderHold(breaks, samples) that uses vector samples and
-Eigen VectorXd/MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
+<code class="docutils literal notranslate"><span class="pre">Eigen::VectorX&lt;T&gt;/MatrixX&lt;T&gt;</span></code> arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
 represents a sample point.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">samples.cols()</span> <span class="pre">==</span> <span class="pre">breaks.size()</span></code></p>
@@ -3156,7 +3156,7 @@ this.value(t).transpose().</p>
 <li><p>ZeroOrderHold(breaks: list[pydrake.symbolic.Expression], samples: list[list[pydrake.symbolic.Expression]]) -&gt; pydrake.trajectories.PiecewisePolynomial_[Expression]</p></li>
 </ol>
 <p>Version of ZeroOrderHold(breaks, samples) that uses vector samples and
-Eigen VectorXd/MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
+<code class="docutils literal notranslate"><span class="pre">Eigen::VectorX&lt;T&gt;/MatrixX&lt;T&gt;</span></code> arguments. Each column of <code class="docutils literal notranslate"><span class="pre">samples</span></code>
 represents a sample point.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">samples.cols()</span> <span class="pre">==</span> <span class="pre">breaks.size()</span></code></p>
@@ -3214,9 +3214,9 @@ for the list of instantiations.</p>
 </ol>
 <p>Constructor.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_traj</span></code>:</dt><dd><p>Position trajectory.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_trajectory</span></code>:</dt><dd><p>Position trajectory.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rot_traj</span></code>:</dt><dd><p>Orientation trajectory.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">orientation_trajectory</span></code>:</dt><dd><p>Orientation trajectory.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3323,9 +3323,9 @@ PiecewisePolynomial.</p>
 </ol>
 <p>Constructor.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_traj</span></code>:</dt><dd><p>Position trajectory.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_trajectory</span></code>:</dt><dd><p>Position trajectory.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rot_traj</span></code>:</dt><dd><p>Orientation trajectory.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">orientation_trajectory</span></code>:</dt><dd><p>Orientation trajectory.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3426,9 +3426,9 @@ PiecewisePolynomial.</p>
 </ol>
 <p>Constructor.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_traj</span></code>:</dt><dd><p>Position trajectory.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_trajectory</span></code>:</dt><dd><p>Position trajectory.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rot_traj</span></code>:</dt><dd><p>Orientation trajectory.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">orientation_trajectory</span></code>:</dt><dd><p>Orientation trajectory.</p>
 </dd>
 </dl>
 </dd></dl>

@@ -170,15 +170,25 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kinova__
 <p>Note that this system does not actually subscribe to an LCM channel. To receive the message, the input of this system should be connected to a LcmSubscriberSystem::Make&lt;drake::lcmt_jaco_command&gt;().</p>
 <p>It has one required input port, "lcmt_jaco_command".</p>
 <p>This system has three output ports: one each for the commanded position and velocity of the arm+finger joints, and one for the timestamp in the most recently received message. Finger velocities will be translated from the values used by the Kinova SDK to values appropriate for the finger joints in the Jaco description (see <a class="el" href="jaco__constants_8h.html">jaco_constants.h</a>).</p>
-<p>@system name: <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html" title="Handles lcmt_jaco_command message from a LcmSubscriberSystem.">JacoCommandReceiver</a> input_ports:</p><ul>
-<li>lcmt_jaco_command</li>
-<li>position_measured (optional) output_ports:</li>
-<li>position</li>
-<li>velocity</li>
-<li>time</li>
-</ul>
-<dl class="section user"><dt>Output prior to receiving a valid lcmt_jaco_command message: The</dt><dd>"position" output initially feeds through from the "position_measured" input port &ndash; or if not connected, outputs zero. When discrete update events are enabled (e.g., during a simulation), the system latches the "position_measured" input into state during the first event, and the "position" output comes from the latched state, no longer fed through from the "position" input. Alternatively, the <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#aedfdc1ea4461e65efa2fcdbe240f4ff6" title="(Advanced) Copies the current &quot;position_measured&quot; input (or zero if not connected) into Context state...">LatchInitialPosition()</a> method is available to achieve the same effect without using events. The "time" output will be a vector of a single zero.</dd></dl>
-<p>@endsystem </p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">lcmt_jaco_command&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">position_measured (optional)&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html" title="Handles lcmt_jaco_command message from a LcmSubscriberSystem.">JacoCommandReceiver</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; position</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; velocity</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; time</td></tr>
+</table>
+</td></tr>
+</table>
+<dl class="section user"><dt>Output prior to receiving a valid lcmt_jaco_command message: The</dt><dd>"position" output initially feeds through from the "position_measured" input port &ndash; or if not connected, outputs zero. When discrete update events are enabled (e.g., during a simulation), the system latches the "position_measured" input into state during the first event, and the "position" output comes from the latched state, no longer fed through from the "position" input. Alternatively, the <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#aedfdc1ea4461e65efa2fcdbe240f4ff6" title="(Advanced) Copies the current &quot;position_measured&quot; input (or zero if not connected) into Context state...">LatchInitialPosition()</a> method is available to achieve the same effect without using events. The "time" output will be a vector of a single zero. </dd></dl>
 </div>
 <p><code>#include &lt;drake/manipulation/kinova_jaco/jaco_command_receiver.h&gt;</code></p>
 <table class="memberdecls">

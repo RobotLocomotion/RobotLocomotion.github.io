@@ -414,16 +414,16 @@ involves the complexity of comparing two arbitrary Expressions
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">map_var_to_index</span></code>:</dt><dd><p>maps variables in <code class="docutils literal notranslate"><span class="pre">poly.GetVariables()</span></code> to the index in the
 vector <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Q</span></code>:</dt><dd><p>[out] The Hessian of the quadratic expression.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Q</span></code>:</dt><dd><p>The Hessian of the quadratic expression.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>The size of Q should be <code class="docutils literal notranslate"><span class="pre">num_variables</span> <span class="pre">x</span> <span class="pre">num_variables</span></code>. Q is a
 symmetric matrix.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>[out] The linear term of the quadratic expression.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt><dd><p>linear term of the quadratic expression.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>The size of <code class="docutils literal notranslate"><span class="pre">b</span></code> should be <code class="docutils literal notranslate"><span class="pre">num_variables</span></code>.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt><dd><p>[out] The constant term of the quadratic expression.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt><dd><p>The constant term of the quadratic expression.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2747,8 +2747,9 @@ trigonometric expansions. For instance,</p>
 </div>
 </details><p>will result in the expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">(sx*cy</span> <span class="pre">+</span> <span class="pre">cx*sy)</span></code>.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">half_angle</span></code>:</dt><dd><p>If true, then the same workflow replaces instances of sin(q/2) and
-cos(q/2) in <code class="docutils literal notranslate"><span class="pre">e</span></code> will be replaced with <code class="docutils literal notranslate"><span class="pre">s</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">subs</span></code>:</dt><dd><p>When set to one of the half_angle options, then the same workflow
+replaces instances of sin(q/2) and cos(q/2) in <code class="docutils literal notranslate"><span class="pre">e</span></code> will be
+replaced with <code class="docutils literal notranslate"><span class="pre">s</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
 </dd>
 <dt><em>Default:</em> false.</dt><dd><p>The half-angle representation is more natural in many analysis
 computations for robots, for instance:

@@ -1476,11 +1476,9 @@ Functions</h2></td></tr>
 <p>Given a pair of geometries and the generalized position/velocity of the plant, compute the signed distance between the pair of geometries and the time derivative of the signed distance. </p>
 <p>This function is similar to QueryObject::ComputeSignedDistancePairClosestPoints(), but it also provides the time derivative of the signed distance. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">plant</td><td>The plant on which the geometries are attached. This plant must have been connected to a SceneGraph. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">geometry_pair</td><td>The pair of geometries whose distance and time derivative are computed. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">context</td><td>The context of the plant. This must store both q and v. This context must have been extracted from the diagram context which contains both <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph contexts. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">distance</td><td>The signed distance between the pair of geometry. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">distance_time_derivative</td><td>The time derivative of the signed distance. </td></tr>
+    <tr><td class="paramname">plant</td><td>The plant on which the geometries are attached. This plant must have been connected to a SceneGraph. </td></tr>
+    <tr><td class="paramname">geometry_pair</td><td>The pair of geometries whose distance and time derivative are computed. </td></tr>
+    <tr><td class="paramname">context</td><td>The context of the plant. This must store both q and v. This context must have been extracted from the diagram context which contains both <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and SceneGraph contexts. </td></tr>
   </table>
   </dd>
 </dl>

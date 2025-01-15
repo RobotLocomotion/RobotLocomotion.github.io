@@ -6,6 +6,7 @@ var namespacedrake =
     [ "examples", "namespacedrake_1_1examples.html", "namespacedrake_1_1examples" ],
     [ "geometry", "namespacedrake_1_1geometry.html", "namespacedrake_1_1geometry" ],
     [ "lcm", "namespacedrake_1_1lcm.html", "namespacedrake_1_1lcm" ],
+    [ "logging", "namespacedrake_1_1logging.html", "namespacedrake_1_1logging" ],
     [ "manipulation", "namespacedrake_1_1manipulation.html", "namespacedrake_1_1manipulation" ],
     [ "math", "namespacedrake_1_1math.html", "namespacedrake_1_1math" ],
     [ "multibody", "namespacedrake_1_1multibody.html", "namespacedrake_1_1multibody" ],

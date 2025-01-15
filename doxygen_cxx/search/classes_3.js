@@ -41,6 +41,7 @@ var searchData=
   ['discretederivative_3c_20double_20_3e',['DiscreteDerivative&lt; double &gt;',['../classdrake_1_1systems_1_1_discrete_derivative.html',1,'drake::systems']]],
   ['discretetimedelay',['DiscreteTimeDelay',['../classdrake_1_1systems_1_1_discrete_time_delay.html',1,'drake::systems']]],
   ['discretetimeintegrator',['DiscreteTimeIntegrator',['../classdrake_1_1systems_1_1_discrete_time_integrator.html',1,'drake::systems']]],
+  ['discretetimetrajectory',['DiscreteTimeTrajectory',['../classdrake_1_1trajectories_1_1_discrete_time_trajectory.html',1,'drake::trajectories']]],
   ['discreteupdateevent',['DiscreteUpdateEvent',['../classdrake_1_1systems_1_1_discrete_update_event.html',1,'drake::systems']]],
   ['discretevalues',['DiscreteValues',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],
   ['discretevalues_3c_20autodiffxd_20_3e',['DiscreteValues&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],

@@ -589,7 +589,7 @@ body_orientation_cost(i) * body_orientation_error(i)
     <tr><td class="paramname">p_BQ</td><td>The position of the point Q measured and expressed in the body frame B. </td></tr>
     <tr><td class="paramname">box_lb_F</td><td>The lower bound of the box in frame <code>F</code>. </td></tr>
     <tr><td class="paramname">box_ub_F</td><td>The upper bound of the box in frame <code>F</code>. </td></tr>
-    <tr><td class="paramname">X_WF.</td><td>The frame in which the box is specified. This frame is represented by a RigidTransform X_WF, the transform from the constraint frame F to the world frame W. Namely if the position of the point <code>Q</code> in the world frame is <code>p_WQ</code>, then the constraint is <pre class="fragment">box_lb_F &lt;= R_FW * (p_WQ-p_WFo) &lt;= box_ub_F
+    <tr><td class="paramname">X_WF</td><td>The frame in which the box is specified. This frame is represented by a RigidTransform X_WF, the transform from the constraint frame F to the world frame W. Namely if the position of the point <code>Q</code> in the world frame is <code>p_WQ</code>, then the constraint is <pre class="fragment">box_lb_F &lt;= R_FW * (p_WQ-p_WFo) &lt;= box_ub_F
 </pre> where<ul>
 <li>R_FW is the rotation matrix of frame <code>W</code> expressed and measured in frame <code>F</code>. <code>R_FW = X_WF.linear().transpose()</code>.</li>
 <li>p_WFo is the position of frame <code>F</code>'s origin, expressed and measured in frame <code>W</code>. <code>p_WFo = X_WF.translation()</code>. <br />
@@ -676,7 +676,7 @@ body_orientation_cost(i) * body_orientation_error(i)
     <tr><td class="paramname">p_AP</td><td>The position of the point P measured and expressed in the body frame A. </td></tr>
     <tr><td class="paramname">box_lb_F</td><td>The lower bound of the box in frame <code>F</code>. </td></tr>
     <tr><td class="paramname">box_ub_F</td><td>The upper bound of the box in frame <code>F</code>. </td></tr>
-    <tr><td class="paramname">X_WF.</td><td>Defines the frame in which the box is specified. <br />
+    <tr><td class="paramname">X_WF</td><td>Defines the frame in which the box is specified. <br />
  <em>Default:</em> is the identity transform. </td></tr>
   </table>
   </dd>
@@ -857,7 +857,7 @@ zᵢ ∈ {0, 1}
     <tr><td class="paramname">body_index</td><td>The index of the body to which the sphere is attached. </td></tr>
     <tr><td class="paramname">p_BQ</td><td>The position of the sphere center in the body frame B. </td></tr>
     <tr><td class="paramname">radius</td><td>The radius of the sphere. </td></tr>
-    <tr><td class="paramname">polytopes.</td><td>polytopes[i] = (Aᵢ, bᵢ). We assume that Aᵢx≤ bᵢ is a bounded polytope. It is the user's responsibility to guarantee the boundedness. </td></tr>
+    <tr><td class="paramname">polytopes</td><td>polytopes[i] = (Aᵢ, bᵢ). We assume that Aᵢx≤ bᵢ is a bounded polytope. It is the user's responsibility to guarantee the boundedness. </td></tr>
   </table>
   </dd>
 </dl>

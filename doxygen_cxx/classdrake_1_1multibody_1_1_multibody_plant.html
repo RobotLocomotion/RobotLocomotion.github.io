@@ -2988,7 +2988,7 @@ When cached values are out of sync with the state stored in context, this method
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The frame B in <code>w_AB</code> (B's angular velocity in A). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame A in <code>w_AB</code> (B's angular velocity in A). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which <code>w_AB</code> is expressed on input and the frame in which the Jacobian <code>J𝑠_w_AB</code> is expressed on output. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">J𝑠_w_AB_E</td><td><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> B's angular velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. The Jacobian is a function of only generalized positions q (which are pulled from the context). The previous definition shows <code>J𝑠_w_AB_E</code> is a matrix of size <code>3 x n</code>, where n is the number of elements in 𝑠. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Js_w_AB_E</td><td><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> B's angular velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. The Jacobian is a function of only generalized positions q (which are pulled from the context). The previous definition shows <code>J𝑠_w_AB_E</code> is a matrix of size <code>3 x n</code>, where n is the number of elements in 𝑠. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3053,7 +3053,7 @@ When cached values are out of sync with the state stored in context, this method
     <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the Jacobian <code>J𝑠_v_ACcm_E</code> is partial derivatives with respect to 𝑠 = q̇ (time-derivatives of generalized positions) or with respect to 𝑠 = v (generalized velocities). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which the translational velocity v_ACcm and its Jacobian J𝑠_v_ACcm are measured. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which the Jacobian J𝑠_v_ACcm is expressed on output. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">J𝑠_v_ACcm_E</td><td>Point Ccm's translational velocity Jacobian in frame A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E. J𝑠_v_ACcm_E is a 3 x n matrix, where n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Js_v_ACcm_E</td><td>Point Ccm's translational velocity Jacobian in frame A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E. J𝑠_v_ACcm_E is a 3 x n matrix, where n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
   </table>
   </dd>
 </dl>
@@ -3126,7 +3126,7 @@ When cached values are out of sync with the state stored in context, this method
     <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the Jacobian <code>J𝑠_v_ACcm_E</code> is partial derivatives with respect to 𝑠 = q̇ (time-derivatives of generalized positions) or with respect to 𝑠 = v (generalized velocities). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which the translational velocity v_ACcm and its Jacobian J𝑠_v_ACcm are measured. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which the Jacobian J𝑠_v_ACcm is expressed on output. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">J𝑠_v_ACcm_E</td><td>Point Ccm's translational velocity Jacobian in frame A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E. J𝑠_v_ACcm_E is a 3 x n matrix, where n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Js_v_ACcm_E</td><td>Point Ccm's translational velocity Jacobian in frame A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E. J𝑠_v_ACcm_E is a 3 x n matrix, where n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
   </table>
   </dd>
 </dl>
@@ -3290,7 +3290,7 @@ See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#Jacobia
     <tr><td class="paramdir">[in]</td><td class="paramname">p_BoBp_B</td><td>A position vector from Bo (frame_B's origin) to point Bp (regarded as fixed/welded to B), expressed in frame_B. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame that measures <code>v_ABp</code> (Bp's velocity in A). Note: It is natural to wonder why there is no parameter p_AoAp_A (similar to the parameter p_BoBp_B for frame_B). There is no need for p_AoAp_A because Bp's velocity in A is defined as the derivative in frame A of Bp's position vector from <em>any</em> point fixed to A. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which <code>v_ABp</code> is expressed on input and the frame in which the Jacobian <code>J𝑠_V_ABp</code> is expressed on output. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">J𝑠_V_ABp_E</td><td>Point Bp's spatial velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. <code>J𝑠_V_ABp_E</code> is a <code>6 x n</code> matrix, where n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Js_V_ABp_E</td><td>Point Bp's spatial velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. <code>J𝑠_V_ABp_E</code> is a <code>6 x n</code> matrix, where n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
   </table>
   </dd>
 </dl>
@@ -3379,7 +3379,7 @@ Consider <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae
     <tr><td class="paramdir">[in]</td><td class="paramname">p_BoBi_B</td><td>A position vector or list of p position vectors from Bo (frame_B's origin) to points Bi (regarded as affixed to B), where each position vector is expressed in frame_B. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame that measures <code>v_ABi</code> (Bi's velocity in A). Note: It is natural to wonder why there is no parameter p_AoAi_A (similar to the parameter p_BoBi_B for frame_B). There is no need for p_AoAi_A because Bi's velocity in A is defined as the derivative in frame A of Bi's position vector from <em>any</em> point affixed to A. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which <code>v_ABi</code> is expressed on input and the frame in which the Jacobian <code>J𝑠_v_ABi</code> is expressed on output. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">J𝑠_v_ABi_E</td><td>Point Bi's velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. <code>J𝑠_v_ABi_E</code> is a <code>3*p x n</code> matrix, where p is the number of points Bi and n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Js_v_ABi_E</td><td>Point Bi's velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. <code>J𝑠_v_ABi_E</code> is a <code>3*p x n</code> matrix, where p is the number of points Bi and n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
   </table>
   </dd>
 </dl>
@@ -9950,7 +9950,7 @@ manager != nullptr. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context to store the pose <code>X_WB</code> of <code>body_B</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">body_B</td><td>The <em>floating base</em> body B corresponding to the pose <code>X_WB</code> to be stored in <code>context</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>The <em>floating base</em> body B corresponding to the pose <code>X_WB</code> to be stored in <code>context</code>. </td></tr>
   </table>
   </dd>
 </dl>

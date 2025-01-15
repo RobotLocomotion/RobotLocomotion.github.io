@@ -3517,7 +3517,7 @@ v (generalized velocities).</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">w_AB</span></code> is expressed on input and the frame in
 which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_w_AB</span></code> is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_w_AB_E</span></code>:</dt><dd><p>Frame B’s angular velocity Jacobian in frame A with respect to
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_w_AB_E</span></code>:</dt><dd><p>Frame B’s angular velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E. The
 Jacobian is a function of only generalized positions q (which are
 pulled from the context). The previous definition shows
@@ -3561,7 +3561,7 @@ Jacobian J𝑠_v_ACcm are measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the Jacobian J𝑠_v_ACcm is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
 respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E.
 J𝑠_v_ACcm_E is a 3 x n matrix, where n is the number of elements
 in 𝑠. The Jacobian is a function of only generalized positions q
@@ -3606,7 +3606,7 @@ Jacobian J𝑠_v_ACcm are measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the Jacobian J𝑠_v_ACcm is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
 respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E.
 J𝑠_v_ACcm_E is a 3 x n matrix, where n is the number of elements
 in 𝑠. The Jacobian is a function of only generalized positions q
@@ -3732,7 +3732,7 @@ in frame A of Bp’s position vector from <em>any</em> point fixed to A.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> is expressed on input and the frame
 in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code>:</dt><dd><p>Point Bp’s spatial velocity Jacobian in frame A with respect to
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_V_ABp_E</span></code>:</dt><dd><p>Point Bp’s spatial velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E.
 <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code> is a <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix, where n is the number of
 elements in 𝑠. The Jacobian is a function of only generalized
@@ -3803,7 +3803,7 @@ in frame A of Bi’s position vector from <em>any</em> point affixed to A.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABi</span></code> is expressed on input and the frame
 in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi</span></code> is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi_E</span></code>:</dt><dd><p>Point Bi’s velocity Jacobian in frame A with respect to speeds 𝑠
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ABi_E</span></code>:</dt><dd><p>Point Bi’s velocity Jacobian in frame A with respect to speeds 𝑠
 (which is either q̇ or v), expressed in frame E. <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi_E</span></code> is
 a <code class="docutils literal notranslate"><span class="pre">3*p</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix, where p is the number of points Bi and n is
 the number of elements in 𝑠. The Jacobian is a function of only
@@ -9264,7 +9264,7 @@ v (generalized velocities).</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">w_AB</span></code> is expressed on input and the frame in
 which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_w_AB</span></code> is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_w_AB_E</span></code>:</dt><dd><p>Frame B’s angular velocity Jacobian in frame A with respect to
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_w_AB_E</span></code>:</dt><dd><p>Frame B’s angular velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E. The
 Jacobian is a function of only generalized positions q (which are
 pulled from the context). The previous definition shows
@@ -9308,7 +9308,7 @@ Jacobian J𝑠_v_ACcm are measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the Jacobian J𝑠_v_ACcm is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
 respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E.
 J𝑠_v_ACcm_E is a 3 x n matrix, where n is the number of elements
 in 𝑠. The Jacobian is a function of only generalized positions q
@@ -9353,7 +9353,7 @@ Jacobian J𝑠_v_ACcm are measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the Jacobian J𝑠_v_ACcm is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
 respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E.
 J𝑠_v_ACcm_E is a 3 x n matrix, where n is the number of elements
 in 𝑠. The Jacobian is a function of only generalized positions q
@@ -9479,7 +9479,7 @@ in frame A of Bp’s position vector from <em>any</em> point fixed to A.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> is expressed on input and the frame
 in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code>:</dt><dd><p>Point Bp’s spatial velocity Jacobian in frame A with respect to
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_V_ABp_E</span></code>:</dt><dd><p>Point Bp’s spatial velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E.
 <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code> is a <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix, where n is the number of
 elements in 𝑠. The Jacobian is a function of only generalized
@@ -9550,7 +9550,7 @@ in frame A of Bi’s position vector from <em>any</em> point affixed to A.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABi</span></code> is expressed on input and the frame
 in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi</span></code> is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi_E</span></code>:</dt><dd><p>Point Bi’s velocity Jacobian in frame A with respect to speeds 𝑠
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ABi_E</span></code>:</dt><dd><p>Point Bi’s velocity Jacobian in frame A with respect to speeds 𝑠
 (which is either q̇ or v), expressed in frame E. <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi_E</span></code> is
 a <code class="docutils literal notranslate"><span class="pre">3*p</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix, where p is the number of points Bi and n is
 the number of elements in 𝑠. The Jacobian is a function of only
@@ -14967,7 +14967,7 @@ v (generalized velocities).</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">w_AB</span></code> is expressed on input and the frame in
 which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_w_AB</span></code> is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_w_AB_E</span></code>:</dt><dd><p>Frame B’s angular velocity Jacobian in frame A with respect to
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_w_AB_E</span></code>:</dt><dd><p>Frame B’s angular velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E. The
 Jacobian is a function of only generalized positions q (which are
 pulled from the context). The previous definition shows
@@ -15011,7 +15011,7 @@ Jacobian J𝑠_v_ACcm are measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the Jacobian J𝑠_v_ACcm is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
 respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E.
 J𝑠_v_ACcm_E is a 3 x n matrix, where n is the number of elements
 in 𝑠. The Jacobian is a function of only generalized positions q
@@ -15056,7 +15056,7 @@ Jacobian J𝑠_v_ACcm are measured.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the Jacobian J𝑠_v_ACcm is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ACcm_E</span></code>:</dt><dd><p>Point Ccm’s translational velocity Jacobian in frame A with
 respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E.
 J𝑠_v_ACcm_E is a 3 x n matrix, where n is the number of elements
 in 𝑠. The Jacobian is a function of only generalized positions q
@@ -15182,7 +15182,7 @@ in frame A of Bp’s position vector from <em>any</em> point fixed to A.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABp</span></code> is expressed on input and the frame
 in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp</span></code> is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code>:</dt><dd><p>Point Bp’s spatial velocity Jacobian in frame A with respect to
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_V_ABp_E</span></code>:</dt><dd><p>Point Bp’s spatial velocity Jacobian in frame A with respect to
 speeds 𝑠 (which is either q̇ or v), expressed in frame E.
 <code class="docutils literal notranslate"><span class="pre">J𝑠_V_ABp_E</span></code> is a <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix, where n is the number of
 elements in 𝑠. The Jacobian is a function of only generalized
@@ -15253,7 +15253,7 @@ in frame A of Bi’s position vector from <em>any</em> point affixed to A.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which <code class="docutils literal notranslate"><span class="pre">v_ABi</span></code> is expressed on input and the frame
 in which the Jacobian <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi</span></code> is expressed on output.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi_E</span></code>:</dt><dd><p>Point Bi’s velocity Jacobian in frame A with respect to speeds 𝑠
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Js_v_ABi_E</span></code>:</dt><dd><p>Point Bi’s velocity Jacobian in frame A with respect to speeds 𝑠
 (which is either q̇ or v), expressed in frame E. <code class="docutils literal notranslate"><span class="pre">J𝑠_v_ABi_E</span></code> is
 a <code class="docutils literal notranslate"><span class="pre">3*p</span> <span class="pre">x</span> <span class="pre">n</span></code> matrix, where p is the number of points Bi and n is
 the number of elements in 𝑠. The Jacobian is a function of only

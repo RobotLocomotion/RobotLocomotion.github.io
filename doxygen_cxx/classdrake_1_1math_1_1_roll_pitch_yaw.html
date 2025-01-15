@@ -616,13 +616,7 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>For <code>this</code> RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generic frames A and D, returns the 3x3 matrix Nc relating ṙ, ṗ, ẏ to ω0, ω1, ω2, where frame D's angular velocity in A, expressed in "child" D is <code>w_AD_D = ω0 Dx + ω1 Dy + ω2 Dz</code>. </p>
-<p>Hence, Nc contains partial derivatives of [ṙ, ṗ, ẏ] with respect to [ω0; ω1; ω2]ᴅ. </p><div class="fragment"><div class="line">⌈ ṙ ⌉      ⌈ ω0 ⌉          ⌈ 1  <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(r)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p)  <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p) ⌉</div><div class="line">| ṗ | = Nc | ω1 |     Nc = | 0      <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)        −sin(r)    |</div><div class="line">⌊ ẏ ⌋      ⌊ ω2 ⌋ᴅ         ⌊ 0  <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(r)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)  <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p) ⌋</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">function_name</td><td>name of the calling function/method. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
+<p>Hence, Nc contains partial derivatives of [ṙ, ṗ, ẏ] with respect to [ω0; ω1; ω2]ᴅ. </p><div class="fragment"><div class="line">⌈ ṙ ⌉      ⌈ ω0 ⌉          ⌈ 1  <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(r)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p)  <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p) ⌉</div><div class="line">| ṗ | = Nc | ω1 |     Nc = | 0      <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)        −sin(r)    |</div><div class="line">⌊ ẏ ⌋      ⌊ ω2 ⌋ᴅ         ⌊ 0  <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(r)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)  <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(r)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p) ⌋</div></div><!-- fragment --> <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>cos(p) ≈ 0</code> (<code>p</code> is near gimbal-lock). </td></tr>
   </table>
@@ -649,13 +643,7 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>For <code>this</code> RollPitchYaw with roll-pitch-yaw angles [r; p; y] which relate the orientation of two generic frames A and D, returns the 3x3 matrix Np relating ṙ, ṗ, ẏ to ωx, ωy, ωz, where frame D's angular velocity in A, expressed in "parent" A is <code>w_AD_A = ωx Ax + ωy Ay + ωz Az</code>. </p>
-<p>Hence, Np contains partial derivatives of [ṙ, ṗ, ẏ] with respect to [ωx; ωy; ωz]ᴀ. </p><div class="fragment"><div class="line">⌈ ṙ ⌉      ⌈ ωx ⌉          ⌈ <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)  <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(y)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)   0 ⌉</div><div class="line">| ṗ | = Np | ωy |     Np = |   −sin(y)          <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)      0 |</div><div class="line">⌊ ẏ ⌋      ⌊ ωz ⌋ᴀ         ⌊ <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p)   <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(y)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p)  1 ⌋</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">function_name</td><td>name of the calling function/method. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
+<p>Hence, Np contains partial derivatives of [ṙ, ṗ, ẏ] with respect to [ωx; ωy; ωz]ᴀ. </p><div class="fragment"><div class="line">⌈ ṙ ⌉      ⌈ ωx ⌉          ⌈ <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)  <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(y)/<a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(p)   0 ⌉</div><div class="line">| ṗ | = Np | ωy |     Np = |   −sin(y)          <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)      0 |</div><div class="line">⌊ ẏ ⌋      ⌊ ωz ⌋ᴀ         ⌊ <a class="code" href="namespacedrake_1_1ad.html#a816394bf5c538b6334bb74b6888bdd75">cos</a>(y)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p)   <a class="code" href="namespacedrake_1_1ad.html#ac023124b011f56f04b412886e348e809">sin</a>(y)*<a class="code" href="namespacedrake_1_1ad.html#a45d35259b01712e9c24f6f04c1f00408">tan</a>(p)  1 ⌋</div></div><!-- fragment --> <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>cos(p) ≈ 0</code> (<code>p</code> is near gimbal-lock). </td></tr>
   </table>
@@ -723,7 +711,7 @@ Related Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rpyDt</td><td>time-derivative of <code>[r; p; y]</code>, i.e., <code>[ṙ; ṗ; ẏ]</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">alpha_AD_D,frame</td><td>D's angular acceleration in frame A, expressed in frame D. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alpha_AD_D</td><td>frame D's angular acceleration in frame A, expressed in frame D. </td></tr>
   </table>
   </dd>
 </dl>
@@ -768,7 +756,7 @@ Related Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rpyDt</td><td>time-derivative of <code>[r; p; y]</code>, i.e., <code>[ṙ; ṗ; ẏ]</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">alpha_AD_A,frame</td><td>D's angular acceleration in frame A, expressed in frame A. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alpha_AD_A</td><td>frame D's angular acceleration in frame A, expressed in frame A. </td></tr>
   </table>
   </dd>
 </dl>
@@ -802,7 +790,7 @@ Related Functions</h2></td></tr>
 <p>Uses angular velocity to compute the 1ˢᵗ time-derivative of <code>this</code> RollPitchYaw whose angles <code>[r; p; y]</code> orient two generic frames A and D. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">w_AD_D,frame</td><td>D's angular velocity in frame A, expressed in D. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w_AD_D</td><td>frame D's angular velocity in frame A, expressed in D. </td></tr>
   </table>
   </dd>
 </dl>
@@ -837,7 +825,7 @@ Related Functions</h2></td></tr>
 <p>Uses angular velocity to compute the 1ˢᵗ time-derivative of <code>this</code> RollPitchYaw whose angles <code>[r; p; y]</code> orient two generic frames A and D. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">w_AD_A,frame</td><td>D's angular velocity in frame A, expressed in A. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w_AD_A</td><td>frame D's angular velocity in frame A, expressed in A. </td></tr>
   </table>
   </dd>
 </dl>

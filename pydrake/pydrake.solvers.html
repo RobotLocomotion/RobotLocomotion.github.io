@@ -299,9 +299,8 @@ non-smooth at c(x) - λ₂/μ = 0.</p>
 <dd><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt><dd><p>The mathematical program we will evaluate.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">include_x_bounds</span></code>:</dt><dd><p>. Whether the Lagrangian and the penalty for the bounds x_lo &lt;= x
-&lt;= x_up are included in the augmented Lagrangian L(x, λ, μ) or
-not.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">include_x_bounds</span></code>:</dt><dd><p>Whether the Lagrangian and the penalty for the bounds x_lo &lt;= x &lt;=
+x_up are included in the augmented Lagrangian L(x, λ, μ) or not.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -477,8 +476,8 @@ variables.</p>
 <dd><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt><dd><p>The mathematical program we will evaluate.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">include_x_bounds</span></code>:</dt><dd><p>. Whether the Lagrangian and the penalty for the bounds x_lo &lt;= x
-&lt;= x_up are included in the augmented Lagrangian L(x, s, λ, μ) or
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">include_x_bounds</span></code>:</dt><dd><p>Whether the Lagrangian and the penalty for the bounds x_lo &lt;= x &lt;=
+x_up are included in the augmented Lagrangian L(x, s, λ, μ) or
 not.</p>
 </dd>
 </dl>
@@ -2221,8 +2220,6 @@ solve.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">callback</span></code>:</dt><dd><p>User callback function.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">user_data</span></code>:</dt><dd><p>Arbitrary data that will be passed to the user callback function.</p>
-</dd>
 </dl>
 </dd></dl>
 
@@ -2233,8 +2230,6 @@ solve.</p>
 solve.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">callback</span></code>:</dt><dd><p>User callback function.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">usrdata</span></code>:</dt><dd><p>Arbitrary data that will be passed to the user callback function.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2721,9 +2716,9 @@ coefficients to achieve numerical robustness.</p>
 <span class="sig-name descname"><span class="pre">set_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.LinearConstraint" title="pydrake.solvers.LinearConstraint"><span class="pre">pydrake.solvers.LinearConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.LinearConstraint.set_bounds" title="Permalink to this definition"></a></dt>
 <dd><p>Set the upper and lower bounds of the constraint.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_lb</span></code>:</dt><dd><p>. A <code class="docutils literal notranslate"><span class="pre">num_constraints</span></code> x 1 vector.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_lb</span></code>:</dt><dd><p>A <code class="docutils literal notranslate"><span class="pre">num_constraints</span></code> x 1 vector.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_ub</span></code>:</dt><dd><p>. A <code class="docutils literal notranslate"><span class="pre">num_constraints</span></code> x 1 vector.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_ub</span></code>:</dt><dd><p>A <code class="docutils literal notranslate"><span class="pre">num_constraints</span></code> x 1 vector.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -2751,7 +2746,7 @@ and new_ub don’t all have the same number of rows.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_lb</span></code>:</dt><dd><p>new lower bound</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_up</span></code>:</dt><dd><p>new upper bound</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_ub</span></code>:</dt><dd><p>new upper bound</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -4557,11 +4552,8 @@ non-negative for any x.</p>
 </details><ol class="arabic simple" start="2">
 <li><p>AddRotatedLorentzConeConstraint(self: pydrake.solvers.MathematicalProgram, v: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.Binding[RotatedLorentzConeConstraint]</p></li>
 </ol>
-<p>Adds a constraint that a symbolic expression</p>
-<dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt><dd><p>is in the rotated Lorentz cone, i.e.,</p>
-</dd>
-</dl>
+<p>Adds a constraint that a symbolic expression <code class="docutils literal notranslate"><span class="pre">v</span></code> is in the rotated
+Lorentz cone, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[v_0v_1 \ge v_2^2 + ... + v_{n-1}^2\\]</div>
 <p>v_0 ge 0, v_1 ge 0</p>
@@ -4941,10 +4933,9 @@ decision variables.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">bindings</span></code>:</dt><dd><p>List of bindings.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt><dd><p>$Parameter <code class="docutils literal notranslate"><span class="pre">prog_var_vals</span></code>:</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog_var_vals</span></code>:</dt><dd><p>The value of all the decision variables in this program.</p>
 </dd>
 </dl>
-<p>The value of all the decision variables in this program.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>All binding values, concatenated into a single vector.</p>
@@ -4960,10 +4951,9 @@ decision variables.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">bindings</span></code>:</dt><dd><p>List of bindings.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt><dd><p>$Parameter <code class="docutils literal notranslate"><span class="pre">prog_var_vals</span></code>:</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog_var_vals</span></code>:</dt><dd><p>The value of all the decision variables in this program.</p>
 </dd>
 </dl>
-<p>The value of all the decision variables in this program.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>All binding values, concatenated into a single vector.</p>
@@ -6470,7 +6460,7 @@ ub to infinity in min(v) &lt;= ub.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_vars</span></code>:</dt><dd><p>The number of inputs to <code class="docutils literal notranslate"><span class="pre">value_function</span></code></p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_value</span></code>:</dt><dd><p>The minimum allowed value, lb, for all elements of the vector
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_value_lower</span></code>:</dt><dd><p>The minimum allowed value, lb, for all elements of the vector
 returned by <code class="docutils literal notranslate"><span class="pre">value_function</span></code>.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">influence_value_offset</span></code>:</dt><dd><p>The difference between the influence value, v_influence, and the
@@ -6678,7 +6668,7 @@ values of the binary variables are different in each solution.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">mip_var</span></code>:</dt><dd><p>A variable in the original MIP.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code>:</dt><dd><p>. The index of the best integral solution.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code>:</dt><dd><p>The index of the best integral solution.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mip_var</span></code> is a variable in the original MIP.</p>
 </dd>
@@ -6699,7 +6689,7 @@ solution is found in a separate node in the branch-and-bound tree, so</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">mip_vars</span></code>:</dt><dd><p>Variables in the original MIP.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code>:</dt><dd><p>. The index of the best integral solution.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code>:</dt><dd><p>The index of the best integral solution.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mip_vars</span></code> are variables in the original MIP.</p>
 </dd>
@@ -6720,7 +6710,7 @@ solution is found in a separate node in the branch-and-bound tree, so</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">mip_vars</span></code>:</dt><dd><p>Variables in the original MIP.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code>:</dt><dd><p>. The index of the best integral solution.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code>:</dt><dd><p>The index of the best integral solution.</p>
 </dd>
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mip_vars</span></code> are variables in the original MIP.</p>
 </dd>

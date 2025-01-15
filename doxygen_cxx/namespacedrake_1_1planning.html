@@ -363,9 +363,9 @@ T: 3 * ss + 2 * ds, knots: fs[2]
  ...
 </pre><p> ss stands for <code>single_support_duration</code>, and ds for <code>double_support_duration</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">footsteps,X</td><td>Y pair </td></tr>
-    <tr><td class="paramname">double_support_duration,Duration</td><td>for double support. </td></tr>
-    <tr><td class="paramname">single_support_duration,Duration</td><td>for single support. </td></tr>
+    <tr><td class="paramname">footsteps</td><td>X Y pair </td></tr>
+    <tr><td class="paramname">double_support_duration</td><td>Duration for double support. </td></tr>
+    <tr><td class="paramname">single_support_duration</td><td>Duration for single support. </td></tr>
   </table>
   </dd>
 </dl>
@@ -630,10 +630,10 @@ Configuration Space," &#160;* Denotes equal contribution.</p>
 <p>Forward simulation using the linear policy from <code>zmp_planner</code> starting from the initial condition <code>x0</code> using explicit Euler integration. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">zmp_planner,Contains</td><td>planned center of mass trajectory, value function, and linear policy. </td></tr>
-    <tr><td class="paramname">x0,Initial</td><td>condition. </td></tr>
-    <tr><td class="paramname">dt,Time</td><td>step. </td></tr>
-    <tr><td class="paramname">extra_time_at_the_end,Simulate</td><td><code>extra_time_at_the_end</code> seconds past the end of the trajectories for convergence. </td></tr>
+    <tr><td class="paramname">zmp_planner</td><td>Contains planned center of mass trajectory, value function, and linear policy. </td></tr>
+    <tr><td class="paramname">x0</td><td>Initial condition. </td></tr>
+    <tr><td class="paramname">dt</td><td>Time step. </td></tr>
+    <tr><td class="paramname">extra_time_at_the_end</td><td>Simulate <code>extra_time_at_the_end</code> seconds past the end of the trajectories for convergence. </td></tr>
   </table>
   </dd>
 </dl>

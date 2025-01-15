@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_multilayer_p
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1systems_1_1_multilayer_perceptron-members.html">List of all members</a>  </div>
@@ -195,6 +196,16 @@ class drake::systems::MultilayerPerceptron&lt; T &gt;</h3>
 </div>
 <p><code>#include &lt;drake/systems/primitives/multilayer_perceptron.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af92d9778ce4ab1984b72b477fd54c993"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#af92d9778ce4ab1984b72b477fd54c993">ScalarLossFunction</a> = std::function&lt; T(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; &amp;Y, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &gt; dloss_dY)&gt;</td></tr>
+<tr class="memdesc:af92d9778ce4ab1984b72b477fd54c993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function signature for <a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a6a199bf7e754cdc2d0767d5a54854d67" title="Implements the Backpropagation algorithm for the MLP to compute the gradients of a scalar loss functi...">Backpropagation()</a>.  <a href="#af92d9778ce4ab1984b72b477fd54c993">More...</a><br /></td></tr>
+<tr class="separator:af92d9778ce4ab1984b72b477fd54c993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classdrake_1_1systems_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classdrake_1_1systems_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; T &gt;</a></td></tr>
+<tr class="memitem:a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc inherit pub_types_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc">Scalar</a> = T</td></tr>
+<tr class="memdesc:a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc inherit pub_types_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scalar type with which this System was instantiated.  <a href="classdrake_1_1systems_1_1_system.html#a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc">More...</a><br /></td></tr>
+<tr class="separator:a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc inherit pub_types_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa1830877a7cd94e0fa0240a4dfbc18f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#aa1830877a7cd94e0fa0240a4dfbc18f3">MultilayerPerceptron</a> (const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;<a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#ac97d652ba13b9b387850ba184cae362a">layers</a>, <a class="el" href="namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0">PerceptronActivationType</a> <a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#adc5e02708e2899b3a85c98a8ce8b3ef6">activation_type</a>=<a class="el" href="namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0ab8f0b26c641a7ec61d715a2ebeb4734d">kTanh</a>)</td></tr>
@@ -255,9 +266,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6dcf0923d191401ac1ebc31d909087d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#ad6dcf0923d191401ac1ebc31d909087d">SetBiases</a> (<a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; params, <a class="el" href="classint.html">int</a> layer, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;b) const</td></tr>
 <tr class="memdesc:ad6dcf0923d191401ac1ebc31d909087d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the biases in <code>params</code> used in the mapping from <code>layer</code> to <code>layer+1</code>.  <a href="#ad6dcf0923d191401ac1ebc31d909087d">More...</a><br /></td></tr>
 <tr class="separator:ad6dcf0923d191401ac1ebc31d909087d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a8e2ac13f8c5f7f6edcc2c04dde042a"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a8a8e2ac13f8c5f7f6edcc2c04dde042a">Backpropagation</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;X, const std::function&lt; T(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;Y, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; dloss_dY)&gt; &amp;loss, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; dloss_dparams) const</td></tr>
-<tr class="memdesc:a8a8e2ac13f8c5f7f6edcc2c04dde042a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the Backpropagation algorithm for the MLP to compute the gradients of a scalar loss function with respect to the network parameters.  <a href="#a8a8e2ac13f8c5f7f6edcc2c04dde042a">More...</a><br /></td></tr>
-<tr class="separator:a8a8e2ac13f8c5f7f6edcc2c04dde042a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a199bf7e754cdc2d0767d5a54854d67"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a6a199bf7e754cdc2d0767d5a54854d67">Backpropagation</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;X, const <a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#af92d9778ce4ab1984b72b477fd54c993">ScalarLossFunction</a> &amp;loss, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; dloss_dparams) const</td></tr>
+<tr class="memdesc:a6a199bf7e754cdc2d0767d5a54854d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the Backpropagation algorithm for the MLP to compute the gradients of a scalar loss function with respect to the network parameters.  <a href="#a6a199bf7e754cdc2d0767d5a54854d67">More...</a><br /></td></tr>
+<tr class="separator:a6a199bf7e754cdc2d0767d5a54854d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69ea02ed461f2cdb6e997d7f55319ef8"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a69ea02ed461f2cdb6e997d7f55319ef8">BackpropagationMeanSquaredError</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;X, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;Y_desired, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; dloss_dparams) const</td></tr>
 <tr class="memdesc:a69ea02ed461f2cdb6e997d7f55319ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls Backpropagation with the mean-squared error loss function: loss = 1/N ∑ᵢ |yᵢ−yᵢᵈ|², where yᵈ is the desired values for y.  <a href="#a69ea02ed461f2cdb6e997d7f55319ef8">More...</a><br /></td></tr>
 <tr class="separator:a69ea02ed461f2cdb6e997d7f55319ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -728,10 +739,6 @@ Friends</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classdrake_1_1systems_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classdrake_1_1systems_1_1_system')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; T &gt;</a></td></tr>
-<tr class="memitem:a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc inherit pub_types_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc">Scalar</a> = T</td></tr>
-<tr class="memdesc:a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc inherit pub_types_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scalar type with which this System was instantiated.  <a href="classdrake_1_1systems_1_1_system.html#a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc">More...</a><br /></td></tr>
-<tr class="separator:a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc inherit pub_types_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classdrake_1_1systems_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classdrake_1_1systems_1_1_system')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; T &gt;</a></td></tr>
 <tr class="memitem:a6fe75ddbd79ab1d862df9a50b3c8a624 inherit pub_static_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a6fe75ddbd79ab1d862df9a50b3c8a624">nothing_ticket</a> ()</td></tr>
 <tr class="memdesc:a6fe75ddbd79ab1d862df9a50b3c8a624 inherit pub_static_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ticket indicating that a computation does not depend on <em>any</em> source value; that is, it is a constant.  <a href="classdrake_1_1systems_1_1_system.html#a6fe75ddbd79ab1d862df9a50b3c8a624">More...</a><br /></td></tr>
@@ -1325,6 +1332,23 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:acae5fb494dd1e5a799534b5fc0826062 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> to access protected <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad91661e6330ae28c6e7be235ed7bfd10" title="Obtains access to the declared Context partition sizes as accumulated during LeafSystem or Diagram co...">get_context_sizes()</a> recursively on its subsystems.  <a href="classdrake_1_1systems_1_1_system_base.html#acae5fb494dd1e5a799534b5fc0826062">More...</a><br /></td></tr>
 <tr class="separator:acae5fb494dd1e5a799534b5fc0826062 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="af92d9778ce4ab1984b72b477fd54c993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af92d9778ce4ab1984b72b477fd54c993">&#9670;&nbsp;</a></span>ScalarLossFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#af92d9778ce4ab1984b72b477fd54c993">ScalarLossFunction</a> =  std::function&lt;T( const Eigen::Ref&lt;const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;T&gt; &gt;&amp; Y, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt;<a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;T&gt; &gt; dloss_dY)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper function signature for <a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a6a199bf7e754cdc2d0767d5a54854d67" title="Implements the Backpropagation algorithm for the MLP to compute the gradients of a scalar loss functi...">Backpropagation()</a>. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a612b74ebd5fb20e1881d7d3fcd6fed6b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a612b74ebd5fb20e1881d7d3fcd6fed6b">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[1/6]</span></h2>
@@ -1445,11 +1469,11 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">layers</td><td>is the number of elements in each layer of the network (the activation function does <em>not</em> count as an additional layer). The first element specifies the number of inputs, and the last layer specifies the number of outputs. </td></tr>
-    <tr><td class="paramname">activation_type</td><td>specifies the activation function, σ(), used in <em>each</em> non-input layer of the network (including the last layer).</td></tr>
+    <tr><td class="paramname">activation_types</td><td>specifies the activation function, σ(), used in <em>each</em> non-input layer of the network (including the last layer).</td></tr>
   </table>
   </dd>
 </dl>
-<p><code>activation_type</code> should have one less element than <code>layers</code>. </p>
+<p><code>activation_types</code> should have one less element than <code>layers</code>. </p>
 
 </div>
 </div>
@@ -1492,11 +1516,11 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">use_sin_cos_for_input</td><td>is a boolean vector that determines whether the sin/cos transform is applied to each element. </td></tr>
     <tr><td class="paramname">remaining_layers</td><td>is the number of elements in each layer of the network (the activation function does <em>not</em> count as an additional layer). The first element specifies the size of the first hidden layer, and the last layer specifies the number of outputs. </td></tr>
-    <tr><td class="paramname">activation_type</td><td>specifies the activation function, σ(), used in <em>each</em> non-input layer of the network (including the last layer).</td></tr>
+    <tr><td class="paramname">activation_types</td><td>specifies the activation function, σ(), used in <em>each</em> non-input layer of the network (including the last layer).</td></tr>
   </table>
   </dd>
 </dl>
-<p><code>activation_type</code> should have the same number of elements as <code>remaining_layers</code>. </p>
+<p><code>activation_types</code> should have the same number of elements as <code>remaining_layers</code>. </p>
 
 </div>
 </div>
@@ -1550,8 +1574,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a8a8e2ac13f8c5f7f6edcc2c04dde042a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a8e2ac13f8c5f7f6edcc2c04dde042a">&#9670;&nbsp;</a></span>Backpropagation()</h2>
+<a id="a6a199bf7e754cdc2d0767d5a54854d67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a199bf7e754cdc2d0767d5a54854d67">&#9670;&nbsp;</a></span>Backpropagation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1566,12 +1590,24 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>X</em>&#160;</td>
+          <td class="paramname"><em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#af92d9778ce4ab1984b72b477fd54c993">ScalarLossFunction</a> &amp;&#160;</td>
+          <td class="paramname"><em>loss</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>dloss_dparams</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

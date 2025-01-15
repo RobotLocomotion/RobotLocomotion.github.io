@@ -7,7 +7,7 @@ var searchData=
   ['backend',['backend',['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8ea4310382b496e8e4efc05c73409cbc',1,'drake::geometry::RenderEngineVtkParams']]],
   ['background',['background',['../structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a01a2a4e8cf420c179bc1253ca3d3a1c3',1,'drake::systems::sensors::CameraConfig']]],
   ['backoff_5fscale',['backoff_scale',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a00b3b24514bf89edc6ca5e662eba136d',1,'drake::geometry::optimization::CspaceFreePolytope::FindPolytopeGivenLagrangianOptions']]],
-  ['backpropagation',['Backpropagation',['../classdrake_1_1systems_1_1_multilayer_perceptron.html#a8a8e2ac13f8c5f7f6edcc2c04dde042a',1,'drake::systems::MultilayerPerceptron']]],
+  ['backpropagation',['Backpropagation',['../classdrake_1_1systems_1_1_multilayer_perceptron.html#a6a199bf7e754cdc2d0767d5a54854d67',1,'drake::systems::MultilayerPerceptron']]],
   ['backpropagationmeansquarederror',['BackpropagationMeanSquaredError',['../classdrake_1_1systems_1_1_multilayer_perceptron.html#a69ea02ed461f2cdb6e997d7f55319ef8',1,'drake::systems::MultilayerPerceptron']]],
   ['balancequadraticforms',['BalanceQuadraticForms',['../namespacedrake_1_1math.html#a8c66e16411c4f0d53e005658a49ccf6a',1,'drake::math']]],
   ['balancing_5fthreshold',['balancing_threshold',['../classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#af5b109419c420190bf99353a63c53c6b',1,'drake::examples::acrobot::SpongControllerParams']]],

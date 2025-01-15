@@ -1,5 +1,6 @@
 var classdrake_1_1systems_1_1_multilayer_perceptron =
 [
+    [ "ScalarLossFunction", "classdrake_1_1systems_1_1_multilayer_perceptron.html#af92d9778ce4ab1984b72b477fd54c993", null ],
     [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a612b74ebd5fb20e1881d7d3fcd6fed6b", null ],
     [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a25a17b87a402d6813d808f1f189fbc77", null ],
     [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#aa1830877a7cd94e0fa0240a4dfbc18f3", null ],
@@ -7,7 +8,7 @@ var classdrake_1_1systems_1_1_multilayer_perceptron =
     [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a49474184e9c2a6455a65e9331739d776", null ],
     [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ad018e0a1ac62facba097fa20704046da", null ],
     [ "activation_type", "classdrake_1_1systems_1_1_multilayer_perceptron.html#adc5e02708e2899b3a85c98a8ce8b3ef6", null ],
-    [ "Backpropagation", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a8a8e2ac13f8c5f7f6edcc2c04dde042a", null ],
+    [ "Backpropagation", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a6a199bf7e754cdc2d0767d5a54854d67", null ],
     [ "BackpropagationMeanSquaredError", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a69ea02ed461f2cdb6e997d7f55319ef8", null ],
     [ "BatchOutput", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ad9134388a0d1f117fea323346f07466c", null ],
     [ "GetBiases", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ad987717e0092f8c8b9b2970c8104c075", null ],

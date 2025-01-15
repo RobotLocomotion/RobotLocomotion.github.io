@@ -261,7 +261,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:addceb3a2a537456ecc55a5ffc35a0df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the rate of change, in radians per second, of <code>this</code> joint's angle (see <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a27e174cbce9d8926ec3eefc7d04e6e7c" title="Gets the rotation angle of this mobilizer from context.">get_angle()</a>) from <code>context</code>.  <a href="#addceb3a2a537456ecc55a5ffc35a0df1">More...</a><br /></td></tr>
 <tr class="separator:addceb3a2a537456ecc55a5ffc35a0df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab01a357a30cd9cd570e133c5ced20a83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html">RevoluteJoint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#ab01a357a30cd9cd570e133c5ced20a83">set_angular_rate</a> (<a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a9b78e1282dbe407d7e389ea125515f69">Context</a>&lt; T &gt; *context, const T &amp;angle) const</td></tr>
-<tr class="memdesc:ab01a357a30cd9cd570e133c5ced20a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the rate of change, in radians per second, of this <code>this</code> joint's angle to <code>theta_dot</code>.  <a href="#ab01a357a30cd9cd570e133c5ced20a83">More...</a><br /></td></tr>
+<tr class="memdesc:ab01a357a30cd9cd570e133c5ced20a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the rate of change, in radians per second, of this <code>this</code> joint's angle to <code>angle</code>.  <a href="#ab01a357a30cd9cd570e133c5ced20a83">More...</a><br /></td></tr>
 <tr class="separator:ab01a357a30cd9cd570e133c5ced20a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74a1226d1892a3185b2827debbb5724"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#ad74a1226d1892a3185b2827debbb5724">GetDamping</a> (const <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a9b78e1282dbe407d7e389ea125515f69">Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:ad74a1226d1892a3185b2827debbb5724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Context dependent damping coefficient stored as a parameter in <code>context</code>.  <a href="#ad74a1226d1892a3185b2827debbb5724">More...</a><br /></td></tr>
@@ -1239,11 +1239,11 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the rate of change, in radians per second, of this <code>this</code> joint's angle to <code>theta_dot</code>. </p>
-<p>The new rate of change <code>theta_dot</code> gets stored in <code>context</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Sets the rate of change, in radians per second, of this <code>this</code> joint's angle to <code>angle</code>. </p>
+<p>The new rate of change <code>angle</code> gets stored in <code>context</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context of the MultibodyTree this joint belongs to. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">theta_dot</td><td>The desired rate of change of <code>this</code> joints's angle in radians per second. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">angle</td><td>The desired rate of change of <code>this</code> joints's angle in radians per second. (Should have been named <code>rate</code> or <code>angular_rate</code>.) </td></tr>
   </table>
   </dd>
 </dl>

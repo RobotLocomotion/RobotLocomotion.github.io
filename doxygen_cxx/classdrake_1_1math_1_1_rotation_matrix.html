@@ -582,7 +582,6 @@ Related Functions</h2></td></tr>
 <p>Constructs a RotationMatrix from an RollPitchYaw. </p>
 <p>In other words, makes the RotationMatrix for a Space-fixed (extrinsic) X-Y-Z rotation by "roll-pitch-yaw" angles <code>[r, p, y]</code>, which is equivalent to a Body-fixed (intrinsic) Z-Y-X rotation by "yaw-pitch-roll" angles <code>[y, p, r]</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">rpy</td><td>radian measures of three angles [roll, pitch, yaw]. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">rpy</td><td>a RollPitchYaw which is a Space-fixed (extrinsic) X-Y-Z rotation with "roll-pitch-yaw" angles <code>[r, p, y]</code> or equivalently a Body- fixed (intrinsic) Z-Y-X rotation with "yaw-pitch-roll" angles <code>[y, p, r]</code>. </td></tr>
   </table>
   </dd>
@@ -1786,7 +1785,7 @@ The rotation matrix <code>R_AB</code> relates two sets of right-handed orthogona
 <p>Closeness is measured with a matrix-2 norm (or equivalently with a Frobenius norm). Hence, this method creates a RotationMatrix R from a 3x3 matrix M by minimizing <code>‖R - M‖₂</code> (the matrix-2 norm of (R-M)) subject to <code>R * Rᵀ = I</code>, where I is the 3x3 identity matrix. For this problem, closeness can also be measured by forming the orthonormal matrix R whose elements minimize the double-summation <code>∑ᵢ ∑ⱼ (R(i,j) - M(i,j))²</code> where <code>i = 1:3, j = 1:3</code>, subject to <code>R * Rᵀ = I</code>. The square-root of this double-summation is called the Frobenius norm. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>a 3x3 matrix. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">quality_factor.</td><td>The quality of M as a rotation matrix. <code>quality_factor</code> = 1 is perfect (M = R). <code>quality_factor</code> = 1.25 means that when M multiplies a unit vector (magnitude 1), a vector of magnitude as large as 1.25 may result. <code>quality_factor</code> = 0.8 means that when M multiplies a unit vector, a vector of magnitude as small as 0.8 may result. <code>quality_factor</code> = 0 means M is singular, so at least one of the bases related by matrix M does not span 3D space (when M multiples a unit vector, a vector of magnitude as small as 0 may result). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">quality_factor</td><td>The quality of M as a rotation matrix. <code>quality_factor</code> = 1 is perfect (M = R). <code>quality_factor</code> = 1.25 means that when M multiplies a unit vector (magnitude 1), a vector of magnitude as large as 1.25 may result. <code>quality_factor</code> = 0.8 means that when M multiplies a unit vector, a vector of magnitude as small as 0.8 may result. <code>quality_factor</code> = 0 means M is singular, so at least one of the bases related by matrix M does not span 3D space (when M multiples a unit vector, a vector of magnitude as small as 0 may result). </td></tr>
   </table>
   </dd>
 </dl>

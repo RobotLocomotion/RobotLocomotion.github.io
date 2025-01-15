@@ -437,13 +437,13 @@ Public Member Functions</h2></td></tr>
 <p>We can reformulate (2a) as the following constraint ⌈aᵀp_AS + b aᵀ⌉ is psd. (3) ⌊ a (aᵀp_AS + b)/r²*I₃⌋ (3) is equivalent to the rational ⌈1⌉ᵀ*⌈aᵀp_AS + b aᵀ⌉*⌈1⌉ ⌊y⌋ ⌊ a (aᵀp_AS+ b)/r²*I₃⌋ ⌊y⌋ is positive.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>The normal vector in the separating plane. a is expressed in frame A. Note that <code>a</code> doesn't need to have a unit length. </td></tr>
-    <tr><td class="paramname">b</td><td>The constant term in the separating plane. </td></tr>
-    <tr><td class="paramname">X_AB_multilinear</td><td>The pose of the collision geometry body (B) in the expressed frame A, written as a multilinear polynomial. This quantity is generated from RationalForwardKinematics::CalcBodyPoseAsMultilinearPolynomial. </td></tr>
-    <tr><td class="paramname">rational_forward_kin</td><td>This object is constructed with the MultibodyPlant containing this collision geometry. </td></tr>
-    <tr><td class="paramname">plane_side</td><td>Whether the geometry is on the positive or negative side of the plane. </td></tr>
-    <tr><td class="paramname">y_slack</td><td>The slack variable y in the documentation above, used for non-polytopic geometries. For spheres and capsules, y_slack has size 3. For cylinders, y_slack has size 2. </td></tr>
-    <tr><td class="paramname">[in/out]</td><td>rationals We append new rational functions to <code>rationals</code>. If these new rational functions are positive, then the geometry is on a given side of the plane. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">a</td><td>The normal vector in the separating plane. a is expressed in frame A. Note that <code>a</code> doesn't need to have a unit length. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">b</td><td>The constant term in the separating plane. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">X_AB_multilinear</td><td>The pose of the collision geometry body (B) in the expressed frame A, written as a multilinear polynomial. This quantity is generated from RationalForwardKinematics::CalcBodyPoseAsMultilinearPolynomial. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">rational_forward_kin</td><td>This object is constructed with the MultibodyPlant containing this collision geometry. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">plane_side</td><td>Whether the geometry is on the positive or negative side of the plane. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">y_slack</td><td>The slack variable y in the documentation above, used for non-polytopic geometries. For spheres and capsules, y_slack has size 3. For cylinders, y_slack has size 2. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">rationals</td><td>We append new rational functions to <code>rationals</code>. If these new rational functions are positive, then the geometry is on a given side of the plane. </td></tr>
   </table>
   </dd>
 </dl>

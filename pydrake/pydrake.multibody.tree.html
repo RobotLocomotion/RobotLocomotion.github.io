@@ -10693,7 +10693,7 @@ frame F is <code class="docutils literal notranslate"><span class="pre">v_FM</sp
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>A Context for the MultibodyPlant this joint belongs to.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt><dd><p>A vector in ℝ³ with the translational velocity of the child frame
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_FM</span></code>:</dt><dd><p>A vector in ℝ³ with the translational velocity of the child frame
 M’s origin in the parent frame F, expressed in F. Refer to this
 class’s documentation for further details and definitions of these
 frames.</p>
@@ -11065,7 +11065,7 @@ frame F is <code class="docutils literal notranslate"><span class="pre">v_FM</sp
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>A Context for the MultibodyPlant this joint belongs to.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt><dd><p>A vector in ℝ³ with the translational velocity of the child frame
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_FM</span></code>:</dt><dd><p>A vector in ℝ³ with the translational velocity of the child frame
 M’s origin in the parent frame F, expressed in F. Refer to this
 class’s documentation for further details and definitions of these
 frames.</p>
@@ -11431,7 +11431,7 @@ frame F is <code class="docutils literal notranslate"><span class="pre">v_FM</sp
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>A Context for the MultibodyPlant this joint belongs to.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w_FM</span></code>:</dt><dd><p>A vector in ℝ³ with the translational velocity of the child frame
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_FM</span></code>:</dt><dd><p>A vector in ℝ³ with the translational velocity of the child frame
 M’s origin in the parent frame F, expressed in F. Refer to this
 class’s documentation for further details and definitions of these
 frames.</p>
@@ -11743,13 +11743,13 @@ to the rotation angle of <code class="docutils literal notranslate"><span class=
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RevoluteJoint.set_angular_rate">
 <span class="sig-name descname"><span class="pre">set_angular_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint" title="pydrake.multibody.tree.RevoluteJoint"><span class="pre">pydrake.multibody.tree.RevoluteJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint" title="pydrake.multibody.tree.RevoluteJoint"><span class="pre">pydrake.multibody.tree.RevoluteJoint</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint.set_angular_rate" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the rate of change, in radians per second, of this <code class="docutils literal notranslate"><span class="pre">this</span></code>
-joint’s angle to <code class="docutils literal notranslate"><span class="pre">theta_dot</span></code>. The new rate of change <code class="docutils literal notranslate"><span class="pre">theta_dot</span></code>
-gets stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+joint’s angle to <code class="docutils literal notranslate"><span class="pre">angle</span></code>. The new rate of change <code class="docutils literal notranslate"><span class="pre">angle</span></code> gets
+stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context of the MultibodyTree this joint belongs to.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_dot</span></code>:</dt><dd><p>The desired rate of change of <code class="docutils literal notranslate"><span class="pre">this</span></code> joints’s angle in radians
-per second.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">angle</span></code>:</dt><dd><p>The desired rate of change of <code class="docutils literal notranslate"><span class="pre">this</span></code> joints’s angle in radians
+per second. (Should have been named <code class="docutils literal notranslate"><span class="pre">rate</span></code> or <code class="docutils literal notranslate"><span class="pre">angular_rate</span></code>.)</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -12048,13 +12048,13 @@ to the rotation angle of <code class="docutils literal notranslate"><span class=
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RevoluteJoint_-AutoDiffXd-.set_angular_rate">
 <span id="pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd].set_angular_rate"></span><span class="sig-name descname"><span class="pre">set_angular_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint_" title="pydrake.multibody.tree.RevoluteJoint_"><span class="pre">pydrake.multibody.tree.RevoluteJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint_" title="pydrake.multibody.tree.RevoluteJoint_"><span class="pre">pydrake.multibody.tree.RevoluteJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_-AutoDiffXd-.set_angular_rate" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the rate of change, in radians per second, of this <code class="docutils literal notranslate"><span class="pre">this</span></code>
-joint’s angle to <code class="docutils literal notranslate"><span class="pre">theta_dot</span></code>. The new rate of change <code class="docutils literal notranslate"><span class="pre">theta_dot</span></code>
-gets stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+joint’s angle to <code class="docutils literal notranslate"><span class="pre">angle</span></code>. The new rate of change <code class="docutils literal notranslate"><span class="pre">angle</span></code> gets
+stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context of the MultibodyTree this joint belongs to.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_dot</span></code>:</dt><dd><p>The desired rate of change of <code class="docutils literal notranslate"><span class="pre">this</span></code> joints’s angle in radians
-per second.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">angle</span></code>:</dt><dd><p>The desired rate of change of <code class="docutils literal notranslate"><span class="pre">this</span></code> joints’s angle in radians
+per second. (Should have been named <code class="docutils literal notranslate"><span class="pre">rate</span></code> or <code class="docutils literal notranslate"><span class="pre">angular_rate</span></code>.)</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -12347,13 +12347,13 @@ to the rotation angle of <code class="docutils literal notranslate"><span class=
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RevoluteJoint_-Expression-.set_angular_rate">
 <span id="pydrake.multibody.tree.RevoluteJoint_[Expression].set_angular_rate"></span><span class="sig-name descname"><span class="pre">set_angular_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint_" title="pydrake.multibody.tree.RevoluteJoint_"><span class="pre">pydrake.multibody.tree.RevoluteJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint_" title="pydrake.multibody.tree.RevoluteJoint_"><span class="pre">pydrake.multibody.tree.RevoluteJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_-Expression-.set_angular_rate" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the rate of change, in radians per second, of this <code class="docutils literal notranslate"><span class="pre">this</span></code>
-joint’s angle to <code class="docutils literal notranslate"><span class="pre">theta_dot</span></code>. The new rate of change <code class="docutils literal notranslate"><span class="pre">theta_dot</span></code>
-gets stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+joint’s angle to <code class="docutils literal notranslate"><span class="pre">angle</span></code>. The new rate of change <code class="docutils literal notranslate"><span class="pre">angle</span></code> gets
+stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context of the MultibodyTree this joint belongs to.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">theta_dot</span></code>:</dt><dd><p>The desired rate of change of <code class="docutils literal notranslate"><span class="pre">this</span></code> joints’s angle in radians
-per second.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">angle</span></code>:</dt><dd><p>The desired rate of change of <code class="docutils literal notranslate"><span class="pre">this</span></code> joints’s angle in radians
+per second. (Should have been named <code class="docutils literal notranslate"><span class="pre">rate</span></code> or <code class="docutils literal notranslate"><span class="pre">angular_rate</span></code>.)</p>
 </dd>
 </dl>
 <dl class="field-list simple">

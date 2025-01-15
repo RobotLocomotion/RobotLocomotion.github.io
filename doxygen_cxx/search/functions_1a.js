@@ -70,6 +70,7 @@ var searchData=
   ['_7edirecttranscription',['~DirectTranscription',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#aae7a39fc88c07d0083ea1a3cccf3e6a9',1,'drake::planning::trajectory_optimization::DirectTranscription']]],
   ['_7ediscretetimedelay',['~DiscreteTimeDelay',['../classdrake_1_1systems_1_1_discrete_time_delay.html#af1c297796070cf2cf5426b1b6a362ff8',1,'drake::systems::DiscreteTimeDelay']]],
   ['_7ediscretetimeintegrator',['~DiscreteTimeIntegrator',['../classdrake_1_1systems_1_1_discrete_time_integrator.html#a11a750e5f18413650ec9c7e4428bdeca',1,'drake::systems::DiscreteTimeIntegrator']]],
+  ['_7ediscretetimetrajectory',['~DiscreteTimeTrajectory',['../classdrake_1_1trajectories_1_1_discrete_time_trajectory.html#a6652a3697492e208bc51cdf908aeb2f4',1,'drake::trajectories::DiscreteTimeTrajectory']]],
   ['_7ediscretevalues',['~DiscreteValues',['../classdrake_1_1systems_1_1_discrete_values.html#a19a5e68e383564f5c571d9bb11e57930',1,'drake::systems::DiscreteValues']]],
   ['_7edistanceandinterpolationprovider',['~DistanceAndInterpolationProvider',['../classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a7e7b3af4f8d9b76984ac31fb2afd0ad6',1,'drake::planning::DistanceAndInterpolationProvider']]],
   ['_7edistanceconstraint',['~DistanceConstraint',['../classdrake_1_1multibody_1_1_distance_constraint.html#ad04269b2bfa6bfa65dc5af30515d41a8',1,'drake::multibody::DistanceConstraint']]],

@@ -233,7 +233,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Numerically integrates the function f over a triangle using the given quadrature rule and the initial value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f(p)</td><td>a function that returns a numerical value for point p in the domain of the triangle, specified in barycentric coordinates. The barycentric coordinates are given by (p[0], p[1], 1 - p[0] - p[1]). </td></tr>
+    <tr><td class="paramname">f</td><td>a function f(p) that returns a numerical value for point p in the domain of the triangle, specified in barycentric coordinates. The barycentric coordinates are given by (p[0], p[1], 1 - p[0] - p[1]). </td></tr>
     <tr><td class="paramname">area</td><td>the area of the triangle. </td></tr>
   </table>
   </dd>
@@ -284,7 +284,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Alternative signature for <a class="el" href="classdrake_1_1multibody_1_1_triangle_quadrature.html#a6d070afc5572e9a355f4a92276468382" title="Numerically integrates the function f over a triangle using the given quadrature rule and the initial...">Integrate()</a> that uses three-dimensional barycentric coordinates. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f(p)</td><td>a function that returns a numerical value for point p in the domain of the triangle, specified in barycentric coordinates. The barycentric coordinates are given by (p[0], p[1], p[2]). </td></tr>
+    <tr><td class="paramname">f</td><td>a function f(p) that returns a numerical value for point p in the domain of the triangle, specified in barycentric coordinates. The barycentric coordinates are given by (p[0], p[1], p[2]). </td></tr>
     <tr><td class="paramname">area</td><td>the area of the triangle. </td></tr>
   </table>
   </dd>

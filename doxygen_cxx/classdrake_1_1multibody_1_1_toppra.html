@@ -327,9 +327,8 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs an inverse kinematics problem for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </p>
-<p>This constructor will create and own a context for</p><dl class="params"><dt>Parameters</dt><dd>
+<p>This constructor will create and own a context for <code>plant</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">plant.</td><td></td></tr>
     <tr><td class="paramname">path</td><td>The trajectory on which the TOPPRA problem will be solved. </td></tr>
     <tr><td class="paramname">plant</td><td>The robot that will follow the solved trajectory. Used for enforcing torque and frame specific constraints. </td></tr>
     <tr><td class="paramname">gridpoints</td><td>The points along the path to discretize the problem and enforce constraints at. The first and last gridpoint must equal the path start and end time respectively. Gridpoints must also be monotonically increasing. </td></tr>

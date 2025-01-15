@@ -2136,10 +2136,10 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 <p>Given many linear costs, aggregate them into. </p>
 <p>aᵀ*x + b, </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">linear_costs</td><td>the linear costs to be aggregated. </td></tr>
-    <tr><td class="paramname">linear_coeff[out]</td><td>a in the documentation above. </td></tr>
-    <tr><td class="paramname">vars[out]</td><td>x in the documentation above. </td></tr>
-    <tr><td class="paramname">constant_cost[out]</td><td>b in the documentation above. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">linear_costs</td><td>the linear costs to be aggregated. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">linear_coeff</td><td>a in the documentation above. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vars</td><td>x in the documentation above. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">constant_cost</td><td>b in the documentation above. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2205,13 +2205,13 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 <p>Given many linear and quadratic costs, aggregate them into. </p>
 <p>0.5*x₁ᵀQx₁ + bᵀx₂ + c where x₁ and x₂ don't need to be the same. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">quadratic_costs</td><td>The quadratic costs to be aggregated. </td></tr>
-    <tr><td class="paramname">linear_costs</td><td>The linear costs to be aggregated. </td></tr>
-    <tr><td class="paramname">Q_lower[out]</td><td>The lower triangular part of the matrix Q. </td></tr>
-    <tr><td class="paramname">quadratic_vars[out]</td><td>x₁ in the documentation above. </td></tr>
-    <tr><td class="paramname">linear_coeff[out]</td><td>b in the documentation above. </td></tr>
-    <tr><td class="paramname">linear_vars[out]</td><td>x₂ in the documentation above. </td></tr>
-    <tr><td class="paramname">constant_cost[out]</td><td>c in the documentation above. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">quadratic_costs</td><td>The quadratic costs to be aggregated. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">linear_costs</td><td>The linear costs to be aggregated. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Q_lower</td><td>The lower triangular part of the matrix Q. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">quadratic_vars</td><td>x₁ in the documentation above. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">linear_coeff</td><td>b in the documentation above. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">linear_vars</td><td>x₂ in the documentation above. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">constant_cost</td><td>c in the documentation above. </td></tr>
   </table>
   </dd>
 </dl>

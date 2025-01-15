@@ -697,7 +697,7 @@ formulation.</p>
 <span class="sig-name descname"><span class="pre">set_joint_acceleration_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_acceleration_limits" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the joint acceleration limits.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_bounds</span></code>:</dt><dd><p>The first element is the lower bound, and the second is the upper
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vd_bounds</span></code>:</dt><dd><p>The first element is the lower bound, and the second is the upper
 bound.</p>
 </dd>
 </dl>
@@ -748,7 +748,7 @@ bound.</p>
 <span class="sig-name descname"><span class="pre">set_joint_velocity_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters" title="pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters"><span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsParameters.set_joint_velocity_limits" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the joint velocity limits.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_bounds</span></code>:</dt><dd><p>The first element is the lower bound, and the second is the upper
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_bounds</span></code>:</dt><dd><p>The first element is the lower bound, and the second is the upper
 bound.</p>
 </dd>
 </dl>
@@ -1307,11 +1307,10 @@ frame B.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">box_ub_F</span></code>:</dt><dd><p>The upper bound of the box in frame <code class="docutils literal notranslate"><span class="pre">F</span></code>.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WF</span></code>:</dt><dd><p>. The frame in which the box is specified. This frame is
-represented by a RigidTransform X_WF, the transform from the
-constraint frame F to the world frame W. Namely if the position of
-the point <code class="docutils literal notranslate"><span class="pre">Q</span></code> in the world frame is <code class="docutils literal notranslate"><span class="pre">p_WQ</span></code>, then the
-constraint is</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WF</span></code>:</dt><dd><p>The frame in which the box is specified. This frame is represented
+by a RigidTransform X_WF, the transform from the constraint frame
+F to the world frame W. Namely if the position of the point <code class="docutils literal notranslate"><span class="pre">Q</span></code>
+in the world frame is <code class="docutils literal notranslate"><span class="pre">p_WQ</span></code>, then the constraint is</p>
 </dd>
 </dl>
 <p>box_lb_F &lt;= R_FW * (p_WQ-p_WFo) &lt;= box_ub_F where - R_FW is the
@@ -1351,7 +1350,7 @@ frame A.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">box_ub_F</span></code>:</dt><dd><p>The upper bound of the box in frame <code class="docutils literal notranslate"><span class="pre">F</span></code>.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WF</span></code>:</dt><dd><p>. Defines the frame in which the box is specified. $*Default:* is
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WF</span></code>:</dt><dd><p>Defines the frame in which the box is specified. $*Default:* is
 the identity transform.</p>
 </dd>
 <dt>Returns <code class="docutils literal notranslate"><span class="pre">binding</span></code>:</dt><dd><p>The newly added constraint, together with the bound variables.</p>
@@ -1504,10 +1503,8 @@ in that Context that should be fixed during IK.</p>
 <li><p>__init__(self: pydrake.multibody.inverse_kinematics.InverseKinematics, plant: pydrake.multibody.plant.MultibodyPlant, with_joint_limits: bool = True) -&gt; None</p></li>
 </ol>
 <p>Constructs an inverse kinematics problem for a MultibodyPlant. This
-constructor will create and own a context for</p>
+constructor will create and own a context for <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>.</p>
-</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The robot on which the inverse kinematics problem will be solved.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">with_joint_limits</span></code>:</dt><dd><p>If set to true, then the constructor imposes the joint limits
@@ -2655,9 +2652,9 @@ gradient of the constraint is computed from autodiff.</p>
 <span class="sig-name descname"><span class="pre">set_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.inverse_kinematics.PositionConstraint" title="pydrake.multibody.inverse_kinematics.PositionConstraint"><span class="pre">pydrake.multibody.inverse_kinematics.PositionConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionConstraint.set_bounds" title="Permalink to this definition"></a></dt>
 <dd><p>Set the upper and lower bounds of the constraint.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_lb</span></code>:</dt><dd><p>. A <code class="docutils literal notranslate"><span class="pre">num_constraints</span></code> x 1 vector.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_lb</span></code>:</dt><dd><p>A <code class="docutils literal notranslate"><span class="pre">num_constraints</span></code> x 1 vector.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_ub</span></code>:</dt><dd><p>. A <code class="docutils literal notranslate"><span class="pre">num_constraints</span></code> x 1 vector.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_ub</span></code>:</dt><dd><p>A <code class="docutils literal notranslate"><span class="pre">num_constraints</span></code> x 1 vector.</p>
 </dd>
 </dl>
 <div class="admonition note">

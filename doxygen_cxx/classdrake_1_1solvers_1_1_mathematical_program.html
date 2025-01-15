@@ -552,7 +552,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a12a0bbb8698b6c9015f06ef81f29e472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds rotated Lorentz cone constraint on the linear expression v1, v2 and quadratic expression u, such that v1 * v2 &gt;= u, v1 &gt;= 0, v2 &gt;= 0.  <a href="#a12a0bbb8698b6c9015f06ef81f29e472">More...</a><br /></td></tr>
 <tr class="separator:a12a0bbb8698b6c9015f06ef81f29e472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8888193e1130288e45be9edd3f47a7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af8888193e1130288e45be9edd3f47a7e">AddRotatedLorentzConeConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;v)</td></tr>
-<tr class="memdesc:af8888193e1130288e45be9edd3f47a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint that a symbolic expression.  <a href="#af8888193e1130288e45be9edd3f47a7e">More...</a><br /></td></tr>
+<tr class="memdesc:af8888193e1130288e45be9edd3f47a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint that a symbolic expression <code>v</code> is in the rotated Lorentz cone, i.e., </p><p class="formulaDsp">
+\[ v_0v_1 \ge v_2^2 + ... + v_{n-1}^2\\ v_0 \ge 0, v_1 \ge 0 \]
+</p>
+<p>.  <a href="#af8888193e1130288e45be9edd3f47a7e">More...</a><br /></td></tr>
 <tr class="separator:af8888193e1130288e45be9edd3f47a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad038198c145926f0e63faf04b254c7a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ad038198c145926f0e63faf04b254c7a3">AddRotatedLorentzConeConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const <a class="el" href="namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b">VariableRefList</a> &amp;vars)</td></tr>
 <tr class="memdesc:ad038198c145926f0e63faf04b254c7a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a rotated Lorentz cone constraint referencing potentially a subset of decision variables, The linear expression \( z=Ax+b \) is in rotated Lorentz cone.  <a href="#ad038198c145926f0e63faf04b254c7a3">More...</a><br /></td></tr>
@@ -5318,13 +5321,12 @@ x+y &gt;= 0
       </table>
 </div><div class="memdoc">
 
-<p>Adds a constraint that a symbolic expression. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v</td><td>is in the rotated Lorentz cone, i.e., <p class="formulaDsp">
+<p>Adds a constraint that a symbolic expression <code>v</code> is in the rotated Lorentz cone, i.e., </p><p class="formulaDsp">
 \[ v_0v_1 \ge v_2^2 + ... + v_{n-1}^2\\ v_0 \ge 0, v_1 \ge 0 \]
 </p>
- </td></tr>
+<p>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramname">v</td><td>A linear expression of variables, \( v = A x + b\), where \( A, b \) are given matrices of the correct size, \( x \) is the vector of decision variables. </td></tr>
   </table>
   </dd>
@@ -6253,7 +6255,6 @@ x+y &gt;= 0
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bindings</td><td>List of bindings. </td></tr>
-    <tr><td class="paramname">prog</td><td></td></tr>
     <tr><td class="paramname">prog_var_vals</td><td>The value of all the decision variables in this program. </td></tr>
   </table>
   </dd>
@@ -7518,7 +7519,7 @@ x+y &gt;= 0
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">names</td><td>A vector of strings containing the name for each variable. </td></tr>
+    <tr><td class="paramname">name</td><td>All variables will share the same name, but different index. </td></tr>
   </table>
   </dd>
 </dl>

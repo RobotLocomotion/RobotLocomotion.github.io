@@ -122,6 +122,7 @@ var searchData=
   ['num_5fsubsystems',['num_subsystems',['../classdrake_1_1systems_1_1_diagram_event_collection.html#a09a19eb1363331358c0b847bca6d499c',1,'drake::systems::DiagramEventCollection::num_subsystems()'],['../classdrake_1_1systems_1_1_diagram_composite_event_collection.html#a09a19eb1363331358c0b847bca6d499c',1,'drake::systems::DiagramCompositeEventCollection::num_subsystems()']]],
   ['num_5fterms',['num_terms',['../classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a7ffbc0928c59ef6d1ed744bcfea6be0b',1,'drake::geometry::optimization::MinkowskiSum']]],
   ['num_5fthreads',['num_threads',['../classdrake_1_1_parallelism.html#ab3c45da58cb1363920de72ba6209652f',1,'drake::Parallelism']]],
+  ['num_5ftimes',['num_times',['../classdrake_1_1trajectories_1_1_discrete_time_trajectory.html#a9dfd48e708e0933b059d6315ef1b906a',1,'drake::trajectories::DiscreteTimeTrajectory']]],
   ['num_5ftotal_5finputs',['num_total_inputs',['../classdrake_1_1systems_1_1_system_base.html#a61fbc5b339d9006ff53e39b8df10c611',1,'drake::systems::SystemBase']]],
   ['num_5ftotal_5foutputs',['num_total_outputs',['../classdrake_1_1systems_1_1_system_base.html#ae1394e3cf29023475b4983cb4ad16e86',1,'drake::systems::SystemBase']]],
   ['num_5ftotal_5fstates',['num_total_states',['../classdrake_1_1systems_1_1_context.html#ac544f3f782615e62cb59a3423fbbe812',1,'drake::systems::Context']]],

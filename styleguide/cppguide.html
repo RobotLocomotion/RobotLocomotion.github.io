@@ -1325,7 +1325,11 @@ of the constructor.</p>
 
   <li>There is no easy way for constructors to signal errors, short of
   crashing the program (not always appropriate) or using exceptions
-  (which are <a href="#Exceptions">forbidden</a>).</li>
+  <code class="nondrake">(which are <a href="#Exceptions">forbidden</a>)</code>.
+  <span class="drake">The destructor will not run if your constructor throws
+  an exception. Be sure to do all your throw-checking upfront before
+  executing any resource-claiming actions, especially those without proper
+  RAII.</span></li>
 
   <li>If the work fails, we now have an object whose initialization
   code failed, so it may be an unusual state requiring a <code>bool
@@ -4665,10 +4669,6 @@ guide, the following C++ features may not be used:</p>
 
   does not have sufficient support for testing, and suffers
   from inherent security vulnerabilities.</li>
-</span>
-<span class="drake">
-  <li>The <code>&lt;filesystem&gt;</code> header, until it is available on all
-  of our supported platforms.</li>
 </span>
 
 </ul>

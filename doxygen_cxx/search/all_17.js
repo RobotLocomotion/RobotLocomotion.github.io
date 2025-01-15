@@ -1,6 +1,7 @@
 var searchData=
 [
   ['waitformessage',['WaitForMessage',['../classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ac456d9170ae4b25ded776deffac5f039',1,'drake::systems::lcm::LcmSubscriberSystem']]],
+  ['warn',['Warn',['../structdrake_1_1logging_1_1_warn.html',1,'Warn'],['../structdrake_1_1logging_1_1_warn.html#adfebb4989e81d5d715e9ef669de87dfe',1,'drake::logging::Warn::Warn()']]],
   ['warn_5funimplemented',['warn_unimplemented',['../structdrake_1_1geometry_1_1_gltf_extension.html#a3e06f5125c9d12865c929726ef90f723',1,'drake::geometry::GltfExtension']]],
   ['warndeprecated',['WarnDeprecated',['../namespacedrake_1_1pydrake.html#ad64efa5d584964d8c233e48c107eae84',1,'drake::pydrake']]],
   ['warning_5frecords_5f',['warning_records_',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html#abb1a7c282a053bfc11213227382e6b4f',1,'drake::test::DiagnosticPolicyTestBase']]],

@@ -1714,7 +1714,6 @@ publish_offset is set to zero when the publish_period is zero. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>The LCM channel on which to publish.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">serializer</td><td>The serializer that converts between byte vectors and LCM message objects.</td></tr>
     <tr><td class="paramdir"></td><td class="paramname">lcm</td><td>A pointer to the LCM subsystem to use, which must remain valid for the lifetime of this object. If null, a <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html" title="A wrapper around a real LCM instance.">drake::lcm::DrakeLcm</a> object is allocated and maintained internally, but see the note in the class comments.</td></tr>
     <tr><td class="paramdir"></td><td class="paramname">publish_triggers</td><td>Set of triggers that determine when messages will be published. Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will throw an error if empty or if unsupported types are provided.</td></tr>
     <tr><td class="paramdir"></td><td class="paramname">publish_period</td><td>Period that messages will be published (optional). publish_period should only be non-zero if one of the publish_triggers is kPeriodic.</td></tr>

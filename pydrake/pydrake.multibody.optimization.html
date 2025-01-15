@@ -271,8 +271,6 @@ should outlive this object.</p>
 Notice that the order of the geometries in the pair should match
 with that in SceneGraphInspector::GetCollisionCandidates().</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">description</span></code>:</dt><dd><p>The description of this evaluator. Default to none.</p>
-</dd>
 </dl>
 </dd></dl>
 
@@ -331,7 +329,7 @@ optimization anyway).</p>
 <dt class="sig sig-object py" id="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint" title="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint"><span class="pre">pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_quaternion_negation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.__init__" title="Permalink to this definition"></a></dt>
 <dd><dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">allow_quaternion_negation</span></code>:</dt><dd><p>. Refer to the class documentation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">allow_quaternion_negation</span></code>:</dt><dd><p>Refer to the class documentation.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -584,10 +582,8 @@ Robotics, 2018.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.optimization.Toppra.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.optimization.Toppra" title="pydrake.multibody.optimization.Toppra"><span class="pre">pydrake.multibody.optimization.Toppra</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.trajectories.html#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><span class="pre">pydrake.trajectories.Trajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">gridpoints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.optimization.Toppra.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs an inverse kinematics problem for a MultibodyPlant. This
-constructor will create and own a context for</p>
+constructor will create and own a context for <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>.</p>
-</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">path</span></code>:</dt><dd><p>The trajectory on which the TOPPRA problem will be solved.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>The robot that will follow the solved trajectory. Used for

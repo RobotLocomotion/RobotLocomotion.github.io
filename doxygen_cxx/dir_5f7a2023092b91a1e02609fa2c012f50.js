@@ -4,7 +4,7 @@ var dir_5f7a2023092b91a1e02609fa2c012f50 =
     [ "bspline_trajectory.h", "bspline__trajectory_8h.html", "bspline__trajectory_8h" ],
     [ "composite_trajectory.h", "composite__trajectory_8h.html", "composite__trajectory_8h" ],
     [ "derivative_trajectory.h", "derivative__trajectory_8h.html", "derivative__trajectory_8h" ],
-    [ "discrete_time_trajectory.h", "discrete__time__trajectory_8h.html", null ],
+    [ "discrete_time_trajectory.h", "discrete__time__trajectory_8h.html", "discrete__time__trajectory_8h" ],
     [ "exponential_plus_piecewise_polynomial.h", "exponential__plus__piecewise__polynomial_8h.html", [
       [ "ExponentialPlusPiecewisePolynomial", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial" ]
     ] ],

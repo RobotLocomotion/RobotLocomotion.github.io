@@ -1816,7 +1816,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">model_path</td><td>Full path to the model file. </td></tr>
     <tr><td class="paramname">iiwa_instance</td><td>Identifies the IIWA model. </td></tr>
     <tr><td class="paramname">parent_frame</td><td>Identifies frame P (the parent frame) in the MultibodyPlant that the IIWA model has been attached to. </td></tr>
-    <tr><td class="paramname">child_frame_name</td><td>Identifies frame C (the child frame) in the IIWA model that is welded to frame P. </td></tr>
+    <tr><td class="paramname">child_frame</td><td>Identifies frame C (the child frame) in the IIWA model that is welded to frame P. </td></tr>
     <tr><td class="paramname">X_PC</td><td>Transformation between frame P and C. </td></tr>
   </table>
   </dd>
@@ -2024,7 +2024,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets the default State for the chosen setup. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">context</td><td>A const reference to the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> context. </td></tr>
+    <tr><td class="paramname">station_context</td><td>A const reference to the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> context. </td></tr>
     <tr><td class="paramname">state</td><td>A pointer to the State of the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> system. </td></tr>
   </table>
   </dd>
@@ -2186,7 +2186,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Convenience method for setting all of the joint velocities of the Kuka IIWA. </p>
-<p>@v must have size <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a15f05a3d7f23b3fc83e67dace06d49c5" title="Gets the number of joints in the IIWA (only – does not include the gripper).">num_iiwa_joints()</a>. </p><dl class="section pre"><dt>Precondition</dt><dd><code>state</code> must be the systems::State&lt;T&gt; object contained in <code>station_context</code>. </dd></dl>
+<p><code>v</code> must have size <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a15f05a3d7f23b3fc83e67dace06d49c5" title="Gets the number of joints in the IIWA (only – does not include the gripper).">num_iiwa_joints()</a>. </p><dl class="section pre"><dt>Precondition</dt><dd><code>state</code> must be the systems::State&lt;T&gt; object contained in <code>station_context</code>. </dd></dl>
 
 </div>
 </div>
@@ -2217,7 +2217,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Convenience method for setting all of the joint velocities of the Kuka IIWA. </p>
-<p>@v must have size <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a15f05a3d7f23b3fc83e67dace06d49c5" title="Gets the number of joints in the IIWA (only – does not include the gripper).">num_iiwa_joints()</a>. </p>
+<p><code>v</code> must have size <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a15f05a3d7f23b3fc83e67dace06d49c5" title="Gets the number of joints in the IIWA (only – does not include the gripper).">num_iiwa_joints()</a>. </p>
 
 </div>
 </div>
@@ -2290,7 +2290,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Sets a random State for the chosen setup. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">context</td><td>A const reference to the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> context. </td></tr>
+    <tr><td class="paramname">station_context</td><td>A const reference to the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> context. </td></tr>
     <tr><td class="paramname">state</td><td>A pointer to the State of the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> system. </td></tr>
     <tr><td class="paramname">generator</td><td>is the random number generator. </td></tr>
   </table>

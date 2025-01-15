@@ -2685,21 +2685,21 @@ parameter vector", Î±, which depends only on <code>parameters:</code> f = W(n)*Î
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">poly</td><td>Quadratic polynomial to decompose. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">map_var_to_index</td><td>maps variables in <code>poly.GetVariables()</code> to the index in the vector <code>x</code>. </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">Q[out]</td><td>The Hessian of the quadratic expression. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Q</td><td>The Hessian of the quadratic expression. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>The size of Q should be <code>num_variables x num_variables</code>. Q is a symmetric matrix. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">b[out]</td><td>The linear term of the quadratic expression. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">b</td><td>linear term of the quadratic expression. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>The size of <code>b</code> should be <code>num_variables</code>. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">c[out]</td><td>The constant term of the quadratic expression. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">c</td><td>The constant term of the quadratic expression. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2951,7 +2951,7 @@ parameter vector", Î±, which depends only on <code>parameters:</code> f = W(n)*Î
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>A symbolic expression. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">vars</td><td>As an input, <code>vars</code> contain the variables before extracting expression <code>e</code>. As an output, the variables in <code>e</code> that were not included in <code>vars</code>, will be appended to the end of <code>vars</code>. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">map_var_to_index.</td><td>map_var_to_index is of the same size as <code>vars</code>, and map_var_to_index[vars(i).get_id()] = i. This invariance holds for map_var_to_index both as the input and as the output. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">map_var_to_index</td><td>is of the same size as <code>vars</code>, and map_var_to_index[vars(i).get_id()] = i. This invariance holds for map_var_to_index both as the input and as the output. </td></tr>
   </table>
   </dd>
 </dl>
@@ -13029,7 +13029,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 </pre><p> will result in the expression <code>x * (sx*cy + cx*sy)</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">half_angle</td><td>If true, then the same workflow replaces instances of sin(q/2) and cos(q/2) in <code>e</code> will be replaced with <code>s</code>, and <code>c</code>. <br />
+    <tr><td class="paramname">subs</td><td>When set to one of the half_angle options, then the same workflow replaces instances of sin(q/2) and cos(q/2) in <code>e</code> will be replaced with <code>s</code>, and <code>c</code>. <br />
  <em>Default:</em> false.</td></tr>
   </table>
   </dd>

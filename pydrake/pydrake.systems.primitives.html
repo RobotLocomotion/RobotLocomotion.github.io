@@ -2892,11 +2892,11 @@ activation function does <em>not</em> count as an additional layer). The
 first element specifies the number of inputs, and the last layer
 specifies the number of outputs.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_types</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
 layer of the network (including the last layer).</p>
 </dd>
 </dl>
-<p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have one less element than <code class="docutils literal notranslate"><span class="pre">layers</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">activation_types</span></code> should have one less element than <code class="docutils literal notranslate"><span class="pre">layers</span></code>.</p>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.systems.primitives.MultilayerPerceptron, use_sin_cos_for_input: list[bool], remaining_layers: list[int], activation_types: list[pydrake.systems.primitives.PerceptronActivationType]) -&gt; None</p></li>
 </ol>
@@ -2916,11 +2916,11 @@ activation function does <em>not</em> count as an additional layer). The
 first element specifies the size of the first hidden layer, and
 the last layer specifies the number of outputs.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_types</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
 layer of the network (including the last layer).</p>
 </dd>
 </dl>
-<p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have the same number of elements as
+<p><code class="docutils literal notranslate"><span class="pre">activation_types</span></code> should have the same number of elements as
 <code class="docutils literal notranslate"><span class="pre">remaining_layers</span></code>.</p>
 </dd></dl>
 
@@ -3158,11 +3158,11 @@ activation function does <em>not</em> count as an additional layer). The
 first element specifies the number of inputs, and the last layer
 specifies the number of outputs.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_types</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
 layer of the network (including the last layer).</p>
 </dd>
 </dl>
-<p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have one less element than <code class="docutils literal notranslate"><span class="pre">layers</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">activation_types</span></code> should have one less element than <code class="docutils literal notranslate"><span class="pre">layers</span></code>.</p>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], use_sin_cos_for_input: list[bool], remaining_layers: list[int], activation_types: list[pydrake.systems.primitives.PerceptronActivationType]) -&gt; None</p></li>
 </ol>
@@ -3182,11 +3182,11 @@ activation function does <em>not</em> count as an additional layer). The
 first element specifies the size of the first hidden layer, and
 the last layer specifies the number of outputs.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_types</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
 layer of the network (including the last layer).</p>
 </dd>
 </dl>
-<p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have the same number of elements as
+<p><code class="docutils literal notranslate"><span class="pre">activation_types</span></code> should have the same number of elements as
 <code class="docutils literal notranslate"><span class="pre">remaining_layers</span></code>.</p>
 </dd></dl>
 
@@ -3418,11 +3418,11 @@ activation function does <em>not</em> count as an additional layer). The
 first element specifies the number of inputs, and the last layer
 specifies the number of outputs.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_types</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
 layer of the network (including the last layer).</p>
 </dd>
 </dl>
-<p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have one less element than <code class="docutils literal notranslate"><span class="pre">layers</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">activation_types</span></code> should have one less element than <code class="docutils literal notranslate"><span class="pre">layers</span></code>.</p>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], use_sin_cos_for_input: list[bool], remaining_layers: list[int], activation_types: list[pydrake.systems.primitives.PerceptronActivationType]) -&gt; None</p></li>
 </ol>
@@ -3442,11 +3442,11 @@ activation function does <em>not</em> count as an additional layer). The
 first element specifies the size of the first hidden layer, and
 the last layer specifies the number of outputs.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_types</span></code>:</dt><dd><p>specifies the activation function, σ(), used in <em>each</em> non-input
 layer of the network (including the last layer).</p>
 </dd>
 </dl>
-<p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have the same number of elements as
+<p><code class="docutils literal notranslate"><span class="pre">activation_types</span></code> should have the same number of elements as
 <code class="docutils literal notranslate"><span class="pre">remaining_layers</span></code>.</p>
 </dd></dl>
 
@@ -4232,13 +4232,13 @@ for the list of instantiations.</p>
 values are represented by vectors of identical size supplied via this
 constructor.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Saturation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_min</span></code>:</dt><dd><p>the lower (vector) limit to the saturation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">min_value</span></code>:</dt><dd><p>the lower (vector) limit to the saturation.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_max</span></code>:</dt><dd><p>the upper (vector) limit to the saturation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_value</span></code>:</dt><dd><p>the upper (vector) limit to the saturation.</p>
 </dd>
 </dl>
 <p>Please consult this class’s description for the requirements of
-<code class="docutils literal notranslate"><span class="pre">u_min</span></code> and <code class="docutils literal notranslate"><span class="pre">u_max</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">min_value</span></code> and <code class="docutils literal notranslate"><span class="pre">max_value</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4285,13 +4285,13 @@ depending on how the system is constructed.</p>
 values are represented by vectors of identical size supplied via this
 constructor.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Saturation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_min</span></code>:</dt><dd><p>the lower (vector) limit to the saturation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">min_value</span></code>:</dt><dd><p>the lower (vector) limit to the saturation.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_max</span></code>:</dt><dd><p>the upper (vector) limit to the saturation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_value</span></code>:</dt><dd><p>the upper (vector) limit to the saturation.</p>
 </dd>
 </dl>
 <p>Please consult this class’s description for the requirements of
-<code class="docutils literal notranslate"><span class="pre">u_min</span></code> and <code class="docutils literal notranslate"><span class="pre">u_max</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">min_value</span></code> and <code class="docutils literal notranslate"><span class="pre">max_value</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4332,13 +4332,13 @@ depending on how the system is constructed.</p>
 values are represented by vectors of identical size supplied via this
 constructor.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Saturation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_min</span></code>:</dt><dd><p>the lower (vector) limit to the saturation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">min_value</span></code>:</dt><dd><p>the lower (vector) limit to the saturation.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">u_max</span></code>:</dt><dd><p>the upper (vector) limit to the saturation.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_value</span></code>:</dt><dd><p>the upper (vector) limit to the saturation.</p>
 </dd>
 </dl>
 <p>Please consult this class’s description for the requirements of
-<code class="docutils literal notranslate"><span class="pre">u_min</span></code> and <code class="docutils literal notranslate"><span class="pre">u_max</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">min_value</span></code> and <code class="docutils literal notranslate"><span class="pre">max_value</span></code>.</p>
 </dd></dl>
 
 </dd></dl>

@@ -802,8 +802,8 @@ var hierarchy =
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
     [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", null ],
-    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
@@ -1155,6 +1155,7 @@ var hierarchy =
       [ "BezierCurve< T >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],
       [ "BsplineTrajectory< T >", "classdrake_1_1trajectories_1_1_bspline_trajectory.html", null ],
       [ "DerivativeTrajectory< T >", "classdrake_1_1trajectories_1_1_derivative_trajectory.html", null ],
+      [ "DiscreteTimeTrajectory< T >", "classdrake_1_1trajectories_1_1_discrete_time_trajectory.html", null ],
       [ "FunctionHandleTrajectory< T >", "classdrake_1_1trajectories_1_1_function_handle_trajectory.html", null ],
       [ "PathParameterizedTrajectory< T >", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html", null ],
       [ "PiecewiseTrajectory< T >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
@@ -1306,6 +1307,7 @@ var hierarchy =
     [ "vtkURILoader", "classvtk_u_r_i_loader.html", [
       [ "VtkGltfUriLoader", "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_vtk_gltf_uri_loader.html", null ]
     ] ],
+    [ "Warn", "structdrake_1_1logging_1_1_warn.html", null ],
     [ "WitnessFunction< T >", "classdrake_1_1systems_1_1_witness_function.html", null ],
     [ "WitnessFunction< double >", "classdrake_1_1systems_1_1_witness_function.html", null ],
     [ "WitnessTriggeredEventData< T >", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", null ],
