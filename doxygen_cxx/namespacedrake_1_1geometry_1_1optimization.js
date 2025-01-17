@@ -18,6 +18,7 @@ var namespacedrake_1_1geometry_1_1optimization =
     [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid" ],
     [ "Hyperrectangle", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html", "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle" ],
     [ "ImplicitGraphOfConvexSets", "classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html", "classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets" ],
+    [ "ImplicitGraphOfConvexSetsFromExplicit", "classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets_from_explicit.html", "classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets_from_explicit" ],
     [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html", "classdrake_1_1geometry_1_1optimization_1_1_intersection" ],
     [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html", "structdrake_1_1geometry_1_1optimization_1_1_iris_options" ],
     [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum" ],

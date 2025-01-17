@@ -213,12 +213,33 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad8bcf2497fef00ed8a3fa1bc7458c365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b683685b055f28b9d4eff7e4c191025"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a2b683685b055f28b9d4eff7e4c191025">~GraphOfConvexSets</a> ()</td></tr>
 <tr class="separator:a2b683685b055f28b9d4eff7e4c191025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabeff4bbe9e29a57de8de99a2f4461f1"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aabeff4bbe9e29a57de8de99a2f4461f1">Clone</a> () const</td></tr>
+<tr class="memdesc:aabeff4bbe9e29a57de8de99a2f4461f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a deep copy of this graph.  <a href="#aabeff4bbe9e29a57de8de99a2f4461f1">More...</a><br /></td></tr>
+<tr class="separator:aabeff4bbe9e29a57de8de99a2f4461f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeba7aff29aca456ae71805286f6547ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aeba7aff29aca456ae71805286f6547ea">AddVertex</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;set, std::string name=&quot;&quot;)</td></tr>
 <tr class="memdesc:aeba7aff29aca456ae71805286f6547ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a vertex to the graph.  <a href="#aeba7aff29aca456ae71805286f6547ea">More...</a><br /></td></tr>
 <tr class="separator:aeba7aff29aca456ae71805286f6547ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af55168dae32f8095da6b58021f147fa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#af55168dae32f8095da6b58021f147fa2">AddVertexFromTemplate</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;template_vertex)</td></tr>
+<tr class="memdesc:af55168dae32f8095da6b58021f147fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new vertex to the graph (and assigns a new unique VertexId) by taking the name, costs, and constraints (but not any edges) from <code>template_vertex</code>.  <a href="#af55168dae32f8095da6b58021f147fa2">More...</a><br /></td></tr>
+<tr class="separator:af55168dae32f8095da6b58021f147fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ed22fc8b0aa0dfc6d10478bc7a49bca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a6ed22fc8b0aa0dfc6d10478bc7a49bca">AddEdge</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> *u, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> *v, std::string name=&quot;&quot;)</td></tr>
 <tr class="memdesc:a6ed22fc8b0aa0dfc6d10478bc7a49bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an edge to the graph from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> <code>u</code> to <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> <code>v</code>.  <a href="#a6ed22fc8b0aa0dfc6d10478bc7a49bca">More...</a><br /></td></tr>
 <tr class="separator:a6ed22fc8b0aa0dfc6d10478bc7a49bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53159e9ac2da32fc54a743c6c380e086"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a53159e9ac2da32fc54a743c6c380e086">AddEdgeFromTemplate</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> *u, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> *v, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> &amp;template_edge)</td></tr>
+<tr class="memdesc:a53159e9ac2da32fc54a743c6c380e086"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an edge to the graph from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> <code>u</code> to <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> <code>v</code> (and assigns a new unique EdgeId), by taking the name, costs, and constraints from <code>template_edge</code>.  <a href="#a53159e9ac2da32fc54a743c6c380e086">More...</a><br /></td></tr>
+<tr class="separator:a53159e9ac2da32fc54a743c6c380e086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac449fc622dc19e8ad8e83c370ad52c14"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ac449fc622dc19e8ad8e83c370ad52c14">GetVertexByName</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:ac449fc622dc19e8ad8e83c370ad52c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first vertex (by the order added to <code>this</code>) with the given name, or nullptr if no such vertex exists.  <a href="#ac449fc622dc19e8ad8e83c370ad52c14">More...</a><br /></td></tr>
+<tr class="separator:ac449fc622dc19e8ad8e83c370ad52c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd36a90e316aeda6990714b3b0dcfcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aebd36a90e316aeda6990714b3b0dcfcd">GetMutableVertexByName</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:aebd36a90e316aeda6990714b3b0dcfcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first vertex (by the order added to <code>this</code>) with the given name, or nullptr if no such vertex exists.  <a href="#aebd36a90e316aeda6990714b3b0dcfcd">More...</a><br /></td></tr>
+<tr class="separator:aebd36a90e316aeda6990714b3b0dcfcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf650d72a516401fb497fb1e8d3636f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#accf650d72a516401fb497fb1e8d3636f">GetEdgeByName</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:accf650d72a516401fb497fb1e8d3636f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first edge (by the order added to <code>this</code>) with the given name, or nullptr if no such edge exists.  <a href="#accf650d72a516401fb497fb1e8d3636f">More...</a><br /></td></tr>
+<tr class="separator:accf650d72a516401fb497fb1e8d3636f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2737a097342fe479ade6cb780324caa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#af2737a097342fe479ade6cb780324caa">GetMutableEdgeByName</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:af2737a097342fe479ade6cb780324caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first edge (by the order added to <code>this</code>) with the given name, or nullptr if no such edge exists.  <a href="#af2737a097342fe479ade6cb780324caa">More...</a><br /></td></tr>
+<tr class="separator:af2737a097342fe479ade6cb780324caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a219e082fcdebc032744ff53102dc0e1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a219e082fcdebc032744ff53102dc0e1f">RemoveVertex</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> *vertex)</td></tr>
 <tr class="memdesc:a219e082fcdebc032744ff53102dc0e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes vertex <code>vertex</code> from the graph as well as any edges from or to the vertex.  <a href="#a219e082fcdebc032744ff53102dc0e1f">More...</a><br /></td></tr>
 <tr class="separator:a219e082fcdebc032744ff53102dc0e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -484,7 +505,56 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds an edge to the graph from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> <code>u</code> to <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> <code>v</code>. </p>
-<p>The vertex references must refer to valid vertices in this graph. If <code>name</code> is empty then a default name will be provided. </p>
+<p>The vertex references must refer to valid vertices in this graph. If <code>name</code> is empty then a default name will be provided. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>u</code> or <code>v</code> are not valid vertices in this graph. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a53159e9ac2da32fc54a743c6c380e086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53159e9ac2da32fc54a743c6c380e086">&#9670;&nbsp;</a></span>AddEdgeFromTemplate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a>* AddEdgeFromTemplate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> *&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> &amp;&#160;</td>
+          <td class="paramname"><em>template_edge</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an edge to the graph from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> <code>u</code> to <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> <code>v</code> (and assigns a new unique EdgeId), by taking the name, costs, and constraints from <code>template_edge</code>. </p>
+<p><code>template_edge</code> does not need to be registered with this GCS instance; this method can be used to effectively copy an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html" title="An edge in the graph connects between vertex u and vertex v.">Edge</a> from another GCS instance into <code>this</code>. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>u</code> or <code>v</code> are not valid vertices in this graph. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>u</code> or <code>v</code> do not match the sizes of the <code>template_edge.u()</code> and <code>template_edge.v()</code> vertices. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if edges have slack variables. We can add this support once it's needed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -519,6 +589,27 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="af55168dae32f8095da6b58021f147fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af55168dae32f8095da6b58021f147fa2">&#9670;&nbsp;</a></span>AddVertexFromTemplate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a>* AddVertexFromTemplate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>template_vertex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new vertex to the graph (and assigns a new unique VertexId) by taking the name, costs, and constraints (but not any edges) from <code>template_vertex</code>. </p>
+<p><code>template_vertex</code> does not need to be registered with this GCS instance; this method can be used to effectively copy a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> from another GCS instance into <code>this</code>. </p>
+
+</div>
+</div>
 <a id="af3d4326967d3460e7a5fd585dbdde489"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3d4326967d3460e7a5fd585dbdde489">&#9670;&nbsp;</a></span>ClearAllPhiConstraints()</h2>
 
@@ -535,6 +626,31 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Removes all constraints added to any edge with AddPhiConstraint. </p>
+
+</div>
+</div>
+<a id="aabeff4bbe9e29a57de8de99a2f4461f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabeff4bbe9e29a57de8de99a2f4461f1">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a>&gt; Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a deep copy of this graph. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if edges have slack variables. We can add this support once it's needed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -573,6 +689,26 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns pointers to the edges stored in the graph. </p>
+
+</div>
+</div>
+<a id="accf650d72a516401fb497fb1e8d3636f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accf650d72a516401fb497fb1e8d3636f">&#9670;&nbsp;</a></span>GetEdgeByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a>* GetEdgeByName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the first edge (by the order added to <code>this</code>) with the given name, or nullptr if no such edge exists. </p>
 
 </div>
 </div>
@@ -617,6 +753,46 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af2737a097342fe479ade6cb780324caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2737a097342fe479ade6cb780324caa">&#9670;&nbsp;</a></span>GetMutableEdgeByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a>* GetMutableEdgeByName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the first edge (by the order added to <code>this</code>) with the given name, or nullptr if no such edge exists. </p>
+
+</div>
+</div>
+<a id="aebd36a90e316aeda6990714b3b0dcfcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd36a90e316aeda6990714b3b0dcfcd">&#9670;&nbsp;</a></span>GetMutableVertexByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a>* GetMutableVertexByName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the first vertex (by the order added to <code>this</code>) with the given name, or nullptr if no such vertex exists. </p>
 
 </div>
 </div>
@@ -671,6 +847,26 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ac449fc622dc19e8ad8e83c370ad52c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac449fc622dc19e8ad8e83c370ad52c14">&#9670;&nbsp;</a></span>GetVertexByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a>* GetVertexByName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the first vertex (by the order added to <code>this</code>) with the given name, or nullptr if no such vertex exists. </p>
 
 </div>
 </div>

@@ -1081,7 +1081,13 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Overload (5d). </p>
-<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+<p>Refer to the C++ <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for further details. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allocate</td><td>Callback function that allocates storage for the value. It takes no arguments and must return an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>. </td></tr>
+    <tr><td class="paramname">calc</td><td>Callback function that computes the value. It takes two arguments (context, value) and does not return anything; instead, it should mutate the <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> object pointed to by <code>value</code> with the new result. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

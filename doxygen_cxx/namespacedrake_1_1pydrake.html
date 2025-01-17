@@ -368,6 +368,8 @@ Functions</h2></td></tr>
 <tr class="separator:a54960a906da6ad2f3b2509a4fd266f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae073851bc679a64d47dc27c133b8d89d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#ae073851bc679a64d47dc27c133b8d89d">DefineFrameworkPyValues</a> (py::module m)</td></tr>
 <tr class="separator:ae073851bc679a64d47dc27c133b8d89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bb2b7de1072472c16fa5fa5bf27486d"><td class="memItemLeft" align="right" valign="top">std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a8bb2b7de1072472c16fa5fa5bf27486d">MakeCppCompatibleAllocateCallback</a> (py::function allocate)</td></tr>
+<tr class="separator:a8bb2b7de1072472c16fa5fa5bf27486d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Handling special non-POD scalar types.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Because we use dtype=object in NumPy, we cannot alias (share references to) the data underlying matrix objects when passing data between NumPy and Eigen (see #8116).</p>
 <p>The simple policy these functions help enforce:</p>
@@ -391,6 +393,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a3001fa4c52ff2d0f13a58523f67be8e0"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a3001fa4c52ff2d0f13a58523f67be8e0">overload_cast_explicit</a> = <a class="el" href="structdrake_1_1pydrake_1_1overload__cast__impl.html">overload_cast_impl</a>&lt;Return, Args...&gt;{}</td></tr>
 <tr class="memdesc:a3001fa4c52ff2d0f13a58523f67be8e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides option to provide explicit signature when <code>py::overload_cast&lt;Args...&gt;</code> fails to infer the Return argument.  <a href="#a3001fa4c52ff2d0f13a58523f67be8e0">More...</a><br /></td></tr>
 <tr class="separator:a3001fa4c52ff2d0f13a58523f67be8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d91f25ffb0fba3520dc159dd45b41d1"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">systems::ContextBase</a> &amp;, <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a0d91f25ffb0fba3520dc159dd45b41d1">MakeCppCompatibleCalcCallback</a> (std::function&lt; void(py::object, py::object)&gt; calc)</td></tr>
+<tr class="separator:a0d91f25ffb0fba3520dc159dd45b41d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a52292ed585da63084b8914356a744d04"></a>
@@ -1507,6 +1511,24 @@ Ts cannot be a <code>py::</code> symbol (e.g. <code>py::object</code>). On Mac, 
 
 </div>
 </div>
+<a id="a8bb2b7de1072472c16fa5fa5bf27486d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bb2b7de1072472c16fa5fa5bf27486d">&#9670;&nbsp;</a></span>MakeCppCompatibleAllocateCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;std::unique_ptr&lt;<a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a>&gt;)&gt; drake::pydrake::MakeCppCompatibleAllocateCallback </td>
+          <td>(</td>
+          <td class="paramtype">py::function&#160;</td>
+          <td class="paramname"><em>allocate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad82c192e2b875f6bd19163b69ba9075a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad82c192e2b875f6bd19163b69ba9075a">&#9670;&nbsp;</a></span>ParamInit()</h2>
 
@@ -1880,6 +1902,20 @@ Ts cannot be a <code>py::</code> symbol (e.g. <code>py::object</code>). On Mac, 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a0d91f25ffb0fba3520dc159dd45b41d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d91f25ffb0fba3520dc159dd45b41d1">&#9670;&nbsp;</a></span>MakeCppCompatibleCalcCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">systems::ContextBase</a>&amp;, <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a>*)&gt; MakeCppCompatibleCalcCallback(std::function&lt; void(py::object, py::object)&gt; calc)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3001fa4c52ff2d0f13a58523f67be8e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3001fa4c52ff2d0f13a58523f67be8e0">&#9670;&nbsp;</a></span>overload_cast_explicit</h2>
 

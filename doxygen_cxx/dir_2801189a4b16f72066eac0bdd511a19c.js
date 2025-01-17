@@ -8,5 +8,6 @@ var dir_2801189a4b16f72066eac0bdd511a19c =
     [ "framework_py_values.h", "framework__py__values_8h.html", "framework__py__values_8h" ],
     [ "lcm_py_bind_cpp_serializers.h", "lcm__py__bind__cpp__serializers_8h.html", "lcm__py__bind__cpp__serializers_8h" ],
     [ "lcm_pybind.h", "lcm__pybind_8h.html", "lcm__pybind_8h" ],
-    [ "sensors_py.h", "sensors__py_8h.html", null ]
+    [ "sensors_py.h", "sensors__py_8h.html", null ],
+    [ "value_producer_pybind.h", "value__producer__pybind_8h.html", "value__producer__pybind_8h" ]
 ];

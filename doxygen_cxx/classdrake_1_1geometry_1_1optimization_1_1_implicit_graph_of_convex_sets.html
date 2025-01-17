@@ -339,6 +339,8 @@ Protected Member Functions</h2></td></tr>
 <p>Expands a vertex <code>v</code> by adding its outgoing edges (and the vertices that they point to) to the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ab601ea9af645ce82b2a01551d646eb5c">mutable_gcs()</a>, calling <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ab601ea9af645ce82b2a01551d646eb5c">mutable_gcs()</a>.AddVertex() and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ab601ea9af645ce82b2a01551d646eb5c">mutable_gcs()</a>.AddEdge() as needed. </p>
 <p>Due to a caching mechanism, implementations can assume that Expand(v) will only be called once for each <code>v</code>. </p>
 
+<p>Implemented in <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets_from_explicit.html#a6bf13b2cc594e61c0d9c7a1da9aecc6e">ImplicitGraphOfConvexSetsFromExplicit</a>.</p>
+
 </div>
 </div>
 <a id="a6ee27611542f04bbe9f750e7e8082ba0"></a>
@@ -368,7 +370,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes repeated recursive calls to <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#a78ca3e55f72b7fb8c3a643e4d5348b06" title="Returns the outgoing edges from v, which defines the &quot;successors&quot; of v in the common notation of impl...">Successors()</a> until no new vertices will be added to the graph, or <code>max_successor_calls</code> has been reached. </p>
-<p>Note: <code>v</code> is mutable because exanding a vertex requires changes to the underlying vertex object.</p>
+<p>Note: <code>v</code> is mutable because expanding a vertex requires changes to the underlying vertex object.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>v</code> is not already registered with the graph. </td></tr>

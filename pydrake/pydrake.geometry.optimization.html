@@ -2022,6 +2022,36 @@ ImplicitGraphOfConvexSets.</p>
 <dd><p>Adds an edge to the graph from Vertex <code class="docutils literal notranslate"><span class="pre">u</span></code> to Vertex <code class="docutils literal notranslate"><span class="pre">v</span></code>. The
 vertex references must refer to valid vertices in this graph. If
 <code class="docutils literal notranslate"><span class="pre">name</span></code> is empty then a default name will be provided.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if u</strong><strong> or </strong><strong>v are not valid vertices in this</strong> – </p></li>
+<li><p><strong>graph.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.AddEdgeFromTemplate">
+<span class="sig-name descname"><span class="pre">AddEdgeFromTemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_edge</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.AddEdgeFromTemplate" title="Permalink to this definition"></a></dt>
+<dd><p>Adds an edge to the graph from Vertex <code class="docutils literal notranslate"><span class="pre">u</span></code> to Vertex <code class="docutils literal notranslate"><span class="pre">v</span></code> (and
+assigns a new unique EdgeId), by taking the name, costs, and
+constraints from <code class="docutils literal notranslate"><span class="pre">template_edge</span></code>. <cite>template_edge</cite> does not need to
+be registered with this GCS instance; this method can be used to
+effectively copy an Edge from another GCS instance into <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if u</strong><strong> or </strong><strong>v are not valid vertices in this</strong> – </p></li>
+<li><p><strong>graph.</strong> – </p></li>
+<li><p><strong>RuntimeError if u</strong><strong> or </strong><strong>v do not match the sizes of the</strong> – </p></li>
+<li><p><strong>template_edge.u</strong><strong>(</strong><strong>)</strong><strong>` and template_edge.v</strong><strong>(</strong><strong>) </strong><strong>vertices</strong> – </p></li>
+<li><p><strong>RuntimeError if edges have slack variables. We can add this</strong> – </p></li>
+<li><p><strong>support once it's needed.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -2033,10 +2063,25 @@ provided.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.AddVertexFromTemplate">
+<span class="sig-name descname"><span class="pre">AddVertexFromTemplate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_vertex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.AddVertexFromTemplate" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a new vertex to the graph (and assigns a new unique VertexId) by
+taking the name, costs, and constraints (but not any edges) from
+<code class="docutils literal notranslate"><span class="pre">template_vertex</span></code>. <cite>template_vertex</cite> does not need to be registered
+with this GCS instance; this method can be used to effectively copy a
+Vertex from another GCS instance into <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.ClearAllPhiConstraints">
 <span class="sig-name descname"><span class="pre">ClearAllPhiConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.ClearAllPhiConstraints" title="Permalink to this definition"></a></dt>
 <dd><p>Removes all constraints added to any edge with AddPhiConstraint.</p>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Clone">
+<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Clone" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.Edge">
@@ -2367,6 +2412,13 @@ builds.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.GetEdgeByName">
+<span class="sig-name descname"><span class="pre">GetEdgeByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetEdgeByName" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the first edge (by the order added to <code class="docutils literal notranslate"><span class="pre">this</span></code>) with the given
+name, or nullptr if no such edge exists.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString">
 <span class="sig-name descname"><span class="pre">GetGraphvizString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -2405,6 +2457,20 @@ original graph edges.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.GetMutableEdgeByName">
+<span class="sig-name descname"><span class="pre">GetMutableEdgeByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetMutableEdgeByName" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the first edge (by the order added to <code class="docutils literal notranslate"><span class="pre">this</span></code>) with the given
+name, or nullptr if no such edge exists.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.GetMutableVertexByName">
+<span class="sig-name descname"><span class="pre">GetMutableVertexByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetMutableVertexByName" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the first vertex (by the order added to <code class="docutils literal notranslate"><span class="pre">this</span></code>) with the
+given name, or nullptr if no such vertex exists.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.GetSolutionPath">
 <span class="sig-name descname"><span class="pre">GetSolutionPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgramResult" title="pydrake.solvers.MathematicalProgramResult"><span class="pre">pydrake.solvers.MathematicalProgramResult</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="pydrake.geometry.optimization.GraphOfConvexSets.Edge"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Edge</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetSolutionPath" title="Permalink to this definition"></a></dt>
 <dd><p>Extracts a path from <code class="docutils literal notranslate"><span class="pre">source</span></code> to <code class="docutils literal notranslate"><span class="pre">target</span></code> described by the
@@ -2426,6 +2492,13 @@ in [0, 1]. The default value is 1e-3.</p>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.GraphOfConvexSets.GetVertexByName">
+<span class="sig-name descname"><span class="pre">GetVertexByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetVertexByName" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the first vertex (by the order added to <code class="docutils literal notranslate"><span class="pre">this</span></code>) with the
+given name, or nullptr if no such vertex exists.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3722,7 +3795,7 @@ time.</p>
 <dd><p>Makes repeated recursive calls to Successors() until no new vertices
 will be added to the graph, or <code class="docutils literal notranslate"><span class="pre">max_successor_calls</span></code> has been
 reached.</p>
-<p>Note: <code class="docutils literal notranslate"><span class="pre">v</span></code> is mutable because exanding a vertex requires changes to
+<p>Note: <code class="docutils literal notranslate"><span class="pre">v</span></code> is mutable because expanding a vertex requires changes to
 the underlying vertex object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -3755,6 +3828,36 @@ pointers from the returned edges to expand them further.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if v is not already registered with the graph.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.optimization.</span></span><span class="sig-name descname"><span class="pre">ImplicitGraphOfConvexSetsFromExplicit</span></span><a class="headerlink" href="#pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ImplicitGraphOfConvexSets" title="pydrake.geometry.optimization.ImplicitGraphOfConvexSets"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ImplicitGraphOfConvexSets</span></code></a></p>
+<p>Provides an implicit GCS interface given an explicit GCS. Vertices and
+edges are cloned into the implicit GCS as they are expanded.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit" title="pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit"><span class="pre">pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">gcs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="pydrake.geometry.optimization.GraphOfConvexSets"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs an implicit GCS from an explicit GCS. <code class="docutils literal notranslate"><span class="pre">gcs</span></code> must remain
+valid for the lifetime of this object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit.ImplicitVertexFromExplicit">
+<span class="sig-name descname"><span class="pre">ImplicitVertexFromExplicit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit" title="pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit"><span class="pre">pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_explicit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="pydrake.geometry.optimization.GraphOfConvexSets.Vertex"><span class="pre">pydrake.geometry.optimization.GraphOfConvexSets.Vertex</span></a></span></span><a class="headerlink" href="#pydrake.geometry.optimization.ImplicitGraphOfConvexSetsFromExplicit.ImplicitVertexFromExplicit" title="Permalink to this definition"></a></dt>
+<dd><p>Looks up the implicit vertex corresponding to <code class="docutils literal notranslate"><span class="pre">v</span></code>. If <code class="docutils literal notranslate"><span class="pre">v</span></code> is not
+already in the implicit GCS, it is added.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if v is not registered with the explicit GCS</strong> – </p></li>
+<li><p><strong>passed in the constructor.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
