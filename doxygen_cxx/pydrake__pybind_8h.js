@@ -7,7 +7,8 @@ var pydrake__pybind_8h =
     [ "DefClone", "pydrake__pybind_8h.html#ad48601ea388e9d2a662aff6f8b42dca4", null ],
     [ "DefCopyAndDeepCopy", "pydrake__pybind_8h.html#a4937c776ae795edfe27824821a0d14a5", null ],
     [ "ExecuteExtraPythonCode", "pydrake__pybind_8h.html#aa8cec9d64f8d0017db630acd8740021e", null ],
-    [ "make_unowned_shared_ptr_from_raw", "pydrake__pybind_8h.html#a303d4b3541bf8120fd6cabfdb40a61ef", null ],
+    [ "make_shared_ptr_from_py_object", "pydrake__pybind_8h.html#a8f53f5da8d132d7fbeda6ff5226eb4d6", null ],
+    [ "make_unowned_shared_ptr_from_raw", "pydrake__pybind_8h.html#a89bdd693baaf8b5918db0352ecefc4dd", null ],
     [ "ParamInit", "pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a", null ],
     [ "overload_cast_explicit", "pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0", null ]
 ];

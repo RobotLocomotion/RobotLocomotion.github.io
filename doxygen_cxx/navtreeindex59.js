@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"pixel__types_8h.html#aeee61963e066e7ce017d584fe2123c7d":[4,0,0,12,8,16,15],
 "planar__gripper__common_8h.html":[4,0,0,3,13,3],
 "planar__gripper__common_8h.html#a022c2ff8acea1011cd346eb1b9ce28c4":[4,0,0,3,13,3,0],
 "planar__gripper__common_8h.html#a14d8479e15e8d08eeeceffe752cd5523":[4,0,0,3,13,3,4],
@@ -152,15 +153,16 @@ var NAVTREEINDEX59 =
 "proximity__utilities_8h.html#aa157ce1fbdd1dfbf0f83de850a4dc009":[4,0,0,4,2,57,6],
 "pydrake__doxygen_8h.html":[4,0,0,0,0,15],
 "pydrake__pybind_8h.html":[4,0,0,0,0,16],
-"pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,16,9],
-"pydrake__pybind_8h.html#a303d4b3541bf8120fd6cabfdb40a61ef":[4,0,0,0,0,16,7],
+"pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,16,10],
 "pydrake__pybind_8h.html#a4937c776ae795edfe27824821a0d14a5":[4,0,0,0,0,16,5],
 "pydrake__pybind_8h.html#a6e587c4c8d044dd6eee74dad65c203ed":[4,0,0,0,0,16,3],
 "pydrake__pybind_8h.html#a770b1f61c8d50f505dd2502203abeeed":[4,0,0,0,0,16,1],
+"pydrake__pybind_8h.html#a89bdd693baaf8b5918db0352ecefc4dd":[4,0,0,0,0,16,8],
+"pydrake__pybind_8h.html#a8f53f5da8d132d7fbeda6ff5226eb4d6":[4,0,0,0,0,16,7],
 "pydrake__pybind_8h.html#aa8cec9d64f8d0017db630acd8740021e":[4,0,0,0,0,16,6],
 "pydrake__pybind_8h.html#abae292352a6ccb4d07b1aa13d4c7f143":[4,0,0,0,0,16,2],
 "pydrake__pybind_8h.html#ad48601ea388e9d2a662aff6f8b42dca4":[4,0,0,0,0,16,4],
-"pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a":[4,0,0,0,0,16,8],
+"pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a":[4,0,0,0,0,16,9],
 "quadratic__form_8h.html":[4,0,0,7,26],
 "quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,26,1],
 "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,26,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "rational__function_8h.html#af9ea1fd857bdf8fa5c18f570118640ff":[4,0,0,1,3,14,17],
 "rational__function_8h.html#aff3765260423d079969572ed50b80934":[4,0,0,1,3,14,30],
 "read__gltf__to__memory_8h.html":[4,0,0,4,47],
-"read__gltf__to__memory_8h.html#a5b789c32326520c1e9836f1717b24ed8":[4,0,0,4,47,0],
-"read__obj_8h.html":[4,0,0,4,48],
-"realtime__rate__calculator_8h.html":[4,0,0,12,0,14]
+"read__gltf__to__memory_8h.html#a5b789c32326520c1e9836f1717b24ed8":[4,0,0,4,47,0]
 };

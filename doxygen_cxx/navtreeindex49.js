@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#ac3160ec1cbd29e1f171d05c5b6cc11c5":[3,0,0,18,14,15],
 "classdrake_1_1trajectories_1_1_trajectory.html#ac51b842ba9d2ee39e9398c86fdc38a75":[3,0,0,18,14,14],
 "classdrake_1_1trajectories_1_1_trajectory.html#acc63489a1a8b80a033e43e7165c45e0d":[3,0,0,18,14,21],
 "classdrake_1_1trajectories_1_1_trajectory.html#ad365bd72052e4ba80a34d982abf890e3":[3,0,0,18,14,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "cpp__param__pybind_8h.html":[4,0,0,0,0,1,0],
 "cpp__param__pybind_8h.html#a2274d953c5404b3021085ef6c9891603":[4,0,0,0,0,1,0,1],
 "cpp__template__pybind_8h.html":[4,0,0,0,0,1,1],
-"cpp__template__pybind_8h.html#a4790743839a4b041b37dc3820e2475ae":[4,0,0,0,0,1,1,4],
-"cpp__template__pybind_8h.html#a590ec0531f7c675e373909bb758740db":[4,0,0,0,0,1,1,1]
+"cpp__template__pybind_8h.html#a4790743839a4b041b37dc3820e2475ae":[4,0,0,0,0,1,1,4]
 };

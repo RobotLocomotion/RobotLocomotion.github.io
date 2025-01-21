@@ -1,5 +1,7 @@
 var NAVTREEINDEX61 =
 {
+"simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e":[4,0,0,12,0,26,0],
+"simulator__gflags_8h.html#aae7184a96835fe5037011cff956df981":[4,0,0,12,0,26,4],
 "simulator__print__stats_8h.html":[4,0,0,12,0,27],
 "simulator__print__stats_8h.html#a14e4e6cd73fdedd3dde63af60b3572e4":[4,0,0,12,0,27,0],
 "simulator__python__internal_8h.html":[4,0,0,12,0,28],
@@ -247,7 +249,5 @@ var NAVTREEINDEX61 =
 "structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[3,0,0,23,0],
 "structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[3,0,0,23,2],
 "structdrake_1_1_polynomial_1_1_product.html":[3,0,0,44,1],
-"structdrake_1_1_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29":[3,0,0,44,1,0],
-"structdrake_1_1_rlocation_or_error.html":[3,0,0,48],
-"structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,48,0]
+"structdrake_1_1_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29":[3,0,0,44,1,0]
 };

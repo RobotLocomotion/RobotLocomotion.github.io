@@ -8,7 +8,7 @@
     <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
     <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <title>Drake: Bazel build system</title>
+    <title>Drake: Developing Drake using Bazel</title>
     <meta
       name="description"
       content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
@@ -133,81 +133,108 @@ analysis.
         <div class="drake-page">
   <header class="drake-page-header">
     <div class="contain">
-      <h1>Bazel build system</h1>
+      <h1>Developing Drake using Bazel</h1>
     </div>
   </header>
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <p>Drake’s primary build system is Bazel.  For more information about Bazel, see
-<a href="https://bazel.build/">https://bazel.build/</a>.</p>
+        <h1 id="new-users">New Users</h1>
 
-<p>Drake also offers a CMake build system wrapper that invokes Bazel under the
-hood.</p>
+<p>For first-time users, we strongly suggest using one of the pre-compiled binaries
+described on our <a href="/installation.html">installation</a> page. If you need to install
+Drake from source please refer to the
+<a href="from_source.html#supported-configurations">CMake instructions</a>.
+If your organization already uses Bazel for its builds, you can build Drake as a
+Bazel external; see <a href="/from_source.html#building-with-bazel">Building with Bazel</a>.</p>
 
-<h1 id="bazel-installation">Bazel Installation</h1>
+<p>This page describes how Drake Developers (and contributors making pull requests)
+should develop and test their changes locally.</p>
 
-<p>Follow Drake’s
-<a href="/from_source.html#mandatory-platform-specific-instructions">platform-specific setup instructions</a>
-to install bazelisk at <code class="language-plaintext highlighter-rouge">/usr/bin/bazel</code>, which will then automatically
-download the correct version of Bazel necessary for the build.</p>
+<h1 id="introduction">Introduction</h1>
 
-<h1 id="drake-clone-and-platform-setup">Drake clone and platform setup</h1>
+<p>Drake’s primary build system is <a href="https://bazel.build/">Bazel</a>, which our
+developers use to build and test locally and in CI. Bazel enables speedy
+development via fine-grained caching of all actions, including tests.</p>
 
-<ul>
-  <li>Start with a <strong>git clone</strong> of drake, per the <a href="/from_source.html#getting-drake">Getting Drake</a>
-instructions.</li>
-  <li>Continue with the <em>“Mandatory platform-specific instructions”</em> on the same
-page.</li>
-</ul>
+<p>For end users, Drake also offers a CMake build system wrapper that invokes Bazel
+as a subprocess and maps CMake build options into Bazel build options, so that
+users can install Drake via standard tools without knowing anything about Bazel.
+See the
+<a href="from_source.html#supported-configurations">CMake instructions</a>
+for details.</p>
+
+<h1 id="getting-drake">Getting Drake</h1>
+
+<p>Run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Get the sources.</span>
+git clone <span class="nt">--filter</span><span class="o">=</span>blob:none https://github.com/RobotLocomotion/drake.git
+
+<span class="c"># Install the developer dependencies.</span>
+drake/setup/install_prereqs <span class="nt">--developer</span>
+</code></pre></div></div>
+
+<p>We suggest you keep the default clone directory name (<code class="language-plaintext highlighter-rouge">drake</code>) and not rename
+it (e.g., <code class="language-plaintext highlighter-rouge">drake2</code>). The CLion integration will suffer if the checkout is not
+named <code class="language-plaintext highlighter-rouge">drake</code>. (See <a href="clion.html">CLion IDE setup</a> for details.)</p>
+
+<h2 id="using-a-fork-of-drake">Using a fork of Drake</h2>
+
+<p>The above <code class="language-plaintext highlighter-rouge">git clone</code> command will configure Drake’s primary repository as a
+remote called <code class="language-plaintext highlighter-rouge">origin</code>. If you plan to fork Drake for development, we
+recommend that you configure your fork of Drake’s primary repository as the
+<code class="language-plaintext highlighter-rouge">origin</code> remote and Drake’s primary repository as the <code class="language-plaintext highlighter-rouge">upstream</code>
+remote. This can be done by executing the following commands:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake
+git remote set-url origin git@github.com:[your github user name]/drake.git
+git remote add upstream https://github.com/RobotLocomotion/drake.git
+git remote set-url <span class="nt">--push</span> upstream no_push
+</code></pre></div></div>
+
+<p>We recommend that you
+<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">setup SSH access to github.com</a>
+to avoid needing to type your password each time you access it.</p>
 
 <h1 id="developing-drake-using-bazel">Developing Drake using Bazel</h1>
 
-<p>To build or test Drake, run <strong>bazel build</strong> or <strong>bazel test</strong> with the desired
-target label (and optional configuration options if desired).  We give some
-typical examples below; for more reading about target patterns, see:
-<a href="https://docs.bazel.build/versions/main/user-manual.html#target-patterns">https://docs.bazel.build/versions/main/user-manual.html#target-patterns</a>.</p>
+<p>To build or test Drake, run <code class="language-plaintext highlighter-rouge">bazel build</code> or <code class="language-plaintext highlighter-rouge">bazel test</code> with the desired
+target label (and optional configuration options if desired). We give some
+typical examples below; for more reading about target patterns, see
+<a href="https://bazel.build/docs/user-manual#target-patterns">target patterns</a>.</p>
 
-<p>On Ubuntu, the default compiler is the first <code class="language-plaintext highlighter-rouge">gcc</code> compiler in the <code class="language-plaintext highlighter-rouge">PATH</code>.
-On macOS, the default compiler is the Apple LLVM compiler. To use Clang on
-Ubuntu, add <code class="language-plaintext highlighter-rouge">--config=clang</code> after any <strong>bazel build</strong>, <strong>bazel test</strong> or any
-other <strong>bazel</strong> commands.</p>
+<p>On Ubuntu, the default compiler is GCC. On macOS, the default compiler is the
+Apple LLVM compiler. To use Clang on Ubuntu, add <code class="language-plaintext highlighter-rouge">--config=clang</code> after any
+<code class="language-plaintext highlighter-rouge">bazel</code> command.</p>
 
 <p>Cheat sheet for operating on the entire project:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake
-bazel build //...                 # Build the entire project.
-bazel test //...                  # Build and test the entire project.
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /path/to/drake
+bazel build //...                 <span class="c"># Build the entire project.</span>
+bazel <span class="nb">test</span> //...                  <span class="c"># Build and test the entire project.</span>
 
-bazel build --config=clang //...  # Build using Clang on Ubuntu.
-bazel test --config=clang //...   # Build and test using Clang on Ubuntu.
+bazel build <span class="nt">--config</span><span class="o">=</span>clang //...  <span class="c"># Build using Clang on Ubuntu.</span>
+bazel <span class="nb">test</span> <span class="nt">--config</span><span class="o">=</span>clang //...   <span class="c"># Build and test using Clang on Ubuntu.</span>
 </code></pre></div></div>
 
 <ul>
   <li>The “<code class="language-plaintext highlighter-rouge">//</code>” means “starting from the root of the project”.</li>
-  <li>The “<code class="language-plaintext highlighter-rouge">...</code>” means “everything including the subdirectories’ <code class="language-plaintext highlighter-rouge">BUILD</code> files”.
-    <ul>
-      <li>Contrast with, e.g., the “<code class="language-plaintext highlighter-rouge">bazel build common:*</code>” explained below, where
-only targets declared <em>directly</em> in <code class="language-plaintext highlighter-rouge">drake/common/BUILD</code> are compiled,
-and not the targets in <code class="language-plaintext highlighter-rouge">drake/common/trajectories/BUILD</code>.  The “<code class="language-plaintext highlighter-rouge">*</code>”
-matches targets in that directory; the “<code class="language-plaintext highlighter-rouge">...</code>” also matches down into
-subdirectories.</li>
-    </ul>
-  </li>
+  <li>The “<code class="language-plaintext highlighter-rouge">...</code>” means “everything, recursing into subdirectories”.</li>
 </ul>
 
 <p>You may use relative pathnames if your shell’s working directory is not at the
 project root:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake/common
-bazel build ...                   # Build everything in common and its child subdirectories.
-bazel test ...                    # Test everything in common and its child subdirectories.
-bazel build //...                 # Build the entire project.
-bazel test //...                  # Build and test the entire project.
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /path/to/drake/common
+bazel build ...                   <span class="c"># Build everything in common and its child subdirectories.</span>
+bazel <span class="nb">test</span> ...                    <span class="c"># Test everything in common and its child subdirectories.</span>
+bazel build //...                 <span class="c"># Build the entire project.</span>
+bazel <span class="nb">test</span> //...                  <span class="c"># Build and test the entire project.</span>
 </code></pre></div></div>
 
 <ul>
-  <li>As before, the “<code class="language-plaintext highlighter-rouge">...</code>” above means “everything including subdirectories”.
+  <li>As before, the “<code class="language-plaintext highlighter-rouge">...</code>” means “everything, recursing into subdirectories”.
     <ul>
       <li>In the first two lines we did not precede “<code class="language-plaintext highlighter-rouge">...</code>” with “<code class="language-plaintext highlighter-rouge">//</code>”, so the
 search begins in the current directory (<code class="language-plaintext highlighter-rouge">common</code>) and not from the
@@ -221,33 +248,32 @@ root, so we’re back to operating on the entire project even though
 
 <p>Cheat sheet for operating on specific portions of the project:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake
-bazel build common/...                               # Build everything in common and its child subdirectories.
-bazel build common                                   # Build libcommon.
-bazel build common:polynomial                        # Build libpolynomial.
-bazel build common:*                                 # Build everything in common but NOT its children.
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /path/to/drake
+bazel build common/...                               <span class="c"># Build everything in common and its child subdirectories.</span>
+bazel build common                                   <span class="c"># Build libcommon.</span>
+bazel build common:polynomial                        <span class="c"># Build libpolynomial.</span>
+bazel build common:all                               <span class="c"># Build everything in common but NOT its children.</span>
 
-bazel test common:polynomial_test                    # Run one test.
-bazel test -c dbg common:polynomial_test             # Run one test in debug mode.
-bazel test --config=memcheck common:polynomial_test  # Run one test under memcheck (valgrind).
-bazel test --config=fastmemcheck common:*            # Run common's tests under memcheck, with minimal recompiling.
-bazel test --config=kcov common:polynomial_test      # Run one test under kcov (see instructions below).
-bazel build -c dbg common:polynomial_test &amp;&amp; \
-  gdb bazel-bin/common/polynomial_test               # Run one test under gdb.
+bazel <span class="nb">test </span>common:polynomial_test                    <span class="c"># Run one test.</span>
+bazel <span class="nb">test</span> <span class="nt">-c</span> dbg common:polynomial_test             <span class="c"># Run one test in debug mode.</span>
+bazel <span class="nb">test</span> <span class="nt">--config</span><span class="o">=</span>memcheck common:polynomial_test  <span class="c"># Run one test under memcheck (valgrind).</span>
+bazel <span class="nb">test</span> <span class="nt">--config</span><span class="o">=</span>fastmemcheck common:all          <span class="c"># Run common's tests under memcheck, with minimal recompiling.</span>
+bazel <span class="nb">test</span> <span class="nt">--config</span><span class="o">=</span>kcov common:polynomial_test      <span class="c"># Run one test under kcov (see instructions below).</span>
+bazel build <span class="nt">-c</span> dbg common:polynomial_test <span class="o">&amp;&amp;</span> <span class="se">\</span>
+  gdb bazel-bin/common/polynomial_test               <span class="c"># Run one test under gdb.</span>
 
-bazel test -c dbg --config=clang --config=asan common:polynomial_test  # Run one test under AddressSanitizer.
+bazel <span class="nb">test</span> <span class="nt">-c</span> dbg <span class="nt">--config</span><span class="o">=</span>clang <span class="nt">--config</span><span class="o">=</span>asan common:polynomial_test  <span class="c"># Run one test under AddressSanitizer.</span>
 
-bazel test --config lint //...                       # Only run style checks; don't build or test anything else.
+bazel <span class="nb">test</span> <span class="nt">--config</span> lint //...                       <span class="c"># Only run style checks; don't build or test anything else.</span>
 </code></pre></div></div>
 
 <ul>
   <li>The “<code class="language-plaintext highlighter-rouge">:</code>” syntax separates target names from the directory path of the
 <code class="language-plaintext highlighter-rouge">BUILD</code> file they appear in. In this case, for example,
-<code class="language-plaintext highlighter-rouge">drake/common/BUILD</code> specifies <code class="language-plaintext highlighter-rouge">cc_test(name = "polynomial_test")</code>.</li>
+<code class="language-plaintext highlighter-rouge">drake/common/BUILD</code> specifies <code class="language-plaintext highlighter-rouge">drake_cc_test(name = "polynomial_test")</code>.</li>
   <li>Note that the configuration switches (<code class="language-plaintext highlighter-rouge">-c</code> and <code class="language-plaintext highlighter-rouge">--config</code>) influence the
 entire command. For example, running a test in <code class="language-plaintext highlighter-rouge">dbg</code> mode means that its
 prerequisite libraries are also compiled and linked in <code class="language-plaintext highlighter-rouge">dbg</code> mode.</li>
-  <li>For the definitions of the “<code class="language-plaintext highlighter-rouge">--config</code>” options see <code class="language-plaintext highlighter-rouge">drake/tools/bazel.rc</code>.</li>
 </ul>
 
 <h2 id="running-with-flags">Running with Flags</h2>
@@ -257,7 +283,7 @@ prerequisite libraries are also compiled and linked in <code class="language-pla
 <p>In general, to figure out what binary-specific arguments are available, add
 “<code class="language-plaintext highlighter-rouge">-- --help</code>” to your <code class="language-plaintext highlighter-rouge">bazel run</code> command. An an example,</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel run //examples/acrobot:run_passive -- --help
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel run //examples/acrobot:run_passive <span class="nt">--</span> <span class="nt">--help</span>
 </code></pre></div></div>
 
 <p>The bare <code class="language-plaintext highlighter-rouge">--</code> separates Bazel arguments from the program’s arguments.</p>
@@ -269,28 +295,31 @@ prerequisite libraries are also compiled and linked in <code class="language-pla
 
 <p>For a C++ unittest that uses <code class="language-plaintext highlighter-rouge">drake_cc_googletest</code>, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel test multibody/plant:multibody_plant_test --test_output=streamed --nocache_test_results --test_arg=--gtest_filter='*SimpleModelCreation*'
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel <span class="nb">test</span> //multibody/plant:multibody_plant_test <span class="nt">--test_output</span><span class="o">=</span>streamed <span class="nt">--nocache_test_results</span> <span class="nt">--test_arg</span><span class="o">=</span><span class="nt">--gtest_filter</span><span class="o">=</span><span class="s1">'*SimpleModelCreation*'</span>
 </code></pre></div></div>
 
 <p>For a Python unittest that uses <code class="language-plaintext highlighter-rouge">drake_py_unittest</code>, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel test bindings/pydrake:py/symbolic_test --test_output=streamed --nocache_test_results --test_arg=--trace=user --test_arg=TestSymbolicVariable
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel <span class="nb">test</span> //bindings/pydrake:py/symbolic_test <span class="nt">--test_output</span><span class="o">=</span>streamed <span class="nt">--nocache_test_results</span> <span class="nt">--test_arg</span><span class="o">=</span><span class="nt">--trace</span><span class="o">=</span>user <span class="nt">--test_arg</span><span class="o">=</span>TestSymbolicVariable
 </code></pre></div></div>
 
 <h1 id="updating-build-files">Updating BUILD files</h1>
 
-<p>Please use the “<code class="language-plaintext highlighter-rouge">buildifier</code>” tool to format edits to <code class="language-plaintext highlighter-rouge">BUILD</code> files (in the
-same spirit as <code class="language-plaintext highlighter-rouge">clang-format</code> formatting C++ code):</p>
+<p>We use the “<code class="language-plaintext highlighter-rouge">buildifier</code>” tool to auto-format our <code class="language-plaintext highlighter-rouge">BUILD</code> files (in the same
+spirit as <code class="language-plaintext highlighter-rouge">clang-format</code> formatting C++ code):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake
-bazel-bin/tools/lint/buildifier --all         # Reformat all Bazel files.
-bazel-bin/tools/lint/buildifier common/BUILD  # Only reformat one file.
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /path/to/drake
+bazel-bin/tools/lint/buildifier <span class="nt">--all</span>         <span class="c"># Reformat all Bazel files.</span>
+bazel-bin/tools/lint/buildifier common/BUILD  <span class="c"># Only reformat one file.</span>
 </code></pre></div></div>
+
+<p>If a BUILD file is mis-formatted, you we see a test failure with instructions
+how to fix the problem.</p>
 
 <p>In most cases the <code class="language-plaintext highlighter-rouge">bazel-bin/tools/lint/buildifier</code> will already be compiled
 by the time you need it.  In case it’s absent, you can compile it via:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /path/to/drake
 bazel build //tools/lint:buildifier
 </code></pre></div></div>
 

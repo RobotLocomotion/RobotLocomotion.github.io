@@ -139,10 +139,16 @@ analysis.
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <h1 id="supported-configurations">Supported Configurations</h1>
+        <h1 id="new-users">New Users</h1>
+
+<p>For first-time users, we strongly suggest using one of the pre-compiled binaries
+described on our <a href="/installation.html">installation</a> page. This page explains how
+to build Drake from source, which is somewhat more challenging.</p>
+
+<h1 id="supported-configurations">Supported Configurations</h1>
 
 <p>The following table shows the configurations and platforms that Drake
-officially supports:</p>
+officially supports when building from source:</p>
 
 <!-- The operating system requirements should match those listed in the root
      CMakeLists.txt. -->
@@ -223,111 +229,111 @@ setup steps.</p>
 
 <p>⁽³⁾ Drake requires a compiler running in C++20 (or greater) mode.</p>
 
-<h1 id="getting-drake">Getting Drake</h1>
+<h1 id="building-with-cmake">Building with CMake</h1>
 
-<p>Run:</p>
+<p>For sample projects that show how to import Drake as a CMake external project
+(either by building Drake from source, or by downloading a pre-compiled Drake
+release) please see our gallery of
+<a href="https://github.com/RobotLocomotion/drake-external-examples">external examples</a>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone --filter=blob:none https://github.com/RobotLocomotion/drake.git
-</code></pre></div></div>
+<p>Otherwise, you can run a build from source by hand like this:</p>
 
-<p>Note: we suggest you keep the default clone directory name (<code class="language-plaintext highlighter-rouge">drake</code>) and not
-rename it (such as <code class="language-plaintext highlighter-rouge">drake2</code>).  The CLion integration will suffer if the
-checkout directory is not named <code class="language-plaintext highlighter-rouge">drake</code>.  (See <a href="clion.html">CLion IDE setup</a> for details.)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Get the sources.</span>
+git clone <span class="nt">--filter</span><span class="o">=</span>blob:none https://github.com/RobotLocomotion/drake.git
 
-<p>Note: the build process may encounter problems if you have unusual characters
-like parentheses in the absolute path to the drake directory
-(see <a href="https://github.com/RobotLocomotion/drake/issues/394">#394</a>).</p>
+<span class="c"># Install the build dependencies.</span>
+drake/setup/install_prereqs
 
-<h2 id="using-a-fork-of-drake">Using a fork of Drake</h2>
-
-<p>The above <code class="language-plaintext highlighter-rouge">git clone</code> command will configure Drake’s primary repository as a
-remote called <code class="language-plaintext highlighter-rouge">origin</code>. If you plan to fork Drake for development, we
-recommend that you configure your fork of Drake’s primary repository as the
-<code class="language-plaintext highlighter-rouge">origin</code> remote and Drake’s primary repository as the <code class="language-plaintext highlighter-rouge">upstream</code>
-remote. This can be done by executing the following commands:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd drake
-git remote set-url origin git@github.com:[your github user name]/drake.git
-git remote add upstream https://github.com/RobotLocomotion/drake.git
-git remote set-url --push upstream no_push
-</code></pre></div></div>
-
-<p>We recommend that you
-<a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">setup SSH access to github.com</a>
-to avoid needing to type your password each time you access it.</p>
-
-<h1 id="mandatory-platform-specific-instructions">Mandatory platform-specific instructions</h1>
-
-<p>Before running the build, you must follow some one-time platform-specific
-setup steps.</p>
-
-<p><em>Ubuntu:</em></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ./setup/ubuntu/install_prereqs.sh
-</code></pre></div></div>
-
-<p><em>macOS:</em></p>
-
-<p>We assume that you have already installed Xcode
-(<a href="https://itunes.apple.com/us/app/xcode/id497799835">from the Mac App Store</a>).</p>
-
-<p>After that, run:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./setup/mac/install_prereqs.sh
-</code></pre></div></div>
-
-<h1 id="build-with-bazel">Build with Bazel</h1>
-
-<p>For instructions, jump to
-<a href="/bazel.html#developing-drake-using-bazel">Developing Drake using Bazel</a>,
-or check out the full details at:</p>
-
-<ul>
-  <li><a href="/bazel.html">Bazel build system</a></li>
-</ul>
-
-<h2 id="building-the-python-bindings">Building the Python Bindings</h2>
-
-<p>To use the Python bindings from Drake externally, we recommend using CMake.
-As an example:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/RobotLocomotion/drake.git
+<span class="c"># Build and install using standard CMake commands.</span>
 <span class="nb">mkdir </span>drake-build
 <span class="nb">cd </span>drake-build
 cmake ../drake
 make <span class="nb">install</span>
 </code></pre></div></div>
 
-<p>Note that a concurrency limit passed to <code class="language-plaintext highlighter-rouge">make</code> (e.g., <code class="language-plaintext highlighter-rouge">make -j 2</code>) has almost no
-effect on the Drake build. You might need to add a bazel configuration dotfile
+<p>To change the build options, you can run one of the standard CMake GUIs (e.g.,
+<code class="language-plaintext highlighter-rouge">ccmake</code> or <code class="language-plaintext highlighter-rouge">cmake-gui</code>) or specify command-line options with <code class="language-plaintext highlighter-rouge">-D</code> to <code class="language-plaintext highlighter-rouge">cmake</code>.</p>
+
+<h2 id="cmake-options-which-are-drake-specific">CMake options which are Drake-specific</h2>
+
+<p>These options can be set using <code class="language-plaintext highlighter-rouge">-DFOO=bar</code> on the CMake command line, or in one
+of the CMake GUIs.</p>
+
+<p>Adjusting open-source dependencies:</p>
+
+<ul>
+  <li>WITH_USER_EIGEN (default OFF). When ON, uses <code class="language-plaintext highlighter-rouge">find_package(Eigen3)</code>
+to locate a user-provided <code class="language-plaintext highlighter-rouge">Eigen3::Eigen</code> library
+instead of hard-coding to the operating system version.</li>
+  <li>WITH_USER_FMT (default OFF). When ON, uses <code class="language-plaintext highlighter-rouge">find_package(fmt)</code>
+to locate a user-provided <code class="language-plaintext highlighter-rouge">fmt::fmt</code> library
+instead of hard-coding to the operating system version.</li>
+  <li>WITH_USER_SPDLOG (default OFF). When ON, uses <code class="language-plaintext highlighter-rouge">find_package(spdlog)</code>
+to locate a user-provided <code class="language-plaintext highlighter-rouge">spdlog::spdlog</code> library
+instead of hard-coding to the operating system version.</li>
+</ul>
+
+<p>Adjusting closed-source (commercial) software dependencies:</p>
+
+<ul>
+  <li>WITH_GUROBI (default OFF). When ON, enables the <code class="language-plaintext highlighter-rouge">GurobiSolver</code> in the build.
+    <ul>
+      <li>When enabled, you must download and install Gurobi 10.0 yourself prior to
+running Drake’s CMake configure script; Drake does not automatically
+download Gurobi. If Gurobi is not installed to its standard location, you
+must also <code class="language-plaintext highlighter-rouge">export GUROBI_HOME=${...GUROBI_UNZIP_PATH...}/linux64</code>
+in your terminal so that <code class="language-plaintext highlighter-rouge">find_package(Gurobi)</code> will be able to find it.</li>
+    </ul>
+  </li>
+  <li>WITH_MOSEK (default OFF). When ON, enables the <code class="language-plaintext highlighter-rouge">MosekSolver</code> in the build.
+    <ul>
+      <li>When enabled, Drake automatically downloads the MOSEK<a href="/tm.html">™</a> software from
+<code class="language-plaintext highlighter-rouge">mosek.com</code> and installs it as part of the Drake build. The selected
+version is hard-coded in Drake and cannot be configured.</li>
+    </ul>
+  </li>
+  <li>WITH_SNOPT (default OFF). When ON, enables the <code class="language-plaintext highlighter-rouge">SnoptSolver</code> in the build.
+    <ul>
+      <li>This option is mutally exclusive with <code class="language-plaintext highlighter-rouge">WITH_ROBOTLOCOMOTION_SNOPT</code>.</li>
+    </ul>
+  </li>
+  <li>SNOPT_PATH (no default). When <code class="language-plaintext highlighter-rouge">WITH_SNOPT</code> is ON, this must be set to a SNOPT
+source code archive path (e.g., <code class="language-plaintext highlighter-rouge">/home/user/Downloads/snopt7.4.tar.gz</code>) with
+SNOPT version 7.4 (recommended) or version 7.6.
+    <ul>
+      <li>Drake does not support using a SNOPT binary release (i.e., shared library);
+it requires a source archive (i.e., the Fortran code).</li>
+    </ul>
+  </li>
+  <li>WITH_ROBOTLOCOMOTION_SNOPT (default OFF). When ON, enables the <code class="language-plaintext highlighter-rouge">SnoptSolver</code>
+in the build, using a hard-coded and access-controlled download of SNOPT.
+This option is only valid for MIT- or TRI-affiliated Drake developers.
+    <ul>
+      <li>This option is mutally exclusive with <code class="language-plaintext highlighter-rouge">WITH_SNOPT</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="cmake-caveats">CMake caveats</h2>
+
+<p>Note that a concurrency limit passed to <code class="language-plaintext highlighter-rouge">make</code> (e.g., <code class="language-plaintext highlighter-rouge">make -j 2</code>) for a Drake
+build has almost no effect. You might need to add a bazel configuration dotfile
 to your home directory if your build is running out of memory. See the
 <a href="/troubleshooting.html#build-oom">troubleshooting</a> page for details.</p>
 
 <p>Be aware that repeatedly running <code class="language-plaintext highlighter-rouge">make install</code> will install the recompiled
 version of Drake <em>on top of</em> the prior version. This will lead to disaster
 unless the set of installed filenames is exactly the same (because old files
-will be hanging around polluting your PYTHONPATH). It is safe if you are merely
-tweaking a source code file and repeatedly installing, without any changes to
-the build system. For any kind of larger change (e.g., upgrading to a newer
-Drake), we strongly advise that you delete the prior tree (within the <code class="language-plaintext highlighter-rouge">install</code>
-sub-directory) before running <code class="language-plaintext highlighter-rouge">make</code>.</p>
+will be hanging around, e.g., polluting your PYTHONPATH). It is safe if you are
+merely tweaking a source code file and repeatedly installing, without any
+changes to the build system. For any kind of larger change (e.g., upgrading to a
+newer Drake), we strongly advise that you delete the prior tree (within the
+<code class="language-plaintext highlighter-rouge">install</code> sub-directory) before running <code class="language-plaintext highlighter-rouge">make</code>.</p>
 
-<p>Please note the additional CMake options which affect the Python bindings:</p>
+<h2 id="running-the-python-bindings-after-a-cmake-install">Running the Python Bindings after a CMake install</h2>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">-DWITH_GUROBI={ON, [OFF]}</code> - Build with Gurobi enabled.</li>
-  <li><code class="language-plaintext highlighter-rouge">-DWITH_MOSEK={ON, [OFF]}</code> - Build with MOSEK<a href="/tm.html">™</a> enabled.</li>
-  <li><code class="language-plaintext highlighter-rouge">-DWITH_SNOPT={ON, [OFF]}</code> - Build with SNOPT enabled.</li>
-</ul>
-
-<p><code class="language-plaintext highlighter-rouge">{...}</code> means a list of options, and the option surrounded by <code class="language-plaintext highlighter-rouge">[...]</code> is
-the default option. An example of building <code class="language-plaintext highlighter-rouge">pydrake</code> with both Gurobi and
-MOSEK<a href="/tm.html">™</a>, without building tests:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">-DWITH_GUROBI</span><span class="o">=</span>ON <span class="nt">-DWITH_MOSEK</span><span class="o">=</span>ON ../drake
-</code></pre></div></div>
-
-<p>You will also need to have your <code class="language-plaintext highlighter-rouge">PYTHONPATH</code> configured correctly.</p>
+<p>To run the installed copy of <code class="language-plaintext highlighter-rouge">pydrake</code>, you will also need to have your
+<code class="language-plaintext highlighter-rouge">PYTHONPATH</code> configured correctly.</p>
 
 <p><em>Ubuntu 22.04 (Jammy):</em></p>
 
@@ -346,6 +352,35 @@ MOSEK<a href="/tm.html">™</a>, without building tests:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
 <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.12/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
 </code></pre></div></div>
+
+<h1 id="building-with-bazel">Building with Bazel</h1>
+
+<p>If your organization already uses Bazel for its builds, you can build Drake as
+a Bazel external. For sample projects that show how to import Drake as a Bazel
+external (either by building Drake from source, or by downloading a pre-compiled
+Drake release) please see our gallery of
+<a href="https://github.com/RobotLocomotion/drake-external-examples">drake-external-examples</a>,
+either
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_bazel_external">drake_bazel_external</a>
+(to build from source) or
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_bazel_download">drake_bazel_download</a>
+(to download a precompiled release).</p>
+
+<p>When building Drake from source as a Bazel external, we offer flags for
+customization. Refer to the comments in
+<a href="https://github.com/RobotLocomotion/drake/blob/master/tools/flags/BUILD.bazel">drake/tools/flags/BUILD.bazel</a>
+for details. The <code class="language-plaintext highlighter-rouge">drake_bazel_external</code> example demonstrates a few of the flags.
+If you enable any of proprietary solvers flags, then you must first install
+the solver and set environment variables per the
+<a href="/bazel.html#proprietary-solvers">Proprietary Solvers</a> instructions.</p>
+
+<p>There is no way to install Drake from Bazel. To install Drake, use CMake (see
+above).</p>
+
+<h1 id="making-changes-to-drake">Making changes to Drake</h1>
+
+<p>Drake developers use Bazel for development. Refer to our <a href="/bazel.html">Bazel
+instructions</a> for details.</p>
 
       </article>
     </div>

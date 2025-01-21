@@ -165,7 +165,8 @@ $(document).ready(function(){initNavTree('add__multibody__plant__constraints_8h.
 <div class="title">add_multibody_plant_constraints.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mathematical__program_8h.html">drake/solvers/mathematical_program.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -184,9 +185,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2b475a845f1e7eed70697af7a34868f8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; solvers::Binding&lt; solvers::Constraint &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a2b475a845f1e7eed70697af7a34868f8">AddMultibodyPlantConstraints</a> (const MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const solvers::VectorXDecisionVariable &amp;q, solvers::MathematicalProgram *prog, systems::Context&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant_context=nullptr)</td></tr>
-<tr class="memdesc:a2b475a845f1e7eed70697af7a34868f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all kinematic constraints associated with <code>plant</code> adds a corresponding solver::Constraint to <code>prog</code>, using decision variables <code>q</code> to represent the generalized positions of the plant.  <a href="namespacedrake_1_1multibody.html#a2b475a845f1e7eed70697af7a34868f8">More...</a><br /></td></tr>
-<tr class="separator:a2b475a845f1e7eed70697af7a34868f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb93b73473d0cca2054585c7b8b15a84"><td class="memItemLeft" align="right" valign="top">std::vector&lt; solvers::Binding&lt; solvers::Constraint &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#acb93b73473d0cca2054585c7b8b15a84">AddMultibodyPlantConstraints</a> (const std::shared_ptr&lt; const MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;plant, const solvers::VectorXDecisionVariable &amp;q, solvers::MathematicalProgram *prog, systems::Context&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant_context=nullptr)</td></tr>
+<tr class="memdesc:acb93b73473d0cca2054585c7b8b15a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all kinematic constraints associated with <code>plant</code> adds a corresponding solver::Constraint to <code>prog</code>, using decision variables <code>q</code> to represent the generalized positions of the plant.  <a href="namespacedrake_1_1multibody.html#acb93b73473d0cca2054585c7b8b15a84">More...</a><br /></td></tr>
+<tr class="separator:acb93b73473d0cca2054585c7b8b15a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
