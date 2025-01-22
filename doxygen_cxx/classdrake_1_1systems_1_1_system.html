@@ -1020,6 +1020,10 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0c2bcc8b809ca6ccb30cdc6d65e0fef3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a0c2bcc8b809ca6ccb30cdc6d65e0fef3">FindUniquePeriodicDiscreteUpdatesOrThrow</a> (const char *api_name, const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, std::optional&lt; <a class="el" href="classdrake_1_1systems_1_1_periodic_event_data.html">PeriodicEventData</a> &gt; *timing, <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_update_event.html">DiscreteUpdateEvent</a>&lt; T &gt;&gt; *events)</td></tr>
 <tr class="memdesc:a0c2bcc8b809ca6ccb30cdc6d65e0fef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Static interface to DoFindUniquePeriodicDiscreteUpdatesOrThrow() to allow a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> to invoke that private method on its subsystems.  <a href="#a0c2bcc8b809ca6ccb30cdc6d65e0fef3">More...</a><br /></td></tr>
 <tr class="separator:a0c2bcc8b809ca6ccb30cdc6d65e0fef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f62cabd62a694728e1ae913d6d99163"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a7f62cabd62a694728e1ae913d6d99163"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a7f62cabd62a694728e1ae913d6d99163">HandlePostConstructionScalarConversion</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; U &gt; &amp;from, <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *to)</td></tr>
+<tr class="memdesc:a7f62cabd62a694728e1ae913d6d99163"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Scalar conversion (e.g., ToAutoDiffXd) will first call the <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a> to construct the converted system, and then call this function for any post-construction cleanup.  <a href="#a7f62cabd62a694728e1ae913d6d99163">More...</a><br /></td></tr>
+<tr class="separator:a7f62cabd62a694728e1ae913d6d99163"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_methods_classdrake_1_1systems_1_1_system_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classdrake_1_1systems_1_1_system_base')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a></td></tr>
 <tr class="memitem:abbed6ab1f586a7b4d4a6131c6fa415ab inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#abbed6ab1f586a7b4d4a6131c6fa415ab">set_parent_service</a> (<a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> *child, const internal::SystemParentServiceInterface *parent_service)</td></tr>
 <tr class="memdesc:abbed6ab1f586a7b4d4a6131c6fa415ab inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Declares that <code>parent_service</code> is the service interface of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> that owns this subsystem.  <a href="classdrake_1_1systems_1_1_system_base.html#abbed6ab1f586a7b4d4a6131c6fa415ab">More...</a><br /></td></tr>
@@ -2421,8 +2425,8 @@ Scalar type conversion by template parameter</h2></td></tr>
 
 </div>
 </div>
-<a id="a4076a7594095a9ca6936dd70c7254f84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4076a7594095a9ca6936dd70c7254f84">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[1/3]</span></h2>
+<a id="a7d078e4f799ae50f07ae35389352835f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2461,8 +2465,10 @@ Scalar type conversion by template parameter</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Declares a cache entry by specifying a model value of concrete type <code>ValueType</code> and a calculator function that is a class member function (method) with signature: </p>
-<p><a class="anchor" id="DeclareCacheEntry_model_and_calc"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code>, <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>, and <code>ValueType</code> is any concrete type such that <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted. (The method names are arbitrary.) Template arguments will be deduced and do not need to be specified. See the <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_primary">primary DeclareCacheEntry() signature</a> above for more information about the parameters and behavior. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
+<p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
+<p><a class="anchor" id="DeclareCacheEntry_calc_only"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code> and <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>. <code>ValueType</code> is a concrete type such that (a) <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted, and (b) <code>ValueType</code> is default constructible. That allows us to create a model value using <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;{}</code> (value initialized so numerical types will be zeroed in the model). (The method name is arbitrary.) Template arguments will be deduced and do not need to be specified. See the first <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3" title="Declares a new CacheEntry in this System using the most generic form of the calculation function.">DeclareCacheEntry()</a> signature above for more information about the parameters and behavior.</p>
+<dl class="section note"><dt>Note</dt><dd>The default constructor will be called once immediately to create a model value, and subsequent allocations will just copy the model value without invoking the constructor again. If you want the constructor invoked again at each allocation (not common), use one of the other signatures to explicitly provide a method for the allocator to call; that method can then invoke the <code>ValueType</code> default constructor each time it is called. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
 
 </div>
 </div>
@@ -2506,8 +2512,8 @@ Scalar type conversion by template parameter</h2></td></tr>
 
 </div>
 </div>
-<a id="a7d078e4f799ae50f07ae35389352835f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[3/3]</span></h2>
+<a id="a4076a7594095a9ca6936dd70c7254f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4076a7594095a9ca6936dd70c7254f84">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2546,10 +2552,8 @@ Scalar type conversion by template parameter</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
-<p><a class="anchor" id="DeclareCacheEntry_calc_only"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code> and <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>. <code>ValueType</code> is a concrete type such that (a) <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted, and (b) <code>ValueType</code> is default constructible. That allows us to create a model value using <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;{}</code> (value initialized so numerical types will be zeroed in the model). (The method name is arbitrary.) Template arguments will be deduced and do not need to be specified. See the first <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3" title="Declares a new CacheEntry in this System using the most generic form of the calculation function.">DeclareCacheEntry()</a> signature above for more information about the parameters and behavior.</p>
-<dl class="section note"><dt>Note</dt><dd>The default constructor will be called once immediately to create a model value, and subsequent allocations will just copy the model value without invoking the constructor again. If you want the constructor invoked again at each allocation (not common), use one of the other signatures to explicitly provide a method for the allocator to call; that method can then invoke the <code>ValueType</code> default constructor each time it is called. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
+<p>Declares a cache entry by specifying a model value of concrete type <code>ValueType</code> and a calculator function that is a class member function (method) with signature: </p>
+<p><a class="anchor" id="DeclareCacheEntry_model_and_calc"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code>, <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>, and <code>ValueType</code> is any concrete type such that <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted. (The method names are arbitrary.) Template arguments will be deduced and do not need to be specified. See the <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_primary">primary DeclareCacheEntry() signature</a> above for more information about the parameters and behavior. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
 
 </div>
 </div>
@@ -4798,6 +4802,44 @@ termination" returns are ignored here.</p>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a7f62cabd62a694728e1ae913d6d99163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f62cabd62a694728e1ae913d6d99163">&#9670;&nbsp;</a></span>HandlePostConstructionScalarConversion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void HandlePostConstructionScalarConversion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Scalar conversion (e.g., ToAutoDiffXd) will first call the <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a> to construct the converted system, and then call this function for any post-construction cleanup. </p>
 
 </div>
 </div>
