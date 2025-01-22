@@ -1,6 +1,5 @@
 var NAVTREEINDEX62 =
 {
-"structdrake_1_1_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29":[3,0,0,44,1,0],
 "structdrake_1_1_rlocation_or_error.html":[3,0,0,48],
 "structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,48,0],
 "structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,48,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX62 =
 "structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple.html#abd0b36292d04faaa728a92e7e2a06d12":[3,0,0,4,34,0,3],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html":[3,0,0,4,37],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a27471eb356d2510ae691de4053d7aef7":[3,0,0,4,37,4],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,37,8]
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,4,37,8],
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,4,37,7]
 };
