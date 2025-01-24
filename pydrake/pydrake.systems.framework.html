@@ -11205,6 +11205,14 @@ which case it will return the deprecated port.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System.get_system_scalar_converter">
+<span class="sig-name descname"><span class="pre">get_system_scalar_converter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.SystemScalarConverter" title="pydrake.systems.framework.SystemScalarConverter"><span class="pre">pydrake.systems.framework.SystemScalarConverter</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.System.get_system_scalar_converter" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) Returns the SystemScalarConverter for this object. This is
+an expert-level API intended for framework authors. Most users should
+prefer the convenience helpers such as System::ToAutoDiffXd.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System.GetInputPort">
 <span class="sig-name descname"><span class="pre">GetInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.System.GetInputPort" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the typed input port with the unique name <code class="docutils literal notranslate"><span class="pre">port_name</span></code>. The
@@ -12408,6 +12416,14 @@ which case it will return the deprecated port.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.get_system_scalar_converter">
+<span id="pydrake.systems.framework.System_[AutoDiffXd].get_system_scalar_converter"></span><span class="sig-name descname"><span class="pre">get_system_scalar_converter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.SystemScalarConverter" title="pydrake.systems.framework.SystemScalarConverter"><span class="pre">pydrake.systems.framework.SystemScalarConverter</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.get_system_scalar_converter" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) Returns the SystemScalarConverter for this object. This is
+an expert-level API intended for framework authors. Most users should
+prefer the convenience helpers such as System::ToAutoDiffXd.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.framework.System_-AutoDiffXd-.GetInputPort">
 <span id="pydrake.systems.framework.System_[AutoDiffXd].GetInputPort"></span><span class="sig-name descname"><span class="pre">GetInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-AutoDiffXd-.GetInputPort" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the typed input port with the unique name <code class="docutils literal notranslate"><span class="pre">port_name</span></code>. The
@@ -13602,6 +13618,14 @@ deprecated.</p>
 <p>Convenience method for the case of exactly one output port. This
 function ignores deprecated ports, unless there is only one port in
 which case it will return the deprecated port.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.System_-Expression-.get_system_scalar_converter">
+<span id="pydrake.systems.framework.System_[Expression].get_system_scalar_converter"></span><span class="sig-name descname"><span class="pre">get_system_scalar_converter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.framework.SystemScalarConverter" title="pydrake.systems.framework.SystemScalarConverter"><span class="pre">pydrake.systems.framework.SystemScalarConverter</span></a></span></span><a class="headerlink" href="#pydrake.systems.framework.System_-Expression-.get_system_scalar_converter" title="Permalink to this definition"></a></dt>
+<dd><p>(Advanced) Returns the SystemScalarConverter for this object. This is
+an expert-level API intended for framework authors. Most users should
+prefer the convenience helpers such as System::ToAutoDiffXd.</p>
 </dd></dl>
 
 <dl class="py method">
