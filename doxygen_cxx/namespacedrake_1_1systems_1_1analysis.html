@@ -184,8 +184,11 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a093baffca68144967ca38da942917459"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a093baffca68144967ca38da942917459">SimulatorFactory</a></td></tr>
-<tr class="separator:a093baffca68144967ca38da942917459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ffd3655007cf7525f5a3af5dcf4a5fe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a9ffd3655007cf7525f5a3af5dcf4a5fe">RandomSimulatorFactory</a> = std::function&lt; std::shared_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;(<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator)&gt;</td></tr>
+<tr class="separator:a9ffd3655007cf7525f5a3af5dcf4a5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ce43695d534b0c8459451cc5a79cd1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1analysis.html#af5ce43695d534b0c8459451cc5a79cd1">SimulatorFactory</a> = std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;(<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator)&gt;</td></tr>
+<tr class="memdesc:af5ce43695d534b0c8459451cc5a79cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#af5ce43695d534b0c8459451cc5a79cd1">More...</a><br /></td></tr>
+<tr class="separator:af5ce43695d534b0c8459451cc5a79cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acba2b2630b11f7f987c6924bcdba3c8e"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; <a class="el" href="classdouble.html">double</a>(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1analysis.html#acba2b2630b11f7f987c6924bcdba3c8e">ScalarSystemFunction</a></td></tr>
 <tr class="separator:acba2b2630b11f7f987c6924bcdba3c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -194,17 +197,31 @@ Functions</h2></td></tr>
 <tr class="memitem:ga2ccd9a43fd950b9e3490dd8c98534c3e"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga2ccd9a43fd950b9e3490dd8c98534c3e">SampleBasedLyapunovAnalysis</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;(const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;state)&gt; &amp;basis_functions, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;state_samples, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;V_zero_state)</td></tr>
 <tr class="memdesc:ga2ccd9a43fd950b9e3490dd8c98534c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up a linear program to search for the coefficients of a Lyapunov function that satisfies the Lyapunov conditions at a set of sample points.  <a href="group__analysis.html#ga2ccd9a43fd950b9e3490dd8c98534c3e">More...</a><br /></td></tr>
 <tr class="separator:ga2ccd9a43fd950b9e3490dd8c98534c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9f3c726f3a915c5188fbcd8bff683cb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga9f3c726f3a915c5188fbcd8bff683cb5">RandomSimulation</a> (const <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a093baffca68144967ca38da942917459">SimulatorFactory</a> &amp;make_simulator, const <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#acba2b2630b11f7f987c6924bcdba3c8e">ScalarSystemFunction</a> &amp;output, <a class="el" href="classdouble.html">double</a> final_time, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator)</td></tr>
-<tr class="memdesc:ga9f3c726f3a915c5188fbcd8bff683cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a deterministic simulation of a (stochastic) <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> using the <code>generator</code> to instantiate all "random" quantities.  <a href="group__analysis.html#ga9f3c726f3a915c5188fbcd8bff683cb5">More...</a><br /></td></tr>
-<tr class="separator:ga9f3c726f3a915c5188fbcd8bff683cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga25e477f2efbdae38b357d7c39d8452bd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga25e477f2efbdae38b357d7c39d8452bd">MonteCarloSimulation</a> (const <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a093baffca68144967ca38da942917459">SimulatorFactory</a> &amp;make_simulator, const <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#acba2b2630b11f7f987c6924bcdba3c8e">ScalarSystemFunction</a> &amp;output, <a class="el" href="classdouble.html">double</a> final_time, <a class="el" href="classint.html">int</a> num_samples, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator=nullptr, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=false)</td></tr>
-<tr class="memdesc:ga25e477f2efbdae38b357d7c39d8452bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates samples of a scalar random variable output by running many random simulations drawn from independent samples of the distributions governing the stochastic simulation.  <a href="group__analysis.html#ga25e477f2efbdae38b357d7c39d8452bd">More...</a><br /></td></tr>
-<tr class="separator:ga25e477f2efbdae38b357d7c39d8452bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52f77ac4ec06fe7743ca32409abddbfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga52f77ac4ec06fe7743ca32409abddbfc">RandomSimulation</a> (const <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a9ffd3655007cf7525f5a3af5dcf4a5fe">RandomSimulatorFactory</a> &amp;make_simulator, const <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#acba2b2630b11f7f987c6924bcdba3c8e">ScalarSystemFunction</a> &amp;output, <a class="el" href="classdouble.html">double</a> final_time, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator)</td></tr>
+<tr class="memdesc:ga52f77ac4ec06fe7743ca32409abddbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a deterministic simulation of a (stochastic) <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> using the <code>generator</code> to instantiate all "random" quantities.  <a href="group__analysis.html#ga52f77ac4ec06fe7743ca32409abddbfc">More...</a><br /></td></tr>
+<tr class="separator:ga52f77ac4ec06fe7743ca32409abddbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4e0e70a74b1692132db0ae985a95294"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analysis.html#gae4e0e70a74b1692132db0ae985a95294">MonteCarloSimulation</a> (const <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a9ffd3655007cf7525f5a3af5dcf4a5fe">RandomSimulatorFactory</a> &amp;make_simulator, const <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#acba2b2630b11f7f987c6924bcdba3c8e">ScalarSystemFunction</a> &amp;output, <a class="el" href="classdouble.html">double</a> final_time, <a class="el" href="classint.html">int</a> num_samples, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator=nullptr, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=false)</td></tr>
+<tr class="memdesc:gae4e0e70a74b1692132db0ae985a95294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates samples of a scalar random variable output by running many random simulations drawn from independent samples of the distributions governing the stochastic simulation.  <a href="group__analysis.html#gae4e0e70a74b1692132db0ae985a95294">More...</a><br /></td></tr>
+<tr class="separator:gae4e0e70a74b1692132db0ae985a95294"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaafb17ca05a19fe7365d28f8a105cff76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analysis.html#gaafb17ca05a19fe7365d28f8a105cff76">RegionOfAttraction</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html">RegionOfAttractionOptions</a> &amp;options=<a class="el" href="structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html">RegionOfAttractionOptions</a>())</td></tr>
 <tr class="memdesc:gaafb17ca05a19fe7365d28f8a105cff76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates the region of attraction of the time-invariant <code>system</code> at the fixed point defined by <code>context</code>.  <a href="group__analysis.html#gaafb17ca05a19fe7365d28f8a105cff76">More...</a><br /></td></tr>
 <tr class="separator:gaafb17ca05a19fe7365d28f8a105cff76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="a9ffd3655007cf7525f5a3af5dcf4a5fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ffd3655007cf7525f5a3af5dcf4a5fe">&#9670;&nbsp;</a></span>RandomSimulatorFactory</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a9ffd3655007cf7525f5a3af5dcf4a5fe">RandomSimulatorFactory</a> =  std::function&lt;std::shared_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt;( <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a>* generator)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="acba2b2630b11f7f987c6924bcdba3c8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acba2b2630b11f7f987c6924bcdba3c8e">&#9670;&nbsp;</a></span>ScalarSystemFunction</h2>
 
@@ -219,17 +236,19 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a093baffca68144967ca38da942917459"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a093baffca68144967ca38da942917459">&#9670;&nbsp;</a></span>SimulatorFactory</h2>
+<a id="af5ce43695d534b0c8459451cc5a79cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ce43695d534b0c8459451cc5a79cd1">&#9670;&nbsp;</a></span>SimulatorFactory</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::function&lt;std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a>* generator)&gt; <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#a093baffca68144967ca38da942917459">SimulatorFactory</a></td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems_1_1analysis.html#af5ce43695d534b0c8459451cc5a79cd1">SimulatorFactory</a> =  std::function&lt; std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt;(<a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a>* generator)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
 
 </div>
 </div>

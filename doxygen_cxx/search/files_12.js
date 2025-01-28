@@ -116,6 +116,7 @@ var searchData=
   ['specific_5foptions_2eh',['specific_options.h',['../specific__options_8h.html',1,'']]],
   ['spectrahedron_2eh',['spectrahedron.h',['../spectrahedron_8h.html',1,'']]],
   ['spgrid_2eh',['spgrid.h',['../spgrid_8h.html',1,'']]],
+  ['spgrid_5fflags_2eh',['spgrid_flags.h',['../spgrid__flags_8h.html',1,'']]],
   ['spong_5fcontroller_2eh',['spong_controller.h',['../spong__controller_8h.html',1,'']]],
   ['spong_5fcontroller_5fparams_2eh',['spong_controller_params.h',['../spong__controller__params_8h.html',1,'']]],
   ['spring_5fmass_5fdamper_5fsystem_2eh',['spring_mass_damper_system.h',['../spring__mass__damper__system_8h.html',1,'']]],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX61 =
 {
+"simulator__gflags_8h.html#a1de575cbf61e7155e7ed13858b9ce177":[4,0,0,12,0,26,5],
+"simulator__gflags_8h.html#a2ddf6e3d8e5f2ecb32db146fad3ce6bd":[4,0,0,12,0,26,1],
 "simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e":[4,0,0,12,0,26,0],
 "simulator__gflags_8h.html#aae7184a96835fe5037011cff956df981":[4,0,0,12,0,26,4],
 "simulator__print__stats_8h.html":[4,0,0,12,0,27],
@@ -110,7 +112,8 @@ var NAVTREEINDEX61 =
 "spatial__velocity__constraint_8h.html":[4,0,0,8,8,6],
 "specific__options_8h.html":[4,0,0,11,61],
 "spectrahedron_8h.html":[4,0,0,4,1,23],
-"spgrid_8h.html":[4,0,0,8,7,3],
+"spgrid_8h.html":[4,0,0,8,7,4],
+"spgrid__flags_8h.html":[4,0,0,8,7,5],
 "spong__controller_8h.html":[4,0,0,3,0,6],
 "spong__controller__params_8h.html":[4,0,0,3,0,7],
 "spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
@@ -246,8 +249,5 @@ var NAVTREEINDEX61 =
 "string__unordered__set_8h.html#ac7bf512e18da0a0815f5ea1214916e45":[4,0,0,1,69,0],
 "structdrake_1_1_delegating_hasher.html":[3,0,0,23],
 "structdrake_1_1_delegating_hasher.html#a2f06de017c348e04061971db98125a4e":[3,0,0,23,1],
-"structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[3,0,0,23,0],
-"structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[3,0,0,23,2],
-"structdrake_1_1_polynomial_1_1_product.html":[3,0,0,44,1],
-"structdrake_1_1_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29":[3,0,0,44,1,0]
+"structdrake_1_1_delegating_hasher.html#aa82405da558e1deea00586c32b6c5651":[3,0,0,23,0]
 };

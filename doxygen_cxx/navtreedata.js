@@ -123,18 +123,18 @@ var NAVTREEINDEX =
 "group__message__passing.html",
 "internal__texture__library_8h.html",
 "mesh__distance__boundary_8h.html",
-"namespacedrake_1_1manipulation_1_1kuka__iiwa.html",
-"pixel__types_8h.html#aeee61963e066e7ce017d584fe2123c7d",
-"read__obj_8h.html",
-"simulator__gflags_8h.html#a612cd2f0112fbe6b3f1465cdc6f90b0e",
-"structdrake_1_1_rlocation_or_error.html",
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e",
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48",
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#aa320d63d28f6de621da0a93f91d6ed9f",
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#ac92db05d92e30518b1be4d186d2a1475",
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#ae776c7f36f23b580fc8353cc6764445a",
-"symbolic_2polynomial_8h.html#ad8bfdaed2217f9183cde2f08246cece4",
-"witness__function_8h.html#afe8fe136944074e97f02b7e3835347b3a6ccaf3b73e3536490f4d0145731c89d0"
+"namespacedrake_1_1manipulation_1_1kinova__jaco.html",
+"pixel__types_8h.html#aa27964439659a0be90e567d865ffb792a9368b1a6dc329fd741e75949a4c8b99a",
+"read__gltf__to__memory_8h.html",
+"simulator__gflags_8h.html#a1de575cbf61e7155e7ed13858b9ce177",
+"structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a",
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a27471eb356d2510ae691de4053d7aef7",
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72",
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a7efd266a84dc02bc8bb42bb8d73273e5",
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#aa9ace1f8c3bba54c72c4fdf3201b20f5",
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a8e8824802dedfbc36776227f7482b6bc",
+"symbolic_2polynomial_8h.html#ab9527491f78970e42f830e74808a0048",
+"witness__function_8h.html#af981a98336579483286f5cbc198cafde"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

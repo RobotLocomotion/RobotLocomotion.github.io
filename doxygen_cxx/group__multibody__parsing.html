@@ -172,6 +172,68 @@ Drake Model Directives Support</h1>
 <h1><a class="anchor" id="multibody_parsing_mjcf"></a>
 MJCF (Mujoco XML) Support</h1>
 <p>There is basic support for parsing MJCF (Mujoco XML) files. The files are recognized by an .xml file extension. The scope of features that are actually supported still need to be documented here, but the parser does log warnings for any unsupported MuJoCo XML elements or attributes at runtime.</p>
+<h2><a class="anchor" id="mjcf_ignored_silent"></a>
+Tags ignored silently</h2>
+<p>The following attributes are specific to the MuJoCo solver (listed here in the order they are listed in the MuJoCo documentation); we have no plans to support them:</p><ul>
+<li><a href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#option"><code>/option/</code></a><ul>
+<li><code>@apirate</code></li>
+<li><code>@impratio</code></li>
+<li><code>@jacobian</code></li>
+<li><code>@o_margin</code></li>
+<li><code>@o_solref</code></li>
+<li><code>@o_solimp</code></li>
+<li><code>@o_friction</code></li>
+<li><code>@solver</code></li>
+<li><code>@iterations</code></li>
+<li><code>@tolerance</code></li>
+<li><code>@ls_iterations</code></li>
+<li><code>@ls_tolerance</code></li>
+<li><code>@noslip_iterations</code></li>
+<li><code>@noslip_tolerance</code></li>
+<li><code>@ccd_iterations</code></li>
+<li><code>@ccd_tolerance</code></li>
+<li><code>@sdf_iterations</code></li>
+<li><code>@sdf_tolerance</code></li>
+<li><code>@sdf_initpoints</code></li>
+</ul>
+</li>
+<li><a href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#compiler"><code>/compiler/</code></a><ul>
+<li><code>@usethread</code></li>
+</ul>
+</li>
+<li><a href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#size"><code>/size</code></a></li>
+<li><a href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#body-joint"><code>/body/joint/</code></a><ul>
+<li><code>@solreflimit</code></li>
+<li><code>@solimplimit</code></li>
+<li><code>@solreffriction</code></li>
+<li><code>@solimpfriction</code></li>
+<li><code>@margin</code></li>
+</ul>
+</li>
+<li><a href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#body-geom"><code>/body/geom/</code></a><ul>
+<li><code>@priority</code></li>
+<li><code>@solmix</code></li>
+<li><code>@solref</code></li>
+<li><code>@solimp</code></li>
+<li><code>@margin</code></li>
+<li><code>@gap</code></li>
+</ul>
+</li>
+<li><a href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#contact-pair"><code>/contact/pair/</code></a><ul>
+<li><code>@solref</code></li>
+<li><code>@solimp</code></li>
+<li><code>@solreffriction</code></li>
+<li><code>@margin</code></li>
+<li><code>@gap</code></li>
+</ul>
+</li>
+<li><a href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#equality-connect"><code>/equality/connect/</code></a><ul>
+<li><code>@solref</code></li>
+<li><code>@solimp</code></li>
+</ul>
+</li>
+<li><a href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#custom"><code>/custom</code></a></li>
+</ul>
 <h1><a class="anchor" id="multibody_parsing_sdf"></a>
 SDFormat Support</h1>
 <p>Drake supports SDFormat files following the specification at <a href="http://sdformat.org/spec">http://sdformat.org/spec</a>. As of this writing, the supported spec version is 1.9, but check also the Drake release notes for current status.</p>
