@@ -179,6 +179,7 @@ class drake::multibody::CurvilinearJoint&lt; T &gt;</h3>
 <p><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> M is defined according to the convention documented in PiecewiseConstantCurvatureTrajectory. That is, axis Mx is the tangent to the trajectory, Mz equals the (constant) normal p̂ to the plane, and My = Mz x Mx. It is not required that M coincides with F at distance q = 0.</p>
 <p>If the specified trajectory is periodic, the joint prescribes a trajectory of cycle length L that satisfies X_FP(s) = X_FP(s + k⋅L) ∀ k ∈ ℤ.</p>
 <p>By default, the joint position limits are the endpoints for aperiodic paths, and (-∞, ∞) for periodic paths.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html" title="A piecewise constant curvature trajectory in a plane, where the plane is posed arbitrarily in three d...">trajectories::PiecewiseConstantCurvatureTrajectory</a></dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>

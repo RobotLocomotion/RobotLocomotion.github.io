@@ -181,9 +181,10 @@ points of the <code class="docutils literal notranslate"><span class="pre">order
 [ub, lb], could be done with:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curve</span><span class="p">.</span><span class="n">AsLinearInControlPoints</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">curve</span><span class="p">.</span><span class="n">rows</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">solvers</span><span class="o">::</span><span class="n">LinearConstraint</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
-<span class="n">M</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="n">k</span><span class="p">).</span><span class="n">transpose</span><span class="p">(),</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="n">lb</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="n">ub</span><span class="p">(</span><span class="n">i</span><span class="p">)));</span><span class="w"></span>
-<span class="n">prog</span><span class="p">.</span><span class="n">AddConstraint</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">curve</span><span class="p">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="n">transpose</span><span class="p">());</span><span class="w"></span>
+<span class="n">prog</span><span class="p">.</span><span class="n">AddLinearConstraint</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="n">transpose</span><span class="p">(),</span><span class="w"></span>
+<span class="n">Vector1d</span><span class="p">(</span><span class="n">lb</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"></span>
+<span class="n">Vector1d</span><span class="p">(</span><span class="n">ub</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"></span>
+<span class="n">curve</span><span class="p">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="n">transpose</span><span class="p">());</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
@@ -288,49 +289,6 @@ interval t ∈ [0, 1].</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve_-AutoDiffXd-.AsLinearInControlPoints">
-<span id="pydrake.trajectories.BezierCurve_[AutoDiffXd].AsLinearInControlPoints"></span><span class="sig-name descname"><span class="pre">AsLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve_" title="pydrake.trajectories.BezierCurve_"><span class="pre">pydrake.trajectories.BezierCurve_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve_-AutoDiffXd-.AsLinearInControlPoints" title="Permalink to this definition"></a></dt>
-<dd><p>Supports writing optimizations using the control points as decision
-variables. This method returns the matrix, <code class="docutils literal notranslate"><span class="pre">M</span></code>, defining the control
-points of the <code class="docutils literal notranslate"><span class="pre">order</span></code> derivative in the form:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">derivative</span><span class="p">.</span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="w"></span>
-</pre></div>
-</div>
-</details><p>For instance, since we have</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">derivative</span><span class="p">.</span><span class="n">control_points</span><span class="p">().</span><span class="n">col</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="n">k</span><span class="p">),</span><span class="w"></span>
-</pre></div>
-</div>
-</details><p>constraining the kth control point of the <a href="#id3"><span class="problematic" id="id4">`</span></a>n`th derivative to be in
-[ub, lb], could be done with:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curve</span><span class="p">.</span><span class="n">AsLinearInControlPoints</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">curve</span><span class="p">.</span><span class="n">rows</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">solvers</span><span class="o">::</span><span class="n">LinearConstraint</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
-<span class="n">M</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="n">k</span><span class="p">).</span><span class="n">transpose</span><span class="p">(),</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="n">lb</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="n">ub</span><span class="p">(</span><span class="n">i</span><span class="p">)));</span><span class="w"></span>
-<span class="n">prog</span><span class="p">.</span><span class="n">AddConstraint</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">curve</span><span class="p">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="n">transpose</span><span class="p">());</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-</details><p>Iterating over the rows of the control points is the natural sparsity
-pattern here (since <code class="docutils literal notranslate"><span class="pre">M</span></code> is the same for all rows). For instance, we
-also have</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">derivative</span><span class="p">.</span><span class="n">control_points</span><span class="p">().</span><span class="n">row</span><span class="p">(</span><span class="n">k</span><span class="p">).</span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">control_points</span><span class="p">().</span><span class="n">row</span><span class="p">(</span><span class="n">k</span><span class="p">).</span><span class="n">T</span><span class="p">,</span><span class="w"></span>
-</pre></div>
-</div>
-</details><p>or</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">vec</span><span class="p">(</span><span class="n">derivative</span><span class="p">.</span><span class="n">control_points</span><span class="p">().</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">blockMT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vec</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">control_points</span><span class="p">().</span><span class="n">T</span><span class="p">),</span><span class="w"></span>
-<span class="n">blockMT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">T</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">....</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
-<span class="p">[</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
-<span class="p">[</span><span class="w">      </span><span class="p">...</span><span class="w">         </span><span class="p">]</span><span class="w"></span>
-<span class="p">[</span><span class="w">  </span><span class="p">...</span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">T</span><span class="w"> </span><span class="p">].</span><span class="w"></span>
-</pre></div>
-</div>
-</details><dl class="simple">
-<dt>Precondition:</dt><dd><p>derivative_order &gt;= 0.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve_-AutoDiffXd-.BernsteinBasis">
 <span id="pydrake.trajectories.BezierCurve_[AutoDiffXd].BernsteinBasis"></span><span class="sig-name descname"><span class="pre">BernsteinBasis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve_" title="pydrake.trajectories.BezierCurve_"><span class="pre">pydrake.trajectories.BezierCurve_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve_-AutoDiffXd-.BernsteinBasis" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the value of the ith basis function of <code class="docutils literal notranslate"><span class="pre">order</span></code> (1 for
@@ -400,49 +358,6 @@ interval t ∈ [0, 1].</p>
 <span class="pre">`control_points</span></code>.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>end_time &gt;= start_time.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.trajectories.BezierCurve_-Expression-.AsLinearInControlPoints">
-<span id="pydrake.trajectories.BezierCurve_[Expression].AsLinearInControlPoints"></span><span class="sig-name descname"><span class="pre">AsLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BezierCurve_" title="pydrake.trajectories.BezierCurve_"><span class="pre">pydrake.trajectories.BezierCurve_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BezierCurve_-Expression-.AsLinearInControlPoints" title="Permalink to this definition"></a></dt>
-<dd><p>Supports writing optimizations using the control points as decision
-variables. This method returns the matrix, <code class="docutils literal notranslate"><span class="pre">M</span></code>, defining the control
-points of the <code class="docutils literal notranslate"><span class="pre">order</span></code> derivative in the form:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">derivative</span><span class="p">.</span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="w"></span>
-</pre></div>
-</div>
-</details><p>For instance, since we have</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">derivative</span><span class="p">.</span><span class="n">control_points</span><span class="p">().</span><span class="n">col</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="n">k</span><span class="p">),</span><span class="w"></span>
-</pre></div>
-</div>
-</details><p>constraining the kth control point of the <a href="#id5"><span class="problematic" id="id6">`</span></a>n`th derivative to be in
-[ub, lb], could be done with:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curve</span><span class="p">.</span><span class="n">AsLinearInControlPoints</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">curve</span><span class="p">.</span><span class="n">rows</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">solvers</span><span class="o">::</span><span class="n">LinearConstraint</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
-<span class="n">M</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="n">k</span><span class="p">).</span><span class="n">transpose</span><span class="p">(),</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="n">lb</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"> </span><span class="n">Vector1d</span><span class="p">(</span><span class="n">ub</span><span class="p">(</span><span class="n">i</span><span class="p">)));</span><span class="w"></span>
-<span class="n">prog</span><span class="p">.</span><span class="n">AddConstraint</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">curve</span><span class="p">.</span><span class="n">row</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="n">transpose</span><span class="p">());</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-</details><p>Iterating over the rows of the control points is the natural sparsity
-pattern here (since <code class="docutils literal notranslate"><span class="pre">M</span></code> is the same for all rows). For instance, we
-also have</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">derivative</span><span class="p">.</span><span class="n">control_points</span><span class="p">().</span><span class="n">row</span><span class="p">(</span><span class="n">k</span><span class="p">).</span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">control_points</span><span class="p">().</span><span class="n">row</span><span class="p">(</span><span class="n">k</span><span class="p">).</span><span class="n">T</span><span class="p">,</span><span class="w"></span>
-</pre></div>
-</div>
-</details><p>or</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">vec</span><span class="p">(</span><span class="n">derivative</span><span class="p">.</span><span class="n">control_points</span><span class="p">().</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">blockMT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vec</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">control_points</span><span class="p">().</span><span class="n">T</span><span class="p">),</span><span class="w"></span>
-<span class="n">blockMT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">T</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">....</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
-<span class="p">[</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
-<span class="p">[</span><span class="w">      </span><span class="p">...</span><span class="w">         </span><span class="p">]</span><span class="w"></span>
-<span class="p">[</span><span class="w">  </span><span class="p">...</span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">.</span><span class="n">T</span><span class="w"> </span><span class="p">].</span><span class="w"></span>
-</pre></div>
-</div>
-</details><dl class="simple">
-<dt>Precondition:</dt><dd><p>derivative_order &gt;= 0.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -528,6 +443,22 @@ for the list of instantiations.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory.AsLinearInControlPoints">
+<span class="sig-name descname"><span class="pre">AsLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory" title="pydrake.trajectories.BsplineTrajectory"><span class="pre">pydrake.trajectories.BsplineTrajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">scipy.sparse.csc_matrix</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory.AsLinearInControlPoints" title="Permalink to this definition"></a></dt>
+<dd><p>Supports writing optimizations using the control points as decision
+variables. This method returns the matrix, <code class="docutils literal notranslate"><span class="pre">M</span></code>, defining the control
+points of the <code class="docutils literal notranslate"><span class="pre">order</span></code> derivative in the form:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">derivative</span><span class="p">.</span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>See <code class="docutils literal notranslate"><span class="pre">BezierCurve::AsLinearInControlPoints()</span></code> for more details.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>derivative_order &gt;= 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory.basis">
 <span class="sig-name descname"><span class="pre">basis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory" title="pydrake.trajectories.BsplineTrajectory"><span class="pre">pydrake.trajectories.BsplineTrajectory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.BsplineBasis" title="pydrake.math.BsplineBasis"><span class="pre">pydrake.math.BsplineBasis</span></a></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory.basis" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the basis of this curve.</p>
@@ -558,6 +489,25 @@ on each <code class="docutils literal notranslate"><span class="pre">point</span
 <dt>Precondition:</dt><dd><p>this-&gt;cols() == 1</p>
 </dd>
 <dt>Precondition:</dt><dd><p>control_points()[0].head(n) must be a valid operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory.EvaluateLinearInControlPoints">
+<span class="sig-name descname"><span class="pre">EvaluateLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory" title="pydrake.trajectories.BsplineTrajectory"><span class="pre">pydrake.trajectories.BsplineTrajectory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory.EvaluateLinearInControlPoints" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the vector, M, such that</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EvalDerivative</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">derivative_order</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>where cols()==1 (so control_points() is a matrix). This is useful for
+writing linear constraints on the control points. Note that if the
+derivative order is greater than or equal to the order of the basis,
+then the result is a zero vector.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>t ≥ start_time()</p>
+</dd>
+<dt>Precondition:</dt><dd><p>t ≤ end_time()</p>
 </dd>
 </dl>
 </dd></dl>
@@ -676,6 +626,25 @@ on each <code class="docutils literal notranslate"><span class="pre">point</span
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.EvaluateLinearInControlPoints">
+<span id="pydrake.trajectories.BsplineTrajectory_[AutoDiffXd].EvaluateLinearInControlPoints"></span><span class="sig-name descname"><span class="pre">EvaluateLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory_" title="pydrake.trajectories.BsplineTrajectory_"><span class="pre">pydrake.trajectories.BsplineTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.EvaluateLinearInControlPoints" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the vector, M, such that</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EvalDerivative</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">derivative_order</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>where cols()==1 (so control_points() is a matrix). This is useful for
+writing linear constraints on the control points. Note that if the
+derivative order is greater than or equal to the order of the basis,
+then the result is a zero vector.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>t ≥ start_time()</p>
+</dd>
+<dt>Precondition:</dt><dd><p>t ≤ end_time()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.FinalValue">
 <span id="pydrake.trajectories.BsplineTrajectory_[AutoDiffXd].FinalValue"></span><span class="sig-name descname"><span class="pre">FinalValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory_" title="pydrake.trajectories.BsplineTrajectory_"><span class="pre">pydrake.trajectories.BsplineTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory_-AutoDiffXd-.FinalValue" title="Permalink to this definition"></a></dt>
 <dd><p>Returns this-&gt;value(this-&gt;end_time())</p>
@@ -778,6 +747,25 @@ on each <code class="docutils literal notranslate"><span class="pre">point</span
 <dt>Precondition:</dt><dd><p>this-&gt;cols() == 1</p>
 </dd>
 <dt>Precondition:</dt><dd><p>control_points()[0].head(n) must be a valid operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.trajectories.BsplineTrajectory_-Expression-.EvaluateLinearInControlPoints">
+<span id="pydrake.trajectories.BsplineTrajectory_[Expression].EvaluateLinearInControlPoints"></span><span class="sig-name descname"><span class="pre">EvaluateLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.trajectories.BsplineTrajectory_" title="pydrake.trajectories.BsplineTrajectory_"><span class="pre">pydrake.trajectories.BsplineTrajectory_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.trajectories.BsplineTrajectory_-Expression-.EvaluateLinearInControlPoints" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the vector, M, such that</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EvalDerivative</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">derivative_order</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control_points</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>where cols()==1 (so control_points() is a matrix). This is useful for
+writing linear constraints on the control points. Note that if the
+derivative order is greater than or equal to the order of the basis,
+then the result is a zero vector.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>t ≥ start_time()</p>
+</dd>
+<dt>Precondition:</dt><dd><p>t ≤ end_time()</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1898,7 +1886,7 @@ breaks have been reversed.</p>
 <dd><p>Scales the time of the trajectory by non-negative <code class="docutils literal notranslate"><span class="pre">scale</span></code> (use
 ReverseTime() if you want to also negate time). The resulting
 polynomial evaluates to pp_after(t) = pp_before(t/scale).</p>
-<p>As an example, <a href="#id7"><span class="problematic" id="id8">`</span></a>scale`=2 will result in a trajectory that is twice as
+<p>As an example, <a href="#id3"><span class="problematic" id="id4">`</span></a>scale`=2 will result in a trajectory that is twice as
 long (start_time() and end_time() have both doubled).</p>
 </dd></dl>
 
@@ -1925,7 +1913,7 @@ is not too large.</p>
 <dd><p>Adds <code class="docutils literal notranslate"><span class="pre">offset</span></code> to all of the breaks. <code class="docutils literal notranslate"><span class="pre">offset</span></code> need not be a
 non-negative number. The resulting polynomial will evaluate to
 pp_after(t) = pp_before(t-offset).</p>
-<p>As an example, <a href="#id9"><span class="problematic" id="id10">`</span></a>offset`=2 will result in the start_time() and
+<p>As an example, <a href="#id5"><span class="problematic" id="id6">`</span></a>offset`=2 will result in the start_time() and
 end_time() being 2 seconds later.</p>
 </dd></dl>
 
@@ -2501,7 +2489,7 @@ breaks have been reversed.</p>
 <dd><p>Scales the time of the trajectory by non-negative <code class="docutils literal notranslate"><span class="pre">scale</span></code> (use
 ReverseTime() if you want to also negate time). The resulting
 polynomial evaluates to pp_after(t) = pp_before(t/scale).</p>
-<p>As an example, <a href="#id11"><span class="problematic" id="id12">`</span></a>scale`=2 will result in a trajectory that is twice as
+<p>As an example, <a href="#id7"><span class="problematic" id="id8">`</span></a>scale`=2 will result in a trajectory that is twice as
 long (start_time() and end_time() have both doubled).</p>
 </dd></dl>
 
@@ -2528,7 +2516,7 @@ is not too large.</p>
 <dd><p>Adds <code class="docutils literal notranslate"><span class="pre">offset</span></code> to all of the breaks. <code class="docutils literal notranslate"><span class="pre">offset</span></code> need not be a
 non-negative number. The resulting polynomial will evaluate to
 pp_after(t) = pp_before(t-offset).</p>
-<p>As an example, <a href="#id13"><span class="problematic" id="id14">`</span></a>offset`=2 will result in the start_time() and
+<p>As an example, <a href="#id9"><span class="problematic" id="id10">`</span></a>offset`=2 will result in the start_time() and
 end_time() being 2 seconds later.</p>
 </dd></dl>
 
@@ -3098,7 +3086,7 @@ breaks have been reversed.</p>
 <dd><p>Scales the time of the trajectory by non-negative <code class="docutils literal notranslate"><span class="pre">scale</span></code> (use
 ReverseTime() if you want to also negate time). The resulting
 polynomial evaluates to pp_after(t) = pp_before(t/scale).</p>
-<p>As an example, <a href="#id15"><span class="problematic" id="id16">`</span></a>scale`=2 will result in a trajectory that is twice as
+<p>As an example, <a href="#id11"><span class="problematic" id="id12">`</span></a>scale`=2 will result in a trajectory that is twice as
 long (start_time() and end_time() have both doubled).</p>
 </dd></dl>
 
@@ -3125,7 +3113,7 @@ is not too large.</p>
 <dd><p>Adds <code class="docutils literal notranslate"><span class="pre">offset</span></code> to all of the breaks. <code class="docutils literal notranslate"><span class="pre">offset</span></code> need not be a
 non-negative number. The resulting polynomial will evaluate to
 pp_after(t) = pp_before(t-offset).</p>
-<p>As an example, <a href="#id17"><span class="problematic" id="id18">`</span></a>offset`=2 will result in the start_time() and
+<p>As an example, <a href="#id13"><span class="problematic" id="id14">`</span></a>offset`=2 will result in the start_time() and
 end_time() being 2 seconds later.</p>
 </dd></dl>
 

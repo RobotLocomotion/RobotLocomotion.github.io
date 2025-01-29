@@ -8,12 +8,15 @@ var classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory =
     [ "PiecewiseConstantCurvatureTrajectory", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a944aeffdb9d0381d2b3d12b0d496a0a0", null ],
     [ "CalcPose", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#adfa1acb11b9a6296c79275adeac9b6f2", null ],
     [ "CalcSpatialAcceleration", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a9c16f458090e923d6a419602f530f659", null ],
+    [ "CalcSpatialAccelerationInM", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a99f97612635ea8aa0a905beb52c94829", null ],
     [ "CalcSpatialVelocity", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a84d9ba906dfe3476c3112019de27db04", null ],
+    [ "CalcSpatialVelocityInM", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#af6959be79c155920b5b9b17f665dfb08", null ],
+    [ "curvature", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#aed807d22d7a3e9b6b2cbf123136b86cc", null ],
     [ "is_periodic", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#ade440970557ec90243a03ce4e1d588db", null ],
     [ "IsNearlyPeriodic", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#abbae6db5c296a6f3f059d9764ab05452", null ],
     [ "length", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a319b1046f6f739132918623ea8aa25d8", null ],
-    [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a13775f15ccac8d15b55ebac5232818b4", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a49c54d6b75561787901ec5de8d831979", null ],
+    [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a13775f15ccac8d15b55ebac5232818b4", null ],
     [ "value", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a6c7298f213adae5ec61e76d94d67d3ae", null ],
     [ "PiecewiseConstantCurvatureTrajectory", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a34eda3a0d1a4264f6c3463af5e457707", null ]
 ];

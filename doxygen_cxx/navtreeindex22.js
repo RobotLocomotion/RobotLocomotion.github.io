@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1multibody_1_1_static_equilibrium_constraint.html":[1,1,0,20],
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a067072a2d1a33d106edc9fd2580731f1":[1,1,0,20,1],
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a0ed0f83f02683c361320074259c77a82":[1,1,0,20,4],
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a5e525a19d46b30f1d607e4f56019bbc0":[1,1,0,20,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aab00745b739ed15a0d00809adc7905a6":[3,0,0,9,0,0,0,1],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#ad4d1481f21e76e96ea81d73ec6277275":[3,0,0,9,0,0,0,13],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#ad4f5de4aa0ac349b2e588dd0783bff41":[3,0,0,9,0,0,0,9],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aed49e32ba918929bcf6c92c6eca4c721":[3,0,0,9,0,0,0,14],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#af159d5fa5570d7b39be3ffd5795447d2":[3,0,0,9,0,0,0,6]
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aed49e32ba918929bcf6c92c6eca4c721":[3,0,0,9,0,0,0,14]
 };

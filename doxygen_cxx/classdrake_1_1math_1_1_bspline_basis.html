@@ -222,6 +222,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0b2383f7cbcf2f4a8bc47c1ccde3134b"><td class="memTemplItemLeft" align="right" valign="top">T_control_point&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_bspline_basis.html#a0b2383f7cbcf2f4a8bc47c1ccde3134b">EvaluateCurve</a> (const std::vector&lt; T_control_point &gt; &amp;control_points, const T &amp;parameter_value) const</td></tr>
 <tr class="memdesc:a0b2383f7cbcf2f4a8bc47c1ccde3134b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the B-spline curve defined by <code>this</code> and <code>control_points</code> at the given <code>parameter_value</code>.  <a href="#a0b2383f7cbcf2f4a8bc47c1ccde3134b">More...</a><br /></td></tr>
 <tr class="separator:a0b2383f7cbcf2f4a8bc47c1ccde3134b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce85a94a392731238ab567e1655710b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_bspline_basis.html#a3ce85a94a392731238ab567e1655710b">EvaluateLinearInControlPoints</a> (const T &amp;parameter_value) const</td></tr>
+<tr class="memdesc:a3ce85a94a392731238ab567e1655710b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector, M, such that.  <a href="#a3ce85a94a392731238ab567e1655710b">More...</a><br /></td></tr>
+<tr class="separator:a3ce85a94a392731238ab567e1655710b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fea6ec1de7bf2bfa739e23101c5b3f5"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_bspline_basis.html#a9fea6ec1de7bf2bfa739e23101c5b3f5">EvaluateBasisFunctionI</a> (<a class="el" href="classint.html">int</a> i, const T &amp;parameter_value) const</td></tr>
 <tr class="memdesc:a9fea6ec1de7bf2bfa739e23101c5b3f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the <code>i</code>-th basis function evaluated at <code>parameter_value</code>.  <a href="#a9fea6ec1de7bf2bfa739e23101c5b3f5">More...</a><br /></td></tr>
 <tr class="separator:a9fea6ec1de7bf2bfa739e23101c5b3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -569,6 +572,31 @@ parameter_value ≤ <a class="el" href="classdrake_1_1math_1_1_bspline_basis.htm
 <dl class="section pre"><dt>Precondition</dt><dd>control_points.size() == <a class="el" href="classdrake_1_1math_1_1_bspline_basis.html#a9aa5331175886f2e54c9d10a74da3ebc" title="The number of basis functions in this B-spline basis (n + 1 in the class description).">num_basis_functions()</a> </dd>
 <dd>
 parameter_value ≥ <a class="el" href="classdrake_1_1math_1_1_bspline_basis.html#a5f8345c2600018f0ff0af5d541feaa51" title="The minimum allowable parameter value for B-spline curves using this basis (tₖ₋₁ in the class descrip...">initial_parameter_value()</a> </dd>
+<dd>
+parameter_value ≤ <a class="el" href="classdrake_1_1math_1_1_bspline_basis.html#aac214fb6b5cac0a02570256141a5a3ec" title="The maximum allowable parameter value for B-spline curves using this basis (tₙ₊₁ in the class descrip...">final_parameter_value()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3ce85a94a392731238ab567e1655710b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce85a94a392731238ab567e1655710b">&#9670;&nbsp;</a></span>EvaluateLinearInControlPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; EvaluateLinearInControlPoints </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>parameter_value</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the vector, M, such that. </p>
+<pre class="fragment">EvaluateCurve(control_points, parameter_value) = control_points * M
+</pre><p> where T_control_points==VectorX&lt;T&gt; (so control_points is a matrix). This is useful for writing linear constraints on the control points.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>parameter_value ≥ <a class="el" href="classdrake_1_1math_1_1_bspline_basis.html#a5f8345c2600018f0ff0af5d541feaa51" title="The minimum allowable parameter value for B-spline curves using this basis (tₖ₋₁ in the class descrip...">initial_parameter_value()</a> </dd>
 <dd>
 parameter_value ≤ <a class="el" href="classdrake_1_1math_1_1_bspline_basis.html#aac214fb6b5cac0a02570256141a5a3ec" title="The maximum allowable parameter value for B-spline curves using this basis (tₙ₊₁ in the class descrip...">final_parameter_value()</a> </dd></dl>
 

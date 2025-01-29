@@ -586,6 +586,23 @@ strictly zero at this point.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.math.BsplineBasis.EvaluateLinearInControlPoints">
+<span class="sig-name descname"><span class="pre">EvaluateLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.BsplineBasis" title="pydrake.math.BsplineBasis"><span class="pre">pydrake.math.BsplineBasis</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.BsplineBasis.EvaluateLinearInControlPoints" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the vector, M, such that</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EvaluateCurve</span><span class="p">(</span><span class="n">control_points</span><span class="p">,</span><span class="w"> </span><span class="n">parameter_value</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control_points</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>where T_control_points==VectorX&lt;T&gt; (so control_points is a matrix).
+This is useful for writing linear constraints on the control points.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>parameter_value ≥ initial_parameter_value()</p>
+</dd>
+<dt>Precondition:</dt><dd><p>parameter_value ≤ final_parameter_value()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.BsplineBasis.final_parameter_value">
 <span class="sig-name descname"><span class="pre">final_parameter_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.BsplineBasis" title="pydrake.math.BsplineBasis"><span class="pre">pydrake.math.BsplineBasis</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.math.BsplineBasis.final_parameter_value" title="Permalink to this definition"></a></dt>
 <dd><p>The maximum allowable parameter value for B-spline curves using this
@@ -769,6 +786,23 @@ strictly zero at this point.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.math.BsplineBasis_-AutoDiffXd-.EvaluateLinearInControlPoints">
+<span id="pydrake.math.BsplineBasis_[AutoDiffXd].EvaluateLinearInControlPoints"></span><span class="sig-name descname"><span class="pre">EvaluateLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.BsplineBasis_" title="pydrake.math.BsplineBasis_"><span class="pre">pydrake.math.BsplineBasis_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.BsplineBasis_-AutoDiffXd-.EvaluateLinearInControlPoints" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the vector, M, such that</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EvaluateCurve</span><span class="p">(</span><span class="n">control_points</span><span class="p">,</span><span class="w"> </span><span class="n">parameter_value</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control_points</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>where T_control_points==VectorX&lt;T&gt; (so control_points is a matrix).
+This is useful for writing linear constraints on the control points.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>parameter_value ≥ initial_parameter_value()</p>
+</dd>
+<dt>Precondition:</dt><dd><p>parameter_value ≤ final_parameter_value()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.math.BsplineBasis_-AutoDiffXd-.final_parameter_value">
 <span id="pydrake.math.BsplineBasis_[AutoDiffXd].final_parameter_value"></span><span class="sig-name descname"><span class="pre">final_parameter_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.BsplineBasis_" title="pydrake.math.BsplineBasis_"><span class="pre">pydrake.math.BsplineBasis_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.math.BsplineBasis_-AutoDiffXd-.final_parameter_value" title="Permalink to this definition"></a></dt>
 <dd><p>The maximum allowable parameter value for B-spline curves using this
@@ -938,6 +972,23 @@ strictly zero at this point.</p>
 </dd>
 <dt>Precondition:</dt><dd><p>control_points.size() == num_basis_functions()</p>
 </dd>
+<dt>Precondition:</dt><dd><p>parameter_value ≥ initial_parameter_value()</p>
+</dd>
+<dt>Precondition:</dt><dd><p>parameter_value ≤ final_parameter_value()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.math.BsplineBasis_-Expression-.EvaluateLinearInControlPoints">
+<span id="pydrake.math.BsplineBasis_[Expression].EvaluateLinearInControlPoints"></span><span class="sig-name descname"><span class="pre">EvaluateLinearInControlPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.math.BsplineBasis_" title="pydrake.math.BsplineBasis_"><span class="pre">pydrake.math.BsplineBasis_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.math.BsplineBasis_-Expression-.EvaluateLinearInControlPoints" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the vector, M, such that</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">EvaluateCurve</span><span class="p">(</span><span class="n">control_points</span><span class="p">,</span><span class="w"> </span><span class="n">parameter_value</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">control_points</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M</span><span class="w"></span>
+</pre></div>
+</div>
+</details><p>where T_control_points==VectorX&lt;T&gt; (so control_points is a matrix).
+This is useful for writing linear constraints on the control points.</p>
+<dl class="simple">
 <dt>Precondition:</dt><dd><p>parameter_value ≥ initial_parameter_value()</p>
 </dd>
 <dt>Precondition:</dt><dd><p>parameter_value ≤ final_parameter_value()</p>

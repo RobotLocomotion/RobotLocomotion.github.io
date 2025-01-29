@@ -195,6 +195,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adca2766204b86212e8ed2b91faa97775"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bspline_trajectory.html#adca2766204b86212e8ed2b91faa97775">value</a> (const T &amp;t) const final</td></tr>
 <tr class="memdesc:adca2766204b86212e8ed2b91faa97775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the <a class="el" href="classdrake_1_1trajectories_1_1_bspline_trajectory.html" title="Represents a B-spline curve using a given basis with ordered control_points such that each control po...">BsplineTrajectory</a> at the given time t.  <a href="#adca2766204b86212e8ed2b91faa97775">More...</a><br /></td></tr>
 <tr class="separator:adca2766204b86212e8ed2b91faa97775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab67e15fe0a2d1e1602ab9ca56eeaf43c"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bspline_trajectory.html#ab67e15fe0a2d1e1602ab9ca56eeaf43c">AsLinearInControlPoints</a> (<a class="el" href="classint.html">int</a> derivative_order=1) const</td></tr>
+<tr class="memdesc:ab67e15fe0a2d1e1602ab9ca56eeaf43c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supports writing optimizations using the control points as decision variables.  <a href="#ab67e15fe0a2d1e1602ab9ca56eeaf43c">More...</a><br /></td></tr>
+<tr class="separator:ab67e15fe0a2d1e1602ab9ca56eeaf43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5362bd601b8e9287f1b8dfefdbb4c905"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bspline_trajectory.html#a5362bd601b8e9287f1b8dfefdbb4c905">EvaluateLinearInControlPoints</a> (const T &amp;t, <a class="el" href="classint.html">int</a> derivative_order=0) const</td></tr>
+<tr class="memdesc:a5362bd601b8e9287f1b8dfefdbb4c905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector, M, such that.  <a href="#a5362bd601b8e9287f1b8dfefdbb4c905">More...</a><br /></td></tr>
+<tr class="separator:a5362bd601b8e9287f1b8dfefdbb4c905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bf41e0881035d3f5e879b99ff8fc4c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7bf41e0881035d3f5e879b99ff8fc4c5">num_control_points</a> () const</td></tr>
 <tr class="memdesc:a7bf41e0881035d3f5e879b99ff8fc4c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of control points in this curve.  <a href="#a7bf41e0881035d3f5e879b99ff8fc4c5">More...</a><br /></td></tr>
 <tr class="separator:a7bf41e0881035d3f5e879b99ff8fc4c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -438,6 +444,29 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab67e15fe0a2d1e1602ab9ca56eeaf43c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab67e15fe0a2d1e1602ab9ca56eeaf43c">&#9670;&nbsp;</a></span>AsLinearInControlPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::SparseMatrix&lt;T&gt; AsLinearInControlPoints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>derivative_order</em> = <code>1</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Supports writing optimizations using the control points as decision variables. </p>
+<p>This method returns the matrix, <code>M</code>, defining the control points of the <code>order</code> derivative in the form: </p><pre>
+derivative.control_points() = this.control_points() * M
+</pre><p> See <code><a class="el" href="classdrake_1_1trajectories_1_1_bezier_curve.html#a4218e147feb3c1d1e3a0b864d223e670" title="Supports writing optimizations using the control points as decision variables.">BezierCurve::AsLinearInControlPoints()</a></code> for more details. </p><dl class="section pre"><dt>Precondition</dt><dd>derivative_order &gt;= 0. </dd></dl>
+
+</div>
+</div>
 <a id="a576612a037dee8597b5975d3525b3a48"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a576612a037dee8597b5975d3525b3a48">&#9670;&nbsp;</a></span>basis()</h2>
 
@@ -558,6 +587,41 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a new <a class="el" href="classdrake_1_1trajectories_1_1_bspline_trajectory.html" title="Represents a B-spline curve using a given basis with ordered control_points such that each control po...">BsplineTrajectory</a> that uses the same basis as <code>this</code>, and whose control points are the result of calling <code>select(point)</code> on each <code>point</code> in <code>this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_bspline_trajectory.html#a16a1ff64460e6742849e539887626cea" title="Returns the control points of this curve.">control_points()</a></code>. </p>
+
+</div>
+</div>
+<a id="a5362bd601b8e9287f1b8dfefdbb4c905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5362bd601b8e9287f1b8dfefdbb4c905">&#9670;&nbsp;</a></span>EvaluateLinearInControlPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; EvaluateLinearInControlPoints </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>derivative_order</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the vector, M, such that. </p>
+<pre class="fragment">EvalDerivative(t, derivative_order) = control_points() * M
+</pre><p> where <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a1f3e7e7cb50900a1f3e9ec7d845ff517">cols()</a>==1 (so <a class="el" href="classdrake_1_1trajectories_1_1_bspline_trajectory.html#a16a1ff64460e6742849e539887626cea" title="Returns the control points of this curve.">control_points()</a> is a matrix). This is useful for writing linear constraints on the control points. Note that if the derivative order is greater than or equal to the order of the basis, then the result is a zero vector.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>t ≥ <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a044e156bc756977905efc3f2a6a5c282">start_time()</a> </dd>
+<dd>
+t ≤ <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#ac3160ec1cbd29e1f171d05c5b6cc11c5">end_time()</a> </dd></dl>
 
 </div>
 </div>

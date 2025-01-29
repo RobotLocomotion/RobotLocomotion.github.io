@@ -126,6 +126,7 @@ var searchData=
   ['evaluategrade_5fn_5fw',['EvaluateGradE_N_W',['../classdrake_1_1geometry_1_1_contact_surface.html#a6cdc841e3e844de37a7852f75869fad0',1,'drake::geometry::ContactSurface']]],
   ['evaluategradient',['EvaluateGradient',['../classdrake_1_1geometry_1_1_mesh_field_linear.html#abcf38af934a0eb7631d282f09838e62e',1,'drake::geometry::MeshFieldLinear']]],
   ['evaluateindeterminates',['EvaluateIndeterminates',['../classdrake_1_1symbolic_1_1_polynomial.html#a854e025ef6b3a037dc0753004dce284a',1,'drake::symbolic::Polynomial']]],
+  ['evaluatelinearincontrolpoints',['EvaluateLinearInControlPoints',['../classdrake_1_1trajectories_1_1_bspline_trajectory.html#a5362bd601b8e9287f1b8dfefdbb4c905',1,'drake::trajectories::BsplineTrajectory::EvaluateLinearInControlPoints()'],['../classdrake_1_1math_1_1_bspline_basis.html#a3ce85a94a392731238ab567e1655710b',1,'drake::math::BsplineBasis::EvaluateLinearInControlPoints()']]],
   ['evaluatemax',['EvaluateMax',['../classdrake_1_1geometry_1_1_mesh_field_linear.html#aabefbb7d4ac222516562df4e819028c1',1,'drake::geometry::MeshFieldLinear']]],
   ['evaluatemin',['EvaluateMin',['../classdrake_1_1geometry_1_1_mesh_field_linear.html#a3bc3a16499ddaaa80a906e48be687244',1,'drake::geometry::MeshFieldLinear']]],
   ['evaluatemultivariate',['EvaluateMultivariate',['../classdrake_1_1_polynomial.html#a96ba53803e4244c1878ed9ad381854a7',1,'drake::Polynomial']]],

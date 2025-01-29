@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#af159d5fa5570d7b39be3ffd5795447d2":[3,0,0,9,0,0,0,6],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html":[3,0,0,9,0,1,0],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a04513ebc0d05ae24a966723d192236e6":[3,0,0,9,0,1,0,1],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a1466802a33c4cb8a41f2ca598fe5b25d":[3,0,0,9,0,1,0,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classdrake_1_1perception_1_1_point_cloud.html#a358b13be8641b30f83e093f66cdbabba":[3,0,0,10,2,48],
 "classdrake_1_1perception_1_1_point_cloud.html#a36282edc63f47b897c7c7940b5fc5a8d":[3,0,0,10,2,16],
 "classdrake_1_1perception_1_1_point_cloud.html#a36b265bae72ff8071ef8192f1c3dc8d4":[3,0,0,10,2,24],
-"classdrake_1_1perception_1_1_point_cloud.html#a38274d49d2f9567f9738cfa37e4b2775":[3,0,0,10,2,34],
-"classdrake_1_1perception_1_1_point_cloud.html#a41d294e761edcf58942f699027fe6c23":[3,0,0,10,2,1]
+"classdrake_1_1perception_1_1_point_cloud.html#a38274d49d2f9567f9738cfa37e4b2775":[3,0,0,10,2,34]
 };

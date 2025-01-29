@@ -1,5 +1,11 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a0d562bb51530219612deccbd4319091f":[3,0,0,9,2,1,8],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a2f34a2f66899dfd008ab76f9fee983de":[3,0,0,9,2,1,4],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,9,2,1,10],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3f67c53b80389c5f53961936edba04c9":[3,0,0,9,2,1,11],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b":[3,0,0,9,2,1,9],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a796122705bf6508783b49e113fb500b1":[3,0,0,9,2,1,7],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a7efd266a84dc02bc8bb42bb8d73273e5":[3,0,0,9,2,1,6],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,2,1,0],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a99fd5bfdf69925c53ed14a93a238065f":[3,0,0,9,2,1,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX65 =
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[3,0,0,14,50],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,14,51],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[3,0,0,14,51,0],
-"structdrake_1_1solvers_1_1_nlopt_solver_details.html":[3,0,0,14,53],
-"structdrake_1_1solvers_1_1_nlopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,14,53,0],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html":[3,0,0,14,55],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[3,0,0,14,55,5],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a175a256729d92d673605def5f6eac769":[3,0,0,14,55,9],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0":[3,0,0,14,55,2],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,14,55,7]
+"structdrake_1_1solvers_1_1_nlopt_solver_details.html":[3,0,0,14,53]
 };

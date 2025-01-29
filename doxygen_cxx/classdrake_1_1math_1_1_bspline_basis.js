@@ -11,6 +11,7 @@ var classdrake_1_1math_1_1_bspline_basis =
     [ "degree", "classdrake_1_1math_1_1_bspline_basis.html#a777ab64a78d6207443b1b48099a90946", null ],
     [ "EvaluateBasisFunctionI", "classdrake_1_1math_1_1_bspline_basis.html#a9fea6ec1de7bf2bfa739e23101c5b3f5", null ],
     [ "EvaluateCurve", "classdrake_1_1math_1_1_bspline_basis.html#a0b2383f7cbcf2f4a8bc47c1ccde3134b", null ],
+    [ "EvaluateLinearInControlPoints", "classdrake_1_1math_1_1_bspline_basis.html#a3ce85a94a392731238ab567e1655710b", null ],
     [ "final_parameter_value", "classdrake_1_1math_1_1_bspline_basis.html#aac214fb6b5cac0a02570256141a5a3ec", null ],
     [ "FindContainingInterval", "classdrake_1_1math_1_1_bspline_basis.html#aa86df05e5f4905e6d63f8ad4af0e9e53", null ],
     [ "initial_parameter_value", "classdrake_1_1math_1_1_bspline_basis.html#a5f8345c2600018f0ff0af5d541feaa51", null ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX66 =
 {
+"structdrake_1_1solvers_1_1_nlopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,14,53,0],
+"structdrake_1_1solvers_1_1_osqp_solver_details.html":[3,0,0,14,55],
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[3,0,0,14,55,5],
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#a175a256729d92d673605def5f6eac769":[3,0,0,14,55,9],
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0":[3,0,0,14,55,2],
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,14,55,7],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#aa9ace1f8c3bba54c72c4fdf3201b20f5":[3,0,0,14,55,3],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[3,0,0,14,55,1],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb":[3,0,0,14,55,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX66 =
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html":[3,0,0,16,8,4,0],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a5260647c6d73b9af547424968d24da09":[3,0,0,16,8,4,0,0],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,8,4,0,2],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#aa1d16b9fcf585fe75becb5357c74ba72":[3,0,0,16,8,4,0,1],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[3,0,0,16,8,4,0,3],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#ad60646285a52dc3f0786f43c6c6c8ba7":[3,0,0,16,8,4,0,4],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#ae776c7f36f23b580fc8353cc6764445a":[3,0,0,16,8,4,0,5],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html":[3,0,0,16,8,4,1],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a51856e1681bf73dbbc8809ab4f25b8b8":[3,0,0,16,8,4,1,1],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a8896c45f8aa4ff195d6cc7e9271026af":[3,0,0,16,8,4,1,0]
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#aa1d16b9fcf585fe75becb5357c74ba72":[3,0,0,16,8,4,0,1]
 };
