@@ -14,6 +14,7 @@ var classdrake_1_1multibody_1_1_linear_spring_damper =
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a189a1cc898965e60756ef7fe82b6c112", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a89c49c8f7ca8e6215810784c48acae23", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a4e415d777b3ac3e7e0071578d6ec62c9", null ],
+    [ "DoShallowClone", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a6c32a1ec73870e624ad115571745258f", null ],
     [ "free_length", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a4d52cab5f7cc46d48673f02f40d92642", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_linear_spring_damper.html#aeca9df3c0415cce50c7175d9ee46a52e", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_linear_spring_damper.html#a8d3f49e4a610262e458a2bf0bbf7fd75", null ],

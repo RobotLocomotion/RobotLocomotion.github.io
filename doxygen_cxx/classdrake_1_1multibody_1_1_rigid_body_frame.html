@@ -291,6 +291,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a72750ba8b4de6270d8625462a7453e85 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; ToScalar &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a72750ba8b4de6270d8625462a7453e85">CloneToScalar</a> (const internal::MultibodyTree&lt; ToScalar &gt; &amp;tree_clone) const</td></tr>
 <tr class="memdesc:a72750ba8b4de6270d8625462a7453e85 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) NVI to <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a0162ba098d0c07be12d3a7244914de38" title="Clones this Frame (templated on T) to a frame templated on double.">DoCloneToScalar()</a> templated on the scalar type of the new clone to be created.  <a href="classdrake_1_1multibody_1_1_frame.html#a72750ba8b4de6270d8625462a7453e85">More...</a><br /></td></tr>
 <tr class="separator:a72750ba8b4de6270d8625462a7453e85 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5490279b898777af9d033f75141ba784 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a5490279b898777af9d033f75141ba784">ShallowClone</a> () const</td></tr>
+<tr class="memdesc:a5490279b898777af9d033f75141ba784 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a shallow clone (i.e., dependent elements such as bodies are aliased, not copied) that is not associated with any MbT (so the assigned index, if any, is discarded).  <a href="classdrake_1_1multibody_1_1_frame.html#a5490279b898777af9d033f75141ba784">More...</a><br /></td></tr>
+<tr class="separator:a5490279b898777af9d033f75141ba784 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a921f7998dbc51e8b4298b1fbb2369686 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a921f7998dbc51e8b4298b1fbb2369686">Frame</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a> &amp;)=delete</td></tr>
 <tr class="separator:a921f7998dbc51e8b4298b1fbb2369686 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e197bedf7aa897596ace36baca53361 inherit pub_methods_classdrake_1_1multibody_1_1_frame"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a8e197bedf7aa897596ace36baca53361">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a> &amp;)=delete</td></tr>
@@ -346,6 +349,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:acd3092c461ef2339ba51209fcf41bdbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed0eeb663f377076dab1ae0ab44be5aa"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#aed0eeb663f377076dab1ae0ab44be5aa">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const override</td></tr>
 <tr class="separator:aed0eeb663f377076dab1ae0ab44be5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2fb62e7a4a185b8a7f4d8fabf3d8fe0"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#ab2fb62e7a4a185b8a7f4d8fabf3d8fe0">DoShallowClone</a> () const override</td></tr>
+<tr class="memdesc:ab2fb62e7a4a185b8a7f4d8fabf3d8fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI for <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a5490279b898777af9d033f75141ba784" title="(Internal use only) Returns a shallow clone (i.e., dependent elements such as bodies are aliased,...">ShallowClone()</a>.  <a href="#ab2fb62e7a4a185b8a7f4d8fabf3d8fe0">More...</a><br /></td></tr>
+<tr class="separator:ab2fb62e7a4a185b8a7f4d8fabf3d8fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af960b8333618006f73d52d63ccd563ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#af960b8333618006f73d52d63ccd563ff">DoCalcPoseInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; &amp;) const override</td></tr>
 <tr class="separator:af960b8333618006f73d52d63ccd563ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1290b0120a1a4cee5720e49aea8abd11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a1290b0120a1a4cee5720e49aea8abd11">DoCalcRotationMatrixInBodyFrame</a> (const <a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; &amp;) const override</td></tr>
@@ -701,6 +707,35 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a21a1267a3cceabc6d0bec7768cd6f2c7">Frame&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ab2fb62e7a4a185b8a7f4d8fabf3d8fe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2fb62e7a4a185b8a7f4d8fabf3d8fe0">&#9670;&nbsp;</a></span>DoShallowClone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt;T&gt; &gt; DoShallowClone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NVI for <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a5490279b898777af9d033f75141ba784" title="(Internal use only) Returns a shallow clone (i.e., dependent elements such as bodies are aliased,...">ShallowClone()</a>. </p>
+
+<p>Reimplemented from <a class="el" href="classdrake_1_1multibody_1_1_frame.html#ae2a794f91644da2f7e0cc3c067b28213">Frame&lt; T &gt;</a>.</p>
 
 </div>
 </div>

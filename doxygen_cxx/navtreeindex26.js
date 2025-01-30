@@ -1,5 +1,15 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#afd4d76dbdc92a7faeadeaeb590c266fa":[3,0,0,11,2,3,1,2],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html":[1,4,2,1,4],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a030ffdb9bb87db95f7ab4b4271f3f7db":[1,4,2,1,4,11],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a21f8c3c709d1033af97e84221e2cf33b":[1,4,2,1,4,12],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a2776d8c1a2ba6628d4b0870c76967c28":[1,4,2,1,4,1],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a3ca6213bff8c9ae3df9fd4e864a58fb1":[1,4,2,1,4,18],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a411b4823b494999f0d51e7d0afac17c0":[1,4,2,1,4,9],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a547060be7141e61d9ce65e75ae93f00d":[1,4,2,1,4,23],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a5cdddfa87a81c1bb16e7c543fbc2c1e6":[1,4,2,1,4,13],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a65363bc4338584a02f119b225ae1cc98":[1,4,2,1,4,3],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a67ebb878e71a66ac8d6ea1e739766d3b":[1,4,2,1,4,8],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a6da88e725b9e65eb10ffe19f25742ad4":[1,4,2,1,4,10],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a712d19c4728dc4e70244c8c192377032":[1,4,2,1,4,4],
@@ -239,15 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1schema_1_1_uniform.html#ab2fdf62aae6216a0920ae351ce1c3020":[3,0,0,13,8,4],
 "classdrake_1_1schema_1_1_uniform.html#ac23c4ac1cbe9a2a85b751fc5957e40a3":[3,0,0,13,8,6],
 "classdrake_1_1schema_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[3,0,0,13,8,1],
-"classdrake_1_1schema_1_1_uniform_discrete.html":[3,0,0,13,9],
-"classdrake_1_1schema_1_1_uniform_discrete.html#a13884ab1df4ecb9b600a2af9a2cf7eb9":[3,0,0,13,9,5],
-"classdrake_1_1schema_1_1_uniform_discrete.html#a16aca88032212a8014155c828d11002e":[3,0,0,13,9,7],
-"classdrake_1_1schema_1_1_uniform_discrete.html#a23a132c29faefbe396c3cc58bd807960":[3,0,0,13,9,4],
-"classdrake_1_1schema_1_1_uniform_discrete.html#a2ad192c64ff93c02f9f41c320e7aa1bc":[3,0,0,13,9,11],
-"classdrake_1_1schema_1_1_uniform_discrete.html#a5d491dd0de7c44e0e73342e819ed5f51":[3,0,0,13,9,8],
-"classdrake_1_1schema_1_1_uniform_discrete.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,13,9,9],
-"classdrake_1_1schema_1_1_uniform_discrete.html#aa77a831a9989407ffea0304416c7ae5c":[3,0,0,13,9,10],
-"classdrake_1_1schema_1_1_uniform_discrete.html#ab274b8ef2f31556986d742794cbad74a":[3,0,0,13,9,1],
-"classdrake_1_1schema_1_1_uniform_discrete.html#ab91a10216ae2b4079d30212f1b178c97":[3,0,0,13,9,0],
-"classdrake_1_1schema_1_1_uniform_discrete.html#ac2c38bb9ddd12fdf9abd67e2e56f9f63":[3,0,0,13,9,3]
+"classdrake_1_1schema_1_1_uniform_discrete.html":[3,0,0,13,9]
 };

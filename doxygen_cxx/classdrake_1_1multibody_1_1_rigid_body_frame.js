@@ -10,6 +10,7 @@ var classdrake_1_1multibody_1_1_rigid_body_frame =
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_rigid_body_frame.html#a5bbfff93bcd19af35f85733af71224f7", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_rigid_body_frame.html#acd3092c461ef2339ba51209fcf41bdbe", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_rigid_body_frame.html#aed0eeb663f377076dab1ae0ab44be5aa", null ],
+    [ "DoShallowClone", "classdrake_1_1multibody_1_1_rigid_body_frame.html#ab2fb62e7a4a185b8a7f4d8fabf3d8fe0", null ],
     [ "GetFixedOffsetPoseInBody", "classdrake_1_1multibody_1_1_rigid_body_frame.html#a210c46de44edae60f004ed525d2d018f", null ],
     [ "GetFixedPoseInBodyFrame", "classdrake_1_1multibody_1_1_rigid_body_frame.html#a85ed93e3f60b6b39558dfcc087442495", null ],
     [ "GetFixedRotationMatrixInBody", "classdrake_1_1multibody_1_1_rigid_body_frame.html#abb66ebf40df1ef9fb2d4347e84a9ab2f", null ],

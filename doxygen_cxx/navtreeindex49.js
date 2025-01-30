@@ -1,5 +1,15 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#a044e156bc756977905efc3f2a6a5c282":[3,0,0,18,14,22],
+"classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2":[3,0,0,18,14,18],
+"classdrake_1_1trajectories_1_1_trajectory.html#a0d2a23aec55910c9e1102de7ab8c3249":[3,0,0,18,14,3],
+"classdrake_1_1trajectories_1_1_trajectory.html#a1a571a2e3240913dc18cdbcbc251579d":[3,0,0,18,14,4],
+"classdrake_1_1trajectories_1_1_trajectory.html#a1b123bd89b7463efc1edbb5e63b7d069":[3,0,0,18,14,6],
+"classdrake_1_1trajectories_1_1_trajectory.html#a1f3e7e7cb50900a1f3e9ec7d845ff517":[3,0,0,18,14,5],
+"classdrake_1_1trajectories_1_1_trajectory.html#a25c4e76b745f136bea7dc723d62650c0":[3,0,0,18,14,25],
+"classdrake_1_1trajectories_1_1_trajectory.html#a274fb2a3734486e697904177dc90fe20":[3,0,0,18,14,23],
+"classdrake_1_1trajectories_1_1_trajectory.html#a51223614aa5ad65e500cce2625aaf328":[3,0,0,18,14,20],
+"classdrake_1_1trajectories_1_1_trajectory.html#a512d5748983857ae1c7b2c99bc56e4a5":[3,0,0,18,14,7],
 "classdrake_1_1trajectories_1_1_trajectory.html#a5adcaff4e623fb6f735397053d070b5f":[3,0,0,18,14,11],
 "classdrake_1_1trajectories_1_1_trajectory.html#a6a03dfabaf0999ebcae4cbf8cde49083":[3,0,0,18,14,19],
 "classdrake_1_1trajectories_1_1_trajectory.html#a6b15b4592b800d6cf4d9273f46a2774b":[3,0,0,18,14,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX49 =
 "controlled__spring__mass__system_8h.html#a15139386fbb9628751df5891a627a423":[4,0,0,12,0,0,0,1],
 "convert__time__derivative_8h.html":[4,0,0,7,8],
 "convert__time__derivative_8h.html#a7ad7ab2561d0c05591eb9720adccc7d5":[4,0,0,7,8,0],
-"convex__hull_8h.html":[4,0,0,4,1,4],
-"convex__set_8h.html":[4,0,0,4,1,5],
-"convex__set_8h.html#a3c7f9b75df3ac22becb7bb5cb03bf956":[4,0,0,4,1,5,1],
-"convex__set_8h.html#ac9a3a5006f20615946f5b466fe9446b6":[4,0,0,4,1,5,2],
-"copyable__unique__ptr_8h.html":[4,0,0,1,13],
-"corotated__model_8h.html":[4,0,0,8,2,3],
-"corotated__model__data_8h.html":[4,0,0,8,2,4],
-"cost_8h.html":[4,0,0,11,10],
-"cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,11,10,2],
-"cost_8h.html#ga62744a5e355fa26fa97169acfc946128":[4,0,0,11,10,0],
-"cost_8h.html#ga9d268ea8150fb094f1499a958c50defb":[4,0,0,11,10,1]
+"convex__hull_8h.html":[4,0,0,4,1,4]
 };

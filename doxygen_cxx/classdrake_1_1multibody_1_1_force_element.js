@@ -14,6 +14,7 @@ var classdrake_1_1multibody_1_1_force_element =
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_force_element.html#a855f012efced04556d523d644fc0d84f", null ],
     [ "DoDeclareForceElementParameters", "classdrake_1_1multibody_1_1_force_element.html#a5f6f5dfe2096f37172c993a563690fba", null ],
     [ "DoSetDefaultForceElementParameters", "classdrake_1_1multibody_1_1_force_element.html#ae1e86b3157f0207f50297ceed7234207", null ],
+    [ "DoShallowClone", "classdrake_1_1multibody_1_1_force_element.html#a6266e271e4d820431b07611e24dd093e", null ],
     [ "index", "classdrake_1_1multibody_1_1_force_element.html#a835dc93131525dfdb27839207c43ccfa", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_force_element.html#a127aac11ae2ccc5ee31dc520e089089a", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_force_element.html#ac55f4166dab54d68fbbd882ac01c390f", null ]

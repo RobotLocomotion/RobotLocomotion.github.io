@@ -14,6 +14,7 @@ var classdrake_1_1multibody_1_1_uniform_gravity_field_element =
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a189a1cc898965e60756ef7fe82b6c112", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a89c49c8f7ca8e6215810784c48acae23", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a4e415d777b3ac3e7e0071578d6ec62c9", null ],
+    [ "DoShallowClone", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a6c32a1ec73870e624ad115571745258f", null ],
     [ "gravity_vector", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a3bee007fc7ec9f8caaa2a61e24e8049a", null ],
     [ "is_enabled", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a150e48b28dd069a27effb2df78759c35", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#abee9ac3222a915113bf9f4b339e8ba0e", null ],

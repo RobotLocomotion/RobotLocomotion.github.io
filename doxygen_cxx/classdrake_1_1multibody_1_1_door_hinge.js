@@ -18,9 +18,10 @@ var classdrake_1_1multibody_1_1_door_hinge =
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_door_hinge.html#aa5dcbffaf94d72a77259e5d18f4dafcd", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_door_hinge.html#adb80046d035fd956ed690d2fe1b3cbfb", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_door_hinge.html#a4e415d777b3ac3e7e0071578d6ec62c9", null ],
+    [ "DoShallowClone", "classdrake_1_1multibody_1_1_door_hinge.html#a6c32a1ec73870e624ad115571745258f", null ],
     [ "joint", "classdrake_1_1multibody_1_1_door_hinge.html#aec72adf302d35f0e2d9fb630bb99d4d2", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_door_hinge.html#ad332fbe5b356d2d4d5eef63e3b74e488", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_door_hinge.html#a964ad746639499fbe624b6b3a24ad6fb", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_door_hinge.html#ad332fbe5b356d2d4d5eef63e3b74e488", null ],
     [ "DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html#a14f1e33beb90541be76fcb45dea6af74", null ],
     [ "DoorHingeTest", "classdrake_1_1multibody_1_1_door_hinge.html#a94e1abf642466ad4417b7aab5b124e01", null ]
 ];

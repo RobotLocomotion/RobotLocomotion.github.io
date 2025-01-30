@@ -258,6 +258,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae1e86b3157f0207f50297ceed7234207"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#ae1e86b3157f0207f50297ceed7234207">DoSetDefaultForceElementParameters</a> (<a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; *) const</td></tr>
 <tr class="memdesc:ae1e86b3157f0207f50297ceed7234207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by DoSetDefaultParameters().  <a href="#ae1e86b3157f0207f50297ceed7234207">More...</a><br /></td></tr>
 <tr class="separator:ae1e86b3157f0207f50297ceed7234207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6266e271e4d820431b07611e24dd093e"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a6266e271e4d820431b07611e24dd093e">DoShallowClone</a> () const</td></tr>
+<tr class="memdesc:a6266e271e4d820431b07611e24dd093e"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI for ShallowClone().  <a href="#a6266e271e4d820431b07611e24dd093e">More...</a><br /></td></tr>
+<tr class="separator:a6266e271e4d820431b07611e24dd093e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods to make a clone templated on different scalar types.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Specific force element subclasses must implement these to support scalar conversion to other types.</p>
 <p>These methods are only called from MultibodyTree::CloneToScalar(); users <em>must</em> not call these explicitly since there is no external mechanism to ensure the argument <code>tree_clone</code> is in a valid stage of cloning. In contrast, MultibodyTree::CloneToScalar() guarantees that by when ForceElement::CloneToScalar() is called, all Body, <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> and Mobilizer objects in the original tree (templated on T) to which <code>this</code> ForceElement&lt;T&gt; belongs, have a corresponding clone in the cloned tree (argument <code>tree_clone</code> for these methods). Therefore, implementations of <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a0703b02d2de4f463389e773f8a058253" title="Clones this ForceElement (templated on T) to a mobilizer templated on double.">ForceElement::DoCloneToScalar()</a> can retrieve clones from <code>tree_clone</code> as needed. Consider the following example for a <code>SpringElement&lt;T&gt;</code> used to model an elastic spring between two bodies: </p><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keyword">class </span>SpringElement : <span class="keyword">public</span> <a class="code" href="classdrake_1_1multibody_1_1_force_element.html#a8f84680c0a78595b5aee3d2296df9e46">ForceElement</a>&lt;T&gt; {</div><div class="line"> <span class="keyword">public</span>:</div><div class="line">  <span class="comment">// Class&#39;s constructor.</span></div><div class="line">  SpringElement(</div><div class="line">    <span class="keyword">const</span> RigidBody&lt;T&gt;&amp; body1, <span class="keyword">const</span> RigidBody&lt;T&gt;&amp; body2,</div><div class="line">    <span class="keywordtype">double</span> stiffness);</div><div class="line">  <span class="comment">// Get the first body to which this spring is connected.</span></div><div class="line">  <span class="keyword">const</span> RigidBody&lt;T&gt;&amp; get_body1() <span class="keyword">const</span>;</div><div class="line">  <span class="comment">// Get the second body to which this spring is connected.</span></div><div class="line">  <span class="keyword">const</span> RigidBody&lt;T&gt;&amp; get_body2() <span class="keyword">const</span>;</div><div class="line">  <span class="comment">// Get the spring stiffness constant.</span></div><div class="line">  <span class="keywordtype">double</span> get_stiffness() <span class="keyword">const</span>;</div><div class="line"> <span class="keyword">protected</span>:</div><div class="line">  <span class="comment">// Implementation of the scalar conversion from T to double.</span></div><div class="line">  std::unique_ptr&lt;ForceElement&lt;double&gt;&gt; <a class="code" href="classdrake_1_1multibody_1_1_force_element.html#a0703b02d2de4f463389e773f8a058253">DoCloneToScalar</a>(</div><div class="line">    <span class="keyword">const</span> MultibodyTree&lt;double&gt;&amp; tree_clone) <span class="keyword">const</span>) {</div><div class="line">      <span class="keyword">const</span> RigidBody&lt;ToScalar&gt;&amp; body1_clone =</div><div class="line">        tree_clone.get_variant(get_body1());</div><div class="line">      <span class="keyword">const</span> RigidBody&lt;ToScalar&gt;&amp; body2_clone =</div><div class="line">        tree_clone.get_variant(get_body2());</div><div class="line">      <span class="keywordflow">return</span> std::make_unique&lt;SpringElement&lt;double&gt;&gt;(</div><div class="line">        body1_clone, body2_clone, get_stiffness());</div><div class="line">  }</div></div><!-- fragment --><p>MultibodyTree::get_variant() methods are available to retrieve cloned variants from <code>tree_clone</code>, and are overloaded on different element types.</p>
@@ -810,6 +813,35 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 
 <p>Called by DoSetDefaultParameters(). </p>
 <p>Derived classes may choose to override to set their sub-class specific parameters. </p>
+
+</div>
+</div>
+<a id="a6266e271e4d820431b07611e24dd093e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6266e271e4d820431b07611e24dd093e">&#9670;&nbsp;</a></span>DoShallowClone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt;T&gt; &gt; DoShallowClone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NVI for ShallowClone(). </p>
+
+<p>Reimplemented in <a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#a6c32a1ec73870e624ad115571745258f">DoorHinge&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a6c32a1ec73870e624ad115571745258f">UniformGravityFieldElement&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html#a6c32a1ec73870e624ad115571745258f">LinearSpringDamper&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_revolute_spring.html#a6c32a1ec73870e624ad115571745258f">RevoluteSpring&lt; T &gt;</a>.</p>
 
 </div>
 </div>

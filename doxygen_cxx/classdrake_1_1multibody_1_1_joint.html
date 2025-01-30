@@ -473,8 +473,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:acce6119b1f6245103bade4b6e88c5f51"><td class="memTemplItemLeft" align="right" valign="top">ConcreteMobilizer&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#acce6119b1f6245103bade4b6e88c5f51">get_mutable_mobilizer_downcast</a> ()</td></tr>
 <tr class="memdesc:acce6119b1f6245103bade4b6e88c5f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Mutable flavor of <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a8a436543dcb9111fce01536d0faa9a7f" title="(Internal use only) Returns the mobilizer implementing this joint, downcast to its specific type.">get_mobilizer_downcast()</a>.  <a href="#acce6119b1f6245103bade4b6e88c5f51">More...</a><br /></td></tr>
 <tr class="separator:acce6119b1f6245103bade4b6e88c5f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Methods to make a clone templated on different scalar types.</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>Clones this Joint (templated on T) to a joint templated on <code>double</code>.</p>
+<tr><td colspan="2"><div class="groupHeader">Methods to make a clone, optionally templated on different scalar</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>types.</p>
+<p>Clones this Joint (templated on T) to a joint templated on <code>double</code>. </p>
 </div></td></tr>
 <tr class="memitem:a8ed5ee2256ac8372e493caa547cbeb1e"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a8ed5ee2256ac8372e493caa547cbeb1e">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const =0</td></tr>
 <tr class="separator:a8ed5ee2256ac8372e493caa547cbeb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -483,6 +484,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a016d32cb724a4dbc9a9aff7b2c75855b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5740b4874654b9fcd8f8324184b3ce98"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a5740b4874654b9fcd8f8324184b3ce98">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const =0</td></tr>
 <tr class="separator:a5740b4874654b9fcd8f8324184b3ce98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c3f4b29ce2967dc0bb185ccee6f2e47"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a9c3f4b29ce2967dc0bb185ccee6f2e47">DoShallowClone</a> () const</td></tr>
+<tr class="memdesc:a9c3f4b29ce2967dc0bb185ccee6f2e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI for ShallowClone().  <a href="#a9c3f4b29ce2967dc0bb185ccee6f2e47">More...</a><br /></td></tr>
+<tr class="separator:a9c3f4b29ce2967dc0bb185ccee6f2e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1multibody_1_1_multibody_element')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement&lt; T &gt;</a></td></tr>
 <tr class="memitem:a7b561934ea4adacae196c9f85cfa6f13 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7b561934ea4adacae196c9f85cfa6f13">MultibodyElement</a> ()</td></tr>
 <tr class="memdesc:a7b561934ea4adacae196c9f85cfa6f13 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor made protected so that sub-classes can still declare their default constructors if they need to.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a7b561934ea4adacae196c9f85cfa6f13">More...</a><br /></td></tr>
@@ -1524,6 +1528,34 @@ Friends</h2></td></tr>
 <p>For advanced use only for developers implementing new MultibodyTree components. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7a5738fd3df2c9ea052b3c8312262071">MultibodyElement&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a9c3f4b29ce2967dc0bb185ccee6f2e47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c3f4b29ce2967dc0bb185ccee6f2e47">&#9670;&nbsp;</a></span>DoShallowClone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt;T&gt; &gt; DoShallowClone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NVI for ShallowClone(). </p>
+<p>The public Joint::ShallowClone in this base class is responsible for copying the mutable <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> data (damping, all limits, default positions, etc.) into the return value. The subclass only needs to handle subclass-specific details. </p>
 
 </div>
 </div>

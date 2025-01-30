@@ -1,5 +1,15 @@
 var NAVTREEINDEX66 =
 {
+"structdrake_1_1solvers_1_1_mosek_solver_details.html":[3,0,0,14,47],
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a049167e80a2c377c18ea0185894e0003":[3,0,0,14,47,1],
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,14,47,0],
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0":[3,0,0,14,47,2],
+"structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[3,0,0,14,48],
+"structdrake_1_1solvers_1_1_new_variable_names.html":[3,0,0,14,49],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[3,0,0,14,50],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,14,51],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[3,0,0,14,51,0],
+"structdrake_1_1solvers_1_1_nlopt_solver_details.html":[3,0,0,14,53],
 "structdrake_1_1solvers_1_1_nlopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,14,53,0],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html":[3,0,0,14,55],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[3,0,0,14,55,5],
@@ -239,15 +249,5 @@ var NAVTREEINDEX66 =
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,16,8,4,21],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9dc0967f9d639aaf80a08151df0e96f3":[3,0,0,16,8,4,26],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#aa1d16b9fcf585fe75becb5357c74ba72":[3,0,0,16,8,4,3],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ac0f326f2618a06b1f9e2817015ff1cd7":[3,0,0,16,8,4,9],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[3,0,0,16,8,4,7],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad12fc34ce789bce6c8a05d8a17138534":[3,0,0,16,8,4,18],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad4489c31400be9adcd1f625f99c48134":[3,0,0,16,8,4,15],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,16,8,4,20],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ae3b978041e97c1025818e7f4e79345fa":[3,0,0,16,8,4,28],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#afae8fde9f81370fb4851c9e1de452a7f":[3,0,0,16,8,4,31],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html":[3,0,0,16,8,4,0],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a5260647c6d73b9af547424968d24da09":[3,0,0,16,8,4,0,0],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,8,4,0,2],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html#aa1d16b9fcf585fe75becb5357c74ba72":[3,0,0,16,8,4,0,1]
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#ac0f326f2618a06b1f9e2817015ff1cd7":[3,0,0,16,8,4,9]
 };

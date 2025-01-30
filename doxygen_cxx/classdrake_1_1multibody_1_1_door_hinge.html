@@ -308,6 +308,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:adb80046d035fd956ed690d2fe1b3cbfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e415d777b3ac3e7e0071578d6ec62c9"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#a4e415d777b3ac3e7e0071578d6ec62c9">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const override</td></tr>
 <tr class="separator:a4e415d777b3ac3e7e0071578d6ec62c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c32a1ec73870e624ad115571745258f"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#a6c32a1ec73870e624ad115571745258f">DoShallowClone</a> () const override</td></tr>
+<tr class="memdesc:a6c32a1ec73870e624ad115571745258f"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI for ShallowClone().  <a href="#a6c32a1ec73870e624ad115571745258f">More...</a><br /></td></tr>
+<tr class="separator:a6c32a1ec73870e624ad115571745258f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_force_element"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1multibody_1_1_force_element')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement&lt; T &gt;</a></td></tr>
 <tr class="memitem:a5f6f5dfe2096f37172c993a563690fba inherit pro_methods_classdrake_1_1multibody_1_1_force_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a5f6f5dfe2096f37172c993a563690fba">DoDeclareForceElementParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *)</td></tr>
 <tr class="memdesc:a5f6f5dfe2096f37172c993a563690fba inherit pro_methods_classdrake_1_1multibody_1_1_force_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by DoDeclareParameters().  <a href="classdrake_1_1multibody_1_1_force_element.html#a5f6f5dfe2096f37172c993a563690fba">More...</a><br /></td></tr>
@@ -912,6 +915,35 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 
 </div>
 </div>
+<a id="a6c32a1ec73870e624ad115571745258f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c32a1ec73870e624ad115571745258f">&#9670;&nbsp;</a></span>DoShallowClone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt;T&gt; &gt; DoShallowClone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NVI for ShallowClone(). </p>
+
+<p>Reimplemented from <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a6266e271e4d820431b07611e24dd093e">ForceElement&lt; T &gt;</a>.</p>
+
+</div>
+</div>
 <a id="aec72adf302d35f0e2d9fb630bb99d4d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec72adf302d35f0e2d9fb630bb99d4d2">&#9670;&nbsp;</a></span>joint()</h2>
 
@@ -929,8 +961,8 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 
 </div>
 </div>
-<a id="ad332fbe5b356d2d4d5eef63e3b74e488"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad332fbe5b356d2d4d5eef63e3b74e488">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a964ad746639499fbe624b6b3a24ad6fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a964ad746639499fbe624b6b3a24ad6fb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -941,7 +973,7 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html">DoorHinge</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html">DoorHinge</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html">DoorHinge</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -955,8 +987,8 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 
 </div>
 </div>
-<a id="a964ad746639499fbe624b6b3a24ad6fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a964ad746639499fbe624b6b3a24ad6fb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ad332fbe5b356d2d4d5eef63e3b74e488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad332fbe5b356d2d4d5eef63e3b74e488">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -967,7 +999,7 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html">DoorHinge</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html">DoorHinge</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html">DoorHinge</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
