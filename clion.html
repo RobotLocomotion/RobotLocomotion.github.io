@@ -329,8 +329,8 @@ following values for the fields:</p>
   <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Clang Format Full File</code></li>
   <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Apply clang-format to the active file</code></li>
   <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel</code></li>
-  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run //tools/lint:clang-format -- -i $FileName$</code></li>
-  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$FileDir$</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run //tools/lint:clang-format -- -i $FilePath$</code></li>
+  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$Projectpath$</code></li>
   <li><strong>Advanced Options:</strong> Uncheck <code class="language-plaintext highlighter-rouge">Open console for tool output</code></li>
 </ul>
 
@@ -345,8 +345,8 @@ following values for the fields:</p>
   <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Clang Format Selected Lines</code></li>
   <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Apply clang-format to the selected lines</code></li>
   <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel</code></li>
-  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run //tools/lint:clang-format -- -lines $SelectionStartLine$:$SelectionEndLine$ -i $FileName$</code></li>
-  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$FileDir$</code></li>
+  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run //tools/lint:clang-format -- -lines $SelectionStartLine$:$SelectionEndLine$ -i $FilePath$</code></li>
+  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$Projectpath$</code></li>
   <li><strong>Advanced Options:</strong> Uncheck <code class="language-plaintext highlighter-rouge">Open console for tool output</code></li>
 </ul>
 

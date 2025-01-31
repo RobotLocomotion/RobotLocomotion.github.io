@@ -11,7 +11,6 @@ var classdrake_1_1_memory_file =
     [ "Make", "classdrake_1_1_memory_file.html#a633efe7c29146d85642c875e653a2229", null ],
     [ "operator=", "classdrake_1_1_memory_file.html#a49987be7adad3c9f9e9b54396649234a", null ],
     [ "operator=", "classdrake_1_1_memory_file.html#a709dc7d281f0dcc7d76101a41c1321f5", null ],
-    [ "Serialize", "classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "sha256", "classdrake_1_1_memory_file.html#a8a9f91a7db6a15fc542f14aa08c8e563", null ],
     [ "to_string", "classdrake_1_1_memory_file.html#ad337b3f5cb6821e21e26c3696144faaa", null ]
 ];

@@ -1,6 +1,5 @@
 var NAVTREEINDEX62 =
 {
-"string__hash_8h.html":[4,0,0,1,65],
 "string__map_8h.html":[4,0,0,1,66],
 "string__map_8h.html#a4730f000053dc13014d5e316c6f91201":[4,0,0,1,66,0],
 "string__map_8h.html#a5bb95e80e713a1874862fba2397c8cd2":[4,0,0,1,66,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX62 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a11926af9280d70fd96e47b07c90cf0ed":[3,0,0,4,31,2,1],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,31,2,4],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,31,2,0],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a9c59ed4a7b6bdc2b1207e39fabf379a4":[3,0,0,4,31,2,5]
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a9c59ed4a7b6bdc2b1207e39fabf379a4":[3,0,0,4,31,2,5],
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#aaf72b1fe5ab339da8e67c2253fa7f92a":[3,0,0,4,31,2,3]
 };
