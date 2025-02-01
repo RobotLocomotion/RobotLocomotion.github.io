@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1trajectories_1_1_bezier_curve.html#a1140b71651392be777ab280996db81de":[3,0,0,18,0,8],
 "classdrake_1_1trajectories_1_1_bezier_curve.html#a16ae097f54f82e813d19f77126ba21e7":[3,0,0,18,0,9],
 "classdrake_1_1trajectories_1_1_bezier_curve.html#a3f901a992920634ebe38141643a638e3":[3,0,0,18,0,2],
 "classdrake_1_1trajectories_1_1_bezier_curve.html#a4218e147feb3c1d1e3a0b864d223e670":[3,0,0,18,0,5],
@@ -107,18 +108,18 @@ var NAVTREEINDEX48 =
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a34eda3a0d1a4264f6c3463af5e457707":[3,0,0,18,8,18],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a49c54d6b75561787901ec5de8d831979":[3,0,0,18,8,15],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a6c7298f213adae5ec61e76d94d67d3ae":[3,0,0,18,8,17],
+"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a79c5d5dffa71f06810be52a082af0ab5":[3,0,0,18,8,12],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a7afd8ab9f8d0562fe877a4fb3cb298a5":[3,0,0,18,8,3],
+"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a7bb3fb70e4d534f4872b38209eb25326":[3,0,0,18,8,13],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a84d9ba906dfe3476c3112019de27db04":[3,0,0,18,8,9],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a944aeffdb9d0381d2b3d12b0d496a0a0":[3,0,0,18,8,5],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a99f97612635ea8aa0a905beb52c94829":[3,0,0,18,8,8],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a9c16f458090e923d6a419602f530f659":[3,0,0,18,8,7],
-"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#abbae6db5c296a6f3f059d9764ab05452":[3,0,0,18,8,13],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#ad421fac36aaf1c6312dde83733ac83ef":[3,0,0,18,8,2],
-"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#ade440970557ec90243a03ce4e1d588db":[3,0,0,18,8,12],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#adfa1acb11b9a6296c79275adeac9b6f2":[3,0,0,18,8,6],
+"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#aecb7abbed2d94d556719b693a89086c9":[3,0,0,18,8,4],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#aed807d22d7a3e9b6b2cbf123136b86cc":[3,0,0,18,8,11],
 "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#af6959be79c155920b5b9b17f665dfb08":[3,0,0,18,8,10],
-"classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#afb9493490c478a0bc33feda6bcf4c757":[3,0,0,18,8,4],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html":[3,0,0,18,9],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a0295b8466f7ead211653b8cddafd8815":[3,0,0,18,9,46],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a04aa32f958635709b5a538f99c092ba0":[3,0,0,18,9,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aaacb08cadfa67d9aabcc07dbf57fce30":[3,0,0,18,13,4],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#aac002eea06875b91ada866e249fc7b6f":[3,0,0,18,13,3],
 "classdrake_1_1trajectories_1_1_stacked_trajectory.html#ae2167a7e4dbf33198c4a3cfb4d8ff370":[3,0,0,18,13,1],
-"classdrake_1_1trajectories_1_1_trajectory.html":[3,0,0,18,14],
-"classdrake_1_1trajectories_1_1_trajectory.html#a044e156bc756977905efc3f2a6a5c282":[3,0,0,18,14,22]
+"classdrake_1_1trajectories_1_1_trajectory.html":[3,0,0,18,14]
 };

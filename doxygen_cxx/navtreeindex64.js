@@ -1,9 +1,10 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a2213eafbc5c4f73c4af52ecd163494c6":[1,1,1,12,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,1,1,12,12],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,5,5,12,12],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d":[1,5,5,12,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d":[1,1,1,12,6],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a5394db50dd4c2741c4d3f7dacf50f51d":[1,5,5,12,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd":[1,5,5,12,9],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a67295e7681f83a17890571e4b6b0a7dd":[1,1,1,12,9],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a6c4438afbf2190941ebeae2f8e16dd11":[1,5,5,12,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#aaaeae014c3934ee5060476d52c6e9181":[3,0,0,9,0,2,1,5],
 "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#ad0c3c5a0cf4055c763011fc59fbb4cb3":[3,0,0,9,0,2,1,0],
 "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#ad4d2d87cee466cb27680067e1b4ee5c5":[3,0,0,9,0,2,1,1],
-"structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#adddb155f97ee7c54be548096bbbba70e":[3,0,0,9,0,2,1,3],
-"structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#afb2dd735f5c20820dd24342eafdfccb1":[3,0,0,9,0,2,1,4]
+"structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#adddb155f97ee7c54be548096bbbba70e":[3,0,0,9,0,2,1,3]
 };
