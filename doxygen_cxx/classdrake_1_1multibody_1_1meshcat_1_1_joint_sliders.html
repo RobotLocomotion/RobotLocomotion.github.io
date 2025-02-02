@@ -182,7 +182,6 @@ class drake::multibody::meshcat::JointSliders&lt; T &gt;</h3>
 </td></tr>
 </table>
 <p>The output port is of size <code>plant.num_positions()</code>, and the order of its elements matches <code>plant.GetPositions()</code>.</p>
-<p>Only positions associated with joints get sliders. All other positions are fixed at nominal values.</p>
 <p>Beware that the output port of this system always provides the sliders' current values, even if evaluated by multiple different downstream input ports during a single computation. If you need to have a synchronized view of the slider data, place a <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html" title="A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract...">systems::ZeroOrderHold</a> system between the sliders and downstream calculations.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -195,9 +194,9 @@ class drake::multibody::meshcat::JointSliders&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a86ebb1951c6fc9e753c7452c13f6dade"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a86ebb1951c6fc9e753c7452c13f6dade">JointSliders</a> (std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant, std::optional&lt; Eigen::VectorXd &gt; initial_value={}, std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; lower_limit={}, std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; upper_limit={}, std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; step={}, std::vector&lt; std::string &gt; decrement_keycodes={}, std::vector&lt; std::string &gt; increment_keycodes={})</td></tr>
-<tr class="memdesc:a86ebb1951c6fc9e753c7452c13f6dade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a meshcat slider for each joint in the given plant.  <a href="#a86ebb1951c6fc9e753c7452c13f6dade">More...</a><br /></td></tr>
-<tr class="separator:a86ebb1951c6fc9e753c7452c13f6dade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d06bab24040ad6f5b74cea2cfc62817"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a8d06bab24040ad6f5b74cea2cfc62817">JointSliders</a> (std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; *plant, const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_value={}, const std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; &amp;lower_limit={}, const std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; &amp;upper_limit={}, const std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; &amp;step={}, std::vector&lt; std::string &gt; decrement_keycodes={}, std::vector&lt; std::string &gt; increment_keycodes={})</td></tr>
+<tr class="memdesc:a8d06bab24040ad6f5b74cea2cfc62817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a meshcat slider for each joint in the given plant.  <a href="#a8d06bab24040ad6f5b74cea2cfc62817">More...</a><br /></td></tr>
+<tr class="separator:a8d06bab24040ad6f5b74cea2cfc62817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2e5aab0612d67400354a4fe71278a21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ac2e5aab0612d67400354a4fe71278a21">Delete</a> ()</td></tr>
 <tr class="memdesc:ac2e5aab0612d67400354a4fe71278a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes our sliders from the associated meshcat instance.  <a href="#ac2e5aab0612d67400354a4fe71278a21">More...</a><br /></td></tr>
 <tr class="separator:ac2e5aab0612d67400354a4fe71278a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,7 +207,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1039b0af2a065af9a3cd392e774e0c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishes the given Diagram (typically, to cause it to be visualized) whenever our sliders' values change.  <a href="#a1039b0af2a065af9a3cd392e774e0c19">More...</a><br /></td></tr>
 <tr class="separator:a1039b0af2a065af9a3cd392e774e0c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf0ba4dc73d12957c13ae22e2a2ef939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#abf0ba4dc73d12957c13ae22e2a2ef939">SetPositions</a> (const Eigen::VectorXd &amp;q)</td></tr>
-<tr class="memdesc:abf0ba4dc73d12957c13ae22e2a2ef939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all robot positions (corresponding to joint positions and potentially positions not associated with any joint) to the values in <code>q</code>.  <a href="#abf0ba4dc73d12957c13ae22e2a2ef939">More...</a><br /></td></tr>
+<tr class="memdesc:abf0ba4dc73d12957c13ae22e2a2ef939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets our meshcat sliders to the values in <code>q</code>.  <a href="#abf0ba4dc73d12957c13ae22e2a2ef939">More...</a><br /></td></tr>
 <tr class="separator:abf0ba4dc73d12957c13ae22e2a2ef939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a9fc78a729b6fdd395e1cb7b6b2db3047"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a9fc78a729b6fdd395e1cb7b6b2db3047">JointSliders</a> (const <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html">JointSliders</a> &amp;)=delete</td></tr>
@@ -1325,8 +1324,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a86ebb1951c6fc9e753c7452c13f6dade"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86ebb1951c6fc9e753c7452c13f6dade">&#9670;&nbsp;</a></span>JointSliders() <span class="overload">[3/3]</span></h2>
+<a id="a8d06bab24040ad6f5b74cea2cfc62817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d06bab24040ad6f5b74cea2cfc62817">&#9670;&nbsp;</a></span>JointSliders() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1346,25 +1345,25 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::optional&lt; Eigen::VectorXd &gt;&#160;</td>
+          <td class="paramtype">const std::optional&lt; Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>initial_value</em> = <code>{}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt;&#160;</td>
+          <td class="paramtype">const std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>lower_limit</em> = <code>{}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt;&#160;</td>
+          <td class="paramtype">const std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>upper_limit</em> = <code>{}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt;&#160;</td>
+          <td class="paramtype">const std::variant&lt; std::monostate, <a class="el" href="classdouble.html">double</a>, Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>step</em> = <code>{}</code>, </td>
         </tr>
         <tr>
@@ -1572,8 +1571,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets all robot positions (corresponding to joint positions and potentially positions not associated with any joint) to the values in <code>q</code>. </p>
-<p>The meshcat sliders associated with any joint positions described by <code>q</code> will have their value updated. Additionally, the "initial state" vector of positions tracked by this instance will be updated to the values in <code>q</code>. This "initial state" vector update will persist even if sliders are removed (e.g., via Delete).</p>
+<p>Sets our meshcat sliders to the values in <code>q</code>. </p>
+<p>Additionally, the "initial state" vector of positions tracked by this instance will be updated to the values in <code>q</code>. This "initial state" vector update will persist even if sliders are removed (e.g., via Delete).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">q</td><td>A vector whose length is equal to the associated <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">MultibodyPlant::num_positions()</a>. </td></tr>

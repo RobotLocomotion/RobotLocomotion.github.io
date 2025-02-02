@@ -446,8 +446,6 @@ teleoperation demos. The sliders’ current values are available on the
 <code class="docutils literal notranslate"><span class="pre">positions</span></code> output port of this system.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>JointSliders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; positions</td></tr></table></td></tr></table><p>The output port is of size <code class="docutils literal notranslate"><span class="pre">plant.num_positions()</span></code>, and the order of
 its elements matches <code class="docutils literal notranslate"><span class="pre">plant.GetPositions()</span></code>.</p>
-<p>Only positions associated with joints get sliders. All other positions
-are fixed at nominal values.</p>
 <p>Beware that the output port of this system always provides the
 sliders’ current values, even if evaluated by multiple different
 downstream input ports during a single computation. If you need to
@@ -554,13 +552,11 @@ the slider values change.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders.SetPositions">
 <span class="sig-name descname"><span class="pre">SetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.JointSliders" title="pydrake.multibody.meshcat.JointSliders"><span class="pre">pydrake.multibody.meshcat.JointSliders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders.SetPositions" title="Permalink to this definition"></a></dt>
-<dd><p>Sets all robot positions (corresponding to joint positions and
-potentially positions not associated with any joint) to the values in
-<code class="docutils literal notranslate"><span class="pre">q</span></code>. The meshcat sliders associated with any joint positions
-described by <code class="docutils literal notranslate"><span class="pre">q</span></code> will have their value updated. Additionally, the
-“initial state” vector of positions tracked by this instance will be
-updated to the values in <code class="docutils literal notranslate"><span class="pre">q</span></code>. This “initial state” vector update
-will persist even if sliders are removed (e.g., via Delete).</p>
+<dd><p>Sets our meshcat sliders to the values in <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+<p>Additionally, the “initial state” vector of positions tracked by this
+instance will be updated to the values in <code class="docutils literal notranslate"><span class="pre">q</span></code>. This “initial state”
+vector update will persist even if sliders are removed (e.g., via
+Delete).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">q</span></code>:</dt><dd><p>A vector whose length is equal to the associated
 MultibodyPlant::num_positions().</p>
@@ -586,8 +582,6 @@ teleoperation demos. The sliders’ current values are available on the
 <code class="docutils literal notranslate"><span class="pre">positions</span></code> output port of this system.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>JointSliders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; positions</td></tr></table></td></tr></table><p>The output port is of size <code class="docutils literal notranslate"><span class="pre">plant.num_positions()</span></code>, and the order of
 its elements matches <code class="docutils literal notranslate"><span class="pre">plant.GetPositions()</span></code>.</p>
-<p>Only positions associated with joints get sliders. All other positions
-are fixed at nominal values.</p>
 <p>Beware that the output port of this system always provides the
 sliders’ current values, even if evaluated by multiple different
 downstream input ports during a single computation. If you need to
@@ -689,13 +683,11 @@ the slider values change.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders_-AutoDiffXd-.SetPositions">
 <span id="pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].SetPositions"></span><span class="sig-name descname"><span class="pre">SetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.JointSliders_" title="pydrake.multibody.meshcat.JointSliders_"><span class="pre">pydrake.multibody.meshcat.JointSliders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_-AutoDiffXd-.SetPositions" title="Permalink to this definition"></a></dt>
-<dd><p>Sets all robot positions (corresponding to joint positions and
-potentially positions not associated with any joint) to the values in
-<code class="docutils literal notranslate"><span class="pre">q</span></code>. The meshcat sliders associated with any joint positions
-described by <code class="docutils literal notranslate"><span class="pre">q</span></code> will have their value updated. Additionally, the
-“initial state” vector of positions tracked by this instance will be
-updated to the values in <code class="docutils literal notranslate"><span class="pre">q</span></code>. This “initial state” vector update
-will persist even if sliders are removed (e.g., via Delete).</p>
+<dd><p>Sets our meshcat sliders to the values in <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+<p>Additionally, the “initial state” vector of positions tracked by this
+instance will be updated to the values in <code class="docutils literal notranslate"><span class="pre">q</span></code>. This “initial state”
+vector update will persist even if sliders are removed (e.g., via
+Delete).</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">q</span></code>:</dt><dd><p>A vector whose length is equal to the associated
 MultibodyPlant::num_positions().</p>
