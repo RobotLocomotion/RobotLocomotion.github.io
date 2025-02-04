@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_simulator.ht
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1systems_1_1_simulator-members.html">List of all members</a>  </div>
@@ -270,7 +271,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afa85ab3036e9c0c5f6c841a346d70d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the internally-maintained <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> with a different one.  <a href="#afa85ab3036e9c0c5f6c841a346d70d93">More...</a><br /></td></tr>
 <tr class="separator:afa85ab3036e9c0c5f6c841a346d70d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0ecc40cda7115ce6a66ba4737bd62a6"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_simulator.html#af0ecc40cda7115ce6a66ba4737bd62a6">release_context</a> ()</td></tr>
-<tr class="memdesc:af0ecc40cda7115ce6a66ba4737bd62a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer ownership of this Simulator's internal <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> to the caller.  <a href="#af0ecc40cda7115ce6a66ba4737bd62a6">More...</a><br /></td></tr>
+<tr class="memdesc:af0ecc40cda7115ce6a66ba4737bd62a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#af0ecc40cda7115ce6a66ba4737bd62a6">More...</a><br /></td></tr>
 <tr class="separator:af0ecc40cda7115ce6a66ba4737bd62a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64a01ac56f8a0086cc6ed335ee9e5caa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_simulator.html#a64a01ac56f8a0086cc6ed335ee9e5caa">ResetStatistics</a> ()</td></tr>
 <tr class="memdesc:a64a01ac56f8a0086cc6ed335ee9e5caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forget accumulated statistics.  <a href="#a64a01ac56f8a0086cc6ed335ee9e5caa">More...</a><br /></td></tr>
@@ -421,6 +422,9 @@ Friends</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a> </td>
@@ -440,6 +444,11 @@ Friends</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Create a Simulator which additionally maintains ownership of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </p>
@@ -981,8 +990,9 @@ The only way to suppress initialization events is by calling <a class="el" href=
       </table>
 </div><div class="memdoc">
 
-<p>Transfer ownership of this Simulator's internal <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> to the caller. </p>
-<p>The Simulator will no longer contain a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>. The caller must not attempt to advance the simulator in time after that point. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_simulator.html#afa85ab3036e9c0c5f6c841a346d70d93" title="Replace the internally-maintained Context with a different one.">reset_context()</a> </dd></dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Use get_context()-&gt;Clone() and reset_context(nullptr) instead. <br />
+ This will be removed from Drake on or after 2025-06-01.</dd></dl>
 
 </div>
 </div>
@@ -1003,7 +1013,7 @@ The only way to suppress initialization events is by calling <a class="el" href=
 </div><div class="memdoc">
 
 <p>Replace the internally-maintained <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> with a different one. </p>
-<p>The current <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> is deleted. This is useful for supplying a new set of initial conditions. You should invoke <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a> after replacing the <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This is useful for supplying a new set of initial conditions. You should invoke <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a> after replacing the <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">context</td><td>The new context, which may be null. If the context is null, a new context must be set before attempting to step the system forward. </td></tr>
   </table>
