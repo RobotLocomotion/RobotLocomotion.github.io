@@ -64,7 +64,6 @@ var hierarchy =
     [ "Bound", "structdrake_1_1solvers_1_1_bound.html", null ],
     [ "BsplineBasis< T >", "classdrake_1_1math_1_1_bspline_basis.html", null ],
     [ "BsplineBasis< double >", "classdrake_1_1math_1_1_bspline_basis.html", null ],
-    [ "BsplineBasis< drake::symbolic::Expression >", "classdrake_1_1math_1_1_bspline_basis.html", null ],
     [ "FemModel< T >::Builder", "classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html", null ],
     [ "ImageIo::ByteSpan", "structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html", null ],
     [ "Cache", "classdrake_1_1systems_1_1_cache.html", null ],
@@ -680,9 +679,9 @@ var hierarchy =
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
-    [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
+    [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
     [ "overload_cast_impl< Return, Args >", "structdrake_1_1pydrake_1_1overload__cast__impl.html", null ],
@@ -1177,14 +1176,12 @@ var hierarchy =
     ] ],
     [ "Trajectory< double >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "BezierCurve< double >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],
+      [ "BsplineTrajectory< double >", "classdrake_1_1trajectories_1_1_bspline_trajectory.html", null ],
       [ "PiecewiseTrajectory< double >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "ExponentialPlusPiecewisePolynomial< double >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],
         [ "PiecewiseConstantCurvatureTrajectory< double >", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html", null ],
         [ "PiecewisePolynomial< double >", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html", null ]
       ] ]
-    ] ],
-    [ "Trajectory< drake::symbolic::Expression >", "classdrake_1_1trajectories_1_1_trajectory.html", [
-      [ "BsplineTrajectory< drake::symbolic::Expression >", "classdrake_1_1trajectories_1_1_bspline_trajectory.html", null ]
     ] ],
     [ "TransferFunction", "classdrake_1_1systems_1_1_transfer_function.html", null ],
     [ "Transform", "classdrake_1_1schema_1_1_transform.html", null ],
@@ -1246,7 +1243,6 @@ var hierarchy =
       [ "copyable_unique_ptr< drake::systems::Parameters< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Parameters< drake::symbolic::Expression > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Parameters< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
-      [ "copyable_unique_ptr< drake::trajectories::BsplineTrajectory< drake::symbolic::Expression > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::trajectories::Trajectory< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::trajectories::Trajectory< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< Engine >", "classdrake_1_1copyable__unique__ptr.html", null ],

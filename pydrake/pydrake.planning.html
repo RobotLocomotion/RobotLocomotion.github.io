@@ -3728,16 +3728,19 @@ for the optimization.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.AddAccelerationBounds">
-<span class="sig-name descname"><span class="pre">AddAccelerationBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Constraint</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddAccelerationBounds" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">AddAccelerationBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Constraint</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddAccelerationBounds" title="Permalink to this definition"></a></dt>
 <dd><p>Adds generic (nonlinear) constraints to enforce the upper and lower
-bounds to the acceleration trajectory, q̈(t). These constraints will
-be respected at all times. Note that this does NOT directly constrain
-r̈(s).</p>
+bounds to the acceleration trajectory, q̈(t). By leveraging the convex
+hull property of B-splines, these bounds are applied at the
+(derivative) control points, but will be respected for all times, t ∈
+[0,T]. Note that this does NOT directly constrain r̈(s).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>A vector of bindings with the ith element is itself a vector of
-constraints (one per dof) adding a constraint to the ith control
-point of the acceleration trajectory.</p>
+<dd class="field-odd"><p>A vector of bindings with interleaved lower and then upper bounds,
+constraining all of the control points for one element of q̈ (e.g.
+the acceleration of the ith joint at all times). However, this
+specific interpretation of these constraints may change without
+deprecation.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3757,16 +3760,19 @@ duration of the trajectory.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.AddJerkBounds">
-<span class="sig-name descname"><span class="pre">AddJerkBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Constraint</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddJerkBounds" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">AddJerkBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Constraint</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddJerkBounds" title="Permalink to this definition"></a></dt>
 <dd><p>Adds generic (nonlinear) constraints to enforce the upper and lower
-bounds to the jerk trajectory, d³qdt³(t). These constraints will be
-respected at all times. Note that this does NOT directly constrain
-d³rds³(s).</p>
+bounds to the jerk trajectory, d³qdt³(t). By leveraging the convex
+hull property of B-splines, these bounds are applied at the
+(derivative) control points, but will be respected for all times, t ∈
+[0,T]. Note that this does NOT directly constrain d³rds³(s).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>A vector of bindings with the ith element is itself a vector of
-constraints (one per dof) adding a constraint to the ith control
-point of the jerk trajectory.</p>
+<dd class="field-odd"><p>A vector of bindings with interleaved lower and then upper bounds,
+constraining all of the control points for one element of d³qdt³
+(e.g. the jerk of the ith joint at all times). However, this
+specific interpretation of these constraints may change without
+deprecation.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3796,7 +3802,9 @@ control points towards being evenly spaced.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A vector of bindings with the ith element adding a cost to the ith
-control point of the velocity trajectory.</p>
+control point of the velocity trajectory. However, this specific
+interpretation of these constraints may change without
+deprecation.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3812,7 +3820,9 @@ are added via MathematicalProgram::AddL2NormCostUsingConicConstraint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A vector of bindings with the ith element adding a cost to the ith
-control point of the velocity trajectory.</p>
+control point of the velocity trajectory. However, this specific
+interpretation of these constraints may change without
+deprecation.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3864,7 +3874,8 @@ r(s), for all s∈[0,1].</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A vector of bindings with the ith element adding a constraint to
-the ith control point.</p>
+the ith control point. However, this specific interpretation of
+these constraints may change without deprecation.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3873,12 +3884,17 @@ the ith control point.</p>
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.AddVelocityBounds">
 <span class="sig-name descname"><span class="pre">AddVelocityBounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ub</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">LinearConstraint</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddVelocityBounds" title="Permalink to this definition"></a></dt>
 <dd><p>Adds linear constraints to enforce upper and lower bounds on the
-velocity trajectory, q̇(t). These bounds will be respected at all
-times. Note this does NOT directly constrain ṙ(s).</p>
+velocity trajectory, q̇(t). By leveraging the convex hull property of
+B-splines, these bounds are applied at the (derivative) control
+points, but will be respected for all times, t ∈ [0,T]. Note this does
+NOT directly constrain ṙ(s).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>A vector of bindings with the ith element adding a constraint to
-the ith control point of the derivative trajectory.</p>
+<dd class="field-odd"><p>A vector of bindings with interleaved lower and then upper bounds,
+constraining all of the control points for one element of q̇ (e.g.
+the velocity of the ith joint at all times). However, this
+specific interpretation of these constraints may change without
+deprecation..</p>
 </dd>
 </dl>
 </dd></dl>

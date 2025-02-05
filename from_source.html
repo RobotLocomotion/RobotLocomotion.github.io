@@ -269,7 +269,15 @@ to locate a user-provided <code class="language-plaintext highlighter-rouge">fmt
 instead of hard-coding to the operating system version.</li>
   <li>WITH_USER_SPDLOG (default ON). When ON, uses <code class="language-plaintext highlighter-rouge">find_package(spdlog)</code>
 to locate a user-provided <code class="language-plaintext highlighter-rouge">spdlog::spdlog</code> library
-instead of hard-coding to the operating system version.</li>
+instead of hard-coding to the operating system version.
+When ON, WITH_USER_FMT must also be ON.</li>
+  <li>WITH_USER_BLAS (default ON). When ON, uses <code class="language-plaintext highlighter-rouge">FindBlas()</code> to locate a
+user-provided <code class="language-plaintext highlighter-rouge">BLAS::BLAS</code> library instead of building from source.
+This option is not available on macOS.</li>
+  <li>WITH_USER_LAPACK (default ON). When ON, uses <code class="language-plaintext highlighter-rouge">FindLapack()</code> to locate a
+user-provided <code class="language-plaintext highlighter-rouge">LAPACK::LAPACK</code> library instead of building from source.
+This option is not available on macOS.
+When ON, WITH_USER_BLAS must also be ON.</li>
 </ul>
 
 <p>Adjusting closed-source (commercial) software dependencies:</p>

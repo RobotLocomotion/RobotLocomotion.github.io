@@ -49,9 +49,8 @@ var searchData=
   ['brickstaticequilibriumnonlinearconstraint',['BrickStaticEquilibriumNonlinearConstraint',['../classdrake_1_1examples_1_1planar__gripper_1_1_brick_static_equilibrium_nonlinear_constraint.html',1,'drake::examples::planar_gripper']]],
   ['bsplinebasis',['BsplineBasis',['../classdrake_1_1math_1_1_bspline_basis.html',1,'drake::math']]],
   ['bsplinebasis_3c_20double_20_3e',['BsplineBasis&lt; double &gt;',['../classdrake_1_1math_1_1_bspline_basis.html',1,'drake::math']]],
-  ['bsplinebasis_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['BsplineBasis&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1math_1_1_bspline_basis.html',1,'drake::math']]],
   ['bsplinetrajectory',['BsplineTrajectory',['../classdrake_1_1trajectories_1_1_bspline_trajectory.html',1,'drake::trajectories']]],
-  ['bsplinetrajectory_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['BsplineTrajectory&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1trajectories_1_1_bspline_trajectory.html',1,'drake::trajectories']]],
+  ['bsplinetrajectory_3c_20double_20_3e',['BsplineTrajectory&lt; double &gt;',['../classdrake_1_1trajectories_1_1_bspline_trajectory.html',1,'drake::trajectories']]],
   ['builder',['Builder',['../classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html',1,'drake::multibody::fem::FemModel']]],
   ['bytespan',['ByteSpan',['../structdrake_1_1systems_1_1sensors_1_1_image_io_1_1_byte_span.html',1,'drake::systems::sensors::ImageIo']]]
 ];
