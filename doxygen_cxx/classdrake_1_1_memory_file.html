@@ -159,6 +159,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1_memory_file.html','');}
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classdrake_1_1_memory_file-members.html">List of all members</a>  </div>
@@ -196,6 +197,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad337b3f5cb6821e21e26c3696144faaa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_memory_file.html#ad337b3f5cb6821e21e26c3696144faaa">to_string</a> (<a class="el" href="classint.html">int</a> contents_limit=100) const</td></tr>
 <tr class="memdesc:ad337b3f5cb6821e21e26c3696144faaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation.  <a href="#ad337b3f5cb6821e21e26c3696144faaa">More...</a><br /></td></tr>
 <tr class="separator:ad337b3f5cb6821e21e26c3696144faaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive &gt; </td></tr>
+<tr class="memitem:a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *a)</td></tr>
+<tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <a href="#a8e8824802dedfbc36776227f7482b6bc">More...</a><br /></td></tr>
+<tr class="separator:a8e8824802dedfbc36776227f7482b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a75826baed3eae4f9970b9350dc7707ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_memory_file.html#a75826baed3eae4f9970b9350dc7707ac">MemoryFile</a> (const <a class="el" href="classdrake_1_1_memory_file.html">MemoryFile</a> &amp;)=default</td></tr>
 <tr class="separator:a75826baed3eae4f9970b9350dc7707ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -497,6 +502,32 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="a8e8824802dedfbc36776227f7482b6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8824802dedfbc36776227f7482b6bc">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Serialize </td>
+          <td>(</td>
+          <td class="paramtype">Archive *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passes this object to an Archive. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background.</p>
+<p>When used in yaml, it is important to specify <em>all</em> fields. Applications may depend on the <code>extension</code> value to determine what to do with the file contents. Omitting <code>extension</code> would make it unusable in those cases.</p>
+<p>Omitting <code>filename_hint</code> is less dangerous; error messages would lack a helpful identifier, but things would otherwise function.</p>
+<p>The value of contents should be a base64-encoded string of the file contents. Yaml's <code>!!binary</code> tag is required to declare the value is such a string. Serializing the MemoryFile will produce such a string. Writing a yaml file by hand will be more challenging.</p>
+<p>For this yaml:</p>
+<div class="fragment"><div class="line">contents: !!binary VGhpcyBpcyBhbiBleGFtcGxlIG9mIG1</div><div class="line">        lbW9yeSBmaWxlIHRlc3QgY29udGVudHMu</div><div class="line">extension: .txt</div><div class="line">filename_hint: payload.txt</div></div><!-- fragment --><p>we would produce a MemoryFile with contents equal to: </p><pre class="fragment">This is an example of memory file test contents.
+</pre> 
 </div>
 </div>
 <a id="a8a9f91a7db6a15fc542f14aa08c8e563"></a>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,2,28],
 "simplification_8h.html":[4,0,0,1,3,16],
 "simplification_8h.html#a134e54042165751a5e5369b4631c90eb":[4,0,0,1,3,16,2],
 "simplification_8h.html#a697784ea0eafd05039e3a0c97b7c1415":[4,0,0,1,3,16,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "stochastic_8h.html#ad0be9949c22ccf3d9bd836e204fc8523":[4,0,0,1,2,1,11],
 "stochastic_8h.html#ae3768479f5bd6420a9b9f347c400cf80":[4,0,0,1,2,1,13],
 "stochastic_8h.html#aefc9cc6990399b1828a73e50c2d360ee":[4,0,0,1,2,1,23],
-"stochastic_8h.html#af9a9a11adf4beb57a9f7b959e190ed3d":[4,0,0,1,2,1,16],
-"stochastic__systems_8h.html":[4,0,0,12,10]
+"stochastic_8h.html#af9a9a11adf4beb57a9f7b959e190ed3d":[4,0,0,1,2,1,16]
 };

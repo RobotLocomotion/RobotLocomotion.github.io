@@ -632,9 +632,12 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Passes this object to an Archive. </p>
-<p>In YAML, an Rgba is represented by an array-like list of three or four numbers. E.g., </p><pre class="fragment"> rgba: [0.5, 0.5, 1.0]
+<p>In YAML, an Rgba is represented by a mapping of the symbol <code>rgba</code> to an array-like list of three or four numbers. E.g., </p><pre class="fragment"> rgba: [0.5, 0.5, 1.0]
 </pre><p>or </p><pre class="fragment"> rgba: [0.5, 0.5, 1.0, 0.5]
 </pre><p>such that the first three values are red, green, and blue, respectively. If no fourth value is provided, alpha is defined a 1.0.</p>
+<p>When another struct has an Rgba-valued member (e.g., <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a01a2a4e8cf420c179bc1253ca3d3a1c3" title="The &quot;background&quot; color.">systems::sensors::CameraConfig::background</a>), remember to include the full mapping. For example, imagine the struct:</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>Foo {</div><div class="line">  <a class="code" href="classdrake_1_1geometry_1_1_rgba.html#a81214ead519f4bfb7951aa77291546f5">Rgba</a> color1;</div><div class="line">  <a class="code" href="classdrake_1_1geometry_1_1_rgba.html#a81214ead519f4bfb7951aa77291546f5">Rgba</a> color2;</div><div class="line">};</div></div><!-- fragment --><p>The correct yaml representation of this would be:</p>
+<div class="fragment"><div class="line">color1:</div><div class="line">  rgba: [0.5, 0.5, 1.0]</div><div class="line">color2:</div><div class="line">  rgba: [1.0, 0.0, 0.0, 0.5]</div></div><!-- fragment --><p>The <em>values</em> of <code>color1</code> and <code>color2</code> are the mapping from <code>rgba</code> to the desired color tuples.</p>
 <p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background. </p>
 
 </div>

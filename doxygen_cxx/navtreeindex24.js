@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1perception_1_1_point_cloud.html#a0c9e7b6d5d69349e12d811b80f22562a":[3,0,0,10,2,23],
 "classdrake_1_1perception_1_1_point_cloud.html#a10564c9ccfebe2b5b4bd6002152c68b3":[3,0,0,10,2,46],
 "classdrake_1_1perception_1_1_point_cloud.html#a155b879601cf0abdb27ac79211763e0b":[3,0,0,10,2,25],
 "classdrake_1_1perception_1_1_point_cloud.html#a180c9ae2c644ee1618acef883ffeca05":[3,0,0,10,2,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1planning_1_1_robot_clearance.html#a8994b635a6f7cbc3fd0e16b8ed907956":[1,4,2,2,5,6],
 "classdrake_1_1planning_1_1_robot_clearance.html#a98c1287cf09d8d1e1acbcb7b9b953b43":[1,4,2,2,5,10],
 "classdrake_1_1planning_1_1_robot_clearance.html#aa1105d39ce49db224c98e90ef7de3741":[1,4,2,2,5,1],
-"classdrake_1_1planning_1_1_robot_clearance.html#aabd02eb3026c91ba1a4ed943fd9c265d":[1,4,2,2,5,4],
-"classdrake_1_1planning_1_1_robot_clearance.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[1,4,2,2,5,9]
+"classdrake_1_1planning_1_1_robot_clearance.html#aabd02eb3026c91ba1a4ed943fd9c265d":[1,4,2,2,5,4]
 };

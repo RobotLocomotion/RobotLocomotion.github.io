@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"group__geometry__optimization__geodesic__convexity.html#ga60002c174b2106139e2b219a0e0fb3f0":[1,1,1,0,4],
 "group__geometry__optimization__geodesic__convexity.html#ga60002c174b2106139e2b219a0e0fb3f0":[1,5,5,0,4],
 "group__geometry__optimization__geodesic__convexity.html#gaeab8ca89c6e95c43cf9ec8c6284f395f":[1,1,1,0,6],
 "group__geometry__optimization__geodesic__convexity.html#gaeab8ca89c6e95c43cf9ec8c6284f395f":[1,5,5,0,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "integrator__base_8h.html#ae1fb31ac47d9f3e58ca4a8f9c3183f96":[4,0,0,12,0,10,0],
 "internal__buffer__dim_8h.html":[4,0,0,4,5,1],
 "internal__frame_8h.html":[4,0,0,4,26],
-"internal__geometry_8h.html":[4,0,0,4,27],
-"internal__geometry__names_8h.html":[4,0,0,8,10,29]
+"internal__geometry_8h.html":[4,0,0,4,27]
 };

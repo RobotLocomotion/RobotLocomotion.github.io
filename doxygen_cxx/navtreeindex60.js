@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"rational__function_8h.html#a43d86ae3f21714ef199febddf60550fe":[4,0,0,1,3,14,31],
 "rational__function_8h.html#a44a9560b5bbc179968621e3df178742c":[4,0,0,1,3,14,22],
 "rational__function_8h.html#a4a8d6fb5671a17bf0c89c1c5aef9efaf":[4,0,0,1,3,14,25],
 "rational__function_8h.html#a579d06e36f094bf2eebf127dcbb46a1c":[4,0,0,1,3,14,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "signed__distance__pair_8h.html":[4,0,0,4,3,3],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,4],
 "sim__iiwa__driver_8h.html":[4,0,0,6,1,8],
-"sim__rgbd__sensor_8h.html":[4,0,0,12,8,21],
-"simplex__gaussian__quadrature_8h.html":[4,0,0,8,2,28]
+"sim__rgbd__sensor_8h.html":[4,0,0,12,8,21]
 };
