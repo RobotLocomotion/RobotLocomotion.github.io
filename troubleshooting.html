@@ -170,6 +170,10 @@ See "Caveats" in drake/doc/README.txt.
       <li><a href="#build-oom" id="markdown-toc-build-oom">Out of memory</a></li>
     </ul>
   </li>
+  <li><a href="#network-configuration" id="markdown-toc-network-configuration">Network Configuration</a>    <ul>
+      <li><a href="#lcm-macos" id="markdown-toc-lcm-macos">LCM on macOS</a></li>
+    </ul>
+  </li>
 </ul>
 
   </div>
@@ -414,6 +418,35 @@ the Drake source tree at <code class="language-plaintext highlighter-rouge">drak
   <p>Note that the concurrency level passed to <code class="language-plaintext highlighter-rouge">make</code> (e.g., <code class="language-plaintext highlighter-rouge">make -j 2</code>) does not
 propagate through to affect the concurrency of most of Drake’s build steps; you
 need to configure the dotfile in order to control the build concurrency.</p>
+
+  <h1 id="network-configuration">Network Configuration</h1>
+
+  <h2 id="lcm-macos">LCM on macOS</h2>
+
+  <p>When building and testing Drake from source on macOS 15 (Sequoia), you may
+encounter issues with <a href="https://lcm-proj.github.io/lcm/index.html">LCM</a>.
+In particular, an error message that can arise is: “LCM self test failed!!
+Check your routing tables and firewall settings.” LCM relies on
+<a href="https://lcm-proj.github.io/lcm/content/multicast-setup.html">UDP Multicast</a>
+over loopback, so multicast traffic must be enabled over the loopback
+interface on your computer in order for it to work.</p>
+
+  <p>Sometimes this is not explicitly enabled on macOS. If you see this error,
+check the routing table by running <code class="language-plaintext highlighter-rouge">netstat -nr</code>. The following entry in the
+IPv4 table is correct:</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Internet:
+Destination        Gateway            Flags               Netif Expire
+...
+224.0.0/4          lo0                UmS                   lo0
+</code></pre></div>  </div>
+
+  <p>If you see a different interface for this address, such as <code class="language-plaintext highlighter-rouge">en0</code>, then
+run the following to change it to loopback (<code class="language-plaintext highlighter-rouge">lo0</code>):</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo route -nv delete 224.0.0.0/4
+sudo route -nv add -net 224.0.0.0/4 -interface lo0
+</code></pre></div>  </div>
 
   <!-- Links to the various Drake doxygen pages.
      Order determined by directory structure first and names second.
