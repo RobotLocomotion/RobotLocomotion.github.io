@@ -1,5 +1,6 @@
 var NAVTREEINDEX63 =
 {
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,31,2,0],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a9c59ed4a7b6bdc2b1207e39fabf379a4":[3,0,0,4,31,2,5],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#aaf72b1fe5ab339da8e67c2253fa7f92a":[3,0,0,4,31,2,3],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#add1a608db25e8e3befb6775a16867611":[3,0,0,4,31,2,2],
@@ -242,12 +243,11 @@ var NAVTREEINDEX63 =
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0c7e372f75bda41909e27f92c1e7a7cd":[1,5,5,12,18],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0d0386ea4a76c2bfe571cca98200f565":[1,1,1,12,4],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0d0386ea4a76c2bfe571cca98200f565":[1,5,5,12,4],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0e0bd9a6fa7b0b7a30e8330f44812655":[1,5,5,12,1],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0e0bd9a6fa7b0b7a30e8330f44812655":[1,1,1,12,1],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a111e7545f0a4fcae1b8a52fec666594a":[1,1,1,12,7],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a0e0bd9a6fa7b0b7a30e8330f44812655":[1,5,5,12,1],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a111e7545f0a4fcae1b8a52fec666594a":[1,5,5,12,7],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,1,1,12,17],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a111e7545f0a4fcae1b8a52fec666594a":[1,1,1,12,7],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,5,5,12,17],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,1,1,12,13],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,1,1,12,17],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,5,5,12,13]
 };

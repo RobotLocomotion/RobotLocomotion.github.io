@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"functions_vars_n.html":[3,3,2,13],
 "functions_vars_o.html":[3,3,2,14],
 "functions_vars_p.html":[3,3,2,15],
 "functions_vars_q.html":[3,3,2,16],
@@ -120,8 +121,8 @@ var NAVTREEINDEX54 =
 "globals.html":[4,1,0],
 "globals_d.html":[4,1,0,1],
 "globals_defs.html":[4,1,3],
-"globals_func.html":[4,1,1],
 "globals_func.html":[4,1,1,0],
+"globals_func.html":[4,1,1],
 "globals_p.html":[4,1,0,2],
 "globals_s.html":[4,1,0,3],
 "globals_vars.html":[4,1,2],
@@ -207,8 +208,8 @@ var NAVTREEINDEX54 =
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,5],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,3],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,15,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,15,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,4],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,15,3],
 "group__default__scalars.html#gaf140364db7046208e67d85327722d34a":[1,6,1,7],
 "group__discrete__systems.html":[1,2,9],
 "group__drake__contacts.html":[1,3,0],
@@ -232,14 +233,14 @@ var NAVTREEINDEX54 =
 "group__geometry__optimization.html":[1,5,5],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,18],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,5,18],
-"group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,1,1,20],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,5,5,20],
+"group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,1,1,20],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,19],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,5,19],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,5,5,17],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,17],
-"group__geometry__optimization__geodesic__convexity.html":[1,5,5,0],
 "group__geometry__optimization__geodesic__convexity.html":[1,1,1,0],
+"group__geometry__optimization__geodesic__convexity.html":[1,5,5,0],
 "group__geometry__optimization__geodesic__convexity.html#ga05bd75c8b08787c334065792f8532797":[1,1,1,0,0],
 "group__geometry__optimization__geodesic__convexity.html#ga05bd75c8b08787c334065792f8532797":[1,5,5,0,0],
 "group__geometry__optimization__geodesic__convexity.html#ga0f945f0d43e169b238695da629d93ff7":[1,1,1,0,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX54 =
 "group__geometry__optimization__geodesic__convexity.html#ga1c6d3fc1c7396ee8eee575958044071b":[1,5,5,0,3],
 "group__geometry__optimization__geodesic__convexity.html#ga2e109ef92fec8f68a785b2edbd380021":[1,1,1,0,1],
 "group__geometry__optimization__geodesic__convexity.html#ga2e109ef92fec8f68a785b2edbd380021":[1,5,5,0,1],
-"group__geometry__optimization__geodesic__convexity.html#ga33ea6cefa0958e76eb228ecab2bbeba5":[1,1,1,0,2],
-"group__geometry__optimization__geodesic__convexity.html#ga33ea6cefa0958e76eb228ecab2bbeba5":[1,5,5,0,2]
+"group__geometry__optimization__geodesic__convexity.html#ga33ea6cefa0958e76eb228ecab2bbeba5":[1,1,1,0,2]
 };

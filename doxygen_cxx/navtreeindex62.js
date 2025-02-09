@@ -1,5 +1,6 @@
 var NAVTREEINDEX62 =
 {
+"stochastic_8h.html#af9a9a11adf4beb57a9f7b959e190ed3d":[4,0,0,1,2,1,16],
 "stochastic__systems_8h.html":[4,0,0,12,10],
 "string__hash_8h.html":[4,0,0,1,65],
 "string__map_8h.html":[4,0,0,1,66],
@@ -248,6 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#add1a608db25e8e3befb6775a16867611":[3,0,0,4,31,1,2],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html":[3,0,0,4,31,2],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a11926af9280d70fd96e47b07c90cf0ed":[3,0,0,4,31,2,1],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,31,2,4],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,31,2,0]
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,31,2,4]
 };

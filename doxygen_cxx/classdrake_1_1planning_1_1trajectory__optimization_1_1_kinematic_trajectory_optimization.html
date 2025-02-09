@@ -243,6 +243,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c266cf092028fbabcc0bca77054d3a3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8c266cf092028fbabcc0bca77054d3a3">AddJerkBounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
 <tr class="memdesc:a8c266cf092028fbabcc0bca77054d3a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds generic (nonlinear) constraints to enforce the upper and lower bounds to the jerk trajectory, d³qdt³(t).  <a href="#a8c266cf092028fbabcc0bca77054d3a3">More...</a><br /></td></tr>
 <tr class="separator:a8c266cf092028fbabcc0bca77054d3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad869a71300a38a96b8f1c7e40090f383"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ad869a71300a38a96b8f1c7e40090f383">AddEffortBoundsAtNormalizedTimes</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;s, const std::optional&lt; Eigen::Ref&lt; const Eigen::VectorXd &gt;&gt; &amp;lb=std::nullopt, const std::optional&lt; Eigen::Ref&lt; const Eigen::VectorXd &gt;&gt; &amp;ub=std::nullopt, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant_context=nullptr)</td></tr>
+<tr class="memdesc:ad869a71300a38a96b8f1c7e40090f383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds generic (nonlinear) constraints to enforce the effort limits defined in the plant at a sequence of normalized times, <code>s</code>:  <a href="#ad869a71300a38a96b8f1c7e40090f383">More...</a><br /></td></tr>
+<tr class="separator:ad869a71300a38a96b8f1c7e40090f383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3f60fe9552c90c9a3986f023ba18a56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">solvers::LinearCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ae3f60fe9552c90c9a3986f023ba18a56">AddDurationCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
 <tr class="memdesc:ae3f60fe9552c90c9a3986f023ba18a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear cost on the duration of the trajectory.  <a href="#ae3f60fe9552c90c9a3986f023ba18a56">More...</a><br /></td></tr>
 <tr class="separator:ae3f60fe9552c90c9a3986f023ba18a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -475,6 +478,68 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds a linear cost on the duration of the trajectory. </p>
+
+</div>
+</div>
+<a id="ad869a71300a38a96b8f1c7e40090f383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad869a71300a38a96b8f1c7e40090f383">&#9670;&nbsp;</a></span>AddEffortBoundsAtNormalizedTimes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; &gt; AddEffortBoundsAtNormalizedTimes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; Eigen::Ref&lt; const Eigen::VectorXd &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>lb</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; Eigen::Ref&lt; const Eigen::VectorXd &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>ub</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant_context</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds generic (nonlinear) constraints to enforce the effort limits defined in the plant at a sequence of normalized times, <code>s</code>: </p>
+<pre class="fragment">B lb ≤ M(q)v̇ + C(q, v)v - τ_g(q) - τ_app ≤ B ub
+</pre><p> where q, v, and v̇ are evaluated at s. B is the plant's actuation matrix, and M, C, τ_g, and τ_app are the plant's mass matrix, Coriolis force, gravity, and applied force, respectively. <code>ub</code> and <code>lb</code> are the upper and lower effort bounds, respectively; if they are not provided then plant.GetEffortLowerLimits() and plant.GetEffortUpperLimits() are used.</p>
+<p>Pass <code>plant_context</code> if you have non-default parameters in the context. Note that there are no lifetime requirements on <code>plant</code> nor <code>plant_context</code>.</p>
+<p>Note that the convex hull property of the B-splines is not guaranteed to hold here &ndash; effort limits maybe be violated away from the normalized times <code>s</code>.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>plant.is_finalized() </dd>
+<dd>
+plant.num_positions() == <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the number of position variables.">num_positions()</a> </dd>
+<dd>
+plant.IsVelocityEqualToQDot() == true </dd>
+<dd>
+s[i] ∈ [0, 1] for all i </dd>
+<dd>
+B lb ≤ B ub</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of bindings with one effort limit constraint for each <code>s</code>. </dd></dl>
 
 </div>
 </div>

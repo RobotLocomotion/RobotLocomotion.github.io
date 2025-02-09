@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#a49ba9f721924f3276d952ded5e007d19":[3,0,0,16,8,2,13],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,16,8,2,5],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#a5330f8117fb7678fba569570e3bc0ff7":[3,0,0,16,8,2,3],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html#a5a9126214b18c2642fc7e3e136b67e66":[3,0,0,16,8,2,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "classdrake_1_1test_1_1_limit_malloc.html#afef229bd4c5ea3baf6feca1c8720d9da":[3,0,0,17,1,1],
 "classdrake_1_1test_1_1_set_env.html":[3,0,0,17,3],
 "classdrake_1_1test_1_1_set_env.html#a6285258c4f0b75961b0f6b86a7b26224":[3,0,0,17,3,0],
-"classdrake_1_1test_1_1_set_env.html#a666a6421373819c6e5d97957cf20c4b5":[3,0,0,17,3,1],
-"classdrake_1_1trajectories_1_1_bezier_curve.html":[3,0,0,18,0]
+"classdrake_1_1test_1_1_set_env.html#a666a6421373819c6e5d97957cf20c4b5":[3,0,0,17,3,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#ad4d2d87cee466cb27680067e1b4ee5c5":[3,0,0,9,0,2,1,1],
 "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#adddb155f97ee7c54be548096bbbba70e":[3,0,0,9,0,2,1,3],
 "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#afb2dd735f5c20820dd24342eafdfccb1":[3,0,0,9,0,2,1,4],
 "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html":[3,0,0,9,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[3,0,0,14,41,0,0],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a7d164a4c018dfca9cd2bc71c083c8054":[3,0,0,14,41,0,2],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,14,41,0,1],
-"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html":[3,0,0,14,43,0],
-"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a558e28b2fea6ebcac661358ea97c7f58":[3,0,0,14,43,0,1]
+"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html":[3,0,0,14,43,0]
 };
