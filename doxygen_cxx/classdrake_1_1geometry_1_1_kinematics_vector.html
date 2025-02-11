@@ -223,6 +223,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5c87029705f9cdb6c64c5dc0d28a49ae"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Id &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a5c87029705f9cdb6c64c5dc0d28a49ae">ids</a> () const</td></tr>
 <tr class="memdesc:a5c87029705f9cdb6c64c5dc0d28a49ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a range object for all of the existing ids in the vector.  <a href="#a5c87029705f9cdb6c64c5dc0d28a49ae">More...</a><br /></td></tr>
 <tr class="separator:a5c87029705f9cdb6c64c5dc0d28a49ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b7dcc502aae627fbc56bcfecf33af1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a33b7dcc502aae627fbc56bcfecf33af1">IsFinite</a> () const</td></tr>
+<tr class="memdesc:a33b7dcc502aae627fbc56bcfecf33af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if <em>all</em> values are finite.  <a href="#a33b7dcc502aae627fbc56bcfecf33af1">More...</a><br /></td></tr>
+<tr class="separator:a33b7dcc502aae627fbc56bcfecf33af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a4c3f2090d3cd2db45de43802e7c9af60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html#a4c3f2090d3cd2db45de43802e7c9af60">KinematicsVector</a> (const <a class="el" href="classdrake_1_1geometry_1_1_kinematics_vector.html">KinematicsVector</a> &amp;)=default</td></tr>
 <tr class="separator:a4c3f2090d3cd2db45de43802e7c9af60"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -399,6 +402,25 @@ Public Member Functions</h2></td></tr>
 
 <p>Provides a range object for all of the existing ids in the vector. </p>
 <p>This is intended to be used as: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (Id <span class="keywordtype">id</span> : this_vector.ids()) {</div><div class="line"> ...</div><div class="line"> <span class="comment">// Obtain the KinematicsValue of an id by `this_vector.value(id)`</span></div><div class="line"> ...</div><div class="line">}</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="a33b7dcc502aae627fbc56bcfecf33af1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b7dcc502aae627fbc56bcfecf33af1">&#9670;&nbsp;</a></span>IsFinite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsFinite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports if <em>all</em> values are finite. </p>
+
 </div>
 </div>
 <a id="adb0b732826563f4d13c3411c56a0d54f"></a>

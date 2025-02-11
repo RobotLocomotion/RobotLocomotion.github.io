@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aca1e9f642a2e6fd9aa518f67e0b5fa1b":[1,1,1,6,0,0],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aca1e9f642a2e6fd9aa518f67e0b5fa1b":[1,5,5,6,0,0],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#acc9aa285e1f7779c552846a8c8a2cb80":[1,1,1,6,0,24],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#acc9aa285e1f7779c552846a8c8a2cb80":[1,5,5,6,0,24],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html":[1,5,5,11],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a06cf8fec3d41afb4398baccb7d9ce347":[1,1,1,11,7],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a06cf8fec3d41afb4398baccb7d9ce347":[1,5,5,11,7],
-"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a2a3f4bf8aea1252265f088592342060a":[1,1,1,11,4],
-"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a2a3f4bf8aea1252265f088592342060a":[1,5,5,11,4]
+"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a2a3f4bf8aea1252265f088592342060a":[1,1,1,11,4]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html":[3,0,0,14,43,0],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a558e28b2fea6ebcac661358ea97c7f58":[3,0,0,14,43,0,1],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a67361c684f5a0c392169e80bb76e9228":[3,0,0,14,43,0,0],
 "structdrake_1_1solvers_1_1_mosek_solver_details.html":[3,0,0,14,47],
@@ -248,6 +249,5 @@ var NAVTREEINDEX66 =
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a8849fbc03b0aa02c8f3c81272c4694b6":[3,0,0,16,8,4,30],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a8cea36e6bf523d90038d2757774e10e0":[3,0,0,16,8,4,4],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,8,4,6],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,16,8,4,21],
-"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9dc0967f9d639aaf80a08151df0e96f3":[3,0,0,16,8,4,26]
+"structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,16,8,4,21]
 };

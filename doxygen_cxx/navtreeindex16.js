@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_deformable_model.html#ad7cbbe20841b68bac6481216b94e3501":[3,0,0,9,25,21],
 "classdrake_1_1multibody_1_1_deformable_model.html#ae48e04215f73edc66de1f732e4968899":[3,0,0,9,25,6],
 "classdrake_1_1multibody_1_1_deformable_model.html#af92b53211e54243aff4490a700168eb4":[3,0,0,9,25,25],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html":[1,2,5,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html#afa48747835f328fbf3e35bc2e91b994a":[3,0,0,9,44,3],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html":[1,4,2,0,2],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a069b08fb67eeeb99c807dfc823ea3154":[1,4,2,0,2,23],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a0bb60b773199c651ab8c8802501d4391":[1,4,2,0,2,8],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a17e545f30ae2d1bf7fd15e14f6198fa9":[1,4,2,0,2,2]
+"classdrake_1_1multibody_1_1_inverse_kinematics.html#a0bb60b773199c651ab8c8802501d4391":[1,4,2,0,2,8]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a2a3f4bf8aea1252265f088592342060a":[1,5,5,11,4],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a4bb118650a6b2616e008bdc642d043d8":[1,1,1,11,1],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a4bb118650a6b2616e008bdc642d043d8":[1,5,5,11,1],
 "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a7a2847efc4f87e996464d9d71159e27b":[1,1,1,11,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1lcm_1_1_drake_lcm.html#a9d709763170b9e1d2744b06799ec768a":[3,0,0,5,0,13],
 "classdrake_1_1lcm_1_1_drake_lcm.html#aae473c12952c3046a0bddd530642166e":[3,0,0,5,0,8],
 "classdrake_1_1lcm_1_1_drake_lcm.html#ab89da93f23549481dfbe2463f10c8f7b":[3,0,0,5,0,14],
-"classdrake_1_1lcm_1_1_drake_lcm.html#ad12ebfa1b7ab6ec343cbde2667052991":[3,0,0,5,0,10],
-"classdrake_1_1lcm_1_1_drake_lcm_base.html":[3,0,0,5,1]
+"classdrake_1_1lcm_1_1_drake_lcm.html#ad12ebfa1b7ab6ec343cbde2667052991":[3,0,0,5,0,10]
 };
