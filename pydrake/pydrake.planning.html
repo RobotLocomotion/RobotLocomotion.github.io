@@ -3344,8 +3344,8 @@ position of <code class="docutils literal notranslate"><span class="pre">traject
 <span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">GetContinuousRevoluteJointIndices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.GetContinuousRevoluteJointIndices" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a list of indices in the plant’s generalized positions which
 correspond to a continuous revolute joint (a revolute joint with no
-joint limits). This includes the revolute component of PlanarJoint and
-RpyFloatingJoint.</p>
+joint limits). This includes UniversalJoint, and the revolute
+component of PlanarJoint and RpyFloatingJoint.</p>
 </dd></dl>
 
 <dl class="py class">

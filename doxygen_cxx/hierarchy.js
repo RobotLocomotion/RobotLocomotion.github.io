@@ -50,7 +50,6 @@ var hierarchy =
     [ "Binding< drake::solvers::RotatedLorentzConeConstraint >", "classdrake_1_1solvers_1_1_binding.html", null ],
     [ "Binding< drake::solvers::VisualizationCallback >", "classdrake_1_1solvers_1_1_binding.html", null ],
     [ "Binding< internal::StaticFrictionConeComplementarityNonlinearConstraint >", "classdrake_1_1solvers_1_1_binding.html", null ],
-    [ "Joint< T >::BluePrint", "structdrake_1_1multibody_1_1_joint_1_1_blue_print.html", null ],
     [ "BodyShapeDescription", "classdrake_1_1planning_1_1_body_shape_description.html", null ],
     [ "bool_constant", null, [
       [ "is_eigen_nonvector_expression_double_pair< DerivedV, DerivedB >", "structdrake_1_1is__eigen__nonvector__expression__double__pair.html", null ],

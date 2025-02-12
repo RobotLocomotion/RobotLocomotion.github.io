@@ -191,9 +191,6 @@ class drake::multibody::Joint&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html">BluePrint</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Structure containing all the information needed to build the MultibodyTree implementation for a Joint.  <a href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html">JointImplementation</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) A <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> is implemented in terms of MultibodyTree elements, typically a Mobilizer.  <a href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -453,9 +450,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5f268758c7ca361722fd8526b7c32551"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a5f268758c7ca361722fd8526b7c32551">DoSetTopology</a> (const internal::MultibodyTreeTopology &amp;) override</td></tr>
 <tr class="memdesc:a5f268758c7ca361722fd8526b7c32551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb" title="Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree...">SetTopology()</a>.  <a href="#a5f268758c7ca361722fd8526b7c32551">More...</a><br /></td></tr>
 <tr class="separator:a5f268758c7ca361722fd8526b7c32551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a486050abefe61d0b8be870a4fa534f03"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html">BluePrint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a486050abefe61d0b8be870a4fa534f03">MakeImplementationBlueprint</a> (const internal::SpanningForest::Mobod &amp;mobod) const =0</td></tr>
-<tr class="memdesc:a486050abefe61d0b8be870a4fa534f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method must be implemented by derived classes in order to provide JointImplementationBuilder a <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html" title="(Advanced) Structure containing all the information needed to build the MultibodyTree implementation ...">BluePrint</a> of their internal implementation <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html" title="(Advanced) A Joint is implemented in terms of MultibodyTree elements, typically a Mobilizer.">JointImplementation</a>.  <a href="#a486050abefe61d0b8be870a4fa534f03">More...</a><br /></td></tr>
-<tr class="separator:a486050abefe61d0b8be870a4fa534f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f3539f25e5614d6783b5405d034497e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html">JointImplementation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a4f3539f25e5614d6783b5405d034497e">get_implementation</a> () const</td></tr>
 <tr class="memdesc:a4f3539f25e5614d6783b5405d034497e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the internal implementation of <code>this</code> joint.  <a href="#a4f3539f25e5614d6783b5405d034497e">More...</a><br /></td></tr>
 <tr class="separator:a4f3539f25e5614d6783b5405d034497e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2072,34 +2066,6 @@ For a <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.
 
 <p>Lock the joint. </p>
 <p>Its generalized velocities will be 0 until it is unlocked. </p>
-
-</div>
-</div>
-<a id="a486050abefe61d0b8be870a4fa534f03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a486050abefe61d0b8be870a4fa534f03">&#9670;&nbsp;</a></span>MakeImplementationBlueprint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html">BluePrint</a>&gt; MakeImplementationBlueprint </td>
-          <td>(</td>
-          <td class="paramtype">const internal::SpanningForest::Mobod &amp;&#160;</td>
-          <td class="paramname"><em>mobod</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This method must be implemented by derived classes in order to provide JointImplementationBuilder a <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html" title="(Advanced) Structure containing all the information needed to build the MultibodyTree implementation ...">BluePrint</a> of their internal implementation <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html" title="(Advanced) A Joint is implemented in terms of MultibodyTree elements, typically a Mobilizer.">JointImplementation</a>. </p>
 
 </div>
 </div>

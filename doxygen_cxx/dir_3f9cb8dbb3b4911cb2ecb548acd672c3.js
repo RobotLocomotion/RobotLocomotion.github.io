@@ -24,7 +24,6 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "geometry_spatial_inertia.h", "geometry__spatial__inertia_8h.html", "geometry__spatial__inertia_8h" ],
     [ "joint.h", "joint_8h.html", [
       [ "Joint", "classdrake_1_1multibody_1_1_joint.html", "classdrake_1_1multibody_1_1_joint" ],
-      [ "BluePrint", "structdrake_1_1multibody_1_1_joint_1_1_blue_print.html", "structdrake_1_1multibody_1_1_joint_1_1_blue_print" ],
       [ "JointImplementation", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation" ]
     ] ],
     [ "joint_actuator.h", "joint__actuator_8h.html", "joint__actuator_8h" ],

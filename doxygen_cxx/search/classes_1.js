@@ -36,7 +36,6 @@ var searchData=
   ['binding_3c_20drake_3a_3asolvers_3a_3arotatedlorentzconeconstraint_20_3e',['Binding&lt; drake::solvers::RotatedLorentzConeConstraint &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20drake_3a_3asolvers_3a_3avisualizationcallback_20_3e',['Binding&lt; drake::solvers::VisualizationCallback &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20internal_3a_3astaticfrictionconecomplementaritynonlinearconstraint_20_3e',['Binding&lt; internal::StaticFrictionConeComplementarityNonlinearConstraint &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
-  ['blueprint',['BluePrint',['../structdrake_1_1multibody_1_1_joint_1_1_blue_print.html',1,'drake::multibody::Joint']]],
   ['bodyshapedescription',['BodyShapeDescription',['../classdrake_1_1planning_1_1_body_shape_description.html',1,'drake::planning']]],
   ['bogackishampine3integrator',['BogackiShampine3Integrator',['../classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html',1,'drake::systems']]],
   ['bouncingball',['BouncingBall',['../classdrake_1_1examples_1_1bouncing__ball_1_1_bouncing_ball.html',1,'drake::examples::bouncing_ball']]],

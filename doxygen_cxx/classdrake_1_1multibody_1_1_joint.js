@@ -1,6 +1,5 @@
 var classdrake_1_1multibody_1_1_joint =
 [
-    [ "BluePrint", "structdrake_1_1multibody_1_1_joint_1_1_blue_print.html", "structdrake_1_1multibody_1_1_joint_1_1_blue_print" ],
     [ "JointImplementation", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation" ],
     [ "Joint", "classdrake_1_1multibody_1_1_joint.html#a1a9b8301235756e59d61585853764f89", null ],
     [ "Joint", "classdrake_1_1multibody_1_1_joint.html#aaa791aaf45d7556c3af317fb6040bb2c", null ],
@@ -53,7 +52,6 @@ var classdrake_1_1multibody_1_1_joint =
     [ "index", "classdrake_1_1multibody_1_1_joint.html#afa899cef34bf7c256f877cc3dc08cb65", null ],
     [ "is_locked", "classdrake_1_1multibody_1_1_joint.html#a0c0fd3c2e27243de55385f4f9695fc0e", null ],
     [ "Lock", "classdrake_1_1multibody_1_1_joint.html#a50c7f850050d4a94641ed72dd2d1968f", null ],
-    [ "MakeImplementationBlueprint", "classdrake_1_1multibody_1_1_joint.html#a486050abefe61d0b8be870a4fa534f03", null ],
     [ "name", "classdrake_1_1multibody_1_1_joint.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],
     [ "num_positions", "classdrake_1_1multibody_1_1_joint.html#aba2887f0ca1fbbdfb49cf6b0ee21e553", null ],
     [ "num_velocities", "classdrake_1_1multibody_1_1_joint.html#ae0163ac0976659d811e3337647ff0313", null ],

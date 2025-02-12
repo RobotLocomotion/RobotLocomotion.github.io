@@ -278,6 +278,9 @@ This option is not available on macOS.</li>
 user-provided <code class="language-plaintext highlighter-rouge">LAPACK::LAPACK</code> library instead of building from source.
 This option is not available on macOS.
 When ON, WITH_USER_BLAS must also be ON.</li>
+  <li>WITH_USER_ZLIB (default ON). When ON, uses <code class="language-plaintext highlighter-rouge">find_package(ZLIB)</code> to locate a
+user-provided <code class="language-plaintext highlighter-rouge">ZLIB::ZLIB</code> library instead of building from source. Caveat:
+On macOS, for now this hardcodes <code class="language-plaintext highlighter-rouge">-lz</code> instead of calling <code class="language-plaintext highlighter-rouge">find_package</code>.</li>
 </ul>
 
 <p>Adjusting closed-source (commercial) software dependencies:</p>

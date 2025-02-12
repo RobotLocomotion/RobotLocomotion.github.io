@@ -96,7 +96,6 @@ var searchData=
   ['block_5fsparse_5flower_5ftriangular_5for_5fsymmetric_5fmatrix_2eh',['block_sparse_lower_triangular_or_symmetric_matrix.h',['../block__sparse__lower__triangular__or__symmetric__matrix_8h.html',1,'']]],
   ['block_5fsparse_5fmatrix_2eh',['block_sparse_matrix.h',['../block__sparse__matrix_8h.html',1,'']]],
   ['block_5fsparse_5fsupernodal_5fsolver_2eh',['block_sparse_supernodal_solver.h',['../block__sparse__supernodal__solver_8h.html',1,'']]],
-  ['blueprint',['BluePrint',['../structdrake_1_1multibody_1_1_joint_1_1_blue_print.html',1,'drake::multibody::Joint']]],
   ['body',['body',['../classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a54ef649a3a7676a4a374f537f2f9bbbe',1,'drake::multibody::test::AxiallySymmetricFreeBodyPlant::body()'],['../classdrake_1_1multibody_1_1_frame.html#a54ef649a3a7676a4a374f537f2f9bbbe',1,'drake::multibody::Frame::body()'],['../namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150',1,'drake::multibody::Body()']]],
   ['body_5fforces',['body_forces',['../classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65',1,'drake::multibody::MultibodyForces']]],
   ['body_5fframe',['body_frame',['../classdrake_1_1multibody_1_1_rigid_body.html#a7548bfd7fb38358e82ab0977f918e364',1,'drake::multibody::RigidBody']]],

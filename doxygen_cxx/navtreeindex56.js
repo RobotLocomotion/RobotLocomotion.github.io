@@ -1,6 +1,5 @@
 var NAVTREEINDEX56 =
 {
-"internal__frame_8h.html":[4,0,0,4,26],
 "internal__geometry_8h.html":[4,0,0,4,27],
 "internal__geometry__names_8h.html":[4,0,0,8,10,29],
 "internal__http__service_8h.html":[4,0,0,4,6,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX56 =
 "matrix__block_8h.html":[4,0,0,8,1,12],
 "matrix__gain_8h.html":[4,0,0,12,6,15],
 "matrix__util_8h.html":[4,0,0,7,24],
-"matrix__util_8h.html#a141ec70804c105e09ab3b0a855152b8b":[4,0,0,7,24,5]
+"matrix__util_8h.html#a141ec70804c105e09ab3b0a855152b8b":[4,0,0,7,24,5],
+"matrix__util_8h.html#a5390bb2dadbe96cd6dfbe26c6891f100":[4,0,0,7,24,8]
 };
