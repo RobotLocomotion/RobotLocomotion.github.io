@@ -225,6 +225,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9130da22735a186f32196b00f7fc80ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a9130da22735a186f32196b00f7fc80ae">AddVelocityConstraintAtNormalizedTime</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &amp;constraint, <a class="el" href="classdouble.html">double</a> s)</td></tr>
 <tr class="memdesc:a9130da22735a186f32196b00f7fc80ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a (generic) constraint on trajectory velocity <code>q̇(t)</code>, evaluated at <code>s</code>.  <a href="#a9130da22735a186f32196b00f7fc80ae">More...</a><br /></td></tr>
 <tr class="separator:a9130da22735a186f32196b00f7fc80ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23331347f481d9bda5c8c130ba80db27"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a23331347f481d9bda5c8c130ba80db27">AddVelocityConstraintAtNormalizedTime</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt; &amp;binding, <a class="el" href="classdouble.html">double</a> s)</td></tr>
+<tr class="memdesc:a23331347f481d9bda5c8c130ba80db27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear constraint on some (or all) of the placeholder variables qdot, evaluated at a normalized time s.  <a href="#a23331347f481d9bda5c8c130ba80db27">More...</a><br /></td></tr>
+<tr class="separator:a23331347f481d9bda5c8c130ba80db27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67ebb878e71a66ac8d6ea1e739766d3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a67ebb878e71a66ac8d6ea1e739766d3b">AddPathAccelerationConstraint</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub, <a class="el" href="classdouble.html">double</a> s)</td></tr>
 <tr class="memdesc:a67ebb878e71a66ac8d6ea1e739766d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear constraint on the second derivative of the path, <code>lb</code> ≤ r̈(s) ≤ <code>ub</code>.  <a href="#a67ebb878e71a66ac8d6ea1e739766d3b">More...</a><br /></td></tr>
 <tr class="separator:a67ebb878e71a66ac8d6ea1e739766d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,6 +258,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a411b4823b494999f0d51e7d0afac17c0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a411b4823b494999f0d51e7d0afac17c0">AddPathEnergyCost</a> (<a class="el" href="classdouble.html">double</a> weight=1.0)</td></tr>
 <tr class="memdesc:a411b4823b494999f0d51e7d0afac17c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a convex quadratic cost on an upper bound on the energy of the path, ∫₀¹ |ṙ(s)|₂² ds, by summing the squared distance between the path control points.  <a href="#a411b4823b494999f0d51e7d0afac17c0">More...</a><br /></td></tr>
 <tr class="separator:a411b4823b494999f0d51e7d0afac17c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8a45ee9ea8cef303be1c8f6b15e32cd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ab8a45ee9ea8cef303be1c8f6b15e32cd">q</a> () const</td></tr>
+<tr class="memdesc:ab8a45ee9ea8cef303be1c8f6b15e32cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the placeholder variable for generalized position q.  <a href="#ab8a45ee9ea8cef303be1c8f6b15e32cd">More...</a><br /></td></tr>
+<tr class="separator:ab8a45ee9ea8cef303be1c8f6b15e32cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d114bef71b337e04ef9a228c15b5d85"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8d114bef71b337e04ef9a228c15b5d85">qdot</a> () const</td></tr>
+<tr class="memdesc:a8d114bef71b337e04ef9a228c15b5d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the placeholder variable for the time derivative of generalized position.  <a href="#a8d114bef71b337e04ef9a228c15b5d85">More...</a><br /></td></tr>
+<tr class="separator:a8d114bef71b337e04ef9a228c15b5d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c94493e777e834ed94dd8b5f1b9eba1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a6c94493e777e834ed94dd8b5f1b9eba1">qddot</a> () const</td></tr>
+<tr class="memdesc:a6c94493e777e834ed94dd8b5f1b9eba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the placeholder variable for the second time derivative of generalized position.  <a href="#a6c94493e777e834ed94dd8b5f1b9eba1">More...</a><br /></td></tr>
+<tr class="separator:a6c94493e777e834ed94dd8b5f1b9eba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a9a8474ae1e7ce1dab9a404fd6e6f6054"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a9a8474ae1e7ce1dab9a404fd6e6f6054">KinematicTrajectoryOptimization</a> (const <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html">KinematicTrajectoryOptimization</a> &amp;)=delete</td></tr>
 <tr class="separator:a9a8474ae1e7ce1dab9a404fd6e6f6054"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -838,7 +850,7 @@ B lb ≤ B ub</dd></dl>
 </div>
 </div>
 <a id="a9130da22735a186f32196b00f7fc80ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9130da22735a186f32196b00f7fc80ae">&#9670;&nbsp;</a></span>AddVelocityConstraintAtNormalizedTime()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9130da22735a186f32196b00f7fc80ae">&#9670;&nbsp;</a></span>AddVelocityConstraintAtNormalizedTime() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -871,6 +883,39 @@ B lb ≤ B ub</dd></dl>
 <dd>
 0 &lt;= <code>s</code> &lt;= 1. </dd></dl>
 
+</div>
+</div>
+<a id="a23331347f481d9bda5c8c130ba80db27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23331347f481d9bda5c8c130ba80db27">&#9670;&nbsp;</a></span>AddVelocityConstraintAtNormalizedTime() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a>&gt; &gt; AddVelocityConstraintAtNormalizedTime </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">solvers::LinearConstraint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>binding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a linear constraint on some (or all) of the placeholder variables qdot, evaluated at a normalized time s. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>binding Can only associate with <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8d114bef71b337e04ef9a228c15b5d85" title="Returns the placeholder variable for the time derivative of generalized position.">qdot()</a>. </dd>
+<dd>
+0 &lt;= <code>s</code> &lt;= 1.</dd></dl>
+<div class="fragment"><div class="line">Binding&lt;LinearConstraint&gt; b(LinearConstraint(A, b), trajopt.qdot());</div><div class="line">trajopt.AddVelocityConstraintAtNormalizedTime(b, 0);</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="a762563a2efd7d83a85bae4df50c66fa8"></a>
@@ -1055,6 +1100,66 @@ B lb ≤ B ub</dd></dl>
 </div><div class="memdoc">
 
 <p>Getter for the optimization program. </p>
+
+</div>
+</div>
+<a id="ab8a45ee9ea8cef303be1c8f6b15e32cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8a45ee9ea8cef303be1c8f6b15e32cd">&#9670;&nbsp;</a></span>q()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;&amp; q </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the placeholder variable for generalized position q. </p>
+<p>Note these are NOT decision variables in the MathematicalProgram. These variables will be substituted for the real decision variables at particular times. Passing these variables directily into objective/constraints for the MathematicalProgram will result in an error. </p>
+
+</div>
+</div>
+<a id="a6c94493e777e834ed94dd8b5f1b9eba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c94493e777e834ed94dd8b5f1b9eba1">&#9670;&nbsp;</a></span>qddot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;&amp; qddot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the placeholder variable for the second time derivative of generalized position. </p>
+<p>Note these are NOT decision variables in the MathematicalProgram. These variables will be substituted for the real decision variables at particular times. Passing these variables directily into objective/constraints for the MathematicalProgram will result in an error. </p>
+
+</div>
+</div>
+<a id="a8d114bef71b337e04ef9a228c15b5d85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d114bef71b337e04ef9a228c15b5d85">&#9670;&nbsp;</a></span>qdot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;&amp; qdot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the placeholder variable for the time derivative of generalized position. </p>
+<p>Note these are NOT decision variables in the MathematicalProgram. These variables will be substituted for the real decision variables at particular times. Passing these variables directily into objective/constraints for the MathematicalProgram will result in an error. </p>
 
 </div>
 </div>

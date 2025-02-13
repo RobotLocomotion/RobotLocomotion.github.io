@@ -534,7 +534,7 @@ var hierarchy =
     [ "IpoptSolverDetails", "structdrake_1_1solvers_1_1_ipopt_solver_details.html", null ],
     [ "IrisFromCliqueCoverOptions", "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html", null ],
     [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html", null ],
-    [ "IrisZoOptions", "structdrake_1_1planning_1_1_iris_zo_options.html", null ],
+    [ "IrisZoOptions", "classdrake_1_1planning_1_1_iris_zo_options.html", null ],
     [ "is_base_of", null, [
       [ "is_eigen_type< Derived >", "structdrake_1_1is__eigen__type.html", null ]
     ] ],

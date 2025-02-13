@@ -7272,8 +7272,8 @@ effects on the dynamics of the system.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if q is not of size</strong> – </p></li>
-<li><p><strong>num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, </strong><strong>if q is not of size</strong> – </p></li>
+<li><p><strong>num_positions</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>q contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7288,8 +7288,9 @@ effects on the dynamics of the system.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, </strong><strong>if the model_instance</strong> – </p></li>
-<li><p><strong>is invalid</strong><strong>, or </strong><strong>if the length of q_instance is not equal to</strong> – </p></li>
-<li><p><strong>num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>`</strong> – </p></li>
+<li><p><strong>is invalid</strong><strong>, </strong><strong>if the length of q_instance is not equal to</strong> – </p></li>
+<li><p><strong>num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>`</strong><strong>, or </strong><strong>if q_instance contain</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7362,8 +7363,9 @@ vector. Prefer this method over GetMutablePositions().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
-<li><p><strong>correspond to the Context for a multibody model</strong><strong>, or </strong><strong>if the length</strong> – </p></li>
-<li><p><strong>of q is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the length of</strong> – </p></li>
+<li><p><strong>q` is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>if q contain</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7376,8 +7378,9 @@ vector. Prefer this method over GetMutablePositions().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
-<li><p><strong>correspond to the Context for a multibody model</strong><strong>, or </strong><strong>if the length</strong> – </p></li>
-<li><p><strong>of q is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the length of</strong> – </p></li>
+<li><p><strong>q` is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>if q contain</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7397,8 +7400,9 @@ GetMutablePositionsAndVelocities().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
-<li><p><strong>correspond to the context for a multibody model</strong><strong>, or </strong><strong>if the length</strong> – </p></li>
-<li><p><strong>of q_v is not equal to num_positions</strong><strong>(</strong><strong>) </strong><strong>+ num_velocities</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>correspond to the context for a multibody model</strong><strong>, </strong><strong>if the length of</strong> – </p></li>
+<li><p><strong>q_v` is not equal to num_positions</strong><strong>(</strong><strong>) </strong><strong>+ num_velocities</strong><strong>(</strong><strong>)</strong><strong>, </strong><strong>o</strong> – </p></li>
+<li><p><strong>if q_v contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7412,9 +7416,10 @@ vector [q; v] for a specified model instance in a given Context.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
 <li><p><strong>correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the model</strong> – </p></li>
-<li><p><strong>instance index is invalid</strong><strong>, or </strong><strong>if the length of q_v is not</strong> – </p></li>
-<li><p><strong>equal to ``num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>) </strong><strong>+</strong> – </p></li>
-<li><p><strong>num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>``.</strong> – </p></li>
+<li><p><strong>instance index is invalid</strong><strong>, </strong><strong>if the length of q_v is not equal</strong> – </p></li>
+<li><p><strong>to ``num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>) </strong><strong>+</strong> – </p></li>
+<li><p><strong>num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>``</strong><strong>, or </strong><strong>if q_v contains</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7461,8 +7466,9 @@ vector. Prefer this method over GetMutableVelocities().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if the context is nullptr</strong><strong>, </strong><strong>if the context does</strong> – </p></li>
-<li><p><strong>not correspond to the context for a multibody model</strong><strong>, or </strong><strong>if the</strong> – </p></li>
-<li><p><strong>length of v is not equal to num_velocities</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>not correspond to the context for a multibody model</strong><strong>, </strong><strong>if the length</strong> – </p></li>
+<li><p><strong>of v is not equal to num_velocities</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>if v</strong> – </p></li>
+<li><p><strong>contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7476,8 +7482,9 @@ given Context from a given vector.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if the context is nullptr</strong><strong>, </strong><strong>if context does</strong> – </p></li>
 <li><p><strong>not correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the model</strong> – </p></li>
-<li><p><strong>instance index is invalid</strong><strong>, or </strong><strong>if the length of v_instance is</strong> – </p></li>
-<li><p><strong>not equal to num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>instance index is invalid</strong><strong>, </strong><strong>if the length of v_instance is not</strong> – </p></li>
+<li><p><strong>equal to num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>, or </strong><strong>if v_instance</strong> – </p></li>
+<li><p><strong>contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -7489,8 +7496,9 @@ given Context from a given vector.</p>
 <dd><p>Sets the vector of generalized velocities for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in
 <code class="docutils literal notranslate"><span class="pre">v</span></code> using <code class="docutils literal notranslate"><span class="pre">v_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal notranslate"><span class="pre">v</span></code> is not of size
-MultibodyPlant::num_velocities() or <code class="docutils literal notranslate"><span class="pre">v_instance</span></code> is not of size
-<code class="docutils literal notranslate"><span class="pre">MultibodyPlant::num_positions(model_instance)</span></code>.</p>
+MultibodyPlant::num_velocities(), <code class="docutils literal notranslate"><span class="pre">v_instance</span></code> is not of size
+<code class="docutils literal notranslate"><span class="pre">MultibodyPlant::num_positions(model_instance)</span></code>, or <code class="docutils literal notranslate"><span class="pre">v_instance</span></code>
+contains non-finite values.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -12981,8 +12989,8 @@ effects on the dynamics of the system.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if q is not of size</strong> – </p></li>
-<li><p><strong>num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, </strong><strong>if q is not of size</strong> – </p></li>
+<li><p><strong>num_positions</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>q contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -12997,8 +13005,9 @@ effects on the dynamics of the system.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, </strong><strong>if the model_instance</strong> – </p></li>
-<li><p><strong>is invalid</strong><strong>, or </strong><strong>if the length of q_instance is not equal to</strong> – </p></li>
-<li><p><strong>num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>`</strong> – </p></li>
+<li><p><strong>is invalid</strong><strong>, </strong><strong>if the length of q_instance is not equal to</strong> – </p></li>
+<li><p><strong>num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>`</strong><strong>, or </strong><strong>if q_instance contain</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -13071,8 +13080,9 @@ vector. Prefer this method over GetMutablePositions().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
-<li><p><strong>correspond to the Context for a multibody model</strong><strong>, or </strong><strong>if the length</strong> – </p></li>
-<li><p><strong>of q is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the length of</strong> – </p></li>
+<li><p><strong>q` is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>if q contain</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -13085,8 +13095,9 @@ vector. Prefer this method over GetMutablePositions().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
-<li><p><strong>correspond to the Context for a multibody model</strong><strong>, or </strong><strong>if the length</strong> – </p></li>
-<li><p><strong>of q is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the length of</strong> – </p></li>
+<li><p><strong>q` is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>if q contain</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -13106,8 +13117,9 @@ GetMutablePositionsAndVelocities().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
-<li><p><strong>correspond to the context for a multibody model</strong><strong>, or </strong><strong>if the length</strong> – </p></li>
-<li><p><strong>of q_v is not equal to num_positions</strong><strong>(</strong><strong>) </strong><strong>+ num_velocities</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>correspond to the context for a multibody model</strong><strong>, </strong><strong>if the length of</strong> – </p></li>
+<li><p><strong>q_v` is not equal to num_positions</strong><strong>(</strong><strong>) </strong><strong>+ num_velocities</strong><strong>(</strong><strong>)</strong><strong>, </strong><strong>o</strong> – </p></li>
+<li><p><strong>if q_v contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -13121,9 +13133,10 @@ vector [q; v] for a specified model instance in a given Context.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
 <li><p><strong>correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the model</strong> – </p></li>
-<li><p><strong>instance index is invalid</strong><strong>, or </strong><strong>if the length of q_v is not</strong> – </p></li>
-<li><p><strong>equal to ``num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>) </strong><strong>+</strong> – </p></li>
-<li><p><strong>num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>``.</strong> – </p></li>
+<li><p><strong>instance index is invalid</strong><strong>, </strong><strong>if the length of q_v is not equal</strong> – </p></li>
+<li><p><strong>to ``num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>) </strong><strong>+</strong> – </p></li>
+<li><p><strong>num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>``</strong><strong>, or </strong><strong>if q_v contains</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -13170,8 +13183,9 @@ vector. Prefer this method over GetMutableVelocities().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if the context is nullptr</strong><strong>, </strong><strong>if the context does</strong> – </p></li>
-<li><p><strong>not correspond to the context for a multibody model</strong><strong>, or </strong><strong>if the</strong> – </p></li>
-<li><p><strong>length of v is not equal to num_velocities</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>not correspond to the context for a multibody model</strong><strong>, </strong><strong>if the length</strong> – </p></li>
+<li><p><strong>of v is not equal to num_velocities</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>if v</strong> – </p></li>
+<li><p><strong>contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -13185,8 +13199,9 @@ given Context from a given vector.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if the context is nullptr</strong><strong>, </strong><strong>if context does</strong> – </p></li>
 <li><p><strong>not correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the model</strong> – </p></li>
-<li><p><strong>instance index is invalid</strong><strong>, or </strong><strong>if the length of v_instance is</strong> – </p></li>
-<li><p><strong>not equal to num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>instance index is invalid</strong><strong>, </strong><strong>if the length of v_instance is not</strong> – </p></li>
+<li><p><strong>equal to num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>, or </strong><strong>if v_instance</strong> – </p></li>
+<li><p><strong>contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -13198,8 +13213,9 @@ given Context from a given vector.</p>
 <dd><p>Sets the vector of generalized velocities for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in
 <code class="docutils literal notranslate"><span class="pre">v</span></code> using <code class="docutils literal notranslate"><span class="pre">v_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal notranslate"><span class="pre">v</span></code> is not of size
-MultibodyPlant::num_velocities() or <code class="docutils literal notranslate"><span class="pre">v_instance</span></code> is not of size
-<code class="docutils literal notranslate"><span class="pre">MultibodyPlant::num_positions(model_instance)</span></code>.</p>
+MultibodyPlant::num_velocities(), <code class="docutils literal notranslate"><span class="pre">v_instance</span></code> is not of size
+<code class="docutils literal notranslate"><span class="pre">MultibodyPlant::num_positions(model_instance)</span></code>, or <code class="docutils literal notranslate"><span class="pre">v_instance</span></code>
+contains non-finite values.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -18684,8 +18700,8 @@ effects on the dynamics of the system.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if the plant is not finalized</strong><strong> or </strong><strong>if q is not of size</strong> – </p></li>
-<li><p><strong>num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, </strong><strong>if q is not of size</strong> – </p></li>
+<li><p><strong>num_positions</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>q contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -18700,8 +18716,9 @@ effects on the dynamics of the system.</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, </strong><strong>if the model_instance</strong> – </p></li>
-<li><p><strong>is invalid</strong><strong>, or </strong><strong>if the length of q_instance is not equal to</strong> – </p></li>
-<li><p><strong>num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>`</strong> – </p></li>
+<li><p><strong>is invalid</strong><strong>, </strong><strong>if the length of q_instance is not equal to</strong> – </p></li>
+<li><p><strong>num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>`</strong><strong>, or </strong><strong>if q_instance contain</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -18774,8 +18791,9 @@ vector. Prefer this method over GetMutablePositions().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
-<li><p><strong>correspond to the Context for a multibody model</strong><strong>, or </strong><strong>if the length</strong> – </p></li>
-<li><p><strong>of q is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the length of</strong> – </p></li>
+<li><p><strong>q` is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>if q contain</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -18788,8 +18806,9 @@ vector. Prefer this method over GetMutablePositions().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
-<li><p><strong>correspond to the Context for a multibody model</strong><strong>, or </strong><strong>if the length</strong> – </p></li>
-<li><p><strong>of q is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the length of</strong> – </p></li>
+<li><p><strong>q` is not equal to num_positions</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>if q contain</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -18809,8 +18828,9 @@ GetMutablePositionsAndVelocities().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
-<li><p><strong>correspond to the context for a multibody model</strong><strong>, or </strong><strong>if the length</strong> – </p></li>
-<li><p><strong>of q_v is not equal to num_positions</strong><strong>(</strong><strong>) </strong><strong>+ num_velocities</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>correspond to the context for a multibody model</strong><strong>, </strong><strong>if the length of</strong> – </p></li>
+<li><p><strong>q_v` is not equal to num_positions</strong><strong>(</strong><strong>) </strong><strong>+ num_velocities</strong><strong>(</strong><strong>)</strong><strong>, </strong><strong>o</strong> – </p></li>
+<li><p><strong>if q_v contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -18824,9 +18844,10 @@ vector [q; v] for a specified model instance in a given Context.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if context is nullptr</strong><strong>, </strong><strong>if context does not</strong> – </p></li>
 <li><p><strong>correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the model</strong> – </p></li>
-<li><p><strong>instance index is invalid</strong><strong>, or </strong><strong>if the length of q_v is not</strong> – </p></li>
-<li><p><strong>equal to ``num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>) </strong><strong>+</strong> – </p></li>
-<li><p><strong>num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>``.</strong> – </p></li>
+<li><p><strong>instance index is invalid</strong><strong>, </strong><strong>if the length of q_v is not equal</strong> – </p></li>
+<li><p><strong>to ``num_positions</strong><strong>(</strong><strong>model_instance</strong><strong>) </strong><strong>+</strong> – </p></li>
+<li><p><strong>num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>``</strong><strong>, or </strong><strong>if q_v contains</strong> – </p></li>
+<li><p><strong>non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -18873,8 +18894,9 @@ vector. Prefer this method over GetMutableVelocities().</p>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if the context is nullptr</strong><strong>, </strong><strong>if the context does</strong> – </p></li>
-<li><p><strong>not correspond to the context for a multibody model</strong><strong>, or </strong><strong>if the</strong> – </p></li>
-<li><p><strong>length of v is not equal to num_velocities</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>not correspond to the context for a multibody model</strong><strong>, </strong><strong>if the length</strong> – </p></li>
+<li><p><strong>of v is not equal to num_velocities</strong><strong>(</strong><strong>)</strong><strong>, or </strong><strong>if v</strong> – </p></li>
+<li><p><strong>contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -18888,8 +18910,9 @@ given Context from a given vector.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if the context is nullptr</strong><strong>, </strong><strong>if context does</strong> – </p></li>
 <li><p><strong>not correspond to the Context for a multibody model</strong><strong>, </strong><strong>if the model</strong> – </p></li>
-<li><p><strong>instance index is invalid</strong><strong>, or </strong><strong>if the length of v_instance is</strong> – </p></li>
-<li><p><strong>not equal to num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>instance index is invalid</strong><strong>, </strong><strong>if the length of v_instance is not</strong> – </p></li>
+<li><p><strong>equal to num_velocities</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>, or </strong><strong>if v_instance</strong> – </p></li>
+<li><p><strong>contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -18901,8 +18924,9 @@ given Context from a given vector.</p>
 <dd><p>Sets the vector of generalized velocities for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in
 <code class="docutils literal notranslate"><span class="pre">v</span></code> using <code class="docutils literal notranslate"><span class="pre">v_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal notranslate"><span class="pre">v</span></code> is not of size
-MultibodyPlant::num_velocities() or <code class="docutils literal notranslate"><span class="pre">v_instance</span></code> is not of size
-<code class="docutils literal notranslate"><span class="pre">MultibodyPlant::num_positions(model_instance)</span></code>.</p>
+MultibodyPlant::num_velocities(), <code class="docutils literal notranslate"><span class="pre">v_instance</span></code> is not of size
+<code class="docutils literal notranslate"><span class="pre">MultibodyPlant::num_positions(model_instance)</span></code>, or <code class="docutils literal notranslate"><span class="pre">v_instance</span></code>
+contains non-finite values.</p>
 </dd></dl>
 
 <dl class="py method">

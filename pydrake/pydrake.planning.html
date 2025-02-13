@@ -3514,7 +3514,9 @@ fraction, confidence level, and various algorithmic settings.</p>
 </dd>
 </dl>
 <p>The <code class="docutils literal notranslate"><span class="pre">starting_ellipsoid</span></code> and <code class="docutils literal notranslate"><span class="pre">domain</span></code> must describe elements in
-the same ambient dimension as the configuration space of the robot.</p>
+the same ambient dimension as the configuration space of the robot,
+unless a parameterization is specified (in which case, they must match
+<code class="docutils literal notranslate"><span class="pre">options.parameterization_dimension</span></code>).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A HPolyhedron representing the computed collision-free region in
@@ -3623,7 +3625,8 @@ added.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelism</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.parallelism" title="Permalink to this definition"></a></dt>
 <dd><p>Number of threads to use when updating the particles. If the user
 requests more threads than the CollisionChecker supports, that number
-of threads will be used instead.</p>
+of threads will be used instead. However, see also
+<code class="docutils literal notranslate"><span class="pre">parameterization_is_threadsafe</span></code>.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -3941,8 +3944,12 @@ deprecation..</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.AddVelocityConstraintAtNormalizedTime">
-<span class="sig-name descname"><span class="pre">AddVelocityConstraintAtNormalizedTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><span class="pre">pydrake.solvers.Constraint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Constraint</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddVelocityConstraintAtNormalizedTime" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a (generic) constraint on trajectory velocity <code class="docutils literal notranslate"><span class="pre">q̇(t)</span></code>,
+<span class="sig-name descname"><span class="pre">AddVelocityConstraintAtNormalizedTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddVelocityConstraintAtNormalizedTime" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>AddVelocityConstraintAtNormalizedTime(self: pydrake.planning.KinematicTrajectoryOptimization, constraint: pydrake.solvers.Constraint, s: float) -&gt; pydrake.solvers.Binding[Constraint]</p></li>
+</ol>
+<p>Adds a (generic) constraint on trajectory velocity <code class="docutils literal notranslate"><span class="pre">q̇(t)</span></code>,
 evaluated at <code class="docutils literal notranslate"><span class="pre">s</span></code>. The constraint will be evaluated as if it is bound
 with variables corresponding to <code class="docutils literal notranslate"><span class="pre">[q(T*s),</span> <span class="pre">q̇(T*s)]</span></code>.</p>
 <p>This is a potentially confusing mix of <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code>, but it is
@@ -3959,7 +3966,23 @@ constraints, whereas this method adds nonconvex generic constraints.</p>
 <dt>Precondition:</dt><dd><p>0 &lt;= <code class="docutils literal notranslate"><span class="pre">s</span></code> &lt;= 1.</p>
 </dd>
 </dl>
-</dd></dl>
+<ol class="arabic simple" start="2">
+<li><p>AddVelocityConstraintAtNormalizedTime(self: pydrake.planning.KinematicTrajectoryOptimization, binding: pydrake.solvers.Binding[LinearConstraint], s: float) -&gt; list[pydrake.solvers.Binding[LinearConstraint]]</p></li>
+</ol>
+<p>Adds a linear constraint on some (or all) of the placeholder variables
+qdot, evaluated at a normalized time s.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>binding Can only associate with qdot().</p>
+</dd>
+<dt>Precondition:</dt><dd><p>0 &lt;= <code class="docutils literal notranslate"><span class="pre">s</span></code> &lt;= 1.</p>
+</dd>
+</dl>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cpp</span><span class="p">}</span><span class="w"></span>
+<span class="n">Binding</span><span class="o">&lt;</span><span class="n">LinearConstraint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">(</span><span class="n">LinearConstraint</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">),</span><span class="w"> </span><span class="n">trajopt</span><span class="p">.</span><span class="n">qdot</span><span class="p">());</span><span class="w"></span>
+<span class="n">trajopt</span><span class="p">.</span><span class="n">AddVelocityConstraintAtNormalizedTime</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.basis">
@@ -4004,6 +4027,39 @@ trajectory.</p>
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.prog">
 <span class="sig-name descname"><span class="pre">prog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram" title="pydrake.solvers.MathematicalProgram"><span class="pre">pydrake.solvers.MathematicalProgram</span></a></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.prog" title="Permalink to this definition"></a></dt>
 <dd><p>Getter for the optimization program.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.q">
+<span class="sig-name descname"><span class="pre">q</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.q" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the placeholder variable for generalized position q. Note
+these are NOT decision variables in the MathematicalProgram. These
+variables will be substituted for the real decision variables at
+particular times. Passing these variables directily into
+objective/constraints for the MathematicalProgram will result in an
+error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.qddot">
+<span class="sig-name descname"><span class="pre">qddot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.qddot" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the placeholder variable for the second time derivative of
+generalized position. Note these are NOT decision variables in the
+MathematicalProgram. These variables will be substituted for the real
+decision variables at particular times. Passing these variables
+directily into objective/constraints for the MathematicalProgram will
+result in an error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.qdot">
+<span class="sig-name descname"><span class="pre">qdot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.qdot" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the placeholder variable for the time derivative of
+generalized position. Note these are NOT decision variables in the
+MathematicalProgram. These variables will be substituted for the real
+decision variables at particular times. Passing these variables
+directily into objective/constraints for the MathematicalProgram will
+result in an error.</p>
 </dd></dl>
 
 <dl class="py method">

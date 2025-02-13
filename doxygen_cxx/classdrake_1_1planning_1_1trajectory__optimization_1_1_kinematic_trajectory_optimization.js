@@ -18,6 +18,7 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_
     [ "AddPositionBounds", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a81d27229471360feee82aac9ea2be7e7", null ],
     [ "AddVelocityBounds", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8529eb42d4e8ce382c0a53ee9b26e236", null ],
     [ "AddVelocityConstraintAtNormalizedTime", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a9130da22735a186f32196b00f7fc80ae", null ],
+    [ "AddVelocityConstraintAtNormalizedTime", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a23331347f481d9bda5c8c130ba80db27", null ],
     [ "basis", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a762563a2efd7d83a85bae4df50c66fa8", null ],
     [ "control_points", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a3ca6213bff8c9ae3df9fd4e864a58fb1", null ],
     [ "duration", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ada7b35ee8b161bd6ccc2709ccf3c1022", null ],
@@ -27,6 +28,9 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_
     [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a547060be7141e61d9ce65e75ae93f00d", null ],
     [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aab1f0d3cbfc0204c739cdd549d980d2b", null ],
     [ "prog", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#afcc8c6b2091ff4447ee2951bb7907de8", null ],
+    [ "q", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#ab8a45ee9ea8cef303be1c8f6b15e32cd", null ],
+    [ "qddot", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a6c94493e777e834ed94dd8b5f1b9eba1", null ],
+    [ "qdot", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8d114bef71b337e04ef9a228c15b5d85", null ],
     [ "ReconstructTrajectory", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#aeb432a55ef7765459155c69a539d8658", null ],
     [ "SetInitialGuess", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8375ea48a9fad7145ae1d2e97d851f76", null ]
 ];

@@ -416,6 +416,8 @@ var group__primitive__systems =
       [ "SetVectorState", "classdrake_1_1systems_1_1_zero_order_hold.html#a696569e9fa87b3f2b37594d647909409", null ],
       [ "ZeroOrderHold", "classdrake_1_1systems_1_1_zero_order_hold.html#a0d112baac097caa5fed5378a07d423ce", null ]
     ] ],
+    [ "DiscreteTimeApproximation", "group__primitive__systems.html#gad0f0167af569b99ed8965f8a4422032f", null ],
+    [ "DiscreteTimeApproximation", "group__primitive__systems.html#ga4342b3c020d0e8863c1e614fa95606ea", null ],
     [ "FirstOrderTaylorApproximation", "group__primitive__systems.html#ga14e2725af4ae2110baaf69555a49b591", null ],
     [ "Linearize", "group__primitive__systems.html#ga80a6af98e4258a474416aae6ab3abdd8", null ]
 ];

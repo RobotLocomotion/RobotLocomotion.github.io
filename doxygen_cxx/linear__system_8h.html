@@ -228,6 +228,14 @@ Functions</h2></td></tr>
 <tr class="memitem:gafef1c264968026046996e35551b7155e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimator__systems.html#gafef1c264968026046996e35551b7155e">IsDetectable</a> (const LinearSystem&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;sys, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; threshold=std::nullopt)</td></tr>
 <tr class="memdesc:gafef1c264968026046996e35551b7155e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the system is detectable.  <a href="group__estimator__systems.html#gafef1c264968026046996e35551b7155e">More...</a><br /></td></tr>
 <tr class="separator:gafef1c264968026046996e35551b7155e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad0f0167af569b99ed8965f8a4422032f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gad0f0167af569b99ed8965f8a4422032f"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; LinearSystem&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__primitive__systems.html#gad0f0167af569b99ed8965f8a4422032f">DiscreteTimeApproximation</a> (const LinearSystem&lt; T &gt; &amp;system, <a class="el" href="classdouble.html">double</a> time_period)</td></tr>
+<tr class="memdesc:gad0f0167af569b99ed8965f8a4422032f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time linear system to a discrete-time linear system using the zero-order hold (ZOH) method.  <a href="group__primitive__systems.html#gad0f0167af569b99ed8965f8a4422032f">More...</a><br /></td></tr>
+<tr class="separator:gad0f0167af569b99ed8965f8a4422032f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4342b3c020d0e8863c1e614fa95606ea"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga4342b3c020d0e8863c1e614fa95606ea"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; AffineSystem&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__primitive__systems.html#ga4342b3c020d0e8863c1e614fa95606ea">DiscreteTimeApproximation</a> (const AffineSystem&lt; T &gt; &amp;system, <a class="el" href="classdouble.html">double</a> time_period)</td></tr>
+<tr class="memdesc:ga4342b3c020d0e8863c1e614fa95606ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time affine system to a discrete-time affine system using the zero-order hold (ZOH) method.  <a href="group__primitive__systems.html#ga4342b3c020d0e8863c1e614fa95606ea">More...</a><br /></td></tr>
+<tr class="separator:ga4342b3c020d0e8863c1e614fa95606ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

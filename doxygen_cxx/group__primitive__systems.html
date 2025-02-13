@@ -272,8 +272,116 @@ Functions</h2></td></tr>
 <tr class="memitem:ga14e2725af4ae2110baaf69555a49b591"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__primitive__systems.html#ga14e2725af4ae2110baaf69555a49b591">FirstOrderTaylorApproximation</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9">InputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> &gt; input_port_index=<a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9ae969b88961b5a19a96fee66796e8d713">InputPortSelection::kUseFirstInputIfItExists</a>, std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a00432489001229d1f63cb6d373403a6e">OutputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">OutputPortIndex</a> &gt; output_port_index=<a class="el" href="namespacedrake_1_1systems.html#a00432489001229d1f63cb6d373403a6ea2e0016ab225d09e0af0e4648992d8be5">OutputPortSelection::kUseFirstOutputIfItExists</a>)</td></tr>
 <tr class="memdesc:ga14e2725af4ae2110baaf69555a49b591"><td class="mdescLeft">&#160;</td><td class="mdescRight">A first-order Taylor series approximation to a <code>system</code> in the neighborhood of an arbitrary point.  <a href="group__primitive__systems.html#ga14e2725af4ae2110baaf69555a49b591">More...</a><br /></td></tr>
 <tr class="separator:ga14e2725af4ae2110baaf69555a49b591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad0f0167af569b99ed8965f8a4422032f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gad0f0167af569b99ed8965f8a4422032f"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__primitive__systems.html#gad0f0167af569b99ed8965f8a4422032f">DiscreteTimeApproximation</a> (const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; T &gt; &amp;system, <a class="el" href="classdouble.html">double</a> time_period)</td></tr>
+<tr class="memdesc:gad0f0167af569b99ed8965f8a4422032f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time linear system to a discrete-time linear system using the zero-order hold (ZOH) method.  <a href="group__primitive__systems.html#gad0f0167af569b99ed8965f8a4422032f">More...</a><br /></td></tr>
+<tr class="separator:gad0f0167af569b99ed8965f8a4422032f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4342b3c020d0e8863c1e614fa95606ea"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga4342b3c020d0e8863c1e614fa95606ea"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__primitive__systems.html#ga4342b3c020d0e8863c1e614fa95606ea">DiscreteTimeApproximation</a> (const <a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt; T &gt; &amp;system, <a class="el" href="classdouble.html">double</a> time_period)</td></tr>
+<tr class="memdesc:ga4342b3c020d0e8863c1e614fa95606ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time affine system to a discrete-time affine system using the zero-order hold (ZOH) method.  <a href="group__primitive__systems.html#ga4342b3c020d0e8863c1e614fa95606ea">More...</a><br /></td></tr>
+<tr class="separator:ga4342b3c020d0e8863c1e614fa95606ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gad0f0167af569b99ed8965f8a4422032f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad0f0167af569b99ed8965f8a4422032f">&#9670;&nbsp;</a></span>DiscreteTimeApproximation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt;T&gt; &gt; drake::systems::DiscreteTimeApproximation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>time_period</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a continuous-time linear system to a discrete-time linear system using the zero-order hold (ZOH) method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>The continuous-time <a class="el" href="classdrake_1_1systems_1_1_linear_system.html" title="A discrete OR continuous linear system.">LinearSystem</a>. </td></tr>
+    <tr><td class="paramname">time_period</td><td>The sampling time period. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A discrete-time <a class="el" href="classdrake_1_1systems_1_1_linear_system.html" title="A discrete OR continuous linear system.">LinearSystem</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the <code>system</code> is not continuous or <code>time_period</code> &lt;= 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4342b3c020d0e8863c1e614fa95606ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4342b3c020d0e8863c1e614fa95606ea">&#9670;&nbsp;</a></span>DiscreteTimeApproximation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt;T&gt; &gt; drake::systems::DiscreteTimeApproximation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>time_period</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a continuous-time affine system to a discrete-time affine system using the zero-order hold (ZOH) method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>The continuous-time <a class="el" href="classdrake_1_1systems_1_1_affine_system.html" title="A discrete OR continuous affine system (with constant coefficients).">AffineSystem</a>. </td></tr>
+    <tr><td class="paramname">time_period</td><td>The sampling time period. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A discrete-time <a class="el" href="classdrake_1_1systems_1_1_affine_system.html" title="A discrete OR continuous affine system (with constant coefficients).">AffineSystem</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the <code>system</code> is not continuous or <code>time_period</code> &lt;= 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga14e2725af4ae2110baaf69555a49b591"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga14e2725af4ae2110baaf69555a49b591">&#9670;&nbsp;</a></span>FirstOrderTaylorApproximation()</h2>
 

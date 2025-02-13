@@ -88,7 +88,7 @@ var searchData=
   ['bindtypesafeindex',['BindTypeSafeIndex',['../namespacedrake_1_1pydrake.html#a236143263d0a18d6ec439f707140d7e1',1,'drake::pydrake']]],
   ['binomial_5fcoefficient_2eh',['binomial_coefficient.h',['../binomial__coefficient_8h.html',1,'']]],
   ['binomialcoefficient',['BinomialCoefficient',['../namespacedrake_1_1math.html#ad23280f04f3264b00fe8e359508c89a1',1,'drake::math']]],
-  ['bisection_5fsteps',['bisection_steps',['../structdrake_1_1planning_1_1_iris_zo_options.html#a8087faf86b2fa08aae91525960c7b32f',1,'drake::planning::IrisZoOptions']]],
+  ['bisection_5fsteps',['bisection_steps',['../classdrake_1_1planning_1_1_iris_zo_options.html#a8087faf86b2fa08aae91525960c7b32f',1,'drake::planning::IrisZoOptions']]],
   ['bit_5fcast_2eh',['bit_cast.h',['../bit__cast_8h.html',1,'']]],
   ['block',['Block',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a45001b70f1a92e1d01778b69bb61adf3',1,'drake::trajectories::PiecewisePolynomial']]],
   ['block_5f3x3_5fsparse_5fmatrix_2eh',['block_3x3_sparse_matrix.h',['../block__3x3__sparse__matrix_8h.html',1,'']]],
