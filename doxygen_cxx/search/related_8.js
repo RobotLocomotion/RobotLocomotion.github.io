@@ -54,7 +54,6 @@ var searchData=
   ['is_5ftrue',['is_true',['../classdrake_1_1symbolic_1_1_formula.html#ac015488f4fe334717bbe5a47e1f1da87',1,'drake::symbolic::Formula']]],
   ['is_5funinterpreted_5ffunction',['is_uninterpreted_function',['../classdrake_1_1symbolic_1_1_expression.html#aa19665aa37ff4c0aff7aa1ca142eff46',1,'drake::symbolic::Expression']]],
   ['is_5fvariable',['is_variable',['../classdrake_1_1symbolic_1_1_expression.html#a3313ad6342effa904bba98f1ef811902',1,'drake::symbolic::Expression::is_variable()'],['../classdrake_1_1symbolic_1_1_formula.html#aebdc9659eb8cc2eb735925fc4f2828ac',1,'drake::symbolic::Formula::is_variable()']]],
-  ['jointimplementationbuilder_3c_20t_20_3e',['JointImplementationBuilder&lt; T &gt;',['../classdrake_1_1multibody_1_1_joint.html#a808e912cd9bc754f25ddbb84feb3f150',1,'drake::multibody::Joint']]],
   ['multibodyplantdiscreteupdatemanagerattorney_3c_20t_20_3e',['MultibodyPlantDiscreteUpdateManagerAttorney&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_plant.html#a9bf56e6eda41a6cc82296377a2267479',1,'drake::multibody::MultibodyPlant']]],
   ['multibodyplantmodelattorney_3c_20t_20_3e',['MultibodyPlantModelAttorney&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_plant.html#a7266290642dbb492700e7ebae2e00a20',1,'drake::multibody::MultibodyPlant']]],
   ['multibodytree_3c_20t_20_3e',['MultibodyTree&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_element.html#a49109966f9505633199c07ad06b0632d',1,'drake::multibody::MultibodyElement']]],

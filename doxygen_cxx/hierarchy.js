@@ -540,7 +540,6 @@ var hierarchy =
     ] ],
     [ "ImplicitIntegrator< T >::IterationMatrix", "classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html", null ],
     [ "JointImpedanceController", "classdrake_1_1systems_1_1controllers_1_1_joint_impedance_controller.html", null ],
-    [ "Joint< T >::JointImplementation", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html", null ],
     [ "KinematicsVector< Id, KinematicsValue >", "classdrake_1_1geometry_1_1_kinematics_vector.html", null ],
     [ "KinematicTrajectoryOptimization", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html", null ],
     [ "KukaRobotJointReactionForces< T >", "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html", null ],

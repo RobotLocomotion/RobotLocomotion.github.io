@@ -265,7 +265,6 @@ var searchData=
   ['get_5fid',['get_id',['../classdrake_1_1symbolic_1_1_variable.html#af5bc2131313b060e441972d85d917314',1,'drake::symbolic::Variable']]],
   ['get_5fideal_5fnext_5fstep_5fsize',['get_ideal_next_step_size',['../classdrake_1_1systems_1_1_integrator_base.html#aa06585bb16e4b92bb3c8f3c005fb6071',1,'drake::systems::IntegratorBase']]],
   ['get_5fiiwa_5fmax_5fjoint_5fvelocities',['get_iiwa_max_joint_velocities',['../namespacedrake_1_1manipulation_1_1kuka__iiwa.html#aa604a09fa622f05945317405b3bb6b79',1,'drake::manipulation::kuka_iiwa']]],
-  ['get_5fimplementation',['get_implementation',['../classdrake_1_1multibody_1_1_joint.html#a4f3539f25e5614d6783b5405d034497e',1,'drake::multibody::Joint']]],
   ['get_5findex',['get_index',['../classdrake_1_1systems_1_1_input_port_base.html#a3fbc75214d2c4d8dbbbcc14a6e42194c',1,'drake::systems::InputPortBase::get_index()'],['../classdrake_1_1systems_1_1_output_port_base.html#a8e465dd39d0d66dcf9e31b9b8c997604',1,'drake::systems::OutputPortBase::get_index()']]],
   ['get_5finitial_5fp_5fnobcm_5fn',['get_initial_p_NoBcm_N',['../classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a4ba8488b887c1bdf282313e3146a3329',1,'drake::multibody::benchmarks::free_body::FreeBody']]],
   ['get_5finitial_5fquat_5fnb',['get_initial_quat_NB',['../classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aac0785ee2738a3557e0fa509ced5c90a',1,'drake::multibody::benchmarks::free_body::FreeBody']]],

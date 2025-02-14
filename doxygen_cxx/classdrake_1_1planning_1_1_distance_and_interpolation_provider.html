@@ -350,7 +350,13 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Computes the configuration distance from the provided configuration <code>from</code> to the provided configuration <code>to</code>. </p>
-<p>The returned distance will be strictly non-negative. </p><dl class="section pre"><dt>Precondition</dt><dd>from.size() == to.size() </dd></dl>
+<p>The returned distance will be strictly non-negative. </p><dl class="section pre"><dt>Precondition</dt><dd>from.size() == to.size(). </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>from</code> or <code>to</code> contain non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -389,7 +395,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Derived distance and interpolation providers must implement distance computation. </p>
-<p>The returned distance must be non-negative. <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> ensures that <code>from</code> and <code>to</code> are the same size. </p>
+<p>The returned distance must be non-negative. <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> ensures that <code>from</code> and <code>to</code> are the same size.</p>
+<p>Base class guarantees that <code>from</code> and <code>to</code> contain only finite values. </p>
 
 </div>
 </div>
@@ -434,7 +441,8 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Derived distance and interpolation providers must implement interpolation. </p>
-<p>The returned configuration must be the same size as <code>from</code> and <code>to</code>. <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> ensures that <code>from</code> and <code>to</code> are the same size and that <code>ratio</code> is in [0, 1]. </p>
+<p>The returned configuration must be the same size as <code>from</code> and <code>to</code>. <a class="el" href="classdrake_1_1planning_1_1_distance_and_interpolation_provider.html" title="This class represents the base interface for performing configuration distance and interpolation oper...">DistanceAndInterpolationProvider</a> ensures that <code>from</code> and <code>to</code> are the same size and that <code>ratio</code> is in [0, 1].</p>
+<p>Base class guarantees that <code>from</code> and <code>to</code> contain only finite values. </p>
 
 </div>
 </div>
@@ -471,9 +479,15 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the interpolated configuration between <code>from</code> and <code>to</code> at <code>ratio</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>from.size() == to.size() </dd>
+<dl class="section pre"><dt>Precondition</dt><dd>from.size() == to.size(). </dd>
 <dd>
-ratio in [0, 1] </dd></dl>
+ratio in [0, 1]. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>from</code> or <code>to</code> contain non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -439,7 +439,10 @@ model. The added <code class="docutils literal notranslate"><span class="pre">sh
 <dd><p>Explicit Context-based version of CalcRobotClearance().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if model_context is nullptr.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if model_context is nullptr.</strong> – </p></li>
+<li><p><strong>if q contains non-finite values.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -471,6 +474,11 @@ other details).</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context_number</span></code>:</dt><dd><p>Optional implicit context number.</p>
 </dd>
 </dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>if q contains non-finite values.</strong> – </p>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>ccb_implicit_contexts “Implicit Context Parallelism”.</p>
@@ -491,6 +499,9 @@ associated context.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>true if collision free, false if in collision.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>if q contains non-finite values.</strong> – </p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -522,6 +533,9 @@ guidance on proper usage.</p>
 <dd class="field-odd"><p>std::vector&lt;uint8_t&gt;, one for each configuration in configs. For
 each configuration, 1 if collision free, 0 if in collision.</p>
 </dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>if configs contains non-finite values.</strong> – </p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -531,7 +545,10 @@ each configuration, 1 if collision free, 0 if in collision.</p>
 <dd><p>Explicit Context-based version of CheckConfigCollisionFree().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if model_context is nullptr.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if model_context is nullptr.</strong> – </p></li>
+<li><p><strong>if q contains non-finite values.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -562,6 +579,9 @@ using the current thread’s associated context.</p>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>true if collision free, false if in collision.</p>
 </dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>if q1</strong><strong> or </strong><strong>q2 contain non-finite values.</strong> – </p>
+</dd>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -588,6 +608,9 @@ guidance on proper usage.</p>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>true if collision free, false if in collision.</p>
 </dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>if q1</strong><strong> or </strong><strong>q2 contain non-finite values.</strong> – </p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -609,6 +632,9 @@ enabled by <code class="docutils literal notranslate"><span class="pre">parallel
 <dd class="field-odd"><p>std::vector&lt;uint8_t&gt;, one for each edge in edges. For each edge, 1
 if collision free, 0 if in collision.</p>
 </dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>if any vector in edges contains non-finite values.</strong> – </p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -629,6 +655,9 @@ entries for robot bodies are guaranteed to be valid; entries for
 environment bodies are populated with kNoCollision, regardless of
 their actual status.</p>
 </dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>if q contains non-finite values.</strong> – </p>
+</dd>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -642,7 +671,10 @@ their actual status.</p>
 <dd><p>Explicit Context-based version of ClassifyBodyCollisions().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if model_context is nullptr.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if model_context is nullptr.</strong> – </p></li>
+<li><p><strong>if q contains non-finite values.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -663,6 +695,11 @@ their actual status.</p>
 configurations <code class="docutils literal notranslate"><span class="pre">q1</span></code> and <code class="docutils literal notranslate"><span class="pre">q2</span></code>, using the distance function
 configured at construction- time or via
 SetConfigurationDistanceFunction().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>if q1</strong><strong> or </strong><strong>q2 contain non-finite values.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -793,7 +830,10 @@ or etc.</p>
 <dd class="field-odd"><p>Interpolated configuration.</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError if ratio is not in range</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>1</strong><strong>]</strong><strong></strong> – </p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if ratio is not in range</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>1</strong><strong>]</strong><strong></strong> – </p></li>
+<li><p><strong>if q1</strong><strong> or </strong><strong>q2 contain non-finite values.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -861,6 +901,11 @@ ComputeConfigurationDistance().</p>
 SetConfigurationDistanceFunction() function; doing so would create
 an infinite loop.</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>if q1</strong><strong> or </strong><strong>q2 contain non-finite values.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -935,7 +980,10 @@ the common padding value. Returns nullopt otherwise.</p>
 <dd><p>Explicit Context-based version of MeasureEdgeCollisionFree().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if model_context is nullptr.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if model_context is nullptr.</strong> – </p></li>
+<li><p><strong>if q1</strong><strong> or </strong><strong>q2 contain non-finite values.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -960,6 +1008,9 @@ using the current thread’s associated context.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A measure of how much of the edge is collision free.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>if q1</strong><strong> or </strong><strong>q2 contain non-finite values.</strong> – </p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -987,6 +1038,9 @@ guidance on proper usage.</p>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A measure of how much of the edge is collision free.</p>
 </dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>if q1</strong><strong> or </strong><strong>q2 contain non-finite values.</strong> – </p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1007,6 +1061,9 @@ enabled by <code class="docutils literal notranslate"><span class="pre">parallel
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A measure of how much of each edge is collision free. The iᵗʰ
 entry is the result for the iᵗʰ edge.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>if any vector in edges contains non-finite values.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1372,7 +1429,10 @@ with respect to all environment bodies.</p>
 <dd><p>Explicit Context-based version of UpdatePositions().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><strong>RuntimeError if model_context is nullptr.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if model_context is nullptr.</strong> – </p></li>
+<li><p><strong>if q contains non-finite values.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -1397,6 +1457,11 @@ current OpenMP thread.</p>
 <p class="admonition-title">See also</p>
 <p>ccb_implicit_contexts “Implicit Context Parallelism”.</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>if q contains non-finite values.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -1808,7 +1873,12 @@ returns the interpolated configuration.</p>
 <code class="docutils literal notranslate"><span class="pre">from</span></code> to the provided configuration <code class="docutils literal notranslate"><span class="pre">to</span></code>. The returned distance
 will be strictly non-negative.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>from.size() == to.size()</p>
+<dt>Precondition:</dt><dd><p>from.size() == to.size().</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>if from</strong><strong> or </strong><strong>to contain non-finite values.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1819,9 +1889,14 @@ will be strictly non-negative.</p>
 <dd><p>Returns the interpolated configuration between <code class="docutils literal notranslate"><span class="pre">from</span></code> and <code class="docutils literal notranslate"><span class="pre">to</span></code> at
 <code class="docutils literal notranslate"><span class="pre">ratio</span></code>.</p>
 <dl class="simple">
-<dt>Precondition:</dt><dd><p>from.size() == to.size()</p>
+<dt>Precondition:</dt><dd><p>from.size() == to.size().</p>
 </dd>
-<dt>Precondition:</dt><dd><p>ratio in [0, 1]</p>
+<dt>Precondition:</dt><dd><p>ratio in [0, 1].</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>if from</strong><strong> or </strong><strong>to contain non-finite values.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>

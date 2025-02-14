@@ -159,7 +159,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_joint.html
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
@@ -180,6 +179,7 @@ class drake::multibody::Joint&lt; T &gt;</h3>
 <p>Typical joints include the ball joint, to allow unrestricted rotations about a given point, the revolute joint, that constraints two bodies to rotate about a given common axis, etc.</p>
 <p>Consider the following example to build a simple pendulum system:</p>
 <div class="fragment"><div class="line">MultibodyPlant&lt;double&gt; plant(0.0);</div><div class="line"><span class="comment">// ... Code here to setup quantities below as mass, com, etc. ...</span></div><div class="line"><span class="keyword">const</span> RigidBody&lt;double&gt;&amp; pendulum =</div><div class="line">  plant.AddRigidBody(SpatialInertia&lt;double&gt;(mass, com, unit_inertia));</div><div class="line"><span class="comment">// We will connect the pendulum body to the world using a RevoluteJoint.</span></div><div class="line"><span class="comment">// In this simple case the parent body P is the model&#39;s world body and frame</span></div><div class="line"><span class="comment">// F IS the world frame.</span></div><div class="line"><span class="comment">// Additionally, we need to specify the pose of frame M on the pendulum&#39;s</span></div><div class="line"><span class="comment">// body frame B.</span></div><div class="line"><span class="comment">// Say we declared and initialized X_BM...</span></div><div class="line"><span class="keyword">const</span> RevoluteJoint&lt;double&gt;&amp; elbow =</div><div class="line">  plant.AddJoint&lt;RevoluteJoint&gt;(</div><div class="line">    <span class="stringliteral">&quot;Elbow&quot;</span>,                <span class="comment">/* joint name */</span></div><div class="line">    plant.world_body(),     <span class="comment">/* parent body */</span></div><div class="line">    {},                     <span class="comment">/* frame F IS the world frame W */</span></div><div class="line">    pendulum,               <span class="comment">/* child body, the pendulum */</span></div><div class="line">    X_BM,                   <span class="comment">/* pose of frame M in the body frame B */</span></div><div class="line">    Vector3d::UnitZ());     <span class="comment">/* revolute axis in this case */</span></div></div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>Do not ever attempt to instantiate and manipulate Joint objects on the stack; it will fail. Add joints to your plant using the provided API <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a437f86026a2268c0fb06936b899ba8d7" title="This method adds a Joint of type JointType between two bodies.">MultibodyPlant::AddJoint()</a> as in the example above.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>To developers: this is the base class for all concrete <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> types. Extending this class to add a new <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> type necessarily requires working with internal implementation classes for which we cannot guarantee API stability due to the need for ongoing improvements to these performance-critical classes. So while our usual stability guarantees apply to the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> <code>public</code> API, the <code>protected</code> API here is subject to change when the underlying internal objects change. Our release notes will say when we have made changes that might affect your <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> implementations, but we won't necessarily be able to provide a deprecation period.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -189,12 +189,6 @@ class drake::multibody::Joint&lt; T &gt;</h3>
 </div>
 <p><code>#include &lt;drake/multibody/tree/multibody_tree.h&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html">JointImplementation</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) A <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> is implemented in terms of MultibodyTree elements, typically a Mobilizer.  <a href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a99141c3ff63f0c6658048705a221fcdc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a99141c3ff63f0c6658048705a221fcdc">Joint</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#af544171c3e9756dd27830a3b5b4ff781">frame_on_parent</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#adeb59e44e49a847f2a338211882d00f6">frame_on_child</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; damping, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;pos_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;pos_upper_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;vel_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;vel_upper_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;acc_lower_limits, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;acc_upper_limits)</td></tr>
@@ -450,12 +444,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5f268758c7ca361722fd8526b7c32551"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a5f268758c7ca361722fd8526b7c32551">DoSetTopology</a> (const internal::MultibodyTreeTopology &amp;) override</td></tr>
 <tr class="memdesc:a5f268758c7ca361722fd8526b7c32551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb" title="Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree...">SetTopology()</a>.  <a href="#a5f268758c7ca361722fd8526b7c32551">More...</a><br /></td></tr>
 <tr class="separator:a5f268758c7ca361722fd8526b7c32551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f3539f25e5614d6783b5405d034497e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html">JointImplementation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a4f3539f25e5614d6783b5405d034497e">get_implementation</a> () const</td></tr>
-<tr class="memdesc:a4f3539f25e5614d6783b5405d034497e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the internal implementation of <code>this</code> joint.  <a href="#a4f3539f25e5614d6783b5405d034497e">More...</a><br /></td></tr>
-<tr class="separator:a4f3539f25e5614d6783b5405d034497e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29cbe17adde3122d72d7d573152b04c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a29cbe17adde3122d72d7d573152b04c8">has_implementation</a> () const</td></tr>
-<tr class="memdesc:a29cbe17adde3122d72d7d573152b04c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether <code>this</code> joint owns a particular implementation.  <a href="#a29cbe17adde3122d72d7d573152b04c8">More...</a><br /></td></tr>
-<tr class="separator:a29cbe17adde3122d72d7d573152b04c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65cc5b05381b286d81b82647ad9b9d59"><td class="memItemLeft" align="right" valign="top">std::pair&lt; const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; *, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a65cc5b05381b286d81b82647ad9b9d59">tree_frames</a> (bool use_reversed_mobilizer) const</td></tr>
 <tr class="memdesc:a65cc5b05381b286d81b82647ad9b9d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility for concrete joint implementations to use to select the inboard/outboard frames for a tree in the spanning forest, given whether they should be reversed from the parent/child frames that are members of this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> object.  <a href="#a65cc5b05381b286d81b82647ad9b9d59">More...</a><br /></td></tr>
 <tr class="separator:a65cc5b05381b286d81b82647ad9b9d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -467,6 +455,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:acce6119b1f6245103bade4b6e88c5f51"><td class="memTemplItemLeft" align="right" valign="top">ConcreteMobilizer&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#acce6119b1f6245103bade4b6e88c5f51">get_mutable_mobilizer_downcast</a> ()</td></tr>
 <tr class="memdesc:acce6119b1f6245103bade4b6e88c5f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Mutable flavor of <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a8a436543dcb9111fce01536d0faa9a7f" title="(Internal use only) Returns the mobilizer implementing this joint, downcast to its specific type.">get_mobilizer_downcast()</a>.  <a href="#acce6119b1f6245103bade4b6e88c5f51">More...</a><br /></td></tr>
 <tr class="separator:acce6119b1f6245103bade4b6e88c5f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a2e7198dc47a29051d2896858f0f721"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a8a2e7198dc47a29051d2896858f0f721">has_mobilizer</a> () const</td></tr>
+<tr class="memdesc:a8a2e7198dc47a29051d2896858f0f721"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns true if this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> has an implementing Mobilizer.  <a href="#a8a2e7198dc47a29051d2896858f0f721">More...</a><br /></td></tr>
+<tr class="separator:a8a2e7198dc47a29051d2896858f0f721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29cbe17adde3122d72d7d573152b04c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a29cbe17adde3122d72d7d573152b04c8">has_implementation</a> () const</td></tr>
+<tr class="memdesc:a29cbe17adde3122d72d7d573152b04c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a29cbe17adde3122d72d7d573152b04c8">More...</a><br /></td></tr>
+<tr class="separator:a29cbe17adde3122d72d7d573152b04c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods to make a clone, optionally templated on different scalar</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>types.</p>
 <p>Clones this Joint (templated on T) to a joint templated on <code>double</code>. </p>
@@ -519,8 +513,6 @@ Friends</h2></td></tr>
 <tr class="memitem:a81331638a2f578c7636dbebb383e09b1"><td class="memTemplParams" colspan="2">template&lt;typename &gt; </td></tr>
 <tr class="memitem:a81331638a2f578c7636dbebb383e09b1"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a81331638a2f578c7636dbebb383e09b1">Joint</a></td></tr>
 <tr class="separator:a81331638a2f578c7636dbebb383e09b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a808e912cd9bc754f25ddbb84feb3f150"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a808e912cd9bc754f25ddbb84feb3f150">internal::JointImplementationBuilder&lt; T &gt;</a></td></tr>
-<tr class="separator:a808e912cd9bc754f25ddbb84feb3f150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1a9b8301235756e59d61585853764f89"></a>
@@ -1591,34 +1583,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a4f3539f25e5614d6783b5405d034497e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f3539f25e5614d6783b5405d034497e">&#9670;&nbsp;</a></span>get_implementation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html">JointImplementation</a>&amp; get_implementation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a const reference to the internal implementation of <code>this</code> joint. </p>
-<dl class="section warning"><dt>Warning</dt><dd>The MultibodyTree model must have already been finalized, or this method will abort. </dd></dl>
-
-</div>
-</div>
 <a id="a8a436543dcb9111fce01536d0faa9a7f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a436543dcb9111fce01536d0faa9a7f">&#9670;&nbsp;</a></span>get_mobilizer_downcast()</h2>
 
@@ -1643,7 +1607,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Internal use only) Returns the mobilizer implementing this joint, downcast to its specific type. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a4f3539f25e5614d6783b5405d034497e" title="Returns a const reference to the internal implementation of this joint.">get_implementation()</a>.has_mobilizer() is true </dd>
+<dl class="section pre"><dt>Precondition</dt><dd>A mobilizer has been created for this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>. </dd>
 <dd>
 ConcreteMobilizer must exactly match the dynamic type of the mobilizer associated with this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>. This requirement is (only) checked in Debug builds. </dd></dl>
 
@@ -2005,8 +1969,36 @@ For a <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_joint.
 </table>
 </div><div class="memdoc">
 
-<p>Returns whether <code>this</code> joint owns a particular implementation. </p>
-<p>If the MultibodyTree has been finalized, this will return true. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use has_mobilizer() instead (JointImplementation class is gone). <br />
+ This will be removed from Drake on or after 2025-06-01.</dd></dl>
+
+</div>
+</div>
+<a id="a8a2e7198dc47a29051d2896858f0f721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a2e7198dc47a29051d2896858f0f721">&#9670;&nbsp;</a></span>has_mobilizer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has_mobilizer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns true if this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> has an implementing Mobilizer. </p>
 
 </div>
 </div>
@@ -2940,28 +2932,6 @@ The default generalized velocities v₀ are zero for every joint. </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="a808e912cd9bc754f25ddbb84feb3f150"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a808e912cd9bc754f25ddbb84feb3f150">&#9670;&nbsp;</a></span>internal::JointImplementationBuilder&lt; T &gt;</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class internal::JointImplementationBuilder&lt; T &gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a81331638a2f578c7636dbebb383e09b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81331638a2f578c7636dbebb383e09b1">&#9670;&nbsp;</a></span>Joint</h2>
 

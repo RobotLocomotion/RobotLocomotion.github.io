@@ -1,6 +1,5 @@
 var classdrake_1_1multibody_1_1_joint =
 [
-    [ "JointImplementation", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation" ],
     [ "Joint", "classdrake_1_1multibody_1_1_joint.html#a1a9b8301235756e59d61585853764f89", null ],
     [ "Joint", "classdrake_1_1multibody_1_1_joint.html#aaa791aaf45d7556c3af317fb6040bb2c", null ],
     [ "Joint", "classdrake_1_1multibody_1_1_joint.html#a99141c3ff63f0c6658048705a221fcdc", null ],
@@ -35,7 +34,6 @@ var classdrake_1_1multibody_1_1_joint =
     [ "DoShallowClone", "classdrake_1_1multibody_1_1_joint.html#a9c3f4b29ce2967dc0bb185ccee6f2e47", null ],
     [ "frame_on_child", "classdrake_1_1multibody_1_1_joint.html#adeb59e44e49a847f2a338211882d00f6", null ],
     [ "frame_on_parent", "classdrake_1_1multibody_1_1_joint.html#af544171c3e9756dd27830a3b5b4ff781", null ],
-    [ "get_implementation", "classdrake_1_1multibody_1_1_joint.html#a4f3539f25e5614d6783b5405d034497e", null ],
     [ "get_mobilizer_downcast", "classdrake_1_1multibody_1_1_joint.html#a8a436543dcb9111fce01536d0faa9a7f", null ],
     [ "get_mutable_mobilizer_downcast", "classdrake_1_1multibody_1_1_joint.html#acce6119b1f6245103bade4b6e88c5f51", null ],
     [ "GetDampingVector", "classdrake_1_1multibody_1_1_joint.html#aca5a7652c185aaa3175292e6624cb627", null ],
@@ -49,6 +47,7 @@ var classdrake_1_1multibody_1_1_joint =
     [ "GetSpatialVelocity", "classdrake_1_1multibody_1_1_joint.html#ae0390174a56904aa6b959b9ead44a173", null ],
     [ "GetVelocities", "classdrake_1_1multibody_1_1_joint.html#ab8f09dbe8d193add682c21bf5e9174fd", null ],
     [ "has_implementation", "classdrake_1_1multibody_1_1_joint.html#a29cbe17adde3122d72d7d573152b04c8", null ],
+    [ "has_mobilizer", "classdrake_1_1multibody_1_1_joint.html#a8a2e7198dc47a29051d2896858f0f721", null ],
     [ "index", "classdrake_1_1multibody_1_1_joint.html#afa899cef34bf7c256f877cc3dc08cb65", null ],
     [ "is_locked", "classdrake_1_1multibody_1_1_joint.html#a0c0fd3c2e27243de55385f4f9695fc0e", null ],
     [ "Lock", "classdrake_1_1multibody_1_1_joint.html#a50c7f850050d4a94641ed72dd2d1968f", null ],
@@ -83,6 +82,5 @@ var classdrake_1_1multibody_1_1_joint =
     [ "velocity_start", "classdrake_1_1multibody_1_1_joint.html#ae24835fcef569246252959b18d0027d6", null ],
     [ "velocity_suffix", "classdrake_1_1multibody_1_1_joint.html#acae7d6c5a271c9ae91c0184390aeb430", null ],
     [ "velocity_upper_limits", "classdrake_1_1multibody_1_1_joint.html#a56f15ee767f00dc5716de4468c8a1aac", null ],
-    [ "internal::JointImplementationBuilder< T >", "classdrake_1_1multibody_1_1_joint.html#a808e912cd9bc754f25ddbb84feb3f150", null ],
     [ "Joint", "classdrake_1_1multibody_1_1_joint.html#a81331638a2f578c7636dbebb383e09b1", null ]
 ];

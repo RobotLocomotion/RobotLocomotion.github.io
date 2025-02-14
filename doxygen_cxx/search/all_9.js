@@ -450,7 +450,6 @@ var searchData=
   ['iterationmatrix',['IterationMatrix',['../classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html',1,'drake::systems::ImplicitIntegrator']]],
   ['iterations',['iterations',['../structdrake_1_1solvers_1_1_clarabel_solver_details.html#a1d10e252e778731e59f0f71afd7e727e',1,'drake::solvers::ClarabelSolverDetails']]],
   ['iterator',['iterator',['../classdrake_1_1symbolic_1_1_environment.html#a3d26d853ee0e9c78a4fbb44e5a8488e0',1,'drake::symbolic::Environment::iterator()'],['../classdrake_1_1symbolic_1_1_variables.html#a05e36ab8e742176eb11f37b020a5c12c',1,'drake::symbolic::Variables::iterator()']]],
-  ['jointimplementationbuilder_3c_20t_20_3e',['JointImplementationBuilder&lt; T &gt;',['../classdrake_1_1multibody_1_1_joint.html#a808e912cd9bc754f25ddbb84feb3f150',1,'drake::multibody::Joint']]],
   ['multibodyplantdiscreteupdatemanagerattorney_3c_20t_20_3e',['MultibodyPlantDiscreteUpdateManagerAttorney&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_plant.html#a9bf56e6eda41a6cc82296377a2267479',1,'drake::multibody::MultibodyPlant']]],
   ['multibodyplantmodelattorney_3c_20t_20_3e',['MultibodyPlantModelAttorney&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_plant.html#a7266290642dbb492700e7ebae2e00a20',1,'drake::multibody::MultibodyPlant']]],
   ['multibodytree_3c_20t_20_3e',['MultibodyTree&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_element.html#a49109966f9505633199c07ad06b0632d',1,'drake::multibody::MultibodyElement']]],

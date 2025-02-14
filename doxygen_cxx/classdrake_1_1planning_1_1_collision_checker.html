@@ -971,6 +971,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>model_context</code> is nullptr. </td></tr>
+    <tr><td class="paramname">if</td><td><code>q</code> contains non-finite values. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1017,6 +1018,12 @@ Protected Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">context_number</td><td>Optional implicit context number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>q</code> contains non-finite values. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1085,6 +1092,12 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if collision free, false if in collision. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>q</code> contains non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
 
 </div>
@@ -1124,6 +1137,12 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;uint8_t&gt;, one for each configuration in configs. For each configuration, 1 if collision free, 0 if in collision. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>configs</code> contains non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1157,6 +1176,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if model_context is nullptr. </td></tr>
+    <tr><td class="paramname">if</td><td><code>q</code> contains non-finite values. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1199,6 +1219,7 @@ Protected Member Functions</h2></td></tr>
 <p>Explicit Context-based version of <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#acd7c5dd9a903bedc2d984fe12aa5c409" title="Checks a single configuration-to-configuration edge for collision, using the current thread&#39;s associa...">CheckEdgeCollisionFree()</a>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
+    <tr><td class="paramname">if</td><td><code>q1</code> or <code>q2</code> contain non-finite values. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if <code>model_context</code> is nullptr. </td></tr>
   </table>
   </dd>
@@ -1249,6 +1270,12 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if collision free, false if in collision. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>q1</code> or <code>q2</code> contain non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
 
 </div>
@@ -1295,6 +1322,12 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if collision free, false if in collision. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>q1</code> or <code>q2</code> contain non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1333,6 +1366,12 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;uint8_t&gt;, one for each edge in edges. For each edge, 1 if collision free, 0 if in collision. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>any vector in <code>edges</code> contains non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1370,6 +1409,12 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a vector of collision types arranged in body index order. Only entries for robot bodies are guaranteed to be valid; entries for environment bodies are populated with kNoCollision, regardless of their actual status. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>q</code> contains non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
 
 </div>
@@ -1404,6 +1449,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>model_context</code> is nullptr. </td></tr>
+    <tr><td class="paramname">if</td><td><code>q</code> contains non-finite values. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1455,6 +1501,12 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Computes configuration-space distance between the provided configurations <code>q1</code> and <code>q2</code>, using the distance function configured at construction- time or via <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903" title="Sets the configuration distance function to distance_function.">SetConfigurationDistanceFunction()</a>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>q1</code> or <code>q2</code> contain non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2078,6 +2130,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if ratio is not in range [0, 1]. </td></tr>
+    <tr><td class="paramname">if</td><td><code>q1</code> or <code>q2</code> contain non-finite values. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2231,6 +2284,12 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a functor that captures this object, so it can be used like a free function. The returned functor is only valid during the lifetime of this object. The math of the function is equivalent to <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ae76ac66c1677433ebe8cff135f77af58" title="Computes configuration-space distance between the provided configurations q1 and q2,...">ComputeConfigurationDistance()</a>. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>do not pass this standalone function back into <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903" title="Sets the configuration distance function to distance_function.">SetConfigurationDistanceFunction()</a> function; doing so would create an infinite loop. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>q1</code> or <code>q2</code> contain non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2397,6 +2456,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>model_context</code> is nullptr. </td></tr>
+    <tr><td class="paramname">if</td><td><code>q1</code> or <code>q2</code> contain non-finite values. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2446,6 +2506,12 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A measure of how much of the edge is collision free. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>q1</code> or <code>q2</code> contain non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
 
 </div>
@@ -2492,6 +2558,12 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A measure of how much of the edge is collision free. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>q1</code> or <code>q2</code> contain non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2530,6 +2602,12 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A measure of how much of each edge is collision free. The iᵗʰ entry is the result for the iᵗʰ edge. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>any vector in <code>edges</code> contains non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -3353,6 +3431,7 @@ the default function uses linear interpolation for most variables, and uses sler
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>model_context</code> is <code>nullptr</code>. </td></tr>
+    <tr><td class="paramname">if</td><td><code>q</code> contains non-finite values. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3394,6 +3473,12 @@ the default function uses linear interpolation for most variables, and uses sler
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#ccb_implicit_contexts">Implicit Context Parallelism</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>q</code> contains non-finite values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -23,8 +23,7 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "frame_body_pose_cache.h", "frame__body__pose__cache_8h.html", "frame__body__pose__cache_8h" ],
     [ "geometry_spatial_inertia.h", "geometry__spatial__inertia_8h.html", "geometry__spatial__inertia_8h" ],
     [ "joint.h", "joint_8h.html", [
-      [ "Joint", "classdrake_1_1multibody_1_1_joint.html", "classdrake_1_1multibody_1_1_joint" ],
-      [ "JointImplementation", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation" ]
+      [ "Joint", "classdrake_1_1multibody_1_1_joint.html", "classdrake_1_1multibody_1_1_joint" ]
     ] ],
     [ "joint_actuator.h", "joint__actuator_8h.html", "joint__actuator_8h" ],
     [ "linear_bushing_roll_pitch_yaw.h", "linear__bushing__roll__pitch__yaw_8h.html", "linear__bushing__roll__pitch__yaw_8h" ],

@@ -1,11 +1,5 @@
 var NAVTREEINDEX65 =
 {
-"structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[3,0,0,9,75,6],
-"structdrake_1_1multibody_1_1_propeller_info.html#a5449c9c55e68b1b71610692e6758f31e":[3,0,0,9,75,0],
-"structdrake_1_1multibody_1_1_propeller_info.html#a5f9f30b642d0b522f931501589466b9c":[3,0,0,9,75,1],
-"structdrake_1_1multibody_1_1_propeller_info.html#a62129aeee008647a28d5c3d3b6604031":[3,0,0,9,75,4],
-"structdrake_1_1multibody_1_1_propeller_info.html#a6c7969c7bd07717edfa11d012a9a0129":[3,0,0,9,75,2],
-"structdrake_1_1multibody_1_1_propeller_info.html#ac154ef8cde7d8d7431d15790225c5b4d":[3,0,0,9,75,7],
 "structdrake_1_1multibody_1_1_propeller_info.html#ac5003148a2f359ec7e4f16c792be2662":[3,0,0,9,75,3],
 "structdrake_1_1multibody_1_1_propeller_info.html#ad703376a8c6bebf64b16bb6b34cfeec0":[3,0,0,9,75,5],
 "structdrake_1_1multibody_1_1_propeller_info.html#ada4bf070125ac43cd7e0a086be12d049":[3,0,0,9,75,8],
@@ -249,5 +243,11 @@ var NAVTREEINDEX65 =
 "structdrake_1_1solvers_1_1_gurobi_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,14,23,3],
 "structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78":[3,0,0,14,23,0],
 "structdrake_1_1solvers_1_1_gurobi_solver_details.html#a803b799247155d71e47493ac3857b909":[3,0,0,14,23,2],
-"structdrake_1_1solvers_1_1_gurobi_solver_details.html#ad1a44ab70cbada790a810ca324c07797":[3,0,0,14,23,1]
+"structdrake_1_1solvers_1_1_gurobi_solver_details.html#ad1a44ab70cbada790a810ca324c07797":[3,0,0,14,23,1],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html":[3,0,0,14,25],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a1377097022dfdec89312e47c9ae9dfc8":[3,0,0,14,25,2],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6df89ba323770f788f15768d8e278d1c":[3,0,0,14,25,0],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,14,25,3],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a727541d7368d1fa14436bfa193f2292c":[3,0,0,14,25,4],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[3,0,0,14,25,5]
 };

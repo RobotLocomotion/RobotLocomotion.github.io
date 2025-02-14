@@ -1,11 +1,5 @@
 var NAVTREEINDEX69 =
 {
-"velocity__newmark__scheme_8h.html#af8e24ea39808c10ac1689f4a6704ece7":[4,0,0,8,2,29,0],
-"visibility__graph_8h.html":[4,0,0,10,20],
-"visibility__graph_8h.html#ac8bff5baf7217216340dc19e591cca74":[4,0,0,10,20,0],
-"visualization__config_8h.html":[4,0,0,13,5],
-"visualization__config__functions_8h.html":[4,0,0,13,6],
-"visualization__config__functions_8h.html#a02befd8c90155c339a042f2af39d4c12":[4,0,0,13,6,0],
 "visualization__config__functions_8h.html#acfe50d1cfd6c229aab5986a0a3c97494":[4,0,0,13,6,1],
 "visualization__py_8h.html":[4,0,0,0,0,11,0],
 "volume__mesh_8h.html":[4,0,0,4,2,62],
