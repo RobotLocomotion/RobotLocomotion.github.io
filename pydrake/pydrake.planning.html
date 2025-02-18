@@ -5657,9 +5657,17 @@ SceneGraph, e.g., in terms of what kinds of geometries can be
 collided.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.SceneGraphCollisionChecker.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.SceneGraphCollisionChecker" title="pydrake.planning.SceneGraphCollisionChecker"><span class="pre">pydrake.planning.SceneGraphCollisionChecker</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagram" title="pydrake.planning.RobotDiagram"><span class="pre">pydrake.planning.RobotDiagram</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.SceneGraphCollisionChecker.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Creates a new checker with the given params.</p>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.SceneGraphCollisionChecker.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.planning.SceneGraphCollisionChecker, <a href="#id25"><span class="problematic" id="id26">*</span></a>, model: object, <a href="#id27"><span class="problematic" id="id28">**</span></a>kwargs) -&gt; None</p></li>
+</ol>
+<p>Creates a new checker with the given params.</p>
 <p>See <a class="reference internal" href="#pydrake.planning.CollisionCheckerParams" title="pydrake.planning.CollisionCheckerParams"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.CollisionCheckerParams</span></code></a> for the list of properties available here as kwargs.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.planning.SceneGraphCollisionChecker, params: pydrake.planning.CollisionCheckerParams) -&gt; None</p></li>
+</ol>
+<p>Creates a new checker with the given params.</p>
 </dd></dl>
 
 </dd></dl>
@@ -5674,14 +5682,27 @@ or for deriving your own collision checker without providing for the
 full suite of operations.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.UnimplementedCollisionChecker.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.UnimplementedCollisionChecker" title="pydrake.planning.UnimplementedCollisionChecker"><span class="pre">pydrake.planning.UnimplementedCollisionChecker</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.RobotDiagram" title="pydrake.planning.RobotDiagram"><span class="pre">pydrake.planning.RobotDiagram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">supports_parallel_checking</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.UnimplementedCollisionChecker.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs a checker.</p>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.UnimplementedCollisionChecker.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.planning.UnimplementedCollisionChecker, <a href="#id29"><span class="problematic" id="id30">*</span></a>, model: object, supports_parallel_checking: bool, <a href="#id31"><span class="problematic" id="id32">**</span></a>kwargs) -&gt; None</p></li>
+</ol>
+<p>Constructs a checker.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">supports_parallel_checking</span></code>:</dt><dd><p>will serve as the return value of the
 CollisionChecker::SupportsParallelChecking() function.</p>
 </dd>
 </dl>
 <p>See <a class="reference internal" href="#pydrake.planning.CollisionCheckerParams" title="pydrake.planning.CollisionCheckerParams"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.CollisionCheckerParams</span></code></a> for the list of properties available here as kwargs.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.planning.UnimplementedCollisionChecker, params: pydrake.planning.CollisionCheckerParams, supports_parallel_checking: bool) -&gt; None</p></li>
+</ol>
+<p>Constructs a checker.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">supports_parallel_checking</span></code>:</dt><dd><p>will serve as the return value of the
+CollisionChecker::SupportsParallelChecking() function.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
