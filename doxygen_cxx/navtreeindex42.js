@@ -1,5 +1,7 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a3039082d5cf5d9b4884c666c2e0dd033":[3,0,0,16,89,2],
+"classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a5bd53ccea4f088d7f9ce1b1839847cf7":[3,0,0,16,89,4],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a677a34d51ed872e958deb90ce676eec5":[3,0,0,16,89,0],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a9e14d71a4415b5bbeb479c4b42712615":[3,0,0,16,89,1],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#aaf92f89ed3fb6ea7acde795d33645a3c":[3,0,0,16,89,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1systems_1_1_symbolic_vector_system.html#aab59143961b0dacdd5f0232dd7ced98d":[3,0,0,16,106,1],
 "classdrake_1_1systems_1_1_symbolic_vector_system.html#ab133988517ef5aa1471234a2c0223f0a":[3,0,0,16,106,5],
 "classdrake_1_1systems_1_1_symbolic_vector_system.html#acf8451dffb1b2adcd1a55d4c282befc5":[3,0,0,16,106,7],
-"classdrake_1_1systems_1_1_symbolic_vector_system.html#ad57f9dd62883c6d2792eb292585880e2":[3,0,0,16,106,4],
-"classdrake_1_1systems_1_1_symbolic_vector_system.html#af4353a0aade79a8b74d02cbee0eafa4b":[3,0,0,16,106,10],
-"classdrake_1_1systems_1_1_symbolic_vector_system.html#afcd6bcc154b67b6fe62a5ace8b010ba7":[3,0,0,16,106,8]
+"classdrake_1_1systems_1_1_symbolic_vector_system.html#ad57f9dd62883c6d2792eb292585880e2":[3,0,0,16,106,4]
 };

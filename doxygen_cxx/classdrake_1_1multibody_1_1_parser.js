@@ -2,6 +2,7 @@ var classdrake_1_1multibody_1_1_parser =
 [
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html#a874a4b22e398a11c45d9f3530c9add35", null ],
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html#a3810ac2e7a2b5afd4e5d05667a7fa08d", null ],
+    [ "Parser", "classdrake_1_1multibody_1_1_parser.html#a4cafaf7a17a5765d3ca96e2d020b0be7", null ],
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html#a2a3870fb0f175a5841b63b621acf15d5", null ],
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html#ab6df00db6c08588caacfdcbd37116fe6", null ],
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html#a1b8bf396f9f7a335098ea5eb96e525d1", null ],
@@ -9,6 +10,7 @@ var classdrake_1_1multibody_1_1_parser =
     [ "AddModels", "classdrake_1_1multibody_1_1_parser.html#ad3bec3a31ebbe841c05773d4f5cb1791", null ],
     [ "AddModelsFromString", "classdrake_1_1multibody_1_1_parser.html#a0f86ad0f6f34758be876e93e46ec2e79", null ],
     [ "AddModelsFromUrl", "classdrake_1_1multibody_1_1_parser.html#a42ecd936860fa30a7c3d248fb75353c0", null ],
+    [ "builder", "classdrake_1_1multibody_1_1_parser.html#a6fe025197c11cbbfd19c89143734fd57", null ],
     [ "GetAutoRenaming", "classdrake_1_1multibody_1_1_parser.html#a5179938bbe0564df009603816008880e", null ],
     [ "GetCollisionFilterGroups", "classdrake_1_1multibody_1_1_parser.html#a3485d7db4daca85028608bb5ba790a1f", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_parser.html#aeebdf7001a0290c2891454d506c67a74", null ],

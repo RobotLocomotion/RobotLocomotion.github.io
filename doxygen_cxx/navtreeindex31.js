@@ -1,5 +1,7 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1solvers_1_1_quadratic_constraint.html#a7893e0ee787698c8d17dfeb4c89c879c":[1,1,0,25,12],
+"classdrake_1_1solvers_1_1_quadratic_constraint.html#a789a3025f571efc45276c890a70590df":[1,1,0,25,6],
 "classdrake_1_1solvers_1_1_quadratic_constraint.html#a8542e0956a41902b653789fa2298c960":[1,1,0,25,7],
 "classdrake_1_1solvers_1_1_quadratic_constraint.html#ab2eb8c7d446a39f747a66448b24b39f9":[1,1,0,25,1],
 "classdrake_1_1solvers_1_1_quadratic_constraint.html#ac9c867fcd0ac956fbd69038ac7e9d3da":[1,1,0,25,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1symbolic_1_1_expression.html#a0283640116ee0d22595a7e0413f13166":[3,0,0,15,6,124],
 "classdrake_1_1symbolic_1_1_expression.html#a063e93564cb1e0d289b60a39b162f81d":[3,0,0,15,6,18],
 "classdrake_1_1symbolic_1_1_expression.html#a079efc843b190d0657c0f7826dd4d185":[3,0,0,15,6,125],
-"classdrake_1_1symbolic_1_1_expression.html#a08543f6be0da160042b6b2cf3585f5f3":[3,0,0,15,6,139],
-"classdrake_1_1symbolic_1_1_expression.html#a08cadfe5adda620a40258a84d87081f4":[3,0,0,15,6,45],
-"classdrake_1_1symbolic_1_1_expression.html#a0e68821f302673f010df7b221af70106":[3,0,0,15,6,44]
+"classdrake_1_1symbolic_1_1_expression.html#a08543f6be0da160042b6b2cf3585f5f3":[3,0,0,15,6,139]
 };

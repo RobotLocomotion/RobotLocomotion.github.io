@@ -208,6 +208,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_parser.htm
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a4cafaf7a17a5765d3ca96e2d020b0be7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a4cafaf7a17a5765d3ca96e2d020b0be7">Parser</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *<a class="el" href="classdrake_1_1multibody_1_1_parser.html#a6fe025197c11cbbfd19c89143734fd57">builder</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *<a class="el" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a>=nullptr, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *<a class="el" href="classdrake_1_1multibody_1_1_parser.html#a3a3f9fedb65b4959f6f3ba8e1457bc4f">scene_graph</a>=nullptr, std::string_view model_name_prefix={})</td></tr>
+<tr class="memdesc:a4cafaf7a17a5765d3ca96e2d020b0be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> given a DiagramBuilder (and optionally plant and scene_graph).  <a href="#a4cafaf7a17a5765d3ca96e2d020b0be7">More...</a><br /></td></tr>
+<tr class="separator:a4cafaf7a17a5765d3ca96e2d020b0be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a3870fb0f175a5841b63b621acf15d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a2a3870fb0f175a5841b63b621acf15d5">Parser</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *<a class="el" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a>, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *<a class="el" href="classdrake_1_1multibody_1_1_parser.html#a3a3f9fedb65b4959f6f3ba8e1457bc4f">scene_graph</a>=nullptr)</td></tr>
 <tr class="memdesc:a2a3870fb0f175a5841b63b621acf15d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> that adds models to the given plant and (optionally) scene_graph.  <a href="#a2a3870fb0f175a5841b63b621acf15d5">More...</a><br /></td></tr>
 <tr class="separator:a2a3870fb0f175a5841b63b621acf15d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,6 +222,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1b8bf396f9f7a335098ea5eb96e525d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb927943cae3ef783a6623389f39c78d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#afb927943cae3ef783a6623389f39c78d">~Parser</a> ()</td></tr>
 <tr class="separator:afb927943cae3ef783a6623389f39c78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fe025197c11cbbfd19c89143734fd57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a6fe025197c11cbbfd19c89143734fd57">builder</a> ()</td></tr>
+<tr class="memdesc:a6fe025197c11cbbfd19c89143734fd57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a mutable pointer to the DiagramBuilder that will be modified by this parser, or nullptr if this parser does not have a DiagramBuilder.  <a href="#a6fe025197c11cbbfd19c89143734fd57">More...</a><br /></td></tr>
+<tr class="separator:a6fe025197c11cbbfd19c89143734fd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbcfdbffd423372fd0b6ece742437971"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971">plant</a> ()</td></tr>
 <tr class="memdesc:adbcfdbffd423372fd0b6ece742437971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a mutable reference to the plant that will be modified by this parser.  <a href="#adbcfdbffd423372fd0b6ece742437971">More...</a><br /></td></tr>
 <tr class="separator:adbcfdbffd423372fd0b6ece742437971"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,7 +272,7 @@ Friends</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a874a4b22e398a11c45d9f3530c9add35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a874a4b22e398a11c45d9f3530c9add35">&#9670;&nbsp;</a></span>Parser() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a874a4b22e398a11c45d9f3530c9add35">&#9670;&nbsp;</a></span>Parser() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,7 +298,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="a3810ac2e7a2b5afd4e5d05667a7fa08d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3810ac2e7a2b5afd4e5d05667a7fa08d">&#9670;&nbsp;</a></span>Parser() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3810ac2e7a2b5afd4e5d05667a7fa08d">&#9670;&nbsp;</a></span>Parser() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,8 +323,69 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a4cafaf7a17a5765d3ca96e2d020b0be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cafaf7a17a5765d3ca96e2d020b0be7">&#9670;&nbsp;</a></span>Parser() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_parser.html">Parser</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>scene_graph</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>model_name_prefix</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> given a DiagramBuilder (and optionally plant and scene_graph). </p>
+<p>If specified, the resulting parser will apply <code>model_name_prefix</code> to the names of any models parsed. <code>builder</code> may be nullptr, but then you must specify a <code>plant</code>.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>Either the given <code>builder</code> contains a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> system named "plant" or else the provided <code>plant</code> is non-null. </dd>
+<dd>
+If both <code>builder</code> and <code>plant</code> are specified, then plant ∈ builder.GetSystems() </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene_graph</td><td>A pointer to a mutable SceneGraph object used for geometry registration (either to model visual or contact geometry). May be nullptr. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>If both <code>builder</code> and <code>scene_graph</code> are specified, then scene_graph ∈ builder.GetSystems(). </dd></dl>
+
+</div>
+</div>
 <a id="a2a3870fb0f175a5841b63b621acf15d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a3870fb0f175a5841b63b621acf15d5">&#9670;&nbsp;</a></span>Parser() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3870fb0f175a5841b63b621acf15d5">&#9670;&nbsp;</a></span>Parser() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,7 +430,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="ab6df00db6c08588caacfdcbd37116fe6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6df00db6c08588caacfdcbd37116fe6">&#9670;&nbsp;</a></span>Parser() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6df00db6c08588caacfdcbd37116fe6">&#9670;&nbsp;</a></span>Parser() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,7 +475,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="a1b8bf396f9f7a335098ea5eb96e525d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b8bf396f9f7a335098ea5eb96e525d1">&#9670;&nbsp;</a></span>Parser() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b8bf396f9f7a335098ea5eb96e525d1">&#9670;&nbsp;</a></span>Parser() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -571,6 +638,25 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a6fe025197c11cbbfd19c89143734fd57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fe025197c11cbbfd19c89143734fd57">&#9670;&nbsp;</a></span>builder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;* builder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a mutable pointer to the DiagramBuilder that will be modified by this parser, or nullptr if this parser does not have a DiagramBuilder. </p>
 
 </div>
 </div>

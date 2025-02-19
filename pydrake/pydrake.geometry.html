@@ -5483,6 +5483,16 @@ value is 1.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatAnimation.set_start_time">
+<span class="sig-name descname"><span class="pre">set_start_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatAnimation" title="pydrake.geometry.MeshcatAnimation"><span class="pre">pydrake.geometry.MeshcatAnimation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.set_start_time" title="Permalink to this definition"></a></dt>
+<dd><p>Set the start time of the animation. This is only for convenience; it
+is used in the frame() method to allow callers to look up the frame
+number based on the current time, the start time, and the frame rate.
+It is not passed to Meshcat. It does not change any frames that have
+previously been set. The default is zero.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.MeshcatAnimation.SetProperty">
 <span class="sig-name descname"><span class="pre">SetProperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.SetProperty" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -5603,6 +5613,11 @@ meshcat_path “Meshcat paths” for the semantics.</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.MeshcatAnimation.start_time">
+<span class="sig-name descname"><span class="pre">start_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.MeshcatAnimation" title="pydrake.geometry.MeshcatAnimation"><span class="pre">pydrake.geometry.MeshcatAnimation</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.start_time" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

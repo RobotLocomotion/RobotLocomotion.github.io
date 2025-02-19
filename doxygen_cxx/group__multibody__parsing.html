@@ -172,6 +172,9 @@ Drake Model Directives Support</h1>
 <h1><a class="anchor" id="multibody_parsing_mjcf"></a>
 MJCF (Mujoco XML) Support</h1>
 <p>There is basic support for parsing MJCF (Mujoco XML) files. The files are recognized by an .xml file extension. The scope of features that are actually supported still need to be documented here, but the parser does log warnings for any unsupported MuJoCo XML elements or attributes at runtime.</p>
+<h2><a class="anchor" id="mjcf_camera"></a>
+MuJoCo camera support</h2>
+<p>The MuJoCo camera element is supported (with any unsupported attributes emmitting the standard parser warnings). To parse cameras, you must register a DiagramBuilder with the Parser, and the MultibodyPlant must have a registered SceneGraph. The parser will call <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa3ab5841aed63bd66db330dc9486be95" title="Constructs a simulated camera sensor (rgbd sensor and publishing systems) within builder.">ApplyCameraConfig()</a> to produce a camera named "{model_instance_name}/{mjcf_camera_name}", where a default {mjcf_camera_name} of "camera{i}" for the ith camera (starting from 0) will be provided if no name is specified in the xml. Note that calling <code>MultibodyPlant::RenameModelInstance</code> after parsing will not update the camera name.</p>
 <h2><a class="anchor" id="mjcf_ignored_silent"></a>
 Tags ignored silently</h2>
 <p>The following attributes are specific to the MuJoCo solver (listed here in the order they are listed in the MuJoCo documentation); we have no plans to support them:</p><ul>
