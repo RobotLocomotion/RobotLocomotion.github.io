@@ -167,7 +167,8 @@ $(document).ready(function(){initNavTree('structdrake_1_1systems_1_1controllers_
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A structure that contains the basic FiniteHorizonLinearQuadraticRegulator results. </p>
-<p>The finite-horizon cost-to-go is given by (x-x0(t))'<em>S(t)</em>(x-x0(t)) + 2*(x-x₀(t))'sₓ(t) + s₀(t) and the optimal controller is given by u-u0(t) = -K(t)*(x-x₀(t)) - k₀(t). Please don't overlook the factor of 2 in front of the sₓ(t) term. </p>
+<p>The continuous-time finite-horizon cost-to-go is given by (x-x₀(t))'<em>S(t)</em>(x-x₀(t)) + 2(x-x₀(t))'sₓ(t) + s₀(t) and the optimal controller is given by u-u₀(t) = -K(t) (x-x₀(t)) - k₀(t). Please don't overlook the factor of 2 in front of the sₓ(t) term.</p>
+<p>The discrete-time finite-horizon cost-to-go is given by (x−x₀[n])'<em>S[n]</em>(x−x₀[n])) + 2(x−x₀[n])'sₓ[n] + s₀[n] and the optimal controller is given by u−u₀[n] = −K[n] (x−x₀[n]) − k₀[n]. Please don't overlook the factor of 2 in front of the sₓ[n] term. </p>
 </div>
 <p><code>#include &lt;drake/systems/controllers/finite_horizon_linear_quadratic_regulator.h&gt;</code></p>
 <table class="memberdecls">

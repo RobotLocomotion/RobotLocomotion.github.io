@@ -583,7 +583,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Variant of FiniteHorizonLinearQuadraticRegulator that returns a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> implementing the regulator (controller) as a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>, with a single "plant_state" input for the estimated plant state, and a single "control" output for the regulator control output. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__control.html#ga58307d2135757a498c434e96d7b99853" title="Solves the differential Riccati equation to compute the optimal controller and optimal cost-to-go for...">FiniteHorizonLinearQuadraticRegulator</a> for details on the arguments. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__control.html#ga58307d2135757a498c434e96d7b99853" title="If system is a continuous-time system, then solves the differential Riccati equation to compute the o...">FiniteHorizonLinearQuadraticRegulator</a> for details on the arguments.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>To control a continuous-time plant using a discrete-time finite-horizon LQR controller, first convert the plant using DiscreteTimeApproximation and pass it to the function. After obtaining the discrete-time controller, be sure to connect a <a class="el" href="classdrake_1_1systems_1_1_zero_order_hold.html" title="A zero order hold block with input u, which may be vector-valued (discrete or continuous) or abstract...">ZeroOrderHold</a> system to its output. For more details, refer to the DiscreteTimeTrajectory documentation. </dd></dl>
 
 </div>
 </div>

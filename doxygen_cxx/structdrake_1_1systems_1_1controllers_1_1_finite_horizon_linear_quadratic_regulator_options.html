@@ -203,7 +203,7 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a92fc34e0decbd0e19c08c8aa004c98a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the "square-root" method solution to the Riccati equation.  <a href="#a92fc34e0decbd0e19c08c8aa004c98a4">More...</a><br /></td></tr>
 <tr class="separator:a92fc34e0decbd0e19c08c8aa004c98a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4242c7dc34593f02bccbbd0dd44585f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a4242c7dc34593f02bccbbd0dd44585f2">simulator_config</a> {}</td></tr>
-<tr class="memdesc:a4242c7dc34593f02bccbbd0dd44585f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">For continuous-time dynamical systems, the Riccati equation is solved by the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> (running backwards in time).  <a href="#a4242c7dc34593f02bccbbd0dd44585f2">More...</a><br /></td></tr>
+<tr class="memdesc:a4242c7dc34593f02bccbbd0dd44585f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">For continuous-time finite-horizon LQR, the Riccati differential equation is solved by the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> (running backwards in time).  <a href="#a4242c7dc34593f02bccbbd0dd44585f2">More...</a><br /></td></tr>
 <tr class="separator:a4242c7dc34593f02bccbbd0dd44585f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -296,7 +296,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>For continuous-time dynamical systems, the Riccati equation is solved by the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> (running backwards in time). </p>
+<p>For continuous-time finite-horizon LQR, the Riccati differential equation is solved by the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> (running backwards in time). </p>
 <p>Use this parameter to configure the simulator (e.g. choose non-default integrator or integrator parameters). </p>
 
 </div>
@@ -314,7 +314,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A nominal input trajectory. </p>
-<p>The system is linearized about this trajectory. u0 must be defined over the entire interval, [t0, tf]. If null, then u0 is taken to be a constant trajectory (whose value is specified by the context passed into the LQR method). </p>
+<p>The system is linearized about this trajectory. u0 must be defined over the entire interval [t0, tf] for the continuous-time case, or at least over the sample times for the discrete-time case. If null, then u0 is taken to be a constant trajectory (whose value is specified by the context passed into the LQR method). </p>
 
 </div>
 </div>
@@ -365,7 +365,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A nominal state trajectory. </p>
-<p>The system is linearized about this trajectory. x0 must be defined over the entire interval [t0, tf]. If null, then x0 is taken to be a constant trajectory (whose value is specified by the context passed into the LQR method). </p>
+<p>The system is linearized about this trajectory. x0 must be defined over the entire interval [t0, tf] for the continuous-time case, or at least over the sample times for the discrete-time case. If null, then x0 is taken to be a constant trajectory (whose value is specified by the context passed into the LQR method). </p>
 
 </div>
 </div>

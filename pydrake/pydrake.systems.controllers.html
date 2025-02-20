@@ -276,8 +276,9 @@ has run once), not zero.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulator">
 <span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">t0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions" title="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions"><span class="pre">pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions(Qf=None,</span> <span class="pre">N=None,</span> <span class="pre">input_port_index=InputPortSelection.kUseFirstInputIfItExists,</span> <span class="pre">use_square_root_method=False,</span> <span class="pre">simulator_config=SimulatorConfig(integration_scheme='runge_kutta3',</span> <span class="pre">max_step_size=0.1,</span> <span class="pre">accuracy=0.0001,</span> <span class="pre">use_error_control=True,</span> <span class="pre">target_realtime_rate=0.0,</span> <span class="pre">publish_every_time_step=False))</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult" title="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult"><span class="pre">pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulator" title="Permalink to this definition"></a></dt>
-<dd><p>Solves the differential Riccati equation to compute the optimal
-controller and optimal cost-to-go for the finite-horizon linear
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">system</span></code> is a continuous-time system, then solves the
+differential Riccati equation to compute the optimal controller and
+optimal cost-to-go for the continuous-time finite-horizon linear
 quadratic regulator:</p>
 <div class="math notranslate nohighlight">
 \[\min_u (x(t_f)-x_d(t_f))'Q_f(x(t_f)-x_d(t_f)) + \int_{t_0}^{t_f}\]</div>
@@ -285,11 +286,31 @@ quadratic regulator:</p>
 (u(t)-u_d(t))’R(u(t)-u_d(t)) dt + int_{t_0}^{t_f}
 2(x(t)-x_d(t))’N(u(t)-u_d(t)) dt text{s.t. } dot{x} - dot{x}_0(t) = A(t)(x(t) - x_0(t)) + B(t)(u(t) -
 u_0(t)) + c(t)</p>
-<p>where A(t), B(t), and c(t) are taken from the gradients of the
-continuous-time dynamics ẋ = f(t,x,u), as A(t) = dfdx(t, x0(t),
-u0(t)), B(t) = dfdu(t, x0(t), u0(t)), and c(t) = f(t, x0(t), u0(t)) -
-ẋ0(t). x0(t) and u0(t) can be specified in <code class="docutils literal notranslate"><span class="pre">options</span></code>, otherwise are
-taken to be constant trajectories with values given by <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<p>where <span class="math notranslate nohighlight">\(A(t)\)</span>, <span class="math notranslate nohighlight">\(B(t)\)</span>, and <span class="math notranslate nohighlight">\(c(t)\)</span> are taken from the
+gradients of the continuous-time dynamics <span class="math notranslate nohighlight">\(\dot{x} = f(t,x,u)\)</span>,
+where <span class="math notranslate nohighlight">\(A(t) = \frac{\partial f}{\partial x}(t, x_0(t), u_0(t))\)</span>,
+<span class="math notranslate nohighlight">\(B(t) = \frac{\partial f}{\partial u}(t, x_0(t), u_0(t))\)</span>, and
+<span class="math notranslate nohighlight">\(c(t) = f(t, x_0(t), u_0(t)) - \dot{x}_0(t)\)</span>. <span class="math notranslate nohighlight">\(x_0(t)\)</span> and
+<span class="math notranslate nohighlight">\(u_0(t)\)</span> can be specified in <code class="docutils literal notranslate"><span class="pre">options</span></code>, otherwise are taken to
+be constant trajectories with values given by <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">system</span></code> is a discrete-time system, then solves the Riccati
+difference equation to compute the optimal controller and optimal
+cost-to-go for the doscrete-time finite-horizon linear quadratic
+regulator:</p>
+<div class="math notranslate nohighlight">
+\[\min_u (x[N]-x_d[N])'Q_f(x[N]-x_d[N]) + \sum_{n=0}^{N-1}\]</div>
+<p>(x[n]-x_d[n])’Q(x[n]-x_d[n])+ sum_{n=0}^{N-1}
+(u[n]-u_d[n])’R(u[n]-u_d[n]) + sum_{n=0}^{N-1}
+2(x[n]-x_d[n])’N(u[n]-u_d[n]) text{s.t. } x[n+1] - x_0[n+1] = A[n](x[n] - x_0[n]) + B[n](u[n] -
+u_0[n]) + c[n]</p>
+<p>where <span class="math notranslate nohighlight">\(A[n]\)</span>, <span class="math notranslate nohighlight">\(B[n]\)</span>, and <span class="math notranslate nohighlight">\(c[n]\)</span> are taken from the
+gradients of the discrete-time dynamics <span class="math notranslate nohighlight">\(x[n+1] =
+f_d(n,x[n],u[n])\)</span>, where <span class="math notranslate nohighlight">\(A[n] =\frac{\partial f_d}{\partial
+x}(x_0[n], u_0[n]), B[n] = \frac{\partial f_d}{\partial u}(n,x_0[n],
+u_0[n])\)</span>, and <span class="math notranslate nohighlight">\(c[n] = f_d(n,x_0[n],u_0[n]) - x_0[n+1]\)</span>.
+<span class="math notranslate nohighlight">\(x_0[n]\)</span> and <span class="math notranslate nohighlight">\(u_0[n]\)</span> can be specified in <code class="docutils literal notranslate"><span class="pre">options</span></code>,
+otherwise are taken to be constant trajectories with values given by
+<code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>a System&lt;double&gt; representing the plant.</p>
 </dd>
@@ -307,20 +328,24 @@ state and/or input trajectories.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt><dd><p>is the optional FiniteHorizonLinearQuadraticRegulatorOptions.</p>
 </dd>
-<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">system</span></code> must be a System&lt;double&gt; with (only) n continuous state
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>FiniteHorizonLinearQuadraticRegulatorResult representing a
+continuous-time or a discrete-time finite-horizon LQR.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">system</span></code> must be a System&lt;double&gt; with n continuous state
+variables and m inputs, or a System&lt;double&gt; with n discrete state
 variables and m inputs. It must be convertible to
 System&lt;AutoDiffXd&gt;.</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Support for difference-equation systems (</p>
-</div>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>System&lt;T&gt;::IsDifferenceEquationSystem()) by solving the
-differential Riccati equation and richer specification of the
-objective are anticipated (they are listed in the code as TODOs).</p>
+<p>Richer specification of the objective is anticipated (they are
+listed in the code as TODOs).</p>
 </div>
 </dd></dl>
 
@@ -364,19 +389,21 @@ the zero matrix.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.simulator_config">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">simulator_config</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.simulator_config" title="Permalink to this definition"></a></dt>
-<dd><p>For continuous-time dynamical systems, the Riccati equation is solved
-by the Simulator (running backwards in time). Use this parameter to
-configure the simulator (e.g. choose non-default integrator or
-integrator parameters).</p>
+<dd><p>For continuous-time finite-horizon LQR, the Riccati differential
+equation is solved by the Simulator (running backwards in time). Use
+this parameter to configure the simulator (e.g. choose non-default
+integrator or integrator parameters).</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.u0">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">u0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.u0" title="Permalink to this definition"></a></dt>
 <dd><p>A nominal input trajectory. The system is linearized about this
-trajectory. u0 must be defined over the entire interval, [t0, tf]. If
-null, then u0 is taken to be a constant trajectory (whose value is
-specified by the context passed into the LQR method).</p>
+trajectory. u0 must be defined over the entire interval [t0, tf] for
+the continuous-time case, or at least over the sample times for the
+discrete-time case. If null, then u0 is taken to be a constant
+trajectory (whose value is specified by the context passed into the
+LQR method).</p>
 </dd></dl>
 
 <dl class="py property">
@@ -401,9 +428,11 @@ definite and symmetric) Qf in this options struct.</p>
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.x0">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.x0" title="Permalink to this definition"></a></dt>
 <dd><p>A nominal state trajectory. The system is linearized about this
-trajectory. x0 must be defined over the entire interval [t0, tf]. If
-null, then x0 is taken to be a constant trajectory (whose value is
-specified by the context passed into the LQR method).</p>
+trajectory. x0 must be defined over the entire interval [t0, tf] for
+the continuous-time case, or at least over the sample times for the
+discrete-time case. If null, then x0 is taken to be a constant
+trajectory (whose value is specified by the context passed into the
+LQR method).</p>
 </dd></dl>
 
 <dl class="py property">
@@ -421,11 +450,15 @@ null, then xd(t) = x0(t).</p>
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult" title="Permalink to this definition"></a></dt>
 <dd><p>A structure that contains the basic
-FiniteHorizonLinearQuadraticRegulator results. The finite-horizon
-cost-to-go is given by (x-x0(t))’<a href="#id5"><span class="problematic" id="id6">*</span></a>S(t)*(x-x0(t)) + 2*(x-x₀(t))’sₓ(t) +
-s₀(t) and the optimal controller is given by u-u0(t) = -K(t)*(x-x₀(t))
-- k₀(t). Please don’t overlook the factor of 2 in front of the sₓ(t)
-term.</p>
+FiniteHorizonLinearQuadraticRegulator results.</p>
+<p>The continuous-time finite-horizon cost-to-go is given by
+(x-x₀(t))’<a href="#id5"><span class="problematic" id="id6">*</span></a>S(t)*(x-x₀(t)) + 2(x-x₀(t))’sₓ(t) + s₀(t) and the optimal
+controller is given by u-u₀(t) = -K(t) (x-x₀(t)) - k₀(t). Please don’t
+overlook the factor of 2 in front of the sₓ(t) term.</p>
+<p>The discrete-time finite-horizon cost-to-go is given by
+(x−x₀[n])’<a href="#id7"><span class="problematic" id="id8">*</span></a>S[n]*(x−x₀[n])) + 2(x−x₀[n])’sₓ[n] + s₀[n] and the optimal
+controller is given by u−u₀[n] = −K[n] (x−x₀[n]) − k₀[n]. Please don’t
+overlook the factor of 2 in front of the sₓ[n] term.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.__init__" title="Permalink to this definition"></a></dt>
@@ -870,7 +903,7 @@ order) expected for the plant’s actuation input port.</p>
 <dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController.get_output_port_generalized_force">
 <span class="sig-name descname"><span class="pre">get_output_port_generalized_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.JointStiffnessController" title="pydrake.systems.controllers.JointStiffnessController"><span class="pre">pydrake.systems.controllers.JointStiffnessController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.get_output_port_generalized_force" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the output port for the generalized forces implementing the
-control. <a href="#id7"><span class="problematic" id="id8">*</span></a>/ (Deprecated.)</p>
+control. <a href="#id9"><span class="problematic" id="id10">*</span></a>/ (Deprecated.)</p>
 <dl class="simple">
 <dt>Deprecated:</dt><dd><p>Use get_output_port_actuation() instead, which multiplies the
 generalized force by B⁻¹ to be consumed by MultibodyPlant’s
@@ -1080,6 +1113,15 @@ implementing the regulator (controller) as a System, with a single
 <p class="admonition-title">See also</p>
 <p>FiniteHorizonLinearQuadraticRegulator for details on the
 arguments.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To control a continuous-time plant using a discrete-time
+finite-horizon LQR controller, first convert the plant using
+DiscreteTimeApproximation and pass it to the function. After
+obtaining the discrete-time controller, be sure to connect a
+ZeroOrderHold system to its output. For more details, refer to the
+DiscreteTimeTrajectory documentation.</p>
 </div>
 </dd></dl>
 
