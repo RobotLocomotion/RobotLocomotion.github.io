@@ -15,6 +15,7 @@ var classdrake_1_1multibody_1_1_rotational_inertia =
     [ "CouldBePhysicallyValid", "classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b", null ],
     [ "get_moments", "classdrake_1_1multibody_1_1_rotational_inertia.html#a63faf9877a005bf08269b508f2d17b42", null ],
     [ "get_products", "classdrake_1_1multibody_1_1_rotational_inertia.html#a73703796210df51bb25acbb19168913a", null ],
+    [ "IsFinite", "classdrake_1_1multibody_1_1_rotational_inertia.html#a1748abde222b7ff23aeeb4bf6f510a37", null ],
     [ "IsNaN", "classdrake_1_1multibody_1_1_rotational_inertia.html#a1a73339c4b21bba9c3fa975f7a6c4220", null ],
     [ "IsNearlyEqualTo", "classdrake_1_1multibody_1_1_rotational_inertia.html#a0546b3ac658fccec61a5156a926765dd", null ],
     [ "IsZero", "classdrake_1_1multibody_1_1_rotational_inertia.html#a55630ea16dd7fcd906f2c9d9db36bb66", null ],

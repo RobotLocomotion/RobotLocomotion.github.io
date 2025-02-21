@@ -310,6 +310,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae57e5aca5db002545e4b9335c8d9dbfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#ae57e5aca5db002545e4b9335c8d9dbfa">SetZero</a> ()</td></tr>
 <tr class="memdesc:ae57e5aca5db002545e4b9335c8d9dbfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>this</code> rotational inertia so all its moments/products of inertia are zero, e.g., for convenient initialization before a computation or for inertia calculations involving a particle (point-mass).  <a href="#ae57e5aca5db002545e4b9335c8d9dbfa">More...</a><br /></td></tr>
 <tr class="separator:ae57e5aca5db002545e4b9335c8d9dbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1748abde222b7ff23aeeb4bf6f510a37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a1748abde222b7ff23aeeb4bf6f510a37">IsFinite</a> () const</td></tr>
+<tr class="memdesc:a1748abde222b7ff23aeeb4bf6f510a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if all moments and products in <code>this</code> rotational inertia are finite (e.g., no NaNs or infinities), otherwise returns false.  <a href="#a1748abde222b7ff23aeeb4bf6f510a37">More...</a><br /></td></tr>
+<tr class="separator:a1748abde222b7ff23aeeb4bf6f510a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a73339c4b21bba9c3fa975f7a6c4220"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a1a73339c4b21bba9c3fa975f7a6c4220">IsNaN</a> () const</td></tr>
 <tr class="memdesc:a1a73339c4b21bba9c3fa975f7a6c4220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if any moment/product in <code>this</code> rotational inertia is NaN.  <a href="#a1a73339c4b21bba9c3fa975f7a6c4220">More...</a><br /></td></tr>
 <tr class="separator:a1a73339c4b21bba9c3fa975f7a6c4220"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -852,6 +855,25 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns 3-element vector with products of inertia [Ixy, Ixz, Iyz]. </p>
+
+</div>
+</div>
+<a id="a1748abde222b7ff23aeeb4bf6f510a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1748abde222b7ff23aeeb4bf6f510a37">&#9670;&nbsp;</a></span>IsFinite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt;T&gt; IsFinite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if all moments and products in <code>this</code> rotational inertia are finite (e.g., no NaNs or infinities), otherwise returns false. </p>
 
 </div>
 </div>

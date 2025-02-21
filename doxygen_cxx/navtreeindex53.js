@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"finite__horizon__linear__quadratic__regulator_8h.html#ga58307d2135757a498c434e96d7b99853":[4,0,0,12,1,2,2],
 "first__order__low__pass__filter_8h.html":[4,0,0,12,6,9],
 "fixed__input__port__value_8h.html":[4,0,0,12,3,22],
 "fixed__offset__frame_8h.html":[4,0,0,8,14,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "functions_rela_b.html":[3,3,6,1],
 "functions_rela_c.html":[3,3,6,2],
 "functions_rela_d.html":[3,3,6,3],
-"functions_rela_e.html":[3,3,6,4],
-"functions_rela_f.html":[3,3,6,5]
+"functions_rela_e.html":[3,3,6,4]
 };

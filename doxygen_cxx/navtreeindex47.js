@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html":[1,2,4,0],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a08fa1fe06c423a4a86f8f6b781da1ea6":[1,2,4,0,0],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a0ce8a8f0157c4c959bfea7710531fc77":[1,2,4,0,2],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a2a175742b79c5106a497a2f943c55da3":[1,2,4,0,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#aab9f68ba747ce2d23132a1348d1604e7":[1,2,4,5,7],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#ad59feb45c891897205200a1a186b86f1":[1,2,4,5,2],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#adddc16fb008fab4bdbc6c83e00033c0a":[1,2,4,5,0],
-"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#af176a3cbce08b1273cadb85c547666e0":[1,2,4,5,10],
-"classdrake_1_1test_1_1_diagnostic_policy_test_base.html":[3,0,0,17,0]
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#af176a3cbce08b1273cadb85c547666e0":[1,2,4,5,10]
 };

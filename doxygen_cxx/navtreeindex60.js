@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"quaternion__floating__joint_8h.html":[4,0,0,8,14,38],
 "quaternion__floating__joint_8h.html#ab083e1c71efaf056be34040355ede455":[4,0,0,8,14,38,1],
 "quaternion__floating__mobilizer_8h.html":[4,0,0,8,14,39],
 "quaternion__floating__mobilizer_8h.html#afd449a6bd8e0e04f8cc9f9bedc9ddcf9":[4,0,0,8,14,39,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "schunk__wsg__position__controller_8h.html":[4,0,0,6,2,7],
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,2,8],
 "schunk__wsg__trajectory__generator__state__vector_8h.html":[4,0,0,6,2,9],
-"scope__exit_8h.html":[4,0,0,1,60],
-"scoped__name_8h.html":[4,0,0,8,14,48]
+"scope__exit_8h.html":[4,0,0,1,60]
 };

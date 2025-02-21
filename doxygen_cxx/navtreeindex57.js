@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"make__pendulum__plant_8h.html#a30233325115a0476081c9049714ce476":[4,0,0,8,0,5,0,1],
 "make__sphere__field_8h.html":[4,0,0,4,2,37],
 "make__sphere__mesh_8h.html":[4,0,0,4,2,38],
 "manipulation__py_8h.html":[4,0,0,0,0,4,0],
@@ -237,17 +238,16 @@ var NAVTREEINDEX57 =
 "namespacedrake_1_1ad.html":[3,0,0,0],
 "namespacedrake_1_1assert.html":[2,0,0,1],
 "namespacedrake_1_1assert.html":[3,0,0,1],
-"namespacedrake_1_1common.html":[2,0,0,2],
 "namespacedrake_1_1common.html":[3,0,0,2],
+"namespacedrake_1_1common.html":[2,0,0,2],
 "namespacedrake_1_1common_1_1test.html":[2,0,0,2,0],
 "namespacedrake_1_1examples.html":[2,0,0,3],
 "namespacedrake_1_1examples.html":[3,0,0,3],
 "namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,3,0],
 "namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0],
-"namespacedrake_1_1examples_1_1allegro__hand.html":[3,0,0,3,1],
 "namespacedrake_1_1examples_1_1allegro__hand.html":[2,0,0,3,1],
+"namespacedrake_1_1examples_1_1allegro__hand.html":[3,0,0,3,1],
 "namespacedrake_1_1examples_1_1ball__plate.html":[2,0,0,3,2],
 "namespacedrake_1_1examples_1_1bead__on__a__wire.html":[2,0,0,3,3],
-"namespacedrake_1_1examples_1_1bead__on__a__wire.html":[3,0,0,3,2],
-"namespacedrake_1_1examples_1_1bouncing__ball.html":[3,0,0,3,3]
+"namespacedrake_1_1examples_1_1bead__on__a__wire.html":[3,0,0,3,2]
 };
