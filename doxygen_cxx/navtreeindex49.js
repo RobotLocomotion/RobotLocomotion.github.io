@@ -1,5 +1,14 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a24948d1f75d0b7f6118b535e655ada09":[3,0,0,18,11,6],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a3093825d2725664b6304ae2f31217759":[3,0,0,18,11,11],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a320fae9dc5f8cb947997f9fdb205ec9c":[3,0,0,18,11,4],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a37135ec545f4025fc50aba0017d8566d":[3,0,0,18,11,9],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a4a93c5b33b420280509114f8a9ac86aa":[3,0,0,18,11,10],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a52ec91bfc0bdaeacdb3be7800ab7d43e":[3,0,0,18,11,16],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a611b9bd79f548904a032ba3992d705e7":[3,0,0,18,11,13],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a6fd5552029547f8e16ebbed98e108bbb":[3,0,0,18,11,3],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[3,0,0,18,11,2],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[3,0,0,18,11,12],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a97e610bb883f37a631873104d8f6209d":[3,0,0,18,11,0],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9efee334e7a31b81c6056b8a0bb2cad1":[3,0,0,18,11,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX49 =
 "constraint__problem__data_8h.html":[4,0,0,3,16,0],
 "constraint__relaxing__ik_8h.html":[4,0,0,8,4,5],
 "constraint__solver_8h.html":[4,0,0,3,16,1],
-"constraint__specs_8h.html":[4,0,0,8,10,3],
-"contact__configuration_8h.html":[4,0,0,8,1,7],
-"contact__defaults__doxygen_8h.html":[4,0,0,8,10,4],
-"contact__jacobians_8h.html":[4,0,0,8,10,5],
-"contact__jacobians_8h.html#a9436deb241da5e1c194a7d7ecd3e1ae8":[4,0,0,8,10,5,0],
-"contact__model__doxygen_8h.html":[4,0,0,8,10,6],
-"contact__problem__graph_8h.html":[4,0,0,8,1,0,0],
-"contact__properties_8h.html":[4,0,0,8,10,7],
-"contact__results_8h.html":[4,0,0,8,10,8],
-"contact__results_8h.html#a1769185ab2e227305eb6677ae38c5824":[4,0,0,8,10,8,1]
+"constraint__specs_8h.html":[4,0,0,8,10,3]
 };

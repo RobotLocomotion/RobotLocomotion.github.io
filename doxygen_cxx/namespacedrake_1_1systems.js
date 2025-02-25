@@ -91,6 +91,8 @@ var namespacedrake_1_1systems =
     [ "ScalarDenseOutput", "classdrake_1_1systems_1_1_scalar_dense_output.html", "classdrake_1_1systems_1_1_scalar_dense_output" ],
     [ "ScalarInitialValueProblem", "classdrake_1_1systems_1_1_scalar_initial_value_problem.html", "classdrake_1_1systems_1_1_scalar_initial_value_problem" ],
     [ "ScalarViewDenseOutput", "classdrake_1_1systems_1_1_scalar_view_dense_output.html", "classdrake_1_1systems_1_1_scalar_view_dense_output" ],
+    [ "Selector", "classdrake_1_1systems_1_1_selector.html", "classdrake_1_1systems_1_1_selector" ],
+    [ "SelectorParams", "structdrake_1_1systems_1_1_selector_params.html", "structdrake_1_1systems_1_1_selector_params" ],
     [ "SemiExplicitEulerIntegrator", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator" ],
     [ "SharedPointerSystem", "classdrake_1_1systems_1_1_shared_pointer_system.html", "classdrake_1_1systems_1_1_shared_pointer_system" ],
     [ "Simulator", "classdrake_1_1systems_1_1_simulator.html", "classdrake_1_1systems_1_1_simulator" ],

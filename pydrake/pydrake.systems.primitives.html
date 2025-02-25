@@ -4388,6 +4388,187 @@ constructor.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.Selector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">Selector</span></span><a class="headerlink" href="#pydrake.systems.primitives.Selector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>This system combines multiple vector-valued inputs into multiple
+vector- valued outputs. It operates at the level of individual
+elements of the input and output vectors (i.e., an output port can
+provide a mixture of data from multiple input ports). The inputs to
+this system directly feed through to its outputs. Refer to
+SelectorParams to understand how the selection is specified.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Selector</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(M-1)</td></tr></table></td></tr></table><p>The port names shown in the figure above are the defaults. Custom
+names may be specified in the SelectorParams.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.systems.primitives.Selector_" title="pydrake.systems.primitives.Selector_"><code class="xref py py-class docutils literal notranslate"><span class="pre">Selector_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.Selector.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.Selector" title="pydrake.systems.primitives.Selector"><span class="pre">pydrake.systems.primitives.Selector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SelectorParams" title="pydrake.systems.primitives.SelectorParams"><span class="pre">pydrake.systems.primitives.SelectorParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.Selector.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a Selector with the given parameters.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.Selector_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">Selector_</span></span><a class="headerlink" href="#pydrake.systems.primitives.Selector_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">Selector_[float]</span></code>, <a class="reference internal" href="#pydrake.systems.primitives.Selector_-AutoDiffXd" title="pydrake.systems.primitives.Selector_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Selector_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.Selector_-Expression" title="pydrake.systems.primitives.Selector_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Selector_[Expression]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.Selector_-AutoDiffXd">
+<span id="pydrake.systems.primitives.Selector_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">Selector_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.primitives.Selector_-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>This system combines multiple vector-valued inputs into multiple
+vector- valued outputs. It operates at the level of individual
+elements of the input and output vectors (i.e., an output port can
+provide a mixture of data from multiple input ports). The inputs to
+this system directly feed through to its outputs. Refer to
+SelectorParams to understand how the selection is specified.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Selector</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(M-1)</td></tr></table></td></tr></table><p>The port names shown in the figure above are the defaults. Custom
+names may be specified in the SelectorParams.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.Selector_-AutoDiffXd-.__init__">
+<span id="pydrake.systems.primitives.Selector_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.Selector_" title="pydrake.systems.primitives.Selector_"><span class="pre">pydrake.systems.primitives.Selector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SelectorParams" title="pydrake.systems.primitives.SelectorParams"><span class="pre">pydrake.systems.primitives.SelectorParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.Selector_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a Selector with the given parameters.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.Selector_-Expression">
+<span id="pydrake.systems.primitives.Selector_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">Selector_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.primitives.Selector_-Expression" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<p>This system combines multiple vector-valued inputs into multiple
+vector- valued outputs. It operates at the level of individual
+elements of the input and output vectors (i.e., an output port can
+provide a mixture of data from multiple input ports). The inputs to
+this system directly feed through to its outputs. Refer to
+SelectorParams to understand how the selection is specified.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Selector</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(M-1)</td></tr></table></td></tr></table><p>The port names shown in the figure above are the defaults. Custom
+names may be specified in the SelectorParams.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.Selector_-Expression-.__init__">
+<span id="pydrake.systems.primitives.Selector_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.Selector_" title="pydrake.systems.primitives.Selector_"><span class="pre">pydrake.systems.primitives.Selector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SelectorParams" title="pydrake.systems.primitives.SelectorParams"><span class="pre">pydrake.systems.primitives.SelectorParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.Selector_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a Selector with the given parameters.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">SelectorParams</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams" title="Permalink to this definition"></a></dt>
+<dd><p>The constructor arguments for a Selector.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SelectorParams" title="pydrake.systems.primitives.SelectorParams"><span class="pre">pydrake.systems.primitives.SelectorParams</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.InputPortParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InputPortParams</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.InputPortParams" title="Permalink to this definition"></a></dt>
+<dd><p>Helper struct for <code class="docutils literal notranslate"><span class="pre">inputs</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.InputPortParams.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SelectorParams.InputPortParams" title="pydrake.systems.primitives.SelectorParams.InputPortParams"><span class="pre">pydrake.systems.primitives.SelectorParams.InputPortParams</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.InputPortParams.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.InputPortParams.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.InputPortParams.name" title="Permalink to this definition"></a></dt>
+<dd><p>(Optional) Specifies a name for the port. When given, the name must be
+a valid port name. When unset, the port will use kDefaultName.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.InputPortParams.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.InputPortParams.size" title="Permalink to this definition"></a></dt>
+<dd><p>Specifies the size of the port, which must be non-negative.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.inputs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inputs</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.inputs" title="Permalink to this definition"></a></dt>
+<dd><p>Specifies details of the input ports, and by implication the total
+number of input ports. There will be <code class="docutils literal notranslate"><span class="pre">inputs.size()</span></code> ports in total.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.OutputPortParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OutputPortParams</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.OutputPortParams" title="Permalink to this definition"></a></dt>
+<dd><p>Helper struct for <code class="docutils literal notranslate"><span class="pre">outputs</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.OutputPortParams.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SelectorParams.OutputPortParams" title="pydrake.systems.primitives.SelectorParams.OutputPortParams"><span class="pre">pydrake.systems.primitives.SelectorParams.OutputPortParams</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.OutputPortParams.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.OutputPortParams.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.OutputPortParams.name" title="Permalink to this definition"></a></dt>
+<dd><p>(Optional) Specifies a name for the port. When given, the name must be
+a valid port name. When unset, the port will use kDefaultName.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.OutputPortParams.selections">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selections</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.OutputPortParams.selections" title="Permalink to this definition"></a></dt>
+<dd><p>Specifies the values for the output port elements, and by implication
+the port’s size. The port will have size <code class="docutils literal notranslate"><span class="pre">selections.size()</span></code>, and
+its i’th output value will be determined by the (input_port_index,
+input_offset) pair at <code class="docutils literal notranslate"><span class="pre">selections[i]</span></code>, i.e., for the m’th output
+port we have:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>n = selections[i].input_port_index
+j = selections[i].input_offset
+y_m[i] = u_n[j]
+</pre></div>
+</div>
+<p>Output elements always come from some input element; it is not
+possible to directly set an output to a constant. (If a constant is
+necessary, connect a ConstantVectorSource to an input port.)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.outputs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">outputs</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.outputs" title="Permalink to this definition"></a></dt>
+<dd><p>Specifies details of the output ports, and by implication the total
+number of output ports. There will be <code class="docutils literal notranslate"><span class="pre">outputs.size()</span></code> ports in
+total.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.OutputSelection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OutputSelection</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.OutputSelection" title="Permalink to this definition"></a></dt>
+<dd><p>Helper struct for <code class="docutils literal notranslate"><span class="pre">output_selections</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.OutputSelection.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.SelectorParams.OutputSelection" title="pydrake.systems.primitives.SelectorParams.OutputSelection"><span class="pre">pydrake.systems.primitives.SelectorParams.OutputSelection</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.OutputSelection.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.OutputSelection.input_offset">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_offset</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.OutputSelection.input_offset" title="Permalink to this definition"></a></dt>
+<dd><p>The element offset within the given input port to use for this single
+output element.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.SelectorParams.OutputSelection.input_port_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_port_index</span></span><a class="headerlink" href="#pydrake.systems.primitives.SelectorParams.OutputSelection.input_port_index" title="Permalink to this definition"></a></dt>
+<dd><p>The input port to use for this single output element.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.SharedPointerSystem">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">SharedPointerSystem</span></span><a class="headerlink" href="#pydrake.systems.primitives.SharedPointerSystem" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>

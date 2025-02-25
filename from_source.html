@@ -281,6 +281,14 @@ When ON, WITH_USER_BLAS must also be ON.</li>
   <li>WITH_USER_ZLIB (default ON). When ON, uses <code class="language-plaintext highlighter-rouge">find_package(ZLIB)</code> to locate a
 user-provided <code class="language-plaintext highlighter-rouge">ZLIB::ZLIB</code> library instead of building from source. Caveat:
 On macOS, for now this hardcodes <code class="language-plaintext highlighter-rouge">-lz</code> instead of calling <code class="language-plaintext highlighter-rouge">find_package</code>.</li>
+  <li>WITH_CLARABEL (default ON). When ON, enables the <code class="language-plaintext highlighter-rouge">ClarabelSolver</code>
+in the build.</li>
+  <li>WITH_CLP (default ON). When ON, enables the <code class="language-plaintext highlighter-rouge">ClpSolver</code> in the build.</li>
+  <li>WITH_CSDP (default ON). When ON, enables the <code class="language-plaintext highlighter-rouge">CsdpSolver</code> in the build.</li>
+  <li>WITH_IPOPT (default ON). When ON, enables the <code class="language-plaintext highlighter-rouge">IpoptSolver</code> in the build.</li>
+  <li>WITH_NLOPT (default ON). When ON, enables the <code class="language-plaintext highlighter-rouge">NloptSolver</code> in the build.</li>
+  <li>WITH_OSQP (default ON). When ON, enables the <code class="language-plaintext highlighter-rouge">OsqpSolver</code> in the build.</li>
+  <li>WITH_SCS (default ON). When ON, enables the <code class="language-plaintext highlighter-rouge">ScsSolver</code> in the build.</li>
 </ul>
 
 <p>Adjusting closed-source (commercial) software dependencies:</p>

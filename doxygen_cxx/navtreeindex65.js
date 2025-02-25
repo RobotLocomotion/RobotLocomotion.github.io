@@ -1,5 +1,16 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#a908a115b57885da98a8babc0d1f258fc":[3,0,0,9,61,0,1],
+"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#aa1d17972259be22a1fb95b557433e617":[3,0,0,9,61,0,5],
+"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#adc6a20e07dcdd4a181acf7bfac2697df":[3,0,0,9,61,0,4],
+"structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html#ae6d5ce7fd888e2e8965cb9354ae38a43":[3,0,0,9,61,0,2],
+"structdrake_1_1multibody_1_1_pd_controller_gains.html":[3,0,0,9,63],
+"structdrake_1_1multibody_1_1_pd_controller_gains.html#a873684cefeb665f3d5e6b495de57fc0d":[3,0,0,9,63,0],
+"structdrake_1_1multibody_1_1_pd_controller_gains.html#aace2d484b0e3651abd108f04803d316c":[3,0,0,9,63,1],
+"structdrake_1_1multibody_1_1_propeller_info.html":[3,0,0,9,75],
+"structdrake_1_1multibody_1_1_propeller_info.html#a30a3388e8684851fd367f80bb8a35249":[3,0,0,9,75,6],
+"structdrake_1_1multibody_1_1_propeller_info.html#a5449c9c55e68b1b71610692e6758f31e":[3,0,0,9,75,0],
+"structdrake_1_1multibody_1_1_propeller_info.html#a5f9f30b642d0b522f931501589466b9c":[3,0,0,9,75,1],
 "structdrake_1_1multibody_1_1_propeller_info.html#a62129aeee008647a28d5c3d3b6604031":[3,0,0,9,75,4],
 "structdrake_1_1multibody_1_1_propeller_info.html#a6c7969c7bd07717edfa11d012a9a0129":[3,0,0,9,75,2],
 "structdrake_1_1multibody_1_1_propeller_info.html#ac154ef8cde7d8d7431d15790225c5b4d":[3,0,0,9,75,7],
@@ -238,16 +249,5 @@ var NAVTREEINDEX65 =
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html":[3,0,0,14,22,0],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c":[3,0,0,14,22,0,3],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a70af31c7e36b58a0a371ab585a605ed0":[3,0,0,14,22,0,2],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a8f0c05ff392b24376b9094bb67a2228b":[3,0,0,14,22,0,4],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#aa7e5f2cbcbe7a77b0b0f1cd1a88dec2c":[3,0,0,14,22,0,0],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#acee912d9ade4dfc099e98629d832127e":[3,0,0,14,22,0,1],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#ae91d6264528898aea42defb33f87f6b8":[3,0,0,14,22,0,5],
-"structdrake_1_1solvers_1_1_gurobi_solver_details.html":[3,0,0,14,23],
-"structdrake_1_1solvers_1_1_gurobi_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,14,23,3],
-"structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78":[3,0,0,14,23,0],
-"structdrake_1_1solvers_1_1_gurobi_solver_details.html#a803b799247155d71e47493ac3857b909":[3,0,0,14,23,2],
-"structdrake_1_1solvers_1_1_gurobi_solver_details.html#ad1a44ab70cbada790a810ca324c07797":[3,0,0,14,23,1],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html":[3,0,0,14,25],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a1377097022dfdec89312e47c9ae9dfc8":[3,0,0,14,25,2],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6df89ba323770f788f15768d8e278d1c":[3,0,0,14,25,0]
+"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a8f0c05ff392b24376b9094bb67a2228b":[3,0,0,14,22,0,4]
 };
