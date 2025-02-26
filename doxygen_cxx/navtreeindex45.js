@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"classdrake_1_1systems_1_1_value_producer.html":[3,0,0,16,128],
 "classdrake_1_1systems_1_1_value_producer.html#a0ba6c329027557ff2e69631a36862d4a":[3,0,0,16,128,8],
 "classdrake_1_1systems_1_1_value_producer.html#a135a073f26ba8996ba7b9a2189728508":[3,0,0,16,128,9],
 "classdrake_1_1systems_1_1_value_producer.html#a1fb6ef2afe451b542ce94b31fca6ae94":[3,0,0,16,128,30],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html#a90d3b598c0bf7e1abb09783397588e74":[3,0,0,16,1,6,1],
 "classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html#abbe4ff2f17f84b3acbd262261bc97cda":[3,0,0,16,1,6,2],
 "classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html#adba81ac8d78ef6c69fbaef90dd031301":[3,0,0,16,1,6,6],
-"classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html#aeff147efdbf2048727462995293019db":[3,0,0,16,1,6,5],
-"classdrake_1_1systems_1_1analysis__test_1_1_quadratic_scalar_system.html":[3,0,0,16,1,8]
+"classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html#aeff147efdbf2048727462995293019db":[3,0,0,16,1,6,5]
 };

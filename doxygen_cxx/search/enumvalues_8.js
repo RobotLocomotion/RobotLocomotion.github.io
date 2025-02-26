@@ -262,5 +262,6 @@ var searchData=
   ['kxyzs',['kXYZs',['../namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afaf7838358503ffc19f4ed15a03804b7f1',1,'drake::perception::pc_flags']]],
   ['kyaw_5f0_5fto_5fpi',['kYaw_0_to_PI',['../namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74aca450e45c136c14aabb606a09e0775a8',1,'drake::solvers']]],
   ['kyaw_5f0_5fto_5fpi_5f2',['kYaw_0_to_PI_2',['../namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74aae2b1591bba5a77450b0df77a207be8f',1,'drake::solvers']]],
-  ['kyaw_5fnegpi_5f2_5fto_5fpi_5f2',['kYaw_NegPI_2_to_PI_2',['../namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74aa059fc525d6d174e5e070c7261ff8e43',1,'drake::solvers']]]
+  ['kyaw_5fnegpi_5f2_5fto_5fpi_5f2',['kYaw_NegPI_2_to_PI_2',['../namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74aa059fc525d6d174e5e070c7261ff8e43',1,'drake::solvers']]],
+  ['kzero',['kZero',['../classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9a941d5a341a6f6a7a3986952dda4e9445',1,'drake::solvers::QuadraticConstraint']]]
 ];

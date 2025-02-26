@@ -7835,12 +7835,13 @@ will malfunction.</p>
 <dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.HessianType">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HessianType</span></span><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.HessianType" title="Permalink to this definition"></a></dt>
 <dd><p>Whether the Hessian matrix is positive semidefinite, negative
-semidefinite, or indefinite.</p>
+semidefinite, indefinite or a zero-matrix.</p>
 <p>Members:</p>
 <blockquote>
 <div><p>kPositiveSemidefinite :</p>
 <p>kNegativeSemidefinite :</p>
 <p>kIndefinite :</p>
+<p>kZero :</p>
 </div></blockquote>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.HessianType.__init__">
@@ -7860,6 +7861,11 @@ semidefinite, or indefinite.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.HessianType.kPositiveSemidefinite">
 <span class="sig-name descname"><span class="pre">kPositiveSemidefinite</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;HessianType.kPositiveSemidefinite:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.HessianType.kPositiveSemidefinite" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.QuadraticConstraint.HessianType.kZero">
+<span class="sig-name descname"><span class="pre">kZero</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;HessianType.kZero:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.solvers.QuadraticConstraint.HessianType.kZero" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">

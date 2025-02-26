@@ -270,6 +270,10 @@ it prior to removing it.</li>
   <li>When using Bazel to depend on Drake via <code class="language-plaintext highlighter-rouge">WORKSPACE.bazel</code> (i.e., without
 bzlmod):
     <ul>
+      <li>WARNING: Using Drake as a WORKSPACE style external is deprecated and will
+be removed from Drake on or after 2025-09-01. Please switch to MODULE style
+externals (i.e., Bzlmod) instead; for an example, see
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_bazel_external">drake_bazel_external</a>.</li>
       <li>The <code class="language-plaintext highlighter-rouge">add_default_...</code> macros defined in
 <code class="language-plaintext highlighter-rouge">@drake//tools/workspace:default.bzl</code> are all part of the Stable API.
         <ul>

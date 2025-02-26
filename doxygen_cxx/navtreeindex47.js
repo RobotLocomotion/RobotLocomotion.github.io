@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html":[1,2,11,3],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a2227250843f4dc54ecb253185461b199":[1,2,11,3,5],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a23186071020bd638fb54e1cc70517a5f":[1,2,11,3,2],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a3154e21e3ddd2f7aec07d8ec9a7ea2de":[1,2,11,3,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#afd0368849f35be23e914079d5373ee2c":[1,2,4,4,9],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#aff74e4980084b28c29f132bd18606031":[1,2,4,4,3],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html":[1,2,4,5],
-"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a0d1b2dbe47a753e6935a63f02e5cc586":[1,2,4,5,6],
-"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a2870708bdf972cdfbacc0fa776a01a5d":[1,2,4,5,9]
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a0d1b2dbe47a753e6935a63f02e5cc586":[1,2,4,5,6]
 };

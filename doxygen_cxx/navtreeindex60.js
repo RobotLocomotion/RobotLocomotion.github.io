@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"quaternion_8h.html#a6a490fce7fb78c13f9af3b650cf36dd5":[4,0,0,7,27,4],
 "quaternion_8h.html#a6dfe7fd8584105c4527a18548abd8550":[4,0,0,7,27,6],
 "quaternion_8h.html#a7e6bdc00adb60394da9687fc9aa5b0aa":[4,0,0,7,27,9],
 "quaternion_8h.html#a89206220569d0454a3c5aefe7562df7b":[4,0,0,7,27,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "schunk__wsg__constants_8h.html#ga9d4acc482bc52a69383e884679887402":[4,0,0,6,2,1,1],
 "schunk__wsg__controller_8h.html":[4,0,0,6,2,2],
 "schunk__wsg__driver_8h.html":[4,0,0,6,2,3],
-"schunk__wsg__driver__functions_8h.html":[4,0,0,6,2,4],
-"schunk__wsg__driver__functions_8h.html#a4439da2b643292abc0bbb07129cbd324":[4,0,0,6,2,4,0]
+"schunk__wsg__driver__functions_8h.html":[4,0,0,6,2,4]
 };

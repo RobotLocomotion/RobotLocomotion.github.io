@@ -408,5 +408,6 @@ var searchData=
   ['kyaw_5fnegpi_5f2_5fto_5fpi_5f2',['kYaw_NegPI_2_to_PI_2',['../namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74aa059fc525d6d174e5e070c7261ff8e43',1,'drake::solvers']]],
   ['kydot',['kYdot',['../structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a156ba06e0e392b0f6291fb2228174470',1,'drake::examples::rod2d::Rod2dStateVectorIndices']]],
   ['kz',['kZ',['../structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#a120a61da3b3a92f87b1d83c6da14d480',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallVectorIndices']]],
-  ['kzdot',['kZdot',['../structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#a9c398193f54100cd0c78342fe06af2f4',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallVectorIndices']]]
+  ['kzdot',['kZdot',['../structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#a9c398193f54100cd0c78342fe06af2f4',1,'drake::examples::scene_graph::bouncing_ball::BouncingBallVectorIndices']]],
+  ['kzero',['kZero',['../classdrake_1_1solvers_1_1_quadratic_constraint.html#a604cad5cda14e378ce4a77ab28ee9fd9a941d5a341a6f6a7a3986952dda4e9445',1,'drake::solvers::QuadraticConstraint']]]
 ];

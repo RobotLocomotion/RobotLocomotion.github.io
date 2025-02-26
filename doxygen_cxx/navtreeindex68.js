@@ -1,5 +1,6 @@
 var NAVTREEINDEX68 =
 {
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,2,19],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html":[3,0,2,20],
 "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html":[3,0,2,21],
 "structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,2,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX68 =
 "variable_8h.html#ab6e0055c99275292d22eb59c103fb0ae":[4,0,0,1,3,0,11,27],
 "variable_8h.html#ac3b123dcb60415c706814483e6b6d2a8":[4,0,0,1,3,0,11,26],
 "variable_8h.html#ac43a4b68b6447c593384282b8a9bc1bc":[4,0,0,1,3,0,11,16],
-"variable_8h.html#ad93b9abfad06da819d5460018eb49b5c":[4,0,0,1,3,0,11,12],
-"variables_8h.html":[4,0,0,1,3,0,12]
+"variable_8h.html#ad93b9abfad06da819d5460018eb49b5c":[4,0,0,1,3,0,11,12]
 };

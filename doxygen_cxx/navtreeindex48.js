@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a2870708bdf972cdfbacc0fa776a01a5d":[1,2,4,5,9],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a4d897b58fab20fca728b82f9101cb7d3":[1,2,4,5,3],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a51a52e381e9b808c5dca3613dc01270f":[1,2,4,5,5],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a6222323e48c49f2c425557b79716478d":[1,2,4,5,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#af3ed665c279c199edc05b05413deb70b":[3,0,0,18,10,6],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html":[3,0,0,18,11],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a0737945305cf88496fc289776515e0d9":[3,0,0,18,11,14],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a1fa8cbbde2703a0114cfeeddef894d0b":[3,0,0,18,11,7],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a22881c8c97b471c7c9a56d437df6e542":[3,0,0,18,11,15]
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a1fa8cbbde2703a0114cfeeddef894d0b":[3,0,0,18,11,7]
 };
