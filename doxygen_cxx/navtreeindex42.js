@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1systems_1_1_scalar_dense_output.html#a8f3118b9179791df7cbaca6f2d488afa":[3,0,0,16,88,9],
 "classdrake_1_1systems_1_1_scalar_dense_output.html#aec23efec42dd4a13cf1931886c6d6dec":[3,0,0,16,88,3],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html":[3,0,0,16,89],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a3039082d5cf5d9b4884c666c2e0dd033":[3,0,0,16,89,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1systems_1_1_supervector.html#a392a49340052ef35dd8729140bf94281":[3,0,0,16,107,3],
 "classdrake_1_1systems_1_1_supervector.html#a6048e9429ab19b42293ecbea1f094f1e":[3,0,0,16,107,0],
 "classdrake_1_1systems_1_1_supervector.html#ae691d69ca31d626ce55256ccc00584a0":[3,0,0,16,107,2],
-"classdrake_1_1systems_1_1_supervector.html#aeacd8b691fb7f994ef2f122dcda9320d":[3,0,0,16,107,4],
-"classdrake_1_1systems_1_1_symbolic_vector_system.html":[3,0,0,16,108]
+"classdrake_1_1systems_1_1_supervector.html#aeacd8b691fb7f994ef2f122dcda9320d":[3,0,0,16,107,4]
 };

@@ -405,6 +405,7 @@ var searchData=
   ['createbinarycodematchconstraint',['CreateBinaryCodeMatchConstraint',['../namespacedrake_1_1solvers.html#a1460b4c245321e57b234a724d774fc50',1,'drake::solvers']]],
   ['createdefaultcontext',['CreateDefaultContext',['../classdrake_1_1systems_1_1_system.html#ad047317ab91889c6743d5e47a64c7f08',1,'drake::systems::System']]],
   ['createdefaultvalue',['CreateDefaultValue',['../classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a5bfe2467e0ea22bbb13e0c4b9afa98a4',1,'drake::systems::lcm::SerializerInterface::CreateDefaultValue()'],['../classdrake_1_1systems_1_1lcm_1_1_serializer.html#aa3b343e6b2a9f07d94959abd15644a45',1,'drake::systems::lcm::Serializer::CreateDefaultValue()']]],
+  ['createinvalidityreport',['CreateInvalidityReport',['../classdrake_1_1multibody_1_1_spatial_inertia.html#ab5bb57a06aaf44fae5e54fcbfb17c980',1,'drake::multibody::SpatialInertia']]],
   ['createlogicalandconstraint',['CreateLogicalAndConstraint',['../namespacedrake_1_1solvers.html#ab3ba521ece6e61a25713f11610b01d97',1,'drake::solvers']]],
   ['createlogicalorconstraint',['CreateLogicalOrConstraint',['../namespacedrake_1_1solvers.html#ada3cfbf9597820039fe2d6c3f175731b',1,'drake::solvers']]],
   ['createlogicalxorconstraint',['CreateLogicalXorConstraint',['../namespacedrake_1_1solvers.html#aa7a863c255da14a1441e3ac58d082472',1,'drake::solvers']]],

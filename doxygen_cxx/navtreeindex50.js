@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"constraint__solver_8h.html":[4,0,0,3,16,1],
 "constraint__specs_8h.html":[4,0,0,8,10,3],
 "contact__configuration_8h.html":[4,0,0,8,1,7],
 "contact__defaults__doxygen_8h.html":[4,0,0,8,10,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "dir_358247dff0bca675d227b56e1e6e52cc.html":[4,0,0,8,15],
 "dir_38bb68bb9a9977cf78f44d487961d9ec.html":[4,0,0,1,3,0],
 "dir_39b8b3c6654246a9c12332c930bc7d3f.html":[4,0,0,8],
-"dir_3c3c25df5132fca4f15a988b4c2efab5.html":[4,0,0,5],
-"dir_3d70560bdc0f87a6aef8c45d30963b2c.html":[4,0,0,6,1]
+"dir_3c3c25df5132fca4f15a988b4c2efab5.html":[4,0,0,5]
 };

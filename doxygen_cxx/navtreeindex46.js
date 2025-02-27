@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html#aeff147efdbf2048727462995293019db":[3,0,0,16,1,6,5],
 "classdrake_1_1systems_1_1analysis__test_1_1_quadratic_scalar_system.html":[3,0,0,16,1,8],
 "classdrake_1_1systems_1_1analysis__test_1_1_quadratic_scalar_system.html#a5d10bc0c5eae442bf40d94e8200b3460":[3,0,0,16,1,8,1],
 "classdrake_1_1systems_1_1analysis__test_1_1_quadratic_scalar_system.html#a5d87f304b0414575e504e473976e4389":[3,0,0,16,1,8,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a43a2fc02cb2f5eb2db97ea5f3fe9a3bf":[3,0,0,16,5,7,7],
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a5bfe2467e0ea22bbb13e0c4b9afa98a4":[3,0,0,16,5,7,4],
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#ab9c5d077a75cc19cd399abe892316543":[3,0,0,16,5,7,1],
-"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acf0fec4b7afc9415a7441b0bb4e9cf33":[3,0,0,16,5,7,0],
-"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#aeae40f26cfe7f3992ac3b6a75e32133f":[3,0,0,16,5,7,5]
+"classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acf0fec4b7afc9415a7441b0bb4e9cf33":[3,0,0,16,5,7,0]
 };

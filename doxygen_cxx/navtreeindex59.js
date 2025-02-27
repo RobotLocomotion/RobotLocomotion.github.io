@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"pages.html":[],
 "parallel__gripper__controller_8h.html":[4,0,0,3,11,2,1],
 "parallelism_8h.html":[4,0,0,1,54],
 "parameter__conversion_8h.html":[4,0,0,8,14,31],
@@ -248,6 +249,5 @@ var NAVTREEINDEX59 =
 "quaternion_8h.html#a06541dcb249b4b951ea73d45d2067337":[4,0,0,7,27,2],
 "quaternion_8h.html#a0fc70ebdc0ea497711e6e7b69eddef2d":[4,0,0,7,27,14],
 "quaternion_8h.html#a29059591a43a840c9a7e2f31a2d55130":[4,0,0,7,27,13],
-"quaternion_8h.html#a2e47f892f2417dfc861a095328019361":[4,0,0,7,27,7],
-"quaternion_8h.html#a3a0adc68819c94157139c9d6c2e9bca6":[4,0,0,7,27,8]
+"quaternion_8h.html#a2e47f892f2417dfc861a095328019361":[4,0,0,7,27,7]
 };

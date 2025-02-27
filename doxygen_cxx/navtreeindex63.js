@@ -1,5 +1,6 @@
 var NAVTREEINDEX63 =
 {
+"structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#a9c398193f54100cd0c78342fe06af2f4":[3,0,0,3,16,0,2,3],
 "structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,16,0,2,1],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html":[3,0,0,4,10],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf":[3,0,0,4,10,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX63 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#af4785f1c637fd480c9b1c3c2f7805675":[3,0,0,4,1,7,8,1],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html":[3,0,0,4,1,8,0],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[3,0,0,4,1,8,0,0],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,1,8,0,1],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#afb686f56113478fa59b75fe3fe36e326":[3,0,0,4,1,8,0,2]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,1,8,0,1]
 };

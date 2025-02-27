@@ -1,5 +1,6 @@
 var NAVTREEINDEX62 =
 {
+"standard__operations_8h.html#acb7ba0716b6d1d6ee2ee41e0bcf1a134":[4,0,0,1,0,0,2,0],
 "standard__operations_8h.html#acb94920527dcd90d09d374b4c2a21ca0":[4,0,0,1,0,0,2,10],
 "standard__operations_8h.html#ad040d0bae5a86990d7bc37a05a1f029c":[4,0,0,1,0,0,2,11],
 "standard__operations_8h.html#ad0df9d4928bfd02e8395e3ed934e20b5":[4,0,0,1,0,0,2,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#afeb620b379f23c1d45f56e28bd5171fe":[3,0,0,3,15,6,6],
 "structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html":[3,0,0,3,16,0,2],
 "structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#a120a61da3b3a92f87b1d83c6da14d480":[3,0,0,3,16,0,2,2],
-"structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,16,0,2,0],
-"structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#a9c398193f54100cd0c78342fe06af2f4":[3,0,0,3,16,0,2,3]
+"structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,16,0,2,0]
 };

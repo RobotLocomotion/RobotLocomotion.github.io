@@ -243,8 +243,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a679852e6738fbcf5751ca37c51d2f084"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a679852e6738fbcf5751ca37c51d2f084">IsPhysicallyValid</a> () const</td></tr>
 <tr class="memdesc:a679852e6738fbcf5751ca37c51d2f084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a number of checks to verify that this is a physically valid spatial inertia.  <a href="#a679852e6738fbcf5751ca37c51d2f084">More...</a><br /></td></tr>
 <tr class="separator:a679852e6738fbcf5751ca37c51d2f084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5bb57a06aaf44fae5e54fcbfb17c980"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ab5bb57a06aaf44fae5e54fcbfb17c980">CreateInvalidityReport</a> () const</td></tr>
+<tr class="memdesc:ab5bb57a06aaf44fae5e54fcbfb17c980"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only).  <a href="#ab5bb57a06aaf44fae5e54fcbfb17c980">More...</a><br /></td></tr>
+<tr class="separator:ab5bb57a06aaf44fae5e54fcbfb17c980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1e539cc1eba1e97ebf0fbedfe30ac09"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ad1e539cc1eba1e97ebf0fbedfe30ac09">CriticizeNotPhysicallyValid</a> () const</td></tr>
-<tr class="memdesc:ad1e539cc1eba1e97ebf0fbedfe30ac09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the same checks as the boolean typed <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a679852e6738fbcf5751ca37c51d2f084" title="Performs a number of checks to verify that this is a physically valid spatial inertia.">IsPhysicallyValid()</a>.  <a href="#ad1e539cc1eba1e97ebf0fbedfe30ac09">More...</a><br /></td></tr>
+<tr class="memdesc:ad1e539cc1eba1e97ebf0fbedfe30ac09"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ad1e539cc1eba1e97ebf0fbedfe30ac09">More...</a><br /></td></tr>
 <tr class="separator:ad1e539cc1eba1e97ebf0fbedfe30ac09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a413ff91e8caf0498a96e5b1e06da9cd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a11f9aa896d31437a219ed19fa944fe20">Matrix6</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a413ff91e8caf0498a96e5b1e06da9cd1">CopyToFullMatrix6</a> () const</td></tr>
 <tr class="memdesc:a413ff91e8caf0498a96e5b1e06da9cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy to a full 6x6 matrix representation.  <a href="#a413ff91e8caf0498a96e5b1e06da9cd1">More...</a><br /></td></tr>
@@ -687,6 +690,26 @@ Minimum possible length can be used to detect erroneous inertias associated with
 
 </div>
 </div>
+<a id="ab5bb57a06aaf44fae5e54fcbfb17c980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5bb57a06aaf44fae5e54fcbfb17c980">&#9670;&nbsp;</a></span>CreateInvalidityReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;std::string&gt; CreateInvalidityReport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only). </p>
+<p>Returns an optional string if this <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html" title="This class represents the physical concept of a Spatial Inertia.">SpatialInertia</a> is invalid, otherwise returns an empty optional. </p>
+
+</div>
+</div>
 <a id="ad1e539cc1eba1e97ebf0fbedfe30ac09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad1e539cc1eba1e97ebf0fbedfe30ac09">&#9670;&nbsp;</a></span>CriticizeNotPhysicallyValid()</h2>
 
@@ -702,8 +725,9 @@ Minimum possible length can be used to detect erroneous inertias associated with
       </table>
 </div><div class="memdoc">
 
-<p>Performs the same checks as the boolean typed <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#a679852e6738fbcf5751ca37c51d2f084" title="Performs a number of checks to verify that this is a physically valid spatial inertia.">IsPhysicallyValid()</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>empty string if valid, otherwise, a detailed error message. </dd></dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Will be removed.  There is no replacement.   File an issue if that is a problem. <br />
+ This will be removed from Drake on or after 2025-06-01.</dd></dl>
 
 </div>
 </div>
@@ -917,7 +941,7 @@ Minimum possible length can be used to detect erroneous inertias associated with
 </div><div class="memdoc">
 
 <p>Performs a number of checks to verify that this is a physically valid spatial inertia. </p>
-<p>The checks performed are:</p>
+<p>The checks performed include:</p>
 <ul>
 <li>No NaN entries.</li>
 <li>Non-negative mass.</li>

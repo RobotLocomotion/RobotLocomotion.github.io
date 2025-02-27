@@ -176,24 +176,25 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1schunk__
 <tr>
 <td align="right" style="padding:5px 0px 5px 0px">force_limit&rarr;</td></tr>
 <tr>
-<td align="right" style="padding:5px 0px 5px 0px">u0&rarr;</td></tr>
+<td align="right" style="padding:5px 0px 5px 0px"><span style="color:gray">u2</span>&rarr;</td></tr>
 </table>
 </td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html" title="This system defines input ports for the desired finger position represented as the desired distance b...">SchunkWsgTrajectoryGenerator</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
 <tr>
-<td align="left" style="padding:5px 0px 5px 0px">&rarr; y1</td></tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <span style="color:gray">y1</span></td></tr>
 </table>
 </td></tr>
 </table>
-<p>Port <code>u0</code> accepts state. Port <code>y0</code> emits target position/velocity. Port <code>y1</code> emits max force. </p>
+<p>Port <code>u2</code> accepts state. Port <code>y0</code> emits target position/velocity. Port <code>y1</code> emits max force.</p>
+<p>Note that the <code>force_limit</code> input port and <code>y1</code> output port (max force) can be opted-out with a constructor argument. </p>
 </div>
 <p><code>#include &lt;drake/manipulation/schunk_wsg/schunk_wsg_trajectory_generator.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a10275792be7b6ee4fc39985407f2d568"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#a10275792be7b6ee4fc39985407f2d568">SchunkWsgTrajectoryGenerator</a> (<a class="el" href="classint.html">int</a> input_size, <a class="el" href="classint.html">int</a> position_index)</td></tr>
-<tr class="separator:a10275792be7b6ee4fc39985407f2d568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5eeccef38e677edac8365bea0bacdce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#af5eeccef38e677edac8365bea0bacdce">SchunkWsgTrajectoryGenerator</a> (<a class="el" href="classint.html">int</a> input_size, <a class="el" href="classint.html">int</a> position_index, bool use_force_limit=true)</td></tr>
+<tr class="separator:af5eeccef38e677edac8365bea0bacdce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a356498b2bd580d7052b0eb6548a06c9c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#a356498b2bd580d7052b0eb6548a06c9c">get_desired_position_input_port</a> () const</td></tr>
 <tr class="separator:a356498b2bd580d7052b0eb6548a06c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81f7b538a90c7ca880c6085b0d386cf1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html#a81f7b538a90c7ca880c6085b0d386cf1">get_force_limit_input_port</a> () const</td></tr>
@@ -1216,8 +1217,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:acae5fb494dd1e5a799534b5fc0826062 inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a10275792be7b6ee4fc39985407f2d568"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10275792be7b6ee4fc39985407f2d568">&#9670;&nbsp;</a></span>SchunkWsgTrajectoryGenerator()</h2>
+<a id="af5eeccef38e677edac8365bea0bacdce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5eeccef38e677edac8365bea0bacdce">&#9670;&nbsp;</a></span>SchunkWsgTrajectoryGenerator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1232,7 +1233,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>position_index</em>&#160;</td>
+          <td class="paramname"><em>position_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_force_limit</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1245,6 +1252,7 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">input_size</td><td>The size of the state input port to create (one reason this may vary is passing in the entire state of a rigid body tree vs. having already demultiplexed the actuated finger). </td></tr>
     <tr><td class="paramname">position_index</td><td>The index in the state input vector which contains the position of the actuated finger. </td></tr>
+    <tr><td class="paramname">use_force_limit</td><td>when false, the <code>force_limit</code> and <code>y1</code> ports will be omitted. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1283,6 +1291,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>The constructor argument use_force_limit was set to true. </dd></dl>
 
 </div>
 </div>
@@ -1300,6 +1309,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section pre"><dt>Precondition</dt><dd>The constructor argument use_force_limit was set to true. </dd></dl>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1planning_1_1_iris_zo_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,11,10,9],
 "classdrake_1_1planning_1_1_iris_zo_options.html#a9ea1a8f5ef3e6d20b362385e1288c72c":[3,0,0,11,10,14],
 "classdrake_1_1planning_1_1_iris_zo_options.html#aae8c4127673f3ded233ec38b010ef8f4":[3,0,0,11,10,17],
 "classdrake_1_1planning_1_1_iris_zo_options.html#ab3f078684998b83967d507d0f453f454":[3,0,0,11,10,28],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#af167f42cb53ff17e0666e38d54d241bd":[3,0,0,11,2,3,0,4],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#af27492cb5b0dbf8cd8ce10e792486052":[3,0,0,11,2,3,0,10],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#afce2be43547f60d510c7e46154eac653":[3,0,0,11,2,3,0,9],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html":[3,0,0,11,2,3,1],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a028f009e523ba70f19975c58f6b0bb6d":[3,0,0,11,2,3,1,3]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html":[3,0,0,11,2,3,1]
 };
