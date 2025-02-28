@@ -623,7 +623,8 @@ renderer_name value.</p>
 images are rendered). Because both RGB and label images are configured
 from the same <code class="docutils literal notranslate"><span class="pre">ColorRenderCamera</span></code>, this setting applies to both
 images. Even when set to true, whether or not the image is able to be
-displayed depends on the specific render engine and its configuration.</p>
+displayed depends on the specific render engine and its configuration
+(see e.g., geometry::RenderEngineVtkParams::backend).</p>
 <p>Note: This flag is intended for quick debug use during development
 instead of serving as an image viewer. Currently, there are known
 issues, e.g., flickering windows when multiple cameras share the same

@@ -249,7 +249,8 @@ Public Attributes</h2></td></tr>
 <p>Controls which graphics library will be used to perform the rendering. </p>
 <p>Permissible values are the empty string (default), "GLX", "EGL", and "Cocoa". Any other value will throw an error.</p>
 <p>By default (i.e., when set to the empty string) the render engine will choose which library to use. At the moment the default is "Cocoa" on macOS and "EGL" on Linux.</p>
-<p>If the option is set to one of the permissible values but the related graphics library has not been compiled into current build (e.g., "GLX" on macOS), then the default choice (empty string) will be used instead, with a warning. </p>
+<p>If the option is set to one of the permissible values but the related graphics library has not been compiled into current build (e.g., "GLX" on macOS), then the default choice (empty string) will be used instead, with a warning.</p>
+<p>Note: RenderEngineVtk's API allows callers to request an interactive display of the current rendering (such as when <a class="el" href="structdrake_1_1systems_1_1sensors_1_1_camera_config.html#a9dc0967f9d639aaf80a08151df0e96f3" title="Controls whether the rendered RGB and/or label images are displayed (in separate windows controlled b...">systems::sensors::CameraConfig::show_rgb</a> is set to <code>true</code>). Whether or not the debug window is displayed depends on the final backend configuration of the RenderEngineVtk instance (after resolving default values as documented above). <em>Currently</em>, the EGL background does not support this display. </p>
 
 </div>
 </div>

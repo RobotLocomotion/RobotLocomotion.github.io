@@ -787,7 +787,7 @@ Camera intrinsics</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Controls whether the rendered RGB and/or label images are displayed (in separate windows controlled by the thread in which the camera images are rendered). </p>
-<p>Because both RGB and label images are configured from the same <code>ColorRenderCamera</code>, this setting applies to both images. Even when set to true, whether or not the image is able to be displayed depends on the specific render engine and its configuration.</p>
+<p>Because both RGB and label images are configured from the same <code>ColorRenderCamera</code>, this setting applies to both images. Even when set to true, whether or not the image is able to be displayed depends on the specific render engine and its configuration (see e.g., <a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8ea4310382b496e8e4efc05c73409cbc" title="Controls which graphics library will be used to perform the rendering.">geometry::RenderEngineVtkParams::backend</a>).</p>
 <p>Note: This flag is intended for quick debug use during development instead of serving as an image viewer. Currently, there are known issues, e.g., flickering windows when multiple cameras share the same renderer or upside-down images if RenderEngineGl is set. See issue #18862 for the proposal to visualize images via Meldis. </p>
 
 </div>

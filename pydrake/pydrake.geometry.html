@@ -10063,6 +10063,13 @@ macOS and “EGL” on Linux.</p>
 graphics library has not been compiled into current build (e.g., “GLX”
 on macOS), then the default choice (empty string) will be used
 instead, with a warning.</p>
+<p>Note: RenderEngineVtk’s API allows callers to request an interactive
+display of the current rendering (such as when
+systems::sensors::CameraConfig::show_rgb is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>). Whether
+or not the debug window is displayed depends on the final backend
+configuration of the RenderEngineVtk instance (after resolving default
+values as documented above). <em>Currently</em>, the EGL background does not
+support this display.</p>
 </dd></dl>
 
 <dl class="py property">
