@@ -501,7 +501,7 @@ Protected Member Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The name of this frame. Cannot be empty. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">P</td><td>The frame to which this frame is attached with a fixed pose. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">X_PF</td><td>The <em>default</em> transform giving the pose of F in P, therefore only the value (as a <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform&lt;double&gt;</a>) is provided. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">model_instance</td><td>The model instance to which this frame belongs to. If unspecified, will use P.body().<a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50" title="Returns the ModelInstanceIndex of the model instance to which this element belongs.">model_instance()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">model_instance</td><td>The model instance to which this frame belongs to. If unspecified, will use P.model_instance(). </td></tr>
   </table>
   </dd>
 </dl>
