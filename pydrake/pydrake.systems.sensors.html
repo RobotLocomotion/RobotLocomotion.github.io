@@ -356,6 +356,28 @@ be provided.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.CameraConfig.FocalLength" title="pydrake.systems.sensors.CameraConfig.FocalLength"><span class="pre">pydrake.systems.sensors.CameraConfig.FocalLength</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FocalLength.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.FocalLength.focal_x">
+<span class="sig-name descname"><span class="pre">focal_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.CameraConfig.FocalLength" title="pydrake.systems.sensors.CameraConfig.FocalLength"><span class="pre">pydrake.systems.sensors.CameraConfig.FocalLength</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FocalLength.focal_x" title="Permalink to this definition"></a></dt>
+<dd><p>Reports focal length along x-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if both x and y are null.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.FocalLength.focal_y">
+<span class="sig-name descname"><span class="pre">focal_y</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.CameraConfig.FocalLength" title="pydrake.systems.sensors.CameraConfig.FocalLength"><span class="pre">pydrake.systems.sensors.CameraConfig.FocalLength</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FocalLength.focal_y" title="Permalink to this definition"></a></dt>
+<dd><p>Resolves focal length along y-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if both x and y are null.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.FocalLength.x">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FocalLength.x" title="Permalink to this definition"></a></dt>
@@ -380,6 +402,30 @@ length in the x-direction.</p>
 <dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.FovDegrees.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.CameraConfig.FovDegrees" title="pydrake.systems.sensors.CameraConfig.FovDegrees"><span class="pre">pydrake.systems.sensors.CameraConfig.FovDegrees</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FovDegrees.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.FovDegrees.focal_x">
+<span class="sig-name descname"><span class="pre">focal_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.CameraConfig.FovDegrees" title="pydrake.systems.sensors.CameraConfig.FovDegrees"><span class="pre">pydrake.systems.sensors.CameraConfig.FovDegrees</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FovDegrees.focal_x" title="Permalink to this definition"></a></dt>
+<dd><p>Resolves focal length along x-axis based on image dimensions and
+defined value for <code class="docutils literal notranslate"><span class="pre">x</span></code> and/or <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if both x and y are null.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.FovDegrees.focal_y">
+<span class="sig-name descname"><span class="pre">focal_y</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.CameraConfig.FovDegrees" title="pydrake.systems.sensors.CameraConfig.FovDegrees"><span class="pre">pydrake.systems.sensors.CameraConfig.FovDegrees</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.FovDegrees.focal_y" title="Permalink to this definition"></a></dt>
+<dd><p>Resolves focal length along y-axis based on image dimensions and
+defined value for <code class="docutils literal notranslate"><span class="pre">y</span></code> and/or <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if both x and y are null.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.FovDegrees.x">
