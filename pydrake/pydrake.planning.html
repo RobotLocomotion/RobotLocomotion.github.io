@@ -3648,6 +3648,21 @@ starting ellipsoid is not contained in the convex hull of these
 containment points.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.CreateWithRationalKinematicParameterization">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CreateWithRationalKinematicParameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.rational.html#pydrake.multibody.rational.RationalForwardKinematics" title="pydrake.multibody.rational.RationalForwardKinematics"><span class="pre">pydrake.multibody.rational.RationalForwardKinematics</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_star_val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.CreateWithRationalKinematicParameterization" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs an instance of IrisZoOptions that handles a rational
+kinematic parameterization. Regions are grown in the <code class="docutils literal notranslate"><span class="pre">s</span></code> variables,
+so as to minimize collisions in the <code class="docutils literal notranslate"><span class="pre">q</span></code> variables. See
+RationalForwardKinematics for details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The user is responsible for ensuring <code class="docutils literal notranslate"><span class="pre">kin</span></code> (and the underlying
+MultibodyPlant it is built on) is kept alive. If that object is
+deleted, then the parametrization can no longer be used.</p>
+</div>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.delta">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delta</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.delta" title="Permalink to this definition"></a></dt>
@@ -3659,6 +3674,42 @@ fraction-in-collision greater than <code class="docutils literal notranslate"><s
 <dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.epsilon">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epsilon</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.epsilon" title="Permalink to this definition"></a></dt>
 <dd><p>Admissible fraction of the region volume allowed to be in collision.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.get_parameterization">
+<span class="sig-name descname"><span class="pre">get_parameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.get_parameterization" title="Permalink to this definition"></a></dt>
+<dd><p>Get the parameterization function.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the user has not specified this with
+<code class="docutils literal notranslate"><span class="pre">set_parameterization()</span></code>, then the default value of
+<code class="docutils literal notranslate"><span class="pre">parameterization_</span></code> is the identity function, indicating that
+the regions should be grown in the full configuration space (in
+the standard coordinate system).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.get_parameterization_dimension">
+<span class="sig-name descname"><span class="pre">get_parameterization_dimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.get_parameterization_dimension" title="Permalink to this definition"></a></dt>
+<dd><p>Returns what the user has specified as the input dimension for the
+parameterization function, or std::nullopt if it has not been set. A
+std::nullopt value indicates that IrisZo should use the ambient
+configuration space dimension as the input dimension to the
+parameterization.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.get_parameterization_is_threadsafe">
+<span class="sig-name descname"><span class="pre">get_parameterization_is_threadsafe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.get_parameterization_is_threadsafe" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether or not the user has specified the parameterization to
+be threadsafe.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default <code class="docutils literal notranslate"><span class="pre">parameterization_</span></code> is the identity function, which
+is threadsafe.</p>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -3725,6 +3776,21 @@ setting to a negative value.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">require_sample_point_is_contained</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.require_sample_point_is_contained" title="Permalink to this definition"></a></dt>
 <dd><p>The initial polytope is guaranteed to contain the point if that point
 is collision-free.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.set_parameterization">
+<span class="sig-name descname"><span class="pre">set_parameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameterization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameterization_dimension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.set_parameterization" title="Permalink to this definition"></a></dt>
+<dd><p>Ordinarily, IRIS-ZO grows collision free regions in the robot’s
+configuration space C. This allows the user to specify a function
+f:Q→C , and grow the region in Q instead. The function should be a map
+R^m to R^n, where n is the dimension of the plant configuration space,
+determined via <code class="docutils literal notranslate"><span class="pre">checker.plant().num_positions()</span></code> and m is
+<code class="docutils literal notranslate"><span class="pre">parameterization_dimension</span></code> if specified. The user must provide
+<code class="docutils literal notranslate"><span class="pre">parameterization</span></code>, which is the function f,
+<code class="docutils literal notranslate"><span class="pre">parameterization_is_threadsafe</span></code>, which is whether or not
+<code class="docutils literal notranslate"><span class="pre">parametrization</span></code> can be called concurrently, and
+<code class="docutils literal notranslate"><span class="pre">parameterization_dimension</span></code>, the dimension of the input space Q.&#64;note Due to GIL, it is inefficient to call a python function concurrently across multiple C++ threads. So the parameterization setter function automatically sets threadsafe to false</p>
 </dd></dl>
 
 <dl class="py property">

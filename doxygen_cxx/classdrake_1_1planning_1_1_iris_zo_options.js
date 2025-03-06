@@ -4,6 +4,7 @@ var classdrake_1_1planning_1_1_iris_zo_options =
     [ "IrisZoOptions", "classdrake_1_1planning_1_1_iris_zo_options.html#a3ef0cf8fc3f5f18c51b9036a4f56eccc", null ],
     [ "IrisZoOptions", "classdrake_1_1planning_1_1_iris_zo_options.html#a54505e83cfea99f34b4b32679f20248d", null ],
     [ "IrisZoOptions", "classdrake_1_1planning_1_1_iris_zo_options.html#a54c52842ea8daec426a70226d67c0f7d", null ],
+    [ "CreateWithRationalKinematicParameterization", "classdrake_1_1planning_1_1_iris_zo_options.html#a5686c40e6f67ce83c3c30b7ee94496d1", null ],
     [ "get_parameterization", "classdrake_1_1planning_1_1_iris_zo_options.html#a62c407d1b530fb47102cc346e309204d", null ],
     [ "get_parameterization_dimension", "classdrake_1_1planning_1_1_iris_zo_options.html#a660d66e6d13bb9abc87a18c3becf7a52", null ],
     [ "get_parameterization_is_threadsafe", "classdrake_1_1planning_1_1_iris_zo_options.html#a7138b8cfd258a815441c437a9d738467", null ],

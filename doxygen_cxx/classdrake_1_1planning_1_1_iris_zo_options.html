@@ -161,6 +161,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_iris_zo_opt
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classdrake_1_1planning_1_1_iris_zo_options-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -208,6 +209,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a54505e83cfea99f34b4b32679f20248d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38bb06f26ccdcf2eff286402cac9fce2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html#a38bb06f26ccdcf2eff286402cac9fce2">operator=</a> (<a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a38bb06f26ccdcf2eff286402cac9fce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5686c40e6f67ce83c3c30b7ee94496d1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html#a5686c40e6f67ce83c3c30b7ee94496d1">CreateWithRationalKinematicParameterization</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">multibody::RationalForwardKinematics</a> *kin, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_star_val)</td></tr>
+<tr class="memdesc:a5686c40e6f67ce83c3c30b7ee94496d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an instance of <a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html" title="IrisZoOptions collects all parameters for the IRIS-ZO algorithm.">IrisZoOptions</a> that handles a rational kinematic parameterization.  <a href="#a5686c40e6f67ce83c3c30b7ee94496d1">More...</a><br /></td></tr>
+<tr class="separator:a5686c40e6f67ce83c3c30b7ee94496d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -360,6 +367,45 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5686c40e6f67ce83c3c30b7ee94496d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5686c40e6f67ce83c3c30b7ee94496d1">&#9670;&nbsp;</a></span>CreateWithRationalKinematicParameterization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a> CreateWithRationalKinematicParameterization </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">multibody::RationalForwardKinematics</a> *&#160;</td>
+          <td class="paramname"><em>kin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>q_star_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an instance of <a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html" title="IrisZoOptions collects all parameters for the IRIS-ZO algorithm.">IrisZoOptions</a> that handles a rational kinematic parameterization. </p>
+<p>Regions are grown in the <code>s</code> variables, so as to minimize collisions in the <code>q</code> variables. See RationalForwardKinematics for details. </p><dl class="section note"><dt>Note</dt><dd>The user is responsible for ensuring <code>kin</code> (and the underlying MultibodyPlant it is built on) is kept alive. If that object is deleted, then the parametrization can no longer be used. </dd></dl>
+
+</div>
+</div>
 <a id="a62c407d1b530fb47102cc346e309204d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62c407d1b530fb47102cc346e309204d">&#9670;&nbsp;</a></span>get_parameterization()</h2>
 

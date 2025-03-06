@@ -1,5 +1,9 @@
 var NAVTREEINDEX62 =
 {
+"standard__operations_8h.html#ac023124b011f56f04b412886e348e809":[4,0,0,1,0,0,2,73],
+"standard__operations_8h.html#ac0a3d7b0b62300064ba6fed28262a878":[4,0,0,1,0,0,2,70],
+"standard__operations_8h.html#ac0f56ac39870bd9e54f8476d84b22fbe":[4,0,0,1,0,0,2,42],
+"standard__operations_8h.html#ac396003d3b4bb5ed80d70095d9e67136":[4,0,0,1,0,0,2,75],
 "standard__operations_8h.html#acb7ba0716b6d1d6ee2ee41e0bcf1a134":[4,0,0,1,0,0,2,0],
 "standard__operations_8h.html#acb94920527dcd90d09d374b4c2a21ca0":[4,0,0,1,0,0,2,10],
 "standard__operations_8h.html#ad040d0bae5a86990d7bc37a05a1f029c":[4,0,0,1,0,0,2,11],
@@ -245,9 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,15,6,0],
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[3,0,0,3,15,6,3],
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,15,6,1],
-"structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[3,0,0,3,15,6,2],
-"structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#afeb620b379f23c1d45f56e28bd5171fe":[3,0,0,3,15,6,6],
-"structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html":[3,0,0,3,16,0,2],
-"structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#a120a61da3b3a92f87b1d83c6da14d480":[3,0,0,3,16,0,2,2],
-"structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,16,0,2,0]
+"structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[3,0,0,3,15,6,2]
 };

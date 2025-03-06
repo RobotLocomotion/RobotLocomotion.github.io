@@ -1,5 +1,9 @@
 var NAVTREEINDEX57 =
 {
+"make__convex__field_8h.html":[4,0,0,4,2,27],
+"make__convex__hull__mesh_8h.html":[4,0,0,4,2,28],
+"make__convex__hull__mesh__impl_8h.html":[4,0,0,4,2,29],
+"make__convex__mesh_8h.html":[4,0,0,4,2,30],
 "make__cylinder__field_8h.html":[4,0,0,4,2,31],
 "make__cylinder__mesh_8h.html":[4,0,0,4,2,32],
 "make__discrete__update__manager_8h.html":[4,0,0,8,10,30],
@@ -245,9 +249,5 @@ var NAVTREEINDEX57 =
 "name__value_8h.html#a4f1f5c73dacf99966ffa810a1fd23cd3":[4,0,0,1,48,2],
 "namespacedrake.html":[2,0,0],
 "namespacedrake.html":[3,0,0],
-"namespacedrake_1_1ad.html":[2,0,0,0],
-"namespacedrake_1_1ad.html":[3,0,0,0],
-"namespacedrake_1_1assert.html":[2,0,0,1],
-"namespacedrake_1_1assert.html":[3,0,0,1],
-"namespacedrake_1_1common.html":[2,0,0,2]
+"namespacedrake_1_1ad.html":[2,0,0,0]
 };
