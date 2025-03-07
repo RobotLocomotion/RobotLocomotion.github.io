@@ -2111,14 +2111,6 @@ DiscreteContactSolver::kSap.)</p>
 each joint actuator, see JointActuator::set_controller_gains(). Unless
 these gains are specified, joint actuators will not be PD controlled
 and JointActuator::has_controller() will return <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>For PD controlled models, all joint actuators in a model instance
-are required to have PD controllers defined. That is, partially PD
-controlled model instances are not supported. An exception will be
-thrown when evaluating the actuation input ports if only a subset
-of the actuators in a model instance is PD controlled.</p>
-</div>
 <p>For models with PD controllers, the actuation torque per actuator is
 computed according to:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>ũ = -Kp⋅(q − qd) - Kd⋅(v − vd) + u_ff
@@ -2142,29 +2134,16 @@ zero and the actuation input port is not required to be connected. 2.
 compensation in the feed-forward term plus PD control to drive the
 robot to a given desired state.</p>
 <p>** Actuation input ports requirements</p>
-<p>The following table specifies whether actuation ports are required to
-be connected or not:</p>
-<div class="line-block">
-<div class="line">Port | without PD control | with PD control | |</div>
-</div>
-<dl class="field-list">
-<dt class="field-odd">——————————</dt>
-<dd class="field-odd"><div class="line-block">
-<div class="line">:——————-: |</div>
-</div>
-</dd>
-<dt class="field-even">————-</dt>
-<dd class="field-even"><div class="line-block">
-<div class="line">| get_actuation_input_port() | yes | no¹ | |</div>
-</div>
-</dd>
-</dl>
-<p>get_desired_state_input_port() | no² | yes |</p>
-<p>¹ Feed-forward actuation is not required for models with PD controlled
-actuators. This simplifies the diagram wiring for models that only
-rely on PD controllers.</p>
-<p>² This port is always declared, though it will be zero sized for model
-instances with no PD controllers.</p>
+<p>Actuation input ports and desired state input ports need not be
+connected: - Unconnected actuation inputs default to zero, simplifying
+diagram wiring for models relying solely on PD controllers. - PD
+controllers are disarmed when their model instance’s desired state
+input port is disconnected. In this state, they have no effect on
+dynamics, behaving as if no PD controller exists. This allows a
+MultibodyPlant model to be used outside simulation (e.g., for
+visualization).</p>
+<p>Note that both ports are always created but will be zero-sized for
+model instances without actuation.</p>
 <p>** Net actuation</p>
 <p>The total joint actuation applied via the actuation input port
 (get_actuation_input_port()) and applied by the PD controllers is
@@ -4586,40 +4565,55 @@ measured and expressed in the World frame, of the deformable bodies in
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_desired_state_input_port">
 <span class="sig-name descname"><span class="pre">get_desired_state_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.get_desired_state_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>For models with PD controlled joint actuators, returns the port to
-provide the desired state for the full <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. Refer to
+provide the desired state for the given <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. Refer to
 mbp_actuation “Actuation” for further details.</p>
 <p>For consistency with get_actuation_input_port(), each model instance
 in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a desired states input port, even if zero
 sized (for model instance with no actuators.)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is a vector valued port of size
-2*num_actuators(model_instance), where we assumed 1-DOF actuated
-joints. This is true even for unactuated models, for which this
-port is zero sized. This port must provide one desired position
-and one desired velocity per joint actuator. Desired state is
-assumed to be packed as xd = [qd, vd] that is, configurations
-first followed by velocities. The actuation value for a particular
-actuator can be found at offset JointActuator::input_start() in
-both qd and vd. For example:</p>
+<p>This port always has size 2 * num_actuators(model_instance), where
+we assume 1-DOF actuated joints. This port must provide one
+desired position and one desired velocity per joint actuator,
+packed as xd = [qd, vd], with positions and velocities in order of
+increasing JointActuatorIndex. Only desired states corresponding
+to PD-controlled actuators on non-locked joints
+(Joint::is_locked()) are used, the rest are ignored. That is PD
+control on just a subset of actuators is allowed.</p>
 </div>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">qd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()];</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">vd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">   </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">num_actuated_dofs</span><span class="p">()];</span><span class="w"></span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The desired state input port for a given model instance is not
+required to be connected. If disconnected, the controllers for
+such model instance will be <em>disarmed</em>. Refer to
+pd_controllers_and_ports for further details.</p>
+</div>
+<p>As an example of this structure, consider the following code to fix
+desired states input values:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// ... Load/parse plant model ...</span>
+<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CreateDefaultContext</span><span class="p">();</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">num_actuators</span><span class="p">(</span><span class="n">model_instance</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">VectorXd</span><span class="w"> </span><span class="nf">model_xd</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_u</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">model_qd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model_xd</span><span class="p">.</span><span class="n">head</span><span class="p">(</span><span class="n">num_u</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">model_vd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model_xd</span><span class="p">.</span><span class="n">tail</span><span class="p">(</span><span class="n">num_u</span><span class="p">);</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Specify qd and vd in increasing order of JointActuatorIndex, as</span>
+<span class="c1">// returned by GetJointActuatorIndices().</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">JointActuatorIndex</span><span class="w"> </span><span class="n">actuator_index</span><span class="w"> </span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetJointActuatorIndices</span><span class="p">(</span><span class="n">model_instance</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">qd</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">....</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">actuator_index</span><span class="w"></span>
+<span class="w">  </span><span class="n">vd</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">....</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">actuator_index</span><span class="w"></span>
+<span class="w">  </span><span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// As an example, fix values in the context.</span>
+<span class="n">plant</span><span class="p">.</span><span class="n">get_desired_state_input_port</span><span class="p">(</span><span class="n">model_instance</span><span class="p">).</span><span class="n">FixValue</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">plant_context</span><span class="p">,</span><span class="w"> </span><span class="n">model_xd</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If a user specifies a PD controller for an actuator from a given
-model instance, then all actuators of that model instance are
-required to be PD controlled.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>It is required to connect this port for PD controlled model
-instances.</p>
-</div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.get_discrete_contact_approximation">
@@ -7865,14 +7859,6 @@ DiscreteContactSolver::kSap.)</p>
 each joint actuator, see JointActuator::set_controller_gains(). Unless
 these gains are specified, joint actuators will not be PD controlled
 and JointActuator::has_controller() will return <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>For PD controlled models, all joint actuators in a model instance
-are required to have PD controllers defined. That is, partially PD
-controlled model instances are not supported. An exception will be
-thrown when evaluating the actuation input ports if only a subset
-of the actuators in a model instance is PD controlled.</p>
-</div>
 <p>For models with PD controllers, the actuation torque per actuator is
 computed according to:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>ũ = -Kp⋅(q − qd) - Kd⋅(v − vd) + u_ff
@@ -7896,29 +7882,16 @@ zero and the actuation input port is not required to be connected. 2.
 compensation in the feed-forward term plus PD control to drive the
 robot to a given desired state.</p>
 <p>** Actuation input ports requirements</p>
-<p>The following table specifies whether actuation ports are required to
-be connected or not:</p>
-<div class="line-block">
-<div class="line">Port | without PD control | with PD control | |</div>
-</div>
-<dl class="field-list">
-<dt class="field-odd">——————————</dt>
-<dd class="field-odd"><div class="line-block">
-<div class="line">:——————-: |</div>
-</div>
-</dd>
-<dt class="field-even">————-</dt>
-<dd class="field-even"><div class="line-block">
-<div class="line">| get_actuation_input_port() | yes | no¹ | |</div>
-</div>
-</dd>
-</dl>
-<p>get_desired_state_input_port() | no² | yes |</p>
-<p>¹ Feed-forward actuation is not required for models with PD controlled
-actuators. This simplifies the diagram wiring for models that only
-rely on PD controllers.</p>
-<p>² This port is always declared, though it will be zero sized for model
-instances with no PD controllers.</p>
+<p>Actuation input ports and desired state input ports need not be
+connected: - Unconnected actuation inputs default to zero, simplifying
+diagram wiring for models relying solely on PD controllers. - PD
+controllers are disarmed when their model instance’s desired state
+input port is disconnected. In this state, they have no effect on
+dynamics, behaving as if no PD controller exists. This allows a
+MultibodyPlant model to be used outside simulation (e.g., for
+visualization).</p>
+<p>Note that both ports are always created but will be zero-sized for
+model instances without actuation.</p>
 <p>** Net actuation</p>
 <p>The total joint actuation applied via the actuation input port
 (get_actuation_input_port()) and applied by the PD controllers is
@@ -10335,40 +10308,55 @@ measured and expressed in the World frame, of the deformable bodies in
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_desired_state_input_port">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_desired_state_input_port"></span><span class="sig-name descname"><span class="pre">get_desired_state_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_desired_state_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>For models with PD controlled joint actuators, returns the port to
-provide the desired state for the full <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. Refer to
+provide the desired state for the given <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. Refer to
 mbp_actuation “Actuation” for further details.</p>
 <p>For consistency with get_actuation_input_port(), each model instance
 in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a desired states input port, even if zero
 sized (for model instance with no actuators.)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is a vector valued port of size
-2*num_actuators(model_instance), where we assumed 1-DOF actuated
-joints. This is true even for unactuated models, for which this
-port is zero sized. This port must provide one desired position
-and one desired velocity per joint actuator. Desired state is
-assumed to be packed as xd = [qd, vd] that is, configurations
-first followed by velocities. The actuation value for a particular
-actuator can be found at offset JointActuator::input_start() in
-both qd and vd. For example:</p>
+<p>This port always has size 2 * num_actuators(model_instance), where
+we assume 1-DOF actuated joints. This port must provide one
+desired position and one desired velocity per joint actuator,
+packed as xd = [qd, vd], with positions and velocities in order of
+increasing JointActuatorIndex. Only desired states corresponding
+to PD-controlled actuators on non-locked joints
+(Joint::is_locked()) are used, the rest are ignored. That is PD
+control on just a subset of actuators is allowed.</p>
 </div>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">qd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()];</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">vd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">   </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">num_actuated_dofs</span><span class="p">()];</span><span class="w"></span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The desired state input port for a given model instance is not
+required to be connected. If disconnected, the controllers for
+such model instance will be <em>disarmed</em>. Refer to
+pd_controllers_and_ports for further details.</p>
+</div>
+<p>As an example of this structure, consider the following code to fix
+desired states input values:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// ... Load/parse plant model ...</span>
+<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CreateDefaultContext</span><span class="p">();</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">num_actuators</span><span class="p">(</span><span class="n">model_instance</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">VectorXd</span><span class="w"> </span><span class="nf">model_xd</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_u</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">model_qd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model_xd</span><span class="p">.</span><span class="n">head</span><span class="p">(</span><span class="n">num_u</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">model_vd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model_xd</span><span class="p">.</span><span class="n">tail</span><span class="p">(</span><span class="n">num_u</span><span class="p">);</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Specify qd and vd in increasing order of JointActuatorIndex, as</span>
+<span class="c1">// returned by GetJointActuatorIndices().</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">JointActuatorIndex</span><span class="w"> </span><span class="n">actuator_index</span><span class="w"> </span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetJointActuatorIndices</span><span class="p">(</span><span class="n">model_instance</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">qd</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">....</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">actuator_index</span><span class="w"></span>
+<span class="w">  </span><span class="n">vd</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">....</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">actuator_index</span><span class="w"></span>
+<span class="w">  </span><span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// As an example, fix values in the context.</span>
+<span class="n">plant</span><span class="p">.</span><span class="n">get_desired_state_input_port</span><span class="p">(</span><span class="n">model_instance</span><span class="p">).</span><span class="n">FixValue</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">plant_context</span><span class="p">,</span><span class="w"> </span><span class="n">model_xd</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If a user specifies a PD controller for an actuator from a given
-model instance, then all actuators of that model instance are
-required to be PD controlled.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>It is required to connect this port for PD controlled model
-instances.</p>
-</div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.get_discrete_contact_approximation">
@@ -13570,14 +13558,6 @@ DiscreteContactSolver::kSap.)</p>
 each joint actuator, see JointActuator::set_controller_gains(). Unless
 these gains are specified, joint actuators will not be PD controlled
 and JointActuator::has_controller() will return <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>For PD controlled models, all joint actuators in a model instance
-are required to have PD controllers defined. That is, partially PD
-controlled model instances are not supported. An exception will be
-thrown when evaluating the actuation input ports if only a subset
-of the actuators in a model instance is PD controlled.</p>
-</div>
 <p>For models with PD controllers, the actuation torque per actuator is
 computed according to:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>ũ = -Kp⋅(q − qd) - Kd⋅(v − vd) + u_ff
@@ -13601,29 +13581,16 @@ zero and the actuation input port is not required to be connected. 2.
 compensation in the feed-forward term plus PD control to drive the
 robot to a given desired state.</p>
 <p>** Actuation input ports requirements</p>
-<p>The following table specifies whether actuation ports are required to
-be connected or not:</p>
-<div class="line-block">
-<div class="line">Port | without PD control | with PD control | |</div>
-</div>
-<dl class="field-list">
-<dt class="field-odd">——————————</dt>
-<dd class="field-odd"><div class="line-block">
-<div class="line">:——————-: |</div>
-</div>
-</dd>
-<dt class="field-even">————-</dt>
-<dd class="field-even"><div class="line-block">
-<div class="line">| get_actuation_input_port() | yes | no¹ | |</div>
-</div>
-</dd>
-</dl>
-<p>get_desired_state_input_port() | no² | yes |</p>
-<p>¹ Feed-forward actuation is not required for models with PD controlled
-actuators. This simplifies the diagram wiring for models that only
-rely on PD controllers.</p>
-<p>² This port is always declared, though it will be zero sized for model
-instances with no PD controllers.</p>
+<p>Actuation input ports and desired state input ports need not be
+connected: - Unconnected actuation inputs default to zero, simplifying
+diagram wiring for models relying solely on PD controllers. - PD
+controllers are disarmed when their model instance’s desired state
+input port is disconnected. In this state, they have no effect on
+dynamics, behaving as if no PD controller exists. This allows a
+MultibodyPlant model to be used outside simulation (e.g., for
+visualization).</p>
+<p>Note that both ports are always created but will be zero-sized for
+model instances without actuation.</p>
 <p>** Net actuation</p>
 <p>The total joint actuation applied via the actuation input port
 (get_actuation_input_port()) and applied by the PD controllers is
@@ -16040,40 +16007,55 @@ measured and expressed in the World frame, of the deformable bodies in
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_desired_state_input_port">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_desired_state_input_port"></span><span class="sig-name descname"><span class="pre">get_desired_state_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.get_desired_state_input_port" title="Permalink to this definition"></a></dt>
 <dd><p>For models with PD controlled joint actuators, returns the port to
-provide the desired state for the full <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. Refer to
+provide the desired state for the given <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>. Refer to
 mbp_actuation “Actuation” for further details.</p>
 <p>For consistency with get_actuation_input_port(), each model instance
 in <code class="docutils literal notranslate"><span class="pre">this</span></code> plant model has a desired states input port, even if zero
 sized (for model instance with no actuators.)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is a vector valued port of size
-2*num_actuators(model_instance), where we assumed 1-DOF actuated
-joints. This is true even for unactuated models, for which this
-port is zero sized. This port must provide one desired position
-and one desired velocity per joint actuator. Desired state is
-assumed to be packed as xd = [qd, vd] that is, configurations
-first followed by velocities. The actuation value for a particular
-actuator can be found at offset JointActuator::input_start() in
-both qd and vd. For example:</p>
+<p>This port always has size 2 * num_actuators(model_instance), where
+we assume 1-DOF actuated joints. This port must provide one
+desired position and one desired velocity per joint actuator,
+packed as xd = [qd, vd], with positions and velocities in order of
+increasing JointActuatorIndex. Only desired states corresponding
+to PD-controlled actuators on non-locked joints
+(Joint::is_locked()) are used, the rest are ignored. That is PD
+control on just a subset of actuators is allowed.</p>
 </div>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">qd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()];</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">vd_actuator</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">   </span><span class="n">xd</span><span class="p">[</span><span class="n">actuator</span><span class="p">.</span><span class="n">input_start</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">num_actuated_dofs</span><span class="p">()];</span><span class="w"></span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The desired state input port for a given model instance is not
+required to be connected. If disconnected, the controllers for
+such model instance will be <em>disarmed</em>. Refer to
+pd_controllers_and_ports for further details.</p>
+</div>
+<p>As an example of this structure, consider the following code to fix
+desired states input values:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plant</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// ... Load/parse plant model ...</span>
+<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CreateDefaultContext</span><span class="p">();</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">num_actuators</span><span class="p">(</span><span class="n">model_instance</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">VectorXd</span><span class="w"> </span><span class="nf">model_xd</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_u</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">model_qd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model_xd</span><span class="p">.</span><span class="n">head</span><span class="p">(</span><span class="n">num_u</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">model_vd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">model_xd</span><span class="p">.</span><span class="n">tail</span><span class="p">(</span><span class="n">num_u</span><span class="p">);</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Specify qd and vd in increasing order of JointActuatorIndex, as</span>
+<span class="c1">// returned by GetJointActuatorIndices().</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">JointActuatorIndex</span><span class="w"> </span><span class="n">actuator_index</span><span class="w"> </span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">plant</span><span class="p">.</span><span class="n">GetJointActuatorIndices</span><span class="p">(</span><span class="n">model_instance</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">qd</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">....</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">actuator_index</span><span class="w"></span>
+<span class="w">  </span><span class="n">vd</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">....</span><span class="w"> </span><span class="n">desired</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">actuator_index</span><span class="w"></span>
+<span class="w">  </span><span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// As an example, fix values in the context.</span>
+<span class="n">plant</span><span class="p">.</span><span class="n">get_desired_state_input_port</span><span class="p">(</span><span class="n">model_instance</span><span class="p">).</span><span class="n">FixValue</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">plant_context</span><span class="p">,</span><span class="w"> </span><span class="n">model_xd</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If a user specifies a PD controller for an actuator from a given
-model instance, then all actuators of that model instance are
-required to be PD controlled.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>It is required to connect this port for PD controlled model
-instances.</p>
-</div>
-</dd></dl>
+</details></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.get_discrete_contact_approximation">

@@ -1,5 +1,13 @@
 var NAVTREEINDEX66 =
 {
+"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,14,7,1],
+"structdrake_1_1solvers_1_1_clp_solver_details.html":[3,0,0,14,9],
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a56ac23a03ae7df25b7cf800be94fa964":[3,0,0,14,9,0],
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,14,9,1],
+"structdrake_1_1solvers_1_1_csdp_solver_details.html":[3,0,0,14,13],
+"structdrake_1_1solvers_1_1_csdp_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd":[3,0,0,14,13,0],
+"structdrake_1_1solvers_1_1_csdp_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,14,13,1],
+"structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb":[3,0,0,14,13,2],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#ab48163f67547336c2aadfc248321044a":[3,0,0,14,13,4],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#aba4b79949c49a2fcb0e02585d277bd83":[3,0,0,14,13,3],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html":[3,0,0,14,22,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX66 =
 "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a08e211873bd62f93a57ad06fdc27b3b2":[1,2,2,4,0,1],
 "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31":[1,2,2,4,0,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,16,7,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#ada71661baddc01a12a0ca7a6a70d9c4f":[3,0,0,16,7,0,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[3,0,0,16,7,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a5753b809f5bdea3b00c67964b6c69575":[3,0,0,16,7,1,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html":[3,0,0,16,7,2],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,16,7,2,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html":[3,0,0,16,7,8],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_random_source_01_4.html":[3,0,0,16,7,9],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html":[3,0,0,16,7,11],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html":[3,0,0,16,7,12]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#ada71661baddc01a12a0ca7a6a70d9c4f":[3,0,0,16,7,0,0]
 };

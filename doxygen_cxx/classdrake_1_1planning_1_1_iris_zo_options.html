@@ -191,6 +191,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a510ef8fccd7dfd0abbcdaf6db82f292c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html#a510ef8fccd7dfd0abbcdaf6db82f292c">set_parameterization</a> (const <a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html#a6b49fe87ea09ecac5be69ce6f550d83e">ParameterizationFunction</a> &amp;parameterization, bool parameterization_is_threadsafe, <a class="el" href="classint.html">int</a> parameterization_dimension)</td></tr>
 <tr class="memdesc:a510ef8fccd7dfd0abbcdaf6db82f292c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordinarily, IRIS-ZO grows collision free regions in the robot's configuration space C.  <a href="#a510ef8fccd7dfd0abbcdaf6db82f292c">More...</a><br /></td></tr>
 <tr class="separator:a510ef8fccd7dfd0abbcdaf6db82f292c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab43cd9ec6a6ab0c8713e18f87e7b30d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html#aab43cd9ec6a6ab0c8713e18f87e7b30d">SetParameterizationFromExpression</a> (const Eigen::VectorX&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;expression_parameterization, const Eigen::VectorX&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;variables)</td></tr>
+<tr class="memdesc:aab43cd9ec6a6ab0c8713e18f87e7b30d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative to <code>set_parameterization</code> that allows the user to define the parameterization using a <code>VectorX&lt;Expression&gt;</code>.  <a href="#aab43cd9ec6a6ab0c8713e18f87e7b30d">More...</a><br /></td></tr>
+<tr class="separator:aab43cd9ec6a6ab0c8713e18f87e7b30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62c407d1b530fb47102cc346e309204d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html#a6b49fe87ea09ecac5be69ce6f550d83e">ParameterizationFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html#a62c407d1b530fb47102cc346e309204d">get_parameterization</a> () const</td></tr>
 <tr class="memdesc:a62c407d1b530fb47102cc346e309204d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parameterization function.  <a href="#a62c407d1b530fb47102cc346e309204d">More...</a><br /></td></tr>
 <tr class="separator:a62c407d1b530fb47102cc346e309204d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,6 +275,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a48d3f3fe2646745a5ac6eea6e3692c1c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html#a48d3f3fe2646745a5ac6eea6e3692c1c">meshcat</a> {}</td></tr>
 <tr class="memdesc:a48d3f3fe2646745a5ac6eea6e3692c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passing a meshcat instance may enable debugging visualizations; this currently and when the configuration space is &lt;= 3 dimensional.  <a href="#a48d3f3fe2646745a5ac6eea6e3692c1c">More...</a><br /></td></tr>
 <tr class="separator:a48d3f3fe2646745a5ac6eea6e3692c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafcf4ea1cbea01d087cc559402acddf2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html#aafcf4ea1cbea01d087cc559402acddf2">prog_with_additional_constraints</a> {}</td></tr>
+<tr class="memdesc:aafcf4ea1cbea01d087cc559402acddf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default, IRIS-ZO only considers collision avoidance constraints.  <a href="#aafcf4ea1cbea01d087cc559402acddf2">More...</a><br /></td></tr>
+<tr class="separator:aafcf4ea1cbea01d087cc559402acddf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a6b49fe87ea09ecac5be69ce6f550d83e"></a>
@@ -576,6 +582,45 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aab43cd9ec6a6ab0c8713e18f87e7b30d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab43cd9ec6a6ab0c8713e18f87e7b30d">&#9670;&nbsp;</a></span>SetParameterizationFromExpression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetParameterizationFromExpression </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorX&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>expression_parameterization</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorX&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>variables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alternative to <code>set_parameterization</code> that allows the user to define the parameterization using a <code>VectorX&lt;Expression&gt;</code>. </p>
+<p>The user must also provide a vector containing the variables used in <code>expression_parameterization</code>, in the order that they should be evaluated. Each <code>Variable</code> in <code>variables</code> must be used, each <code>Variable</code> used in <code>expression_parameterization</code> must appear in <code>variables</code>, and there must be no duplicates in <code>variables</code>. </p><dl class="section note"><dt>Note</dt><dd>Expression parameterizations are always threadsafe. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the number of variables used across <code>expression_parameterization</code> does not match <code>ssize(variables)</code>. </td></tr>
+    <tr><td class="paramname">if</td><td>any variables in <code>expression_parameterization</code> are not listed in <code>variables</code>. </td></tr>
+    <tr><td class="paramname">if</td><td>any variables in <code>variables</code> are not used anywhere in <code>expression_parameterization</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a8087faf86b2fa08aae91525960c7b32f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8087faf86b2fa08aae91525960c7b32f">&#9670;&nbsp;</a></span>bisection_steps</h2>
@@ -770,6 +815,27 @@ Public Attributes</h2></td></tr>
 
 <p>Number of threads to use when updating the particles. </p>
 <p>If the user requests more threads than the <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html" title="Interface for collision checkers to use.">CollisionChecker</a> supports, that number of threads will be used instead. However, see also <code>parameterization_is_threadsafe</code>. </p>
+
+</div>
+</div>
+<a id="aafcf4ea1cbea01d087cc559402acddf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafcf4ea1cbea01d087cc559402acddf2">&#9670;&nbsp;</a></span>prog_with_additional_constraints</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a>* prog_with_additional_constraints {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>By default, IRIS-ZO only considers collision avoidance constraints. </p>
+<p>This option can be used to pass additional constraints that should be satisfied by the output region. We accept these in the form of a MathematicalProgram:</p>
+<p>find q subject to g(q) ≤ 0.</p>
+<p>The decision_variables() for the program are taken to define <code>q</code>. IRIS-ZO will silently ignore any costs in <code>prog_with_additional_constraints</code>. If any constraints are not threadsafe, then <code>parallelism</code> will be overridden, and only one thread will be used. </p><dl class="section note"><dt>Note</dt><dd>If the user has specified a parameterization, then these constraints are imposed on the points in the parameterized space Q, not the configuration space C. </dd>
+<dd>
+Internally, these constraints are checked after collisions checking is performed. </dd></dl>
 
 </div>
 </div>

@@ -3756,6 +3756,32 @@ of threads will be used instead. However, see also
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.prog_with_additional_constraints">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prog_with_additional_constraints</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.prog_with_additional_constraints" title="Permalink to this definition"></a></dt>
+<dd><p>By default, IRIS-ZO only considers collision avoidance constraints.
+This option can be used to pass additional constraints that should be
+satisfied by the output region. We accept these in the form of a
+MathematicalProgram:</p>
+<p>find q subject to g(q) ≤ 0.</p>
+<p>The decision_variables() for the program are taken to define <code class="docutils literal notranslate"><span class="pre">q</span></code>.
+IRIS-ZO will silently ignore any costs in
+<code class="docutils literal notranslate"><span class="pre">prog_with_additional_constraints</span></code>. If any constraints are not
+threadsafe, then <code class="docutils literal notranslate"><span class="pre">parallelism</span></code> will be overridden, and only one
+thread will be used.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the user has specified a parameterization, then these
+constraints are imposed on the points in the parameterized space
+Q, not the configuration space C.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Internally, these constraints are checked after collisions
+checking is performed.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.random_seed">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">random_seed</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.random_seed" title="Permalink to this definition"></a></dt>
 <dd><p>This option sets the random seed for random sampling throughout the
@@ -3791,6 +3817,35 @@ determined via <code class="docutils literal notranslate"><span class="pre">chec
 <code class="docutils literal notranslate"><span class="pre">parameterization_is_threadsafe</span></code>, which is whether or not
 <code class="docutils literal notranslate"><span class="pre">parametrization</span></code> can be called concurrently, and
 <code class="docutils literal notranslate"><span class="pre">parameterization_dimension</span></code>, the dimension of the input space Q.&#64;note Due to GIL, it is inefficient to call a python function concurrently across multiple C++ threads. So the parameterization setter function automatically sets threadsafe to false</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.SetParameterizationFromExpression">
+<span class="sig-name descname"><span class="pre">SetParameterizationFromExpression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">expression_parameterization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.SetParameterizationFromExpression" title="Permalink to this definition"></a></dt>
+<dd><p>Alternative to <code class="docutils literal notranslate"><span class="pre">set_parameterization</span></code> that allows the user to define
+the parameterization using a <code class="docutils literal notranslate"><span class="pre">VectorX&lt;Expression&gt;</span></code>. The user must
+also provide a vector containing the variables used in
+<code class="docutils literal notranslate"><span class="pre">expression_parameterization</span></code>, in the order that they should be
+evaluated. Each <code class="docutils literal notranslate"><span class="pre">Variable</span></code> in <code class="docutils literal notranslate"><span class="pre">variables</span></code> must be used, each
+<code class="docutils literal notranslate"><span class="pre">Variable</span></code> used in <code class="docutils literal notranslate"><span class="pre">expression_parameterization</span></code> must appear in
+<code class="docutils literal notranslate"><span class="pre">variables</span></code>, and there must be no duplicates in <code class="docutils literal notranslate"><span class="pre">variables</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Expression parameterizations are always threadsafe.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if the number of variables used across</strong> – </p></li>
+<li><p><strong>expression_parameterization` does not matc</strong> – </p></li>
+<li><p><strong>ssize</strong><strong>(</strong><strong>variables</strong><strong>)</strong><strong>`</strong> – </p></li>
+<li><p><strong>if any variables in expression_parameterization are not listed</strong> – </p></li>
+<li><p><strong>in variables.</strong> – </p></li>
+<li><p><strong>if any variables in variables are not used anywhere in</strong> – </p></li>
+<li><p><strong>expression_parameterization`</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">

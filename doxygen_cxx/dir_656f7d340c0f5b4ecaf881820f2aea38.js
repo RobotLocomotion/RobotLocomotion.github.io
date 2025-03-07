@@ -17,6 +17,7 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     [ "deformable_model.h", "deformable__model_8h.html", [
       [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html", "classdrake_1_1multibody_1_1_deformable_model" ]
     ] ],
+    [ "desired_state_input.h", "desired__state__input_8h.html", "desired__state__input_8h" ],
     [ "discrete_contact_data.h", "discrete__contact__data_8h.html", null ],
     [ "discrete_contact_pair.h", "discrete__contact__pair_8h.html", null ],
     [ "discrete_step_memory.h", "discrete__step__memory_8h.html", null ],
