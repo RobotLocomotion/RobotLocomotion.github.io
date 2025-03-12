@@ -65,5 +65,6 @@ var searchData=
   ['is_5feigen_5fvector',['is_eigen_vector',['../structdrake_1_1is__eigen__vector.html',1,'drake']]],
   ['is_5feigen_5fvector_5fexpression_5fdouble_5fpair',['is_eigen_vector_expression_double_pair',['../structdrake_1_1is__eigen__vector__expression__double__pair.html',1,'drake']]],
   ['is_5feigen_5fvector_5fof',['is_eigen_vector_of',['../structdrake_1_1is__eigen__vector__of.html',1,'drake']]],
-  ['iterationmatrix',['IterationMatrix',['../classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html',1,'drake::systems::ImplicitIntegrator']]]
+  ['iterationmatrix',['IterationMatrix',['../classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html',1,'drake::systems::ImplicitIntegrator']]],
+  ['iterator',['Iterator',['../classdrake_1_1systems_1_1_bus_value_1_1_iterator.html',1,'drake::systems::BusValue']]]
 ];

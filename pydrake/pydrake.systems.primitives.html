@@ -692,6 +692,304 @@ mesh.MeshValuesFrom(function) is one useful tool for creating it.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">BusCreator</span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>This system packs values from heterogeneous input ports into a single
+output port of type BusValue.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>BusCreator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>The port names shown in the figure above are the defaults. Custom
+names may be specified when setting up the BusCreator.</p>
+<p>When an input port is not connected, it is not an error; its value
+will simply not appear as part of the BusValue on the output port.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>BusSelector, BusValue</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.systems.primitives.BusCreator_" title="pydrake.systems.primitives.BusCreator_"><code class="xref py py-class docutils literal notranslate"><span class="pre">BusCreator_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusCreator" title="pydrake.systems.primitives.BusCreator"><span class="pre">pydrake.systems.primitives.BusCreator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">kUseDefaultName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a BusCreator with no inputs, and the given output port
+name. Use DeclareAbstractInputPort() and DeclareVectorInputPort() to
+add ports.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator.DeclareAbstractInputPort">
+<span class="sig-name descname"><span class="pre">DeclareAbstractInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusCreator" title="pydrake.systems.primitives.BusCreator"><span class="pre">pydrake.systems.primitives.BusCreator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator.DeclareAbstractInputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares an abstract input port with the given attributes. The port
+name will also be used as the name of this signal in the BusValue
+output port.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator.DeclareVectorInputPort">
+<span class="sig-name descname"><span class="pre">DeclareVectorInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusCreator" title="pydrake.systems.primitives.BusCreator"><span class="pre">pydrake.systems.primitives.BusCreator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator.DeclareVectorInputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares a vector input port with the given attributes. The port name
+will also be used as the name of this signal in the BusValue output
+port. The type of the signal on the output bus will be
+<code class="docutils literal notranslate"><span class="pre">BasicVector&lt;T&gt;</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">BusCreator_</span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">BusCreator_[float]</span></code>, <a class="reference internal" href="#pydrake.systems.primitives.BusCreator_-AutoDiffXd" title="pydrake.systems.primitives.BusCreator_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">BusCreator_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.BusCreator_-Expression" title="pydrake.systems.primitives.BusCreator_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">BusCreator_[Expression]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator_-AutoDiffXd">
+<span id="pydrake.systems.primitives.BusCreator_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">BusCreator_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator_-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>This system packs values from heterogeneous input ports into a single
+output port of type BusValue.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>BusCreator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>The port names shown in the figure above are the defaults. Custom
+names may be specified when setting up the BusCreator.</p>
+<p>When an input port is not connected, it is not an error; its value
+will simply not appear as part of the BusValue on the output port.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>BusSelector, BusValue</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator_-AutoDiffXd-.__init__">
+<span id="pydrake.systems.primitives.BusCreator_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusCreator_" title="pydrake.systems.primitives.BusCreator_"><span class="pre">pydrake.systems.primitives.BusCreator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">kUseDefaultName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a BusCreator with no inputs, and the given output port
+name. Use DeclareAbstractInputPort() and DeclareVectorInputPort() to
+add ports.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator_-AutoDiffXd-.DeclareAbstractInputPort">
+<span id="pydrake.systems.primitives.BusCreator_[AutoDiffXd].DeclareAbstractInputPort"></span><span class="sig-name descname"><span class="pre">DeclareAbstractInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusCreator_" title="pydrake.systems.primitives.BusCreator_"><span class="pre">pydrake.systems.primitives.BusCreator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator_-AutoDiffXd-.DeclareAbstractInputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares an abstract input port with the given attributes. The port
+name will also be used as the name of this signal in the BusValue
+output port.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator_-AutoDiffXd-.DeclareVectorInputPort">
+<span id="pydrake.systems.primitives.BusCreator_[AutoDiffXd].DeclareVectorInputPort"></span><span class="sig-name descname"><span class="pre">DeclareVectorInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusCreator_" title="pydrake.systems.primitives.BusCreator_"><span class="pre">pydrake.systems.primitives.BusCreator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator_-AutoDiffXd-.DeclareVectorInputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares a vector input port with the given attributes. The port name
+will also be used as the name of this signal in the BusValue output
+port. The type of the signal on the output bus will be
+<code class="docutils literal notranslate"><span class="pre">BasicVector&lt;T&gt;</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator_-Expression">
+<span id="pydrake.systems.primitives.BusCreator_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">BusCreator_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator_-Expression" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<p>This system packs values from heterogeneous input ports into a single
+output port of type BusValue.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>BusCreator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>The port names shown in the figure above are the defaults. Custom
+names may be specified when setting up the BusCreator.</p>
+<p>When an input port is not connected, it is not an error; its value
+will simply not appear as part of the BusValue on the output port.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>BusSelector, BusValue</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator_-Expression-.__init__">
+<span id="pydrake.systems.primitives.BusCreator_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusCreator_" title="pydrake.systems.primitives.BusCreator_"><span class="pre">pydrake.systems.primitives.BusCreator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">kUseDefaultName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a BusCreator with no inputs, and the given output port
+name. Use DeclareAbstractInputPort() and DeclareVectorInputPort() to
+add ports.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator_-Expression-.DeclareAbstractInputPort">
+<span id="pydrake.systems.primitives.BusCreator_[Expression].DeclareAbstractInputPort"></span><span class="sig-name descname"><span class="pre">DeclareAbstractInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusCreator_" title="pydrake.systems.primitives.BusCreator_"><span class="pre">pydrake.systems.primitives.BusCreator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator_-Expression-.DeclareAbstractInputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares an abstract input port with the given attributes. The port
+name will also be used as the name of this signal in the BusValue
+output port.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusCreator_-Expression-.DeclareVectorInputPort">
+<span id="pydrake.systems.primitives.BusCreator_[Expression].DeclareVectorInputPort"></span><span class="sig-name descname"><span class="pre">DeclareVectorInputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusCreator_" title="pydrake.systems.primitives.BusCreator_"><span class="pre">pydrake.systems.primitives.BusCreator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_" title="pydrake.systems.framework.InputPort_"><span class="pre">pydrake.systems.framework.InputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusCreator_-Expression-.DeclareVectorInputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares a vector input port with the given attributes. The port name
+will also be used as the name of this signal in the BusValue output
+port. The type of the signal on the output bus will be
+<code class="docutils literal notranslate"><span class="pre">BasicVector&lt;T&gt;</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">BusSelector</span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>This system unpacks values from a single input port of type BusValue
+onto heterogeneous output ports, where each output port’s value comes
+from the same- named signal on the bus.</p>
+<p>The value on input port may contain additional bus value entries which
+are not selected (because there is no output port with that name);
+this is not an error.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>BusSelector</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(N-1)</td></tr></table></td></tr></table><p>The port names shown in the figure above are the defaults. Custom
+names may be specified when setting up the BusSelector.</p>
+<p>When an output port is evaluated but the input port’s bus doesn’t
+contain that signal name, it is an error.</p>
+<p>Because of the all-encompassing nature of AbstractValue, a
+vector-valued bus signal can be output on an abstract-valued port. Of
+course, the vector value can still be retrieved from the
+AbstractValue. However, we recommend declaring output ports as
+vector-valued when the corresponding input signal is known to be
+vector-valued to maximize utility and minimize surprise.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>BusCreator, BusValue</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.systems.primitives.BusSelector_" title="pydrake.systems.primitives.BusSelector_"><code class="xref py py-class docutils literal notranslate"><span class="pre">BusSelector_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusSelector" title="pydrake.systems.primitives.BusSelector"><span class="pre">pydrake.systems.primitives.BusSelector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">kUseDefaultName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a BusSelector with the given input port name, and no
+outputs. Use DeclareVectorOutputPort() and DeclareAbstractOutputPort()
+to add ports.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector.DeclareAbstractOutputPort">
+<span class="sig-name descname"><span class="pre">DeclareAbstractOutputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusSelector" title="pydrake.systems.primitives.BusSelector"><span class="pre">pydrake.systems.primitives.BusSelector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector.DeclareAbstractOutputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares an abstract output port with the given attributes. The port
+name will also be used as the name of the signal to find in the
+BusValue input port.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector.DeclareVectorOutputPort">
+<span class="sig-name descname"><span class="pre">DeclareVectorOutputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusSelector" title="pydrake.systems.primitives.BusSelector"><span class="pre">pydrake.systems.primitives.BusSelector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector.DeclareVectorOutputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares a vector output port with the given attributes. The port name
+will also be used as the name of the signal to find in the BusValue
+input port. The type of the signal on the input bus must be
+<code class="docutils literal notranslate"><span class="pre">BasicVector&lt;T&gt;</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">BusSelector_</span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector_" title="Permalink to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">BusSelector_[float]</span></code>, <a class="reference internal" href="#pydrake.systems.primitives.BusSelector_-AutoDiffXd" title="pydrake.systems.primitives.BusSelector_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">BusSelector_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.BusSelector_-Expression" title="pydrake.systems.primitives.BusSelector_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">BusSelector_[Expression]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector_-AutoDiffXd">
+<span id="pydrake.systems.primitives.BusSelector_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">BusSelector_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector_-AutoDiffXd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>This system unpacks values from a single input port of type BusValue
+onto heterogeneous output ports, where each output port’s value comes
+from the same- named signal on the bus.</p>
+<p>The value on input port may contain additional bus value entries which
+are not selected (because there is no output port with that name);
+this is not an error.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>BusSelector</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(N-1)</td></tr></table></td></tr></table><p>The port names shown in the figure above are the defaults. Custom
+names may be specified when setting up the BusSelector.</p>
+<p>When an output port is evaluated but the input port’s bus doesn’t
+contain that signal name, it is an error.</p>
+<p>Because of the all-encompassing nature of AbstractValue, a
+vector-valued bus signal can be output on an abstract-valued port. Of
+course, the vector value can still be retrieved from the
+AbstractValue. However, we recommend declaring output ports as
+vector-valued when the corresponding input signal is known to be
+vector-valued to maximize utility and minimize surprise.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>BusCreator, BusValue</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector_-AutoDiffXd-.__init__">
+<span id="pydrake.systems.primitives.BusSelector_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusSelector_" title="pydrake.systems.primitives.BusSelector_"><span class="pre">pydrake.systems.primitives.BusSelector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">kUseDefaultName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a BusSelector with the given input port name, and no
+outputs. Use DeclareVectorOutputPort() and DeclareAbstractOutputPort()
+to add ports.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector_-AutoDiffXd-.DeclareAbstractOutputPort">
+<span id="pydrake.systems.primitives.BusSelector_[AutoDiffXd].DeclareAbstractOutputPort"></span><span class="sig-name descname"><span class="pre">DeclareAbstractOutputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusSelector_" title="pydrake.systems.primitives.BusSelector_"><span class="pre">pydrake.systems.primitives.BusSelector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector_-AutoDiffXd-.DeclareAbstractOutputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares an abstract output port with the given attributes. The port
+name will also be used as the name of the signal to find in the
+BusValue input port.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector_-AutoDiffXd-.DeclareVectorOutputPort">
+<span id="pydrake.systems.primitives.BusSelector_[AutoDiffXd].DeclareVectorOutputPort"></span><span class="sig-name descname"><span class="pre">DeclareVectorOutputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusSelector_" title="pydrake.systems.primitives.BusSelector_"><span class="pre">pydrake.systems.primitives.BusSelector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector_-AutoDiffXd-.DeclareVectorOutputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares a vector output port with the given attributes. The port name
+will also be used as the name of the signal to find in the BusValue
+input port. The type of the signal on the input bus must be
+<code class="docutils literal notranslate"><span class="pre">BasicVector&lt;T&gt;</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector_-Expression">
+<span id="pydrake.systems.primitives.BusSelector_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">BusSelector_[Expression]</span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector_-Expression" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-Expression" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<p>This system unpacks values from a single input port of type BusValue
+onto heterogeneous output ports, where each output port’s value comes
+from the same- named signal on the bus.</p>
+<p>The value on input port may contain additional bus value entries which
+are not selected (because there is no output port with that name);
+this is not an error.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>BusSelector</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(N-1)</td></tr></table></td></tr></table><p>The port names shown in the figure above are the defaults. Custom
+names may be specified when setting up the BusSelector.</p>
+<p>When an output port is evaluated but the input port’s bus doesn’t
+contain that signal name, it is an error.</p>
+<p>Because of the all-encompassing nature of AbstractValue, a
+vector-valued bus signal can be output on an abstract-valued port. Of
+course, the vector value can still be retrieved from the
+AbstractValue. However, we recommend declaring output ports as
+vector-valued when the corresponding input signal is known to be
+vector-valued to maximize utility and minimize surprise.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>BusCreator, BusValue</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector_-Expression-.__init__">
+<span id="pydrake.systems.primitives.BusSelector_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusSelector_" title="pydrake.systems.primitives.BusSelector_"><span class="pre">pydrake.systems.primitives.BusSelector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_port_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">kUseDefaultName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector_-Expression-.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a BusSelector with the given input port name, and no
+outputs. Use DeclareVectorOutputPort() and DeclareAbstractOutputPort()
+to add ports.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector_-Expression-.DeclareAbstractOutputPort">
+<span id="pydrake.systems.primitives.BusSelector_[Expression].DeclareAbstractOutputPort"></span><span class="sig-name descname"><span class="pre">DeclareAbstractOutputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusSelector_" title="pydrake.systems.primitives.BusSelector_"><span class="pre">pydrake.systems.primitives.BusSelector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector_-Expression-.DeclareAbstractOutputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares an abstract output port with the given attributes. The port
+name will also be used as the name of the signal to find in the
+BusValue input port.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.primitives.BusSelector_-Expression-.DeclareVectorOutputPort">
+<span id="pydrake.systems.primitives.BusSelector_[Expression].DeclareVectorOutputPort"></span><span class="sig-name descname"><span class="pre">DeclareVectorOutputPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.primitives.BusSelector_" title="pydrake.systems.primitives.BusSelector_"><span class="pre">pydrake.systems.primitives.BusSelector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName" title="pydrake.systems.framework.UseDefaultName"><span class="pre">pydrake.systems.framework.UseDefaultName</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort_" title="pydrake.systems.framework.OutputPort_"><span class="pre">pydrake.systems.framework.OutputPort_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.primitives.BusSelector_-Expression-.DeclareVectorOutputPort" title="Permalink to this definition"></a></dt>
+<dd><p>Declares a vector output port with the given attributes. The port name
+will also be used as the name of the signal to find in the BusValue
+input port. The type of the signal on the input bus must be
+<code class="docutils literal notranslate"><span class="pre">BasicVector&lt;T&gt;</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.primitives.ConstantValueSource">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.primitives.</span></span><span class="sig-name descname"><span class="pre">ConstantValueSource</span></span><a class="headerlink" href="#pydrake.systems.primitives.ConstantValueSource" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>

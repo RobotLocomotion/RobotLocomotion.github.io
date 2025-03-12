@@ -459,6 +459,66 @@ preferred method for examining a BasicVector’s value.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.systems.framework.BusValue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">BusValue</span></span><a class="headerlink" href="#pydrake.systems.framework.BusValue" title="Permalink to this definition"></a></dt>
+<dd><p>BusValue is a value type used on input ports and output ports to group
+labeled signals into a single port. Each signal is referred to by a
+unique name and stored using an AbstractValue.</p>
+<p>In some cases the signal names are used only for human-readable
+logging or debugging, so can be anything. In other cases, the systems
+using the signals will require the signals to use specific names per
+some convention (e.g., for a BusSelector the signal names must match
+the output port names).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>BusCreator, BusSelector</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.BusValue.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.BusValue" title="pydrake.systems.framework.BusValue"><span class="pre">pydrake.systems.framework.BusValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.BusValue.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs an empty BusValue.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.BusValue.Clear">
+<span class="sig-name descname"><span class="pre">Clear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.BusValue" title="pydrake.systems.framework.BusValue"><span class="pre">pydrake.systems.framework.BusValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.BusValue.Clear" title="Permalink to this definition"></a></dt>
+<dd><p>Removes all signals from this. Invalidates all iterators.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.BusValue.Find">
+<span class="sig-name descname"><span class="pre">Find</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.BusValue" title="pydrake.systems.framework.BusValue"><span class="pre">pydrake.systems.framework.BusValue</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#pydrake.systems.framework.BusValue.Find" title="Permalink to this definition"></a></dt>
+<dd><p>Gets one signal value. Returns nullptr if not found. Does not
+invalidate any iterators, but the return value is invalidated by a
+call to any non-const method on this.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.systems.framework.BusValue.Set">
+<span class="sig-name descname"><span class="pre">Set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.framework.BusValue" title="pydrake.systems.framework.BusValue"><span class="pre">pydrake.systems.framework.BusValue</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.common.value.html#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><span class="pre">pydrake.common.value.AbstractValue</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.framework.BusValue.Set" title="Permalink to this definition"></a></dt>
+<dd><p>Sets one signal value. Invalidates all iterators. The <code class="docutils literal notranslate"><span class="pre">name</span></code> can be
+any string without restriction, although we encourage valid UTF-8.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Within a group of BusValue objects that are expected to
+inter-operate (i.e., to be copied or assigned to each other), the
+type of the <code class="docutils literal notranslate"><span class="pre">value</span></code> for a given <code class="docutils literal notranslate"><span class="pre">name</span></code> is expected to be
+consistent (i.e., homogenous) across the entire group of objects.
+After setting a <code class="docutils literal notranslate"><span class="pre">name</span></code> to some value the first time, every
+subsequent call to Set on the same BusValue object for that same
+<code class="docutils literal notranslate"><span class="pre">name</span></code> must provide a value of the same type, even if the object
+has since been cleared or copied onto another object. The only way
+to reset the hysteresis for the “presumed type” of a name is to
+construct a new BusValue object. Failure to keep the types
+consistent may result in an exception at runtime. However, we
+might relax this restriction in the future, so don’t count on it
+for error handling.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.framework.CacheEntry">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.framework.</span></span><span class="sig-name descname"><span class="pre">CacheEntry</span></span><a class="headerlink" href="#pydrake.systems.framework.CacheEntry" title="Permalink to this definition"></a></dt>
 <dd><p>A CacheEntry belongs to a System and represents the properties of one

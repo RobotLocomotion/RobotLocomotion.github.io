@@ -1,5 +1,8 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1planning_1_1_iris_zo_options.html#a62c407d1b530fb47102cc346e309204d":[3,0,0,11,10,5],
+"classdrake_1_1planning_1_1_iris_zo_options.html#a660d66e6d13bb9abc87a18c3becf7a52":[3,0,0,11,10,6],
+"classdrake_1_1planning_1_1_iris_zo_options.html#a6b49fe87ea09ecac5be69ce6f550d83e":[3,0,0,11,10,0],
 "classdrake_1_1planning_1_1_iris_zo_options.html#a7138b8cfd258a815441c437a9d738467":[3,0,0,11,10,7],
 "classdrake_1_1planning_1_1_iris_zo_options.html#a8087faf86b2fa08aae91525960c7b32f":[3,0,0,11,10,13],
 "classdrake_1_1planning_1_1_iris_zo_options.html#a82eead8e5a402b5c5da8b449073bad45":[3,0,0,11,10,18],
@@ -246,8 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#aa69be52668ec461d59f91ad7eaca3a89":[3,0,0,11,2,3,0,18],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#aa9c3a75dd770a5776c3d438c8e5709d4":[3,0,0,11,2,3,0,6],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#aae29721eac65539aa19e424aaef66589":[3,0,0,11,2,3,0,1],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#abf75b0f596cc9aa68c9819a4674f0269":[3,0,0,11,2,3,0,16],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ace0e9a0c85d4205f2a7d2a25aa24122c":[3,0,0,11,2,3,0,17],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ad8c6ac3db7c5565d4742881f0f6e0c32":[3,0,0,11,2,3,0,2],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#ae7ba9e174af2c666240c009b99d5dfa1":[3,0,0,11,2,3,0,0]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#abf75b0f596cc9aa68c9819a4674f0269":[3,0,0,11,2,3,0,16]
 };

@@ -61,6 +61,30 @@ var group__primitive__systems =
       [ "y0", "classdrake_1_1systems_1_1_affine_system.html#af1094f55f3c81cc7f8c3a953a2394337", null ],
       [ "y0", "classdrake_1_1systems_1_1_affine_system.html#a75939c59506633bf76199742eda9736f", null ]
     ] ],
+    [ "BusCreator", "classdrake_1_1systems_1_1_bus_creator.html", [
+      [ "BusCreator", "classdrake_1_1systems_1_1_bus_creator.html#a10d96e7d2c5c3489c943af241d507972", null ],
+      [ "BusCreator", "classdrake_1_1systems_1_1_bus_creator.html#a376d1a76ff541f748ecae72bff4cb74d", null ],
+      [ "BusCreator", "classdrake_1_1systems_1_1_bus_creator.html#a1c05117b05ca200caef7c28100879e73", null ],
+      [ "BusCreator", "classdrake_1_1systems_1_1_bus_creator.html#ad0d817f0956209f722cb304f6b435067", null ],
+      [ "~BusCreator", "classdrake_1_1systems_1_1_bus_creator.html#a0082ef8bb8fa9a049988229eed862c81", null ],
+      [ "DeclareAbstractInputPort", "classdrake_1_1systems_1_1_bus_creator.html#aa8175cc7f364afbece28a7115f63428b", null ],
+      [ "DeclareVectorInputPort", "classdrake_1_1systems_1_1_bus_creator.html#a1d080586a5812998a216d569fc0a5a64", null ],
+      [ "operator=", "classdrake_1_1systems_1_1_bus_creator.html#ab35c7d4cd7e2a92a8b437366d94ddde0", null ],
+      [ "operator=", "classdrake_1_1systems_1_1_bus_creator.html#a385ef46c6e71caf55157c579426891dd", null ],
+      [ "BusCreator", "classdrake_1_1systems_1_1_bus_creator.html#aee66995fa97e2ca915307226a137f7cf", null ]
+    ] ],
+    [ "BusSelector", "classdrake_1_1systems_1_1_bus_selector.html", [
+      [ "BusSelector", "classdrake_1_1systems_1_1_bus_selector.html#a3657ab9bb28dc2f88554f888b519edea", null ],
+      [ "BusSelector", "classdrake_1_1systems_1_1_bus_selector.html#a114341edf7752183fc8289e44c3d658a", null ],
+      [ "BusSelector", "classdrake_1_1systems_1_1_bus_selector.html#a0a44017b3eb67ace2c086502f33f21fa", null ],
+      [ "BusSelector", "classdrake_1_1systems_1_1_bus_selector.html#a30ff2d0d90a1583a50551d32246d71bf", null ],
+      [ "~BusSelector", "classdrake_1_1systems_1_1_bus_selector.html#a42bb71631636c66de08639600d76a572", null ],
+      [ "DeclareAbstractOutputPort", "classdrake_1_1systems_1_1_bus_selector.html#abaafbbdf12db550bb9ac50dee655f0a4", null ],
+      [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_bus_selector.html#a218b5c47603dd37fc507ee042bd8c75a", null ],
+      [ "operator=", "classdrake_1_1systems_1_1_bus_selector.html#a3d6c2e5d079422df4d4fc3b8ac2f30c5", null ],
+      [ "operator=", "classdrake_1_1systems_1_1_bus_selector.html#a1141ef84f1dc551d59467716bb1280dc", null ],
+      [ "BusSelector", "classdrake_1_1systems_1_1_bus_selector.html#afaa66749fffeba0f1b79585f7508d39a", null ]
+    ] ],
     [ "ConstantValueSource", "classdrake_1_1systems_1_1_constant_value_source.html", [
       [ "ConstantValueSource", "classdrake_1_1systems_1_1_constant_value_source.html#a190c6b4b8a1910076ac54b7b20538767", null ],
       [ "ConstantValueSource", "classdrake_1_1systems_1_1_constant_value_source.html#a2789f04b9565181ad7787b0968532eef", null ],

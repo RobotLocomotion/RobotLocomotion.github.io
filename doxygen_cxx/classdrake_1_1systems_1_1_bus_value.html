@@ -1,0 +1,506 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: BusValue Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_bus_value.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1systems_1_1_bus_value-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">BusValue Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>BusValue is a value type used on input ports and output ports to group labeled signals into a single port. </p>
+<p>Each signal is referred to by a unique name and stored using an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>.</p>
+<p>In some cases the signal names are used only for human-readable logging or debugging, so can be anything. In other cases, the systems using the signals will require the signals to use specific names per some convention (e.g., for a <a class="el" href="classdrake_1_1systems_1_1_bus_selector.html" title="This system unpacks values from a single input port of type BusValue onto heterogeneous output ports,...">BusSelector</a> the signal names must match the output port names).</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_bus_creator.html" title="This system packs values from heterogeneous input ports into a single output port of type BusValue.">BusCreator</a>, <a class="el" href="classdrake_1_1systems_1_1_bus_selector.html" title="This system unpacks values from a single input port of type BusValue onto heterogeneous output ports,...">BusSelector</a> </dd></dl>
+</div>
+<p><code>#include &lt;drake/systems/framework/bus_value.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value_1_1_iterator.html">Iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a forward_iterator over <a class="el" href="classdrake_1_1systems_1_1_bus_value.html" title="BusValue is a value type used on input ports and output ports to group labeled signals into a single ...">BusValue</a> signals.  <a href="classdrake_1_1systems_1_1_bus_value_1_1_iterator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Container-like type aliases</div></td></tr>
+<tr class="memitem:a9e2888aae0cedaa5259e4e54d0d9049e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#a9e2888aae0cedaa5259e4e54d0d9049e">const_iterator</a> = <a class="el" href="classdrake_1_1systems_1_1_bus_value_1_1_iterator.html">Iterator</a></td></tr>
+<tr class="separator:a9e2888aae0cedaa5259e4e54d0d9049e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea845f741e4349987ac8f8b49039b580"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#aea845f741e4349987ac8f8b49039b580">value_type</a> = std::pair&lt; const std::string_view, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp; &gt;</td></tr>
+<tr class="separator:aea845f741e4349987ac8f8b49039b580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:acaaa8bb657c96a11c6739c4d1c7ec0f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#acaaa8bb657c96a11c6739c4d1c7ec0f8">BusValue</a> ()</td></tr>
+<tr class="memdesc:acaaa8bb657c96a11c6739c4d1c7ec0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty BusValue.  <a href="#acaaa8bb657c96a11c6739c4d1c7ec0f8">More...</a><br /></td></tr>
+<tr class="separator:acaaa8bb657c96a11c6739c4d1c7ec0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f19a812c2a26ee21b463a31930ecd82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#a2f19a812c2a26ee21b463a31930ecd82">~BusValue</a> ()</td></tr>
+<tr class="separator:a2f19a812c2a26ee21b463a31930ecd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aff0390ff388655c7476dc72e91d45c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#a9aff0390ff388655c7476dc72e91d45c">Find</a> (std::string_view name) const</td></tr>
+<tr class="memdesc:a9aff0390ff388655c7476dc72e91d45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets one signal value.  <a href="#a9aff0390ff388655c7476dc72e91d45c">More...</a><br /></td></tr>
+<tr class="separator:a9aff0390ff388655c7476dc72e91d45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71d36872f416feaa853788a7a7a7ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#aa71d36872f416feaa853788a7a7a7ef8">Clear</a> ()</td></tr>
+<tr class="memdesc:aa71d36872f416feaa853788a7a7a7ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all signals from this.  <a href="#aa71d36872f416feaa853788a7a7a7ef8">More...</a><br /></td></tr>
+<tr class="separator:aa71d36872f416feaa853788a7a7a7ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae1a0aff8f4867d3ce28072d3c8503d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#adae1a0aff8f4867d3ce28072d3c8503d">Set</a> (std::string_view name, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;value)</td></tr>
+<tr class="memdesc:adae1a0aff8f4867d3ce28072d3c8503d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets one signal value.  <a href="#adae1a0aff8f4867d3ce28072d3c8503d">More...</a><br /></td></tr>
+<tr class="separator:adae1a0aff8f4867d3ce28072d3c8503d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:ac28dca58ac586736b99ad4d6952a35b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#ac28dca58ac586736b99ad4d6952a35b3">BusValue</a> (const <a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> &amp;)</td></tr>
+<tr class="separator:ac28dca58ac586736b99ad4d6952a35b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae46d4d7f47eeee97dc224598906b4e49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#ae46d4d7f47eeee97dc224598906b4e49">operator=</a> (const <a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> &amp;)</td></tr>
+<tr class="separator:ae46d4d7f47eeee97dc224598906b4e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e813df0366f8a9bde40c8d58f8e93ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#a3e813df0366f8a9bde40c8d58f8e93ad">BusValue</a> (<a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> &amp;&amp;)</td></tr>
+<tr class="separator:a3e813df0366f8a9bde40c8d58f8e93ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c42e604e26fb6320b080905069c704e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#a2c42e604e26fb6320b080905069c704e">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> &amp;&amp;)</td></tr>
+<tr class="separator:a2c42e604e26fb6320b080905069c704e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Iterators</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>The iteration order is deterministic but unspecified.</p>
+</div></td></tr>
+<tr class="memitem:a09dd208593b9721a30a83ed978ede577"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_bus_value_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#a09dd208593b9721a30a83ed978ede577">begin</a> () const</td></tr>
+<tr class="separator:a09dd208593b9721a30a83ed978ede577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e88afd3fe20755720963a3b1be0e08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_bus_value_1_1_iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html#a02e88afd3fe20755720963a3b1be0e08">end</a> () const</td></tr>
+<tr class="separator:a02e88afd3fe20755720963a3b1be0e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a9e2888aae0cedaa5259e4e54d0d9049e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e2888aae0cedaa5259e4e54d0d9049e">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_bus_value.html#a9e2888aae0cedaa5259e4e54d0d9049e">const_iterator</a> =  <a class="el" href="classdrake_1_1systems_1_1_bus_value_1_1_iterator.html">Iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea845f741e4349987ac8f8b49039b580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea845f741e4349987ac8f8b49039b580">&#9670;&nbsp;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_bus_value.html#aea845f741e4349987ac8f8b49039b580">value_type</a> =  std::pair&lt;const std::string_view, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a>&amp;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac28dca58ac586736b99ad4d6952a35b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28dca58ac586736b99ad4d6952a35b3">&#9670;&nbsp;</a></span>BusValue() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e813df0366f8a9bde40c8d58f8e93ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e813df0366f8a9bde40c8d58f8e93ad">&#9670;&nbsp;</a></span>BusValue() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acaaa8bb657c96a11c6739c4d1c7ec0f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaaa8bb657c96a11c6739c4d1c7ec0f8">&#9670;&nbsp;</a></span>BusValue() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an empty BusValue. </p>
+
+</div>
+</div>
+<a id="a2f19a812c2a26ee21b463a31930ecd82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f19a812c2a26ee21b463a31930ecd82">&#9670;&nbsp;</a></span>~BusValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a09dd208593b9721a30a83ed978ede577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09dd208593b9721a30a83ed978ede577">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_bus_value_1_1_iterator.html">Iterator</a> begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa71d36872f416feaa853788a7a7a7ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa71d36872f416feaa853788a7a7a7ef8">&#9670;&nbsp;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes all signals from this. </p>
+<p>Invalidates all iterators. </p>
+
+</div>
+</div>
+<a id="a02e88afd3fe20755720963a3b1be0e08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e88afd3fe20755720963a3b1be0e08">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_bus_value_1_1_iterator.html">BusValue::Iterator</a> end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9aff0390ff388655c7476dc72e91d45c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aff0390ff388655c7476dc72e91d45c">&#9670;&nbsp;</a></span>Find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a>* Find </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets one signal value. </p>
+<p>Returns nullptr if not found. Does not invalidate any iterators, but the return value is invalidated by a call to any non-const method on this. </p>
+
+</div>
+</div>
+<a id="a2c42e604e26fb6320b080905069c704e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c42e604e26fb6320b080905069c704e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae46d4d7f47eeee97dc224598906b4e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46d4d7f47eeee97dc224598906b4e49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adae1a0aff8f4867d3ce28072d3c8503d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae1a0aff8f4867d3ce28072d3c8503d">&#9670;&nbsp;</a></span>Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Set </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets one signal value. </p>
+<p>Invalidates all iterators. The <code>name</code> can be any string without restriction, although we encourage valid UTF-8.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Within a group of <a class="el" href="classdrake_1_1systems_1_1_bus_value.html" title="BusValue is a value type used on input ports and output ports to group labeled signals into a single ...">BusValue</a> objects that are expected to inter-operate (i.e., to be copied or assigned to each other), the type of the <code>value</code> for a given <code>name</code> is expected to be consistent (i.e., homogenous) across the entire group of objects. After setting a <code>name</code> to some value the first time, every subsequent call to Set on the same <a class="el" href="classdrake_1_1systems_1_1_bus_value.html" title="BusValue is a value type used on input ports and output ports to group labeled signals into a single ...">BusValue</a> object for that same <code>name</code> must provide a value of the same type, even if the object has since been cleared or copied onto another object. The only way to reset the hysteresis for the "presumed type" of a name is to construct a new <a class="el" href="classdrake_1_1systems_1_1_bus_value.html" title="BusValue is a value type used on input ports and output ports to group labeled signals into a single ...">BusValue</a> object. Failure to keep the types consistent may result in an exception at runtime. However, we might relax this restriction in the future, so don't count on it for error handling. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/systems/framework/<a class="el" href="bus__value_8h.html">bus_value.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1systems.html">systems</a></li><li class="navelem"><a class="el" href="classdrake_1_1systems_1_1_bus_value.html">BusValue</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

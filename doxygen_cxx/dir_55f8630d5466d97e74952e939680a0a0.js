@@ -5,6 +5,8 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
     [ "barycentric_system.h", "barycentric__system_8h.html", [
       [ "BarycentricMeshSystem", "classdrake_1_1systems_1_1_barycentric_mesh_system.html", "classdrake_1_1systems_1_1_barycentric_mesh_system" ]
     ] ],
+    [ "bus_creator.h", "bus__creator_8h.html", null ],
+    [ "bus_selector.h", "bus__selector_8h.html", null ],
     [ "constant_value_source.h", "constant__value__source_8h.html", "constant__value__source_8h" ],
     [ "constant_vector_source.h", "constant__vector__source_8h.html", null ],
     [ "demultiplexer.h", "demultiplexer_8h.html", null ],
