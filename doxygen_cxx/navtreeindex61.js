@@ -1,6 +1,5 @@
 var NAVTREEINDEX61 =
 {
-"runge__kutta2__integrator_8h.html#adcfd8ce56999d0e9bec5487b67476358":[4,0,0,12,0,16,0],
 "runge__kutta3__integrator_8h.html":[4,0,0,12,0,17],
 "runge__kutta3__integrator_8h.html#abf7bfbbd891bc7113318fdfd9be2dcec":[4,0,0,12,0,17,0],
 "runge__kutta5__integrator_8h.html":[4,0,0,12,0,18],
@@ -220,8 +219,8 @@ var NAVTREEINDEX61 =
 "spanning__forest__tree_8h.html":[4,0,0,8,13,12],
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,60],
 "sparse__grid_8h.html":[4,0,0,8,7,5],
-"sparse__linear__operator_8h.html":[4,0,0,8,1,18],
-"sparse__linear__operator_8h.html#ab3a29b7d9714447621ce21836bca9b15":[4,0,0,8,1,18,0],
+"sparse__linear__operator_8h.html":[4,0,0,8,1,17],
+"sparse__linear__operator_8h.html#ab3a29b7d9714447621ce21836bca9b15":[4,0,0,8,1,17,0],
 "sparse__matrix__gain_8h.html":[4,0,0,12,6,28],
 "spatial__acceleration_8h.html":[4,0,0,8,5,0],
 "spatial__acceleration_8h.html#a34fc915b4c64fba1362cc960d9a27d4a":[4,0,0,8,5,0,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX61 =
 "spong__controller__params_8h.html":[4,0,0,3,0,7],
 "spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
 "spring__mass__system_8h.html":[4,0,0,12,0,0,15],
-"ssize_8h.html":[4,0,0,1,64]
+"ssize_8h.html":[4,0,0,1,64],
+"ssize_8h.html#a65f207e2f4d5cda4d2bc9da7b8a54256":[4,0,0,1,64,0]
 };

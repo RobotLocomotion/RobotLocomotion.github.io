@@ -194,11 +194,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a955f9ba613b3309f1c819c7d379f6afd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a955f9ba613b3309f1c819c7d379f6afd">WeldJoint</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_on_parent_F, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_on_child_M, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#afeb8c8bfec14a1952a54971827058949">X_FM</a>)</td></tr>
 <tr class="memdesc:a955f9ba613b3309f1c819c7d379f6afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a WeldJoint between a <code>frame_on_parent_F</code> and a <code>frame_on_child_M</code> so that their relative pose <code>X_FM</code> is fixed as if they were "welded" together.  <a href="#a955f9ba613b3309f1c819c7d379f6afd">More...</a><br /></td></tr>
 <tr class="separator:a955f9ba613b3309f1c819c7d379f6afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40a0f999d2cc42a0088088ba65484f2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a40a0f999d2cc42a0088088ba65484f2c">~WeldJoint</a> () override</td></tr>
-<tr class="separator:a40a0f999d2cc42a0088088ba65484f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a952a908b4c1b68ac11b2e31ef31e9524"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">type_name</a> () const override</td></tr>
-<tr class="memdesc:a952a908b4c1b68ac11b2e31ef31e9524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string identifying the type of <code>this</code> joint, such as "revolute" or "prismatic".  <a href="#a952a908b4c1b68ac11b2e31ef31e9524">More...</a><br /></td></tr>
-<tr class="separator:a952a908b4c1b68ac11b2e31ef31e9524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6531922f3e1a02e4cfc1b1902a377fae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a6531922f3e1a02e4cfc1b1902a377fae">~WeldJoint</a> () final</td></tr>
+<tr class="separator:a6531922f3e1a02e4cfc1b1902a377fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4fa9c904accccf5900c63c3e65ca277"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#ae4fa9c904accccf5900c63c3e65ca277">type_name</a> () const final</td></tr>
+<tr class="memdesc:ae4fa9c904accccf5900c63c3e65ca277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string identifying the type of <code>this</code> joint, such as "revolute" or "prismatic".  <a href="#ae4fa9c904accccf5900c63c3e65ca277">More...</a><br /></td></tr>
+<tr class="separator:ae4fa9c904accccf5900c63c3e65ca277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeb8c8bfec14a1952a54971827058949"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#afeb8c8bfec14a1952a54971827058949">X_FM</a> () const</td></tr>
 <tr class="memdesc:afeb8c8bfec14a1952a54971827058949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pose X_FM of frame M in F.  <a href="#afeb8c8bfec14a1952a54971827058949">More...</a><br /></td></tr>
 <tr class="separator:afeb8c8bfec14a1952a54971827058949"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -418,9 +418,9 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a83a06d8a7b5e79c67b09f98583b0d807"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a83a06d8a7b5e79c67b09f98583b0d807">DoAddInOneForce</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;, <a class="el" href="classint.html">int</a>, const T &amp;, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *) const override</td></tr>
-<tr class="memdesc:a83a06d8a7b5e79c67b09f98583b0d807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joint&lt;T&gt; override called through public NVI, Joint::AddInForce().  <a href="#a83a06d8a7b5e79c67b09f98583b0d807">More...</a><br /></td></tr>
-<tr class="separator:a83a06d8a7b5e79c67b09f98583b0d807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78c0363e81b89f005b383543f2a9cfc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a78c0363e81b89f005b383543f2a9cfc0">DoAddInOneForce</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;, <a class="el" href="classint.html">int</a>, const T &amp;, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *) const final</td></tr>
+<tr class="memdesc:a78c0363e81b89f005b383543f2a9cfc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joint&lt;T&gt; override called through public NVI, Joint::AddInForce().  <a href="#a78c0363e81b89f005b383543f2a9cfc0">More...</a><br /></td></tr>
+<tr class="separator:a78c0363e81b89f005b383543f2a9cfc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_joint"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1multibody_1_1_joint')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint&lt; T &gt;</a></td></tr>
 <tr class="memitem:acdd227553c00c5305fcbb8263eb3955f inherit pro_methods_classdrake_1_1multibody_1_1_joint"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#acdd227553c00c5305fcbb8263eb3955f">DoSetDefaultPosePair</a> (const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;q_FM, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_FM)</td></tr>
 <tr class="memdesc:acdd227553c00c5305fcbb8263eb3955f inherit pro_methods_classdrake_1_1multibody_1_1_joint"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a>.  <a href="classdrake_1_1multibody_1_1_joint.html#acdd227553c00c5305fcbb8263eb3955f">More...</a><br /></td></tr>
@@ -606,8 +606,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a40a0f999d2cc42a0088088ba65484f2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40a0f999d2cc42a0088088ba65484f2c">&#9670;&nbsp;</a></span>~WeldJoint()</h2>
+<a id="a6531922f3e1a02e4cfc1b1902a377fae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6531922f3e1a02e4cfc1b1902a377fae">&#9670;&nbsp;</a></span>~WeldJoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -624,7 +624,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -632,8 +632,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a83a06d8a7b5e79c67b09f98583b0d807"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83a06d8a7b5e79c67b09f98583b0d807">&#9670;&nbsp;</a></span>DoAddInOneForce()</h2>
+<a id="a78c0363e81b89f005b383543f2a9cfc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78c0363e81b89f005b383543f2a9cfc0">&#9670;&nbsp;</a></span>DoAddInOneForce()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -673,7 +673,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -737,8 +737,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a952a908b4c1b68ac11b2e31ef31e9524"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a952a908b4c1b68ac11b2e31ef31e9524">&#9670;&nbsp;</a></span>type_name()</h2>
+<a id="ae4fa9c904accccf5900c63c3e65ca277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4fa9c904accccf5900c63c3e65ca277">&#9670;&nbsp;</a></span>type_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -755,7 +755,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

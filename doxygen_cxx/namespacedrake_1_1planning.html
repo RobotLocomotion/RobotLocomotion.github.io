@@ -486,7 +486,13 @@ Configuration Space," &#160;* Denotes equal contribution.</p>
   </dd>
 </dl>
 <p>The <code>starting_ellipsoid</code> and <code>domain</code> must describe elements in the same ambient dimension as the configuration space of the robot, unless a parameterization is specified (in which case, they must match <code>options.parameterization_dimension</code>). </p><dl class="section return"><dt>Returns</dt><dd>A HPolyhedron representing the computed collision-free region in configuration space.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the center of <code>starting_ellipsoid</code> is in collision, or violates any of the user-specified constraints in <code>options.prog_with_additional_constraints</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

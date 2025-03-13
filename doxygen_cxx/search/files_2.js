@@ -50,7 +50,6 @@ var searchData=
   ['compute_5ftorque_2eh',['compute_torque.h',['../compute__torque_8h.html',1,'']]],
   ['concatenate_5fimages_2eh',['concatenate_images.h',['../concatenate__images_8h.html',1,'']]],
   ['cond_2eh',['cond.h',['../cond_8h.html',1,'']]],
-  ['conex_5fsupernodal_5fsolver_2eh',['conex_supernodal_solver.h',['../conex__supernodal__solver_8h.html',1,'']]],
   ['constant_5fvalue_5fsource_2eh',['constant_value_source.h',['../constant__value__source_8h.html',1,'']]],
   ['constant_5fvector_5fsource_2eh',['constant_vector_source.h',['../constant__vector__source_8h.html',1,'']]],
   ['constants_2eh',['constants.h',['../constants_8h.html',1,'']]],

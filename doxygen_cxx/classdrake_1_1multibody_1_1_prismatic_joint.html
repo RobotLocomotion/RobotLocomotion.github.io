@@ -195,11 +195,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bb544cad098dd3988a693ae8b3a7665"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a4bb544cad098dd3988a693ae8b3a7665">PrismaticJoint</a> (const std::string &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#af544171c3e9756dd27830a3b5b4ff781">frame_on_parent</a>, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;<a class="el" href="classdrake_1_1multibody_1_1_joint.html#adeb59e44e49a847f2a338211882d00f6">frame_on_child</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;axis, <a class="el" href="classdouble.html">double</a> pos_lower_limit=-std::numeric_limits&lt; <a class="el" href="classdouble.html">double</a> &gt;::infinity(), <a class="el" href="classdouble.html">double</a> pos_upper_limit=std::numeric_limits&lt; <a class="el" href="classdouble.html">double</a> &gt;::infinity(), <a class="el" href="classdouble.html">double</a> damping=0)</td></tr>
 <tr class="memdesc:a4bb544cad098dd3988a693ae8b3a7665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to create a prismatic joint between two bodies so that frame F attached to the parent body P and frame M attached to the child body B, translate relatively to one another along a common axis.  <a href="#a4bb544cad098dd3988a693ae8b3a7665">More...</a><br /></td></tr>
 <tr class="separator:a4bb544cad098dd3988a693ae8b3a7665"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a024b638bc44aba4eebd816979faaa5ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a024b638bc44aba4eebd816979faaa5ba">~PrismaticJoint</a> () override</td></tr>
-<tr class="separator:a024b638bc44aba4eebd816979faaa5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a952a908b4c1b68ac11b2e31ef31e9524"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">type_name</a> () const override</td></tr>
-<tr class="memdesc:a952a908b4c1b68ac11b2e31ef31e9524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string identifying the type of <code>this</code> joint, such as "revolute" or "prismatic".  <a href="#a952a908b4c1b68ac11b2e31ef31e9524">More...</a><br /></td></tr>
-<tr class="separator:a952a908b4c1b68ac11b2e31ef31e9524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960a12810250964280b9a35fd0f8650b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a960a12810250964280b9a35fd0f8650b">~PrismaticJoint</a> () final</td></tr>
+<tr class="separator:a960a12810250964280b9a35fd0f8650b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4fa9c904accccf5900c63c3e65ca277"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#ae4fa9c904accccf5900c63c3e65ca277">type_name</a> () const final</td></tr>
+<tr class="memdesc:ae4fa9c904accccf5900c63c3e65ca277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string identifying the type of <code>this</code> joint, such as "revolute" or "prismatic".  <a href="#ae4fa9c904accccf5900c63c3e65ca277">More...</a><br /></td></tr>
+<tr class="separator:ae4fa9c904accccf5900c63c3e65ca277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6693bdd8cd7c223b8ac7b6015dd2ab4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#af6693bdd8cd7c223b8ac7b6015dd2ab4">translation_axis</a> () const</td></tr>
 <tr class="memdesc:af6693bdd8cd7c223b8ac7b6015dd2ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the axis of translation for <code>this</code> joint as a unit vector.  <a href="#af6693bdd8cd7c223b8ac7b6015dd2ab4">More...</a><br /></td></tr>
 <tr class="separator:af6693bdd8cd7c223b8ac7b6015dd2ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -476,9 +476,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4acdcbc3dc24b7ee11c38403b7101996"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a4acdcbc3dc24b7ee11c38403b7101996">DoAddInOneForce</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;, <a class="el" href="classint.html">int</a> joint_dof, const T &amp;joint_tau, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const final</td></tr>
 <tr class="memdesc:a4acdcbc3dc24b7ee11c38403b7101996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joint&lt;T&gt; virtual override called through public NVI, Joint::AddInForce().  <a href="#a4acdcbc3dc24b7ee11c38403b7101996">More...</a><br /></td></tr>
 <tr class="separator:a4acdcbc3dc24b7ee11c38403b7101996"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae58dc70f3e0535c09582b85ecbc612a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#ae58dc70f3e0535c09582b85ecbc612a7">DoAddInDamping</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const override</td></tr>
-<tr class="memdesc:ae58dc70f3e0535c09582b85ecbc612a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joint&lt;T&gt; override called through public NVI, <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a17028bb61e70288045e0e78002c32ba8" title="Adds into forces the force due to damping within this joint.">Joint::AddInDamping()</a>.  <a href="#ae58dc70f3e0535c09582b85ecbc612a7">More...</a><br /></td></tr>
-<tr class="separator:ae58dc70f3e0535c09582b85ecbc612a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d61e0fa9ce2f6e50096cebbc3100fa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a5d61e0fa9ce2f6e50096cebbc3100fa3">DoAddInDamping</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const final</td></tr>
+<tr class="memdesc:a5d61e0fa9ce2f6e50096cebbc3100fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joint&lt;T&gt; override called through public NVI, <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a17028bb61e70288045e0e78002c32ba8" title="Adds into forces the force due to damping within this joint.">Joint::AddInDamping()</a>.  <a href="#a5d61e0fa9ce2f6e50096cebbc3100fa3">More...</a><br /></td></tr>
+<tr class="separator:a5d61e0fa9ce2f6e50096cebbc3100fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_joint"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1multibody_1_1_joint')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint&lt; T &gt;</a></td></tr>
 <tr class="memitem:acdd227553c00c5305fcbb8263eb3955f inherit pro_methods_classdrake_1_1multibody_1_1_joint"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#acdd227553c00c5305fcbb8263eb3955f">DoSetDefaultPosePair</a> (const <a class="el" href="namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084">Quaternion</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;q_FM, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;p_FM)</td></tr>
 <tr class="memdesc:acdd227553c00c5305fcbb8263eb3955f inherit pro_methods_classdrake_1_1multibody_1_1_joint"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae155f82972080dcf9791c63cb7dcfe1a" title="Sets this joint&#39;s default generalized positions q₀ such that the pose of the child frame M in the par...">SetDefaultPose()</a>.  <a href="classdrake_1_1multibody_1_1_joint.html#acdd227553c00c5305fcbb8263eb3955f">More...</a><br /></td></tr>
@@ -690,8 +690,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a024b638bc44aba4eebd816979faaa5ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a024b638bc44aba4eebd816979faaa5ba">&#9670;&nbsp;</a></span>~PrismaticJoint()</h2>
+<a id="a960a12810250964280b9a35fd0f8650b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a960a12810250964280b9a35fd0f8650b">&#9670;&nbsp;</a></span>~PrismaticJoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -708,7 +708,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -810,8 +810,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ae58dc70f3e0535c09582b85ecbc612a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae58dc70f3e0535c09582b85ecbc612a7">&#9670;&nbsp;</a></span>DoAddInDamping()</h2>
+<a id="a5d61e0fa9ce2f6e50096cebbc3100fa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d61e0fa9ce2f6e50096cebbc3100fa3">&#9670;&nbsp;</a></span>DoAddInDamping()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -839,7 +839,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1304,8 +1304,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a952a908b4c1b68ac11b2e31ef31e9524"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a952a908b4c1b68ac11b2e31ef31e9524">&#9670;&nbsp;</a></span>type_name()</h2>
+<a id="ae4fa9c904accccf5900c63c3e65ca277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4fa9c904accccf5900c63c3e65ca277">&#9670;&nbsp;</a></span>type_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1322,7 +1322,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

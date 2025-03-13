@@ -239,7 +239,6 @@ var NAVTREEINDEX19 =
 "classdrake_1_1multibody_1_1_position_cost.html#ae9072d05126141177968d5cfbb70d7e4":[1,1,0,13,6],
 "classdrake_1_1multibody_1_1_position_cost.html#aea30e32707f124096a67520f5a46f404":[1,1,0,13,4],
 "classdrake_1_1multibody_1_1_prismatic_joint.html":[3,0,0,9,72],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a024b638bc44aba4eebd816979faaa5ba":[3,0,0,9,72,4],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a05dcc634b9736cf409a30afaa368d812":[3,0,0,9,72,21],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a0882afbed041f1a4823cb105abe80af4":[3,0,0,9,72,1],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a111a71a315e80d42b343cf82336fc169":[3,0,0,9,72,23],
@@ -249,5 +248,6 @@ var NAVTREEINDEX19 =
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a46c1152817528426d83470b735e91fd9":[3,0,0,9,72,24],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a4acdcbc3dc24b7ee11c38403b7101996":[3,0,0,9,72,10],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#a4bb544cad098dd3988a693ae8b3a7665":[3,0,0,9,72,3],
-"classdrake_1_1multibody_1_1_prismatic_joint.html#a503af5e7b7477b89d8920f5ec29582e1":[3,0,0,9,72,30]
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a503af5e7b7477b89d8920f5ec29582e1":[3,0,0,9,72,30],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a5d61e0fa9ce2f6e50096cebbc3100fa3":[3,0,0,9,72,9]
 };

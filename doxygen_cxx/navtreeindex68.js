@@ -1,6 +1,5 @@
 var NAVTREEINDEX68 =
 {
-"structdrake_1_1yaml_1_1_load_yaml_options.html#a41075284801afdfd502cd4c5f73f363d":[3,0,0,20,0,0],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aa4ca52e888e12f7fd01ae981e6b63275":[3,0,0,20,0,1],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[3,0,0,20,0,2],
 "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html":[3,0,1,33],
@@ -80,7 +79,7 @@ var NAVTREEINDEX68 =
 "subvector_8h.html":[4,0,0,12,3,38],
 "subvector_8h.html#a7a943137086b7efeb07642846ea8ea37":[4,0,0,12,3,38,1],
 "suction__cup__controller_8h.html":[4,0,0,3,11,2,3],
-"supernodal__solver_8h.html":[4,0,0,8,1,19],
+"supernodal__solver_8h.html":[4,0,0,8,1,18],
 "supervector_8h.html":[4,0,0,12,3,39],
 "supervector_8h.html#a1a6c3f2cc0c6b06738a4b393b90b811c":[4,0,0,12,3,39,1],
 "symbolic_2polynomial_8h.html":[4,0,0,1,3,11],
@@ -178,8 +177,8 @@ var NAVTREEINDEX68 =
 "system__constraint__adapter_8h.html":[4,0,0,12,5,0],
 "system__constraint__wrapper_8h.html":[4,0,0,12,5,1],
 "system__constraint__wrapper_8h.html#aa012f2e77f3c419bf4b10632f6eb6507":[4,0,0,12,5,1,1],
-"system__dynamics__data_8h.html":[4,0,0,8,1,20],
-"system__dynamics__data_8h.html#aadd94ea888130540aa18f2ad7cff1ced":[4,0,0,8,1,20,0],
+"system__dynamics__data_8h.html":[4,0,0,8,1,19],
+"system__dynamics__data_8h.html#aadd94ea888130540aa18f2ad7cff1ced":[4,0,0,8,1,19,0],
 "system__output_8h.html":[4,0,0,12,3,44],
 "system__output_8h.html#af61dd5d97b6aa0f6fef7c1b030cc939a":[4,0,0,12,3,44,2],
 "system__scalar__conversion__doxygen_8h.html":[4,0,0,12,3,45],
@@ -249,5 +248,6 @@ var NAVTREEINDEX68 =
 "type__pack_8h.html":[4,0,0,0,0,1,11],
 "type__pack_8h.html#a1becf7d91b4613c259a888ef35590d76":[4,0,0,0,0,1,11,9],
 "type__pack_8h.html#a23e81e154cbda13ce43322ccfcedb7ed":[4,0,0,0,0,1,11,11],
-"type__pack_8h.html#a2f8fb09132c1375ac50b011cd4c47559":[4,0,0,0,0,1,11,10]
+"type__pack_8h.html#a2f8fb09132c1375ac50b011cd4c47559":[4,0,0,0,0,1,11,10],
+"type__pack_8h.html#a7421f3f5801e3e393c7a52105aeb876e":[4,0,0,0,0,1,11,12]
 };

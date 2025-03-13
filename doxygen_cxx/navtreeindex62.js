@@ -1,6 +1,5 @@
 var NAVTREEINDEX62 =
 {
-"ssize_8h.html#a65f207e2f4d5cda4d2bc9da7b8a54256":[4,0,0,1,64,0],
 "ssize_8h.html#a7a5f6f92343ffa2502b5f2345c3d595f":[4,0,0,1,64,1],
 "stacked__trajectory_8h.html":[4,0,0,1,5,13],
 "stacked__trajectory_8h.html#a87df1c4f5cdfa8e0ccd623850c60ed6a":[4,0,0,1,5,13,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX62 =
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[3,0,0,3,14,5,3],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac7fb7de4cb058013c26c48812a248d90":[3,0,0,3,14,5,4],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ad7178daaf2b128e7576318790394a37f":[3,0,0,3,14,5,2],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html":[3,0,0,3,15,0]
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html":[3,0,0,3,15,0],
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#a09f8d0da960e3eed8859508f7efdb421":[3,0,0,3,15,0,0]
 };

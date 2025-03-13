@@ -1,6 +1,5 @@
 var NAVTREEINDEX65 =
 {
-"structdrake_1_1multibody_1_1_calc_grid_points_options.html#a4895028b237386dd36645a9b8f0f30f4":[3,0,0,9,11,1],
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#a53380b3b14c20bdfcb3bc9970c421231":[3,0,0,9,11,2],
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,11,0],
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#ae62d09bc52470752b2fd4589c92049f5":[3,0,0,9,11,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX65 =
 "structdrake_1_1pydrake_1_1overload__cast__impl.html#a4eeedf83a7bce37a16d96085dcdc46f4":[3,0,0,12,2,0],
 "structdrake_1_1pydrake_1_1overload__cast__impl.html#a74f8574b2d358293cf04c7f27df47bb2":[3,0,0,12,2,1],
 "structdrake_1_1pydrake_1_1overload__cast__impl.html#ad8669f38296275ae761b8ea5ca557cd6":[3,0,0,12,2,2],
-"structdrake_1_1pydrake_1_1wrap__arg__default.html":[3,0,0,12,3]
+"structdrake_1_1pydrake_1_1wrap__arg__default.html":[3,0,0,12,3],
+"structdrake_1_1pydrake_1_1wrap__arg__default.html#a48a259ef8336ef23e66f632b0ddad145":[3,0,0,12,3,2]
 };

@@ -1,8 +1,7 @@
 var NAVTREEINDEX57 =
 {
-"linear__distance__and__interpolation__provider_8h.html":[4,0,0,10,12],
-"linear__operator_8h.html":[4,0,0,8,1,11],
-"linear__operator_8h.html#a987c60ae38cccb949747e42892b482bc":[4,0,0,8,1,11,0],
+"linear__operator_8h.html":[4,0,0,8,1,10],
+"linear__operator_8h.html#a987c60ae38cccb949747e42892b482bc":[4,0,0,8,1,10,0],
 "linear__quadratic__regulator_8h.html":[4,0,0,12,1,6],
 "linear__quadratic__regulator_8h.html#ga048915783bddb58606c84332b91dad6c":[4,0,0,12,1,6,4],
 "linear__quadratic__regulator_8h.html#ga6506532189adf1c7a42662b597135f70":[4,0,0,12,1,6,2],
@@ -105,7 +104,7 @@ var NAVTREEINDEX57 =
 "mathematical__program__result_8h.html":[4,0,0,11,32],
 "mathematical__program__result_8h.html#a014d2838aa5fae12520da4ebf46005ca":[4,0,0,11,32,1],
 "mathematical__program__result_8h.html#afd8c88bd4238ccc189020ed7d99b1792":[4,0,0,11,32,2],
-"matrix__block_8h.html":[4,0,0,8,1,12],
+"matrix__block_8h.html":[4,0,0,8,1,11],
 "matrix__gain_8h.html":[4,0,0,12,6,17],
 "matrix__util_8h.html":[4,0,0,7,24],
 "matrix__util_8h.html#a141ec70804c105e09ab3b0a855152b8b":[4,0,0,7,24,5],
@@ -164,7 +163,7 @@ var NAVTREEINDEX57 =
 "meshing__utilities_8h.html":[4,0,0,4,2,46],
 "min__clique__cover__solver__base_8h.html":[4,0,0,10,0,4],
 "min__clique__cover__solver__via__greedy_8h.html":[4,0,0,10,0,5],
-"minimum__degree__ordering_8h.html":[4,0,0,8,1,13],
+"minimum__degree__ordering_8h.html":[4,0,0,8,1,12],
 "minimum__distance__lower__bound__constraint_8h.html":[4,0,0,8,4,14],
 "minimum__distance__upper__bound__constraint_8h.html":[4,0,0,8,4,15],
 "minimum__value__constraint_8h.html":[4,0,0,11,33],
@@ -249,5 +248,6 @@ var NAVTREEINDEX57 =
 "multibody__plant_8h.html#aa1d02176591187cb83e77e9ff779d679ac9a6ebef7049abc9802a9d0705a2e976":[4,0,0,8,10,32,6,2],
 "multibody__plant_8h.html#aa1d02176591187cb83e77e9ff779d679ad454de89727cb520148830aa54cb3a90":[4,0,0,8,10,32,6,0],
 "multibody__plant_8h.html#aa1d02176591187cb83e77e9ff779d679ad48dc7e3221aee2d9e1af665ebfbeeec":[4,0,0,8,10,32,6,1],
-"multibody__plant_8h.html#ab69d6cd821353ffa5ba779a02269852d":[4,0,0,8,10,32,4]
+"multibody__plant_8h.html#ab69d6cd821353ffa5ba779a02269852d":[4,0,0,8,10,32,4],
+"multibody__plant_8h.html#ab69d6cd821353ffa5ba779a02269852da280e7e1407e229994454217707eea0f2":[4,0,0,8,10,32,4,0]
 };
