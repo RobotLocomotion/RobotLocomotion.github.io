@@ -1,5 +1,11 @@
 var NAVTREEINDEX68 =
 {
+"structdrake_1_1visualization_1_1_visualization_config.html#adfdda5f3f8c943cb23d22e9bf52afbe7":[3,0,0,19,5,2],
+"structdrake_1_1visualization_1_1_visualization_config.html#ae5544a2db38abe64cf9742dea94b1995":[3,0,0,19,5,8],
+"structdrake_1_1visualization_1_1_visualization_config.html#aeafcd0d4f3194281faba6686f1589b00":[3,0,0,19,5,10],
+"structdrake_1_1yaml_1_1_load_yaml_options.html":[3,0,0,20,0],
+"structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d":[3,0,0,20,0,3],
+"structdrake_1_1yaml_1_1_load_yaml_options.html#a41075284801afdfd502cd4c5f73f363d":[3,0,0,20,0,0],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aa4ca52e888e12f7fd01ae981e6b63275":[3,0,0,20,0,1],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#aea27c3ce8aaf9792e86b006e57659938":[3,0,0,20,0,2],
 "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html":[3,0,1,33],
@@ -243,11 +249,5 @@ var NAVTREEINDEX68 =
 "trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44af4d2017f452ed392e963b2d8ddf591bb":[4,0,0,1,3,17,2,0],
 "trigonometric__polynomial_8h.html#a13c5d9eccfc9643fdd5764d6e72b8faf":[4,0,0,1,3,17,1],
 "trigonometric__polynomial_8h.html#a1db53e224c37b630f7ec9d1615215449":[4,0,0,1,3,17,4],
-"trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62":[4,0,0,1,3,17,3],
-"trigonometric__polynomial_8h.html#ad88f58019962d307b9da7ebc9d32ec87":[4,0,0,1,3,17,5],
-"type__pack_8h.html":[4,0,0,0,0,1,11],
-"type__pack_8h.html#a1becf7d91b4613c259a888ef35590d76":[4,0,0,0,0,1,11,9],
-"type__pack_8h.html#a23e81e154cbda13ce43322ccfcedb7ed":[4,0,0,0,0,1,11,11],
-"type__pack_8h.html#a2f8fb09132c1375ac50b011cd4c47559":[4,0,0,0,0,1,11,10],
-"type__pack_8h.html#a7421f3f5801e3e393c7a52105aeb876e":[4,0,0,0,0,1,11,12]
+"trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62":[4,0,0,1,3,17,3]
 };

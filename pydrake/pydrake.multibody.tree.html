@@ -5677,17 +5677,17 @@ velocity variables of joint().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.has_controller">
 <span class="sig-name descname"><span class="pre">has_controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.has_controller" title="Permalink to this definition"></a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if controller gains have been specified with a call
-to set_controller_gains().</p>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if any non-zero controller gains have been specified
+with a call to set_controller_gains().</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A controller for a given model instance can be <em>disarmed</em> if the
 desired state input port for its model instance is not connected.
 When a PD controller is disarmed, it has no effect on the
 MultibodyPlant’s dynamics, as if there was no PD controller
-(still, this method returns <code class="docutils literal notranslate"><span class="pre">True</span></code> whenever controller gains
-were set with set_controller_gains().) See
-pd_controllers_and_ports for further details.</p>
+(still, this method returns <code class="docutils literal notranslate"><span class="pre">True</span></code> whenever non-zero gains were
+set with set_controller_gains().) See pd_controllers_and_ports for
+further details.</p>
 </div>
 </dd></dl>
 
@@ -5788,28 +5788,16 @@ Kd⋅(v − vd) + u_ff u = max(−e, min(e, ũ)) where qd and vd are the
 desired configuration and velocity for joint(), Kp and Kd are the
 proportional and derivative gains specified in <code class="docutils literal notranslate"><span class="pre">gains</span></code>, u_ff is the
 feedforward actuation and <code class="docutils literal notranslate"><span class="pre">e</span></code> corresponds to effort_limit().</p>
+<p>The gains must be finite and non-negative. Setting both gains to zero
+will remove the controller (has_controller() will return false).</p>
 <p>For simulation, feedforward actuation can be provided through
 MultibodyPlant::get_actuation_input_port(). Desired configuration and
 velocity are specified through
 MultibodyPlant::get_desired_state_input_port().</p>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>The MultibodyPlant associated with this actuator has not yet
-allocated a Context. In other words, although gains can be changed
-post-Finalize, they cannot be changed during simulation.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>iff the proportional gain is not strictly positive</strong><strong> or </strong><strong>if the</strong> – </p></li>
-<li><p><strong>derivative gain is negative.</strong> – </p></li>
-<li><p><strong>iff the owning MultibodyPlant is finalized and no gains were set</strong> – </p></li>
-<li><p><strong>pre-finalize. In other words</strong><strong>, </strong><strong>editing gains post-finalize is</strong> – </p></li>
-<li><p><strong>fine</strong><strong>, </strong><strong>but adding gains post-finalize is an error. See</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
-</dd>
-</dl>
+<p>PD control is currently only supported for a discrete time plant.
+Attempting to use non-zero gains on a continuous time plant will
+result in an exception. See pd_controllers_and_ports for further
+details.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5938,17 +5926,17 @@ velocity variables of joint().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.has_controller">
 <span id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].has_controller"></span><span class="sig-name descname"><span class="pre">has_controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.has_controller" title="Permalink to this definition"></a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if controller gains have been specified with a call
-to set_controller_gains().</p>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if any non-zero controller gains have been specified
+with a call to set_controller_gains().</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A controller for a given model instance can be <em>disarmed</em> if the
 desired state input port for its model instance is not connected.
 When a PD controller is disarmed, it has no effect on the
 MultibodyPlant’s dynamics, as if there was no PD controller
-(still, this method returns <code class="docutils literal notranslate"><span class="pre">True</span></code> whenever controller gains
-were set with set_controller_gains().) See
-pd_controllers_and_ports for further details.</p>
+(still, this method returns <code class="docutils literal notranslate"><span class="pre">True</span></code> whenever non-zero gains were
+set with set_controller_gains().) See pd_controllers_and_ports for
+further details.</p>
 </div>
 </dd></dl>
 
@@ -6049,28 +6037,16 @@ Kd⋅(v − vd) + u_ff u = max(−e, min(e, ũ)) where qd and vd are the
 desired configuration and velocity for joint(), Kp and Kd are the
 proportional and derivative gains specified in <code class="docutils literal notranslate"><span class="pre">gains</span></code>, u_ff is the
 feedforward actuation and <code class="docutils literal notranslate"><span class="pre">e</span></code> corresponds to effort_limit().</p>
+<p>The gains must be finite and non-negative. Setting both gains to zero
+will remove the controller (has_controller() will return false).</p>
 <p>For simulation, feedforward actuation can be provided through
 MultibodyPlant::get_actuation_input_port(). Desired configuration and
 velocity are specified through
 MultibodyPlant::get_desired_state_input_port().</p>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>The MultibodyPlant associated with this actuator has not yet
-allocated a Context. In other words, although gains can be changed
-post-Finalize, they cannot be changed during simulation.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>iff the proportional gain is not strictly positive</strong><strong> or </strong><strong>if the</strong> – </p></li>
-<li><p><strong>derivative gain is negative.</strong> – </p></li>
-<li><p><strong>iff the owning MultibodyPlant is finalized and no gains were set</strong> – </p></li>
-<li><p><strong>pre-finalize. In other words</strong><strong>, </strong><strong>editing gains post-finalize is</strong> – </p></li>
-<li><p><strong>fine</strong><strong>, </strong><strong>but adding gains post-finalize is an error. See</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
-</dd>
-</dl>
+<p>PD control is currently only supported for a discrete time plant.
+Attempting to use non-zero gains on a continuous time plant will
+result in an exception. See pd_controllers_and_ports for further
+details.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6193,17 +6169,17 @@ velocity variables of joint().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.has_controller">
 <span id="pydrake.multibody.tree.JointActuator_[Expression].has_controller"></span><span class="sig-name descname"><span class="pre">has_controller</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator_" title="pydrake.multibody.tree.JointActuator_"><span class="pre">pydrake.multibody.tree.JointActuator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.has_controller" title="Permalink to this definition"></a></dt>
-<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if controller gains have been specified with a call
-to set_controller_gains().</p>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if any non-zero controller gains have been specified
+with a call to set_controller_gains().</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A controller for a given model instance can be <em>disarmed</em> if the
 desired state input port for its model instance is not connected.
 When a PD controller is disarmed, it has no effect on the
 MultibodyPlant’s dynamics, as if there was no PD controller
-(still, this method returns <code class="docutils literal notranslate"><span class="pre">True</span></code> whenever controller gains
-were set with set_controller_gains().) See
-pd_controllers_and_ports for further details.</p>
+(still, this method returns <code class="docutils literal notranslate"><span class="pre">True</span></code> whenever non-zero gains were
+set with set_controller_gains().) See pd_controllers_and_ports for
+further details.</p>
 </div>
 </dd></dl>
 
@@ -6304,28 +6280,16 @@ Kd⋅(v − vd) + u_ff u = max(−e, min(e, ũ)) where qd and vd are the
 desired configuration and velocity for joint(), Kp and Kd are the
 proportional and derivative gains specified in <code class="docutils literal notranslate"><span class="pre">gains</span></code>, u_ff is the
 feedforward actuation and <code class="docutils literal notranslate"><span class="pre">e</span></code> corresponds to effort_limit().</p>
+<p>The gains must be finite and non-negative. Setting both gains to zero
+will remove the controller (has_controller() will return false).</p>
 <p>For simulation, feedforward actuation can be provided through
 MultibodyPlant::get_actuation_input_port(). Desired configuration and
 velocity are specified through
 MultibodyPlant::get_desired_state_input_port().</p>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>The MultibodyPlant associated with this actuator has not yet
-allocated a Context. In other words, although gains can be changed
-post-Finalize, they cannot be changed during simulation.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>iff the proportional gain is not strictly positive</strong><strong> or </strong><strong>if the</strong> – </p></li>
-<li><p><strong>derivative gain is negative.</strong> – </p></li>
-<li><p><strong>iff the owning MultibodyPlant is finalized and no gains were set</strong> – </p></li>
-<li><p><strong>pre-finalize. In other words</strong><strong>, </strong><strong>editing gains post-finalize is</strong> – </p></li>
-<li><p><strong>fine</strong><strong>, </strong><strong>but adding gains post-finalize is an error. See</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
-</ul>
-</dd>
-</dl>
+<p>PD control is currently only supported for a discrete time plant.
+Attempting to use non-zero gains on a continuous time plant will
+result in an exception. See pd_controllers_and_ports for further
+details.</p>
 </dd></dl>
 
 <dl class="py method">

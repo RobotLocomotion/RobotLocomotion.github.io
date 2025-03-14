@@ -213,21 +213,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a857039e3b686ddb6baaef2bfc381800b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a resolved path for <code>url</code>.  <a href="#a857039e3b686ddb6baaef2bfc381800b">More...</a><br /></td></tr>
 <tr class="separator:a857039e3b686ddb6baaef2bfc381800b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Functions for adding packages to the map</div></td></tr>
+<tr class="memitem:acc6da6abf9ea1b547b967f4e4d4a87de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#acc6da6abf9ea1b547b967f4e4d4a87de">Add</a> (const std::string &amp;package_name, const std::filesystem::path &amp;package_path)</td></tr>
+<tr class="memdesc:acc6da6abf9ea1b547b967f4e4d4a87de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds package <code>package_name</code> and its path, <code>package_path</code>.  <a href="#acc6da6abf9ea1b547b967f4e4d4a87de">More...</a><br /></td></tr>
+<tr class="separator:acc6da6abf9ea1b547b967f4e4d4a87de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac51ed3119aaced1a4d66bc104c7a8241"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ac51ed3119aaced1a4d66bc104c7a8241">Add</a> (const std::string &amp;package_name, const std::string &amp;package_path)</td></tr>
-<tr class="memdesc:ac51ed3119aaced1a4d66bc104c7a8241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds package <code>package_name</code> and its path, <code>package_path</code>.  <a href="#ac51ed3119aaced1a4d66bc104c7a8241">More...</a><br /></td></tr>
+<tr class="memdesc:ac51ed3119aaced1a4d66bc104c7a8241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#acc6da6abf9ea1b547b967f4e4d4a87de" title="Adds package package_name and its path, package_path.">Add()</a> that accepts a string instead of a std::filesystem::path.  <a href="#ac51ed3119aaced1a4d66bc104c7a8241">More...</a><br /></td></tr>
 <tr class="separator:ac51ed3119aaced1a4d66bc104c7a8241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80459d96f2cad3104d7b46dde2fb3a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ae80459d96f2cad3104d7b46dde2fb3a3">Add</a> (const std::string &amp;package_name, const char *package_path)</td></tr>
+<tr class="memdesc:ae80459d96f2cad3104d7b46dde2fb3a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#acc6da6abf9ea1b547b967f4e4d4a87de" title="Adds package package_name and its path, package_path.">Add()</a> that accepts a null-terminated C string instead of a std::filesystem::path.  <a href="#ae80459d96f2cad3104d7b46dde2fb3a3">More...</a><br /></td></tr>
+<tr class="separator:ae80459d96f2cad3104d7b46dde2fb3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b6898c14b340f42747bdef9a77abfe3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a1b6898c14b340f42747bdef9a77abfe3">AddMap</a> (const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;other_map)</td></tr>
 <tr class="memdesc:a1b6898c14b340f42747bdef9a77abfe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds all packages from <code>other_map</code> into <code>this</code>.  <a href="#a1b6898c14b340f42747bdef9a77abfe3">More...</a><br /></td></tr>
 <tr class="separator:a1b6898c14b340f42747bdef9a77abfe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69efd0ba5986fafa25cd6a40d94150e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a69efd0ba5986fafa25cd6a40d94150e6">AddPackageXml</a> (const std::filesystem::path &amp;filename)</td></tr>
+<tr class="memdesc:a69efd0ba5986fafa25cd6a40d94150e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> for the given <code>package.xml</code> filename.  <a href="#a69efd0ba5986fafa25cd6a40d94150e6">More...</a><br /></td></tr>
+<tr class="separator:a69efd0ba5986fafa25cd6a40d94150e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5db13a6fe84a643a043c9347e1bc8d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ab5db13a6fe84a643a043c9347e1bc8d2">AddPackageXml</a> (const std::string &amp;filename)</td></tr>
-<tr class="memdesc:ab5db13a6fe84a643a043c9347e1bc8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> for the given <code>package.xml</code> filename.  <a href="#ab5db13a6fe84a643a043c9347e1bc8d2">More...</a><br /></td></tr>
+<tr class="memdesc:ab5db13a6fe84a643a043c9347e1bc8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a69efd0ba5986fafa25cd6a40d94150e6" title="Adds an entry into this PackageMap for the given package.xml filename.">AddPackageXml()</a> that accepts a string instead of a std::filesystem::path.  <a href="#ab5db13a6fe84a643a043c9347e1bc8d2">More...</a><br /></td></tr>
 <tr class="separator:ab5db13a6fe84a643a043c9347e1bc8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a600955ff01f0506184b9122a93845cae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a600955ff01f0506184b9122a93845cae">AddPackageXml</a> (const char *filename)</td></tr>
+<tr class="memdesc:a600955ff01f0506184b9122a93845cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a69efd0ba5986fafa25cd6a40d94150e6" title="Adds an entry into this PackageMap for the given package.xml filename.">AddPackageXml()</a> that accepts a null-terminated C string instead of a std::filesystem::path.  <a href="#a600955ff01f0506184b9122a93845cae">More...</a><br /></td></tr>
+<tr class="separator:a600955ff01f0506184b9122a93845cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a315d439afb48490c763ff66f4fc24b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a315d439afb48490c763ff66f4fc24b86">AddRemote</a> (std::string package_name, <a class="el" href="structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html">RemoteParams</a> params)</td></tr>
 <tr class="memdesc:a315d439afb48490c763ff66f4fc24b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> for the given <code>package_name</code>, which will be downloaded from the internet (with local caching).  <a href="#a315d439afb48490c763ff66f4fc24b86">More...</a><br /></td></tr>
 <tr class="separator:a315d439afb48490c763ff66f4fc24b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127d6123d640835830e620e259172c19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a127d6123d640835830e620e259172c19">PopulateFromFolder</a> (const std::filesystem::path &amp;path)</td></tr>
+<tr class="memdesc:a127d6123d640835830e620e259172c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crawls down the directory tree starting at <code>path</code> searching for directories containing the file <code>package.xml</code>.  <a href="#a127d6123d640835830e620e259172c19">More...</a><br /></td></tr>
+<tr class="separator:a127d6123d640835830e620e259172c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a510d35f38c93d44fa6a70d727f55cb8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a510d35f38c93d44fa6a70d727f55cb8c">PopulateFromFolder</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:a510d35f38c93d44fa6a70d727f55cb8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crawls down the directory tree starting at <code>path</code> searching for directories containing the file <code>package.xml</code>.  <a href="#a510d35f38c93d44fa6a70d727f55cb8c">More...</a><br /></td></tr>
+<tr class="memdesc:a510d35f38c93d44fa6a70d727f55cb8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a127d6123d640835830e620e259172c19" title="Crawls down the directory tree starting at path searching for directories containing the file package...">PopulateFromFolder()</a> that accepts a string instead of a std::filesystem::path.  <a href="#a510d35f38c93d44fa6a70d727f55cb8c">More...</a><br /></td></tr>
 <tr class="separator:a510d35f38c93d44fa6a70d727f55cb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8823e46827a09b70795716ce7824fcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ae8823e46827a09b70795716ce7824fcb">PopulateFromFolder</a> (const char *path)</td></tr>
+<tr class="memdesc:ae8823e46827a09b70795716ce7824fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a127d6123d640835830e620e259172c19" title="Crawls down the directory tree starting at path searching for directories containing the file package...">PopulateFromFolder()</a> that accepts a null-terminated C string instead of a std::filesystem::path.  <a href="#ae8823e46827a09b70795716ce7824fcb">More...</a><br /></td></tr>
+<tr class="separator:ae8823e46827a09b70795716ce7824fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab17a29ee7c846aaca8f0d50248a42068"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ab17a29ee7c846aaca8f0d50248a42068">PopulateFromEnvironment</a> (const std::string &amp;environment_variable)</td></tr>
 <tr class="memdesc:ab17a29ee7c846aaca8f0d50248a42068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains one or more paths from environment variable <code>environment_variable</code>.  <a href="#ab17a29ee7c846aaca8f0d50248a42068">More...</a><br /></td></tr>
 <tr class="separator:ab17a29ee7c846aaca8f0d50248a42068"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,8 +349,39 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="acc6da6abf9ea1b547b967f4e4d4a87de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6da6abf9ea1b547b967f4e4d4a87de">&#9670;&nbsp;</a></span>Add() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Add </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>package_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>package_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds package <code>package_name</code> and its path, <code>package_path</code>. </p>
+<p>Throws if <code>package_name</code> is already present in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> with a different path, or if <code>package_path</code> does not exist. </p>
+
+</div>
+</div>
 <a id="ac51ed3119aaced1a4d66bc104c7a8241"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac51ed3119aaced1a4d66bc104c7a8241">&#9670;&nbsp;</a></span>Add()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac51ed3119aaced1a4d66bc104c7a8241">&#9670;&nbsp;</a></span>Add() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -357,8 +406,37 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds package <code>package_name</code> and its path, <code>package_path</code>. </p>
-<p>Throws if <code>package_name</code> is already present in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> with a different path, or if <code>package_path</code> does not exist. </p>
+<p>Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#acc6da6abf9ea1b547b967f4e4d4a87de" title="Adds package package_name and its path, package_path.">Add()</a> that accepts a string instead of a std::filesystem::path. </p>
+
+</div>
+</div>
+<a id="ae80459d96f2cad3104d7b46dde2fb3a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae80459d96f2cad3104d7b46dde2fb3a3">&#9670;&nbsp;</a></span>Add() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Add </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>package_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>package_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#acc6da6abf9ea1b547b967f4e4d4a87de" title="Adds package package_name and its path, package_path.">Add()</a> that accepts a null-terminated C string instead of a std::filesystem::path. </p>
 
 </div>
 </div>
@@ -383,8 +461,29 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a69efd0ba5986fafa25cd6a40d94150e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69efd0ba5986fafa25cd6a40d94150e6">&#9670;&nbsp;</a></span>AddPackageXml() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPackageXml </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> for the given <code>package.xml</code> filename. </p>
+<p>Throws if <code>filename</code> does not exist or its embedded name already exists in this map. </p>
+
+</div>
+</div>
 <a id="ab5db13a6fe84a643a043c9347e1bc8d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5db13a6fe84a643a043c9347e1bc8d2">&#9670;&nbsp;</a></span>AddPackageXml()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5db13a6fe84a643a043c9347e1bc8d2">&#9670;&nbsp;</a></span>AddPackageXml() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -399,8 +498,27 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds an entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> for the given <code>package.xml</code> filename. </p>
-<p>Throws if <code>filename</code> does not exist or its embedded name already exists in this map. </p>
+<p>Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a69efd0ba5986fafa25cd6a40d94150e6" title="Adds an entry into this PackageMap for the given package.xml filename.">AddPackageXml()</a> that accepts a string instead of a std::filesystem::path. </p>
+
+</div>
+</div>
+<a id="a600955ff01f0506184b9122a93845cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a600955ff01f0506184b9122a93845cae">&#9670;&nbsp;</a></span>AddPackageXml() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPackageXml </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a69efd0ba5986fafa25cd6a40d94150e6" title="Adds an entry into this PackageMap for the given package.xml filename.">AddPackageXml()</a> that accepts a null-terminated C string instead of a std::filesystem::path. </p>
 
 </div>
 </div>
@@ -620,8 +738,29 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a127d6123d640835830e620e259172c19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127d6123d640835830e620e259172c19">&#9670;&nbsp;</a></span>PopulateFromFolder() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PopulateFromFolder </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crawls down the directory tree starting at <code>path</code> searching for directories containing the file <code>package.xml</code>. </p>
+<p>For each of these directories, this method adds a new entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> where the key is the package name as specified within <code>package.xml</code> and the directory's path is the value. If a package already known by the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> is found again with a conflicting path, a warning is logged and the original path is kept. If the path does not exist or is unreadable, a warning is logged. </p>
+
+</div>
+</div>
 <a id="a510d35f38c93d44fa6a70d727f55cb8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a510d35f38c93d44fa6a70d727f55cb8c">&#9670;&nbsp;</a></span>PopulateFromFolder()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a510d35f38c93d44fa6a70d727f55cb8c">&#9670;&nbsp;</a></span>PopulateFromFolder() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -636,8 +775,27 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Crawls down the directory tree starting at <code>path</code> searching for directories containing the file <code>package.xml</code>. </p>
-<p>For each of these directories, this method adds a new entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> where the key is the package name as specified within <code>package.xml</code> and the directory's path is the value. If a package already known by the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> is found again with a conflicting path, a warning is logged and the original path is kept. If the path does not exist or is unreadable, a warning is logged. </p>
+<p>Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a127d6123d640835830e620e259172c19" title="Crawls down the directory tree starting at path searching for directories containing the file package...">PopulateFromFolder()</a> that accepts a string instead of a std::filesystem::path. </p>
+
+</div>
+</div>
+<a id="ae8823e46827a09b70795716ce7824fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8823e46827a09b70795716ce7824fcb">&#9670;&nbsp;</a></span>PopulateFromFolder() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PopulateFromFolder </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Legacy overload of <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a127d6123d640835830e620e259172c19" title="Crawls down the directory tree starting at path searching for directories containing the file package...">PopulateFromFolder()</a> that accepts a null-terminated C string instead of a std::filesystem::path. </p>
 
 </div>
 </div>

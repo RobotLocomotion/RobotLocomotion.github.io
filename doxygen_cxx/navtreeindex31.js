@@ -1,5 +1,11 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a93b9495de294e391dc2411455d35125c":[1,1,0,34,0],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[1,1,0,34,5],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2789d79ee441d9c90e1234b5f08f801":[1,1,0,34,2],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441":[1,1,0,34,7],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#ac070804dddf0300f7245aa6692940d95":[1,1,0,34,8],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#af6182a9803c81d9ef793685fd891082f":[1,1,0,34,9],
 "classdrake_1_1solvers_1_1_quadratic_constraint.html":[1,1,0,25],
 "classdrake_1_1solvers_1_1_quadratic_constraint.html#a0a6cbf2b2482a80c78e51a04f29aefe5":[1,1,0,25,5],
 "classdrake_1_1solvers_1_1_quadratic_constraint.html#a342bf500f07e30d92a924b308ae7c5ec":[1,1,0,25,9],
@@ -243,11 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1symbolic_1_1_environment.html#a9c9766a96c492f3e9e5861d6b4f87387":[3,0,0,15,5,21],
 "classdrake_1_1symbolic_1_1_environment.html#aa78859b4ed9397a69493467bdcba622e":[3,0,0,15,5,10],
 "classdrake_1_1symbolic_1_1_environment.html#aaa0a3a993236363f9cc3f1d7b040a52d":[3,0,0,15,5,17],
-"classdrake_1_1symbolic_1_1_environment.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,15,5,30],
-"classdrake_1_1symbolic_1_1_environment.html#ac5fffa4e52a874a509605d02130d5285":[3,0,0,15,5,7],
-"classdrake_1_1symbolic_1_1_environment.html#acad38d52497a975bfb6f2f6acd76631f":[3,0,0,15,5,19],
-"classdrake_1_1symbolic_1_1_environment.html#accf9a4bd0c34d4a5f6a7dab66ea10cdc":[3,0,0,15,5,20],
-"classdrake_1_1symbolic_1_1_environment.html#ad1fde034ff21259de810fb2ecbf8214a":[3,0,0,15,5,24],
-"classdrake_1_1symbolic_1_1_environment.html#ad69bd11391be1a1dba5c8202259664f8":[3,0,0,15,5,13],
-"classdrake_1_1symbolic_1_1_environment.html#ae4a058bb65df76e4078e8fcb764ee144":[3,0,0,15,5,9]
+"classdrake_1_1symbolic_1_1_environment.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,15,5,30]
 };

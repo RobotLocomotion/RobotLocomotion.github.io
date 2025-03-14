@@ -276,7 +276,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0d23c206d13900df47e009ce56fddfeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set controller gains for this joint actuator.  <a href="#a0d23c206d13900df47e009ce56fddfeb">More...</a><br /></td></tr>
 <tr class="separator:a0d23c206d13900df47e009ce56fddfeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ae9bfe9ff9fa92e86c62acc0179d459"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a2ae9bfe9ff9fa92e86c62acc0179d459">has_controller</a> () const</td></tr>
-<tr class="memdesc:a2ae9bfe9ff9fa92e86c62acc0179d459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if controller gains have been specified with a call to <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0d23c206d13900df47e009ce56fddfeb" title="Set controller gains for this joint actuator.">set_controller_gains()</a>.  <a href="#a2ae9bfe9ff9fa92e86c62acc0179d459">More...</a><br /></td></tr>
+<tr class="memdesc:a2ae9bfe9ff9fa92e86c62acc0179d459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if any non-zero controller gains have been specified with a call to <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0d23c206d13900df47e009ce56fddfeb" title="Set controller gains for this joint actuator.">set_controller_gains()</a>.  <a href="#a2ae9bfe9ff9fa92e86c62acc0179d459">More...</a><br /></td></tr>
 <tr class="separator:a2ae9bfe9ff9fa92e86c62acc0179d459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70bb0382f762152bb446666338300b6e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdrake_1_1multibody_1_1_pd_controller_gains.html">PdControllerGains</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a70bb0382f762152bb446666338300b6e">get_controller_gains</a> () const</td></tr>
 <tr class="memdesc:a70bb0382f762152bb446666338300b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the controller gains for this actuator.  <a href="#a70bb0382f762152bb446666338300b6e">More...</a><br /></td></tr>
@@ -686,7 +686,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a reference to the controller gains for this actuator. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a2ae9bfe9ff9fa92e86c62acc0179d459" title="Returns true if controller gains have been specified with a call to set_controller_gains().">has_controller()</a> is <code>true</code>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a2ae9bfe9ff9fa92e86c62acc0179d459" title="Returns true if any non-zero controller gains have been specified with a call to set_controller_gains...">has_controller()</a> is <code>true</code>. </dd></dl>
 
 </div>
 </div>
@@ -705,8 +705,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns <code>true</code> if controller gains have been specified with a call to <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0d23c206d13900df47e009ce56fddfeb" title="Set controller gains for this joint actuator.">set_controller_gains()</a>. </p>
-<dl class="section note"><dt>Note</dt><dd>A controller for a given model instance can be <em>disarmed</em> if the desired state input port for its model instance is not connected. When a PD controller is disarmed, it has no effect on the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>'s dynamics, as if there was no PD controller (still, this method returns <code>true</code> whenever controller gains were set with <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0d23c206d13900df47e009ce56fddfeb" title="Set controller gains for this joint actuator.">set_controller_gains()</a>.) See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#pd_controllers_and_ports">pd_controllers_and_ports</a> for further details. </dd></dl>
+<p>Returns <code>true</code> if any non-zero controller gains have been specified with a call to <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0d23c206d13900df47e009ce56fddfeb" title="Set controller gains for this joint actuator.">set_controller_gains()</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>A controller for a given model instance can be <em>disarmed</em> if the desired state input port for its model instance is not connected. When a PD controller is disarmed, it has no effect on the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>'s dynamics, as if there was no PD controller (still, this method returns <code>true</code> whenever non-zero gains were set with <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0d23c206d13900df47e009ce56fddfeb" title="Set controller gains for this joint actuator.">set_controller_gains()</a>.) See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#pd_controllers_and_ports">pd_controllers_and_ports</a> for further details. </dd></dl>
 
 </div>
 </div>
@@ -953,15 +953,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set controller gains for this joint actuator. </p>
 <p>This enables the modeling of a simple PD controller of the form: ũ = -Kp⋅(q − qd) - Kd⋅(v − vd) + u_ff u = max(−e, min(e, ũ)) where qd and vd are the desired configuration and velocity for <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a54bc3724965cc59e714c64cbeb147b86" title="Returns a reference to the joint actuated by this JointActuator.">joint()</a>, Kp and Kd are the proportional and derivative gains specified in <code>gains</code>, u_ff is the feedforward actuation and <code>e</code> corresponds to <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a5e00d5f4ea204b3bab3d733b8a64b9eb" title="Returns the actuator effort limit.">effort_limit()</a>.</p>
+<p>The gains must be finite and non-negative. Setting both gains to zero will remove the controller (<a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a2ae9bfe9ff9fa92e86c62acc0179d459" title="Returns true if any non-zero controller gains have been specified with a call to set_controller_gains...">has_controller()</a> will return false).</p>
 <p>For simulation, feedforward actuation can be provided through <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1cc1d71e6c2e91fcd215105ae4ed01e4" title="Returns a constant reference to the input port for external actuation for all actuated dofs.">MultibodyPlant::get_actuation_input_port()</a>. Desired configuration and velocity are specified through <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a10da7d22fff4db1da5c396eef5780ae2" title="For models with PD controlled joint actuators, returns the port to provide the desired state for the ...">MultibodyPlant::get_desired_state_input_port()</a>.</p>
-<dl class="section pre"><dt>Precondition</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> associated with this actuator has not yet allocated a Context. In other words, although gains can be changed post-Finalize, they cannot be changed during simulation.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">iff</td><td>the proportional gain is not strictly positive or if the derivative gain is negative. </td></tr>
-    <tr><td class="paramname">iff</td><td>the owning <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> is finalized and no gains were set pre-finalize. In other words, <em>editing</em> gains post-finalize is fine, but <em>adding</em> gains post-finalize is an error. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>PD control is currently only supported for a discrete time plant. Attempting to use non-zero gains on a continuous time plant will result in an exception. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#pd_controllers_and_ports">pd_controllers_and_ports</a> for further details. </p>
 
 </div>
 </div>

@@ -1,5 +1,11 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1_discrete_values.html#a3e55061c1a2d3227fa98fde06050a14a":[3,0,0,16,45,2],
+"classdrake_1_1systems_1_1_discrete_values.html#a4af818ddd91ebbee04c8354fe32df917":[3,0,0,16,45,8],
+"classdrake_1_1systems_1_1_discrete_values.html#a4d33aecde019e5f62d662aa2ef142b34":[3,0,0,16,45,15],
+"classdrake_1_1systems_1_1_discrete_values.html#a544681f87243cb9f80715bb1aa9c0a99":[3,0,0,16,45,22],
+"classdrake_1_1systems_1_1_discrete_values.html#a781b532f24d827486a4ab324df7f1f92":[3,0,0,16,45,17],
+"classdrake_1_1systems_1_1_discrete_values.html#a808120e3bb3ff14125effe132ea4b954":[3,0,0,16,45,13],
 "classdrake_1_1systems_1_1_discrete_values.html#a95cee47ba175ab6b8fd8f7cb2f82ab96":[3,0,0,16,45,25],
 "classdrake_1_1systems_1_1_discrete_values.html#a99150adfc55ef9056b7feddc006d8878":[3,0,0,16,45,23],
 "classdrake_1_1systems_1_1_discrete_values.html#a9ab30c3b2e786dcdfe59acd8836d85c2":[3,0,0,16,45,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1systems_1_1_initial_value_problem.html#ab73607d9b76dfc69cc00baef379ba034":[3,0,0,16,59,7],
 "classdrake_1_1systems_1_1_initial_value_problem.html#ad0982751dac3585352c27701a63b30a5":[3,0,0,16,59,13],
 "classdrake_1_1systems_1_1_initial_value_problem.html#adbc3bf152afe75736c6b8b3ecf8cd65e":[3,0,0,16,59,5],
-"classdrake_1_1systems_1_1_initial_value_problem.html#af039c3769d5abfe049934207c10e0129":[3,0,0,16,59,8],
-"classdrake_1_1systems_1_1_initial_value_problem.html#af7c4ee8378a24e575a176dfb7d308ae9":[3,0,0,16,59,6],
-"classdrake_1_1systems_1_1_initial_value_problem.html#afb82099555a08ddfc85d8565f7d2b434":[3,0,0,16,59,0],
-"classdrake_1_1systems_1_1_initialization_test_system.html":[3,0,0,16,57],
-"classdrake_1_1systems_1_1_initialization_test_system.html#a0669ee3b467a3c5882d8e0c22ac6c75c":[3,0,0,16,57,1],
-"classdrake_1_1systems_1_1_initialization_test_system.html#a25d2e07e6da0644eefadfab6939b4387":[3,0,0,16,57,0],
-"classdrake_1_1systems_1_1_initialization_test_system.html#a5f770165d582c44cb920008caf9e5744":[3,0,0,16,57,2]
+"classdrake_1_1systems_1_1_initial_value_problem.html#af039c3769d5abfe049934207c10e0129":[3,0,0,16,59,8]
 };
