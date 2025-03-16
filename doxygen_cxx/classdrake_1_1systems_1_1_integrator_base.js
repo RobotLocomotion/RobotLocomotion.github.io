@@ -11,7 +11,7 @@ var classdrake_1_1systems_1_1_integrator_base =
     [ "IntegratorBase", "classdrake_1_1systems_1_1_integrator_base.html#a3ecc7a468ab5fc69c4dd0beefd4aab08", null ],
     [ "IntegratorBase", "classdrake_1_1systems_1_1_integrator_base.html#aa0d908b973947061eaa9041e6a2b1442", null ],
     [ "IntegratorBase", "classdrake_1_1systems_1_1_integrator_base.html#a447030379c5091a36af0c158a0945c6e", null ],
-    [ "~IntegratorBase", "classdrake_1_1systems_1_1_integrator_base.html#af88b1b96e061ad4e07a71561bf95fad4", null ],
+    [ "~IntegratorBase", "classdrake_1_1systems_1_1_integrator_base.html#a94d8cc81230c7f1f3d751bfd14b01cdc", null ],
     [ "add_derivative_evaluations", "classdrake_1_1systems_1_1_integrator_base.html#a644f18faa19a24bd106100bd575e1934", null ],
     [ "CalcAdjustedStepSize", "classdrake_1_1systems_1_1_integrator_base.html#a7d2de54f99afe5aba4cfc20583291869", null ],
     [ "CalcStateChangeNorm", "classdrake_1_1systems_1_1_integrator_base.html#a251c75be3ec4f5b14aeaf5ca2467416f", null ],

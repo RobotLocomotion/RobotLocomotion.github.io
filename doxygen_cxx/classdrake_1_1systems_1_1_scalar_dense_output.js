@@ -2,7 +2,7 @@ var classdrake_1_1systems_1_1_scalar_dense_output =
 [
     [ "ScalarDenseOutput", "classdrake_1_1systems_1_1_scalar_dense_output.html#a6f7af73262fde19bad14a17a0b5fc840", null ],
     [ "ScalarDenseOutput", "classdrake_1_1systems_1_1_scalar_dense_output.html#a8ba688c06d94c838f3744115035d99ab", null ],
-    [ "~ScalarDenseOutput", "classdrake_1_1systems_1_1_scalar_dense_output.html#a687a48016f7da72e6a4bc234718fe144", null ],
+    [ "~ScalarDenseOutput", "classdrake_1_1systems_1_1_scalar_dense_output.html#a9aacb34c9b61f0b1c863b37e16f0b0c6", null ],
     [ "ScalarDenseOutput", "classdrake_1_1systems_1_1_scalar_dense_output.html#aec23efec42dd4a13cf1931886c6d6dec", null ],
     [ "do_size", "classdrake_1_1systems_1_1_scalar_dense_output.html#a391a65a7d2b4f5059ef524ac3a9b97e9", null ],
     [ "DoEvaluate", "classdrake_1_1systems_1_1_scalar_dense_output.html#a3ee4672a4597cc60597444085106fff9", null ],

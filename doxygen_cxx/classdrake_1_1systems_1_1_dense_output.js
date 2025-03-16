@@ -2,7 +2,7 @@ var classdrake_1_1systems_1_1_dense_output =
 [
     [ "DenseOutput", "classdrake_1_1systems_1_1_dense_output.html#a5e96d47d3fa4f2915ae2478bd24710ca", null ],
     [ "DenseOutput", "classdrake_1_1systems_1_1_dense_output.html#a8b5f6ff41cc69dbdd3944562ca845b18", null ],
-    [ "~DenseOutput", "classdrake_1_1systems_1_1_dense_output.html#a69988224169c4e04a80054e5c666b166", null ],
+    [ "~DenseOutput", "classdrake_1_1systems_1_1_dense_output.html#a267df6a7df9838b44c7fd271271b2b7a", null ],
     [ "DenseOutput", "classdrake_1_1systems_1_1_dense_output.html#a32fe37e2c6b62e7f04b037b5b470c885", null ],
     [ "do_end_time", "classdrake_1_1systems_1_1_dense_output.html#a167f9e35da2f5715a963a18dfc718de4", null ],
     [ "do_is_empty", "classdrake_1_1systems_1_1_dense_output.html#a15f16d30700908ddbb386e2e309971f9", null ],

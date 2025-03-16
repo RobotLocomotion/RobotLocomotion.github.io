@@ -3,7 +3,7 @@ var group__integrators =
     [ "BogackiShampine3Integrator", "classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html", [
       [ "BogackiShampine3Integrator", "classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html#ab745b6bf677ad2f9c3f44af2e49d1564", null ],
       [ "BogackiShampine3Integrator", "classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html#af8c3c7dda43b54d419bb9190de4eb2c7", null ],
-      [ "~BogackiShampine3Integrator", "classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html#a53d32d848b25991c62dc715bf096eceb", null ],
+      [ "~BogackiShampine3Integrator", "classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html#afca6e91ccf488989f7fe3ba2d490ae2f", null ],
       [ "BogackiShampine3Integrator", "classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html#a9872db5cc7b334bdf53326a0e4a13bef", null ],
       [ "get_error_estimate_order", "classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html#a7932e0cc0f116b8a625cb025616d73ab", null ],
       [ "operator=", "classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html#a8dce605e4730eaf8f34b76e1f1753af4", null ],
@@ -13,7 +13,7 @@ var group__integrators =
     [ "ExplicitEulerIntegrator", "classdrake_1_1systems_1_1_explicit_euler_integrator.html", [
       [ "ExplicitEulerIntegrator", "classdrake_1_1systems_1_1_explicit_euler_integrator.html#adf53af966c7e20f9c767d19498d85754", null ],
       [ "ExplicitEulerIntegrator", "classdrake_1_1systems_1_1_explicit_euler_integrator.html#a38ae88f0d74dab300a3d318c1ddf5b44", null ],
-      [ "~ExplicitEulerIntegrator", "classdrake_1_1systems_1_1_explicit_euler_integrator.html#a3663050b72d552229994cc1f10da1e8e", null ],
+      [ "~ExplicitEulerIntegrator", "classdrake_1_1systems_1_1_explicit_euler_integrator.html#a537969e31a4a03bf1d789a73d7937a97", null ],
       [ "ExplicitEulerIntegrator", "classdrake_1_1systems_1_1_explicit_euler_integrator.html#a8a6de066cd2ebfcbeed4810b7371535b", null ],
       [ "get_error_estimate_order", "classdrake_1_1systems_1_1_explicit_euler_integrator.html#a7932e0cc0f116b8a625cb025616d73ab", null ],
       [ "operator=", "classdrake_1_1systems_1_1_explicit_euler_integrator.html#a31f2131e66fa33ea5d68f84b59b06a2a", null ],
@@ -23,7 +23,7 @@ var group__integrators =
     [ "ImplicitEulerIntegrator", "classdrake_1_1systems_1_1_implicit_euler_integrator.html", [
       [ "ImplicitEulerIntegrator", "classdrake_1_1systems_1_1_implicit_euler_integrator.html#a153cfb621ca6c474b942a63762a82ec5", null ],
       [ "ImplicitEulerIntegrator", "classdrake_1_1systems_1_1_implicit_euler_integrator.html#ad3e68ba9c263c2c5ed12e63ef9df6a3c", null ],
-      [ "~ImplicitEulerIntegrator", "classdrake_1_1systems_1_1_implicit_euler_integrator.html#ae2eaabe4602c37240d26d92382cdeb62", null ],
+      [ "~ImplicitEulerIntegrator", "classdrake_1_1systems_1_1_implicit_euler_integrator.html#a46c096e7806c727c8bbc6eda3e8f5410", null ],
       [ "ImplicitEulerIntegrator", "classdrake_1_1systems_1_1_implicit_euler_integrator.html#aa577e3beda4e1a9615b81c38a8f91a69", null ],
       [ "get_error_estimate_order", "classdrake_1_1systems_1_1_implicit_euler_integrator.html#a447328b1aaa3ed12450855b792983d24", null ],
       [ "get_use_implicit_trapezoid_error_estimation", "classdrake_1_1systems_1_1_implicit_euler_integrator.html#a4f261ecb03c3b1d75465e7b8b18338f3", null ],
@@ -44,7 +44,7 @@ var group__integrators =
       [ "IntegratorBase", "classdrake_1_1systems_1_1_integrator_base.html#a3ecc7a468ab5fc69c4dd0beefd4aab08", null ],
       [ "IntegratorBase", "classdrake_1_1systems_1_1_integrator_base.html#aa0d908b973947061eaa9041e6a2b1442", null ],
       [ "IntegratorBase", "classdrake_1_1systems_1_1_integrator_base.html#a447030379c5091a36af0c158a0945c6e", null ],
-      [ "~IntegratorBase", "classdrake_1_1systems_1_1_integrator_base.html#af88b1b96e061ad4e07a71561bf95fad4", null ],
+      [ "~IntegratorBase", "classdrake_1_1systems_1_1_integrator_base.html#a94d8cc81230c7f1f3d751bfd14b01cdc", null ],
       [ "add_derivative_evaluations", "classdrake_1_1systems_1_1_integrator_base.html#a644f18faa19a24bd106100bd575e1934", null ],
       [ "CalcAdjustedStepSize", "classdrake_1_1systems_1_1_integrator_base.html#a7d2de54f99afe5aba4cfc20583291869", null ],
       [ "CalcStateChangeNorm", "classdrake_1_1systems_1_1_integrator_base.html#a251c75be3ec4f5b14aeaf5ca2467416f", null ],
@@ -116,7 +116,7 @@ var group__integrators =
       [ "RadauIntegrator", "classdrake_1_1systems_1_1_radau_integrator.html#afe2fb652f1811bb09c3132eb8db89e7f", null ],
       [ "RadauIntegrator", "classdrake_1_1systems_1_1_radau_integrator.html#a4e834929f0e6ecb3977e2d1b76ccf64a", null ],
       [ "RadauIntegrator", "classdrake_1_1systems_1_1_radau_integrator.html#a5bfd029aa3eae730504d19eca588c4c5", null ],
-      [ "~RadauIntegrator", "classdrake_1_1systems_1_1_radau_integrator.html#a90618508634c3eb9518f21f6ea8218f0", null ],
+      [ "~RadauIntegrator", "classdrake_1_1systems_1_1_radau_integrator.html#aa5ebb53c734081c99033772c0cc2b3b9", null ],
       [ "get_error_estimate_order", "classdrake_1_1systems_1_1_radau_integrator.html#a447328b1aaa3ed12450855b792983d24", null ],
       [ "operator=", "classdrake_1_1systems_1_1_radau_integrator.html#ada334b2b8b88f08b61b9a0203e784623", null ],
       [ "operator=", "classdrake_1_1systems_1_1_radau_integrator.html#a951782fb1053b98dc6b37e3c2bd3dc92", null ],
@@ -125,7 +125,7 @@ var group__integrators =
     [ "RungeKutta2Integrator", "classdrake_1_1systems_1_1_runge_kutta2_integrator.html", [
       [ "RungeKutta2Integrator", "classdrake_1_1systems_1_1_runge_kutta2_integrator.html#aacd14095d3799b8a7b07d850099ab0d1", null ],
       [ "RungeKutta2Integrator", "classdrake_1_1systems_1_1_runge_kutta2_integrator.html#ad7a021e823fe99bac2715362d105c40f", null ],
-      [ "~RungeKutta2Integrator", "classdrake_1_1systems_1_1_runge_kutta2_integrator.html#af3564d590c3b219c27ce83e6f46fad07", null ],
+      [ "~RungeKutta2Integrator", "classdrake_1_1systems_1_1_runge_kutta2_integrator.html#a8a698a3d0a8ff00943219351504c913f", null ],
       [ "RungeKutta2Integrator", "classdrake_1_1systems_1_1_runge_kutta2_integrator.html#a53e96d013e25e4ae79b986834df6740f", null ],
       [ "get_error_estimate_order", "classdrake_1_1systems_1_1_runge_kutta2_integrator.html#a7932e0cc0f116b8a625cb025616d73ab", null ],
       [ "operator=", "classdrake_1_1systems_1_1_runge_kutta2_integrator.html#a2bbf6d7ce2c807c284f683ddf42468d2", null ],
@@ -135,7 +135,7 @@ var group__integrators =
     [ "RungeKutta3Integrator", "classdrake_1_1systems_1_1_runge_kutta3_integrator.html", [
       [ "RungeKutta3Integrator", "classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a79fa9cee8048c3c70860a5e881eee447", null ],
       [ "RungeKutta3Integrator", "classdrake_1_1systems_1_1_runge_kutta3_integrator.html#aed4d1538f754665db35232833361256d", null ],
-      [ "~RungeKutta3Integrator", "classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a6feb774094471a9ae52b7611699f11c6", null ],
+      [ "~RungeKutta3Integrator", "classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a8051e0fb505c1e24fe3de4fb0e48d005", null ],
       [ "RungeKutta3Integrator", "classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a53dbca07d2c73e1ce8cd5a4007eac320", null ],
       [ "get_error_estimate_order", "classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a7932e0cc0f116b8a625cb025616d73ab", null ],
       [ "operator=", "classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a9690b81e16988da984312a341d3c1c64", null ],
@@ -145,7 +145,7 @@ var group__integrators =
     [ "RungeKutta5Integrator", "classdrake_1_1systems_1_1_runge_kutta5_integrator.html", [
       [ "RungeKutta5Integrator", "classdrake_1_1systems_1_1_runge_kutta5_integrator.html#ad39cfca6f1bd46f50789f96a24fe419e", null ],
       [ "RungeKutta5Integrator", "classdrake_1_1systems_1_1_runge_kutta5_integrator.html#a0783821783e5404b483d8c1b758ea9ae", null ],
-      [ "~RungeKutta5Integrator", "classdrake_1_1systems_1_1_runge_kutta5_integrator.html#a11090b32db6a94ddf4da30f7f6913724", null ],
+      [ "~RungeKutta5Integrator", "classdrake_1_1systems_1_1_runge_kutta5_integrator.html#a72b04787b08462b346f23a5d0abe4d20", null ],
       [ "RungeKutta5Integrator", "classdrake_1_1systems_1_1_runge_kutta5_integrator.html#a571ccaa9e4261760a7d130eac5a2994e", null ],
       [ "get_error_estimate_order", "classdrake_1_1systems_1_1_runge_kutta5_integrator.html#a7932e0cc0f116b8a625cb025616d73ab", null ],
       [ "operator=", "classdrake_1_1systems_1_1_runge_kutta5_integrator.html#a799ebc0e1697372ab3758b6cf6ff48de", null ],
@@ -155,7 +155,7 @@ var group__integrators =
     [ "SemiExplicitEulerIntegrator", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html", [
       [ "SemiExplicitEulerIntegrator", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a517f4c11b27374a04df1a338b31e614e", null ],
       [ "SemiExplicitEulerIntegrator", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#aadc7cb1e73118a0d6a7f91d31a07b535", null ],
-      [ "~SemiExplicitEulerIntegrator", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a780fa5f8fa4dc5416f986db48acb2749", null ],
+      [ "~SemiExplicitEulerIntegrator", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a72451274931cfd090687a84f9c684970", null ],
       [ "SemiExplicitEulerIntegrator", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#ae173eb642cf704943f70deee7a804f68", null ],
       [ "get_error_estimate_order", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a7932e0cc0f116b8a625cb025616d73ab", null ],
       [ "operator=", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a3cb469f94591bc75e720fc8186481d0a", null ],
@@ -165,7 +165,7 @@ var group__integrators =
     [ "VelocityImplicitEulerIntegrator", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html", [
       [ "VelocityImplicitEulerIntegrator", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a724cc5ac6ca872cfe3dda561cc20163b", null ],
       [ "VelocityImplicitEulerIntegrator", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a1c50c03e94472e430e7e44184107ae0d", null ],
-      [ "~VelocityImplicitEulerIntegrator", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a6cfdb1188fe401e8397af9ed6e80b309", null ],
+      [ "~VelocityImplicitEulerIntegrator", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a18de53adfda2b211264f932d56b0efdf", null ],
       [ "VelocityImplicitEulerIntegrator", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a51cd4d7a95294abf5d4730227f4a7daf", null ],
       [ "get_error_estimate_order", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a447328b1aaa3ed12450855b792983d24", null ],
       [ "operator=", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a2edea43a5cc1cf93774961dedc8b0d2f", null ],
