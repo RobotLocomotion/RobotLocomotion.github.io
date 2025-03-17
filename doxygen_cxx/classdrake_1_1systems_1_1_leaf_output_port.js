@@ -5,7 +5,7 @@ var classdrake_1_1systems_1_1_leaf_output_port =
     [ "CalcVectorCallback", "classdrake_1_1systems_1_1_leaf_output_port.html#a62d51f59c5dcae13358abd4585fb734d", null ],
     [ "LeafOutputPort", "classdrake_1_1systems_1_1_leaf_output_port.html#a9eb9f27d8d7ba2bea48eab868831e2d0", null ],
     [ "LeafOutputPort", "classdrake_1_1systems_1_1_leaf_output_port.html#ac0123499e870d70bbc91afa9eda10ab2", null ],
-    [ "~LeafOutputPort", "classdrake_1_1systems_1_1_leaf_output_port.html#a47057b98dccffa64e2d9359effbab5fc", null ],
+    [ "~LeafOutputPort", "classdrake_1_1systems_1_1_leaf_output_port.html#a9134f86b8ae0bbfa5b0176951fc71a5b", null ],
     [ "cache_entry", "classdrake_1_1systems_1_1_leaf_output_port.html#a469d4c6377094caf4521fc79da4f7e3c", null ],
     [ "disable_caching_by_default", "classdrake_1_1systems_1_1_leaf_output_port.html#a923b7a9751b687aa2d1e20d608f52132", null ],
     [ "operator=", "classdrake_1_1systems_1_1_leaf_output_port.html#a0f4aa6f887ec4883b44be8b547bed447", null ],

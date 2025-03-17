@@ -2,7 +2,7 @@ var classdrake_1_1systems_1_1_vector_system =
 [
     [ "VectorSystem", "classdrake_1_1systems_1_1_vector_system.html#aa01ce50ca94cf9450f14b3bd674e2617", null ],
     [ "VectorSystem", "classdrake_1_1systems_1_1_vector_system.html#a4addfc6da584da16d318282783b47492", null ],
-    [ "~VectorSystem", "classdrake_1_1systems_1_1_vector_system.html#af3507e495301a272961cd1b5af222164", null ],
+    [ "~VectorSystem", "classdrake_1_1systems_1_1_vector_system.html#a98282973b0ce154957afec3dde1610bb", null ],
     [ "VectorSystem", "classdrake_1_1systems_1_1_vector_system.html#af94ab93adad13112190ef9394b2ca4b2", null ],
     [ "VectorSystem", "classdrake_1_1systems_1_1_vector_system.html#a97c6e3f6b69151852a7a409dc1a89f3d", null ],
     [ "CalcVectorOutput", "classdrake_1_1systems_1_1_vector_system.html#abdcf055421e02a1bb92b463f4383ff57", null ],
