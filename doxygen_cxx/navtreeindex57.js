@@ -11,7 +11,7 @@ var NAVTREEINDEX57 =
 "linear__quadratic__regulator_8h.html":[4,0,0,12,1,6],
 "linear__quadratic__regulator_8h.html#ga048915783bddb58606c84332b91dad6c":[4,0,0,12,1,6,4],
 "linear__quadratic__regulator_8h.html#ga6506532189adf1c7a42662b597135f70":[4,0,0,12,1,6,2],
-"linear__quadratic__regulator_8h.html#gae7d3c5debca2daa6de88dbc014263f5c":[4,0,0,12,1,6,1],
+"linear__quadratic__regulator_8h.html#ga8859bd4aaff2f0b81861547ad60d21f9":[4,0,0,12,1,6,1],
 "linear__quadratic__regulator_8h.html#gaeaf380f9c445eee90a846b57f8b70ba7":[4,0,0,12,1,6,3],
 "linear__scalar__system_8h.html":[4,0,0,12,0,0,6],
 "linear__simplex__element_8h.html":[4,0,0,8,2,23],

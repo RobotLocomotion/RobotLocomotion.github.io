@@ -225,7 +225,7 @@ themselves, which you can find inside of the
 
 <span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
 <span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
-<span class="n">Parser</span><span class="p">(</span><span class="n">plant</span><span class="p">).</span><span class="n">AddModels</span><span class="p">(</span>
+<span class="n">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="n">AddModels</span><span class="p">(</span>
     <span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="s">"drake/examples/pendulum/Pendulum.urdf"</span><span class="p">))</span>
 <span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">()</span>
 <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">()</span>
@@ -249,7 +249,7 @@ introduce symbol collisions that are difficult to debug.</p>
 
 <span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
 <span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
-<span class="n">Parser</span><span class="p">(</span><span class="n">plant</span><span class="p">).</span><span class="n">AddModels</span><span class="p">(</span>
+<span class="n">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="n">AddModels</span><span class="p">(</span>
     <span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="s">"drake/examples/pendulum/Pendulum.urdf"</span><span class="p">))</span>
 <span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">()</span>
 <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">()</span>
@@ -263,7 +263,7 @@ explicitly refer to each symbol:</p>
 
 <span class="n">builder</span> <span class="o">=</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">framework</span><span class="p">.</span><span class="n">DiagramBuilder</span><span class="p">()</span>
 <span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">multibody</span><span class="p">.</span><span class="n">plant</span><span class="p">.</span><span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
-<span class="n">pydrake</span><span class="p">.</span><span class="n">multibody</span><span class="p">.</span><span class="n">parsing</span><span class="p">.</span><span class="n">Parser</span><span class="p">(</span><span class="n">plant</span><span class="p">).</span><span class="n">AddModels</span><span class="p">(</span>
+<span class="n">pydrake</span><span class="p">.</span><span class="n">multibody</span><span class="p">.</span><span class="n">parsing</span><span class="p">.</span><span class="n">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="n">AddModels</span><span class="p">(</span>
   <span class="n">pydrake</span><span class="p">.</span><span class="n">common</span><span class="p">.</span><span class="n">FindResourceOrThrow</span><span class="p">(</span>
       <span class="s">"drake/examples/pendulum/Pendulum.urdf"</span><span class="p">))</span>
 <span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">()</span>

@@ -179,13 +179,13 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6506532189adf1c7a42662b597135f70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html">LinearQuadraticRegulatorResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control.html#ga6506532189adf1c7a42662b597135f70">LinearQuadraticRegulator</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;B, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;N=Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 0, 0 &gt;::Zero(), const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;F=Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 0, 0 &gt;::Zero())</td></tr>
 <tr class="memdesc:ga6506532189adf1c7a42662b597135f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal feedback controller, u=-Kx, and the optimal cost-to-go J = x'Sx for the problem:  <a href="group__control.html#ga6506532189adf1c7a42662b597135f70">More...</a><br /></td></tr>
 <tr class="separator:ga6506532189adf1c7a42662b597135f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae7d3c5debca2daa6de88dbc014263f5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html">LinearQuadraticRegulatorResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control.html#gae7d3c5debca2daa6de88dbc014263f5c">DiscreteTimeLinearQuadraticRegulator</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;B, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R)</td></tr>
-<tr class="memdesc:gae7d3c5debca2daa6de88dbc014263f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal feedback controller, u=-Kx, and the optimal cost-to-go J = x'Sx for the problem:  <a href="group__control.html#gae7d3c5debca2daa6de88dbc014263f5c">More...</a><br /></td></tr>
-<tr class="separator:gae7d3c5debca2daa6de88dbc014263f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8859bd4aaff2f0b81861547ad60d21f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html">LinearQuadraticRegulatorResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__control.html#ga8859bd4aaff2f0b81861547ad60d21f9">DiscreteTimeLinearQuadraticRegulator</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;B, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;N=Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, 0, 0 &gt;::Zero())</td></tr>
+<tr class="memdesc:ga8859bd4aaff2f0b81861547ad60d21f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal feedback controller, u=-Kx, and the optimal cost-to-go J = x'Sx for the problem:  <a href="group__control.html#ga8859bd4aaff2f0b81861547ad60d21f9">More...</a><br /></td></tr>
+<tr class="separator:ga8859bd4aaff2f0b81861547ad60d21f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gae7d3c5debca2daa6de88dbc014263f5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae7d3c5debca2daa6de88dbc014263f5c">&#9670;&nbsp;</a></span>DiscreteTimeLinearQuadraticRegulator()</h2>
+<a id="ga8859bd4aaff2f0b81861547ad60d21f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8859bd4aaff2f0b81861547ad60d21f9">&#9670;&nbsp;</a></span>DiscreteTimeLinearQuadraticRegulator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +212,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>R</em>&#160;</td>
+          <td class="paramname"><em>R</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>N</em> = <code>Eigen::Matrix&lt;&#160;<a class="el" href="classdouble.html">double</a>,&#160;0,&#160;0&#160;&gt;::Zero()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -227,7 +233,7 @@ Functions</h2></td></tr>
 \[ x[n+1] = Ax[n] + Bu[n] \]
 </p>
  <p class="formulaDsp">
-\[ \min_u \sum_0^\infty x&#39;Qx + u&#39;Ru \]
+\[ \min_u \sum_0^\infty x&#39;Qx + u&#39;Ru + 2x&#39;Nu \]
 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -235,13 +241,14 @@ Functions</h2></td></tr>
     <tr><td class="paramname">B</td><td>The state-space input matrix of size num_states x num_inputs. </td></tr>
     <tr><td class="paramname">Q</td><td>A symmetric positive semi-definite cost matrix of size num_states x num_states. </td></tr>
     <tr><td class="paramname">R</td><td>A symmetric positive definite cost matrix of size num_inputs x num_inputs. </td></tr>
+    <tr><td class="paramname">N</td><td>A cost matrix of size num_states x num_inputs. If N.rows() == 0, N will be treated as a num_states x num_inputs zero matrix. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A structure that contains the optimal feedback gain K and the quadratic cost term S. The optimal feedback control is u = -Kx;</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if R is not positive definite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if R is not positive definite or if [Q N; N' R] is not positive semi-definite. </td></tr>
   </table>
   </dd>
 </dl>
