@@ -1,5 +1,7 @@
 var NAVTREEINDEX55 =
 {
+"gradient__util_8h.html#ae748bcfe9270b9ed5dd2fb71df3941b6":[4,0,0,7,18,11],
+"graph_8h.html":[4,0,0,8,13,1],
 "graph_8h.html#a154a0c83778a1e53f5e93d27d3cce195":[4,0,0,8,13,1,0],
 "graph__algorithms__internal_8h.html":[4,0,0,10,0,0],
 "graph__of__convex__sets_8h.html":[4,0,0,4,1,13],
@@ -89,8 +91,8 @@ var NAVTREEINDEX55 =
 "group__geometry.html":[1,5],
 "group__geometry__file__formats.html":[1,5,4],
 "group__geometry__infrastructure.html":[1,5,0],
-"group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html":[1,5,5],
+"group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,18],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,5,18],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,1,1,20],
@@ -247,7 +249,5 @@ var NAVTREEINDEX55 =
 "iiwa__command__receiver_8h.html":[4,0,0,6,1,1],
 "iiwa__command__sender_8h.html":[4,0,0,6,1,2],
 "iiwa__common_8h.html":[4,0,0,3,8,0],
-"iiwa__common_8h.html#a511f2bc74c4837a92767a236c0ddfacc":[4,0,0,3,8,0,1],
-"iiwa__common_8h.html#ad149063fd7d96c538d69282f410fff60":[4,0,0,3,8,0,0],
-"iiwa__constants_8h.html":[4,0,0,6,1,3]
+"iiwa__common_8h.html#a511f2bc74c4837a92767a236c0ddfacc":[4,0,0,3,8,0,1]
 };

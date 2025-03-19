@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5412c17187dde2f8984dcfb3eb67ca1d":[3,0,0,18,9,14],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a547e26c83862bad737713ca1be3d3d84":[3,0,0,18,9,34],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a54d2cefdc8e6443b9710b195b914b680":[3,0,0,18,9,43],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f":[3,0,0,18,9,58],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7":[3,0,0,18,9,31],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "clp__solver_8h.html":[4,0,0,11,7],
 "codegen_8h.html":[4,0,0,1,3,3],
 "codegen_8h.html#ga141de7c1e3ce45784c62e57a034a71ac":[4,0,0,1,3,3,2],
-"codegen_8h.html#ga2d07751d060ddf51dad4702d441f651a":[4,0,0,1,3,3,1],
-"codegen_8h.html#gada538db5c08eaa47546d2df1c6f442cb":[4,0,0,1,3,3,3],
-"collision__avoidance_8h.html":[4,0,0,10,6]
+"codegen_8h.html#ga2d07751d060ddf51dad4702d441f651a":[4,0,0,1,3,3,1]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html#af07e3c1d0fff270f720835edffc4b7bd":[3,0,0,9,44,0],
+"classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html#afa48747835f328fbf3e35bc2e91b994a":[3,0,0,9,44,3],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html":[1,4,2,0,2],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a069b08fb67eeeb99c807dfc823ea3154":[1,4,2,0,2,23],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a0bb60b773199c651ab8c8802501d4391":[1,4,2,0,2,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_multibody_element.html#ae050e0d4d07cfeb79d77626a7175f596":[3,0,0,9,53,16],
 "classdrake_1_1multibody_1_1_multibody_element.html#aec74a0672620a8670aaf06ba7c00e1c9":[3,0,0,9,53,21],
 "classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3":[3,0,0,9,53,22],
-"classdrake_1_1multibody_1_1_multibody_forces.html":[3,0,0,9,54],
-"classdrake_1_1multibody_1_1_multibody_forces.html#a0683cda243923e84765d9e31e22ce4f5":[3,0,0,9,54,5],
-"classdrake_1_1multibody_1_1_multibody_forces.html#a4bebeb0fade3383fdb4acbab2bcc4c3b":[3,0,0,9,54,6]
+"classdrake_1_1multibody_1_1_multibody_forces.html":[3,0,0,9,54]
 };

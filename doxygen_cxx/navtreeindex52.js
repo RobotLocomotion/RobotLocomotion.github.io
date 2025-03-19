@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"eigen__matrix__compare_8h.html#a487584d4d770172ae2f665bde7462de2adc4d53aa0d117d8b189b36d161af4e96":[4,0,0,1,4,1,0,0],
+"eigen__matrix__compare_8h.html#a886235c479e3d60c4d088505191293bc":[4,0,0,1,4,1,1],
 "eigen__printer_8h.html":[4,0,0,1,4,2],
 "eigen__pybind_8h.html":[4,0,0,0,0,1,4],
 "eigen__pybind_8h.html#a0d7582877591057ceea633df19d910fa":[4,0,0,0,0,1,4,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "expression__cell_8h.html#ac919050a36dacd7f943da0813c91f400":[4,0,0,1,3,0,4,58],
 "expression__cell_8h.html#acb998316cfc15506d72b2f2843b4fa62":[4,0,0,1,3,0,4,36],
 "expression__cell_8h.html#ad0aaf128d1ed75cbab9c4ca238e0ae6c":[4,0,0,1,3,0,4,45],
-"expression__cell_8h.html#ae4927daffb66b9bd137c174d41d94444":[4,0,0,1,3,0,4,35],
-"expression__cell_8h.html#ae9dfc929a3e771ece5e5d20312e96abd":[4,0,0,1,3,0,4,33],
-"expression__cell_8h.html#aee17d0564b198d4c784811945707ddbf":[4,0,0,1,3,0,4,46]
+"expression__cell_8h.html#ae4927daffb66b9bd137c174d41d94444":[4,0,0,1,3,0,4,35]
 };

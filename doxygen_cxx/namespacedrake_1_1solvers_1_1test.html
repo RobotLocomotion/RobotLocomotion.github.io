@@ -170,6 +170,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a38add06103af2ff100219257e2ef2ada"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers_1_1test.html#a38add06103af2ff100219257e2ef2ada">CheckConstraintEvalNonsymbolic</a> (const <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &amp;constraint, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a> &gt; &amp;x_autodiff, <a class="el" href="classdouble.html">double</a> tol)</td></tr>
 <tr class="memdesc:a38add06103af2ff100219257e2ef2ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare the result between Eval&lt;double&gt;() and Eval&lt;AutoDiffXd&gt;().  <a href="#a38add06103af2ff100219257e2ef2ada">More...</a><br /></td></tr>
 <tr class="separator:a38add06103af2ff100219257e2ef2ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a4e46efff65f77fa1b13f39177a8396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers_1_1test.html#a9a4e46efff65f77fa1b13f39177a8396">CheckGradientSparsityPattern</a> (const <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a> &amp;evaluator, const <a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a> &amp;x_ad, bool strict=false)</td></tr>
+<tr class="memdesc:a9a4e46efff65f77fa1b13f39177a8396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the gradient sparsity pattern, by evaluating <code>evaluator</code> at <code>x_ad</code>, and compare whether the gradient matches with evaluator.gradient_sparsity_pattern().  <a href="#a9a4e46efff65f77fa1b13f39177a8396">More...</a><br /></td></tr>
+<tr class="separator:a9a4e46efff65f77fa1b13f39177a8396"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a38add06103af2ff100219257e2ef2ada"></a>
@@ -213,6 +216,43 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a9a4e46efff65f77fa1b13f39177a8396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4e46efff65f77fa1b13f39177a8396">&#9670;&nbsp;</a></span>CheckGradientSparsityPattern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::solvers::test::CheckGradientSparsityPattern </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html">EvaluatorBase</a> &amp;&#160;</td>
+          <td class="paramname"><em>evaluator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a> &amp;&#160;</td>
+          <td class="paramname"><em>x_ad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>strict</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks the gradient sparsity pattern, by evaluating <code>evaluator</code> at <code>x_ad</code>, and compare whether the gradient matches with evaluator.gradient_sparsity_pattern(). </p>
+<p>Notice that <code>evaluator.gradients_sparsity_pattern()</code> contains all the (row, col) indices where the gradient <b>might</b> be non-zero, so <code>evaluator.gradients_sparsity_pattern()</code> is a superset of all the non-zero gradient indices. If <code>strict</code>=true, then we check if <code>evaluator.gradients_sparsity_pattern()</code> is exactly the set of all the non-zero gradient_indices. </p>
 
 </div>
 </div>

@@ -169,6 +169,8 @@ var NAVTREEINDEX0 =
 "chebyshev__polynomial_8h.html#abcc20898a64bbcee2ec07efd585e7c39":[4,0,0,1,3,2,3],
 "check__constraint__eval__nonsymbolic_8h.html":[4,0,0,11,0,0],
 "check__constraint__eval__nonsymbolic_8h.html#a38add06103af2ff100219257e2ef2ada":[4,0,0,11,0,0,0],
+"check__gradient__sparsity__pattern_8h.html":[4,0,0,11,0,1],
+"check__gradient__sparsity__pattern_8h.html#a9a4e46efff65f77fa1b13f39177a8396":[4,0,0,11,0,1,0],
 "choose__best__solver_8h.html":[4,0,0,11,5],
 "choose__best__solver_8h.html#a55b69ef16f17a627abcbe62dde1d4807":[4,0,0,11,5,2],
 "choose__best__solver_8h.html#a99ce5167dfbdc1a1f84e2e7cc52cba4e":[4,0,0,11,5,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_manual_timer.html#aa2b1740e982eea27707e6c0cd6563d6d":[3,0,0,37,8],
 "classdrake_1_1_manual_timer.html#ac5ea6f4cefe82c72397931471dc94e9c":[3,0,0,37,3],
 "classdrake_1_1_manual_timer.html#afcdf2c43260313172a1d7cb9309dc92f":[3,0,0,37,5],
-"classdrake_1_1_memory_file.html":[3,0,0,38],
-"classdrake_1_1_memory_file.html#a49987be7adad3c9f9e9b54396649234a":[3,0,0,38,9],
-"classdrake_1_1_memory_file.html#a4c4d06064edcbb136da7216c72914dcd":[3,0,0,38,2]
+"classdrake_1_1_memory_file.html":[3,0,0,38]
 };

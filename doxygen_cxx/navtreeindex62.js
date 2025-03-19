@@ -1,5 +1,7 @@
 var NAVTREEINDEX62 =
 {
+"spectrahedron_8h.html":[4,0,0,4,1,23],
+"spgrid_8h.html":[4,0,0,8,7,6],
 "spgrid__flags_8h.html":[4,0,0,8,7,7],
 "spong__controller_8h.html":[4,0,0,3,0,6],
 "spong__controller__params_8h.html":[4,0,0,3,0,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[3,0,0,3,14,2,3],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,14,2,1],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[3,0,0,3,14,2,2],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html":[3,0,0,3,14,5],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,14,5,0],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,14,5,1]
+"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html":[3,0,0,3,14,5]
 };

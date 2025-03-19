@@ -2603,7 +2603,23 @@ for the list of instantiations.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Create a Simulator that can advance a given System through time to
+produce a trajectory consisting of a sequence of Context values. The
+System must not have unresolved input ports if the values of those
+ports are necessary for computations performed during simulation (see
+class documentation).</p>
+<p>The Simulator holds an internal, non-owned reference to the System
+object so you must ensure that <code class="docutils literal notranslate"><span class="pre">system</span></code> has a longer lifetime than
+the Simulator. It also owns a compatible Context internally that takes
+on each of the trajectory values. You may optionally provide a Context
+that will be used as the initial condition for the simulation;
+otherwise the Simulator will obtain a default Context from <code class="docutils literal notranslate"><span class="pre">system</span></code>.</p>
+<p>(Python only) The Simulator’s Context, whether provided as a constructor
+argument or allocated internally, will have a lifetime managed by Python
+reference counting. Note, however, that the simulator logically “owns” the
+context; it will modify the context in most of its methods. Therefore, sharing
+a Context object among Simulators will likely lead to incorrect results.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator.AdvancePendingEvents">
@@ -3303,7 +3319,23 @@ useful when reusing the simulator over the same system and time span.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.__init__">
 <span id="pydrake.systems.analysis.Simulator_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.analysis.Simulator_" title="pydrake.systems.analysis.Simulator_"><span class="pre">pydrake.systems.analysis.Simulator_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.analysis.Simulator_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Create a Simulator that can advance a given System through time to
+produce a trajectory consisting of a sequence of Context values. The
+System must not have unresolved input ports if the values of those
+ports are necessary for computations performed during simulation (see
+class documentation).</p>
+<p>The Simulator holds an internal, non-owned reference to the System
+object so you must ensure that <code class="docutils literal notranslate"><span class="pre">system</span></code> has a longer lifetime than
+the Simulator. It also owns a compatible Context internally that takes
+on each of the trajectory values. You may optionally provide a Context
+that will be used as the initial condition for the simulation;
+otherwise the Simulator will obtain a default Context from <code class="docutils literal notranslate"><span class="pre">system</span></code>.</p>
+<p>(Python only) The Simulator’s Context, whether provided as a constructor
+argument or allocated internally, will have a lifetime managed by Python
+reference counting. Note, however, that the simulator logically “owns” the
+context; it will modify the context in most of its methods. Therefore, sharing
+a Context object among Simulators will likely lead to incorrect results.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.Simulator_-AutoDiffXd-.AdvancePendingEvents">
