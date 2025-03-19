@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62":[4,0,0,1,3,17,3],
 "trigonometric__polynomial_8h.html#ad88f58019962d307b9da7ebc9d32ec87":[4,0,0,1,3,17,5],
 "type__pack_8h.html":[4,0,0,0,0,1,11],
 "type__pack_8h.html#a1becf7d91b4613c259a888ef35590d76":[4,0,0,0,0,1,11,9],
@@ -32,7 +33,7 @@ var NAVTREEINDEX69 =
 "unused_8h.html":[4,0,0,1,74],
 "unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,74,0],
 "utilities_8h.html":[4,0,0,4,54],
-"validate__constraint__gradients_8h.html":[4,0,0,8,1,0,21],
+"validate__constraint__gradients_8h.html":[4,0,0,8,1,0,22],
 "value_8h.html":[4,0,0,1,75],
 "value__checker_8h.html":[4,0,0,12,3,50],
 "value__producer_8h.html":[4,0,0,12,3,51],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a22edde1cca11d8d8bfb16621d27aecc4":[3,0,0,9,6,3],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a71ce3810dfddb699a4d17e9b3087e239":[3,0,0,9,6,2],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#ac754f7e1ac2c0ce138d0c37c2ab2984d":[3,0,0,9,6,1],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#add5c7dbef28836cc86021cd2d41307af":[3,0,0,9,6,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html#adece3fa3587078a7dbf1489538b98ea2":[3,0,0,11,1,3,0],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html#af56dfbe73c981c12fcb2e03b27c0df26":[3,0,0,11,1,3,1],
 "structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html":[3,0,0,11,2,7],
-"structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html#abe9829e2f3692b78d036ed9e67a49867":[3,0,0,11,2,7,0],
-"structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html#aee90379adb0307effb138f4871edbc5c":[3,0,0,11,2,7,1]
+"structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html#abe9829e2f3692b78d036ed9e67a49867":[3,0,0,11,2,7,0]
 };
