@@ -1,5 +1,9 @@
 var NAVTREEINDEX61 =
 {
+"rotation__matrix_8h.html":[4,0,0,7,32],
+"rotation__matrix_8h.html#a3e79d002774aeaba84ca0b645621d7f4":[4,0,0,7,32,1],
+"rotation__matrix_8h.html#ab095ea87a1517bb9bae78d221f5d34da":[4,0,0,7,32,2],
+"rotational__inertia_8h.html":[4,0,0,8,14,44],
 "rotational__inertia_8h.html#aa59ab5d10d13a388ce2e9c80929a31b3":[4,0,0,8,14,44,2],
 "rpc__pipe__temp__directory_8h.html":[4,0,0,1,1,1],
 "rpc__pipe__temp__directory_8h.html#a650cbe453cd80d0752cc0c91e857789a":[4,0,0,1,1,1,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX61 =
 "spatial__force_8h.html#ab01e3bfd2969f7633ec1ab14c3474d59":[4,0,0,8,5,2,2],
 "spatial__inertia_8h.html":[4,0,0,8,14,51],
 "spatial__inertia_8h.html#acfa0fb944ca6f5e790292bf6eacaa811":[4,0,0,8,14,51,2],
-"spatial__kinematics_8h.html":[4,0,0,8,12,4],
-"spatial__momentum_8h.html":[4,0,0,8,5,3],
-"spatial__momentum_8h.html#a656bebe8588828ae235b12c3772e54d8":[4,0,0,8,5,3,2],
-"spatial__vector_8h.html":[4,0,0,8,5,4],
-"spatial__velocity_8h.html":[4,0,0,8,5,5]
+"spatial__kinematics_8h.html":[4,0,0,8,12,4]
 };

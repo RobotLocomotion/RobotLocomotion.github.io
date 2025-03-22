@@ -566,6 +566,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a96b8512dd5edf0fcb41d2ebd2e650bf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a96b8512dd5edf0fcb41d2ebd2e650bf7">num_weld_constraints</a> () const</td></tr>
 <tr class="memdesc:a96b8512dd5edf0fcb41d2ebd2e650bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of weld constraints specified by the user.  <a href="#a96b8512dd5edf0fcb41d2ebd2e650bf7">More...</a><br /></td></tr>
 <tr class="separator:a96b8512dd5edf0fcb41d2ebd2e650bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea05e15475afa8545b1ce34795261a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abea05e15475afa8545b1ce34795261a6">num_tendon_constraints</a> () const</td></tr>
+<tr class="memdesc:abea05e15475afa8545b1ce34795261a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of tendon constraints specified by the user.  <a href="#abea05e15475afa8545b1ce34795261a6">More...</a><br /></td></tr>
+<tr class="separator:abea05e15475afa8545b1ce34795261a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a891b617d944b90c276e67bcdc48e86b1"><td class="memItemLeft" align="right" valign="top">const internal::CouplerConstraintSpec &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a891b617d944b90c276e67bcdc48e86b1">get_coupler_constraint_specs</a> (<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id) const</td></tr>
 <tr class="memdesc:a891b617d944b90c276e67bcdc48e86b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the coupler constraint specification corresponding to <code>id</code>  <a href="#a891b617d944b90c276e67bcdc48e86b1">More...</a><br /></td></tr>
 <tr class="separator:a891b617d944b90c276e67bcdc48e86b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -578,6 +581,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4f418e73ecc4c0135591f9d75fff7584"><td class="memItemLeft" align="right" valign="top">const internal::WeldConstraintSpec &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4f418e73ecc4c0135591f9d75fff7584">get_weld_constraint_specs</a> (<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id) const</td></tr>
 <tr class="memdesc:a4f418e73ecc4c0135591f9d75fff7584"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the weld constraint specification corresponding to <code>id</code>  <a href="#a4f418e73ecc4c0135591f9d75fff7584">More...</a><br /></td></tr>
 <tr class="separator:a4f418e73ecc4c0135591f9d75fff7584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6a984f85a2402d90d47b348232e125"><td class="memItemLeft" align="right" valign="top">const internal::TendonConstraintSpec &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0e6a984f85a2402d90d47b348232e125">get_tendon_constraint_specs</a> (<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id) const</td></tr>
+<tr class="memdesc:a0e6a984f85a2402d90d47b348232e125"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the tendon constraint specification corresponding to <code>id</code>  <a href="#a0e6a984f85a2402d90d47b348232e125">More...</a><br /></td></tr>
+<tr class="separator:a0e6a984f85a2402d90d47b348232e125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bc72c0f1dfd391ca20b880b3c316c8d"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>, internal::CouplerConstraintSpec &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8bc72c0f1dfd391ca20b880b3c316c8d">get_coupler_constraint_specs</a> () const</td></tr>
 <tr class="memdesc:a8bc72c0f1dfd391ca20b880b3c316c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a reference to the all of the coupler constraints in this plant as a map from MultibodyConstraintId to CouplerConstraintSpec.  <a href="#a8bc72c0f1dfd391ca20b880b3c316c8d">More...</a><br /></td></tr>
 <tr class="separator:a8bc72c0f1dfd391ca20b880b3c316c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -590,6 +596,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad59a4bcf3dbf76cfeb323aae20cb0f6e"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>, internal::WeldConstraintSpec &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad59a4bcf3dbf76cfeb323aae20cb0f6e">get_weld_constraint_specs</a> () const</td></tr>
 <tr class="memdesc:ad59a4bcf3dbf76cfeb323aae20cb0f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a reference to the all of the weld constraints in this plant as a map from MultibodyConstraintId to WeldConstraintSpec.  <a href="#ad59a4bcf3dbf76cfeb323aae20cb0f6e">More...</a><br /></td></tr>
 <tr class="separator:ad59a4bcf3dbf76cfeb323aae20cb0f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c513af0455f98aae90644620cec581b"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>, internal::TendonConstraintSpec &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3c513af0455f98aae90644620cec581b">get_tendon_constraint_specs</a> () const</td></tr>
+<tr class="memdesc:a3c513af0455f98aae90644620cec581b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a reference to the all of the tendon constraints in this plant as a map from MultibodyConstraintId to TendonConstraintSpec.  <a href="#a3c513af0455f98aae90644620cec581b">More...</a><br /></td></tr>
+<tr class="separator:a3c513af0455f98aae90644620cec581b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f75638f952ae11ee62d8c8458a47415"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8f75638f952ae11ee62d8c8458a47415">GetConstraintActiveStatus</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id) const</td></tr>
 <tr class="memdesc:a8f75638f952ae11ee62d8c8458a47415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the active status of the constraint given by <code>id</code> in <code>context</code>.  <a href="#a8f75638f952ae11ee62d8c8458a47415">More...</a><br /></td></tr>
 <tr class="separator:a8f75638f952ae11ee62d8c8458a47415"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -608,6 +617,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec4f15db42bddd6789b0732762046ce6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aec4f15db42bddd6789b0732762046ce6">AddWeldConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body_A, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_AP, const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;body_B, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_BQ)</td></tr>
 <tr class="memdesc:aec4f15db42bddd6789b0732762046ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a constraint such that frame P affixed to body A is coincident at all times with frame Q affixed to body B, effectively modeling a weld joint.  <a href="#aec4f15db42bddd6789b0732762046ce6">More...</a><br /></td></tr>
 <tr class="separator:aec4f15db42bddd6789b0732762046ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7639ec04cd9ca90b649e7b712e5b839c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c">AddTendonConstraint</a> (std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; joints, std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt; a, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; offset, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; lower_limit, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; upper_limit, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; stiffness, std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt; damping)</td></tr>
+<tr class="memdesc:a7639ec04cd9ca90b649e7b712e5b839c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a set of unilateral constraints on the length of an abstract tendon defined as:  <a href="#a7639ec04cd9ca90b649e7b712e5b839c">More...</a><br /></td></tr>
+<tr class="separator:a7639ec04cd9ca90b649e7b712e5b839c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab868821d19fbf79f94b50147c4d90b9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab868821d19fbf79f94b50147c4d90b9b">RemoveConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> id)</td></tr>
 <tr class="memdesc:ab868821d19fbf79f94b50147c4d90b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the constraint <code>id</code> from the plant.  <a href="#ab868821d19fbf79f94b50147c4d90b9b">More...</a><br /></td></tr>
 <tr class="separator:ab868821d19fbf79f94b50147c4d90b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2035,6 +2047,121 @@ A distance constraint is the wrong modeling choice if the distance needs to go t
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if additional model instances have been created beyond the world and default instances. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7639ec04cd9ca90b649e7b712e5b839c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7639ec04cd9ca90b649e7b712e5b839c">&#9670;&nbsp;</a></span>AddTendonConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> AddTendonConstraint </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt;&#160;</td>
+          <td class="paramname"><em>joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>lower_limit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>upper_limit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>stiffness</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>damping</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines a set of unilateral constraints on the length of an abstract tendon defined as: </p>
+<p>l(q) = aᵀ⋅q + offset ∈ ℝ</p>
+<p>where <b>q</b> is the configuration of the model, <b>a</b> is a vector of coefficients, and <b>offset</b> a scalar offset. This constraint imposes:</p>
+<p>lₗ ≤ l(q) ≤ lᵤ</p>
+<p>where <b>lₗ</b> and <b>lᵤ</b> are lower and upper bounds, respectively. Both limits are not strictly required. At most one of <b>lₗ</b> or <b>lᵤ</b> may be infinite (−∞ for <b>lₗ</b> and ∞ for <b>lᵤ</b>), indicating no lower or upper limit, respectively.</p>
+<p>For finite <code>stiffness</code> and <code>damping</code>, this constraint is modeled by compliant spring-like forces:</p>
+<p>fₗ = −stiffness⋅(l - lₗ) − damping⋅dl(q)/dt <br />
+ fᵤ = −stiffness⋅(lᵤ - l) + damping⋅dl(q)/dt</p>
+<p>that act to keep the length within bounds. If the user provided stiffness is either omitted or set to ∞, this constraint is modeled as close to rigid as possible by the underlying solver.</p>
+<dl class="section note"><dt>Note</dt><dd>The coefficients in a are expected to have units such that the abstract length l(q) has consistent units (either meters or radians) and it is up to the user to maintain consistency in these units. The (optionally user provided) <code>stiffness</code> and <code>damping</code> are expected to have consistent units such that their products have units of the corresponding generalized force. E.g. N/m for <code>stiffness</code> and N⋅s/m for <code>damping</code> when l has units of m, so that <b>fₗ</b> and <b>fᵤ</b> have units of N.</dd>
+<dd>
+Any joint involved in this constraint can still be actuated.</dd>
+<dd>
+See the MuJoCo model documentation for details the equivalent concept of a "fixed" tendon: <a href="https://mujoco.readthedocs.io/en/stable/XMLreference.html#tendon-fixed">https://mujoco.readthedocs.io/en/stable/XMLreference.html#tendon-fixed</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">joints</td><td>Non-empty vector of single-dof joint indices where the configuration, qᵢ, of joints[i] corresponds to the entry a[i]. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Non-empty vector of coefficients where a[i] corresponds to the configuration, qᵢ, of joints[i]. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>(optional) Scalar length offset in either [m] or [rad]. If std::nullopt, it is set to 0. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lower_limit</td><td>(optional) Lower bound on l in either [m] or [rad]. If std::nullopt, it is set to −∞. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">upper_limit</td><td>Upper bound on l in either [m] or [rad]. If std::nullopt, it is set to ∞. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stiffness</td><td>(optional) Constraint stiffness in either [N/m] or [N⋅m/rad]. If std::nullopt, its default value is set to ∞ to model a rigid constraint. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">damping</td><td>(optional) Constraint damping in either [N⋅s/m] or [N⋅m⋅rad/s]. If std::nullopt, it is set to 0 to model a non-dissipative constraint.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Because of a restriction in the SAP solver, <b>at most</b> two kinematic trees can be represented by the joints in <code>joints</code>. This violation is only detected after the simulation has been started, in which case the solver will throw an exception when trying to add the constraint.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>joints.size() &gt; 0</code> </dd>
+<dd>
+<code>joints</code> contains no duplicates. </dd>
+<dd>
+<code>a.size() == joints.size()</code> </dd>
+<dd>
+<code>index ∈ joints</code> is a valid (non-removed) index to a joint in this plant. </dd>
+<dd>
+<code>get_joint(index).num_velocities() == 1</code> for each index in <code>joints</code>. </dd>
+<dd>
+<code>lower_limit &lt; ∞</code> (if not std::nullopt). </dd>
+<dd>
+<code>upper_limit &gt; -∞</code> (if not std::nullopt). </dd>
+<dd>
+At least one of <code>lower_limit</code> and <code>upper_limit</code> are finite. </dd>
+<dd>
+<code>lower_limit ≤ upper_limit</code> (if not std::nullopt). </dd>
+<dd>
+<code>stiffness &gt; 0</code> (if not std::nullopt). </dd>
+<dd>
+<code>damping &gt;= 0</code> (if not std::nullopt).</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the MultibodyPlant has already been finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant is not a discrete model (<code>is_discrete() == false</code>). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> MultibodyPlant's underlying contact solver is not SAP. (i.e. <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad7698366750a09e383106a17bf9009a2" title="Returns the contact solver type used for discrete MultibodyPlant models.">get_discrete_contact_solver()</a> != <a class="el" href="namespacedrake_1_1multibody.html#a902306c5e0120a67c07f80e9219a3e8dad48dc7e3221aee2d9e1af665ebfbeeec" title="SAP solver, see [Castro et al., 2022].">DiscreteContactSolver::kSap</a></code>). </td></tr>
   </table>
   </dd>
 </dl>
@@ -5237,6 +5364,51 @@ The desired state input port for a given model instance is not required to be co
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a0e6a984f85a2402d90d47b348232e125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6a984f85a2402d90d47b348232e125">&#9670;&nbsp;</a></span>get_tendon_constraint_specs() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const internal::TendonConstraintSpec&amp; get_tendon_constraint_specs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns the tendon constraint specification corresponding to <code>id</code> </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td><code>id</code> is not a valid identifier for a tendon constraint. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c513af0455f98aae90644620cec581b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c513af0455f98aae90644620cec581b">&#9670;&nbsp;</a></span>get_tendon_constraint_specs() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;<a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a>, internal::TendonConstraintSpec&gt;&amp; get_tendon_constraint_specs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns a reference to the all of the tendon constraints in this plant as a map from MultibodyConstraintId to TendonConstraintSpec. </p>
 
 </div>
 </div>
@@ -8550,6 +8722,25 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
+<a id="abea05e15475afa8545b1ce34795261a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea05e15475afa8545b1ce34795261a6">&#9670;&nbsp;</a></span>num_tendon_constraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_tendon_constraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total number of tendon constraints specified by the user. </p>
+
+</div>
+</div>
 <a id="ae0163ac0976659d811e3337647ff0313"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae0163ac0976659d811e3337647ff0313">&#9670;&nbsp;</a></span>num_velocities() <span class="overload">[1/2]</span></h2>
 
@@ -8659,8 +8850,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8671,7 +8862,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -8685,8 +8876,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8697,7 +8888,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
