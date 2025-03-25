@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1never__destroyed.html#a3e79f3039a5ba580fff20e6153523538":[3,0,0,40,0],
 "classdrake_1_1never__destroyed.html#a54c5e5d1a51055269e08e00e806dc694":[3,0,0,40,5],
 "classdrake_1_1never__destroyed.html#a75b0a6d92982429933c36cc5a6c52986":[3,0,0,40,2],
 "classdrake_1_1never__destroyed.html#a870c17e486af2da212aa1f707d68cdb4":[3,0,0,40,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1planning_1_1_edge_measure.html#aed1f69595a29dbd7c9bec63186a898dc":[1,4,2,2,4,3],
 "classdrake_1_1planning_1_1_edge_measure.html#af2a7f93a2f9ab704e82849ba600da879":[1,4,2,2,4,9],
 "classdrake_1_1planning_1_1_iris_zo_options.html":[3,0,0,11,10],
-"classdrake_1_1planning_1_1_iris_zo_options.html#a033befdd75124d17abb45b56c75a71db":[3,0,0,11,10,14],
-"classdrake_1_1planning_1_1_iris_zo_options.html#a111e7545f0a4fcae1b8a52fec666594a":[3,0,0,11,10,22]
+"classdrake_1_1planning_1_1_iris_zo_options.html#a033befdd75124d17abb45b56c75a71db":[3,0,0,11,10,14]
 };

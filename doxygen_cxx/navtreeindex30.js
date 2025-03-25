@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#aff1dec7a0a110ed8551948963a99ce85":[1,1,2,112],
 "classdrake_1_1solvers_1_1_mathematical_program.html#afff086e342ead2410215c884dfd4e82d":[1,1,2,218],
 "classdrake_1_1solvers_1_1_mathematical_program_result.html":[3,0,0,14,38],
 "classdrake_1_1solvers_1_1_mathematical_program_result.html#a08eae785a81fe46335b4ad6cb962eb74":[3,0,0,14,38,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#a4cfabc8f2d2a53ee991b848f84516bb6":[3,0,0,14,59,5],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#a8e630e27e9f83a8cfd4faa27125643e4":[3,0,0,14,59,2],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#ac6d99026f137504bc679b191d2d8fa61":[3,0,0,14,59,4],
-"classdrake_1_1solvers_1_1_polynomial_evaluator.html#adb44a2531992a42f8172fd93aac16760":[3,0,0,14,59,1],
-"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html":[1,1,0,34]
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#adb44a2531992a42f8172fd93aac16760":[3,0,0,14,59,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX62 =
 {
+"spatial__kinematics_8h.html":[4,0,0,8,12,4],
 "spatial__momentum_8h.html":[4,0,0,8,5,3],
 "spatial__momentum_8h.html#a656bebe8588828ae235b12c3772e54d8":[4,0,0,8,5,3,2],
 "spatial__vector_8h.html":[4,0,0,8,5,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html#ad7178daaf2b128e7576318790394a37f":[3,0,0,3,11,4,3],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html":[3,0,0,3,11,7],
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,11,7,0],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[3,0,0,3,11,7,3],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,11,7,1]
+"structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[3,0,0,3,11,7,3]
 };

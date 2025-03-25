@@ -1,5 +1,6 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html":[3,0,0,11,2,3,0],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#a028f009e523ba70f19975c58f6b0bb6d":[3,0,0,11,2,3,0,3],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#a096ce11cacbbdc3be3dd3d189d81b93f":[3,0,0,11,2,3,0,8],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#a3f6b4f835d276bfd98c41e028a8af3bb":[3,0,0,11,2,3,0,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1schema_1_1_gaussian.html#af780e8349d067915e79eee3c77758a94":[3,0,0,13,4,7],
 "classdrake_1_1schema_1_1_gaussian_vector.html":[3,0,0,13,5],
 "classdrake_1_1schema_1_1_gaussian_vector.html#a01824ef427a174f9071cc4f5e7ca6676":[3,0,0,13,5,4],
-"classdrake_1_1schema_1_1_gaussian_vector.html#a09ce0e8b0ce6505e2cad9754651176de":[3,0,0,13,5,6],
-"classdrake_1_1schema_1_1_gaussian_vector.html#a1d969737bf8d1e959fd7c19c4c57bf46":[3,0,0,13,5,5]
+"classdrake_1_1schema_1_1_gaussian_vector.html#a09ce0e8b0ce6505e2cad9754651176de":[3,0,0,13,5,6]
 };

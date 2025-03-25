@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"gradient__util_8h.html#a4805a6b4a327bedeb7793cd1ce11523c":[4,0,0,7,18,8],
 "gradient__util_8h.html#a5c5269630d172b12a31b34d6c98b4e64":[4,0,0,7,18,4],
 "gradient__util_8h.html#a6eb0d39dab703d87f0f582cf310c6134":[4,0,0,7,18,7],
 "gradient__util_8h.html#ab54df9b3b01c7c5509373712fda88ad4":[4,0,0,7,18,12],
@@ -66,14 +67,14 @@ var NAVTREEINDEX55 =
 "group__default__scalars.html":[1,6,1],
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[1,6,1,2],
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[4,0,0,1,15,1],
-"group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,6],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,15,5],
+"group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,6],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,15,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,1],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,5],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,15,4],
-"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,3],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,15,2],
+"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,15,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,4],
 "group__default__scalars.html#gaf140364db7046208e67d85327722d34a":[1,6,1,7],
@@ -101,14 +102,14 @@ var NAVTREEINDEX55 =
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,18],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,1,1,20],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,5,5,20],
-"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,19],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,5,19],
+"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,19],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,5,5,17],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,17],
 "group__geometry__optimization__geodesic__convexity.html":[1,5,5,0],
 "group__geometry__optimization__geodesic__convexity.html":[1,1,1,0],
-"group__geometry__optimization__geodesic__convexity.html#ga05bd75c8b08787c334065792f8532797":[1,1,1,0,0],
 "group__geometry__optimization__geodesic__convexity.html#ga05bd75c8b08787c334065792f8532797":[1,5,5,0,0],
+"group__geometry__optimization__geodesic__convexity.html#ga05bd75c8b08787c334065792f8532797":[1,1,1,0,0],
 "group__geometry__optimization__geodesic__convexity.html#ga0f945f0d43e169b238695da629d93ff7":[1,1,1,0,5],
 "group__geometry__optimization__geodesic__convexity.html#ga0f945f0d43e169b238695da629d93ff7":[1,5,5,0,5],
 "group__geometry__optimization__geodesic__convexity.html#ga1c6d3fc1c7396ee8eee575958044071b":[1,1,1,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "hyperrectangle_8h.html":[4,0,0,4,1,16],
 "identifier_8h.html":[4,0,0,1,43],
 "identifier_8h.html#a75fb496e078e67e4dcafd6ae9e624f30":[4,0,0,1,43,3],
-"identifier__pybind_8h.html":[4,0,0,0,0,1,5],
-"identifier__pybind_8h.html#a3791768bef1f65b7d83bcd7767e0b307":[4,0,0,0,0,1,5,0]
+"identifier__pybind_8h.html":[4,0,0,0,0,1,5]
 };

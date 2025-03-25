@@ -24,6 +24,7 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "get_mutable_recording", "classdrake_1_1geometry_1_1_meshcat.html#a74916eddef1ba24184bf974d233a1b59", null ],
     [ "get_recording", "classdrake_1_1geometry_1_1_meshcat.html#ab2495973164738aa5f3c326c8bf78bbf", null ],
     [ "GetButtonClicks", "classdrake_1_1geometry_1_1_meshcat.html#a3af3f4e27821f5f1630844a5cf4e39be", null ],
+    [ "GetButtonNames", "classdrake_1_1geometry_1_1_meshcat.html#a4b4c0f30b0f77e5266f1e2b5df798cd9", null ],
     [ "GetGamepad", "classdrake_1_1geometry_1_1_meshcat.html#a99102c7b2a8ca0cd1a9f1d55b3819b7d", null ],
     [ "GetNumActiveConnections", "classdrake_1_1geometry_1_1_meshcat.html#a85bcb12442dbc8a27d51e005ec7a922f", null ],
     [ "GetPackedObject", "classdrake_1_1geometry_1_1_meshcat.html#abac0b91a968117e6d9b8792bc753d9d6", null ],
