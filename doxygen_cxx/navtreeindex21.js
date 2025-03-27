@@ -1,5 +1,14 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1multibody_1_1_rotational_inertia.html":[3,0,0,9,83],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a0393e660bf996a3937e40ef2dc3e6757":[3,0,0,9,83,21],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b":[3,0,0,9,83,12],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a0546b3ac658fccec61a5156a926765dd":[3,0,0,9,83,17],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a0e13800a4b7f21903141dbe4c0102720":[3,0,0,9,83,7],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a1748abde222b7ff23aeeb4bf6f510a37":[3,0,0,9,83,15],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a1a73339c4b21bba9c3fa975f7a6c4220":[3,0,0,9,83,16],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a22d65a4cd4dd6105398ee79ad825035f":[3,0,0,9,83,27],
+"classdrake_1_1multibody_1_1_rotational_inertia.html#a23798f37ae600d4d79b8a2e71586c4c7":[3,0,0,9,83,45],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a275b3628b6e487b99b5a26b40e7c9454":[3,0,0,9,83,23],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a2a08dda5dfc4ee0f6279bad54ceecd9b":[3,0,0,9,83,41],
 "classdrake_1_1multibody_1_1_rotational_inertia.html#a319d6a0feeb306267605332cdd1906d6":[3,0,0,9,83,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1multibody_1_1_spatial_vector.html#a7ef3ca98bf83a4e8ee30147de1ce201d":[3,0,0,9,92,7],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a929ee35f2e827f504f3557b18b3c40c8":[3,0,0,9,92,12],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a9ce284c584f78b3f4cfd64b9d7632aa3":[3,0,0,9,92,21],
-"classdrake_1_1multibody_1_1_spatial_vector.html#a9d56e1315fbb0f8a59a83c948fcded20":[3,0,0,9,92,30],
-"classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c":[3,0,0,9,92,1],
-"classdrake_1_1multibody_1_1_spatial_vector.html#aa4d910cbcc53e1f9e2c4bcf24f0f61fc":[3,0,0,9,92,28],
-"classdrake_1_1multibody_1_1_spatial_vector.html#aa831e731779635166d20d016b8ba686b":[3,0,0,9,92,9],
-"classdrake_1_1multibody_1_1_spatial_vector.html#aadedf5dde48c214001423e185449e233":[3,0,0,9,92,8],
-"classdrake_1_1multibody_1_1_spatial_vector.html#ab09bd8d0cfc7e7ae4853c5f57973254a":[3,0,0,9,92,11],
-"classdrake_1_1multibody_1_1_spatial_vector.html#ab8d09ceb2acbdee33c80ac3a32751c43":[3,0,0,9,92,25],
-"classdrake_1_1multibody_1_1_spatial_vector.html#abb042fa391ff71b369dd7e50f0c9fbc2":[3,0,0,9,92,18],
-"classdrake_1_1multibody_1_1_spatial_vector.html#abfcc7772c9a75439b094cd2477f45e2f":[3,0,0,9,92,35],
-"classdrake_1_1multibody_1_1_spatial_vector.html#ac07d322df9b6d0290f529b978225802d":[3,0,0,9,92,14]
+"classdrake_1_1multibody_1_1_spatial_vector.html#a9d56e1315fbb0f8a59a83c948fcded20":[3,0,0,9,92,30]
 };

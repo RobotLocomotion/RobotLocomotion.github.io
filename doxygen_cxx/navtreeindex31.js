@@ -1,5 +1,14 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1solvers_1_1_polynomial_cost.html#ad972d33be3a5df23c8c6f0906ee43d00":[1,1,0,46,2],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html":[3,0,0,14,59],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a25f396d1eaf4be52eb3db66072895105":[3,0,0,14,59,6],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a384004055e2aad02cb0d300cc16722c3":[3,0,0,14,59,3],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a4b9014ce5ea008d66f100e73f204fecb":[3,0,0,14,59,0],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a4cfabc8f2d2a53ee991b848f84516bb6":[3,0,0,14,59,5],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a8e630e27e9f83a8cfd4faa27125643e4":[3,0,0,14,59,2],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#ac6d99026f137504bc679b191d2d8fa61":[3,0,0,14,59,4],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#adb44a2531992a42f8172fd93aac16760":[3,0,0,14,59,1],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html":[1,1,0,34],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a2ef19e543f4121af42e8d3f5e66ce4fa":[1,1,0,34,10],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a36439246736ce57d04811336f146d275":[1,1,0,34,11],
@@ -240,14 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1symbolic_1_1_environment.html#a231088519ec2ff5cfeacac5ae590570b":[3,0,0,15,5,4],
 "classdrake_1_1symbolic_1_1_environment.html#a259cb5a711406a8c3e5d937eb9350cca":[3,0,0,15,5,29],
 "classdrake_1_1symbolic_1_1_environment.html#a29305669b60ca1680752e2fc3592ba99":[3,0,0,15,5,14],
-"classdrake_1_1symbolic_1_1_environment.html#a320bbed240a1470cd9be984ab1fbbb50":[3,0,0,15,5,11],
-"classdrake_1_1symbolic_1_1_environment.html#a39112ae08f6ffc7ee58c6aa79772e094":[3,0,0,15,5,15],
-"classdrake_1_1symbolic_1_1_environment.html#a3d26d853ee0e9c78a4fbb44e5a8488e0":[3,0,0,15,5,1],
-"classdrake_1_1symbolic_1_1_environment.html#a497cdaf9cdf0fdd1d90355f5af48bc5d":[3,0,0,15,5,12],
-"classdrake_1_1symbolic_1_1_environment.html#a4b32e107dfb0df05488ec4ec410be075":[3,0,0,15,5,26],
-"classdrake_1_1symbolic_1_1_environment.html#a644718bb2fb240de962dc3c9a1fdf0dc":[3,0,0,15,5,18],
-"classdrake_1_1symbolic_1_1_environment.html#a6977fb8930c6c5a154827633c08e00b5":[3,0,0,15,5,25],
-"classdrake_1_1symbolic_1_1_environment.html#a698235d8479dc200c706a56c6305de3f":[3,0,0,15,5,8],
-"classdrake_1_1symbolic_1_1_environment.html#a6a7be25f3fe8fac9b3b7353c9b6ddd1f":[3,0,0,15,5,6],
-"classdrake_1_1symbolic_1_1_environment.html#a70598db5223360d917ed0fbb6cf61127":[3,0,0,15,5,2]
+"classdrake_1_1symbolic_1_1_environment.html#a320bbed240a1470cd9be984ab1fbbb50":[3,0,0,15,5,11]
 };

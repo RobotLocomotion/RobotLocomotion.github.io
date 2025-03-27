@@ -1508,6 +1508,10 @@ relative to the current working directory.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.geometry.Convex, filename: os.PathLike, scale3: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
+</ol>
+<p>File variant that allows for specification of non-uniform scale.</p>
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.geometry.Convex, mesh_data: pydrake.geometry.InMemoryMesh, scale: float = 1.0) -&gt; None</p></li>
 </ol>
 <p>Constructs a convex shape specification from the contents of a
@@ -1525,7 +1529,12 @@ shape.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt><dd><p>An optional scale to coordinates.</p>
 </dd>
 </dl>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="4">
+<li><p>__init__(self: pydrake.geometry.Convex, mesh_data: pydrake.geometry.InMemoryMesh, scale3: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
+</ol>
+<p>Mesh-contents variant that allows for specification of non-uniform
+scale.</p>
+<ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.geometry.Convex, source: pydrake.geometry.MeshSource, scale: float = 1.0) -&gt; None</p></li>
 </ol>
 <p>Constructs a convex shape specification from the given <code class="docutils literal notranslate"><span class="pre">source</span></code>.</p>
@@ -1535,7 +1544,12 @@ shape.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt><dd><p>An optional scale to coordinates.</p>
 </dd>
 </dl>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="6">
+<li><p>__init__(self: pydrake.geometry.Convex, source: pydrake.geometry.MeshSource, scale3: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
+</ol>
+<p>Mesh-source variant that allows for specification of non-uniform
+scale.</p>
+<ol class="arabic simple" start="7">
 <li><p>__init__(self: pydrake.geometry.Convex, points: numpy.ndarray[numpy.float64[3, n]], label: str, scale: float = 1.0) -&gt; None</p></li>
 </ol>
 <p>Constructs an in-memory convex shape specification from the given
@@ -1561,6 +1575,10 @@ must consist of a single line.</p>
 </ul>
 </dd>
 </dl>
+<ol class="arabic simple" start="8">
+<li><p>__init__(self: pydrake.geometry.Convex, points: numpy.ndarray[numpy.float64[3, n]], label: str, scale3: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
+</ol>
+<p>Point variant that allows for specification of non-uniform scale.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1621,7 +1639,19 @@ All subsequent invocations should have an O(1) cost.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Convex.scale">
 <span class="sig-name descname"><span class="pre">scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Convex" title="pydrake.geometry.Convex"><span class="pre">pydrake.geometry.Convex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.Convex.scale" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Returns a single scale representing the <em>uniform</em> scale factor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>if the scale is not uniform in all directions.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Convex.scale3">
+<span class="sig-name descname"><span class="pre">scale3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Convex" title="pydrake.geometry.Convex"><span class="pre">pydrake.geometry.Convex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.Convex.scale3" title="Permalink to this definition"></a></dt>
+<dd><p>Returns general scale factors for this mesh.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Convex.source">
@@ -4080,6 +4110,20 @@ file is used as directly as possible.</p>
 <p>The mesh is defined in a canonical frame C, implicit in the file
 parsed. Upon loading it in SceneGraph it can be scaled around the
 origin of C by a given <code class="docutils literal notranslate"><span class="pre">scale</span></code> amount.</p>
+<p>Note: a negative scale can be applied. This can be useful in mirroring
+the geometry (e.g., using a right hand mesh for a left hand).
+Mirroring the geometry will typically change the “winding” of the mesh
+elements. By convention, Drake looks at the <em>ordering</em> of the vertices
+that form mesh elements (triangles and tetrahedra) and derives the
+notion of “inside” and “outside” relative to that element. In order to
+preserve the input mesh’s definition of “inside” and “outside”, when
+the mesh gets mirrored Drake may perturb the ordering of the vertex
+indices. For example, a triangle originally referencing vertices <code class="docutils literal notranslate"><span class="pre">[0</span>
+<span class="pre">1</span> <span class="pre">2]</span></code>, when mirrored may change to <code class="docutils literal notranslate"><span class="pre">[2</span> <span class="pre">1</span> <span class="pre">0]</span></code>, so don’t be surprised
+if you introspect the details of the loaded mesh and you see such a
+change. An analogous change can affect the vertex ordering of
+tetrahedra in a volume mesh (i.e., a perturbation of the original
+vertex index list <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3]</span></code> to <code class="docutils literal notranslate"><span class="pre">[2</span> <span class="pre">1</span> <span class="pre">0</span> <span class="pre">3]</span></code>).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Mesh.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Mesh.__init__" title="Permalink to this definition"></a></dt>
@@ -4113,6 +4157,10 @@ relative to the current working directory.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.geometry.Mesh, filename: os.PathLike, scale3: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
+</ol>
+<p>Mesh-file variant that allows for specification of non-uniform scale.</p>
+<ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.geometry.Mesh, mesh_data: pydrake.geometry.InMemoryMesh, scale: float = 1.0) -&gt; None</p></li>
 </ol>
 <p>Constructs a mesh shape specification from the contents of a
@@ -4129,7 +4177,12 @@ shape.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt><dd><p>An optional scale to coordinates.</p>
 </dd>
 </dl>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="4">
+<li><p>__init__(self: pydrake.geometry.Mesh, mesh_data: pydrake.geometry.InMemoryMesh, scale3: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
+</ol>
+<p>Mesh-contents variant that allows for specification of non-uniform
+scale.</p>
+<ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.geometry.Mesh, source: pydrake.geometry.MeshSource, scale: float = 1.0) -&gt; None</p></li>
 </ol>
 <p>Constructs a mesh shape specification from the given <code class="docutils literal notranslate"><span class="pre">source</span></code>.</p>
@@ -4139,6 +4192,11 @@ shape.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt><dd><p>An optional scale to coordinates.</p>
 </dd>
 </dl>
+<ol class="arabic simple" start="6">
+<li><p>__init__(self: pydrake.geometry.Mesh, source: pydrake.geometry.MeshSource, scale3: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</p></li>
+</ol>
+<p>Mesh-source variant that allows for specification of non-uniform
+scale.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4198,7 +4256,19 @@ All subsequent invocations should have an O(1) cost.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Mesh.scale">
 <span class="sig-name descname"><span class="pre">scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Mesh" title="pydrake.geometry.Mesh"><span class="pre">pydrake.geometry.Mesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.Mesh.scale" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Returns a single scale representing the <em>uniform</em> scale factor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>if the scale is not uniform in all directions.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Mesh.scale3">
+<span class="sig-name descname"><span class="pre">scale3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Mesh" title="pydrake.geometry.Mesh"><span class="pre">pydrake.geometry.Mesh</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.Mesh.scale3" title="Permalink to this definition"></a></dt>
+<dd><p>Returns general scale factors for this mesh.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Mesh.source">
@@ -10575,17 +10645,12 @@ to its world space configuration (i.e. the vertex positions of its
 mesh representation in the world frame). All registered deformable
 geometries must be accounted for and only geometries registered by a
 source can be included in its output port.</p>
-<p>SceneGraph has two output ports:</p>
+<p>SceneGraph has one output port:</p>
 <p><strong>query port</strong>: An abstract-valued port containing an instance of
-QueryObject. It provides a “ticket” for downstream LeafSystem
-instances to perform geometric queries on the SceneGraph. To perform
-geometric queries, downstream LeafSystem instances acquire the
-QueryObject from SceneGraph’s output port and provide it as a
-parameter to one of SceneGraph’s query methods (e.g.,
-SceneGraph::ComputeContact()). This assumes that the querying system
-has access to a const pointer to the connected SceneGraph instance.
-Use get_query_output_port() to acquire the output port for the query
-handle.</p>
+QueryObject. To perform geometric queries, downstream LeafSystem
+instances acquire the QueryObject from SceneGraph’s output port and
+invoke the appropriate methods on it. Use get_query_output_port() to
+acquire the output port for the query handle.</p>
 <p>LeafSystem instances can relate to SceneGraph in one of two ways: as a
 <em>consumer</em> that performs queries, or as a <em>producer</em> that introduces
 geometry into the shared world and defines its context-dependent
@@ -10599,9 +10664,9 @@ QueryObject-valued input port and connect it to SceneGraph’s
 corresponding output port, and 2. have a reference to the connected
 SceneGraph instance.</p>
 <p>With those two requirements satisfied, a LeafSystem can perform
-geometry queries by: 1. evaluating the QueryObject input port, and 2.
-passing the returned query object into the appropriate query method on
-SceneGraph (e.g., SceneGraph::ComputeContact()).</p>
+geometry queries by: 1. evaluating the QueryObject input port,
+retrieving a <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">QueryObject&amp;</span></code> in return, and 2. invoking the
+appropriate method on the QueryObject.</p>
 <p><strong>Producer</strong></p>
 <p>All producers introduce geometry into the shared geometric world. This
 is called <em>registering</em> geometry. Depending on what exactly has been
@@ -11503,17 +11568,12 @@ to its world space configuration (i.e. the vertex positions of its
 mesh representation in the world frame). All registered deformable
 geometries must be accounted for and only geometries registered by a
 source can be included in its output port.</p>
-<p>SceneGraph has two output ports:</p>
+<p>SceneGraph has one output port:</p>
 <p><strong>query port</strong>: An abstract-valued port containing an instance of
-QueryObject. It provides a “ticket” for downstream LeafSystem
-instances to perform geometric queries on the SceneGraph. To perform
-geometric queries, downstream LeafSystem instances acquire the
-QueryObject from SceneGraph’s output port and provide it as a
-parameter to one of SceneGraph’s query methods (e.g.,
-SceneGraph::ComputeContact()). This assumes that the querying system
-has access to a const pointer to the connected SceneGraph instance.
-Use get_query_output_port() to acquire the output port for the query
-handle.</p>
+QueryObject. To perform geometric queries, downstream LeafSystem
+instances acquire the QueryObject from SceneGraph’s output port and
+invoke the appropriate methods on it. Use get_query_output_port() to
+acquire the output port for the query handle.</p>
 <p>LeafSystem instances can relate to SceneGraph in one of two ways: as a
 <em>consumer</em> that performs queries, or as a <em>producer</em> that introduces
 geometry into the shared world and defines its context-dependent
@@ -11527,9 +11587,9 @@ QueryObject-valued input port and connect it to SceneGraph’s
 corresponding output port, and 2. have a reference to the connected
 SceneGraph instance.</p>
 <p>With those two requirements satisfied, a LeafSystem can perform
-geometry queries by: 1. evaluating the QueryObject input port, and 2.
-passing the returned query object into the appropriate query method on
-SceneGraph (e.g., SceneGraph::ComputeContact()).</p>
+geometry queries by: 1. evaluating the QueryObject input port,
+retrieving a <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">QueryObject&amp;</span></code> in return, and 2. invoking the
+appropriate method on the QueryObject.</p>
 <p><strong>Producer</strong></p>
 <p>All producers introduce geometry into the shared geometric world. This
 is called <em>registering</em> geometry. Depending on what exactly has been
@@ -12420,17 +12480,12 @@ to its world space configuration (i.e. the vertex positions of its
 mesh representation in the world frame). All registered deformable
 geometries must be accounted for and only geometries registered by a
 source can be included in its output port.</p>
-<p>SceneGraph has two output ports:</p>
+<p>SceneGraph has one output port:</p>
 <p><strong>query port</strong>: An abstract-valued port containing an instance of
-QueryObject. It provides a “ticket” for downstream LeafSystem
-instances to perform geometric queries on the SceneGraph. To perform
-geometric queries, downstream LeafSystem instances acquire the
-QueryObject from SceneGraph’s output port and provide it as a
-parameter to one of SceneGraph’s query methods (e.g.,
-SceneGraph::ComputeContact()). This assumes that the querying system
-has access to a const pointer to the connected SceneGraph instance.
-Use get_query_output_port() to acquire the output port for the query
-handle.</p>
+QueryObject. To perform geometric queries, downstream LeafSystem
+instances acquire the QueryObject from SceneGraph’s output port and
+invoke the appropriate methods on it. Use get_query_output_port() to
+acquire the output port for the query handle.</p>
 <p>LeafSystem instances can relate to SceneGraph in one of two ways: as a
 <em>consumer</em> that performs queries, or as a <em>producer</em> that introduces
 geometry into the shared world and defines its context-dependent
@@ -12444,9 +12499,9 @@ QueryObject-valued input port and connect it to SceneGraph’s
 corresponding output port, and 2. have a reference to the connected
 SceneGraph instance.</p>
 <p>With those two requirements satisfied, a LeafSystem can perform
-geometry queries by: 1. evaluating the QueryObject input port, and 2.
-passing the returned query object into the appropriate query method on
-SceneGraph (e.g., SceneGraph::ComputeContact()).</p>
+geometry queries by: 1. evaluating the QueryObject input port,
+retrieving a <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">QueryObject&amp;</span></code> in return, and 2. invoking the
+appropriate method on the QueryObject.</p>
 <p><strong>Producer</strong></p>
 <p>All producers introduce geometry into the shared geometric world. This
 is called <em>registering</em> geometry. Depending on what exactly has been

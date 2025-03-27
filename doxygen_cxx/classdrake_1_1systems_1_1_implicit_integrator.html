@@ -306,6 +306,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9ec42d998ad39014c3dc64c50cfbc4d inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#ae9ec42d998ad39014c3dc64c50cfbc4d">reset_context</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context)</td></tr>
 <tr class="memdesc:ae9ec42d998ad39014c3dc64c50cfbc4d inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the pointer to the internally-maintained <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> with a different one.  <a href="classdrake_1_1systems_1_1_integrator_base.html#ae9ec42d998ad39014c3dc64c50cfbc4d">More...</a><br /></td></tr>
 <tr class="separator:ae9ec42d998ad39014c3dc64c50cfbc4d inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa85ab3036e9c0c5f6c841a346d70d93 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#afa85ab3036e9c0c5f6c841a346d70d93">reset_context</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt;&gt; context)</td></tr>
+<tr class="memdesc:afa85ab3036e9c0c5f6c841a346d70d93 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as above but allows the integrator to take ownership of the context.  <a href="classdrake_1_1systems_1_1_integrator_base.html#afa85ab3036e9c0c5f6c841a346d70d93">More...</a><br /></td></tr>
+<tr class="separator:afa85ab3036e9c0c5f6c841a346d70d93 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c403016877fd5f6291208aeb9a8063c inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a5c403016877fd5f6291208aeb9a8063c">get_system</a> () const</td></tr>
 <tr class="memdesc:a5c403016877fd5f6291208aeb9a8063c inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a constant reference to the system that is being integrated (and was provided to the constructor of the integrator).  <a href="classdrake_1_1systems_1_1_integrator_base.html#a5c403016877fd5f6291208aeb9a8063c">More...</a><br /></td></tr>
 <tr class="separator:a5c403016877fd5f6291208aeb9a8063c inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -431,6 +434,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af5801cb8f02c7ae4aaffff94972ad324 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">trajectories::PiecewisePolynomial</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#af5801cb8f02c7ae4aaffff94972ad324">StopDenseIntegration</a> ()</td></tr>
 <tr class="memdesc:af5801cb8f02c7ae4aaffff94972ad324 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops dense integration, yielding ownership of the current dense output to the caller.  <a href="classdrake_1_1systems_1_1_integrator_base.html#af5801cb8f02c7ae4aaffff94972ad324">More...</a><br /></td></tr>
 <tr class="separator:af5801cb8f02c7ae4aaffff94972ad324 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43106eda8fcb87444002a993b2658923 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a43106eda8fcb87444002a993b2658923">Clone</a> () const</td></tr>
+<tr class="memdesc:a43106eda8fcb87444002a993b2658923 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this integrator with reset statistics, reinitialized internal integrator states, and a cloned system context.  <a href="classdrake_1_1systems_1_1_integrator_base.html#a43106eda8fcb87444002a993b2658923">More...</a><br /></td></tr>
+<tr class="separator:a43106eda8fcb87444002a993b2658923 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
@@ -469,6 +475,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ad5fffcba1f63c3d8ceae80a550558f92"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_implicit_integrator.html#ad5fffcba1f63c3d8ceae80a550558f92">IsBadJacobian</a> (const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &amp;J) const</td></tr>
 <tr class="memdesc:ad5fffcba1f63c3d8ceae80a550558f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see whether a Jacobian matrix is "bad" (has any NaN or Inf values) and needs to be recomputed.  <a href="#ad5fffcba1f63c3d8ceae80a550558f92">More...</a><br /></td></tr>
 <tr class="separator:ad5fffcba1f63c3d8ceae80a550558f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af29c1758b965c600970cd23df0194e9d"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_implicit_integrator.html">ImplicitIntegrator</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_implicit_integrator.html#af29c1758b965c600970cd23df0194e9d">DoImplicitIntegratorClone</a> () const =0</td></tr>
+<tr class="memdesc:af29c1758b965c600970cd23df0194e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes must implement this method to return a copy of themselves as an <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html" title="An abstract class for an integrator for ODEs and DAEs as represented by a Drake System.">IntegratorBase</a> instance.  <a href="#af29c1758b965c600970cd23df0194e9d">More...</a><br /></td></tr>
+<tr class="separator:af29c1758b965c600970cd23df0194e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0ad96385997c3cc8d63d625ccd74615"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classint64__t.html">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_implicit_integrator.html#aa0ad96385997c3cc8d63d625ccd74615">do_get_num_newton_raphson_iterations</a> () const =0</td></tr>
 <tr class="separator:aa0ad96385997c3cc8d63d625ccd74615"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadbe903583c98cc606416be5daf1f994"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classint64__t.html">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_implicit_integrator.html#aadbe903583c98cc606416be5daf1f994">do_get_num_error_estimator_derivative_evaluations</a> () const =0</td></tr>
@@ -1167,6 +1176,34 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Derived classes can override this method to change the number of Newton-Raphson iterations (10 by default) to take before the Newton-Raphson process decides that convergence will not be attained. </p>
+
+</div>
+</div>
+<a id="af29c1758b965c600970cd23df0194e9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af29c1758b965c600970cd23df0194e9d">&#9670;&nbsp;</a></span>DoImplicitIntegratorClone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_implicit_integrator.html">ImplicitIntegrator</a>&lt;T&gt; &gt; DoImplicitIntegratorClone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived classes must implement this method to return a copy of themselves as an <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html" title="An abstract class for an integrator for ODEs and DAEs as represented by a Drake System.">IntegratorBase</a> instance. </p>
+<p>The returned object must correctly duplicate all member variables specific to the derived class, while the parent class members are assumed to be handled by the parent class. </p>
 
 </div>
 </div>
