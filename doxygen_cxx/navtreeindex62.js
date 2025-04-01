@@ -1,5 +1,6 @@
 var NAVTREEINDEX62 =
 {
+"sparse__linear__operator_8h.html":[4,0,0,8,1,17],
 "sparse__linear__operator_8h.html#ab3a29b7d9714447621ce21836bca9b15":[4,0,0,8,1,17,0],
 "sparse__matrix__gain_8h.html":[4,0,0,12,6,28],
 "spatial__acceleration_8h.html":[4,0,0,8,5,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html#a44002341240d718782c4328f8a329799":[3,0,0,3,10,0,1,2],
 "structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,10,0,1,0],
 "structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,10,0,1,1],
-"structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,10,0,1,5],
-"structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html":[3,0,0,3,11,2]
+"structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,10,0,1,5]
 };

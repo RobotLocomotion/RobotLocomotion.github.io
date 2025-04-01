@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a78e561b570fd05dd9d132a3608142970":[3,0,0,9,0,4,6],
 "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a86e4d687884a9f2753aff8f65ae5c567":[3,0,0,9,0,4,2],
 "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#ac244fbd782e3bc4db5acfccb27b3d51c":[3,0,0,9,0,4,3],
 "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#ac9b10929ce69ac9ec5abc5d839443f85":[3,0,0,9,0,4,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a5648d641e62c97c3d8bb555a49443839":[3,0,0,9,5,0,7],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a59afbd430a82f1add5f0cd09bf34f444":[3,0,0,9,5,0,5],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a6b11517643a27a1b5633e5c017881f3f":[3,0,0,9,5,0,14],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a96c7c25771960765e62faa13efcce1bc":[3,0,0,9,5,0,9],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#aa31802748296a2a9f3c8ab04a3ab58b0":[3,0,0,9,5,0,4]
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a96c7c25771960765e62faa13efcce1bc":[3,0,0,9,5,0,9]
 };

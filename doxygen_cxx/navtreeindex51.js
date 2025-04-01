@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"desired__state__input_8h.html":[4,0,0,8,10,15],
 "desired__state__input_8h.html#a2e66eb1bf99e66920f74b9c447ac7c08":[4,0,0,8,10,15,0],
 "detail__collision__filter__group__resolver_8h.html":[4,0,0,8,9,1],
 "detail__collision__filter__groups__impl_8h.html":[4,0,0,8,9,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "drake__path_8h.html#a3d3b9fa09763df2a9013eec2cf87df7b":[4,0,0,1,26,0],
 "drake__throw_8h.html":[4,0,0,1,27],
 "drake__throw_8h.html#a4d9c29b101212c8a886c7f4f1a8b71ca":[4,0,0,1,27,0],
-"drake__visualizer_8h.html":[4,0,0,4,12],
-"drake__visualizer_8h.html#a25bbce5543d108e2a4675813e3d6c5f1":[4,0,0,4,12,4]
+"drake__visualizer_8h.html":[4,0,0,4,12]
 };

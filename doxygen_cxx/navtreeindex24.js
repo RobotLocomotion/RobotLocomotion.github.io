@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#aa31802748296a2a9f3c8ab04a3ab58b0":[3,0,0,9,5,0,4],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#abf1e3c89af40ff48fe33cbffe3f3c025":[3,0,0,9,5,0,8],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae8047523b382903ae29b5187e30cab7b":[3,0,0,9,5,0,1],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae855057ba808cde3b3615c5e1c4938be":[3,0,0,9,5,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#ac6bc04d65819cd44e330926097d1289c":[3,0,0,11,7,9],
 "classdrake_1_1planning_1_1_edge_measure.html":[1,4,2,2,4],
 "classdrake_1_1planning_1_1_edge_measure.html#a2dc8535376412ba8a2e7c280443d53de":[1,4,2,2,4,1],
-"classdrake_1_1planning_1_1_edge_measure.html#a45f315d76b75857667d9ebb503323e7d":[1,4,2,2,4,5],
-"classdrake_1_1planning_1_1_edge_measure.html#a632f1b28166e024b687b55e71d74dbeb":[1,4,2,2,4,6]
+"classdrake_1_1planning_1_1_edge_measure.html#a45f315d76b75857667d9ebb503323e7d":[1,4,2,2,4,5]
 };

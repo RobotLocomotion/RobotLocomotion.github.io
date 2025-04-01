@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#af5a5ef4b6da552936dabb22caae98f4b":[1,1,2,120],
 "classdrake_1_1solvers_1_1_mathematical_program.html#af5e169f4d4bb63dd56bcd7cc89a561a1":[1,1,2,166],
 "classdrake_1_1solvers_1_1_mathematical_program.html#af7be7b407fbcebb6fc7100759492a3d9":[1,1,2,181],
 "classdrake_1_1solvers_1_1_mathematical_program.html#af84919b89bf3c494ed3dd1b0913c3e5f":[1,1,2,76],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "classdrake_1_1solvers_1_1_polynomial_cost.html#a4cfabc8f2d2a53ee991b848f84516bb6":[1,1,0,46,5],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#a7ac486efb96e05a296c7d114d64f2ead":[1,1,0,46,1],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#a8f99a12c084358b7a5c4cc6ec1722450":[1,1,0,46,3],
-"classdrake_1_1solvers_1_1_polynomial_cost.html#aa2d7ab409cc841882a99f3e9b5d034c3":[1,1,0,46,0],
-"classdrake_1_1solvers_1_1_polynomial_cost.html#ab934f3e9477d69de1b7e4d21adaa59c1":[1,1,0,46,4]
+"classdrake_1_1solvers_1_1_polynomial_cost.html#aa2d7ab409cc841882a99f3e9b5d034c3":[1,1,0,46,0]
 };

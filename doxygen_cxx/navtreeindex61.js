@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aa059fc525d6d174e5e070c7261ff8e43":[4,0,0,11,44,1,6],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aae2b1591bba5a77450b0df77a207be8f":[4,0,0,11,44,1,10],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aca450e45c136c14aabb606a09e0775a8":[4,0,0,11,44,1,7],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74adb2b51a6cdf2edf29dc2bfdcefef6ce0":[4,0,0,11,44,1,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "spanning__forest__mobod_8h.html":[4,0,0,8,13,11],
 "spanning__forest__tree_8h.html":[4,0,0,8,13,12],
 "sparse__and__dense__matrix_8h.html":[4,0,0,11,60],
-"sparse__grid_8h.html":[4,0,0,8,7,6],
-"sparse__linear__operator_8h.html":[4,0,0,8,1,17]
+"sparse__grid_8h.html":[4,0,0,8,7,6]
 };

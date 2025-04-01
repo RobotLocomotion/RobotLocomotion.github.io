@@ -262,6 +262,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a57aa9aaaab0516dbcbaf970347c76611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a86b350169906f6d5e07e9db46e36d57a">systems::AbstractParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a57aa9aaaab0516dbcbaf970347c76611">DeclareAbstractParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;model_value)</td></tr>
 <tr class="memdesc:a57aa9aaaab0516dbcbaf970347c76611"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <a href="#a57aa9aaaab0516dbcbaf970347c76611">More...</a><br /></td></tr>
 <tr class="separator:a57aa9aaaab0516dbcbaf970347c76611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af679af47835138fca8011749414d3bd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af679af47835138fca8011749414d3bd4">has_parent_tree</a> () const</td></tr>
+<tr class="memdesc:af679af47835138fca8011749414d3bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this multibody element has a parent tree, otherwise false.  <a href="#af679af47835138fca8011749414d3bd4">More...</a><br /></td></tr>
+<tr class="separator:af679af47835138fca8011749414d3bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -660,6 +663,12 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a constant reference to the parent MultibodyTree that owns this element. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in debug builds if <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af679af47835138fca8011749414d3bd4" title="Returns true if this multibody element has a parent tree, otherwise false.">has_parent_tree()</a> is false. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -713,6 +722,39 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a constant reference to the parent MultibodyTreeSystem that owns the parent MultibodyTree that owns this element. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>in debug builds if <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af679af47835138fca8011749414d3bd4" title="Returns true if this multibody element has a parent tree, otherwise false.">has_parent_tree()</a> is false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af679af47835138fca8011749414d3bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af679af47835138fca8011749414d3bd4">&#9670;&nbsp;</a></span>has_parent_tree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has_parent_tree </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if this multibody element has a parent tree, otherwise false. </p>
 
 </div>
 </div>
@@ -782,8 +824,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ac7d3ff54398a47f3c1e9ce9b4fb2e120"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7d3ff54398a47f3c1e9ce9b4fb2e120">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a47e4f9cb97baf94b1cdc26585e2e1e3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47e4f9cb97baf94b1cdc26585e2e1e3c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -794,7 +836,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -808,8 +850,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a47e4f9cb97baf94b1cdc26585e2e1e3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47e4f9cb97baf94b1cdc26585e2e1e3c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ac7d3ff54398a47f3c1e9ce9b4fb2e120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d3ff54398a47f3c1e9ce9b4fb2e120">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -820,7 +862,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

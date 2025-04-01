@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1systems_1_1_discrete_update_event.html#a6411929eebb98e856021335d43bcb7f4":[3,0,0,16,44,5],
 "classdrake_1_1systems_1_1_discrete_update_event.html#a69dfa70adfc53ee7b4deaebd2d15f381":[3,0,0,16,44,2],
 "classdrake_1_1systems_1_1_discrete_update_event.html#aa2cade880acf332eef698892a30397d0":[3,0,0,16,44,3],
 "classdrake_1_1systems_1_1_discrete_update_event.html#ac65543aabc8ab1b8c4fcd1bcf1ec48c5":[3,0,0,16,44,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "classdrake_1_1systems_1_1_implicit_integrator.html#afcb7d2fbbe7b0f1bb5b0207f1abf2ec3":[3,0,0,16,56,8],
 "classdrake_1_1systems_1_1_implicit_integrator.html#afe0fe49897eb21e92fb07b6f58433d08":[3,0,0,16,56,14],
 "classdrake_1_1systems_1_1_implicit_integrator.html#afe3b83b211bb511fcdd4d9f3c08e1093":[3,0,0,16,56,35],
-"classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html":[3,0,0,16,56,0],
-"classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html#a4309730e8a9221c2a027c09a128c7b3c":[3,0,0,16,56,0,1]
+"classdrake_1_1systems_1_1_implicit_integrator_1_1_iteration_matrix.html":[3,0,0,16,56,0]
 };

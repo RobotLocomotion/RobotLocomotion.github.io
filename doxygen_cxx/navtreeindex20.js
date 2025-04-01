@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1multibody_1_1_position_constraint.html#ab62e91d74ed7c1d89ac7898f3fdb832f":[1,1,0,12,5],
 "classdrake_1_1multibody_1_1_position_constraint.html#ac8a4c9b030dd337e8299e8fc4abe4354":[1,1,0,12,1],
 "classdrake_1_1multibody_1_1_position_constraint.html#ae820aa73265bd730e3a6d9881fbc4a23":[1,1,0,12,0],
 "classdrake_1_1multibody_1_1_position_cost.html":[1,1,0,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1multibody_1_1_rigid_body_frame.html#acd3092c461ef2339ba51209fcf41bdbe":[3,0,0,9,82,8],
 "classdrake_1_1multibody_1_1_rigid_body_frame.html#ad61d2c71c1094b3fd326bf7cf6606bf2":[3,0,0,9,82,0],
 "classdrake_1_1multibody_1_1_rigid_body_frame.html#ae7e5030f9a138a2914398524f36e162c":[3,0,0,9,82,18],
-"classdrake_1_1multibody_1_1_rigid_body_frame.html#aed0eeb663f377076dab1ae0ab44be5aa":[3,0,0,9,82,9],
-"classdrake_1_1multibody_1_1_rigid_body_frame.html#af960b8333618006f73d52d63ccd563ff":[3,0,0,9,82,5]
+"classdrake_1_1multibody_1_1_rigid_body_frame.html#aed0eeb663f377076dab1ae0ab44be5aa":[3,0,0,9,82,9]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"structdrake_1_1systems_1_1_system_type_tag.html#a379e6a18189f3ab144292c07cd2cd1d9":[3,0,0,16,121,0],
 "structdrake_1_1systems_1_1_use_default_name.html":[3,0,0,16,130],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html":[3,0,0,16,0,1],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a338f8f52a23e583f8ec10aa553b1fdfc":[3,0,0,16,0,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX67 =
 "structdrake_1_1test_1_1_limit_malloc_params.html#a7febc78e5aba3a9f8f0b9a89f4537b25":[3,0,0,17,2,2],
 "structdrake_1_1type__at.html":[3,0,0,56],
 "structdrake_1_1type__at.html#ae186135b13d8acdaf385d1ff052f0d82":[3,0,0,56,0],
-"structdrake_1_1type__check__different__from.html":[3,0,0,57],
-"structdrake_1_1type__check__different__from.html#a0860509034ec6a8bc624149afad18d42":[3,0,0,57,0]
+"structdrake_1_1type__check__different__from.html":[3,0,0,57]
 };

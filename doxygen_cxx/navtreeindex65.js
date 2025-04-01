@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html#ad4c6ff118d1301201b7fe48a73a9f0bf":[3,0,0,7,2,4,1],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html":[3,0,0,7,2,12],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a315acc3fbfccce5bbd6942fc8675bce5":[3,0,0,7,2,12,2],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,7,2,12,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ad56caacfcfc31a58bbbce672c955e976":[3,0,0,11,9,6],
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#adcdf0a6717afd726d071ce59a6d12c3e":[3,0,0,11,9,8],
 "structdrake_1_1planning_1_1_zmp_test_traj.html":[3,0,0,11,18],
-"structdrake_1_1planning_1_1_zmp_test_traj.html#a20ae58e972a3c748065e4f8dfe982f07":[3,0,0,11,18,3],
-"structdrake_1_1planning_1_1_zmp_test_traj.html#a493480e3e8aafc05211da06f51b4f3dc":[3,0,0,11,18,0]
+"structdrake_1_1planning_1_1_zmp_test_traj.html#a20ae58e972a3c748065e4f8dfe982f07":[3,0,0,11,18,3]
 };
