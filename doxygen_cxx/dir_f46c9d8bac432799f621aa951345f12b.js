@@ -8,6 +8,7 @@ var dir_f46c9d8bac432799f621aa951345f12b =
     [ "moving_average_filter.h", "moving__average__filter_8h.html", [
       [ "MovingAverageFilter", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter" ]
     ] ],
+    [ "named_positions_functions.h", "named__positions__functions_8h.html", "named__positions__functions_8h" ],
     [ "robot_plan_interpolator.h", "robot__plan__interpolator_8h.html", "robot__plan__interpolator_8h" ],
     [ "robot_plan_utils.h", "robot__plan__utils_8h.html", "robot__plan__utils_8h" ],
     [ "zero_force_driver.h", "zero__force__driver_8h.html", [

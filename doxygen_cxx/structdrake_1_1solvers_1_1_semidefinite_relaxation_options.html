@@ -190,9 +190,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:afcf57444ce2685aa6f70ca6e44b7a783"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#afcf57444ce2685aa6f70ca6e44b7a783">add_implied_linear_constraints</a> {true}</td></tr>
 <tr class="memdesc:afcf57444ce2685aa6f70ca6e44b7a783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a program with the linear equality constraints Ay = b, sets whether to add the implied linear constraints [A, -b]X = 0 to the semidefinite relaxation.  <a href="#afcf57444ce2685aa6f70ca6e44b7a783">More...</a><br /></td></tr>
 <tr class="separator:afcf57444ce2685aa6f70ca6e44b7a783"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d0ed785e8b4d09c5a15770af0067ab9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#a2d0ed785e8b4d09c5a15770af0067ab9">preserve_convex_quadratic_constraints</a> {false}</td></tr>
-<tr class="memdesc:a2d0ed785e8b4d09c5a15770af0067ab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">2025-04-01 DEPRECATION NOTICE: The convex quadratic constraints are already implied by a linear constraint that is always added to the semidefinite relaxation.  <a href="#a2d0ed785e8b4d09c5a15770af0067ab9">More...</a><br /></td></tr>
-<tr class="separator:a2d0ed785e8b4d09c5a15770af0067ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="abe7cc73e24fe58cd9ad359cf82044447"></a>
@@ -265,24 +262,6 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Given a program with the linear constraints Ay ≤ b, sets whether to add the implied linear constraints [A,-b]X[A,-b]ᵀ ≤ 0 to the semidefinite relaxation. </p>
-
-</div>
-</div>
-<a id="a2d0ed785e8b4d09c5a15770af0067ab9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d0ed785e8b4d09c5a15770af0067ab9">&#9670;&nbsp;</a></span>preserve_convex_quadratic_constraints</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool preserve_convex_quadratic_constraints {false}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>2025-04-01 DEPRECATION NOTICE: The convex quadratic constraints are already implied by a linear constraint that is always added to the semidefinite relaxation. </p>
-<p>Therefore, this flag has no effect on the solution to the overall program and will be deprecated on April 1st, 2025.</p>
-<p>Given a convex quadratic constraint xᵀP x + xᵀq + r &lt;= 0 it is always stronger to add the linearized constraint Tr(PX) + xᵀq + r &lt;= 0 (as is already done for all convex and nonconvex quadratic constraints), rendering the original convex quadratic constraints unnecessary. </p>
 
 </div>
 </div>

@@ -161,6 +161,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1manipulation.html','
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::manipulation Namespace Reference</div>  </div>
@@ -184,16 +185,43 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A driver that applies zero actuation to every joint of a model.  <a href="structdrake_1_1manipulation_1_1_zero_force_driver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:adbec09473da9017710b6e9abfa224fa3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation.html#adbec09473da9017710b6e9abfa224fa3">NamedPositions</a> = <a class="el" href="namespacedrake.html#a4730f000053dc13014d5e316c6f91201">drake::string_map</a>&lt; <a class="el" href="namespacedrake.html#a4730f000053dc13014d5e316c6f91201">drake::string_map</a>&lt; Eigen::VectorXd &gt; &gt;</td></tr>
+<tr class="memdesc:adbec09473da9017710b6e9abfa224fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map-of-maps {model_instance_name: {joint_name: joint_positions}} that describes joint positions.  <a href="#adbec09473da9017710b6e9abfa224fa3">More...</a><br /></td></tr>
+<tr class="separator:adbec09473da9017710b6e9abfa224fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:adb8ec6471d1a13e6fcea69aebb9ee7ab"><td class="memTemplParams" colspan="2">template&lt;typename... Types&gt; </td></tr>
 <tr class="memitem:adb8ec6471d1a13e6fcea69aebb9ee7ab"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation.html#adb8ec6471d1a13e6fcea69aebb9ee7ab">ApplyDriverConfigs</a> (const std::map&lt; std::string, std::variant&lt; Types... &gt;&gt; &amp;driver_configs, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;sim_plant, const std::vector&lt; <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;models_from_directives, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;lcm_buses, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
 <tr class="memdesc:adb8ec6471d1a13e6fcea69aebb9ee7ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply many driver configurations to a model.  <a href="#adb8ec6471d1a13e6fcea69aebb9ee7ab">More...</a><br /></td></tr>
 <tr class="separator:adb8ec6471d1a13e6fcea69aebb9ee7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c6951409a72c18ec9b4c4c29caec65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation.html#ab3c6951409a72c18ec9b4c4c29caec65">ApplyNamedPositionsAsDefaults</a> (const <a class="el" href="namespacedrake_1_1manipulation.html#adbec09473da9017710b6e9abfa224fa3">NamedPositions</a> &amp;input, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant)</td></tr>
+<tr class="memdesc:ab3c6951409a72c18ec9b4c4c29caec65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets default joint positions in the given <code>plant</code> according to the given <code>input</code> (which specifies joints by their string name).  <a href="#ab3c6951409a72c18ec9b4c4c29caec65">More...</a><br /></td></tr>
+<tr class="separator:ab3c6951409a72c18ec9b4c4c29caec65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af69facd0dee8f748962b3dbd5e251a60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation.html#af69facd0dee8f748962b3dbd5e251a60">ApplyDriverConfig</a> (const <a class="el" href="structdrake_1_1manipulation_1_1_zero_force_driver.html">ZeroForceDriver</a> &amp;driver_config, const std::string &amp;model_instance_name, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;sim_plant, const std::map&lt; std::string, <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_instance_info.html">multibody::parsing::ModelInstanceInfo</a> &gt; &amp;models_from_directives, const <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html">systems::lcm::LcmBuses</a> &amp;lcms, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder)</td></tr>
 <tr class="memdesc:af69facd0dee8f748962b3dbd5e251a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies zero actuation to every joint of a model mainly for debugging and testing purposes.  <a href="#af69facd0dee8f748962b3dbd5e251a60">More...</a><br /></td></tr>
 <tr class="separator:af69facd0dee8f748962b3dbd5e251a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="adbec09473da9017710b6e9abfa224fa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbec09473da9017710b6e9abfa224fa3">&#9670;&nbsp;</a></span>NamedPositions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1manipulation.html#adbec09473da9017710b6e9abfa224fa3">NamedPositions</a> =  <a class="el" href="namespacedrake.html#a4730f000053dc13014d5e316c6f91201">drake::string_map</a>&lt;<a class="el" href="namespacedrake.html#a4730f000053dc13014d5e316c6f91201">drake::string_map</a>&lt;Eigen::VectorXd&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A map-of-maps {model_instance_name: {joint_name: joint_positions}} that describes joint positions. </p>
+<p>Note that a given joint's positions are always spelled as a vector, even though for the most common joint types (prismatic, revolute, screw, etc.) the vector will only contain a single element. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="af69facd0dee8f748962b3dbd5e251a60"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af69facd0dee8f748962b3dbd5e251a60">&#9670;&nbsp;</a></span>ApplyDriverConfig()</h2>
@@ -299,6 +327,43 @@ Functions</h2></td></tr>
 <p>These conceptually simulate "drivers" &ndash; they take the role that driver software and control cabinets would take in real life &ndash; but may also model some physical properties of the robot that are not easily reflected in MultibodyPlant (e.g., the WSG belt drive).</p>
 <p>The caller of this function is responsible for including the variant members' apply function, such as <a class="el" href="schunk__wsg__driver__functions_8h.html">schunk_wsg_driver_functions.h</a>.</p>
 <p><code>driver_configs</code> The configurations to apply. <code>sim_plant</code> The plant containing the model. <code>models_from_directives</code> All of the <code>ModelInstanceInfo</code>s from previously- loaded directives. <code>lcm_buses</code> The available LCM buses to drive and/or sense from this driver. <code>builder</code> The <code>DiagramBuilder</code> into which to install this driver. </p>
+
+</div>
+</div>
+<a id="ab3c6951409a72c18ec9b4c4c29caec65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c6951409a72c18ec9b4c4c29caec65">&#9670;&nbsp;</a></span>ApplyNamedPositionsAsDefaults()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::manipulation::ApplyNamedPositionsAsDefaults </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1manipulation.html#adbec09473da9017710b6e9abfa224fa3">NamedPositions</a> &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets default joint positions in the given <code>plant</code> according to the given <code>input</code> (which specifies joints by their string name). </p>
+<p>The default positions for joints not mentioned will remain unchanged.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the number of position values in the input and the actual number of positions for the intended joint do not match. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

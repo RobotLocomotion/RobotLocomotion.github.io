@@ -141,11 +141,55 @@
              
   <section id="module-pydrake.systems.estimators">
 <span id="pydrake-systems-estimators"></span><h1>pydrake.systems.estimators<a class="headerlink" href="#module-pydrake.systems.estimators" title="Permalink to this headline"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="pydrake.systems.estimators.DiscreteTimeSteadyStateKalmanFilter">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.estimators.</span></span><span class="sig-name descname"><span class="pre">DiscreteTimeSteadyStateKalmanFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">W</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.estimators.DiscreteTimeSteadyStateKalmanFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the optimal observer gain, L, for the discrete-time linear
+system defined by</p>
+<div class="math notranslate nohighlight">
+\[x[n+1] = Ax[n] + Bu[n] + w,\]</div>
+<div class="math notranslate nohighlight">
+\[y[n] = Cx[n] + Du[n] + v.\]</div>
+<p>The resulting observer is of the form</p>
+<div class="math notranslate nohighlight">
+\[\hat{x}[n+1] = A\hat{x}[n] + Bu[n] + L(y - C\hat{x}[n] - Du[n]).\]</div>
+<p>The process noise, w, and the measurement noise, v, are assumed to be
+iid mean-zero Gaussian.</p>
+<p>This is a simplified form of the full Kalman filter obtained by
+assuming that the state-covariance matrix has already converged to its
+steady-state solution P, and the observer gain L = APC’(CPC’ + V)⁻¹.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt><dd><p>The state-space dynamics matrix of size num_states x num_states.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt><dd><p>The state-space output matrix of size num_outputs x num_states.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">W</span></code>:</dt><dd><p>The process noise covariance matrix, E[ww’], of size num_states x
+num_states.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt><dd><p>The measurement noise covariance matrix, E[vv’], of size
+num_outputs x num_outputs.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The steady-state observer gain matrix of size num_states x
+num_outputs.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if W is not positive semi-definite</strong><strong> or </strong><strong>if V is not</strong> – </p></li>
+<li><p><strong>positive definite.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.systems.estimators.LuenbergerObserver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.estimators.</span></span><span class="sig-name descname"><span class="pre">LuenbergerObserver</span></span><a class="headerlink" href="#pydrake.systems.estimators.LuenbergerObserver" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
-<p>A simple state observer for a dynamical system of the form:</p>
+<p>A simple state observer for a continuous-time dynamical system of the
+form:</p>
 <div class="math notranslate nohighlight">
 \[\dot{x} = f(x,u)\]</div>
 <div class="math notranslate nohighlight">
@@ -153,9 +197,20 @@
 <p>the observer dynamics takes the form</p>
 <div class="math notranslate nohighlight">
 \[\dot{\hat{x}} = f(\hat{x},u) + L(y - g(\hat{x},u))\]</div>
-<p>where <span class="math notranslate nohighlight">\(\hat{x}\)</span> is the estimated state of the original system.</p>
-<p>The output of the observer system is <span class="math notranslate nohighlight">\(\hat{x}\)</span>.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">observed system input&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">observed_system_output&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LuenbergerObserver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; estimated_state</td></tr></table></td></tr></table><dl class="py method">
+<p>where <span class="math notranslate nohighlight">\(\hat{x}\)</span> is the estimated state of the original system.
+The output of the observer system is <span class="math notranslate nohighlight">\(\hat{x}\)</span>.</p>
+<p>Or a simple state observer for a discrete-time dynamical system of the
+form:</p>
+<div class="math notranslate nohighlight">
+\[x[n+1] = f_d(x[n],u[n])\]</div>
+<div class="math notranslate nohighlight">
+\[y[n] = g(x[n],u[n])\]</div>
+<p>the observer dynamics takes the form</p>
+<div class="math notranslate nohighlight">
+\[\hat{x}[n+1] = f(\hat{x}[n],u[n]) + L(y - g(\hat{x}[n],u[n]))\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{x}\)</span> is the estimated state of the original system.
+The output of the observer system is <span class="math notranslate nohighlight">\(\hat{x}[n+1]\)</span>.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">observed_system_input&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">observed_system_output&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LuenbergerObserver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; estimated_state</td></tr></table></td></tr></table><dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.estimators.LuenbergerObserver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.estimators.LuenbergerObserver" title="pydrake.systems.estimators.LuenbergerObserver"><span class="pre">pydrake.systems.estimators.LuenbergerObserver</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">observed_system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">observed_system_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_gain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.estimators.LuenbergerObserver.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructs the observer.</p>
@@ -211,8 +266,8 @@ evaluate the system.</p>
 <ol class="arabic simple">
 <li><p>SteadyStateKalmanFilter(A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], C: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], W: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], V: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, n]]</p></li>
 </ol>
-<p>Computes the optimal observer gain, L, for the linear system defined
-by</p>
+<p>Computes the optimal observer gain, L, for the continuous-time linear
+system defined by</p>
 <div class="math notranslate nohighlight">
 \[\dot{x} = Ax + Bu + w,\]</div>
 <div class="math notranslate nohighlight">
@@ -233,7 +288,8 @@ steady-state solution.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">W</span></code>:</dt><dd><p>The process noise covariance matrix, E[ww’], of size num_states x
 num_states.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt><dd><p>The measurement noise covariance matrix, E[vv’], of size <a href="#id1"><span class="problematic" id="id2">num_</span></a>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt><dd><p>The measurement noise covariance matrix, E[vv’], of size
+num_outputs x num_outputs.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -249,14 +305,16 @@ num_outputs.</p>
 <li><p>SteadyStateKalmanFilter(system: pydrake.systems.primitives.LinearSystem, W: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], V: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; pydrake.systems.estimators.LuenbergerObserver</p></li>
 </ol>
 <p>Creates a Luenberger observer system using the optimal steady-state
-Kalman filter gain matrix, L, as described above.</p>
+Kalman filter gain matrix, L, as described in SteadyStateKalmanFilter
+and DiscreteTimeSteadyStateKalmanFilter.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The LinearSystem describing the system to be observed.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">W</span></code>:</dt><dd><p>The process noise covariance matrix, E[ww’], of size num_states x
 num_states.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt><dd><p>The measurement noise covariance matrix, E[vv’], of size <a href="#id3"><span class="problematic" id="id4">num_</span></a>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt><dd><p>The measurement noise covariance matrix, E[vv’], of size
+num_outputs x num_outputs.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -272,12 +330,17 @@ num_states.</p>
 </ol>
 <p>Creates a Luenberger observer system using the steady-state Kalman
 filter observer gain.</p>
-<p>Assuming <code class="docutils literal notranslate"><span class="pre">system</span></code> has the (continuous-time) dynamics: dx/dt =
-f(x,u), and the output: y = g(x,u), then the resulting observer will
-have the form dx̂/dt = f(x̂,u) + L(y - g(x̂,u)), where x̂ is the
-estimated state and the gain matrix, L, is designed as a steady-state
-Kalman filter using a linearization of f(x,u) at <code class="docutils literal notranslate"><span class="pre">context</span></code> as
-described above.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">system</span></code> has continuous-time dynamics: ẋ = f(x,u), and the
+output: y = g(x,u), then the resulting observer will have the form
+dx̂/dt = f(x̂,u) + L(y − g(x̂,u)), where x̂ is the estimated state and
+the gain matrix, L, is designed as a steady-state Kalman filter using
+a linearization of f(x,u) at <code class="docutils literal notranslate"><span class="pre">context</span></code> as described above.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">system</span></code> has discrete-time dynamics: x[n+1] = f(x[n],u[n]), and
+the output: y[n] = g(x[n],u[n]), then the resulting observer will have
+the form x̂[n+1] = f(x̂[n],u[n]) + L(y − g(x̂[n],u[n])), where x̂[n+1]
+is the estimated state and the gain matrix, L, is designed as a
+steady-state Kalman filter using a linearization of f(x,u) at
+<code class="docutils literal notranslate"><span class="pre">context</span></code> as described above.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The System describing the system to be observed.</p>
 </dd>
@@ -287,7 +350,8 @@ additional parameters).</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">W</span></code>:</dt><dd><p>The process noise covariance matrix, E[ww’], of size num_states x
 num_states.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt><dd><p>The measurement noise covariance matrix, E[vv’], of size <a href="#id5"><span class="problematic" id="id6">num_</span></a>.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt><dd><p>The measurement noise covariance matrix, E[vv’], of size
+num_outputs x num_outputs.</p>
 </dd>
 </dl>
 <dl class="field-list simple">

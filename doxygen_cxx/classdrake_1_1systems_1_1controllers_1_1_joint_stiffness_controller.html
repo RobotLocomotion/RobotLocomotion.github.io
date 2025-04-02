@@ -222,9 +222,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa28328eb9d4bce20371ea403960122fb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#aa28328eb9d4bce20371ea403960122fb">get_input_port_desired_state</a> () const</td></tr>
 <tr class="memdesc:aa28328eb9d4bce20371ea403960122fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the input port for the desired state.  <a href="#aa28328eb9d4bce20371ea403960122fb">More...</a><br /></td></tr>
 <tr class="separator:aa28328eb9d4bce20371ea403960122fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1296b665521a703cc08e6d98f5b6f64"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#ae1296b665521a703cc08e6d98f5b6f64">get_output_port_generalized_force</a> () const</td></tr>
-<tr class="memdesc:ae1296b665521a703cc08e6d98f5b6f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port for the generalized forces implementing the control.  <a href="#ae1296b665521a703cc08e6d98f5b6f64">More...</a><br /></td></tr>
-<tr class="separator:ae1296b665521a703cc08e6d98f5b6f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02ffa2d9b80c4b46003312db5e69e35c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a02ffa2d9b80c4b46003312db5e69e35c">get_output_port_actuation</a> () const</td></tr>
 <tr class="memdesc:a02ffa2d9b80c4b46003312db5e69e35c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port implementing the control in the form (and order) expected for the plant's actuation input port.  <a href="#a02ffa2d9b80c4b46003312db5e69e35c">More...</a><br /></td></tr>
 <tr class="separator:a02ffa2d9b80c4b46003312db5e69e35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1573,27 +1570,6 @@ plant.IsVelocityEqualToQDot() is true. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns the output port implementing the control in the form (and order) expected for the plant's actuation input port. </p>
-
-</div>
-</div>
-<a id="ae1296b665521a703cc08e6d98f5b6f64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1296b665521a703cc08e6d98f5b6f64">&#9670;&nbsp;</a></span>get_output_port_generalized_force()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;T&gt;&amp; get_output_port_generalized_force </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the output port for the generalized forces implementing the control. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Use get_output_port_actuation() instead, which multiplies  the generalized force by B⁻¹ to be consumed by  MultibodyPlant's actuation input port. <br />
- This will be removed from Drake on or after 2025-04-01.</dd></dl>
 
 </div>
 </div>

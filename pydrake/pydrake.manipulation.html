@@ -189,6 +189,22 @@ driver.</p></li>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.manipulation.ApplyNamedPositionsAsDefaults">
+<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">ApplyNamedPositionsAsDefaults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">input:</span> <span class="pre">dict[str,</span> <span class="pre">dict[str,</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]],</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.ApplyNamedPositionsAsDefaults" title="Permalink to this definition"></a></dt>
+<dd><p>Sets default joint positions in the given <code class="docutils literal notranslate"><span class="pre">plant</span></code> according to the
+given <code class="docutils literal notranslate"><span class="pre">input</span></code> (which specifies joints by their string name). The
+default positions for joints not mentioned will remain unchanged.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the number of position values in the input and the</strong> – </p></li>
+<li><p><strong>actual number of positions for the intended joint do not match.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.manipulation.BuildIiwaControl">
 <span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">BuildIiwaControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iiwa_instance:</span> <span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm:</span> <span class="pre">pydrake.lcm.DrakeLcmInterface</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext_joint_filter_tau:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_iiwa_kp_gains:</span> <span class="pre">Optional[numpy.ndarray[numpy.float64[m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode</span> <span class="pre">=</span> <span class="pre">&lt;IiwaControlMode.kPositionAndTorque:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.BuildIiwaControl" title="Permalink to this definition"></a></dt>
 <dd><p>Given a <code class="docutils literal notranslate"><span class="pre">plant</span></code> (and associated <code class="docutils literal notranslate"><span class="pre">iiwa_instance)</span></code> and a

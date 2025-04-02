@@ -184,6 +184,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga00b67f54aba155c982e8a1038278eed6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6">ExtractSimulatorConfig</a> (const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; &amp;simulator)</td></tr>
 <tr class="memdesc:ga00b67f54aba155c982e8a1038278eed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the simulator's current configuration, including the configuration of the integrator.  <a href="group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6">More...</a><br /></td></tr>
 <tr class="separator:ga00b67f54aba155c982e8a1038278eed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf4e6ced63bc542a51f1ee61d864480f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaaf4e6ced63bc542a51f1ee61d864480f"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#gaaf4e6ced63bc542a51f1ee61d864480f">CreateIntegratorFromConfig</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *system, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;integrator_config)</td></tr>
+<tr class="memdesc:gaaf4e6ced63bc542a51f1ee61d864480f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an integrator according to the given configuration.  <a href="group__simulator__configuration.html#gaaf4e6ced63bc542a51f1ee61d864480f">More...</a><br /></td></tr>
+<tr class="separator:gaaf4e6ced63bc542a51f1ee61d864480f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga6875fa2f1e9eb22cee800a29b0ca61b9"></a>
@@ -224,6 +228,56 @@ Functions</h2></td></tr>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaaf4e6ced63bc542a51f1ee61d864480f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf4e6ced63bc542a51f1ee61d864480f">&#9670;&nbsp;</a></span>CreateIntegratorFromConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt;T&gt; &gt; drake::systems::CreateIntegratorFromConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>integrator_config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create an integrator according to the given configuration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>A pointer to the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> to be integrated; the integrator will maintain a reference to the system in perpetuity, so the integrator must not outlive the system. </td></tr>
+    <tr><td class="paramname">integrator_config</td><td>Configuration to be used. Only values relevant to the integrator (integration_scheme, max_step_size, use_error_control, accuracy) are applied. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>system != nullptr</code>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the integration scheme does not match any of <a class="el" href="group__simulator__configuration.html#ga5d1fc9d510c450590826170fca172e5a" title="Returns the allowed string values for the scheme parameter in ResetIntegratorFromFlags() and Simulato...">GetIntegrationSchemes()</a>, or if the integration scheme does not support the scalar type T. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
   </table>
   </dd>
 </dl>

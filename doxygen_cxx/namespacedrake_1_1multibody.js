@@ -30,6 +30,7 @@ var namespacedrake_1_1multibody =
     [ "DifferentialInverseKinematicsParameters", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters" ],
     [ "DifferentialInverseKinematicsResult", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_result" ],
     [ "DistanceConstraint", "classdrake_1_1multibody_1_1_distance_constraint.html", "classdrake_1_1multibody_1_1_distance_constraint" ],
+    [ "DistanceConstraintParams", "classdrake_1_1multibody_1_1_distance_constraint_params.html", "classdrake_1_1multibody_1_1_distance_constraint_params" ],
     [ "DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html", "classdrake_1_1multibody_1_1_door_hinge" ],
     [ "DoorHingeConfig", "structdrake_1_1multibody_1_1_door_hinge_config.html", "structdrake_1_1multibody_1_1_door_hinge_config" ],
     [ "ExternallyAppliedSpatialForce", "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html", "structdrake_1_1multibody_1_1_externally_applied_spatial_force" ],

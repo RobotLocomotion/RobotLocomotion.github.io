@@ -158,10 +158,178 @@ $(document).ready(function(){initNavTree('group__estimation.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">State Estimation<div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga483f8a39c210ad058dfc19ae26d93e16"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimation.html#ga483f8a39c210ad058dfc19ae26d93e16">SteadyStateKalmanFilter</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;C, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
+<tr class="memdesc:ga483f8a39c210ad058dfc19ae26d93e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal observer gain, L, for the continuous-time linear system defined by </p><p class="formulaDsp">
+\[ \dot{x} = Ax + Bu + w, \]
+</p>
+ <p class="formulaDsp">
+\[ y = Cx + Du + v. \]
+</p>
+<p> The resulting observer is of the form </p><p class="formulaDsp">
+\[ \dot{\hat{x}} = A\hat{x} + Bu + L(y - C\hat{x} - Du). \]
+</p>
+<p> The process noise, w, and the measurement noise, v, are assumed to be iid mean-zero Gaussian.  <a href="group__estimation.html#ga483f8a39c210ad058dfc19ae26d93e16">More...</a><br /></td></tr>
+<tr class="separator:ga483f8a39c210ad058dfc19ae26d93e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa4c925b6356157327fbb15cf94350494"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimation.html#gaa4c925b6356157327fbb15cf94350494">DiscreteTimeSteadyStateKalmanFilter</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;C, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
+<tr class="memdesc:gaa4c925b6356157327fbb15cf94350494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal observer gain, L, for the discrete-time linear system defined by </p><p class="formulaDsp">
+\[ x[n+1] = Ax[n] + Bu[n] + w, \]
+</p>
+ <p class="formulaDsp">
+\[ y[n] = Cx[n] + Du[n] + v. \]
+</p>
+<p> The resulting observer is of the form </p><p class="formulaDsp">
+\[ \hat{x}[n+1] = A\hat{x}[n] + Bu[n] + L(y - C\hat{x}[n] - Du[n]). \]
+</p>
+<p> The process noise, w, and the measurement noise, v, are assumed to be iid mean-zero Gaussian.  <a href="group__estimation.html#gaa4c925b6356157327fbb15cf94350494">More...</a><br /></td></tr>
+<tr class="separator:gaa4c925b6356157327fbb15cf94350494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaa4c925b6356157327fbb15cf94350494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4c925b6356157327fbb15cf94350494">&#9670;&nbsp;</a></span>DiscreteTimeSteadyStateKalmanFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd drake::systems::estimators::DiscreteTimeSteadyStateKalmanFilter </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>W</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the optimal observer gain, L, for the discrete-time linear system defined by </p><p class="formulaDsp">
+\[ x[n+1] = Ax[n] + Bu[n] + w, \]
+</p>
+ <p class="formulaDsp">
+\[ y[n] = Cx[n] + Du[n] + v. \]
+</p>
+<p> The resulting observer is of the form </p><p class="formulaDsp">
+\[ \hat{x}[n+1] = A\hat{x}[n] + Bu[n] + L(y - C\hat{x}[n] - Du[n]). \]
+</p>
+<p> The process noise, w, and the measurement noise, v, are assumed to be iid mean-zero Gaussian. </p>
+<p>This is a simplified form of the full Kalman filter obtained by assuming that the state-covariance matrix has already converged to its steady-state solution P, and the observer gain L = APC'(CPC' + V)⁻¹.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>The state-space dynamics matrix of size num_states x num_states. </td></tr>
+    <tr><td class="paramname">C</td><td>The state-space output matrix of size num_outputs x num_states. </td></tr>
+    <tr><td class="paramname">W</td><td>The process noise covariance matrix, E[ww'], of size num_states x num_states. </td></tr>
+    <tr><td class="paramname">V</td><td>The measurement noise covariance matrix, E[vv'], of size num_outputs x num_outputs. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The steady-state observer gain matrix of size num_states x num_outputs.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if W is not positive semi-definite or if V is not positive definite. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga483f8a39c210ad058dfc19ae26d93e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga483f8a39c210ad058dfc19ae26d93e16">&#9670;&nbsp;</a></span>SteadyStateKalmanFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd drake::systems::estimators::SteadyStateKalmanFilter </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>W</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>V</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the optimal observer gain, L, for the continuous-time linear system defined by </p><p class="formulaDsp">
+\[ \dot{x} = Ax + Bu + w, \]
+</p>
+ <p class="formulaDsp">
+\[ y = Cx + Du + v. \]
+</p>
+<p> The resulting observer is of the form </p><p class="formulaDsp">
+\[ \dot{\hat{x}} = A\hat{x} + Bu + L(y - C\hat{x} - Du). \]
+</p>
+<p> The process noise, w, and the measurement noise, v, are assumed to be iid mean-zero Gaussian. </p>
+<p>This is a simplified form of the full Kalman filter obtained by assuming that the state-covariance matrix has already converged to its steady-state solution.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>The state-space dynamics matrix of size num_states x num_states. </td></tr>
+    <tr><td class="paramname">C</td><td>The state-space output matrix of size num_outputs x num_states. </td></tr>
+    <tr><td class="paramname">W</td><td>The process noise covariance matrix, E[ww'], of size num_states x num_states. </td></tr>
+    <tr><td class="paramname">V</td><td>The measurement noise covariance matrix, E[vv'], of size num_outputs x num_outputs. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The steady-state observer gain matrix of size num_states x num_outputs.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if V is not positive definite. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

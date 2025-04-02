@@ -184,10 +184,10 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_mesh.html',
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7f04226d6b4b7dc562cb9fea57277c96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a7f04226d6b4b7dc562cb9fea57277c96">Mesh</a> (const std::filesystem::path &amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a94c732bb0f167eab349228237a8fbe3c">filename</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a>=1.0)</td></tr>
+<tr class="memitem:a7f04226d6b4b7dc562cb9fea57277c96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a7f04226d6b4b7dc562cb9fea57277c96">Mesh</a> (const std::filesystem::path &amp;filename, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a>=1.0)</td></tr>
 <tr class="memdesc:a7f04226d6b4b7dc562cb9fea57277c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a mesh shape specification from the mesh file located at the given file path.  <a href="#a7f04226d6b4b7dc562cb9fea57277c96">More...</a><br /></td></tr>
 <tr class="separator:a7f04226d6b4b7dc562cb9fea57277c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ca8b4e0de434941dd439f4159b19ae5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a3ca8b4e0de434941dd439f4159b19ae5">Mesh</a> (const std::filesystem::path &amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a94c732bb0f167eab349228237a8fbe3c">filename</a>, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a65c09004291c785ae5b360e7cde60105">scale3</a>)</td></tr>
+<tr class="memitem:a3ca8b4e0de434941dd439f4159b19ae5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a3ca8b4e0de434941dd439f4159b19ae5">Mesh</a> (const std::filesystem::path &amp;filename, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a65c09004291c785ae5b360e7cde60105">scale3</a>)</td></tr>
 <tr class="memdesc:a3ca8b4e0de434941dd439f4159b19ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh-file variant that allows for specification of non-uniform scale.  <a href="#a3ca8b4e0de434941dd439f4159b19ae5">More...</a><br /></td></tr>
 <tr class="separator:a3ca8b4e0de434941dd439f4159b19ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b667fa7d0ced114c87f783079658ccc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a7b667fa7d0ced114c87f783079658ccc">Mesh</a> (<a class="el" href="structdrake_1_1geometry_1_1_in_memory_mesh.html">InMemoryMesh</a> mesh_data, <a class="el" href="classdouble.html">double</a> <a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10">scale</a>=1.0)</td></tr>
@@ -207,9 +207,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab63b07aff5ff1812f7b0c3cbcbfc79fa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_mesh_source.html">MeshSource</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#ab63b07aff5ff1812f7b0c3cbcbfc79fa">source</a> () const</td></tr>
 <tr class="memdesc:ab63b07aff5ff1812f7b0c3cbcbfc79fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the source for this specification's mesh data.  <a href="#ab63b07aff5ff1812f7b0c3cbcbfc79fa">More...</a><br /></td></tr>
 <tr class="separator:ab63b07aff5ff1812f7b0c3cbcbfc79fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94c732bb0f167eab349228237a8fbe3c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a94c732bb0f167eab349228237a8fbe3c">filename</a> () const</td></tr>
-<tr class="memdesc:a94c732bb0f167eab349228237a8fbe3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the filename passed to the constructor.  <a href="#a94c732bb0f167eab349228237a8fbe3c">More...</a><br /></td></tr>
-<tr class="separator:a94c732bb0f167eab349228237a8fbe3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2ba33fb44bb4a5f4e273a5d9d440ea"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea">extension</a> () const</td></tr>
 <tr class="memdesc:a5a2ba33fb44bb4a5f4e273a5d9d440ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the extension of the mesh type &ndash; all lower case and including the dot.  <a href="#a5a2ba33fb44bb4a5f4e273a5d9d440ea">More...</a><br /></td></tr>
 <tr class="separator:a5a2ba33fb44bb4a5f4e273a5d9d440ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -608,34 +605,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a94c732bb0f167eab349228237a8fbe3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94c732bb0f167eab349228237a8fbe3c">&#9670;&nbsp;</a></span>filename()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string filename </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the filename passed to the constructor. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>this</code> Mesh was constructed using in-memory file contents. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_mesh.html#ab63b07aff5ff1812f7b0c3cbcbfc79fa" title="Returns the source for this specification&#39;s mesh data.">source()</a>.is_path(). (Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Meshes can be defined from a file path or in memory data. Use  Mesh::source() to determine if a filename is available. <br />
- This will be removed from Drake on or after 2025-04-01.</dd></dl>
-
-</div>
-</div>
 <a id="abc7849f0d8f3e992a4f357f17fa6ae45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc7849f0d8f3e992a4f357f17fa6ae45">&#9670;&nbsp;</a></span>GetConvexHull()</h2>
 
@@ -662,8 +631,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0d3626df50b3182819a2dba3433f8327"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d3626df50b3182819a2dba3433f8327">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="adba4850f9e9a8694f921ac5bab8f32a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba4850f9e9a8694f921ac5bab8f32a8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -674,7 +643,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -688,8 +657,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="adba4850f9e9a8694f921ac5bab8f32a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adba4850f9e9a8694f921ac5bab8f32a8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a0d3626df50b3182819a2dba3433f8327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3626df50b3182819a2dba3433f8327">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -700,7 +669,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

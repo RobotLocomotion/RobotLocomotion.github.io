@@ -188,8 +188,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga483f8a39c210ad058dfc19ae26d93e16"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimator__systems.html#ga483f8a39c210ad058dfc19ae26d93e16">SteadyStateKalmanFilter</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;C, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
-<tr class="memdesc:ga483f8a39c210ad058dfc19ae26d93e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal observer gain, L, for the linear system defined by </p><p class="formulaDsp">
+<tr class="memitem:ga483f8a39c210ad058dfc19ae26d93e16"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimation.html#ga483f8a39c210ad058dfc19ae26d93e16">SteadyStateKalmanFilter</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;C, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
+<tr class="memdesc:ga483f8a39c210ad058dfc19ae26d93e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal observer gain, L, for the continuous-time linear system defined by </p><p class="formulaDsp">
 \[ \dot{x} = Ax + Bu + w, \]
 </p>
  <p class="formulaDsp">
@@ -198,10 +198,22 @@ Functions</h2></td></tr>
 <p> The resulting observer is of the form </p><p class="formulaDsp">
 \[ \dot{\hat{x}} = A\hat{x} + Bu + L(y - C\hat{x} - Du). \]
 </p>
-<p> The process noise, w, and the measurement noise, v, are assumed to be iid mean-zero Gaussian.  <a href="group__estimator__systems.html#ga483f8a39c210ad058dfc19ae26d93e16">More...</a><br /></td></tr>
+<p> The process noise, w, and the measurement noise, v, are assumed to be iid mean-zero Gaussian.  <a href="group__estimation.html#ga483f8a39c210ad058dfc19ae26d93e16">More...</a><br /></td></tr>
 <tr class="separator:ga483f8a39c210ad058dfc19ae26d93e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa4c925b6356157327fbb15cf94350494"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimation.html#gaa4c925b6356157327fbb15cf94350494">DiscreteTimeSteadyStateKalmanFilter</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;C, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
+<tr class="memdesc:gaa4c925b6356157327fbb15cf94350494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal observer gain, L, for the discrete-time linear system defined by </p><p class="formulaDsp">
+\[ x[n+1] = Ax[n] + Bu[n] + w, \]
+</p>
+ <p class="formulaDsp">
+\[ y[n] = Cx[n] + Du[n] + v. \]
+</p>
+<p> The resulting observer is of the form </p><p class="formulaDsp">
+\[ \hat{x}[n+1] = A\hat{x}[n] + Bu[n] + L(y - C\hat{x}[n] - Du[n]). \]
+</p>
+<p> The process noise, w, and the measurement noise, v, are assumed to be iid mean-zero Gaussian.  <a href="group__estimation.html#gaa4c925b6356157327fbb15cf94350494">More...</a><br /></td></tr>
+<tr class="separator:gaa4c925b6356157327fbb15cf94350494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7c4307c228661d355148e7f72a6b53dc"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; LuenbergerObserver&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimator__systems.html#ga7c4307c228661d355148e7f72a6b53dc">SteadyStateKalmanFilter</a> (std::shared_ptr&lt; const LinearSystem&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; system, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
-<tr class="memdesc:ga7c4307c228661d355148e7f72a6b53dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Luenberger observer system using the optimal steady-state Kalman filter gain matrix, L, as described above.  <a href="group__estimator__systems.html#ga7c4307c228661d355148e7f72a6b53dc">More...</a><br /></td></tr>
+<tr class="memdesc:ga7c4307c228661d355148e7f72a6b53dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Luenberger observer system using the optimal steady-state Kalman filter gain matrix, L, as described in <a class="el" href="group__estimation.html#ga483f8a39c210ad058dfc19ae26d93e16">SteadyStateKalmanFilter</a> and <a class="el" href="group__estimation.html#gaa4c925b6356157327fbb15cf94350494">DiscreteTimeSteadyStateKalmanFilter</a>.  <a href="group__estimator__systems.html#ga7c4307c228661d355148e7f72a6b53dc">More...</a><br /></td></tr>
 <tr class="separator:ga7c4307c228661d355148e7f72a6b53dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4fb2e563d9ca3996eed28b0bac18bb67"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; LuenbergerObserver&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimator__systems.html#ga4fb2e563d9ca3996eed28b0bac18bb67">SteadyStateKalmanFilter</a> (std::shared_ptr&lt; const System&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; system, const Context&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
 <tr class="memdesc:ga4fb2e563d9ca3996eed28b0bac18bb67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Luenberger observer system using the steady-state Kalman filter observer gain.  <a href="group__estimator__systems.html#ga4fb2e563d9ca3996eed28b0bac18bb67">More...</a><br /></td></tr>

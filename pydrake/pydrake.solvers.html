@@ -8294,25 +8294,6 @@ add the implied linear constraints [A,-b]X[A,-b]ᵀ ≤ 0 to the
 semidefinite relaxation.</p>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.solvers.SemidefiniteRelaxationOptions.preserve_convex_quadratic_constraints">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preserve_convex_quadratic_constraints</span></span><a class="headerlink" href="#pydrake.solvers.SemidefiniteRelaxationOptions.preserve_convex_quadratic_constraints" title="Permalink to this definition"></a></dt>
-<dd><p>The convex quadratic constraints are
-already implied by a linear constraint that is always added to the
-semidefinite relaxation. Therefore, this flag has no effect on the
-solution to the overall program and will be deprecated on April 1st,
-2025.</p>
-<p>Given a convex quadratic constraint xᵀP x + xᵀq + r &lt;= 0 it is always
-stronger to add the linearized constraint Tr(PX) + xᵀq + r &lt;= 0 (as is
-already done for all convex and nonconvex quadratic constraints),
-rendering the original convex quadratic constraints unnecessary.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>2025-04-01 DEPRECATION NOTICE</p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.SemidefiniteRelaxationOptions.set_to_strongest">
 <span class="sig-name descname"><span class="pre">set_to_strongest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SemidefiniteRelaxationOptions" title="pydrake.solvers.SemidefiniteRelaxationOptions"><span class="pre">pydrake.solvers.SemidefiniteRelaxationOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.SemidefiniteRelaxationOptions.set_to_strongest" title="Permalink to this definition"></a></dt>

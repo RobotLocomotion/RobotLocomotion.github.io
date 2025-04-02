@@ -172,34 +172,22 @@ $(document).ready(function(){initNavTree('group__estimator__systems.html','');})
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple state observer for a dynamical system of the form: </p><p class="formulaDsp">
-\[\dot{x} = f(x,u) \]
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple state observer for a continuous-time dynamical system of the form: </p><p class="formulaDsp">
+\[ \dot{x} = f(x,u) \]
 </p>
  <p class="formulaDsp">
-\[y = g(x,u) \]
+\[ y = g(x,u) \]
 </p>
 <p> the observer dynamics takes the form </p><p class="formulaDsp">
-\[\dot{\hat{x}} = f(\hat{x},u) + L(y - g(\hat{x},u)) \]
+\[ \dot{\hat{x}} = f(\hat{x},u) + L(y - g(\hat{x},u)) \]
 </p>
 <p> where \(\hat{x}\) is the estimated state of the original system.  <a href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga483f8a39c210ad058dfc19ae26d93e16"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimator__systems.html#ga483f8a39c210ad058dfc19ae26d93e16">SteadyStateKalmanFilter</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;C, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
-<tr class="memdesc:ga483f8a39c210ad058dfc19ae26d93e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the optimal observer gain, L, for the linear system defined by </p><p class="formulaDsp">
-\[ \dot{x} = Ax + Bu + w, \]
-</p>
- <p class="formulaDsp">
-\[ y = Cx + Du + v. \]
-</p>
-<p> The resulting observer is of the form </p><p class="formulaDsp">
-\[ \dot{\hat{x}} = A\hat{x} + Bu + L(y - C\hat{x} - Du). \]
-</p>
-<p> The process noise, w, and the measurement noise, v, are assumed to be iid mean-zero Gaussian.  <a href="group__estimator__systems.html#ga483f8a39c210ad058dfc19ae26d93e16">More...</a><br /></td></tr>
-<tr class="separator:ga483f8a39c210ad058dfc19ae26d93e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7c4307c228661d355148e7f72a6b53dc"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimator__systems.html#ga7c4307c228661d355148e7f72a6b53dc">SteadyStateKalmanFilter</a> (std::shared_ptr&lt; const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; system, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
-<tr class="memdesc:ga7c4307c228661d355148e7f72a6b53dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Luenberger observer system using the optimal steady-state Kalman filter gain matrix, L, as described above.  <a href="group__estimator__systems.html#ga7c4307c228661d355148e7f72a6b53dc">More...</a><br /></td></tr>
+<tr class="memdesc:ga7c4307c228661d355148e7f72a6b53dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Luenberger observer system using the optimal steady-state Kalman filter gain matrix, L, as described in <a class="el" href="group__estimation.html#ga483f8a39c210ad058dfc19ae26d93e16">SteadyStateKalmanFilter</a> and <a class="el" href="group__estimation.html#gaa4c925b6356157327fbb15cf94350494">DiscreteTimeSteadyStateKalmanFilter</a>.  <a href="group__estimator__systems.html#ga7c4307c228661d355148e7f72a6b53dc">More...</a><br /></td></tr>
 <tr class="separator:ga7c4307c228661d355148e7f72a6b53dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4fb2e563d9ca3996eed28b0bac18bb67"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__estimator__systems.html#ga4fb2e563d9ca3996eed28b0bac18bb67">SteadyStateKalmanFilter</a> (std::shared_ptr&lt; const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</td></tr>
 <tr class="memdesc:ga4fb2e563d9ca3996eed28b0bac18bb67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Luenberger observer system using the steady-state Kalman filter observer gain.  <a href="group__estimator__systems.html#ga4fb2e563d9ca3996eed28b0bac18bb67">More...</a><br /></td></tr>
@@ -295,76 +283,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga483f8a39c210ad058dfc19ae26d93e16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga483f8a39c210ad058dfc19ae26d93e16">&#9670;&nbsp;</a></span>SteadyStateKalmanFilter() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Eigen::MatrixXd drake::systems::estimators::SteadyStateKalmanFilter </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>C</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>W</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>V</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes the optimal observer gain, L, for the linear system defined by </p><p class="formulaDsp">
-\[ \dot{x} = Ax + Bu + w, \]
-</p>
- <p class="formulaDsp">
-\[ y = Cx + Du + v. \]
-</p>
-<p> The resulting observer is of the form </p><p class="formulaDsp">
-\[ \dot{\hat{x}} = A\hat{x} + Bu + L(y - C\hat{x} - Du). \]
-</p>
-<p> The process noise, w, and the measurement noise, v, are assumed to be iid mean-zero Gaussian. </p>
-<p>This is a simplified form of the full Kalman filter obtained by assuming that the state-covariance matrix has already converged to its steady-state solution.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">A</td><td>The state-space dynamics matrix of size num_states x num_states. </td></tr>
-    <tr><td class="paramname">C</td><td>The state-space output matrix of size num_outputs x num_states. </td></tr>
-    <tr><td class="paramname">W</td><td>The process noise covariance matrix, E[ww'], of size num_states x num_states. </td></tr>
-    <tr><td class="paramname">V</td><td>The measurement noise covariance matrix, E[vv'], of size num_. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The steady-state observer gain matrix of size num_states x num_outputs.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if V is not positive definite. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ga7c4307c228661d355148e7f72a6b53dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7c4307c228661d355148e7f72a6b53dc">&#9670;&nbsp;</a></span>SteadyStateKalmanFilter() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7c4307c228661d355148e7f72a6b53dc">&#9670;&nbsp;</a></span>SteadyStateKalmanFilter() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,12 +315,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a Luenberger observer system using the optimal steady-state Kalman filter gain matrix, L, as described above. </p>
+<p>Creates a Luenberger observer system using the optimal steady-state Kalman filter gain matrix, L, as described in <a class="el" href="group__estimation.html#ga483f8a39c210ad058dfc19ae26d93e16">SteadyStateKalmanFilter</a> and <a class="el" href="group__estimation.html#gaa4c925b6356157327fbb15cf94350494">DiscreteTimeSteadyStateKalmanFilter</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">system</td><td>The <a class="el" href="classdrake_1_1systems_1_1_linear_system.html" title="A discrete OR continuous linear system.">LinearSystem</a> describing the system to be observed. </td></tr>
     <tr><td class="paramname">W</td><td>The process noise covariance matrix, E[ww'], of size num_states x num_states. </td></tr>
-    <tr><td class="paramname">V</td><td>The measurement noise covariance matrix, E[vv'], of size num_. </td></tr>
+    <tr><td class="paramname">V</td><td>The measurement noise covariance matrix, E[vv'], of size num_outputs x num_outputs. </td></tr>
   </table>
   </dd>
 </dl>
@@ -415,7 +335,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="ga4fb2e563d9ca3996eed28b0bac18bb67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4fb2e563d9ca3996eed28b0bac18bb67">&#9670;&nbsp;</a></span>SteadyStateKalmanFilter() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fb2e563d9ca3996eed28b0bac18bb67">&#9670;&nbsp;</a></span>SteadyStateKalmanFilter() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,13 +373,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a Luenberger observer system using the steady-state Kalman filter observer gain. </p>
-<p>Assuming <code>system</code> has the (continuous-time) dynamics: dx/dt = f(x,u), and the output: y = g(x,u), then the resulting observer will have the form dx̂/dt = f(x̂,u) + L(y - g(x̂,u)), where x̂ is the estimated state and the gain matrix, L, is designed as a steady-state Kalman filter using a linearization of f(x,u) at <code>context</code> as described above.</p>
+<p>If <code>system</code> has continuous-time dynamics: ẋ = f(x,u), and the output: y = g(x,u), then the resulting observer will have the form dx̂/dt = f(x̂,u) + L(y − g(x̂,u)), where x̂ is the estimated state and the gain matrix, L, is designed as a steady-state Kalman filter using a linearization of f(x,u) at <code>context</code> as described above.</p>
+<p>If <code>system</code> has discrete-time dynamics: x[n+1] = f(x[n],u[n]), and the output: y[n] = g(x[n],u[n]), then the resulting observer will have the form x̂[n+1] = f(x̂[n],u[n]) + L(y − g(x̂[n],u[n])), where x̂[n+1] is the estimated state and the gain matrix, L, is designed as a steady-state Kalman filter using a linearization of f(x,u) at <code>context</code> as described above.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">system</td><td>The <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> describing the system to be observed. </td></tr>
     <tr><td class="paramname">context</td><td>The context describing a fixed-point of the system (plus any additional parameters). </td></tr>
     <tr><td class="paramname">W</td><td>The process noise covariance matrix, E[ww'], of size num_states x num_states. </td></tr>
-    <tr><td class="paramname">V</td><td>The measurement noise covariance matrix, E[vv'], of size num_. </td></tr>
+    <tr><td class="paramname">V</td><td>The measurement noise covariance matrix, E[vv'], of size num_outputs x num_outputs. </td></tr>
   </table>
   </dd>
 </dl>

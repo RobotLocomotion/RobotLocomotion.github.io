@@ -1514,6 +1514,126 @@ Unconstrained Convex Formulation of Compliant Contact. Available online at
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DistanceConstraintParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">DistanceConstraintParams</span></span><a class="headerlink" href="#pydrake.multibody.plant.DistanceConstraintParams" title="Permalink to this definition"></a></dt>
+<dd><p>Parameters for a distance constraint. A distance constraint is modeled
+as a holonomic constraint. Distance constraints can be “soft”, and are
+implemented as a spring force, f: f = -k⋅(d(q) - d₀) - c⋅ḋ(q), where
+d₀ is a fixed length, k a stiffness parameter in N/m and c a damping
+parameter in N⋅s/m. We use d(q) to denote the Euclidean distance
+between two points P and Q, rigidly affixed to bodies A and B
+respectively, as a function of the configuration of the model q. This
+constraint reduces to d(q) = d₀ in the limit to infinite stiffness and
+it behaves as a linear spring damper for finite values of stiffness
+and damping.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A distance constraint is the wrong modeling choice if the distance
+needs to go through zero. To constrain two points to be coincident
+we need a 3-dof ball constraint, the 1-dof distance constraint is
+singular in this case. Therefore we require the distance parameter
+to be strictly positive.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DistanceConstraintParams.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.DistanceConstraintParams.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.multibody.plant.DistanceConstraintParams) -&gt; None</p></li>
+</ol>
+<p>Construction to an invalid set of parameters only meant to facilitate
+use with STL containers.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.multibody.plant.DistanceConstraintParams, bodyA: pydrake.multibody.tree.BodyIndex, p_AP: numpy.ndarray[numpy.float64[3, 1]], bodyB: pydrake.multibody.tree.BodyIndex, p_BQ: numpy.ndarray[numpy.float64[3, 1]], distance: float, stiffness: float, damping: float) -&gt; None</p></li>
+</ol>
+<p>Constructor for a set of valid parameters.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bodyA</span></code>:</dt><dd><p>Index of body A in the MultibodyPlant.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bodyB</span></code>:</dt><dd><p>Index of body B in the MultibodyPlant.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AP</span></code>:</dt><dd><p>Position of a point P in A’s body frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt><dd><p>Position of a point Q in Q’s body frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">distance</span></code>:</dt><dd><p>The fixed length of this constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt><dd><p>If finite, this constraint models a massless elastic rod of length
+<code class="docutils literal notranslate"><span class="pre">distance</span></code> with the given <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> and <code class="docutils literal notranslate"><span class="pre">damping</span></code>.
+“Infinite” is a valid value if a hard constraint is intended. See
+the class documentation for details.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt><dd><p>When <code class="docutils literal notranslate"><span class="pre">stiffness</span></code> is finite, this value parametrizes the damping
+model of the elastic massless rod. See the class documentation for
+details.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This class does not have a way to check whether body indices do
+correspond to valid indices in a MultibodyPlant. Use
+MultibodyPlant APIs to safely register distance constraints
+between valid bodies and to later retrieve their valid set of
+parameters.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if BodyIndex::is_valid</strong><strong>(</strong><strong>) </strong><strong>is false for either body.</strong> – </p></li>
+<li><p><strong>RuntimeError if bodies A and B are the same body.</strong> – </p></li>
+<li><p><strong>RuntimeError if distance is not strictly positive.</strong> – </p></li>
+<li><p><strong>RuntimeError if stiffness is not strictly positive.</strong> – </p></li>
+<li><p><strong>RuntimeError if damping is not positive</strong><strong> or </strong><strong>zero.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DistanceConstraintParams.bodyA">
+<span class="sig-name descname"><span class="pre">bodyA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DistanceConstraintParams.bodyA" title="Permalink to this definition"></a></dt>
+<dd><p>Index of body A.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DistanceConstraintParams.bodyB">
+<span class="sig-name descname"><span class="pre">bodyB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DistanceConstraintParams.bodyB" title="Permalink to this definition"></a></dt>
+<dd><p>Index of body B.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DistanceConstraintParams.damping">
+<span class="sig-name descname"><span class="pre">damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DistanceConstraintParams.damping" title="Permalink to this definition"></a></dt>
+<dd><p>Constraint damping. See class documentation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DistanceConstraintParams.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DistanceConstraintParams.distance" title="Permalink to this definition"></a></dt>
+<dd><p>The fixed length of the constraint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DistanceConstraintParams.p_AP">
+<span class="sig-name descname"><span class="pre">p_AP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DistanceConstraintParams.p_AP" title="Permalink to this definition"></a></dt>
+<dd><p>Position of point P in body A’s frame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DistanceConstraintParams.p_BQ">
+<span class="sig-name descname"><span class="pre">p_BQ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DistanceConstraintParams.p_BQ" title="Permalink to this definition"></a></dt>
+<dd><p>Position of point Q in body B’s frame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DistanceConstraintParams.stiffness">
+<span class="sig-name descname"><span class="pre">stiffness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DistanceConstraintParams.stiffness" title="Permalink to this definition"></a></dt>
+<dd><p>Constraint stiffness. See class documentation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.ExternallyAppliedSpatialForce">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">ExternallyAppliedSpatialForce</span></span><a class="headerlink" href="#pydrake.multibody.plant.ExternallyAppliedSpatialForce" title="Permalink to this definition"></a></dt>
 <dd><div class="admonition note">
@@ -2591,6 +2711,13 @@ needs to go through zero. To constrain two points to be coincident
 we need a 3-dof ball constraint, the 1-dof distance constraint is
 singular in this case. Therefore we require the distance parameter
 to be strictly positive.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When a new context is created, a DistanceConstraintParams is
+initialized to store the parameters passed to this function.
+Parameters in the context can be modified with calls to
+SetDistanceConstraintParams().</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -5254,6 +5381,15 @@ systems default to use triangles.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetDefaultDistanceConstraintParams">
+<span class="sig-name descname"><span class="pre">GetDefaultDistanceConstraintParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetDefaultDistanceConstraintParams" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all default distance constraint parameters, as registered via
+AddDistanceConstraint(). See GetDistanceConstraintParams() and
+SetDistanceConstraintParams() for working with parameters stored in a
+context.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetDefaultFreeBodyPose">
 <span class="sig-name descname"><span class="pre">GetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetDefaultFreeBodyPose" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code> as set by SetDefaultFreeBodyPose().
@@ -5296,6 +5432,27 @@ which can be changed via SetDefaultPositions().</p>
 <li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, or </strong><strong>if the</strong> – </p></li>
 <li><p><strong>model_instance is invalid</strong><strong>,</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetDistanceConstraintParams">
+<span class="sig-name descname"><span class="pre">GetDistanceConstraintParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetDistanceConstraintParams" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetDistanceConstraintParams(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context) -&gt; dict[pydrake.multibody.tree.MultibodyConstraintId, pydrake.multibody.plant.DistanceConstraintParams]</p></li>
+</ol>
+<p>Returns all distance constraint parameters currently stored in
+<code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetDistanceConstraintParams(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, id: pydrake.multibody.tree.MultibodyConstraintId) -&gt; pydrake.multibody.plant.DistanceConstraintParams</p></li>
+</ol>
+<p>Returns a constant reference to the parameters for the distance
+constraint that corresponds to identifier <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>if id is not a valid identifier for a distance constraint.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -7299,6 +7456,31 @@ state corresponds to zero generalized positions and velocities.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetDistanceConstraintParams">
+<span class="sig-name descname"><span class="pre">SetDistanceConstraintParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetDistanceConstraintParams" title="Permalink to this definition"></a></dt>
+<dd><p>Stores in <code class="docutils literal notranslate"><span class="pre">context</span></code> the parameters <code class="docutils literal notranslate"><span class="pre">params</span></code> for the distance
+constraint with identifier <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">out</span></code>:</dt><dd><p>] context The plant’s context. On output it stores <code class="docutils literal notranslate"><span class="pre">params</span></code> for
+the requested distance constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">id</span></code>:</dt><dd><p>Unique identifier of the constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">params</span></code>:</dt><dd><p>The new set of parameters to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if id is not a valid identifier for a distance constraint.</strong> – </p></li>
+<li><p><strong>if params.bodyA</strong><strong>(</strong><strong>) or </strong><strong>params.bodyB</strong><strong>(</strong><strong>) </strong><strong>do not correspond to rigid</strong> – </p></li>
+<li><p><strong>bodies in this MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetFreeBodyPose">
 <span class="sig-name descname"><span class="pre">SetFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetFreeBodyPose" title="Permalink to this definition"></a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the pose <code class="docutils literal notranslate"><span class="pre">X_PB</span></code> of a given <code class="docutils literal notranslate"><span class="pre">body</span></code> B in
@@ -8334,6 +8516,13 @@ needs to go through zero. To constrain two points to be coincident
 we need a 3-dof ball constraint, the 1-dof distance constraint is
 singular in this case. Therefore we require the distance parameter
 to be strictly positive.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When a new context is created, a DistanceConstraintParams is
+initialized to store the parameters passed to this function.
+Parameters in the context can be modified with calls to
+SetDistanceConstraintParams().</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -10997,6 +11186,15 @@ systems default to use triangles.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultDistanceConstraintParams">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetDefaultDistanceConstraintParams"></span><span class="sig-name descname"><span class="pre">GetDefaultDistanceConstraintParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultDistanceConstraintParams" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all default distance constraint parameters, as registered via
+AddDistanceConstraint(). See GetDistanceConstraintParams() and
+SetDistanceConstraintParams() for working with parameters stored in a
+context.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultFreeBodyPose">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetDefaultFreeBodyPose"></span><span class="sig-name descname"><span class="pre">GetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultFreeBodyPose" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code> as set by SetDefaultFreeBodyPose().
@@ -11039,6 +11237,27 @@ which can be changed via SetDefaultPositions().</p>
 <li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, or </strong><strong>if the</strong> – </p></li>
 <li><p><strong>model_instance is invalid</strong><strong>,</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDistanceConstraintParams">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetDistanceConstraintParams"></span><span class="sig-name descname"><span class="pre">GetDistanceConstraintParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDistanceConstraintParams" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetDistanceConstraintParams(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; dict[pydrake.multibody.tree.MultibodyConstraintId, pydrake.multibody.plant.DistanceConstraintParams]</p></li>
+</ol>
+<p>Returns all distance constraint parameters currently stored in
+<code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetDistanceConstraintParams(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], id: pydrake.multibody.tree.MultibodyConstraintId) -&gt; pydrake.multibody.plant.DistanceConstraintParams</p></li>
+</ol>
+<p>Returns a constant reference to the parameters for the distance
+constraint that corresponds to identifier <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>if id is not a valid identifier for a distance constraint.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -13004,6 +13223,31 @@ state corresponds to zero generalized positions and velocities.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetDistanceConstraintParams">
+<span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetDistanceConstraintParams"></span><span class="sig-name descname"><span class="pre">SetDistanceConstraintParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetDistanceConstraintParams" title="Permalink to this definition"></a></dt>
+<dd><p>Stores in <code class="docutils literal notranslate"><span class="pre">context</span></code> the parameters <code class="docutils literal notranslate"><span class="pre">params</span></code> for the distance
+constraint with identifier <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">out</span></code>:</dt><dd><p>] context The plant’s context. On output it stores <code class="docutils literal notranslate"><span class="pre">params</span></code> for
+the requested distance constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">id</span></code>:</dt><dd><p>Unique identifier of the constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">params</span></code>:</dt><dd><p>The new set of parameters to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if id is not a valid identifier for a distance constraint.</strong> – </p></li>
+<li><p><strong>if params.bodyA</strong><strong>(</strong><strong>) or </strong><strong>params.bodyB</strong><strong>(</strong><strong>) </strong><strong>do not correspond to rigid</strong> – </p></li>
+<li><p><strong>bodies in this MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFreeBodyPose">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetFreeBodyPose"></span><span class="sig-name descname"><span class="pre">SetFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFreeBodyPose" title="Permalink to this definition"></a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the pose <code class="docutils literal notranslate"><span class="pre">X_PB</span></code> of a given <code class="docutils literal notranslate"><span class="pre">body</span></code> B in
@@ -14033,6 +14277,13 @@ needs to go through zero. To constrain two points to be coincident
 we need a 3-dof ball constraint, the 1-dof distance constraint is
 singular in this case. Therefore we require the distance parameter
 to be strictly positive.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When a new context is created, a DistanceConstraintParams is
+initialized to store the parameters passed to this function.
+Parameters in the context can be modified with calls to
+SetDistanceConstraintParams().</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -16696,6 +16947,15 @@ systems default to use triangles.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultDistanceConstraintParams">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetDefaultDistanceConstraintParams"></span><span class="sig-name descname"><span class="pre">GetDefaultDistanceConstraintParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultDistanceConstraintParams" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all default distance constraint parameters, as registered via
+AddDistanceConstraint(). See GetDistanceConstraintParams() and
+SetDistanceConstraintParams() for working with parameters stored in a
+context.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultFreeBodyPose">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetDefaultFreeBodyPose"></span><span class="sig-name descname"><span class="pre">GetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultFreeBodyPose" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code> as set by SetDefaultFreeBodyPose().
@@ -16738,6 +16998,27 @@ which can be changed via SetDefaultPositions().</p>
 <li><p><strong>RuntimeError if the plant is not finalized</strong><strong>, or </strong><strong>if the</strong> – </p></li>
 <li><p><strong>model_instance is invalid</strong><strong>,</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDistanceConstraintParams">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetDistanceConstraintParams"></span><span class="sig-name descname"><span class="pre">GetDistanceConstraintParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDistanceConstraintParams" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetDistanceConstraintParams(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression]) -&gt; dict[pydrake.multibody.tree.MultibodyConstraintId, pydrake.multibody.plant.DistanceConstraintParams]</p></li>
+</ol>
+<p>Returns all distance constraint parameters currently stored in
+<code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetDistanceConstraintParams(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], id: pydrake.multibody.tree.MultibodyConstraintId) -&gt; pydrake.multibody.plant.DistanceConstraintParams</p></li>
+</ol>
+<p>Returns a constant reference to the parameters for the distance
+constraint that corresponds to identifier <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>if id is not a valid identifier for a distance constraint.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -18698,6 +18979,31 @@ state corresponds to zero generalized positions and velocities.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize. See Finalize</strong><strong>(</strong><strong>)</strong><strong></strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetDistanceConstraintParams">
+<span id="pydrake.multibody.plant.MultibodyPlant_[Expression].SetDistanceConstraintParams"></span><span class="sig-name descname"><span class="pre">SetDistanceConstraintParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DistanceConstraintParams" title="pydrake.multibody.plant.DistanceConstraintParams"><span class="pre">pydrake.multibody.plant.DistanceConstraintParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetDistanceConstraintParams" title="Permalink to this definition"></a></dt>
+<dd><p>Stores in <code class="docutils literal notranslate"><span class="pre">context</span></code> the parameters <code class="docutils literal notranslate"><span class="pre">params</span></code> for the distance
+constraint with identifier <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">out</span></code>:</dt><dd><p>] context The plant’s context. On output it stores <code class="docutils literal notranslate"><span class="pre">params</span></code> for
+the requested distance constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">id</span></code>:</dt><dd><p>Unique identifier of the constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">params</span></code>:</dt><dd><p>The new set of parameters to be stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if id is not a valid identifier for a distance constraint.</strong> – </p></li>
+<li><p><strong>if params.bodyA</strong><strong>(</strong><strong>) or </strong><strong>params.bodyB</strong><strong>(</strong><strong>) </strong><strong>do not correspond to rigid</strong> – </p></li>
+<li><p><strong>bodies in this MultibodyPlant.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

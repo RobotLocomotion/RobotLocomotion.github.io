@@ -4,6 +4,6 @@ var group__algorithms =
     [ "Analysis", "group__analysis.html", "group__analysis" ],
     [ "Planning", "group__planning.html", "group__planning" ],
     [ "Feedback Control Design", "group__control.html", "group__control" ],
-    [ "State Estimation", "group__estimation.html", null ],
+    [ "State Estimation", "group__estimation.html", "group__estimation" ],
     [ "System Identification", "group__identification.html", null ]
 ];

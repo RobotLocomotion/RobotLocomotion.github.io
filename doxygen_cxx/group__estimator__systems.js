@@ -16,7 +16,6 @@ var group__estimator__systems =
     [ "IsDetectable", "group__estimator__systems.html#gafef1c264968026046996e35551b7155e", null ],
     [ "IsObservable", "group__estimator__systems.html#ga9bb685faf49982e65d0e4bbf2c1d460b", null ],
     [ "ObservabilityMatrix", "group__estimator__systems.html#gaa15831763ec42b356a75c6bb616a6531", null ],
-    [ "SteadyStateKalmanFilter", "group__estimator__systems.html#ga483f8a39c210ad058dfc19ae26d93e16", null ],
     [ "SteadyStateKalmanFilter", "group__estimator__systems.html#ga7c4307c228661d355148e7f72a6b53dc", null ],
     [ "SteadyStateKalmanFilter", "group__estimator__systems.html#ga4fb2e563d9ca3996eed28b0bac18bb67", null ]
 ];
