@@ -8,7 +8,7 @@
     <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
     <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <title>Drake: Installation via Pip</title>
+    <title>Drake: Installation via Pip (Python)</title>
     <meta
       name="description"
       content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
@@ -50,8 +50,24 @@ analysis.
         </li>
         
         <li class="site-menu-item site-menu-item-main">
-          <a href="/installation.html" class="site-menu-item">Installation</a>
+          Installation
 
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/docker.html" class="site-menu-item">Docker Hub</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
           
         </li>
         
@@ -133,7 +149,7 @@ analysis.
         <div class="drake-page">
   <header class="drake-page-header">
     <div class="contain">
-      <h1>Installation via Pip</h1>
+      <h1>Installation via Pip (Python)</h1>
     </div>
   </header>
   <section class="padding">
@@ -158,24 +174,25 @@ version of <code class="language-plaintext highlighter-rouge">pip &gt;= 20.3</co
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>.
 Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
 
-<p>Drake’s pip packages do not support the Gurobi solver. To use
-Gurobi, you will need to build Drake from source following the instructions
-in <a href="/from_source.html">Source Installation</a>.</p>
-
-<h2 id="stable-releases">Stable Releases</h2>
-
 <div class="note">
-  <p>Drake is not tested regularly with Anaconda, so if you are using Anaconda you
+  <p>Please note the following compatibility requirements for using Drake via Python:</p>
+  <ul>
+    <li>Drake’s pip packages do not support the Gurobi solver. To use
+Gurobi, you will need to build Drake from source following the instructions
+in <a href="/from_source.html">Source Installation</a>.</li>
+    <li>Drake is not tested regularly with Anaconda, so if you are using Anaconda you
 may experience compatibility hiccups; when asking for help, be sure to mention
-that Conda is involved.</p>
+that Conda is involved.</li>
+    <li>For macOS, ensure that you’re using Homebrew Python (not Apple’s system Python).</li>
+  </ul>
 </div>
 
 <p>We recommend installing drake into a
 <a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment">virtual environment</a>
-directory.  In the example below, we will name that directory <code class="language-plaintext highlighter-rouge">env</code>, but you
+directory.  In the examples below, we will name that directory <code class="language-plaintext highlighter-rouge">env</code>, but you
 can choose any name.</p>
 
-<p>For macOS, ensure that you’re using Homebrew Python (not Apple’s system Python).</p>
+<h2 id="stable-releases">Stable Releases</h2>
 
 <p>Create a virtual environment, install Drake, and activate the environment:</p>
 

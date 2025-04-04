@@ -50,8 +50,24 @@ analysis.
         </li>
         
         <li class="site-menu-item site-menu-item-main">
-          <a href="/installation.html" class="site-menu-item">Installation</a>
+          Installation
 
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/docker.html" class="site-menu-item">Docker Hub</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
           
         </li>
         
@@ -157,9 +173,11 @@ for compatibility details.</p>
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>.
 Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
 
-<p>Drake’s binary releases do not support the Gurobi solver. To use
+<div class="note">
+  <p>Drake’s binary releases do not support the Gurobi solver. To use
 Gurobi, you will need to build Drake from source following the instructions in
 <a href="/from_source.html">Source Installation</a>.</p>
+</div>
 
 <h2 id="stable-releases">Stable Releases</h2>
 
@@ -252,26 +270,23 @@ Mac are generated nightly and are available to download at:</p>
   <li>https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac-arm64.tar.gz</li>
 </ul>
 
-<p>Older packages for specific dates are available by replacing <code class="language-plaintext highlighter-rouge">latest</code> with an
-8-digit date preceded by <code class="language-plaintext highlighter-rouge">0.0.</code>, e.g., <code class="language-plaintext highlighter-rouge">0.0.20240408</code> for April 8th, 2024.</p>
+<p>Older packages for specific dates are available by replacing <code class="language-plaintext highlighter-rouge">latest</code>
+with date YYYYMMDD preceded by <code class="language-plaintext highlighter-rouge">0.0.</code>. For example,</p>
 
 <ul>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20240408-jammy.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20240408-jammy.tar.gz</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20240408-noble.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20240408-noble.tar.gz</a></li>
-  <li>https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20240408-mac-arm64.tar.gz</li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20250301-jammy.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20250301-jammy.tar.gz</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20250301-noble.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20250301-noble.tar.gz</a></li>
+  <li>https://drake-packages.csail.mit.edu/drake/nightly/drake-0.0.20250301-mac-arm64.tar.gz</li>
 </ul>
 
-<p>Users of macOS must download using a command-line tool such as <code class="language-plaintext highlighter-rouge">curl</code> instead
-of using a web browser, to avoid hassles from Gatekeeper checks for malicious
-software. See the “Stable Releases” section above for a sample command line.</p>
+<p>As with stable releases, users of macOS must download using a command-line tool
+such as <code class="language-plaintext highlighter-rouge">curl</code> instead of using a web browser, to avoid hassles from
+Gatekeeper checks for malicious software.
+See the “Stable Releases” section above for a sample command line.</p>
 
 <p>Nightly archives are retained for 56 days from their date of creation.</p>
 
 <p>The installation instructions are identical to stable releases as shown above.</p>
-
-<p>As with stable releases, users of macOS must download using a command-line tool
-such as <code class="language-plaintext highlighter-rouge">curl</code> instead of using a web browser, to avoid hassles from
-Gatekeeper checks for malicious software.</p>
 
       </article>
     </div>

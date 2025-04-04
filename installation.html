@@ -50,8 +50,24 @@ analysis.
         </li>
         
         <li class="site-menu-item site-menu-item-main">
-          <a href="/installation.html" class="site-menu-item">Installation</a>
+          Installation
 
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/docker.html" class="site-menu-item">Docker Hub</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
           
         </li>
         
@@ -153,7 +169,7 @@ CMakeLists.txt and tools/workspace/python/repository.bzl. When any Python
 version changes, also be sure to grep the full body of documentation to find
 any other citations to it (e.g., in PYTHONPATH). -->
 
-<p>The following table shows the configurations and platforms that Drake
+<p>The following table shows the configurations that Drake
 officially supports:</p>
 
 <table>
@@ -220,9 +236,9 @@ timeline for changing which Python versions are supported.</p>
 <p>⁽⁴⁾ These end-of-life dates are estimates.
 Refer to <a href="/stable.html#os-support">OS Support</a> for details.</p>
 
-<p>Additionally, if you are compiling your own C++ code against Drake’s C++ code
-and are using Drake’s pre-compiled binaries, then you must use the same
-compiler as our releases:</p>
+<p>The following table shows the configurations that <em>must</em> be used when
+compiling your own C++ code against Drake’s C++ code using one of
+Drake’s pre-compiled binaries:</p>
 
 <table>
   <thead>
@@ -256,6 +272,9 @@ compiler as our releases:</p>
   </tbody>
 </table>
 
+<p>Any other configuration not listed here will lead to undefined behavior
+(as a violation of the C++ One-Definition Rule).</p>
+
 <h2 id="available-versions">Available Versions</h2>
 
 <p>Drake publishes stable releases approximately once a month, and also
@@ -273,62 +292,61 @@ nightly builds.</p>
 
 <h2 id="choose-an-installation-method">Choose an Installation Method</h2>
 
-<p>The following table shows the installation methods available for Drake’s
-pre-compiled binaries, per the supported platforms and release versions.</p>
+<p>The following installation methods are available for Drake’s
+pre-compiled binaries.
+Stable and nightly release versions are available for each method.</p>
 
-<p>The pip packages only support using Drake via Python.
-All other packages support both C++ and/or Python.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th>Ubuntu</th>
-      <th>macOS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Using pip</td>
-      <td><a href="/pip.html#stable-releases">Stable</a> or <a href="/pip.html#nightly-releases">Nightly</a></td>
-      <td><a href="/pip.html#stable-releases">Stable</a> or <a href="/pip.html#nightly-releases">Nightly</a></td>
-    </tr>
-    <tr>
-      <td>Using apt (deb)</td>
-      <td><a href="/apt.html#stable-releases">Stable</a> or <a href="/apt.html#nightly-releases">Nightly</a></td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Using tar.gz download</td>
-      <td><a href="/from_binary.html#stable-releases">Stable</a> or <a href="/from_binary.html#nightly-releases">Nightly</a></td>
-      <td><a href="/from_binary.html#stable-releases">Stable</a> or <a href="/from_binary.html#nightly-releases">Nightly</a></td>
-    </tr>
-    <tr>
-      <td>Using Docker Hub</td>
-      <td><a href="/docker.html#stable-releases">Stable</a> or <a href="/docker.html#nightly-releases">Nightly</a></td>
-      <td><a href="/docker.html#stable-releases">Stable</a> or <a href="/docker.html#nightly-releases">Nightly</a></td>
-    </tr>
-  </tbody>
-</table>
+<ul>
+  <li><a href="/pip.html">Pip</a> (only supports Python)</li>
+  <li><a href="/apt.html">APT</a> (only supports Ubuntu)</li>
+  <li><a href="/from_binary.html">Binary (<code class="language-plaintext highlighter-rouge">*.tar.gz</code>) download</a></li>
+  <li><a href="/docker.html">Docker Hub</a></li>
+</ul>
 
 <p>Alternatively, you can skip the pre-compiled binaries and build Drake
 following the instructions in <a href="/from_source.html">Source Installation</a>.</p>
 
-<p>Drake’s binary releases do not support the Gurobi solver.
+<div class="note">
+  <p>Drake’s binary releases do not support the Gurobi solver.
 To use Gurobi, you must build Drake from source.</p>
+</div>
 
 <h1 id="quickstart">Quickstart</h1>
 
-<p>For Python, refer to
-<a href="/python_bindings.html#using-the-python-bindings">Using the Python Bindings</a>.</p>
+<h2 id="python">Python</h2>
 
-<p>For C++ sample projects that show how to import Drake as a CMake external
-project, please see our gallery of
-<a href="https://github.com/RobotLocomotion/drake-external-examples">external examples</a>,
-specifically either the
-<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed_apt">example CMake project for apt (deb)</a>
-or the
-<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed">example CMake project for tar.gz download</a>.</p>
+<p>Refer to <a href="/python_bindings.html#using-the-python-bindings">Using the Python Bindings</a>
+for useful information and getting started.</p>
+
+<p>Additionally, see our gallery of
+<a href="https://github.com/RobotLocomotion/drake-external-examples">external examples</a>
+for sample Python projects that show how to use Drake from Python.</p>
+
+<ul>
+  <li>The <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_pip"><code class="language-plaintext highlighter-rouge">drake_pip</code> example</a>
+shows how to use Drake via pip.</li>
+  <li>The <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_poetry"><code class="language-plaintext highlighter-rouge">drake_poetry</code> example</a>
+shows how to use Drake via poetry.</li>
+</ul>
+
+<p>For further details, refer to the
+<a href="/pydrake/index.html">Python API Documentation</a>.</p>
+
+<h2 id="c">C++</h2>
+
+<p>See our gallery of
+<a href="https://github.com/RobotLocomotion/drake-external-examples">external examples</a>
+for sample C++ projects that show how to import Drake as a CMake external.</p>
+
+<ul>
+  <li>The <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed_apt"><code class="language-plaintext highlighter-rouge">drake_cmake_installed_apt</code> example</a>
+shows how to use Drake via APT installation.</li>
+  <li>The <a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed"><code class="language-plaintext highlighter-rouge">drake_cmake_installed</code> example</a>
+shows how to use Drake via binary (<code class="language-plaintext highlighter-rouge">tar.gz</code>) installation.</li>
+</ul>
+
+<p>For further details, refer to the
+<a href="/doxygen_cxx/index.html">C++ API Documentation</a>.</p>
 
       </article>
     </div>

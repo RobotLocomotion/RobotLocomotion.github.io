@@ -50,8 +50,24 @@ analysis.
         </li>
         
         <li class="site-menu-item site-menu-item-main">
-          <a href="/installation.html" class="site-menu-item">Installation</a>
+          Installation
 
+          
+            <div class="sub">
+            
+              <a href="/installation.html" class="site-menu-item">Overview</a>
+            
+              <a href="/pip.html" class="site-menu-item">Pip</a>
+            
+              <a href="/apt.html" class="site-menu-item">APT</a>
+            
+              <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
+            
+              <a href="/docker.html" class="site-menu-item">Docker Hub</a>
+            
+              <a href="/from_source.html" class="site-menu-item">Build From Source</a>
+            
+            </div>
           
         </li>
         
@@ -158,22 +174,24 @@ for additional compatibility details.</p>
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>.
 Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
 
-<p>Drake’s apt packages do not support the Gurobi solver. To use
+<div class="note">
+  <p>Drake’s apt packages do not support the Gurobi solver. To use
 Gurobi, you will need to build Drake from source following the instructions
 in <a href="/from_source.html">Source Installation</a>.</p>
-
-<h2 id="stable-releases">Stable Releases</h2>
-
-<p>To add the Drake APT repository to your machine and install the <code class="language-plaintext highlighter-rouge">drake-dev</code> package,
-please do the following in order:</p>
+</div>
 
 <p>If you are using a <a href="https://wiki.ubuntu.com/Minimal">minimal</a> cloud or
-container image, you may need to install the following packages:</p>
+container image, you may need to install the following packages before continuing:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
 <span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> <span class="se">\</span>
   ca-certificates gnupg lsb-release wget
 </code></pre></div></div>
+
+<h2 id="stable-releases">Stable Releases</h2>
+
+<p>To add the Drake APT repository to your machine and install the <code class="language-plaintext highlighter-rouge">drake-dev</code> package,
+please do the following in order.</p>
 
 <p>Download a copy of the Drake GPG signing key and add it to an APT trusted keychain:</p>
 
@@ -196,8 +214,8 @@ container image, you may need to install the following packages:</p>
 <p>Most content installs to <code class="language-plaintext highlighter-rouge">/opt/drake</code>, so setting the following environment
 variables may be useful:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/opt/drake/bin</span><span class="k">${</span><span class="nv">PATH</span>:+:<span class="k">${</span><span class="nv">PATH</span><span class="k">}}</span><span class="s2">"</span>
-  <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib/python</span><span class="si">$(</span>python3 <span class="nt">-c</span> <span class="s1">'import sys; print("{0}.{1}".format(*sys.version_info))'</span><span class="si">)</span><span class="s2">/site-packages</span><span class="k">${</span><span class="nv">PYTHONPATH</span>:+:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}}</span><span class="s2">"</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/opt/drake/bin</span><span class="k">${</span><span class="nv">PATH</span>:+:<span class="k">${</span><span class="nv">PATH</span><span class="k">}}</span><span class="s2">"</span>
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib/python</span><span class="si">$(</span>python3 <span class="nt">-c</span> <span class="s1">'import sys; print("{0}.{1}".format(*sys.version_info))'</span><span class="si">)</span><span class="s2">/site-packages</span><span class="k">${</span><span class="nv">PYTHONPATH</span>:+:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}}</span><span class="s2">"</span>
 </code></pre></div></div>
 
 <p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
@@ -212,21 +230,20 @@ Ubuntu 24.04 (Noble) are available to download at:</p>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-noble.deb</a></li>
 </ul>
 
-<p>Older packages for specific dates are available by replacing <code class="language-plaintext highlighter-rouge">latest</code> with an
-8-digit date, e.g., <code class="language-plaintext highlighter-rouge">20220721</code> for July 21st, 2022.</p>
+<p>Older packages for specific dates are available by replacing <code class="language-plaintext highlighter-rouge">latest</code>
+with date YYYYMMDD preceded with <code class="language-plaintext highlighter-rouge">0.0.</code>. For example,</p>
 
 <ul>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20220721-1_amd64-jammy.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20220721-1_amd64-jammy.deb</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20220721-1_amd64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20220721-1_amd64-noble.deb</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20250301-1_amd64-jammy.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20250301-1_amd64-jammy.deb</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20250301-1_amd64-noble.deb">https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_0.0.20250301-1_amd64-noble.deb</a></li>
 </ul>
 
 <p>Nightly packages are retained for 56 days from their date of creation.</p>
 
-<p>For installing a nightly apt package, download the archive and install it
-directly:</p>
+<p>To install a nightly apt package, download the archive and install it directly:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  wget https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-jammy.deb
-  <span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> ./drake-dev_latest-1_amd64-jammy.deb
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://drake-packages.csail.mit.edu/drake/nightly/drake-dev_latest-1_amd64-jammy.deb
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> ./drake-dev_latest-1_amd64-jammy.deb
 </code></pre></div></div>
 
       </article>
