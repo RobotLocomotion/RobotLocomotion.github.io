@@ -74,6 +74,7 @@ var searchData=
   ['discrete_5flyapunov_5fequation_2eh',['discrete_lyapunov_equation.h',['../discrete__lyapunov__equation_8h.html',1,'']]],
   ['discrete_5fstep_5fmemory_2eh',['discrete_step_memory.h',['../discrete__step__memory_8h.html',1,'']]],
   ['discrete_5fsystems_2eh',['discrete_systems.h',['../discrete__systems_8h.html',1,'']]],
+  ['discrete_5ftime_5fapproximation_2eh',['discrete_time_approximation.h',['../discrete__time__approximation_8h.html',1,'']]],
   ['discrete_5ftime_5fdelay_2eh',['discrete_time_delay.h',['../discrete__time__delay_8h.html',1,'']]],
   ['discrete_5ftime_5fintegrator_2eh',['discrete_time_integrator.h',['../multibody_2fem_2discrete__time__integrator_8h.html',1,'(Global Namespace)'],['../systems_2primitives_2discrete__time__integrator_8h.html',1,'(Global Namespace)']]],
   ['discrete_5ftime_5ftrajectory_2eh',['discrete_time_trajectory.h',['../discrete__time__trajectory_8h.html',1,'']]],

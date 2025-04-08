@@ -506,6 +506,50 @@ vector-valued and have the same size as the number of rows in
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pydrake.systems.analysis.DiscreteTimeApproximation">
+<span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">DiscreteTimeApproximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.analysis.DiscreteTimeApproximation" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>DiscreteTimeApproximation(linear_system: pydrake.systems.primitives.LinearSystem, time_period: float) -&gt; pydrake.systems.primitives.LinearSystem</p></li>
+</ol>
+<p>Converts a continuous-time linear system to a discrete-time linear
+system using the zero-order hold (ZOH) method.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">linear_system</span></code>:</dt><dd><p>The continuous-time LinearSystem.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_period</span></code>:</dt><dd><p>The sampling time period.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A discrete-time LinearSystem.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>if the system is not continuous</strong><strong> or </strong><strong>time_period &lt;= 0.</strong> – </p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>DiscreteTimeApproximation(affine_system: pydrake.systems.primitives.AffineSystem, time_period: float) -&gt; pydrake.systems.primitives.AffineSystem</p></li>
+</ol>
+<p>Converts a continuous-time affine system to a discrete-time affine
+system using the zero-order hold (ZOH) method.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">affine_system</span></code>:</dt><dd><p>The continuous-time AffineSystem.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_period</span></code>:</dt><dd><p>The sampling time period.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A discrete-time AffineSystem.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>if the system is not continuous</strong><strong> or </strong><strong>time_period &lt;= 0.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pydrake.systems.analysis.ExtractSimulatorConfig">
 <span class="sig-prename descclassname"><span class="pre">pydrake.systems.analysis.</span></span><span class="sig-name descname"><span class="pre">ExtractSimulatorConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.analysis.ExtractSimulatorConfig" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>

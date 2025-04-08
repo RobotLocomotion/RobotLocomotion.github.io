@@ -5,6 +5,7 @@ var dir_9f920ef99dcb5f2ba14ba6c3f54b363c =
     [ "batch_eval.h", "batch__eval_8h.html", "batch__eval_8h" ],
     [ "bogacki_shampine3_integrator.h", "bogacki__shampine3__integrator_8h.html", "bogacki__shampine3__integrator_8h" ],
     [ "dense_output.h", "dense__output_8h.html", "dense__output_8h" ],
+    [ "discrete_time_approximation.h", "discrete__time__approximation_8h.html", "discrete__time__approximation_8h" ],
     [ "explicit_euler_integrator.h", "explicit__euler__integrator_8h.html", "explicit__euler__integrator_8h" ],
     [ "hermitian_dense_output.h", "hermitian__dense__output_8h.html", "hermitian__dense__output_8h" ],
     [ "implicit_euler_integrator.h", "implicit__euler__integrator_8h.html", "implicit__euler__integrator_8h" ],

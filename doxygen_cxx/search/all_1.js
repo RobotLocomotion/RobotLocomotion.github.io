@@ -375,6 +375,7 @@ var searchData=
   ['appendtotrackerpointermap',['AppendToTrackerPointerMap',['../classdrake_1_1systems_1_1_dependency_graph.html#a32f801ebc60ebd200bf0f9dd9ae6ce32',1,'drake::systems::DependencyGraph']]],
   ['apply',['Apply',['../classdrake_1_1geometry_1_1_collision_filter_manager.html#a67386b6917b1243e34c6f092d4956386',1,'drake::geometry::CollisionFilterManager']]],
   ['apply_5fdriver_5fconfigs_2eh',['apply_driver_configs.h',['../apply__driver__configs_8h.html',1,'']]],
+  ['applyaxialrotation',['ApplyAxialRotation',['../classdrake_1_1math_1_1_rigid_transform.html#ae17e0b339a6717f2d7090c74b7d665e5',1,'drake::math::RigidTransform::ApplyAxialRotation()'],['../classdrake_1_1math_1_1_rotation_matrix.html#a1cb9532b3aca8b358be1bbd8636bd0c2',1,'drake::math::RotationMatrix::ApplyAxialRotation()']]],
   ['applyboundarycondition',['ApplyBoundaryCondition',['../classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a2ee02de44d4dbf0f45954abf319447b9',1,'drake::multibody::fem::FemModel']]],
   ['applycameraconfig',['ApplyCameraConfig',['../namespacedrake_1_1systems_1_1sensors.html#aa3ab5841aed63bd66db330dc9486be95',1,'drake::systems::sensors']]],
   ['applydiscretevariableupdate',['ApplyDiscreteVariableUpdate',['../classdrake_1_1systems_1_1_system.html#a3873890578a88001255c795f20f01e3f',1,'drake::systems::System']]],

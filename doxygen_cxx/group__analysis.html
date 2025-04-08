@@ -168,6 +168,14 @@ $(document).ready(function(){initNavTree('group__analysis.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga4287afca40b5f9d9d7831e524ac18ffc">DiscreteTimeApproximation</a> (const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; T &gt; &amp;linear_system, <a class="el" href="classdouble.html">double</a> time_period)</td></tr>
+<tr class="memdesc:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time linear system to a discrete-time linear system using the zero-order hold (ZOH) method.  <a href="group__analysis.html#ga4287afca40b5f9d9d7831e524ac18ffc">More...</a><br /></td></tr>
+<tr class="separator:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga1a56db8d4954d7b191253ffb89c2b03e">DiscreteTimeApproximation</a> (const <a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt; T &gt; &amp;affine_system, <a class="el" href="classdouble.html">double</a> time_period)</td></tr>
+<tr class="memdesc:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time affine system to a discrete-time affine system using the zero-order hold (ZOH) method.  <a href="group__analysis.html#ga1a56db8d4954d7b191253ffb89c2b03e">More...</a><br /></td></tr>
+<tr class="separator:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2ccd9a43fd950b9e3490dd8c98534c3e"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga2ccd9a43fd950b9e3490dd8c98534c3e">SampleBasedLyapunovAnalysis</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const std::function&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;(const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;state)&gt; &amp;basis_functions, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;state_samples, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;V_zero_state)</td></tr>
 <tr class="memdesc:ga2ccd9a43fd950b9e3490dd8c98534c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up a linear program to search for the coefficients of a Lyapunov function that satisfies the Lyapunov conditions at a set of sample points.  <a href="group__analysis.html#ga2ccd9a43fd950b9e3490dd8c98534c3e">More...</a><br /></td></tr>
 <tr class="separator:ga2ccd9a43fd950b9e3490dd8c98534c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,6 +190,106 @@ Functions</h2></td></tr>
 <tr class="separator:gaafb17ca05a19fe7365d28f8a105cff76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga4287afca40b5f9d9d7831e524ac18ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4287afca40b5f9d9d7831e524ac18ffc">&#9670;&nbsp;</a></span>DiscreteTimeApproximation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt;T&gt; &gt; drake::systems::DiscreteTimeApproximation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>linear_system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>time_period</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a continuous-time linear system to a discrete-time linear system using the zero-order hold (ZOH) method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">linear_system</td><td>The continuous-time <a class="el" href="classdrake_1_1systems_1_1_linear_system.html" title="A discrete OR continuous linear system.">LinearSystem</a>. </td></tr>
+    <tr><td class="paramname">time_period</td><td>The sampling time period. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A discrete-time <a class="el" href="classdrake_1_1systems_1_1_linear_system.html" title="A discrete OR continuous linear system.">LinearSystem</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the <code>system</code> is not continuous or <code>time_period</code> &lt;= 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1a56db8d4954d7b191253ffb89c2b03e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1a56db8d4954d7b191253ffb89c2b03e">&#9670;&nbsp;</a></span>DiscreteTimeApproximation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt;T&gt; &gt; drake::systems::DiscreteTimeApproximation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>affine_system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>time_period</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a continuous-time affine system to a discrete-time affine system using the zero-order hold (ZOH) method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">affine_system</td><td>The continuous-time <a class="el" href="classdrake_1_1systems_1_1_affine_system.html" title="A discrete OR continuous affine system (with constant coefficients).">AffineSystem</a>. </td></tr>
+    <tr><td class="paramname">time_period</td><td>The sampling time period. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A discrete-time <a class="el" href="classdrake_1_1systems_1_1_affine_system.html" title="A discrete OR continuous affine system (with constant coefficients).">AffineSystem</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the <code>system</code> is not continuous or <code>time_period</code> &lt;= 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gae4e0e70a74b1692132db0ae985a95294"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae4e0e70a74b1692132db0ae985a95294">&#9670;&nbsp;</a></span>MonteCarloSimulation()</h2>
 

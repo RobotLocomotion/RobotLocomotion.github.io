@@ -361,6 +361,35 @@ Related Functions</h2></td></tr>
 <tr class="memitem:a9771c03401395a6e30c398f5663799ed"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a9771c03401395a6e30c398f5663799ed">RotationMatrixd</a> = <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;</td></tr>
 <tr class="memdesc:a9771c03401395a6e30c398f5663799ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abbreviation (alias/typedef) for a <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a> double scalar type.  <a href="#a9771c03401395a6e30c398f5663799ed">More...</a><br /></td></tr>
 <tr class="separator:a9771c03401395a6e30c398f5663799ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+(Internal use only) methods for axial rotations</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp16514d32edce0f662d3a4f3c1bdadaf6"></a><a class="anchor" id="axial_rotation_def"></a> (Internal use only) Axial rotations are RotationMatrix objects for which we know that the represented rotation is about one of the basis vectors (coordinate axes) x, y, or z. These are essentially 2d rotations and only four of the nine elements are "active", by which we mean that they change with the rotation angle θ. The other five elements are "inactive", meaning that they have known values and never change during a simulation. For best performance, the algorithms in this section are permitted to <em>assume</em> without looking that the inactive elements have their required values. However, those elements are still required to have the expected values, which are the values they would have in an identity rotation (that is, 1 on the diagonal and 0 off-diagonal). (Even when T is <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, we insist that the inactive elements have the correct numerical values and don't require an Environment for evaluation.) This ensures that general purpose (non-specialized) code can still use the resulting rotation matrices.</p>
+<p>With <em>general</em> rotation matrices (nine active elements), re-expressing a vector takes 15 floating point operations, composing two rotations takes 45, and updating requires writing all nine elements. The methods in this section take advantage of the axial structure to reduce the number of operations required. To do that, they are templatized by the axis number 0, 1, or 2 (+x, +y, or +z axis, resp.). The number of operations required is documented with each method.</p>
+<p>Notation: we denote axial rotations by preceding the usual "R" with a lower case "a" for axial, e.g. aR_BC is a rotation matrix R_BC but for which we have foreknowledge of its axial structure. In cases where we know the particular axis we'll replace the "a" with "x", "y", or "z".</p>
+<dl class="section warning"><dt>Warning</dt><dd>We depend on the caller's promise that axial rotation matrix arguments are indeed axial; for performance reasons we do not verify that in Release builds although we may verify in Debug builds.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>There are no Python bindings for these methods since there is nothing to be gained by using them in Python. Use the general equivalent RotationMatrix methods instead. </dd></dl>
+</td></tr>
+<tr class="memitem:ac3355bbe3a6fb5f3e607c32d0705c6b5"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:ac3355bbe3a6fb5f3e607c32d0705c6b5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#ac3355bbe3a6fb5f3e607c32d0705c6b5">ComposeWithAxialRotation</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;aR_BC, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; *R_AC) const</td></tr>
+<tr class="memdesc:ac3355bbe3a6fb5f3e607c32d0705c6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) With <code>this</code> a general rotation R_AB, and given an axial rotation aR_BC, efficiently forms R_AC = R_AB * aR_BC.  <a href="#ac3355bbe3a6fb5f3e607c32d0705c6b5">More...</a><br /></td></tr>
+<tr class="separator:ac3355bbe3a6fb5f3e607c32d0705c6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a89304ce8f1bbbe9b1fcec73e234cc8"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:a7a89304ce8f1bbbe9b1fcec73e234cc8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a7a89304ce8f1bbbe9b1fcec73e234cc8">IsAxialRotationOrThrow</a> () const</td></tr>
+<tr class="memdesc:a7a89304ce8f1bbbe9b1fcec73e234cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws an exception if <code>this</code> RotationMatrix is not an axial rotation about the indicated axis.  <a href="#a7a89304ce8f1bbbe9b1fcec73e234cc8">More...</a><br /></td></tr>
+<tr class="separator:a7a89304ce8f1bbbe9b1fcec73e234cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb9532b3aca8b358be1bbd8636bd0c2"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:a1cb9532b3aca8b358be1bbd8636bd0c2"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a1cb9532b3aca8b358be1bbd8636bd0c2">ApplyAxialRotation</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;aR_BC, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;v_C)</td></tr>
+<tr class="memdesc:a1cb9532b3aca8b358be1bbd8636bd0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given an axial rotation about a coordinate axis (x, y, or z), uses it to efficiently re-express a vector.  <a href="#a1cb9532b3aca8b358be1bbd8636bd0c2">More...</a><br /></td></tr>
+<tr class="separator:a1cb9532b3aca8b358be1bbd8636bd0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059d9a3a612cfcdf82dca04bf7c839f7"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:a059d9a3a612cfcdf82dca04bf7c839f7"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a059d9a3a612cfcdf82dca04bf7c839f7">UpdateAxialRotation</a> (const T &amp;theta, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; *aR_BC)</td></tr>
+<tr class="memdesc:a059d9a3a612cfcdf82dca04bf7c839f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given a new rotation angle θ, updates the axial rotation aR_BC to represent the new rotation angle.  <a href="#a059d9a3a612cfcdf82dca04bf7c839f7">More...</a><br /></td></tr>
+<tr class="separator:a059d9a3a612cfcdf82dca04bf7c839f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae81bab00c8331157afcba156d8c84ab7"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:ae81bab00c8331157afcba156d8c84ab7"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#ae81bab00c8331157afcba156d8c84ab7">UpdateAxialRotation</a> (const T &amp;sin_theta, const T &amp;cos_theta, <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; *aR_BC)</td></tr>
+<tr class="memdesc:ae81bab00c8331157afcba156d8c84ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given sin(θ) and cos(θ), where θ is a new rotation angle, updates the axial rotation aR_BC to represent the new rotation angle.  <a href="#ae81bab00c8331157afcba156d8c84ab7">More...</a><br /></td></tr>
+<tr class="separator:ae81bab00c8331157afcba156d8c84ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a64fa29fa97b01b5f9fd75720fad74f7f"></a>
@@ -635,6 +664,64 @@ This method constructs a <a class="el" href="classdrake_1_1math_1_1_rotation_mat
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1cb9532b3aca8b358be1bbd8636bd0c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb9532b3aca8b358be1bbd8636bd0c2">&#9670;&nbsp;</a></span>ApplyAxialRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; ApplyAxialRotation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>aR_BC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v_C</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Given an axial rotation about a coordinate axis (x, y, or z), uses it to efficiently re-express a vector. </p>
+<p>This takes only 6 floating point operations. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aR_BC</td><td>An axial rotation about the indicated axis. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v_C</td><td>A vector expressed in frame C to be re-expressed in frame B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">v_B</td><td>The input vector re-expressed in frame B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>aR_BC is an <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#axial_rotation_def">axial rotation matrix</a> about the given <code>axis</code>. </dd></dl>
+
+</div>
+</div>
 <a id="ac3937318f50c0b017a1a519e6cb66e7d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3937318f50c0b017a1a519e6cb66e7d">&#9670;&nbsp;</a></span>cast()</h2>
 
@@ -697,6 +784,50 @@ This method constructs a <a class="el" href="classdrake_1_1math_1_1_rotation_mat
 <dl class="section note"><dt>Note</dt><dd>For efficiency and consistency with Eigen, this method returns the same quantity returned by Eigen's <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a7af450eebe5d5ac5cf5ee49aab783609" title="Returns this rotation matrix&#39;s iᵗʰ column (i = 0, 1, 2).">col()</a> operator. The returned quantity can be assigned in various ways, e.g., as <code>const auto&amp; Bz_A = col(2);</code> or <code>Vector3&lt;T&gt; Bz_A = col(2);</code> </dd></dl>
 </li>
 </ul>
+
+</div>
+</div>
+<a id="ac3355bbe3a6fb5f3e607c32d0705c6b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3355bbe3a6fb5f3e607c32d0705c6b5">&#9670;&nbsp;</a></span>ComposeWithAxialRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ComposeWithAxialRotation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>aR_BC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>R_AC</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) With <code>this</code> a general rotation R_AB, and given an axial rotation aR_BC, efficiently forms R_AC = R_AB * aR_BC. </p>
+<p>This requires only 14 floating point operations. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aR_BC</td><td>An axial rotation about the indicated axis. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">R_AC</td><td>The result. Must not overlap with aR_BC in memory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>aR_BC is an <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#axial_rotation_def">axial rotation matrix</a> about the given <code>axis</code>. </dd></dl>
 
 </div>
 </div>
@@ -870,6 +1001,32 @@ To orthonormalize a 3x3 matrix, use <a class="el" href="classdrake_1_1math_1_1_r
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>It is possible (albeit improbable) to create an invalid rotation matrix by accumulating round-off error with a large number of multiplies. </dd></dl>
+
+</div>
+</div>
+<a id="a7a89304ce8f1bbbe9b1fcec73e234cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a89304ce8f1bbbe9b1fcec73e234cc8">&#9670;&nbsp;</a></span>IsAxialRotationOrThrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsAxialRotationOrThrow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Throws an exception if <code>this</code> RotationMatrix is not an axial rotation about the indicated axis. </p>
+<p>See <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#axial_rotation_def">axial rotation matrix</a> for the conditions that must be satisfied for a rotation matrix to be "axial". In addition, for numerical types T we check here that the active elements are reasonable: there should be two equal cos(θ) entries, ±sin(θ) entries, and sin²+cos²==1. (Numerical tests are done to a fairly loose tolerance of 16ε to avoid false negatives.) </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This is intended for Debug-mode checks that the other methods in this section are being used properly. </dd></dl>
 
 </div>
 </div>
@@ -1695,8 +1852,8 @@ The rotation matrix <code>R_AB</code> relates two sets of right-handed orthogona
 
 </div>
 </div>
-<a id="ac5347f3aae9669cd2242300fb05104ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5347f3aae9669cd2242300fb05104ef">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a3deaaa5800a824dbc47f832c60dc3915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3deaaa5800a824dbc47f832c60dc3915">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1707,7 +1864,7 @@ The rotation matrix <code>R_AB</code> relates two sets of right-handed orthogona
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1721,8 +1878,8 @@ The rotation matrix <code>R_AB</code> relates two sets of right-handed orthogona
 
 </div>
 </div>
-<a id="a3deaaa5800a824dbc47f832c60dc3915"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3deaaa5800a824dbc47f832c60dc3915">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ac5347f3aae9669cd2242300fb05104ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5347f3aae9669cd2242300fb05104ef">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1733,7 +1890,7 @@ The rotation matrix <code>R_AB</code> relates two sets of right-handed orthogona
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2049,6 +2206,121 @@ Engineering and Computer Science, Massachusetts Institute of Technology" <a href
 
 <p>Returns <code>R_BA = R_AB⁻¹</code>, the transpose of this RotationMatrix. </p>
 <dl class="section note"><dt>Note</dt><dd>For a valid rotation matrix <code>R_BA = R_AB⁻¹ = R_ABᵀ</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a059d9a3a612cfcdf82dca04bf7c839f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059d9a3a612cfcdf82dca04bf7c839f7">&#9670;&nbsp;</a></span>UpdateAxialRotation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UpdateAxialRotation </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>aR_BC</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Given a new rotation angle θ, updates the axial rotation aR_BC to represent the new rotation angle. </p>
+<p>We expect that aR_BC was already such an axial rotation about the given x, y, or z axis. Only the 4 active elements are modified; the other 5 remain unchanged. (However, execution time is likely to be dominated by the time to calculate sine and cosine.) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">theta</td><td>the new rotation angle in radians. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">aR_BC</td><td>the axial rotation matrix to be updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>the overloaded signature if you already have sin(θ) &amp; cos(θ). </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>aR_BC is an <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#axial_rotation_def">axial rotation matrix</a> about the given <code>axis</code>. </dd></dl>
+
+</div>
+</div>
+<a id="ae81bab00c8331157afcba156d8c84ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae81bab00c8331157afcba156d8c84ab7">&#9670;&nbsp;</a></span>UpdateAxialRotation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UpdateAxialRotation </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>sin_theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>cos_theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>aR_BC</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Given sin(θ) and cos(θ), where θ is a new rotation angle, updates the axial rotation aR_BC to represent the new rotation angle. </p>
+<p>We expect that aR_BC was already such a rotation (about the given x, y, or z axis) but by some other angle. Only the 4 active elements are modified; the other 5 remain unchanged. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sin_theta</td><td>sin(θ), where θ is the new rotation angle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cos_theta</td><td>cos(θ), where θ is the new rotation angle. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">aR_BC</td><td>the axial rotation matrix to be updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z rotation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>the overloaded signature if you just have the angle θ. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>aR_BC is an <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#axial_rotation_def">axial rotation matrix</a> about the given <code>axis</code>. </dd>
+<dd>
+<code>sin_theta</code> and <code>cos_theta</code> are sine and cosine of the same angle. </dd></dl>
 
 </div>
 </div>
