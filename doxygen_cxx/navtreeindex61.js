@@ -1,5 +1,8 @@
 var NAVTREEINDEX61 =
 {
+"rimless__wheel_8h.html":[4,0,0,3,15,0],
+"rimless__wheel__continuous__state_8h.html":[4,0,0,3,15,1],
+"rimless__wheel__geometry_8h.html":[4,0,0,3,15,2],
 "rimless__wheel__params_8h.html":[4,0,0,3,15,3],
 "robertson__system_8h.html":[4,0,0,12,0,0,13],
 "robot__clearance_8h.html":[4,0,0,10,14],
@@ -246,8 +249,5 @@ var NAVTREEINDEX61 =
 "solve_8h.html#a432743d40e298cda4d1104734324b69d":[4,0,0,11,52,4],
 "solve_8h.html#a6f8160cf69cc8a3cd41dfec1fb08a8fa":[4,0,0,11,52,2],
 "solve_8h.html#a7411fe5d588d0bd68b7b9bb30f1e4d09":[4,0,0,11,52,3],
-"solve_8h.html#a78328b8267370289c8c653bc67efde5e":[4,0,0,11,52,1],
-"solver__base_8h.html":[4,0,0,11,53],
-"solver__id_8h.html":[4,0,0,11,54],
-"solver__id_8h.html#a710dbb02b7a2ce05760b1534cd7b32d9":[4,0,0,11,54,4]
+"solve_8h.html#a78328b8267370289c8c653bc67efde5e":[4,0,0,11,52,1]
 };

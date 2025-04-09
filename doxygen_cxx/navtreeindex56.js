@@ -1,5 +1,7 @@
 var NAVTREEINDEX56 =
 {
+"group__solver__evaluators.html#ga9d268ea8150fb094f1499a958c50defb":[1,1,0,54],
+"group__solver__evaluators.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[1,1,0,50],
 "group__solver__evaluators.html#gad168321c6009ddda8ee2ca9abbef90b1":[1,1,0,51],
 "group__solver__evaluators.html#gaea88a3c59172c77e8537633348a057a9":[1,1,0,49],
 "group__solvers.html":[1,1],
@@ -152,8 +154,8 @@ var NAVTREEINDEX56 =
 "indeterminate_8h.html#ac27bca68509bbb001ab8073089b48031":[4,0,0,11,24,0],
 "indeterminate_8h.html#aca547471b139de0956139286cbfe5f10":[4,0,0,11,24,5],
 "index.html":[],
-"inertia__visualizer_8h.html":[4,0,0,13,3],
-"inertia__visualizer_8h.html#ac3899c4392068f63d78217c4634e13a1":[4,0,0,13,3,0],
+"inertia__visualizer_8h.html":[4,0,0,14,3],
+"inertia__visualizer_8h.html#ac3899c4392068f63d78217c4634e13a1":[4,0,0,14,3,0],
 "inflate__mesh_8h.html":[4,0,0,4,2,22],
 "initial__value__problem_8h.html":[4,0,0,12,0,10],
 "initial__value__problem_8h.html#aec4184a3d8bf137b9565c1943acd9f9a":[4,0,0,12,0,10,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX56 =
 "joint__sliders_8h.html":[4,0,0,8,6,3],
 "joint__sliders_8h.html#a90528b02307ab3b885075c1a46df2e7c":[4,0,0,8,6,3,0],
 "joint__stiffness__controller_8h.html":[4,0,0,12,1,5],
-"joint__stiffness__controller_8h.html#ae1242cfbf00814ed6dcbd11d2f052e88":[4,0,0,12,1,5,0],
-"kalman__filter_8h.html":[4,0,0,12,2,0],
-"kalman__filter_8h.html#affc5a5eabe473ebd57f96b0310d70ed8":[4,0,0,12,2,0,4]
+"joint__stiffness__controller_8h.html#ae1242cfbf00814ed6dcbd11d2f052e88":[4,0,0,12,1,5,0]
 };

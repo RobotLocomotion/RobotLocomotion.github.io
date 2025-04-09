@@ -1,5 +1,8 @@
 var NAVTREEINDEX66 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a9d2283c8d505bed192de8c63a98abb43":[3,0,0,9,3,6,5],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,3,6,0],
+"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html":[3,0,0,9,3,7],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a21a8a03c07311e67bcc453bb4fb65f27":[3,0,0,9,3,7,2],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,3,7,1],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,3,7,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX66 =
 "structdrake_1_1symbolic_1_1_sin_cos.html#a919d5819ace24054ded2f7899e67ff54":[3,0,0,15,63,2],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a998dc5eab25095b0f2c481bdc575a430":[3,0,0,15,63,4],
 "structdrake_1_1symbolic_1_1_sin_cos.html#acc45493e97e5176d748160a80140ecb2":[3,0,0,15,63,1],
-"structdrake_1_1systems_1_1_initialize_params.html":[1,4,0,2],
-"structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa":[1,4,0,2,1],
-"structdrake_1_1systems_1_1_initialize_params.html#a8e8824802dedfbc36776227f7482b6bc":[1,4,0,2,0],
-"structdrake_1_1systems_1_1_periodic_event_data_comparator.html":[3,0,0,16,80]
+"structdrake_1_1systems_1_1_initialize_params.html":[1,4,0,2]
 };

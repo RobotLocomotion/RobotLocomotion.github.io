@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"point__to__line__distance__constraint_8h.html":[4,0,0,8,4,18],
+"point__to__point__distance__constraint_8h.html":[4,0,0,8,4,19],
 "pointer__cast_8h.html":[4,0,0,1,55],
 "pointer__cast_8h.html#a36437147c667653017cba46d057455d9":[4,0,0,1,55,2],
 "pointer__cast_8h.html#a983e5f23fd0a884e01038572bd3e24a2":[4,0,0,1,55,3],
@@ -104,6 +106,7 @@ var NAVTREEINDEX60 =
 "proximity__utilities_8h.html#a8f106b9c67eabf12f6e34a632561cd26":[4,0,0,4,2,57,1],
 "proximity__utilities_8h.html#a9181fb586ba454606318ae13d07b6517":[4,0,0,4,2,57,3],
 "proximity__utilities_8h.html#aa157ce1fbdd1dfbf0f83de850a4dc009":[4,0,0,4,2,57,6],
+"publish__images__via__doxygen_8h.html":[4,0,0,13,0,0],
 "pydrake__doxygen_8h.html":[4,0,0,0,0,15],
 "pydrake__pybind_8h.html":[4,0,0,0,0,16],
 "pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,16,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX60 =
 "rigid__body_8h.html#ae79415446189cc2def19eed2a9713d66":[4,0,0,8,14,43,4],
 "rigid__body__on__compliant__ground_8h.html":[4,0,0,8,10,0,1],
 "rigid__transform_8h.html":[4,0,0,7,29],
-"rigid__transform_8h.html#aa7b1534bec3a3bcf63686133f87fb80e":[4,0,0,7,29,2],
-"rimless__wheel_8h.html":[4,0,0,3,15,0],
-"rimless__wheel__continuous__state_8h.html":[4,0,0,3,15,1],
-"rimless__wheel__geometry_8h.html":[4,0,0,3,15,2]
+"rigid__transform_8h.html#aa7b1534bec3a3bcf63686133f87fb80e":[4,0,0,7,29,2]
 };

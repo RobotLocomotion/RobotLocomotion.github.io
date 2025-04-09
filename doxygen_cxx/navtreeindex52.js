@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"double__overloads_8h.html#ad14dd00683f82b89dc0f08f9adec904e":[4,0,0,1,17,0],
+"doxygen_8h.html":[4,0,0,2,0,0],
 "doxygen__cxx_8h.html":[4,0,0,1,18],
 "drake__assert_8h.html":[4,0,0,1,19],
 "drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[4,0,0,1,19,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "expression_2expression_8h.html#ab9900f71e1c1ceb9d59553adfa2db2b5":[4,0,0,1,3,0,3,119],
 "expression_2expression_8h.html#abc7a6656f58842adedcc8024b14bc06c":[4,0,0,1,3,0,3,59],
 "expression_2expression_8h.html#abd312bc518c0dd20a656021aef3e3c37":[4,0,0,1,3,0,3,39],
-"expression_2expression_8h.html#ac2fcf1da78e47a4afb20e0a4e85ac7dd":[4,0,0,1,3,0,3,47],
-"expression_2expression_8h.html#ac306b9a9b7ace256330ae3ab8deaafef":[4,0,0,1,3,0,3,104],
-"expression_2expression_8h.html#ac3c13478861afcc48abcec64900b0c66":[4,0,0,1,3,0,3,18]
+"expression_2expression_8h.html#ac2fcf1da78e47a4afb20e0a4e85ac7dd":[4,0,0,1,3,0,3,47]
 };
