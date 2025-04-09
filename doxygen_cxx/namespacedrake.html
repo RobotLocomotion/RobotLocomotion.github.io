@@ -637,6 +637,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acffe42a683dd67544fb4d499d082b16d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#acffe42a683dd67544fb4d499d082b16d">ExtractDoubleOrThrow</a> (<a class="el" href="classdouble.html">double</a> scalar)</td></tr>
 <tr class="memdesc:acffe42a683dd67544fb4d499d082b16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>scalar</code> as a double. Never throws.  <a href="#acffe42a683dd67544fb4d499d082b16d">More...</a><br /></td></tr>
 <tr class="separator:acffe42a683dd67544fb4d499d082b16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed7ea46c6e18cce6d2d5ecb7000b8033"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aed7ea46c6e18cce6d2d5ecb7000b8033">ExtractDoubleOrThrow</a> (float scalar)</td></tr>
+<tr class="memdesc:aed7ea46c6e18cce6d2d5ecb7000b8033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>scalar</code> as a double. Never throws.  <a href="#aed7ea46c6e18cce6d2d5ecb7000b8033">More...</a><br /></td></tr>
+<tr class="separator:aed7ea46c6e18cce6d2d5ecb7000b8033"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa25d21a232067d56c472d508b45d90cf"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:aa25d21a232067d56c472d508b45d90cf"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdouble.html">double</a> &gt;, <a class="el" href="namespacedrake.html#aaadcdc21cc0c381e5879b1b7f023d82d">MatrixLikewise</a>&lt; <a class="el" href="classdouble.html">double</a>, Derived &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aa25d21a232067d56c472d508b45d90cf">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
 <tr class="memdesc:aa25d21a232067d56c472d508b45d90cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>.  <a href="#aa25d21a232067d56c472d508b45d90cf">More...</a><br /></td></tr>
@@ -2290,7 +2293,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="acffe42a683dd67544fb4d499d082b16d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acffe42a683dd67544fb4d499d082b16d">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acffe42a683dd67544fb4d499d082b16d">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2309,8 +2312,28 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aed7ea46c6e18cce6d2d5ecb7000b8033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed7ea46c6e18cce6d2d5ecb7000b8033">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> drake::ExtractDoubleOrThrow </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>scalar</code> as a double. Never throws. </p>
+
+</div>
+</div>
 <a id="aa25d21a232067d56c472d508b45d90cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa25d21a232067d56c472d508b45d90cf">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[2/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa25d21a232067d56c472d508b45d90cf">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2331,7 +2354,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="aa9721f3a5897b05ef2168f7a6d886dc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9721f3a5897b05ef2168f7a6d886dc8">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[3/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9721f3a5897b05ef2168f7a6d886dc8">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2352,7 +2375,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="aff59561e63256fd202070185754cdb4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff59561e63256fd202070185754cdb4c">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aff59561e63256fd202070185754cdb4c">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[5/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2373,7 +2396,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="a979582c00c744ebe1c719e57c6f738b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a979582c00c744ebe1c719e57c6f738b8">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a979582c00c744ebe1c719e57c6f738b8">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2399,7 +2422,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="ae77fe95853a296631fd2de0dda5ebb9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae77fe95853a296631fd2de0dda5ebb9c">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae77fe95853a296631fd2de0dda5ebb9c">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[7/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

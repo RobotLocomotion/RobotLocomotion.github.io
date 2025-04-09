@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1estimators_1_
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LuenbergerObserver&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__systems.html">Modeling Dynamical Systems</a> &raquo; <a class="el" href="group__estimator__systems.html">Estimators</a></div></div>  </div>
@@ -187,7 +188,7 @@ class drake::systems::estimators::LuenbergerObserver&lt; T &gt;</h3>
 \[ y[n] = g(x[n],u[n]) \]
 </p>
 <p> the observer dynamics takes the form </p><p class="formulaDsp">
-\[ \hat{x}[n+1] = f(\hat{x}[n],u[n]) + L(y - g(\hat{x}[n],u[n])) \]
+\[ \hat{x}[n+1] = f_d(\hat{x}[n],u[n]) + L(y - g(\hat{x}[n],u[n])) \]
 </p>
 <p> where \(\hat{x}\) is the estimated state of the original system. The output of the observer system is \(\hat{x}[n+1]\).</p>
 <table align="center" cellpadding="0" cellspacing="0">
@@ -221,6 +222,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec8654f6fef2f02fae53910ff4319980"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aec8654f6fef2f02fae53910ff4319980">LuenbergerObserver</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;observed_system, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;observed_system_context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a2d369537575baf5f2628190a821155ce">observer_gain</a>)</td></tr>
 <tr class="memdesc:aec8654f6fef2f02fae53910ff4319980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the observer, without claiming ownership of <code>observed_system</code>.  <a href="#aec8654f6fef2f02fae53910ff4319980">More...</a><br /></td></tr>
 <tr class="separator:aec8654f6fef2f02fae53910ff4319980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a504d3c760694bafb7704956f88e49247"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a504d3c760694bafb7704956f88e49247"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a504d3c760694bafb7704956f88e49247">LuenbergerObserver</a> (const <a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a>&lt; U &gt; &amp;other)</td></tr>
+<tr class="separator:a504d3c760694bafb7704956f88e49247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a789215f20f4dd16718b9003d08daf99d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a789215f20f4dd16718b9003d08daf99d">get_observed_system_input_input_port</a> () const</td></tr>
 <tr class="separator:a789215f20f4dd16718b9003d08daf99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebe74a87d7957f9ab354177ba42f5a78"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aebe74a87d7957f9ab354177ba42f5a78">get_observed_system_output_input_port</a> () const</td></tr>
@@ -691,6 +695,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c95876fd161fda4fb4fb7d51bec2a81 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7c95876fd161fda4fb4fb7d51bec2a81">output_port_ticket</a> (<a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">OutputPortIndex</a> index) const</td></tr>
 <tr class="memdesc:a7c95876fd161fda4fb4fb7d51bec2a81 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a ticket indicating dependence on the output port indicated by <code>index</code>.  <a href="classdrake_1_1systems_1_1_system_base.html#a7c95876fd161fda4fb4fb7d51bec2a81">More...</a><br /></td></tr>
 <tr class="separator:a7c95876fd161fda4fb4fb7d51bec2a81 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a53ab5f2f5af54c8ec94fc2c0e35e2f50"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a53ab5f2f5af54c8ec94fc2c0e35e2f50"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a53ab5f2f5af54c8ec94fc2c0e35e2f50">LuenbergerObserver</a></td></tr>
+<tr class="separator:a53ab5f2f5af54c8ec94fc2c0e35e2f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -1294,7 +1304,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a75f619833e2c15feac6e8acba57fbd8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75f619833e2c15feac6e8acba57fbd8b">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a75f619833e2c15feac6e8acba57fbd8b">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1320,7 +1330,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="aad627f771b16f15ab12904fde13e5f86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad627f771b16f15ab12904fde13e5f86">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aad627f771b16f15ab12904fde13e5f86">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1346,7 +1356,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a093753797574399c626da5a418464fbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a093753797574399c626da5a418464fbe">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a093753797574399c626da5a418464fbe">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1391,7 +1401,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="aec8654f6fef2f02fae53910ff4319980"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec8654f6fef2f02fae53910ff4319980">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aec8654f6fef2f02fae53910ff4319980">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1424,6 +1434,32 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Constructs the observer, without claiming ownership of <code>observed_system</code>. </p>
 <p>Note: The <code>observed_system</code> reference must remain valid for the lifetime of this system. </p>
+
+</div>
+</div>
+<a id="a504d3c760694bafb7704956f88e49247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a504d3c760694bafb7704956f88e49247">&#9670;&nbsp;</a></span>LuenbergerObserver() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1563,6 +1599,29 @@ Additional Inherited Members</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a53ab5f2f5af54c8ec94fc2c0e35e2f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53ab5f2f5af54c8ec94fc2c0e35e2f50">&#9670;&nbsp;</a></span>LuenbergerObserver</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html">LuenbergerObserver</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

@@ -222,6 +222,8 @@ must be nullopt if <code class="docutils literal notranslate"><span class="pre">
 <p>Note: The Diagram will maintain an internal reference to
 <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code>, so you must ensure that <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> has
 a longer lifetime than the Diagram.</p>
+<p>The torque values in the published LCM status messages will follow the
+IIWA-specific LCM conventions outlined in manipulation/README.</p>
 </dd></dl>
 
 <dl class="py function">

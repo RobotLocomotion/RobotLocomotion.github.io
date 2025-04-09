@@ -1,5 +1,14 @@
 var NAVTREEINDEX62 =
 {
+"solver__id_8h.html#a8463238715a273b4709959e9bf23b9af":[4,0,0,11,54,6],
+"solver__id_8h.html#af22da0124afc42f58ae6e42e1a97b724":[4,0,0,11,54,5],
+"solver__interface_8h.html":[4,0,0,11,55],
+"solver__options_8h.html":[4,0,0,11,56],
+"solver__options_8h.html#a16445fc3b260d8c58ea9082a3594f85f":[4,0,0,11,56,2],
+"solver__options_8h.html#ad58cede9876421e050ac44deee7804ff":[4,0,0,11,56,1],
+"solver__type_8h.html":[4,0,0,11,57],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ec":[4,0,0,11,57,0],
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6":[4,0,0,11,57,0,12],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca18bc9cbd9bb764958e636263b1b53a9d":[4,0,0,11,57,0,7],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca64e0ff0ce277a08ed59a9fe9140a8fd7":[4,0,0,11,57,0,8],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca6619293bd01e7ea8efb3682f16bf55c4":[4,0,0,11,57,0,10],
@@ -240,14 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,0,6,12],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#ab70346bde44a5c59f95c114cb4e62169":[3,0,0,3,0,6,5],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#ad6c4a88f35bb753e4b8296349c018278":[3,0,0,3,0,6,6],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#adf59b0091584bba743b814d186a3ca5d":[3,0,0,3,0,6,7],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#aebc7e071a27867145a968aea155d99f8":[3,0,0,3,0,6,1],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html":[3,0,0,3,0,10],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,0,10,0],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a574197988c880f73533a3b3c68fd0067":[3,0,0,3,0,10,3],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a5d0e7d91df6b1a261375b231fc678acd":[3,0,0,3,0,10,2],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a99f66380688774b2de4d3fc48d6f1213":[3,0,0,3,0,10,4],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,0,10,1],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aed7f375ae98cea9475fefc18eac57e2e":[3,0,0,3,0,10,5],
-"structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html":[3,0,0,3,0,15]
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#adf59b0091584bba743b814d186a3ca5d":[3,0,0,3,0,6,7]
 };

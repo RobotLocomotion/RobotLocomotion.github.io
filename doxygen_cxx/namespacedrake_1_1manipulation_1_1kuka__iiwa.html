@@ -388,7 +388,8 @@ driver_config.hand_model_name is in models_from_directives. </dd></dl>
 <p>The installed plant will connect itself to the actuation input port and state output ports in <code>plant</code> corresponding to the Iiwa model.</p>
 <p><code>desired_iiwa_kp_gains</code> is an optional argument to pass in gains corresponding to the Iiwa Dof (7) in the controller. If no argument is passed, the gains derived from hardware will be used instead (hardcoded within the implementation of this function). These gains must be nullopt if <code>control_mode</code> does not include position control.</p>
 <p><code>control_mode</code> the control mode for the controller.</p>
-<p>Note: The Diagram will maintain an internal reference to <code>controller_plant</code>, so you must ensure that <code>controller_plant</code> has a longer lifetime than the Diagram. </p>
+<p>Note: The Diagram will maintain an internal reference to <code>controller_plant</code>, so you must ensure that <code>controller_plant</code> has a longer lifetime than the Diagram.</p>
+<p>The torque values in the published LCM status messages will follow the IIWA-specific LCM conventions outlined in manipulation/README. </p>
 
 </div>
 </div>

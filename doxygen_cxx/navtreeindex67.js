@@ -1,5 +1,14 @@
 var NAVTREEINDEX67 =
 {
+"structdrake_1_1systems_1_1_periodic_event_data_comparator.html#a427c5f42d5940b0e40fba4abe2b3111a":[3,0,0,16,80,0],
+"structdrake_1_1systems_1_1_selector_params.html":[3,0,0,16,95],
+"structdrake_1_1systems_1_1_selector_params.html#a683dd4d2171486060eb06c2e32eeca71":[3,0,0,16,95,5],
+"structdrake_1_1systems_1_1_selector_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,95,3],
+"structdrake_1_1systems_1_1_selector_params.html#aac06d5ce54e5d0432809963897d377b4":[3,0,0,16,95,4],
+"structdrake_1_1systems_1_1_selector_params_1_1_input_port_params.html":[3,0,0,16,95,0],
+"structdrake_1_1systems_1_1_selector_params_1_1_input_port_params.html#a439227feff9d7f55384e8780cfc2eb82":[3,0,0,16,95,0,2],
+"structdrake_1_1systems_1_1_selector_params_1_1_input_port_params.html#a6e523cbe30620206b7b99a00fbc852a7":[3,0,0,16,95,0,1],
+"structdrake_1_1systems_1_1_selector_params_1_1_input_port_params.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,95,0,0],
 "structdrake_1_1systems_1_1_selector_params_1_1_output_port_params.html":[3,0,0,16,95,1],
 "structdrake_1_1systems_1_1_selector_params_1_1_output_port_params.html#a05cf3d895fffffdfd03d2976dd3b749f":[3,0,0,16,95,1,2],
 "structdrake_1_1systems_1_1_selector_params_1_1_output_port_params.html#a6e523cbe30620206b7b99a00fbc852a7":[3,0,0,16,95,1,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX67 =
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[3,0,0,16,8,17,3],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,16,8,17,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html":[3,0,0,16,8,18],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,18,1],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,16,8,18,0],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[3,0,0,16,8,18,3],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,16,8,18,2],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits.html":[3,0,0,16,8,21],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html":[3,0,0,16,8,22],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,16,8,22,0],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html":[3,0,0,16,8,23],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,16,8,23,0],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html":[3,0,0,16,8,24]
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,18,1]
 };

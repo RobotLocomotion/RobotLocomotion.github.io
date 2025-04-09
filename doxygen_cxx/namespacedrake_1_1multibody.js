@@ -25,6 +25,7 @@ var namespacedrake_1_1multibody =
     [ "CoulombFriction", "classdrake_1_1multibody_1_1_coulomb_friction.html", "classdrake_1_1multibody_1_1_coulomb_friction" ],
     [ "CurvilinearJoint", "classdrake_1_1multibody_1_1_curvilinear_joint.html", "classdrake_1_1multibody_1_1_curvilinear_joint" ],
     [ "DeformableContactInfo", "classdrake_1_1multibody_1_1_deformable_contact_info.html", "classdrake_1_1multibody_1_1_deformable_contact_info" ],
+    [ "DeformableContactInfo< symbolic::Expression >", "classdrake_1_1multibody_1_1_deformable_contact_info_3_01symbolic_1_1_expression_01_4.html", "classdrake_1_1multibody_1_1_deformable_contact_info_3_01symbolic_1_1_expression_01_4" ],
     [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html", "classdrake_1_1multibody_1_1_deformable_model" ],
     [ "DifferentialInverseKinematicsIntegrator", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator" ],
     [ "DifferentialInverseKinematicsParameters", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters" ],

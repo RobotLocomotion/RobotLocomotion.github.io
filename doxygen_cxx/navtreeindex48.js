@@ -1,5 +1,13 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_image_io.html#a879348624bdbe042c6d78f2bb6eb525b":[3,0,0,16,8,8,16],
+"classdrake_1_1systems_1_1sensors_1_1_image_io.html#aaaa38f205ae72ecf7933b06be50fffd9":[3,0,0,16,8,8,14],
+"classdrake_1_1systems_1_1sensors_1_1_image_io.html#ab3b70eefb56487eb68dddb7a0e48d436":[3,0,0,16,8,8,4],
+"classdrake_1_1systems_1_1sensors_1_1_image_io.html#aecfa0ef66dac0446bdc8bef8dd3f3bbc":[3,0,0,16,8,8,5],
+"classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html":[3,0,0,16,8,9],
+"classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a19e3fdb6b521373acd4a93b3eedf3daf":[3,0,0,16,8,9,1],
+"classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a38a8bd947e9f8065291a2a9053e10c4a":[3,0,0,16,8,9,0],
+"classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a4564fab2abf555871eb10f82ec0d55a0":[3,0,0,16,8,9,3],
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a56b5225e83219495b333ff973a9e33f5":[3,0,0,16,8,9,9],
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a6584b81c4a074422048a7f34bc240467":[3,0,0,16,8,9,8],
 "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a88d06be3e05fdb3ab12d40101e512bfb":[3,0,0,16,8,9,5],
@@ -241,13 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#af63939a5197628c5693f211d3ff3b583":[3,0,0,18,5,5],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afb48be114e596b51430d94200ca3b821":[3,0,0,18,5,4],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afd774c050097f45948fa77e181ec8a19":[3,0,0,18,5,6],
-"classdrake_1_1trajectories_1_1_function_handle_trajectory.html":[3,0,0,18,6],
-"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#a43aeb39c75a161bbe11551e73edcd9ea":[3,0,0,18,6,3],
-"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#a6a8121fd509d4b7ac45f0a9932f1e1fd":[3,0,0,18,6,4],
-"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#a91f12eeb5a65ec18decef64094e1efb5":[3,0,0,18,6,5],
-"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#aa5b39fa8a919e6eadaaa144a69c6dde6":[3,0,0,18,6,2],
-"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#ac0a9219ab1dbf34bbcc41ae2c6a781fa":[3,0,0,18,6,6],
-"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#ac6a7f0f20571fc68c90c3131b497a165":[3,0,0,18,6,0],
-"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#ae148ef7c0a88650131a3986e33fb4050":[3,0,0,18,6,1],
-"classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html":[3,0,0,18,7]
+"classdrake_1_1trajectories_1_1_function_handle_trajectory.html":[3,0,0,18,6]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX30 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#ad79e9b50113698bdee1aff54ea18e7bc":[1,1,2,228],
+"classdrake_1_1solvers_1_1_mathematical_program.html#ad7e4fa58845ca19073b0c532431ac141":[1,1,2,194],
+"classdrake_1_1solvers_1_1_mathematical_program.html#ad7fb1e639660acc96ade8aa1d6706c6f":[1,1,2,57],
+"classdrake_1_1solvers_1_1_mathematical_program.html#ad90403c02bdb7c61d7a8de5dd39e9c39":[1,1,2,152],
+"classdrake_1_1solvers_1_1_mathematical_program.html#adb2e0b7c0a939513aba56fc147696a8a":[1,1,2,87],
+"classdrake_1_1solvers_1_1_mathematical_program.html#adba470b9c71439a795a0d647d171f71b":[1,1,2,77],
 "classdrake_1_1solvers_1_1_mathematical_program.html#ade4bcd993d4cefb458564896160eebd2":[1,1,2,63],
 "classdrake_1_1solvers_1_1_mathematical_program.html#adf1b28062ab095a5824cbf928e37e1ff":[1,1,2,154],
 "classdrake_1_1solvers_1_1_mathematical_program.html#ae0b35ad9e0036fc52b27fc98c555a091":[1,1,2,61],
@@ -243,11 +249,5 @@ var NAVTREEINDEX30 =
 "classdrake_1_1solvers_1_1_osqp_solver.html#a7ac8ab830c4d723c3b657635030dafb6":[3,0,0,14,54,2],
 "classdrake_1_1solvers_1_1_osqp_solver.html#a8ed370bb9c586abb237c55a5f36a4815":[3,0,0,14,54,4],
 "classdrake_1_1solvers_1_1_osqp_solver.html#aad3b86a30c6110a46792f5451e1df046":[3,0,0,14,54,3],
-"classdrake_1_1solvers_1_1_osqp_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,14,54,12],
-"classdrake_1_1solvers_1_1_osqp_solver.html#afa135bc8b8d84cf608c982037e707e09":[3,0,0,14,54,8],
-"classdrake_1_1solvers_1_1_osqp_solver.html#afdbc2d66c43c508fe956c4a18e531c76":[3,0,0,14,54,0],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html":[1,1,0,44],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a05f12ff63f9849accf2405af287cf808":[1,1,0,44,2],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a0aa38833bde962effcfb1899c772d40b":[1,1,0,44,3],
-"classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a2e01310c2db1c98782b5fa3d0ad9f87b":[1,1,0,44,13]
+"classdrake_1_1solvers_1_1_osqp_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,14,54,12]
 };

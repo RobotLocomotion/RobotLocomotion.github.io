@@ -1,5 +1,11 @@
 var NAVTREEINDEX32 =
 {
+"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#aeb966b9b8938caf3b73c32f4043d0c8f":[3,0,0,15,2,0],
+"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#af43531f645bc3f0d26090c621394a217":[3,0,0,15,2,13],
+"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#af7175873a78ceeb2f9618df075522bd3":[3,0,0,15,2,7],
+"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#af7f99b595b4e8a78116a3f6dcc6f2a5a":[3,0,0,15,2,5],
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html":[3,0,0,15,3],
+"classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a02d52040a8c27a93acbf3c6f4438f912":[3,0,0,15,3,5],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a03a72be3355e6291a8ace9016df45bbd":[3,0,0,15,3,11],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a12bbd5b99675b3fb5d29f58535dcfb36":[3,0,0,15,3,0],
 "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html#a1a9144f1ebdf663cbf084afd81e83923":[3,0,0,15,3,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX32 =
 "classdrake_1_1symbolic_1_1_expression_add.html#aa3acb8f966e8bcc451ccd870c82c103b":[3,0,0,15,9,5],
 "classdrake_1_1symbolic_1_1_expression_add.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,15,9,3],
 "classdrake_1_1symbolic_1_1_expression_add.html#ae4fb457c881d49e1e698120eae9e4c52":[3,0,0,15,9,7],
-"classdrake_1_1symbolic_1_1_expression_add_factory.html":[3,0,0,15,10],
-"classdrake_1_1symbolic_1_1_expression_add_factory.html#a082ffdb431a1990a9ef1d89c5e563d35":[3,0,0,15,10,12],
-"classdrake_1_1symbolic_1_1_expression_add_factory.html#a139908581ad5f26cd51585ccecfaf628":[3,0,0,15,10,10],
-"classdrake_1_1symbolic_1_1_expression_add_factory.html#a18d1a55cd155c0ce455d13dbf8176030":[3,0,0,15,10,5],
-"classdrake_1_1symbolic_1_1_expression_add_factory.html#a3696f2dede9b63b0171069b5fc888b0f":[3,0,0,15,10,7],
-"classdrake_1_1symbolic_1_1_expression_add_factory.html#a57a110644a5bfbf19ed8a90b30dc040c":[3,0,0,15,10,3],
-"classdrake_1_1symbolic_1_1_expression_add_factory.html#a9529cc1d2d94b680c8289f423c8870c7":[3,0,0,15,10,0]
+"classdrake_1_1symbolic_1_1_expression_add_factory.html":[3,0,0,15,10]
 };

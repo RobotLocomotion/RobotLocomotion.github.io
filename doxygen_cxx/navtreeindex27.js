@@ -1,5 +1,11 @@
 var NAVTREEINDEX27 =
 {
+"classdrake_1_1schema_1_1_deterministic_vector.html#a63d94ab9a00029414ee4c5fe4d760b28":[3,0,0,13,1,7],
+"classdrake_1_1schema_1_1_deterministic_vector.html#a68fa0e72552fbe9c3be3df5b1de58fa7":[3,0,0,13,1,1],
+"classdrake_1_1schema_1_1_deterministic_vector.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,13,1,9],
+"classdrake_1_1schema_1_1_deterministic_vector.html#aad4b968e35b277b170084310566c8b8b":[3,0,0,13,1,8],
+"classdrake_1_1schema_1_1_deterministic_vector.html#acc2130db61a9c21eb8e43884b9af7643":[3,0,0,13,1,0],
+"classdrake_1_1schema_1_1_deterministic_vector.html#ad80934fe58016c8c45ace203e14bdc43":[3,0,0,13,1,10],
 "classdrake_1_1schema_1_1_deterministic_vector.html#aec0e78d5da059c9e2d3ba21faa02709b":[3,0,0,13,1,2],
 "classdrake_1_1schema_1_1_distribution.html":[3,0,0,13,2],
 "classdrake_1_1schema_1_1_distribution.html#a392b7d292d59a91db801b2d024238145":[3,0,0,13,2,8],
@@ -243,11 +249,5 @@ var NAVTREEINDEX27 =
 "classdrake_1_1solvers_1_1_csdp_solver.html#a7faaf7248160fecda908e1d8828126ee":[3,0,0,14,12,3],
 "classdrake_1_1solvers_1_1_csdp_solver.html#aac182c9c5dee71253ce7e5454e779b8c":[3,0,0,14,12,4],
 "classdrake_1_1solvers_1_1_csdp_solver.html#ab4e0d8d9552154536e669d5621f8cc98":[3,0,0,14,12,1],
-"classdrake_1_1solvers_1_1_csdp_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,14,12,11],
-"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html":[3,0,0,14,14],
-"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,14,14,12],
-"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a030544dd34f8d35fa24233b4e399fdfa":[3,0,0,14,14,2],
-"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,14,14,6],
-"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[3,0,0,14,14,7],
-"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a3b0cd2e1b756f4a3ae8b3f54c07c081b":[3,0,0,14,14,9]
+"classdrake_1_1solvers_1_1_csdp_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,14,12,11]
 };

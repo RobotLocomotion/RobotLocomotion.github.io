@@ -1,5 +1,11 @@
 var NAVTREEINDEX29 =
 {
+"classdrake_1_1solvers_1_1_linear_cost.html#ad53d00d4ea818abfcf3d8035ea8385d1":[1,1,0,39,15],
+"classdrake_1_1solvers_1_1_linear_cost.html#afade41e8d6d327cf8750031fa3250fda":[1,1,0,39,4],
+"classdrake_1_1solvers_1_1_linear_cost.html#afd5ade712b02fa2e71e8c26811c9494a":[1,1,0,39,6],
+"classdrake_1_1solvers_1_1_linear_equality_constraint.html":[1,1,0,31],
+"classdrake_1_1solvers_1_1_linear_equality_constraint.html#a03d00476564c0fab5843b1f31ad274bc":[1,1,0,31,8],
+"classdrake_1_1solvers_1_1_linear_equality_constraint.html#a20e4a4051faefd6611d0372943fffcdd":[1,1,0,31,0],
 "classdrake_1_1solvers_1_1_linear_equality_constraint.html#a43a3ad9096c1ae05c122dbd3d2720336":[1,1,0,31,4],
 "classdrake_1_1solvers_1_1_linear_equality_constraint.html#a5ccb20910f90294814f8bec5c857ed10":[1,1,0,31,6],
 "classdrake_1_1solvers_1_1_linear_equality_constraint.html#a61ea6cee87f7311f05bce9e9273d3b25":[1,1,0,31,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX29 =
 "classdrake_1_1solvers_1_1_mathematical_program.html#acde760e4bedab593fdf328530467fa4d":[1,1,2,165],
 "classdrake_1_1solvers_1_1_mathematical_program.html#ad038198c145926f0e63faf04b254c7a3":[1,1,2,117],
 "classdrake_1_1solvers_1_1_mathematical_program.html#ad3c8d9a4008399136a7f997d8b5be55c":[1,1,2,31],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ad6bf33171369a5b673c956f7e21e1c5f":[1,1,2,204],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ad79e9b50113698bdee1aff54ea18e7bc":[1,1,2,228],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ad7e4fa58845ca19073b0c532431ac141":[1,1,2,194],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ad7fb1e639660acc96ade8aa1d6706c6f":[1,1,2,57],
-"classdrake_1_1solvers_1_1_mathematical_program.html#ad90403c02bdb7c61d7a8de5dd39e9c39":[1,1,2,152],
-"classdrake_1_1solvers_1_1_mathematical_program.html#adb2e0b7c0a939513aba56fc147696a8a":[1,1,2,87],
-"classdrake_1_1solvers_1_1_mathematical_program.html#adba470b9c71439a795a0d647d171f71b":[1,1,2,77]
+"classdrake_1_1solvers_1_1_mathematical_program.html#ad6bf33171369a5b673c956f7e21e1c5f":[1,1,2,204]
 };

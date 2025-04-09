@@ -1,5 +1,14 @@
 var NAVTREEINDEX68 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,16,8,18,0],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[3,0,0,16,8,18,3],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,16,8,18,2],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits.html":[3,0,0,16,8,21],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html":[3,0,0,16,8,22],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,16,8,22,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html":[3,0,0,16,8,23],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,16,8,23,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html":[3,0,0,16,8,24],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,16,8,24,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html":[3,0,0,16,8,25],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,16,8,25,0],
@@ -240,14 +249,5 @@ var NAVTREEINDEX68 =
 "system__constraint_8h.html#ad97e0b61b78e2f875122a004e0c8bb8a":[4,0,0,12,3,43,7],
 "system__constraint_8h.html#af67c9d8e51c043770c3cf671ba779083":[4,0,0,12,3,43,5],
 "system__constraint_8h.html#afb8f89bae1d60315dd16a46224febd21":[4,0,0,12,3,43,4],
-"system__constraint__adapter_8h.html":[4,0,0,12,5,0],
-"system__constraint__wrapper_8h.html":[4,0,0,12,5,1],
-"system__constraint__wrapper_8h.html#aa012f2e77f3c419bf4b10632f6eb6507":[4,0,0,12,5,1,1],
-"system__dynamics__data_8h.html":[4,0,0,8,1,19],
-"system__dynamics__data_8h.html#aadd94ea888130540aa18f2ad7cff1ced":[4,0,0,8,1,19,0],
-"system__output_8h.html":[4,0,0,12,3,44],
-"system__output_8h.html#af61dd5d97b6aa0f6fef7c1b030cc939a":[4,0,0,12,3,44,2],
-"system__scalar__conversion__doxygen_8h.html":[4,0,0,12,3,45],
-"system__scalar__converter_8h.html":[4,0,0,12,3,46],
-"system__symbolic__inspector_8h.html":[4,0,0,12,3,47]
+"system__constraint__adapter_8h.html":[4,0,0,12,5,0]
 };

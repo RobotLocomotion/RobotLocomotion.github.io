@@ -1,5 +1,11 @@
 var NAVTREEINDEX28 =
 {
+"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html":[3,0,0,14,14],
+"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,14,14,12],
+"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a030544dd34f8d35fa24233b4e399fdfa":[3,0,0,14,14,2],
+"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,14,14,6],
+"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[3,0,0,14,14,7],
+"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a3b0cd2e1b756f4a3ae8b3f54c07c081b":[3,0,0,14,14,9],
 "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a46e00957032bd0394db7304badcb2134":[3,0,0,14,14,8],
 "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a47af567b01d6e5b42803825ded33dbf8":[3,0,0,14,14,4],
 "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a4dc451b7db72a168d9f0da1746011b45":[3,0,0,14,14,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX28 =
 "classdrake_1_1solvers_1_1_linear_cost.html#aa1b2d558d5487acf11ff7efb46fd76e8":[1,1,0,39,11],
 "classdrake_1_1solvers_1_1_linear_cost.html#aa2431c2dbd82437d8f621033d8af8231":[1,1,0,39,8],
 "classdrake_1_1solvers_1_1_linear_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441":[1,1,0,39,10],
-"classdrake_1_1solvers_1_1_linear_cost.html#aac72835dbe58acbf2018c41b5db19d4d":[1,1,0,39,2],
-"classdrake_1_1solvers_1_1_linear_cost.html#ad53d00d4ea818abfcf3d8035ea8385d1":[1,1,0,39,15],
-"classdrake_1_1solvers_1_1_linear_cost.html#afade41e8d6d327cf8750031fa3250fda":[1,1,0,39,4],
-"classdrake_1_1solvers_1_1_linear_cost.html#afd5ade712b02fa2e71e8c26811c9494a":[1,1,0,39,6],
-"classdrake_1_1solvers_1_1_linear_equality_constraint.html":[1,1,0,31],
-"classdrake_1_1solvers_1_1_linear_equality_constraint.html#a03d00476564c0fab5843b1f31ad274bc":[1,1,0,31,8],
-"classdrake_1_1solvers_1_1_linear_equality_constraint.html#a20e4a4051faefd6611d0372943fffcdd":[1,1,0,31,0]
+"classdrake_1_1solvers_1_1_linear_cost.html#aac72835dbe58acbf2018c41b5db19d4d":[1,1,0,39,2]
 };

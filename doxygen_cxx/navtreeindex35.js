@@ -1,5 +1,11 @@
 var NAVTREEINDEX35 =
 {
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a8ccb7c7bd130704b3a7927248cc27339":[3,0,0,15,53,13],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a8d315d0db5e68af87171f64284cebc31":[3,0,0,15,53,16],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a90f49b49b2be609e60b1cfd8be7a42d7":[3,0,0,15,53,22],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a93add05032e2cd4f0a369225fd856240":[3,0,0,15,53,39],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a9701cd00e90c6aa657a866f7944ed8d4":[3,0,0,15,53,24],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#aa49a7f8176f9d9693aac96f527b3afa2":[3,0,0,15,53,40],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#aa4a7b789f040bca000e4febb043e180b":[3,0,0,15,53,15],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#aaf2a77325f716479b2f8c5b17729a5c6":[3,0,0,15,53,42],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#ab0eca912d6069f1f0f3ccbeae8c169d8":[3,0,0,15,53,31],
@@ -243,11 +249,5 @@ var NAVTREEINDEX35 =
 "classdrake_1_1symbolic_1_1_variable.html#aca3ec61adeebe1195830deb61573d76d":[3,0,0,15,65,7],
 "classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c":[3,0,0,15,65,0],
 "classdrake_1_1symbolic_1_1_variable.html#ae3ae0a370426bdec708902b75342d71d":[3,0,0,15,65,5],
-"classdrake_1_1symbolic_1_1_variable.html#ae66ae8ada34dafb779ee60b39f58459b":[3,0,0,15,65,4],
-"classdrake_1_1symbolic_1_1_variable.html#af10bcef044040e6ad7654a00c35180ca":[3,0,0,15,65,14],
-"classdrake_1_1symbolic_1_1_variable.html#af4210d888791fd17afa08232e277a56b":[3,0,0,15,65,3],
-"classdrake_1_1symbolic_1_1_variable.html#af5bc2131313b060e441972d85d917314":[3,0,0,15,65,9],
-"classdrake_1_1symbolic_1_1_variable.html#af60eaee0fab2214b1a12fa7120929f35":[3,0,0,15,65,2],
-"classdrake_1_1symbolic_1_1_variable.html#afb7e03e3f21dcaed2c1fb3ade24e1dfa":[3,0,0,15,65,8],
-"classdrake_1_1symbolic_1_1_variables.html":[3,0,0,15,66]
+"classdrake_1_1symbolic_1_1_variable.html#ae66ae8ada34dafb779ee60b39f58459b":[3,0,0,15,65,4]
 };
