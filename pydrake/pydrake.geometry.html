@@ -11117,6 +11117,76 @@ scene_graph_versioning).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.RegisterDeformableGeometry">
+<span class="sig-name descname"><span class="pre">RegisterDeformableGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.RegisterDeformableGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RegisterDeformableGeometry(self: pydrake.geometry.SceneGraph, source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance, resolution_hint: float) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>Registers a new deformable geometry G for this source. This registers
+geometry G on a frame F (indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>). The registered
+geometry has a meshed representation. The positions of the vertices of
+this mesh representation are defined in the frame F (i.e., <code class="docutils literal notranslate"><span class="pre">q_FG</span></code>).
+Returns the corresponding unique geometry id.</p>
+<p>Roles will be assigned to the registered geometry if the corresponding
+GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. Potentially modifies proximity, perception, and
+illustration versions based on the roles assigned to the geometry (see
+scene_graph_versioning).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt><dd><p>The id for the source registering the geometry.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>:</dt><dd><p>The id for the frame F to put the geometry in.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry</span></code>:</dt><dd><p>The geometry G to to be represented in frame F.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">resolution_hint</span></code>:</dt><dd><p>The parameter that guides the level of mesh refinement of the
+deformable geometry. It has length units (in meters) and roughly
+corresponds to a typical edge length in the resulting mesh for a
+primitive shape.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A unique identifier for the added geometry.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>resolution_hint &gt; 0.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the source_id does not map to a</strong> – </p></li>
+<li><p><strong>registered source</strong><strong>, </strong><strong>b</strong><strong>) </strong><strong>frame_id != world_frame_id</strong><strong>(</strong><strong>)</strong><strong>, </strong><strong>c</strong><strong>) </strong><strong>the</strong> – </p></li>
+<li><p><strong>geometry` is equal to nullptr</strong><strong>, </strong><strong>d</strong><strong>) </strong><strong>the geometry's nam</strong> – </p></li>
+<li><p><strong>doesn't satisfy the requirements outlined in GeometryInstance.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>RegisterDeformableGeometry(self: pydrake.geometry.SceneGraph, context: pydrake.systems.framework.Context, source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance, resolution_hint: float) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>systems::Context-modifying variant of RegisterDeformableGeometry().
+Rather than modifying SceneGraph’s model, it modifies the copy of the
+model stored in the provided context.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.RegisterFrame">
 <span class="sig-name descname"><span class="pre">RegisterFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.RegisterFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -12035,6 +12105,76 @@ scene_graph_versioning).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.RegisterDeformableGeometry">
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].RegisterDeformableGeometry"></span><span class="sig-name descname"><span class="pre">RegisterDeformableGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.RegisterDeformableGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RegisterDeformableGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance, resolution_hint: float) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>Registers a new deformable geometry G for this source. This registers
+geometry G on a frame F (indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>). The registered
+geometry has a meshed representation. The positions of the vertices of
+this mesh representation are defined in the frame F (i.e., <code class="docutils literal notranslate"><span class="pre">q_FG</span></code>).
+Returns the corresponding unique geometry id.</p>
+<p>Roles will be assigned to the registered geometry if the corresponding
+GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. Potentially modifies proximity, perception, and
+illustration versions based on the roles assigned to the geometry (see
+scene_graph_versioning).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt><dd><p>The id for the source registering the geometry.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>:</dt><dd><p>The id for the frame F to put the geometry in.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry</span></code>:</dt><dd><p>The geometry G to to be represented in frame F.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">resolution_hint</span></code>:</dt><dd><p>The parameter that guides the level of mesh refinement of the
+deformable geometry. It has length units (in meters) and roughly
+corresponds to a typical edge length in the resulting mesh for a
+primitive shape.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A unique identifier for the added geometry.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>resolution_hint &gt; 0.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the source_id does not map to a</strong> – </p></li>
+<li><p><strong>registered source</strong><strong>, </strong><strong>b</strong><strong>) </strong><strong>frame_id != world_frame_id</strong><strong>(</strong><strong>)</strong><strong>, </strong><strong>c</strong><strong>) </strong><strong>the</strong> – </p></li>
+<li><p><strong>geometry` is equal to nullptr</strong><strong>, </strong><strong>d</strong><strong>) </strong><strong>the geometry's nam</strong> – </p></li>
+<li><p><strong>doesn't satisfy the requirements outlined in GeometryInstance.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>RegisterDeformableGeometry(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance, resolution_hint: float) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>systems::Context-modifying variant of RegisterDeformableGeometry().
+Rather than modifying SceneGraph’s model, it modifies the copy of the
+model stored in the provided context.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.RegisterFrame">
 <span id="pydrake.geometry.SceneGraph_[AutoDiffXd].RegisterFrame"></span><span class="sig-name descname"><span class="pre">RegisterFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.RegisterFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -12947,6 +13087,76 @@ scene_graph_versioning).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.RegisterDeformableGeometry">
+<span id="pydrake.geometry.SceneGraph_[Expression].RegisterDeformableGeometry"></span><span class="sig-name descname"><span class="pre">RegisterDeformableGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.RegisterDeformableGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RegisterDeformableGeometry(self: pydrake.geometry.SceneGraph_[Expression], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance, resolution_hint: float) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>Registers a new deformable geometry G for this source. This registers
+geometry G on a frame F (indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>). The registered
+geometry has a meshed representation. The positions of the vertices of
+this mesh representation are defined in the frame F (i.e., <code class="docutils literal notranslate"><span class="pre">q_FG</span></code>).
+Returns the corresponding unique geometry id.</p>
+<p>Roles will be assigned to the registered geometry if the corresponding
+GeometryInstance <code class="docutils literal notranslate"><span class="pre">geometry</span></code> has had properties assigned.</p>
+<p>This method modifies the underlying model and requires a new Context
+to be allocated. Potentially modifies proximity, perception, and
+illustration versions based on the roles assigned to the geometry (see
+scene_graph_versioning).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source_id</span></code>:</dt><dd><p>The id for the source registering the geometry.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_id</span></code>:</dt><dd><p>The id for the frame F to put the geometry in.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry</span></code>:</dt><dd><p>The geometry G to to be represented in frame F.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">resolution_hint</span></code>:</dt><dd><p>The parameter that guides the level of mesh refinement of the
+deformable geometry. It has length units (in meters) and roughly
+corresponds to a typical edge length in the resulting mesh for a
+primitive shape.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A unique identifier for the added geometry.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>resolution_hint &gt; 0.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if a</strong><strong>) </strong><strong>the source_id does not map to a</strong> – </p></li>
+<li><p><strong>registered source</strong><strong>, </strong><strong>b</strong><strong>) </strong><strong>frame_id != world_frame_id</strong><strong>(</strong><strong>)</strong><strong>, </strong><strong>c</strong><strong>) </strong><strong>the</strong> – </p></li>
+<li><p><strong>geometry` is equal to nullptr</strong><strong>, </strong><strong>d</strong><strong>) </strong><strong>the geometry's nam</strong> – </p></li>
+<li><p><strong>doesn't satisfy the requirements outlined in GeometryInstance.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>RegisterDeformableGeometry(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], source_id: pydrake.geometry.SourceId, frame_id: pydrake.geometry.FrameId, geometry: pydrake.geometry.GeometryInstance, resolution_hint: float) -&gt; pydrake.geometry.GeometryId</p></li>
+</ol>
+<p>systems::Context-modifying variant of RegisterDeformableGeometry().
+Rather than modifying SceneGraph’s model, it modifies the copy of the
+model stored in the provided context.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.RegisterFrame">
 <span id="pydrake.geometry.SceneGraph_[Expression].RegisterFrame"></span><span class="sig-name descname"><span class="pre">RegisterFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.RegisterFrame" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -13469,6 +13679,13 @@ copied.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.GetAllDeformableGeometryIds">
+<span class="sig-name descname"><span class="pre">GetAllDeformableGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetAllDeformableGeometryIds" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all geometry ids that correspond to deformable geometries. The
+order is guaranteed to be stable and consistent.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.GetAllFrameIds">
 <span class="sig-name descname"><span class="pre">GetAllFrameIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetAllFrameIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all of the frame ids in the scene graph. The order is
@@ -13506,6 +13723,16 @@ pair may <em>not</em> be a candidate.</p>
 reported in a fixed order (i.e., always (A, B) and <em>never</em> (B, A)).
 This is the same ordering as would be returned by, e.g.,
 QueryObject::ComputePointPairPenetration().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.GetConvexHull">
+<span class="sig-name descname"><span class="pre">GetConvexHull</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.PolygonSurfaceMesh" title="pydrake.geometry.PolygonSurfaceMesh"><span class="pre">pydrake.geometry.PolygonSurfaceMesh</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetConvexHull" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the convex hull (a polytope) associated with the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>, if it exists. Basic primitive shapes don’t have
+convex hulls (including, arbitrarily, Box). But Mesh and Convex shapes
+do. Alternatively, if you already have a Mesh or Convex you can call
+Mesh::GetConvexHull() or Convex::GetConvexHull(), respectively.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -13807,11 +14034,61 @@ properties).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.GetReferenceMesh">
+<span class="sig-name descname"><span class="pre">GetReferenceMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.VolumeMesh" title="pydrake.geometry.VolumeMesh"><span class="pre">pydrake.geometry.VolumeMesh</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetReferenceMesh" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the reference mesh of the geometry with the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>, measured and expressed in the geometry’s frame, G.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The identifier for the queried geometry.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A pointer to the reference mesh of the geometry if the geometry is
+deformable, or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> if the geometry is rigid.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>GetPoseInFrame() provides the transform necessary to measure and
+express the reference mesh’s vertex positions in the geometry’s
+registered frame F.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
+<li><p><strong>geometry.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.GetShape">
 <span class="sig-name descname"><span class="pre">GetShape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetShape" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the shape specified for the geometry with the given
 <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>. In order to extract the details of the shape, it
 should be passed through an implementation of a ShapeReifier.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.IsDeformableGeometry">
+<span class="sig-name descname"><span class="pre">IsDeformableGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.IsDeformableGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if the geometry with the given <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is
+deformable.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The identifier for the queried geometry.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
+<li><p><strong>geometry.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -13874,6 +14151,13 @@ the SceneGraph itself counts as a source.</p>
 <dd><p>Reports the total number of <em>anchored</em> non-deformable geometries. This
 should provide the same answer as calling NumGeometriesForFrame() with
 the world frame id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector.NumDeformableGeometriesWithRole">
+<span class="sig-name descname"><span class="pre">NumDeformableGeometriesWithRole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector" title="pydrake.geometry.SceneGraphInspector"><span class="pre">pydrake.geometry.SceneGraphInspector</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Role" title="pydrake.geometry.Role"><span class="pre">pydrake.geometry.Role</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.NumDeformableGeometriesWithRole" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the <em>total</em> number of geometries in the scene graph with the
+indicated role.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14103,6 +14387,13 @@ copied.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllDeformableGeometryIds">
+<span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetAllDeformableGeometryIds"></span><span class="sig-name descname"><span class="pre">GetAllDeformableGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllDeformableGeometryIds" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all geometry ids that correspond to deformable geometries. The
+order is guaranteed to be stable and consistent.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllFrameIds">
 <span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetAllFrameIds"></span><span class="sig-name descname"><span class="pre">GetAllFrameIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetAllFrameIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all of the frame ids in the scene graph. The order is
@@ -14140,6 +14431,16 @@ pair may <em>not</em> be a candidate.</p>
 reported in a fixed order (i.e., always (A, B) and <em>never</em> (B, A)).
 This is the same ordering as would be returned by, e.g.,
 QueryObject::ComputePointPairPenetration().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetConvexHull">
+<span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetConvexHull"></span><span class="sig-name descname"><span class="pre">GetConvexHull</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.PolygonSurfaceMesh" title="pydrake.geometry.PolygonSurfaceMesh"><span class="pre">pydrake.geometry.PolygonSurfaceMesh</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetConvexHull" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the convex hull (a polytope) associated with the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>, if it exists. Basic primitive shapes don’t have
+convex hulls (including, arbitrarily, Box). But Mesh and Convex shapes
+do. Alternatively, if you already have a Mesh or Convex you can call
+Mesh::GetConvexHull() or Convex::GetConvexHull(), respectively.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14441,11 +14742,61 @@ properties).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetReferenceMesh">
+<span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetReferenceMesh"></span><span class="sig-name descname"><span class="pre">GetReferenceMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.VolumeMesh" title="pydrake.geometry.VolumeMesh"><span class="pre">pydrake.geometry.VolumeMesh</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetReferenceMesh" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the reference mesh of the geometry with the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>, measured and expressed in the geometry’s frame, G.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The identifier for the queried geometry.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A pointer to the reference mesh of the geometry if the geometry is
+deformable, or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> if the geometry is rigid.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>GetPoseInFrame() provides the transform necessary to measure and
+express the reference mesh’s vertex positions in the geometry’s
+registered frame F.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
+<li><p><strong>geometry.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetShape">
 <span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetShape"></span><span class="sig-name descname"><span class="pre">GetShape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.GetShape" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the shape specified for the geometry with the given
 <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>. In order to extract the details of the shape, it
 should be passed through an implementation of a ShapeReifier.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.IsDeformableGeometry">
+<span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].IsDeformableGeometry"></span><span class="sig-name descname"><span class="pre">IsDeformableGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.IsDeformableGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if the geometry with the given <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is
+deformable.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The identifier for the queried geometry.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
+<li><p><strong>geometry.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -14508,6 +14859,13 @@ the SceneGraph itself counts as a source.</p>
 <dd><p>Reports the total number of <em>anchored</em> non-deformable geometries. This
 should provide the same answer as calling NumGeometriesForFrame() with
 the world frame id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.NumDeformableGeometriesWithRole">
+<span id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].NumDeformableGeometriesWithRole"></span><span class="sig-name descname"><span class="pre">NumDeformableGeometriesWithRole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Role" title="pydrake.geometry.Role"><span class="pre">pydrake.geometry.Role</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-AutoDiffXd-.NumDeformableGeometriesWithRole" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the <em>total</em> number of geometries in the scene graph with the
+indicated role.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14731,6 +15089,13 @@ copied.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.GetAllDeformableGeometryIds">
+<span id="pydrake.geometry.SceneGraphInspector_[Expression].GetAllDeformableGeometryIds"></span><span class="sig-name descname"><span class="pre">GetAllDeformableGeometryIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetAllDeformableGeometryIds" title="Permalink to this definition"></a></dt>
+<dd><p>Returns all geometry ids that correspond to deformable geometries. The
+order is guaranteed to be stable and consistent.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.GetAllFrameIds">
 <span id="pydrake.geometry.SceneGraphInspector_[Expression].GetAllFrameIds"></span><span class="sig-name descname"><span class="pre">GetAllFrameIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetAllFrameIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all of the frame ids in the scene graph. The order is
@@ -14768,6 +15133,16 @@ pair may <em>not</em> be a candidate.</p>
 reported in a fixed order (i.e., always (A, B) and <em>never</em> (B, A)).
 This is the same ordering as would be returned by, e.g.,
 QueryObject::ComputePointPairPenetration().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.GetConvexHull">
+<span id="pydrake.geometry.SceneGraphInspector_[Expression].GetConvexHull"></span><span class="sig-name descname"><span class="pre">GetConvexHull</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.PolygonSurfaceMesh" title="pydrake.geometry.PolygonSurfaceMesh"><span class="pre">pydrake.geometry.PolygonSurfaceMesh</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetConvexHull" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the convex hull (a polytope) associated with the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>, if it exists. Basic primitive shapes don’t have
+convex hulls (including, arbitrarily, Box). But Mesh and Convex shapes
+do. Alternatively, if you already have a Mesh or Convex you can call
+Mesh::GetConvexHull() or Convex::GetConvexHull(), respectively.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -15069,11 +15444,61 @@ properties).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.GetReferenceMesh">
+<span id="pydrake.geometry.SceneGraphInspector_[Expression].GetReferenceMesh"></span><span class="sig-name descname"><span class="pre">GetReferenceMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.VolumeMesh" title="pydrake.geometry.VolumeMesh"><span class="pre">pydrake.geometry.VolumeMesh</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetReferenceMesh" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the reference mesh of the geometry with the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>, measured and expressed in the geometry’s frame, G.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The identifier for the queried geometry.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A pointer to the reference mesh of the geometry if the geometry is
+deformable, or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> if the geometry is rigid.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>GetPoseInFrame() provides the transform necessary to measure and
+express the reference mesh’s vertex positions in the geometry’s
+registered frame F.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
+<li><p><strong>geometry.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.GetShape">
 <span id="pydrake.geometry.SceneGraphInspector_[Expression].GetShape"></span><span class="sig-name descname"><span class="pre">GetShape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.GetShape" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the shape specified for the geometry with the given
 <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>. In order to extract the details of the shape, it
 should be passed through an implementation of a ShapeReifier.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.IsDeformableGeometry">
+<span id="pydrake.geometry.SceneGraphInspector_[Expression].IsDeformableGeometry"></span><span class="sig-name descname"><span class="pre">IsDeformableGeometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.IsDeformableGeometry" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if the geometry with the given <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> is
+deformable.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The identifier for the queried geometry.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
+<li><p><strong>geometry.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15136,6 +15561,13 @@ the SceneGraph itself counts as a source.</p>
 <dd><p>Reports the total number of <em>anchored</em> non-deformable geometries. This
 should provide the same answer as calling NumGeometriesForFrame() with
 the world frame id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraphInspector_-Expression-.NumDeformableGeometriesWithRole">
+<span id="pydrake.geometry.SceneGraphInspector_[Expression].NumDeformableGeometriesWithRole"></span><span class="sig-name descname"><span class="pre">NumDeformableGeometriesWithRole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SceneGraphInspector_" title="pydrake.geometry.SceneGraphInspector_"><span class="pre">pydrake.geometry.SceneGraphInspector_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Role" title="pydrake.geometry.Role"><span class="pre">pydrake.geometry.Role</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_-Expression-.NumDeformableGeometriesWithRole" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the <em>total</em> number of geometries in the scene graph with the
+indicated role.</p>
 </dd></dl>
 
 <dl class="py method">
