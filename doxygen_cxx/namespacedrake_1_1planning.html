@@ -489,10 +489,11 @@ Configuration Space," &#160;* Denotes equal contribution.</p>
 <dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">if</td><td>the center of <code>starting_ellipsoid</code> is in collision, or violates any of the user-specified constraints in <code>options.prog_with_additional_constraints</code>. </td></tr>
+    <tr><td class="paramname">if</td><td>the center of <code>starting_ellipsoid</code> is in collision, or violates any of the user-specified constraints in <code>options.prog_with_additional_constraints</code>.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>This can be a long running function that needs to solve many QPs. If you have a solver which requires a license, consider acquiring the license before solving this function. See AcquireLicense for more details. </dd></dl>
 
 </div>
 </div>

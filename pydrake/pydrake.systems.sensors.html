@@ -227,6 +227,85 @@ geometry::render::DepthRenderCamera) cameras.</p>
 <p>The values are only checked when the configuration is operated on:
 during serialization, after deserialization, and when applying the
 configuration (see ApplyCameraConfig().)</p>
+<p><strong>Cameras and RenderEngines</strong></p>
+<p>Every camera is supported by a geometry::render::RenderEngine
+instance. These properties configure the render engine for this
+camera.</p>
+<p>RenderEngines are uniquely identified by their name (as specified by
+<code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>) and configured by <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code>. Each
+RenderEngine instance must have a unique name. Rendering will be more
+efficient if multiple cameras share the same RenderEngine instance. To
+share RenderEngine instances, cameras must have <em>same</em> value for
+<code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>.</p>
+<p>Each camera can also provide the configuration of its supporting
+RenderEngine (<code class="docutils literal notranslate"><span class="pre">renderer_class</span></code>). However, it is an error for two
+cameras to specify the same <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> but provide
+<em>conflicting</em> renderer configurations. It is the <em>user’s</em>
+responsibility to make sure that for every shared <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>
+value in a set of CameraConfig instances that the corresponding
+<code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> values are compatible. How that is achieved depends
+on the medium of specification. While there are multiple possible
+mechanisms, these examples consist of the simplest.</p>
+<p><em>Configuring compatible ``renderer_class`` in YAML</em></p>
+<p>The simplest solution in YAML is to use the merge operator (<code class="docutils literal notranslate"><span class="pre">&lt;&lt;:</span></code>)
+to guarantee that multiple cameras use the exact same
+<code class="docutils literal notranslate"><span class="pre">renderer_class</span></code>. This terse example shows how that might be done.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cameras</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">&amp;BaseCamera</span><span class="p">:</span><span class="w"></span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base_camera</span><span class="w"></span>
+<span class="nt">rgb</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="nt">depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="nt">renderer_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">common_renderer</span><span class="w"></span>
+<span class="nt">renderer_class</span><span class="p">:</span><span class="w"> </span><span class="kt">!RenderEngineVtk</span><span class="w"></span>
+<span class="nt">exposure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.4</span><span class="w"></span>
+<span class="nt">cast_shadows</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;DepthOnlyCamera</span><span class="w"></span>
+<span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="nv">*BaseCamera</span><span class="w"></span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">depth_camera</span><span class="w"></span>
+<span class="nt">rgb</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+<span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In this example, we’ve defined two cameras named, <code class="docutils literal notranslate"><span class="pre">base_camera</span></code> and
+<code class="docutils literal notranslate"><span class="pre">depth_camera</span></code>. Both share a RenderEngineVtk instance named
+<code class="docutils literal notranslate"><span class="pre">common_renderer</span></code>. The merge operator guarantees that
+<code class="docutils literal notranslate"><span class="pre">depth_camera</span></code> has exactly duplicated <code class="docutils literal notranslate"><span class="pre">base_camera`'s</span>
+<span class="pre">`renderer_class</span></code> value. However, it tweaks the camera definition by
+disabling the rgb and label images. Edits to the <code class="docutils literal notranslate"><span class="pre">RenderEngineVtk</span></code>
+parameters in a single location are kept in sync across all cameras
+that are supposed to share.</p>
+<p><em>Configuring compatible ``renderer_class`` in C++</em></p>
+<p>The same trick for coordinating multiple CameraConfig instances in
+yaml will also work in C++. Simply instantiate a single set of
+RenderEngine parameters and assign it to every instance.</p>
+<p>In C++ there are other options available. If you have control over the
+order that CameraConfig instances get applied, you can simply define
+the <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> value for the first instance and leave it blank
+in subsequent instances which share the same <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>. It is
+important to configure the RenderEngine on the <em>first</em> appearance of a
+<code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> value.</p>
+<p><em>Rules for compatible ``renderer_class`` values</em></p>
+<p>Assume we have two CameraConfig instances that have a common
+<code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> value (and both have well-formed <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code>
+values). When we apply the first config instance, we will add a
+RenderEngine. When we attempt to apply the second config instance, we
+already have a RenderEngine with the specified name. Compatibility now
+depends on the <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> value stored in the second config
+instance. It will be compatible in the following cases:</p>
+<ul class="simple">
+<li><p>The second config instance’s <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> value is the empty string.</p></li>
+<li><p>The second config instance’s <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> value is the <em>class name</em> of</p></li>
+</ul>
+<p>the RenderEngine instance that was already created.
+- The second config instance’s <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> contains the appropriate
+parameters type for the type of RenderEngine instance that was already
+created <em>and</em> the parameter values <em>exactly</em> match those in the
+instantiated engine.</p>
+<p>Every other <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> value in the second config instance
+(e.g., naming a different type of RenderEngine, or specifying
+different parameters) is considered a conflicting specification and
+will give rise to runtime errors.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.sensors.CameraConfig" title="pydrake.systems.sensors.CameraConfig"><span class="pre">pydrake.systems.sensors.CameraConfig</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.__init__" title="Permalink to this definition"></a></dt>
@@ -528,48 +607,31 @@ point in the center of the image.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.renderer_class">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">renderer_class</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.renderer_class" title="Permalink to this definition"></a></dt>
-<dd><p>The choice of render engine implementation to use. It can be specified
-simply by providing a <code class="docutils literal notranslate"><span class="pre">string</span></code> containing the class <em>name</em> of the
-RenderEngine to use (i.e., <code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineVtk&quot;</span></code>, <cite>“RenderEngineGl”</cite>,
-or <code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineGltfClient&quot;</span></code>). Or, it can be specified by providing
-parameters for one of those engines: RenderEngineVtkParams,
+<dd><p>The configuration of the camera’s supporting RenderEngine.</p>
+<p>The value can be one of: - An empty string. - A string containing the
+class name of the RenderEngine to use (i.e., <code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineVtk&quot;</span></code>,
+<cite>“RenderEngineGl”</cite>, or <code class="docutils literal notranslate"><span class="pre">&quot;RenderEngineGltfClient&quot;</span></code>). - The struct of
+parameters for a supported engine, i.e., RenderEngineVtkParams,
 RenderEngineGlParams, or RenderEngineGltfClientParams.</p>
-<p>If a <code class="docutils literal notranslate"><span class="pre">string</span></code> containing the render engine class <em>name</em> is provided,
-the engine instantiated will use the default parameters – equivalent
-to passing the set of default parameters.</p>
-<p>It is possible for multiple cameras to reference the same
-<code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> but configure the renderer differently. This would
-be a configuration error. The following rules will help prevent
-problematic configurations:</p>
+<p>For config instances which have a unique <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> value (one
+that has not yet been added to the diagram), the various possible
+<code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> values will instantiate a new RenderEngine and
+associate it with a camera according to the following rules.</p>
 <ul class="simple">
-<li><p>Multiple cameras can reference the same value for <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>.</p></li>
-<li><p>If multiple cameras reference the same value for <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>, only</p></li>
+<li><p>Empty string: a RenderEngine of the <em>default</em> type (RenderEngineVtk)</p></li>
 </ul>
-<p>the <em>first</em> can use the engine parameters to specify it. Attempting to
-do so with a later camera will produce an error.
-- The later cameras can use engine class <em>name</em>.
-- If a later camera names a <em>different</em> engine class, that will result
-in an error.</p>
-<p>In YAML, it can be a bit trickier. Depending on how a collection of
-cameras is articulated, the concept of “first” may be unclear. In
-<code class="docutils literal notranslate"><span class="pre">examples/hardware_sim/scenario.h</span></code> the collection is a map. So, the
-camera configurations are not necessarily processed in the order they
-appear in the YAML file. Instead, the processing order depends on the
-mnemonic camera key. So, be aware, if you use a similar mapping, you
-may have to massage the key names to achieve the requisite processing
-order. Alternatively, a vector of CameraConfig in your own scenario
-file, would guarantee that processing order is the same as file order.</p>
-<p>We intend to relax these restrictions in time, allowing equivalent,
-redundant specifications of a render engine (and throwing only on
-inconsistent specifications).</p>
-<p>Passing the empty string is equivalent to saying, “I don’t care”. If a
-render engine with that name has already been configured, the camera
-will use it (regardless of type). If the name doesn’t already exist,
-the default, slower, more portable, and more robust RenderEngineVtk
-will be instantiated. RenderEngineGl can be selected if you are on
+<p>will be instantiated with <em>default</em> parameters.
+- Class name string: a RenderEngine of the <em>named</em> type will be
+instantiated with <em>default</em> parameters.
+- Parameter struct: a RenderEngine of the type compatible with the struct
+will be instantiated, with those parameter values.</p>
+<p>If, however, the <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> is not unique, as documented
+camera_config_compatible_renderer “above”, the values of
+<code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> must be <em>compatible</em> with each other.</p>
+<p>Note: RenderEngineVtk is the default RenderEngine type. It is slower,
+but portable and robust. RenderEngineGl is an option if you are on
 Ubuntu and need the improved performance (at the <em>possible</em> cost of
-lesser image fidelity). In YAML, omitting <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> from the
-camera specification is equivalent to “passing the empty string”.</p>
+lesser image fidelity).</p>
 <p><em>Configuring in YAML</em></p>
 <p>It isn’t always obvious what the proper spelling in YAML is. The
 following examples illustrate how the <code class="docutils literal notranslate"><span class="pre">renderer_class</span></code> field can be
@@ -614,9 +676,8 @@ engine parameters with default values.</p>
 <span class="nl">cleanup</span><span class="p">:</span><span class="w"> </span><span class="nb">false</span><span class="w"></span>
 </pre></div>
 </div>
-</details><ol class="arabic simple" start="6">
-<li><p>Explicitly request Drake’s default render engine.</p></li>
-</ol>
+</details><p>6. Explicitly request Drake’s default render engine or previously configured
+RenderEngine based on shared <code class="docutils literal notranslate"><span class="pre">renderer_name</span></code>.</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">yaml</span><span class="p">}</span><span class="w"></span>
 <span class="nl">renderer_class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"></span>
 </pre></div>
@@ -645,10 +706,7 @@ Drake’s RenderEngine implementations.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.systems.sensors.CameraConfig.renderer_name">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">renderer_name</span></span><a class="headerlink" href="#pydrake.systems.sensors.CameraConfig.renderer_name" title="Permalink to this definition"></a></dt>
-<dd><p>The name of the geometry::render::RenderEngine that this camera uses.
-Generally, it is more efficient for multiple cameras to share a single
-render engine instance; they should, therefore, share a common
-renderer_name value.</p>
+<dd><p>The name of the geometry::render::RenderEngine that this camera uses.</p>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">renderer_name</span></code> is not empty.</p>
 </dd>

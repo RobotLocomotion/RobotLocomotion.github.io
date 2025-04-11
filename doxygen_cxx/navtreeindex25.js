@@ -1,5 +1,9 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1planning_1_1_collision_checker.html#af1190d81eb661b4151d32b844e86fc5a":[1,4,2,2,1,73],
+"classdrake_1_1planning_1_1_collision_checker.html#af290abddd23e4ccd6cfed2ee8c69ae78":[1,4,2,2,1,66],
+"classdrake_1_1planning_1_1_collision_checker.html#af43a938ad38ceb4d96258db6bbe668e5":[1,4,2,2,1,32],
+"classdrake_1_1planning_1_1_collision_checker.html#af4a3f7ae74cf3f31e5f3a3b840d111a5":[1,4,2,2,1,34],
 "classdrake_1_1planning_1_1_collision_checker.html#af8423473a4d7b2c2b37c7f9c8108c7a3":[1,4,2,2,1,85],
 "classdrake_1_1planning_1_1_collision_checker.html#af9df46cf7a999edaee7b5461a38a8e0d":[1,4,2,2,1,84],
 "classdrake_1_1planning_1_1_collision_checker.html#afa782a122b868c688b6c7bce870a7c93":[1,4,2,2,1,54],
@@ -245,9 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a5eea9354674efc1c07bf537319628ead":[1,1,0,22,8],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a643ccb05dea44d65aa2d91b422f20f12":[1,1,0,22,0],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a66022c63d007d32a9812270a90890e7f":[1,1,0,22,12],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a6ce6c2bf02e868cb54161dd4d8a26e29":[1,1,0,22,1],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a809bcc60ce15f0470a72646d4323643c":[1,1,0,22,5],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,22,6],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a89e2693c8bf829dbf08466fca0f15e07":[1,1,0,22,11],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[1,1,0,22,7]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a6ce6c2bf02e868cb54161dd4d8a26e29":[1,1,0,22,1]
 };

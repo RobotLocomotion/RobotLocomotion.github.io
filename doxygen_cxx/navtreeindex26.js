@@ -1,5 +1,9 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a809bcc60ce15f0470a72646d4323643c":[1,1,0,22,5],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,22,6],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a89e2693c8bf829dbf08466fca0f15e07":[1,1,0,22,11],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[1,1,0,22,7],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#aaf84e2d97527cd6fd276f3446f7b627d":[1,1,0,22,4],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ad27bd6e013f3fee7cbf92d25f00b5bd7":[1,1,0,22,2],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html":[1,4,2,1,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1schema_1_1_deterministic.html#aee90379adb0307effb138f4871edbc5c":[3,0,0,13,0,11],
 "classdrake_1_1schema_1_1_deterministic.html#af7adf59f949c5e77dcc2eee074d02208":[3,0,0,13,0,7],
 "classdrake_1_1schema_1_1_deterministic_vector.html":[3,0,0,13,1],
-"classdrake_1_1schema_1_1_deterministic_vector.html#a04d8ff3a3d7cd3f8ad34bbc853c03fdb":[3,0,0,13,1,6],
-"classdrake_1_1schema_1_1_deterministic_vector.html#a0a6c2511eabe93951ecba0bd0e887d48":[3,0,0,13,1,4],
-"classdrake_1_1schema_1_1_deterministic_vector.html#a0cc4f4435cdfc7f37c1091be688a22de":[3,0,0,13,1,11],
-"classdrake_1_1schema_1_1_deterministic_vector.html#a1d969737bf8d1e959fd7c19c4c57bf46":[3,0,0,13,1,5],
-"classdrake_1_1schema_1_1_deterministic_vector.html#a47368fe9dde1da5c10f132422f6d03f0":[3,0,0,13,1,3]
+"classdrake_1_1schema_1_1_deterministic_vector.html#a04d8ff3a3d7cd3f8ad34bbc853c03fdb":[3,0,0,13,1,6]
 };

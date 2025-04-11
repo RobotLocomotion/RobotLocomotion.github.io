@@ -215,6 +215,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a88a7096a316e3d2340941ddcc0a89832"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a88a7096a316e3d2340941ddcc0a89832">default_render_label</a> () const</td></tr>
 <tr class="memdesc:a88a7096a316e3d2340941ddcc0a89832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the render label value this render engine has been configured to use.  <a href="#a88a7096a316e3d2340941ddcc0a89832">More...</a><br /></td></tr>
 <tr class="separator:a88a7096a316e3d2340941ddcc0a89832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd56e7a846b575dcf43b772a4c528e34"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#afd56e7a846b575dcf43b772a4c528e34">GetParameterYaml</a> () const</td></tr>
+<tr class="memdesc:afd56e7a846b575dcf43b772a4c528e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produces a yaml string that can be deserialized into this <em>particular</em> <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a>'s type.  <a href="#afd56e7a846b575dcf43b772a4c528e34">More...</a><br /></td></tr>
+<tr class="separator:afd56e7a846b575dcf43b772a4c528e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Registering geometry with the engine</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Clones the render engine.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -290,6 +293,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:afc7e6d829f1d058e48eda74c9afe9646"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#afc7e6d829f1d058e48eda74c9afe9646">SetDefaultLightPosition</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_DL)</td></tr>
 <tr class="memdesc:afc7e6d829f1d058e48eda74c9afe9646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides access to the light for manual configuration since it's currently bound to the camera position.  <a href="#afc7e6d829f1d058e48eda74c9afe9646">More...</a><br /></td></tr>
 <tr class="separator:afc7e6d829f1d058e48eda74c9afe9646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b3a55f09d0d1173c300b2e161b2c9a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a79b3a55f09d0d1173c300b2e161b2c9a">DoGetParameterYaml</a> () const</td></tr>
+<tr class="memdesc:a79b3a55f09d0d1173c300b2e161b2c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NVI-function for <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#afd56e7a846b575dcf43b772a4c528e34" title="Produces a yaml string that can be deserialized into this particular RenderEngine&#39;s type.">GetParameterYaml()</a>.  <a href="#a79b3a55f09d0d1173c300b2e161b2c9a">More...</a><br /></td></tr>
+<tr class="separator:a79b3a55f09d0d1173c300b2e161b2c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:aeac1db8fb59a28cbb7b50248c53a5bc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#aeac1db8fb59a28cbb7b50248c53a5bc6">RenderEngine</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html">RenderEngine</a> &amp;)=default</td></tr>
 <tr class="separator:aeac1db8fb59a28cbb7b50248c53a5bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -508,6 +514,34 @@ Friends</h2></td></tr>
 
 <p>The NVI-function for cloning this render engine as a shared_ptr. </p>
 <p>When not overridden, this base class implementation will call <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#a9db015dacce22c75992bd3c0a0b39af7" title="The NVI-function for cloning this render engine as a unique_ptr.">DoClone()</a> to construct a unique_ptr clone and then promote that to a shared_ptr upon return. Note that in Python this is bound as simply "DoClone" not "DoCloneShared", because the unique_ptr flavor is nonsense in Python. </p>
+
+</div>
+</div>
+<a id="a79b3a55f09d0d1173c300b2e161b2c9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b3a55f09d0d1173c300b2e161b2c9a">&#9670;&nbsp;</a></span>DoGetParameterYaml()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string DoGetParameterYaml </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The NVI-function for <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#afd56e7a846b575dcf43b772a4c528e34" title="Produces a yaml string that can be deserialized into this particular RenderEngine&#39;s type.">GetParameterYaml()</a>. </p>
+<p>Derived classes must implement this in order to support engine comparisons. </p>
 
 </div>
 </div>
@@ -875,6 +909,25 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="afd56e7a846b575dcf43b772a4c528e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd56e7a846b575dcf43b772a4c528e34">&#9670;&nbsp;</a></span>GetParameterYaml()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetParameterYaml </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Produces a yaml string that can be deserialized into this <em>particular</em> <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a>'s type. </p>
 
 </div>
 </div>

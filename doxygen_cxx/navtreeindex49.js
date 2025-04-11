@@ -1,5 +1,9 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#af63939a5197628c5693f211d3ff3b583":[3,0,0,18,5,5],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afb48be114e596b51430d94200ca3b821":[3,0,0,18,5,4],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afd774c050097f45948fa77e181ec8a19":[3,0,0,18,5,6],
+"classdrake_1_1trajectories_1_1_function_handle_trajectory.html":[3,0,0,18,6],
 "classdrake_1_1trajectories_1_1_function_handle_trajectory.html#a43aeb39c75a161bbe11551e73edcd9ea":[3,0,0,18,6,3],
 "classdrake_1_1trajectories_1_1_function_handle_trajectory.html#a6a8121fd509d4b7ac45f0a9932f1e1fd":[3,0,0,18,6,4],
 "classdrake_1_1trajectories_1_1_function_handle_trajectory.html#a91f12eeb5a65ec18decef64094e1efb5":[3,0,0,18,6,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX49 =
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ae66e8448b66859a6593a973875a61c9c":[1,2,11,8,5],
 "classes.html":[3,1],
 "classprocess__attribute__default.html":[3,0,3],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,3],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03f87782de17fa3cc06eae968fe10b34":[3,0,2,3,12],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a04a274a495def8512740b2abae7247dd":[3,0,2,3,2],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,2,3,0],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,2,3,10]
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,3]
 };

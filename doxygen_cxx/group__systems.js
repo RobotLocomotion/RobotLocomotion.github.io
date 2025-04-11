@@ -39,6 +39,8 @@ var group__systems =
       [ "get_query_output_port", "classdrake_1_1geometry_1_1_scene_graph.html#a26da55d64bd1dda5bda1ea5ae8b985c4", null ],
       [ "get_source_configuration_port", "classdrake_1_1geometry_1_1_scene_graph.html#a14fe2ae2ffcc6ef39c82b2ebf2561e9d", null ],
       [ "get_source_pose_port", "classdrake_1_1geometry_1_1_scene_graph.html#af6a9586065e37f08cc0dd316e9bdd480", null ],
+      [ "GetRendererParameterYaml", "classdrake_1_1geometry_1_1_scene_graph.html#ac8c1ac8044652913df21017b283382b5", null ],
+      [ "GetRendererParameterYaml", "classdrake_1_1geometry_1_1_scene_graph.html#ad1eb0f1b0743edb7a468a2cc77955733", null ],
       [ "GetRendererTypeName", "classdrake_1_1geometry_1_1_scene_graph.html#a9cdf0a6693c255362906281ff2f7d880", null ],
       [ "GetRendererTypeName", "classdrake_1_1geometry_1_1_scene_graph.html#a2bbf224327b53543c185b2c926821019", null ],
       [ "HasRenderer", "classdrake_1_1geometry_1_1_scene_graph.html#a9ab68336b439ffd7ac7f1e1fe6a025db", null ],

@@ -409,6 +409,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2bbf224327b53543c185b2c926821019"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2bbf224327b53543c185b2c926821019">GetRendererTypeName</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::string &amp;name) const</td></tr>
 <tr class="memdesc:a2bbf224327b53543c185b2c926821019"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a9cdf0a6693c255362906281ff2f7d880" title="Reports the type name for the RenderEngine registered with the given name.">GetRendererTypeName()</a>.  <a href="#a2bbf224327b53543c185b2c926821019">More...</a><br /></td></tr>
 <tr class="separator:a2bbf224327b53543c185b2c926821019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c1ac8044652913df21017b283382b5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ac8c1ac8044652913df21017b283382b5">GetRendererParameterYaml</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:ac8c1ac8044652913df21017b283382b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Yaml-formatted string representing the named engine's parameters.  <a href="#ac8c1ac8044652913df21017b283382b5">More...</a><br /></td></tr>
+<tr class="separator:ac8c1ac8044652913df21017b283382b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1eb0f1b0743edb7a468a2cc77955733"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ad1eb0f1b0743edb7a468a2cc77955733">GetRendererParameterYaml</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::string &amp;name) const</td></tr>
+<tr class="memdesc:ad1eb0f1b0743edb7a468a2cc77955733"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ac8c1ac8044652913df21017b283382b5" title="Creates a Yaml-formatted string representing the named engine&#39;s parameters.">GetRendererParameterYaml()</a>.  <a href="#ad1eb0f1b0743edb7a468a2cc77955733">More...</a><br /></td></tr>
+<tr class="separator:ad1eb0f1b0743edb7a468a2cc77955733"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae614976e788b66b5ceed6df5fa7fba5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ae614976e788b66b5ceed6df5fa7fba5e">RendererCount</a> () const</td></tr>
 <tr class="memdesc:ae614976e788b66b5ceed6df5fa7fba5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the number of renderers registered to this SceneGraph.  <a href="#ae614976e788b66b5ceed6df5fa7fba5e">More...</a><br /></td></tr>
 <tr class="separator:ae614976e788b66b5ceed6df5fa7fba5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2395,6 +2401,61 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ac8c1ac8044652913df21017b283382b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c1ac8044652913df21017b283382b5">&#9670;&nbsp;</a></span>GetRendererParameterYaml() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetRendererParameterYaml </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a Yaml-formatted string representing the named engine's parameters. </p>
+<p>The YAML will be prefixed with the paramater type's name, e.g: </p><pre class="fragment">RenderEngineVtkParams:
+  default_diffuse: [1, 1, 1]
+  ...
+</pre><p>If no registered engine has the given <code>name</code>, the returned string is empty. </p>
+
+</div>
+</div>
+<a id="ad1eb0f1b0743edb7a468a2cc77955733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1eb0f1b0743edb7a468a2cc77955733">&#9670;&nbsp;</a></span>GetRendererParameterYaml() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetRendererParameterYaml </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-query variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ac8c1ac8044652913df21017b283382b5" title="Creates a Yaml-formatted string representing the named engine&#39;s parameters.">GetRendererParameterYaml()</a>. </p>
+<p>Rather than querying SceneGraph's model, it queries the copy of the model stored in the provided context. </p>
 
 </div>
 </div>

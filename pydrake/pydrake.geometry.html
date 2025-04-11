@@ -9810,6 +9810,13 @@ to use.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngine.GetParameterYaml">
+<span class="sig-name descname"><span class="pre">GetParameterYaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.RenderEngine" title="pydrake.geometry.RenderEngine"><span class="pre">pydrake.geometry.RenderEngine</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.geometry.RenderEngine.GetParameterYaml" title="Permalink to this definition"></a></dt>
+<dd><p>Produces a yaml string that can be deserialized into this <em>particular</em>
+RenderEngine’s type.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.RenderEngine.GetRenderLabelOrThrow">
 <span class="sig-name descname"><span class="pre">GetRenderLabelOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.RenderEngine" title="pydrake.geometry.RenderEngine"><span class="pre">pydrake.geometry.RenderEngine</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.PerceptionProperties" title="pydrake.geometry.PerceptionProperties"><span class="pre">pydrake.geometry.PerceptionProperties</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.geometry.RenderLabel" title="pydrake.geometry.RenderLabel"><span class="pre">pydrake.geometry.RenderLabel</span></a></span></span><a class="headerlink" href="#pydrake.geometry.RenderEngine.GetRenderLabelOrThrow" title="Permalink to this definition"></a></dt>
 <dd><p>Extracts the <code class="docutils literal notranslate"><span class="pre">(label,</span> <span class="pre">id)</span></code> RenderLabel property from the given
@@ -11038,6 +11045,27 @@ registered frames.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.GetRendererParameterYaml">
+<span class="sig-name descname"><span class="pre">GetRendererParameterYaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.GetRendererParameterYaml" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetRendererParameterYaml(self: pydrake.geometry.SceneGraph, name: str) -&gt; str</p></li>
+</ol>
+<p>Creates a Yaml-formatted string representing the named engine’s
+parameters. The YAML will be prefixed with the paramater type’s name,
+e.g:</p>
+<p>RenderEngineVtkParams: default_diffuse: [1, 1, 1] …</p>
+<p>If no registered engine has the given <code class="docutils literal notranslate"><span class="pre">name</span></code>, the returned string is
+empty.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetRendererParameterYaml(self: pydrake.geometry.SceneGraph, context: pydrake.systems.framework.Context, name: str) -&gt; str</p></li>
+</ol>
+<p>systems::Context-query variant of GetRendererParameterYaml(). Rather
+than querying SceneGraph’s model, it queries the copy of the model
+stored in the provided context.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph.GetRendererTypeName">
 <span class="sig-name descname"><span class="pre">GetRendererTypeName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph.GetRendererTypeName" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -12026,6 +12054,27 @@ registered frames.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.GetRendererParameterYaml">
+<span id="pydrake.geometry.SceneGraph_[AutoDiffXd].GetRendererParameterYaml"></span><span class="sig-name descname"><span class="pre">GetRendererParameterYaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.GetRendererParameterYaml" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetRendererParameterYaml(self: pydrake.geometry.SceneGraph_[AutoDiffXd], name: str) -&gt; str</p></li>
+</ol>
+<p>Creates a Yaml-formatted string representing the named engine’s
+parameters. The YAML will be prefixed with the paramater type’s name,
+e.g:</p>
+<p>RenderEngineVtkParams: default_diffuse: [1, 1, 1] …</p>
+<p>If no registered engine has the given <code class="docutils literal notranslate"><span class="pre">name</span></code>, the returned string is
+empty.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetRendererParameterYaml(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], name: str) -&gt; str</p></li>
+</ol>
+<p>systems::Context-query variant of GetRendererParameterYaml(). Rather
+than querying SceneGraph’s model, it queries the copy of the model
+stored in the provided context.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-AutoDiffXd-.GetRendererTypeName">
 <span id="pydrake.geometry.SceneGraph_[AutoDiffXd].GetRendererTypeName"></span><span class="sig-name descname"><span class="pre">GetRendererTypeName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-AutoDiffXd-.GetRendererTypeName" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
@@ -13005,6 +13054,27 @@ registered frames.</p>
 <dd class="field-odd"><p><strong>RuntimeError if the source_id is not recognized.</strong> – </p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SceneGraph_-Expression-.GetRendererParameterYaml">
+<span id="pydrake.geometry.SceneGraph_[Expression].GetRendererParameterYaml"></span><span class="sig-name descname"><span class="pre">GetRendererParameterYaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_-Expression-.GetRendererParameterYaml" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetRendererParameterYaml(self: pydrake.geometry.SceneGraph_[Expression], name: str) -&gt; str</p></li>
+</ol>
+<p>Creates a Yaml-formatted string representing the named engine’s
+parameters. The YAML will be prefixed with the paramater type’s name,
+e.g:</p>
+<p>RenderEngineVtkParams: default_diffuse: [1, 1, 1] …</p>
+<p>If no registered engine has the given <code class="docutils literal notranslate"><span class="pre">name</span></code>, the returned string is
+empty.</p>
+<ol class="arabic simple" start="2">
+<li><p>GetRendererParameterYaml(self: pydrake.geometry.SceneGraph_[Expression], context: pydrake.systems.framework.Context_[Expression], name: str) -&gt; str</p></li>
+</ol>
+<p>systems::Context-query variant of GetRendererParameterYaml(). Rather
+than querying SceneGraph’s model, it queries the copy of the model
+stored in the provided context.</p>
 </dd></dl>
 
 <dl class="py method">
