@@ -196,6 +196,8 @@ release notes draft using the <code class="language-plaintext highlighter-rouge"
       <li>On the first run, use <code class="language-plaintext highlighter-rouge">--action=create</code> to bootstrap the file.
         <ul>
           <li>The output is draft release notes in <code class="language-plaintext highlighter-rouge">doc/_release-notes/v1.N.0.md</code>.</li>
+          <li>The version numbers in <code class="language-plaintext highlighter-rouge">doc/_pages/from_binary.md</code> should also have
+been automatically upgraded.</li>
         </ul>
       </li>
       <li>On the subsequent runs, use <code class="language-plaintext highlighter-rouge">--action=update</code> to refresh the file.
@@ -337,8 +339,6 @@ tag the release until all five builds have succeeded.</li>
       <li>There is a dummy date 2099-12-31 nearby that should likewise be changed.</li>
       <li>Make sure that the nightly build git sha from the prior steps matches the
 <code class="language-plaintext highlighter-rouge">newest_commit</code> whose changes are enumerated in the notes.</li>
-      <li>Update the github links within <code class="language-plaintext highlighter-rouge">doc/_pages/from_binary.md</code> to reflect
-the upcoming v1.N.0.</li>
     </ol>
   </li>
   <li>Re-enable CI by reverting the commit you added way up above in step 3 of <strong>Prior to release</strong>.</li>
@@ -381,13 +381,13 @@ appropriate edits as follows:
         </ul>
       </li>
       <li>Click the box labeled “Attach binaries by dropping them here or selecting
-them.” and then choose for upload the <strong>36</strong> release files from
+them.” and then choose for upload the <strong>33</strong> release files from
 <code class="language-plaintext highlighter-rouge">/tmp/drake-release/v1.N.0/...</code>:
         <ul>
           <li>9: 3 <code class="language-plaintext highlighter-rouge">.tar.gz</code> + 6 checksums</li>
           <li>6: 2 <code class="language-plaintext highlighter-rouge">.deb</code> + 4 checksums</li>
           <li>12: 4 linux <code class="language-plaintext highlighter-rouge">.whl</code> + 8 checksums</li>
-          <li>9: 3 macOS arm <code class="language-plaintext highlighter-rouge">.whl</code> + 6 checksums</li>
+          <li>6: 2 macOS arm <code class="language-plaintext highlighter-rouge">.whl</code> + 4 checksums</li>
           <li>Note that on Jammy with <code class="language-plaintext highlighter-rouge">snap</code> provided Firefox, drag-and-drop from
 Nautilus will fail, and drop all of your release page inputs typed so
 far. Use the Firefox-provided selection dialog instead, by clicking on
@@ -425,8 +425,8 @@ instructions to obtain a username and password.</p>
 <code class="language-plaintext highlighter-rouge">twine</code> uploader. See <a href="https://pypi.org/help/#apitoken">https://pypi.org/help/#apitoken</a> and <a href="https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#create-an-account">https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/#create-an-account</a>
 for advice on managing api tokens.</p>
 
-<p>For Jammy (and later?), <code class="language-plaintext highlighter-rouge">apt install twine</code> gives a perfectly adequate
-version of <code class="language-plaintext highlighter-rouge">twine</code>.</p>
+<p>For Jammy, <code class="language-plaintext highlighter-rouge">apt install twine</code> is too old. Instead, you must run it from a
+venv (detail below).</p>
 
 <ol>
   <li>
@@ -434,7 +434,14 @@ version of <code class="language-plaintext highlighter-rouge">twine</code>.</p>
 
     <ol>
       <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
-      <li>Run <code class="language-plaintext highlighter-rouge">twine upload /tmp/drake-release/v1.N.0/*.whl</code>.</li>
+      <li>Run:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd tmp
+$ python3 -m venv env
+$ env/bin/pip install twine
+$ env/bin/twine upload /tmp/drake-release/v1.N.0/*.whl
+$ rm -rf env
+</code></pre></div>        </div>
+      </li>
       <li>Confirm that all of the uploads succeeded without any error messages in
 your terminal.</li>
     </ol>

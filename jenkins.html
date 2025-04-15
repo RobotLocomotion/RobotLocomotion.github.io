@@ -8,7 +8,7 @@
     <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
     <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <title>Drake: GitHub PR Interaction with Jenkins</title>
+    <title>Drake: Continuous Integration with GitHub Pull Requests</title>
     <meta
       name="description"
       content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
@@ -149,7 +149,7 @@ analysis.
         <div class="drake-page">
   <header class="drake-page-header">
     <div class="contain">
-      <h1>GitHub PR Interaction with Jenkins</h1>
+      <h1>Continuous Integration with GitHub Pull Requests</h1>
     </div>
   </header>
   <section class="padding">
@@ -355,6 +355,76 @@ env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</s
 <span class="nb">env</span>/bin/pip <span class="nb">install</span> &lt;url-of-experimental-wheel&gt;
 <span class="nb">source env</span>/bin/activate
 </code></pre></div></div>
+
+<h1 id="testing-via-external-examples">Testing via External Examples</h1>
+
+<p>The examples within Drake’s
+<a href="https://github.com/RobotLocomotion/drake-external-examples">gallery of external examples</a>
+provide continuous integration via both Jenkins and GitHub Actions. This provides
+downstream test coverage for Drake developers to ensure reliability in the
+build infrastructure. Additionally, the GitHub Actions provide a benefit
+for end users, in that examples of CI pipelines on public servers for
+external projects using Drake installations are made easily accessible.</p>
+
+<p>See the external examples
+<a href="https://github.com/RobotLocomotion/drake-external-examples#continuous-integration">continuous integration</a>
+for details on which examples use Jenkins or GitHub Actions. In general,
+GitHub Actions is used for the lightweight examples which use some
+installed version of Drake, while Jenkins is used for complete coverage
+on examples which pull in Drake externally and build it.</p>
+
+<p>When a new pull request is opened in Drake, members of the RobotLocomotion
+organization can utilize Jenkins and GitHub Actions to run custom builds.
+This is especially pertinent for pull requests which affect the build infrastructure.</p>
+
+<h2 id="jenkins">Jenkins</h2>
+
+<p>To test the examples which use Jenkins for CI with a PR branch of Drake,
+comment on an open pull request using the following command:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-jammy-unprovisioned-external-examples please</code></li>
+</ul>
+
+<p>or follow the <a href="#scheduling-builds-via-the-jenkins-user-interface">instructions above</a>
+to schedule a build of the
+<a href="https://drake-jenkins.csail.mit.edu/view/Linux%20Jammy%20Unprovisioned/job/linux-jammy-unprovisioned-external-examples/">external examples job</a>.
+Note that this job provides parameters for branches of
+drake and drake-external-examples.</p>
+
+<h2 id="github-actions">GitHub Actions</h2>
+
+<p>You can schedule “experimental” builds of a <a href="/from_binary.html">binary package</a>,
+<a href="/apt.html">debian package</a>, and/or a <a href="/pip.html">wheel package</a> by following the
+instructions <a href="#building-packages-on-demand">above</a>.
+Copy the download URL(s) obtained from the build as described.</p>
+
+<p>From the <a href="https://github.com/RobotLocomotion/drake-external-examples/actions/workflows/ci.yml">GitHub Actions workflow</a>
+in drake-external-examples, notice the message “This workflow has a
+<code class="language-plaintext highlighter-rouge">workflow_dispatch</code> event trigger.” Click “Run workflow” and input the
+download URL(s) copied from Jenkins in the drop-down menu.
+All parameters are optional, so you can ignore the package(s) and/or platform(s)
+that you don’t need. (For those left blank, the default workflow will run using
+a more “stable” version of Drake, which is usually either source code from
+<code class="language-plaintext highlighter-rouge">master</code> or a nightly release depending on the example).</p>
+
+<h2 id="local-testing">Local Testing</h2>
+
+<p>For CMake, see the
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed#developer-testing">drake_cmake_installed</a>
+example.</p>
+
+<p>For Bazel, see the
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_bazel_external">drake_bazel_external</a>
+example, and note the comments in:</p>
+
+<ul>
+  <li>the <a href="https://github.com/RobotLocomotion/drake-external-examples/blob/main/drake_bazel_external#using-a-local-checkout-of-Drake">README</a>,
+which mentions using
+<a href="https://bazel.build/reference/command-line-reference#flag--override_module"><code class="language-plaintext highlighter-rouge">--override-module</code></a> to consume a local checkout of Drake</li>
+  <li><a href="https://github.com/RobotLocomotion/drake-external-examples/blob/main/drake_bazel_external/MODULE.bazel"><code class="language-plaintext highlighter-rouge">MODULE.bazel</code></a>,
+which can be modified to use a particular revision (commit or release) of Drake</li>
+</ul>
 
       </article>
     </div>
