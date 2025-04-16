@@ -318,15 +318,14 @@ color of the previous build.</p>
 <p>In addition, check the <a href="https://github.com/RobotLocomotion/RobotLocomotion.github.io/commits/master">automatically generated documentation repo</a>
 to confirm that the latest commit has a green circle, not a red x.</p>
 
-<h2 id="monitor-the-cache-servers">Monitor the Cache Servers</h2>
+<h2 id="monitor-the-cache-server">Monitor the Cache Server</h2>
 
-<p>Check once per week that caching is still enabled, there are currently two cache
-servers that need to be confirmed.  Open each of the following jobs and search
-for <code class="language-plaintext highlighter-rouge">REMOTE_CACHE_KEY</code> and confirm it has a value:</p>
+<p>Check once per week that caching is still enabled for Linux builds (there are
+currently no cache servers in use for macOS). Open the following job and
+search for <code class="language-plaintext highlighter-rouge">REMOTE_CACHE_KEY</code> and confirm it has a value:</p>
 
 <ul>
   <li><a href="https://drake-jenkins.csail.mit.edu/job/linux-noble-clang-bazel-continuous-release/lastBuild/consoleFull">https://drake-jenkins.csail.mit.edu/job/linux-noble-clang-bazel-continuous-release/lastBuild/consoleFull</a></li>
-  <li><a href="https://drake-jenkins.csail.mit.edu/job/mac-arm-sonoma-clang-bazel-continuous-release/lastBuild/consoleFull">https://drake-jenkins.csail.mit.edu/job/mac-arm-sonoma-clang-bazel-continuous-release/lastBuild/consoleFull</a></li>
 </ul>
 
 <p>Message indicating a problem:</p>
@@ -339,7 +338,7 @@ for <code class="language-plaintext highlighter-rouge">REMOTE_CACHE_KEY</code> a
 
 <p>The exact key hash is not important, it’s just important that it’s non-empty.</p>
 
-<p>If there is an issue with either cache server, post the details on the
+<p>If there is an issue with the cache server, post the details on the
 <a href="https://drakedevelopers.slack.com/messages/buildcop/details/">#buildcop</a>
 channel on Slack, ensuring that <code class="language-plaintext highlighter-rouge">@betsymcphail</code> is mentioned in the message.</p>
 
@@ -476,7 +475,7 @@ eventually and the build should run, once Jenkins gets a node booted up.</label>
 <h2 id="infrastructure-collapse">Infrastructure Collapse</h2>
 
 <p>Occasionally, some piece of CI infrastructure completely stops working. For
-instance, GitHub, AWS, or MacStadium could have an outage, or our Jenkins server
+instance, GitHub or AWS could have an outage, or our Jenkins server
 could crash or become wedged.  During infrastructure collapses, lots of builds
 will turn red and stay red.</p>
 

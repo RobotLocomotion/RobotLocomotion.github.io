@@ -176,6 +176,7 @@ $(document).ready(function(){initNavTree('math_2autodiff_8h.html','');});
 <code>#include &lt;Eigen/Dense&gt;</code><br />
 <code>#include &lt;unsupported/Eigen/AutoDiff&gt;</code><br />
 <code>#include &quot;<a class="el" href="common_2autodiff_8h.html">drake/common/autodiff.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__throw_8h.html">drake/common/drake_throw.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="unused_8h.html">drake/common/unused.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -207,9 +208,13 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a5030348e3955ed6f0b62d32abcf61c53"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a5030348e3955ed6f0b62d32abcf61c53"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a5030348e3955ed6f0b62d32abcf61c53">ExtractValue</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix, MatrixLikewise&lt; typename Derived::Scalar::Scalar, Derived &gt; *value)</td></tr>
+<tr class="memdesc:a5030348e3955ed6f0b62d32abcf61c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the <code>value()</code> portion from an AutoDiffScalar matrix into a pre-existing matrix (resizing if necessary).  <a href="namespacedrake_1_1math.html#a5030348e3955ed6f0b62d32abcf61c53">More...</a><br /></td></tr>
+<tr class="separator:a5030348e3955ed6f0b62d32abcf61c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac74b322064f97efb2b143fe01b832ab1"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:ac74b322064f97efb2b143fe01b832ab1"><td class="memTemplItemLeft" align="right" valign="top">MatrixLikewise&lt; typename Derived::Scalar::Scalar, Derived &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ac74b322064f97efb2b143fe01b832ab1">ExtractValue</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix)</td></tr>
-<tr class="memdesc:ac74b322064f97efb2b143fe01b832ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the <code>value()</code> portion from a matrix of AutoDiffScalar entries.  <a href="namespacedrake_1_1math.html#ac74b322064f97efb2b143fe01b832ab1">More...</a><br /></td></tr>
+<tr class="memdesc:ac74b322064f97efb2b143fe01b832ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <code>value()</code> portion from a matrix of AutoDiffScalar entries.  <a href="namespacedrake_1_1math.html#ac74b322064f97efb2b143fe01b832ab1">More...</a><br /></td></tr>
 <tr class="separator:ac74b322064f97efb2b143fe01b832ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68e6b946837028263ddbf020d182fee0"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a68e6b946837028263ddbf020d182fee0"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a68e6b946837028263ddbf020d182fee0">DiscardGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
@@ -229,6 +234,7 @@ Functions</h2></td></tr>
 <tr class="separator:a3e75abd55fa93ee21998756cf8c6e244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a285789fb9b379daf395aeb3b206dae8e"><td class="memTemplParams" colspan="2">template&lt;typename... Deriveds&gt; </td></tr>
 <tr class="memitem:a285789fb9b379daf395aeb3b206dae8e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a285789fb9b379daf395aeb3b206dae8e">InitializeAutoDiffTuple</a> (const Eigen::MatrixBase&lt; Deriveds &gt; &amp;... args)</td></tr>
+<tr class="memdesc:a285789fb9b379daf395aeb3b206dae8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a series of Eigen matrices, creates a tuple of corresponding AutoDiff matrices with values equal to the input matrices and properly initialized derivative vectors.  <a href="namespacedrake_1_1math.html#a285789fb9b379daf395aeb3b206dae8e">More...</a><br /></td></tr>
 <tr class="separator:a285789fb9b379daf395aeb3b206dae8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

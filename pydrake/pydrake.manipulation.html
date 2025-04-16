@@ -853,6 +853,73 @@ fingers (positive implies non-penetration).</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgTrajectoryGenerator</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>This system defines input ports for the desired finger position
+represented as the desired distance between the fingers in meters and
+the desired force limit in newtons, and emits target position/velocity
+for the actuated finger to reach the commanded target, expressed as
+the negative of the distance between the two fingers in meters. The
+force portion of the command message is passed through this system,
+but does not affect the generated trajectory. The desired_position and
+force_limit are scalars (BasicVector&lt;double&gt; of size 1).</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">desired_position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">force_limit&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u2</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWsgTrajectoryGenerator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:gray">y1</span></td></tr></table></td></tr></table><p>Port <code class="docutils literal notranslate"><span class="pre">u2</span></code> accepts state. Port <code class="docutils literal notranslate"><span class="pre">y0</span></code> emits target position/velocity.
+Port <code class="docutils literal notranslate"><span class="pre">y1</span></code> emits max force.</p>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">force_limit</span></code> input port and <code class="docutils literal notranslate"><span class="pre">y1</span></code> output port (max
+force) can be opted-out with a constructor argument.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_force_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_size</span></code>:</dt><dd><p>The size of the state input port to create (one reason this may
+vary is passing in the entire state of a rigid body tree vs.
+having already demultiplexed the actuated finger).</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">position_index</span></code>:</dt><dd><p>The index in the state input vector which contains the position of
+the actuated finger.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_force_limit</span></code>:</dt><dd><p>when false, the <code class="docutils literal notranslate"><span class="pre">force_limit</span></code> and <code class="docutils literal notranslate"><span class="pre">y1</span></code> ports will be omitted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_desired_position_input_port">
+<span class="sig-name descname"><span class="pre">get_desired_position_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_desired_position_input_port" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_force_limit_input_port">
+<span class="sig-name descname"><span class="pre">get_force_limit_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_force_limit_input_port" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Precondition:</dt><dd><p>The constructor argument use_force_limit was set to true.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_max_force_output_port">
+<span class="sig-name descname"><span class="pre">get_max_force_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_max_force_output_port" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Precondition:</dt><dd><p>The constructor argument use_force_limit was set to true.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_state_input_port">
+<span class="sig-name descname"><span class="pre">get_state_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_state_input_port" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_target_output_port">
+<span class="sig-name descname"><span class="pre">get_target_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_target_output_port" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.manipulation.SimIiwaDriver">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SimIiwaDriver</span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"joint__actuator_8h.html#a1def3023081b586c7139e10c3eacf81e":[4,0,0,8,14,18,3],
 "joint__sliders_8h.html":[4,0,0,8,6,3],
 "joint__sliders_8h.html#a90528b02307ab3b885075c1a46df2e7c":[4,0,0,8,6,3,0],
 "joint__stiffness__controller_8h.html":[4,0,0,12,1,5],
@@ -163,13 +164,14 @@ var NAVTREEINDEX57 =
 "mass__and__momentum_8h.html":[4,0,0,8,7,2],
 "mass__damper__spring__analytical__solution_8h.html":[4,0,0,8,0,4,0],
 "math_2autodiff_8h.html":[4,0,0,7,0],
-"math_2autodiff_8h.html#a285789fb9b379daf395aeb3b206dae8e":[4,0,0,7,0,6],
-"math_2autodiff_8h.html#a32942f788a67278f27426f128e50e0b2":[4,0,0,7,0,3],
-"math_2autodiff_8h.html#a3e75abd55fa93ee21998756cf8c6e244":[4,0,0,7,0,5],
-"math_2autodiff_8h.html#a563f68724c579b35cdaf62b72c056e5e":[4,0,0,7,0,4],
+"math_2autodiff_8h.html#a285789fb9b379daf395aeb3b206dae8e":[4,0,0,7,0,7],
+"math_2autodiff_8h.html#a32942f788a67278f27426f128e50e0b2":[4,0,0,7,0,4],
+"math_2autodiff_8h.html#a3e75abd55fa93ee21998756cf8c6e244":[4,0,0,7,0,6],
+"math_2autodiff_8h.html#a5030348e3955ed6f0b62d32abcf61c53":[4,0,0,7,0,2],
+"math_2autodiff_8h.html#a563f68724c579b35cdaf62b72c056e5e":[4,0,0,7,0,5],
 "math_2autodiff_8h.html#a68e6b946837028263ddbf020d182fee0":[4,0,0,7,0,1],
 "math_2autodiff_8h.html#a6e5cf27ab08ab982d6c3f4429687e9fb":[4,0,0,7,0,0],
-"math_2autodiff_8h.html#ac74b322064f97efb2b143fe01b832ab1":[4,0,0,7,0,2],
+"math_2autodiff_8h.html#ac74b322064f97efb2b143fe01b832ab1":[4,0,0,7,0,3],
 "math__operators__pybind_8h.html":[4,0,0,0,0,13],
 "math__py_8h.html":[4,0,0,0,0,5,0],
 "mathematical__program_8h.html":[4,0,0,11,30],
@@ -247,7 +249,5 @@ var NAVTREEINDEX57 =
 "minkowski__sum_8h.html":[4,0,0,4,1,21],
 "mixed__integer__optimization__util_8h.html":[4,0,0,11,34],
 "mixed__integer__optimization__util_8h.html#a1c2dee1da65ed555024f9d2f7ba82141":[4,0,0,11,34,3],
-"mixed__integer__optimization__util_8h.html#a2f7d6f23d494612f72e8efc99b87143c":[4,0,0,11,34,9],
-"mixed__integer__optimization__util_8h.html#a5cbd203e51076aa08e497620f11187b4":[4,0,0,11,34,6],
-"mixed__integer__optimization__util_8h.html#a6297509967536d29159910e5c51fd285":[4,0,0,11,34,1]
+"mixed__integer__optimization__util_8h.html#a2f7d6f23d494612f72e8efc99b87143c":[4,0,0,11,34,9]
 };

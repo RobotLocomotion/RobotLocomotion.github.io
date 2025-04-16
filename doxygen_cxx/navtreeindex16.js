@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1_deformable_contact_info.html#a71ce1b105045cb51e258230d31fa0819":[3,0,0,9,24,8],
 "classdrake_1_1multibody_1_1_deformable_contact_info.html#ac82dd03d7c709425b77ffe79bd4a3fa5":[3,0,0,9,24,6],
 "classdrake_1_1multibody_1_1_deformable_contact_info_3_01symbolic_1_1_expression_01_4.html":[3,0,0,9,25],
 "classdrake_1_1multibody_1_1_deformable_contact_info_3_01symbolic_1_1_expression_01_4.html#a14451b9615bada57047a5dc70e54833e":[3,0,0,9,25,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_frame.html#afebfd42eb5a5a2b1ff8c5d5686359f77":[3,0,0,9,39,20],
 "classdrake_1_1multibody_1_1_gaussian_triangle_quadrature_rule.html":[3,0,0,9,40],
 "classdrake_1_1multibody_1_1_gaussian_triangle_quadrature_rule.html#a155390e4848e155f377f70af151d89d2":[3,0,0,9,40,0],
-"classdrake_1_1multibody_1_1_gaze_target_constraint.html":[1,1,0,4],
-"classdrake_1_1multibody_1_1_gaze_target_constraint.html#a0bed703bbca132825b38d9f2fac2464e":[1,1,0,4,4]
+"classdrake_1_1multibody_1_1_gaze_target_constraint.html":[1,1,0,4]
 };

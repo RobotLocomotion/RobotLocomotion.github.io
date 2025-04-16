@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a013fda545d50a041a8494d61e1a0323c":[3,0,0,4,62,25],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a07d5cff6bd9d7af5fe7d3de136a88605":[3,0,0,4,62,11],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a319e621fc359dd8daad48247f95b12fa":[3,0,0,4,62,18],
 "classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a39b0509ce7179535d6b30f11fb305dc6":[3,0,0,4,62,29],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a54d6f25d563615123ccee12d0a41e81d":[1,5,5,5,22],
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9":[1,1,1,5,11],
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9":[1,5,5,5,11],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a76e651ff2ae9533733cfefa7e8fadb54":[1,1,1,5,15],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a76e651ff2ae9533733cfefa7e8fadb54":[1,5,5,5,15]
+"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a76e651ff2ae9533733cfefa7e8fadb54":[1,1,1,5,15]
 };
