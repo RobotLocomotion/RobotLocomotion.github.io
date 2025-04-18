@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"classdrake_1_1systems_1_1_witness_function.html#ace44961132e96e032f20ea411cdf6736":[3,0,0,16,137,11],
+"classdrake_1_1systems_1_1_witness_function.html#ae80bcec7d1a0eed4b8cc10f61ba5768b":[3,0,0,16,137,0],
 "classdrake_1_1systems_1_1_witness_function.html#aef95581415f22863a5bce5f9f3f24260":[3,0,0,16,137,7],
 "classdrake_1_1systems_1_1_witness_triggered_event_data.html":[3,0,0,16,138],
 "classdrake_1_1systems_1_1_witness_triggered_event_data.html#a0066aa2cd6610c7e22e586fe943d1573":[3,0,0,16,138,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a8a3d1c41ca05a555fbb78ab53548697c":[3,0,0,16,2,10,8],
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#aa37e8848eafd3dbcf70745b329834770":[3,0,0,16,2,10,4],
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#abbc50a5c7f39b362c997e98dbcb6387e":[3,0,0,16,2,10,1],
-"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#abd361fc0104cfc0020871088466d2b94":[3,0,0,16,2,10,5],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html":[1,2,3,0],
-"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a093753797574399c626da5a418464fbe":[1,2,3,0,2]
+"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#abd361fc0104cfc0020871088466d2b94":[3,0,0,16,2,10,5]
 };

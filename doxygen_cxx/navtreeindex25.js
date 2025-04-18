@@ -1,5 +1,7 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1planning_1_1_collision_checker.html#ae76ac66c1677433ebe8cff135f77af58":[1,4,2,2,1,24],
+"classdrake_1_1planning_1_1_collision_checker.html#aebf58f4817df47ff85f1e4f3de824382":[1,4,2,2,1,82],
 "classdrake_1_1planning_1_1_collision_checker.html#aec1e2c7eed9a8e920dbe0b0db80af1be":[1,4,2,2,1,27],
 "classdrake_1_1planning_1_1_collision_checker.html#af1190d81eb661b4151d32b844e86fc5a":[1,4,2,2,1,73],
 "classdrake_1_1planning_1_1_collision_checker.html#af290abddd23e4ccd6cfed2ee8c69ae78":[1,4,2,2,1,66],
@@ -247,7 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349":[1,1,0,22,9],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a3cbd3e24f7648ab7712c803ca8a63f3e":[1,1,0,22,10],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a4e8411c6f694362a4520129e1e7bc3b4":[1,1,0,22,3],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a5eea9354674efc1c07bf537319628ead":[1,1,0,22,8],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a643ccb05dea44d65aa2d91b422f20f12":[1,1,0,22,0],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a66022c63d007d32a9812270a90890e7f":[1,1,0,22,12]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a5eea9354674efc1c07bf537319628ead":[1,1,0,22,8]
 };

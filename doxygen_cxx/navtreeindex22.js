@@ -1,5 +1,7 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1multibody_1_1_spatial_inertia.html#adc40e315f8733af98f82560144c1b8e3":[3,0,0,9,92,39],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#ae7f8142e184c3d2f68a4c7f342a6c549":[3,0,0,9,92,34],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#aeb07d17fd701017f4d67815c17fc80a2":[3,0,0,9,92,46],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#aefe13c3fa1bec5373af28bc723de8bd6":[3,0,0,9,92,6],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#af24310926c4f3a0604b4ebb341deca84":[3,0,0,9,92,50],
@@ -247,7 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1multibody_1_1_universal_joint.html#aaf74a3f7b11353d199a585fbb4c85eb9":[3,0,0,9,109,14],
 "classdrake_1_1multibody_1_1_universal_joint.html#abae9b9ebb7e360384c17235462aa1216":[3,0,0,9,109,12],
 "classdrake_1_1multibody_1_1_universal_joint.html#ac26a6dc0b1e4bced2875df3137eacd8a":[3,0,0,9,109,18],
-"classdrake_1_1multibody_1_1_universal_joint.html#ae4fa9c904accccf5900c63c3e65ca277":[3,0,0,9,109,17],
-"classdrake_1_1multibody_1_1_universal_joint.html#aea9614ad4bc22801505a7399550293ce":[3,0,0,9,109,5],
-"classdrake_1_1multibody_1_1_universal_joint.html#aed1a9065bba2f51f45b65aa8f0b12cea":[3,0,0,9,109,10]
+"classdrake_1_1multibody_1_1_universal_joint.html#ae4fa9c904accccf5900c63c3e65ca277":[3,0,0,9,109,17]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX27 =
 {
+"classdrake_1_1schema_1_1_deterministic.html#af7adf59f949c5e77dcc2eee074d02208":[3,0,0,13,0,7],
+"classdrake_1_1schema_1_1_deterministic_vector.html":[3,0,0,13,1],
 "classdrake_1_1schema_1_1_deterministic_vector.html#a04d8ff3a3d7cd3f8ad34bbc853c03fdb":[3,0,0,13,1,6],
 "classdrake_1_1schema_1_1_deterministic_vector.html#a0a6c2511eabe93951ecba0bd0e887d48":[3,0,0,13,1,4],
 "classdrake_1_1schema_1_1_deterministic_vector.html#a0cc4f4435cdfc7f37c1091be688a22de":[3,0,0,13,1,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "classdrake_1_1solvers_1_1_csdp_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,14,12,6],
 "classdrake_1_1solvers_1_1_csdp_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[3,0,0,14,12,7],
 "classdrake_1_1solvers_1_1_csdp_solver.html#a3c710e5fed7041dda0e3391dd5d3171b":[3,0,0,14,12,2],
-"classdrake_1_1solvers_1_1_csdp_solver.html#a4dc451b7db72a168d9f0da1746011b45":[3,0,0,14,12,5],
-"classdrake_1_1solvers_1_1_csdp_solver.html#a585e2207e56c0f66b497f4cf38a84971":[3,0,0,14,12,8],
-"classdrake_1_1solvers_1_1_csdp_solver.html#a685395edde930fefd200ecdaa5b069a1":[3,0,0,14,12,9]
+"classdrake_1_1solvers_1_1_csdp_solver.html#a4dc451b7db72a168d9f0da1746011b45":[3,0,0,14,12,5]
 };

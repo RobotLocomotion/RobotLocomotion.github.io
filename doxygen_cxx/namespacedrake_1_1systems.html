@@ -721,12 +721,23 @@ Functions</h2></td></tr>
 <tr class="separator:a21966f31af4a13c4b60cadf46e5779c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga4287afca40b5f9d9d7831e524ac18ffc">DiscreteTimeApproximation</a> (const <a class="el" href="classdrake_1_1systems_1_1_linear_system.html">LinearSystem</a>&lt; T &gt; &amp;linear_system, <a class="el" href="classdouble.html">double</a> time_period)</td></tr>
-<tr class="memdesc:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time linear system to a discrete-time linear system using the zero-order hold (ZOH) method.  <a href="group__analysis.html#ga4287afca40b5f9d9d7831e524ac18ffc">More...</a><br /></td></tr>
+<tr class="memdesc:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time linear system to a discrete-time linear system using the zero-order hold method.  <a href="group__analysis.html#ga4287afca40b5f9d9d7831e524ac18ffc">More...</a><br /></td></tr>
 <tr class="separator:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga1a56db8d4954d7b191253ffb89c2b03e">DiscreteTimeApproximation</a> (const <a class="el" href="classdrake_1_1systems_1_1_affine_system.html">AffineSystem</a>&lt; T &gt; &amp;affine_system, <a class="el" href="classdouble.html">double</a> time_period)</td></tr>
-<tr class="memdesc:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time affine system to a discrete-time affine system using the zero-order hold (ZOH) method.  <a href="group__analysis.html#ga1a56db8d4954d7b191253ffb89c2b03e">More...</a><br /></td></tr>
+<tr class="memdesc:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time affine system to a discrete-time affine system using the zero-order hold method.  <a href="group__analysis.html#ga1a56db8d4954d7b191253ffb89c2b03e">More...</a><br /></td></tr>
 <tr class="separator:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b12640ee9d9dffdef56ecb73cd55ee9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga6b12640ee9d9dffdef56ecb73cd55ee9"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga6b12640ee9d9dffdef56ecb73cd55ee9">DiscreteTimeApproximation</a> (std::shared_ptr&lt; const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt;&gt; system, <a class="el" href="classdouble.html">double</a> time_period, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;integrator_config=<a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>())</td></tr>
+<tr class="memdesc:ga6b12640ee9d9dffdef56ecb73cd55ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a general continuous-time system \( \dot{x} = f(t,x(t),u(t)) \) to a discrete-time system with zero-order hold on the input.  <a href="group__analysis.html#ga6b12640ee9d9dffdef56ecb73cd55ee9">More...</a><br /></td></tr>
+<tr class="separator:ga6b12640ee9d9dffdef56ecb73cd55ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54865a7137538639aac5b167d0fe838d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga54865a7137538639aac5b167d0fe838d"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga54865a7137538639aac5b167d0fe838d">DiscreteTimeApproximation</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, <a class="el" href="classdouble.html">double</a> time_period, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;integrator_config=<a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>())</td></tr>
+<tr class="memdesc:ga54865a7137538639aac5b167d0fe838d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as above, without claiming ownership of <code>system</code>.  <a href="group__analysis.html#ga54865a7137538639aac5b167d0fe838d">More...</a><br /></td></tr>
+<tr class="separator:ga54865a7137538639aac5b167d0fe838d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1c4ce1da6ebdeb704f3bb196af6e95"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5f1c4ce1da6ebdeb704f3bb196af6e95"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a5f1c4ce1da6ebdeb704f3bb196af6e95">DiscreteTimeApproximation</a> (<a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&amp;system, <a class="el" href="classdouble.html">double</a> time_period, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;integrator_config=<a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>())=delete</td></tr>
+<tr class="separator:a5f1c4ce1da6ebdeb704f3bb196af6e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad32461bc90073aac39049d636974a04b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:gad32461bc90073aac39049d636974a04b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b">ResetIntegratorFromFlags</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; T &gt; *simulator, const std::string &amp;scheme, const T &amp;max_step_size)</td></tr>
 <tr class="memdesc:gad32461bc90073aac39049d636974a04b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the integrator used to advanced the continuous time dynamics of the system associated with <code>simulator</code> according to the given arguments.  <a href="group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b">More...</a><br /></td></tr>
@@ -1620,6 +1631,48 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a5f1c4ce1da6ebdeb704f3bb196af6e95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f1c4ce1da6ebdeb704f3bb196af6e95">&#9670;&nbsp;</a></span>DiscreteTimeApproximation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;T&gt; &gt; drake::systems::DiscreteTimeApproximation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>time_period</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>integrator_config</em> = <code><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -90,6 +90,7 @@ var searchData=
   ['solver_5fid_2eh',['solver_id.h',['../solver__id_8h.html',1,'']]],
   ['solver_5finterface_2eh',['solver_interface.h',['../solver__interface_8h.html',1,'']]],
   ['solver_5foptions_2eh',['solver_options.h',['../solver__options_8h.html',1,'']]],
+  ['solver_5fstate_2eh',['solver_state.h',['../solver__state_8h.html',1,'']]],
   ['solver_5ftype_2eh',['solver_type.h',['../solver__type_8h.html',1,'']]],
   ['solver_5ftype_5fconverter_2eh',['solver_type_converter.h',['../solver__type__converter_8h.html',1,'']]],
   ['solvers_5fpy_2eh',['solvers_py.h',['../solvers__py_8h.html',1,'']]],

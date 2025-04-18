@@ -1490,6 +1490,37 @@ the given <code class="docutils literal notranslate"><span class="pre">id</span>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetPositions">
+<span class="sig-name descname"><span class="pre">GetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetPositions" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the matrix of vertex positions for the deformable body with
+the given <code class="docutils literal notranslate"><span class="pre">id</span></code> in the provided <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context associated with the MultibodyPlant that owns this
+DeformableModel.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">id</span></code>:</dt><dd><p>The identifier of the deformable body whose positions are being
+queried.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">q</span></code>:</dt><dd><p>A 3×N matrix containing the positions of all vertices of the body.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any of the following conditions are met</strong> – <ol class="arabic simple">
+<li></li>
+</ol>
+</p></li>
+<li><p><strong>context` does not belong to the MultibodyPlant associated wit</strong> – </p></li>
+<li><p><strong>this DeformableModel. 2. No body with the given id is</strong> – </p></li>
+<li><p><strong>registered. 3. Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on the</strong> – </p></li>
+<li><p><strong>MultibodyPlant that owns this deformable model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetReferencePositions">
 <span class="sig-name descname"><span class="pre">GetReferencePositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetReferencePositions" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the reference positions of the vertices of the deformable body
@@ -1543,6 +1574,39 @@ primitive shape.</p>
 <li><p><strong>double.</strong> – </p></li>
 <li><p><strong>RuntimeError if Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on the multibody plant</strong> – </p></li>
 <li><p><strong>owning this deformable model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.SetPositions">
+<span class="sig-name descname"><span class="pre">SetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.SetPositions" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the vertex positions of the deformable body with the given <code class="docutils literal notranslate"><span class="pre">id</span></code>
+in the provided <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">out</span></code>:</dt><dd><p>] context The context associated with the MultibodyPlant that owns
+this DeformableModel.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">id</span></code>:</dt><dd><p>The identifier of the deformable body whose positions are being
+set.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q</span></code>:</dt><dd><p>A 3×N matrix of vertex positions.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any of the following conditions are met</strong> – <ol class="arabic simple">
+<li></li>
+</ol>
+</p></li>
+<li><p><strong>context` is nullptr. 2. context does not belong to th</strong> – </p></li>
+<li><p><strong>MultibodyPlant associated with this DeformableModel. 3. No body</strong> – </p></li>
+<li><p><strong>with the given id is registered. 4. The number of columns of</strong> – </p></li>
+<li><p><strong>q` does not match the number of vertices of the body. 5. ``q`</strong> – </p></li>
+<li><p><strong>contains non-finite values. 6. Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on</strong> – </p></li>
+<li><p><strong>the MultibodyPlant that owns this deformable model.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -2175,7 +2239,7 @@ queries.
 Explicitly form matrices that appear in the equations of motion.
 - mbp_introspection “Introspection”:
 Perform introspection to find out what’s in the MultibodyPlant.</p>
-<p><a href="#id1"><span class="problematic" id="id2">**</span></a>** Model Instances</p>
+<p><a href="#id3"><span class="problematic" id="id4">**</span></a>** Model Instances</p>
 <p>A MultiBodyPlant may contain multiple model instances. Each model
 instance corresponds to a set of bodies and their connections
 (joints). Model instances provide methods to get or set the state of
@@ -2206,7 +2270,7 @@ GetVelocitiesFromArray(), SetPositionsInArray(),
 SetVelocitiesInArray(), SetActuationInArray(),
 HasModelInstanceNamed(), GetModelInstanceName(),
 get_state_output_port(), get_actuation_input_port().</p>
-<p><a href="#id3"><span class="problematic" id="id4">**</span></a>** System dynamics</p>
+<p><a href="#id5"><span class="problematic" id="id6">**</span></a>** System dynamics</p>
 <p>The state of a multibody system <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[q;</span> <span class="pre">v]</span></code> is given by its
 generalized positions vector q, of size <code class="docutils literal notranslate"><span class="pre">nq</span></code> (see num_positions()),
 and by its generalized velocities vector v, of size <code class="docutils literal notranslate"><span class="pre">nv</span></code> (see
@@ -2240,7 +2304,7 @@ generalized positions) and the generalized velocities v, [Seth 2010].
 hand side of Eq. (1) is the system’s generalized forces. These
 incorporate gravity, springs, externally applied body forces,
 constraint forces, and contact forces.</p>
-<p><a href="#id5"><span class="problematic" id="id6">**</span></a>** Discrete system dynamics</p>
+<p><a href="#id7"><span class="problematic" id="id8">**</span></a>** Discrete system dynamics</p>
 <p>We’ll start with the basic difference equation interpretation of a
 discrete plant and then explain some Drake-specific subtleties.</p>
 <div class="admonition note">
@@ -2302,7 +2366,7 @@ only Discrete (numeric) state variables and Discrete update.
 behavior of any MultibodyPlant “Calc” or “Eval” functions – those are
 always calculated using the current values of time, kinematic state, and
 input port values.</p>
-<p><a href="#id7"><span class="problematic" id="id8">**</span></a>** Output port sampling</p>
+<p><a href="#id9"><span class="problematic" id="id10">**</span></a>** Output port sampling</p>
 <p>As described in mbp_discrete_dynamics “Discrete system dynamics”
 above, the semantics of certain MultibodyPlant output ports depends on
 whether the plant is configured to advance using continuous time
@@ -2361,7 +2425,7 @@ either use a continuous-time plant, set the config option
 <code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code>, or use ExecuteForcedEvents() to
 force a dynamics step and then the outputs (and positions) will
 change.</p>
-<p><a href="#id9"><span class="problematic" id="id10">**</span></a>** Actuation</p>
+<p><a href="#id11"><span class="problematic" id="id12">**</span></a>** Actuation</p>
 <p>In a MultibodyPlant model an actuator can be added as a JointActuator,
 see AddJointActuator(). The plant declares actuation input ports to
 provide feedforward actuation, both for the MultibodyPlant as a whole
@@ -2495,7 +2559,7 @@ a given actuator.</p>
 Joint::Lock()), and thus they have no effect on the actuation
 output.</p>
 </div>
-<p><a href="#id11"><span class="problematic" id="id12">**</span></a>** Loading models from SDFormat files</p>
+<p><a href="#id13"><span class="problematic" id="id14">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
@@ -2515,7 +2579,7 @@ order to load multiple model instances. Other methods are available on
 Parser such as AddModels() which allows creating model instances per
 each <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> tag found in the file. Please refer to each of these
 methods’ documentation for further details.</p>
-<p><a href="#id13"><span class="problematic" id="id14">**</span></a>** Working with SceneGraph</p>
+<p><a href="#id15"><span class="problematic" id="id16">**</span></a>** Working with SceneGraph</p>
 <p>** Adding a MultibodyPlant connected to a SceneGraph to your Diagram</p>
 <p>Probably the simplest way to add and wire up a MultibodyPlant with a
 SceneGraph in your Diagram is using AddMultibodyPlantSceneGraph().</p>
@@ -2590,13 +2654,13 @@ geometry::ProximityProperties by geometry::SceneGraph. These
 properties can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<p><a href="#id103"><span class="problematic" id="id104">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
-<a href="#id105"><span class="problematic" id="id106">|:--------:|</span></a>:———–:<a href="#id107"><span class="problematic" id="id108">|:------:|</span></a>:—————-:<a href="#id109"><span class="problematic" id="id110">|:-------------------|</span></a>
-<a href="#id111"><span class="problematic" id="id112">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id113"><span class="problematic" id="id114">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
-contact stiffness.| <a href="#id115"><span class="problematic" id="id116">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
+<p><a href="#id105"><span class="problematic" id="id106">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
+<a href="#id107"><span class="problematic" id="id108">|:--------:|</span></a>:———–:<a href="#id109"><span class="problematic" id="id110">|:------:|</span></a>:—————-:<a href="#id111"><span class="problematic" id="id112">|:-------------------|</span></a>
+<a href="#id113"><span class="problematic" id="id114">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
+friction.|</span></a> <a href="#id115"><span class="problematic" id="id116">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
+contact stiffness.| <a href="#id117"><span class="problematic" id="id118">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
 Compliant contact dissipation.|
-<a href="#id117"><span class="problematic" id="id118">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
+<a href="#id119"><span class="problematic" id="id120">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
 parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
@@ -2655,7 +2719,7 @@ as:</p>
 <span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id15"><span class="problematic" id="id16">**</span></a>** Working with MultibodyElement parameters Several
+</details><p><a href="#id17"><span class="problematic" id="id18">**</span></a>** Working with MultibodyElement parameters Several
 MultibodyElements expose parameters, allowing the user flexible
 modification of some aspects of the plant’s model, post
 systems::Context creation. For details, refer to the documentation for
@@ -2703,7 +2767,7 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id17"><span class="problematic" id="id18">**</span></a>** Adding modeling elements</p>
+</details><p><a href="#id19"><span class="problematic" id="id20">**</span></a>** Adding modeling elements</p>
 <p>Add multibody elements to a MultibodyPlant with methods like:</p>
 <ul class="simple">
 <li><p>Bodies: AddRigidBody()</p></li>
@@ -2712,11 +2776,11 @@ take derivatives with respect to one of the bodies’ masses:</p>
 </ul>
 <p>All modeling elements <strong>must</strong> be added before Finalize() is called.
 See mbp_finalize_stage “Finalize stage” for a discussion.</p>
-<p><a href="#id19"><span class="problematic" id="id20">**</span></a>** Modeling contact</p>
+<p><a href="#id21"><span class="problematic" id="id22">**</span></a>** Modeling contact</p>
 <p>Please refer to drake_contacts “Contact Modeling in Drake” for details
 on the available approximations, setup, and considerations for a
 multibody simulation with frictional contact.</p>
-<p><a href="#id21"><span class="problematic" id="id22">**</span></a>** Energy and Power</p>
+<p><a href="#id23"><span class="problematic" id="id24">**</span></a>** Energy and Power</p>
 <p>MultibodyPlant implements the System energy and power methods, with
 some limitations. - Kinetic energy: fully implemented. - Potential
 energy and conservative power: currently include only gravity and
@@ -2727,7 +2791,7 @@ objects; actuation and input port forces, joint damping, and
 dissipation from joint limits, friction, and contact dissipation are
 not included.</p>
 <p>See Drake issue #12942 for more discussion.</p>
-<p><a href="#id23"><span class="problematic" id="id24">**</span></a>** Finalize() stage</p>
+<p><a href="#id25"><span class="problematic" id="id26">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
@@ -2741,7 +2805,7 @@ welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <p>Subclassing MultibodyPlant is deprecated; it will be marked
 <code class="docutils literal notranslate"><span class="pre">final</span></code> or or after 2025-05-01.</p>
 </div>
-<p><a href="#id25"><span class="problematic" id="id26">**</span></a>** References</p>
+<p><a href="#id27"><span class="problematic" id="id28">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
 </ul>
@@ -2961,7 +3025,7 @@ SetDistanceConstraintParams().</p>
 <span class="sig-name descname"><span class="pre">AddForceElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement" title="pydrake.multibody.tree.ForceElement"><span class="pre">pydrake.multibody.tree.ForceElement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement" title="pydrake.multibody.tree.ForceElement"><span class="pre">pydrake.multibody.tree.ForceElement</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.AddForceElement" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a new force element model of type <code class="docutils literal notranslate"><span class="pre">ForceElementType</span></code> to
 <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant. The arguments to this method <code class="docutils literal notranslate"><span class="pre">args</span></code> are
-forwarded to <a href="#id27"><span class="problematic" id="id28">``</span></a>ForceElementType`’s constructor.</p>
+forwarded to <a href="#id29"><span class="problematic" id="id30">``</span></a>ForceElementType`’s constructor.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">args</span></code>:</dt><dd><p>Zero or more parameters provided to the constructor of the new
 force element. It must be the case that
@@ -3949,7 +4013,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id151"><span class="problematic" id="id152">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id153"><span class="problematic" id="id154">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bᵢcm is the center of mass of
@@ -6068,43 +6132,6 @@ model instance in a given Context.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="3">
-<li><p>GetPositions(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
-</ol>
-<p>Returns a const vector reference to the vector of generalized
-positions q in a given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This method returns a reference to existing data, exhibits
-constant i.e., O(1) time complexity, and runs very quickly.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-<ol class="arabic simple" start="4">
-<li><p>GetPositions(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
-</ol>
-<p>Returns a vector containing the generalized positions q of a specified
-model instance in a given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Returns a dense vector of dimension
-<code class="docutils literal notranslate"><span class="pre">num_positions(model_instance)</span></code> associated with
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> by copying from <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model</strong><strong> or </strong><strong>model_instance is invalid.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -6303,43 +6330,6 @@ constant i.e., O(1) time complexity, and runs very quickly.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>GetVelocities(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
-</ol>
-<p>Returns a vector containing the generalized velocities v of a
-specified model instance in a given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>returns a dense vector of dimension
-<code class="docutils literal notranslate"><span class="pre">num_velocities(model_instance)</span></code> associated with
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> by copying from <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model</strong><strong> or </strong><strong>model_instance is invalid.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-<ol class="arabic simple" start="3">
-<li><p>GetVelocities(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
-</ol>
-<p>Returns a const vector reference to the generalized velocities v in a
-given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This method returns a reference to existing data, exhibits
-constant i.e., O(1) time complexity, and runs very quickly.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-<ol class="arabic simple" start="4">
 <li><p>GetVelocities(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[numpy.float64[m, 1]]</p></li>
 </ol>
 <p>Returns a vector containing the generalized velocities v of a
@@ -7520,7 +7510,7 @@ but non-zero number can be used, e.g. 1.0e-3.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.set_stiction_tolerance">
 <span class="sig-name descname"><span class="pre">set_stiction_tolerance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_stiction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.set_stiction_tolerance" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id31"><span class="problematic" id="id32">**</span></a>** Stribeck model of friction</p>
+<dd><p><a href="#id33"><span class="problematic" id="id34">**</span></a>** Stribeck model of friction</p>
 <p>Currently MultibodyPlant uses the Stribeck approximation to model dry
 friction. The Stribeck model of friction is an approximation to
 Coulomb’s law of friction that allows using continuous time
@@ -7985,7 +7975,7 @@ queries.
 Explicitly form matrices that appear in the equations of motion.
 - mbp_introspection “Introspection”:
 Perform introspection to find out what’s in the MultibodyPlant.</p>
-<p><a href="#id35"><span class="problematic" id="id36">**</span></a>** Model Instances</p>
+<p><a href="#id37"><span class="problematic" id="id38">**</span></a>** Model Instances</p>
 <p>A MultiBodyPlant may contain multiple model instances. Each model
 instance corresponds to a set of bodies and their connections
 (joints). Model instances provide methods to get or set the state of
@@ -8016,7 +8006,7 @@ GetVelocitiesFromArray(), SetPositionsInArray(),
 SetVelocitiesInArray(), SetActuationInArray(),
 HasModelInstanceNamed(), GetModelInstanceName(),
 get_state_output_port(), get_actuation_input_port().</p>
-<p><a href="#id37"><span class="problematic" id="id38">**</span></a>** System dynamics</p>
+<p><a href="#id39"><span class="problematic" id="id40">**</span></a>** System dynamics</p>
 <p>The state of a multibody system <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[q;</span> <span class="pre">v]</span></code> is given by its
 generalized positions vector q, of size <code class="docutils literal notranslate"><span class="pre">nq</span></code> (see num_positions()),
 and by its generalized velocities vector v, of size <code class="docutils literal notranslate"><span class="pre">nv</span></code> (see
@@ -8050,7 +8040,7 @@ generalized positions) and the generalized velocities v, [Seth 2010].
 hand side of Eq. (1) is the system’s generalized forces. These
 incorporate gravity, springs, externally applied body forces,
 constraint forces, and contact forces.</p>
-<p><a href="#id39"><span class="problematic" id="id40">**</span></a>** Discrete system dynamics</p>
+<p><a href="#id41"><span class="problematic" id="id42">**</span></a>** Discrete system dynamics</p>
 <p>We’ll start with the basic difference equation interpretation of a
 discrete plant and then explain some Drake-specific subtleties.</p>
 <div class="admonition note">
@@ -8112,7 +8102,7 @@ only Discrete (numeric) state variables and Discrete update.
 behavior of any MultibodyPlant “Calc” or “Eval” functions – those are
 always calculated using the current values of time, kinematic state, and
 input port values.</p>
-<p><a href="#id41"><span class="problematic" id="id42">**</span></a>** Output port sampling</p>
+<p><a href="#id43"><span class="problematic" id="id44">**</span></a>** Output port sampling</p>
 <p>As described in mbp_discrete_dynamics “Discrete system dynamics”
 above, the semantics of certain MultibodyPlant output ports depends on
 whether the plant is configured to advance using continuous time
@@ -8171,7 +8161,7 @@ either use a continuous-time plant, set the config option
 <code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code>, or use ExecuteForcedEvents() to
 force a dynamics step and then the outputs (and positions) will
 change.</p>
-<p><a href="#id43"><span class="problematic" id="id44">**</span></a>** Actuation</p>
+<p><a href="#id45"><span class="problematic" id="id46">**</span></a>** Actuation</p>
 <p>In a MultibodyPlant model an actuator can be added as a JointActuator,
 see AddJointActuator(). The plant declares actuation input ports to
 provide feedforward actuation, both for the MultibodyPlant as a whole
@@ -8305,7 +8295,7 @@ a given actuator.</p>
 Joint::Lock()), and thus they have no effect on the actuation
 output.</p>
 </div>
-<p><a href="#id45"><span class="problematic" id="id46">**</span></a>** Loading models from SDFormat files</p>
+<p><a href="#id47"><span class="problematic" id="id48">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
@@ -8325,7 +8315,7 @@ order to load multiple model instances. Other methods are available on
 Parser such as AddModels() which allows creating model instances per
 each <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> tag found in the file. Please refer to each of these
 methods’ documentation for further details.</p>
-<p><a href="#id47"><span class="problematic" id="id48">**</span></a>** Working with SceneGraph</p>
+<p><a href="#id49"><span class="problematic" id="id50">**</span></a>** Working with SceneGraph</p>
 <p>** Adding a MultibodyPlant connected to a SceneGraph to your Diagram</p>
 <p>Probably the simplest way to add and wire up a MultibodyPlant with a
 SceneGraph in your Diagram is using AddMultibodyPlantSceneGraph().</p>
@@ -8400,13 +8390,13 @@ geometry::ProximityProperties by geometry::SceneGraph. These
 properties can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<p><a href="#id119"><span class="problematic" id="id120">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
-<a href="#id121"><span class="problematic" id="id122">|:--------:|</span></a>:———–:<a href="#id123"><span class="problematic" id="id124">|:------:|</span></a>:—————-:<a href="#id125"><span class="problematic" id="id126">|:-------------------|</span></a>
-<a href="#id127"><span class="problematic" id="id128">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id129"><span class="problematic" id="id130">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
-contact stiffness.| <a href="#id131"><span class="problematic" id="id132">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
+<p><a href="#id121"><span class="problematic" id="id122">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
+<a href="#id123"><span class="problematic" id="id124">|:--------:|</span></a>:———–:<a href="#id125"><span class="problematic" id="id126">|:------:|</span></a>:—————-:<a href="#id127"><span class="problematic" id="id128">|:-------------------|</span></a>
+<a href="#id129"><span class="problematic" id="id130">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
+friction.|</span></a> <a href="#id131"><span class="problematic" id="id132">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
+contact stiffness.| <a href="#id133"><span class="problematic" id="id134">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
 Compliant contact dissipation.|
-<a href="#id133"><span class="problematic" id="id134">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
+<a href="#id135"><span class="problematic" id="id136">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
 parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
@@ -8465,7 +8455,7 @@ as:</p>
 <span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id49"><span class="problematic" id="id50">**</span></a>** Working with MultibodyElement parameters Several
+</details><p><a href="#id51"><span class="problematic" id="id52">**</span></a>** Working with MultibodyElement parameters Several
 MultibodyElements expose parameters, allowing the user flexible
 modification of some aspects of the plant’s model, post
 systems::Context creation. For details, refer to the documentation for
@@ -8513,7 +8503,7 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id51"><span class="problematic" id="id52">**</span></a>** Adding modeling elements</p>
+</details><p><a href="#id53"><span class="problematic" id="id54">**</span></a>** Adding modeling elements</p>
 <p>Add multibody elements to a MultibodyPlant with methods like:</p>
 <ul class="simple">
 <li><p>Bodies: AddRigidBody()</p></li>
@@ -8522,11 +8512,11 @@ take derivatives with respect to one of the bodies’ masses:</p>
 </ul>
 <p>All modeling elements <strong>must</strong> be added before Finalize() is called.
 See mbp_finalize_stage “Finalize stage” for a discussion.</p>
-<p><a href="#id53"><span class="problematic" id="id54">**</span></a>** Modeling contact</p>
+<p><a href="#id55"><span class="problematic" id="id56">**</span></a>** Modeling contact</p>
 <p>Please refer to drake_contacts “Contact Modeling in Drake” for details
 on the available approximations, setup, and considerations for a
 multibody simulation with frictional contact.</p>
-<p><a href="#id55"><span class="problematic" id="id56">**</span></a>** Energy and Power</p>
+<p><a href="#id57"><span class="problematic" id="id58">**</span></a>** Energy and Power</p>
 <p>MultibodyPlant implements the System energy and power methods, with
 some limitations. - Kinetic energy: fully implemented. - Potential
 energy and conservative power: currently include only gravity and
@@ -8537,7 +8527,7 @@ objects; actuation and input port forces, joint damping, and
 dissipation from joint limits, friction, and contact dissipation are
 not included.</p>
 <p>See Drake issue #12942 for more discussion.</p>
-<p><a href="#id57"><span class="problematic" id="id58">**</span></a>** Finalize() stage</p>
+<p><a href="#id59"><span class="problematic" id="id60">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
@@ -8551,7 +8541,7 @@ welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <p>Subclassing MultibodyPlant is deprecated; it will be marked
 <code class="docutils literal notranslate"><span class="pre">final</span></code> or or after 2025-05-01.</p>
 </div>
-<p><a href="#id59"><span class="problematic" id="id60">**</span></a>** References</p>
+<p><a href="#id61"><span class="problematic" id="id62">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
 </ul>
@@ -8766,7 +8756,7 @@ SetDistanceConstraintParams().</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].AddForceElement"></span><span class="sig-name descname"><span class="pre">AddForceElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.AddForceElement" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a new force element model of type <code class="docutils literal notranslate"><span class="pre">ForceElementType</span></code> to
 <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant. The arguments to this method <code class="docutils literal notranslate"><span class="pre">args</span></code> are
-forwarded to <a href="#id61"><span class="problematic" id="id62">``</span></a>ForceElementType`’s constructor.</p>
+forwarded to <a href="#id63"><span class="problematic" id="id64">``</span></a>ForceElementType`’s constructor.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">args</span></code>:</dt><dd><p>Zero or more parameters provided to the constructor of the new
 force element. It must be the case that
@@ -9754,7 +9744,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id153"><span class="problematic" id="id154">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id155"><span class="problematic" id="id156">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bᵢcm is the center of mass of
@@ -11873,43 +11863,6 @@ model instance in a given Context.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="3">
-<li><p>GetPositions(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; numpy.ndarray[object[m, 1]]</p></li>
-</ol>
-<p>Returns a const vector reference to the vector of generalized
-positions q in a given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This method returns a reference to existing data, exhibits
-constant i.e., O(1) time complexity, and runs very quickly.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-<ol class="arabic simple" start="4">
-<li><p>GetPositions(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[object[m, 1]]</p></li>
-</ol>
-<p>Returns a vector containing the generalized positions q of a specified
-model instance in a given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Returns a dense vector of dimension
-<code class="docutils literal notranslate"><span class="pre">num_positions(model_instance)</span></code> associated with
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> by copying from <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model</strong><strong> or </strong><strong>model_instance is invalid.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -12108,43 +12061,6 @@ constant i.e., O(1) time complexity, and runs very quickly.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>GetVelocities(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[object[m, 1]]</p></li>
-</ol>
-<p>Returns a vector containing the generalized velocities v of a
-specified model instance in a given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>returns a dense vector of dimension
-<code class="docutils literal notranslate"><span class="pre">num_velocities(model_instance)</span></code> associated with
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> by copying from <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model</strong><strong> or </strong><strong>model_instance is invalid.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-<ol class="arabic simple" start="3">
-<li><p>GetVelocities(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; numpy.ndarray[object[m, 1]]</p></li>
-</ol>
-<p>Returns a const vector reference to the generalized velocities v in a
-given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This method returns a reference to existing data, exhibits
-constant i.e., O(1) time complexity, and runs very quickly.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-<ol class="arabic simple" start="4">
 <li><p>GetVelocities(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[object[m, 1]]</p></li>
 </ol>
 <p>Returns a vector containing the generalized velocities v of a
@@ -13287,7 +13203,7 @@ but non-zero number can be used, e.g. 1.0e-3.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_stiction_tolerance">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_stiction_tolerance"></span><span class="sig-name descname"><span class="pre">set_stiction_tolerance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_stiction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.set_stiction_tolerance" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id65"><span class="problematic" id="id66">**</span></a>** Stribeck model of friction</p>
+<dd><p><a href="#id67"><span class="problematic" id="id68">**</span></a>** Stribeck model of friction</p>
 <p>Currently MultibodyPlant uses the Stribeck approximation to model dry
 friction. The Stribeck model of friction is an approximation to
 Coulomb’s law of friction that allows using continuous time
@@ -13746,7 +13662,7 @@ queries.
 Explicitly form matrices that appear in the equations of motion.
 - mbp_introspection “Introspection”:
 Perform introspection to find out what’s in the MultibodyPlant.</p>
-<p><a href="#id69"><span class="problematic" id="id70">**</span></a>** Model Instances</p>
+<p><a href="#id71"><span class="problematic" id="id72">**</span></a>** Model Instances</p>
 <p>A MultiBodyPlant may contain multiple model instances. Each model
 instance corresponds to a set of bodies and their connections
 (joints). Model instances provide methods to get or set the state of
@@ -13777,7 +13693,7 @@ GetVelocitiesFromArray(), SetPositionsInArray(),
 SetVelocitiesInArray(), SetActuationInArray(),
 HasModelInstanceNamed(), GetModelInstanceName(),
 get_state_output_port(), get_actuation_input_port().</p>
-<p><a href="#id71"><span class="problematic" id="id72">**</span></a>** System dynamics</p>
+<p><a href="#id73"><span class="problematic" id="id74">**</span></a>** System dynamics</p>
 <p>The state of a multibody system <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[q;</span> <span class="pre">v]</span></code> is given by its
 generalized positions vector q, of size <code class="docutils literal notranslate"><span class="pre">nq</span></code> (see num_positions()),
 and by its generalized velocities vector v, of size <code class="docutils literal notranslate"><span class="pre">nv</span></code> (see
@@ -13811,7 +13727,7 @@ generalized positions) and the generalized velocities v, [Seth 2010].
 hand side of Eq. (1) is the system’s generalized forces. These
 incorporate gravity, springs, externally applied body forces,
 constraint forces, and contact forces.</p>
-<p><a href="#id73"><span class="problematic" id="id74">**</span></a>** Discrete system dynamics</p>
+<p><a href="#id75"><span class="problematic" id="id76">**</span></a>** Discrete system dynamics</p>
 <p>We’ll start with the basic difference equation interpretation of a
 discrete plant and then explain some Drake-specific subtleties.</p>
 <div class="admonition note">
@@ -13873,7 +13789,7 @@ only Discrete (numeric) state variables and Discrete update.
 behavior of any MultibodyPlant “Calc” or “Eval” functions – those are
 always calculated using the current values of time, kinematic state, and
 input port values.</p>
-<p><a href="#id75"><span class="problematic" id="id76">**</span></a>** Output port sampling</p>
+<p><a href="#id77"><span class="problematic" id="id78">**</span></a>** Output port sampling</p>
 <p>As described in mbp_discrete_dynamics “Discrete system dynamics”
 above, the semantics of certain MultibodyPlant output ports depends on
 whether the plant is configured to advance using continuous time
@@ -13932,7 +13848,7 @@ either use a continuous-time plant, set the config option
 <code class="docutils literal notranslate"><span class="pre">use_sampled_output_ports=false</span></code>, or use ExecuteForcedEvents() to
 force a dynamics step and then the outputs (and positions) will
 change.</p>
-<p><a href="#id77"><span class="problematic" id="id78">**</span></a>** Actuation</p>
+<p><a href="#id79"><span class="problematic" id="id80">**</span></a>** Actuation</p>
 <p>In a MultibodyPlant model an actuator can be added as a JointActuator,
 see AddJointActuator(). The plant declares actuation input ports to
 provide feedforward actuation, both for the MultibodyPlant as a whole
@@ -14066,7 +13982,7 @@ a given actuator.</p>
 Joint::Lock()), and thus they have no effect on the actuation
 output.</p>
 </div>
-<p><a href="#id79"><span class="problematic" id="id80">**</span></a>** Loading models from SDFormat files</p>
+<p><a href="#id81"><span class="problematic" id="id82">**</span></a>** Loading models from SDFormat files</p>
 <p>Drake has the capability to load multibody models from SDFormat and
 URDF files. Consider the example below which loads an acrobot model:</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">acrobot</span><span class="p">;</span><span class="w"></span>
@@ -14086,7 +14002,7 @@ order to load multiple model instances. Other methods are available on
 Parser such as AddModels() which allows creating model instances per
 each <code class="docutils literal notranslate"><span class="pre">&lt;model&gt;</span></code> tag found in the file. Please refer to each of these
 methods’ documentation for further details.</p>
-<p><a href="#id81"><span class="problematic" id="id82">**</span></a>** Working with SceneGraph</p>
+<p><a href="#id83"><span class="problematic" id="id84">**</span></a>** Working with SceneGraph</p>
 <p>** Adding a MultibodyPlant connected to a SceneGraph to your Diagram</p>
 <p>Probably the simplest way to add and wire up a MultibodyPlant with a
 SceneGraph in your Diagram is using AddMultibodyPlantSceneGraph().</p>
@@ -14161,13 +14077,13 @@ geometry::ProximityProperties by geometry::SceneGraph. These
 properties can be obtained before or after context creation through
 geometry::SceneGraphInspector APIs as outlined below. MultibodyPlant
 expects the following properties for point contact modeling:</p>
-<p><a href="#id135"><span class="problematic" id="id136">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
-<a href="#id137"><span class="problematic" id="id138">|:--------:|</span></a>:———–:<a href="#id139"><span class="problematic" id="id140">|:------:|</span></a>:—————-:<a href="#id141"><span class="problematic" id="id142">|:-------------------|</span></a>
-<a href="#id143"><span class="problematic" id="id144">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
-friction.|</span></a> <a href="#id145"><span class="problematic" id="id146">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
-contact stiffness.| <a href="#id147"><span class="problematic" id="id148">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
+<p><a href="#id137"><span class="problematic" id="id138">|Group name|Property Name|Required|Property Type|Property Description|</span></a>
+<a href="#id139"><span class="problematic" id="id140">|:--------:|</span></a>:———–:<a href="#id141"><span class="problematic" id="id142">|:------:|</span></a>:—————-:<a href="#id143"><span class="problematic" id="id144">|:-------------------|</span></a>
+<a href="#id145"><span class="problematic" id="id146">|material|coulomb_friction|yes¹|CoulombFriction&lt;T&gt;|Static and Dynamic
+friction.|</span></a> <a href="#id147"><span class="problematic" id="id148">|material|point_contact_stiffness|no²|T|</span></a> Compliant point
+contact stiffness.| <a href="#id149"><span class="problematic" id="id150">|material|hunt_crossley_dissipation |no²⁴|T|</span></a>
 Compliant contact dissipation.|
-<a href="#id149"><span class="problematic" id="id150">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
+<a href="#id151"><span class="problematic" id="id152">|material|relaxation_time|yes³⁴|T|Linear Kelvin–Voigt model
 parameter.|</span></a></p>
 <p>¹ Collision geometry is required to be registered with a
 geometry::ProximityProperties object that contains the (“material”,
@@ -14226,7 +14142,7 @@ as:</p>
 <span class="s">&quot;coulomb_friction&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id83"><span class="problematic" id="id84">**</span></a>** Working with MultibodyElement parameters Several
+</details><p><a href="#id85"><span class="problematic" id="id86">**</span></a>** Working with MultibodyElement parameters Several
 MultibodyElements expose parameters, allowing the user flexible
 modification of some aspects of the plant’s model, post
 systems::Context creation. For details, refer to the documentation for
@@ -14274,7 +14190,7 @@ take derivatives with respect to one of the bodies’ masses:</p>
 <span class="n">plant_autodiff</span><span class="o">-&gt;</span><span class="n">CalcMassMatrix</span><span class="p">(</span><span class="o">*</span><span class="n">context_autodiff</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">M_autodiff</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-</details><p><a href="#id85"><span class="problematic" id="id86">**</span></a>** Adding modeling elements</p>
+</details><p><a href="#id87"><span class="problematic" id="id88">**</span></a>** Adding modeling elements</p>
 <p>Add multibody elements to a MultibodyPlant with methods like:</p>
 <ul class="simple">
 <li><p>Bodies: AddRigidBody()</p></li>
@@ -14283,11 +14199,11 @@ take derivatives with respect to one of the bodies’ masses:</p>
 </ul>
 <p>All modeling elements <strong>must</strong> be added before Finalize() is called.
 See mbp_finalize_stage “Finalize stage” for a discussion.</p>
-<p><a href="#id87"><span class="problematic" id="id88">**</span></a>** Modeling contact</p>
+<p><a href="#id89"><span class="problematic" id="id90">**</span></a>** Modeling contact</p>
 <p>Please refer to drake_contacts “Contact Modeling in Drake” for details
 on the available approximations, setup, and considerations for a
 multibody simulation with frictional contact.</p>
-<p><a href="#id89"><span class="problematic" id="id90">**</span></a>** Energy and Power</p>
+<p><a href="#id91"><span class="problematic" id="id92">**</span></a>** Energy and Power</p>
 <p>MultibodyPlant implements the System energy and power methods, with
 some limitations. - Kinetic energy: fully implemented. - Potential
 energy and conservative power: currently include only gravity and
@@ -14298,7 +14214,7 @@ objects; actuation and input port forces, joint damping, and
 dissipation from joint limits, friction, and contact dissipation are
 not included.</p>
 <p>See Drake issue #12942 for more discussion.</p>
-<p><a href="#id91"><span class="problematic" id="id92">**</span></a>** Finalize() stage</p>
+<p><a href="#id93"><span class="problematic" id="id94">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
 Build the underlying tree structure of the multibody model, - declare
@@ -14312,7 +14228,7 @@ welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
 <p>Subclassing MultibodyPlant is deprecated; it will be marked
 <code class="docutils literal notranslate"><span class="pre">final</span></code> or or after 2025-05-01.</p>
 </div>
-<p><a href="#id93"><span class="problematic" id="id94">**</span></a>** References</p>
+<p><a href="#id95"><span class="problematic" id="id96">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
 </ul>
@@ -14527,7 +14443,7 @@ SetDistanceConstraintParams().</p>
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].AddForceElement"></span><span class="sig-name descname"><span class="pre">AddForceElement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_" title="pydrake.multibody.tree.ForceElement_"><span class="pre">pydrake.multibody.tree.ForceElement_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.AddForceElement" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a new force element model of type <code class="docutils literal notranslate"><span class="pre">ForceElementType</span></code> to
 <code class="docutils literal notranslate"><span class="pre">this</span></code> MultibodyPlant. The arguments to this method <code class="docutils literal notranslate"><span class="pre">args</span></code> are
-forwarded to <a href="#id95"><span class="problematic" id="id96">``</span></a>ForceElementType`’s constructor.</p>
+forwarded to <a href="#id97"><span class="problematic" id="id98">``</span></a>ForceElementType`’s constructor.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">args</span></code>:</dt><dd><p>Zero or more parameters provided to the constructor of the new
 force element. It must be the case that
@@ -15515,7 +15431,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The world_body() is ignored. <a href="#id155"><span class="problematic" id="id156">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p>The world_body() is ignored. <a href="#id157"><span class="problematic" id="id158">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bᵢcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bᵢcm is the center of mass of
@@ -17634,43 +17550,6 @@ model instance in a given Context.</p>
 </ul>
 </dd>
 </dl>
-<ol class="arabic simple" start="3">
-<li><p>GetPositions(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression]) -&gt; numpy.ndarray[object[m, 1]]</p></li>
-</ol>
-<p>Returns a const vector reference to the vector of generalized
-positions q in a given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This method returns a reference to existing data, exhibits
-constant i.e., O(1) time complexity, and runs very quickly.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-<ol class="arabic simple" start="4">
-<li><p>GetPositions(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[object[m, 1]]</p></li>
-</ol>
-<p>Returns a vector containing the generalized positions q of a specified
-model instance in a given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Returns a dense vector of dimension
-<code class="docutils literal notranslate"><span class="pre">num_positions(model_instance)</span></code> associated with
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> by copying from <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model</strong><strong> or </strong><strong>model_instance is invalid.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -17869,43 +17748,6 @@ constant i.e., O(1) time complexity, and runs very quickly.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li><p>GetVelocities(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[object[m, 1]]</p></li>
-</ol>
-<p>Returns a vector containing the generalized velocities v of a
-specified model instance in a given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>returns a dense vector of dimension
-<code class="docutils literal notranslate"><span class="pre">num_velocities(model_instance)</span></code> associated with
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> by copying from <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model</strong><strong> or </strong><strong>model_instance is invalid.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-<ol class="arabic simple" start="3">
-<li><p>GetVelocities(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression]) -&gt; numpy.ndarray[object[m, 1]]</p></li>
-</ol>
-<p>Returns a const vector reference to the generalized velocities v in a
-given Context.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This method returns a reference to existing data, exhibits
-constant i.e., O(1) time complexity, and runs very quickly.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if context does not correspond to the Context for</strong> – </p></li>
-<li><p><strong>a multibody model.</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-<ol class="arabic simple" start="4">
 <li><p>GetVelocities(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; numpy.ndarray[object[m, 1]]</p></li>
 </ol>
 <p>Returns a vector containing the generalized velocities v of a
@@ -19048,7 +18890,7 @@ but non-zero number can be used, e.g. 1.0e-3.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.set_stiction_tolerance">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_stiction_tolerance"></span><span class="sig-name descname"><span class="pre">set_stiction_tolerance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_stiction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.set_stiction_tolerance" title="Permalink to this definition"></a></dt>
-<dd><p><a href="#id99"><span class="problematic" id="id100">**</span></a>** Stribeck model of friction</p>
+<dd><p><a href="#id101"><span class="problematic" id="id102">**</span></a>** Stribeck model of friction</p>
 <p>Currently MultibodyPlant uses the Stribeck approximation to model dry
 friction. The Stribeck model of friction is an approximation to
 Coulomb’s law of friction that allows using continuous time

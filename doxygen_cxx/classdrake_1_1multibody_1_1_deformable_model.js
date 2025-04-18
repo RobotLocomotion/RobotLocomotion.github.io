@@ -18,6 +18,7 @@ var classdrake_1_1multibody_1_1_deformable_model =
     [ "GetExternalForces", "classdrake_1_1multibody_1_1_deformable_model.html#a0522dd997904b1a3c75fce34250b63a7", null ],
     [ "GetFemModel", "classdrake_1_1multibody_1_1_deformable_model.html#a0dcc2aacf14abcecaaa220ceda00d7eb", null ],
     [ "GetGeometryId", "classdrake_1_1multibody_1_1_deformable_model.html#ac1d094e88bf62c509d5a146cc04df966", null ],
+    [ "GetPositions", "classdrake_1_1multibody_1_1_deformable_model.html#af5e0ebb8bcd41ac6a70c1015e08f132c", null ],
     [ "GetReferencePositions", "classdrake_1_1multibody_1_1_deformable_model.html#a4ddf03bd29da69359f022038999cb4ac", null ],
     [ "HasConstraint", "classdrake_1_1multibody_1_1_deformable_model.html#aba11a421c05ac3fe0dec30c33cf6e244", null ],
     [ "is_cloneable_to_autodiff", "classdrake_1_1multibody_1_1_deformable_model.html#a697327f87bef2705ce2682a5fcf876e4", null ],
@@ -26,9 +27,10 @@ var classdrake_1_1multibody_1_1_deformable_model =
     [ "is_empty", "classdrake_1_1multibody_1_1_deformable_model.html#a5a2b7a58dc85678d08752945ff655362", null ],
     [ "is_enabled", "classdrake_1_1multibody_1_1_deformable_model.html#ac0a872b20edcf3403791a845a96ba351", null ],
     [ "num_bodies", "classdrake_1_1multibody_1_1_deformable_model.html#af92b53211e54243aff4490a700168eb4", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_deformable_model.html#a6f045b3a39c4d8397fc55b2cb4e48f01", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_deformable_model.html#a68fd2d05f3e8b6982ddb2ab108275688", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_deformable_model.html#a6f045b3a39c4d8397fc55b2cb4e48f01", null ],
     [ "RegisterDeformableBody", "classdrake_1_1multibody_1_1_deformable_model.html#a466a23330391176d84dbb60a03db8a39", null ],
+    [ "SetPositions", "classdrake_1_1multibody_1_1_deformable_model.html#a4f231b15ec0ee43b435b38322a9b957f", null ],
     [ "SetWallBoundaryCondition", "classdrake_1_1multibody_1_1_deformable_model.html#a8e4f2d02a025433b059374ae0023881c", null ],
     [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html#a8668cbb69c3c1ed4e0e93608be9d93a1", null ]
 ];

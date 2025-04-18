@@ -1,5 +1,10 @@
 var NAVTREEINDEX54 =
 {
+"formula_8h.html#ac41223d30845a91ba757f6277ad8f8a1":[4,0,0,1,3,0,7,77],
+"formula_8h.html#ac460ea048a6b4cddcaf88672a6abcf46":[4,0,0,1,3,0,7,34],
+"formula_8h.html#ac4ac705adb39eafdc363379ce4ea950c":[4,0,0,1,3,0,7,63],
+"formula_8h.html#ac5c1c4bfd4434de52e240126b78853c0":[4,0,0,1,3,0,7,44],
+"formula_8h.html#ac66d112b9b6d693ee82d08c7a01f7a14":[4,0,0,1,3,0,7,35],
 "formula_8h.html#ac9f34a1136227779b18433cd0a2f4dde":[4,0,0,1,3,0,7,43],
 "formula_8h.html#acbfcc66d64e8756ae983891059050205":[4,0,0,1,3,0,7,11],
 "formula_8h.html#ad0de903abee4a9e39dbc9148d86c770c":[4,0,0,1,3,0,7,58],
@@ -136,8 +141,8 @@ var NAVTREEINDEX54 =
 "functions_p.html":[3,3,0,15],
 "functions_q.html":[3,3,0,16],
 "functions_r.html":[3,3,0,17],
-"functions_rela.html":[3,3,6],
 "functions_rela.html":[3,3,6,0],
+"functions_rela.html":[3,3,6],
 "functions_rela_b.html":[3,3,6,1],
 "functions_rela_c.html":[3,3,6,2],
 "functions_rela_d.html":[3,3,6,3],
@@ -164,8 +169,8 @@ var NAVTREEINDEX54 =
 "functions_type.html":[3,3,3],
 "functions_u.html":[3,3,0,20],
 "functions_v.html":[3,3,0,21],
-"functions_vars.html":[3,3,2],
 "functions_vars.html":[3,3,2,0],
+"functions_vars.html":[3,3,2],
 "functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
 "functions_vars_d.html":[3,3,2,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX54 =
 "generic__polynomial_8h.html#afc778273d730c518678796b632e4de8f":[4,0,0,1,3,6,31],
 "geodesic__convexity_8h.html":[4,0,0,4,1,12],
 "geodesic__convexity_8h.html#ga05bd75c8b08787c334065792f8532797":[4,0,0,4,1,12,0],
-"geodesic__convexity_8h.html#ga0f945f0d43e169b238695da629d93ff7":[4,0,0,4,1,12,5],
-"geodesic__convexity_8h.html#ga1c6d3fc1c7396ee8eee575958044071b":[4,0,0,4,1,12,3],
-"geodesic__convexity_8h.html#ga2e109ef92fec8f68a785b2edbd380021":[4,0,0,4,1,12,1],
-"geodesic__convexity_8h.html#ga33ea6cefa0958e76eb228ecab2bbeba5":[4,0,0,4,1,12,2],
-"geodesic__convexity_8h.html#ga60002c174b2106139e2b219a0e0fb3f0":[4,0,0,4,1,12,4],
-"geodesic__convexity_8h.html#gaeab8ca89c6e95c43cf9ec8c6284f395f":[4,0,0,4,1,12,6]
+"geodesic__convexity_8h.html#ga0f945f0d43e169b238695da629d93ff7":[4,0,0,4,1,12,5]
 };

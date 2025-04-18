@@ -166,6 +166,8 @@ $(document).ready(function(){initNavTree('discrete__time__approximation_8h.html'
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="simulator__config_8h.html">drake/systems/analysis/simulator_config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="system_8h.html">drake/systems/framework/system.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="affine__system_8h.html">drake/systems/primitives/affine_system.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="linear__system_8h.html">drake/systems/primitives/linear_system.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -186,12 +188,23 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; LinearSystem&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga4287afca40b5f9d9d7831e524ac18ffc">DiscreteTimeApproximation</a> (const LinearSystem&lt; T &gt; &amp;linear_system, <a class="el" href="classdouble.html">double</a> time_period)</td></tr>
-<tr class="memdesc:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time linear system to a discrete-time linear system using the zero-order hold (ZOH) method.  <a href="group__analysis.html#ga4287afca40b5f9d9d7831e524ac18ffc">More...</a><br /></td></tr>
+<tr class="memdesc:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time linear system to a discrete-time linear system using the zero-order hold method.  <a href="group__analysis.html#ga4287afca40b5f9d9d7831e524ac18ffc">More...</a><br /></td></tr>
 <tr class="separator:ga4287afca40b5f9d9d7831e524ac18ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; AffineSystem&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga1a56db8d4954d7b191253ffb89c2b03e">DiscreteTimeApproximation</a> (const AffineSystem&lt; T &gt; &amp;affine_system, <a class="el" href="classdouble.html">double</a> time_period)</td></tr>
-<tr class="memdesc:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time affine system to a discrete-time affine system using the zero-order hold (ZOH) method.  <a href="group__analysis.html#ga1a56db8d4954d7b191253ffb89c2b03e">More...</a><br /></td></tr>
+<tr class="memdesc:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a continuous-time affine system to a discrete-time affine system using the zero-order hold method.  <a href="group__analysis.html#ga1a56db8d4954d7b191253ffb89c2b03e">More...</a><br /></td></tr>
 <tr class="separator:ga1a56db8d4954d7b191253ffb89c2b03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b12640ee9d9dffdef56ecb73cd55ee9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga6b12640ee9d9dffdef56ecb73cd55ee9"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; System&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga6b12640ee9d9dffdef56ecb73cd55ee9">DiscreteTimeApproximation</a> (std::shared_ptr&lt; const System&lt; T &gt;&gt; system, <a class="el" href="classdouble.html">double</a> time_period, const SimulatorConfig &amp;integrator_config=SimulatorConfig())</td></tr>
+<tr class="memdesc:ga6b12640ee9d9dffdef56ecb73cd55ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a general continuous-time system \( \dot{x} = f(t,x(t),u(t)) \) to a discrete-time system with zero-order hold on the input.  <a href="group__analysis.html#ga6b12640ee9d9dffdef56ecb73cd55ee9">More...</a><br /></td></tr>
+<tr class="separator:ga6b12640ee9d9dffdef56ecb73cd55ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54865a7137538639aac5b167d0fe838d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga54865a7137538639aac5b167d0fe838d"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; System&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__analysis.html#ga54865a7137538639aac5b167d0fe838d">DiscreteTimeApproximation</a> (const System&lt; T &gt; &amp;system, <a class="el" href="classdouble.html">double</a> time_period, const SimulatorConfig &amp;integrator_config=SimulatorConfig())</td></tr>
+<tr class="memdesc:ga54865a7137538639aac5b167d0fe838d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as above, without claiming ownership of <code>system</code>.  <a href="group__analysis.html#ga54865a7137538639aac5b167d0fe838d">More...</a><br /></td></tr>
+<tr class="separator:ga54865a7137538639aac5b167d0fe838d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1c4ce1da6ebdeb704f3bb196af6e95"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5f1c4ce1da6ebdeb704f3bb196af6e95"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; System&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a5f1c4ce1da6ebdeb704f3bb196af6e95">DiscreteTimeApproximation</a> (System&lt; T &gt; &amp;&amp;system, <a class="el" href="classdouble.html">double</a> time_period, const SimulatorConfig &amp;integrator_config=SimulatorConfig())=delete</td></tr>
+<tr class="separator:a5f1c4ce1da6ebdeb704f3bb196af6e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
