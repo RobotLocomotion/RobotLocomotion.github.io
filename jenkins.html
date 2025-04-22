@@ -270,13 +270,16 @@ and <code class="language-plaintext highlighter-rouge">new_release.py</code>). A
 only appear in one of these lists.</p>
 
 <p>When updating prerequisites with these scripts, the normal experimental CI will
-most likely fail. To test new prerequisites, you should first request
-unprovisioned experimental builds, e.g.:</p>
+most likely fail. To test new prerequisites on Linux, you should first request an
+unprovisioned experimental build, e.g.:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-jammy-unprovisioned-gcc-bazel-experimental-release please</code></li>
-  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-arm-sonoma-unprovisioned-clang-bazel-experimental-release please</code></li>
 </ul>
+
+<p>Testing changes to the source distribution prerequisites for macOS is a work
+in progress as there are no longer unprovisioned builds.
+Contact <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code> for guidance on testing these changes.</p>
 
 <p>After this has passed, go through normal review. Once normal review is done,
 add <code class="language-plaintext highlighter-rouge">@BetsyMcPhail</code> for review and request that the provisioned instances be
@@ -292,7 +295,7 @@ more of these commands:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-jammy-unprovisioned-gcc-bazel-experimental-packaging please</code></li>
-  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-arm-sonoma-unprovisioned-clang-bazel-experimental-packaging please</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-arm-sonoma-clang-bazel-experimental-packaging please</code></li>
 </ul>
 
 <p>or follow the <a href="#scheduling-builds-via-the-jenkins-user-interface">instructions above</a>
@@ -317,7 +320,7 @@ comment on an open pull request using one or more of these commands:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-jammy-unprovisioned-gcc-wheel-experimental-release please</code></li>
-  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-arm-sonoma-unprovisioned-clang-wheel-experimental-release please</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot mac-arm-sonoma-clang-wheel-experimental-release please</code></li>
 </ul>
 
 <p>or follow the <a href="#scheduling-builds-via-the-jenkins-user-interface">instructions above</a>
