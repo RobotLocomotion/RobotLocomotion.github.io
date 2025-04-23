@@ -1618,7 +1618,7 @@ Friends</h2></td></tr>
 <p>(Internal use only) Returns the mobilizer implementing this joint, downcast to its specific type. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>A mobilizer has been created for this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>. </dd>
 <dd>
-ConcreteMobilizer must exactly match the dynamic type of the mobilizer associated with this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>. This requirement is (only) checked in Debug builds. </dd></dl>
+ConcreteMobilizer must exactly match the dynamic type of the mobilizer associated with this <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>, or be a base class of the dynamic type. This requirement is (only) checked in Debug builds. </dd></dl>
 
 </div>
 </div>

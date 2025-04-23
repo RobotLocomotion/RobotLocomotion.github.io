@@ -1,5 +1,9 @@
 var NAVTREEINDEX57 =
 {
+"jaco__constants_8h.html#a688a61fff7d08168bac255b9573991c1":[4,0,0,6,0,2,3],
+"jaco__constants_8h.html#a76e840d3817a28023432836bf34365fe":[4,0,0,6,0,2,4],
+"jaco__constants_8h.html#adea794626896ab94d6dc0a2b81590681":[4,0,0,6,0,2,2],
+"jaco__constants_8h.html#aea7ed85292870a6405c353c62f8a2075":[4,0,0,6,0,2,1],
 "jaco__status__receiver_8h.html":[4,0,0,6,0,3],
 "jaco__status__sender_8h.html":[4,0,0,6,0,4],
 "jacobian_8h.html":[4,0,0,7,21],
@@ -245,9 +249,5 @@ var NAVTREEINDEX57 =
 "meshcat__visualizer__params_8h.html":[4,0,0,4,42],
 "meshing__utilities_8h.html":[4,0,0,4,2,46],
 "min__clique__cover__solver__base_8h.html":[4,0,0,10,0,4],
-"min__clique__cover__solver__via__greedy_8h.html":[4,0,0,10,0,5],
-"minimum__degree__ordering_8h.html":[4,0,0,8,1,12],
-"minimum__distance__lower__bound__constraint_8h.html":[4,0,0,8,4,14],
-"minimum__distance__upper__bound__constraint_8h.html":[4,0,0,8,4,15],
-"minimum__value__constraint_8h.html":[4,0,0,11,33]
+"min__clique__cover__solver__via__greedy_8h.html":[4,0,0,10,0,5]
 };
