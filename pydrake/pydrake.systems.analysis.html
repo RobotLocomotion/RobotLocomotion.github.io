@@ -578,7 +578,11 @@ or accuracy).</p>
 <dd class="field-odd"><p>A discrete-time System.</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>if the system is not continuous</strong><strong> or </strong><strong>time_period &lt;= 0.</strong> – </p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>if the system is not continuous</strong><strong> or </strong><strong>time_period &lt;= 0.</strong> – </p></li>
+<li><p><strong>RuntimeError if the integration scheme does not support the scalar</strong> – </p></li>
+<li><p><strong>type T.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <ol class="arabic simple" start="4">
@@ -649,7 +653,11 @@ or accuracy).</p>
 <dd class="field-odd"><p>A discrete-time System.</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>if the system is not continuous</strong><strong> or </strong><strong>time_period &lt;= 0.</strong> – </p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>if the system is not continuous</strong><strong> or </strong><strong>time_period &lt;= 0.</strong> – </p></li>
+<li><p><strong>RuntimeError if the integration scheme does not support the scalar</strong> – </p></li>
+<li><p><strong>type T.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <ol class="arabic simple" start="7">
@@ -693,6 +701,37 @@ system using the zero-order hold method.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>if the affine_system is not continuous</strong><strong> or </strong><strong>time_period &lt;=</strong> – </p></li>
 <li><p><strong>0.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="9">
+<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System_[Expression], time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, target_realtime_rate=0.0, publish_every_time_step=False)) -&gt; pydrake.systems.framework.System_[Expression]</p></li>
+</ol>
+<p>Converts a general continuous-time system <span class="math notranslate nohighlight">\(\dot{x} =
+f(t,x(t),u(t))\)</span> to a discrete-time system with zero-order hold on the
+input. The approximate discrete-time dynamics is given by
+<span class="math notranslate nohighlight">\(x[n+1] = f_d(n,x[n],u[n]) = x[n] + \int_{t[n]}^{t[n+1]}
+f(t,x(t),u[n]) \, dt\)</span>, where the integration is performed using
+numerical integration via an IntegratorBase.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt><dd><p>The continuous-time System.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_period</span></code>:</dt><dd><p>The discrete time period.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">integrator_config</span></code>:</dt><dd><p>Use this parameter to configure the integrator (e.g. choose
+non-default integration_scheme, max_step_size, use_error_control,
+or accuracy).</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A discrete-time System.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>if the system is not continuous</strong><strong> or </strong><strong>time_period &lt;= 0.</strong> – </p></li>
+<li><p><strong>RuntimeError if the integration scheme does not support the scalar</strong> – </p></li>
+<li><p><strong>type T.</strong> – </p></li>
 </ul>
 </dd>
 </dl>

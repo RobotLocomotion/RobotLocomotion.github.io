@@ -1,5 +1,7 @@
 var NAVTREEINDEX62 =
 {
+"soft__min__max_8h.html#a01c6c47a926e29b798e1901f0b4a1913":[4,0,0,7,33,2],
+"soft__min__max_8h.html#a2fb9f9a7a842e3d0be47d3c7b7f23f11":[4,0,0,7,33,1],
 "soft__min__max_8h.html#ad5dcb8264087a5079e8103b7241ce77d":[4,0,0,7,33,0],
 "soft__min__max_8h.html#af0fa6ae7f85a3641b2688a7a929a601d":[4,0,0,7,33,3],
 "solar__system_8h.html":[4,0,0,3,17,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1_sorted_pair.html#a32b737917cbeeb58e2b54f4d4225bb6b":[3,0,0,52,2],
 "structdrake_1_1_sorted_pair.html#a4aecff03b3cdf08b4ed26f836cc9de31":[3,0,0,52,7],
 "structdrake_1_1_sorted_pair.html#a88eda7bfcc2bb51183a5c71ca7956731":[3,0,0,52,8],
-"structdrake_1_1_sorted_pair.html#aa92b10b40f1d60a4dce917bb942db4ce":[3,0,0,52,10],
-"structdrake_1_1_sorted_pair.html#ace5b7f162bab05d193bcdd27ddee7b3b":[3,0,0,52,3],
-"structdrake_1_1_sorted_pair.html#affe80b1feb4483db8575f33f3b23e07d":[3,0,0,52,0]
+"structdrake_1_1_sorted_pair.html#aa92b10b40f1d60a4dce917bb942db4ce":[3,0,0,52,10]
 };

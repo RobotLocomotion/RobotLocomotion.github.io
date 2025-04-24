@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"reset__after__move_8h.html":[4,0,0,1,58],
 "reset__on__copy_8h.html":[4,0,0,1,59],
 "revolute__joint_8h.html":[4,0,0,8,14,40],
 "revolute__joint_8h.html#a735b4e36da906bd208771139b3a979cb":[4,0,0,8,14,40,1],
@@ -223,10 +224,11 @@ var NAVTREEINDEX61 =
 "simulator__config_8h.html":[4,0,0,12,0,25],
 "simulator__config__functions_8h.html":[4,0,0,12,0,26],
 "simulator__config__functions_8h.html#ga00b67f54aba155c982e8a1038278eed6":[4,0,0,12,0,26,2],
+"simulator__config__functions_8h.html#ga1de5476f115ca0e4e00424c001f63ef7":[4,0,0,12,0,26,4],
 "simulator__config__functions_8h.html#ga5d1fc9d510c450590826170fca172e5a":[4,0,0,12,0,26,3],
 "simulator__config__functions_8h.html#ga6875fa2f1e9eb22cee800a29b0ca61b9":[4,0,0,12,0,26,0],
 "simulator__config__functions_8h.html#gaaf4e6ced63bc542a51f1ee61d864480f":[4,0,0,12,0,26,1],
-"simulator__config__functions_8h.html#gad32461bc90073aac39049d636974a04b":[4,0,0,12,0,26,4],
+"simulator__config__functions_8h.html#gad32461bc90073aac39049d636974a04b":[4,0,0,12,0,26,5],
 "simulator__gflags_8h.html":[4,0,0,12,0,27],
 "simulator__gflags_8h.html#a03ad7235991b77cba364074f82049d31":[4,0,0,12,0,27,2],
 "simulator__gflags_8h.html#a0cc9deeb95a8594918a525db7ac445c2":[4,0,0,12,0,27,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX61 =
 "sliding__friction__complementarity__constraint_8h.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[4,0,0,8,8,5,0],
 "sliding__friction__complementarity__constraint_8h.html#gad168321c6009ddda8ee2ca9abbef90b1":[4,0,0,8,8,5,1],
 "snopt__solver_8h.html":[4,0,0,11,50],
-"soft__min__max_8h.html":[4,0,0,7,33],
-"soft__min__max_8h.html#a01c6c47a926e29b798e1901f0b4a1913":[4,0,0,7,33,2],
-"soft__min__max_8h.html#a2fb9f9a7a842e3d0be47d3c7b7f23f11":[4,0,0,7,33,1]
+"soft__min__max_8h.html":[4,0,0,7,33]
 };

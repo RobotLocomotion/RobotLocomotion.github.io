@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"jaco__constants_8h.html#a04639133526c7c4d44d721a97e31587c":[4,0,0,6,0,2,0],
 "jaco__constants_8h.html#a688a61fff7d08168bac255b9573991c1":[4,0,0,6,0,2,3],
 "jaco__constants_8h.html#a76e840d3817a28023432836bf34365fe":[4,0,0,6,0,2,4],
 "jaco__constants_8h.html#adea794626896ab94d6dc0a2b81590681":[4,0,0,6,0,2,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "meshcat__visualizer_8h.html#af0be5cf994a2c139318cfaa61769db04":[4,0,0,4,41,3],
 "meshcat__visualizer__params_8h.html":[4,0,0,4,42],
 "meshing__utilities_8h.html":[4,0,0,4,2,46],
-"min__clique__cover__solver__base_8h.html":[4,0,0,10,0,4],
-"min__clique__cover__solver__via__greedy_8h.html":[4,0,0,10,0,5]
+"min__clique__cover__solver__base_8h.html":[4,0,0,10,0,4]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX66 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_add_frame.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,3,2,0],
+"structdrake_1_1multibody_1_1parsing_1_1_add_model.html":[3,0,0,9,3,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a4e550ebb9a213be8a3939f0c6ad4816b":[3,0,0,9,3,3,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,3,3,1],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,3,3,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX66 =
 "structdrake_1_1solvers_1_1_solver_options.html#a75ae4b0e55acd123d4dd077a31e8b0ff":[3,0,0,14,72,14],
 "structdrake_1_1solvers_1_1_solver_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,14,72,15],
 "structdrake_1_1solvers_1_1_solver_options.html#a9df62381db112d3b359cd2a5e1111fdf":[3,0,0,14,72,12],
-"structdrake_1_1solvers_1_1_solver_options.html#a9e12607058c5231c94d2a2d915b052b7":[3,0,0,14,72,10],
-"structdrake_1_1solvers_1_1_solver_options.html#aac20432da1daa9805e9448e151f2b552":[3,0,0,14,72,11],
-"structdrake_1_1solvers_1_1_solver_options.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,14,72,18]
+"structdrake_1_1solvers_1_1_solver_options.html#a9e12607058c5231c94d2a2d915b052b7":[3,0,0,14,72,10]
 };

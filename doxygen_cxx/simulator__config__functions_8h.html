@@ -167,6 +167,7 @@ $(document).ready(function(){initNavTree('simulator__config__functions_8h.html',
 <div class="contents">
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="default__scalars_8h.html">drake/common/default_scalars.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="integrator__base_8h.html">drake/systems/analysis/integrator_base.h</a>&quot;</code><br />
@@ -208,6 +209,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gaaf4e6ced63bc542a51f1ee61d864480f"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; IntegratorBase&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#gaaf4e6ced63bc542a51f1ee61d864480f">CreateIntegratorFromConfig</a> (const System&lt; T &gt; *system, const SimulatorConfig &amp;integrator_config)</td></tr>
 <tr class="memdesc:gaaf4e6ced63bc542a51f1ee61d864480f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an integrator according to the given configuration.  <a href="group__simulator__configuration.html#gaaf4e6ced63bc542a51f1ee61d864480f">More...</a><br /></td></tr>
 <tr class="separator:gaaf4e6ced63bc542a51f1ee61d864480f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1de5476f115ca0e4e00424c001f63ef7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga1de5476f115ca0e4e00424c001f63ef7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga1de5476f115ca0e4e00424c001f63ef7">IsScalarTypeSupportedByIntegrator</a> (std::string_view integration_scheme)</td></tr>
+<tr class="memdesc:ga1de5476f115ca0e4e00424c001f63ef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if an integration scheme supports the scalar type T.  <a href="group__simulator__configuration.html#ga1de5476f115ca0e4e00424c001f63ef7">More...</a><br /></td></tr>
+<tr class="separator:ga1de5476f115ca0e4e00424c001f63ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

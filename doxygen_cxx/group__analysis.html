@@ -343,13 +343,14 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A discrete-time <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">if</td><td>the <code>system</code> is not continuous or <code>time_period</code> &lt;= 0.</td></tr>
+    <tr><td class="paramname">if</td><td>the <code>system</code> is not continuous or <code>time_period</code> &lt;= 0. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the integration scheme does not support the scalar type T.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -392,7 +393,7 @@ Functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>The <code>system</code> reference must remain valid for the lifetime of the returned system.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
   </table>
   </dd>
 </dl>
