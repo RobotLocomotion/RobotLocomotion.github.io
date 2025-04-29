@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a4c4e8d73a04fdc4401e2b0aea356a15f":[1,2,11,8,2],
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a87b644f91479935ab6f674550c53f1dc":[1,2,11,8,3],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ab9a884ab71a576b2fdb10c31f1501ece":[1,2,11,8,6],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ac2e5aab0612d67400354a4fe71278a21":[1,2,11,8,4],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ad869cd6ef2e796607d92e63fdc374112":[1,2,11,8,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "decompose_8h.html#ad528f8f92173863f5029b979b9c5f36b":[4,0,0,1,3,4,8],
 "decompose_8h.html#ae3c6a31812dc3e509644dbbc95c9778e":[4,0,0,1,3,4,2],
 "decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c":[4,0,0,1,3,4,5],
-"default__scalars_8h.html":[4,0,0,1,15],
-"default__scalars_8h.html#gaf140364db7046208e67d85327722d34a":[4,0,0,1,15,6],
-"default__scalars__pybind_8h.html":[4,0,0,0,0,1,2]
+"default__scalars_8h.html":[4,0,0,1,15]
 };

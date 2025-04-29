@@ -168,6 +168,7 @@ See "Caveats" in drake/doc/README.txt.
   <li><a href="#multibodyplant" id="markdown-toc-multibodyplant">MultibodyPlant</a>    <ul>
       <li><a href="#mbp-parsing" id="markdown-toc-mbp-parsing">Parsing</a></li>
       <li><a href="#mbp-unconnected-query-object-port" id="markdown-toc-mbp-unconnected-query-object-port">Unconnected QueryObject port</a></li>
+      <li><a href="#mbp-loops-in-graph" id="markdown-toc-mbp-loops-in-graph">Loops in the body-joint graph</a></li>
     </ul>
   </li>
   <li><a href="#system-framework" id="markdown-toc-system-framework">System Framework</a>    <ul>
@@ -270,6 +271,29 @@ E.g.,</li>
 </code></pre></div>      </div>
     </li>
   </ol>
+
+  <h2 id="mbp-loops-in-graph">Loops in the body-joint graph</h2>
+
+  <p>Currently Drake does not support automatic modeling of systems for which the
+bodies and joints form one or more loops in the system graph. However, there
+are several ways you can model these systems in Drake:</p>
+
+  <ul>
+    <li>Break each loop at a joint and replace the joint by an equivalent constraint
+or by using a <code class="language-plaintext highlighter-rouge">LinearBushingRollPitchYaw</code>
+(<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html">C++</a>,
+<a href="https://drake.mit.edu/pydrake/pydrake.multibody.tree.html#pydrake.multibody.tree.LinearBushingRollPitchYaw">Python</a>) force element.</li>
+    <li>Break each loop by cutting one of the bodies involved in the loop. This
+introduces a new “shadow” body that will follow the “primary” body. For best
+numerical behavior, distribute the mass and inertia 1/2 to each of the
+two bodies. Use a Weld constraint to attach the shadow to its primary. This
+method has the advantage that joints remain uniformly treated and the
+joint coordinates are unchanged.</li>
+  </ul>
+
+  <p>It is also possible to introduce loops by accident. If you didn’t intend to
+do so, check your system description to see whether some joint may have been
+connected to the wrong body.</p>
 
   <h1 id="system-framework">System Framework</h1>
 

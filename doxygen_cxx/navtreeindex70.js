@@ -1,5 +1,7 @@
 var NAVTREEINDEX70 =
 {
+"yaml__io_8h.html#ac67b5225cdcfc369f84d1910dbd2313e":[4,0,0,1,6,1,2],
+"yaml__io_8h.html#ad38f7b06115765153b8434cff70a597f":[4,0,0,1,6,1,1],
 "yaml__io__options_8h.html":[4,0,0,1,6,2],
 "yaml__node_8h.html":[4,0,0,1,6,3],
 "yaml__read__archive_8h.html":[4,0,0,1,6,4],

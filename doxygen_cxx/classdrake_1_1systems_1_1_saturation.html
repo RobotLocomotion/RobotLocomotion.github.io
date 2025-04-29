@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_saturation.h
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1systems_1_1_saturation-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Saturation&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__systems.html">Modeling Dynamical Systems</a> &raquo; <a class="el" href="group__primitive__systems.html">Primitives</a></div></div>  </div>
@@ -219,6 +220,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c3d4113bb36a4e304b96d0fdf0cd3de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_saturation.html#a3c3d4113bb36a4e304b96d0fdf0cd3de">Saturation</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;min_value, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;max_value)</td></tr>
 <tr class="memdesc:a3c3d4113bb36a4e304b96d0fdf0cd3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a constant Saturation system where the upper and lower values are represented by vectors of identical size supplied via this constructor.  <a href="#a3c3d4113bb36a4e304b96d0fdf0cd3de">More...</a><br /></td></tr>
 <tr class="separator:a3c3d4113bb36a4e304b96d0fdf0cd3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1043ae61036cde97500bf8c111e8b61b"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a1043ae61036cde97500bf8c111e8b61b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_saturation.html#a1043ae61036cde97500bf8c111e8b61b">Saturation</a> (const <a class="el" href="classdrake_1_1systems_1_1_saturation.html">Saturation</a>&lt; U &gt; &amp;)</td></tr>
+<tr class="memdesc:a1043ae61036cde97500bf8c111e8b61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor. See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a>.  <a href="#a1043ae61036cde97500bf8c111e8b61b">More...</a><br /></td></tr>
+<tr class="separator:a1043ae61036cde97500bf8c111e8b61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcfc22af164f8b6ee671b0d598fd2466"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_saturation.html#abcfc22af164f8b6ee671b0d598fd2466">get_input_port</a> () const</td></tr>
 <tr class="memdesc:abcfc22af164f8b6ee671b0d598fd2466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the input port.  <a href="#abcfc22af164f8b6ee671b0d598fd2466">More...</a><br /></td></tr>
 <tr class="separator:abcfc22af164f8b6ee671b0d598fd2466"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -689,6 +694,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c95876fd161fda4fb4fb7d51bec2a81 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7c95876fd161fda4fb4fb7d51bec2a81">output_port_ticket</a> (<a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">OutputPortIndex</a> index) const</td></tr>
 <tr class="memdesc:a7c95876fd161fda4fb4fb7d51bec2a81 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a ticket indicating dependence on the output port indicated by <code>index</code>.  <a href="classdrake_1_1systems_1_1_system_base.html#a7c95876fd161fda4fb4fb7d51bec2a81">More...</a><br /></td></tr>
 <tr class="separator:a7c95876fd161fda4fb4fb7d51bec2a81 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a5175a5f4c61c65df45844e0cdd6f1b58"><td class="memTemplParams" colspan="2">template&lt;typename &gt; </td></tr>
+<tr class="memitem:a5175a5f4c61c65df45844e0cdd6f1b58"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_saturation.html#a5175a5f4c61c65df45844e0cdd6f1b58">Saturation</a></td></tr>
+<tr class="separator:a5175a5f4c61c65df45844e0cdd6f1b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -1295,7 +1306,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a87198e44c71388d56697531009915e3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87198e44c71388d56697531009915e3b">&#9670;&nbsp;</a></span>Saturation() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a87198e44c71388d56697531009915e3b">&#9670;&nbsp;</a></span>Saturation() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1321,7 +1332,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="aada3471b0f354f15d264e98b0a028255"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aada3471b0f354f15d264e98b0a028255">&#9670;&nbsp;</a></span>Saturation() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aada3471b0f354f15d264e98b0a028255">&#9670;&nbsp;</a></span>Saturation() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1347,7 +1358,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a2f84bb1a9217bcb1a2f464779246b9ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f84bb1a9217bcb1a2f464779246b9ed">&#9670;&nbsp;</a></span>Saturation() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f84bb1a9217bcb1a2f464779246b9ed">&#9670;&nbsp;</a></span>Saturation() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1399,7 +1410,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a3c3d4113bb36a4e304b96d0fdf0cd3de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c3d4113bb36a4e304b96d0fdf0cd3de">&#9670;&nbsp;</a></span>Saturation() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c3d4113bb36a4e304b96d0fdf0cd3de">&#9670;&nbsp;</a></span>Saturation() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1445,6 +1456,34 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>Please consult this class's description for the requirements of <code>min_value</code> and <code>max_value</code>. </p>
+
+</div>
+</div>
+<a id="a1043ae61036cde97500bf8c111e8b61b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1043ae61036cde97500bf8c111e8b61b">&#9670;&nbsp;</a></span>Saturation() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_saturation.html">Saturation</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_saturation.html">Saturation</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Scalar-converting copy constructor. See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a>. </p>
 
 </div>
 </div>
@@ -1571,6 +1610,29 @@ Additional Inherited Members</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a5175a5f4c61c65df45844e0cdd6f1b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5175a5f4c61c65df45844e0cdd6f1b58">&#9670;&nbsp;</a></span>Saturation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1systems_1_1_saturation.html">Saturation</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

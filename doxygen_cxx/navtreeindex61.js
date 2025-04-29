@@ -1,5 +1,7 @@
 var NAVTREEINDEX61 =
 {
+"replace__bilinear__terms_8h.html":[4,0,0,1,3,15],
+"replace__bilinear__terms_8h.html#a04799bc5337c8999ef3f10e82dd979cd":[4,0,0,1,3,15,0],
 "reset__after__move_8h.html":[4,0,0,1,58],
 "reset__on__copy_8h.html":[4,0,0,1,59],
 "revolute__joint_8h.html":[4,0,0,8,14,40],
@@ -247,7 +249,5 @@ var NAVTREEINDEX61 =
 "slicing__and__indexing_8h.html":[4,0,0,8,10,45],
 "sliding__friction__complementarity__constraint_8h.html":[4,0,0,8,8,5],
 "sliding__friction__complementarity__constraint_8h.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[4,0,0,8,8,5,0],
-"sliding__friction__complementarity__constraint_8h.html#gad168321c6009ddda8ee2ca9abbef90b1":[4,0,0,8,8,5,1],
-"snopt__solver_8h.html":[4,0,0,11,50],
-"soft__min__max_8h.html":[4,0,0,7,33]
+"sliding__friction__complementarity__constraint_8h.html#gad168321c6009ddda8ee2ca9abbef90b1":[4,0,0,8,8,5,1]
 };

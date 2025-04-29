@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"default__scalars_8h.html#gaf140364db7046208e67d85327722d34a":[4,0,0,1,15,6],
+"default__scalars__pybind_8h.html":[4,0,0,0,0,1,2],
 "default__scalars__pybind_8h.html#a52292ed585da63084b8914356a744d04":[4,0,0,0,0,1,2,0],
 "default__scalars__pybind_8h.html#a6294e82ee237c93a7e6cbc2fb4d924b2":[4,0,0,0,0,1,2,3],
 "default__scalars__pybind_8h.html#a8a3b7387557e1dd66533247e34770031":[4,0,0,0,0,1,2,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "discrete__time__approximation_8h.html#ga4287afca40b5f9d9d7831e524ac18ffc":[4,0,0,12,0,5,0],
 "discrete__time__approximation_8h.html#ga54865a7137538639aac5b167d0fe838d":[4,0,0,12,0,5,3],
 "discrete__time__approximation_8h.html#ga6b12640ee9d9dffdef56ecb73cd55ee9":[4,0,0,12,0,5,2],
-"discrete__time__delay_8h.html":[4,0,0,12,6,9],
-"discrete__time__trajectory_8h.html":[4,0,0,1,5,4],
-"discrete__time__trajectory_8h.html#a34f52efef364a43b210d89290991aec8":[4,0,0,1,5,4,1]
+"discrete__time__delay_8h.html":[4,0,0,12,6,9]
 };

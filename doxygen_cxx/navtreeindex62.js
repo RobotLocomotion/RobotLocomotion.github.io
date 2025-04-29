@@ -1,5 +1,7 @@
 var NAVTREEINDEX62 =
 {
+"snopt__solver_8h.html":[4,0,0,11,50],
+"soft__min__max_8h.html":[4,0,0,7,33],
 "soft__min__max_8h.html#a01c6c47a926e29b798e1901f0b4a1913":[4,0,0,7,33,2],
 "soft__min__max_8h.html#a2fb9f9a7a842e3d0be47d3c7b7f23f11":[4,0,0,7,33,1],
 "soft__min__max_8h.html#ad5dcb8264087a5079e8103b7241ce77d":[4,0,0,7,33,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX62 =
 "structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1":[3,0,0,52,6],
 "structdrake_1_1_sorted_pair.html#a2fc588ec6d00ca9a86173dcc508a12a9":[3,0,0,52,1],
 "structdrake_1_1_sorted_pair.html#a32b737917cbeeb58e2b54f4d4225bb6b":[3,0,0,52,2],
-"structdrake_1_1_sorted_pair.html#a4aecff03b3cdf08b4ed26f836cc9de31":[3,0,0,52,7],
-"structdrake_1_1_sorted_pair.html#a88eda7bfcc2bb51183a5c71ca7956731":[3,0,0,52,8],
-"structdrake_1_1_sorted_pair.html#aa92b10b40f1d60a4dce917bb942db4ce":[3,0,0,52,10]
+"structdrake_1_1_sorted_pair.html#a4aecff03b3cdf08b4ed26f836cc9de31":[3,0,0,52,7]
 };

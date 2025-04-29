@@ -1,5 +1,7 @@
 var NAVTREEINDEX63 =
 {
+"structdrake_1_1_sorted_pair.html#a88eda7bfcc2bb51183a5c71ca7956731":[3,0,0,52,8],
+"structdrake_1_1_sorted_pair.html#aa92b10b40f1d60a4dce917bb942db4ce":[3,0,0,52,10],
 "structdrake_1_1_sorted_pair.html#ace5b7f162bab05d193bcdd27ddee7b3b":[3,0,0,52,3],
 "structdrake_1_1_sorted_pair.html#affe80b1feb4483db8575f33f3b23e07d":[3,0,0,52,0],
 "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html":[3,0,0,1,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX63 =
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[3,0,0,4,37,9],
 "structdrake_1_1geometry_1_1_null_texture.html":[3,0,0,4,40],
 "structdrake_1_1geometry_1_1_null_texture.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,4,40,0],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html":[3,0,0,4,41],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a03dd077d6a46472c4cbcc37ba07e6655":[3,0,0,4,41,6],
-"structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a09d9dc26f5ad9558065022d1cdab2b27":[3,0,0,4,41,0]
+"structdrake_1_1geometry_1_1_penetration_as_point_pair.html":[3,0,0,4,41]
 };
