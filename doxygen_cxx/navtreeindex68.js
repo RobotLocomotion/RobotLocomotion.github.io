@@ -1,5 +1,11 @@
 var NAVTREEINDEX68 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html":[3,0,0,16,8,12],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,12,1],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,16,8,12,0],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[3,0,0,16,8,12,3],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,16,8,12,2],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html":[3,0,0,16,8,13],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#a09ebd10735aaa1583c86ff17479eb9f8":[3,0,0,16,8,13,4],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#a0ad45d355aa0c88b07500cec8faa94b5":[3,0,0,16,8,13,5],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,16,8,13,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX68 =
 "symbolic__test__util_8h.html#a5749b30e655142139a5f1969af8e8cb9":[4,0,0,1,4,13,0],
 "symbolic__test__util_8h.html#a5c95fc4c9ee4b5116c480d70d14c9441":[4,0,0,1,4,13,12],
 "symbolic__test__util_8h.html#a5f68813c021d723596cf0e927df40b30":[4,0,0,1,4,13,8],
-"symbolic__test__util_8h.html#a663e73fe69ce1b37a442113b1bc1d09d":[4,0,0,1,4,13,17],
-"symbolic__test__util_8h.html#a6c0d2e30262fcb6f7900d590480b4b93":[4,0,0,1,4,13,14],
-"symbolic__test__util_8h.html#a76d302c21a7cd37bdbb3ccd309db9847":[4,0,0,1,4,13,13],
-"symbolic__test__util_8h.html#a7c25d0add2e7a5b5ac520fde29a095ac":[4,0,0,1,4,13,16],
-"symbolic__test__util_8h.html#a7d32380c1bed6f6406814604a31d4486":[4,0,0,1,4,13,2],
-"symbolic__test__util_8h.html#a8709d7c6c2135beaf013d99f406cd183":[4,0,0,1,4,13,1],
-"symbolic__test__util_8h.html#a8bce1dea155cf606b8fd9c58718bd2b8":[4,0,0,1,4,13,19]
+"symbolic__test__util_8h.html#a663e73fe69ce1b37a442113b1bc1d09d":[4,0,0,1,4,13,17]
 };

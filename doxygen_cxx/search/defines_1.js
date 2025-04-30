@@ -11,6 +11,7 @@ var searchData=
   ['drake_5fcommon_5fsymbolic_5fexpression_5fall',['DRAKE_COMMON_SYMBOLIC_EXPRESSION_ALL',['../all_8h.html#a9bad86b8d25af2652383881372b2ef52',1,'all.h']]],
   ['drake_5fcommon_5fsymbolic_5fpolynomial_5fh',['DRAKE_COMMON_SYMBOLIC_POLYNOMIAL_H',['../symbolic_2polynomial_8h.html#a14031f45c6c7d6bfde87bb3455963fc3',1,'polynomial.h']]],
   ['drake_5fdeclare_5fcopy_5fand_5fmove_5fand_5fassign',['DRAKE_DECLARE_COPY_AND_MOVE_AND_ASSIGN',['../drake__copyable_8h.html#a8d60a299683340853a6c62040721c9a0',1,'drake_copyable.h']]],
+  ['drake_5fdeclare_5fprismatic_5fmobilizer',['DRAKE_DECLARE_PRISMATIC_MOBILIZER',['../prismatic__mobilizer_8h.html#a3f700e194f1a28334174c61a827d5c6e',1,'prismatic_mobilizer.h']]],
   ['drake_5fdeclare_5frevolute_5fmobilizer',['DRAKE_DECLARE_REVOLUTE_MOBILIZER',['../revolute__mobilizer_8h.html#a050a457ded3e7b601b45aedabbfc3dc1',1,'revolute_mobilizer.h']]],
   ['drake_5fdeclare_5ftemplate_5finstantiations_5fon_5fall_5fsizes',['DRAKE_DECLARE_TEMPLATE_INSTANTIATIONS_ON_ALL_SIZES',['../stochastic_8h.html#a0611532f6e53d2b3eb39986468ad1399',1,'stochastic.h']]],
   ['drake_5fdefault_5fcopy_5fand_5fmove_5fand_5fassign',['DRAKE_DEFAULT_COPY_AND_MOVE_AND_ASSIGN',['../drake__copyable_8h.html#ae6322b9e40935343a422cbdfb41e310e',1,'drake_copyable.h']]],

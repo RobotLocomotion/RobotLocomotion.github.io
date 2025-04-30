@@ -1,5 +1,7 @@
 var NAVTREEINDEX56 =
 {
+"group__pydrake__python__logging.html":[1,6,6,0],
+"group__python__bindings.html":[1,6,0],
 "group__render__benchmarks.html":[1,5,3,0],
 "group__render__engine__benchmarks.html":[1,5,3,0,0],
 "group__render__engine__gltf__client__server__api.html":[1,5,3,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX56 =
 "is__dynamic__castable_8h.html#ada20909a7ef482cf1fecbe11bbcf67d4":[4,0,0,1,4,6,2],
 "is__less__than__comparable_8h.html":[4,0,0,1,46],
 "is__memcpy__movable_8h.html":[4,0,0,1,4,7],
-"is__memcpy__movable_8h.html#a6f982e28ff81290b698e4d73e2fb6751":[4,0,0,1,4,7,0],
-"isoparametric__element_8h.html":[4,0,0,8,2,18],
-"jaco__command__receiver_8h.html":[4,0,0,6,0,0]
+"is__memcpy__movable_8h.html#a6f982e28ff81290b698e4d73e2fb6751":[4,0,0,1,4,7,0]
 };

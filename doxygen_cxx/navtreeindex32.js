@@ -1,5 +1,7 @@
 var NAVTREEINDEX32 =
 {
+"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a26f52b8ebf9ac5b1ee36a3bdec08d366":[3,0,0,15,2,16],
+"classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a38ee88c008b73d992ee8f5a4ed9da3e7":[3,0,0,15,2,9],
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a63929de29f3d2b155105f56be0f05c36":[3,0,0,15,2,1],
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a67a4f0a8fd4c135cd142f0fb677b8535":[3,0,0,15,2,14],
 "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#a6ce529dd88bd7a979a7d3ec5938ffebe":[3,0,0,15,2,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX32 =
 "classdrake_1_1symbolic_1_1_expression_acos.html#af8065ca48e8ba9293a744d561bb007e9":[3,0,0,15,8,1],
 "classdrake_1_1symbolic_1_1_expression_add.html":[3,0,0,15,9],
 "classdrake_1_1symbolic_1_1_expression_add.html#a05fdc56be2bae58a250b0528b539f0ad":[3,0,0,15,9,10],
-"classdrake_1_1symbolic_1_1_expression_add.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,15,9,13],
-"classdrake_1_1symbolic_1_1_expression_add.html#a17a687a22fc3792625f3e48fff7f0269":[3,0,0,15,9,4],
-"classdrake_1_1symbolic_1_1_expression_add.html#a299f165a73ecabab4c6d061180c521e2":[3,0,0,15,9,1]
+"classdrake_1_1symbolic_1_1_expression_add.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,15,9,13]
 };

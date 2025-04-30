@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"classdrake_1_1systems_1_1_witness_function.html#a42a4db5a8ad2eb9ed478f1d2f20ad50c":[3,0,0,16,137,2],
+"classdrake_1_1systems_1_1_witness_function.html#a42e6ac7e64f6c610dd24a73ca3bdc249":[3,0,0,16,137,5],
 "classdrake_1_1systems_1_1_witness_function.html#a43ed565f3efdcb1af08b2ab94bdcf05a":[3,0,0,16,137,9],
 "classdrake_1_1systems_1_1_witness_function.html#a5c403016877fd5f6291208aeb9a8063c":[3,0,0,16,137,8],
 "classdrake_1_1systems_1_1_witness_function.html#a677b263497c4e65d9a108e08e838f7f3":[3,0,0,16,137,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#af3e78294735e57d674d1ad9ae0252c56":[1,2,2,5,9],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#afa02d5ace5f5eb4df62c82fe3883bdab":[1,2,2,5,1],
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html":[3,0,0,16,2,10],
-"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a06b00bdf9cf61457cade4e39ebc40b28":[3,0,0,16,2,10,2],
-"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a250b7dda39fb41640df16e3d85bbc8ea":[3,0,0,16,2,10,0],
-"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a2d5e3af9235581bbca735ace1a676ac6":[3,0,0,16,2,10,3]
+"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a06b00bdf9cf61457cade4e39ebc40b28":[3,0,0,16,2,10,2]
 };

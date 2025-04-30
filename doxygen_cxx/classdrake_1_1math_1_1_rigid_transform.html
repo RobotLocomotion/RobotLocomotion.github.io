@@ -396,6 +396,10 @@ Related Functions</h2></td></tr>
 <tr class="memitem:a1799ba24af4042082a90b0d741bc0ee9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a1799ba24af4042082a90b0d741bc0ee9">PostMultiplyByAxialTranslation</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;atX_BC, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; *X_AC) const</td></tr>
 <tr class="memdesc:a1799ba24af4042082a90b0d741bc0ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Composes <code>this</code> general transform X_AB with a given axial translation transform atX_BC to efficiently calculate <code>X_AC = X_AB * atX_BC</code>.  <a href="#a1799ba24af4042082a90b0d741bc0ee9">More...</a><br /></td></tr>
 <tr class="separator:a1799ba24af4042082a90b0d741bc0ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd0afeafec4e9996e417de29a8d1674"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:a9cd0afeafec4e9996e417de29a8d1674"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a9cd0afeafec4e9996e417de29a8d1674">PreMultiplyByAxialTranslation</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;atX_AB, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; *X_AC) const</td></tr>
+<tr class="memdesc:a9cd0afeafec4e9996e417de29a8d1674"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) With <code>this</code> a general transform X_BC, and given an axial translation transform atX_AB, efficiently calculates <code>X_AC = atX_AB * X_BC</code>.  <a href="#a9cd0afeafec4e9996e417de29a8d1674">More...</a><br /></td></tr>
+<tr class="separator:a9cd0afeafec4e9996e417de29a8d1674"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40dd27d818f056170dd9bf9a694667a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a40dd27d818f056170dd9bf9a694667a2">PostMultiplyByRotation</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;rX_BC, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; *X_AC) const</td></tr>
 <tr class="memdesc:a40dd27d818f056170dd9bf9a694667a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Composes <code>this</code> general transform X_AB with a given rotation-only transform rX_BC to efficiently calculate <code>X_AC = X_AB * rX_BC</code>.  <a href="#a40dd27d818f056170dd9bf9a694667a2">More...</a><br /></td></tr>
 <tr class="separator:a40dd27d818f056170dd9bf9a694667a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -418,6 +422,10 @@ Related Functions</h2></td></tr>
 <tr class="memitem:ad58984dbf6d96e27a1dc25062a768069"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#ad58984dbf6d96e27a1dc25062a768069">UpdateAxialRotation</a> (const T &amp;sin_theta, const T &amp;cos_theta, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; *arX_BC)</td></tr>
 <tr class="memdesc:ad58984dbf6d96e27a1dc25062a768069"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given sin(θ) and cos(θ), where θ is a new rotation angle, updates the axial rotation transform arX_BC to represent the new rotation angle.  <a href="#ad58984dbf6d96e27a1dc25062a768069">More...</a><br /></td></tr>
 <tr class="separator:ad58984dbf6d96e27a1dc25062a768069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c756da482eb99973ba0754ad3d53ea6"><td class="memTemplParams" colspan="2">template&lt;int axis&gt; </td></tr>
+<tr class="memitem:a8c756da482eb99973ba0754ad3d53ea6"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a8c756da482eb99973ba0754ad3d53ea6">UpdateAxialTranslation</a> (const T &amp;distance, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; *atX_BC)</td></tr>
+<tr class="memdesc:a8c756da482eb99973ba0754ad3d53ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Given a new <code>distance</code>, updates the axial translation transform atX_BC to represent the new translation by that amount.  <a href="#a8c756da482eb99973ba0754ad3d53ea6">More...</a><br /></td></tr>
+<tr class="separator:a8c756da482eb99973ba0754ad3d53ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aaac6934d2979499ff35457a8583ce60a"></a>
@@ -1719,7 +1727,7 @@ X_AC does not overlap with <code>this</code> in memory. </dd></dl>
 <p>This requires only 6 floating point operations. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">atX_BC</td><td>An axial translation transform about the indicated <code>axis</code>. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">X_AC</td><td>Preallocated space for the result. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">X_AC</td><td>Preallocated space for the result, which will be a general transform. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1852,6 +1860,50 @@ X_AC does not overlap with <code>this</code> in memory. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>arX_AB is an <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#special_xform_def">Axial rotation transform</a> </dd>
 <dd>
 X_AC does not overlap with arX_AB or <code>this</code> in memory. </dd></dl>
+
+</div>
+</div>
+<a id="a9cd0afeafec4e9996e417de29a8d1674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cd0afeafec4e9996e417de29a8d1674">&#9670;&nbsp;</a></span>PreMultiplyByAxialTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PreMultiplyByAxialTranslation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>atX_AB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>X_AC</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) With <code>this</code> a general transform X_BC, and given an axial translation transform atX_AB, efficiently calculates <code>X_AC = atX_AB * X_BC</code>. </p>
+<p>This requires just 1 floating point operation. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">atX_AB</td><td>An axial translation transform along the indicated <code>axis</code>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">X_AC</td><td>Preallocated space for the result, which will be a general transform. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z translation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>atX_AB is an <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#special_xform_def">Axial translation transform</a> </dd></dl>
 
 </div>
 </div>
@@ -2234,6 +2286,58 @@ X_AC does not overlap with arX_AB or <code>this</code> in memory. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>arX_BC is an <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#special_xform_def">Axial rotation transform</a>. </dd>
 <dd>
 <code>sin_theta</code> and <code>cos_theta</code> are sine and cosine of the same angle. </dd></dl>
+
+</div>
+</div>
+<a id="a8c756da482eb99973ba0754ad3d53ea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c756da482eb99973ba0754ad3d53ea6">&#9670;&nbsp;</a></span>UpdateAxialTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UpdateAxialTranslation </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>atX_BC</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Given a new <code>distance</code>, updates the axial translation transform atX_BC to represent the new translation by that amount. </p>
+<p>We expect that atX_BC was already such a transform (about the given x, y, or z axis). Only the 1 active element is modified; the other 11 remain unchanged. No floating point operations are needed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">distance</td><td>the component of p_BC along the <code>axis</code> direction. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">atX_BC</td><td>the axial translation transform matrix to be updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">axis</td><td>0, 1, or 2 corresponding to +x, +y, or +z translation axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>atX_BC is an <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#special_xform_def">Axial translation transform</a>. </dd></dl>
 
 </div>
 </div>

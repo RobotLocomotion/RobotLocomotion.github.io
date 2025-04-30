@@ -520,7 +520,7 @@ error cases of <code class="docutils literal notranslate"><span class="pre">Mult
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.multibody.parsing.LoadModelDirectives">
-<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">LoadModelDirectives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirectives" title="pydrake.multibody.parsing.ModelDirectives"><span class="pre">pydrake.multibody.parsing.ModelDirectives</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.LoadModelDirectives" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">LoadModelDirectives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirectives" title="pydrake.multibody.parsing.ModelDirectives"><span class="pre">pydrake.multibody.parsing.ModelDirectives</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.LoadModelDirectives" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
@@ -1028,7 +1028,7 @@ scene_graph ∈ builder.GetSystems().</p>
 <span class="sig-name descname"><span class="pre">AddModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModels" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>AddModels(self: pydrake.multibody.parsing.Parser, file_name: str) -&gt; list[pydrake.multibody.tree.ModelInstanceIndex]</p></li>
+<li><p>AddModels(self: pydrake.multibody.parsing.Parser, file_name: os.PathLike) -&gt; list[pydrake.multibody.tree.ModelInstanceIndex]</p></li>
 </ol>
 <p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">file_name</span></code> and adds all of its
 model(s) to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>

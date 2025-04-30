@@ -9533,13 +9533,13 @@ second.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">PrismaticJoint</span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Joint</span></code></a></p>
 <p>This Joint allows two bodies to translate relative to one another
-along a common axis. That is, given a frame F attached to the parent
-body P and a frame M attached to the child body B (see the Joint
-class’s documentation), this Joint allows frames F and M to translate
-with respect to each other along an axis â. The translation distance
-is defined positive when child body B translates along the direction
-of â. Axis â is constant and has the same measures in both frames F
-and M, that is, <code class="docutils literal notranslate"><span class="pre">â_F</span> <span class="pre">=</span> <span class="pre">â_M</span></code>.</p>
+along a common axis. That is, given a frame Jp attached to the parent
+body P and a frame Jc attached to the child body C (see the Joint
+class’s documentation), this Joint allows frames Jp and Jc to
+translate with respect to each other along an axis â. The translation
+distance is defined positive when child body C translates along the
+direction of â. Axis vector â is constant and has the same
+components in both frames Jp and Jc, that is, <code class="docutils literal notranslate"><span class="pre">â_Jp</span> <span class="pre">=</span> <span class="pre">â_Jc</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint_" title="pydrake.multibody.tree.PrismaticJoint_"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrismaticJoint_</span></code></a>
@@ -9549,8 +9549,8 @@ for the list of instantiations.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint" title="pydrake.multibody.tree.PrismaticJoint"><span class="pre">pydrake.multibody.tree.PrismaticJoint</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_on_parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_on_child</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-</span> <span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor to create a prismatic joint between two bodies so that
-frame F attached to the parent body P and frame M attached to the
-child body B, translate relatively to one another along a common axis.
+frame Jp attached to the parent body P and frame Jc attached to the
+child body C, translate relatively to one another along a common axis.
 See this class’s documentation for further details on the definition
 of these frames and translation distance. The first three arguments to
 this constructor are those of the Joint class constructor. See the
@@ -9558,10 +9558,11 @@ Joint class’s documentation for details. The additional parameter
 <code class="docutils literal notranslate"><span class="pre">axis</span></code> is:</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt><dd><p>A vector in ℝ³ specifying the translation axis for this joint.
-Given that frame M only translates with respect to F and there is
-no relative rotation, the measures of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in either frame F
-or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>. This
-vector can have any length, only the direction is used.</p>
+Given that frame Jc only translates with respect to Jp and there
+is no relative rotation, the components of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in either
+frame Jp or Jc are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span> <span class="pre">=</span>
+<span class="pre">axis_Jc</span></code>. This vector can have any length, only the direction is
+used.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_lower_limit</span></code>:</dt><dd><p>Lower position limit, in meters, for the translation coordinate
 (see get_translation()).</p>
@@ -9775,9 +9776,9 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint.translation_axis">
 <span class="sig-name descname"><span class="pre">translation_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint" title="pydrake.multibody.tree.PrismaticJoint"><span class="pre">pydrake.multibody.tree.PrismaticJoint</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint.translation_axis" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the axis of translation for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
-Since the measures of this axis in either frame F or M are the same
-(see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
-<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+Since the components of this axis in either frame Jp or Jc are the
+same (see this class’s documentation for frame definitions) then,
+<code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">axis_Jp</span> <span class="pre">=</span> <span class="pre">axis_Jc</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -9807,19 +9808,19 @@ second.</p>
 <span id="pydrake.multibody.tree.PrismaticJoint_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">PrismaticJoint_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Joint_-AutoDiffXd" title="pydrake.multibody.tree.Joint_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Joint_[AutoDiffXd]</span></code></a></p>
 <p>This Joint allows two bodies to translate relative to one another
-along a common axis. That is, given a frame F attached to the parent
-body P and a frame M attached to the child body B (see the Joint
-class’s documentation), this Joint allows frames F and M to translate
-with respect to each other along an axis â. The translation distance
-is defined positive when child body B translates along the direction
-of â. Axis â is constant and has the same measures in both frames F
-and M, that is, <code class="docutils literal notranslate"><span class="pre">â_F</span> <span class="pre">=</span> <span class="pre">â_M</span></code>.</p>
+along a common axis. That is, given a frame Jp attached to the parent
+body P and a frame Jc attached to the child body C (see the Joint
+class’s documentation), this Joint allows frames Jp and Jc to
+translate with respect to each other along an axis â. The translation
+distance is defined positive when child body C translates along the
+direction of â. Axis vector â is constant and has the same
+components in both frames Jp and Jc, that is, <code class="docutils literal notranslate"><span class="pre">â_Jp</span> <span class="pre">=</span> <span class="pre">â_Jc</span></code>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint_-AutoDiffXd-.__init__">
 <span id="pydrake.multibody.tree.PrismaticJoint_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint_" title="pydrake.multibody.tree.PrismaticJoint_"><span class="pre">pydrake.multibody.tree.PrismaticJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_on_parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_on_child</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-</span> <span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor to create a prismatic joint between two bodies so that
-frame F attached to the parent body P and frame M attached to the
-child body B, translate relatively to one another along a common axis.
+frame Jp attached to the parent body P and frame Jc attached to the
+child body C, translate relatively to one another along a common axis.
 See this class’s documentation for further details on the definition
 of these frames and translation distance. The first three arguments to
 this constructor are those of the Joint class constructor. See the
@@ -9827,10 +9828,11 @@ Joint class’s documentation for details. The additional parameter
 <code class="docutils literal notranslate"><span class="pre">axis</span></code> is:</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt><dd><p>A vector in ℝ³ specifying the translation axis for this joint.
-Given that frame M only translates with respect to F and there is
-no relative rotation, the measures of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in either frame F
-or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>. This
-vector can have any length, only the direction is used.</p>
+Given that frame Jc only translates with respect to Jp and there
+is no relative rotation, the components of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in either
+frame Jp or Jc are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span> <span class="pre">=</span>
+<span class="pre">axis_Jc</span></code>. This vector can have any length, only the direction is
+used.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_lower_limit</span></code>:</dt><dd><p>Lower position limit, in meters, for the translation coordinate
 (see get_translation()).</p>
@@ -10044,9 +10046,9 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint_-AutoDiffXd-.translation_axis">
 <span id="pydrake.multibody.tree.PrismaticJoint_[AutoDiffXd].translation_axis"></span><span class="sig-name descname"><span class="pre">translation_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint_" title="pydrake.multibody.tree.PrismaticJoint_"><span class="pre">pydrake.multibody.tree.PrismaticJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_-AutoDiffXd-.translation_axis" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the axis of translation for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
-Since the measures of this axis in either frame F or M are the same
-(see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
-<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+Since the components of this axis in either frame Jp or Jc are the
+same (see this class’s documentation for frame definitions) then,
+<code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">axis_Jp</span> <span class="pre">=</span> <span class="pre">axis_Jc</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -10070,19 +10072,19 @@ second.</p>
 <span id="pydrake.multibody.tree.PrismaticJoint_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">PrismaticJoint_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Joint_-Expression" title="pydrake.multibody.tree.Joint_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Joint_[Expression]</span></code></a></p>
 <p>This Joint allows two bodies to translate relative to one another
-along a common axis. That is, given a frame F attached to the parent
-body P and a frame M attached to the child body B (see the Joint
-class’s documentation), this Joint allows frames F and M to translate
-with respect to each other along an axis â. The translation distance
-is defined positive when child body B translates along the direction
-of â. Axis â is constant and has the same measures in both frames F
-and M, that is, <code class="docutils literal notranslate"><span class="pre">â_F</span> <span class="pre">=</span> <span class="pre">â_M</span></code>.</p>
+along a common axis. That is, given a frame Jp attached to the parent
+body P and a frame Jc attached to the child body C (see the Joint
+class’s documentation), this Joint allows frames Jp and Jc to
+translate with respect to each other along an axis â. The translation
+distance is defined positive when child body C translates along the
+direction of â. Axis vector â is constant and has the same
+components in both frames Jp and Jc, that is, <code class="docutils literal notranslate"><span class="pre">â_Jp</span> <span class="pre">=</span> <span class="pre">â_Jc</span></code>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint_-Expression-.__init__">
 <span id="pydrake.multibody.tree.PrismaticJoint_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint_" title="pydrake.multibody.tree.PrismaticJoint_"><span class="pre">pydrake.multibody.tree.PrismaticJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_on_parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_on_child</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.Frame_" title="pydrake.multibody.tree.Frame_"><span class="pre">pydrake.multibody.tree.Frame_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-</span> <span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos_upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_-Expression-.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor to create a prismatic joint between two bodies so that
-frame F attached to the parent body P and frame M attached to the
-child body B, translate relatively to one another along a common axis.
+frame Jp attached to the parent body P and frame Jc attached to the
+child body C, translate relatively to one another along a common axis.
 See this class’s documentation for further details on the definition
 of these frames and translation distance. The first three arguments to
 this constructor are those of the Joint class constructor. See the
@@ -10090,10 +10092,11 @@ Joint class’s documentation for details. The additional parameter
 <code class="docutils literal notranslate"><span class="pre">axis</span></code> is:</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt><dd><p>A vector in ℝ³ specifying the translation axis for this joint.
-Given that frame M only translates with respect to F and there is
-no relative rotation, the measures of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in either frame F
-or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>. This
-vector can have any length, only the direction is used.</p>
+Given that frame Jc only translates with respect to Jp and there
+is no relative rotation, the components of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in either
+frame Jp or Jc are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span> <span class="pre">=</span>
+<span class="pre">axis_Jc</span></code>. This vector can have any length, only the direction is
+used.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_lower_limit</span></code>:</dt><dd><p>Lower position limit, in meters, for the translation coordinate
 (see get_translation()).</p>
@@ -10307,9 +10310,9 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dt class="sig sig-object py" id="pydrake.multibody.tree.PrismaticJoint_-Expression-.translation_axis">
 <span id="pydrake.multibody.tree.PrismaticJoint_[Expression].translation_axis"></span><span class="sig-name descname"><span class="pre">translation_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.PrismaticJoint_" title="pydrake.multibody.tree.PrismaticJoint_"><span class="pre">pydrake.multibody.tree.PrismaticJoint_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.PrismaticJoint_-Expression-.translation_axis" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the axis of translation for <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
-Since the measures of this axis in either frame F or M are the same
-(see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
-<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+Since the components of this axis in either frame Jp or Jc are the
+same (see this class’s documentation for frame definitions) then,
+<code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">axis_Jp</span> <span class="pre">=</span> <span class="pre">axis_Jc</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11618,14 +11621,14 @@ the input quaternion <code class="docutils literal notranslate"><span class="pre
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">RevoluteJoint</span></span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Joint" title="pydrake.multibody.tree.Joint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Joint</span></code></a></p>
 <p>This Joint allows two bodies to rotate relatively to one another
-around a common axis. That is, given a frame F attached to the parent
-body P and a frame M attached to the child body B (see the Joint
-class’s documentation), this Joint allows frames F and M to rotate
+around a common axis. That is, given a frame Jp attached to the parent
+body P and a frame Jc attached to the child body C (see the Joint
+class’s documentation), this Joint allows frames Jp and Jc to rotate
 with respect to each other about an axis â. The rotation angle’s sign
-is defined such that child body B rotates about axis â according to
-the right hand rule, with thumb aligned in the axis direction. Axis â
-is constant and has the same measures in both frames F and M, that is,
-<code class="docutils literal notranslate"><span class="pre">â_F</span> <span class="pre">=</span> <span class="pre">â_M</span></code>.</p>
+is defined such that child body C rotates about axis â according to
+the right hand rule, with thumb aligned in the axis direction. Axis
+vector â is constant and has the same components in both frames Jp
+and Jc, that is, <code class="docutils literal notranslate"><span class="pre">â_Jp</span> <span class="pre">=</span> <span class="pre">â_Jc</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.tree.RevoluteJoint_" title="pydrake.multibody.tree.RevoluteJoint_"><code class="xref py py-class docutils literal notranslate"><span class="pre">RevoluteJoint_</span></code></a>
@@ -11639,8 +11642,8 @@ for the list of instantiations.</p>
 <li><p>__init__(self: pydrake.multibody.tree.RevoluteJoint, name: str, frame_on_parent: pydrake.multibody.tree.Frame, frame_on_child: pydrake.multibody.tree.Frame, axis: numpy.ndarray[numpy.float64[3, 1]], damping: float = 0) -&gt; None</p></li>
 </ol>
 <p>Constructor to create a revolute joint between two bodies so that
-frame F attached to the parent body P and frame M attached to the
-child body B, rotate relatively to one another about a common axis.
+frame Jp attached to the parent body P and frame Jc attached to the
+child body C, rotate relatively to one another about a common axis.
 See this class’s documentation for further details on the definition
 of these frames and rotation angle. This constructor signature creates
 a joint with no joint limits, i.e. the joint position, velocity and
@@ -11650,13 +11653,13 @@ constructor. See the Joint class’s documentation for details. The
 additional parameters are:</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt><dd><p>A vector in ℝ³ specifying the axis of revolution for this joint.
-Given that frame M only rotates with respect to F and their
-origins are coincident at all times, the measures of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
-either frame F or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span>
-<span class="pre">axis_M</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the
-eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with eigenvalue equal to one. This vector
-can have any length, only the direction is used. This method
-aborts if <code class="docutils literal notranslate"><span class="pre">axis</span></code> is the zero vector.</p>
+Given that frame Jc only rotates with respect to Jp and their
+origins are coincident at all times, the components of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
+either frame Jp or Jc are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span> <span class="pre">=</span>
+<span class="pre">axis_Jc</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_Jc</span></code>) is the
+eigenvector of <code class="docutils literal notranslate"><span class="pre">R_JpJc</span></code> with eigenvalue equal to one. This
+vector can have any length, only the direction is used. This
+method aborts if <code class="docutils literal notranslate"><span class="pre">axis</span></code> is the zero vector.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt><dd><p>Viscous damping coefficient, in N⋅m⋅s, used to model losses within
 the joint. The damping torque (in N⋅m) is modeled as <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">=</span>
@@ -11673,20 +11676,20 @@ the joint. The damping torque (in N⋅m) is modeled as <code class="docutils lit
 <li><p>__init__(self: pydrake.multibody.tree.RevoluteJoint, name: str, frame_on_parent: pydrake.multibody.tree.Frame, frame_on_child: pydrake.multibody.tree.Frame, axis: numpy.ndarray[numpy.float64[3, 1]], pos_lower_limit: float, pos_upper_limit: float, damping: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructor to create a revolute joint between two bodies so that
-frame F attached to the parent body P and frame M attached to the
-child body B, rotate relatively to one another about a common axis.
+frame Jp attached to the parent body P and frame Jc attached to the
+child body C, rotate relatively to one another about a common axis.
 See this class’s documentation for further details on the definition
 of these frames and rotation angle. The first three arguments to this
 constructor are those of the Joint class constructor. See the Joint
 class’s documentation for details. The additional parameters are:</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt><dd><p>A vector in ℝ³ specifying the axis of revolution for this joint.
-Given that frame M only rotates with respect to F and their
-origins are coincident at all times, the measures of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
-either frame F or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span>
-<span class="pre">axis_M</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the
-eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with eigenvalue equal to one. This vector
-can have any length, only the direction is used.</p>
+Given that frame Jc only rotates with respect to Jp and their
+origins are coincident at all times, the components of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
+either frame Jp or Jc are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span> <span class="pre">=</span>
+<span class="pre">axis_Jc</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_Jc</span></code>) is the
+eigenvector of <code class="docutils literal notranslate"><span class="pre">R_JpJc</span></code> with eigenvalue equal to one. This
+vector can have any length, only the direction is used.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_lower_limit</span></code>:</dt><dd><p>Lower position limit, in radians, for the rotation coordinate (see
 get_angle()).</p>
@@ -11811,7 +11814,7 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dd><p>Returns the axis of revolution of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
 Since the measures of this axis in either frame F or M are the same
 (see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
-<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+<span class="pre">axis_Jp</span> <span class="pre">=</span> <span class="pre">axis_Jc</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -11928,14 +11931,14 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <span id="pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">RevoluteJoint_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_-AutoDiffXd" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Joint_-AutoDiffXd" title="pydrake.multibody.tree.Joint_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Joint_[AutoDiffXd]</span></code></a></p>
 <p>This Joint allows two bodies to rotate relatively to one another
-around a common axis. That is, given a frame F attached to the parent
-body P and a frame M attached to the child body B (see the Joint
-class’s documentation), this Joint allows frames F and M to rotate
+around a common axis. That is, given a frame Jp attached to the parent
+body P and a frame Jc attached to the child body C (see the Joint
+class’s documentation), this Joint allows frames Jp and Jc to rotate
 with respect to each other about an axis â. The rotation angle’s sign
-is defined such that child body B rotates about axis â according to
-the right hand rule, with thumb aligned in the axis direction. Axis â
-is constant and has the same measures in both frames F and M, that is,
-<code class="docutils literal notranslate"><span class="pre">â_F</span> <span class="pre">=</span> <span class="pre">â_M</span></code>.</p>
+is defined such that child body C rotates about axis â according to
+the right hand rule, with thumb aligned in the axis direction. Axis
+vector â is constant and has the same components in both frames Jp
+and Jc, that is, <code class="docutils literal notranslate"><span class="pre">â_Jp</span> <span class="pre">=</span> <span class="pre">â_Jc</span></code>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RevoluteJoint_-AutoDiffXd-.__init__">
 <span id="pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
@@ -11944,8 +11947,8 @@ is constant and has the same measures in both frames F and M, that is,
 <li><p>__init__(self: pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], axis: numpy.ndarray[numpy.float64[3, 1]], damping: float = 0) -&gt; None</p></li>
 </ol>
 <p>Constructor to create a revolute joint between two bodies so that
-frame F attached to the parent body P and frame M attached to the
-child body B, rotate relatively to one another about a common axis.
+frame Jp attached to the parent body P and frame Jc attached to the
+child body C, rotate relatively to one another about a common axis.
 See this class’s documentation for further details on the definition
 of these frames and rotation angle. This constructor signature creates
 a joint with no joint limits, i.e. the joint position, velocity and
@@ -11955,13 +11958,13 @@ constructor. See the Joint class’s documentation for details. The
 additional parameters are:</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt><dd><p>A vector in ℝ³ specifying the axis of revolution for this joint.
-Given that frame M only rotates with respect to F and their
-origins are coincident at all times, the measures of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
-either frame F or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span>
-<span class="pre">axis_M</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the
-eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with eigenvalue equal to one. This vector
-can have any length, only the direction is used. This method
-aborts if <code class="docutils literal notranslate"><span class="pre">axis</span></code> is the zero vector.</p>
+Given that frame Jc only rotates with respect to Jp and their
+origins are coincident at all times, the components of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
+either frame Jp or Jc are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span> <span class="pre">=</span>
+<span class="pre">axis_Jc</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_Jc</span></code>) is the
+eigenvector of <code class="docutils literal notranslate"><span class="pre">R_JpJc</span></code> with eigenvalue equal to one. This
+vector can have any length, only the direction is used. This
+method aborts if <code class="docutils literal notranslate"><span class="pre">axis</span></code> is the zero vector.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt><dd><p>Viscous damping coefficient, in N⋅m⋅s, used to model losses within
 the joint. The damping torque (in N⋅m) is modeled as <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">=</span>
@@ -11978,20 +11981,20 @@ the joint. The damping torque (in N⋅m) is modeled as <code class="docutils lit
 <li><p>__init__(self: pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child: pydrake.multibody.tree.Frame_[AutoDiffXd], axis: numpy.ndarray[numpy.float64[3, 1]], pos_lower_limit: float, pos_upper_limit: float, damping: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructor to create a revolute joint between two bodies so that
-frame F attached to the parent body P and frame M attached to the
-child body B, rotate relatively to one another about a common axis.
+frame Jp attached to the parent body P and frame Jc attached to the
+child body C, rotate relatively to one another about a common axis.
 See this class’s documentation for further details on the definition
 of these frames and rotation angle. The first three arguments to this
 constructor are those of the Joint class constructor. See the Joint
 class’s documentation for details. The additional parameters are:</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt><dd><p>A vector in ℝ³ specifying the axis of revolution for this joint.
-Given that frame M only rotates with respect to F and their
-origins are coincident at all times, the measures of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
-either frame F or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span>
-<span class="pre">axis_M</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the
-eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with eigenvalue equal to one. This vector
-can have any length, only the direction is used.</p>
+Given that frame Jc only rotates with respect to Jp and their
+origins are coincident at all times, the components of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
+either frame Jp or Jc are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span> <span class="pre">=</span>
+<span class="pre">axis_Jc</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_Jc</span></code>) is the
+eigenvector of <code class="docutils literal notranslate"><span class="pre">R_JpJc</span></code> with eigenvalue equal to one. This
+vector can have any length, only the direction is used.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_lower_limit</span></code>:</dt><dd><p>Lower position limit, in radians, for the rotation coordinate (see
 get_angle()).</p>
@@ -12116,7 +12119,7 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dd><p>Returns the axis of revolution of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
 Since the measures of this axis in either frame F or M are the same
 (see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
-<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+<span class="pre">axis_Jp</span> <span class="pre">=</span> <span class="pre">axis_Jc</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -12227,14 +12230,14 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <span id="pydrake.multibody.tree.RevoluteJoint_[Expression]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">RevoluteJoint_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_-Expression" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.Joint_-Expression" title="pydrake.multibody.tree.Joint_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.Joint_[Expression]</span></code></a></p>
 <p>This Joint allows two bodies to rotate relatively to one another
-around a common axis. That is, given a frame F attached to the parent
-body P and a frame M attached to the child body B (see the Joint
-class’s documentation), this Joint allows frames F and M to rotate
+around a common axis. That is, given a frame Jp attached to the parent
+body P and a frame Jc attached to the child body C (see the Joint
+class’s documentation), this Joint allows frames Jp and Jc to rotate
 with respect to each other about an axis â. The rotation angle’s sign
-is defined such that child body B rotates about axis â according to
-the right hand rule, with thumb aligned in the axis direction. Axis â
-is constant and has the same measures in both frames F and M, that is,
-<code class="docutils literal notranslate"><span class="pre">â_F</span> <span class="pre">=</span> <span class="pre">â_M</span></code>.</p>
+is defined such that child body C rotates about axis â according to
+the right hand rule, with thumb aligned in the axis direction. Axis
+vector â is constant and has the same components in both frames Jp
+and Jc, that is, <code class="docutils literal notranslate"><span class="pre">â_Jp</span> <span class="pre">=</span> <span class="pre">â_Jc</span></code>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RevoluteJoint_-Expression-.__init__">
 <span id="pydrake.multibody.tree.RevoluteJoint_[Expression].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.RevoluteJoint_-Expression-.__init__" title="Permalink to this definition"></a></dt>
@@ -12243,8 +12246,8 @@ is constant and has the same measures in both frames F and M, that is,
 <li><p>__init__(self: pydrake.multibody.tree.RevoluteJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], axis: numpy.ndarray[numpy.float64[3, 1]], damping: float = 0) -&gt; None</p></li>
 </ol>
 <p>Constructor to create a revolute joint between two bodies so that
-frame F attached to the parent body P and frame M attached to the
-child body B, rotate relatively to one another about a common axis.
+frame Jp attached to the parent body P and frame Jc attached to the
+child body C, rotate relatively to one another about a common axis.
 See this class’s documentation for further details on the definition
 of these frames and rotation angle. This constructor signature creates
 a joint with no joint limits, i.e. the joint position, velocity and
@@ -12254,13 +12257,13 @@ constructor. See the Joint class’s documentation for details. The
 additional parameters are:</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt><dd><p>A vector in ℝ³ specifying the axis of revolution for this joint.
-Given that frame M only rotates with respect to F and their
-origins are coincident at all times, the measures of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
-either frame F or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span>
-<span class="pre">axis_M</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the
-eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with eigenvalue equal to one. This vector
-can have any length, only the direction is used. This method
-aborts if <code class="docutils literal notranslate"><span class="pre">axis</span></code> is the zero vector.</p>
+Given that frame Jc only rotates with respect to Jp and their
+origins are coincident at all times, the components of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
+either frame Jp or Jc are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span> <span class="pre">=</span>
+<span class="pre">axis_Jc</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_Jc</span></code>) is the
+eigenvector of <code class="docutils literal notranslate"><span class="pre">R_JpJc</span></code> with eigenvalue equal to one. This
+vector can have any length, only the direction is used. This
+method aborts if <code class="docutils literal notranslate"><span class="pre">axis</span></code> is the zero vector.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">damping</span></code>:</dt><dd><p>Viscous damping coefficient, in N⋅m⋅s, used to model losses within
 the joint. The damping torque (in N⋅m) is modeled as <code class="docutils literal notranslate"><span class="pre">τ</span> <span class="pre">=</span>
@@ -12277,20 +12280,20 @@ the joint. The damping torque (in N⋅m) is modeled as <code class="docutils lit
 <li><p>__init__(self: pydrake.multibody.tree.RevoluteJoint_[Expression], name: str, frame_on_parent: pydrake.multibody.tree.Frame_[Expression], frame_on_child: pydrake.multibody.tree.Frame_[Expression], axis: numpy.ndarray[numpy.float64[3, 1]], pos_lower_limit: float, pos_upper_limit: float, damping: float = 0.0) -&gt; None</p></li>
 </ol>
 <p>Constructor to create a revolute joint between two bodies so that
-frame F attached to the parent body P and frame M attached to the
-child body B, rotate relatively to one another about a common axis.
+frame Jp attached to the parent body P and frame Jc attached to the
+child body C, rotate relatively to one another about a common axis.
 See this class’s documentation for further details on the definition
 of these frames and rotation angle. The first three arguments to this
 constructor are those of the Joint class constructor. See the Joint
 class’s documentation for details. The additional parameters are:</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</dt><dd><p>A vector in ℝ³ specifying the axis of revolution for this joint.
-Given that frame M only rotates with respect to F and their
-origins are coincident at all times, the measures of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
-either frame F or M are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_F</span> <span class="pre">=</span>
-<span class="pre">axis_M</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_F</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_M</span></code>) is the
-eigenvector of <code class="docutils literal notranslate"><span class="pre">R_FM</span></code> with eigenvalue equal to one. This vector
-can have any length, only the direction is used.</p>
+Given that frame Jc only rotates with respect to Jp and their
+origins are coincident at all times, the components of <code class="docutils literal notranslate"><span class="pre">axis</span></code> in
+either frame Jp or Jc are exactly the same, that is, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span> <span class="pre">=</span>
+<span class="pre">axis_Jc</span></code>. In other words, <code class="docutils literal notranslate"><span class="pre">axis_Jp</span></code> (or <code class="docutils literal notranslate"><span class="pre">axis_Jc</span></code>) is the
+eigenvector of <code class="docutils literal notranslate"><span class="pre">R_JpJc</span></code> with eigenvalue equal to one. This
+vector can have any length, only the direction is used.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pos_lower_limit</span></code>:</dt><dd><p>Lower position limit, in radians, for the rotation coordinate (see
 get_angle()).</p>
@@ -12415,7 +12418,7 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dd><p>Returns the axis of revolution of <code class="docutils literal notranslate"><span class="pre">this</span></code> joint as a unit vector.
 Since the measures of this axis in either frame F or M are the same
 (see this class’s documentation for frame definitions) then, <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span>
-<span class="pre">axis_F</span> <span class="pre">=</span> <span class="pre">axis_M</span></code>.</p>
+<span class="pre">axis_Jp</span> <span class="pre">=</span> <span class="pre">axis_Jc</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">

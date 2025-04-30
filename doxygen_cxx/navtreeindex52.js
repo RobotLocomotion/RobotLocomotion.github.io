@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"discrete__time__approximation_8h.html#ga6b12640ee9d9dffdef56ecb73cd55ee9":[4,0,0,12,0,5,2],
+"discrete__time__delay_8h.html":[4,0,0,12,6,9],
 "discrete__time__trajectory_8h.html":[4,0,0,1,5,4],
 "discrete__time__trajectory_8h.html#a34f52efef364a43b210d89290991aec8":[4,0,0,1,5,4,1],
 "discrete__update__manager_8h.html":[4,0,0,8,10,19],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "expression_2expression_8h.html#a996064aacae33fb26d67c20617c764ee":[4,0,0,1,3,0,3,95],
 "expression_2expression_8h.html#a99b295edb3a60b6a961bbc6f42e24547":[4,0,0,1,3,0,3,90],
 "expression_2expression_8h.html#a9d4ba82d6dffb1c0c6f40a768f86eae7":[4,0,0,1,3,0,3,17],
-"expression_2expression_8h.html#a9da61282d0c5ccefeaa2068d84a19273":[4,0,0,1,3,0,3,73],
-"expression_2expression_8h.html#aa12acbb0b86d35d1de9280e699d3999d":[4,0,0,1,3,0,3,14],
-"expression_2expression_8h.html#aa12b990bcc72a788e6d8176894d0d8a2":[4,0,0,1,3,0,3,60]
+"expression_2expression_8h.html#a9da61282d0c5ccefeaa2068d84a19273":[4,0,0,1,3,0,3,73]
 };
