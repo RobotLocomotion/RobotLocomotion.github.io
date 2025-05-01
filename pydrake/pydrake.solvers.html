@@ -2406,12 +2406,6 @@ variables. For more details,</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
 <p>A wrapper to call &lt;a href=”<a class="reference external" href="https://coin-or.github.io/Ipopt/">https://coin-or.github.io/Ipopt/</a>”&gt;Ipopt&lt;/a&gt;
 using Drake’s MathematicalProgram.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Setting the Ipopt option “linear_solver” to “mumps” is deprecated
-and will be removed on or after 2025-05-01. Using MUMPS is NOT
-threadsafe (see <a class="reference external" href="https://github.com/coin-or/Ipopt/issues/733">https://github.com/coin-or/Ipopt/issues/733</a>).</p>
-</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.IpoptSolver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.IpoptSolver" title="pydrake.solvers.IpoptSolver"><span class="pre">pydrake.solvers.IpoptSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.IpoptSolver.__init__" title="Permalink to this definition"></a></dt>
@@ -8748,66 +8742,6 @@ boolean options should be passed as integers (0 or 1).</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.__init__" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.solvers.SolverOptions.common_solver_options">
-<span class="sig-name descname"><span class="pre">common_solver_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.solvers.CommonSolverOption" title="pydrake.solvers.CommonSolverOption"><span class="pre">pydrake.solvers.CommonSolverOption</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.common_solver_options" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Access the ‘options’ directly, instead. This will be removed from
-Drake on or after 2025-09-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.solvers.SolverOptions.get_max_threads">
-<span class="sig-name descname"><span class="pre">get_max_threads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.get_max_threads" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Access the ‘options’ directly, instead. This will be removed from
-Drake on or after 2025-09-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.solvers.SolverOptions.get_print_file_name">
-<span class="sig-name descname"><span class="pre">get_print_file_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.get_print_file_name" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Access the ‘options’ directly, instead. This will be removed from
-Drake on or after 2025-09-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.solvers.SolverOptions.get_print_to_console">
-<span class="sig-name descname"><span class="pre">get_print_to_console</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.get_print_to_console" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Access the ‘options’ directly, instead. This will be removed from
-Drake on or after 2025-09-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.solvers.SolverOptions.get_standalone_reproduction_file_name">
-<span class="sig-name descname"><span class="pre">get_standalone_reproduction_file_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.get_standalone_reproduction_file_name" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.solvers.SolverOptions.GetOptions">
-<span class="sig-name descname"><span class="pre">GetOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverOptions" title="pydrake.solvers.SolverOptions"><span class="pre">pydrake.solvers.SolverOptions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverId" title="pydrake.solvers.SolverId"><span class="pre">pydrake.solvers.SolverId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.GetOptions" title="Permalink to this definition"></a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Access the ‘options’ directly, instead. This will be removed from
-Drake on or after 2025-09-01.</p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="py property">
 <dt class="sig sig-object py" id="pydrake.solvers.SolverOptions.options">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">options</span></span><a class="headerlink" href="#pydrake.solvers.SolverOptions.options" title="Permalink to this definition"></a></dt>
@@ -8829,18 +8763,6 @@ when setting the option here).</p>
 <p>Sets a common option for all solvers supporting that option (for
 example, printing the progress in each iteration). If the solver
 doesn’t support the option, the option is ignored.</p>
-<ol class="arabic simple" start="3">
-<li><p>SetOption(self: pydrake.solvers.SolverOptions, solver_id: pydrake.solvers.SolverId, solver_option: str, option_value: float) -&gt; None</p></li>
-</ol>
-<p>The kwarg names for SolverOptions.SetOption have changed; the new names are <cite>key</cite> and <cite>value</cite> not <cite>solver_option</cite> and <cite>option_value</cite>; the old names are deprecated and will be removed from Drake on or after 2025-05-01.</p>
-<ol class="arabic simple" start="4">
-<li><p>SetOption(self: pydrake.solvers.SolverOptions, solver_id: pydrake.solvers.SolverId, solver_option: str, option_value: int) -&gt; None</p></li>
-</ol>
-<p>The kwarg names for SolverOptions.SetOption have changed; the new names are <cite>key</cite> and <cite>value</cite> not <cite>solver_option</cite> and <cite>option_value</cite>; the old names are deprecated and will be removed from Drake on or after 2025-05-01.</p>
-<ol class="arabic simple" start="5">
-<li><p>SetOption(self: pydrake.solvers.SolverOptions, solver_id: pydrake.solvers.SolverId, solver_option: str, option_value: str) -&gt; None</p></li>
-</ol>
-<p>The kwarg names for SolverOptions.SetOption have changed; the new names are <cite>key</cite> and <cite>value</cite> not <cite>solver_option</cite> and <cite>option_value</cite>; the old names are deprecated and will be removed from Drake on or after 2025-05-01.</p>
 </dd></dl>
 
 </dd></dl>

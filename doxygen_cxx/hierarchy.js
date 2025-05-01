@@ -810,8 +810,8 @@ var hierarchy =
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
     [ "SelectorParams", "structdrake_1_1systems_1_1_selector_params.html", null ],
     [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", null ],
-    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
@@ -979,6 +979,8 @@ var hierarchy =
             [ "DiscreteTimeDelay< T >", "classdrake_1_1systems_1_1_discrete_time_delay.html", null ],
             [ "DiscreteTimeIntegrator< T >", "classdrake_1_1systems_1_1_discrete_time_integrator.html", null ],
             [ "LuenbergerObserver< T >", "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html", null ],
+            [ "StochasticLinearSystem< T >", "classdrake_1_1systems_1_1estimators__test_1_1_stochastic_linear_system.html", null ],
+            [ "SumMatrixColumnsSystem< T >", "classdrake_1_1systems_1_1estimators__test_1_1_sum_matrix_columns_system.html", null ],
             [ "LinearTransformDensity< T >", "classdrake_1_1systems_1_1_linear_transform_density.html", null ],
             [ "MultilayerPerceptron< T >", "classdrake_1_1systems_1_1_multilayer_perceptron.html", null ],
             [ "Multiplexer< T >", "classdrake_1_1systems_1_1_multiplexer.html", null ],

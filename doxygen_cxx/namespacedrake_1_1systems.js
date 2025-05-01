@@ -4,6 +4,7 @@ var namespacedrake_1_1systems =
     [ "analysis_test", "namespacedrake_1_1systems_1_1analysis__test.html", "namespacedrake_1_1systems_1_1analysis__test" ],
     [ "controllers", "namespacedrake_1_1systems_1_1controllers.html", "namespacedrake_1_1systems_1_1controllers" ],
     [ "estimators", "namespacedrake_1_1systems_1_1estimators.html", "namespacedrake_1_1systems_1_1estimators" ],
+    [ "estimators_test", "namespacedrake_1_1systems_1_1estimators__test.html", "namespacedrake_1_1systems_1_1estimators__test" ],
     [ "implicit_integrator_test", "namespacedrake_1_1systems_1_1implicit__integrator__test.html", "namespacedrake_1_1systems_1_1implicit__integrator__test" ],
     [ "lcm", "namespacedrake_1_1systems_1_1lcm.html", "namespacedrake_1_1systems_1_1lcm" ],
     [ "rendering", "namespacedrake_1_1systems_1_1rendering.html", "namespacedrake_1_1systems_1_1rendering" ],

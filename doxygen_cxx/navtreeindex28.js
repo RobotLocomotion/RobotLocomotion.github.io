@@ -1,7 +1,5 @@
 var NAVTREEINDEX28 =
 {
-"classdrake_1_1solvers_1_1_csdp_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,14,12,12],
-"classdrake_1_1solvers_1_1_csdp_solver.html#a00d171013db74e01b6e6ce6e7f1b1dd7":[3,0,0,14,12,0],
 "classdrake_1_1solvers_1_1_csdp_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,14,12,6],
 "classdrake_1_1solvers_1_1_csdp_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[3,0,0,14,12,7],
 "classdrake_1_1solvers_1_1_csdp_solver.html#a3c710e5fed7041dda0e3391dd5d3171b":[3,0,0,14,12,2],
@@ -155,8 +153,7 @@ var NAVTREEINDEX28 =
 "classdrake_1_1solvers_1_1_ipopt_solver.html#a89cbf472729e62d082afc8a4b2f8f57f":[3,0,0,14,24,3],
 "classdrake_1_1solvers_1_1_ipopt_solver.html#ac7f38cbeaed26717b3b9a8ee8595add5":[3,0,0,14,24,8],
 "classdrake_1_1solvers_1_1_ipopt_solver.html#ae3ba02c661d1f13cf2059642d34b5792":[3,0,0,14,24,4],
-"classdrake_1_1solvers_1_1_ipopt_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,14,24,13],
-"classdrake_1_1solvers_1_1_ipopt_solver.html#afe21f1240ff88d0b6854712d75f0dbb8":[3,0,0,14,24,11],
+"classdrake_1_1solvers_1_1_ipopt_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,14,24,11],
 "classdrake_1_1solvers_1_1_l1_norm_cost.html":[1,1,0,41],
 "classdrake_1_1solvers_1_1_l1_norm_cost.html#a17be3710c66eca9567f09c640fd2ba41":[1,1,0,41,11],
 "classdrake_1_1solvers_1_1_l1_norm_cost.html#a1a0e4dcd0603f7c7ed930fa928087d54":[1,1,0,41,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX28 =
 "classdrake_1_1solvers_1_1_linear_constraint.html#af4a741d62e930b18c9250e5c65a854be":[1,1,0,30,20],
 "classdrake_1_1solvers_1_1_linear_constraint.html#afd5ade712b02fa2e71e8c26811c9494a":[1,1,0,30,5],
 "classdrake_1_1solvers_1_1_linear_cost.html":[1,1,0,39],
-"classdrake_1_1solvers_1_1_linear_cost.html#a083d486bad895d52d44b5ae214379ec0":[1,1,0,39,16]
+"classdrake_1_1solvers_1_1_linear_cost.html#a083d486bad895d52d44b5ae214379ec0":[1,1,0,39,16],
+"classdrake_1_1solvers_1_1_linear_cost.html#a2bbc76aeadab8a326a08ddab7aae3412":[1,1,0,39,5],
+"classdrake_1_1solvers_1_1_linear_cost.html#a46863ada967e178fad6be79d2e8dd3d7":[1,1,0,39,13],
+"classdrake_1_1solvers_1_1_linear_cost.html#a4a3ccac22c046cbcd35eb0a65a0c1891":[1,1,0,39,3]
 };

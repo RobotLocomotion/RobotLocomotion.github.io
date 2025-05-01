@@ -4,7 +4,6 @@ var searchData=
   ['x_5fbg',['X_BG',['../classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#ad1a29f5c9188a3eef88a3c7f8fbb9baf',1,'drake::geometry::optimization::CIrisCollisionGeometry']]],
   ['x_5ffm',['X_FM',['../classdrake_1_1multibody_1_1_weld_joint.html#afeb8c8bfec14a1952a54971827058949',1,'drake::multibody::WeldJoint']]],
   ['x_5flo',['x_lo',['../classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#aab9edba21b7a369d72b0334c04bad28e',1,'drake::solvers::AugmentedLagrangianNonsmooth::x_lo()'],['../classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#aab9edba21b7a369d72b0334c04bad28e',1,'drake::solvers::AugmentedLagrangianSmooth::x_lo()']]],
-  ['x_5fpb',['X_PB',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#acfe6bdbdc50d1b6bff27e133688a4230',1,'drake::systems::sensors::RgbdSensorAsync']]],
   ['x_5fup',['x_up',['../classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a1c89886a59dfaa4862b55712c37b876b',1,'drake::solvers::AugmentedLagrangianNonsmooth::x_up()'],['../classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#a1c89886a59dfaa4862b55712c37b876b',1,'drake::solvers::AugmentedLagrangianSmooth::x_up()']]],
   ['x_5fvars',['x_vars',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a2bba238b83d8a4a8cfc34e763937a0b7',1,'drake::planning::trajectory_optimization::MultipleShooting']]],
   ['x_5fwgripper',['X_WGripper',['../namespacedrake_1_1examples_1_1planar__gripper.html#aac827d36be5bbdcf57001c67fde0c969',1,'drake::examples::planar_gripper']]],
