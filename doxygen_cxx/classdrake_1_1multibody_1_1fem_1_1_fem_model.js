@@ -27,7 +27,7 @@ var classdrake_1_1multibody_1_1fem_1_1_fem_model =
     [ "num_nodes", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a90e3616a403cd3f26b9aae1ffe0ec76c", null ],
     [ "operator=", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a52811120b5134c610e2af3fc096c92af", null ],
     [ "operator=", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a22e6cae04151e6b39cf8ceecfc7f4cf9", null ],
-    [ "SetDirichletBoundaryCondition", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a1e1357e343129ca9171b658d68b9f551", null ],
+    [ "SetDirichletBoundaryCondition", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#afc3ad846cfba540a1eb038ce1b32a8e9", null ],
     [ "ThrowIfModelStateIncompatible", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a93f9e9287217253c4148bcff802b0fd6", null ],
     [ "UpdateFemStateSystem", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a7bd928c1298c6e5939d3bd2559e18e71", null ]
 ];

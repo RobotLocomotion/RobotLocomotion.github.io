@@ -231,9 +231,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2ee02de44d4dbf0f45954abf319447b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a2ee02de44d4dbf0f45954abf319447b9">ApplyBoundaryCondition</a> (<a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; *fem_state) const</td></tr>
 <tr class="memdesc:a2ee02de44d4dbf0f45954abf319447b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies boundary condition set for this FemModel to the input <code>state</code>.  <a href="#a2ee02de44d4dbf0f45954abf319447b9">More...</a><br /></td></tr>
 <tr class="separator:a2ee02de44d4dbf0f45954abf319447b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e1357e343129ca9171b658d68b9f551"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a1e1357e343129ca9171b658d68b9f551">SetDirichletBoundaryCondition</a> (internal::DirichletBoundaryCondition&lt; T &gt; dirichlet_bc)</td></tr>
-<tr class="memdesc:a1e1357e343129ca9171b658d68b9f551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Dirichlet boundary condition that this model is subject to.  <a href="#a1e1357e343129ca9171b658d68b9f551">More...</a><br /></td></tr>
-<tr class="separator:a1e1357e343129ca9171b658d68b9f551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3ad846cfba540a1eb038ce1b32a8e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#afc3ad846cfba540a1eb038ce1b32a8e9">SetDirichletBoundaryCondition</a> (const internal::DirichletBoundaryCondition&lt; T &gt; &amp;dirichlet_bc)</td></tr>
+<tr class="memdesc:afc3ad846cfba540a1eb038ce1b32a8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Dirichlet boundary condition that this model is subject to.  <a href="#afc3ad846cfba540a1eb038ce1b32a8e9">More...</a><br /></td></tr>
+<tr class="separator:afc3ad846cfba540a1eb038ce1b32a8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab05415c859297c32d4fc415ea438680f"><td class="memItemLeft" align="right" valign="top">const internal::DirichletBoundaryCondition&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#ab05415c859297c32d4fc415ea438680f">dirichlet_boundary_condition</a> () const</td></tr>
 <tr class="memdesc:ab05415c859297c32d4fc415ea438680f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Dirichlet boundary condition that this model is subject to.  <a href="#ab05415c859297c32d4fc415ea438680f">More...</a><br /></td></tr>
 <tr class="separator:ab05415c859297c32d4fc415ea438680f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1013,8 +1013,8 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
 
 </div>
 </div>
-<a id="a1e1357e343129ca9171b658d68b9f551"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e1357e343129ca9171b658d68b9f551">&#9670;&nbsp;</a></span>SetDirichletBoundaryCondition()</h2>
+<a id="afc3ad846cfba540a1eb038ce1b32a8e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc3ad846cfba540a1eb038ce1b32a8e9">&#9670;&nbsp;</a></span>SetDirichletBoundaryCondition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1022,7 +1022,7 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
         <tr>
           <td class="memname">void SetDirichletBoundaryCondition </td>
           <td>(</td>
-          <td class="paramtype">internal::DirichletBoundaryCondition&lt; T &gt;&#160;</td>
+          <td class="paramtype">const internal::DirichletBoundaryCondition&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>dirichlet_bc</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1030,6 +1030,7 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
 </div><div class="memdoc">
 
 <p>Sets the Dirichlet boundary condition that this model is subject to. </p>
+<p>If dirichlet_bc specifies the boundary condition for a node for which a boundary condition has already been specified, the lastest one will be used. </p>
 
 </div>
 </div>
