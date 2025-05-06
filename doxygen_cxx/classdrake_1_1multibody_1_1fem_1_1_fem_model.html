@@ -246,6 +246,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a93f9e9287217253c4148bcff802b0fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a93f9e9287217253c4148bcff802b0fd6">ThrowIfModelStateIncompatible</a> (const char *func, const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const</td></tr>
 <tr class="memdesc:a93f9e9287217253c4148bcff802b0fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws std::exception to report a mismatch between the FEM model and state that were passed to API method <code>func</code>.  <a href="#a93f9e9287217253c4148bcff802b0fd6">More...</a><br /></td></tr>
 <tr class="separator:a93f9e9287217253c4148bcff802b0fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07eaa4e5b20335359ffd850eadb75482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a07eaa4e5b20335359ffd850eadb75482">set_parallelism</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a4b2d2ea2327ec3c0b6fe05158bc29e59">parallelism</a>)</td></tr>
+<tr class="memdesc:a07eaa4e5b20335359ffd850eadb75482"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Configures the parallelism that <code>this</code> FemModel uses when opportunities for parallel computation arises.  <a href="#a07eaa4e5b20335359ffd850eadb75482">More...</a><br /></td></tr>
+<tr class="separator:a07eaa4e5b20335359ffd850eadb75482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a4b2d2ea2327ec3c0b6fe05158bc29e59">parallelism</a> () const</td></tr>
+<tr class="memdesc:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the parallelism that <code>this</code> FemModel uses when opportunities for parallel computation arises.  <a href="#a4b2d2ea2327ec3c0b6fe05158bc29e59">More...</a><br /></td></tr>
+<tr class="separator:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:af7127cb41cf465a47db9080be52cbf91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af7127cb41cf465a47db9080be52cbf91">FemModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a> &amp;)=delete</td></tr>
 <tr class="separator:af7127cb41cf465a47db9080be52cbf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -961,8 +967,34 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
 
 </div>
 </div>
+<a id="a22e6cae04151e6b39cf8ceecfc7f4cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e6cae04151e6b39cf8ceecfc7f4cf9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a52811120b5134c610e2af3fc096c92af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52811120b5134c610e2af3fc096c92af">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a52811120b5134c610e2af3fc096c92af">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -987,29 +1019,42 @@ All entries in <code>weights</code> are non-negative. </dd></dl>
 
 </div>
 </div>
-<a id="a22e6cae04151e6b39cf8ceecfc7f4cf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22e6cae04151e6b39cf8ceecfc7f4cf9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a4b2d2ea2327ec3c0b6fe05158bc29e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b2d2ea2327ec3c0b6fe05158bc29e59">&#9670;&nbsp;</a></span>parallelism()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&amp; operator= </td>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns the parallelism that <code>this</code> FemModel uses when opportunities for parallel computation arises. </p>
+
+</div>
+</div>
+<a id="a07eaa4e5b20335359ffd850eadb75482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07eaa4e5b20335359ffd850eadb75482">&#9670;&nbsp;</a></span>set_parallelism()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_parallelism </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelism</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>(Internal use only) Configures the parallelism that <code>this</code> FemModel uses when opportunities for parallel computation arises. </p>
 
 </div>
 </div>

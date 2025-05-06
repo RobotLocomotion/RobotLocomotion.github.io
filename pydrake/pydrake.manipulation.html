@@ -206,24 +206,33 @@ default positions for joints not mentioned will remain unchanged.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.manipulation.BuildIiwaControl">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">BuildIiwaControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iiwa_instance:</span> <span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm:</span> <span class="pre">pydrake.lcm.DrakeLcmInterface</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext_joint_filter_tau:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_iiwa_kp_gains:</span> <span class="pre">Optional[numpy.ndarray[numpy.float64[m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode</span> <span class="pre">=</span> <span class="pre">&lt;IiwaControlMode.kPositionAndTorque:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.BuildIiwaControl" title="Permalink to this definition"></a></dt>
-<dd><p>Given a <code class="docutils literal notranslate"><span class="pre">plant</span></code> (and associated <code class="docutils literal notranslate"><span class="pre">iiwa_instance)</span></code> and a
-<code class="docutils literal notranslate"><span class="pre">builder</span></code>, installs in that builder the systems necessary to control
-and monitor an Iiwa described by <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> in that plant.</p>
+<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">BuildIiwaControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.BuildIiwaControl" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>BuildIiwaControl(builder: pydrake.systems.framework.DiagramBuilder, lcm: pydrake.lcm.DrakeLcmInterface, plant: drake::multibody::MultibodyPlant&lt;double&gt;, iiwa_instance: pydrake.multibody.tree.ModelInstanceIndex, driver_config: pydrake.manipulation.IiwaDriver, controller_plant: drake::multibody::MultibodyPlant&lt;double&gt;) -&gt; None</p></li>
+</ol>
+<p>Given a <code class="docutils literal notranslate"><span class="pre">plant</span></code> (and associated <code class="docutils literal notranslate"><span class="pre">iiwa_instance</span></code>) and a`builder`,
+installs in that builder the systems necessary to control and monitor
+an Iiwa described by <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> in that plant.</p>
 <p>The installed plant will communicate over the LCM interface <code class="docutils literal notranslate"><span class="pre">lcm</span></code>.</p>
 <p>The installed plant will connect itself to the actuation input port
 and state output ports in <code class="docutils literal notranslate"><span class="pre">plant</span></code> corresponding to the Iiwa model.</p>
-<p><code class="docutils literal notranslate"><span class="pre">desired_iiwa_kp_gains</span></code> is an optional argument to pass in gains
-corresponding to the Iiwa Dof (7) in the controller. If no argument is
-passed, the gains derived from hardware will be used instead
-(hardcoded within the implementation of this function). These gains
-must be nullopt if <code class="docutils literal notranslate"><span class="pre">control_mode</span></code> does not include position control.</p>
-<p><code class="docutils literal notranslate"><span class="pre">control_mode</span></code> the control mode for the controller.</p>
+<p>The values in <code class="docutils literal notranslate"><span class="pre">driver_config</span></code> further specify Diagram behavior; see
+IiwaDriver for more details.</p>
 <p>Note: The Diagram will maintain an internal reference to
 <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code>, so you must ensure that <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> has
 a longer lifetime than the Diagram.</p>
 <p>The torque values in the published LCM status messages will follow the
 IIWA-specific LCM conventions outlined in manipulation/README.</p>
+<ol class="arabic simple" start="2">
+<li><p>BuildIiwaControl(plant: drake::multibody::MultibodyPlant&lt;double&gt;, iiwa_instance: pydrake.multibody.tree.ModelInstanceIndex, controller_plant: drake::multibody::MultibodyPlant&lt;double&gt;, lcm: pydrake.lcm.DrakeLcmInterface, builder: pydrake.systems.framework.DiagramBuilder, ext_joint_filter_tau: float = 0.01, desired_iiwa_kp_gains: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, control_mode: pydrake.manipulation.IiwaControlMode = &lt;IiwaControlMode.kPositionAndTorque: 2&gt;) -&gt; None</p></li>
+</ol>
+<p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use the overload taking <code class="docutils literal notranslate"><span class="pre">driver_config</span></code> instead. This will be
+removed from Drake on or after 2025-09-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -423,6 +432,14 @@ subscriber on the <code class="docutils literal notranslate"><span class="pre">I
 <dd></dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.arm_child_frame_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">arm_child_frame_name</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.arm_child_frame_name" title="Permalink to this definition"></a></dt>
+<dd><p>Optionally give an alternative frame on the arm model for its weld
+point to the world. If not supplied, the <code class="docutils literal notranslate"><span class="pre">child_frame_name</span></code> in the
+arm’s ModelInstanceInfo will be used.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.control_mode">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">control_mode</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.control_mode" title="Permalink to this definition"></a></dt>
 <dd><p>The driver’s control mode. Valid options (per ParseIiwaControlMode)
@@ -431,9 +448,27 @@ are: - “position_only” - “position_and_torque” (default) -
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.desired_kp_gains">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">desired_kp_gains</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.desired_kp_gains" title="Permalink to this definition"></a></dt>
+<dd><p>Optionally pass in gains corresponding to the Iiwa Dof (7) in the
+controller. If no value is passed, the gains derived from hardware
+will be used instead (hardcoded within the implementations of
+functions accepting this struct). These gains must be nullopt if
+<code class="docutils literal notranslate"><span class="pre">control_mode</span></code> does not include position control.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.ext_joint_filter_tau">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ext_joint_filter_tau</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.ext_joint_filter_tau" title="Permalink to this definition"></a></dt>
-<dd><p>Per BuildIiwaControl.</p>
+<dd><p>A time constant used to low-pass filter external torque inputs.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.gripper_parent_frame_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gripper_parent_frame_name</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.gripper_parent_frame_name" title="Permalink to this definition"></a></dt>
+<dd><p>Optionally give an alternative frame on the arm model for its weld
+point to the gripper. If not supplied, the <code class="docutils literal notranslate"><span class="pre">parent_frame_name</span></code> in
+the gripper’s ModelInstanceInfo will be used.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -448,6 +483,12 @@ end effector inertia for its copy of the arm in inverse dynamics.</p>
 <dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.lcm_bus">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lcm_bus</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.lcm_bus" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.lcm_status_period">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lcm_status_period</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.lcm_status_period" title="Permalink to this definition"></a></dt>
+<dd><p>The period in seconds at which status reports are expected.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -931,21 +972,21 @@ MultibodyPlant.</p>
 or be removed at any time, without any deprecation notice ahead of
 time.</p>
 </div>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><b style="color:orange">state</b>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><b style="color:orange">generalized_contact_forces</b>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">position (in kPositionOnly or kPositionAndTorque mode)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque (in kTorqueOnly or kPositionAndTorque mode)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SimIiwaDriver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">actuation</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position_commanded</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; velocity_estimated</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state_estimated</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque_commanded</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque_external</td></tr></table></td></tr></table><p>Ports shown in &lt;b style=”color:orange”&gt;orange&lt;/b&gt; are intended to
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><b style="color:orange">state</b>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><b style="color:orange">generalized_contact_forces</b>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">position (in kPositionOnly or kPositionAndTorque mode)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque (in kTorqueOnly or kPositionAndTorque mode)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SimIiwaDriver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">actuation</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position_commanded</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; velocity_estimated</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state_estimated</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque_commanded</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque_external</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; velocity_commanded (in kPositionOnly or kPositionAndTorque mode)</td></tr></table></td></tr></table><p>Ports shown in &lt;b style=”color:orange”&gt;orange&lt;/b&gt; are intended to
 connect to the MultibodyPlant’s per-model-instance ports of the same
 name. All other ports are intended to mimic the LCM command and status
 message fields.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.manipulation.SimIiwaDriver.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.manipulation.SimIiwaDriver,</span> <span class="pre">control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode,</span> <span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">ext_joint_filter_tau:</span> <span class="pre">float,</span> <span class="pre">kp_gains:</span> <span class="pre">Optional[numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs a diagram with the given parameters. A reference to the
-<code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> is retained by this system, so the
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.manipulation.SimIiwaDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_config:</span> <span class="pre">pydrake.manipulation.IiwaDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a diagram with the given <code class="docutils literal notranslate"><span class="pre">driver_config</span></code>. A reference to
+the <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> is retained by this system, so the
 <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> must outlive <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.manipulation.SimIiwaDriver.AddToBuilder">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AddToBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder,</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">iiwa_instance:</span> <span class="pre">pydrake.multibody.tree.ModelInstanceIndex,</span> <span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">ext_joint_filter_tau:</span> <span class="pre">float,</span> <span class="pre">desired_iiwa_kp_gains:</span> <span class="pre">Optional[numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]],</span> <span class="pre">control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver.AddToBuilder" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AddToBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iiwa_instance:</span> <span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_config:</span> <span class="pre">pydrake.manipulation.IiwaDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver.AddToBuilder" title="Permalink to this definition"></a></dt>
 <dd><p>Given a <code class="docutils literal notranslate"><span class="pre">plant</span></code> (and associated <code class="docutils literal notranslate"><span class="pre">iiwa_instance</span></code>) and a
 <code class="docutils literal notranslate"><span class="pre">builder</span></code>, installs in that builder the <code class="docutils literal notranslate"><span class="pre">SimIiwaDriver</span></code> system to
 control and monitor an iiwa described by <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code>.</p>

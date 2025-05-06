@@ -1,5 +1,11 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html":[3,0,0,16,2,10],
+"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a06b00bdf9cf61457cade4e39ebc40b28":[3,0,0,16,2,10,2],
+"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a250b7dda39fb41640df16e3d85bbc8ea":[3,0,0,16,2,10,0],
+"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a2d5e3af9235581bbca735ace1a676ac6":[3,0,0,16,2,10,3],
+"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a47d45f4dacd4da362d0017dde8778d12":[3,0,0,16,2,10,7],
+"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a67f3d3a0113ead3e42a7424f58420f5c":[3,0,0,16,2,10,6],
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a8a3d1c41ca05a555fbb78ab53548697c":[3,0,0,16,2,10,8],
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#aa37e8848eafd3dbcf70745b329834770":[3,0,0,16,2,10,4],
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#abbc50a5c7f39b362c997e98dbcb6387e":[3,0,0,16,2,10,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX47 =
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aca5377a1606d0d69d2a9365fafd51476":[3,0,0,16,9,5,12],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad3774f6419003470f54fd495124ef51f":[3,0,0,16,9,5,11],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad72663daf610f2a0833a2fc3d78e4fdf":[3,0,0,16,9,5,15],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ae03e1d5e4c7f223bcee8712aba25c40c":[3,0,0,16,9,5,6],
-"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html":[1,2,4,2],
-"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a0a3ab350cc45baa62c4321726d4bf0f6":[1,2,4,2,4],
-"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a3e230f0151517774b1ff00a0852b6e66":[1,2,4,2,2],
-"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a5609ecc9abeb6eb02d34938bf4ad7106":[1,2,4,2,8],
-"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a881f5c187422f03f5159f7e515899ede":[1,2,4,2,3],
-"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a9138e7b7ef3459968b28c912cc953aba":[1,2,4,2,9]
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ae03e1d5e4c7f223bcee8712aba25c40c":[3,0,0,16,9,5,6]
 };

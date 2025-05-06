@@ -264,6 +264,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0f356a4e007916eb25e4f0df6c17b9ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a0f356a4e007916eb25e4f0df6c17b9ca">is_cloneable_to_symbolic</a> () const final</td></tr>
 <tr class="memdesc:a0f356a4e007916eb25e4f0df6c17b9ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if and only if this DeformableModel is empty.  <a href="#a0f356a4e007916eb25e4f0df6c17b9ca">More...</a><br /></td></tr>
 <tr class="separator:a0f356a4e007916eb25e4f0df6c17b9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2d5179261d86e1ac42da0b0112f679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a1d2d5179261d86e1ac42da0b0112f679">SetParallelism</a> (<a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a4b2d2ea2327ec3c0b6fe05158bc29e59">parallelism</a>)</td></tr>
+<tr class="memdesc:a1d2d5179261d86e1ac42da0b0112f679"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Configures the parallelism that <code>this</code> DeformableModel uses when opportunities for parallel computation arises.  <a href="#a1d2d5179261d86e1ac42da0b0112f679">More...</a><br /></td></tr>
+<tr class="separator:a1d2d5179261d86e1ac42da0b0112f679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a4b2d2ea2327ec3c0b6fe05158bc29e59">parallelism</a> () const</td></tr>
+<tr class="memdesc:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the parallelism that <code>this</code> DeformableModel uses when opportunities for parallel computation arises.  <a href="#a4b2d2ea2327ec3c0b6fe05158bc29e59">More...</a><br /></td></tr>
+<tr class="separator:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a43232b40951ba5412cc46880c836caff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a43232b40951ba5412cc46880c836caff">DeformableModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a> &amp;)=delete</td></tr>
 <tr class="separator:a43232b40951ba5412cc46880c836caff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1184,6 +1190,25 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
+<a id="a4b2d2ea2327ec3c0b6fe05158bc29e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b2d2ea2327ec3c0b6fe05158bc29e59">&#9670;&nbsp;</a></span>parallelism()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns the parallelism that <code>this</code> DeformableModel uses when opportunities for parallel computation arises. </p>
+
+</div>
+</div>
 <a id="a466a23330391176d84dbb60a03db8a39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a466a23330391176d84dbb60a03db8a39">&#9670;&nbsp;</a></span>RegisterDeformableBody()</h2>
 
@@ -1233,6 +1258,26 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a1d2d5179261d86e1ac42da0b0112f679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2d5179261d86e1ac42da0b0112f679">&#9670;&nbsp;</a></span>SetParallelism()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetParallelism </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td>
+          <td class="paramname"><em>parallelism</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Configures the parallelism that <code>this</code> DeformableModel uses when opportunities for parallel computation arises. </p>
 
 </div>
 </div>

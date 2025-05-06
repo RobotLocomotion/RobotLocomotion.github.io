@@ -1,5 +1,11 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1trajectories_1_1_composite_trajectory.html#a7fcff10dd95c7646ffc5d7e925c79cab":[3,0,0,18,2,3],
+"classdrake_1_1trajectories_1_1_composite_trajectory.html#a9c09865c80ca6626696a32927846530b":[3,0,0,18,2,1],
+"classdrake_1_1trajectories_1_1_composite_trajectory.html#ad232d70c6d50a859d5081d9d093b90aa":[3,0,0,18,2,4],
+"classdrake_1_1trajectories_1_1_composite_trajectory.html#ad2ea83e5c3e3dacdcf10c302a1c87a8a":[3,0,0,18,2,2],
+"classdrake_1_1trajectories_1_1_composite_trajectory.html#ad6a459d5e94794486e86aacb53ecfe1b":[3,0,0,18,2,7],
+"classdrake_1_1trajectories_1_1_composite_trajectory.html#adca2766204b86212e8ed2b91faa97775":[3,0,0,18,2,8],
 "classdrake_1_1trajectories_1_1_derivative_trajectory.html":[3,0,0,18,3],
 "classdrake_1_1trajectories_1_1_derivative_trajectory.html#a36a49cd33376d5faa9480d3bdfdd4459":[3,0,0,18,3,2],
 "classdrake_1_1trajectories_1_1_derivative_trajectory.html#a3cb5eb6604c6f975e8505b4c87b96660":[3,0,0,18,3,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX49 =
 "classdrake_1_1visualization_1_1_colorize_depth_image.html#ae35d904a52a563fef78643d4e612d2fd":[1,2,11,4,3],
 "classdrake_1_1visualization_1_1_colorize_label_image.html":[1,2,11,5],
 "classdrake_1_1visualization_1_1_colorize_label_image.html#a4a4d804bb9945b6a98fa44c1fc39ded8":[1,2,11,5,3],
-"classdrake_1_1visualization_1_1_colorize_label_image.html#a7e915b7642a98e2e3a657d531c40e4ed":[1,2,11,5,2],
-"classdrake_1_1visualization_1_1_colorize_label_image.html#a81c20a8853f69655d580bf0af1eec313":[1,2,11,5,1],
-"classdrake_1_1visualization_1_1_colorize_label_image.html#a94e6d0975f01df3d38ad96466c807304":[1,2,11,5,7],
-"classdrake_1_1visualization_1_1_colorize_label_image.html#a994bb9c694565c6de7c2ac023aeb8e75":[1,2,11,5,0],
-"classdrake_1_1visualization_1_1_colorize_label_image.html#aa9c3795e276d0ab7b36b76c75d5fe5f6":[1,2,11,5,6],
-"classdrake_1_1visualization_1_1_colorize_label_image.html#abd8d604309d403783711fbf9e51cd74d":[1,2,11,5,4],
-"classdrake_1_1visualization_1_1_colorize_label_image.html#abfe0764e04080a30f928a361a7c326a7":[1,2,11,5,8]
+"classdrake_1_1visualization_1_1_colorize_label_image.html#a7e915b7642a98e2e3a657d531c40e4ed":[1,2,11,5,2]
 };

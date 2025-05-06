@@ -1,5 +1,11 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a4e7e2451f0e6ee53d4bd8444a5e368f2":[1,4,2,1,2,1],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a6b919734963d0c38356747786ca44f55":[1,4,2,1,2,4],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a6b91e418f6215db5d8ea7fc3b831c7ac":[1,4,2,1,2,2],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a732aeddf39ef1457d22d5629dca4e41c":[1,4,2,1,2,3],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a91b3d512821b5f210669cef35d8e4859":[1,4,2,1,2,0],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html":[1,1,0,22],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349":[1,1,0,22,9],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a3cbd3e24f7648ab7712c803ca8a63f3e":[1,1,0,22,10],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a4e8411c6f694362a4520129e1e7bc3b4":[1,1,0,22,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1reset__on__copy.html#ad4afd34dd51194448846f2b5c1a5bec0":[3,0,0,47,1],
 "classdrake_1_1reset__on__copy.html#adb981e40d1fb1d0759c5b179884dc640":[3,0,0,47,4],
 "classdrake_1_1schema_1_1_deterministic.html":[3,0,0,13,0],
-"classdrake_1_1schema_1_1_deterministic.html#a0aa3048b97479443fea38b42f65e7ce5":[3,0,0,13,0,3],
-"classdrake_1_1schema_1_1_deterministic.html#a13884ab1df4ecb9b600a2af9a2cf7eb9":[3,0,0,13,0,5],
-"classdrake_1_1schema_1_1_deterministic.html#a2f57ce4fef0f729c01f388d492669327":[3,0,0,13,0,1],
-"classdrake_1_1schema_1_1_deterministic.html#a34a88e4193bdc9d5c43a609f685e1237":[3,0,0,13,0,4],
-"classdrake_1_1schema_1_1_deterministic.html#a3ab27e22c619fc8025e6e9fc066ab5da":[3,0,0,13,0,2],
-"classdrake_1_1schema_1_1_deterministic.html#a42b999c63f58c61ddd73e27c29206125":[3,0,0,13,0,6],
-"classdrake_1_1schema_1_1_deterministic.html#a5d491dd0de7c44e0e73342e819ed5f51":[3,0,0,13,0,8]
+"classdrake_1_1schema_1_1_deterministic.html#a0aa3048b97479443fea38b42f65e7ce5":[3,0,0,13,0,3]
 };

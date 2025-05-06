@@ -25,8 +25,10 @@ var classdrake_1_1multibody_1_1fem_1_1_fem_model =
     [ "num_dofs", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af4e031e8d885172740f7f66f07234f7f", null ],
     [ "num_elements", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a7596bc2928432a0ac2271bc9184d692e", null ],
     [ "num_nodes", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a90e3616a403cd3f26b9aae1ffe0ec76c", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a52811120b5134c610e2af3fc096c92af", null ],
     [ "operator=", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a22e6cae04151e6b39cf8ceecfc7f4cf9", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a52811120b5134c610e2af3fc096c92af", null ],
+    [ "parallelism", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a4b2d2ea2327ec3c0b6fe05158bc29e59", null ],
+    [ "set_parallelism", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a07eaa4e5b20335359ffd850eadb75482", null ],
     [ "SetDirichletBoundaryCondition", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#afc3ad846cfba540a1eb038ce1b32a8e9", null ],
     [ "ThrowIfModelStateIncompatible", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a93f9e9287217253c4148bcff802b0fd6", null ],
     [ "UpdateFemStateSystem", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a7bd928c1298c6e5939d3bd2559e18e71", null ]

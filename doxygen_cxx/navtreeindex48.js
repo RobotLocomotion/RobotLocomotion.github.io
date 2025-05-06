@@ -1,5 +1,11 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html":[1,2,4,2],
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a0a3ab350cc45baa62c4321726d4bf0f6":[1,2,4,2,4],
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a3e230f0151517774b1ff00a0852b6e66":[1,2,4,2,2],
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a5609ecc9abeb6eb02d34938bf4ad7106":[1,2,4,2,8],
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a881f5c187422f03f5159f7e515899ede":[1,2,4,2,3],
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a9138e7b7ef3459968b28c912cc953aba":[1,2,4,2,9],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#aacf63e458daa370f3a050109aebc14fb":[1,2,4,2,1],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ac00966c8749aec375110e166e0b7eea2":[1,2,4,2,11],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ac027638872e51adb5d3fee6cd9203021":[1,2,4,2,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1trajectories_1_1_composite_trajectory.html":[3,0,0,18,2],
 "classdrake_1_1trajectories_1_1_composite_trajectory.html#a20e1b00dc63d86a7d2d1b4e9e2c4dec4":[3,0,0,18,2,0],
 "classdrake_1_1trajectories_1_1_composite_trajectory.html#a565b401214fc119baca5476097474ebf":[3,0,0,18,2,5],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#a581a015e893005dbcd6883093a04c82c":[3,0,0,18,2,6],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#a7fcff10dd95c7646ffc5d7e925c79cab":[3,0,0,18,2,3],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#a9c09865c80ca6626696a32927846530b":[3,0,0,18,2,1],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#ad232d70c6d50a859d5081d9d093b90aa":[3,0,0,18,2,4],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#ad2ea83e5c3e3dacdcf10c302a1c87a8a":[3,0,0,18,2,2],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#ad6a459d5e94794486e86aacb53ecfe1b":[3,0,0,18,2,7],
-"classdrake_1_1trajectories_1_1_composite_trajectory.html#adca2766204b86212e8ed2b91faa97775":[3,0,0,18,2,8]
+"classdrake_1_1trajectories_1_1_composite_trajectory.html#a581a015e893005dbcd6883093a04c82c":[3,0,0,18,2,6]
 };

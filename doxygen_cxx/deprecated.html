@@ -163,68 +163,74 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#ad3720de284f34533b4dbbaa0710637b4">drake::manipulation::kuka_iiwa::BuildIiwaControl</a>  (const multibody::MultibodyPlant&lt; double &gt; &amp;plant, const <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0" title="Type used to identify model instances by index within a multibody plant.">multibody::ModelInstanceIndex</a> iiwa_instance, const multibody::MultibodyPlant&lt; double &gt; &amp;controller_plant, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">lcm::DrakeLcmInterface</a> *lcm, systems::DiagramBuilder&lt; double &gt; *builder, double ext_joint_filter_tau=0.01, const std::optional&lt; Eigen::VectorXd &gt; &amp;desired_iiwa_kp_gains=std::nullopt, IiwaControlMode control_mode=<a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5a418831c3a400f7c6e099f1109c47b14d">IiwaControlMode::kPositionAndTorque</a>)</dt>
+<dd><a class="anchor" id="_deprecated000002"></a>Use the overload taking `driver_config` instead. <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a4662f54d834653e1b9af1848f753e32c">drake::manipulation::kuka_iiwa::BuildSimplifiedIiwaControl</a>  (const multibody::MultibodyPlant&lt; double &gt; &amp;plant, const <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0" title="Type used to identify model instances by index within a multibody plant.">multibody::ModelInstanceIndex</a> iiwa_instance, const multibody::MultibodyPlant&lt; double &gt; &amp;controller_plant, systems::DiagramBuilder&lt; double &gt; *builder, double ext_joint_filter_tau=0.01, const std::optional&lt; Eigen::VectorXd &gt; &amp;desired_iiwa_kp_gains=std::nullopt, IiwaControlMode control_mode=<a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5a418831c3a400f7c6e099f1109c47b14d">IiwaControlMode::kPositionAndTorque</a>)</dt>
+<dd><a class="anchor" id="_deprecated000003"></a>Use the overload taking `driver_config` instead. <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1solvers.html#ad58cede9876421e050ac44deee7804ff">drake::solvers::operator&lt;&lt;</a>  (std::ostream &amp;, const <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html" title="Stores options for multiple solvers.">SolverOptions</a> &amp;)</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>Use options.to_string(), instead. <br />
+<dd><a class="anchor" id="_deprecated000010"></a>Use options.to_string(), instead. <br />
  This will be removed from Drake on or after 2025-09-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1solvers.html#a16445fc3b260d8c58ea9082a3594f85f">drake::solvers::to_string</a>  (const <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html" title="Stores options for multiple solvers.">SolverOptions</a> &amp;)</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>Use options.to_string(), instead. <br />
+<dd><a class="anchor" id="_deprecated000009"></a>Use options.to_string(), instead. <br />
  This will be removed from Drake on or after 2025-09-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#ad528f8f92173863f5029b979b9c5f36b">drake::symbolic::ExtractAndAppendVariablesFromExpression</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> &amp;e, VectorX&lt; Variable &gt; *vars, std::unordered_map&lt; symbolic::Variable::Id, int &gt; *map_var_to_index)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>Use the overloaded function with std::vector&lt;Variable&gt;  instead of VectorX&lt;Variable&gt; <br />
  This will be removed from Drake on or after 2024-05-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems_1_1estimators.html#affc5a5eabe473ebd57f96b0310d70ed8">drake::systems::estimators::SteadyStateKalmanFilter</a>  (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; double &gt;</a>&gt; system, std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context&lt; double &gt;</a>&gt; context, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;W, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;V)</dt>
-<dd><a class="anchor" id="_deprecated000021"></a>This overload is deprecated for removal. Instead, use the other overload  by passing a const-ref to the context. (Add an asterisk at the call site  to de-reference the context.) <br />
+<dd><a class="anchor" id="_deprecated000023"></a>This overload is deprecated for removal. Instead, use the other overload  by passing a const-ref to the context. (Add an asterisk at the call site  to de-reference the context.) <br />
  This will be removed from Drake on or after 2025-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a29cbe17adde3122d72d7d573152b04c8">Joint&lt; T &gt;::has_implementation</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000002"></a>Use has_mobilizer() instead (JointImplementation class is gone). <br />
+<dd><a class="anchor" id="_deprecated000004"></a>Use has_mobilizer() instead (JointImplementation class is gone). <br />
  This will be removed from Drake on or after 2025-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a0ceaa241ff3da59bba7c7b238b187ef1">MathematicalProgram::GetSolverOptionsDouble</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
-<dd><a class="anchor" id="_deprecated000004"></a>Use the solver_options() accessor, instead <br />
- This will be removed from Drake on or after 2025-09-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a633f007d833807176b9e12632a32bd76">MathematicalProgram::GetSolverOptionsInt</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
-<dd><a class="anchor" id="_deprecated000005"></a>Use the solver_options() accessor, instead <br />
- This will be removed from Drake on or after 2025-09-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a356d77ba1fc99214d16837c747463483">MathematicalProgram::GetSolverOptionsStr</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
 <dd><a class="anchor" id="_deprecated000006"></a>Use the solver_options() accessor, instead <br />
  This will be removed from Drake on or after 2025-09-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a633f007d833807176b9e12632a32bd76">MathematicalProgram::GetSolverOptionsInt</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
+<dd><a class="anchor" id="_deprecated000007"></a>Use the solver_options() accessor, instead <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a356d77ba1fc99214d16837c747463483">MathematicalProgram::GetSolverOptionsStr</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>Use the solver_options() accessor, instead <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_simulator.html#af0ecc40cda7115ce6a66ba4737bd62a6">Simulator&lt; T &gt;::release_context</a>  ()</dt>
-<dd><a class="anchor" id="_deprecated000020"></a>Use get_context()-&gt;Clone() and reset_context(nullptr) instead. <br />
+<dd><a class="anchor" id="_deprecated000022"></a>Use get_context()-&gt;Clone() and reset_context(nullptr) instead. <br />
  This will be removed from Drake on or after 2025-06-01. </dd>
 <dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a2b58e2b5bf8bb445762bf2c692c957c5">SolverOptions::CheckOptionKeysForSolver</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id, const std::unordered_set&lt; std::string &gt; &amp;allowable_double_keys, const std::unordered_set&lt; std::string &gt; &amp;allowable_int_keys, const std::unordered_set&lt; std::string &gt; &amp;allowable_str_keys) const</dt>
-<dd><a class="anchor" id="_deprecated000019"></a>Access the 'options' directly, instead. <br />
+<dd><a class="anchor" id="_deprecated000021"></a>Access the 'options' directly, instead. <br />
  This will be removed from Drake on or after 2025-09-01. </dd>
 <dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#adec03288ff360572725cdcc7a5fba5f5">SolverOptions::common_solver_options</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Access the 'options' directly, instead. <br />
- This will be removed from Drake on or after 2025-09-01. </dd>
-<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#add6975df5414067f7cf44bc932a92f5b">SolverOptions::get_max_threads</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000016"></a>Access the 'options' directly, instead. <br />
- This will be removed from Drake on or after 2025-09-01. </dd>
-<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#ac2adda584ed29a23b6e0bced598f22c3">SolverOptions::get_print_file_name</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>Access the 'options' directly, instead. <br />
- This will be removed from Drake on or after 2025-09-01. </dd>
-<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a2894ce2c8df835376f1df65dabc7d321">SolverOptions::get_print_to_console</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000014"></a>Access the 'options' directly, instead. <br />
  This will be removed from Drake on or after 2025-09-01. </dd>
-<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#ad0387089aeb1d2e2f42052740bc945cc">SolverOptions::get_standalone_reproduction_file_name</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000015"></a>Access the 'options' directly, instead. <br />
- This will be removed from Drake on or after 2025-09-01. </dd>
-<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a1e73a3a8b89000d249540b40a93a173a">SolverOptions::GetOptions</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
-<dd><a class="anchor" id="_deprecated000017"></a>Access the 'options' directly, instead. <br />
- This will be removed from Drake on or after 2025-09-01. </dd>
-<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a31681641f7d2a35f22c39eb4247dd50f">SolverOptions::GetOptionsDouble</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>Access the 'options' directly, instead. <br />
- This will be removed from Drake on or after 2025-09-01. </dd>
-<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a4bf6e41b18bd68978f288df2adcd6c05">SolverOptions::GetOptionsInt</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>Access the 'options' directly, instead. <br />
- This will be removed from Drake on or after 2025-09-01. </dd>
-<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a9e12607058c5231c94d2a2d915b052b7">SolverOptions::GetOptionsStr</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>Access the 'options' directly, instead. <br />
- This will be removed from Drake on or after 2025-09-01. </dd>
-<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#aac20432da1daa9805e9448e151f2b552">SolverOptions::GetSolverIds</a>  () const</dt>
+<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#add6975df5414067f7cf44bc932a92f5b">SolverOptions::get_max_threads</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000018"></a>Access the 'options' directly, instead. <br />
  This will be removed from Drake on or after 2025-09-01. </dd>
+<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#ac2adda584ed29a23b6e0bced598f22c3">SolverOptions::get_print_file_name</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000015"></a>Access the 'options' directly, instead. <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
+<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a2894ce2c8df835376f1df65dabc7d321">SolverOptions::get_print_to_console</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000016"></a>Access the 'options' directly, instead. <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
+<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#ad0387089aeb1d2e2f42052740bc945cc">SolverOptions::get_standalone_reproduction_file_name</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000017"></a>Access the 'options' directly, instead. <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
+<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a1e73a3a8b89000d249540b40a93a173a">SolverOptions::GetOptions</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
+<dd><a class="anchor" id="_deprecated000019"></a>Access the 'options' directly, instead. <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
+<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a31681641f7d2a35f22c39eb4247dd50f">SolverOptions::GetOptionsDouble</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
+<dd><a class="anchor" id="_deprecated000011"></a>Access the 'options' directly, instead. <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
+<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a4bf6e41b18bd68978f288df2adcd6c05">SolverOptions::GetOptionsInt</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
+<dd><a class="anchor" id="_deprecated000012"></a>Access the 'options' directly, instead. <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
+<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#a9e12607058c5231c94d2a2d915b052b7">SolverOptions::GetOptionsStr</a>  (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html" title="Identifies a SolverInterface implementation.">SolverId</a> &amp;solver_id) const</dt>
+<dd><a class="anchor" id="_deprecated000013"></a>Access the 'options' directly, instead. <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
+<dt>Member <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html#aac20432da1daa9805e9448e151f2b552">SolverOptions::GetSolverIds</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000020"></a>Access the 'options' directly, instead. <br />
+ This will be removed from Drake on or after 2025-09-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_spatial_inertia.html#ad1e539cc1eba1e97ebf0fbedfe30ac09">SpatialInertia&lt; T &gt;::CriticizeNotPhysicallyValid</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000003"></a>Will be removed.  There is no replacement.   File an issue if that is a problem. <br />
+<dd><a class="anchor" id="_deprecated000005"></a>Will be removed.  There is no replacement.   File an issue if that is a problem. <br />
  This will be removed from Drake on or after 2025-06-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->
