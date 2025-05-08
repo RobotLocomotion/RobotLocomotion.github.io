@@ -83,6 +83,9 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "OsqpSolver", "classdrake_1_1solvers_1_1_osqp_solver.html", "classdrake_1_1solvers_1_1_osqp_solver" ]
     ] ],
     [ "program_attribute.h", "program__attribute_8h.html", "program__attribute_8h" ],
+    [ "projected_gradient_descent_solver.h", "projected__gradient__descent__solver_8h.html", [
+      [ "ProjectedGradientDescentSolver", "classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html", "classdrake_1_1solvers_1_1_projected_gradient_descent_solver" ]
+    ] ],
     [ "rotation_constraint.h", "rotation__constraint_8h.html", "rotation__constraint_8h" ],
     [ "scs_clarabel_common.h", "scs__clarabel__common_8h.html", null ],
     [ "scs_solver.h", "scs__solver_8h.html", [

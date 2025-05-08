@@ -164,7 +164,7 @@ $(document).ready(function(){initNavTree('group__multibody__parsing.html','');})
 <div class="contents">
 <p>Drake's <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">drake::multibody::Parser</a> accepts model files written in a variety of input formats. </p>
 <p>Drake's parsing of URDF, SDFormat, and MJCF (Mujoco XML) has Drake-specific extensions and limitations.</p>
-<p>The result of the parse is an in-memory model realized within <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">drake::multibody::MultibodyPlant</a> and (optionally) <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">drake::geometry::SceneGraph</a>. Note that parses that do not use a <code>SceneGraph</code> will effectively ignore geometric model elements, especially <code>//visual</code> and <code>//collision</code> elements.</p>
+<p>The result of the parse is an in-memory model realized within <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">drake::multibody::MultibodyPlant</a> and (optionally) <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">drake::geometry::SceneGraph</a>. Note that parses that do not use a <code>SceneGraph</code> will effectively ignore geometric model elements, especially <code>//visual</code> and <code>//collision</code> elements. Without a <code>SceneGraph</code>, deformable models will also be ignored.</p>
 <p>In the reference sections below, when discussing XML formats, the relevant usage paths for various tags are indicated using <a href="https://www.w3.org/TR/xpath-31/">XPath</a> notation.</p>
 <h1><a class="anchor" id="multibody_parsing_dmd"></a>
 Drake Model Directives Support</h1>
@@ -174,7 +174,7 @@ MJCF (Mujoco XML) Support</h1>
 <p>There is basic support for parsing MJCF (Mujoco XML) files. The files are recognized by an .xml file extension. The scope of features that are actually supported still need to be documented here, but the parser does log warnings for any unsupported MuJoCo XML elements or attributes at runtime.</p>
 <h2><a class="anchor" id="mjcf_camera"></a>
 MuJoCo camera support</h2>
-<p>The MuJoCo camera element is supported (with any unsupported attributes emmitting the standard parser warnings). To parse cameras, you must register a DiagramBuilder with the Parser, and the MultibodyPlant must have a registered SceneGraph. The parser will call <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa3ab5841aed63bd66db330dc9486be95" title="Constructs a simulated camera sensor (rgbd sensor and publishing systems) within builder.">ApplyCameraConfig()</a> to produce a camera named "{model_instance_name}/{mjcf_camera_name}", where a default {mjcf_camera_name} of "camera{i}" for the ith camera (starting from 0) will be provided if no name is specified in the xml. Note that calling <code>MultibodyPlant::RenameModelInstance</code> after parsing will not update the camera name.</p>
+<p>The MuJoCo camera element is supported (with any unsupported attributes emitting the standard parser warnings). To parse cameras, you must register a DiagramBuilder with the Parser, and the MultibodyPlant must have a registered SceneGraph. The parser will call <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa3ab5841aed63bd66db330dc9486be95" title="Constructs a simulated camera sensor (rgbd sensor and publishing systems) within builder.">ApplyCameraConfig()</a> to produce a camera named "{model_instance_name}/{mjcf_camera_name}", where a default {mjcf_camera_name} of "camera{i}" for the ith camera (starting from 0) will be provided if no name is specified in the xml. Note that calling <code>MultibodyPlant::RenameModelInstance</code> after parsing will not update the camera name.</p>
 <h2><a class="anchor" id="mjcf_ignored_silent"></a>
 Tags ignored silently</h2>
 <p>The following attributes are specific to the MuJoCo solver (listed here in the order they are listed in the MuJoCo documentation); we have no plans to support them:</p><ul>
@@ -269,6 +269,16 @@ Scoped names</h3>
 </ul>
 <p>Note that (deliberately) there is no way to refer to elements outward or upward from the current model; all names are relative to the current model and can only refer to the current or a nested model. In particular, names must not start with <code>::</code>; there is no way to denote any "outer" or "outermost" scope.</p>
 <p>For a detailed design discussion with examples, see the <a href="http://sdformat.org/tutorials?tut=composition_proposal#1-3-name-scoping-and-cross-referencing">SDFormat documentation of name scoping.</a></p>
+<h2><a class="anchor" id="tag_deformable_link_requirements"></a>
+Deformable link requirements</h2>
+<p>Drake supports specifying deformable bodies through SDFormat via custom tags as an experimental feature. A <code>&lt;link&gt;</code> element is interpreted as a deformable body if it contains a <code>&lt;drake:deformable_properties&gt;</code> element (see <a class="el" href="group__multibody__parsing.html#tag_drake_deformable_properties">drake:deformable_properties</a>). In that case, there are several requirements that must be satisfied:</p>
+<ul>
+<li><b>Exactly one <code>&lt;collision&gt;</code> element</b>: The <code>&lt;collision&gt;</code> tag must be present, but more than one <code>&lt;collision&gt;</code> tag is forbidden.</li>
+<li><b>Geometry restriction</b>: the <code>&lt;collision&gt;/&lt;geometry&gt;</code> must contain a single <code>&lt;mesh&gt;</code> whose URI points to a <code>.vtk</code> file that specifies a tetrahedral mesh; primitive shapes are not yet supported. The geometry is used for both collision and dynamics.</li>
+<li><b>Limited proximity properties</b>: inside <code>&lt;collision&gt;</code>, the only Drake proximity tag recognized are <code>&lt;drake:mu_dynamic&gt;</code>, <code>&lt;drake:hunt_crossley_dissipation&gt;</code>, and <code>drake:relaxation_time&gt;</code>. All other tags are not allowed.</li>
+<li><b>At most one <code>&lt;visual&gt;</code> element</b>: The default visual representation of the deformable body is the surface of the simulated tetrahedral mesh. However, a single <code>&lt;visual&gt;</code> element may be present to provide an alternative visual representation of the deformable body. Currently, the visual geometry is only used for rendering (and the surface of the simulated mesh is <em>always</em> used for visualization). Therefore, it's only meaningful to specify a non-empty <code>&lt;geometry&gt;</code> element if the <code>&lt;drake:perception_properties&gt;</code> element is not disabled; otherwise, the geometry supplied will be ignored with a warning. The <code>&lt;geometry&gt;</code> element, if non-empty, must contain a single <code>&lt;mesh&gt;</code> element, and the URI of the mesh must point to a <code>.obj</code> file, and the (potentially textured) surface described by the <code>.obj</code> file is used for rendering. More than one <code>&lt;visual&gt;</code> is an error.</li>
+</ul>
+<p>Violating any of these rules results in a <em>parsing error</em>.</p>
 <h1><a class="anchor" id="multibody_parsing_urdf"></a>
 URDF Support</h1>
 <p>Drake supports URDF files as described here: <a href="http://wiki.ros.org/urdf/XML">http://wiki.ros.org/urdf/XML</a>.</p>
@@ -341,6 +351,7 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_curves">drake:curves</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_damping">drake:damping</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_declare_convex">drake:declare_convex</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_deformable_properties">drake:deformable_properties</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_diffuse_map">drake:diffuse_map</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_ellipsoid">drake:ellipsoid</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_gear_ratio">drake:gear_ratio</a></li>
@@ -355,6 +366,9 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_length">drake:length</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_line_segment">drake:line_segment</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_linear_bushing_rpy">drake:linear_bushing_rpy</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_mass_damping">drake:mass_damping</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_mass_density">drake:mass_density</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_material_model">drake:material_model</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_member">drake:member</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_member_group">drake:member_group</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_mesh_resolution_hint">drake:mesh_resolution_hint</a></li>
@@ -365,13 +379,16 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_perception_properties">drake:perception_properties</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_plane_normal">drake:plane_normal</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_point_contact_stiffness">drake:point_contact_stiffness</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_poissons_ratio">drake:poissons_ratio</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_proximity_properties">drake:proximity_properties</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_radius">drake:radius</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_relaxation_time">drake:relaxation_time</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_rigid_hydroelastic">drake:rigid_hydroelastic</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_rotor_inertia">drake:rotor_inertia</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_screw_thread_pitch">drake:screw_thread_pitch</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_stiffness_damping">drake:stiffness_damping</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_visual">drake:visual</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_youngs_modulus">drake:youngs_modulus</a></li>
 </ul>
 <h2><a class="anchor" id="tag_drake_acceleration"></a>
 drake:acceleration</h2>
@@ -615,7 +632,7 @@ drake:curves</h2>
 <h3><a class="anchor" id="tag_drake_curves_semantics"></a>
 Semantics</h3>
 <p>A joint-type-specific tag for <a class="el" href="classdrake_1_1multibody_1_1_curvilinear_joint.html" title="A Joint that allows a body to move along a piecewise constant curvature path contained in a plane.">drake::multibody::CurvilinearJoint</a>, corresponding to a <code>drake:joint</code> of <code>curvilinear</code> type.</p>
-<p>Curvilinear joints allow the child frame to move relative to the parent along a planer curvilinear path, expressed in this tag as an ordered list of linear and circular arc segments. Each segment is appended to the end of the previous segment, so that the entire path is continuously differentiable.</p>
+<p>Curvilinear joints allow the child frame to move relative to the parent along a planar curvilinear path, expressed in this tag as an ordered list of linear and circular arc segments. Each segment is appended to the end of the previous segment, so that the entire path is continuously differentiable.</p>
 <p>The initial heading of the curve is determined by the joint's <code>drake:initial_tangent</code> element, and remains in a plane defined by the joint's <code>drake:plane_normal</code>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_initial_tangent">drake:initial_tangent</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_plane_normal">drake:plane_normal</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_line_segment">drake:line_segment</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_circular_arc">drake:circular_arc</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_joint">drake:joint</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_damping"></a>
@@ -640,6 +657,25 @@ drake:declare_convex</h2>
 Semantics</h3>
 <p>If present, this element causes Drake to use the convex hull of the named mesh geometry. The resulting geometry in memory will be <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">drake::geometry::Convex</a>, rather than <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">drake::geometry::Mesh</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">drake::geometry::Convex</a>, <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">drake::geometry::Mesh</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_deformable_properties"></a>
+drake:deformable_properties</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/drake:deformable_properties</code></li>
+<li>URDF path: n/a</li>
+<li>Syntax: Nested elements; see below.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_deformable_properties"></a>
+drake:deformable_properties</h3>
+<p>If present, this element defines the link element as a deformable body in Drake. Such link elements are not treated as rigid bodies, and the standard tags such as inertia are illegal and provoke errors. The only other tags that are allowed are under such "deformable" links are <code>&lt;pose&gt;</code>, <code>&lt;collision&gt;</code>, and <code>&lt;visual&gt;</code>. Attaching frames, joints, and other elements to deformable links is not allowed. The <code>&lt;pose&gt;</code> tag is interpreted as the pose of the deformable geometry used for dynamics and collision in its reference configuration. The <code>&lt;collision&gt;</code> and <code>&lt;visual&gt;</code> tags are <em>not</em> interpreted exactly the same way as the standard <code>&lt;collision&gt;</code> and <code>&lt;visual&gt;</code> tags either. We explain the differences in the <a class="el" href="group__multibody__parsing.html#tag_deformable_link_requirements">Deformable link requirements</a> section.</p>
+<p>The following nested elements may be present under <code>&lt;drake:deformable_properties&gt;</code>:</p><ul>
+<li><code>drake:youngs_modulus</code></li>
+<li><code>drake:poissons_ratio</code></li>
+<li><code>drake:mass_damping</code></li>
+<li><code>drake:stiffness_damping</code></li>
+<li><code>drake:mass_density</code></li>
+<li><code>drake:material_model</code></li>
+</ul>
+<p>see <a class="el" href="group__multibody__parsing.html#tag_drake_youngs_modulus">drake:youngs_modulus</a> <a class="el" href="group__multibody__parsing.html#tag_drake_poissons_ratio">drake:poissons_ratio</a> <a class="el" href="group__multibody__parsing.html#tag_drake_mass_damping">drake:mass_damping</a> <a class="el" href="group__multibody__parsing.html#tag_drake_stiffness_damping">drake:stiffness_damping</a> <a class="el" href="group__multibody__parsing.html#tag_drake_mass_density">drake:mass_density</a> <a class="el" href="group__multibody__parsing.html#tag_drake_material_model">drake:material_model</a></p>
 <h2><a class="anchor" id="tag_drake_diffuse_map"></a>
 drake:diffuse_map</h2>
 <ul>
@@ -771,7 +807,7 @@ Semantics</h3>
 <li><code>drake:plane_normal</code>: A normal vector for the plane expressed in parent frame.</li>
 <li><code>drake:initial_tangent</code>: A tangent vector for the curvilinear path at joint position <code>0</code>, expressed in parent frame.</li>
 <li><code>drake:curves</code>: A list of line segments and circular arcs defining the curve shape.</li>
-<li><code>drake:is_periodic</code>: A boolean value specifying whether the curve is periodic, allowing the joint to traves multiple laps of the curve without hitting joint limits.</li>
+<li><code>drake:is_periodic</code>: A boolean value specifying whether the curve is periodic, allowing the joint to traverse multiple laps of the curve without hitting joint limits.</li>
 </ul>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_parent">drake:parent</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_child">drake:child</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_damping">drake:damping</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_screw_thread_pitch">drake:screw_thread_pitch</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_initial_tangent">drake:initial_tangent</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_plane_normal">drake:plane_normal</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_curves">drake:curves</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_is_periodic">drake:is_periodic</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_length"></a>
@@ -809,6 +845,36 @@ drake:linear_bushing_rpy</h2>
 Semantics</h3>
 <p>This element adds a <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">drake::multibody::LinearBushingRollPitchYaw</a> to the model.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">drake::multibody::LinearBushingRollPitchYaw</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_bushing_force_damping">drake:bushing_force_damping</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_bushing_force_stiffness">drake:bushing_force_stiffness</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_bushing_frameA">drake:bushing_frameA</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_bushing_frameC">drake:bushing_frameC</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_bushing_torque_damping">drake:bushing_torque_damping</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_bushing_torque_stiffness">drake:bushing_torque_stiffness</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_mass_damping"></a>
+drake:mass_damping</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/drake:deformable_properties/drake:mass_damping</code></li>
+<li>URDF path: n/a</li>
+<li>Syntax: Non-negative floating point value.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_mass_damping_semantics"></a>
+Semantics</h3>
+<p>If present, this element provides a value (with unit <code>1/s</code>) for the mass damping coefficient in Rayleigh damping for the deformable body.</p>
+<h2><a class="anchor" id="tag_drake_mass_density"></a>
+drake:mass_density</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/drake:deformable_properties/drake:mass_density</code></li>
+<li>URDF path: n/a</li>
+<li>Syntax: Positive floating point value.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_mass_density_semantics"></a>
+Semantics</h3>
+<p>If present, this element provides a value (with unit <code>kg/m³</code>) for the mass density of the deformable body.</p>
+<h2><a class="anchor" id="tag_drake_material_model"></a>
+drake:material_model</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/drake:deformable_properties/drake:material_model</code></li>
+<li>URDF path: n/a</li>
+<li>Syntax: String.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_material_model_semantics"></a>
+Semantics</h3>
+<p>If present, this element provides the material model of the deformable body. The valid values are <code>linear_corotated</code>, <code>corotated</code>, and <code>linear</code>.</p>
 <h2><a class="anchor" id="tag_drake_member"></a>
 drake:member</h2>
 <ul>
@@ -925,6 +991,16 @@ drake:point_contact_stiffness</h2>
 Semantics</h3>
 <p>If present, this element provides a stiffness value (units of N/m) for point contact calculations for this specific geometry. It is stored in a ProximityProperties object under <code>(material, point_contact_stiffness)</code>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#accessing_contact_properties">Accessing point contact parameters</a>, <a class="el" href="group__compliant__contact.html#point_forces_modeling">Point Contact Forces</a>, and <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">drake::geometry::ProximityProperties</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_poissons_ratio"></a>
+drake:poissons_ratio</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/drake:deformable_properties/drake:poissons_ratio</code></li>
+<li>URDF path: n/a</li>
+<li>Syntax: Floating point value in (-1, 0.5), non-inclusive.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_poissons_ratio_semantics"></a>
+Semantics</h3>
+<p>If present, this element provides a value (unitless) for the Poisson's ratio for for the deformable body.</p>
 <h2><a class="anchor" id="tag_drake_proximity_properties"></a>
 drake:proximity_properties</h2>
 <ul>
@@ -1001,6 +1077,16 @@ drake:screw_thread_pitch</h2>
 Semantics</h3>
 <p>Applies the indicated thread pitch value to the appropriate ScrewJoint object. This kinematic parameter specifies the axial distance traveled for each revolution of the joint. Units are m/revolution, with a positive value corresponding to a right-handed thread.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html" title="This joint models a screw joint allowing two bodies to rotate about one axis while translating along ...">drake::multibody::ScrewJoint</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_stiffness_damping"></a>
+drake:stiffness_damping</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/drake:deformable_properties/drake:stiffness_damping</code></li>
+<li>URDF path: n/a</li>
+<li>Syntax: Non-negative floating point value.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_stiffness_damping_semantics"></a>
+Semantics</h3>
+<p>If present, this element provides a value (with unit <code>s</code>) for the stiffness damping coefficient in Rayleigh damping for the deformable body.</p>
 <h2><a class="anchor" id="tag_drake_visual"></a>
 drake:visual</h2>
 <ul>
@@ -1023,7 +1109,17 @@ Semantics</h3>
 <p>Note: disabling both visual roles on a <code>&lt;drake:visual&gt;</code> element will <em>not</em> emit a warning as it would for doing the same to a <code>&lt;visual&gt;</code> tag.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_perception_properties">drake:perception_properties</a> </dd>
 <dd>
-<a class="el" href="group__multibody__parsing.html#tag_drake_illustration_properties">drake:illustration_properties</a> </dd></dl>
+<a class="el" href="group__multibody__parsing.html#tag_drake_illustration_properties">drake:illustration_properties</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_youngs_modulus"></a>
+drake:youngs_modulus</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/drake:deformable_properties/drake:youngs_modulus</code></li>
+<li>URDF path: n/a</li>
+<li>Syntax: Positive floating point value.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_youngs_modulus_semantics"></a>
+Semantics</h3>
+<p>If present, this element provides a value (with unit <code>Pa(N/m²)</code>) for the Young's modulus for the deformable body. </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->

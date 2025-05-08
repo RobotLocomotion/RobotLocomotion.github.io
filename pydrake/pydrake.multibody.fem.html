@@ -401,10 +401,24 @@ and Alejandro Castro. “A Convex Formulation of Frictional Contact
 between Rigid and Deformable Bodies.” arXiv preprint arXiv:2303.08912
 (2023).</p>
 <blockquote>
-<div><p>kCorotated : Corotational model. More computationally expensive and less robust</p>
+<div><p>kCorotated : Corotational model. More computationally expensive. Recommended when</p>
 </div></blockquote>
-<p>than the linear corotational model. May require smaller time steps.
-Recommended when capturing large rotation velocity is important.</p>
+<p>capturing large rotation velocity is important.</p>
+<p>[Stomakhin et al., 2012] Stomakhin, Alexey, et al. “Energetically
+consistent invertible elasticity.” Proceedings of the 11th ACM
+SIGGRAPH/Eurographics conference on Computer Animation. 2012.</p>
+<blockquote>
+<div><p>kNeoHookean : Neohookean model. More computationally expensive. Recommended when</p>
+</div></blockquote>
+<p>capturing large rotation velocity is important. There are subtle
+differences in physical behavior between the Corotated model and the
+Neo-Hookean model. See [Smith et al., 2019; Stomakhin et al., 2012]
+for details. In practice, we often choose the Neo-Hookean model over
+the Corotated model simply because it’s computationally more
+efficient.</p>
+<p>[Smith et al., 2019] Smith, Breannan, Fernando De Goes, and Theodore
+Kim. “Stable Neo-Hookean flesh simulation.” ACM Transactions on
+Graphics (TOG) 37.2 (2018): 1-15.</p>
 <blockquote>
 <div><p>kLinear : Linear elasticity model (rarely used). Less computationally expensive</p>
 </div></blockquote>
@@ -422,12 +436,17 @@ deformations occur.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.multibody.fem.MaterialModel.kLinear">
-<span class="sig-name descname"><span class="pre">kLinear</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MaterialModel.kLinear:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.kLinear" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">kLinear</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MaterialModel.kLinear:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.kLinear" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pydrake.multibody.fem.MaterialModel.kLinearCorotated">
 <span class="sig-name descname"><span class="pre">kLinearCorotated</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MaterialModel.kLinearCorotated:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.kLinearCorotated" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.multibody.fem.MaterialModel.kNeoHookean">
+<span class="sig-name descname"><span class="pre">kNeoHookean</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MaterialModel.kNeoHookean:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.kNeoHookean" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">

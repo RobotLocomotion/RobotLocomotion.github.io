@@ -43,7 +43,7 @@ var searchData=
   ['inputport_3c_20double_20_3e',['InputPort&lt; double &gt;',['../classdrake_1_1systems_1_1_input_port.html',1,'drake::systems']]],
   ['inputportbase',['InputPortBase',['../classdrake_1_1systems_1_1_input_port_base.html',1,'drake::systems']]],
   ['inputportparams',['InputPortParams',['../structdrake_1_1systems_1_1_selector_params_1_1_input_port_params.html',1,'drake::systems::SelectorParams']]],
-  ['instance',['Instance',['../structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html',1,'MultibodyPlant&lt; T &gt;::InputPortIndices::Instance'],['../structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html',1,'MultibodyPlant&lt; T &gt;::OutputPortIndices::Instance']]],
+  ['instance',['Instance',['../structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html',1,'MultibodyPlant&lt; T &gt;::OutputPortIndices::Instance'],['../structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html',1,'MultibodyPlant&lt; T &gt;::InputPortIndices::Instance']]],
   ['integrationstep',['IntegrationStep',['../classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html',1,'drake::systems::HermitianDenseOutput']]],
   ['integrator',['Integrator',['../classdrake_1_1systems_1_1_integrator.html',1,'drake::systems']]],
   ['integratorbase',['IntegratorBase',['../classdrake_1_1systems_1_1_integrator_base.html',1,'drake::systems']]],

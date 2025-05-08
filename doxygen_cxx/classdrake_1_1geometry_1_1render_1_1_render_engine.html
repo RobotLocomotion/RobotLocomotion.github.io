@@ -1497,6 +1497,7 @@ Friends</h2></td></tr>
 
 <p>Updates the configurations of all meshes associated with the given deformable geometry (see <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#aba87ec5ca446671192bc1a2194a547fc" title="Requests registration of the given deformable geometry with this render engine.">RegisterDeformableVisual()</a>). </p>
 <p>The number of elements in the supplied vertex position vector <code>q_WGs</code> and the vertex normal vector <code>nhats_W</code> must be equal to the number of render meshes registered to the geometry associated with <code>id</code>. Within each mesh, the vertex positions and normals must be ordered the same way as the vertices specified in the render mesh at registration when reshaped to be an Nx3 matrix with N being the number of vertices in the mesh.</p>
+<p>No-op if no geometry with the given <code>id</code> is registered with this engine.</p>
 <dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1508,7 +1509,6 @@ Friends</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if no geometry with the given <code>id</code> is registered as deformable geometry in this <code><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a></code>. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if the sizes of <code>q_WGs</code> or <code>nhats_W</code> are incompatible with the number of degrees of freedom of the meshes registered with the deformable geometry. </td></tr>
   </table>
   </dd>

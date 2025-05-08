@@ -285,6 +285,7 @@ var searchData=
   ['_7epositivesemidefiniteconstraint',['~PositiveSemidefiniteConstraint',['../classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a606f4db084fea67dad1e32fd17d580e1',1,'drake::solvers::PositiveSemidefiniteConstraint']]],
   ['_7eprismaticjoint',['~PrismaticJoint',['../classdrake_1_1multibody_1_1_prismatic_joint.html#a960a12810250964280b9a35fd0f8650b',1,'drake::multibody::PrismaticJoint']]],
   ['_7eprismaticspring',['~PrismaticSpring',['../classdrake_1_1multibody_1_1_prismatic_spring.html#a7901b6dc0b4900c597ac55c3934aab45',1,'drake::multibody::PrismaticSpring']]],
+  ['_7eprojectedgradientdescentsolver',['~ProjectedGradientDescentSolver',['../classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#a64d33f7224e73224f9adbe5735b642ef',1,'drake::solvers::ProjectedGradientDescentSolver']]],
   ['_7epropeller',['~Propeller',['../classdrake_1_1multibody_1_1_propeller.html#ac1e0d0df13e2d99aeb5b7b01f95538d0',1,'drake::multibody::Propeller']]],
   ['_7eproximityproperties',['~ProximityProperties',['../classdrake_1_1geometry_1_1_proximity_properties.html#a98ca790a7f8e9d30d915333e42b8cddb',1,'drake::geometry::ProximityProperties']]],
   ['_7equadraticconstraint',['~QuadraticConstraint',['../classdrake_1_1solvers_1_1_quadratic_constraint.html#ac9c867fcd0ac956fbd69038ac7e9d3da',1,'drake::solvers::QuadraticConstraint']]],

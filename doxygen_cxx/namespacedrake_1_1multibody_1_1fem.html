@@ -197,6 +197,7 @@ Typedefs</h2></td></tr>
 Enumerations</h2></td></tr>
 <tr class="memitem:ad0fc09b4ba51af3abea545b9c6220b7a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a">MaterialModel</a> { <a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aab46bfc626f096c85ab83f7763ecfeaee">kLinearCorotated</a>, 
 <a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f">kCorotated</a>, 
+<a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aad864bb0ddb640ff5e3cc8dca04dfc111">kNeoHookean</a>, 
 <a class="el" href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385">kLinear</a>
  }</td></tr>
 <tr class="memdesc:ad0fc09b4ba51af3abea545b9c6220b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of material models for the deformable body.  <a href="namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a">More...</a><br /></td></tr>
@@ -262,7 +263,13 @@ Enumerations</h2></td></tr>
 <p>It provides a combination of accuracy, robustness, and speed. Recommended in most scenarios. [Han et al., 2023] Han, Xuchen, Joseph Masterjohn, and Alejandro Castro. "A Convex Formulation of Frictional Contact between Rigid and Deformable Bodies." arXiv preprint arXiv:2303.08912 (2023). </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f"></a>kCorotated&#160;</td><td class="fielddoc"><p>Corotational model. </p>
-<p>More computationally expensive and less robust than the linear corotational model. May require smaller time steps. Recommended when capturing large rotation velocity is important. </p>
+<p>More computationally expensive. Recommended when capturing large rotation velocity is important.</p>
+<p>[Stomakhin et al., 2012] Stomakhin, Alexey, et al. "Energetically consistent
+invertible elasticity." Proceedings of the 11th ACM SIGGRAPH/Eurographics conference on Computer Animation. 2012. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad0fc09b4ba51af3abea545b9c6220b7aad864bb0ddb640ff5e3cc8dca04dfc111"></a>kNeoHookean&#160;</td><td class="fielddoc"><p>Neohookean model. </p>
+<p>More computationally expensive. Recommended when capturing large rotation velocity is important. There are subtle differences in physical behavior between the Corotated model and the Neo-Hookean model. See [Smith et al., 2019; Stomakhin et al., 2012] for details. In practice, we often choose the Neo-Hookean model over the Corotated model simply because it's computationally more efficient.</p>
+<p>[Smith et al., 2019] Smith, Breannan, Fernando De Goes, and Theodore Kim. "Stable Neo-Hookean flesh simulation." ACM Transactions on Graphics (TOG) 37.2 (2018): 1-15. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385"></a>kLinear&#160;</td><td class="fielddoc"><p>Linear elasticity model (rarely used). </p>
 <p>Less computationally expensive than other models but leads to artifacts when large rotational deformations occur. </p>

@@ -61,6 +61,7 @@ var namespacedrake_1_1solvers =
     [ "PolynomialCost", "classdrake_1_1solvers_1_1_polynomial_cost.html", "classdrake_1_1solvers_1_1_polynomial_cost" ],
     [ "PolynomialEvaluator", "classdrake_1_1solvers_1_1_polynomial_evaluator.html", "classdrake_1_1solvers_1_1_polynomial_evaluator" ],
     [ "PositiveSemidefiniteConstraint", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint" ],
+    [ "ProjectedGradientDescentSolver", "classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html", "classdrake_1_1solvers_1_1_projected_gradient_descent_solver" ],
     [ "QuadraticConstraint", "classdrake_1_1solvers_1_1_quadratic_constraint.html", "classdrake_1_1solvers_1_1_quadratic_constraint" ],
     [ "QuadraticCost", "classdrake_1_1solvers_1_1_quadratic_cost.html", "classdrake_1_1solvers_1_1_quadratic_cost" ],
     [ "RotatedLorentzConeConstraint", "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html", "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint" ],

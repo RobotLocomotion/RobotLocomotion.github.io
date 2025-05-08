@@ -74,6 +74,7 @@ var searchData=
   ['prismaticspring',['PrismaticSpring',['../classdrake_1_1multibody_1_1_prismatic_spring.html',1,'drake::multibody']]],
   ['process_5fattribute_5fdefault',['process_attribute_default',['../classprocess__attribute__default.html',1,'']]],
   ['product',['Product',['../structdrake_1_1_polynomial_1_1_product.html',1,'drake::Polynomial']]],
+  ['projectedgradientdescentsolver',['ProjectedGradientDescentSolver',['../classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html',1,'drake::solvers']]],
   ['promoted_5fnumerical',['promoted_numerical',['../structdrake_1_1geometry_1_1promoted__numerical.html',1,'drake::geometry']]],
   ['propeller',['Propeller',['../classdrake_1_1multibody_1_1_propeller.html',1,'drake::multibody']]],
   ['propellerinfo',['PropellerInfo',['../structdrake_1_1multibody_1_1_propeller_info.html',1,'drake::multibody']]],

@@ -75,6 +75,7 @@ var searchData=
   ['prismatic_5fspring_2eh',['prismatic_spring.h',['../prismatic__spring_8h.html',1,'']]],
   ['process_5fmodel_5fdirectives_2eh',['process_model_directives.h',['../process__model__directives_8h.html',1,'']]],
   ['program_5fattribute_2eh',['program_attribute.h',['../program__attribute_8h.html',1,'']]],
+  ['projected_5fgradient_5fdescent_5fsolver_2eh',['projected_gradient_descent_solver.h',['../projected__gradient__descent__solver_8h.html',1,'']]],
   ['propeller_2eh',['propeller.h',['../propeller_8h.html',1,'']]],
   ['proximity_5fdoxygen_2eh',['proximity_doxygen.h',['../proximity__doxygen_8h.html',1,'']]],
   ['proximity_5fengine_2eh',['proximity_engine.h',['../proximity__engine_8h.html',1,'']]],

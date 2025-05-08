@@ -1430,10 +1430,6 @@ body B’s frame.</p>
 <li><p><strong>has been registered.</strong> – </p></li>
 <li><p><strong>RuntimeError unless body_B is registered with the same</strong> – </p></li>
 <li><p><strong>multibody plant owning this deformable model.</strong> – </p></li>
-<li><p><strong>RuntimeError if shape is not supported by</strong> – </p></li>
-<li><p><strong>QueryObject::ComputeSignedDistanceToPoint</strong><strong>(</strong><strong>)</strong><strong> Currently</strong><strong>, </strong><strong>supported</strong> – </p></li>
-<li><p><strong>shapes include Box</strong><strong>, </strong><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Capsule" title="pydrake.geometry.Capsule"><strong>Capsule</strong></a><strong>, </strong><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Cylinder" title="pydrake.geometry.Cylinder"><strong>Cylinder</strong></a><strong>, </strong><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Ellipsoid" title="pydrake.geometry.Ellipsoid"><strong>Ellipsoid</strong></a><strong>, </strong><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.HalfSpace" title="pydrake.geometry.HalfSpace"><strong>HalfSpace</strong></a><strong>, </strong><strong>and</strong> – </p></li>
-<li><p><strong>Sphere.</strong> – </p></li>
 <li><p><strong>RuntimeError if Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on the multibody plant</strong> – </p></li>
 <li><p><strong>owning this deformable model.</strong> – </p></li>
 <li><p><strong>RuntimeError if this DeformableModel is not of scalar type</strong> – </p></li>
@@ -1548,8 +1544,17 @@ DeformableModel.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.RegisterDeformableBody">
-<span class="sig-name descname"><span class="pre">RegisterDeformableBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryInstance" title="pydrake.geometry.GeometryInstance"><span class="pre">pydrake.geometry.GeometryInstance</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.fem.html#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution_hint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.RegisterDeformableBody" title="Permalink to this definition"></a></dt>
-<dd><p>Registers a deformable body in <code class="docutils literal notranslate"><span class="pre">this</span></code> DeformableModel with the given
+<span class="sig-name descname"><span class="pre">RegisterDeformableBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.RegisterDeformableBody" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>RegisterDeformableBody(self: pydrake.multibody.plant.DeformableModel, geometry_instance: pydrake.geometry.GeometryInstance, config: pydrake.multibody.fem.DeformableBodyConfig, resolution_hint: float) -&gt; pydrake.multibody.plant.DeformableBodyId</p></li>
+</ol>
+<p>Registers a deformable body in <code class="docutils literal notranslate"><span class="pre">this</span></code> DeformableModel with the
+default model instance.</p>
+<ol class="arabic simple" start="2">
+<li><p>RegisterDeformableBody(self: pydrake.multibody.plant.DeformableModel, geometry_instance: pydrake.geometry.GeometryInstance, model_instance: pydrake.multibody.tree.ModelInstanceIndex, config: pydrake.multibody.fem.DeformableBodyConfig, resolution_hint: float) -&gt; pydrake.multibody.plant.DeformableBodyId</p></li>
+</ol>
+<p>Registers a deformable body in <code class="docutils literal notranslate"><span class="pre">this</span></code> DeformableModel with the given
 GeometryInstance. The body is represented in the world frame and
 simulated with FEM with linear elements and a first order quadrature
 rule that integrates linear functions exactly. See FemModel for
@@ -1558,6 +1563,8 @@ details. Returns a unique identifier for the added geometry.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_instance</span></code>:</dt><dd><p>The geometry to be registered with the model.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">config</span></code>:</dt><dd><p>The physical properties of deformable body.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>:</dt><dd><p>The model instance index which this body is part of.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">resolution_hint</span></code>:</dt><dd><p>The parameter that guides the level of mesh refinement of the
 deformable geometry. It has length units (in meters) and roughly
@@ -1572,6 +1579,7 @@ primitive shape.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if this DeformableModel is not of scalar type</strong> – </p></li>
 <li><p><strong>double.</strong> – </p></li>
+<li><p><strong>RuntimeError if the model instance does not exist.</strong> – </p></li>
 <li><p><strong>RuntimeError if Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on the multibody plant</strong> – </p></li>
 <li><p><strong>owning this deformable model.</strong> – </p></li>
 </ul>
