@@ -7740,6 +7740,161 @@ more details.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">ProjectedGradientDescentSolver</span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.SolverInterface</span></code></a></p>
+<p>Solves a nonlinear program via the projected gradient descent
+algorithm. The gradient is determined by differentiation of the costs,
+or the user can supply a custom gradient function. The projection step
+is itself an optimization problem in general, but the user can supply
+a custom projection function. The user can also specify a specific
+solver interface to be used to solve the projection problem.</p>
+<p>The solver terminates if - the projection step fails to find a
+feasible solution, - the 2-norm distance between subsequent iterates
+is less than the user-specified tolerance (see
+ProjectedGradientDescentSolver::ConvergenceTolOptionName
+“ConvergenceTolOptionName”), or - a maximum number of iterations have
+been run (see ProjectedGradientDescentSolver::MaxIterationsOptionName
+“MaxIterationsOptionName”).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.ProjectedGradientDescentSolver" title="pydrake.solvers.ProjectedGradientDescentSolver"><span class="pre">pydrake.solvers.ProjectedGradientDescentSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.BacktrackingAlpha0OptionName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BacktrackingAlpha0OptionName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.BacktrackingAlpha0OptionName" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string key for SolverOptions to set the value of alpha_0 to use
+for the backtracking line search. Must be positive.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.BacktrackingCOptionName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BacktrackingCOptionName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.BacktrackingCOptionName" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string key for SolverOptions to set the value of c to use for the
+backtracking line search. Must be between 0 and 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.BacktrackingTauOptionName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BacktrackingTauOptionName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.BacktrackingTauOptionName" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string key for SolverOptions to set the value of tau to use for
+the backtracking line search. Must be between 0 and 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.ConvergenceTolOptionName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConvergenceTolOptionName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.ConvergenceTolOptionName" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string key for SolverOptions to set the threshold used to
+determine convergence. It must be positive.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.solvers.SolverId" title="pydrake.solvers.SolverId"><span class="pre">pydrake.solvers.SolverId</span></a></span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.kDefaultBacktrackingAlpha0">
+<span class="sig-name descname"><span class="pre">kDefaultBacktrackingAlpha0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.1</span></em><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.kDefaultBacktrackingAlpha0" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.kDefaultBacktrackingC">
+<span class="sig-name descname"><span class="pre">kDefaultBacktrackingC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.5</span></em><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.kDefaultBacktrackingC" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.kDefaultBacktrackingTau">
+<span class="sig-name descname"><span class="pre">kDefaultBacktrackingTau</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.5</span></em><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.kDefaultBacktrackingTau" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.kDefaultConvergenceTol">
+<span class="sig-name descname"><span class="pre">kDefaultConvergenceTol</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1e-12</span></em><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.kDefaultConvergenceTol" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.kDefaultMaxIterations">
+<span class="sig-name descname"><span class="pre">kDefaultMaxIterations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1000</span></em><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.kDefaultMaxIterations" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.kDefaultMaxLineSearchSteps">
+<span class="sig-name descname"><span class="pre">kDefaultMaxLineSearchSteps</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.kDefaultMaxLineSearchSteps" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.MaxIterationsOptionName">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MaxIterationsOptionName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.MaxIterationsOptionName" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string key for SolverOptions to set the maximum number of
+iterations. It must be a positive integer.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.SetCustomGradientFunction">
+<span class="sig-name descname"><span class="pre">SetCustomGradientFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.ProjectedGradientDescentSolver" title="pydrake.solvers.ProjectedGradientDescentSolver"><span class="pre">pydrake.solvers.ProjectedGradientDescentSolver</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_gradient_function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.SetCustomGradientFunction" title="Permalink to this definition"></a></dt>
+<dd><p>Specify a custom gradient function. Otherwise, this solver will
+differentiate through the costs in the MathematicalProgram it’s used
+to solve.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.SetCustomProjectionFunction">
+<span class="sig-name descname"><span class="pre">SetCustomProjectionFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.ProjectedGradientDescentSolver" title="pydrake.solvers.ProjectedGradientDescentSolver"><span class="pre">pydrake.solvers.ProjectedGradientDescentSolver</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_projection_function</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.SetCustomProjectionFunction" title="Permalink to this definition"></a></dt>
+<dd><p>Specify a custom projection function. Otherwise, this solver will
+attempt to solve the L2 projection onto the feasible set of the
+MathematicalProgram it’s used to solve. The projection function
+should return a tuple, whose first entry is a boolean value
+indicating success or failure, and whose second value is the result
+of the projection. It should take in as an argument the point we are
+trying to stay close to.</p>
+<p class="rubric">Example</p>
+<p>You can define a custom projection function in Python, such as projecting onto the nonnegative orthant:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nonnegative_projection</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># Project onto the set {x | x &gt;= 0}</span>
+    <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.solvers.ProjectedGradientDescentSolver.SetProjectionSolverInterface">
+<span class="sig-name descname"><span class="pre">SetProjectionSolverInterface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.ProjectedGradientDescentSolver" title="pydrake.solvers.ProjectedGradientDescentSolver"><span class="pre">pydrake.solvers.ProjectedGradientDescentSolver</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">projection_solver_interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.SolverInterface" title="pydrake.solvers.SolverInterface"><span class="pre">pydrake.solvers.SolverInterface</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.ProjectedGradientDescentSolver.SetProjectionSolverInterface" title="Permalink to this definition"></a></dt>
+<dd><p>Specify a solver interface to be used when solving the L2 projection
+onto the feasible set of the MathematicalProgram it’s being used to
+solve.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.solvers.PyFunctionConstraint">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.solvers.</span></span><span class="sig-name descname"><span class="pre">PyFunctionConstraint</span></span><a class="headerlink" href="#pydrake.solvers.PyFunctionConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.Constraint" title="pydrake.solvers.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></a></p>
