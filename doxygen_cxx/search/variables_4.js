@@ -11,7 +11,7 @@ var searchData=
   ['env_5fcollision_5fpadding',['env_collision_padding',['../structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226',1,'drake::planning::CollisionCheckerParams']]],
   ['env_5fpadding',['env_padding',['../structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#ad97eac1aabdf303df62851accf84d131',1,'drake::planning::test::CollisionCheckerConstructionParams']]],
   ['environment_5fmap',['environment_map',['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ad84a8836b437a560f61b53e899a80fc4',1,'drake::geometry::RenderEngineVtkParams']]],
-  ['epsilon',['epsilon',['../classdrake_1_1planning_1_1_iris_zo_options.html#a4904cc82627458fdf6672ccc0b2802c7',1,'drake::planning::IrisZoOptions']]],
+  ['epsilon',['epsilon',['../classdrake_1_1planning_1_1_common_sampled_iris_options.html#a4904cc82627458fdf6672ccc0b2802c7',1,'drake::planning::CommonSampledIrisOptions']]],
   ['error',['error',['../structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685',1,'drake::RlocationOrError']]],
   ['error_5fcode',['error_code',['../structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78',1,'drake::solvers::GurobiSolverDetails']]],
   ['error_5frecords_5f',['error_records_',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html#ad51b5b573600baeee3cfc55edb39482e',1,'drake::test::DiagnosticPolicyTestBase']]],

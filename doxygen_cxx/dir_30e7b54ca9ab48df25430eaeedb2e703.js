@@ -10,6 +10,7 @@ var dir_30e7b54ca9ab48df25430eaeedb2e703 =
     [ "contact_solver.h", "contact__solver_8h.html", "contact__solver_8h" ],
     [ "contact_solver_results.h", "contact__solver__results_8h.html", "contact__solver__results_8h" ],
     [ "contact_solver_utils.h", "contact__solver__utils_8h.html", null ],
+    [ "eigen_block_3x3_sparse_symmetric_matrix.h", "eigen__block__3x3__sparse__symmetric__matrix_8h.html", null ],
     [ "linear_operator.h", "linear__operator_8h.html", "linear__operator_8h" ],
     [ "matrix_block.h", "matrix__block_8h.html", null ],
     [ "minimum_degree_ordering.h", "minimum__degree__ordering_8h.html", null ],

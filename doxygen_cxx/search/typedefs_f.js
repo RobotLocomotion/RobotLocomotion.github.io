@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['parameterizationfunction',['ParameterizationFunction',['../classdrake_1_1planning_1_1_iris_zo_options.html#a6b49fe87ea09ecac5be69ce6f550d83e',1,'drake::planning::IrisZoOptions']]],
+  ['parameterizationfunction',['ParameterizationFunction',['../classdrake_1_1planning_1_1_iris_parameterization_function.html#a6b49fe87ea09ecac5be69ce6f550d83e',1,'drake::planning::IrisParameterizationFunction']]],
   ['pattern',['Pattern',['../namespacedrake_1_1symbolic.html#aeb27ddf30420e620beb8e6725d83208f',1,'drake::symbolic']]],
   ['physicalmodelpointervariant',['PhysicalModelPointerVariant',['../namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9',1,'drake::multibody']]],
   ['pointermap',['PointerMap',['../classdrake_1_1systems_1_1_dependency_tracker.html#a7f2d7cb826a1609573105b5e5b094bab',1,'drake::systems::DependencyTracker']]],

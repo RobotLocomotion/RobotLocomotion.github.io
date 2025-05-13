@@ -2,9 +2,9 @@ var classdrake_1_1multibody_1_1_spatial_vector =
 [
     [ "CoeffsEigenType", "classdrake_1_1multibody_1_1_spatial_vector.html#a5783654d7b96144dd0f50344fbfc909d", null ],
     [ "SpatialQuantity", "classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c", null ],
-    [ "kSpatialVectorSize", "classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a38ca6e91f04c4a5339893a4461e2985a", null ],
-    [ "kRotationSize", "classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a1e16824cb2e47cdb67d49d3d8fb18adc", null ],
-    [ "kTranslationSize", "classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a132f1d424bdc477e9a068a3804743afc", null ],
+    [ "kSpatialVectorSize", "classdrake_1_1multibody_1_1_spatial_vector.html#a99fb83031ce9923c84392b4e92f956b5a38ca6e91f04c4a5339893a4461e2985a", null ],
+    [ "kRotationSize", "classdrake_1_1multibody_1_1_spatial_vector.html#a99fb83031ce9923c84392b4e92f956b5a1e16824cb2e47cdb67d49d3d8fb18adc", null ],
+    [ "kTranslationSize", "classdrake_1_1multibody_1_1_spatial_vector.html#a99fb83031ce9923c84392b4e92f956b5a132f1d424bdc477e9a068a3804743afc", null ],
     [ "SpatialVector", "classdrake_1_1multibody_1_1_spatial_vector.html#a7519ac8ffeab83f9f99992265b5f5db7", null ],
     [ "SpatialVector", "classdrake_1_1multibody_1_1_spatial_vector.html#a55ef3f82fae301899d9bb544a7ea2de0", null ],
     [ "SpatialVector", "classdrake_1_1multibody_1_1_spatial_vector.html#a7ef3ca98bf83a4e8ee30147de1ce201d", null ],

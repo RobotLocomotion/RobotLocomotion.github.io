@@ -1630,6 +1630,166 @@ reports a collision.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">CommonSampledIrisOptions</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.CommonSampledIrisOptions" title="pydrake.planning.CommonSampledIrisOptions"><span class="pre">pydrake.planning.CommonSampledIrisOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.configuration_space_margin">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configuration_space_margin</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.configuration_space_margin" title="Permalink to this definition"></a></dt>
+<dd><p>We retreat by this margin from each C-space obstacle in order to avoid
+the possibility of requiring an infinite number of faces to
+approximate a curved boundary.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.containment_points">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">containment_points</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.containment_points" title="Permalink to this definition"></a></dt>
+<dd><p>Points that are guaranteed to be contained in the final region
+provided their convex hull is collision free. Note that if the
+containment points are closer than configuration_margin to an obstacle
+we will relax the margin in favor of including the containment points.
+The matrix <code class="docutils literal notranslate"><span class="pre">containment_points</span></code> is expected to be of the shape
+dimension times number of points. IrisZo throws if the center of the
+starting ellipsoid is not contained in the convex hull of these
+containment points.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.delta">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delta</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.delta" title="Permalink to this definition"></a></dt>
+<dd><p>Upper bound on the probability the returned region has a
+fraction-in-collision greater than <code class="docutils literal notranslate"><span class="pre">epsilon</span></code>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.epsilon">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epsilon</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.epsilon" title="Permalink to this definition"></a></dt>
+<dd><p>Admissible fraction of the region volume allowed to be in collision.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.max_iterations">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.max_iterations" title="Permalink to this definition"></a></dt>
+<dd><p>Maximum number of alternations between the ellipsoid and the
+separating planes step (a.k.a. outer iterations).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.max_iterations_separating_planes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations_separating_planes</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.max_iterations_separating_planes" title="Permalink to this definition"></a></dt>
+<dd><p>Maximum number of rounds of adding faces to the polytope per outer
+iteration.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.max_separating_planes_per_iteration">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_separating_planes_per_iteration</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.max_separating_planes_per_iteration" title="Permalink to this definition"></a></dt>
+<dd><p>Maximum number of faces to add per inner iteration. Setting the value
+to -1 means there is no limit to the number of faces that can be
+added.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.mixing_steps">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mixing_steps</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.mixing_steps" title="Permalink to this definition"></a></dt>
+<dd><p>Number of mixing steps used for hit-and-run sampling.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.num_particles">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_particles</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.num_particles" title="Permalink to this definition"></a></dt>
+<dd><p>Number of particles used to estimate the closest collision.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.parallelism">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelism</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.parallelism" title="Permalink to this definition"></a></dt>
+<dd><p>Number of threads to use when updating the particles. If the user
+requests more threads than the CollisionChecker supports, that number
+of threads will be used instead. However, see also
+<code class="docutils literal notranslate"><span class="pre">parameterization_is_threadsafe</span></code>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.prog_with_additional_constraints">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prog_with_additional_constraints</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.prog_with_additional_constraints" title="Permalink to this definition"></a></dt>
+<dd><p>By default, IRIS-ZO only considers collision avoidance constraints.
+This option can be used to pass additional constraints that should be
+satisfied by the output region. We accept these in the form of a
+MathematicalProgram:</p>
+<p>find q subject to g(q) ≤ 0.</p>
+<p>The decision_variables() for the program are taken to define <code class="docutils literal notranslate"><span class="pre">q</span></code>.
+IRIS-ZO will silently ignore any costs in
+<code class="docutils literal notranslate"><span class="pre">prog_with_additional_constraints</span></code>. If any constraints are not
+threadsafe, then <code class="docutils literal notranslate"><span class="pre">parallelism</span></code> will be overridden, and only one
+thread will be used.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the user has specified a parameterization, then these
+constraints are imposed on the points in the parameterized space
+Q, not the configuration space C.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Internally, these constraints are checked after collisions
+checking is performed.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.random_seed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">random_seed</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.random_seed" title="Permalink to this definition"></a></dt>
+<dd><p>This option sets the random seed for random sampling throughout the
+algorithm.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.relative_termination_threshold">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">relative_termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.relative_termination_threshold" title="Permalink to this definition"></a></dt>
+<dd><p>IRIS will terminate if the change in the <em>volume</em> of the
+hyperellipsoid between iterations is less that this percent of the
+previous best volume. This termination condition can be disabled by
+setting to a negative value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.require_sample_point_is_contained">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">require_sample_point_is_contained</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.require_sample_point_is_contained" title="Permalink to this definition"></a></dt>
+<dd><p>The initial polytope is guaranteed to contain the point if that point
+is collision-free.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.tau">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tau</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.tau" title="Permalink to this definition"></a></dt>
+<dd><p>Decision threshold for the unadaptive test. Choosing a small value
+increases both the cost and the power of the statistical test.
+Increasing the value of <code class="docutils literal notranslate"><span class="pre">tau</span></code> makes running an individual test
+cheaper but decreases its power to accept a polytope. We find choosing
+a value of 0.5 a good trade-off.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.termination_threshold">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.termination_threshold" title="Permalink to this definition"></a></dt>
+<dd><p>IRIS will terminate if the change in the <em>volume</em> of the
+hyperellipsoid between iterations is less that this threshold. This
+termination condition can be disabled by setting to a negative value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.planning.CommonSampledIrisOptions.verbose">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#pydrake.planning.CommonSampledIrisOptions.verbose" title="Permalink to this definition"></a></dt>
+<dd><p>Enables print statements indicating the progress of IrisZo.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.DirectCollocation">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">DirectCollocation</span></span><a class="headerlink" href="#pydrake.planning.DirectCollocation" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.planning.MultipleShooting" title="pydrake.planning.MultipleShooting"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.MultipleShooting</span></code></a></p>
@@ -3555,9 +3715,120 @@ will throw if <code class="docutils literal notranslate"><span class="pre">max_c
 problem.</p>
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.IrisParameterizationFunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisParameterizationFunction</span></span><a class="headerlink" href="#pydrake.planning.IrisParameterizationFunction" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.IrisParameterizationFunction.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.IrisParameterizationFunction.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.planning.IrisParameterizationFunction) -&gt; None</p></li>
+</ol>
+<p>Default constructor – returns the identity mapping, which is
+threadsafe and compatible with any dimension configuration space.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.planning.IrisParameterizationFunction, parameterization: Callable[[numpy.ndarray[numpy.float64[m, 1]]], numpy.ndarray[numpy.float64[m, 1]]], dimension: int) -&gt; None</p></li>
+</ol>
+<p>Ordinarily, IRIS algorithms grow collision free regions in the robot’s
+configuration space C. This allows the user to specify a function
+f:Q→C , and grow the region in Q instead. The function should be a map
+R^m to R^n, where n is the dimension of the plant configuration space,
+determined via <code class="docutils literal notranslate"><span class="pre">checker.plant().num_positions()</span></code> and m is
+<code class="docutils literal notranslate"><span class="pre">parameterization_dimension</span></code> if specified. The user must provide
+<code class="docutils literal notranslate"><span class="pre">parameterization</span></code>, which is the function f,
+<code class="docutils literal notranslate"><span class="pre">parameterization_is_threadsafe</span></code>, which is whether or not
+<code class="docutils literal notranslate"><span class="pre">parameterization</span></code> can be called concurrently, and
+<code class="docutils literal notranslate"><span class="pre">parameterization_dimension</span></code>, the dimension of the input space Q.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Due to the GIL, it is inefficient to call a Python function
+concurrently across multiple C++ threads. Therefore, the
+parameterization setter function automatically sets threadsafe to false.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.planning.IrisParameterizationFunction, expression_parameterization: numpy.ndarray[object[m, 1]], variables: numpy.ndarray[object[m, 1]]) -&gt; None</p></li>
+</ol>
+<p>Alternative constructor that allows the user to define the
+parameterization using a <code class="docutils literal notranslate"><span class="pre">VectorX&lt;Expression&gt;</span></code>. The user must also
+provide a vector containing the variables used in
+<code class="docutils literal notranslate"><span class="pre">expression_parameterization</span></code>, in the order that they should be
+evaluated. Each <code class="docutils literal notranslate"><span class="pre">Variable</span></code> in <code class="docutils literal notranslate"><span class="pre">variables</span></code> must be used, each
+<code class="docutils literal notranslate"><span class="pre">Variable</span></code> used in <code class="docutils literal notranslate"><span class="pre">expression_parameterization</span></code> must appear in
+<code class="docutils literal notranslate"><span class="pre">variables</span></code>, and there must be no duplicates in <code class="docutils literal notranslate"><span class="pre">variables</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Expression parameterizations are always threadsafe.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>if the number of variables used across</strong> – </p></li>
+<li><p><strong>expression_parameterization` does not matc</strong> – </p></li>
+<li><p><strong>ssize</strong><strong>(</strong><strong>variables</strong><strong>)</strong><strong>`</strong> – </p></li>
+<li><p><strong>if any variables in expression_parameterization are not listed</strong> – </p></li>
+<li><p><strong>in variables.</strong> – </p></li>
+<li><p><strong>if any variables in variables are not used anywhere in</strong> – </p></li>
+<li><p><strong>expression_parameterization`</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>__init__(self: pydrake.planning.IrisParameterizationFunction, kin: pydrake.multibody.rational.RationalForwardKinematics, q_star_val: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
+</ol>
+<p>Constructs an instance of IrisParameterizationFunction that handles a
+rational kinematic parameterization. Regions are grown in the <code class="docutils literal notranslate"><span class="pre">s</span></code>
+variables, so as to minimize collisions in the <code class="docutils literal notranslate"><span class="pre">q</span></code> variables. See
+RationalForwardKinematics for details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The user is responsible for ensuring <code class="docutils literal notranslate"><span class="pre">kin</span></code> (and the underlying
+MultibodyPlant it is built on) is kept alive. If that object is
+deleted, then the parameterization can no longer be used.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.IrisParameterizationFunction.get_parameterization">
+<span class="sig-name descname"><span class="pre">get_parameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisParameterizationFunction" title="pydrake.planning.IrisParameterizationFunction"><span class="pre">pydrake.planning.IrisParameterizationFunction</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.IrisParameterizationFunction.get_parameterization" title="Permalink to this definition"></a></dt>
+<dd><p>Get the parameterization function.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the user has not specified this with
+<code class="docutils literal notranslate"><span class="pre">set_parameterization()</span></code>, then the default value of
+<code class="docutils literal notranslate"><span class="pre">parameterization_</span></code> is the identity function, indicating that
+the regions should be grown in the full configuration space (in
+the standard coordinate system).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.IrisParameterizationFunction.get_parameterization_dimension">
+<span class="sig-name descname"><span class="pre">get_parameterization_dimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisParameterizationFunction" title="pydrake.planning.IrisParameterizationFunction"><span class="pre">pydrake.planning.IrisParameterizationFunction</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.IrisParameterizationFunction.get_parameterization_dimension" title="Permalink to this definition"></a></dt>
+<dd><p>Returns what the user has specified as the input dimension for the
+parameterization function, or std::nullopt if it has not been set. A
+std::nullopt value indicates that IrisZo should use the ambient
+configuration space dimension as the input dimension to the
+parameterization.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.IrisParameterizationFunction.get_parameterization_is_threadsafe">
+<span class="sig-name descname"><span class="pre">get_parameterization_is_threadsafe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisParameterizationFunction" title="pydrake.planning.IrisParameterizationFunction"><span class="pre">pydrake.planning.IrisParameterizationFunction</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.IrisParameterizationFunction.get_parameterization_is_threadsafe" title="Permalink to this definition"></a></dt>
+<dd><p>Returns whether or not the user has specified the parameterization to
+be threadsafe.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default <code class="docutils literal notranslate"><span class="pre">parameterization_</span></code> is the identity function, which
+is threadsafe.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.planning.IrisZo">
-<span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisZo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><span class="pre">pydrake.planning.CollisionChecker</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_ellipsoid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Hyperellipsoid" title="pydrake.geometry.optimization.Hyperellipsoid"><span class="pre">pydrake.geometry.optimization.Hyperellipsoid</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">IrisZoOptions(num_particles=1000,</span> <span class="pre">tau=0.5,</span> <span class="pre">delta=0.05,</span> <span class="pre">epsilon=0.01,</span> <span class="pre">max_iterations=3,</span> <span class="pre">max_iterations_separating_planes=20,</span> <span class="pre">max_separating_planes_per_iteration=-</span> <span class="pre">1,</span> <span class="pre">bisection_steps=10,</span> <span class="pre">parallelism=Parallelism(num_threads=16),</span> <span class="pre">verbose=False,</span> <span class="pre">require_sample_point_is_contained=True,</span> <span class="pre">configuration_space_margin=0.01,</span> <span class="pre">termination_threshold=0.02,</span> <span class="pre">relative_termination_threshold=0.001,</span> <span class="pre">random_seed=1234,</span> <span class="pre">mixing_steps=50)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></span><a class="headerlink" href="#pydrake.planning.IrisZo" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">IrisZo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.CollisionChecker" title="pydrake.planning.CollisionChecker"><span class="pre">pydrake.planning.CollisionChecker</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_ellipsoid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Hyperellipsoid" title="pydrake.geometry.optimization.Hyperellipsoid"><span class="pre">pydrake.geometry.optimization.Hyperellipsoid</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">IrisZoOptions(bisection_steps=10,</span> <span class="pre">sampled_iris_options=CommonSampledIrisOptions(num_particles=1000,</span> <span class="pre">tau=0.5,</span> <span class="pre">delta=0.05,</span> <span class="pre">epsilon=0.01,</span> <span class="pre">max_iterations=3,</span> <span class="pre">max_iterations_separating_planes=20,</span> <span class="pre">max_separating_planes_per_iteration=10,</span> <span class="pre">parallelism=Parallelism(num_threads=16),</span> <span class="pre">verbose=False,</span> <span class="pre">require_sample_point_is_contained=True,</span> <span class="pre">configuration_space_margin=0.01,</span> <span class="pre">termination_threshold=0.02,</span> <span class="pre">relative_termination_threshold=0.001,</span> <span class="pre">random_seed=1234,</span> <span class="pre">mixing_steps=50))</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron" title="pydrake.geometry.optimization.HPolyhedron"><span class="pre">pydrake.geometry.optimization.HPolyhedron</span></a></span></span><a class="headerlink" href="#pydrake.planning.IrisZo" title="Permalink to this definition"></a></dt>
 <dd><p>The IRIS-ZO (Iterative Regional Inflation by Semidefinite programming
 - Zero Order) algorithm, as described in</p>
 <p>P. Werner, T. Cohn*, R. H. Jiang*, T. Seyde, M. Simchowitz, R.
@@ -3644,248 +3915,17 @@ time.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.configuration_space_margin">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configuration_space_margin</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.configuration_space_margin" title="Permalink to this definition"></a></dt>
-<dd><p>We retreat by this margin from each C-space obstacle in order to avoid
-the possibility of requiring an infinite number of faces to
-approximate a curved boundary.</p>
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.parameterization">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameterization</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.parameterization" title="Permalink to this definition"></a></dt>
+<dd><p>Parameterization of the subspace along which to grow the region.
+Default is the identity parameterization, corresponding to growing
+regions in the ordinary configuration space.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.containment_points">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">containment_points</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.containment_points" title="Permalink to this definition"></a></dt>
-<dd><p>Points that are guaranteed to be contained in the final region
-provided their convex hull is collision free. Note that if the
-containment points are closer than configuration_margin to an obstacle
-we will relax the margin in favor of including the containment points.
-The matrix <code class="docutils literal notranslate"><span class="pre">containment_points</span></code> is expected to be of the shape
-dimension times number of points. IrisZo throws if the center of the
-starting ellipsoid is not contained in the convex hull of these
-containment points.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.CreateWithRationalKinematicParameterization">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CreateWithRationalKinematicParameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.rational.html#pydrake.multibody.rational.RationalForwardKinematics" title="pydrake.multibody.rational.RationalForwardKinematics"><span class="pre">pydrake.multibody.rational.RationalForwardKinematics</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_star_val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.CreateWithRationalKinematicParameterization" title="Permalink to this definition"></a></dt>
-<dd><p>Constructs an instance of IrisZoOptions that handles a rational
-kinematic parameterization. Regions are grown in the <code class="docutils literal notranslate"><span class="pre">s</span></code> variables,
-so as to minimize collisions in the <code class="docutils literal notranslate"><span class="pre">q</span></code> variables. See
-RationalForwardKinematics for details.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The user is responsible for ensuring <code class="docutils literal notranslate"><span class="pre">kin</span></code> (and the underlying
-MultibodyPlant it is built on) is kept alive. If that object is
-deleted, then the parametrization can no longer be used.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.delta">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delta</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.delta" title="Permalink to this definition"></a></dt>
-<dd><p>Upper bound on the probability the returned region has a
-fraction-in-collision greater than <code class="docutils literal notranslate"><span class="pre">epsilon</span></code>.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.epsilon">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epsilon</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.epsilon" title="Permalink to this definition"></a></dt>
-<dd><p>Admissible fraction of the region volume allowed to be in collision.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.get_parameterization">
-<span class="sig-name descname"><span class="pre">get_parameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.get_parameterization" title="Permalink to this definition"></a></dt>
-<dd><p>Get the parameterization function.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If the user has not specified this with
-<code class="docutils literal notranslate"><span class="pre">set_parameterization()</span></code>, then the default value of
-<code class="docutils literal notranslate"><span class="pre">parameterization_</span></code> is the identity function, indicating that
-the regions should be grown in the full configuration space (in
-the standard coordinate system).</p>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.get_parameterization_dimension">
-<span class="sig-name descname"><span class="pre">get_parameterization_dimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.get_parameterization_dimension" title="Permalink to this definition"></a></dt>
-<dd><p>Returns what the user has specified as the input dimension for the
-parameterization function, or std::nullopt if it has not been set. A
-std::nullopt value indicates that IrisZo should use the ambient
-configuration space dimension as the input dimension to the
-parameterization.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.get_parameterization_is_threadsafe">
-<span class="sig-name descname"><span class="pre">get_parameterization_is_threadsafe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.get_parameterization_is_threadsafe" title="Permalink to this definition"></a></dt>
-<dd><p>Returns whether or not the user has specified the parameterization to
-be threadsafe.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The default <code class="docutils literal notranslate"><span class="pre">parameterization_</span></code> is the identity function, which
-is threadsafe.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.max_iterations">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.max_iterations" title="Permalink to this definition"></a></dt>
-<dd><p>Maximum number of alternations between the ellipsoid and the
-separating planes step (a.k.a. outer iterations).</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.max_iterations_separating_planes">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations_separating_planes</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.max_iterations_separating_planes" title="Permalink to this definition"></a></dt>
-<dd><p>Maximum number of rounds of adding faces to the polytope per outer
-iteration.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.max_separating_planes_per_iteration">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_separating_planes_per_iteration</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.max_separating_planes_per_iteration" title="Permalink to this definition"></a></dt>
-<dd><p>Maximum number of faces to add per inner iteration. Setting the value
-to -1 means there is no limit to the number of faces that can be
-added.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.mixing_steps">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mixing_steps</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.mixing_steps" title="Permalink to this definition"></a></dt>
-<dd><p>Number of mixing steps used for hit-and-run sampling.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.num_particles">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_particles</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.num_particles" title="Permalink to this definition"></a></dt>
-<dd><p>Number of particles used to estimate the closest collision.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.parallelism">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parallelism</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.parallelism" title="Permalink to this definition"></a></dt>
-<dd><p>Number of threads to use when updating the particles. If the user
-requests more threads than the CollisionChecker supports, that number
-of threads will be used instead. However, see also
-<code class="docutils literal notranslate"><span class="pre">parameterization_is_threadsafe</span></code>.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.prog_with_additional_constraints">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prog_with_additional_constraints</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.prog_with_additional_constraints" title="Permalink to this definition"></a></dt>
-<dd><p>By default, IRIS-ZO only considers collision avoidance constraints.
-This option can be used to pass additional constraints that should be
-satisfied by the output region. We accept these in the form of a
-MathematicalProgram:</p>
-<p>find q subject to g(q) ≤ 0.</p>
-<p>The decision_variables() for the program are taken to define <code class="docutils literal notranslate"><span class="pre">q</span></code>.
-IRIS-ZO will silently ignore any costs in
-<code class="docutils literal notranslate"><span class="pre">prog_with_additional_constraints</span></code>. If any constraints are not
-threadsafe, then <code class="docutils literal notranslate"><span class="pre">parallelism</span></code> will be overridden, and only one
-thread will be used.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If the user has specified a parameterization, then these
-constraints are imposed on the points in the parameterized space
-Q, not the configuration space C.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Internally, these constraints are checked after collisions
-checking is performed.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.random_seed">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">random_seed</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.random_seed" title="Permalink to this definition"></a></dt>
-<dd><p>This option sets the random seed for random sampling throughout the
-algorithm.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.relative_termination_threshold">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">relative_termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.relative_termination_threshold" title="Permalink to this definition"></a></dt>
-<dd><p>IRIS will terminate if the change in the <em>volume</em> of the
-hyperellipsoid between iterations is less that this percent of the
-previous best volume. This termination condition can be disabled by
-setting to a negative value.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.require_sample_point_is_contained">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">require_sample_point_is_contained</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.require_sample_point_is_contained" title="Permalink to this definition"></a></dt>
-<dd><p>The initial polytope is guaranteed to contain the point if that point
-is collision-free.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.set_parameterization">
-<span class="sig-name descname"><span class="pre">set_parameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameterization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameterization_dimension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.set_parameterization" title="Permalink to this definition"></a></dt>
-<dd><p>Ordinarily, IRIS-ZO grows collision free regions in the robot’s
-configuration space C. This allows the user to specify a function
-f:Q→C , and grow the region in Q instead. The function should be a map
-R^m to R^n, where n is the dimension of the plant configuration space,
-determined via <code class="docutils literal notranslate"><span class="pre">checker.plant().num_positions()</span></code> and m is
-<code class="docutils literal notranslate"><span class="pre">parameterization_dimension</span></code> if specified. The user must provide
-<code class="docutils literal notranslate"><span class="pre">parameterization</span></code>, which is the function f,
-<code class="docutils literal notranslate"><span class="pre">parameterization_is_threadsafe</span></code>, which is whether or not
-<code class="docutils literal notranslate"><span class="pre">parametrization</span></code> can be called concurrently, and
-<code class="docutils literal notranslate"><span class="pre">parameterization_dimension</span></code>, the dimension of the input space Q.&#64;note Due to GIL, it is inefficient to call a python function concurrently across multiple C++ threads. So the parameterization setter function automatically sets threadsafe to false</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.SetParameterizationFromExpression">
-<span class="sig-name descname"><span class="pre">SetParameterizationFromExpression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.IrisZoOptions" title="pydrake.planning.IrisZoOptions"><span class="pre">pydrake.planning.IrisZoOptions</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">expression_parameterization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.SetParameterizationFromExpression" title="Permalink to this definition"></a></dt>
-<dd><p>Alternative to <code class="docutils literal notranslate"><span class="pre">set_parameterization</span></code> that allows the user to define
-the parameterization using a <code class="docutils literal notranslate"><span class="pre">VectorX&lt;Expression&gt;</span></code>. The user must
-also provide a vector containing the variables used in
-<code class="docutils literal notranslate"><span class="pre">expression_parameterization</span></code>, in the order that they should be
-evaluated. Each <code class="docutils literal notranslate"><span class="pre">Variable</span></code> in <code class="docutils literal notranslate"><span class="pre">variables</span></code> must be used, each
-<code class="docutils literal notranslate"><span class="pre">Variable</span></code> used in <code class="docutils literal notranslate"><span class="pre">expression_parameterization</span></code> must appear in
-<code class="docutils literal notranslate"><span class="pre">variables</span></code>, and there must be no duplicates in <code class="docutils literal notranslate"><span class="pre">variables</span></code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Expression parameterizations are always threadsafe.</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>if the number of variables used across</strong> – </p></li>
-<li><p><strong>expression_parameterization` does not matc</strong> – </p></li>
-<li><p><strong>ssize</strong><strong>(</strong><strong>variables</strong><strong>)</strong><strong>`</strong> – </p></li>
-<li><p><strong>if any variables in expression_parameterization are not listed</strong> – </p></li>
-<li><p><strong>in variables.</strong> – </p></li>
-<li><p><strong>if any variables in variables are not used anywhere in</strong> – </p></li>
-<li><p><strong>expression_parameterization`</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.tau">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tau</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.tau" title="Permalink to this definition"></a></dt>
-<dd><p>Decision threshold for the unadaptive test. Choosing a small value
-increases both the cost and the power statistical test. Increasing the
-value of <code class="docutils literal notranslate"><span class="pre">tau</span></code> makes running an individual test cheaper but
-decreases its power to accept a polytope. We find choosing a value of
-0.5 a good trade-off.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.termination_threshold">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">termination_threshold</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.termination_threshold" title="Permalink to this definition"></a></dt>
-<dd><p>IRIS will terminate if the change in the <em>volume</em> of the
-hyperellipsoid between iterations is less that this threshold. This
-termination condition can be disabled by setting to a negative value.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.verbose">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.verbose" title="Permalink to this definition"></a></dt>
-<dd><p>Enables print statements indicating the progress of IrisZo.</p>
+<dt class="sig sig-object py" id="pydrake.planning.IrisZoOptions.sampled_iris_options">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sampled_iris_options</span></span><a class="headerlink" href="#pydrake.planning.IrisZoOptions.sampled_iris_options" title="Permalink to this definition"></a></dt>
+<dd><p>Options pertaining to the sampling and temrination conditions.</p>
 </dd></dl>
 
 </dd></dl>

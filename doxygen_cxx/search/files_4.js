@@ -2,6 +2,7 @@ var searchData=
 [
   ['edge_5fmeasure_2eh',['edge_measure.h',['../edge__measure_8h.html',1,'']]],
   ['eigen_5fautodiff_5ftypes_2eh',['eigen_autodiff_types.h',['../eigen__autodiff__types_8h.html',1,'']]],
+  ['eigen_5fblock_5f3x3_5fsparse_5fsymmetric_5fmatrix_2eh',['eigen_block_3x3_sparse_symmetric_matrix.h',['../eigen__block__3x3__sparse__symmetric__matrix_8h.html',1,'']]],
   ['eigen_5fmatrix_5fcompare_2eh',['eigen_matrix_compare.h',['../eigen__matrix__compare_8h.html',1,'']]],
   ['eigen_5fprinter_2eh',['eigen_printer.h',['../eigen__printer_8h.html',1,'']]],
   ['eigen_5fpybind_2eh',['eigen_pybind.h',['../eigen__pybind_8h.html',1,'']]],
