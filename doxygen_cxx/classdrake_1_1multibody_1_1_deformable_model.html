@@ -262,6 +262,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1fbbceb086e5b356101ff99949aaa0d3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a319faaf6ac907f922a1b51dd3d32325a">MultibodyConstraintId</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a1fbbceb086e5b356101ff99949aaa0d3">fixed_constraint_ids</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:a1fbbceb086e5b356101ff99949aaa0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a reference to the all ids of fixed constraints registered with the deformable body with the given <code>id</code>.  <a href="#a1fbbceb086e5b356101ff99949aaa0d3">More...</a><br /></td></tr>
 <tr class="separator:a1fbbceb086e5b356101ff99949aaa0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac97d6938ab6b290266ca3d961ee0c513"><td class="memItemLeft" align="right" valign="top">const multibody::fem::internal::DiscreteTimeIntegrator&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ac97d6938ab6b290266ca3d961ee0c513">integrator</a> () const</td></tr>
+<tr class="memdesc:ac97d6938ab6b290266ca3d961ee0c513"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the time integrator used to for all FemModels in this model.  <a href="#ac97d6938ab6b290266ca3d961ee0c513">More...</a><br /></td></tr>
+<tr class="separator:ac97d6938ab6b290266ca3d961ee0c513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae48e04215f73edc66de1f732e4968899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">systems::OutputPortIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ae48e04215f73edc66de1f732e4968899">configuration_output_port_index</a> () const</td></tr>
 <tr class="memdesc:ae48e04215f73edc66de1f732e4968899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port index of the vertex positions port for all registered deformable bodies.  <a href="#ae48e04215f73edc66de1f732e4968899">More...</a><br /></td></tr>
 <tr class="separator:ae48e04215f73edc66de1f732e4968899"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1060,6 +1063,31 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 </div><div class="memdoc">
 
 <p>(Internal use only) Returns the true iff the deformable body with the given <code>id</code> has constraints associated with it. </p>
+
+</div>
+</div>
+<a id="ac97d6938ab6b290266ca3d961ee0c513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac97d6938ab6b290266ca3d961ee0c513">&#9670;&nbsp;</a></span>integrator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const multibody::fem::internal::DiscreteTimeIntegrator&lt;T&gt;&amp; integrator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns the time integrator used to for all FemModels in this model. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the integrator hasn't been set. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

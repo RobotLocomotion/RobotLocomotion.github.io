@@ -1,4 +1,4 @@
 var acceleration__newmark__scheme_8h =
 [
-    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS", "acceleration__newmark__scheme_8h.html#a72a2c00b4991b6b936c6a012f1900f87", null ]
+    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "acceleration__newmark__scheme_8h.html#a221a2ff3c9fbae70d3b9b1b50130c9f5", null ]
 ];

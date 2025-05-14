@@ -10,7 +10,7 @@ var searchData=
   ['timevaryingaffinesystem',['TimeVaryingAffineSystem',['../classdrake_1_1systems_1_1_time_varying_affine_system.html',1,'drake::systems']]],
   ['timevaryinglinearsystem',['TimeVaryingLinearSystem',['../classdrake_1_1systems_1_1_time_varying_linear_system.html',1,'drake::systems']]],
   ['toppra',['Toppra',['../classdrake_1_1multibody_1_1_toppra.html',1,'drake::multibody']]],
-  ['traits',['Traits',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html',1,'Traits&lt; S &gt;'],['../classtraits.html',1,'traits']]],
+  ['traits',['traits',['../classtraits.html',1,'traits'],['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html',1,'Traits&lt; S &gt;']]],
   ['traits_3c_20drake_3a_3amultibody_3a_3ameshcat_3a_3acontactvisualizer_20_3e',['Traits&lt; drake::multibody::meshcat::ContactVisualizer &gt;',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1meshcat_1_1_contact_visualizer_01_4.html',1,'drake::systems::scalar_conversion']]],
   ['traits_3c_20examples_3a_3arimless_5fwheel_3a_3arimlesswheel_20_3e',['Traits&lt; examples::rimless_wheel::RimlessWheel &gt;',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html',1,'drake::systems::scalar_conversion']]],
   ['traits_3c_20geometry_3a_3adrakevisualizer_20_3e',['Traits&lt; geometry::DrakeVisualizer &gt;',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html',1,'drake::systems::scalar_conversion']]],

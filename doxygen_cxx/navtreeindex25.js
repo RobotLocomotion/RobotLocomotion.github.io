@@ -1,5 +1,7 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1planning_1_1_collision_checker.html#abe50f03a06f61840b6c7bb3572290f8a":[1,4,2,2,1,58],
+"classdrake_1_1planning_1_1_collision_checker.html#abf9f38d4551063f5871e7d88d1b4f449":[1,4,2,2,1,3],
 "classdrake_1_1planning_1_1_collision_checker.html#ac60fa98836f3dac1975ebc8f7a68b223":[1,4,2,2,1,60],
 "classdrake_1_1planning_1_1_collision_checker.html#acb92e0e060e99a17ea72a57daba72251":[1,4,2,2,1,56],
 "classdrake_1_1planning_1_1_collision_checker.html#acc6b89337adab829567d9be3fe350517":[1,4,2,2,1,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_via_mip.html#adc639dd5f0b0489663d51a8bb3e7b391":[3,0,0,11,0,2,4],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html":[3,0,0,11,0,3],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a18dfeb5c73a4018374841c2ed557d440":[3,0,0,11,0,3,1],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a2c4c76fc276c73aab5b57ff96025ece0":[3,0,0,11,0,3,6],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a67d91926bee8d42ac96890804d5a4e9c":[3,0,0,11,0,3,5],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a80dacd714707bd5ee7907e8050dd0591":[3,0,0,11,0,3,0]
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_base.html#a2c4c76fc276c73aab5b57ff96025ece0":[3,0,0,11,0,3,6]
 };

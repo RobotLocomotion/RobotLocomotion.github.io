@@ -24,6 +24,7 @@ var classdrake_1_1multibody_1_1_deformable_model =
     [ "GetReferencePositions", "classdrake_1_1multibody_1_1_deformable_model.html#a4ddf03bd29da69359f022038999cb4ac", null ],
     [ "HasBodyNamed", "classdrake_1_1multibody_1_1_deformable_model.html#a89a198b6549e543018c7c9873d4e6dc1", null ],
     [ "HasConstraint", "classdrake_1_1multibody_1_1_deformable_model.html#aba11a421c05ac3fe0dec30c33cf6e244", null ],
+    [ "integrator", "classdrake_1_1multibody_1_1_deformable_model.html#ac97d6938ab6b290266ca3d961ee0c513", null ],
     [ "is_cloneable_to_autodiff", "classdrake_1_1multibody_1_1_deformable_model.html#a697327f87bef2705ce2682a5fcf876e4", null ],
     [ "is_cloneable_to_double", "classdrake_1_1multibody_1_1_deformable_model.html#ad7cbbe20841b68bac6481216b94e3501", null ],
     [ "is_cloneable_to_symbolic", "classdrake_1_1multibody_1_1_deformable_model.html#a0f356a4e007916eb25e4f0df6c17b9ca", null ],
