@@ -1458,6 +1458,14 @@ body B’s frame.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetBodyIds">
+<span class="sig-name descname"><span class="pre">GetBodyIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetBodyIds" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the DeformableIds of the bodies that belong to the given model
+instance. Returns the empty vector if no deformable bodies are
+registered with the given model instance.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetDiscreteStateIndex">
 <span class="sig-name descname"><span class="pre">GetDiscreteStateIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiscreteStateIndex" title="pydrake.systems.framework.DiscreteStateIndex"><span class="pre">pydrake.systems.framework.DiscreteStateIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetDiscreteStateIndex" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the discrete state index of the deformable body identified by
@@ -5483,12 +5491,20 @@ optionally be withheld using <code class="docutils literal notranslate"><span cl
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetBodiesKinematicallyAffectedBy">
 <span class="sig-name descname"><span class="pre">GetBodiesKinematicallyAffectedBy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_indexes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetBodiesKinematicallyAffectedBy" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all bodies whose kinematics are transitively affected by the
-given vector of Joints. The affected bodies are returned in increasing
-order of body indexes. Note that this is a kinematic relationship
-rather than a dynamic one. For example, if one of the inboard joints
-is a free (6dof) joint, the kinematic influence is still felt even
-though dynamically there would be no influence on the outboard body.
-This function can be only be called post-finalize, see Finalize().</p>
+given vector of Joints. This is a <em>kinematic</em> relationship rather than
+a dynamic one. It is is inherently a query on the topology of the
+plant’s modeled tree. Constraints are likewise not considered.</p>
+<p>The affected bodies are returned in increasing order of body indices.
+A body is included in the output if that body’s spatial velocity is
+affected by the generalized velocities v of one of the indicated
+joints.</p>
+<p>As such, there are some notable implications:</p>
+<p>1. If a body has an inboard free (6 dof) joint, it will be
+<em>kinematically</em> affected by joints further inboard, even though there
+might not be any dynamic influence on that body. 2. If the set of
+joints have no velocities (i.e., they are all weld (0 dof) joints),
+then, by definition, no bodies will be affected.</p>
+<p>This function can be only be called post-finalize, see Finalize().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11209,12 +11225,20 @@ optionally be withheld using <code class="docutils literal notranslate"><span cl
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetBodiesKinematicallyAffectedBy">
 <span id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetBodiesKinematicallyAffectedBy"></span><span class="sig-name descname"><span class="pre">GetBodiesKinematicallyAffectedBy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_indexes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetBodiesKinematicallyAffectedBy" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all bodies whose kinematics are transitively affected by the
-given vector of Joints. The affected bodies are returned in increasing
-order of body indexes. Note that this is a kinematic relationship
-rather than a dynamic one. For example, if one of the inboard joints
-is a free (6dof) joint, the kinematic influence is still felt even
-though dynamically there would be no influence on the outboard body.
-This function can be only be called post-finalize, see Finalize().</p>
+given vector of Joints. This is a <em>kinematic</em> relationship rather than
+a dynamic one. It is is inherently a query on the topology of the
+plant’s modeled tree. Constraints are likewise not considered.</p>
+<p>The affected bodies are returned in increasing order of body indices.
+A body is included in the output if that body’s spatial velocity is
+affected by the generalized velocities v of one of the indicated
+joints.</p>
+<p>As such, there are some notable implications:</p>
+<p>1. If a body has an inboard free (6 dof) joint, it will be
+<em>kinematically</em> affected by joints further inboard, even though there
+might not be any dynamic influence on that body. 2. If the set of
+joints have no velocities (i.e., they are all weld (0 dof) joints),
+then, by definition, no bodies will be affected.</p>
+<p>This function can be only be called post-finalize, see Finalize().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
@@ -16891,12 +16915,20 @@ optionally be withheld using <code class="docutils literal notranslate"><span cl
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetBodiesKinematicallyAffectedBy">
 <span id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetBodiesKinematicallyAffectedBy"></span><span class="sig-name descname"><span class="pre">GetBodiesKinematicallyAffectedBy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant_" title="pydrake.multibody.plant.MultibodyPlant_"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_indexes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex" title="pydrake.multibody.tree.JointIndex"><span class="pre">pydrake.multibody.tree.JointIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetBodiesKinematicallyAffectedBy" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all bodies whose kinematics are transitively affected by the
-given vector of Joints. The affected bodies are returned in increasing
-order of body indexes. Note that this is a kinematic relationship
-rather than a dynamic one. For example, if one of the inboard joints
-is a free (6dof) joint, the kinematic influence is still felt even
-though dynamically there would be no influence on the outboard body.
-This function can be only be called post-finalize, see Finalize().</p>
+given vector of Joints. This is a <em>kinematic</em> relationship rather than
+a dynamic one. It is is inherently a query on the topology of the
+plant’s modeled tree. Constraints are likewise not considered.</p>
+<p>The affected bodies are returned in increasing order of body indices.
+A body is included in the output if that body’s spatial velocity is
+affected by the generalized velocities v of one of the indicated
+joints.</p>
+<p>As such, there are some notable implications:</p>
+<p>1. If a body has an inboard free (6 dof) joint, it will be
+<em>kinematically</em> affected by joints further inboard, even though there
+might not be any dynamic influence on that body. 2. If the set of
+joints have no velocities (i.e., they are all weld (0 dof) joints),
+then, by definition, no bodies will be affected.</p>
+<p>This function can be only be called post-finalize, see Finalize().</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">

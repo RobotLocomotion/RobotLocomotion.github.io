@@ -3931,6 +3931,149 @@ regions in the ordinary configuration space.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">JointLimits</span></span><a class="headerlink" href="#pydrake.planning.JointLimits" title="Permalink to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.JointLimits.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.planning.JointLimits) -&gt; None</p></li>
+</ol>
+<p>Constructs a JointLimits with 0-length vectors for all limits.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.planning.JointLimits, plant: pydrake.multibody.plant.MultibodyPlant, require_finite_positions: bool = False, require_finite_velocities: bool = False, require_finite_accelerations: bool = False) -&gt; None</p></li>
+</ol>
+<p>Constructs a JointLimits using the position, velocity, and
+acceleration limits in the provided <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if plant is not finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if the position</strong><strong>, </strong><strong>velocity</strong><strong>, or </strong><strong>acceleration limits</strong> – </p></li>
+<li><p><strong>contain non-finite values</strong><strong>, </strong><strong>and the corresponding constructor</strong> – </p></li>
+<li><p><strong>argument is true.</strong> – </p></li>
+<li><p><strong>RuntimeError if any limits contain NaN values.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.planning.JointLimits, position_lower: numpy.ndarray[numpy.float64[m, 1]], position_upper: numpy.ndarray[numpy.float64[m, 1]], velocity_lower: numpy.ndarray[numpy.float64[m, 1]], velocity_upper: numpy.ndarray[numpy.float64[m, 1]], acceleration_lower: numpy.ndarray[numpy.float64[m, 1]], acceleration_upper: numpy.ndarray[numpy.float64[m, 1]], require_finite_positions: bool = False, require_finite_velocities: bool = False, require_finite_accelerations: bool = False) -&gt; None</p></li>
+</ol>
+<p>Constructs a JointLimits using the provided arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the position</strong><strong>, </strong><strong>velocity</strong><strong>, or </strong><strong>acceleration limits</strong> – </p></li>
+<li><p><strong>contain non-finite values</strong><strong>, </strong><strong>and the corresponding constructor</strong> – </p></li>
+<li><p><strong>argument is true.</strong> – </p></li>
+<li><p><strong>RuntimeError if any lower/upper limit pairs differ in size.</strong> – </p></li>
+<li><p><strong>RuntimeError if any upper limit coefficients are less than the</strong> – </p></li>
+<li><p><strong>corresponding lower limit coefficient.</strong> – </p></li>
+<li><p><strong>RuntimeError if velocity and acceleration limits differ in size.</strong> – </p></li>
+<li><p><strong>RuntimeError if any limits contain NaN values.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.acceleration_lower">
+<span class="sig-name descname"><span class="pre">acceleration_lower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.acceleration_lower" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.acceleration_upper">
+<span class="sig-name descname"><span class="pre">acceleration_upper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.acceleration_upper" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.CheckInAccelerationLimits">
+<span class="sig-name descname"><span class="pre">CheckInAccelerationLimits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">acceleration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.CheckInAccelerationLimits" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if <code class="docutils literal notranslate"><span class="pre">acceleration</span></code> is within acceleration limits, relaxed
+outward by <code class="docutils literal notranslate"><span class="pre">tolerance</span></code> in both directions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if acceleration.size</strong><strong>(</strong><strong>) </strong><strong>!= num_accelerations</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if tolerance is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if acceleration</strong><strong> or </strong><strong>tolerance contain NaN</strong> – </p></li>
+<li><p><strong>values.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.CheckInPositionLimits">
+<span class="sig-name descname"><span class="pre">CheckInPositionLimits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.CheckInPositionLimits" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if <code class="docutils literal notranslate"><span class="pre">position</span></code> is within position limits, relaxed outward by
+<code class="docutils literal notranslate"><span class="pre">tolerance</span></code> in both directions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if position.size</strong><strong>(</strong><strong>) </strong><strong>!= num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if tolerance is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if position</strong><strong> or </strong><strong>tolerance contain NaN values.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.CheckInVelocityLimits">
+<span class="sig-name descname"><span class="pre">CheckInVelocityLimits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.CheckInVelocityLimits" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if <code class="docutils literal notranslate"><span class="pre">velocity</span></code> is within velocity limits, relaxed outward by
+<code class="docutils literal notranslate"><span class="pre">tolerance</span></code> in both directions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if velocity.size</strong><strong>(</strong><strong>) </strong><strong>!= num_velocities</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if tolerance is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if velocity</strong><strong> or </strong><strong>tolerance contain NaN values.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.num_accelerations">
+<span class="sig-name descname"><span class="pre">num_accelerations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.num_accelerations" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.num_positions">
+<span class="sig-name descname"><span class="pre">num_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.num_positions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.num_velocities">
+<span class="sig-name descname"><span class="pre">num_velocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.num_velocities" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.position_lower">
+<span class="sig-name descname"><span class="pre">position_lower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.position_lower" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.position_upper">
+<span class="sig-name descname"><span class="pre">position_upper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.position_upper" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.velocity_lower">
+<span class="sig-name descname"><span class="pre">velocity_lower</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.velocity_lower" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.planning.JointLimits.velocity_upper">
+<span class="sig-name descname"><span class="pre">velocity_upper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.JointLimits" title="pydrake.planning.JointLimits"><span class="pre">pydrake.planning.JointLimits</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.JointLimits.velocity_upper" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.planning.</span></span><span class="sig-name descname"><span class="pre">KinematicTrajectoryOptimization</span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization" title="Permalink to this definition"></a></dt>
 <dd><p>Optimizes a trajectory, q(t) subject to costs and constraints on the

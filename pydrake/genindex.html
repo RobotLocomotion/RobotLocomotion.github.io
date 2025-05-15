@@ -339,6 +339,12 @@
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-FramePoseVector_-Expression-.__init__">(pydrake.common.value.Value[FramePoseVector_[Expression]] method)</a>
 </li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector-.__init__">(pydrake.common.value.Value[GeometryConfigurationVector] method)</a>
+</li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector_-AutoDiffXd-.__init__">(pydrake.common.value.Value[GeometryConfigurationVector_[AutoDiffXd]] method)</a>
+</li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector_-Expression-.__init__">(pydrake.common.value.Value[GeometryConfigurationVector_[Expression]] method)</a>
+</li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GurobiSolverDetails-.__init__">(pydrake.common.value.Value[GurobiSolverDetails] method)</a>
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-HydroelasticContactInfo-.__init__">(pydrake.common.value.Value[HydroelasticContactInfo] method)</a>
@@ -594,6 +600,12 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector_-AutoDiffXd-.__init__">(pydrake.geometry.FramePoseVector_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector_-Expression-.__init__">(pydrake.geometry.FramePoseVector_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector.__init__">(pydrake.geometry.GeometryConfigurationVector method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-AutoDiffXd-.__init__">(pydrake.geometry.GeometryConfigurationVector_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-Expression-.__init__">(pydrake.geometry.GeometryConfigurationVector_[Expression] method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryFrame.__init__">(pydrake.geometry.GeometryFrame method)</a>
 </li>
@@ -1358,6 +1370,8 @@
         <li><a href="pydrake.planning.html#pydrake.planning.IrisParameterizationFunction.__init__">(pydrake.planning.IrisParameterizationFunction method)</a>
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.IrisZoOptions.__init__">(pydrake.planning.IrisZoOptions method)</a>
+</li>
+        <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.__init__">(pydrake.planning.JointLimits method)</a>
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.__init__">(pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
@@ -2394,6 +2408,8 @@
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.AbstractValues">AbstractValues (class in pydrake.systems.framework)</a>
 </li>
+      <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.acceleration_lower">acceleration_lower() (pydrake.planning.JointLimits method)</a>
+</li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.PrismaticJoint.acceleration_lower_limit">acceleration_lower_limit() (pydrake.multibody.tree.PrismaticJoint method)</a>
 
       <ul>
@@ -2416,6 +2432,8 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_-Expression-.acceleration_lower_limits">(pydrake.multibody.tree.Joint_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.acceleration_upper">acceleration_upper() (pydrake.planning.JointLimits method)</a>
+</li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.PrismaticJoint.acceleration_upper_limit">acceleration_upper_limit() (pydrake.multibody.tree.PrismaticJoint method)</a>
 
       <ul>
@@ -2894,10 +2912,10 @@
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraints">AddPointInSetConstraints() (pydrake.geometry.optimization.ConvexSet method)</a>
 </li>
-      <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToLineDistanceConstraint">AddPointToLineDistanceConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToLineDistanceConstraint">AddPointToLineDistanceConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
+</li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint">AddPointToPointDistanceConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPolyhedronConstraint">AddPolyhedronConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
@@ -4824,13 +4842,19 @@
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.CheckEdgeCollisionFree">CheckEdgeCollisionFree() (pydrake.planning.CollisionChecker method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.CheckEdgeCollisionFreeParallel">CheckEdgeCollisionFreeParallel() (pydrake.planning.CollisionChecker method)</a>
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.CollisionChecker.CheckEdgesCollisionFree">CheckEdgesCollisionFree() (pydrake.planning.CollisionChecker method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.CheckIfSatisfiesConvexityRadius">CheckIfSatisfiesConvexityRadius() (in module pydrake.geometry.optimization)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.CheckInAccelerationLimits">CheckInAccelerationLimits() (pydrake.planning.JointLimits method)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.CheckInPositionLimits">CheckInPositionLimits() (pydrake.planning.JointLimits method)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.CheckInVelocityLimits">CheckInVelocityLimits() (pydrake.planning.JointLimits method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Constraint.CheckSatisfied">CheckSatisfied() (pydrake.solvers.Constraint method)</a>
 
@@ -4880,6 +4904,12 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector_-AutoDiffXd-.clear">(pydrake.geometry.FramePoseVector_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector_-Expression-.clear">(pydrake.geometry.FramePoseVector_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector.clear">(pydrake.geometry.GeometryConfigurationVector method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-AutoDiffXd-.clear">(pydrake.geometry.GeometryConfigurationVector_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-Expression-.clear">(pydrake.geometry.GeometryConfigurationVector_[Expression] method)</a>
 </li>
         <li><a href="pydrake.lcm.html#pydrake.lcm.Subscriber.clear">(pydrake.lcm.Subscriber method)</a>
 </li>
@@ -7968,6 +7998,12 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraphInspector_-Expression-.geometry_version">(pydrake.geometry.SceneGraphInspector_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector">GeometryConfigurationVector (class in pydrake.geometry)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-AutoDiffXd">GeometryConfigurationVector_[AutoDiffXd] (class in pydrake.geometry)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-Expression">GeometryConfigurationVector_[Expression] (class in pydrake.geometry)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryFrame">GeometryFrame (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryId">GeometryId (class in pydrake.geometry)</a>
@@ -9225,6 +9261,12 @@
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-FramePoseVector_-Expression-.get_mutable_value">(pydrake.common.value.Value[FramePoseVector_[Expression]] method)</a>
 </li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector-.get_mutable_value">(pydrake.common.value.Value[GeometryConfigurationVector] method)</a>
+</li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector_-AutoDiffXd-.get_mutable_value">(pydrake.common.value.Value[GeometryConfigurationVector_[AutoDiffXd]] method)</a>
+</li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector_-Expression-.get_mutable_value">(pydrake.common.value.Value[GeometryConfigurationVector_[Expression]] method)</a>
+</li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GurobiSolverDetails-.get_mutable_value">(pydrake.common.value.Value[GurobiSolverDetails] method)</a>
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-HydroelasticContactInfo-.get_mutable_value">(pydrake.common.value.Value[HydroelasticContactInfo] method)</a>
@@ -10171,6 +10213,12 @@
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-FramePoseVector_-Expression-.get_value">(pydrake.common.value.Value[FramePoseVector_[Expression]] method)</a>
 </li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector-.get_value">(pydrake.common.value.Value[GeometryConfigurationVector] method)</a>
+</li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector_-AutoDiffXd-.get_value">(pydrake.common.value.Value[GeometryConfigurationVector_[AutoDiffXd]] method)</a>
+</li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector_-Expression-.get_value">(pydrake.common.value.Value[GeometryConfigurationVector_[Expression]] method)</a>
+</li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GurobiSolverDetails-.get_value">(pydrake.common.value.Value[GurobiSolverDetails] method)</a>
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-HydroelasticContactInfo-.get_value">(pydrake.common.value.Value[HydroelasticContactInfo] method)</a>
@@ -10583,6 +10631,8 @@
 </li>
       </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.GetBodyId">GetBodyId() (pydrake.multibody.plant.DeformableModel method)</a>
+</li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.GetBodyIds">GetBodyIds() (pydrake.multibody.plant.DeformableModel method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.GetBodyIndices">GetBodyIndices() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
@@ -11869,6 +11919,12 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector_-Expression-.has_id">(pydrake.geometry.FramePoseVector_[Expression] method)</a>
 </li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector.has_id">(pydrake.geometry.GeometryConfigurationVector method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-AutoDiffXd-.has_id">(pydrake.geometry.GeometryConfigurationVector_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-Expression-.has_id">(pydrake.geometry.GeometryConfigurationVector_[Expression] method)</a>
+</li>
       </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.has_joint">has_joint() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
@@ -12309,6 +12365,12 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector_-Expression-.ids">(pydrake.geometry.FramePoseVector_[Expression] method)</a>
 </li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector.ids">(pydrake.geometry.GeometryConfigurationVector method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-AutoDiffXd-.ids">(pydrake.geometry.GeometryConfigurationVector_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-Expression-.ids">(pydrake.geometry.GeometryConfigurationVector_[Expression] method)</a>
+</li>
       </ul></li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.if_then_else">if_then_else() (in module pydrake.symbolic)</a>
 </li>
@@ -12684,10 +12746,10 @@
         <li><a href="pydrake.math.html#pydrake.math.RotationMatrix_-Expression-.inverse">(pydrake.math.RotationMatrix_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.InverseDynamics">InverseDynamics (class in pydrake.systems.controllers)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.InverseDynamics">InverseDynamics (class in pydrake.systems.controllers)</a>
+</li>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode">InverseDynamics.InverseDynamicsMode (class in pydrake.systems.controllers)</a>
 </li>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.InverseDynamicsController">InverseDynamicsController (class in pydrake.systems.controllers)</a>
@@ -13295,6 +13357,8 @@
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuatorIndex">JointActuatorIndex (class in pydrake.multibody.tree)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointIndex">JointIndex (class in pydrake.multibody.tree)</a>
+</li>
+      <li><a href="pydrake.planning.html#pydrake.planning.JointLimits">JointLimits (class in pydrake.planning)</a>
 </li>
       <li><a href="pydrake.multibody.meshcat.html#pydrake.multibody.meshcat.JointSliders">JointSliders (class in pydrake.multibody.meshcat)</a>
 </li>
@@ -15525,6 +15589,8 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.num_abstract_states">(pydrake.systems.framework.SystemBase method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.num_accelerations">num_accelerations() (pydrake.planning.JointLimits method)</a>
+</li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.num_actuated_dofs">num_actuated_dofs() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
       <ul>
@@ -15862,6 +15928,8 @@
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.GcsTrajectoryOptimization.num_positions">(pydrake.planning.GcsTrajectoryOptimization method)</a>
 </li>
+        <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.num_positions">(pydrake.planning.JointLimits method)</a>
+</li>
         <li><a href="pydrake.planning.html#pydrake.planning.KinematicTrajectoryOptimization.num_positions">(pydrake.planning.KinematicTrajectoryOptimization method)</a>
 </li>
         <li><a href="pydrake.planning.html#pydrake.planning.RobotClearance.num_positions">(pydrake.planning.RobotClearance method)</a>
@@ -15971,6 +16039,8 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyForces_-AutoDiffXd-.num_velocities">(pydrake.multibody.tree.MultibodyForces_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyForces_-Expression-.num_velocities">(pydrake.multibody.tree.MultibodyForces_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.num_velocities">(pydrake.planning.JointLimits method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.ContactSurface.num_vertices">num_vertices() (pydrake.geometry.ContactSurface method)</a>
@@ -16695,6 +16765,8 @@
       </ul></li>
       <li><a href="pydrake.manipulation.html#pydrake.manipulation.position_enabled">position_enabled() (in module pydrake.manipulation)</a>
 </li>
+      <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.position_lower">position_lower() (pydrake.planning.JointLimits method)</a>
+</li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.PrismaticJoint.position_lower_limit">position_lower_limit() (pydrake.multibody.tree.PrismaticJoint method)</a>
 
       <ul>
@@ -16735,6 +16807,8 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_-Expression-.position_suffix">(pydrake.multibody.tree.Joint_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.position_upper">position_upper() (pydrake.planning.JointLimits method)</a>
+</li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.PrismaticJoint.position_upper_limit">position_upper_limit() (pydrake.multibody.tree.PrismaticJoint method)</a>
 
       <ul>
@@ -19632,6 +19706,12 @@
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-FramePoseVector_-Expression-.set_value">(pydrake.common.value.Value[FramePoseVector_[Expression]] method)</a>
 </li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector-.set_value">(pydrake.common.value.Value[GeometryConfigurationVector] method)</a>
+</li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector_-AutoDiffXd-.set_value">(pydrake.common.value.Value[GeometryConfigurationVector_[AutoDiffXd]] method)</a>
+</li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector_-Expression-.set_value">(pydrake.common.value.Value[GeometryConfigurationVector_[Expression]] method)</a>
+</li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GurobiSolverDetails-.set_value">(pydrake.common.value.Value[GurobiSolverDetails] method)</a>
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-HydroelasticContactInfo-.set_value">(pydrake.common.value.Value[HydroelasticContactInfo] method)</a>
@@ -19789,6 +19869,12 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector_-AutoDiffXd-.set_value">(pydrake.geometry.FramePoseVector_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector_-Expression-.set_value">(pydrake.geometry.FramePoseVector_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector.set_value">(pydrake.geometry.GeometryConfigurationVector method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-AutoDiffXd-.set_value">(pydrake.geometry.GeometryConfigurationVector_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-Expression-.set_value">(pydrake.geometry.GeometryConfigurationVector_[Expression] method)</a>
 </li>
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector.set_value">(pydrake.systems.framework.BasicVector method)</a>
 </li>
@@ -20783,6 +20869,12 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector_-AutoDiffXd-.size">(pydrake.geometry.FramePoseVector_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector_-Expression-.size">(pydrake.geometry.FramePoseVector_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector.size">(pydrake.geometry.GeometryConfigurationVector method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-AutoDiffXd-.size">(pydrake.geometry.GeometryConfigurationVector_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-Expression-.size">(pydrake.geometry.GeometryConfigurationVector_[Expression] method)</a>
 </li>
         <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.PackageMap.size">(pydrake.multibody.parsing.PackageMap method)</a>
 </li>
@@ -22546,6 +22638,12 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector_-Expression-.value">(pydrake.geometry.FramePoseVector_[Expression] method)</a>
 </li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector.value">(pydrake.geometry.GeometryConfigurationVector method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-AutoDiffXd-.value">(pydrake.geometry.GeometryConfigurationVector_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryConfigurationVector_-Expression-.value">(pydrake.geometry.GeometryConfigurationVector_[Expression] method)</a>
+</li>
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector.value">(pydrake.systems.framework.BasicVector method)</a>
 </li>
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_-AutoDiffXd-.value">(pydrake.systems.framework.BasicVector_[AutoDiffXd] method)</a>
@@ -22637,6 +22735,12 @@
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-FramePoseVector_-Expression">Value[FramePoseVector_[Expression]] (class in pydrake.common.value)</a>
 </li>
+      <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector">Value[GeometryConfigurationVector] (class in pydrake.common.value)</a>
+</li>
+      <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector_-AutoDiffXd">Value[GeometryConfigurationVector_[AutoDiffXd]] (class in pydrake.common.value)</a>
+</li>
+      <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GeometryConfigurationVector_-Expression">Value[GeometryConfigurationVector_[Expression]] (class in pydrake.common.value)</a>
+</li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-GurobiSolverDetails">Value[GurobiSolverDetails] (class in pydrake.common.value)</a>
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-HydroelasticContactInfo">Value[HydroelasticContactInfo] (class in pydrake.common.value)</a>
@@ -22711,12 +22815,12 @@
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialMomentum_-Expression">Value[list[SpatialMomentum_[Expression]]] (class in pydrake.common.value)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity">Value[list[SpatialVelocity]] (class in pydrake.common.value)</a>
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity_-AutoDiffXd">Value[list[SpatialVelocity_[AutoDiffXd]]] (class in pydrake.common.value)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity_-Expression">Value[list[SpatialVelocity_[Expression]]] (class in pydrake.common.value)</a>
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-ModelInstanceIndex">Value[ModelInstanceIndex] (class in pydrake.common.value)</a>
@@ -22907,6 +23011,8 @@
 </li>
       <li><a href="pydrake.math.html#pydrake.math.VectorToSkewSymmetric">VectorToSkewSymmetric() (in module pydrake.math)</a>
 </li>
+      <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.velocity_lower">velocity_lower() (pydrake.planning.JointLimits method)</a>
+</li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.PrismaticJoint.velocity_lower_limit">velocity_lower_limit() (pydrake.multibody.tree.PrismaticJoint method)</a>
 
       <ul>
@@ -22945,6 +23051,8 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_-Expression-.velocity_suffix">(pydrake.multibody.tree.Joint_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.velocity_upper">velocity_upper() (pydrake.planning.JointLimits method)</a>
+</li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.PrismaticJoint.velocity_upper_limit">velocity_upper_limit() (pydrake.multibody.tree.PrismaticJoint method)</a>
 
       <ul>

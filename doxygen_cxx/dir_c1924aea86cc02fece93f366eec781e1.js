@@ -16,6 +16,9 @@ var dir_c1924aea86cc02fece93f366eec781e1 =
       [ "DistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html", "classdrake_1_1planning_1_1_distance_and_interpolation_provider" ]
     ] ],
     [ "edge_measure.h", "edge__measure_8h.html", null ],
+    [ "joint_limits.h", "joint__limits_8h.html", [
+      [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html", "classdrake_1_1planning_1_1_joint_limits" ]
+    ] ],
     [ "linear_distance_and_interpolation_provider.h", "linear__distance__and__interpolation__provider_8h.html", [
       [ "LinearDistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html", "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider" ]
     ] ],

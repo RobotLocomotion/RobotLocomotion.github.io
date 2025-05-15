@@ -13,6 +13,7 @@ var namespacedrake_1_1planning =
     [ "IrisFromCliqueCoverOptions", "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html", "structdrake_1_1planning_1_1_iris_from_clique_cover_options" ],
     [ "IrisParameterizationFunction", "classdrake_1_1planning_1_1_iris_parameterization_function.html", "classdrake_1_1planning_1_1_iris_parameterization_function" ],
     [ "IrisZoOptions", "classdrake_1_1planning_1_1_iris_zo_options.html", "classdrake_1_1planning_1_1_iris_zo_options" ],
+    [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html", "classdrake_1_1planning_1_1_joint_limits" ],
     [ "LinearDistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html", "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider" ],
     [ "RobotClearance", "classdrake_1_1planning_1_1_robot_clearance.html", "classdrake_1_1planning_1_1_robot_clearance" ],
     [ "RobotDiagram", "classdrake_1_1planning_1_1_robot_diagram.html", "classdrake_1_1planning_1_1_robot_diagram" ],

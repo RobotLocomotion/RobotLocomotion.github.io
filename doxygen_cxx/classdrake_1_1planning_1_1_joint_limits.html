@@ -1,0 +1,811 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: JointLimits Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_joint_limits.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classdrake_1_1planning_1_1_joint_limits-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">JointLimits Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Wrapper type for position, velocity, and acceleration limits. </p>
+<p>Note that enforcement of finite limits by this class is optional; see the <code>require_finite_*</code> constructor arguments.</p>
+<p>NaN values are rejected for all limits and tolerances. </p>
+</div>
+<p><code>#include &lt;drake/planning/joint_limits.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a775d8b642fd16e310ecd2f658b894e07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a775d8b642fd16e310ecd2f658b894e07">JointLimits</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, bool require_finite_positions=false, bool require_finite_velocities=false, bool require_finite_accelerations=false)</td></tr>
+<tr class="memdesc:a775d8b642fd16e310ecd2f658b894e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> using the position, velocity, and acceleration limits in the provided <code>plant</code>.  <a href="#a775d8b642fd16e310ecd2f658b894e07">More...</a><br /></td></tr>
+<tr class="separator:a775d8b642fd16e310ecd2f658b894e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d651163f4d1fe92e635aaaf3e9a701"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a73d651163f4d1fe92e635aaaf3e9a701">JointLimits</a> (const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a97e15c60940bdde2ba9757545ea353a1">position_lower</a>, const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a2970af13be80ae132249cc17d5288c77">position_upper</a>, const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#af812d8f950c8002834ae7f9977d23d9e">velocity_lower</a>, const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a3d7182317ce6c6c76367ddddd65bab67">velocity_upper</a>, const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#ad94799af335483efba79d9f3c650a04b">acceleration_lower</a>, const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a286987e5693b0f45841c616f75d39ae3">acceleration_upper</a>, bool require_finite_positions=false, bool require_finite_velocities=false, bool require_finite_accelerations=false)</td></tr>
+<tr class="memdesc:a73d651163f4d1fe92e635aaaf3e9a701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> using the provided arguments.  <a href="#a73d651163f4d1fe92e635aaaf3e9a701">More...</a><br /></td></tr>
+<tr class="separator:a73d651163f4d1fe92e635aaaf3e9a701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5eeea9e807395042989c4ec46ff1b3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#af5eeea9e807395042989c4ec46ff1b3f">JointLimits</a> ()=default</td></tr>
+<tr class="memdesc:af5eeea9e807395042989c4ec46ff1b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> with 0-length vectors for all limits.  <a href="#af5eeea9e807395042989c4ec46ff1b3f">More...</a><br /></td></tr>
+<tr class="separator:af5eeea9e807395042989c4ec46ff1b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a262f42214d106b31158ceb36515cd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a6a262f42214d106b31158ceb36515cd0">~JointLimits</a> ()</td></tr>
+<tr class="separator:a6a262f42214d106b31158ceb36515cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba2887f0ca1fbbdfb49cf6b0ee21e553"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#aba2887f0ca1fbbdfb49cf6b0ee21e553">num_positions</a> () const</td></tr>
+<tr class="separator:aba2887f0ca1fbbdfb49cf6b0ee21e553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0163ac0976659d811e3337647ff0313"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#ae0163ac0976659d811e3337647ff0313">num_velocities</a> () const</td></tr>
+<tr class="separator:ae0163ac0976659d811e3337647ff0313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb51c8b90ff2a026ef7153fa2f43425"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#aabb51c8b90ff2a026ef7153fa2f43425">num_accelerations</a> () const</td></tr>
+<tr class="separator:aabb51c8b90ff2a026ef7153fa2f43425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97e15c60940bdde2ba9757545ea353a1"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a97e15c60940bdde2ba9757545ea353a1">position_lower</a> () const</td></tr>
+<tr class="separator:a97e15c60940bdde2ba9757545ea353a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2970af13be80ae132249cc17d5288c77"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a2970af13be80ae132249cc17d5288c77">position_upper</a> () const</td></tr>
+<tr class="separator:a2970af13be80ae132249cc17d5288c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af812d8f950c8002834ae7f9977d23d9e"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#af812d8f950c8002834ae7f9977d23d9e">velocity_lower</a> () const</td></tr>
+<tr class="separator:af812d8f950c8002834ae7f9977d23d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d7182317ce6c6c76367ddddd65bab67"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a3d7182317ce6c6c76367ddddd65bab67">velocity_upper</a> () const</td></tr>
+<tr class="separator:a3d7182317ce6c6c76367ddddd65bab67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94799af335483efba79d9f3c650a04b"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#ad94799af335483efba79d9f3c650a04b">acceleration_lower</a> () const</td></tr>
+<tr class="separator:ad94799af335483efba79d9f3c650a04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a286987e5693b0f45841c616f75d39ae3"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a286987e5693b0f45841c616f75d39ae3">acceleration_upper</a> () const</td></tr>
+<tr class="separator:a286987e5693b0f45841c616f75d39ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99392273cd43628df73943e46fc1d43a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a99392273cd43628df73943e46fc1d43a">CheckInPositionLimits</a> (const Eigen::VectorXd &amp;position, <a class="el" href="classdouble.html">double</a> tolerance=0.0) const</td></tr>
+<tr class="memdesc:a99392273cd43628df73943e46fc1d43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>position</code> is within position limits, relaxed outward by <code>tolerance</code> in both directions.  <a href="#a99392273cd43628df73943e46fc1d43a">More...</a><br /></td></tr>
+<tr class="separator:a99392273cd43628df73943e46fc1d43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae010f7e3a16486f594dc855abefa8b7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#ae010f7e3a16486f594dc855abefa8b7d">CheckInVelocityLimits</a> (const Eigen::VectorXd &amp;velocity, <a class="el" href="classdouble.html">double</a> tolerance=0.0) const</td></tr>
+<tr class="memdesc:ae010f7e3a16486f594dc855abefa8b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>velocity</code> is within velocity limits, relaxed outward by <code>tolerance</code> in both directions.  <a href="#ae010f7e3a16486f594dc855abefa8b7d">More...</a><br /></td></tr>
+<tr class="separator:ae010f7e3a16486f594dc855abefa8b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af71002e10227f495ab5d746e2fc5ac9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#af71002e10227f495ab5d746e2fc5ac9e">CheckInAccelerationLimits</a> (const Eigen::VectorXd &amp;acceleration, <a class="el" href="classdouble.html">double</a> tolerance=0.0) const</td></tr>
+<tr class="memdesc:af71002e10227f495ab5d746e2fc5ac9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>acceleration</code> is within acceleration limits, relaxed outward by <code>tolerance</code> in both directions.  <a href="#af71002e10227f495ab5d746e2fc5ac9e">More...</a><br /></td></tr>
+<tr class="separator:af71002e10227f495ab5d746e2fc5ac9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:aaa96ab65c0503a7900cace64dd5283ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#aaa96ab65c0503a7900cace64dd5283ee">JointLimits</a> (const <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;)=default</td></tr>
+<tr class="separator:aaa96ab65c0503a7900cace64dd5283ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebe56b0303aa731d2473d759451a7a29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#aebe56b0303aa731d2473d759451a7a29">operator=</a> (const <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;)=default</td></tr>
+<tr class="separator:aebe56b0303aa731d2473d759451a7a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f442d2f0895707de9ea222f9f9616b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a5f442d2f0895707de9ea222f9f9616b7">JointLimits</a> (<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a5f442d2f0895707de9ea222f9f9616b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89f70a42f99dd5c4b0eff42f61258be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#af89f70a42f99dd5c4b0eff42f61258be">operator=</a> (<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:af89f70a42f99dd5c4b0eff42f61258be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aaa96ab65c0503a7900cace64dd5283ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa96ab65c0503a7900cace64dd5283ee">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f442d2f0895707de9ea222f9f9616b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f442d2f0895707de9ea222f9f9616b7">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a775d8b642fd16e310ecd2f658b894e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a775d8b642fd16e310ecd2f658b894e07">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_positions</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_velocities</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_accelerations</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> using the position, velocity, and acceleration limits in the provided <code>plant</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if plant is not finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the position, velocity, or acceleration limits contain non-finite values, and the corresponding constructor argument is true. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any limits contain NaN values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a73d651163f4d1fe92e635aaaf3e9a701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d651163f4d1fe92e635aaaf3e9a701">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>position_lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>position_upper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>velocity_lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>velocity_upper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>acceleration_lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>acceleration_upper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_positions</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_velocities</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_accelerations</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> using the provided arguments. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the position, velocity, or acceleration limits contain non-finite values, and the corresponding constructor argument is true. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any lower/upper limit pairs differ in size. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any upper limit coefficients are less than the corresponding lower limit coefficient. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if velocity and acceleration limits differ in size. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any limits contain NaN values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af5eeea9e807395042989c4ec46ff1b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5eeea9e807395042989c4ec46ff1b3f">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> with 0-length vectors for all limits. </p>
+
+</div>
+</div>
+<a id="a6a262f42214d106b31158ceb36515cd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a262f42214d106b31158ceb36515cd0">&#9670;&nbsp;</a></span>~JointLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad94799af335483efba79d9f3c650a04b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad94799af335483efba79d9f3c650a04b">&#9670;&nbsp;</a></span>acceleration_lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd&amp; acceleration_lower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a286987e5693b0f45841c616f75d39ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a286987e5693b0f45841c616f75d39ae3">&#9670;&nbsp;</a></span>acceleration_upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd&amp; acceleration_upper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af71002e10227f495ab5d746e2fc5ac9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af71002e10227f495ab5d746e2fc5ac9e">&#9670;&nbsp;</a></span>CheckInAccelerationLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckInAccelerationLimits </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>acceleration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tolerance</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if <code>acceleration</code> is within acceleration limits, relaxed outward by <code>tolerance</code> in both directions. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>acceleration.size() != <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#aabb51c8b90ff2a026ef7153fa2f43425">num_accelerations()</a></code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>tolerance</code> is negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>acceleration</code> or <code>tolerance</code> contain NaN values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a99392273cd43628df73943e46fc1d43a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99392273cd43628df73943e46fc1d43a">&#9670;&nbsp;</a></span>CheckInPositionLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckInPositionLimits </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tolerance</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if <code>position</code> is within position limits, relaxed outward by <code>tolerance</code> in both directions. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>position.size() != <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#aba2887f0ca1fbbdfb49cf6b0ee21e553">num_positions()</a></code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>tolerance</code> is negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>position</code> or <code>tolerance</code> contain NaN values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae010f7e3a16486f594dc855abefa8b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae010f7e3a16486f594dc855abefa8b7d">&#9670;&nbsp;</a></span>CheckInVelocityLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckInVelocityLimits </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>velocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tolerance</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if <code>velocity</code> is within velocity limits, relaxed outward by <code>tolerance</code> in both directions. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>velocity.size() != <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#ae0163ac0976659d811e3337647ff0313">num_velocities()</a></code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>tolerance</code> is negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>velocity</code> or <code>tolerance</code> contain NaN values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aabb51c8b90ff2a026ef7153fa2f43425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabb51c8b90ff2a026ef7153fa2f43425">&#9670;&nbsp;</a></span>num_accelerations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_accelerations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba2887f0ca1fbbdfb49cf6b0ee21e553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba2887f0ca1fbbdfb49cf6b0ee21e553">&#9670;&nbsp;</a></span>num_positions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_positions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0163ac0976659d811e3337647ff0313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0163ac0976659d811e3337647ff0313">&#9670;&nbsp;</a></span>num_velocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_velocities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af89f70a42f99dd5c4b0eff42f61258be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89f70a42f99dd5c4b0eff42f61258be">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebe56b0303aa731d2473d759451a7a29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe56b0303aa731d2473d759451a7a29">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97e15c60940bdde2ba9757545ea353a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e15c60940bdde2ba9757545ea353a1">&#9670;&nbsp;</a></span>position_lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd&amp; position_lower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2970af13be80ae132249cc17d5288c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2970af13be80ae132249cc17d5288c77">&#9670;&nbsp;</a></span>position_upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd&amp; position_upper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af812d8f950c8002834ae7f9977d23d9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af812d8f950c8002834ae7f9977d23d9e">&#9670;&nbsp;</a></span>velocity_lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd&amp; velocity_lower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d7182317ce6c6c76367ddddd65bab67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d7182317ce6c6c76367ddddd65bab67">&#9670;&nbsp;</a></span>velocity_upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd&amp; velocity_upper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/planning/<a class="el" href="joint__limits_8h.html">joint_limits.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1planning.html">planning</a></li><li class="navelem"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

@@ -8,6 +8,7 @@ var searchData=
   ['jacobian_2eh',['jacobian.h',['../jacobian_8h.html',1,'']]],
   ['joint_2eh',['joint.h',['../joint_8h.html',1,'']]],
   ['joint_5factuator_2eh',['joint_actuator.h',['../joint__actuator_8h.html',1,'']]],
+  ['joint_5flimits_2eh',['joint_limits.h',['../joint__limits_8h.html',1,'']]],
   ['joint_5fsliders_2eh',['joint_sliders.h',['../joint__sliders_8h.html',1,'']]],
   ['joint_5fstiffness_5fcontroller_2eh',['joint_stiffness_controller.h',['../joint__stiffness__controller_8h.html',1,'']]]
 ];
