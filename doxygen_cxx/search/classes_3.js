@@ -54,6 +54,7 @@ var searchData=
   ['distanceconstraintparams',['DistanceConstraintParams',['../classdrake_1_1multibody_1_1_distance_constraint_params.html',1,'drake::multibody']]],
   ['distribution',['Distribution',['../classdrake_1_1schema_1_1_distribution.html',1,'drake::schema']]],
   ['distributionvector',['DistributionVector',['../classdrake_1_1schema_1_1_distribution_vector.html',1,'drake::schema']]],
+  ['dofmask',['DofMask',['../classdrake_1_1planning_1_1_dof_mask.html',1,'drake::planning']]],
   ['doorhinge',['DoorHinge',['../classdrake_1_1multibody_1_1_door_hinge.html',1,'drake::multibody']]],
   ['doorhingeconfig',['DoorHingeConfig',['../structdrake_1_1multibody_1_1_door_hinge_config.html',1,'drake::multibody']]],
   ['drakekukaiiwarobot',['DrakeKukaIIwaRobot',['../classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html',1,'drake::multibody::benchmarks::kuka_iiwa_robot']]],

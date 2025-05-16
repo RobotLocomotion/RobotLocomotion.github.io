@@ -8433,6 +8433,25 @@ ids are added/removed).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.QueryObject.GetConfigurationsInWorld">
+<span class="sig-name descname"><span class="pre">GetConfigurationsInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.QueryObject" title="pydrake.geometry.QueryObject"><span class="pre">pydrake.geometry.QueryObject</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">deformable_geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.QueryObject.GetConfigurationsInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the configuration of the deformable geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">deformable_geometry_id</span></code> relative to the world frame.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetPoseInWorld().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the geometry deformable_geometry_id is not</strong> – </p></li>
+<li><p><strong>valid</strong><strong> or </strong><strong>is not a deformable geometry.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.QueryObject.GetPoseInParent">
 <span class="sig-name descname"><span class="pre">GetPoseInParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.QueryObject" title="pydrake.geometry.QueryObject"><span class="pre">pydrake.geometry.QueryObject</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.geometry.QueryObject.GetPoseInParent" title="Permalink to this definition"></a></dt>
 <dd><p>Reports the position of the frame indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code> relative
@@ -9258,6 +9277,25 @@ ids are added/removed).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.QueryObject_-AutoDiffXd-.GetConfigurationsInWorld">
+<span id="pydrake.geometry.QueryObject_[AutoDiffXd].GetConfigurationsInWorld"></span><span class="sig-name descname"><span class="pre">GetConfigurationsInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.QueryObject_" title="pydrake.geometry.QueryObject_"><span class="pre">pydrake.geometry.QueryObject_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deformable_geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.QueryObject_-AutoDiffXd-.GetConfigurationsInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the configuration of the deformable geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">deformable_geometry_id</span></code> relative to the world frame.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetPoseInWorld().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the geometry deformable_geometry_id is not</strong> – </p></li>
+<li><p><strong>valid</strong><strong> or </strong><strong>is not a deformable geometry.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.QueryObject_-AutoDiffXd-.GetPoseInParent">
 <span id="pydrake.geometry.QueryObject_[AutoDiffXd].GetPoseInParent"></span><span class="sig-name descname"><span class="pre">GetPoseInParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.QueryObject_" title="pydrake.geometry.QueryObject_"><span class="pre">pydrake.geometry.QueryObject_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform_" title="pydrake.math.RigidTransform_"><span class="pre">pydrake.math.RigidTransform_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.QueryObject_-AutoDiffXd-.GetPoseInParent" title="Permalink to this definition"></a></dt>
 <dd><p>Reports the position of the frame indicated by <code class="docutils literal notranslate"><span class="pre">frame_id</span></code> relative
@@ -9947,6 +9985,25 @@ are <em>actually</em> in collision.</p>
 <dd class="field-odd"><p>A vector populated with collision pair candidates (the order will
 remain constant for a fixed population but can change as geometry
 ids are added/removed).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.QueryObject_-Expression-.GetConfigurationsInWorld">
+<span id="pydrake.geometry.QueryObject_[Expression].GetConfigurationsInWorld"></span><span class="sig-name descname"><span class="pre">GetConfigurationsInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.QueryObject_" title="pydrake.geometry.QueryObject_"><span class="pre">pydrake.geometry.QueryObject_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deformable_geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.QueryObject_-Expression-.GetConfigurationsInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Reports the configuration of the deformable geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">deformable_geometry_id</span></code> relative to the world frame.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetPoseInWorld().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the geometry deformable_geometry_id is not</strong> – </p></li>
+<li><p><strong>valid</strong><strong> or </strong><strong>is not a deformable geometry.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

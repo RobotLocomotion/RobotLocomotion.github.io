@@ -165,7 +165,7 @@ $(document).ready(function(){initNavTree('scoped__names_8h.html','');});
 <div class="title">scoped_names.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;string_view&gt;</code><br />
 <code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for scoped_names.h:</div>
@@ -185,14 +185,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af39da13ca6cbea792e407e55703f2f3c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:af39da13ca6cbea792e407e55703f2f3c"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">drake::multibody::Frame</a>&lt; T &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#af39da13ca6cbea792e407e55703f2f3c">GetScopedFrameByNameMaybe</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; T &gt; &amp;plant, const std::string &amp;full_name)</td></tr>
-<tr class="memdesc:af39da13ca6cbea792e407e55703f2f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an optionally model-scoped frame.  <a href="namespacedrake_1_1multibody_1_1parsing.html#af39da13ca6cbea792e407e55703f2f3c">More...</a><br /></td></tr>
-<tr class="separator:af39da13ca6cbea792e407e55703f2f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05d4b28adc62a5fe3da0c742bf39dd44"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a05d4b28adc62a5fe3da0c742bf39dd44"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">drake::multibody::Frame</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a05d4b28adc62a5fe3da0c742bf39dd44">GetScopedFrameByName</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; T &gt; &amp;plant, const std::string &amp;full_name)</td></tr>
-<tr class="memdesc:a05d4b28adc62a5fe3da0c742bf39dd44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equivalent to <code>GetScopedFrameByNameMaybe</code>, but throws if the frame is not found.  <a href="namespacedrake_1_1multibody_1_1parsing.html#a05d4b28adc62a5fe3da0c742bf39dd44">More...</a><br /></td></tr>
-<tr class="separator:a05d4b28adc62a5fe3da0c742bf39dd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07eb0d30ef1c7a69a12abe9fe8cd410f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a07eb0d30ef1c7a69a12abe9fe8cd410f"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">drake::multibody::Frame</a>&lt; T &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a07eb0d30ef1c7a69a12abe9fe8cd410f">GetScopedFrameByNameMaybe</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; T &gt; &amp;plant, std::string_view full_name)</td></tr>
+<tr class="memdesc:a07eb0d30ef1c7a69a12abe9fe8cd410f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an optionally model-scoped frame.  <a href="namespacedrake_1_1multibody_1_1parsing.html#a07eb0d30ef1c7a69a12abe9fe8cd410f">More...</a><br /></td></tr>
+<tr class="separator:a07eb0d30ef1c7a69a12abe9fe8cd410f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37ec69bcf882465bc248dde89fef3f1c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a37ec69bcf882465bc248dde89fef3f1c"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">drake::multibody::Frame</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a37ec69bcf882465bc248dde89fef3f1c">GetScopedFrameByName</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; T &gt; &amp;plant, std::string_view full_name)</td></tr>
+<tr class="memdesc:a37ec69bcf882465bc248dde89fef3f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equivalent to <code>GetScopedFrameByNameMaybe</code>, but throws if the frame is not found.  <a href="namespacedrake_1_1multibody_1_1parsing.html#a37ec69bcf882465bc248dde89fef3f1c">More...</a><br /></td></tr>
+<tr class="separator:a37ec69bcf882465bc248dde89fef3f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

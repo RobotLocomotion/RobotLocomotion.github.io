@@ -9,6 +9,7 @@ var namespacedrake_1_1planning =
     [ "CollisionCheckerParams", "structdrake_1_1planning_1_1_collision_checker_params.html", "structdrake_1_1planning_1_1_collision_checker_params" ],
     [ "CommonSampledIrisOptions", "classdrake_1_1planning_1_1_common_sampled_iris_options.html", "classdrake_1_1planning_1_1_common_sampled_iris_options" ],
     [ "DistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html", "classdrake_1_1planning_1_1_distance_and_interpolation_provider" ],
+    [ "DofMask", "classdrake_1_1planning_1_1_dof_mask.html", "classdrake_1_1planning_1_1_dof_mask" ],
     [ "EdgeMeasure", "classdrake_1_1planning_1_1_edge_measure.html", "classdrake_1_1planning_1_1_edge_measure" ],
     [ "IrisFromCliqueCoverOptions", "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html", "structdrake_1_1planning_1_1_iris_from_clique_cover_options" ],
     [ "IrisParameterizationFunction", "classdrake_1_1planning_1_1_iris_parameterization_function.html", "classdrake_1_1planning_1_1_iris_parameterization_function" ],

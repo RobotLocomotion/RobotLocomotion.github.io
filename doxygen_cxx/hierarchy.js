@@ -204,6 +204,7 @@ var hierarchy =
       [ "GaussianVector< Size >", "classdrake_1_1schema_1_1_gaussian_vector.html", null ],
       [ "UniformVector< Size >", "classdrake_1_1schema_1_1_uniform_vector.html", null ]
     ] ],
+    [ "DofMask", "classdrake_1_1planning_1_1_dof_mask.html", null ],
     [ "DoorHingeConfig", "structdrake_1_1multibody_1_1_door_hinge_config.html", null ],
     [ "DrakeKukaIIwaRobot< T >", "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html", null ],
     [ "DrakeLcmInterface", "classdrake_1_1lcm_1_1_drake_lcm_interface.html", [
@@ -515,8 +516,8 @@ var hierarchy =
     [ "InitialValueProblem< T >", "classdrake_1_1systems_1_1_initial_value_problem.html", null ],
     [ "InMemoryMesh", "structdrake_1_1geometry_1_1_in_memory_mesh.html", null ],
     [ "SelectorParams::InputPortParams", "structdrake_1_1systems_1_1_selector_params_1_1_input_port_params.html", null ],
-    [ "MultibodyPlant< T >::InputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", null ],
     [ "MultibodyPlant< T >::OutputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html", null ],
+    [ "MultibodyPlant< T >::InputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", null ],
     [ "integral_constant", null, [
       [ "tuple_size< drake::SortedPair< T > >", "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ]
     ] ],
@@ -814,8 +815,8 @@ var hierarchy =
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
     [ "SelectorParams", "structdrake_1_1systems_1_1_selector_params.html", null ],
     [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", null ],
-    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
+    [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
@@ -1167,8 +1168,8 @@ var hierarchy =
     ] ],
     [ "TimeStep", "structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html", null ],
     [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html", null ],
-    [ "traits", "classtraits.html", null ],
     [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
+    [ "traits", "classtraits.html", null ],
     [ "Traits< TrajectorySource >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html", null ],
     [ "Trajectory< T >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "BezierCurve< T >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],
