@@ -282,10 +282,10 @@ to maintain over time.</li>
 <ol>
   <li>Find a plausible nightly build to use:
     <ol>
-      <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Production/">https://drake-jenkins.csail.mit.edu/view/Production/</a> is clean</li>
+      <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Production/">https://drake-jenkins.csail.mit.edu/view/Production/</a> is clean.</li>
       <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/</a>
 has nothing still running (modulo the <code class="language-plaintext highlighter-rouge">*-coverage</code> builds, which we can
-ignore)</li>
+ignore).</li>
       <li>Open the latest builds from the following builds:
         <ol>
           <li><a href="https://drake-jenkins.csail.mit.edu/view/Packaging/job/linux-jammy-unprovisioned-gcc-cmake-nightly-packaging/">https://drake-jenkins.csail.mit.edu/view/Packaging/job/linux-jammy-unprovisioned-gcc-cmake-nightly-packaging/</a></li>
@@ -301,7 +301,7 @@ should have the same date. If not, wait until the following night.</li>
       <li>Use the
 <code class="language-plaintext highlighter-rouge">tools/release_engineering/download_release_candidate</code> tool with the
 <code class="language-plaintext highlighter-rouge">--find-git-sha</code> option to download and verify that all the nightlies
-are built from the same commit.  (It’s usage instructions are atop its
+are built from the same commit.  (Its usage instructions are atop its
 source code:
 <a href="https://github.com/RobotLocomotion/drake/blob/master/tools/release_engineering/download_release_candidate.py">download_release_candidate.py</a>.)</li>
     </ol>
@@ -346,12 +346,12 @@ tag the release until all five builds have succeeded.</li>
     <ol>
       <li>Use the
 <code class="language-plaintext highlighter-rouge">tools/release_engineering/download_release_candidate</code> tool with the
-<code class="language-plaintext highlighter-rouge">--version</code> option to download and verify all binaries.  (It’s usage
+<code class="language-plaintext highlighter-rouge">--version</code> option to download and verify all binaries.  (Its usage
 instructions are atop its source code:
 <a href="https://github.com/RobotLocomotion/drake/blob/master/tools/release_engineering/download_release_candidate.py">download_release_candidate.py</a>.)</li>
     </ol>
   </li>
-  <li>Merge the release notes PR
+  <li>Merge the release notes PR.
     <ol>
       <li>Take care when squashing not to accept github’s auto-generated commit message if it is not appropriate.</li>
       <li>After merge, go to <a href="https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-jammy-unprovisioned-gcc-bazel-nightly-documentation/">https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-jammy-unprovisioned-gcc-bazel-nightly-documentation/</a> and push “Build now”.
@@ -401,7 +401,7 @@ the box.</li>
     <ol>
       <li>Check that the link to drake.mit.edu docs from the GitHub release draft
 page actually works.</li>
-      <li>Click “Publish release”</li>
+      <li>Click “Publish release”.</li>
       <li>Create a new GitHub issue on the <a href="https://github.com/RobotLocomotion/drake/issues/new/choose">drake</a>
 repository and select the “Post-Release Actions” template.</li>
       <li>Create a GitHub issue on the <a href="https://github.com/RobotLocomotion/drake-ros/issues">drake-ros</a>

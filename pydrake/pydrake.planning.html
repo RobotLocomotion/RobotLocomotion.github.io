@@ -2097,6 +2097,10 @@ ball joints).</p>
 <p>Full/empty constructor.</p>
 <p>This allows for construction of a mask with the given <code class="docutils literal notranslate"><span class="pre">size</span></code> where
 all dofs are either selected (<code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">=</span> <span class="pre">true</span></code>) or unselected.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>size &gt;= 0</p>
+</dd>
+</dl>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.planning.DofMask, values: list[bool]) -&gt; None</p></li>
 </ol>
