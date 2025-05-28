@@ -38,6 +38,7 @@ var namespacedrake_1_1multibody =
     [ "ExternallyAppliedSpatialForceMultiplexer", "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html", "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer" ],
     [ "FixedOffsetFrame", "classdrake_1_1multibody_1_1_fixed_offset_frame.html", "classdrake_1_1multibody_1_1_fixed_offset_frame" ],
     [ "ForceDensityField", "classdrake_1_1multibody_1_1_force_density_field.html", "classdrake_1_1multibody_1_1_force_density_field" ],
+    [ "ForceDensityFieldBase", "classdrake_1_1multibody_1_1_force_density_field_base.html", "classdrake_1_1multibody_1_1_force_density_field_base" ],
     [ "ForceElement", "classdrake_1_1multibody_1_1_force_element.html", "classdrake_1_1multibody_1_1_force_element" ],
     [ "Frame", "classdrake_1_1multibody_1_1_frame.html", "classdrake_1_1multibody_1_1_frame" ],
     [ "GaussianTriangleQuadratureRule", "classdrake_1_1multibody_1_1_gaussian_triangle_quadrature_rule.html", "classdrake_1_1multibody_1_1_gaussian_triangle_quadrature_rule" ],

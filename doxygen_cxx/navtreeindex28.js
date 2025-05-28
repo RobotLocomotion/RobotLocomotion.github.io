@@ -1,5 +1,12 @@
 var NAVTREEINDEX28 =
 {
+"classdrake_1_1solvers_1_1_binding.html#a029d0047d449cc59d92f3951167aba3a":[3,0,0,14,3,3],
+"classdrake_1_1solvers_1_1_binding.html#a16a29060a22052fd99eeea242a14627a":[3,0,0,14,3,8],
+"classdrake_1_1solvers_1_1_binding.html#a236729b642e241e5c611e09dba8951d2":[3,0,0,14,3,11],
+"classdrake_1_1solvers_1_1_binding.html#a2d56859532ea054bc76a10ea691746bc":[3,0,0,14,3,13],
+"classdrake_1_1solvers_1_1_binding.html#a38b81cff4aa19f7c4f19a55d095d2213":[3,0,0,14,3,10],
+"classdrake_1_1solvers_1_1_binding.html#a437e49f5ef82c70c9085c8f0c741005a":[3,0,0,14,3,0],
+"classdrake_1_1solvers_1_1_binding.html#a6f319f0d50c3403278af24eb88d8fb61":[3,0,0,14,3,14],
 "classdrake_1_1solvers_1_1_binding.html#a7ef2321debee2bd5b32026388dd3855d":[3,0,0,14,3,2],
 "classdrake_1_1solvers_1_1_binding.html#a865cec724a188ed5afb59dda367fe78c":[3,0,0,14,3,7],
 "classdrake_1_1solvers_1_1_binding.html#a94d0d01fcb647eb14ca2484fbef2595a":[3,0,0,14,3,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX28 =
 "classdrake_1_1solvers_1_1_l1_norm_cost.html#aa8e1e9254703f4bfe3d3e4d01807f441":[1,1,0,41,10],
 "classdrake_1_1solvers_1_1_l1_norm_cost.html#aae45694d3595659922653fd027d15cb6":[1,1,0,41,5],
 "classdrake_1_1solvers_1_1_l1_norm_cost.html#ace583a472a3bdc1b67f05d6a6571a903":[1,1,0,41,4],
-"classdrake_1_1solvers_1_1_l1_norm_cost.html#af07bddc22f2b1e732e919385ef1c3d4d":[1,1,0,41,0],
-"classdrake_1_1solvers_1_1_l1_norm_cost.html#af0e469d5862fcbd74594f47e7c2608bb":[1,1,0,41,14],
-"classdrake_1_1solvers_1_1_l1_norm_cost.html#afd5ade712b02fa2e71e8c26811c9494a":[1,1,0,41,6],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html":[1,1,0,42],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a1c266571ce951e63d66d582a62854908":[1,1,0,42,11],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a2d9b39ef1f63164b8f727d7748603a88":[1,1,0,42,16],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a38e25e75fd44159789b93a0c7f180c39":[1,1,0,42,12],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a4cf3e98daed7e5998c947592c2d7c3e0":[1,1,0,42,13]
+"classdrake_1_1solvers_1_1_l1_norm_cost.html#af07bddc22f2b1e732e919385ef1c3d4d":[1,1,0,41,0]
 };

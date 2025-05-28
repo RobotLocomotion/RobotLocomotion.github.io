@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/multibody/plant/force_density_field.h File Reference</title>
+<title>Drake: drake/multibody/tree/force_density_field.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -161,7 +161,6 @@ $(document).ready(function(){initNavTree('force__density__field_8h.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">force_density_field.h File Reference</div>  </div>
@@ -175,6 +174,7 @@ $(document).ready(function(){initNavTree('force__density__field_8h.html','');});
 <code>#include &quot;<a class="el" href="default__scalars_8h.html">drake/common/default_scalars.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="force__density__field__base_8h.html">drake/multibody/fem/force_density_field_base.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody__tree__system_8h.html">drake/multibody/tree/multibody_tree_system.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for force_density_field.h:</div>
@@ -185,7 +185,7 @@ Include dependency graph for force_density_field.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="force__density__field_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="force__density__field_8h__dep__incl.svg" width="207" height="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -195,7 +195,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MultibodyPlant is a Drake system framework representation (see <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">systems::System</a>) for the model of a physical system consisting of a collection of interconnected bodies.  <a href="classdrake_1_1multibody_1_1_multibody_plant.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html">ForceDensityField&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ForceDensityField class is an abstract base class that represents a force density field affecting deformable bodies in a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="classdrake_1_1multibody_1_1_force_density_field.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementations of the <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html" title="The ForceDensityFieldBase class is an abstract base class that represents a force density field affec...">ForceDensityFieldBase</a> class should inherit from this class.  <a href="classdrake_1_1multibody_1_1_force_density_field.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_gravity_force_field.html">GravityForceField&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A uniform gravitational force density field for a uniform density object.  <a href="classdrake_1_1multibody_1_1_gravity_force_field.html#details">More...</a><br /></td></tr>
@@ -207,14 +207,6 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1multibody"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html">drake::multibody</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a0f77dfd6828c43977a6b9f8aa6bccdba"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdba">ForceDensityType</a> { <a class="el" href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdbaa4ccd18823739ddc388e14df7c3386dcd">kPerCurrentVolume</a>, 
-<a class="el" href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdbaa6cdc8cc6c28d212d5a0000e6b3f20d4c">kPerReferenceVolume</a>
- }</td></tr>
-<tr class="memdesc:a0f77dfd6828c43977a6b9f8aa6bccdba"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Enum for the type of force density in ForceDensityField.  <a href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdba">More...</a><br /></td></tr>
-<tr class="separator:a0f77dfd6828c43977a6b9f8aa6bccdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -265,7 +257,7 @@ Functions</h2></td></tr>
 <!-- footer -->
 <div class="navpath">
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li><li class="navelem"><a class="el" href="dir_656f7d340c0f5b4ecaf881820f2aea38.html">plant</a></li><li class="navelem"><a class="el" href="force__density__field_8h.html">force_density_field.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li><li class="navelem"><a class="el" href="dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html">tree</a></li><li class="navelem"><a class="el" href="force__density__field_8h.html">force_density_field.h</a></li>
   </ul>
 </div>
 <footer id="nav-path", class="site-footer padding">

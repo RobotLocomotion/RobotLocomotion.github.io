@@ -32,7 +32,6 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     [ "externally_applied_spatial_force_multiplexer.h", "externally__applied__spatial__force__multiplexer_8h.html", [
       [ "ExternallyAppliedSpatialForceMultiplexer", "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html", "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer" ]
     ] ],
-    [ "force_density_field.h", "force__density__field_8h.html", "force__density__field_8h" ],
     [ "geometry_contact_data.h", "geometry__contact__data_8h.html", "geometry__contact__data_8h" ],
     [ "hydroelastic_contact_forces_continuous_cache_data.h", "hydroelastic__contact__forces__continuous__cache__data_8h.html", null ],
     [ "hydroelastic_contact_info.h", "hydroelastic__contact__info_8h.html", "hydroelastic__contact__info_8h" ],

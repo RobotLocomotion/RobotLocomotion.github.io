@@ -379,11 +379,13 @@ var hierarchy =
     [ "FiniteHorizonLinearQuadraticRegulatorResult", "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html", null ],
     [ "FixedInputPortValue", "classdrake_1_1systems_1_1_fixed_input_port_value.html", null ],
     [ "CameraConfig::FocalLength", "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_focal_length.html", null ],
-    [ "ForceDensityField< T >", "classdrake_1_1multibody_1_1_force_density_field.html", [
-      [ "GravityForceField< T >", "classdrake_1_1multibody_1_1_gravity_force_field.html", null ]
-    ] ],
-    [ "ForceDensityField< double >", "classdrake_1_1multibody_1_1_force_density_field.html", [
-      [ "PointSourceForceField", "classdrake_1_1examples_1_1deformable_1_1_point_source_force_field.html", null ]
+    [ "ForceDensityFieldBase< T >", "classdrake_1_1multibody_1_1_force_density_field_base.html", [
+      [ "ForceDensityField< T >", "classdrake_1_1multibody_1_1_force_density_field.html", [
+        [ "GravityForceField< T >", "classdrake_1_1multibody_1_1_gravity_force_field.html", null ]
+      ] ],
+      [ "ForceDensityField< double >", "classdrake_1_1multibody_1_1_force_density_field.html", [
+        [ "PointSourceForceField", "classdrake_1_1examples_1_1deformable_1_1_point_source_force_field.html", null ]
+      ] ]
     ] ],
     [ "formatter", null, [
       [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
@@ -516,8 +518,8 @@ var hierarchy =
     [ "InitialValueProblem< T >", "classdrake_1_1systems_1_1_initial_value_problem.html", null ],
     [ "InMemoryMesh", "structdrake_1_1geometry_1_1_in_memory_mesh.html", null ],
     [ "SelectorParams::InputPortParams", "structdrake_1_1systems_1_1_selector_params_1_1_input_port_params.html", null ],
-    [ "MultibodyPlant< T >::OutputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html", null ],
     [ "MultibodyPlant< T >::InputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", null ],
+    [ "MultibodyPlant< T >::OutputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html", null ],
     [ "integral_constant", null, [
       [ "tuple_size< drake::SortedPair< T > >", "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ]
     ] ],

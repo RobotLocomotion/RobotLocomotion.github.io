@@ -1,0 +1,541 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: ForceDensityFieldBase&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_force_density_field_base.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classdrake_1_1multibody_1_1_force_density_field_base-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">ForceDensityFieldBase&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class drake::multibody::ForceDensityFieldBase&lt; T &gt;</h3>
+
+<p>The ForceDensityFieldBase class is an abstract base class that represents a force density field affecting deformable bodies in a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </p>
+<p>The force field is described by the member function <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a60e328d070ad76a196fa2b8a14ad07d8" title="Evaluates the force density [N/m³] with the given context of the owning MultibodyPlant and a position...">EvaluateAt()</a> which takes as input a position in the world frame and returns the force density from the force density field at the given location, with unit [N/m³]. To create a concrete ForceDensityFieldBase class, inherit from <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html" title="Implementations of the ForceDensityFieldBase class should inherit from this class.">ForceDensityField</a> instead of directly inheriting from ForceDensityFieldBase. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+<p><code>#include &lt;drake/multibody/fem/force_density_field_base.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a7a452e563e7d734701aa824076e519dd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a7a452e563e7d734701aa824076e519dd">~ForceDensityFieldBase</a> ()=0</td></tr>
+<tr class="separator:a7a452e563e7d734701aa824076e519dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e328d070ad76a196fa2b8a14ad07d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a60e328d070ad76a196fa2b8a14ad07d8">EvaluateAt</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ) const</td></tr>
+<tr class="memdesc:a60e328d070ad76a196fa2b8a14ad07d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the force density [N/m³] with the given <code>context</code> of the owning <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and a position in world, <code>p_WQ</code>.  <a href="#a60e328d070ad76a196fa2b8a14ad07d8">More...</a><br /></td></tr>
+<tr class="separator:a60e328d070ad76a196fa2b8a14ad07d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f55f72c4938231de9e7781fc2901849"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a8f55f72c4938231de9e7781fc2901849">Clone</a> () const</td></tr>
+<tr class="memdesc:a8f55f72c4938231de9e7781fc2901849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an identical copy of <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html" title="The ForceDensityFieldBase class is an abstract base class that represents a force density field affec...">ForceDensityFieldBase</a>.  <a href="#a8f55f72c4938231de9e7781fc2901849">More...</a><br /></td></tr>
+<tr class="separator:a8f55f72c4938231de9e7781fc2901849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e5a8708b974d1db2ccb0576a05bbc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdba">ForceDensityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a90e5a8708b974d1db2ccb0576a05bbc6">density_type</a> () const</td></tr>
+<tr class="separator:a90e5a8708b974d1db2ccb0576a05bbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5915d7f4e848132f3f0d2b7230103dea"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a5915d7f4e848132f3f0d2b7230103dea">DoEvaluateAt</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ) const =0</td></tr>
+<tr class="memdesc:a5915d7f4e848132f3f0d2b7230103dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes must override this function to provide a threadsafe implemention to the NVI <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a60e328d070ad76a196fa2b8a14ad07d8" title="Evaluates the force density [N/m³] with the given context of the owning MultibodyPlant and a position...">EvaluateAt()</a>.  <a href="#a5915d7f4e848132f3f0d2b7230103dea">More...</a><br /></td></tr>
+<tr class="separator:a5915d7f4e848132f3f0d2b7230103dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe8c11e644e31a45cdc117b96f5620e"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a3fe8c11e644e31a45cdc117b96f5620e">DoClone</a> () const =0</td></tr>
+<tr class="memdesc:a3fe8c11e644e31a45cdc117b96f5620e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes must override this function to implement the NVI <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a8f55f72c4938231de9e7781fc2901849" title="Returns an identical copy of this ForceDensityFieldBase.">Clone()</a>.  <a href="#a3fe8c11e644e31a45cdc117b96f5620e">More...</a><br /></td></tr>
+<tr class="separator:a3fe8c11e644e31a45cdc117b96f5620e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:ab2e1af0e42c9bce925af298da1e099bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#ab2e1af0e42c9bce925af298da1e099bd">ForceDensityFieldBase</a> (const <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a> &amp;)=default</td></tr>
+<tr class="separator:ab2e1af0e42c9bce925af298da1e099bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e80543e42368fd77d7bab57bc66c258"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a9e80543e42368fd77d7bab57bc66c258">operator=</a> (const <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a> &amp;)=default</td></tr>
+<tr class="separator:a9e80543e42368fd77d7bab57bc66c258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1555da0d13c5df206261386557adfa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a5e1555da0d13c5df206261386557adfa">ForceDensityFieldBase</a> (<a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a5e1555da0d13c5df206261386557adfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217e4bbf9330a2901c9290c18deeaf76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a217e4bbf9330a2901c9290c18deeaf76">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a217e4bbf9330a2901c9290c18deeaf76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a8c9bf0d761aa1ce46226cdd6e7884750"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a8c9bf0d761aa1ce46226cdd6e7884750">ForceDensityField&lt; T &gt;</a></td></tr>
+<tr class="separator:a8c9bf0d761aa1ce46226cdd6e7884750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7a452e563e7d734701aa824076e519dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a452e563e7d734701aa824076e519dd">&#9670;&nbsp;</a></span>~ForceDensityFieldBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2e1af0e42c9bce925af298da1e099bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e1af0e42c9bce925af298da1e099bd">&#9670;&nbsp;</a></span>ForceDensityFieldBase() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e1555da0d13c5df206261386557adfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e1555da0d13c5df206261386557adfa">&#9670;&nbsp;</a></span>ForceDensityFieldBase() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8f55f72c4938231de9e7781fc2901849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f55f72c4938231de9e7781fc2901849">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt;T&gt; &gt; Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an identical copy of <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html" title="The ForceDensityFieldBase class is an abstract base class that represents a force density field affec...">ForceDensityFieldBase</a>. </p>
+
+</div>
+</div>
+<a id="a90e5a8708b974d1db2ccb0576a05bbc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e5a8708b974d1db2ccb0576a05bbc6">&#9670;&nbsp;</a></span>density_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdba">ForceDensityType</a> density_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fe8c11e644e31a45cdc117b96f5620e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe8c11e644e31a45cdc117b96f5620e">&#9670;&nbsp;</a></span>DoClone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt;T&gt; &gt; DoClone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived classes must override this function to implement the NVI <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a8f55f72c4938231de9e7781fc2901849" title="Returns an identical copy of this ForceDensityFieldBase.">Clone()</a>. </p>
+
+</div>
+</div>
+<a id="a5915d7f4e848132f3f0d2b7230103dea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5915d7f4e848132f3f0d2b7230103dea">&#9670;&nbsp;</a></span>DoEvaluateAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; DoEvaluateAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_WQ</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derived classes must override this function to provide a threadsafe implemention to the NVI <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a60e328d070ad76a196fa2b8a14ad07d8" title="Evaluates the force density [N/m³] with the given context of the owning MultibodyPlant and a position...">EvaluateAt()</a>. </p>
+
+</div>
+</div>
+<a id="a60e328d070ad76a196fa2b8a14ad07d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e328d070ad76a196fa2b8a14ad07d8">&#9670;&nbsp;</a></span>EvaluateAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; EvaluateAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_WQ</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the force density [N/m³] with the given <code>context</code> of the owning <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and a position in world, <code>p_WQ</code>. </p>
+
+</div>
+</div>
+<a id="a217e4bbf9330a2901c9290c18deeaf76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a217e4bbf9330a2901c9290c18deeaf76">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e80543e42368fd77d7bab57bc66c258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e80543e42368fd77d7bab57bc66c258">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a8c9bf0d761aa1ce46226cdd6e7884750"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9bf0d761aa1ce46226cdd6e7884750">&#9670;&nbsp;</a></span>ForceDensityField&lt; T &gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html">ForceDensityField</a>&lt; T &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/multibody/fem/<a class="el" href="force__density__field__base_8h.html">force_density_field_base.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a class="el" href="namespacedrake.html">drake</a></li><li class="navelem"><a class="el" href="namespacedrake_1_1multibody.html">multibody</a></li><li class="navelem"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

@@ -212,12 +212,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af5e0ebb8bcd41ac6a70c1015e08f132c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#af5e0ebb8bcd41ac6a70c1015e08f132c">GetPositions</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:af5e0ebb8bcd41ac6a70c1015e08f132c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix of vertex positions for the deformable body with the given <code>id</code> in the provided <code>context</code>.  <a href="#af5e0ebb8bcd41ac6a70c1015e08f132c">More...</a><br /></td></tr>
 <tr class="separator:af5e0ebb8bcd41ac6a70c1015e08f132c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a577ee07a79c5e8e65594ea8ee16ab0e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a577ee07a79c5e8e65594ea8ee16ab0e5">AddExternalForce</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html">ForceDensityField</a>&lt; T &gt;&gt; external_force)</td></tr>
-<tr class="memdesc:a577ee07a79c5e8e65594ea8ee16ab0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an external force density field that applies external force to all deformable bodies.  <a href="#a577ee07a79c5e8e65594ea8ee16ab0e5">More...</a><br /></td></tr>
-<tr class="separator:a577ee07a79c5e8e65594ea8ee16ab0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0522dd997904b1a3c75fce34250b63a7"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; const <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html">ForceDensityField</a>&lt; T &gt; * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a0522dd997904b1a3c75fce34250b63a7">GetExternalForces</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
-<tr class="memdesc:a0522dd997904b1a3c75fce34250b63a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the force density fields acting on the deformable body with the given <code>id</code>.  <a href="#a0522dd997904b1a3c75fce34250b63a7">More...</a><br /></td></tr>
-<tr class="separator:a0522dd997904b1a3c75fce34250b63a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73071e1b75d3810e07aa18e4f0a0fa5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a73071e1b75d3810e07aa18e4f0a0fa5e">AddExternalForce</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt; T &gt;&gt; external_force)</td></tr>
+<tr class="memdesc:a73071e1b75d3810e07aa18e4f0a0fa5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an external force density field that applies external force to all deformable bodies.  <a href="#a73071e1b75d3810e07aa18e4f0a0fa5e">More...</a><br /></td></tr>
+<tr class="separator:a73071e1b75d3810e07aa18e4f0a0fa5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe26263ce7503739202823c40a1b529"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; const <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt; T &gt; * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#abfe26263ce7503739202823c40a1b529">GetExternalForces</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
+<tr class="memdesc:abfe26263ce7503739202823c40a1b529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the force density fields acting on the deformable body with the given <code>id</code>.  <a href="#abfe26263ce7503739202823c40a1b529">More...</a><br /></td></tr>
+<tr class="separator:abfe26263ce7503739202823c40a1b529"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e5ab302b3f0c9972be6ae03491f5637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a5e5ab302b3f0c9972be6ae03491f5637">Disable</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a5e5ab302b3f0c9972be6ae03491f5637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the deformable body with the given <code>id</code> in the given context.  <a href="#a5e5ab302b3f0c9972be6ae03491f5637">More...</a><br /></td></tr>
 <tr class="separator:a5e5ab302b3f0c9972be6ae03491f5637"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -469,8 +469,8 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a577ee07a79c5e8e65594ea8ee16ab0e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a577ee07a79c5e8e65594ea8ee16ab0e5">&#9670;&nbsp;</a></span>AddExternalForce()</h2>
+<a id="a73071e1b75d3810e07aa18e4f0a0fa5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73071e1b75d3810e07aa18e4f0a0fa5e">&#9670;&nbsp;</a></span>AddExternalForce()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -478,7 +478,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
         <tr>
           <td class="memname">void AddExternalForce </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html">ForceDensityField</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt; T &gt;&gt;&#160;</td>
           <td class="paramname"><em>external_force</em></td><td>)</td>
           <td></td>
         </tr>
@@ -868,14 +868,14 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
-<a id="a0522dd997904b1a3c75fce34250b63a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0522dd997904b1a3c75fce34250b63a7">&#9670;&nbsp;</a></span>GetExternalForces()</h2>
+<a id="abfe26263ce7503739202823c40a1b529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe26263ce7503739202823c40a1b529">&#9670;&nbsp;</a></span>GetExternalForces()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt;const <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html">ForceDensityField</a>&lt;T&gt;*&gt;&amp; GetExternalForces </td>
+          <td class="memname">const std::vector&lt;const <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt;T&gt;*&gt;&amp; GetExternalForces </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>

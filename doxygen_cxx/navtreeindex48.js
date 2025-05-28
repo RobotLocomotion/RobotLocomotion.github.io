@@ -1,5 +1,13 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1systems_1_1lcm_1_1_serializer.html#a19a46c344566fb11866cbc35541e9495":[3,0,0,16,6,6,3],
+"classdrake_1_1systems_1_1lcm_1_1_serializer.html#a4758f09d2f9e7f4fb68ddbd4d26a79b8":[3,0,0,16,6,6,6],
+"classdrake_1_1systems_1_1lcm_1_1_serializer.html#a671833651346535b186f22561b183698":[3,0,0,16,6,6,0],
+"classdrake_1_1systems_1_1lcm_1_1_serializer.html#a868390ca87ecfa7d8436db99da7d2ece":[3,0,0,16,6,6,1],
+"classdrake_1_1systems_1_1lcm_1_1_serializer.html#aa3b343e6b2a9f07d94959abd15644a45":[3,0,0,16,6,6,4],
+"classdrake_1_1systems_1_1lcm_1_1_serializer.html#aa6cfb82796bd99ae286bbc5cd6353b7c":[3,0,0,16,6,6,7],
+"classdrake_1_1systems_1_1lcm_1_1_serializer.html#ad793335c2a7fa1e6348e1889b82c257e":[3,0,0,16,6,6,5],
+"classdrake_1_1systems_1_1lcm_1_1_serializer.html#aeec1aea93f0d97cc9fe78175ba0ee048":[3,0,0,16,6,6,2],
 "classdrake_1_1systems_1_1lcm_1_1_serializer.html#af4a163890191ae19f7e61f4503179e24":[3,0,0,16,6,6,8],
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html":[3,0,0,16,6,7],
 "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a0820513febb88c2ff24110d99fac8a23":[3,0,0,16,6,7,8],
@@ -241,13 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html#aff74e4980084b28c29f132bd18606031":[3,0,0,16,9,39,3],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html":[1,2,4,4],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a008e7b4be9970662f22b3e31fbcc5a2b":[1,2,4,4,4],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a5ae4ab5e2ebbb46c574d1f0531d86d66":[1,2,4,4,11],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a79737f07b9834cf08fd55925be76944d":[1,2,4,4,14],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a7a7563e77e29dbe2723b67edd4ffe6bb":[1,2,4,4,10],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a895ff707132dabf15a997d7aec0b23a1":[1,2,4,4,5],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a96a36d6a07e828f5d59df2fd3f254495":[1,2,4,4,7],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#aa98a461039c6c801f61b1d491939435a":[1,2,4,4,2],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#ab9ed4e2a0b5730711b8a3d28804e9a07":[1,2,4,4,1],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#ad21badaf40ab842db851a4a380c0e22f":[1,2,4,4,0],
-"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#adf4572bb00056a157be83e44f7f41523":[1,2,4,4,12]
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a5ae4ab5e2ebbb46c574d1f0531d86d66":[1,2,4,4,11]
 };

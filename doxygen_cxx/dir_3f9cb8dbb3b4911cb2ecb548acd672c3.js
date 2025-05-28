@@ -13,6 +13,7 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "door_hinge.h", "door__hinge_8h.html", "door__hinge_8h" ],
     [ "element_collection.h", "element__collection_8h.html", null ],
     [ "fixed_offset_frame.h", "fixed__offset__frame_8h.html", "fixed__offset__frame_8h" ],
+    [ "force_density_field.h", "force__density__field_8h.html", "force__density__field_8h" ],
     [ "force_element.h", "force__element_8h.html", [
       [ "ForceElement", "classdrake_1_1multibody_1_1_force_element.html", "classdrake_1_1multibody_1_1_force_element" ]
     ] ],

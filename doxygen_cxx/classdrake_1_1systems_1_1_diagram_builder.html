@@ -289,6 +289,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1eb25ed5b825b50aadf96f3c0f0e54d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">OutputPortIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a1eb25ed5b825b50aadf96f3c0f0e54d6">ExportOutput</a> (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;output, std::variant&lt; std::string, <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &gt; name=<a class="el" href="namespacedrake_1_1systems.html#a399dec16d9f072ee3a256c35ba3379fa">kUseDefaultName</a>)</td></tr>
 <tr class="memdesc:a1eb25ed5b825b50aadf96f3c0f0e54d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that the given <code>output</code> port of a constituent system is an output of the entire diagram.  <a href="#a1eb25ed5b825b50aadf96f3c0f0e54d6">More...</a><br /></td></tr>
 <tr class="separator:a1eb25ed5b825b50aadf96f3c0f0e54d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb3ea9fef65725177f4290a2566ea02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#abbb3ea9fef65725177f4290a2566ea02">Disconnect</a> (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;source, const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;dest)</td></tr>
+<tr class="memdesc:abbb3ea9fef65725177f4290a2566ea02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undoes a <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a3a8352f868d18200ed5f6894edc303d7" title="Declares that input port dest is connected to output port src.">Connect()</a> by disconnecting the given subsystem ports.  <a href="#abbb3ea9fef65725177f4290a2566ea02">More...</a><br /></td></tr>
+<tr class="separator:abbb3ea9fef65725177f4290a2566ea02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4aef2b1fed54592b99071ee8df81f76"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aa4aef2b1fed54592b99071ee8df81f76">Build</a> ()</td></tr>
 <tr class="memdesc:aa4aef2b1fed54592b99071ee8df81f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> that has been described by the calls to Connect, ExportInput, and ExportOutput.  <a href="#aa4aef2b1fed54592b99071ee8df81f76">More...</a><br /></td></tr>
 <tr class="separator:aa4aef2b1fed54592b99071ee8df81f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -983,6 +986,43 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="abbb3ea9fef65725177f4290a2566ea02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbb3ea9fef65725177f4290a2566ea02">&#9670;&nbsp;</a></span>Disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disconnect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Undoes a <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a3a8352f868d18200ed5f6894edc303d7" title="Declares that input port dest is connected to output port src.">Connect()</a> by disconnecting the given subsystem ports. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#adbc3f35c7cd5f2a99c88deb5829655c6" title="(Advanced) Returns a reference to the map of connections between Systems.">connection_map()</a> </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the ports were not already connected. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a644718bb2fb240de962dc3c9a1fdf0dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a644718bb2fb240de962dc3c9a1fdf0dc">&#9670;&nbsp;</a></span>empty()</h2>
 
@@ -1346,8 +1386,8 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
-<a id="a1c4553ec1b3caebff0d951e5795fd617"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a9707232e37c28463f285aaab01f88c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1358,7 +1398,7 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1372,8 +1412,8 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
 
 </div>
 </div>
-<a id="a9707232e37c28463f285aaab01f88c49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9707232e37c28463f285aaab01f88c49">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a1c4553ec1b3caebff0d951e5795fd617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4553ec1b3caebff0d951e5795fd617">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1384,7 +1424,7 @@ A port indicated by the resolution of <code>name</code> must not exist. </dd></d
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

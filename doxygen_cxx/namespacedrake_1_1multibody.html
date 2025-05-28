@@ -282,7 +282,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FixedOffsetFrame represents a material frame F whose pose is fixed with respect to a <em>parent</em> material frame P.  <a href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html">ForceDensityField</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ForceDensityField class is an abstract base class that represents a force density field affecting deformable bodies in a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="classdrake_1_1multibody_1_1_force_density_field.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementations of the <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html" title="The ForceDensityFieldBase class is an abstract base class that represents a force density field affec...">ForceDensityFieldBase</a> class should inherit from this class.  <a href="classdrake_1_1multibody_1_1_force_density_field.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ForceDensityFieldBase class is an abstract base class that represents a force density field affecting deformable bodies in a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="classdrake_1_1multibody_1_1_force_density_field_base.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ForceElement allows modeling state and time dependent forces in a MultibodyTree model.  <a href="classdrake_1_1multibody_1_1_force_element.html#details">More...</a><br /></td></tr>
@@ -541,6 +544,11 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a0f77dfd6828c43977a6b9f8aa6bccdba"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdba">ForceDensityType</a> { <a class="el" href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdbaa4ccd18823739ddc388e14df7c3386dcd">kPerCurrentVolume</a>, 
+<a class="el" href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdbaa6cdc8cc6c28d212d5a0000e6b3f20d4c">kPerReferenceVolume</a>
+ }</td></tr>
+<tr class="memdesc:a0f77dfd6828c43977a6b9f8aa6bccdba"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Enum for the type of force density in ForceDensityFieldBase.  <a href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdba">More...</a><br /></td></tr>
+<tr class="separator:a0f77dfd6828c43977a6b9f8aa6bccdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e26d472253fc2fe452f8b4bb2d1bcdc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a3e26d472253fc2fe452f8b4bb2d1bcdc">DifferentialInverseKinematicsStatus</a> { <a class="el" href="namespacedrake_1_1multibody.html#a3e26d472253fc2fe452f8b4bb2d1bcdcabc17c60a85668aa4d8463d9204acb6f9">kSolutionFound</a>, 
 <a class="el" href="namespacedrake_1_1multibody.html#a3e26d472253fc2fe452f8b4bb2d1bcdca7dbb41ec30548b5703863365ae83a5dc">kNoSolutionFound</a>, 
 <a class="el" href="namespacedrake_1_1multibody.html#a3e26d472253fc2fe452f8b4bb2d1bcdca2090aef3abe80df58a23b77aa3a10bc3">kStuck</a>
@@ -551,11 +559,6 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ad8fa828762d54ed2db5efec5df1b5082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects how linear constraints are enforced for TOPPRA's optimization.  <a href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">More...</a><br /></td></tr>
 <tr class="separator:ad8fa828762d54ed2db5efec5df1b5082"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f77dfd6828c43977a6b9f8aa6bccdba"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdba">ForceDensityType</a> { <a class="el" href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdbaa4ccd18823739ddc388e14df7c3386dcd">kPerCurrentVolume</a>, 
-<a class="el" href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdbaa6cdc8cc6c28d212d5a0000e6b3f20d4c">kPerReferenceVolume</a>
- }</td></tr>
-<tr class="memdesc:a0f77dfd6828c43977a6b9f8aa6bccdba"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Enum for the type of force density in ForceDensityField.  <a href="namespacedrake_1_1multibody.html#a0f77dfd6828c43977a6b9f8aa6bccdba">More...</a><br /></td></tr>
-<tr class="separator:a0f77dfd6828c43977a6b9f8aa6bccdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f6e054758d34b83e86bea87d65dfe4e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4e">ContactModel</a> { <br />
 &#160;&#160;<a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea873aefb0d70a0478c541b2d98484595d">kHydroelastic</a>, 
 <a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea20e722b15a1b587c30633f0a136b7009">kPoint</a>, 
@@ -1092,11 +1095,11 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Enum for the type of force density in <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html" title="The ForceDensityField class is an abstract base class that represents a force density field affecting...">ForceDensityField</a>. </p>
+<p>(Advanced) Enum for the type of force density in <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html" title="The ForceDensityFieldBase class is an abstract base class that represents a force density field affec...">ForceDensityFieldBase</a>. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0f77dfd6828c43977a6b9f8aa6bccdbaa4ccd18823739ddc388e14df7c3386dcd"></a>kPerCurrentVolume&#160;</td><td class="fielddoc"><p><a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html#a60e328d070ad76a196fa2b8a14ad07d8" title="Evaluates the force density [N/m³] with the given context of the owning MultibodyPlant and a position...">ForceDensityField::EvaluateAt()</a> returns the force per unit of <em>current</em> (deformed) configuration volume. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0f77dfd6828c43977a6b9f8aa6bccdbaa4ccd18823739ddc388e14df7c3386dcd"></a>kPerCurrentVolume&#160;</td><td class="fielddoc"><p><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a60e328d070ad76a196fa2b8a14ad07d8" title="Evaluates the force density [N/m³] with the given context of the owning MultibodyPlant and a position...">ForceDensityFieldBase::EvaluateAt()</a> returns the force per unit of <em>current</em> (deformed) configuration volume. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a0f77dfd6828c43977a6b9f8aa6bccdbaa6cdc8cc6c28d212d5a0000e6b3f20d4c"></a>kPerReferenceVolume&#160;</td><td class="fielddoc"><p><a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html#a60e328d070ad76a196fa2b8a14ad07d8" title="Evaluates the force density [N/m³] with the given context of the owning MultibodyPlant and a position...">ForceDensityField::EvaluateAt()</a> returns the force per unit of <em>reference</em> configuration volume where the reference undeformed configuration is defined by the input mesh provided by the user. </p>
+<tr><td class="fieldname"><a id="a0f77dfd6828c43977a6b9f8aa6bccdbaa6cdc8cc6c28d212d5a0000e6b3f20d4c"></a>kPerReferenceVolume&#160;</td><td class="fielddoc"><p><a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html#a60e328d070ad76a196fa2b8a14ad07d8" title="Evaluates the force density [N/m³] with the given context of the owning MultibodyPlant and a position...">ForceDensityFieldBase::EvaluateAt()</a> returns the force per unit of <em>reference</em> configuration volume where the reference undeformed configuration is defined by the input mesh provided by the user. </p>
 </td></tr>
 </table>
 
