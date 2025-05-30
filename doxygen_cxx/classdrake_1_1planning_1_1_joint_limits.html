@@ -169,20 +169,26 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_joint_limit
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Wrapper type for position, velocity, and acceleration limits. </p>
 <p>Note that enforcement of finite limits by this class is optional; see the <code>require_finite_*</code> constructor arguments.</p>
-<p>NaN values are rejected for all limits and tolerances. </p>
+<p>NaNs are rejected for all limits and tolerances. </p>
 </div>
 <p><code>#include &lt;drake/planning/joint_limits.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a775d8b642fd16e310ecd2f658b894e07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a775d8b642fd16e310ecd2f658b894e07">JointLimits</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, bool require_finite_positions=false, bool require_finite_velocities=false, bool require_finite_accelerations=false)</td></tr>
-<tr class="memdesc:a775d8b642fd16e310ecd2f658b894e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> using the position, velocity, and acceleration limits in the provided <code>plant</code>.  <a href="#a775d8b642fd16e310ecd2f658b894e07">More...</a><br /></td></tr>
+<tr class="memdesc:a775d8b642fd16e310ecd2f658b894e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a JointLimits using the position, velocity, and acceleration limits in the provided <code>plant</code>.  <a href="#a775d8b642fd16e310ecd2f658b894e07">More...</a><br /></td></tr>
 <tr class="separator:a775d8b642fd16e310ecd2f658b894e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c089f065edaca8994de45632436738"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a29c089f065edaca8994de45632436738">JointLimits</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1planning_1_1_dof_mask.html">DofMask</a> &amp;active_dof, bool require_finite_positions=false, bool require_finite_velocities=false, bool require_finite_accelerations=false)</td></tr>
+<tr class="memdesc:a29c089f065edaca8994de45632436738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a JointLimits using the position, velocity, and acceleration limits in the provided <code>plant</code>, selecting only the dofs indicated by <code>active_dof. </code> <a href="#a29c089f065edaca8994de45632436738">More...</a><br /></td></tr>
+<tr class="separator:a29c089f065edaca8994de45632436738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d78b47297a41d3808969bbc58e625a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a5d78b47297a41d3808969bbc58e625a1">JointLimits</a> (const <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;other, const <a class="el" href="classdrake_1_1planning_1_1_dof_mask.html">DofMask</a> &amp;active_dof, bool require_finite_positions=false, bool require_finite_velocities=false, bool require_finite_accelerations=false)</td></tr>
+<tr class="memdesc:a5d78b47297a41d3808969bbc58e625a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a JointLimits using the position, velocity, and acceleration limits in the provided <code>other</code>, selecting only the coefficients indicated by <code>active_dof. </code> <a href="#a5d78b47297a41d3808969bbc58e625a1">More...</a><br /></td></tr>
+<tr class="separator:a5d78b47297a41d3808969bbc58e625a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73d651163f4d1fe92e635aaaf3e9a701"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a73d651163f4d1fe92e635aaaf3e9a701">JointLimits</a> (const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a97e15c60940bdde2ba9757545ea353a1">position_lower</a>, const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a2970af13be80ae132249cc17d5288c77">position_upper</a>, const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#af812d8f950c8002834ae7f9977d23d9e">velocity_lower</a>, const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a3d7182317ce6c6c76367ddddd65bab67">velocity_upper</a>, const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#ad94799af335483efba79d9f3c650a04b">acceleration_lower</a>, const Eigen::VectorXd &amp;<a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a286987e5693b0f45841c616f75d39ae3">acceleration_upper</a>, bool require_finite_positions=false, bool require_finite_velocities=false, bool require_finite_accelerations=false)</td></tr>
-<tr class="memdesc:a73d651163f4d1fe92e635aaaf3e9a701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> using the provided arguments.  <a href="#a73d651163f4d1fe92e635aaaf3e9a701">More...</a><br /></td></tr>
+<tr class="memdesc:a73d651163f4d1fe92e635aaaf3e9a701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a JointLimits using the provided arguments.  <a href="#a73d651163f4d1fe92e635aaaf3e9a701">More...</a><br /></td></tr>
 <tr class="separator:a73d651163f4d1fe92e635aaaf3e9a701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5eeea9e807395042989c4ec46ff1b3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#af5eeea9e807395042989c4ec46ff1b3f">JointLimits</a> ()=default</td></tr>
-<tr class="memdesc:af5eeea9e807395042989c4ec46ff1b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> with 0-length vectors for all limits.  <a href="#af5eeea9e807395042989c4ec46ff1b3f">More...</a><br /></td></tr>
+<tr class="memdesc:af5eeea9e807395042989c4ec46ff1b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a JointLimits with 0-length vectors for all limits.  <a href="#af5eeea9e807395042989c4ec46ff1b3f">More...</a><br /></td></tr>
 <tr class="separator:af5eeea9e807395042989c4ec46ff1b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a262f42214d106b31158ceb36515cd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#a6a262f42214d106b31158ceb36515cd0">~JointLimits</a> ()</td></tr>
 <tr class="separator:a6a262f42214d106b31158ceb36515cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,7 +231,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aaa96ab65c0503a7900cace64dd5283ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa96ab65c0503a7900cace64dd5283ee">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa96ab65c0503a7900cace64dd5283ee">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +257,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a5f442d2f0895707de9ea222f9f9616b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f442d2f0895707de9ea222f9f9616b7">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f442d2f0895707de9ea222f9f9616b7">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,7 +283,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a775d8b642fd16e310ecd2f658b894e07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a775d8b642fd16e310ecd2f658b894e07">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a775d8b642fd16e310ecd2f658b894e07">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,12 +320,129 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> using the position, velocity, and acceleration limits in the provided <code>plant</code>. </p>
+<p>Constructs a JointLimits using the position, velocity, and acceleration limits in the provided <code>plant</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if plant is not finalized. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if the position, velocity, or acceleration limits contain non-finite values, and the corresponding constructor argument is true. </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if any limits contain NaN values. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any limit value is NaN. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a29c089f065edaca8994de45632436738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c089f065edaca8994de45632436738">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_dof_mask.html">DofMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>active_dof</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_positions</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_velocities</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_accelerations</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a JointLimits using the position, velocity, and acceleration limits in the provided <code>plant</code>, selecting only the dofs indicated by <code>active_dof. </code></p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if plant is not finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if active_dof.size() != <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#aba2887f0ca1fbbdfb49cf6b0ee21e553">num_positions()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if active_dof.size() != <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#ae0163ac0976659d811e3337647ff0313">num_velocities()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if active_dof.size() != <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html#aabb51c8b90ff2a026ef7153fa2f43425">num_accelerations()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the position, velocity, or acceleration limits contain non-finite values, and the corresponding constructor argument is true. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any limit value is NaN. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5d78b47297a41d3808969bbc58e625a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d78b47297a41d3808969bbc58e625a1">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html">JointLimits</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_dof_mask.html">DofMask</a> &amp;&#160;</td>
+          <td class="paramname"><em>active_dof</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_positions</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_velocities</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>require_finite_accelerations</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a JointLimits using the position, velocity, and acceleration limits in the provided <code>other</code>, selecting only the coefficients indicated by <code>active_dof. </code></p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if active_dof.size() != other.num_positions(). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if active_dof.size() != other.num_velocities(). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if active_dof.size() != other.num_accelerations(). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the position, velocity, or acceleration limits contain non-finite values, and the corresponding constructor argument is true. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any limit value is NaN. </td></tr>
   </table>
   </dd>
 </dl>
@@ -327,7 +450,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a73d651163f4d1fe92e635aaaf3e9a701"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73d651163f4d1fe92e635aaaf3e9a701">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d651163f4d1fe92e635aaaf3e9a701">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -394,14 +517,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> using the provided arguments. </p>
+<p>Constructs a JointLimits using the provided arguments. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the position, velocity, or acceleration limits contain non-finite values, and the corresponding constructor argument is true. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if any lower/upper limit pairs differ in size. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if any upper limit coefficients are less than the corresponding lower limit coefficient. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if velocity and acceleration limits differ in size. </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if any limits contain NaN values. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any limit value is NaN. </td></tr>
   </table>
   </dd>
 </dl>
@@ -409,7 +532,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="af5eeea9e807395042989c4ec46ff1b3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5eeea9e807395042989c4ec46ff1b3f">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af5eeea9e807395042989c4ec46ff1b3f">&#9670;&nbsp;</a></span>JointLimits() <span class="overload">[7/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -431,7 +554,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="classdrake_1_1planning_1_1_joint_limits.html" title="Wrapper type for position, velocity, and acceleration limits.">JointLimits</a> with 0-length vectors for all limits. </p>
+<p>Constructs a JointLimits with 0-length vectors for all limits. </p>
 
 </div>
 </div>

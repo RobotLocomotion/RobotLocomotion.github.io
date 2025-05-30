@@ -555,7 +555,7 @@ system using the zero-order hold method.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System, time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, target_realtime_rate=0.0, publish_every_time_step=False)) -&gt; pydrake.systems.framework.System</p></li>
+<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System, time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, start_time=0.0, target_realtime_rate=0.0, publish_every_time_step=False)) -&gt; pydrake.systems.framework.System</p></li>
 </ol>
 <p>Converts a general continuous-time system <span class="math notranslate nohighlight">\(\dot{x} =
 f(t,x(t),u(t))\)</span> to a discrete-time system with zero-order hold on the
@@ -630,7 +630,7 @@ system using the zero-order hold method.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="6">
-<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System_[AutoDiffXd], time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, target_realtime_rate=0.0, publish_every_time_step=False)) -&gt; pydrake.systems.framework.System_[AutoDiffXd]</p></li>
+<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System_[AutoDiffXd], time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, start_time=0.0, target_realtime_rate=0.0, publish_every_time_step=False)) -&gt; pydrake.systems.framework.System_[AutoDiffXd]</p></li>
 </ol>
 <p>Converts a general continuous-time system <span class="math notranslate nohighlight">\(\dot{x} =
 f(t,x(t),u(t))\)</span> to a discrete-time system with zero-order hold on the
@@ -705,7 +705,7 @@ system using the zero-order hold method.</p>
 </dd>
 </dl>
 <ol class="arabic simple" start="9">
-<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System_[Expression], time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, target_realtime_rate=0.0, publish_every_time_step=False)) -&gt; pydrake.systems.framework.System_[Expression]</p></li>
+<li><p>DiscreteTimeApproximation(system: pydrake.systems.framework.System_[Expression], time_period: float, integrator_config: pydrake.systems.analysis.SimulatorConfig = SimulatorConfig(integration_scheme=’runge_kutta3’, max_step_size=0.1, accuracy=0.0001, use_error_control=True, start_time=0.0, target_realtime_rate=0.0, publish_every_time_step=False)) -&gt; pydrake.systems.framework.System_[Expression]</p></li>
 </ol>
 <p>Converts a general continuous-time system <span class="math notranslate nohighlight">\(\dot{x} =
 f(t,x(t),u(t))\)</span> to a discrete-time system with zero-order hold on the
@@ -745,7 +745,8 @@ or accuracy).</p>
 <li><p>ExtractSimulatorConfig(simulator: pydrake.systems.analysis.Simulator) -&gt; pydrake.systems.analysis.SimulatorConfig</p></li>
 </ol>
 <p>Reports the simulator’s current configuration, including the
-configuration of the integrator.</p>
+configuration of the integrator. The start_time of the extracted
+config is set to the current time of the simulator context.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt><dd><p>The Simulator to extract the configuration from. $Note:</p>
 </dd>
@@ -757,7 +758,8 @@ gradients.</p>
 <li><p>ExtractSimulatorConfig(simulator: pydrake.systems.analysis.Simulator_[AutoDiffXd]) -&gt; pydrake.systems.analysis.SimulatorConfig</p></li>
 </ol>
 <p>Reports the simulator’s current configuration, including the
-configuration of the integrator.</p>
+configuration of the integrator. The start_time of the extracted
+config is set to the current time of the simulator context.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt><dd><p>The Simulator to extract the configuration from. $Note:</p>
 </dd>
@@ -4106,6 +4108,13 @@ IntegratorBase.</p>
 <dd><p>Sets Simulator::set_publish_at_initialization() in addition to
 Simulator::set_publish_every_time_step() when applied by
 ApplySimulatorConfig().</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.systems.analysis.SimulatorConfig.start_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">start_time</span></span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.start_time" title="Permalink to this definition"></a></dt>
+<dd><p>Starting time of the simulation. We will set the context time to
+<code class="docutils literal notranslate"><span class="pre">start_time</span></code> at the beginning of the simulation.</p>
 </dd></dl>
 
 <dl class="py property">

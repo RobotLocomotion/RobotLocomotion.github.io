@@ -3,6 +3,8 @@ var classdrake_1_1planning_1_1_joint_limits =
     [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html#aaa96ab65c0503a7900cace64dd5283ee", null ],
     [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html#a5f442d2f0895707de9ea222f9f9616b7", null ],
     [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html#a775d8b642fd16e310ecd2f658b894e07", null ],
+    [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html#a29c089f065edaca8994de45632436738", null ],
+    [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html#a5d78b47297a41d3808969bbc58e625a1", null ],
     [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html#a73d651163f4d1fe92e635aaaf3e9a701", null ],
     [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html#af5eeea9e807395042989c4ec46ff1b3f", null ],
     [ "~JointLimits", "classdrake_1_1planning_1_1_joint_limits.html#a6a262f42214d106b31158ceb36515cd0", null ],

@@ -188,6 +188,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a6e55b938786bd86846860397d25c10bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa3fc271512a1944d2d285a32f310019"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html#afa3fc271512a1944d2d285a32f310019">use_error_control</a> {true}</td></tr>
 <tr class="separator:afa3fc271512a1944d2d285a32f310019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00b0c9b1c3ea8bb73a7fc8b53a3961fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html#a00b0c9b1c3ea8bb73a7fc8b53a3961fd">start_time</a> {0.0}</td></tr>
+<tr class="memdesc:a00b0c9b1c3ea8bb73a7fc8b53a3961fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting time of the simulation.  <a href="#a00b0c9b1c3ea8bb73a7fc8b53a3961fd">More...</a><br /></td></tr>
+<tr class="separator:a00b0c9b1c3ea8bb73a7fc8b53a3961fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18b1f02b49adcc233f5e23845b8c90fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html#a18b1f02b49adcc233f5e23845b8c90fe">target_realtime_rate</a> {0.0}</td></tr>
 <tr class="separator:a18b1f02b49adcc233f5e23845b8c90fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1d9089360c8cd472de8f923ba7df99a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html#af1d9089360c8cd472de8f923ba7df99a">publish_every_time_step</a> {false}</td></tr>
@@ -272,6 +275,23 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets <a class="el" href="classdrake_1_1systems_1_1_simulator.html#ac210a235b5e0865efb51fdd27c4b58ae" title="(To be deprecated) Prefer using initialization or per-step publish events instead.">Simulator::set_publish_at_initialization()</a> in addition to <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aef1dc6aeb821503379ab1dd8c6044562" title="(To be deprecated) Prefer using per-step publish events instead.">Simulator::set_publish_every_time_step()</a> when applied by <a class="el" href="group__simulator__configuration.html#ga6875fa2f1e9eb22cee800a29b0ca61b9" title="Modifies the simulator based on the given config.">ApplySimulatorConfig()</a>. </p>
+
+</div>
+</div>
+<a id="a00b0c9b1c3ea8bb73a7fc8b53a3961fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00b0c9b1c3ea8bb73a7fc8b53a3961fd">&#9670;&nbsp;</a></span>start_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> start_time {0.0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starting time of the simulation. </p>
+<p>We will set the context time to <code>start_time</code> at the beginning of the simulation. </p>
 
 </div>
 </div>

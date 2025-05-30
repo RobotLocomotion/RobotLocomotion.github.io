@@ -4098,11 +4098,50 @@ acceleration limits in the provided <code class="docutils literal notranslate"><
 <li><p><strong>RuntimeError if the position</strong><strong>, </strong><strong>velocity</strong><strong>, or </strong><strong>acceleration limits</strong> – </p></li>
 <li><p><strong>contain non-finite values</strong><strong>, </strong><strong>and the corresponding constructor</strong> – </p></li>
 <li><p><strong>argument is true.</strong> – </p></li>
-<li><p><strong>RuntimeError if any limits contain NaN values.</strong> – </p></li>
+<li><p><strong>RuntimeError if any limit value is NaN.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
+<li><p>__init__(self: pydrake.planning.JointLimits, plant: pydrake.multibody.plant.MultibodyPlant, active_dof: pydrake.planning.DofMask, require_finite_positions: bool = False, require_finite_velocities: bool = False, require_finite_accelerations: bool = False) -&gt; None</p></li>
+</ol>
+<p>Constructs a JointLimits using the position, velocity, and
+acceleration limits in the provided <code class="docutils literal notranslate"><span class="pre">plant</span></code>, selecting only the dofs
+indicated by <code class="docutils literal notranslate"><span class="pre">active_dof.</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if plant is not finalized.</strong> – </p></li>
+<li><p><strong>RuntimeError if active_dof.size</strong><strong>(</strong><strong>) </strong><strong>!= num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if active_dof.size</strong><strong>(</strong><strong>) </strong><strong>!= num_velocities</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if active_dof.size</strong><strong>(</strong><strong>) </strong><strong>!= num_accelerations</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if the position</strong><strong>, </strong><strong>velocity</strong><strong>, or </strong><strong>acceleration limits</strong> – </p></li>
+<li><p><strong>contain non-finite values</strong><strong>, </strong><strong>and the corresponding constructor</strong> – </p></li>
+<li><p><strong>argument is true.</strong> – </p></li>
+<li><p><strong>RuntimeError if any limit value is NaN.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>__init__(self: pydrake.planning.JointLimits, other: pydrake.planning.JointLimits, active_dof: pydrake.planning.DofMask, require_finite_positions: bool = False, require_finite_velocities: bool = False, require_finite_accelerations: bool = False) -&gt; None</p></li>
+</ol>
+<p>Constructs a JointLimits using the position, velocity, and
+acceleration limits in the provided <code class="docutils literal notranslate"><span class="pre">other</span></code>, selecting only the
+coefficients indicated by <code class="docutils literal notranslate"><span class="pre">active_dof.</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if active_dof.size</strong><strong>(</strong><strong>) </strong><strong>!= other.num_positions</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if active_dof.size</strong><strong>(</strong><strong>) </strong><strong>!= other.num_velocities</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if active_dof.size</strong><strong>(</strong><strong>) </strong><strong>!= other.num_accelerations</strong><strong>(</strong><strong>)</strong><strong></strong> – </p></li>
+<li><p><strong>RuntimeError if the position</strong><strong>, </strong><strong>velocity</strong><strong>, or </strong><strong>acceleration limits</strong> – </p></li>
+<li><p><strong>contain non-finite values</strong><strong>, </strong><strong>and the corresponding constructor</strong> – </p></li>
+<li><p><strong>argument is true.</strong> – </p></li>
+<li><p><strong>RuntimeError if any limit value is NaN.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="5">
 <li><p>__init__(self: pydrake.planning.JointLimits, position_lower: numpy.ndarray[numpy.float64[m, 1]], position_upper: numpy.ndarray[numpy.float64[m, 1]], velocity_lower: numpy.ndarray[numpy.float64[m, 1]], velocity_upper: numpy.ndarray[numpy.float64[m, 1]], acceleration_lower: numpy.ndarray[numpy.float64[m, 1]], acceleration_upper: numpy.ndarray[numpy.float64[m, 1]], require_finite_positions: bool = False, require_finite_velocities: bool = False, require_finite_accelerations: bool = False) -&gt; None</p></li>
 </ol>
 <p>Constructs a JointLimits using the provided arguments.</p>
@@ -4116,7 +4155,7 @@ acceleration limits in the provided <code class="docutils literal notranslate"><
 <li><p><strong>RuntimeError if any upper limit coefficients are less than the</strong> – </p></li>
 <li><p><strong>corresponding lower limit coefficient.</strong> – </p></li>
 <li><p><strong>RuntimeError if velocity and acceleration limits differ in size.</strong> – </p></li>
-<li><p><strong>RuntimeError if any limits contain NaN values.</strong> – </p></li>
+<li><p><strong>RuntimeError if any limit value is NaN.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
