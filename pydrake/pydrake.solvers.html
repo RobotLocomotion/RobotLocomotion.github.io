@@ -7239,6 +7239,12 @@ non-deterministic timing measurements to establish the interval). N.B.
 Generally the interval should be an integer multiple of
 <code class="docutils literal notranslate"><span class="pre">check_termination</span></code>, so if you choose to override either option you
 should probably override both at once.</p>
+<p>At the end of OsqpSolver::Solve() function, we always return the value
+of the primal and dual variables inside the OSQP solver, regardless of
+the solver status (whether it is optimal, infeasible, unbounded, etc),
+except when the problem has an invalid input. Users should always
+check the solver status before interpreting the returned primal and
+dual variables.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.solvers.OsqpSolver.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.solvers.OsqpSolver" title="pydrake.solvers.OsqpSolver"><span class="pre">pydrake.solvers.OsqpSolver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.solvers.OsqpSolver.__init__" title="Permalink to this definition"></a></dt>
