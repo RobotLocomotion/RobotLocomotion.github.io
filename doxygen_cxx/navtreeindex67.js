@@ -1,9 +1,5 @@
 var NAVTREEINDEX67 =
 {
-"structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#acec7d07d091313067f08b344b9207124":[3,0,0,11,1,2,5],
-"structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#ae981d6dfbbbad47f1783dedfd04fa1e0":[3,0,0,11,1,2,1],
-"structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html":[3,0,0,11,1,3],
-"structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html#ab4fb2b25d0ea5b6cd23f92c34704e7be":[3,0,0,11,1,3,2],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html#adece3fa3587078a7dbf1489538b98ea2":[3,0,0,11,1,3,0],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html#af56dfbe73c981c12fcb2e03b27c0df26":[3,0,0,11,1,3,1],
 "structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html":[3,0,0,11,2,7],
@@ -249,5 +245,9 @@ var NAVTREEINDEX67 =
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a56768addea5ab57a9e5d7e37e66460af":[3,0,0,16,0,2,6],
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a6c4438afbf2190941ebeae2f8e16dd11":[3,0,0,16,0,2,4],
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,0,2,1],
-"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#aad8f71d6c3e803538d9917ba719e66d4":[3,0,0,16,0,2,2]
+"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#aad8f71d6c3e803538d9917ba719e66d4":[3,0,0,16,0,2,2],
+"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#aaeb33e652a26580e0b4af48b12fff998":[3,0,0,16,0,2,5],
+"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#adf3c6b6e481d6acc45e87b93d10d8f96":[3,0,0,16,0,2,0],
+"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html":[3,0,0,16,1,1],
+"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a03438bfa4d94bde06f020fd03bf119f7":[3,0,0,16,1,1,4]
 };

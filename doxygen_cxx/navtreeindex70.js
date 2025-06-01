@@ -1,9 +1,5 @@
 var NAVTREEINDEX70 =
 {
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,60],
-"triangle__surface__mesh_8h.html#a1b6e179f892df67543be3028eae06fb9":[4,0,0,4,2,60,3],
-"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,61],
-"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,61,0],
 "trigonometric__polynomial_8h.html":[4,0,0,1,3,17],
 "trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44":[4,0,0,1,3,17,2],
 "trigonometric__polynomial_8h.html#a0f7729e9ae50c2b5ca1d86021ad1ae44acdf5f9e766a4e04d5ac3bf38e82da0f0":[4,0,0,1,3,17,2,2],

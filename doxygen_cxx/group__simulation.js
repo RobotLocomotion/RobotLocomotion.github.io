@@ -32,7 +32,6 @@ var group__simulation =
       [ "Initialize", "classdrake_1_1systems_1_1_simulator.html#aa1862c2aeab9862e391194d157a96c21", null ],
       [ "operator=", "classdrake_1_1systems_1_1_simulator.html#a9e8575d9029f7febab0a5d347b8ac502", null ],
       [ "operator=", "classdrake_1_1systems_1_1_simulator.html#ab52b9a3d9e687fc51a489fff8bb26233", null ],
-      [ "release_context", "classdrake_1_1systems_1_1_simulator.html#af0ecc40cda7115ce6a66ba4737bd62a6", null ],
       [ "reset_context", "classdrake_1_1systems_1_1_simulator.html#afa85ab3036e9c0c5f6c841a346d70d93", null ],
       [ "reset_integrator", "classdrake_1_1systems_1_1_simulator.html#a5a9131a4f2e685ca0dafe9872f24ef11", null ],
       [ "reset_integrator", "classdrake_1_1systems_1_1_simulator.html#a6e8a90974f072c44ced288c9036c3716", null ],

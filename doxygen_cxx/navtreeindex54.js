@@ -1,8 +1,5 @@
 var NAVTREEINDEX54 =
 {
-"expression__visitor_8h.html#a0a61c45c20176e91159639186b26e35e":[4,0,0,1,3,0,6,1],
-"expression__visitor_8h.html#ab58092344918003fc7e186b1c57bbc7f":[4,0,0,1,3,0,6,0],
-"externally__applied__spatial__force_8h.html":[4,0,0,8,10,22],
 "externally__applied__spatial__force__multiplexer_8h.html":[4,0,0,8,10,23],
 "extract__double_8h.html":[4,0,0,1,31],
 "extract__double_8h.html#aa25d21a232067d56c472d508b45d90cf":[4,0,0,1,31,2],
@@ -249,5 +246,8 @@ var NAVTREEINDEX54 =
 "functions_enum.html":[3,3,4],
 "functions_eval.html":[3,3,5],
 "functions_f.html":[3,3,0,5],
-"functions_func.html":[3,3,1]
+"functions_func.html":[3,3,1,0],
+"functions_func.html":[3,3,1],
+"functions_func_b.html":[3,3,1,1],
+"functions_func_c.html":[3,3,1,2]
 };

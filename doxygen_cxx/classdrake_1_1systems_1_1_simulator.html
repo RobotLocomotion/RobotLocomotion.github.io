@@ -270,9 +270,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afa85ab3036e9c0c5f6c841a346d70d93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_simulator.html#afa85ab3036e9c0c5f6c841a346d70d93">reset_context</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt;&gt; context)</td></tr>
 <tr class="memdesc:afa85ab3036e9c0c5f6c841a346d70d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the internally-maintained <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> with a different one.  <a href="#afa85ab3036e9c0c5f6c841a346d70d93">More...</a><br /></td></tr>
 <tr class="separator:afa85ab3036e9c0c5f6c841a346d70d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0ecc40cda7115ce6a66ba4737bd62a6"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_simulator.html#af0ecc40cda7115ce6a66ba4737bd62a6">release_context</a> ()</td></tr>
-<tr class="memdesc:af0ecc40cda7115ce6a66ba4737bd62a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#af0ecc40cda7115ce6a66ba4737bd62a6">More...</a><br /></td></tr>
-<tr class="separator:af0ecc40cda7115ce6a66ba4737bd62a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64a01ac56f8a0086cc6ed335ee9e5caa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_simulator.html#a64a01ac56f8a0086cc6ed335ee9e5caa">ResetStatistics</a> ()</td></tr>
 <tr class="memdesc:a64a01ac56f8a0086cc6ed335ee9e5caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forget accumulated statistics.  <a href="#a64a01ac56f8a0086cc6ed335ee9e5caa">More...</a><br /></td></tr>
 <tr class="separator:a64a01ac56f8a0086cc6ed335ee9e5caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -972,27 +969,6 @@ The only way to suppress initialization events is by calling <a class="el" href=
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="af0ecc40cda7115ce6a66ba4737bd62a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0ecc40cda7115ce6a66ba4737bd62a6">&#9670;&nbsp;</a></span>release_context()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt;T&gt; &gt; release_context </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>Use get_context()-&gt;Clone() and reset_context(nullptr) instead. <br />
- This will be removed from Drake on or after 2025-06-01.</dd></dl>
 
 </div>
 </div>

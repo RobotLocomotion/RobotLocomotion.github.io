@@ -635,7 +635,6 @@ var searchData=
   ['createplantcontext',['CreatePlantContext',['../classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#adc5888e081c1fbc84276f4ecbd0573de',1,'drake::multibody::test::AxiallySymmetricFreeBodyPlant']]],
   ['createprototypecontext',['CreatePrototypeContext',['../classdrake_1_1planning_1_1_collision_checker.html#a7835992cd1ce72dcf315fee54b6f64fe',1,'drake::planning::CollisionChecker']]],
   ['crend',['crend',['../classdrake_1_1symbolic_1_1_variables.html#abef9dfc7607c7e1a3854788ba56a4f34',1,'drake::symbolic::Variables']]],
-  ['criticizenotphysicallyvalid',['CriticizeNotPhysicallyValid',['../classdrake_1_1multibody_1_1_spatial_inertia.html#ad1e539cc1eba1e97ebf0fbedfe30ac09',1,'drake::multibody::SpatialInertia']]],
   ['criticizepaddingmatrix',['CriticizePaddingMatrix',['../classdrake_1_1planning_1_1_collision_checker.html#ad9406112c93e430d27b84744b6f5fa77',1,'drake::planning::CollisionChecker']]],
   ['crneg',['CRneg',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a',1,'drake::solvers::AddRotationMatrixBoxSphereIntersectionReturn']]],
   ['crop',['Crop',['../classdrake_1_1perception_1_1_point_cloud.html#aa3e3e56ca9276b5caf4c6422154616ca',1,'drake::perception::PointCloud']]],

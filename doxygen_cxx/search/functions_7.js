@@ -21,7 +21,6 @@ var searchData=
   ['has_5fexact_5fvolume',['has_exact_volume',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a7d9beaa673ec9f46fcf52eb4c49b62bd',1,'drake::geometry::optimization::ConvexSet']]],
   ['has_5fgeometry',['has_geometry',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a8b0f9484caa7253881345e230309e586',1,'drake::geometry::render::RenderEngine']]],
   ['has_5fid',['has_id',['../classdrake_1_1geometry_1_1_kinematics_vector.html#afa31ec21de4026953a4add92ab0e025b',1,'drake::geometry::KinematicsVector']]],
-  ['has_5fimplementation',['has_implementation',['../classdrake_1_1multibody_1_1_joint.html#a29cbe17adde3122d72d7d573152b04c8',1,'drake::multibody::Joint']]],
   ['has_5fjoint',['has_joint',['../classdrake_1_1multibody_1_1_multibody_plant.html#aee8d8c1e520c405dc36cbffccbfe2ad8',1,'drake::multibody::MultibodyPlant']]],
   ['has_5fjoint_5factuator',['has_joint_actuator',['../classdrake_1_1multibody_1_1_multibody_plant.html#a3fc00564be4a547c6ba3d476ab128d2c',1,'drake::multibody::MultibodyPlant']]],
   ['has_5fmobilizer',['has_mobilizer',['../classdrake_1_1multibody_1_1_joint.html#a8a2e7198dc47a29051d2896858f0f721',1,'drake::multibody::Joint']]],

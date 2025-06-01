@@ -1,7 +1,5 @@
 var NAVTREEINDEX42 =
 {
-"classdrake_1_1systems_1_1_multilayer_perceptron.html#af92d9778ce4ab1984b72b477fd54c993":[1,2,1,19,0],
-"classdrake_1_1systems_1_1_multiplexer.html":[1,2,1,20],
 "classdrake_1_1systems_1_1_multiplexer.html#a0c8a526baff8c5660a5feaf5ccc39b4e":[1,2,1,20,2],
 "classdrake_1_1systems_1_1_multiplexer.html#a27b61c4fdf63f1cebf6b975e0dc9b151":[1,2,1,20,3],
 "classdrake_1_1systems_1_1_multiplexer.html#a4dcb4fb0e76f378b4a7c2802eb5c1dc6":[1,2,1,20,8],
@@ -249,5 +247,7 @@ var NAVTREEINDEX42 =
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#aaf92f89ed3fb6ea7acde795d33645a3c":[3,0,0,16,93,9],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#ac91758ed577d1b8cb29a5d333a9027f1":[3,0,0,16,93,3],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#adbc3bf152afe75736c6b8b3ecf8cd65e":[3,0,0,16,93,5],
-"classdrake_1_1systems_1_1_scalar_initial_value_problem.html#aeacb789e3f8f5b136caef88d063b76e9":[3,0,0,16,93,10]
+"classdrake_1_1systems_1_1_scalar_initial_value_problem.html#aeacb789e3f8f5b136caef88d063b76e9":[3,0,0,16,93,10],
+"classdrake_1_1systems_1_1_scalar_initial_value_problem.html#af271bb5896ff93bf00fb74143035279e":[3,0,0,16,93,7],
+"classdrake_1_1systems_1_1_scalar_initial_value_problem.html#af7c4ee8378a24e575a176dfb7d308ae9":[3,0,0,16,93,6]
 };
