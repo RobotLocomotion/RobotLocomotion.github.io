@@ -204,6 +204,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af084609147b7e91add9fb620a12735e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3">SetDefaultParameters</a> (<a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; *parameters) const</td></tr>
 <tr class="memdesc:af084609147b7e91add9fb620a12735e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets default values of parameters belonging to each MultibodyElement in <code>parameters</code> at a call to MultibodyTreeSystem::SetDefaultParameters().  <a href="#af084609147b7e91add9fb620a12735e3">More...</a><br /></td></tr>
 <tr class="separator:af084609147b7e91add9fb620a12735e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3866d0245d1722869287b159c0b6adb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3866d0245d1722869287b159c0b6adb3">DeclareDiscreteState</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system)</td></tr>
+<tr class="memdesc:a3866d0245d1722869287b159c0b6adb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares MultibodyTreeSystem discrete states.  <a href="#a3866d0245d1722869287b159c0b6adb3">More...</a><br /></td></tr>
+<tr class="separator:a3866d0245d1722869287b159c0b6adb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae050e0d4d07cfeb79d77626a7175f596"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#ae050e0d4d07cfeb79d77626a7175f596">is_ephemeral</a> () const</td></tr>
 <tr class="memdesc:ae050e0d4d07cfeb79d77626a7175f596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if this MultibodyElement was added during Finalize() rather than something a user added.  <a href="#ae050e0d4d07cfeb79d77626a7175f596">More...</a><br /></td></tr>
 <tr class="separator:ae050e0d4d07cfeb79d77626a7175f596"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,12 +259,18 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac10aa21a51e7dc4d31f33397cce842a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#ac10aa21a51e7dc4d31f33397cce842a3">DoSetDefaultParameters</a> (<a class="el" href="classdrake_1_1systems_1_1_parameters.html">systems::Parameters</a>&lt; T &gt; *) const</td></tr>
 <tr class="memdesc:ac10aa21a51e7dc4d31f33397cce842a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3" title="Sets default values of parameters belonging to each MultibodyElement in parameters at a call to Multi...">SetDefaultParameters()</a>.  <a href="#ac10aa21a51e7dc4d31f33397cce842a3">More...</a><br /></td></tr>
 <tr class="separator:ac10aa21a51e7dc4d31f33397cce842a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3394b67729adad18156be78ac98281fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3394b67729adad18156be78ac98281fe">DoDeclareDiscreteState</a> (internal::MultibodyTreeSystem&lt; T &gt; *)</td></tr>
+<tr class="memdesc:a3394b67729adad18156be78ac98281fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3866d0245d1722869287b159c0b6adb3" title="Declares MultibodyTreeSystem discrete states.">DeclareDiscreteState()</a>.  <a href="#a3394b67729adad18156be78ac98281fe">More...</a><br /></td></tr>
+<tr class="separator:a3394b67729adad18156be78ac98281fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a976e6fccd8686189b1fdbf1d2cc722"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#af11369a06c5bfd3fa18acb79f85777df">systems::NumericParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722">DeclareNumericParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector)</td></tr>
 <tr class="memdesc:a7a976e6fccd8686189b1fdbf1d2cc722"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <a href="#a7a976e6fccd8686189b1fdbf1d2cc722">More...</a><br /></td></tr>
 <tr class="separator:a7a976e6fccd8686189b1fdbf1d2cc722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57aa9aaaab0516dbcbaf970347c76611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a86b350169906f6d5e07e9db46e36d57a">systems::AbstractParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a57aa9aaaab0516dbcbaf970347c76611">DeclareAbstractParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;model_value)</td></tr>
 <tr class="memdesc:a57aa9aaaab0516dbcbaf970347c76611"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <a href="#a57aa9aaaab0516dbcbaf970347c76611">More...</a><br /></td></tr>
 <tr class="separator:a57aa9aaaab0516dbcbaf970347c76611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ae3195088941d76212740a197117c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a80ae3195088941d76212740a197117c5">DeclareDiscreteState</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;model_value)</td></tr>
+<tr class="memdesc:a80ae3195088941d76212740a197117c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring discrete states in their implementation of DoDeclareDiscreteStates().  <a href="#a80ae3195088941d76212740a197117c5">More...</a><br /></td></tr>
+<tr class="separator:a80ae3195088941d76212740a197117c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af679af47835138fca8011749414d3bd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af679af47835138fca8011749414d3bd4">has_parent_tree</a> () const</td></tr>
 <tr class="memdesc:af679af47835138fca8011749414d3bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this multibody element has a parent tree, otherwise false.  <a href="#af679af47835138fca8011749414d3bd4">More...</a><br /></td></tr>
 <tr class="separator:af679af47835138fca8011749414d3bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -270,6 +279,8 @@ Protected Member Functions</h2></td></tr>
 Friends</h2></td></tr>
 <tr class="memitem:a49109966f9505633199c07ad06b0632d"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a49109966f9505633199c07ad06b0632d">internal::MultibodyTree&lt; T &gt;</a></td></tr>
 <tr class="separator:a49109966f9505633199c07ad06b0632d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8efc4fff636d586125e8b787839853c2"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a8efc4fff636d586125e8b787839853c2">DeformableModel&lt; T &gt;</a></td></tr>
+<tr class="separator:a8efc4fff636d586125e8b787839853c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59cf1173a305d4864320bf9e1bf60f35"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a59cf1173a305d4864320bf9e1bf60f35">MultibodyElementTester</a></td></tr>
 <tr class="separator:a59cf1173a305d4864320bf9e1bf60f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -484,6 +495,72 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a3866d0245d1722869287b159c0b6adb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3866d0245d1722869287b159c0b6adb3">&#9670;&nbsp;</a></span>DeclareDiscreteState() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeclareDiscreteState </td>
+          <td>(</td>
+          <td class="paramtype">internal::MultibodyTreeSystem&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>tree_system</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Declares MultibodyTreeSystem discrete states. </p>
+<p>NVI to the virtual method <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3394b67729adad18156be78ac98281fe" title="Implementation of the NVI DeclareDiscreteState().">DoDeclareDiscreteState()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tree_system</td><td>A mutable copy of the parent MultibodyTreeSystem. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>'tree_system' must be the same as the parent tree system (what's returned from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3df812307c45b93543b2cef9fec2c3be" title="Returns a constant reference to the parent MultibodyTreeSystem that owns the parent MultibodyTree tha...">GetParentTreeSystem()</a>). </dd></dl>
+
+</div>
+</div>
+<a id="a80ae3195088941d76212740a197117c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80ae3195088941d76212740a197117c5">&#9670;&nbsp;</a></span>DeclareDiscreteState() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">systems::DiscreteStateIndex</a> DeclareDiscreteState </td>
+          <td>(</td>
+          <td class="paramtype">internal::MultibodyTreeSystem&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>tree_system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>model_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To be used by MultibodyElement-derived objects when declaring discrete states in their implementation of DoDeclareDiscreteStates(). </p>
+<p>For an example, see DeformableBody::DoDeclareDiscreteStates(). </p>
+
+</div>
+</div>
 <a id="a7a976e6fccd8686189b1fdbf1d2cc722"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a976e6fccd8686189b1fdbf1d2cc722">&#9670;&nbsp;</a></span>DeclareNumericParameter()</h2>
 
@@ -547,6 +624,35 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>'tree_system' must be the same as the parent tree system (what's returned from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3df812307c45b93543b2cef9fec2c3be" title="Returns a constant reference to the parent MultibodyTreeSystem that owns the parent MultibodyTree tha...">GetParentTreeSystem()</a>). </dd></dl>
+
+</div>
+</div>
+<a id="a3394b67729adad18156be78ac98281fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3394b67729adad18156be78ac98281fe">&#9670;&nbsp;</a></span>DoDeclareDiscreteState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DoDeclareDiscreteState </td>
+          <td>(</td>
+          <td class="paramtype">internal::MultibodyTreeSystem&lt; T &gt; *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3866d0245d1722869287b159c0b6adb3" title="Declares MultibodyTreeSystem discrete states.">DeclareDiscreteState()</a>. </p>
+<p>MultibodyElement-derived objects may override to declare their specific state variables. </p>
 
 </div>
 </div>
@@ -824,8 +930,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a47e4f9cb97baf94b1cdc26585e2e1e3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47e4f9cb97baf94b1cdc26585e2e1e3c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="ac7d3ff54398a47f3c1e9ce9b4fb2e120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d3ff54398a47f3c1e9ce9b4fb2e120">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -836,7 +942,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -850,8 +956,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ac7d3ff54398a47f3c1e9ce9b4fb2e120"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7d3ff54398a47f3c1e9ce9b4fb2e120">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a47e4f9cb97baf94b1cdc26585e2e1e3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47e4f9cb97baf94b1cdc26585e2e1e3c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -862,7 +968,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html">MultibodyElement</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -981,6 +1087,28 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a8efc4fff636d586125e8b787839853c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8efc4fff636d586125e8b787839853c2">&#9670;&nbsp;</a></span>DeformableModel&lt; T &gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a49109966f9505633199c07ad06b0632d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49109966f9505633199c07ad06b0632d">&#9670;&nbsp;</a></span>internal::MultibodyTree&lt; T &gt;</h2>
 

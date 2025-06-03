@@ -13,7 +13,6 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     [ "coulomb_friction.h", "coulomb__friction_8h.html", "coulomb__friction_8h" ],
     [ "deformable_contact_info.h", "deformable__contact__info_8h.html", "deformable__contact__info_8h" ],
     [ "deformable_driver.h", "deformable__driver_8h.html", null ],
-    [ "deformable_ids.h", "deformable__ids_8h.html", "deformable__ids_8h" ],
     [ "deformable_model.h", "deformable__model_8h.html", [
       [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html", "classdrake_1_1multibody_1_1_deformable_model" ]
     ] ],

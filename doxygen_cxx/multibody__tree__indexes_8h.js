@@ -1,6 +1,8 @@
 var multibody__tree__indexes_8h =
 [
     [ "BodyIndex", "multibody__tree__indexes_8h.html#a02d233e6f0ef016f5cf02e2222a22f5c", null ],
+    [ "DeformableBodyId", "multibody__tree__indexes_8h.html#ae810ad4b839c5925c285d08b4d269a56", null ],
+    [ "DeformableBodyIndex", "multibody__tree__indexes_8h.html#ad6f28f9f3c7b71cc803442f421b26352", null ],
     [ "ForceElementIndex", "multibody__tree__indexes_8h.html#add80e949328b179d78312d1455319868", null ],
     [ "FrameIndex", "multibody__tree__indexes_8h.html#a51c69848adb64ae45eebc1e5af5dbaa6", null ],
     [ "JointActuatorIndex", "multibody__tree__indexes_8h.html#acc810ff385ed4dede2e011b0b6fd3f2c", null ],

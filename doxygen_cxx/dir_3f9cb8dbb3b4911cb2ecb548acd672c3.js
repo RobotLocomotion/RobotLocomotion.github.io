@@ -10,6 +10,9 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "body_node_world.h", "body__node__world_8h.html", "body__node__world_8h" ],
     [ "curvilinear_joint.h", "curvilinear__joint_8h.html", "curvilinear__joint_8h" ],
     [ "curvilinear_mobilizer.h", "curvilinear__mobilizer_8h.html", "curvilinear__mobilizer_8h" ],
+    [ "deformable_body.h", "deformable__body_8h.html", [
+      [ "DeformableBody", "classdrake_1_1multibody_1_1_deformable_body.html", "classdrake_1_1multibody_1_1_deformable_body" ]
+    ] ],
     [ "door_hinge.h", "door__hinge_8h.html", "door__hinge_8h" ],
     [ "element_collection.h", "element__collection_8h.html", null ],
     [ "fixed_offset_frame.h", "fixed__offset__frame_8h.html", "fixed__offset__frame_8h" ],

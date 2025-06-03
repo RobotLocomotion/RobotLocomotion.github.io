@@ -103,7 +103,7 @@ var searchData=
   ['addfingernoslidingconstraint',['AddFingerNoSlidingConstraint',['../namespacedrake_1_1examples_1_1planar__gripper.html#a7f53972e9a8f6cf5791b197c02b89a5a',1,'drake::examples::planar_gripper']]],
   ['addfingernoslidingfromfixedpostureconstraint',['AddFingerNoSlidingFromFixedPostureConstraint',['../namespacedrake_1_1examples_1_1planar__gripper.html#ab6421a917c787a1ace8ca8f4e8c82627',1,'drake::examples::planar_gripper']]],
   ['addfingertipincontactwithbrickfaceconstraint',['AddFingerTipInContactWithBrickFaceConstraint',['../namespacedrake_1_1examples_1_1planar__gripper.html#a9d215b1f96ef0f7ae036b271f795e8d0',1,'drake::examples::planar_gripper']]],
-  ['addfixedconstraint',['AddFixedConstraint',['../classdrake_1_1multibody_1_1_deformable_model.html#a0c18b0c8d67975d2ee7ca2b8bb01c28d',1,'drake::multibody::DeformableModel']]],
+  ['addfixedconstraint',['AddFixedConstraint',['../classdrake_1_1multibody_1_1_deformable_model.html#a44d5370261e20241b80d454d18940ea0',1,'drake::multibody::DeformableModel::AddFixedConstraint()'],['../classdrake_1_1multibody_1_1_deformable_body.html#a7376eb96770f12f2001f5f3623bfd385',1,'drake::multibody::DeformableBody::AddFixedConstraint()']]],
   ['addfixedobjectstoplant',['AddFixedObjectsToPlant',['../namespacedrake_1_1multibody_1_1test.html#a6a2faff4d58a2704dd29573c3fd20921',1,'drake::multibody::test']]],
   ['addforceelement',['AddForceElement',['../classdrake_1_1multibody_1_1_multibody_plant.html#a48009c793b01c5a6dd079d33265435a3',1,'drake::multibody::MultibodyPlant']]],
   ['addframe',['AddFrame',['../classdrake_1_1multibody_1_1_multibody_plant.html#a474c90a0b3e4f9349533207026413186',1,'drake::multibody::MultibodyPlant']]],

@@ -244,6 +244,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_curvilinear_joint.html">CurvilinearJoint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> that allows a body to move along a piecewise constant curvature path contained in a plane.  <a href="classdrake_1_1multibody_1_1_curvilinear_joint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html">DeformableBody</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html" title="The DeformableBody class represents a single deformable element within a MultibodyPlant.">DeformableBody</a> class represents a single deformable element within a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="classdrake_1_1multibody_1_1_deformable_body.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_contact_info.html">DeformableContactInfo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class containing information regarding contact and contact response between two geometries belonging to a pair of bodies with at least one of them being a deformable body.  <a href="classdrake_1_1multibody_1_1_deformable_contact_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -507,12 +510,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ae810ad4b839c5925c285d08b4d269a56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> = <a class="el" href="classdrake_1_1_identifier.html">Identifier</a>&lt; class DeformableBodyTag &gt;</td></tr>
-<tr class="memdesc:ae810ad4b839c5925c285d08b4d269a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uniquely identifies a deformable body.  <a href="#ae810ad4b839c5925c285d08b4d269a56">More...</a><br /></td></tr>
-<tr class="separator:ae810ad4b839c5925c285d08b4d269a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6f28f9f3c7b71cc803442f421b26352"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad6f28f9f3c7b71cc803442f421b26352">DeformableBodyIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class DeformableBodyTag &gt;</td></tr>
-<tr class="memdesc:ad6f28f9f3c7b71cc803442f421b26352"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Indexes deformable bodies, only used after Finalize().  <a href="#ad6f28f9f3c7b71cc803442f421b26352">More...</a><br /></td></tr>
-<tr class="separator:ad6f28f9f3c7b71cc803442f421b26352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a> = std::variant&lt; const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; *, std::monostate &gt;</td></tr>
 <tr class="separator:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -537,6 +534,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:af65439a17091283a89eb12f1955c6db0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class ModelInstanceTag &gt;</td></tr>
 <tr class="memdesc:af65439a17091283a89eb12f1955c6db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify model instances by index within a multibody plant.  <a href="#af65439a17091283a89eb12f1955c6db0">More...</a><br /></td></tr>
 <tr class="separator:af65439a17091283a89eb12f1955c6db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae810ad4b839c5925c285d08b4d269a56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> = <a class="el" href="classdrake_1_1_identifier.html">Identifier</a>&lt; class DeformableBodyTag &gt;</td></tr>
+<tr class="memdesc:ae810ad4b839c5925c285d08b4d269a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify a deformable body by id within a multibody plant.  <a href="#ae810ad4b839c5925c285d08b4d269a56">More...</a><br /></td></tr>
+<tr class="separator:ae810ad4b839c5925c285d08b4d269a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f28f9f3c7b71cc803442f421b26352"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad6f28f9f3c7b71cc803442f421b26352">DeformableBodyIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class DeformableBodyTag &gt;</td></tr>
+<tr class="memdesc:ad6f28f9f3c7b71cc803442f421b26352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify a deformable body by index within a multibody plant.  <a href="#ad6f28f9f3c7b71cc803442f421b26352">More...</a><br /></td></tr>
+<tr class="separator:ad6f28f9f3c7b71cc803442f421b26352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f0a405774254de6133e7aa5d3960150"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a7f0a405774254de6133e7aa5d3960150"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a7f0a405774254de6133e7aa5d3960150">Body</a> = <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt;</td></tr>
 <tr class="memdesc:a7f0a405774254de6133e7aa5d3960150"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Compatibility) Prefer <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> to Body, however this dispreferred alias is available to permit older code to continue working.  <a href="#a7f0a405774254de6133e7aa5d3960150">More...</a><br /></td></tr>
@@ -757,8 +760,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Uniquely identifies a deformable body. </p>
-<p>It is valid before and after Finalize(). </p>
+<p>Type used to identify a deformable body by id within a multibody plant. </p>
 
 </div>
 </div>
@@ -774,7 +776,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Internal use only) Indexes deformable bodies, only used after Finalize(). </p>
+<p>Type used to identify a deformable body by index within a multibody plant. </p>
 
 </div>
 </div>

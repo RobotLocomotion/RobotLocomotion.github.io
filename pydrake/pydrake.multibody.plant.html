@@ -1147,8 +1147,8 @@ given surface.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableBodyId">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">DeformableBodyId</span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId" title="Permalink to this definition"></a></dt>
-<dd><p>Uniquely identifies a deformable body. It is valid before and after
-Finalize().</p>
+<dd><p>Type used to identify a deformable body by id within a multibody
+plant.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableBodyId.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId.__init__" title="Permalink to this definition"></a></dt>
@@ -1412,7 +1412,7 @@ deformable body specified to be under constraint.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BA</span></code>:</dt><dd><p>The pose of deformable body A’s reference mesh in B’s body frame</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">shape</span></code>:</dt><dd><p>The prescribed geometry shape, attached to rigid body B, used to
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">shape_G</span></code>:</dt><dd><p>The prescribed geometry shape, attached to rigid body B, used to
 determine which vertices of the deformable body A is under
 constraint.</p>
 </dd>
@@ -1517,7 +1517,7 @@ queried.</p>
 </p></li>
 <li><p><strong>context` does not belong to the MultibodyPlant associated wit</strong> – </p></li>
 <li><p><strong>this DeformableModel. 2. No body with the given id is</strong> – </p></li>
-<li><p><strong>registered. 3. Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on the</strong> – </p></li>
+<li><p><strong>registered. 3. Finalize</strong><strong>(</strong><strong>) </strong><strong>has not been called on the</strong> – </p></li>
 <li><p><strong>MultibodyPlant that owns this deformable model.</strong> – </p></li>
 </ul>
 </dd>
@@ -1587,7 +1587,11 @@ primitive shape.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if this DeformableModel is not of scalar type</strong> – </p></li>
 <li><p><strong>double.</strong> – </p></li>
+<li><p><strong>RuntimeError if this DeformableModel belongs to a continuous</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
 <li><p><strong>RuntimeError if the model instance does not exist.</strong> – </p></li>
+<li><p><strong>RuntimeError if a deformable body with the same name has already</strong> – </p></li>
+<li><p><strong>been registered to the model instance.</strong> – </p></li>
 <li><p><strong>RuntimeError if Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on the multibody plant</strong> – </p></li>
 <li><p><strong>owning this deformable model.</strong> – </p></li>
 </ul>
@@ -1621,8 +1625,8 @@ set.</p>
 <li><p><strong>MultibodyPlant associated with this DeformableModel. 3. No body</strong> – </p></li>
 <li><p><strong>with the given id is registered. 4. The number of columns of</strong> – </p></li>
 <li><p><strong>q` does not match the number of vertices of the body. 5. ``q`</strong> – </p></li>
-<li><p><strong>contains non-finite values. 6. Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on</strong> – </p></li>
-<li><p><strong>the MultibodyPlant that owns this deformable model.</strong> – </p></li>
+<li><p><strong>contains non-finite values. 6. Finalize</strong><strong>(</strong><strong>) </strong><strong>has not been called</strong> – </p></li>
+<li><p><strong>on the MultibodyPlant that owns this deformable model.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -1656,9 +1660,8 @@ a vertex very close to the plane defining the half space.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on the multibody plant</strong> – </p></li>
-<li><p><strong>owning this deformable model</strong><strong> or </strong><strong>if no deformable body with the</strong> – </p></li>
-<li><p><strong>given id has been registered in this model.</strong> – </p></li>
+<li><p><strong>RuntimeError if no deformable body with the given id has been</strong> – </p></li>
+<li><p><strong>registered in this model.</strong> – </p></li>
 </ul>
 </dd>
 </dl>

@@ -248,6 +248,6 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1_curvilinear_joint.html#ae4fa9c904accccf5900c63c3e65ca277":[3,0,0,9,23,27],
 "classdrake_1_1multibody_1_1_curvilinear_joint.html#aea9614ad4bc22801505a7399550293ce":[3,0,0,9,23,9],
 "classdrake_1_1multibody_1_1_curvilinear_joint.html#aff7762ca7021852fcb63a6652053c701":[3,0,0,9,23,23],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html":[3,0,0,9,24],
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#a083fc52348e2a57c24ce16ad914cc7c6":[3,0,0,9,24,4]
+"classdrake_1_1multibody_1_1_deformable_body.html":[3,0,0,9,24],
+"classdrake_1_1multibody_1_1_deformable_body.html#a01df73d3ba90296a66b57c6e25a0a03b":[3,0,0,9,24,19]
 };

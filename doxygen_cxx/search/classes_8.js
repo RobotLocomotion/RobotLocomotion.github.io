@@ -1,6 +1,7 @@
 var searchData=
 [
   ['identifier',['Identifier',['../classdrake_1_1_identifier.html',1,'drake']]],
+  ['identifier_3c_20class_20deformablebodytag_20_3e',['Identifier&lt; class DeformableBodyTag &gt;',['../classdrake_1_1_identifier.html',1,'drake']]],
   ['identifier_3c_20class_20frametag_20_3e',['Identifier&lt; class FrameTag &gt;',['../classdrake_1_1_identifier.html',1,'drake']]],
   ['identifier_3c_20class_20geometrytag_20_3e',['Identifier&lt; class GeometryTag &gt;',['../classdrake_1_1_identifier.html',1,'drake']]],
   ['identifier_3c_20class_20roleversiontag_20_3e',['Identifier&lt; class RoleVersionTag &gt;',['../classdrake_1_1_identifier.html',1,'drake']]],
