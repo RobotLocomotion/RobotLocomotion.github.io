@@ -15,7 +15,6 @@ var classdrake_1_1multibody_1_1_deformable_model =
     [ "GetBodyByName", "classdrake_1_1multibody_1_1_deformable_model.html#a031ec7542a5fae1055f5bdb1fe6215e9", null ],
     [ "GetBodyId", "classdrake_1_1multibody_1_1_deformable_model.html#a3edee15645c6e2abd1f8d70b27f0a0cb", null ],
     [ "GetBodyId", "classdrake_1_1multibody_1_1_deformable_model.html#a74e2fac4addeea2a100fbd378a3136ab", null ],
-    [ "GetBodyIdByName", "classdrake_1_1multibody_1_1_deformable_model.html#ac007ef3019cd6f842f9ce39015ee41ad", null ],
     [ "GetBodyIds", "classdrake_1_1multibody_1_1_deformable_model.html#a706ead7e484b7375fac173564ef3df12", null ],
     [ "GetBodyIndex", "classdrake_1_1multibody_1_1_deformable_model.html#a77aa9f45a14620d95b53d1c90ff6d3fe", null ],
     [ "GetDiscreteStateIndex", "classdrake_1_1multibody_1_1_deformable_model.html#a4938896f6f6f3967f754e3941aa4b445", null ],

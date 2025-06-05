@@ -1145,41 +1145,6 @@ given surface.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableBodyId">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">DeformableBodyId</span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId" title="Permalink to this definition"></a></dt>
-<dd><p>Type used to identify a deformable body by id within a multibody
-plant.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableBodyId.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableBodyId.get_new_id">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_new_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId.get_new_id" title="Permalink to this definition"></a></dt>
-<dd><p>Generates a new identifier for this id type. This new identifier will
-be different from all previous identifiers created. This method does
-<em>not</em> make any guarantees about the values of ids from successive
-invocations. This method is guaranteed to be thread safe.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableBodyId.get_value">
-<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId.get_value" title="Permalink to this definition"></a></dt>
-<dd><p>Extracts the underlying representation from the identifier. This is
-considered invalid for invalid ids and is strictly enforced in Debug
-builds.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableBodyId.is_valid">
-<span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableBodyId.is_valid" title="Permalink to this definition"></a></dt>
-<dd><p>Reports if the id is valid.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableContactInfo">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.plant.</span></span><span class="sig-name descname"><span class="pre">DeformableContactInfo</span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableContactInfo" title="Permalink to this definition"></a></dt>
 <dd><p>A class containing information regarding contact and contact response
@@ -1375,21 +1340,12 @@ time.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.multibody.plant.DeformableModel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>(Internal only) Constructs a DeformableModel to be owned by the given
-MultibodyPlant. This constructor is only intended to be called
-internally by MultibodyPlant.</p>
-<dl class="simple">
-<dt>Precondition:</dt><dd><p>plant != nullptr.</p>
-</dd>
-<dt>Precondition:</dt><dd><p>Finalize() has not been called on <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.AddFixedConstraint">
-<span class="sig-name descname"><span class="pre">AddFixedConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BA</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BG</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.AddFixedConstraint" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">AddFixedConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_A_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BA</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape_G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BG</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.AddFixedConstraint" title="Permalink to this definition"></a></dt>
 <dd><p>Defines a fixed constraint between a deformable body A and a rigid
 body B. Such a fixed constraint is modeled as distance holonomic
 constraints:</p>
@@ -1443,9 +1399,143 @@ body B’s frame.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.Disable">
+<span class="sig-name descname"><span class="pre">Disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.Disable" title="Permalink to this definition"></a></dt>
+<dd><p>Disables the deformable body with the given <code class="docutils literal notranslate"><span class="pre">id</span></code> in the given
+context. Disabling a deformable body sets its vertex velocities and
+accelerations to zero and freezes its vertex positions. A disabled
+deformable body is not subject to any constraint (e.g. frictional
+contact constraint or fixed constraint); it does not move under the
+influence of external forces (e.g. gravity); and it does not
+necessarily satisfy the prescribed boundary condition (if any). On the
+flip side, a disabled deformable body does not affect the dynamics of
+other bodies, even if the collision between the disabled body’s
+geometry and other geometries is not filtered. Effectively, the
+physics of the deformable body stop being computed. The deformable
+body can be enabled by calling Enable(). Calling Disable() on a body
+which is already disabled has no effect.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Enable().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the passed in context isn't compatible with the</strong> – </p></li>
+<li><p><strong>MultibodyPlant associated with this DeformableModel.</strong> – </p></li>
+<li><p><strong>RuntimeError if a deformable body with the given id is not</strong> – </p></li>
+<li><p><strong>registered.</strong> – </p></li>
+<li><p><strong>RuntimeError if context is null.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.Enable">
+<span class="sig-name descname"><span class="pre">Enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.Enable" title="Permalink to this definition"></a></dt>
+<dd><p>Enables the deformable body with the given <code class="docutils literal notranslate"><span class="pre">id</span></code> in the given
+context. Calling Enable() on a body which is already enabled has no
+effect.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Disable().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the passed in context isn't compatible with the</strong> – </p></li>
+<li><p><strong>MultibodyPlant associated with this DeformableModel.</strong> – </p></li>
+<li><p><strong>RuntimeError if a deformable body with the given id is not</strong> – </p></li>
+<li><p><strong>registered.</strong> – </p></li>
+<li><p><strong>RuntimeError if context is null.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetBody">
+<span class="sig-name descname"><span class="pre">GetBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetBody" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetBody(self: pydrake.multibody.plant.DeformableModel, id: pydrake.multibody.tree.DeformableBodyId) -&gt; pydrake.multibody.tree.DeformableBody</p></li>
+</ol>
+<p>Returns the deformable body with the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if no deformable body with the given id has been</strong> – </p></li>
+<li><p><strong>registered in this model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetBody(self: pydrake.multibody.plant.DeformableModel, index: pydrake.multibody.tree.DeformableBodyIndex) -&gt; pydrake.multibody.tree.DeformableBody</p></li>
+</ol>
+<p>Returns the deformable body with the given <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if no deformable body with the given index is</strong> – </p></li>
+<li><p><strong>registered in this model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetBodyByName">
+<span class="sig-name descname"><span class="pre">GetBodyByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetBodyByName" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetBodyByName(self: pydrake.multibody.plant.DeformableModel, name: str) -&gt; pydrake.multibody.tree.DeformableBody</p></li>
+</ol>
+<p>Returns the DeformableBody with the given name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if there's no body with the given name</strong><strong> or </strong><strong>if more</strong> – </p></li>
+<li><p><strong>than one model instance contains a deformable body with the given</strong> – </p></li>
+<li><p><strong>name.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetBodyByName(self: pydrake.multibody.plant.DeformableModel, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.multibody.tree.DeformableBody</p></li>
+</ol>
+<p>Returns the DeformableBody with the given name from the given model
+instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if there's no body with the given name that is</strong> – </p></li>
+<li><p><strong>registered with the given model instance.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetBodyId">
-<span class="sig-name descname"><span class="pre">GetBodyId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetBodyId" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the DeformableBodyId associated with the given
+<span class="sig-name descname"><span class="pre">GetBodyId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetBodyId" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>GetBodyId(self: pydrake.multibody.plant.DeformableModel, index: pydrake.multibody.tree.DeformableBodyIndex) -&gt; pydrake.multibody.tree.DeformableBodyId</p></li>
+</ol>
+<p>Returns the DeformableBodyId of the body with the given body index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if no deformable body with the given index has been</strong> – </p></li>
+<li><p><strong>registered in this model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>GetBodyId(self: pydrake.multibody.plant.DeformableModel, geometry_id: pydrake.geometry.GeometryId) -&gt; pydrake.multibody.tree.DeformableBodyId</p></li>
+</ol>
+<p>Returns the DeformableBodyId associated with the given
 <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -1459,15 +1549,26 @@ body B’s frame.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetBodyIds">
-<span class="sig-name descname"><span class="pre">GetBodyIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetBodyIds" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetBodyIds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetBodyIds" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the DeformableIds of the bodies that belong to the given model
 instance. Returns the empty vector if no deformable bodies are
 registered with the given model instance.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetBodyIndex">
+<span class="sig-name descname"><span class="pre">GetBodyIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyIndex" title="pydrake.multibody.tree.DeformableBodyIndex"><span class="pre">pydrake.multibody.tree.DeformableBodyIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetBodyIndex" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the DeformableBodyIndex of the body with the given id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if no body with the given id has been registered.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetDiscreteStateIndex">
-<span class="sig-name descname"><span class="pre">GetDiscreteStateIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiscreteStateIndex" title="pydrake.systems.framework.DiscreteStateIndex"><span class="pre">pydrake.systems.framework.DiscreteStateIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetDiscreteStateIndex" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetDiscreteStateIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiscreteStateIndex" title="pydrake.systems.framework.DiscreteStateIndex"><span class="pre">pydrake.systems.framework.DiscreteStateIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetDiscreteStateIndex" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the discrete state index of the deformable body identified by
 the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
 <dl class="field-list simple">
@@ -1483,7 +1584,7 @@ the given <code class="docutils literal notranslate"><span class="pre">id</span>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetGeometryId">
-<span class="sig-name descname"><span class="pre">GetGeometryId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetGeometryId" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetGeometryId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetGeometryId" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the GeometryId of the geometry associated with the body with
 the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
 <dl class="field-list simple">
@@ -1494,8 +1595,23 @@ the given <code class="docutils literal notranslate"><span class="pre">id</span>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetMutableBody">
+<span class="sig-name descname"><span class="pre">GetMutableBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetMutableBody" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a mutable reference to the deformable body with the given
+<code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if no deformable body with the given id has been</strong> – </p></li>
+<li><p><strong>registered in this model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetPositions">
-<span class="sig-name descname"><span class="pre">GetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetPositions" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetPositions" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the matrix of vertex positions for the deformable body with
 the given <code class="docutils literal notranslate"><span class="pre">id</span></code> in the provided <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <dl class="simple">
@@ -1526,7 +1642,7 @@ queried.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.GetReferencePositions">
-<span class="sig-name descname"><span class="pre">GetReferencePositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetReferencePositions" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">GetReferencePositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.GetReferencePositions" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the reference positions of the vertices of the deformable body
 identified by the given <code class="docutils literal notranslate"><span class="pre">id</span></code>. The reference positions are
 represented as a VectorX with 3N values where N is the number of
@@ -1544,6 +1660,56 @@ VectorX.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.HasBodyNamed">
+<span class="sig-name descname"><span class="pre">HasBodyNamed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.HasBodyNamed" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>HasBodyNamed(self: pydrake.multibody.plant.DeformableModel, name: str) -&gt; bool</p></li>
+</ol>
+<p>Returns true if and only if a deformable body with the given <code class="docutils literal notranslate"><span class="pre">name</span></code>
+has been registered with this model.</p>
+<ol class="arabic simple" start="2">
+<li><p>HasBodyNamed(self: pydrake.multibody.plant.DeformableModel, name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; bool</p></li>
+</ol>
+<p>Returns true if and only if a deformable body with the given <code class="docutils literal notranslate"><span class="pre">name</span></code>
+has been registered with this model under the given
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.HasConstraint">
+<span class="sig-name descname"><span class="pre">HasConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.HasConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the true if the deformable body with the given <code class="docutils literal notranslate"><span class="pre">id</span></code> has
+constraints associated with it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.is_empty">
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.is_empty" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if there’s no deformable body or external force
+registered to <code class="docutils literal notranslate"><span class="pre">this</span></code> DeformableModel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.is_enabled">
+<span class="sig-name descname"><span class="pre">is_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.is_enabled" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if and only if the deformable body with the given id is
+enabled.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if the passed in context isn't compatible with the</strong> – </p></li>
+<li><p><strong>MultibodyPlant associated with this DeformableModel.</strong> – </p></li>
+<li><p><strong>RuntimeError if a deformable body with the given id is not</strong> – </p></li>
+<li><p><strong>registered.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.num_bodies">
 <span class="sig-name descname"><span class="pre">num_bodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.num_bodies" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the number of deformable bodies registered with this
@@ -1555,12 +1721,12 @@ DeformableModel.</p>
 <span class="sig-name descname"><span class="pre">RegisterDeformableBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.RegisterDeformableBody" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>RegisterDeformableBody(self: pydrake.multibody.plant.DeformableModel, geometry_instance: pydrake.geometry.GeometryInstance, config: pydrake.multibody.fem.DeformableBodyConfig, resolution_hint: float) -&gt; pydrake.multibody.plant.DeformableBodyId</p></li>
+<li><p>RegisterDeformableBody(self: pydrake.multibody.plant.DeformableModel, geometry_instance: pydrake.geometry.GeometryInstance, config: pydrake.multibody.fem.DeformableBodyConfig, resolution_hint: float) -&gt; pydrake.multibody.tree.DeformableBodyId</p></li>
 </ol>
 <p>Registers a deformable body in <code class="docutils literal notranslate"><span class="pre">this</span></code> DeformableModel with the
 default model instance.</p>
 <ol class="arabic simple" start="2">
-<li><p>RegisterDeformableBody(self: pydrake.multibody.plant.DeformableModel, geometry_instance: pydrake.geometry.GeometryInstance, model_instance: pydrake.multibody.tree.ModelInstanceIndex, config: pydrake.multibody.fem.DeformableBodyConfig, resolution_hint: float) -&gt; pydrake.multibody.plant.DeformableBodyId</p></li>
+<li><p>RegisterDeformableBody(self: pydrake.multibody.plant.DeformableModel, geometry_instance: pydrake.geometry.GeometryInstance, model_instance: pydrake.multibody.tree.ModelInstanceIndex, config: pydrake.multibody.fem.DeformableBodyConfig, resolution_hint: float) -&gt; pydrake.multibody.tree.DeformableBodyId</p></li>
 </ol>
 <p>Registers a deformable body in <code class="docutils literal notranslate"><span class="pre">this</span></code> DeformableModel with the given
 GeometryInstance. The body is represented in the world frame and
@@ -1601,7 +1767,7 @@ primitive shape.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.SetPositions">
-<span class="sig-name descname"><span class="pre">SetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.SetPositions" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">SetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.SetPositions" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the vertex positions of the deformable body with the given <code class="docutils literal notranslate"><span class="pre">id</span></code>
 in the provided <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <dl class="simple">
@@ -1634,7 +1800,7 @@ set.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.DeformableModel.SetWallBoundaryCondition">
-<span class="sig-name descname"><span class="pre">SetWallBoundaryCondition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableBodyId" title="pydrake.multibody.plant.DeformableBodyId"><span class="pre">pydrake.multibody.plant.DeformableBodyId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_WQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_W</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.SetWallBoundaryCondition" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">SetWallBoundaryCondition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.DeformableModel" title="pydrake.multibody.plant.DeformableModel"><span class="pre">pydrake.multibody.plant.DeformableModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_WQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_W</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.DeformableModel.SetWallBoundaryCondition" title="Permalink to this definition"></a></dt>
 <dd><p>Sets wall boundary conditions for the body with the given <code class="docutils literal notranslate"><span class="pre">id</span></code>. All
 vertices of the mesh of the deformable body whose reference positions
 are inside the prescribed open half space are put under zero

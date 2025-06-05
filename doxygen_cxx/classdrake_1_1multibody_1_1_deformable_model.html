@@ -235,6 +235,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3edee15645c6e2abd1f8d70b27f0a0cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a3edee15645c6e2abd1f8d70b27f0a0cb">GetBodyId</a> (<a class="el" href="namespacedrake_1_1multibody.html#ad6f28f9f3c7b71cc803442f421b26352">DeformableBodyIndex</a> index) const</td></tr>
 <tr class="memdesc:a3edee15645c6e2abd1f8d70b27f0a0cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the DeformableBodyId of the body with the given body index.  <a href="#a3edee15645c6e2abd1f8d70b27f0a0cb">More...</a><br /></td></tr>
 <tr class="separator:a3edee15645c6e2abd1f8d70b27f0a0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e2fac4addeea2a100fbd378a3136ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a74e2fac4addeea2a100fbd378a3136ab">GetBodyId</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> geometry_id) const</td></tr>
+<tr class="memdesc:a74e2fac4addeea2a100fbd378a3136ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the DeformableBodyId associated with the given <code>geometry_id</code>.  <a href="#a74e2fac4addeea2a100fbd378a3136ab">More...</a><br /></td></tr>
+<tr class="separator:a74e2fac4addeea2a100fbd378a3136ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07af5a10198a7613731797e77d7de6f9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html">DeformableBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a07af5a10198a7613731797e77d7de6f9">GetBody</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:a07af5a10198a7613731797e77d7de6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the deformable body with the given <code>id</code>.  <a href="#a07af5a10198a7613731797e77d7de6f9">More...</a><br /></td></tr>
 <tr class="separator:a07af5a10198a7613731797e77d7de6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,29 +259,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a031ec7542a5fae1055f5bdb1fe6215e9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html">DeformableBody</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a031ec7542a5fae1055f5bdb1fe6215e9">GetBodyByName</a> (const std::string &amp;name, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:a031ec7542a5fae1055f5bdb1fe6215e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html" title="The DeformableBody class represents a single deformable element within a MultibodyPlant.">DeformableBody</a> with the given name from the given model instance.  <a href="#a031ec7542a5fae1055f5bdb1fe6215e9">More...</a><br /></td></tr>
 <tr class="separator:a031ec7542a5fae1055f5bdb1fe6215e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac007ef3019cd6f842f9ce39015ee41ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ac007ef3019cd6f842f9ce39015ee41ad">GetBodyIdByName</a> (const std::string &amp;name) const</td></tr>
-<tr class="memdesc:ac007ef3019cd6f842f9ce39015ee41ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the DeformableBodyId of the body with the given name.  <a href="#ac007ef3019cd6f842f9ce39015ee41ad">More...</a><br /></td></tr>
-<tr class="separator:ac007ef3019cd6f842f9ce39015ee41ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a706ead7e484b7375fac173564ef3df12"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a706ead7e484b7375fac173564ef3df12">GetBodyIds</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:a706ead7e484b7375fac173564ef3df12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the DeformableIds of the bodies that belong to the given model instance.  <a href="#a706ead7e484b7375fac173564ef3df12">More...</a><br /></td></tr>
 <tr class="separator:a706ead7e484b7375fac173564ef3df12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77aa9f45a14620d95b53d1c90ff6d3fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#ad6f28f9f3c7b71cc803442f421b26352">DeformableBodyIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a77aa9f45a14620d95b53d1c90ff6d3fe">GetBodyIndex</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
-<tr class="memdesc:a77aa9f45a14620d95b53d1c90ff6d3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Returns the DeformableBodyIndex of the body with the given id.  <a href="#a77aa9f45a14620d95b53d1c90ff6d3fe">More...</a><br /></td></tr>
+<tr class="memdesc:a77aa9f45a14620d95b53d1c90ff6d3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the DeformableBodyIndex of the body with the given id.  <a href="#a77aa9f45a14620d95b53d1c90ff6d3fe">More...</a><br /></td></tr>
 <tr class="separator:a77aa9f45a14620d95b53d1c90ff6d3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1d094e88bf62c509d5a146cc04df966"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ac1d094e88bf62c509d5a146cc04df966">GetGeometryId</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:ac1d094e88bf62c509d5a146cc04df966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the GeometryId of the geometry associated with the body with the given <code>id</code>.  <a href="#ac1d094e88bf62c509d5a146cc04df966">More...</a><br /></td></tr>
 <tr class="separator:ac1d094e88bf62c509d5a146cc04df966"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74e2fac4addeea2a100fbd378a3136ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a74e2fac4addeea2a100fbd378a3136ab">GetBodyId</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a> geometry_id) const</td></tr>
-<tr class="memdesc:a74e2fac4addeea2a100fbd378a3136ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the DeformableBodyId associated with the given <code>geometry_id</code>.  <a href="#a74e2fac4addeea2a100fbd378a3136ab">More...</a><br /></td></tr>
-<tr class="separator:a74e2fac4addeea2a100fbd378a3136ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba11a421c05ac3fe0dec30c33cf6e244"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#aba11a421c05ac3fe0dec30c33cf6e244">HasConstraint</a> (<a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
-<tr class="memdesc:aba11a421c05ac3fe0dec30c33cf6e244"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the true iff the deformable body with the given <code>id</code> has constraints associated with it.  <a href="#aba11a421c05ac3fe0dec30c33cf6e244">More...</a><br /></td></tr>
+<tr class="memdesc:aba11a421c05ac3fe0dec30c33cf6e244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the true if the deformable body with the given <code>id</code> has constraints associated with it.  <a href="#aba11a421c05ac3fe0dec30c33cf6e244">More...</a><br /></td></tr>
 <tr class="separator:aba11a421c05ac3fe0dec30c33cf6e244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac97d6938ab6b290266ca3d961ee0c513"><td class="memItemLeft" align="right" valign="top">const multibody::fem::internal::DiscreteTimeIntegrator&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ac97d6938ab6b290266ca3d961ee0c513">integrator</a> () const</td></tr>
 <tr class="memdesc:ac97d6938ab6b290266ca3d961ee0c513"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the time integrator used to for all FemModels in this model.  <a href="#ac97d6938ab6b290266ca3d961ee0c513">More...</a><br /></td></tr>
 <tr class="separator:ac97d6938ab6b290266ca3d961ee0c513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae48e04215f73edc66de1f732e4968899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">systems::OutputPortIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ae48e04215f73edc66de1f732e4968899">configuration_output_port_index</a> () const</td></tr>
-<tr class="memdesc:ae48e04215f73edc66de1f732e4968899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port index of the vertex positions port for all registered deformable bodies.  <a href="#ae48e04215f73edc66de1f732e4968899">More...</a><br /></td></tr>
+<tr class="memdesc:ae48e04215f73edc66de1f732e4968899"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the output port index of the vertex positions port for all registered deformable bodies.  <a href="#ae48e04215f73edc66de1f732e4968899">More...</a><br /></td></tr>
 <tr class="separator:ae48e04215f73edc66de1f732e4968899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2b7a58dc85678d08752945ff655362"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a5a2b7a58dc85678d08752945ff655362">is_empty</a> () const</td></tr>
 <tr class="memdesc:a5a2b7a58dc85678d08752945ff655362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if there's no deformable body or external force registered to <code>this</code> DeformableModel.  <a href="#a5a2b7a58dc85678d08752945ff655362">More...</a><br /></td></tr>
@@ -598,7 +595,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the output port index of the vertex positions port for all registered deformable bodies. </p>
+<p>(Internal use only) Returns the output port index of the vertex positions port for all registered deformable bodies. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called before <code><a class="el" href="classdrake_1_1multibody_1_1_physical_model.html#aeac673af572017abd863d759450110b7" title="(Internal only) Declares zero or more output ports in the owning MultibodyPlant to communicate with a...">DeclareSceneGraphPorts()</a></code> is called. </td></tr>
@@ -852,32 +849,6 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
-<a id="ac007ef3019cd6f842f9ce39015ee41ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac007ef3019cd6f842f9ce39015ee41ad">&#9670;&nbsp;</a></span>GetBodyIdByName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> GetBodyIdByName </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the DeformableBodyId of the body with the given name. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if there's no body with the given name or if more than one model instance contains deformable body with the given name. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a706ead7e484b7375fac173564ef3df12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a706ead7e484b7375fac173564ef3df12">&#9670;&nbsp;</a></span>GetBodyIds()</h2>
 
@@ -915,8 +886,8 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>(Internal) Returns the DeformableBodyIndex of the body with the given id. </p>
-<p>This function is for internal bookkeeping use only. Most users should use DeformableBodyId instead. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>Returns the DeformableBodyIndex of the body with the given id. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if no body with the given <code>id</code> has been registered. </td></tr>
   </table>
@@ -1201,7 +1172,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>(Internal use only) Returns the true iff the deformable body with the given <code>id</code> has constraints associated with it. </p>
+<p>Returns the true if the deformable body with the given <code>id</code> has constraints associated with it. </p>
 
 </div>
 </div>

@@ -311,6 +311,8 @@
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-CSpaceSeparatingPlane_-Variable-.__init__">(pydrake.common.value.Value[CSpaceSeparatingPlane_[Variable]] method)</a>
 </li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableBodyIndex-.__init__">(pydrake.common.value.Value[DeformableBodyIndex] method)</a>
+</li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableContactInfo-.__init__">(pydrake.common.value.Value[DeformableContactInfo] method)</a>
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableContactInfo_-AutoDiffXd-.__init__">(pydrake.common.value.Value[DeformableContactInfo_[AutoDiffXd]] method)</a>
@@ -1079,8 +1081,6 @@
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.CoulombFriction_-Expression-.__init__">(pydrake.multibody.plant.CoulombFriction_[Expression] method)</a>
 </li>
-        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableBodyId.__init__">(pydrake.multibody.plant.DeformableBodyId method)</a>
-</li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableContactInfo.__init__">(pydrake.multibody.plant.DeformableContactInfo method)</a>
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableContactInfo_-AutoDiffXd-.__init__">(pydrake.multibody.plant.DeformableContactInfo_[AutoDiffXd] method)</a>
@@ -1156,6 +1156,12 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.BallRpyJoint_-Expression-.__init__">(pydrake.multibody.tree.BallRpyJoint_[Expression] method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex.__init__">(pydrake.multibody.tree.BodyIndex method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.__init__">(pydrake.multibody.tree.DeformableBody method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId.__init__">(pydrake.multibody.tree.DeformableBodyId method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyIndex.__init__">(pydrake.multibody.tree.DeformableBodyIndex method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DoorHinge.__init__">(pydrake.multibody.tree.DoorHinge method)</a>
 </li>
@@ -2689,7 +2695,11 @@
       <li><a href="pydrake.planning.html#pydrake.planning.MultipleShooting.AddFinalCost">AddFinalCost() (pydrake.planning.MultipleShooting method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.AddFixedConstraint">AddFixedConstraint() (pydrake.multibody.plant.DeformableModel method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.AddFixedConstraint">(pydrake.multibody.tree.DeformableBody method)</a>
 </li>
+      </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.AddForceElement">AddForceElement() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
       <ul>
@@ -3712,10 +3722,10 @@
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-L2NormCost">Binding[L2NormCost] (class in pydrake.solvers)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-LinearComplementarityConstraint">Binding[LinearComplementarityConstraint] (class in pydrake.solvers)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-LinearConstraint">Binding[LinearConstraint] (class in pydrake.solvers)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Binding-LinearCost">Binding[LinearCost] (class in pydrake.solvers)</a>
@@ -3772,6 +3782,8 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_-Expression-.body_frame">(pydrake.multibody.tree.RigidBody_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.body_id">body_id() (pydrake.multibody.tree.DeformableBody method)</a>
+</li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.ExternallyAppliedSpatialForce.body_index">body_index (pydrake.multibody.plant.ExternallyAppliedSpatialForce property)</a>
 
       <ul>
@@ -4852,10 +4864,10 @@
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.CheckInAccelerationLimits">CheckInAccelerationLimits() (pydrake.planning.JointLimits method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.CheckInPositionLimits">CheckInPositionLimits() (pydrake.planning.JointLimits method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.planning.html#pydrake.planning.JointLimits.CheckInVelocityLimits">CheckInVelocityLimits() (pydrake.planning.JointLimits method)</a>
 </li>
       <li><a href="pydrake.solvers.html#pydrake.solvers.Constraint.CheckSatisfied">CheckSatisfied() (pydrake.solvers.Constraint method)</a>
@@ -5262,9 +5274,11 @@
       </ul></li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.LightParameter.cone_angle">cone_angle (pydrake.geometry.LightParameter property)</a>
 </li>
-      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DoorHinge.config">config() (pydrake.multibody.tree.DoorHinge method)</a>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.config">config() (pydrake.multibody.tree.DeformableBody method)</a>
 
       <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DoorHinge.config">(pydrake.multibody.tree.DoorHinge method)</a>
+</li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DoorHinge_-AutoDiffXd-.config">(pydrake.multibody.tree.DoorHinge_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DoorHinge_-Expression-.config">(pydrake.multibody.tree.DoorHinge_[Expression] method)</a>
@@ -6272,8 +6286,6 @@
 </li>
       <li><a href="pydrake.lcm.html#pydrake.lcm.DrakeLcmParams.defer_initialization">defer_initialization (pydrake.lcm.DrakeLcmParams property)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.common.cpp_template.html#pydrake.common.cpp_template.TemplateBase.define">define() (pydrake.common.cpp_template.TemplateBase class method)</a>
 
       <ul>
@@ -6288,6 +6300,8 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.ContactResults_-Expression-.deformable_contact_info">(pydrake.multibody.plant.ContactResults_[Expression] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.deformable_model">deformable_model() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
       <ul>
@@ -6296,11 +6310,15 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.deformable_model">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody">DeformableBody (class in pydrake.multibody.tree)</a>
+</li>
       <li><a href="pydrake.multibody.fem.html#pydrake.multibody.fem.DeformableBodyConfig">DeformableBodyConfig (class in pydrake.multibody.fem)</a>
 </li>
       <li><a href="pydrake.multibody.fem.html#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd">DeformableBodyConfig_[AutoDiffXd] (class in pydrake.multibody.fem)</a>
 </li>
-      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableBodyId">DeformableBodyId (class in pydrake.multibody.plant)</a>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId">DeformableBodyId (class in pydrake.multibody.tree)</a>
+</li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyIndex">DeformableBodyIndex (class in pydrake.multibody.tree)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableContactInfo">DeformableContactInfo (class in pydrake.multibody.plant)</a>
 </li>
@@ -6532,6 +6550,12 @@
 </li>
       <li><a href="pydrake.planning.html#pydrake.planning.DirectTranscription.TimeStep">DirectTranscription.TimeStep (class in pydrake.planning)</a>
 </li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.Disable">Disable() (pydrake.multibody.plant.DeformableModel method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.Disable">(pydrake.multibody.tree.DeformableBody method)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.CacheEntry.disable_caching">disable_caching() (pydrake.systems.framework.CacheEntry method)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.CacheEntry.disable_caching_by_default">disable_caching_by_default() (pydrake.systems.framework.CacheEntry method)</a>
@@ -6557,6 +6581,8 @@
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.DynamicProgrammingOptions.discount_factor">discount_factor (pydrake.systems.controllers.DynamicProgrammingOptions property)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlantConfig.discrete_contact_approximation">discrete_contact_approximation (pydrake.multibody.plant.MultibodyPlantConfig property)</a>
+</li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.discrete_state_index">discrete_state_index() (pydrake.multibody.tree.DeformableBody method)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.discrete_state_ticket">discrete_state_ticket() (pydrake.systems.framework.SystemBase method)</a>
 </li>
@@ -6884,6 +6910,12 @@
       </ul></li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.ConvexHull.empty_sets_removed">empty_sets_removed() (pydrake.geometry.optimization.ConvexHull method)</a>
 </li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.Enable">Enable() (pydrake.multibody.plant.DeformableModel method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.Enable">(pydrake.multibody.tree.DeformableBody method)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatVisualizerParams.enable_alpha_slider">enable_alpha_slider (pydrake.geometry.MeshcatVisualizerParams property)</a>
 </li>
       <li><a href="pydrake.visualization.html#pydrake.visualization.VisualizationConfig.enable_alpha_sliders">enable_alpha_sliders (pydrake.visualization.VisualizationConfig property)</a>
@@ -7999,6 +8031,8 @@
       <li><a href="pydrake.solvers.html#pydrake.solvers.MathematicalProgram.generic_costs">generic_costs() (pydrake.solvers.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.CIrisCollisionGeometry.geometry">geometry() (pydrake.geometry.optimization.CIrisCollisionGeometry method)</a>
+</li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.geometry_id">geometry_id() (pydrake.multibody.tree.DeformableBody method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.geometry_source_is_registered">geometry_source_is_registered() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
@@ -9253,6 +9287,8 @@
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-CSpaceSeparatingPlane_-Variable-.get_mutable_value">(pydrake.common.value.Value[CSpaceSeparatingPlane_[Variable]] method)</a>
 </li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableBodyIndex-.get_mutable_value">(pydrake.common.value.Value[DeformableBodyIndex] method)</a>
+</li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableContactInfo-.get_mutable_value">(pydrake.common.value.Value[DeformableContactInfo] method)</a>
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableContactInfo_-AutoDiffXd-.get_mutable_value">(pydrake.common.value.Value[DeformableContactInfo_[AutoDiffXd]] method)</a>
@@ -9509,7 +9545,7 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.SourceId.get_new_id">(pydrake.geometry.SourceId static method)</a>
 </li>
-        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableBodyId.get_new_id">(pydrake.multibody.plant.DeformableBodyId static method)</a>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId.get_new_id">(pydrake.multibody.tree.DeformableBodyId static method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId.get_new_id">(pydrake.multibody.tree.MultibodyConstraintId static method)</a>
 </li>
@@ -9908,14 +9944,14 @@
         <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.ConstantVectorSource_-Expression-.get_source_value">(pydrake.systems.primitives.ConstantVectorSource_[Expression] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.html#pydrake.solvers.L2NormCost.get_sparse_A">get_sparse_A() (pydrake.solvers.L2NormCost method)</a>
 
       <ul>
         <li><a href="pydrake.solvers.html#pydrake.solvers.LinearConstraint.get_sparse_A">(pydrake.solvers.LinearConstraint method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.Wing.get_spatial_force_output_port">get_spatial_force_output_port() (pydrake.multibody.plant.Wing method)</a>
 
       <ul>
@@ -10211,6 +10247,8 @@
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-CSpaceSeparatingPlane_-Variable-.get_value">(pydrake.common.value.Value[CSpaceSeparatingPlane_[Variable]] method)</a>
 </li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableBodyIndex-.get_value">(pydrake.common.value.Value[DeformableBodyIndex] method)</a>
+</li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableContactInfo-.get_value">(pydrake.common.value.Value[DeformableContactInfo] method)</a>
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableContactInfo_-AutoDiffXd-.get_value">(pydrake.common.value.Value[DeformableContactInfo_[AutoDiffXd]] method)</a>
@@ -10409,7 +10447,7 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.SourceId.get_value">(pydrake.geometry.SourceId method)</a>
 </li>
-        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableBodyId.get_value">(pydrake.multibody.plant.DeformableBodyId method)</a>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId.get_value">(pydrake.multibody.tree.DeformableBodyId method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.MultibodyConstraintId.get_value">(pydrake.multibody.tree.MultibodyConstraintId method)</a>
 </li>
@@ -10624,9 +10662,13 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetBodiesWeldedTo">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.GetBodyByName">GetBodyByName() (pydrake.multibody.plant.MultibodyPlant method)</a>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.GetBody">GetBody() (pydrake.multibody.plant.DeformableModel method)</a>
+</li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.GetBodyByName">GetBodyByName() (pydrake.multibody.plant.DeformableModel method)</a>
 
       <ul>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.GetBodyByName">(pydrake.multibody.plant.MultibodyPlant method)</a>
+</li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetBodyByName">(pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetBodyByName">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
@@ -10659,6 +10701,8 @@
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.GetBodyId">GetBodyId() (pydrake.multibody.plant.DeformableModel method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.GetBodyIds">GetBodyIds() (pydrake.multibody.plant.DeformableModel method)</a>
+</li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.GetBodyIndex">GetBodyIndex() (pydrake.multibody.plant.DeformableModel method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.GetBodyIndices">GetBodyIndices() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
@@ -11186,6 +11230,8 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetModelInstanceName">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.GetMutableBody">GetMutableBody() (pydrake.multibody.plant.DeformableModel method)</a>
+</li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.FixedInputPortValue.GetMutableData">GetMutableData() (pydrake.systems.framework.FixedInputPortValue method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.GetMutableEdgeByName">GetMutableEdgeByName() (pydrake.geometry.optimization.GraphOfConvexSets method)</a>
@@ -11344,9 +11390,11 @@
         <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.RgbdSensorAsync.GetParentFrameId">(pydrake.systems.sensors.RgbdSensorAsync method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement.GetParentPlant">GetParentPlant() (pydrake.multibody.tree.ForceElement method)</a>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.GetParentPlant">GetParentPlant() (pydrake.multibody.tree.DeformableBody method)</a>
 
       <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement.GetParentPlant">(pydrake.multibody.tree.ForceElement method)</a>
+</li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_-AutoDiffXd-.GetParentPlant">(pydrake.multibody.tree.ForceElement_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_-Expression-.GetParentPlant">(pydrake.multibody.tree.ForceElement_[Expression] method)</a>
@@ -11478,6 +11526,8 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetPositions">(pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetPositions">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.GetPositions">(pydrake.multibody.tree.DeformableBody method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.GetPositionsAndVelocities">GetPositionsAndVelocities() (pydrake.multibody.plant.MultibodyPlant method)</a>
@@ -11948,6 +11998,8 @@
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.Trajectory_-Expression-.has_derivative">(pydrake.trajectories.Trajectory_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.has_fixed_constraint">has_fixed_constraint() (pydrake.multibody.tree.DeformableBody method)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.RenderEngine.has_geometry">has_geometry() (pydrake.geometry.RenderEngine method)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.FramePoseVector.has_id">has_id() (pydrake.geometry.FramePoseVector method)</a>
@@ -12030,9 +12082,11 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_-Expression-.HasAnyDirectFeedthrough">(pydrake.systems.framework.System_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.HasBodyNamed">HasBodyNamed() (pydrake.multibody.plant.MultibodyPlant method)</a>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.HasBodyNamed">HasBodyNamed() (pydrake.multibody.plant.DeformableModel method)</a>
 
       <ul>
+        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.HasBodyNamed">(pydrake.multibody.plant.MultibodyPlant method)</a>
+</li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasBodyNamed">(pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.HasBodyNamed">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
@@ -12046,6 +12100,8 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.QueryObject_-Expression-.HasCollisions">(pydrake.geometry.QueryObject_[Expression] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.HasConstraint">HasConstraint() (pydrake.multibody.plant.DeformableModel method)</a>
+</li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System.HasDirectFeedthrough">HasDirectFeedthrough() (pydrake.systems.framework.System method)</a>
 
       <ul>
@@ -12084,6 +12140,8 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_-Expression-.HasInputPort">(pydrake.systems.framework.System_[Expression] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.HasJointActuatorNamed">HasJointActuatorNamed() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
       <ul>
@@ -12092,8 +12150,6 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.HasJointActuatorNamed">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.HasJointNamed">HasJointNamed() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
       <ul>
@@ -12542,9 +12598,11 @@
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.Gamepad.index">index (pydrake.geometry.Meshcat.Gamepad property)</a>
 </li>
-      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement.index">index() (pydrake.multibody.tree.ForceElement method)</a>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.index">index() (pydrake.multibody.tree.DeformableBody method)</a>
 
       <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement.index">(pydrake.multibody.tree.ForceElement method)</a>
+</li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_-AutoDiffXd-.index">(pydrake.multibody.tree.ForceElement_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_-Expression-.index">(pydrake.multibody.tree.ForceElement_[Expression] method)</a>
@@ -12786,10 +12844,10 @@
         <li><a href="pydrake.math.html#pydrake.math.RotationMatrix_-Expression-.inverse">(pydrake.math.RotationMatrix_[Expression] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.InverseDynamics">InverseDynamics (class in pydrake.systems.controllers)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode">InverseDynamics.InverseDynamicsMode (class in pydrake.systems.controllers)</a>
 </li>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.InverseDynamicsController">InverseDynamicsController (class in pydrake.systems.controllers)</a>
@@ -12862,17 +12920,27 @@
 </li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.Variable.is_dummy">is_dummy() (pydrake.symbolic.Variable method)</a>
 </li>
-      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement.is_enabled">is_enabled() (pydrake.multibody.tree.UniformGravityFieldElement method)</a>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.is_empty">is_empty() (pydrake.multibody.plant.DeformableModel method)</a>
+</li>
+      <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.is_enabled">is_enabled() (pydrake.multibody.plant.DeformableModel method)</a>
 
       <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.is_enabled">(pydrake.multibody.tree.DeformableBody method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement.is_enabled">(pydrake.multibody.tree.UniformGravityFieldElement method)</a>
+</li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement_-AutoDiffXd-.is_enabled">(pydrake.multibody.tree.UniformGravityFieldElement_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniformGravityFieldElement_-Expression-.is_enabled">(pydrake.multibody.tree.UniformGravityFieldElement_[Expression] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement.is_ephemeral">is_ephemeral() (pydrake.multibody.tree.ForceElement method)</a>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.is_enabled_parameter_index">is_enabled_parameter_index() (pydrake.multibody.tree.DeformableBody method)</a>
+</li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.is_ephemeral">is_ephemeral() (pydrake.multibody.tree.DeformableBody method)</a>
 
       <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement.is_ephemeral">(pydrake.multibody.tree.ForceElement method)</a>
+</li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_-AutoDiffXd-.is_ephemeral">(pydrake.multibody.tree.ForceElement_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_-Expression-.is_ephemeral">(pydrake.multibody.tree.ForceElement_[Expression] method)</a>
@@ -13003,9 +13071,11 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.SourceId.is_valid">(pydrake.geometry.SourceId method)</a>
 </li>
-        <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableBodyId.is_valid">(pydrake.multibody.plant.DeformableBodyId method)</a>
-</li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex.is_valid">(pydrake.multibody.tree.BodyIndex method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyId.is_valid">(pydrake.multibody.tree.DeformableBodyId method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBodyIndex.is_valid">(pydrake.multibody.tree.DeformableBodyIndex method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElementIndex.is_valid">(pydrake.multibody.tree.ForceElementIndex method)</a>
 </li>
@@ -14946,9 +15016,11 @@
       </ul></li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.ModelInstanceInfo.model_instance">model_instance (pydrake.multibody.parsing.ModelInstanceInfo property)</a>
 </li>
-      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement.model_instance">model_instance() (pydrake.multibody.tree.ForceElement method)</a>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.model_instance">model_instance() (pydrake.multibody.tree.DeformableBody method)</a>
 
       <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement.model_instance">(pydrake.multibody.tree.ForceElement method)</a>
+</li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_-AutoDiffXd-.model_instance">(pydrake.multibody.tree.ForceElement_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.ForceElement_-Expression-.model_instance">(pydrake.multibody.tree.ForceElement_[Expression] method)</a>
@@ -15460,6 +15532,8 @@
 </li>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.name">(pydrake.geometry.optimization.GraphOfConvexSets.Vertex method)</a>
 </li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.name">(pydrake.multibody.tree.DeformableBody method)</a>
+</li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame.name">(pydrake.multibody.tree.Frame method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_-AutoDiffXd-.name">(pydrake.multibody.tree.Frame_[AutoDiffXd] method)</a>
@@ -15743,6 +15817,8 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.num_dofs">num_dofs() (pydrake.multibody.tree.DeformableBody method)</a>
+</li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.GraphOfConvexSets.num_edges">num_edges() (pydrake.geometry.optimization.GraphOfConvexSets method)</a>
 </li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.ConvexHull.num_elements">num_elements() (pydrake.geometry.optimization.ConvexHull method)</a>
@@ -17726,6 +17802,8 @@
 </li>
       </ul></li>
       <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds.reference_direction">reference_direction (pydrake.multibody.optimization.SpatialVelocityConstraint.AngularVelocityBounds property)</a>
+</li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.reference_positions">reference_positions() (pydrake.multibody.tree.DeformableBody method)</a>
 </li>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.RegionOfAttraction">RegionOfAttraction() (in module pydrake.systems.analysis)</a>
 </li>
@@ -19720,6 +19798,8 @@
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-CSpaceSeparatingPlane_-Variable-.set_value">(pydrake.common.value.Value[CSpaceSeparatingPlane_[Variable]] method)</a>
 </li>
+        <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableBodyIndex-.set_value">(pydrake.common.value.Value[DeformableBodyIndex] method)</a>
+</li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableContactInfo-.set_value">(pydrake.common.value.Value[DeformableContactInfo] method)</a>
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableContactInfo_-AutoDiffXd-.set_value">(pydrake.common.value.Value[DeformableContactInfo_[AutoDiffXd]] method)</a>
@@ -20420,6 +20500,8 @@
 </li>
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetPositions">(pydrake.multibody.plant.MultibodyPlant_[Expression] method)</a>
 </li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.SetPositions">(pydrake.multibody.tree.DeformableBody method)</a>
+</li>
       </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant.SetPositionsAndVelocities">SetPositionsAndVelocities() (pydrake.multibody.plant.MultibodyPlant method)</a>
 
@@ -20620,7 +20702,11 @@
 </li>
       </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.DeformableModel.SetWallBoundaryCondition">SetWallBoundaryCondition() (pydrake.multibody.plant.DeformableModel method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DeformableBody.SetWallBoundaryCondition">(pydrake.multibody.tree.DeformableBody method)</a>
 </li>
+      </ul></li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.MultilayerPerceptron.SetWeights">SetWeights() (pydrake.systems.primitives.MultilayerPerceptron method)</a>
 
       <ul>
@@ -22757,6 +22843,8 @@
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-CSpaceSeparatingPlane_-Variable">Value[CSpaceSeparatingPlane_[Variable]] (class in pydrake.common.value)</a>
 </li>
+      <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableBodyIndex">Value[DeformableBodyIndex] (class in pydrake.common.value)</a>
+</li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableContactInfo">Value[DeformableContactInfo] (class in pydrake.common.value)</a>
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-DeformableContactInfo_-AutoDiffXd">Value[DeformableContactInfo_[AutoDiffXd]] (class in pydrake.common.value)</a>
@@ -22863,10 +22951,10 @@
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialMomentum_-AutoDiffXd">Value[list[SpatialMomentum_[AutoDiffXd]]] (class in pydrake.common.value)</a>
 </li>
-      <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialMomentum_-Expression">Value[list[SpatialMomentum_[Expression]]] (class in pydrake.common.value)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialMomentum_-Expression">Value[list[SpatialMomentum_[Expression]]] (class in pydrake.common.value)</a>
+</li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity">Value[list[SpatialVelocity]] (class in pydrake.common.value)</a>
 </li>
       <li><a href="pydrake.common.value.html#pydrake.common.value.Value-list-SpatialVelocity_-AutoDiffXd">Value[list[SpatialVelocity_[AutoDiffXd]]] (class in pydrake.common.value)</a>

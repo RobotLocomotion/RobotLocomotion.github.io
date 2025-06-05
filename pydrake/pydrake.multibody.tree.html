@@ -819,6 +819,363 @@ explicit model instance specified.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">DeformableBody</span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody" title="Permalink to this definition"></a></dt>
+<dd><p>The DeformableBody class represents a single deformable element within
+a MultibodyPlant. It encapsulates the mesh, physical properties, and
+finite-element model required to simulate deformable behavior. It
+manages: - Unique identification (DeformableBodyIndex,
+DeformableBodyId) and naming - Geometry association for collision and
+visualization - Construction of a FEM model with configurable
+constitutive parameters - Storage of reference vertex positions and
+system state indices - Application of boundary conditions and
+constraints - Registration and retrieval of external forces (including
+gravity) - Enabling/disabling of dynamics at runtime</p>
+<p>This class is not meant to be created by end users and it must be
+created exclusively by DeformableModel through
+DeformableModel::RegisterDeformableBody.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.AddFixedConstraint">
+<span class="sig-name descname"><span class="pre">AddFixedConstraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BA</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape_G</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><span class="pre">pydrake.geometry.Shape</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_BG</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.MultibodyConstraintId" title="pydrake.multibody.tree.MultibodyConstraintId"><span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.AddFixedConstraint" title="Permalink to this definition"></a></dt>
+<dd><p>Defines a fixed constraint between this deformable body and a rigid
+body B. Such a fixed constraint is modeled as distance holonomic
+constraints:</p>
+<p>p_PᵢQᵢ(q) = 0 for each constrained vertex Pᵢ</p>
+<p>where Pᵢ is the i-th vertex of the deformable body (A) under
+constraint and Qᵢ is a point rigidly affixed to the rigid body B. To
+specify the constraint, we put the reference mesh M of this body A in
+B’s body frame with the given pose <code class="docutils literal notranslate"><span class="pre">X_BA</span></code> and prescribe a shape G
+with pose <code class="docutils literal notranslate"><span class="pre">X_BG</span></code> in B’s body frame. All vertices Pᵢ in M that are
+inside (or on the surface of) G are subject to the fixed constraints
+with Qᵢ being coincident with Pᵢ when M is in pose X_BA. p_PᵢQᵢ(q)
+denotes the relative position of point Qᵢ with respect to point Pᵢ as
+a function of the configuration of the model q. Imposing this
+constraint forces Pᵢ and Qᵢ to be coincident for each vertex i of the
+deformable body specified to be under constraint.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_B</span></code>:</dt><dd><p>The rigid body under constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BA</span></code>:</dt><dd><p>The pose of this deformable body A’s reference mesh in B’s body
+frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">shape_G</span></code>:</dt><dd><p>The prescribed geometry shape, attached to rigid body B, used to
+determine which vertices of this deformable body A is under
+constraint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BG</span></code>:</dt><dd><p>The fixed pose of the geometry frame of the given <code class="docutils literal notranslate"><span class="pre">shape</span></code> in
+body B’s frame.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the unique id of the newly added constraint.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError unless body_B is registered with the same</strong> – </p></li>
+<li><p><strong>multibody tree owning this deformable body.</strong> – </p></li>
+<li><p><strong>RuntimeError if no constraint is added</strong><strong> (</strong><strong>i.e. no vertex of the</strong> – </p></li>
+<li><p><strong>deformable body is inside the given shape with the given</strong> – </p></li>
+<li><p><strong>poses</strong><strong>)</strong><strong></strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.body_id">
+<span class="sig-name descname"><span class="pre">body_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.body_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.config">
+<span class="sig-name descname"><span class="pre">config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.fem.html#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.config" title="Permalink to this definition"></a></dt>
+<dd><p>Returns physical parameters of this deformable body.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.Disable">
+<span class="sig-name descname"><span class="pre">Disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.Disable" title="Permalink to this definition"></a></dt>
+<dd><p>Disables this deformable body in the given context. Disabling a
+deformable body sets its vertex velocities and accelerations to zero
+and freezes its vertex positions. A disabled deformable body is not
+subject to any constraint (e.g. frictional contact constraint or fixed
+constraint); it does not move under the influence of external forces
+(e.g. gravity); and it does not necessarily satisfy the prescribed
+boundary condition (if any). On the flip side, a disabled deformable
+body does not affect the dynamics of other bodies, even if the
+collision between the disabled body’s geometry and other geometries is
+not filtered. Effectively, the physics of the deformable body stop
+being computed. The deformable body can be enabled by calling
+Enable(). Calling Disable() on a body which is already disabled has no
+effect.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Enable().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the passed in context isn't compatible with the</strong> – </p></li>
+<li><p><strong>MultibodyPlant that owns this body.</strong> – </p></li>
+<li><p><strong>RuntimeError if context is null.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.discrete_state_index">
+<span class="sig-name descname"><span class="pre">discrete_state_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiscreteStateIndex" title="pydrake.systems.framework.DiscreteStateIndex"><span class="pre">pydrake.systems.framework.DiscreteStateIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.discrete_state_index" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the index of the discrete state associated with this
+deformable body in the MultibodyPlant that owns the body.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.Enable">
+<span class="sig-name descname"><span class="pre">Enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.Enable" title="Permalink to this definition"></a></dt>
+<dd><p>Enables this deformable body in the given context. Calling Enable() on
+a body which is already enabled has no effect.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Disable().</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the passed in context isn't compatible with the</strong> – </p></li>
+<li><p><strong>MultibodyPlant that owns this body.</strong> – </p></li>
+<li><p><strong>RuntimeError if context is null.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.geometry_id">
+<span class="sig-name descname"><span class="pre">geometry_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.geometry_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.GetParentPlant">
+<span class="sig-name descname"><span class="pre">GetParentPlant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.GetParentPlant" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.GetPositions">
+<span class="sig-name descname"><span class="pre">GetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.GetPositions" title="Permalink to this definition"></a></dt>
+<dd><p>Copies out the matrix of vertex positions for this deformable body in
+the provided <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context associated with the MultibodyPlant that owns this
+body.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">q</span></code>:</dt><dd><p>A 3×N matrix containing the positions of all vertices of the body.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if context does not belong to the MultibodyPlant</strong> – </p></li>
+<li><p><strong>that owns this body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.has_fixed_constraint">
+<span class="sig-name descname"><span class="pre">has_fixed_constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.has_fixed_constraint" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true if this deformable body is under any fixed constraint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.index">
+<span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBodyIndex" title="pydrake.multibody.tree.DeformableBodyIndex"><span class="pre">pydrake.multibody.tree.DeformableBodyIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.is_enabled">
+<span class="sig-name descname"><span class="pre">is_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.is_enabled" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if this deformable body is enabled.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if the passed in context isn't compatible with the</strong> – </p></li>
+<li><p><strong>MultibodyPlant that owns this body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.is_enabled_parameter_index">
+<span class="sig-name descname"><span class="pre">is_enabled_parameter_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.AbstractParameterIndex" title="pydrake.systems.framework.AbstractParameterIndex"><span class="pre">pydrake.systems.framework.AbstractParameterIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.is_enabled_parameter_index" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the index of the boolean parameter indicating whether this
+deformable body is enabled.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.is_ephemeral">
+<span class="sig-name descname"><span class="pre">is_ephemeral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.is_ephemeral" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.model_instance">
+<span class="sig-name descname"><span class="pre">model_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.model_instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.num_dofs">
+<span class="sig-name descname"><span class="pre">num_dofs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.num_dofs" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of degrees of freedom (DoFs) of this body.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.reference_positions">
+<span class="sig-name descname"><span class="pre">reference_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.reference_positions" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the reference positions of the vertices of the deformable body
+identified by the given <code class="docutils literal notranslate"><span class="pre">id</span></code>. The reference positions are
+represented as a VectorX with 3N values where N is the number of
+vertices. The x-, y-, and z-positions (measured and expressed in the
+world frame) of the j-th vertex are 3j, 3j + 1, and 3j + 2 in the
+VectorX.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.SetPositions">
+<span class="sig-name descname"><span class="pre">SetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.SetPositions" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the vertex positions of this deformable body in the provided
+<code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">out</span></code>:</dt><dd><p>] context The context associated with the MultibodyPlant that owns
+this body.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q</span></code>:</dt><dd><p>A 3×N matrix of vertex positions.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any of the following conditions are met</strong> – <ol class="arabic simple">
+<li></li>
+</ol>
+</p></li>
+<li><p><strong>context` is nullptr. 2. context does not belong to th</strong> – </p></li>
+<li><p><strong>MultibodyPlant that owns this body. 3. The number of columns of</strong> – </p></li>
+<li><p><strong>q` does not match the number of vertices of this body. 4. ``q`</strong> – </p></li>
+<li><p><strong>contains non-finite values.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.SetWallBoundaryCondition">
+<span class="sig-name descname"><span class="pre">SetWallBoundaryCondition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_WQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_W</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.SetWallBoundaryCondition" title="Permalink to this definition"></a></dt>
+<dd><p>Sets wall boundary conditions for this deformable body. All vertices
+of the mesh of the deformable body whose reference positions are
+inside the prescribed open half space are put under zero displacement
+boundary conditions. The open half space is defined by a plane with
+outward normal n_W. A vertex V is considered to be subject to the
+boundary condition if n̂ ⋅ p_QV &lt; 0 where Q is a point on the plane
+and n̂ is normalized n_W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_WQ</span></code>:</dt><dd><p>The position of a point Q on the plane in the world frame.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">n_W</span></code>:</dt><dd><p>Outward normal to the half space expressed in the world frame.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>n_W.norm() &gt; 1e-10.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Roundoff error may cause a point very near the defining plane to
+be mischaracterized as to which side of the plane it is on.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBodyId">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">DeformableBodyId</span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBodyId" title="Permalink to this definition"></a></dt>
+<dd><p>Type used to identify a deformable body by id within a multibody
+plant.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBodyId.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBodyId.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBodyId.get_new_id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_new_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBodyId.get_new_id" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a new identifier for this id type. This new identifier will
+be different from all previous identifiers created. This method does
+<em>not</em> make any guarantees about the values of ids from successive
+invocations. This method is guaranteed to be thread safe.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBodyId.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBodyId.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Extracts the underlying representation from the identifier. This is
+considered invalid for invalid ids and is strictly enforced in Debug
+builds.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBodyId.is_valid">
+<span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBodyId.is_valid" title="Permalink to this definition"></a></dt>
+<dd><p>Reports if the id is valid.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBodyIndex">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">DeformableBodyIndex</span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBodyIndex" title="Permalink to this definition"></a></dt>
+<dd><p>Type used to identify a deformable body by index within a multibody
+plant.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBodyIndex.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBodyIndex.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.multibody.tree.DeformableBodyIndex) -&gt; None</p></li>
+</ol>
+<p>Default constructor; the result is an <em>invalid</em> index. This only
+exists to serve applications which require a default constructor.</p>
+<ol class="arabic simple" start="2">
+<li><p>__init__(self: pydrake.multibody.tree.DeformableBodyIndex, arg0: int) -&gt; None</p></li>
+</ol>
+<p>Construction from a non-negative <code class="docutils literal notranslate"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBodyIndex.is_valid">
+<span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBodyIndex" title="pydrake.multibody.tree.DeformableBodyIndex"><span class="pre">pydrake.multibody.tree.DeformableBodyIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBodyIndex.is_valid" title="Permalink to this definition"></a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.DoorHinge">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.tree.</span></span><span class="sig-name descname"><span class="pre">DoorHinge</span></span><a class="headerlink" href="#pydrake.multibody.tree.DoorHinge" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.tree.ForceElement" title="pydrake.multibody.tree.ForceElement"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.ForceElement</span></code></a></p>
@@ -1718,7 +2075,7 @@ method computes the pose <code class="docutils literal notranslate"><span class=
 which this frame is attached. In other words, if the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code>
 frame F in the body frame B is <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>, this method computes the pose
 <code class="docutils literal notranslate"><span class="pre">X_BQ</span></code> of frame Q in the body frame B as <code class="docutils literal notranslate"><span class="pre">X_BQ</span> <span class="pre">=</span> <span class="pre">X_BF</span> <span class="pre">*</span> <span class="pre">X_FQ</span></code>. In
-particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id1"><span class="problematic" id="id2">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
+particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id3"><span class="problematic" id="id4">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
 identity transformation, this method directly returns <code class="docutils literal notranslate"><span class="pre">X_FQ</span></code>.
 Specific frame subclasses can override this method to provide faster
 implementations if needed.</p>
@@ -2360,7 +2717,7 @@ method computes the pose <code class="docutils literal notranslate"><span class=
 which this frame is attached. In other words, if the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code>
 frame F in the body frame B is <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>, this method computes the pose
 <code class="docutils literal notranslate"><span class="pre">X_BQ</span></code> of frame Q in the body frame B as <code class="docutils literal notranslate"><span class="pre">X_BQ</span> <span class="pre">=</span> <span class="pre">X_BF</span> <span class="pre">*</span> <span class="pre">X_FQ</span></code>. In
-particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id3"><span class="problematic" id="id4">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
+particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id5"><span class="problematic" id="id6">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
 identity transformation, this method directly returns <code class="docutils literal notranslate"><span class="pre">X_FQ</span></code>.
 Specific frame subclasses can override this method to provide faster
 implementations if needed.</p>
@@ -2996,7 +3353,7 @@ method computes the pose <code class="docutils literal notranslate"><span class=
 which this frame is attached. In other words, if the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code>
 frame F in the body frame B is <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>, this method computes the pose
 <code class="docutils literal notranslate"><span class="pre">X_BQ</span></code> of frame Q in the body frame B as <code class="docutils literal notranslate"><span class="pre">X_BQ</span> <span class="pre">=</span> <span class="pre">X_BF</span> <span class="pre">*</span> <span class="pre">X_FQ</span></code>. In
-particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id5"><span class="problematic" id="id6">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
+particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id7"><span class="problematic" id="id8">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
 identity transformation, this method directly returns <code class="docutils literal notranslate"><span class="pre">X_FQ</span></code>.
 Specific frame subclasses can override this method to provide faster
 implementations if needed.</p>
@@ -6467,7 +6824,7 @@ demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
 <p>Bushing type | torque constants | force constants
-——————————–<a href="#id43"><span class="problematic" id="id44">|:--------------------|</span></a>:——————
+——————————–<a href="#id45"><span class="problematic" id="id46">|:--------------------|</span></a>:——————
 z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
 | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
 | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
@@ -6505,7 +6862,7 @@ constant dx is by choosing a “reasonably small” settling time tₛ,
 where settling time tₛ is the interval of time for a system to settle
 to within 1% (0.01) of an equilibrium solution). Is tₛ = 0.01 s
 negligible for a robot arm with a 10 s reach maneuver?</p>
-<p><a href="#id13"><span class="problematic" id="id14">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
+<p><a href="#id15"><span class="problematic" id="id16">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
 d₀. The estimate of stiffness k₀ depends on whether you are modeling a
 physical bushing (consider stiffness methods 1 or 2 below) or whether
 you are using a bushing to replace an ideal joint such as a revolute
@@ -6533,7 +6890,7 @@ damping), estimate a characteristic moment of inertia and calculate
 <code class="docutils literal notranslate"><span class="pre">d₀</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">ζ</span> <span class="pre">√(I₀</span> <span class="pre">k₀)</span></code>.</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id15"><span class="problematic" id="id16">**</span></a>** How to choose a force stiffness constant kx or damping constant
+<p><a href="#id17"><span class="problematic" id="id18">**</span></a>** How to choose a force stiffness constant kx or damping constant
 dx. The estimate of stiffness kx depends on whether you are modeling a
 real bushing (consider stiffness methods 1 or 2 below) or whether you
 are using a bushing to replace an ideal joint such as a revolute or
@@ -6560,7 +6917,7 @@ a characteristic mass m and calculate <code class="docutils literal notranslate"
 N*s/m).</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id17"><span class="problematic" id="id18">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
+<p><a href="#id19"><span class="problematic" id="id20">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
 torques” τ relate to 𝐭, it helps to remember that the RollPitchYaw
 class documentation states that a Space-fixed (extrinsic) X-Y-Z
 rotation with roll-pitch-yaw angles [q₀ q₁ q₂] is equivalent to a
@@ -6581,7 +6938,7 @@ w_AC = τ ⋅ q̇.</p>
 ⌊ tz ⌋      ⌊ τ₂ ⌋            ⌊ cos(q₂)*tan(q₁)   sin(q₂)*tan(q₁)  1 ⌋
 </pre></div>
 </div>
-</details><p><a href="#id19"><span class="problematic" id="id20">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
+</details><p><a href="#id21"><span class="problematic" id="id22">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
 constants. The basics on how to choose bushing stiffness and damping
 constants are at: - Basic_bushing_torque_stiffness_and_damping “How to
 choose torque stiffness and damping constants” -
@@ -6653,7 +7010,7 @@ logarithmic decrement δ = -ln(decay_ratio), calculate damping ratio
 ζ = √(δ² / (4π² + δ²)), then calculate d₀ using d₀ = 2 ζ √(I₀ k₀) or
 d₀ = 2 ζ k₀ / ωₙ. For more information, see
 <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement">https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement</a></p>
-<p><a href="#id21"><span class="problematic" id="id22">**</span></a>** Derivation: Approximate formula for overdamped settling time.
+<p><a href="#id23"><span class="problematic" id="id24">**</span></a>** Derivation: Approximate formula for overdamped settling time.
 Since a literature reference for this formula was not found, the
 derivation below was done at TRI (it has not been peer reviewed). This
 formula results from the “dominant pole” solution in the prototypical
@@ -7029,7 +7386,7 @@ demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
 <p>Bushing type | torque constants | force constants
-——————————–<a href="#id45"><span class="problematic" id="id46">|:--------------------|</span></a>:——————
+——————————–<a href="#id47"><span class="problematic" id="id48">|:--------------------|</span></a>:——————
 z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
 | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
 | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
@@ -7067,7 +7424,7 @@ constant dx is by choosing a “reasonably small” settling time tₛ,
 where settling time tₛ is the interval of time for a system to settle
 to within 1% (0.01) of an equilibrium solution). Is tₛ = 0.01 s
 negligible for a robot arm with a 10 s reach maneuver?</p>
-<p><a href="#id23"><span class="problematic" id="id24">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
+<p><a href="#id25"><span class="problematic" id="id26">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
 d₀. The estimate of stiffness k₀ depends on whether you are modeling a
 physical bushing (consider stiffness methods 1 or 2 below) or whether
 you are using a bushing to replace an ideal joint such as a revolute
@@ -7095,7 +7452,7 @@ damping), estimate a characteristic moment of inertia and calculate
 <code class="docutils literal notranslate"><span class="pre">d₀</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">ζ</span> <span class="pre">√(I₀</span> <span class="pre">k₀)</span></code>.</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id25"><span class="problematic" id="id26">**</span></a>** How to choose a force stiffness constant kx or damping constant
+<p><a href="#id27"><span class="problematic" id="id28">**</span></a>** How to choose a force stiffness constant kx or damping constant
 dx. The estimate of stiffness kx depends on whether you are modeling a
 real bushing (consider stiffness methods 1 or 2 below) or whether you
 are using a bushing to replace an ideal joint such as a revolute or
@@ -7122,7 +7479,7 @@ a characteristic mass m and calculate <code class="docutils literal notranslate"
 N*s/m).</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id27"><span class="problematic" id="id28">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
+<p><a href="#id29"><span class="problematic" id="id30">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
 torques” τ relate to 𝐭, it helps to remember that the RollPitchYaw
 class documentation states that a Space-fixed (extrinsic) X-Y-Z
 rotation with roll-pitch-yaw angles [q₀ q₁ q₂] is equivalent to a
@@ -7143,7 +7500,7 @@ w_AC = τ ⋅ q̇.</p>
 ⌊ tz ⌋      ⌊ τ₂ ⌋            ⌊ cos(q₂)*tan(q₁)   sin(q₂)*tan(q₁)  1 ⌋
 </pre></div>
 </div>
-</details><p><a href="#id29"><span class="problematic" id="id30">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
+</details><p><a href="#id31"><span class="problematic" id="id32">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
 constants. The basics on how to choose bushing stiffness and damping
 constants are at: - Basic_bushing_torque_stiffness_and_damping “How to
 choose torque stiffness and damping constants” -
@@ -7215,7 +7572,7 @@ logarithmic decrement δ = -ln(decay_ratio), calculate damping ratio
 ζ = √(δ² / (4π² + δ²)), then calculate d₀ using d₀ = 2 ζ √(I₀ k₀) or
 d₀ = 2 ζ k₀ / ωₙ. For more information, see
 <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement">https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement</a></p>
-<p><a href="#id31"><span class="problematic" id="id32">**</span></a>** Derivation: Approximate formula for overdamped settling time.
+<p><a href="#id33"><span class="problematic" id="id34">**</span></a>** Derivation: Approximate formula for overdamped settling time.
 Since a literature reference for this formula was not found, the
 derivation below was done at TRI (it has not been peer reviewed). This
 formula results from the “dominant pole” solution in the prototypical
@@ -7580,7 +7937,7 @@ demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
 <p>Bushing type | torque constants | force constants
-——————————–<a href="#id47"><span class="problematic" id="id48">|:--------------------|</span></a>:——————
+——————————–<a href="#id49"><span class="problematic" id="id50">|:--------------------|</span></a>:——————
 z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
 | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
 | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
@@ -7618,7 +7975,7 @@ constant dx is by choosing a “reasonably small” settling time tₛ,
 where settling time tₛ is the interval of time for a system to settle
 to within 1% (0.01) of an equilibrium solution). Is tₛ = 0.01 s
 negligible for a robot arm with a 10 s reach maneuver?</p>
-<p><a href="#id33"><span class="problematic" id="id34">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
+<p><a href="#id35"><span class="problematic" id="id36">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
 d₀. The estimate of stiffness k₀ depends on whether you are modeling a
 physical bushing (consider stiffness methods 1 or 2 below) or whether
 you are using a bushing to replace an ideal joint such as a revolute
@@ -7646,7 +8003,7 @@ damping), estimate a characteristic moment of inertia and calculate
 <code class="docutils literal notranslate"><span class="pre">d₀</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">ζ</span> <span class="pre">√(I₀</span> <span class="pre">k₀)</span></code>.</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id35"><span class="problematic" id="id36">**</span></a>** How to choose a force stiffness constant kx or damping constant
+<p><a href="#id37"><span class="problematic" id="id38">**</span></a>** How to choose a force stiffness constant kx or damping constant
 dx. The estimate of stiffness kx depends on whether you are modeling a
 real bushing (consider stiffness methods 1 or 2 below) or whether you
 are using a bushing to replace an ideal joint such as a revolute or
@@ -7673,7 +8030,7 @@ a characteristic mass m and calculate <code class="docutils literal notranslate"
 N*s/m).</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id37"><span class="problematic" id="id38">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
+<p><a href="#id39"><span class="problematic" id="id40">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
 torques” τ relate to 𝐭, it helps to remember that the RollPitchYaw
 class documentation states that a Space-fixed (extrinsic) X-Y-Z
 rotation with roll-pitch-yaw angles [q₀ q₁ q₂] is equivalent to a
@@ -7694,7 +8051,7 @@ w_AC = τ ⋅ q̇.</p>
 ⌊ tz ⌋      ⌊ τ₂ ⌋            ⌊ cos(q₂)*tan(q₁)   sin(q₂)*tan(q₁)  1 ⌋
 </pre></div>
 </div>
-</details><p><a href="#id39"><span class="problematic" id="id40">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
+</details><p><a href="#id41"><span class="problematic" id="id42">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
 constants. The basics on how to choose bushing stiffness and damping
 constants are at: - Basic_bushing_torque_stiffness_and_damping “How to
 choose torque stiffness and damping constants” -
@@ -7766,7 +8123,7 @@ logarithmic decrement δ = -ln(decay_ratio), calculate damping ratio
 ζ = √(δ² / (4π² + δ²)), then calculate d₀ using d₀ = 2 ζ √(I₀ k₀) or
 d₀ = 2 ζ k₀ / ωₙ. For more information, see
 <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement">https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement</a></p>
-<p><a href="#id41"><span class="problematic" id="id42">**</span></a>** Derivation: Approximate formula for overdamped settling time.
+<p><a href="#id43"><span class="problematic" id="id44">**</span></a>** Derivation: Approximate formula for overdamped settling time.
 Since a literature reference for this formula was not found, the
 derivation below was done at TRI (it has not been peer reviewed). This
 formula results from the “dominant pole” solution in the prototypical

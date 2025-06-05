@@ -1,6 +1,5 @@
 var NAVTREEINDEX64 =
 {
-"structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,9,3,0],
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a5c1d918dc22b5ef6cf169eb681e7eecf":[3,0,0,3,9,3,1],
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,9,3,2],
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a905b0fa1fb0e4a5334581d565fb2f8ec":[3,0,0,3,9,3,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX64 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,4,58,1],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,4,58,3],
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html":[3,0,0,4,1,9],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a03924fec23a67a542cf129700a52949a":[3,0,0,4,1,9,6]
+"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a03924fec23a67a542cf129700a52949a":[3,0,0,4,1,9,6],
+"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a0d3adebc3343af4468bf27a14bba93ae":[3,0,0,4,1,9,13]
 };

@@ -673,7 +673,6 @@ var searchData=
   ['getbodyframeidorthrow',['GetBodyFrameIdOrThrow',['../classdrake_1_1multibody_1_1_multibody_plant.html#afdcdcb4e7798a5aef9bc3111402dfa5e',1,'drake::multibody::MultibodyPlant']]],
   ['getbodyfromframeid',['GetBodyFromFrameId',['../classdrake_1_1multibody_1_1_multibody_plant.html#a3135f9f3f715b19b53f823d2d135a157',1,'drake::multibody::MultibodyPlant']]],
   ['getbodyid',['GetBodyId',['../classdrake_1_1multibody_1_1_deformable_model.html#a3edee15645c6e2abd1f8d70b27f0a0cb',1,'drake::multibody::DeformableModel::GetBodyId(DeformableBodyIndex index) const'],['../classdrake_1_1multibody_1_1_deformable_model.html#a74e2fac4addeea2a100fbd378a3136ab',1,'drake::multibody::DeformableModel::GetBodyId(geometry::GeometryId geometry_id) const']]],
-  ['getbodyidbyname',['GetBodyIdByName',['../classdrake_1_1multibody_1_1_deformable_model.html#ac007ef3019cd6f842f9ce39015ee41ad',1,'drake::multibody::DeformableModel']]],
   ['getbodyids',['GetBodyIds',['../classdrake_1_1multibody_1_1_deformable_model.html#a706ead7e484b7375fac173564ef3df12',1,'drake::multibody::DeformableModel']]],
   ['getbodyindex',['GetBodyIndex',['../classdrake_1_1multibody_1_1_deformable_model.html#a77aa9f45a14620d95b53d1c90ff6d3fe',1,'drake::multibody::DeformableModel']]],
   ['getbodyindices',['GetBodyIndices',['../classdrake_1_1multibody_1_1_multibody_plant.html#a9e826bbe6f7a8768bea8d2a41be7f0ac',1,'drake::multibody::MultibodyPlant']]],

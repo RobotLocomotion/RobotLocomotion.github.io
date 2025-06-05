@@ -1,6 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a267edae8605e4acdddde78de1197fdc6":[3,0,0,9,52,6],
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a2c4b05762404b1eeafa2ddd885d0494d":[3,0,0,9,52,12],
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a3e68617d672d8e03ed51c42c29c898b4":[3,0,0,9,52,19],
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a425889c333ac04815f5ed0b9a3740ff5":[3,0,0,9,52,5],
@@ -249,5 +248,6 @@ var NAVTREEINDEX18 =
 "classdrake_1_1multibody_1_1_multibody_plant.html#a74b62418e9cee452711363b80ef554d3":[1,2,14,267],
 "classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c":[1,2,14,16],
 "classdrake_1_1multibody_1_1_multibody_plant.html#a78463f908367335926f461a19978d89b":[1,2,14,194],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a78ebacb6a7d7cc73afb40deb6dc17798":[1,2,14,139]
+"classdrake_1_1multibody_1_1_multibody_plant.html#a78ebacb6a7d7cc73afb40deb6dc17798":[1,2,14,139],
+"classdrake_1_1multibody_1_1_multibody_plant.html#a7bb24fed19f16a76450eece1857b92dc":[1,2,14,202]
 };
