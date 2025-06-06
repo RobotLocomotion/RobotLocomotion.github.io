@@ -200,6 +200,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a> () const</td></tr>
 <tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the body.  <a href="#ad8227ba86a01f26e4f173cd5e219d5d1">More...</a><br /></td></tr>
 <tr class="separator:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html#a06542e4ec7c6a884bfcd61c9b00221b4">scoped_name</a> () const</td></tr>
+<tr class="memdesc:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns scoped name of this body.  <a href="#a06542e4ec7c6a884bfcd61c9b00221b4">More...</a><br /></td></tr>
+<tr class="separator:a06542e4ec7c6a884bfcd61c9b00221b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b4a24e75b4aedbdf350681cea6bdc08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">geometry::GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html#a5b4a24e75b4aedbdf350681cea6bdc08">geometry_id</a> () const</td></tr>
 <tr class="memdesc:a5b4a24e75b4aedbdf350681cea6bdc08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the geometry id of the deformable geometry used to simulate this deformable body.  <a href="#a5b4a24e75b4aedbdf350681cea6bdc08">More...</a><br /></td></tr>
 <tr class="separator:a5b4a24e75b4aedbdf350681cea6bdc08"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -881,6 +884,26 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the reference positions of the vertices of the deformable body identified by the given <code>id</code>. </p>
 <p>The reference positions are represented as a VectorX with 3N values where N is the number of vertices. The x-, y-, and z-positions (measured and expressed in the world frame) of the j-th vertex are 3j, 3j + 1, and 3j + 2 in the VectorX. </p>
+
+</div>
+</div>
+<a id="a06542e4ec7c6a884bfcd61c9b00221b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06542e4ec7c6a884bfcd61c9b00221b4">&#9670;&nbsp;</a></span>scoped_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_scoped_name.html">ScopedName</a> scoped_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns scoped name of this body. </p>
+<p>Neither of the two pieces of the name will be empty (the scope name and the element name). </p>
 
 </div>
 </div>

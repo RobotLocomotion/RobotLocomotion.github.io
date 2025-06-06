@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1systems_1_1_input_port_base.html#af6dca4e6beb6a40b56f25911cf6261db":[3,0,0,16,62,6],
 "classdrake_1_1systems_1_1_input_port_base.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,16,62,16],
 "classdrake_1_1systems_1_1_input_port_base.html#afc129bed52eb7aed59ad5eed74cca3e8":[3,0,0,16,62,1],
 "classdrake_1_1systems_1_1_integrator.html":[1,2,1,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1systems_1_1_linear_transform_density.html#aeb4e2971ee7a06f63699420801626843":[1,2,1,17,14],
 "classdrake_1_1systems_1_1_linear_transform_density.html#afe984a0b26d77f8ce5c3731559b6e3c0":[1,2,1,17,1],
 "classdrake_1_1systems_1_1_linear_transform_density.html#affc1de2b26d80b8f18d7ff6310987c71":[1,2,1,17,3],
-"classdrake_1_1systems_1_1_matrix_gain.html":[1,2,1,18],
-"classdrake_1_1systems_1_1_matrix_gain.html#a3af0b57a7a890abc45d1e2fadd6d7871":[1,2,1,18,0]
+"classdrake_1_1systems_1_1_matrix_gain.html":[1,2,1,18]
 };

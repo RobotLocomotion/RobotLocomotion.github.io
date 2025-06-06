@@ -128,7 +128,7 @@ var searchData=
   ['schur_5fcomplement_2eh',['schur_complement.h',['../contact__solvers_2schur__complement_8h.html',1,'(Global Namespace)'],['../fem_2schur__complement_8h.html',1,'(Global Namespace)']]],
   ['scientific',['scientific',['../structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html#ae1cae86879a197bb61d6519204b56535',1,'drake::geometry::optimization::GcsGraphvizOptions']]],
   ['scope_5fexit_2eh',['scope_exit.h',['../scope__exit_8h.html',1,'']]],
-  ['scoped_5fname',['scoped_name',['../classdrake_1_1multibody_1_1_frame.html#a06542e4ec7c6a884bfcd61c9b00221b4',1,'drake::multibody::Frame::scoped_name()'],['../classdrake_1_1multibody_1_1_rigid_body.html#a06542e4ec7c6a884bfcd61c9b00221b4',1,'drake::multibody::RigidBody::scoped_name()']]],
+  ['scoped_5fname',['scoped_name',['../classdrake_1_1multibody_1_1_deformable_body.html#a06542e4ec7c6a884bfcd61c9b00221b4',1,'drake::multibody::DeformableBody::scoped_name()'],['../classdrake_1_1multibody_1_1_frame.html#a06542e4ec7c6a884bfcd61c9b00221b4',1,'drake::multibody::Frame::scoped_name()'],['../classdrake_1_1multibody_1_1_rigid_body.html#a06542e4ec7c6a884bfcd61c9b00221b4',1,'drake::multibody::RigidBody::scoped_name()']]],
   ['scoped_5fname_2eh',['scoped_name.h',['../scoped__name_8h.html',1,'']]],
   ['scoped_5fnames_2eh',['scoped_names.h',['../scoped__names_8h.html',1,'']]],
   ['scoped_5fsingleton_2eh',['scoped_singleton.h',['../scoped__singleton_8h.html',1,'']]],

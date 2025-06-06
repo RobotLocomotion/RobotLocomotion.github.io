@@ -890,7 +890,8 @@ body B’s frame.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.body_id">
 <span class="sig-name descname"><span class="pre">body_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBodyId" title="pydrake.multibody.tree.DeformableBodyId"><span class="pre">pydrake.multibody.tree.DeformableBodyId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.body_id" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Returns the unique body id.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.config">
@@ -959,7 +960,9 @@ a body which is already enabled has no effect.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.geometry_id">
 <span class="sig-name descname"><span class="pre">geometry_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.GeometryId" title="pydrake.geometry.GeometryId"><span class="pre">pydrake.geometry.GeometryId</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.geometry_id" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Returns the geometry id of the deformable geometry used to simulate
+this deformable body.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.GetParentPlant">
@@ -1035,7 +1038,8 @@ deformable body is enabled.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.name">
 <span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.name" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Returns the name of the body.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.num_dofs">
@@ -1052,6 +1056,13 @@ represented as a VectorX with 3N values where N is the number of
 vertices. The x-, y-, and z-positions (measured and expressed in the
 world frame) of the j-th vertex are 3j, 3j + 1, and 3j + 2 in the
 VectorX.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.scoped_name">
+<span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.scoped_name" title="Permalink to this definition"></a></dt>
+<dd><p>Returns scoped name of this body. Neither of the two pieces of the
+name will be empty (the scope name and the element name).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -13556,7 +13567,7 @@ be empty.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody.scoped_name">
 <span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody.scoped_name" title="Permalink to this definition"></a></dt>
-<dd><p>Returns scoped name of this frame. Neither of the two pieces of the
+<dd><p>Returns scoped name of this body. Neither of the two pieces of the
 name will be empty (the scope name and the element name).</p>
 </dd></dl>
 
@@ -14185,7 +14196,7 @@ be empty.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-AutoDiffXd-.scoped_name">
 <span id="pydrake.multibody.tree.RigidBody_[AutoDiffXd].scoped_name"></span><span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-AutoDiffXd-.scoped_name" title="Permalink to this definition"></a></dt>
-<dd><p>Returns scoped name of this frame. Neither of the two pieces of the
+<dd><p>Returns scoped name of this body. Neither of the two pieces of the
 name will be empty (the scope name and the element name).</p>
 </dd></dl>
 
@@ -14808,7 +14819,7 @@ be empty.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.RigidBody_-Expression-.scoped_name">
 <span id="pydrake.multibody.tree.RigidBody_[Expression].scoped_name"></span><span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RigidBody_" title="pydrake.multibody.tree.RigidBody_"><span class="pre">pydrake.multibody.tree.RigidBody_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.RigidBody_-Expression-.scoped_name" title="Permalink to this definition"></a></dt>
-<dd><p>Returns scoped name of this frame. Neither of the two pieces of the
+<dd><p>Returns scoped name of this body. Neither of the two pieces of the
 name will be empty (the scope name and the element name).</p>
 </dd></dl>
 

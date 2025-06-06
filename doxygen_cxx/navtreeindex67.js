@@ -1,5 +1,6 @@
 var NAVTREEINDEX67 =
 {
+"structdrake_1_1planning_1_1_collision_checker_params.html#a97e6971c2938a484343028417a4614c9":[1,4,2,2,3,4],
 "structdrake_1_1planning_1_1_collision_checker_params.html#a9e6dd7347da1885477cd5b895b47ce9a":[1,4,2,2,3,6],
 "structdrake_1_1planning_1_1_collision_checker_params.html#ab8904e304fbe6985bed2bc4edafdb1e2":[1,4,2,2,3,5],
 "structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226":[1,4,2,2,3,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX67 =
 "structdrake_1_1systems_1_1_simulator_config.html#af1d9089360c8cd472de8f923ba7df99a":[3,0,0,16,100,4],
 "structdrake_1_1systems_1_1_simulator_config.html#afa3fc271512a1944d2d285a32f310019":[3,0,0,16,100,7],
 "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html":[3,0,0,16,114,0],
-"structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#a24d2b7b9127e9eb52958e80f9c5792a6":[3,0,0,16,114,0,6],
-"structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#a316ea670e32f26f70f4402bdb5064d20":[3,0,0,16,114,0,0]
+"structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#a24d2b7b9127e9eb52958e80f9c5792a6":[3,0,0,16,114,0,6]
 };

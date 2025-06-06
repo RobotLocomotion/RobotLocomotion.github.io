@@ -22,6 +22,7 @@ var classdrake_1_1multibody_1_1_deformable_body =
     [ "operator=", "classdrake_1_1multibody_1_1_deformable_body.html#a01df73d3ba90296a66b57c6e25a0a03b", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_deformable_body.html#aa379aeebf8cbf64b02789606262ce19f", null ],
     [ "reference_positions", "classdrake_1_1multibody_1_1_deformable_body.html#a24ac4c600790cb8116ba24d0f9a3c30b", null ],
+    [ "scoped_name", "classdrake_1_1multibody_1_1_deformable_body.html#a06542e4ec7c6a884bfcd61c9b00221b4", null ],
     [ "set_parallelism", "classdrake_1_1multibody_1_1_deformable_body.html#a07eaa4e5b20335359ffd850eadb75482", null ],
     [ "SetPositions", "classdrake_1_1multibody_1_1_deformable_body.html#a88cb688daefe08a90a3c2c163ae6445f", null ],
     [ "SetWallBoundaryCondition", "classdrake_1_1multibody_1_1_deformable_body.html#a67b25a5168fb3b8aaff3facd364b2839", null ],

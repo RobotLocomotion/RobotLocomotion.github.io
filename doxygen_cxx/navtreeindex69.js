@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_grey_01_4.html":[3,0,0,16,9,34],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_grey_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,9,34,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_label_01_4.html":[3,0,0,16,9,35],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_label_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,16,9,35,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX69 =
 "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a":[4,0,0,8,10,45,3,1],
 "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782":[4,0,0,8,10,45,3,0],
 "tamsi__solver_8h.html#a6f795d5f99c4812df226348de9286a4d":[4,0,0,8,10,45,4],
-"temp__directory_8h.html":[4,0,0,1,70],
-"temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,70,0]
+"temp__directory_8h.html":[4,0,0,1,70]
 };
