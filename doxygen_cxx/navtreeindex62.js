@@ -1,5 +1,7 @@
 var NAVTREEINDEX62 =
 {
+"rotary__encoders_8h.html":[4,0,0,12,8,20],
+"rotary__encoders_8h.html#a649d32a80f8b07b33895faf8f969b712":[4,0,0,12,8,20,0],
 "rotation_8h.html":[4,0,0,1,2,0],
 "rotation__constraint_8h.html":[4,0,0,11,45],
 "rotation__constraint_8h.html#a0c7466e7ce1b8db6de94ad0524f8106d":[4,0,0,11,45,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX62 =
 "sorted__pair_8h.html#a6d76c69274d87b34a742dae799e2177f":[4,0,0,1,63,7],
 "sorted__pair_8h.html#a87d5210878ec865ee82bb87786eb996d":[4,0,0,1,63,4],
 "sorted__pair_8h.html#a98c59bc997ae44eeb4d45bc371b26f0a":[4,0,0,1,63,11],
-"sorted__pair_8h.html#aaaa975aac6050ca9507bf9761707c383":[4,0,0,1,63,10],
-"sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,63,6],
-"sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,63,8]
+"sorted__pair_8h.html#aaaa975aac6050ca9507bf9761707c383":[4,0,0,1,63,10]
 };

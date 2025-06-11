@@ -2379,7 +2379,9 @@ subspace.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddContinuityConstraints">
 <span class="sig-name descname"><span class="pre">AddContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddContinuityConstraints" title="Permalink to this definition"></a></dt>
-<dd><p>Enforces derivative continuity constraints on the entire graph.</p>
+<dd><p>Enforces that for any two subsequent path segments in the entire
+graph, the <a href="#id9"><span class="problematic" id="id10">`</span></a>continuity_order`th time derivative at the end of the
+first segment equals that of the start of the second segment.</p>
 <p>This adds a nonlinear constraint to the restriction and MIP
 GraphOfConvexSets::Transcription, while adding a convex surrogate to
 the relaxation. For more details, see nonconvex_graph_of_convex_sets
@@ -2408,6 +2410,11 @@ them by the size of the sets.</p>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To enforce that the trajectory is of class C^k, you must call
+AddContinuityConstraint for each continuity_order 1 through k.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -2503,10 +2510,12 @@ time of the set. For now, h₀ is set to 1.0 for all sets.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.AddPathContinuityConstraints">
 <span class="sig-name descname"><span class="pre">AddPathContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization" title="pydrake.planning.GcsTrajectoryOptimization"><span class="pre">pydrake.planning.GcsTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.AddPathContinuityConstraints" title="Permalink to this definition"></a></dt>
-<dd><p>Enforces derivative continuity constraints on the entire graph.</p>
+<dd><p>Enforces that for any two subsequent path segments in the entire
+graph, the <a href="#id11"><span class="problematic" id="id12">``</span></a>continuity_order`th path derivative at the end of the
+first segment equals that of the start of the second segment.</p>
 <p>Note that the constraints are on the control points of the derivatives
 of r(s) and not q(t). This may result in discontinuities of the
-trajectory return by <code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code> since the r(s) will get rescaled
+trajectory return by <cite>SolvePath()`</cite> since the r(s) will get rescaled
 by the duration h to yield q(t). <code class="docutils literal notranslate"><span class="pre">NormalizeSegmentTimes()</span></code> will
 return r(s) with valid continuity.</p>
 <dl class="simple">
@@ -2521,6 +2530,11 @@ return r(s) with valid continuity.</p>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To enforce that the trajectory is of class C^k, you must call
+AddPathContinuityConstraint for each continuity_order 1 through k.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -2530,7 +2544,7 @@ return r(s) with valid continuity.</p>
 <ol class="arabic simple">
 <li><p>AddPathEnergyCost(self: pydrake.planning.GcsTrajectoryOptimization, weight_matrix: numpy.ndarray[numpy.float64[m, n]]) -&gt; None</p></li>
 </ol>
-<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id9"><span class="problematic" id="id10">|</span></a>weight_matrix
+<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id13"><span class="problematic" id="id14">|</span></a>weight_matrix
 * (rᵢ₊₁ − rᵢ)|₂². In comparison to AddPathLength cost, this cost
 encourages control points to be evenly spaced but may result in
 greater number of regions and larger path length on the solution. It
@@ -2554,7 +2568,7 @@ can be used to penalize diagonal movement.</p>
 <ol class="arabic simple" start="2">
 <li><p>AddPathEnergyCost(self: pydrake.planning.GcsTrajectoryOptimization, weight: float = 1.0) -&gt; None</p></li>
 </ol>
-<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id11"><span class="problematic" id="id12">|</span></a>(rᵢ₊₁ − rᵢ)|₂²
+<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id15"><span class="problematic" id="id16">|</span></a>(rᵢ₊₁ − rᵢ)|₂²
 with weight being applied uniformly to all dimensions. In comparison
 to AddPathLength cost, this cost encourages control points to be
 evenly spaced but may result in greater number of regions and larger
@@ -2582,7 +2596,7 @@ the future.</p>
 <p>Adds multiple L2Norm Costs on the upper bound of the path length.
 Since we cannot directly compute the path length of a Bézier curve, we
 minimize the upper bound of the path integral by minimizing the sum of
-(weighted) distances between control points: ∑ <a href="#id13"><span class="problematic" id="id14">|</span></a>weight_matrix * (rᵢ₊₁
+(weighted) distances between control points: ∑ <a href="#id17"><span class="problematic" id="id18">|</span></a>weight_matrix * (rᵢ₊₁
 − rᵢ)|₂.</p>
 <p>This cost will be added to the entire graph. Since the path length is
 only defined for Bézier curves that have two or more control points,
@@ -2773,8 +2787,10 @@ GCSTrajetoryOptimization is not supported.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddContinuityConstraints">
 <span class="sig-name descname"><span class="pre">AddContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddContinuityConstraints" title="Permalink to this definition"></a></dt>
-<dd><p>Enforces derivative continuity constraints on the edges between the
-subgraphs.</p>
+<dd><p>Enforces that for any two subsequent path segments that are joined by
+an edge in this EdgesBetweenSubgraphs, the <a href="#id19"><span class="problematic" id="id20">`</span></a>continuity_order`th time
+derivative at the end of the first segment equals that of the start of
+the second segment.</p>
 <p>This adds a nonlinear constraint to the restriction and MIP
 GraphOfConvexSets::Transcription, while adding a convex surrogate to
 the relaxation. For more details, see nonconvex_graph_of_convex_sets
@@ -2805,6 +2821,11 @@ them by the size of the sets.</p>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To enforce that the trajectory is of class C^k, you must call
+AddContinuityConstraint for each continuity_order 1 through k.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -2931,11 +2952,13 @@ time of the set. For now, h₀ is set to 1.0 for all sets.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddPathContinuityConstraints">
 <span class="sig-name descname"><span class="pre">AddPathContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs" title="pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.EdgesBetweenSubgraphs.AddPathContinuityConstraints" title="Permalink to this definition"></a></dt>
-<dd><p>Enforces derivative continuity constraints on the edges between the
-subgraphs.</p>
+<dd><p>Enforces that for any two subsequent path segments that are joined by
+an edge in this EdgesBetweenSubgraphs, the <a href="#id21"><span class="problematic" id="id22">``</span></a>continuity_order`th path
+derivative at the end of the first segment equals that of the start of
+the second segment.</p>
 <p>Note that the constraints are on the control points of the derivatives
 of r(s) and not q(t). This may result in discontinuities of the
-trajectory return by <code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code> since the r(s) will get rescaled
+trajectory return by <cite>SolvePath()`</cite> since the r(s) will get rescaled
 by the duration h to yield q(t). <code class="docutils literal notranslate"><span class="pre">NormalizeSegmentTimes()</span></code> will
 return r(s) with valid continuity.</p>
 <dl class="simple">
@@ -2952,6 +2975,11 @@ return r(s) with valid continuity.</p>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To enforce that the trajectory is of class C^k, you must call
+AddPathContinuityConstraint for each continuity_order 1 through k.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -3204,7 +3232,9 @@ be mixed with other instances of GcsTrajectoryOptimization.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddContinuityConstraints">
 <span class="sig-name descname"><span class="pre">AddContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddContinuityConstraints" title="Permalink to this definition"></a></dt>
-<dd><p>Enforces derivative continuity constraints on the subgraph.</p>
+<dd><p>Enforces that for any two subsequent path segments within the
+subgraph, the <a href="#id23"><span class="problematic" id="id24">`</span></a>continuity_order`th time derivative at the end of the
+first segment equals that of the start of the second segment.</p>
 <p>This adds a nonlinear constraint to the restriction and MIP
 GraphOfConvexSets::Transcription, while adding a convex surrogate to
 the relaxation. For more details, see nonconvex_graph_of_convex_sets
@@ -3235,6 +3265,11 @@ them by the size of the sets.</p>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To enforce that the trajectory is of class C^k, you must call
+AddContinuityConstraint for each continuity_order 1 through k.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -3361,10 +3396,12 @@ time of the set. For now, h₀ is set to 1.0 for all sets.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathContinuityConstraints">
 <span class="sig-name descname"><span class="pre">AddPathContinuityConstraints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph" title="pydrake.planning.GcsTrajectoryOptimization.Subgraph"><span class="pre">pydrake.planning.GcsTrajectoryOptimization.Subgraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.planning.GcsTrajectoryOptimization.Subgraph.AddPathContinuityConstraints" title="Permalink to this definition"></a></dt>
-<dd><p>Enforces derivative continuity constraints on the subgraph.</p>
+<dd><p>Enforces that for any two subsequent path segments within the
+subgraph, the <a href="#id25"><span class="problematic" id="id26">``</span></a>continuity_order`th path derivative at the end of the
+first segment equals that of the start of the second segment.</p>
 <p>Note that the constraints are on the control points of the derivatives
 of r(s) and not q(t). This may result in discontinuities of the
-trajectory return by <code class="docutils literal notranslate"><span class="pre">SolvePath()</span></code> since the r(s) will get rescaled
+trajectory return by <cite>SolvePath()`</cite> since the r(s) will get rescaled
 by the duration h to yield q(t). <code class="docutils literal notranslate"><span class="pre">NormalizeSegmentTimes()</span></code> will
 return r(s) with valid continuity.</p>
 <dl class="simple">
@@ -3381,6 +3418,11 @@ return r(s) with valid continuity.</p>
 </ul>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To enforce that the trajectory is of class C^k, you must call
+AddPathContinuityConstraint for each continuity_order 1 through k.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -3390,7 +3432,7 @@ return r(s) with valid continuity.</p>
 <ol class="arabic simple">
 <li><p>AddPathEnergyCost(self: pydrake.planning.GcsTrajectoryOptimization.Subgraph, weight_matrix: numpy.ndarray[numpy.float64[m, n]]) -&gt; None</p></li>
 </ol>
-<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id15"><span class="problematic" id="id16">|</span></a>weight_matrix
+<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id27"><span class="problematic" id="id28">|</span></a>weight_matrix
 * (rᵢ₊₁ − rᵢ)|₂². In comparison to AddPathLength cost, this cost
 encourages control points to be evenly spaced but may result in
 greater number of regions and larger path length on the solution. It
@@ -3409,7 +3451,7 @@ can be used to penalize diagonal movement.</p>
 <ol class="arabic simple" start="2">
 <li><p>AddPathEnergyCost(self: pydrake.planning.GcsTrajectoryOptimization.Subgraph, weight: float = 1.0) -&gt; None</p></li>
 </ol>
-<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id17"><span class="problematic" id="id18">|</span></a>(rᵢ₊₁ − rᵢ)|₂²
+<p>Similar to AddPathLengthCost in usage, but minimizes ∑ <a href="#id29"><span class="problematic" id="id30">|</span></a>(rᵢ₊₁ − rᵢ)|₂²
 with weight being applied uniformly to all dimensions. In comparison
 to AddPathLength cost, this cost encourages control points to be
 evenly spaced but may result in greater number of regions and larger
@@ -4414,7 +4456,7 @@ deprecation.</p>
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.AddPathEnergyCost">
 <span class="sig-name descname"><span class="pre">AddPathEnergyCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Cost</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddPathEnergyCost" title="Permalink to this definition"></a></dt>
 <dd><p>Adds a convex quadratic cost on an upper bound on the energy of the
-path, ∫₀¹ <a href="#id19"><span class="problematic" id="id20">|</span></a>ṙ(s)|₂² ds, by summing the squared distance between the
+path, ∫₀¹ <a href="#id31"><span class="problematic" id="id32">|</span></a>ṙ(s)|₂² ds, by summing the squared distance between the
 path control points. In the limit of infinitely many control points,
 minimizers for AddPathLengthCost and AddPathEnergyCost will follow the
 same path, but potentially with different timing. They may have
@@ -4434,8 +4476,8 @@ deprecation.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.planning.KinematicTrajectoryOptimization.AddPathLengthCost">
 <span class="sig-name descname"><span class="pre">AddPathLengthCost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.planning.KinematicTrajectoryOptimization" title="pydrake.planning.KinematicTrajectoryOptimization"><span class="pre">pydrake.planning.KinematicTrajectoryOptimization</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_conic_constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.solvers.html#pydrake.solvers.Binding" title="pydrake.solvers.Binding"><span class="pre">pydrake.solvers.Binding</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Cost</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.planning.KinematicTrajectoryOptimization.AddPathLengthCost" title="Permalink to this definition"></a></dt>
-<dd><p>Adds a cost on an upper bound of the length of the path, ∫₀ᵀ <a href="#id21"><span class="problematic" id="id22">|</span></a>q̇(t)|₂
-dt, or equivalently ∫₀¹ <a href="#id23"><span class="problematic" id="id24">|</span></a>ṙ(s)|₂ ds, by summing the distance between
+<dd><p>Adds a cost on an upper bound of the length of the path, ∫₀ᵀ <a href="#id33"><span class="problematic" id="id34">|</span></a>q̇(t)|₂
+dt, or equivalently ∫₀¹ <a href="#id35"><span class="problematic" id="id36">|</span></a>ṙ(s)|₂ ds, by summing the distance between
 the path control points. If <code class="docutils literal notranslate"><span class="pre">use_conic_constraint</span> <span class="pre">=</span> <span class="pre">false</span></code>, then
 costs are added via MathematicalProgram::AddL2NormCost; otherwise they
 are added via MathematicalProgram::AddL2NormCostUsingConicConstraint.</p>
@@ -6164,7 +6206,7 @@ collided.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.SceneGraphCollisionChecker.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.planning.SceneGraphCollisionChecker, <a href="#id25"><span class="problematic" id="id26">*</span></a>, model: object, <a href="#id27"><span class="problematic" id="id28">**</span></a>kwargs) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.planning.SceneGraphCollisionChecker, <a href="#id37"><span class="problematic" id="id38">*</span></a>, model: object, <a href="#id39"><span class="problematic" id="id40">**</span></a>kwargs) -&gt; None</p></li>
 </ol>
 <p>Creates a new checker with the given params.</p>
 <p>See <a class="reference internal" href="#pydrake.planning.CollisionCheckerParams" title="pydrake.planning.CollisionCheckerParams"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.planning.CollisionCheckerParams</span></code></a> for the list of properties available here as kwargs.</p>
@@ -6189,7 +6231,7 @@ full suite of operations.</p>
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.planning.UnimplementedCollisionChecker.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li><p>__init__(self: pydrake.planning.UnimplementedCollisionChecker, <a href="#id29"><span class="problematic" id="id30">*</span></a>, model: object, supports_parallel_checking: bool, <a href="#id31"><span class="problematic" id="id32">**</span></a>kwargs) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.planning.UnimplementedCollisionChecker, <a href="#id41"><span class="problematic" id="id42">*</span></a>, model: object, supports_parallel_checking: bool, <a href="#id43"><span class="problematic" id="id44">**</span></a>kwargs) -&gt; None</p></li>
 </ol>
 <p>Constructs a checker.</p>
 <dl class="simple">

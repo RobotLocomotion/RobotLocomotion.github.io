@@ -209,6 +209,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3bd120e4e5cad6f052fd4a17cce5c984"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a3bd120e4e5cad6f052fd4a17cce5c984">inspector</a> () const</td></tr>
 <tr class="memdesc:a3bd120e4e5cad6f052fd4a17cce5c984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides an inspector for the topological structure of the underlying scene graph data (see <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html" title="The SceneGraphInspector serves as a mechanism to query the topological structure of a SceneGraph inst...">SceneGraphInspector</a> for details).  <a href="#a3bd120e4e5cad6f052fd4a17cce5c984">More...</a><br /></td></tr>
 <tr class="separator:a3bd120e4e5cad6f052fd4a17cce5c984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c5a5ff0373013f09f7799eb0f5f1e97"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_to_point.html">SignedDistanceToPoint</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a9c5a5ff0373013f09f7799eb0f5f1e97">ComputeSignedDistanceGeometryToPoint</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;geometries) const</td></tr>
+<tr class="memdesc:a9c5a5ff0373013f09f7799eb0f5f1e97"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variant of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aa4c7754ca66a8593b182ae990643875c" title="Computes the signed distances and gradients to a query point from each geometry in the scene.">ComputeSignedDistanceToPoint()</a>.  <a href="#a9c5a5ff0373013f09f7799eb0f5f1e97">More...</a><br /></td></tr>
+<tr class="separator:a9c5a5ff0373013f09f7799eb0f5f1e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Calling the copy constructor or assignment will turn a <em>live</em> QueryObject into a <em>baked</em> QueryObject (an expensive operation).</p>
 <p>Copying baked QueryObjects is cheap. </p>
@@ -626,6 +629,53 @@ Friends</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if a Shape-Shape pair is in collision and indicated as <code>throws</code> in the support table above. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9c5a5ff0373013f09f7799eb0f5f1e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c5a5ff0373013f09f7799eb0f5f1e97">&#9670;&nbsp;</a></span>ComputeSignedDistanceGeometryToPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structdrake_1_1geometry_1_1_signed_distance_to_point.html">SignedDistanceToPoint</a>&lt;T&gt; &gt; ComputeSignedDistanceGeometryToPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_WQ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
+          <td class="paramname"><em>geometries</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A variant of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aa4c7754ca66a8593b182ae990643875c" title="Computes the signed distances and gradients to a query point from each geometry in the scene.">ComputeSignedDistanceToPoint()</a>. </p>
+<p>Instead of finding distances to all geometries, provides the distance to only the geometries indicated by the given set of <code>geometries</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_WQ</td><td>Position of a query point Q in world frame W. </td></tr>
+    <tr><td class="paramname">geometries</td><td>The set of geometries to query against. The distances between the surface of each geometry and the point Q will be returned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the distance measurements. The ordering of the results is guaranteed to be consistent &ndash; for a fixed set of geometries, the results will remain the same.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> in <code>geometries</code> is invalid. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the combination of an indicated geometry's <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The abstract base class for all shape specifications.">Shape</a> type and the given scalar Type T are unsupported in <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aa4c7754ca66a8593b182ae990643875c" title="Computes the signed distances and gradients to a query point from each geometry in the scene.">ComputeSignedDistanceToPoint()</a>'s support table. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any indicated geometry is deformable. </td></tr>
   </table>
   </dd>
 </dl>

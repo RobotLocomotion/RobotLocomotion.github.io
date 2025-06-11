@@ -1,5 +1,7 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1planning_1_1_robot_diagram.html#af6991618c0f368d894bc81a0c30784bd":[1,4,2,3,0,1],
+"classdrake_1_1planning_1_1_robot_diagram_builder.html":[1,4,2,3,1],
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#a05db50be0e0a71870ea9b69ae2fd8239":[1,4,2,3,1,8],
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#a0aae5ce912ba9567925d1e239a1b63a2":[1,4,2,3,1,15],
 "classdrake_1_1planning_1_1_robot_diagram_builder.html#a30da7a7bd94fe4c3d652abc41d5b1091":[1,4,2,3,1,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a81d27229471360feee82aac9ea2be7e7":[1,4,2,1,4,15],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8375ea48a9fad7145ae1d2e97d851f76":[1,4,2,1,4,32],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a850317f5fe8fa8343e0690a51556bbbe":[1,4,2,1,4,4],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8529eb42d4e8ce382c0a53ee9b26e236":[1,4,2,1,4,16],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8c266cf092028fbabcc0bca77054d3a3":[1,4,2,1,4,8],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8d114bef71b337e04ef9a228c15b5d85":[1,4,2,1,4,30]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html#a8529eb42d4e8ce382c0a53ee9b26e236":[1,4,2,1,4,16]
 };

@@ -320,12 +320,12 @@ to confirm that the latest commit has a green circle, not a red x.</p>
 
 <h2 id="monitor-the-cache-server">Monitor the Cache Server</h2>
 
-<p>Check once per week that caching is still enabled for Linux builds (there are
-currently no cache servers in use for macOS). Open the following job and
-search for <code class="language-plaintext highlighter-rouge">REMOTE_CACHE_KEY</code> and confirm it has a value:</p>
+<p>Check once per week that caching is still enabled for Linux and macOS builds.
+Open the following jobs and search for <code class="language-plaintext highlighter-rouge">REMOTE_CACHE_KEY</code> and confirm it has a value:</p>
 
 <ul>
   <li><a href="https://drake-jenkins.csail.mit.edu/job/linux-noble-clang-bazel-continuous-release/lastBuild/consoleFull">https://drake-jenkins.csail.mit.edu/job/linux-noble-clang-bazel-continuous-release/lastBuild/consoleFull</a></li>
+  <li><a href="https://drake-jenkins.csail.mit.edu/job/mac-arm-sonoma-clang-bazel-continuous-release/lastBuild/consoleFull">https://drake-jenkins.csail.mit.edu/job/mac-arm-sonoma-clang-bazel-continuous-release/lastBuild/consoleFull</a></li>
 </ul>
 
 <p>Message indicating a problem:</p>

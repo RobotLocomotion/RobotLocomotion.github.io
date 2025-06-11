@@ -461,6 +461,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae42e6f719f5768457bc1cd9535ddf7f0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_to_point.html">SignedDistanceToPoint</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ae42e6f719f5768457bc1cd9535ddf7f0">ComputeSignedDistanceToPoint</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ, <a class="el" href="classdouble.html">double</a> threshold) const</td></tr>
 <tr class="memdesc:ae42e6f719f5768457bc1cd9535ddf7f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aa4c7754ca66a8593b182ae990643875c" title="Computes the signed distances and gradients to a query point from each geometry in the scene.">QueryObject::ComputeSignedDistanceToPoint()</a>.  <a href="#ae42e6f719f5768457bc1cd9535ddf7f0">More...</a><br /></td></tr>
 <tr class="separator:ae42e6f719f5768457bc1cd9535ddf7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c5a5ff0373013f09f7799eb0f5f1e97"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_to_point.html">SignedDistanceToPoint</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a9c5a5ff0373013f09f7799eb0f5f1e97">ComputeSignedDistanceGeometryToPoint</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_WQ, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;geometries) const</td></tr>
+<tr class="memdesc:a9c5a5ff0373013f09f7799eb0f5f1e97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a9c5a5ff0373013f09f7799eb0f5f1e97" title="A variant of ComputeSignedDistanceToPoint().">QueryObject::ComputeSignedDistanceGeometryToPoint()</a>.  <a href="#a9c5a5ff0373013f09f7799eb0f5f1e97">More...</a><br /></td></tr>
+<tr class="separator:a9c5a5ff0373013f09f7799eb0f5f1e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Render Queries</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>See <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#render_queries">Render Queries</a> for more details.</p>
 </div></td></tr>
@@ -1057,6 +1060,36 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f" title="Computes the penetrations across all pairs of geometries in the world with the penetrations character...">QueryObject::ComputePointPairPenetration()</a>. </p>
+
+</div>
+</div>
+<a id="a9c5a5ff0373013f09f7799eb0f5f1e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c5a5ff0373013f09f7799eb0f5f1e97">&#9670;&nbsp;</a></span>ComputeSignedDistanceGeometryToPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structdrake_1_1geometry_1_1_signed_distance_to_point.html">SignedDistanceToPoint</a>&lt;T&gt; &gt; ComputeSignedDistanceGeometryToPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_WQ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
+          <td class="paramname"><em>geometries</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a9c5a5ff0373013f09f7799eb0f5f1e97" title="A variant of ComputeSignedDistanceToPoint().">QueryObject::ComputeSignedDistanceGeometryToPoint()</a>. </p>
 
 </div>
 </div>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX70 =
 {
+"tamsi__solver_8h.html#a6f795d5f99c4812df226348de9286a4d":[4,0,0,8,10,45,4],
+"temp__directory_8h.html":[4,0,0,1,70],
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,70,0],
 "tessellation__strategy_8h.html":[4,0,0,4,2,59],
 "test__utilities_8h.html":[4,0,0,4,1,24],

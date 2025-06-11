@@ -186,10 +186,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3f6b4f835d276bfd98c41e028a8af3bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforces zero derivatives on the control point connecting the subgraphs.  <a href="#a3f6b4f835d276bfd98c41e028a8af3bb">More...</a><br /></td></tr>
 <tr class="separator:a3f6b4f835d276bfd98c41e028a8af3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afce2be43547f60d510c7e46154eac653"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#afce2be43547f60d510c7e46154eac653">AddPathContinuityConstraints</a> (<a class="el" href="classint.html">int</a> continuity_order)</td></tr>
-<tr class="memdesc:afce2be43547f60d510c7e46154eac653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforces derivative continuity constraints on the edges between the subgraphs.  <a href="#afce2be43547f60d510c7e46154eac653">More...</a><br /></td></tr>
+<tr class="memdesc:afce2be43547f60d510c7e46154eac653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforces that for any two subsequent path segments that are joined by an edge in this <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html" title="EdgesBetweenSubgraphs are defined as the connecting edges between two given subgraphs.">EdgesBetweenSubgraphs</a>, the <code>continuity_order</code>th path derivative at the end of the first segment equals that of the start of the second segment.  <a href="#afce2be43547f60d510c7e46154eac653">More...</a><br /></td></tr>
 <tr class="separator:afce2be43547f60d510c7e46154eac653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a028f009e523ba70f19975c58f6b0bb6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#a028f009e523ba70f19975c58f6b0bb6d">AddContinuityConstraints</a> (<a class="el" href="classint.html">int</a> continuity_order)</td></tr>
-<tr class="memdesc:a028f009e523ba70f19975c58f6b0bb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforces derivative continuity constraints on the edges between the subgraphs.  <a href="#a028f009e523ba70f19975c58f6b0bb6d">More...</a><br /></td></tr>
+<tr class="memdesc:a028f009e523ba70f19975c58f6b0bb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enforces that for any two subsequent path segments that are joined by an edge in this <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html" title="EdgesBetweenSubgraphs are defined as the connecting edges between two given subgraphs.">EdgesBetweenSubgraphs</a>, the <code>continuity_order</code>th time derivative at the end of the first segment equals that of the start of the second segment.  <a href="#a028f009e523ba70f19975c58f6b0bb6d">More...</a><br /></td></tr>
 <tr class="separator:a028f009e523ba70f19975c58f6b0bb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f886e6ef274f450d24dd134729d1f99"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">geometry::optimization::GraphOfConvexSets::Edge</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html#a9f886e6ef274f450d24dd134729d1f99">Edges</a> ()</td></tr>
 <tr class="memdesc:a9f886e6ef274f450d24dd134729d1f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns constant reference to a vector of mutable pointers to the edges.  <a href="#a9f886e6ef274f450d24dd134729d1f99">More...</a><br /></td></tr>
@@ -317,7 +317,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enforces derivative continuity constraints on the edges between the subgraphs. </p>
+<p>Enforces that for any two subsequent path segments that are joined by an edge in this <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html" title="EdgesBetweenSubgraphs are defined as the connecting edges between two given subgraphs.">EdgesBetweenSubgraphs</a>, the <code>continuity_order</code>th time derivative at the end of the first segment equals that of the start of the second segment. </p>
 <p>This adds a nonlinear constraint to the restriction and MIP GraphOfConvexSets::Transcription, while adding a convex surrogate to the relaxation. For more details, see <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#nonconvex_graph_of_convex_sets">Guiding Non-convex Optimization with the GraphOfConvexSets</a>.</p>
 <p>The continuity is enforced on the control points of q(t), which appear as nonlinear constraints. </p><pre> (dᴺrᵤ(s=1) / dsᴺ) / hᵤᴺ == (dᴺrᵥ(s=0) / dsᴺ) / hᵥᴺ </pre><p> The convex surrogate is simply the path continuity, where hᵤᴺ and hᵥᴺ are replaced by the characteristic times of the respective sets: </p><pre> (dᴺrᵤ(s=1) / dsᴺ) / hᵤ₀ᴺ == (dᴺrᵥ(s=0) / dsᴺ) / hᵥ₀ᴺ </pre><p>. For now, these are set to one, but future work may involve scaling them by the size of the sets.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -329,10 +329,11 @@ Friends</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the continuity order is not equal or less than the order of both subgraphs. </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if the continuity order is less than one since path continuity is enforced by default. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the continuity order is less than one since path continuity is enforced by default.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>To enforce that the trajectory is of class C^k, you must call AddContinuityConstraint for each continuity_order 1 through k. </dd></dl>
 
 </div>
 </div>
@@ -554,7 +555,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enforces derivative continuity constraints on the edges between the subgraphs. </p>
+<p>Enforces that for any two subsequent path segments that are joined by an edge in this <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_edges_between_subgraphs.html" title="EdgesBetweenSubgraphs are defined as the connecting edges between two given subgraphs.">EdgesBetweenSubgraphs</a>, the <code>continuity_order</code>th path derivative at the end of the first segment equals that of the start of the second segment. </p>
 <p>Note that the constraints are on the control points of the derivatives of r(s) and not q(t). This may result in discontinuities of the trajectory return by <code><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a8ddb1df26a2324afc83f84c90281c249" title="Formulates and solves the mixed-integer convex formulation of the shortest path problem on the whole ...">SolvePath()</a></code> since the r(s) will get rescaled by the duration h to yield q(t). <code><a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html#a0745622466ef1e6253a0de1c1216d804" title="Normalizes each trajectory segment to one second in duration.">NormalizeSegmentTimes()</a></code> will return r(s) with valid continuity.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -565,10 +566,11 @@ Friends</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the continuity order is not equal or less than the order of both subgraphs. </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if the continuity order is less than one since path continuity is enforced by default. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the continuity order is less than one since path continuity is enforced by default.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>To enforce that the trajectory is of class C^k, you must call AddPathContinuityConstraint for each continuity_order 1 through k. </dd></dl>
 
 </div>
 </div>
