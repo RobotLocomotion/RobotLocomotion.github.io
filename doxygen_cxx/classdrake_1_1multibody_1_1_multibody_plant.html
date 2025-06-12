@@ -988,6 +988,12 @@ Public Member Functions</h2></td></tr>
 <p>J𝑠_v_ABp denotes the translational velocity Jacobian in a frame A of a point Bp of frame B with respect to "speeds" 𝑠. It is calculated with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae2516569f5a2cc27e76ee0cc8b728746" title="For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi, Bi&#39;s translational velocity Jacob...">CalcJacobianTranslationalVelocity()</a>.</p>
 <p>J𝑠_v_AScm_E denotes the translational velocity Jacobian in a frame A of a point Scm with respect to "speeds" 𝑠, where point Scm is the center of mass of a system S. It is calculated with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa6f3d23ff0cbfd8b3fa7e0e453d224ad" title="Calculates J𝑠_v_AScm_E, point Scm&#39;s translational velocity Jacobian in frame A with respect to &quot;speed...">CalcJacobianCenterOfMassTranslationalVelocity()</a> </p>
 </div></td></tr>
+<tr class="memitem:aa0501ac1bf20833a84101dcc7ffeba22"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; Eigen::MatrixX&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa0501ac1bf20833a84101dcc7ffeba22">EvalBlockSystemJacobian</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:aa0501ac1bf20833a84101dcc7ffeba22"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the System Jacobian Jv_V_WB(q) in block form.  <a href="#aa0501ac1bf20833a84101dcc7ffeba22">More...</a><br /></td></tr>
+<tr class="separator:aa0501ac1bf20833a84101dcc7ffeba22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd96a40beaae94b024cdd04497468bae"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixX&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abd96a40beaae94b024cdd04497468bae">CalcFullSystemJacobian</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:abd96a40beaae94b024cdd04497468bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Evaluates the block system Jacobian, then uses it to fill in an equivalent full matrix of size 6n x m where n is the number of mobilized bodies and m the number of generalized velocities (mobilities).  <a href="#abd96a40beaae94b024cdd04497468bae">More...</a><br /></td></tr>
+<tr class="separator:abd96a40beaae94b024cdd04497468bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f39a8f68fae3de53767a281503a3313"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5f39a8f68fae3de53767a281503a3313">CalcJacobianSpatialVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_B, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;p_BoBp_B, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; Js_V_ABp_E) const</td></tr>
 <tr class="memdesc:a5f39a8f68fae3de53767a281503a3313"><td class="mdescLeft">&#160;</td><td class="mdescRight">For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp's spatial velocity Jacobian in frame A with respect to "speeds" 𝑠.  <a href="#a5f39a8f68fae3de53767a281503a3313">More...</a><br /></td></tr>
 <tr class="separator:a5f39a8f68fae3de53767a281503a3313"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1272,6 +1278,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a39f68ce7fc652377b941459c8ec55897"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a39f68ce7fc652377b941459c8ec55897">GetMutableSceneGraphPreFinalize</a> ()</td></tr>
 <tr class="memdesc:a39f68ce7fc652377b941459c8ec55897"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a mutable pointer to the SceneGraph that this plant is registered as a source for.  <a href="#a39f68ce7fc652377b941459c8ec55897">More...</a><br /></td></tr>
 <tr class="separator:a39f68ce7fc652377b941459c8ec55897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1074a9dc06f72f7cc2308dc0e9315a"><td class="memItemLeft" align="right" valign="top">const internal::LinkJointGraph &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3d1074a9dc06f72f7cc2308dc0e9315a">graph</a> () const</td></tr>
+<tr class="memdesc:a3d1074a9dc06f72f7cc2308dc0e9315a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Provides access to the internal::LinkJointGraph.  <a href="#a3d1074a9dc06f72f7cc2308dc0e9315a">More...</a><br /></td></tr>
+<tr class="separator:a3d1074a9dc06f72f7cc2308dc0e9315a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -2884,6 +2893,28 @@ When cached values are out of sync with the state stored in context, this method
 
 </div>
 </div>
+<a id="abd96a40beaae94b024cdd04497468bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd96a40beaae94b024cdd04497468bae">&#9670;&nbsp;</a></span>CalcFullSystemJacobian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixX&lt;T&gt; CalcFullSystemJacobian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Evaluates the block system Jacobian, then uses it to fill in an equivalent full matrix of size 6n x m where n is the number of mobilized bodies and m the number of generalized velocities (mobilities). </p>
+<p>Each mobilized body generates a 6 x m strip of the Jacobian (6 rows) and those are ordered by MobodIndex. Note that World is the 0th mobilized body so to keep the numbering consistent the first 6 rows of the Jacobian correspond to the World Mobod (and are thus all zero).</p>
+<p>This is most useful for testing; it is more efficient to use <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa0501ac1bf20833a84101dcc7ffeba22" title="(Internal use only) Returns the System Jacobian Jv_V_WB(q) in block form.">EvalBlockSystemJacobian()</a> and to work with the individual blocks. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa0501ac1bf20833a84101dcc7ffeba22" title="(Internal use only) Returns the System Jacobian Jv_V_WB(q) in block form.">EvalBlockSystemJacobian()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5f39a8f68fae3de53767a281503a3313" title="For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp&#39;s spatial velocity Jacobian in fr...">CalcJacobianSpatialVelocity()</a> </dd></dl>
+
+</div>
+</div>
 <a id="a05d83f939cc098d1c25eabecf41ff588"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05d83f939cc098d1c25eabecf41ff588">&#9670;&nbsp;</a></span>CalcGeneralizedForces()</h2>
 
@@ -4136,6 +4167,29 @@ See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#Jacobia
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+
+</div>
+</div>
+<a id="aa0501ac1bf20833a84101dcc7ffeba22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0501ac1bf20833a84101dcc7ffeba22">&#9670;&nbsp;</a></span>EvalBlockSystemJacobian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;Eigen::MatrixX&lt;T&gt; &gt;&amp; EvalBlockSystemJacobian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns the System Jacobian Jv_V_WB(q) in block form. </p>
+<p>Each block is dense and corresponds to one Tree of the as-built internal::SpanningForest. The blocks follow the Tree ordering defined by the SpanningForest, so are in TreeIndex order. The block for Treeᵢ is a MatrixX of size 6nᵢ x mᵢ, where nᵢ is the number of mobilized bodies in Treeᵢ and mᵢ is the total number of mobilizer velocity degrees of freedom (mobilities) in the Tree. Every Tree has an entry even if it has no mobilities (in that case mᵢ=0). World is not part of any Tree so there is no block corresponding to World here.</p>
+<p>To be precise: the iᵗʰ block Jvi_V_WB ≡ ∂Vi_WB/∂vᵢ where Vi_WB is the stacked spatial velocities for each mobilized body in Treeᵢ (in order of MobodIndex), and vᵢ is the vector of generalized velocities associated with those mobilized bodies, in the same order. Thus Jvi_V_WB⋅v for some set of mᵢ generalized velocities v, returns the spatial velocities for each body in Treeᵢ that would result from velocities v.</p>
+<p>Note that locking and unlocking mobilizers does not affect the Jacobian; the Jacobian reflects what would happen if a velocity variable changed regardless of whether it can currently do so. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5f39a8f68fae3de53767a281503a3313" title="For one point Bp fixed/welded to a frame B, calculates J𝑠_V_ABp, Bp&#39;s spatial velocity Jacobian in fr...">CalcJacobianSpatialVelocity()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abd96a40beaae94b024cdd04497468bae" title="(Internal use only) Evaluates the block system Jacobian, then uses it to fill in an equivalent full m...">CalcFullSystemJacobian()</a> </dd></dl>
 
 </div>
 </div>
@@ -7592,6 +7646,26 @@ This function is guaranteed to allocate no heap. </dd></dl>
 <p>Returns an array of GeometryId's identifying the different visual geometries for <code>body</code> previously registered with a SceneGraph. </p>
 <dl class="section note"><dt>Note</dt><dd>This method can be called at any time during the lifetime of <code>this</code> plant, either pre- or post-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. Post-finalize calls will always return the same value. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af475e2acc5c4720650cf004a37f1ce95" title="Registers geometry in a SceneGraph with a given geometry::Shape to be used for visualization of a giv...">RegisterVisualGeometry()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3d1074a9dc06f72f7cc2308dc0e9315a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d1074a9dc06f72f7cc2308dc0e9315a">&#9670;&nbsp;</a></span>graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const internal::LinkJointGraph&amp; graph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Provides access to the internal::LinkJointGraph. </p>
+<p>You can use <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3d1074a9dc06f72f7cc2308dc0e9315a" title="(Internal use only) Provides access to the internal::LinkJointGraph.">graph()</a>.forest() to access the as-built internal::SpanningForest if you've already called <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. </p>
 
 </div>
 </div>

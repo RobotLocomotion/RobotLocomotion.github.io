@@ -1,5 +1,7 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ad698ad9e16c30c988cf99b578b5d5ab7":[1,1,1,10,6],
+"classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#ad698ad9e16c30c988cf99b578b5d5ab7":[1,5,5,10,6],
 "classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#addb0fcca809c3b0a7043d564cd33408a":[1,1,1,10,1],
 "classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#addb0fcca809c3b0a7043d564cd33408a":[1,5,5,10,1],
 "classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html#af2822887fda36975010450cf0900b06c":[1,1,1,10,4],
@@ -65,8 +67,8 @@ var NAVTREEINDEX12 =
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#acf3359a9ffe54d19027766e2e2520218":[1,5,5,13,5],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#ada1d96f68ad61431e19ea0cb65117cd6":[1,1,1,13,1],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#ada1d96f68ad61431e19ea0cb65117cd6":[1,5,5,13,1],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aeb9d125fc472d3d8b44a2f410f3ffb18":[1,5,5,13,9],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aeb9d125fc472d3d8b44a2f410f3ffb18":[1,1,1,13,9],
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aeb9d125fc472d3d8b44a2f410f3ffb18":[1,5,5,13,9],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aefdee5e8d315d573207fd1cd6711353e":[1,1,1,13,4],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aefdee5e8d315d573207fd1cd6711353e":[1,5,5,13,4],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html":[1,5,5,14],
@@ -247,7 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#a6f83cff1e2c62a99e81cb8620399739e":[3,0,0,4,2,7,19],
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#a706b3e423598af0494af4d9b0f25c3f3":[3,0,0,4,2,7,5],
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#a7c0b77a17d31769a90004ea0aa712f5a":[3,0,0,4,2,7,9],
-"classdrake_1_1geometry_1_1render_1_1_render_label.html#a9e9a7b24e6f0a2532d8bf925350e295f":[3,0,0,4,2,7,16],
-"classdrake_1_1geometry_1_1render_1_1_render_label.html#aa2060042dfeb0be42ee347018a267acc":[3,0,0,4,2,7,12],
-"classdrake_1_1geometry_1_1render_1_1_render_label.html#aa2a03978e820b552f5ab0234ae934d5f":[3,0,0,4,2,7,13]
+"classdrake_1_1geometry_1_1render_1_1_render_label.html#a9e9a7b24e6f0a2532d8bf925350e295f":[3,0,0,4,2,7,16]
 };

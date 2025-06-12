@@ -218,9 +218,11 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 </li>
 <li>DeclareCacheEntries()
 : <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a4e0e23b8877740039d58b314565edf8b">FemModel&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a91a60255e4ba08ef36d6a913c47e1e91">MultibodyElement&lt; T &gt;</a>
 </li>
 <li>DeclareCacheEntry()
 : <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html#ad066510abca509607f860ca295c80c15">ForceDensityField&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a44e553ecf4f45416cbc2685070040531">MultibodyElement&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3">SystemBase</a>
 </li>
 <li>DeclareCacheEntryWithKnownTicket()
@@ -588,7 +590,7 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 : <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a89b57241cc3b1acb02d8b85797d6bebc">Diagram&lt; T &gt;</a>
 </li>
 <li>DiagramBuilder()
-: <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aa3171750ccde03a5c67ba3acb598435a">DiagramBuilder&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#ae8a44a2dfe05cf9e0ffce42b77187427">DiagramBuilder&lt; T &gt;</a>
 </li>
 <li>DiagramCompositeEventCollection()
 : <a class="el" href="classdrake_1_1systems_1_1_diagram_composite_event_collection.html#a2f64d9963bcc39bc4b057e4a41eebf1a">DiagramCompositeEventCollection&lt; T &gt;</a>
@@ -1001,6 +1003,12 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 , <a class="el" href="classdrake_1_1multibody_1_1_revolute_spring.html#a48f25252c7b270e0d4b1ef43b96041bd">RevoluteSpring&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a886c494032cdc0bb5c1a4e5123415cab">UniformGravityFieldElement&lt; T &gt;</a>
 </li>
+<li>DoCalcCenterOfMassPositionInWorld()
+: <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#ae48bcef673b2beae6916b9e1a2ecce95">FemModel&lt; T &gt;</a>
+</li>
+<li>DoCalcCenterOfMassTranslationalVelocityInWorld()
+: <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a3240e566ab13ff98324f6e34dd8949ca">FemModel&lt; T &gt;</a>
+</li>
 <li>DoCalcConservativePower()
 : <a class="el" href="classdrake_1_1systems_1_1_spring_mass_system.html#a464f9783933838f554ca2a5ca6277076">SpringMassSystem&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1systems_1_1_system.html#aafa6ce88c0e7ba9f6592713d36bc4047">System&lt; T &gt;</a>
@@ -1008,6 +1016,9 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 <li>DoCalcContextRobotClearance()
 : <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html#a8393e34359ae424d80b7975551234652">CollisionChecker</a>
 , <a class="el" href="classdrake_1_1planning_1_1_unimplemented_collision_checker.html#a749f14f28d5f317e2bbcf99590ae78d4">UnimplementedCollisionChecker</a>
+</li>
+<li>DoCalcEffectiveAngularVelocity()
+: <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#aff903c44a41e8d4c20d68bf08c7437a6">FemModel&lt; T &gt;</a>
 </li>
 <li>DoCalcImplicitTimeDerivativesResidual()
 : <a class="el" href="classdrake_1_1systems_1_1_system.html#a3dc0da965ea43074f3fb6c7d1530f579">System&lt; T &gt;</a>
@@ -1141,14 +1152,14 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 </li>
 <li>DoCloneToScalar()
 : <a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#aa5dcbffaf94d72a77259e5d18f4dafcd">DoorHinge&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#aed0eeb663f377076dab1ae0ab44be5aa">FixedOffsetFrame&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a0703b02d2de4f463389e773f8a058253">ForceElement&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a21a1267a3cceabc6d0bec7768cd6f2c7">Frame&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#acd3092c461ef2339ba51209fcf41bdbe">FixedOffsetFrame&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a855f012efced04556d523d644fc0d84f">ForceElement&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a0162ba098d0c07be12d3a7244914de38">Frame&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a8ed5ee2256ac8372e493caa547cbeb1e">Joint&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html#a189a1cc898965e60756ef7fe82b6c112">LinearSpringDamper&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_revolute_spring.html#a189a1cc898965e60756ef7fe82b6c112">RevoluteSpring&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#acd3092c461ef2339ba51209fcf41bdbe">RigidBodyFrame&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a189a1cc898965e60756ef7fe82b6c112">UniformGravityFieldElement&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#a5bbfff93bcd19af35f85733af71224f7">RigidBodyFrame&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a89c49c8f7ca8e6215810784c48acae23">UniformGravityFieldElement&lt; T &gt;</a>
 </li>
 <li>DoCloneWithoutPointers()
 : <a class="el" href="classdrake_1_1systems_1_1_context_base.html#a41778cd897c51068829979a180db058b">ContextBase</a>
@@ -1159,6 +1170,7 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 </li>
 <li>DoDeclareCacheEntries()
 : <a class="el" href="classdrake_1_1multibody_1_1_force_density_field.html#aac5f211c0559db62e85f9cb132d04390">ForceDensityField&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a23bbf0a8dab0eeaf8e967745e6048e5d">MultibodyElement&lt; T &gt;</a>
 </li>
 <li>DoDeclareDiscreteState()
 : <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3394b67729adad18156be78ac98281fe">MultibodyElement&lt; T &gt;</a>
@@ -1205,18 +1217,18 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 : <a class="el" href="classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a863f7df9d3ee10378794b4c6842a4377">DirectCollocationConstraint</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a0184613cc2538fda69fa81bacfab9cb6">EvaluatorBase</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_evaluator_cost.html#a5eea9354674efc1c07bf537319628ead">EvaluatorCost&lt; EvaluatorType &gt;</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_exponential_cone_constraint.html#a5eea9354674efc1c07bf537319628ead">ExponentialConeConstraint</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_expression_constraint.html#a863f7df9d3ee10378794b4c6842a4377">ExpressionConstraint</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_exponential_cone_constraint.html#a863f7df9d3ee10378794b4c6842a4377">ExponentialConeConstraint</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_expression_constraint.html#aa2431c2dbd82437d8f621033d8af8231">ExpressionConstraint</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_expression_cost.html#aa2431c2dbd82437d8f621033d8af8231">ExpressionCost</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_l1_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377">L1NormCost</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#aa2431c2dbd82437d8f621033d8af8231">L2NormCost</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#aa2431c2dbd82437d8f621033d8af8231">LinearComplementarityConstraint</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#aa2431c2dbd82437d8f621033d8af8231">LinearConstraint</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377">L2NormCost</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a863f7df9d3ee10378794b4c6842a4377">LinearComplementarityConstraint</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a863f7df9d3ee10378794b4c6842a4377">LinearConstraint</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html#aa2431c2dbd82437d8f621033d8af8231">LinearCost</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a863f7df9d3ee10378794b4c6842a4377">LinearMatrixInequalityConstraint</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#a5eea9354674efc1c07bf537319628ead">LinearMatrixInequalityConstraint</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377">LInfNormCost</a>
 , <a class="el" href="classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a863f7df9d3ee10378794b4c6842a4377">PerspectiveQuadraticCost</a>
-, <a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a5eea9354674efc1c07bf537319628ead">PositiveSemidefiniteConstraint</a>
+, <a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2431c2dbd82437d8f621033d8af8231">PositiveSemidefiniteConstraint</a>
 , <a class="el" href="classdrake_1_1systems_1_1_output_port.html#af88e845c5cd35ef910521ea4cfc4978a">OutputPort&lt; T &gt;</a>
 </li>
 <li>DoEvalDerivative()
@@ -1376,7 +1388,7 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 : <a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a63a88047b7daee8ad1cabeeca1dfe111">PolynomialBasisElement</a>
 </li>
 <li>DoorHinge()
-: <a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#aea84c5e088a697ae4571e5b165e9b2bd">DoorHinge&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#a1c1522be243a3ab3eeca60c8c56696ce">DoorHinge&lt; T &gt;</a>
 </li>
 <li>DoorHingeConfig()
 : <a class="el" href="structdrake_1_1multibody_1_1_door_hinge_config.html#a1a3999d885274e660c1c7415c8dd9062">DoorHingeConfig</a>
@@ -1528,7 +1540,7 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 : <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a8bd6ca8a128bb2663ebaa27d6851c68d">LeafSystem&lt; T &gt;</a>
 </li>
 <li>DrakeKukaIIwaRobot()
-: <a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a722b8e19a396259de4990b566f07dc6b">DrakeKukaIIwaRobot&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a765c17a1b88356c2d9d9b20659d4292d">DrakeKukaIIwaRobot&lt; T &gt;</a>
 </li>
 <li>DrakeLcm()
 : <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a6a8336aee2fe2421bb23d59d145238f2">DrakeLcm</a>
@@ -1540,13 +1552,13 @@ $(document).ready(function(){initNavTree('functions_func_d.html','');});
 : <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a7b73a55d48495f81082838dad64bd57e">DrakeLcmInterface</a>
 </li>
 <li>DrakeLcmLog()
-: <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#a101e1a0d1cad7440599a48f707c98562">DrakeLcmLog</a>
+: <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_log.html#aecca52377a3a88d3601b08d71cd7022a">DrakeLcmLog</a>
 </li>
 <li>DrakeSubscriptionInterface()
-: <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html#a81cd7606d39abebb4d8722b17db1365e">DrakeSubscriptionInterface</a>
+: <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html#a961f10260228f1032a44b281fa1531ed">DrakeSubscriptionInterface</a>
 </li>
 <li>DrakeVisualizer()
-: <a class="el" href="classdrake_1_1geometry_1_1_drake_visualizer.html#a883052cc9bf90b92391c87674a16c939">DrakeVisualizer&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1geometry_1_1_drake_visualizer.html#a063bba7329e7434bd8e6d2a6324dd63f">DrakeVisualizer&lt; T &gt;</a>
 </li>
 <li>dummy_cache_entry_value()
 : <a class="el" href="classdrake_1_1systems_1_1_cache.html#a587f7f69b1e38eea5f3638c5926e6edc">Cache</a>

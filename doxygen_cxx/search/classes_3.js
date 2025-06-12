@@ -49,6 +49,8 @@ var searchData=
   ['discretevalues_3c_20autodiffxd_20_3e',['DiscreteValues&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],
   ['discretevalues_3c_20double_20_3e',['DiscreteValues&lt; double &gt;',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],
   ['discretevalues_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['DiscreteValues&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],
+  ['discretevalues_3c_20element_3a_3adouble_20_3e',['DiscreteValues&lt; Element::double &gt;',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],
+  ['discretevalues_3c_20element_3a_3aelement_3a_3adouble_20_3e',['DiscreteValues&lt; Element::Element::double &gt;',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],
   ['discretevalues_3c_20element_3a_3at_20_3e',['DiscreteValues&lt; Element::T &gt;',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],
   ['distanceandinterpolationprovider',['DistanceAndInterpolationProvider',['../classdrake_1_1planning_1_1_distance_and_interpolation_provider.html',1,'drake::planning']]],
   ['distanceconstraint',['DistanceConstraint',['../classdrake_1_1multibody_1_1_distance_constraint.html',1,'drake::multibody']]],

@@ -20,7 +20,7 @@ var searchData=
   ['geometrysettester',['GeometrySetTester',['../classdrake_1_1geometry_1_1_geometry_set_tester.html',1,'drake::geometry']]],
   ['geometrystate',['GeometryState',['../classdrake_1_1geometry_1_1_geometry_state.html',1,'drake::geometry']]],
   ['geometrystate_3c_20autodiffxd_20_3e',['GeometryState&lt; AutoDiffXd &gt;',['../classdrake_1_1geometry_1_1_geometry_state.html',1,'drake::geometry']]],
-  ['geometrystate_3c_20double_20_3e',['GeometryState&lt; double &gt;',['../classdrake_1_1geometry_1_1_geometry_state.html',1,'drake::geometry']]],
+  ['geometrystate_3c_20element_3a_3adouble_20_3e',['GeometryState&lt; Element::double &gt;',['../classdrake_1_1geometry_1_1_geometry_state.html',1,'drake::geometry']]],
   ['geometryversion',['GeometryVersion',['../classdrake_1_1geometry_1_1_geometry_version.html',1,'drake::geometry']]],
   ['getsubmatrixgradientarray',['GetSubMatrixGradientArray',['../structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html',1,'drake::math']]],
   ['getsubmatrixgradientsingleelement',['GetSubMatrixGradientSingleElement',['../structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html',1,'drake::math']]],

@@ -106,6 +106,9 @@ var hierarchy =
     [ "CompositeEventCollection< double >", "classdrake_1_1systems_1_1_composite_event_collection.html", [
       [ "LeafCompositeEventCollection< double >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
     ] ],
+    [ "CompositeEventCollection< Element::double >", "classdrake_1_1systems_1_1_composite_event_collection.html", [
+      [ "LeafCompositeEventCollection< Element::double >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
+    ] ],
     [ "CompositeEventCollection< Element::T >", "classdrake_1_1systems_1_1_composite_event_collection.html", [
       [ "LeafCompositeEventCollection< Element::T >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
     ] ],
@@ -124,6 +127,7 @@ var hierarchy =
         [ "Context< AutoDiffXd >", "classdrake_1_1systems_1_1_context.html", null ],
         [ "Context< double >", "classdrake_1_1systems_1_1_context.html", null ],
         [ "Context< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_context.html", null ],
+        [ "Context< Element::double >", "classdrake_1_1systems_1_1_context.html", null ],
         [ "Context< T >", "classdrake_1_1systems_1_1_context.html", [
           [ "DiagramContext< T >", "classdrake_1_1systems_1_1_diagram_context.html", null ],
           [ "LeafContext< T >", "classdrake_1_1systems_1_1_leaf_context.html", null ]
@@ -137,6 +141,7 @@ var hierarchy =
     [ "ContinuousState< AutoDiffXd >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< double >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
+    [ "ContinuousState< Element::T >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", [
       [ "AffineBall", "classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html", null ],
       [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html", null ],
@@ -188,6 +193,8 @@ var hierarchy =
     [ "DiscreteValues< AutoDiffXd >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "DiscreteValues< double >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "DiscreteValues< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
+    [ "DiscreteValues< Element::double >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
+    [ "DiscreteValues< Element::Element::double >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "DiscreteValues< Element::T >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "DistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html", [
       [ "LinearDistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html", null ]
@@ -314,16 +321,19 @@ var hierarchy =
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< AutoDiffXd > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< drake::symbolic::Expression > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
+    [ "EventCollection< drake::systems::DiscreteUpdateEvent< Element::double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< Element::T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< AutoDiffXd > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< drake::symbolic::Expression > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
+    [ "EventCollection< drake::systems::PublishEvent< Element::double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< Element::T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< AutoDiffXd > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< drake::symbolic::Expression > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
+    [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< Element::double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< Element::T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventStatus", "classdrake_1_1systems_1_1_event_status.html", null ],
@@ -467,7 +477,7 @@ var hierarchy =
     [ "GeometrySetTester", "classdrake_1_1geometry_1_1_geometry_set_tester.html", null ],
     [ "GeometryState< T >", "classdrake_1_1geometry_1_1_geometry_state.html", null ],
     [ "GeometryState< AutoDiffXd >", "classdrake_1_1geometry_1_1_geometry_state.html", null ],
-    [ "GeometryState< double >", "classdrake_1_1geometry_1_1_geometry_state.html", null ],
+    [ "GeometryState< Element::double >", "classdrake_1_1geometry_1_1_geometry_state.html", null ],
     [ "GeometryVersion", "classdrake_1_1geometry_1_1_geometry_version.html", null ],
     [ "GetSubMatrixGradientArray< QSubvectorSize, Derived, NRows, NCols >", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html", null ],
     [ "GetSubMatrixGradientSingleElement< QSubvectorSize, Derived >", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html", null ],
@@ -705,6 +715,7 @@ var hierarchy =
     [ "Parameters< AutoDiffXd >", "classdrake_1_1systems_1_1_parameters.html", null ],
     [ "Parameters< double >", "classdrake_1_1systems_1_1_parameters.html", null ],
     [ "Parameters< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_parameters.html", null ],
+    [ "Parameters< Element::double >", "classdrake_1_1systems_1_1_parameters.html", null ],
     [ "Parser", "classdrake_1_1multibody_1_1_parser.html", null ],
     [ "PdControllerGains", "structdrake_1_1multibody_1_1_pd_controller_gains.html", null ],
     [ "PendulumInputIndices", "structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html", null ],
@@ -722,8 +733,8 @@ var hierarchy =
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
     [ "PolygonSurfaceMesh< double >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
     [ "PolygonSurfaceMeshTest< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh_test.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -733,7 +744,8 @@ var hierarchy =
       [ "InputPortBase", "classdrake_1_1systems_1_1_input_port_base.html", [
         [ "InputPort< T >", "classdrake_1_1systems_1_1_input_port.html", null ],
         [ "InputPort< AutoDiffXd >", "classdrake_1_1systems_1_1_input_port.html", null ],
-        [ "InputPort< double >", "classdrake_1_1systems_1_1_input_port.html", null ]
+        [ "InputPort< double >", "classdrake_1_1systems_1_1_input_port.html", null ],
+        [ "InputPort< Element::T >", "classdrake_1_1systems_1_1_input_port.html", null ]
       ] ],
       [ "OutputPortBase", "classdrake_1_1systems_1_1_output_port_base.html", [
         [ "OutputPort< T >", "classdrake_1_1systems_1_1_output_port.html", [
@@ -927,6 +939,7 @@ var hierarchy =
     [ "SystemConstraint< AutoDiffXd >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraint< double >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraint< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
+    [ "SystemConstraint< Element::double >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraint< Element::T >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraintAdapter", "classdrake_1_1systems_1_1_system_constraint_adapter.html", null ],
     [ "SystemConstraintBounds", "classdrake_1_1systems_1_1_system_constraint_bounds.html", null ],
@@ -966,7 +979,8 @@ var hierarchy =
             [ "ExternallyAppliedSpatialForceMultiplexer< T >", "classdrake_1_1multibody_1_1_externally_applied_spatial_force_multiplexer.html", null ],
             [ "MultibodyTreeSystem< T >", null, [
               [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ],
-              [ "MultibodyPlant< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
+              [ "MultibodyPlant< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ],
+              [ "MultibodyPlant< double >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
             ] ],
             [ "ContactVisualizer< T >", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html", null ],
             [ "JointSliders< T >", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html", null ],
@@ -1121,9 +1135,6 @@ var hierarchy =
             [ "LcmImageArrayToImages", "classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html", null ],
             [ "RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html", null ],
             [ "RgbdSensorAsync", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html", null ],
-            [ "MultibodyTreeSystem< double >", null, [
-              [ "MultibodyPlant< double >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
-            ] ],
             [ "SceneGraph< double >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
             [ "SpringMassSystem< double >", "classdrake_1_1systems_1_1_spring_mass_system.html", [
               [ "MySpringMassSystem< double >", "classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html", null ],
@@ -1135,6 +1146,9 @@ var hierarchy =
           ] ]
         ] ],
         [ "System< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_system.html", null ],
+        [ "System< Element::double >", "classdrake_1_1systems_1_1_system.html", [
+          [ "LeafSystem< Element::double >", "classdrake_1_1systems_1_1_leaf_system.html", null ]
+        ] ],
         [ "System< Element::T >", "classdrake_1_1systems_1_1_system.html", [
           [ "LeafSystem< Element::T >", "classdrake_1_1systems_1_1_leaf_system.html", null ]
         ] ]
@@ -1267,6 +1281,7 @@ var hierarchy =
       [ "copyable_unique_ptr< drake::systems::Parameters< AutoDiffXd > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Parameters< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Parameters< drake::symbolic::Expression > >", "classdrake_1_1copyable__unique__ptr.html", null ],
+      [ "copyable_unique_ptr< drake::systems::Parameters< Element::double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::Parameters< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::trajectories::Trajectory< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::trajectories::Trajectory< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
@@ -1274,7 +1289,7 @@ var hierarchy =
       [ "copyable_unique_ptr< Impl >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< internal::CollisionFilterGroupsImpl< std::string > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< internal::ProximityEngine< AutoDiffXd > >", "classdrake_1_1copyable__unique__ptr.html", null ],
-      [ "copyable_unique_ptr< internal::ProximityEngine< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
+      [ "copyable_unique_ptr< internal::ProximityEngine< Element::double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< internal::ProximityEngine< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< T >", "classdrake_1_1copyable__unique__ptr.html", null ]
     ] ],
@@ -1319,6 +1334,12 @@ var hierarchy =
     [ "VectorBase< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_vector_base.html", [
       [ "BasicVector< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
     ] ],
+    [ "VectorBase< Element::double >", "classdrake_1_1systems_1_1_vector_base.html", [
+      [ "BasicVector< Element::double >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
+    ] ],
+    [ "VectorBase< Element::Element::double >", "classdrake_1_1systems_1_1_vector_base.html", [
+      [ "BasicVector< Element::Element::double >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
+    ] ],
     [ "VectorBase< Element::T >", "classdrake_1_1systems_1_1_vector_base.html", [
       [ "BasicVector< Element::T >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
     ] ],
@@ -1342,8 +1363,10 @@ var hierarchy =
     [ "ZmpPlanner", "classdrake_1_1planning_1_1_zmp_planner.html", null ],
     [ "ZmpTestTraj", "structdrake_1_1planning_1_1_zmp_test_traj.html", null ],
     [ "const ContextConstraintCalc< double >", "classconst_01_context_constraint_calc_3_01double_01_4.html", null ],
+    [ "const ContextConstraintCalc< Element::double >", "classconst_01_context_constraint_calc_3_01_element_1_1double_01_4.html", null ],
     [ "const ContextConstraintCalc< Element::T >", "classconst_01_context_constraint_calc_3_01_element_1_1_t_01_4.html", null ],
     [ "const SystemConstraintCalc< double >", "classconst_01_system_constraint_calc_3_01double_01_4.html", null ],
+    [ "const SystemConstraintCalc< Element::double >", "classconst_01_system_constraint_calc_3_01_element_1_1double_01_4.html", null ],
     [ "const SystemConstraintCalc< Element::T >", "classconst_01_system_constraint_calc_3_01_element_1_1_t_01_4.html", null ],
     [ "double", "classdouble.html", null ],
     [ "InputPortLocator", "class_input_port_locator.html", null ],
@@ -1353,5 +1376,6 @@ var hierarchy =
     [ "Vector3< Element::T >", "class_vector3_3_01_element_1_1_t_01_4.html", null ],
     [ "Vector6< T >", "class_vector6_3_01_t_01_4.html", null ],
     [ "VectorX< double >", "class_vector_x_3_01double_01_4.html", null ],
+    [ "VectorX< Element::double >", "class_vector_x_3_01_element_1_1double_01_4.html", null ],
     [ "VectorX< Element::T >", "class_vector_x_3_01_element_1_1_t_01_4.html", null ]
 ];

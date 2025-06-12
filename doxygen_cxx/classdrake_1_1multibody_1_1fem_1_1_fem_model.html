@@ -225,6 +225,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aff2f3bcebb7e575c8aa83c382eea070c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#aff2f3bcebb7e575c8aa83c382eea070c">CalcTangentMatrix</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state, contact_solvers::internal::Block3x3SparseSymmetricMatrix *tangent_matrix) const</td></tr>
 <tr class="memdesc:aff2f3bcebb7e575c8aa83c382eea070c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates an approximated tangent matrix evaluated at the given FEM state.  <a href="#aff2f3bcebb7e575c8aa83c382eea070c">More...</a><br /></td></tr>
 <tr class="separator:aff2f3bcebb7e575c8aa83c382eea070c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a729b1c45f57e254602d8c2bd749b53b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a729b1c45f57e254602d8c2bd749b53b7">CalcCenterOfMassPositionInWorld</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const</td></tr>
+<tr class="memdesc:a729b1c45f57e254602d8c2bd749b53b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the position vector from the world origin Wo to the center of mass of all bodies in this <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a> S, expressed in the world frame W.  <a href="#a729b1c45f57e254602d8c2bd749b53b7">More...</a><br /></td></tr>
+<tr class="separator:a729b1c45f57e254602d8c2bd749b53b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b43f8f4a5316c12336367bbc331118"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a73b43f8f4a5316c12336367bbc331118">CalcCenterOfMassTranslationalVelocityInWorld</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const</td></tr>
+<tr class="memdesc:a73b43f8f4a5316c12336367bbc331118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates system center of mass translational velocity in world frame W.  <a href="#a73b43f8f4a5316c12336367bbc331118">More...</a><br /></td></tr>
+<tr class="separator:a73b43f8f4a5316c12336367bbc331118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16461d037232e5ce1d3e31363a58cdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af16461d037232e5ce1d3e31363a58cdf">CalcEffectiveAngularVelocity</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const</td></tr>
+<tr class="memdesc:af16461d037232e5ce1d3e31363a58cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Using an angular momentum analogy, calculates an "effective" angular velocity for this <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a> S, measured and expressed in the world frame W.  <a href="#af16461d037232e5ce1d3e31363a58cdf">More...</a><br /></td></tr>
+<tr class="separator:af16461d037232e5ce1d3e31363a58cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a602bda26c00d30265b787b1494fbcc3a"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; contact_solvers::internal::Block3x3SparseSymmetricMatrix &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a602bda26c00d30265b787b1494fbcc3a">MakeTangentMatrix</a> () const</td></tr>
 <tr class="memdesc:a602bda26c00d30265b787b1494fbcc3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a symmetric block sparse matrix that has the sparsity pattern of the tangent matrix of this FEM model.  <a href="#a602bda26c00d30265b787b1494fbcc3a">More...</a><br /></td></tr>
 <tr class="separator:a602bda26c00d30265b787b1494fbcc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,6 +263,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a4b2d2ea2327ec3c0b6fe05158bc29e59">parallelism</a> () const</td></tr>
 <tr class="memdesc:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the parallelism that <code>this</code> FemModel uses when opportunities for parallel computation arises.  <a href="#a4b2d2ea2327ec3c0b6fe05158bc29e59">More...</a><br /></td></tr>
 <tr class="separator:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a1cc0830a1d3516d093286baf6f1476"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a8a1cc0830a1d3516d093286baf6f1476">get_total_mass</a> () const</td></tr>
+<tr class="memdesc:a8a1cc0830a1d3516d093286baf6f1476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total mass of the system.  <a href="#a8a1cc0830a1d3516d093286baf6f1476">More...</a><br /></td></tr>
+<tr class="separator:a8a1cc0830a1d3516d093286baf6f1476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:af7127cb41cf465a47db9080be52cbf91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af7127cb41cf465a47db9080be52cbf91">FemModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a> &amp;)=delete</td></tr>
 <tr class="separator:af7127cb41cf465a47db9080be52cbf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -281,6 +293,15 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:af91dcd079621ccc79c3656609cac0839"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af91dcd079621ccc79c3656609cac0839">DoCalcTangentMatrix</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state, contact_solvers::internal::Block3x3SparseSymmetricMatrix *tangent_matrix) const =0</td></tr>
 <tr class="memdesc:af91dcd079621ccc79c3656609cac0839"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#aff2f3bcebb7e575c8aa83c382eea070c" title="Calculates an approximated tangent matrix evaluated at the given FEM state.">CalcTangentMatrix()</a>.  <a href="#af91dcd079621ccc79c3656609cac0839">More...</a><br /></td></tr>
 <tr class="separator:af91dcd079621ccc79c3656609cac0839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48bcef673b2beae6916b9e1a2ecce95"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#ae48bcef673b2beae6916b9e1a2ecce95">DoCalcCenterOfMassPositionInWorld</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const =0</td></tr>
+<tr class="memdesc:ae48bcef673b2beae6916b9e1a2ecce95"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a729b1c45f57e254602d8c2bd749b53b7" title="Calculates the position vector from the world origin Wo to the center of mass of all bodies in this F...">CalcCenterOfMassPositionInWorld()</a>.  <a href="#ae48bcef673b2beae6916b9e1a2ecce95">More...</a><br /></td></tr>
+<tr class="separator:ae48bcef673b2beae6916b9e1a2ecce95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3240e566ab13ff98324f6e34dd8949ca"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a3240e566ab13ff98324f6e34dd8949ca">DoCalcCenterOfMassTranslationalVelocityInWorld</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const =0</td></tr>
+<tr class="memdesc:a3240e566ab13ff98324f6e34dd8949ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a73b43f8f4a5316c12336367bbc331118" title="Calculates system center of mass translational velocity in world frame W.">CalcCenterOfMassTranslationalVelocityInWorld()</a>.  <a href="#a3240e566ab13ff98324f6e34dd8949ca">More...</a><br /></td></tr>
+<tr class="separator:a3240e566ab13ff98324f6e34dd8949ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff903c44a41e8d4c20d68bf08c7437a6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#aff903c44a41e8d4c20d68bf08c7437a6">DoCalcEffectiveAngularVelocity</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const =0</td></tr>
+<tr class="memdesc:aff903c44a41e8d4c20d68bf08c7437a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af16461d037232e5ce1d3e31363a58cdf" title="Using an angular momentum analogy, calculates an &quot;effective&quot; angular velocity for this FemModel S,...">CalcEffectiveAngularVelocity()</a>.  <a href="#aff903c44a41e8d4c20d68bf08c7437a6">More...</a><br /></td></tr>
+<tr class="separator:aff903c44a41e8d4c20d68bf08c7437a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af244131353862756a79cbb5ae3657d64"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; contact_solvers::internal::Block3x3SparseSymmetricMatrix &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af244131353862756a79cbb5ae3657d64">DoMakeTangentMatrix</a> () const =0</td></tr>
 <tr class="memdesc:af244131353862756a79cbb5ae3657d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a602bda26c00d30265b787b1494fbcc3a" title="Creates a symmetric block sparse matrix that has the sparsity pattern of the tangent matrix of this F...">MakeTangentMatrix()</a>.  <a href="#af244131353862756a79cbb5ae3657d64">More...</a><br /></td></tr>
 <tr class="separator:af244131353862756a79cbb5ae3657d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -423,6 +444,122 @@ Protected Member Functions</h2></td></tr>
 
 <p>Applies boundary condition set for this FemModel to the input <code>state</code>. </p>
 <p>No-op if no boundary condition is set. </p><dl class="section pre"><dt>Precondition</dt><dd>fem_state != nullptr. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the FEM state is incompatible with this model. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a729b1c45f57e254602d8c2bd749b53b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a729b1c45f57e254602d8c2bd749b53b7">&#9670;&nbsp;</a></span>CalcCenterOfMassPositionInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; CalcCenterOfMassPositionInWorld </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fem_state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the position vector from the world origin Wo to the center of mass of all bodies in this <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a> S, expressed in the world frame W. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fem_state</td><td>The <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html" title="FemState provides access to private workspace FEM state and per-element state-dependent data.">FemState</a> used to evaluate the center of mass. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">p_WoScm_W</td><td>position vector from Wo to Scm expressed in world frame W, where Scm is the center of mass of the system S stored by <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the FEM state is incompatible with this model. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a73b43f8f4a5316c12336367bbc331118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b43f8f4a5316c12336367bbc331118">&#9670;&nbsp;</a></span>CalcCenterOfMassTranslationalVelocityInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; CalcCenterOfMassTranslationalVelocityInWorld </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fem_state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates system center of mass translational velocity in world frame W. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fem_state</td><td>The <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html" title="FemState provides access to private workspace FEM state and per-element state-dependent data.">FemState</a> used for this calculation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">v_WScm_W</td><td>Scm's translational velocity in frame W, expressed in W, where Scm is the center of mass of the system S stored by this <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the FEM state is incompatible with this model. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af16461d037232e5ce1d3e31363a58cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af16461d037232e5ce1d3e31363a58cdf">&#9670;&nbsp;</a></span>CalcEffectiveAngularVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; CalcEffectiveAngularVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fem_state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Using an angular momentum analogy, calculates an "effective" angular velocity for this <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a> S, measured and expressed in the world frame W. </p>
+<p>The effective angular velocity is computed using an angular momentum equation that assumes S is a rigid body (albeit we know S is deformable). </p><pre class="fragment"> H_WSSm_W = I_SScm_W * w_WScm_W
+</pre><p>for which when solved for w_WScm_W gives </p><pre class="fragment"> w_WScm_W = inverse(I_SScm_W) * H_WSSm_W
+</pre><p>where H_WSSm_W is the <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a> S's angular momentum about its center of mass Scm measured and expressed in the world frame W. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fem_state</td><td>The <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html" title="FemState provides access to private workspace FEM state and per-element state-dependent data.">FemState</a> used for this calculation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">w_WScm_W</td><td>the <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a> S's effective angular velocity for Scm, measured and expressed in the world frame W. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the FEM state is incompatible with this model. </td></tr>
@@ -616,6 +753,93 @@ All nonzero entries in the resulting tangent matrix have been allocated. See <a 
 
 </div>
 </div>
+<a id="ae48bcef673b2beae6916b9e1a2ecce95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48bcef673b2beae6916b9e1a2ecce95">&#9670;&nbsp;</a></span>DoCalcCenterOfMassPositionInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; DoCalcCenterOfMassPositionInWorld </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fem_state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a729b1c45f57e254602d8c2bd749b53b7" title="Calculates the position vector from the world origin Wo to the center of mass of all bodies in this F...">CalcCenterOfMassPositionInWorld()</a>. </p>
+<p>The input <code>fem_state</code> is guaranteed to be compatible with <code>this</code> FEM model. </p>
+
+</div>
+</div>
+<a id="a3240e566ab13ff98324f6e34dd8949ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3240e566ab13ff98324f6e34dd8949ca">&#9670;&nbsp;</a></span>DoCalcCenterOfMassTranslationalVelocityInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; DoCalcCenterOfMassTranslationalVelocityInWorld </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fem_state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a73b43f8f4a5316c12336367bbc331118" title="Calculates system center of mass translational velocity in world frame W.">CalcCenterOfMassTranslationalVelocityInWorld()</a>. </p>
+<p>The input <code>fem_state</code> is guaranteed to be compatible with <code>this</code> FEM model. </p>
+
+</div>
+</div>
+<a id="aff903c44a41e8d4c20d68bf08c7437a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff903c44a41e8d4c20d68bf08c7437a6">&#9670;&nbsp;</a></span>DoCalcEffectiveAngularVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; DoCalcEffectiveAngularVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fem_state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af16461d037232e5ce1d3e31363a58cdf" title="Using an angular momentum analogy, calculates an &quot;effective&quot; angular velocity for this FemModel S,...">CalcEffectiveAngularVelocity()</a>. </p>
+<p>The input <code>fem_state</code> is guaranteed to be compatible with <code>this</code> FEM model. </p>
+
+</div>
+</div>
 <a id="a1aed41d0f842f413adc5fb44162d9423"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1aed41d0f842f413adc5fb44162d9423">&#9670;&nbsp;</a></span>DoCalcResidual()</h2>
 
@@ -778,6 +1002,25 @@ All nonzero entries in the resulting tangent matrix have been allocated. See <a 
 </div><div class="memdoc">
 
 <p>Returns the FemStateSystem that manages the states and cache entries in this FemModel. </p>
+
+</div>
+</div>
+<a id="a8a1cc0830a1d3516d093286baf6f1476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a1cc0830a1d3516d093286baf6f1476">&#9670;&nbsp;</a></span>get_total_mass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T get_total_mass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total mass of the system. </p>
 
 </div>
 </div>

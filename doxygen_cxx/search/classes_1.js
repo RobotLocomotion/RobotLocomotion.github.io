@@ -7,6 +7,8 @@ var searchData=
   ['basicvector_3c_20autodiffxd_20_3e',['BasicVector&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_basic_vector.html',1,'drake::systems']]],
   ['basicvector_3c_20double_20_3e',['BasicVector&lt; double &gt;',['../classdrake_1_1systems_1_1_basic_vector.html',1,'drake::systems']]],
   ['basicvector_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['BasicVector&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1systems_1_1_basic_vector.html',1,'drake::systems']]],
+  ['basicvector_3c_20element_3a_3adouble_20_3e',['BasicVector&lt; Element::double &gt;',['../classdrake_1_1systems_1_1_basic_vector.html',1,'drake::systems']]],
+  ['basicvector_3c_20element_3a_3aelement_3a_3adouble_20_3e',['BasicVector&lt; Element::Element::double &gt;',['../classdrake_1_1systems_1_1_basic_vector.html',1,'drake::systems']]],
   ['basicvector_3c_20element_3a_3at_20_3e',['BasicVector&lt; Element::T &gt;',['../classdrake_1_1systems_1_1_basic_vector.html',1,'drake::systems']]],
   ['basiselementgradedreverselexorder',['BasisElementGradedReverseLexOrder',['../structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html',1,'drake::symbolic']]],
   ['beadonawire',['BeadOnAWire',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html',1,'drake::examples::bead_on_a_wire']]],

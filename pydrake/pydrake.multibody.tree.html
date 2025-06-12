@@ -894,6 +894,82 @@ body B’s frame.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.CalcCenterOfMassPositionInWorld">
+<span class="sig-name descname"><span class="pre">CalcCenterOfMassPositionInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.CalcCenterOfMassPositionInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the body’s center of mass position in world frame W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context associated with the MultibodyPlant that owns this
+body.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">p_WBcm_W</span></code>:</dt><dd><p>the body’s center of mass position, measured and expressed in the
+world frame W.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if context does not belong to the MultibodyPlant</strong> – </p></li>
+<li><p><strong>that owns this body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.CalcCenterOfMassTranslationalVelocityInWorld">
+<span class="sig-name descname"><span class="pre">CalcCenterOfMassTranslationalVelocityInWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.CalcCenterOfMassTranslationalVelocityInWorld" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the body’s center of mass translational velocity in world
+frame W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context associated with the MultibodyPlant that owns this
+body.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v_WScm_W</span></code>:</dt><dd><p>Scm’s translational velocity in frame W, expressed in W, where Scm
+is the center of mass of this body.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if context does not belong to the MultibodyPlant</strong> – </p></li>
+<li><p><strong>that owns this body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.CalcEffectiveAngularVelocity">
+<span class="sig-name descname"><span class="pre">CalcEffectiveAngularVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.CalcEffectiveAngularVelocity" title="Permalink to this definition"></a></dt>
+<dd><p>Using an angular momentum analogy, calculates an “effective” angular
+velocity for this body about its center of mass, measured and
+expressed in the world frame W. The effective angular velocity is
+computed using an angular momentum equation that assumes the body is a
+rigid body (albeit we know it is deformable).</p>
+<p>H_WBcm_W = I_BBcm_W * w_WBcm_W</p>
+<p>for which when solved for w_WBcm_W gives</p>
+<p>w_WBcm_W = inverse(I_BBcm_W) * H_WBcm_W</p>
+<p>where H_WBcm_W is the body’s angular momentum about its center of mass
+Bcm measured and expressed in the world frame W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context associated with the MultibodyPlant that owns this
+body.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">w_WBcm_W</span></code>:</dt><dd><p>the body’s effective angular velocity about Bcm, measured and
+expressed in the world frame W.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if context does not belong to the MultibodyPlant</strong> – </p></li>
+<li><p><strong>that owns this body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.config">
 <span class="sig-name descname"><span class="pre">config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.fem.html#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.config" title="Permalink to this definition"></a></dt>
 <dd><p>Returns physical parameters of this deformable body.</p>
