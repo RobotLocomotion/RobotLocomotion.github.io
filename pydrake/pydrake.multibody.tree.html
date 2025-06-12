@@ -965,6 +965,15 @@ this deformable body.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.get_default_pose">
+<span class="sig-name descname"><span class="pre">get_default_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.get_default_pose" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the default pose of the simulated geometry (in its reference
+configuration) in the world frame W. This returns pose last set by
+set_default_pose(), or the pose of the geometry in the world frame W
+when the body is registered if set_default_pose() has not been called.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.GetParentPlant">
 <span class="sig-name descname"><span class="pre">GetParentPlant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.GetParentPlant" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -1051,11 +1060,13 @@ deformable body is enabled.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.reference_positions">
 <span class="sig-name descname"><span class="pre">reference_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.reference_positions" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the reference positions of the vertices of the deformable body
-identified by the given <code class="docutils literal notranslate"><span class="pre">id</span></code>. The reference positions are
-represented as a VectorX with 3N values where N is the number of
-vertices. The x-, y-, and z-positions (measured and expressed in the
-world frame) of the j-th vertex are 3j, 3j + 1, and 3j + 2 in the
-VectorX.</p>
+identified by the given <code class="docutils literal notranslate"><span class="pre">id</span></code>. The reference positions are the
+positions of the vertices of the mesh geometry representing the body
+at registration time, measured and expressed in the world frame. The
+reference positions are represented as a VectorX with 3N values where
+N is the number of vertices. The x-, y-, and z-positions (measured and
+expressed in the world frame) of the j-th vertex are 3j, 3j + 1, and
+3j + 2 in the VectorX.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1063,6 +1074,17 @@ VectorX.</p>
 <span class="sig-name descname"><span class="pre">scoped_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.ScopedName" title="pydrake.multibody.tree.ScopedName"><span class="pre">pydrake.multibody.tree.ScopedName</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.scoped_name" title="Permalink to this definition"></a></dt>
 <dd><p>Returns scoped name of this body. Neither of the two pieces of the
 name will be empty (the scope name and the element name).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.tree.DeformableBody.set_default_pose">
+<span class="sig-name descname"><span class="pre">set_default_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.DeformableBody" title="pydrake.multibody.tree.DeformableBody"><span class="pre">pydrake.multibody.tree.DeformableBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_WD</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.DeformableBody.set_default_pose" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default pose of the simulated geometry (in its reference
+configuration) in the world frame W.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WD</span></code>:</dt><dd><p>The default pose of the simulated geometry in the world frame W.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -22378,11 +22400,11 @@ re-expressed in frame A.</p>
 <span class="sig-name descname"><span class="pre">SetFromRotationalInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia" title="pydrake.multibody.tree.UnitInertia"><span class="pre">pydrake.multibody.tree.UnitInertia</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">I</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia" title="pydrake.multibody.tree.RotationalInertia"><span class="pre">pydrake.multibody.tree.RotationalInertia</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia" title="pydrake.multibody.tree.UnitInertia"><span class="pre">pydrake.multibody.tree.UnitInertia</span></a></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia.SetFromRotationalInertia" title="Permalink to this definition"></a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">this</span></code> unit inertia from a generally non-unit inertia I
 corresponding to a body with a given <code class="docutils literal notranslate"><span class="pre">mass</span></code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In Debug builds, this operation aborts if the provided <code class="docutils literal notranslate"><span class="pre">mass</span></code> is
-not strictly positive.</p>
-</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the provided mass is not strictly positive.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -22865,11 +22887,11 @@ re-expressed in frame A.</p>
 <span id="pydrake.multibody.tree.UnitInertia_[AutoDiffXd].SetFromRotationalInertia"></span><span class="sig-name descname"><span class="pre">SetFromRotationalInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-AutoDiffXd-.SetFromRotationalInertia" title="Permalink to this definition"></a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">this</span></code> unit inertia from a generally non-unit inertia I
 corresponding to a body with a given <code class="docutils literal notranslate"><span class="pre">mass</span></code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In Debug builds, this operation aborts if the provided <code class="docutils literal notranslate"><span class="pre">mass</span></code> is
-not strictly positive.</p>
-</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the provided mass is not strictly positive.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -23346,11 +23368,11 @@ re-expressed in frame A.</p>
 <span id="pydrake.multibody.tree.UnitInertia_[Expression].SetFromRotationalInertia"></span><span class="sig-name descname"><span class="pre">SetFromRotationalInertia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.RotationalInertia_" title="pydrake.multibody.tree.RotationalInertia_"><span class="pre">pydrake.multibody.tree.RotationalInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.tree.UnitInertia_" title="pydrake.multibody.tree.UnitInertia_"><span class="pre">pydrake.multibody.tree.UnitInertia_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">Expression</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.tree.UnitInertia_-Expression-.SetFromRotationalInertia" title="Permalink to this definition"></a></dt>
 <dd><p>Sets <code class="docutils literal notranslate"><span class="pre">this</span></code> unit inertia from a generally non-unit inertia I
 corresponding to a body with a given <code class="docutils literal notranslate"><span class="pre">mass</span></code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In Debug builds, this operation aborts if the provided <code class="docutils literal notranslate"><span class="pre">mass</span></code> is
-not strictly positive.</p>
-</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError if the provided mass is not strictly positive.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

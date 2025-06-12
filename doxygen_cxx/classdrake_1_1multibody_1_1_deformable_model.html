@@ -294,6 +294,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a4b2d2ea2327ec3c0b6fe05158bc29e59">parallelism</a> () const</td></tr>
 <tr class="memdesc:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the parallelism that <code>this</code> DeformableModel uses when opportunities for parallel computation arises.  <a href="#a4b2d2ea2327ec3c0b6fe05158bc29e59">More...</a><br /></td></tr>
 <tr class="separator:a4b2d2ea2327ec3c0b6fe05158bc29e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8bd33a2e8520eccde63ffbd423c056a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#af8bd33a2e8520eccde63ffbd423c056a">SetDefaultState</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const</td></tr>
+<tr class="memdesc:af8bd33a2e8520eccde63ffbd423c056a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Sets the default state for the deformable model.  <a href="#af8bd33a2e8520eccde63ffbd423c056a">More...</a><br /></td></tr>
+<tr class="separator:af8bd33a2e8520eccde63ffbd423c056a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a43232b40951ba5412cc46880c836caff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a43232b40951ba5412cc46880c836caff">DeformableModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a> &amp;)=delete</td></tr>
 <tr class="separator:a43232b40951ba5412cc46880c836caff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1354,8 +1357,8 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
-<a id="a68fd2d05f3e8b6982ddb2ab108275688"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68fd2d05f3e8b6982ddb2ab108275688">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a6f045b3a39c4d8397fc55b2cb4e48f01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f045b3a39c4d8397fc55b2cb4e48f01">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1366,7 +1369,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1380,8 +1383,8 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
-<a id="a6f045b3a39c4d8397fc55b2cb4e48f01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f045b3a39c4d8397fc55b2cb4e48f01">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a68fd2d05f3e8b6982ddb2ab108275688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68fd2d05f3e8b6982ddb2ab108275688">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1392,7 +1395,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1520,6 +1523,37 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 </div><div class="memdoc">
 
 <p>Registers a deformable body in <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> with the default model instance. </p>
+
+</div>
+</div>
+<a id="af8bd33a2e8520eccde63ffbd423c056a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8bd33a2e8520eccde63ffbd423c056a">&#9670;&nbsp;</a></span>SetDefaultState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDefaultState </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Sets the default state for the deformable model. </p>
+<p>This should only be called by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> as a part of <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae73edc00d493b3f15ba7679cc14830a0" title="Sets state according to defaults set by the user for joints (e.g.">MultibodyPlant::SetDefaultState()</a>. </p>
 
 </div>
 </div>

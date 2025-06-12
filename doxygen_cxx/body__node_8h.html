@@ -207,10 +207,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ae46917541bd3efa5ef7452bdfe0b594a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="body__node_8h.html#ae46917541bd3efa5ef7452bdfe0b594a">DECLARE_MASS_MATRIX_OFF_DIAGONAL_BLOCK</a>(Rnv)</td></tr>
-<tr class="separator:ae46917541bd3efa5ef7452bdfe0b594a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37eafbb3e5714f8d157bb6282162e57c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="body__node_8h.html#a37eafbb3e5714f8d157bb6282162e57c">SPECIALIZE_MASS_MATRIX_DISPATCHER</a>(Rnv)</td></tr>
-<tr class="separator:a37eafbb3e5714f8d157bb6282162e57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255f27eb954cd0ecd359c76e58062e4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="body__node_8h.html#a255f27eb954cd0ecd359c76e58062e4a">DECLARE_MASS_MATRIX_OFF_DIAGONAL_BLOCK_VIA_WORLD</a>(Bnv)</td></tr>
+<tr class="separator:a255f27eb954cd0ecd359c76e58062e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480001cdc03902b69ba8a4a8bf7d9c08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="body__node_8h.html#a480001cdc03902b69ba8a4a8bf7d9c08">SPECIALIZE_MASS_MATRIX_VIA_WORLD_DISPATCHER</a>(Bnv)</td></tr>
+<tr class="separator:a480001cdc03902b69ba8a4a8bf7d9c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -218,41 +218,41 @@ Functions</h2></td></tr>
 <tr class="separator:a310fd202b6bfeeb75ca522117028211f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ae46917541bd3efa5ef7452bdfe0b594a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae46917541bd3efa5ef7452bdfe0b594a">&#9670;&nbsp;</a></span>DECLARE_MASS_MATRIX_OFF_DIAGONAL_BLOCK</h2>
+<a id="a255f27eb954cd0ecd359c76e58062e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255f27eb954cd0ecd359c76e58062e4a">&#9670;&nbsp;</a></span>DECLARE_MASS_MATRIX_OFF_DIAGONAL_BLOCK_VIA_WORLD</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DECLARE_MASS_MATRIX_OFF_DIAGONAL_BLOCK</td>
+          <td class="memname">#define DECLARE_MASS_MATRIX_OFF_DIAGONAL_BLOCK_VIA_WORLD</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">Rnv</td><td>)</td>
+          <td class="paramname">Bnv</td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> CalcMassMatrixOffDiagonalBlock##Rnv(                     \</div><div class="line">      <span class="keywordtype">int</span> R_start_in_v, <span class="keyword">const</span> std::vector&lt;<a class="code" href="class_vector6_3_01_t_01_4.html">Vector6&lt;T&gt;</a>&gt;&amp; H_PB_W_cache,    \</div><div class="line">      <span class="keyword">const</span> Eigen::Matrix&lt;T, 6, Rnv&gt;&amp; Fm_CBo_W, EigenPtr&lt;MatrixX&lt;T&gt;&gt; M) \</div><div class="line">      const = 0</div><div class="ttc" id="class_vector6_3_01_t_01_4_html"><div class="ttname"><a href="class_vector6_3_01_t_01_4.html">Vector6&lt; T &gt;</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> CalcMassMatrixOffDiagonalBlockViaWorld##Bnv(             \</div><div class="line">      <span class="keywordtype">int</span> B_start_in_v, <span class="keyword">const</span> std::vector&lt;<a class="code" href="class_vector6_3_01_t_01_4.html">Vector6&lt;T&gt;</a>&gt;&amp; H_PB_W_cache,    \</div><div class="line">      <span class="keyword">const</span> Eigen::Matrix&lt;T, 6, Bnv&gt;&amp; Fm_CBo_W, EigenPtr&lt;MatrixX&lt;T&gt;&gt; M) \</div><div class="line">      const = 0</div><div class="ttc" id="class_vector6_3_01_t_01_4_html"><div class="ttname"><a href="class_vector6_3_01_t_01_4.html">Vector6&lt; T &gt;</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a37eafbb3e5714f8d157bb6282162e57c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37eafbb3e5714f8d157bb6282162e57c">&#9670;&nbsp;</a></span>SPECIALIZE_MASS_MATRIX_DISPATCHER</h2>
+<a id="a480001cdc03902b69ba8a4a8bf7d9c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a480001cdc03902b69ba8a4a8bf7d9c08">&#9670;&nbsp;</a></span>SPECIALIZE_MASS_MATRIX_VIA_WORLD_DISPATCHER</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SPECIALIZE_MASS_MATRIX_DISPATCHER</td>
+          <td class="memname">#define SPECIALIZE_MASS_MATRIX_VIA_WORLD_DISPATCHER</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">Rnv</td><td>)</td>
+          <td class="paramname">Bnv</td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;                                                  \</div><div class="line">  class CalcMassMatrixOffDiagonalDispatcher&lt;T, Rnv&gt; {                    \</div><div class="line">   public:                                                               \</div><div class="line">    static <span class="keywordtype">void</span> Dispatch(<span class="keyword">const</span> BodyNode&lt;T&gt;&amp; body_node, <span class="keywordtype">int</span> R_start_in_v, \</div><div class="line">                         <span class="keyword">const</span> std::vector&lt;<a class="code" href="class_vector6_3_01_t_01_4.html">Vector6&lt;T&gt;</a>&gt;&amp; H_PB_W_cache,    \</div><div class="line">                         <span class="keyword">const</span> Eigen::Matrix&lt;T, 6, Rnv&gt;&amp; Fm_CBo_W,       \</div><div class="line">                         EigenPtr&lt;MatrixX&lt;T&gt;&gt; M) {                       \</div><div class="line">      body_node.CalcMassMatrixOffDiagonalBlock##Rnv(                     \</div><div class="line">          R_start_in_v, H_PB_W_cache, Fm_CBo_W, M);                      \</div><div class="line">    }                                                                    \</div><div class="line">  }</div><div class="ttc" id="class_vector6_3_01_t_01_4_html"><div class="ttname"><a href="class_vector6_3_01_t_01_4.html">Vector6&lt; T &gt;</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;                                                    \</div><div class="line">  class CalcMassMatrixOffDiagonalViaWorldDispatcher&lt;T, Bnv&gt; {              \</div><div class="line">   public:                                                                 \</div><div class="line">    static <span class="keywordtype">void</span> Dispatch(<span class="keyword">const</span> BodyNode&lt;T&gt;&amp; parent_node, <span class="keywordtype">int</span> B_start_in_v, \</div><div class="line">                         <span class="keyword">const</span> std::vector&lt;<a class="code" href="class_vector6_3_01_t_01_4.html">Vector6&lt;T&gt;</a>&gt;&amp; H_PB_W_cache,      \</div><div class="line">                         <span class="keyword">const</span> Eigen::Matrix&lt;T, 6, Bnv&gt;&amp; Fm_CPo_W,         \</div><div class="line">                         EigenPtr&lt;MatrixX&lt;T&gt;&gt; M) {                         \</div><div class="line">      parent_node.CalcMassMatrixOffDiagonalBlockViaWorld##Bnv(             \</div><div class="line">          B_start_in_v, H_PB_W_cache, Fm_CPo_W, M);                        \</div><div class="line">    }                                                                      \</div><div class="line">  }</div><div class="ttc" id="class_vector6_3_01_t_01_4_html"><div class="ttname"><a href="class_vector6_3_01_t_01_4.html">Vector6&lt; T &gt;</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -1,5 +1,8 @@
 var NAVTREEINDEX52 =
 {
+"diagram_8h.html":[4,0,0,12,3,12],
+"diagram_8h.html#aa5050c5d3ea4f3d4691875a0eae0a4c0":[4,0,0,12,3,12,2],
+"diagram__builder_8h.html":[4,0,0,12,3,13],
 "diagram__builder_8h.html#a7616c30571f8326b1286442e69e22409":[4,0,0,12,3,13,1],
 "diagram__context_8h.html":[4,0,0,12,3,14],
 "diagram__context_8h.html#a2835cb328be8cc3d781fecd5ec488553":[4,0,0,12,3,14,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX52 =
 "eigen__autodiff__types_8h.html#a5f4077c4918078fb55bfb6b73968cb0a":[4,0,0,1,29,0],
 "eigen__autodiff__types_8h.html#a790a072a62129732864a20e7a4743298":[4,0,0,1,29,1],
 "eigen__autodiff__types_8h.html#a7b13142534d668d5d490b829b917fa16":[4,0,0,1,29,2],
-"eigen__block__3x3__sparse__symmetric__matrix_8h.html":[4,0,0,8,1,10],
-"eigen__matrix__compare_8h.html":[4,0,0,1,4,1],
-"eigen__matrix__compare_8h.html#a487584d4d770172ae2f665bde7462de2":[4,0,0,1,4,1,0],
-"eigen__matrix__compare_8h.html#a487584d4d770172ae2f665bde7462de2a99c483e1d11b1a279a2a1a3960528487":[4,0,0,1,4,1,0,1]
+"eigen__block__3x3__sparse__symmetric__matrix_8h.html":[4,0,0,8,1,10]
 };

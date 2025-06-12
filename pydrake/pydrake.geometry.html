@@ -538,8 +538,13 @@ effect of an earlier statement. The full declaration is evaluated by
 CollisionFilterManager::Apply().</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.CollisionFilterDeclaration.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.CollisionFilterDeclaration" title="pydrake.geometry.CollisionFilterDeclaration"><span class="pre">pydrake.geometry.CollisionFilterDeclaration</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.CollisionFilterDeclaration.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.CollisionFilterDeclaration.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>__init__(self: pydrake.geometry.CollisionFilterDeclaration) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.geometry.CollisionFilterDeclaration, scope: pydrake.geometry.CollisionFilterScope) -&gt; None</p></li>
+</ol>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.CollisionFilterDeclaration.AllowBetween">
@@ -807,6 +812,46 @@ filter that has successfully been removed).</p>
 </dd>
 </dl>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.CollisionFilterScope">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">CollisionFilterScope</span></span><a class="headerlink" href="#pydrake.geometry.CollisionFilterScope" title="Permalink to this definition"></a></dt>
+<dd><p>Enum that defines the scope of the geometries that are affected by the
+collision filtering mechanism.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kAll : All geometries are considered when collision filters are applied.</p>
+<p>kOmitDeformable : Deformable geometries are omitted when applying collision filters.</p>
+</div></blockquote>
+<p>That means that all deformable geometries are not affected by the
+collision filter declaration even if they are included in the
+GeometrySet when the filter is declared.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.CollisionFilterScope.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.CollisionFilterScope" title="pydrake.geometry.CollisionFilterScope"><span class="pre">pydrake.geometry.CollisionFilterScope</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.CollisionFilterScope.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.geometry.CollisionFilterScope.kAll">
+<span class="sig-name descname"><span class="pre">kAll</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CollisionFilterScope.kAll:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.geometry.CollisionFilterScope.kAll" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pydrake.geometry.CollisionFilterScope.kOmitDeformable">
+<span class="sig-name descname"><span class="pre">kOmitDeformable</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CollisionFilterScope.kOmitDeformable:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.geometry.CollisionFilterScope.kOmitDeformable" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.CollisionFilterScope.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.geometry.CollisionFilterScope.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.CollisionFilterScope.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.geometry.CollisionFilterScope.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

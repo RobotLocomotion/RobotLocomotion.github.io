@@ -1030,7 +1030,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets <code>this</code> unit inertia from a generally non-unit inertia I corresponding to a body with a given <code>mass</code>. </p>
-<dl class="section note"><dt>Note</dt><dd>In Debug builds, this operation aborts if the provided <code>mass</code> is not strictly positive. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the provided <code>mass</code> is not strictly positive. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

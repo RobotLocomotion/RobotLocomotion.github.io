@@ -256,6 +256,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5b0d7d1511409b4fa0d30ea4fac490f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html#a5b0d7d1511409b4fa0d30ea4fac490f2">Enable</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a5b0d7d1511409b4fa0d30ea4fac490f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables this deformable body in the given context.  <a href="#a5b0d7d1511409b4fa0d30ea4fac490f2">More...</a><br /></td></tr>
 <tr class="separator:a5b0d7d1511409b4fa0d30ea4fac490f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7d803aec25983eb6bcbb2e3cebf2db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html#a3b7d803aec25983eb6bcbb2e3cebf2db">set_default_pose</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_WD)</td></tr>
+<tr class="memdesc:a3b7d803aec25983eb6bcbb2e3cebf2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default pose of the simulated geometry (in its reference configuration) in the world frame W.  <a href="#a3b7d803aec25983eb6bcbb2e3cebf2db">More...</a><br /></td></tr>
+<tr class="separator:a3b7d803aec25983eb6bcbb2e3cebf2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e8fcddd426846249b2d5e6630f8ff84"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html#a0e8fcddd426846249b2d5e6630f8ff84">get_default_pose</a> () const</td></tr>
+<tr class="memdesc:a0e8fcddd426846249b2d5e6630f8ff84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default pose of the simulated geometry (in its reference configuration) in the world frame W.  <a href="#a0e8fcddd426846249b2d5e6630f8ff84">More...</a><br /></td></tr>
+<tr class="separator:a0e8fcddd426846249b2d5e6630f8ff84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a7b5d5b574653c43828c231cd0f9e6a3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html#a7b5d5b574653c43828c231cd0f9e6a3d">DeformableBody</a> (const <a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html">DeformableBody</a> &amp;)=delete</td></tr>
 <tr class="separator:a7b5d5b574653c43828c231cd0f9e6a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -657,6 +663,26 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a0e8fcddd426846249b2d5e6630f8ff84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e8fcddd426846249b2d5e6630f8ff84">&#9670;&nbsp;</a></span>get_default_pose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; get_default_pose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the default pose of the simulated geometry (in its reference configuration) in the world frame W. </p>
+<p>This returns pose last set by <a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html#a3b7d803aec25983eb6bcbb2e3cebf2db" title="Sets the default pose of the simulated geometry (in its reference configuration) in the world frame W...">set_default_pose()</a>, or the pose of the geometry in the world frame W when the body is registered if <a class="el" href="classdrake_1_1multibody_1_1_deformable_body.html#a3b7d803aec25983eb6bcbb2e3cebf2db" title="Sets the default pose of the simulated geometry (in its reference configuration) in the world frame W...">set_default_pose()</a> has not been called. </p>
+
+</div>
+</div>
 <a id="a6bbe9d9b1b028c15fb1e177fcdda23ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6bbe9d9b1b028c15fb1e177fcdda23ac">&#9670;&nbsp;</a></span>GetPositions()</h2>
 
@@ -883,7 +909,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the reference positions of the vertices of the deformable body identified by the given <code>id</code>. </p>
-<p>The reference positions are represented as a VectorX with 3N values where N is the number of vertices. The x-, y-, and z-positions (measured and expressed in the world frame) of the j-th vertex are 3j, 3j + 1, and 3j + 2 in the VectorX. </p>
+<p>The reference positions are the positions of the vertices of the mesh geometry representing the body at registration time, measured and expressed in the world frame. The reference positions are represented as a VectorX with 3N values where N is the number of vertices. The x-, y-, and z-positions (measured and expressed in the world frame) of the j-th vertex are 3j, 3j + 1, and 3j + 2 in the VectorX. </p>
 
 </div>
 </div>
@@ -904,6 +930,32 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns scoped name of this body. </p>
 <p>Neither of the two pieces of the name will be empty (the scope name and the element name). </p>
+
+</div>
+</div>
+<a id="a3b7d803aec25983eb6bcbb2e3cebf2db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7d803aec25983eb6bcbb2e3cebf2db">&#9670;&nbsp;</a></span>set_default_pose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_default_pose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X_WD</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the default pose of the simulated geometry (in its reference configuration) in the world frame W. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">X_WD</td><td>The default pose of the simulated geometry in the world frame W. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

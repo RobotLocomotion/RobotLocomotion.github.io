@@ -1,5 +1,8 @@
 var NAVTREEINDEX64 =
 {
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[3,0,0,3,4,5,7],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#ae48fdaa0013a64a07e1caaf8a6b66ec7":[3,0,0,3,4,5,5],
+"structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#af2ec6e39cde2a2ebae13657d96462b72":[3,0,0,3,4,5,1],
 "structdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params_indices.html#afb6eb259e3f5d5095695d320b31e40d5":[3,0,0,3,4,5,3],
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html":[3,0,0,3,9,3],
 "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,9,3,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a79cdf6ba5fded027dba5f24168719ef1":[3,0,0,4,58,7],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a7fa789c84df3efe720c9070acd56c1ce":[3,0,0,4,58,5],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[3,0,0,4,58,2],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[3,0,0,4,58,8],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[3,0,0,4,58,0],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,4,58,1],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,4,58,3]
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[3,0,0,4,58,8]
 };

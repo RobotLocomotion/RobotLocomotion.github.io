@@ -1,5 +1,8 @@
 var NAVTREEINDEX70 =
 {
+"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a0d8bee303449569624e2adc151710b85":[4,0,0,8,10,45,3,3],
+"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a":[4,0,0,8,10,45,3,1],
+"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782":[4,0,0,8,10,45,3,0],
 "tamsi__solver_8h.html#a6f795d5f99c4812df226348de9286a4d":[4,0,0,8,10,45,4],
 "temp__directory_8h.html":[4,0,0,1,70],
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,70,0],

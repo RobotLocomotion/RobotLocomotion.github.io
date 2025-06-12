@@ -1,5 +1,8 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ace6f433c7211d34645537b436f8ce2ef":[3,0,0,14,41,9],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0":[3,0,0,14,41,4],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0a6d0e92592f596eacaa92b16042a2ecc3":[3,0,0,14,41,4,0],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0af24cd281f7d53dfed3304bc17ce590cd":[3,0,0,14,41,4,1],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0af322fe68b3aa4385e65e59b4225af10b":[3,0,0,14,41,4,2],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ada47cae16d222dda3fda918db0d4863d":[3,0,0,14,41,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1solvers_1_1_quadratic_cost.html#adef0fed0cb1426f67a076769f9867786":[1,1,0,40,5],
 "classdrake_1_1solvers_1_1_quadratic_cost.html#aed1b16458dc1fd342f9c87f6ef477258":[1,1,0,40,7],
 "classdrake_1_1solvers_1_1_quadratic_cost.html#af987f18f72fb2baf141b5e8ba2b1bfc1":[1,1,0,40,11],
-"classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html":[1,1,0,27],
-"classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#a16722a3fa6c094a05d2d1dd8ebcc7454":[1,1,0,27,5],
-"classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#a1a7729291c1ad05a62f9964c37cc6b5d":[1,1,0,27,2],
-"classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#a1e24a46159cb5db58529dc917d7e831a":[1,1,0,27,1]
+"classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html":[1,1,0,27]
 };
