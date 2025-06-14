@@ -1,5 +1,16 @@
 var NAVTREEINDEX61 =
 {
+"polyhedron__constraint_8h.html":[4,0,0,8,4,20],
+"polynomial_8h.html":[4,0,0,1,56],
+"polynomial_8h.html#a00cbebcd97766579bb36e35abcf44acf":[4,0,0,1,56,7],
+"polynomial_8h.html#a95cb9413bd3124511459d856f6eef5f3":[4,0,0,1,56,10],
+"polynomial_8h.html#ab0a2621977171e1d2d5b64c55141b9b2":[4,0,0,1,56,6],
+"polynomial_8h.html#ad2b506cc6aeddf8e5f52b327382d0b13":[4,0,0,1,56,9],
+"polynomial_8h.html#af3578a3c0daaaeea6e12f173c5419540":[4,0,0,1,56,8],
+"polynomial__basis_8h.html":[4,0,0,1,3,12],
+"polynomial__basis_8h.html#a83a29f70485ada14c4bba67192ac4efc":[4,0,0,1,3,12,0],
+"polynomial__basis__element_8h.html":[4,0,0,1,3,13],
+"polynomial__types__pybind_8h.html":[4,0,0,0,0,14],
 "populate__ball__plant_8h.html":[4,0,0,3,11,3,0],
 "populate__ball__plant_8h.html#a0edab67597b031dabfd19611d4f64b55":[4,0,0,3,11,3,0,0],
 "populate__cylinder__plant_8h.html":[4,0,0,3,11,1,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX61 =
 "rimless__wheel_8h.html":[4,0,0,3,15,0],
 "rimless__wheel__continuous__state_8h.html":[4,0,0,3,15,1],
 "rimless__wheel__geometry_8h.html":[4,0,0,3,15,2],
-"rimless__wheel__params_8h.html":[4,0,0,3,15,3],
-"robertson__system_8h.html":[4,0,0,12,0,0,13],
-"robot__clearance_8h.html":[4,0,0,10,16],
-"robot__collision__type_8h.html":[4,0,0,10,17],
-"robot__collision__type_8h.html#ad0291e1222f1f88c5e1b5f4bac4abd10":[4,0,0,10,17,2],
-"robot__collision__type_8h.html#ad65f73fdac346846cbc24ebae63c60be":[4,0,0,10,17,1],
-"robot__collision__type_8h.html#ga6e884b3a7afc04b1a0c132ce264c14b7":[4,0,0,10,17,0],
-"robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7abff922fe7fd244bc34f5c20c2a55496f":[4,0,0,10,17,0,3],
-"robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7acc814d0e7a27814a2db5ff00d3d84a2e":[4,0,0,10,17,0,2],
-"robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7ad435a021513720293cbdafd945533b2f":[4,0,0,10,17,0,1],
-"robot__collision__type_8h.html#gga6e884b3a7afc04b1a0c132ce264c14b7ae9e690a25422e7ed157a6f924b06c20c":[4,0,0,10,17,0,0],
-"robot__diagram_8h.html":[4,0,0,10,18]
+"rimless__wheel__params_8h.html":[4,0,0,3,15,3]
 };

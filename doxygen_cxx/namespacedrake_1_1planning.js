@@ -12,6 +12,7 @@ var namespacedrake_1_1planning =
     [ "DofMask", "classdrake_1_1planning_1_1_dof_mask.html", "classdrake_1_1planning_1_1_dof_mask" ],
     [ "EdgeMeasure", "classdrake_1_1planning_1_1_edge_measure.html", "classdrake_1_1planning_1_1_edge_measure" ],
     [ "IrisFromCliqueCoverOptions", "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html", "structdrake_1_1planning_1_1_iris_from_clique_cover_options" ],
+    [ "IrisNp2Options", "classdrake_1_1planning_1_1_iris_np2_options.html", "classdrake_1_1planning_1_1_iris_np2_options" ],
     [ "IrisParameterizationFunction", "classdrake_1_1planning_1_1_iris_parameterization_function.html", "classdrake_1_1planning_1_1_iris_parameterization_function" ],
     [ "IrisZoOptions", "classdrake_1_1planning_1_1_iris_zo_options.html", "classdrake_1_1planning_1_1_iris_zo_options" ],
     [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html", "classdrake_1_1planning_1_1_joint_limits" ],

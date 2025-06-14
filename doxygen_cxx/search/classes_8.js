@@ -58,6 +58,7 @@ var searchData=
   ['ipoptsolver',['IpoptSolver',['../classdrake_1_1solvers_1_1_ipopt_solver.html',1,'drake::solvers']]],
   ['ipoptsolverdetails',['IpoptSolverDetails',['../structdrake_1_1solvers_1_1_ipopt_solver_details.html',1,'drake::solvers']]],
   ['irisfromcliquecoveroptions',['IrisFromCliqueCoverOptions',['../structdrake_1_1planning_1_1_iris_from_clique_cover_options.html',1,'drake::planning']]],
+  ['irisnp2options',['IrisNp2Options',['../classdrake_1_1planning_1_1_iris_np2_options.html',1,'drake::planning']]],
   ['irisoptions',['IrisOptions',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html',1,'drake::geometry::optimization']]],
   ['irisparameterizationfunction',['IrisParameterizationFunction',['../classdrake_1_1planning_1_1_iris_parameterization_function.html',1,'drake::planning']]],
   ['iriszooptions',['IrisZoOptions',['../classdrake_1_1planning_1_1_iris_zo_options.html',1,'drake::planning']]],
