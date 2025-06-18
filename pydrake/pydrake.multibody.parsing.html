@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.multibody.parsing &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=6b576c25" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7f41d439"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -60,7 +63,11 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pydrake
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pydrake
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -126,9 +133,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
-      <li>pydrake.multibody.parsing</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pydrake.multibody.html">pydrake.multibody</a></li>
+      <li class="breadcrumb-item active">pydrake.multibody.parsing</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -138,21 +145,21 @@
            <div itemprop="articleBody">
              
   <section id="module-pydrake.multibody.parsing">
-<span id="pydrake-multibody-parsing"></span><h1>pydrake.multibody.parsing<a class="headerlink" href="#module-pydrake.multibody.parsing" title="Permalink to this headline"></a></h1>
+<span id="pydrake-multibody-parsing"></span><h1>pydrake.multibody.parsing<a class="headerlink" href="#module-pydrake.multibody.parsing" title="Link to this heading"></a></h1>
 <p>SDF and URDF parsing for MultibodyPlant and SceneGraph.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddCollisionFilterGroup">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">AddCollisionFilterGroup</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddCollisionFilterGroup</span></span></dt>
 <dd><p>Directive to add a collision filter group. This directive is analogous
 to tag_drake_collision_filter_group in XML model formats.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddCollisionFilterGroup.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.AddCollisionFilterGroup" title="pydrake.multibody.parsing.AddCollisionFilterGroup"><span class="pre">pydrake.multibody.parsing.AddCollisionFilterGroup</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddCollisionFilterGroup.__init__(self:</span> <span class="pre">pydrake.multibody.parsing.AddCollisionFilterGroup,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddCollisionFilterGroup.ignored_collision_filter_groups">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ignored_collision_filter_groups</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.ignored_collision_filter_groups" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddCollisionFilterGroup.ignored_collision_filter_groups</span></span></dt>
 <dd><p>Names of groups against which to ignore collisions. If another group
 is named, collisions between this group and that group will be
 ignored. If this group is named, collisions within this group will be
@@ -163,32 +170,32 @@ tag_drake_ignored_collision_filter_group in XML model formats.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddCollisionFilterGroup.member_groups">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">member_groups</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.member_groups" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddCollisionFilterGroup.member_groups</span></span></dt>
 <dd><p>Names of groups to add en masse as members of the group. May be scoped
 and refer to bodies of already added models. This data is analogous to
 a sequence of tag_drake_member_group in XML model formats.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddCollisionFilterGroup.members">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">members</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.members" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddCollisionFilterGroup.members</span></span></dt>
 <dd><p>Names of members of the group. May be scoped and refer to bodies of
 already added models. This data is analogous to a sequence of
 tag_drake_member in XML model formats.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddCollisionFilterGroup.model_namespace">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model_namespace</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.model_namespace" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddCollisionFilterGroup.model_namespace</span></span></dt>
 <dd><p>Optional model namespace. Allows <code class="docutils literal notranslate"><span class="pre">name</span></code> to be reused between models
 and lets you use the scoped name in
 <code class="docutils literal notranslate"><span class="pre">ignored_collision_filter_groups</span></code>.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddCollisionFilterGroup.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddCollisionFilterGroup.name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddCollisionFilterGroup.name</span></span></dt>
 <dd><p>Name of group to be added. This is an unscoped name, and must be
 unique either globally or within its specified model namespace.</p>
 </dd></dl>
@@ -196,24 +203,24 @@ unique either globally or within its specified model namespace.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddDirectives">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">AddDirectives</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddDirectives" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddDirectives</span></span></dt>
 <dd><p>Directive to incorporate another model directives file, optionally
 with its elements prefixed with a namespace.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddDirectives.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.AddDirectives" title="pydrake.multibody.parsing.AddDirectives"><span class="pre">pydrake.multibody.parsing.AddDirectives</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddDirectives.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddDirectives.__init__(self:</span> <span class="pre">pydrake.multibody.parsing.AddDirectives,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddDirectives.file">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">file</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddDirectives.file" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddDirectives.file</span></span></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">package://</span></code> URI of the file to add.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddDirectives.model_namespace">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model_namespace</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddDirectives.model_namespace" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddDirectives.model_namespace</span></span></dt>
 <dd><p>Namespaces base model instance for processing directive files. Affects
 scoping (i.e. the following members): - AddModel::name -
 AddModelInstance::name - AddFrame::name - AddWeld::parent -
@@ -227,25 +234,25 @@ references and namespacing.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddFrame">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">AddFrame</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddFrame" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddFrame</span></span></dt>
 <dd><p>Directive to add a Frame to the scene. The added frame must have a
 name and a transform with a base frame and offset.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddFrame.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.AddFrame" title="pydrake.multibody.parsing.AddFrame"><span class="pre">pydrake.multibody.parsing.AddFrame</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddFrame.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddFrame.__init__(self:</span> <span class="pre">pydrake.multibody.parsing.AddFrame,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddFrame.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddFrame.name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddFrame.name</span></span></dt>
 <dd><p>Name of frame to be added. If scope is specified, will override model
 instance; otherwise, will use <a href="#id1"><span class="problematic" id="id2">`</span></a>X_PF.base_frame`s instance.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddFrame.X_PF">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">X_PF</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddFrame.X_PF" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddFrame.X_PF</span></span></dt>
 <dd><p>Pose of frame to be added, <code class="docutils literal notranslate"><span class="pre">F</span></code>, w.r.t. parent frame <code class="docutils literal notranslate"><span class="pre">P</span></code> (as
 defined by <code class="docutils literal notranslate"><span class="pre">X_PF.base_frame</span></code>).</p>
 </dd></dl>
@@ -253,18 +260,18 @@ defined by <code class="docutils literal notranslate"><span class="pre">X_PF.bas
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">AddModel</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddModel" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddModel</span></span></dt>
 <dd><p>Directive to add a model from a URDF or SDFormat file to a scene,
 using a given name for the added instance.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddModel.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.AddModel" title="pydrake.multibody.parsing.AddModel"><span class="pre">pydrake.multibody.parsing.AddModel</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddModel.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddModel.__init__(self:</span> <span class="pre">pydrake.multibody.parsing.AddModel,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddModel.default_free_body_pose">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_free_body_pose</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddModel.default_free_body_pose" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddModel.default_free_body_pose</span></span></dt>
 <dd><p>Map of body_name or frame_name =&gt; default free body pose. The name
 must be a name within the scope of the model added by this directive.
 The name must not be scoped (i.e., no “foo::link”, just “link”). If
@@ -310,8 +317,8 @@ bodies implied by the named frames.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddModel.default_joint_positions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_joint_positions</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddModel.default_joint_positions" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddModel.default_joint_positions</span></span></dt>
 <dd><p>Map of joint_name =&gt; default position vector. Each joint name must be
 a name within the scope of the model added by this directive. The name
 must not contains <em>this</em> model’s scoped name (nor that of any
@@ -319,61 +326,61 @@ previously added model).</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddModel.file">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">file</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddModel.file" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddModel.file</span></span></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">package://</span></code> URI of the file to add.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddModel.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddModel.name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddModel.name</span></span></dt>
 <dd><p>The model instance name.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddModelInstance">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">AddModelInstance</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddModelInstance" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddModelInstance</span></span></dt>
 <dd><p>Directive to add an empty, named model instance to a scene.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddModelInstance.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.AddModelInstance" title="pydrake.multibody.parsing.AddModelInstance"><span class="pre">pydrake.multibody.parsing.AddModelInstance</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddModelInstance.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddModelInstance.__init__(self:</span> <span class="pre">pydrake.multibody.parsing.AddModelInstance,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddModelInstance.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddModelInstance.name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddModelInstance.name</span></span></dt>
 <dd><p>The model instance name.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddWeld">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">AddWeld</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddWeld" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddWeld</span></span></dt>
 <dd><p>Directive to add a weld between two named frames, a parent and a
 child.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddWeld.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.AddWeld" title="pydrake.multibody.parsing.AddWeld"><span class="pre">pydrake.multibody.parsing.AddWeld</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddWeld.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddWeld.__init__(self:</span> <span class="pre">pydrake.multibody.parsing.AddWeld,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddWeld.child">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">child</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddWeld.child" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddWeld.child</span></span></dt>
 <dd><p>Child frame. Can (and should) specify scope.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddWeld.parent">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddWeld.parent" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddWeld.parent</span></span></dt>
 <dd><p>Parent frame. Can specify scope.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.AddWeld.X_PC">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">X_PC</span></span><a class="headerlink" href="#pydrake.multibody.parsing.AddWeld.X_PC" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddWeld.X_PC</span></span></dt>
 <dd><p>Relative transform between the parent frame P and the child frame C.
 If unspecified, the Identity transform will be used.</p>
 </dd></dl>
@@ -381,8 +388,8 @@ If unspecified, the Identity transform will be used.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">CollisionFilterGroups</span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">CollisionFilterGroups</span></span></dt>
 <dd><p>This is storage for parsed collision filter groups and group pairs.
 This data may be useful to users needing to compose further collision
 filters in code, without having to restate the data already captured
@@ -395,13 +402,13 @@ expected workflow, the parser will add groups and exclusion pairs
 found during parsing. The only condition checked here is that a group
 with a given name is only added once.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">CollisionFilterGroups.__init__(self:</span> <span class="pre">pydrake.multibody.parsing.CollisionFilterGroups)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.AddExclusionPair">
-<span class="sig-name descname"><span class="pre">AddExclusionPair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.AddExclusionPair" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">CollisionFilterGroups.AddExclusionPair(self:</span> <span class="pre">pydrake.multibody.parsing.CollisionFilterGroups,</span> <span class="pre">pair:</span> <span class="pre">Tuple[str])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Adds an exclusion pair between two collision filter groups.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">pair</span></code>:</dt><dd><p>a pair of fully-qualified scoped names of groups.</p>
@@ -416,8 +423,8 @@ Adding an already defined pair does nothing.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.AddGroup">
-<span class="sig-name descname"><span class="pre">AddGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">members</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.AddGroup" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">CollisionFilterGroups.AddGroup(self:</span> <span class="pre">pydrake.multibody.parsing.CollisionFilterGroups,</span> <span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">members:</span> <span class="pre">set[str])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Adds a new collision filter group.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt><dd><p>the fully-qualified scoped name of the group being defined.</p>
@@ -430,30 +437,30 @@ Adding an already defined pair does nothing.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.empty">
-<span class="sig-name descname"><span class="pre">empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.empty" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">CollisionFilterGroups.empty(self:</span> <span class="pre">pydrake.multibody.parsing.CollisionFilterGroups)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true iff both groups() and exclusion_pairs() are empty.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.exclusion_pairs">
-<span class="sig-name descname"><span class="pre">exclusion_pairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.exclusion_pairs" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">CollisionFilterGroups.exclusion_pairs(self:</span> <span class="pre">pydrake.multibody.parsing.CollisionFilterGroups)</span> <span class="pre">-&gt;</span> <span class="pre">set[Tuple[str]]</span></span></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the pairs stored by prior calls to AddExclusionPair().</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.CollisionFilterGroups.groups">
-<span class="sig-name descname"><span class="pre">groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.CollisionFilterGroups.groups" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">CollisionFilterGroups.groups(self:</span> <span class="pre">pydrake.multibody.parsing.CollisionFilterGroups)</span> <span class="pre">-&gt;</span> <span class="pre">dict[str,</span> <span class="pre">set[str]]</span></span></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the groups stored by prior calls to AddGroup().</p>
 </dd>
 </dl>
@@ -462,8 +469,8 @@ Adding an already defined pair does nothing.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.FlattenModelDirectives">
-<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">FlattenModelDirectives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directives</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirectives" title="pydrake.multibody.parsing.ModelDirectives"><span class="pre">pydrake.multibody.parsing.ModelDirectives</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirectives" title="pydrake.multibody.parsing.ModelDirectives"><span class="pre">pydrake.multibody.parsing.ModelDirectives</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.FlattenModelDirectives" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FlattenModelDirectives(directives:</span> <span class="pre">pydrake.multibody.parsing.ModelDirectives,</span> <span class="pre">package_map:</span> <span class="pre">pydrake.multibody.parsing.PackageMap)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.parsing.ModelDirectives</span></span></dt>
 <dd><p>Flatten model directives into a single object.</p>
 <p>This function removes all AddDirectives directives from the given
 <code class="docutils literal notranslate"><span class="pre">directives</span></code>, locating the file via the given <code class="docutils literal notranslate"><span class="pre">package_map</span></code>,
@@ -478,8 +485,8 @@ debugging.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.GetScopedFrameByName">
-<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">GetScopedFrameByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.GetScopedFrameByName" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GetScopedFrameByName(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>GetScopedFrameByName(plant: drake::multibody::MultibodyPlant&lt;double&gt;, full_name: str) -&gt; pydrake.multibody.tree.Frame</p></li>
@@ -499,8 +506,8 @@ is not found.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.GetScopedFrameByNameMaybe">
-<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">GetScopedFrameByNameMaybe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.GetScopedFrameByNameMaybe" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GetScopedFrameByNameMaybe(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>GetScopedFrameByNameMaybe(plant: drake::multibody::MultibodyPlant&lt;double&gt;, full_name: str) -&gt; pydrake.multibody.tree.Frame</p></li>
@@ -523,18 +530,18 @@ error cases of <code class="docutils literal notranslate"><span class="pre">Mult
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.LoadModelDirectives">
-<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">LoadModelDirectives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirectives" title="pydrake.multibody.parsing.ModelDirectives"><span class="pre">pydrake.multibody.parsing.ModelDirectives</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.LoadModelDirectives" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">LoadModelDirectives(filename:</span> <span class="pre">os.PathLike)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.parsing.ModelDirectives</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.LoadModelDirectivesFromString">
-<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">LoadModelDirectivesFromString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_directives</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirectives" title="pydrake.multibody.parsing.ModelDirectives"><span class="pre">pydrake.multibody.parsing.ModelDirectives</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.LoadModelDirectivesFromString" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">LoadModelDirectivesFromString(model_directives:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.parsing.ModelDirectives</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirective">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">ModelDirective</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelDirective</span></span></dt>
 <dd><p>Union structure for model directives.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -543,120 +550,120 @@ around, and thus we used a parent field, rather than a YAML tag,
 to designate the intended type for the directive.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirective.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirective" title="pydrake.multibody.parsing.ModelDirective"><span class="pre">pydrake.multibody.parsing.ModelDirective</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelDirective.__init__(self:</span> <span class="pre">pydrake.multibody.parsing.ModelDirective,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirective.add_collision_filter_group">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_collision_filter_group</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_collision_filter_group" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelDirective.add_collision_filter_group</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirective.add_directives">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_directives</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_directives" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelDirective.add_directives</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirective.add_frame">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_frame</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_frame" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelDirective.add_frame</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirective.add_model">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_model</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_model" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelDirective.add_model</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirective.add_model_instance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_model_instance</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_model_instance" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelDirective.add_model_instance</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirective.add_weld">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_weld</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirective.add_weld" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelDirective.add_weld</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirectives">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">ModelDirectives</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirectives" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelDirectives</span></span></dt>
 <dd><p>Top-level structure for a model directives yaml file schema.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirectives.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.ModelDirectives" title="pydrake.multibody.parsing.ModelDirectives"><span class="pre">pydrake.multibody.parsing.ModelDirectives</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirectives.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelDirectives.__init__(self:</span> <span class="pre">pydrake.multibody.parsing.ModelDirectives,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelDirectives.directives">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">directives</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelDirectives.directives" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelDirectives.directives</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelInstanceInfo">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">ModelInstanceInfo</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelInstanceInfo" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelInstanceInfo</span></span></dt>
 <dd><p>Convenience structure to hold all of the information to add a model
 instance from a file.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelInstanceInfo.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.ModelInstanceInfo.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelInstanceInfo.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelInstanceInfo.child_frame_name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">child_frame_name</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelInstanceInfo.child_frame_name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelInstanceInfo.child_frame_name</span></span></dt>
 <dd><p>This is the unscoped frame name belonging to <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelInstanceInfo.model_instance">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model_instance</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelInstanceInfo.model_instance" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelInstanceInfo.model_instance</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelInstanceInfo.model_name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model_name</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelInstanceInfo.model_name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelInstanceInfo.model_name</span></span></dt>
 <dd><p>Model name (possibly scoped).</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelInstanceInfo.model_path">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model_path</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelInstanceInfo.model_path" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelInstanceInfo.model_path</span></span></dt>
 <dd><p>File path.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelInstanceInfo.parent_frame_name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent_frame_name</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelInstanceInfo.parent_frame_name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelInstanceInfo.parent_frame_name</span></span></dt>
 <dd><p>This is the <em>unscoped</em> parent frame, assumed to be unique.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>WARNING</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ModelInstanceInfo.X_PC">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">X_PC</span></span><a class="headerlink" href="#pydrake.multibody.parsing.ModelInstanceInfo.X_PC" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelInstanceInfo.X_PC</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">PackageMap</span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap</span></span></dt>
 <dd><p>Maps ROS package names to their full path on the local file system. It
 is used by the SDF and URDF parsers when parsing files that reference
 ROS packages for resources like mesh files. This class can also
 download remote packages from the internet on an as-needed basis via
 AddRemote().</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.multibody.parsing.PackageMap) -&gt; None</p></li>
@@ -671,16 +678,16 @@ empty map.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.Add">
-<span class="sig-name descname"><span class="pre">Add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.Add" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.Add(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap,</span> <span class="pre">package_name:</span> <span class="pre">str,</span> <span class="pre">package_path:</span> <span class="pre">os.PathLike)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Adds package <code class="docutils literal notranslate"><span class="pre">package_name</span></code> and its path, <code class="docutils literal notranslate"><span class="pre">package_path</span></code>. Throws
 if <code class="docutils literal notranslate"><span class="pre">package_name</span></code> is already present in this PackageMap with a
 different path, or if <code class="docutils literal notranslate"><span class="pre">package_path</span></code> does not exist.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.AddMap">
-<span class="sig-name descname"><span class="pre">AddMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.AddMap" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.AddMap(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap,</span> <span class="pre">other_map:</span> <span class="pre">pydrake.multibody.parsing.PackageMap)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Adds all packages from <code class="docutils literal notranslate"><span class="pre">other_map</span></code> into <code class="docutils literal notranslate"><span class="pre">this</span></code>. Throws if
 <code class="docutils literal notranslate"><span class="pre">other</span></code> contains a package with the same <code class="docutils literal notranslate"><span class="pre">package_name</span></code> as one
 already in this map but with incompatible details (e.g., a different
@@ -688,34 +695,34 @@ local path).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.AddPackageXml">
-<span class="sig-name descname"><span class="pre">AddPackageXml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.AddPackageXml" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.AddPackageXml(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap,</span> <span class="pre">filename:</span> <span class="pre">os.PathLike)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Adds an entry into this PackageMap for the given <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>
 filename. Throws if <code class="docutils literal notranslate"><span class="pre">filename</span></code> does not exist or its embedded name
 already exists in this map.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.AddRemote">
-<span class="sig-name descname"><span class="pre">AddRemote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap.RemoteParams" title="pydrake.multibody.parsing.PackageMap.RemoteParams"><span class="pre">pydrake.multibody.parsing.PackageMap.RemoteParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.AddRemote" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.AddRemote(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap,</span> <span class="pre">package_name:</span> <span class="pre">str,</span> <span class="pre">params:</span> <span class="pre">pydrake.multibody.parsing.PackageMap.RemoteParams)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.Contains">
-<span class="sig-name descname"><span class="pre">Contains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.Contains" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.Contains(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap,</span> <span class="pre">package_name:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
 <dd><p>Returns true if and only if this PackageMap contains <code class="docutils literal notranslate"><span class="pre">package_name</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.GetPackageNames">
-<span class="sig-name descname"><span class="pre">GetPackageNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.GetPackageNames" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.GetPackageNames(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap)</span> <span class="pre">-&gt;</span> <span class="pre">list[str]</span></span></dt>
 <dd><p>Returns the package names in this PackageMap. The order of package
 names returned is unspecified.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.GetPath">
-<span class="sig-name descname"><span class="pre">GetPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.GetPath" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.GetPath(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap,</span> <span class="pre">package_name:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">str</span></span></dt>
 <dd><p>Obtains the path associated with package <code class="docutils literal notranslate"><span class="pre">package_name</span></code>. Aborts if
 no package named <code class="docutils literal notranslate"><span class="pre">package_name</span></code> exists in this PackageMap.</p>
 <dl class="simple">
@@ -730,14 +737,14 @@ nullopt.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.MakeEmpty">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MakeEmpty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.MakeEmpty" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.MakeEmpty()</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.parsing.PackageMap</span></span></dt>
 <dd><p>A factory method that initializes an empty map.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.PopulateFromEnvironment">
-<span class="sig-name descname"><span class="pre">PopulateFromEnvironment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment_variable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.PopulateFromEnvironment" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.PopulateFromEnvironment(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap,</span> <span class="pre">environment_variable:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Obtains one or more paths from environment variable
 <code class="docutils literal notranslate"><span class="pre">environment_variable</span></code>. Crawls downward through the directory
 tree(s) starting from the path(s) searching for <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> files.
@@ -759,8 +766,8 @@ when that is attempted. Instead, use PopulateFromRosPackagePath().</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.PopulateFromFolder">
-<span class="sig-name descname"><span class="pre">PopulateFromFolder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.PopulateFromFolder" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.PopulateFromFolder(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap,</span> <span class="pre">path:</span> <span class="pre">os.PathLike)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Crawls down the directory tree starting at <code class="docutils literal notranslate"><span class="pre">path</span></code> searching for
 directories containing the file <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>. For each of these
 directories, this method adds a new entry into this PackageMap where
@@ -772,8 +779,8 @@ unreadable, a warning is logged.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.PopulateFromRosPackagePath">
-<span class="sig-name descname"><span class="pre">PopulateFromRosPackagePath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.PopulateFromRosPackagePath" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.PopulateFromRosPackagePath(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Obtains one or more paths from the ROS_PACKAGE_PATH environment
 variable. Semantics are similar to PopulateFromEnvironment(), except
 that ROS-style crawl termination semantics are enabled, which means
@@ -783,17 +790,17 @@ files: - AMENT_IGNORE - CATKIN_IGNORE - COLCON_IGNORE</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.RemoteParams">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RemoteParams</span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.RemoteParams" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.RemoteParams</span></span></dt>
 <dd><p>Parameters used for AddRemote().</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.RemoteParams.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap.RemoteParams" title="pydrake.multibody.parsing.PackageMap.RemoteParams"><span class="pre">pydrake.multibody.parsing.PackageMap.RemoteParams</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.RemoteParams.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.RemoteParams.__init__(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap.RemoteParams,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.RemoteParams.archive_type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">archive_type</span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.RemoteParams.archive_type" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.RemoteParams.archive_type</span></span></dt>
 <dd><p>(Optional) The archive type of the downloaded file. Valid options are
 “zip”, “tar”, “gztar”, “bztar”, or “xztar”. By default, the archive
 type is determined from the file extension of the URL; in case the URL
@@ -801,15 +808,15 @@ has no filename extension, you should explicitly specify one here.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.RemoteParams.sha256">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sha256</span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.RemoteParams.sha256" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.RemoteParams.sha256</span></span></dt>
 <dd><p>The cryptographic checksum of the file to be downloaded, as a
 64-character hexadecimal string.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.RemoteParams.strip_prefix">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">strip_prefix</span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.RemoteParams.strip_prefix" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.RemoteParams.strip_prefix</span></span></dt>
 <dd><p>(Optional) A directory prefix to remove from the extracted files. In
 many cases, an archive will prefix all filenames with something like
 “package-v1.2.3/” so that it extracts into a convenient directory.
@@ -820,14 +827,14 @@ of this directory they will be silently discarded.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.RemoteParams.ToJson">
-<span class="sig-name descname"><span class="pre">ToJson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap.RemoteParams" title="pydrake.multibody.parsing.PackageMap.RemoteParams"><span class="pre">pydrake.multibody.parsing.PackageMap.RemoteParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.RemoteParams.ToJson" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.RemoteParams.ToJson(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap.RemoteParams)</span> <span class="pre">-&gt;</span> <span class="pre">str</span></span></dt>
 <dd><p>Returns the JSON serialization of these params.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.RemoteParams.urls">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">urls</span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.RemoteParams.urls" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.RemoteParams.urls</span></span></dt>
 <dd><p>The list of remote URLs for this resource. The urls are used in the
 other they appear here, so preferred mirror(s) should come first.
 Valid methods are “<a class="reference external" href="http://">http://</a>” or “<a class="reference external" href="https://">https://</a>” or “<a class="reference external" href="file://">file://</a>”.</p>
@@ -836,35 +843,35 @@ Valid methods are “<a class="reference external" href="http://">http://</a>”
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.Remove">
-<span class="sig-name descname"><span class="pre">Remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.Remove" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.Remove(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap,</span> <span class="pre">package_name:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Removes package <code class="docutils literal notranslate"><span class="pre">package_name</span></code> and its previously added path. Throws
 if <code class="docutils literal notranslate"><span class="pre">package_name</span></code> is not present in this PackageMap.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.ResolveUrl">
-<span class="sig-name descname"><span class="pre">ResolveUrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.ResolveUrl" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.ResolveUrl(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap,</span> <span class="pre">url:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">str</span></span></dt>
 <dd><p>Returns a resolved path for <code class="docutils literal notranslate"><span class="pre">url</span></code>. URL schemes are either
 <code class="docutils literal notranslate"><span class="pre">file://</span></code> for local files or <code class="docutils literal notranslate"><span class="pre">package://</span></code> (or <code class="docutils literal notranslate"><span class="pre">model://</span></code>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if the url cannot be resolved.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.PackageMap.size">
-<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.size" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PackageMap.size(self:</span> <span class="pre">pydrake.multibody.parsing.PackageMap)</span> <span class="pre">-&gt;</span> <span class="pre">int</span></span></dt>
 <dd><p>Returns the number of entries in this PackageMap.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">Parser</span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser</span></span></dt>
 <dd><p>Parses model description input into a MultibodyPlant and (optionally)
 a SceneGraph. A variety of input formats are supported, and are
 recognized by filename suffixes:</p>
@@ -930,8 +937,8 @@ plant, Parser offers a few different strategies.</p>
 <p>Parser has constructors that take a model name prefix, which gets
 applied to all models loaded with that Parser instance. The resulting
 workflow makes multiple parsers to build models for a single plant:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Parser</span><span class="w"> </span><span class="nf">left_parser</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;left&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w"> </span><span class="n">Parser</span><span class="w"> </span><span class="nf">right_parser</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="p">);</span><span class="w"></span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Parser</span><span class="w"> </span><span class="n">left_parser</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;left&quot;</span><span class="p">);</span>
+<span class="w"> </span><span class="n">Parser</span><span class="w"> </span><span class="n">right_parser</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;right&quot;</span><span class="p">);</span>
 <span class="w"> </span><span class="n">left_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">arm_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;left::arm&quot;</span>
 <span class="w"> </span><span class="n">right_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">arm_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;right::arm&quot;</span>
 <span class="w"> </span><span class="n">left_parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">gripper_model</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;left::gripper&quot;</span>
@@ -941,8 +948,8 @@ workflow makes multiple parsers to build models for a single plant:</p>
 </details><p>For situations where it is convenient to load a model many times,
 Parser offers optional auto-renaming. When auto-renaming is enabled,
 name collisions will be resolved by adding a subscript to the name.</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Parser</span><span class="w"> </span><span class="nf">parser</span><span class="p">(</span><span class="n">plant</span><span class="p">);</span><span class="w"></span>
-<span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">SetAutoRenaming</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Parser</span><span class="w"> </span><span class="nf">parser</span><span class="p">(</span><span class="n">plant</span><span class="p">);</span>
+<span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">SetAutoRenaming</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
 <span class="w"> </span><span class="c1">// Subscripts are compact, and start at 1.</span>
 <span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">rock</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;rock&quot;</span>
 <span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">AddModels</span><span class="p">(</span><span class="n">rock</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;rock_1&quot;</span>
@@ -964,8 +971,8 @@ registration into the given plant. We describe this option only for
 completeness; we strongly discourage anyone from taking advantage of
 this feature.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.multibody.parsing.Parser, plant: drake::multibody::MultibodyPlant&lt;double&gt;, scene_graph: pydrake.geometry.SceneGraph = None, model_name_prefix: str = ‘’) -&gt; None</p></li>
@@ -1028,8 +1035,8 @@ scene_graph ∈ builder.GetSystems().</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.AddModels">
-<span class="sig-name descname"><span class="pre">AddModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModels" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.AddModels(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>AddModels(self: pydrake.multibody.parsing.Parser, file_name: os.PathLike) -&gt; list[pydrake.multibody.tree.ModelInstanceIndex]</p></li>
@@ -1042,12 +1049,12 @@ from the extension.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The set of model instance indices for the newly added models,
 including nested models.</p>
 </dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError in case of errors.</strong> – </p>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError in case</strong><strong> of </strong><strong>errors.</strong> – </p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -1063,12 +1070,12 @@ extension.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The set of model instance indices for the newly added models,
 including nested models.</p>
 </dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError in case of errors.</strong> – </p>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError in case</strong><strong> of </strong><strong>errors.</strong> – </p>
 </dd>
 </dl>
 <ol class="arabic simple" start="3">
@@ -1085,19 +1092,19 @@ above, <em>without</em> the leading dot (.).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The set of model instance indices for the newly added models,
 including nested models.</p>
 </dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError in case of errors.</strong> – </p>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError in case</strong><strong> of </strong><strong>errors.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.AddModelsFromString">
-<span class="sig-name descname"><span class="pre">AddModelsFromString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_contents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelsFromString" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.AddModelsFromString(self:</span> <span class="pre">pydrake.multibody.parsing.Parser,</span> <span class="pre">file_contents:</span> <span class="pre">str,</span> <span class="pre">file_type:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">list[pydrake.multibody.tree.ModelInstanceIndex]</span></span></dt>
 <dd><p>Provides same functionality as AddModels, but instead parses the model
 description text data via <code class="docutils literal notranslate"><span class="pre">file_contents</span></code> with format dictated by
 <code class="docutils literal notranslate"><span class="pre">file_type</span></code>.</p>
@@ -1109,19 +1116,19 @@ above, <em>without</em> the leading dot (.).</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The set of model instance indices for the newly added models,
 including nested models.</p>
 </dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError in case of errors.</strong> – </p>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError in case</strong><strong> of </strong><strong>errors.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.AddModelsFromUrl">
-<span class="sig-name descname"><span class="pre">AddModelsFromUrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.AddModelsFromUrl" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.AddModelsFromUrl(self:</span> <span class="pre">pydrake.multibody.parsing.Parser,</span> <span class="pre">url:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">list[pydrake.multibody.tree.ModelInstanceIndex]</span></span></dt>
 <dd><p>Parses the input file named in <code class="docutils literal notranslate"><span class="pre">url</span></code> and adds all of its model(s) to
 <code class="docutils literal notranslate"><span class="pre">plant</span></code>. The allowed URL schemes are either <code class="docutils literal notranslate"><span class="pre">file://</span></code> for local
 files or <code class="docutils literal notranslate"><span class="pre">package://</span></code> (or <code class="docutils literal notranslate"><span class="pre">model://</span></code>) to use this Parser’s
@@ -1132,26 +1139,26 @@ extension.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The set of model instance indices for the newly added models,
 including nested models.</p>
 </dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><strong>RuntimeError in case of errors.</strong> – </p>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError in case</strong><strong> of </strong><strong>errors.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.builder">
-<span class="sig-name descname"><span class="pre">builder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.builder" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.builder(self:</span> <span class="pre">pydrake.multibody.parsing.Parser)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.DiagramBuilder</span></span></dt>
 <dd><p>Gets a mutable pointer to the DiagramBuilder that will be modified by
 this parser, or nullptr if this parser does not have a DiagramBuilder.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.GetAutoRenaming">
-<span class="sig-name descname"><span class="pre">GetAutoRenaming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.GetAutoRenaming" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.GetAutoRenaming(self:</span> <span class="pre">pydrake.multibody.parsing.Parser)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
 <dd><p>Get the current state of auto-renaming.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1160,8 +1167,8 @@ this parser, or nullptr if this parser does not have a DiagramBuilder.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.GetCollisionFilterGroups">
-<span class="sig-name descname"><span class="pre">GetCollisionFilterGroups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.parsing.CollisionFilterGroups" title="pydrake.multibody.parsing.CollisionFilterGroups"><span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.GetCollisionFilterGroups" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.GetCollisionFilterGroups(self:</span> <span class="pre">pydrake.multibody.parsing.Parser)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.parsing.CollisionFilterGroups</span></span></dt>
 <dd><p>Gets the accumulated set of collision filter definitions seen by this
 parser.</p>
 <p>There are two kinds of names in the returned data: group names and
@@ -1174,28 +1181,28 @@ names will be the names seen during parsing.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.package_map">
-<span class="sig-name descname"><span class="pre">package_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.parsing.PackageMap" title="pydrake.multibody.parsing.PackageMap"><span class="pre">pydrake.multibody.parsing.PackageMap</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.package_map" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.package_map(self:</span> <span class="pre">pydrake.multibody.parsing.Parser)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.parsing.PackageMap</span></span></dt>
 <dd><p>Gets a mutable reference to the PackageMap used by this parser.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.plant">
-<span class="sig-name descname"><span class="pre">plant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.plant" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.plant(self:</span> <span class="pre">pydrake.multibody.parsing.Parser)</span> <span class="pre">-&gt;</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></dt>
 <dd><p>Gets a mutable reference to the plant that will be modified by this
 parser.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.scene_graph">
-<span class="sig-name descname"><span class="pre">scene_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.scene_graph" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.scene_graph(self:</span> <span class="pre">pydrake.multibody.parsing.Parser)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.SceneGraph</span></span></dt>
 <dd><p>Gets a mutable pointer to the SceneGraph that will be modified by this
 parser, or nullptr if this parser does not have a SceneGraph.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.SetAutoRenaming">
-<span class="sig-name descname"><span class="pre">SetAutoRenaming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.SetAutoRenaming" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.SetAutoRenaming(self:</span> <span class="pre">pydrake.multibody.parsing.Parser,</span> <span class="pre">value:</span> <span class="pre">bool)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Enable or disable auto-renaming. It is disabled by default.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1204,8 +1211,8 @@ parser, or nullptr if this parser does not have a SceneGraph.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.Parser.SetStrictParsing">
-<span class="sig-name descname"><span class="pre">SetStrictParsing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.parsing.Parser" title="pydrake.multibody.parsing.Parser"><span class="pre">pydrake.multibody.parsing.Parser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.parsing.Parser.SetStrictParsing" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parser.SetStrictParsing(self:</span> <span class="pre">pydrake.multibody.parsing.Parser)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Cause all subsequent Add*Model*() operations to use strict parsing;
 warnings will be treated as errors.</p>
 </dd></dl>
@@ -1213,8 +1220,8 @@ warnings will be treated as errors.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.multibody.parsing.ProcessModelDirectives">
-<span class="sig-prename descclassname"><span class="pre">pydrake.multibody.parsing.</span></span><span class="sig-name descname"><span class="pre">ProcessModelDirectives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.parsing.ProcessModelDirectives" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ProcessModelDirectives(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>ProcessModelDirectives(directives: pydrake.multibody.parsing.ModelDirectives, parser: pydrake.multibody.parsing.Parser) -&gt; list[pydrake.multibody.parsing.ModelInstanceInfo]</p></li>

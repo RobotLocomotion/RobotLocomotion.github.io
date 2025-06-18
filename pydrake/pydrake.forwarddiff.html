@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.forwarddiff &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=6b576c25" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7f41d439"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -60,7 +63,11 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pydrake
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pydrake
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -111,8 +118,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>pydrake.forwarddiff</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pydrake.forwarddiff</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -122,23 +129,23 @@
            <div itemprop="articleBody">
              
   <section id="module-pydrake.forwarddiff">
-<span id="pydrake-forwarddiff"></span><h1>pydrake.forwarddiff<a class="headerlink" href="#module-pydrake.forwarddiff" title="Permalink to this headline"></a></h1>
+<span id="pydrake-forwarddiff"></span><h1>pydrake.forwarddiff<a class="headerlink" href="#module-pydrake.forwarddiff" title="Link to this heading"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.forwarddiff.cos">
-<span class="sig-prename descclassname"><span class="pre">pydrake.forwarddiff.</span></span><span class="sig-name descname"><span class="pre">cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.forwarddiff.cos" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">cos(x)</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.forwarddiff.derivative">
-<span class="sig-prename descclassname"><span class="pre">pydrake.forwarddiff.</span></span><span class="sig-name descname"><span class="pre">derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.forwarddiff.derivative" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">derivative(function,</span> <span class="pre">x)</span></span></dt>
 <dd><p>Compute the derivative of the function evaluated at the scalar input x
 using Eigen’s automatic differentiation.</p>
 <p>The function should be scalar-input and scalar-output.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.forwarddiff.gradient">
-<span class="sig-prename descclassname"><span class="pre">pydrake.forwarddiff.</span></span><span class="sig-name descname"><span class="pre">gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.forwarddiff.gradient" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">gradient(function,</span> <span class="pre">x)</span></span></dt>
 <dd><p>Compute the gradient of the function evaluated at the vector input x
 using Eigen’s automatic differentiation.</p>
 <p><code class="docutils literal notranslate"><span class="pre">function</span></code> should be vector-input and be either a scalar output or a
@@ -146,8 +153,8 @@ vector of size 1, where the element must be of type AutoDiffXd.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.forwarddiff.jacobian">
-<span class="sig-prename descclassname"><span class="pre">pydrake.forwarddiff.</span></span><span class="sig-name descname"><span class="pre">jacobian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.forwarddiff.jacobian" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">jacobian(function,</span> <span class="pre">x)</span></span></dt>
 <dd><p>Compute the jacobian of the function evaluated at the vector input x
 using Eigen’s automatic differentiation. The dimension of the jacobian will
 be one more than the output of <code class="docutils literal notranslate"><span class="pre">function</span></code>.</p>
@@ -156,8 +163,8 @@ must return an array with AutoDiffXd elements.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.forwarddiff.sin">
-<span class="sig-prename descclassname"><span class="pre">pydrake.forwarddiff.</span></span><span class="sig-name descname"><span class="pre">sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.forwarddiff.sin" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">sin(x)</span></span></dt>
 <dd></dd></dl>
 
 </section>

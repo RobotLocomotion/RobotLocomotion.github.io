@@ -338,6 +338,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af1dd02f74528f84556c55239d82ab9b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#af1dd02f74528f84556c55239d82ab9b3">DefineGeometryVisualizers</a> (py::module m)</td></tr>
 <tr class="memdesc:af1dd02f74528f84556c55239d82ab9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the visualizers in <a class="el" href="namespacedrake_1_1geometry.html">drake::geometry</a>.  <a href="#af1dd02f74528f84556c55239d82ab9b3">More...</a><br /></td></tr>
 <tr class="separator:af1dd02f74528f84556c55239d82ab9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22884cc26e8f99e78567d4e07a74627e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a22884cc26e8f99e78567d4e07a74627e">DefineGeometryRefine</a> (py::module m)</td></tr>
+<tr class="memdesc:a22884cc26e8f99e78567d4e07a74627e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the mesh refinement functions.  <a href="#a22884cc26e8f99e78567d4e07a74627e">More...</a><br /></td></tr>
+<tr class="separator:a22884cc26e8f99e78567d4e07a74627e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d712eb0a12e5f78078993172f842dfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">geometry::optimization::ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a3d712eb0a12e5f78078993172f842dfe">CloneConvexSets</a> (const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">geometry::optimization::ConvexSet</a> * &gt; &amp;sets_in)</td></tr>
 <tr class="memdesc:a3d712eb0a12e5f78078993172f842dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deep-copies the ConvexSet pointers in the given list into the C++-compatible object ConvexSets (which uses <a class="el" href="classdrake_1_1copyable__unique__ptr.html" title="A smart pointer with deep copy semantics.">copyable_unique_ptr</a> ownership).  <a href="#a3d712eb0a12e5f78078993172f842dfe">More...</a><br /></td></tr>
 <tr class="separator:a3d712eb0a12e5f78078993172f842dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1081,6 +1084,27 @@ Variables</h2></td></tr>
 
 <p>Defines all elements in the <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">drake::geometry::optimization</a> namespace. </p>
 <p>See geometry_py_optimization.cc. </p>
+
+</div>
+</div>
+<a id="a22884cc26e8f99e78567d4e07a74627e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22884cc26e8f99e78567d4e07a74627e">&#9670;&nbsp;</a></span>DefineGeometryRefine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::pydrake::DefineGeometryRefine </td>
+          <td>(</td>
+          <td class="paramtype">py::module&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines the mesh refinement functions. </p>
+<p>See geometry_py_refine.cc. </p>
 
 </div>
 </div>

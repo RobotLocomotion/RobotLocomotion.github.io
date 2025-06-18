@@ -253,21 +253,21 @@ the plant and scene graph together for you.</li>
 E.g.,</li>
       </ul>
 
-      <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
+      <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="n">builder</span> <span class="o">=</span> <span class="nc">DiagramBuilder</span><span class="p">()</span>
    <span class="c1"># Build plant and scene graph and automatically connect them.
-</span>   <span class="n">plant</span><span class="p">,</span> <span class="n">scene_graph</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span>
+</span>   <span class="n">plant</span><span class="p">,</span> <span class="n">scene_graph</span> <span class="o">=</span> <span class="nc">AddMultibodyPlantSceneGraph</span><span class="p">(</span>
        <span class="n">builder</span><span class="o">=</span><span class="n">builder</span><span class="p">,</span> <span class="n">time_step</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
-   <span class="p">...</span>
-   <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">()</span>
+   <span class="bp">...</span>
+   <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="nc">Build</span><span class="p">()</span>
 
    <span class="c1"># WRONG.  This will create a Context for the plant only (no connected
 </span>   <span class="c1"># SceneGraph).
-</span>   <span class="n">xdot</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="n">EvalTimeDerivatives</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant</span><span class="p">.</span><span class="n">CreateDefaultContext</span><span class="p">())</span>
+</span>   <span class="n">xdot</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">EvalTimeDerivatives</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant</span><span class="p">.</span><span class="nc">CreateDefaultContext</span><span class="p">())</span>
 
-   <span class="n">context</span> <span class="o">=</span> <span class="n">diagram</span><span class="p">.</span><span class="n">CreateDefaultContext</span><span class="p">()</span>
+   <span class="n">context</span> <span class="o">=</span> <span class="n">diagram</span><span class="p">.</span><span class="nc">CreateDefaultContext</span><span class="p">()</span>
    <span class="c1"># Extract the plant's context from the diagram's to invoke plant methods.
-</span>   <span class="n">plant_context</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span>
-   <span class="n">xdot</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="n">EvalTimeDerivatives</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant_context</span><span class="p">)</span>
+</span>   <span class="n">plant_context</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="o">=</span><span class="n">context</span><span class="p">)</span>
+   <span class="n">xdot</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">EvalTimeDerivatives</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant_context</span><span class="p">)</span>
 </code></pre></div>      </div>
     </li>
   </ol>
@@ -358,22 +358,22 @@ The solution is to use either <code class="language-plaintext highlighter-rouge"
 <code class="language-plaintext highlighter-rouge">GetMyMutableContextFromRoot()</code> (<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_system.html#ae7fa91d2b2102457ced3361207724e52">C++</a>, <a href="https://drake.mit.edu/pydrake/pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].GetMyMutableContextFromRoot">Python</a>) as appropriate to extract a particular
 <code class="language-plaintext highlighter-rouge">System</code>’s <code class="language-plaintext highlighter-rouge">Context</code> from its <code class="language-plaintext highlighter-rouge">Diagram</code>’s <code class="language-plaintext highlighter-rouge">Context</code>.</p>
 
-  <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
-  <span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="o">=</span><span class="n">builder</span><span class="p">,</span> <span class="n">time_step</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
+  <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">builder</span> <span class="o">=</span> <span class="nc">DiagramBuilder</span><span class="p">()</span>
+  <span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nc">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="o">=</span><span class="n">builder</span><span class="p">,</span> <span class="n">time_step</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
   <span class="p">...</span>  <span class="c1"># Populate the plant with interesting stuff.
-</span>  <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">()</span>
+</span>  <span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="nc">Build</span><span class="p">()</span>
   <span class="c1"># Create a Context for diagram.
-</span>  <span class="n">root_context</span> <span class="o">=</span> <span class="n">diagram</span><span class="p">.</span><span class="n">CreateDefaultContext</span><span class="p">()</span>
+</span>  <span class="n">root_context</span> <span class="o">=</span> <span class="n">diagram</span><span class="p">.</span><span class="nc">CreateDefaultContext</span><span class="p">()</span>
 
-  <span class="n">my_body</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="n">GetBodyByName</span><span class="p">(</span><span class="s">"my_body"</span><span class="p">)</span>
-  <span class="n">X_WB</span> <span class="o">=</span> <span class="n">RigidTransform</span><span class="p">(...)</span>  <span class="c1"># Define a pose for the body.
+  <span class="n">my_body</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">GetBodyByName</span><span class="p">(</span><span class="sh">"</span><span class="s">my_body</span><span class="sh">"</span><span class="p">)</span>
+  <span class="n">X_WB</span> <span class="o">=</span> <span class="nc">RigidTransform</span><span class="p">(...)</span>  <span class="c1"># Define a pose for the body.
 </span>  <span class="c1"># Error! plant has been given diagram's context.
-</span>  <span class="n">plant</span><span class="p">.</span><span class="n">SetFreeBodyPose</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">root_context</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">base</span><span class="p">,</span> <span class="n">X_WB</span><span class="o">=</span><span class="n">X_WB_desired</span><span class="p">)</span>
+</span>  <span class="n">plant</span><span class="p">.</span><span class="nc">SetFreeBodyPose</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">root_context</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">base</span><span class="p">,</span> <span class="n">X_WB</span><span class="o">=</span><span class="n">X_WB_desired</span><span class="p">)</span>
 
   <span class="c1"># Get the Context for plant from diagram's context.
-</span>  <span class="n">plant_context</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="o">=</span><span class="n">root_context</span><span class="p">)</span>
+</span>  <span class="n">plant_context</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="o">=</span><span class="n">root_context</span><span class="p">)</span>
   <span class="c1"># Successful operation; the provided context belongs to plant.
-</span>  <span class="n">plant</span><span class="p">.</span><span class="n">SetFreeBodyPose</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant_context</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">base</span><span class="p">,</span> <span class="n">X_WB</span><span class="o">=</span><span class="n">X_WB_desired</span><span class="p">)</span>
+</span>  <span class="n">plant</span><span class="p">.</span><span class="nc">SetFreeBodyPose</span><span class="p">(</span><span class="n">context</span><span class="o">=</span><span class="n">plant_context</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">base</span><span class="p">,</span> <span class="n">X_WB</span><span class="o">=</span><span class="n">X_WB_desired</span><span class="p">)</span>
 </code></pre></div>  </div>
 
   <p>See the notes on <a href="https://drake.mit.edu/doxygen_cxx/group__system__compatibility.html">System Compatibility</a> for further discussion.</p>

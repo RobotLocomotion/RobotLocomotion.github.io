@@ -243,19 +243,19 @@ themselves, which you can find inside of the
 
   <p>Here’s an example snippet of code from <code class="language-plaintext highlighter-rouge">pydrake</code>:</p>
 
-  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pydrake.common</span> <span class="kn">import</span> <span class="n">FindResourceOrThrow</span>
-<span class="kn">from</span> <span class="nn">pydrake.multibody.parsing</span> <span class="kn">import</span> <span class="n">Parser</span>
-<span class="kn">from</span> <span class="nn">pydrake.multibody.plant</span> <span class="kn">import</span> <span class="n">AddMultibodyPlantSceneGraph</span>
-<span class="kn">from</span> <span class="nn">pydrake.systems.analysis</span> <span class="kn">import</span> <span class="n">Simulator</span>
-<span class="kn">from</span> <span class="nn">pydrake.systems.framework</span> <span class="kn">import</span> <span class="n">DiagramBuilder</span>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pydrake.common</span> <span class="kn">import</span> <span class="n">FindResourceOrThrow</span>
+<span class="kn">from</span> <span class="n">pydrake.multibody.parsing</span> <span class="kn">import</span> <span class="n">Parser</span>
+<span class="kn">from</span> <span class="n">pydrake.multibody.plant</span> <span class="kn">import</span> <span class="n">AddMultibodyPlantSceneGraph</span>
+<span class="kn">from</span> <span class="n">pydrake.systems.analysis</span> <span class="kn">import</span> <span class="n">Simulator</span>
+<span class="kn">from</span> <span class="n">pydrake.systems.framework</span> <span class="kn">import</span> <span class="n">DiagramBuilder</span>
 
-<span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
-<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
-<span class="n">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="n">AddModels</span><span class="p">(</span>
-    <span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="s">"drake/examples/pendulum/Pendulum.urdf"</span><span class="p">))</span>
-<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">()</span>
-<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">()</span>
-<span class="n">simulator</span> <span class="o">=</span> <span class="n">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
+<span class="n">builder</span> <span class="o">=</span> <span class="nc">DiagramBuilder</span><span class="p">()</span>
+<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nc">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="nc">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="nc">AddModels</span><span class="p">(</span>
+    <span class="nc">FindResourceOrThrow</span><span class="p">(</span><span class="sh">"</span><span class="s">drake/examples/pendulum/Pendulum.urdf</span><span class="sh">"</span><span class="p">))</span>
+<span class="n">plant</span><span class="p">.</span><span class="nc">Finalize</span><span class="p">()</span>
+<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="nc">Build</span><span class="p">()</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="nc">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
 </code></pre></div>  </div>
 
   <p>If you are prototyping code in a REPL environment (such as IPython / Jupyter)
@@ -269,32 +269,32 @@ introduce symbol collisions that are difficult to debug.</p>
 
   <p>The above example, but using <code class="language-plaintext highlighter-rouge">pydrake.all</code>:</p>
 
-  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pydrake.all</span> <span class="kn">import</span> <span class="p">(</span>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pydrake.all</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">,</span> <span class="n">DiagramBuilder</span><span class="p">,</span> <span class="n">FindResourceOrThrow</span><span class="p">,</span>
     <span class="n">Parser</span><span class="p">,</span> <span class="n">Simulator</span><span class="p">)</span>
 
-<span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
-<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
-<span class="n">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="n">AddModels</span><span class="p">(</span>
-    <span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="s">"drake/examples/pendulum/Pendulum.urdf"</span><span class="p">))</span>
-<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">()</span>
-<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">()</span>
-<span class="n">simulator</span> <span class="o">=</span> <span class="n">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
+<span class="n">builder</span> <span class="o">=</span> <span class="nc">DiagramBuilder</span><span class="p">()</span>
+<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nc">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="nc">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="nc">AddModels</span><span class="p">(</span>
+    <span class="nc">FindResourceOrThrow</span><span class="p">(</span><span class="sh">"</span><span class="s">drake/examples/pendulum/Pendulum.urdf</span><span class="sh">"</span><span class="p">))</span>
+<span class="n">plant</span><span class="p">.</span><span class="nc">Finalize</span><span class="p">()</span>
+<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="nc">Build</span><span class="p">()</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="nc">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
 </code></pre></div>  </div>
 
   <p>An alternative is to use <code class="language-plaintext highlighter-rouge">pydrake.all</code> to import all modules, but then
 explicitly refer to each symbol:</p>
 
-  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pydrake.all</span>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pydrake.all</span>
 
-<span class="n">builder</span> <span class="o">=</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">framework</span><span class="p">.</span><span class="n">DiagramBuilder</span><span class="p">()</span>
-<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">multibody</span><span class="p">.</span><span class="n">plant</span><span class="p">.</span><span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
-<span class="n">pydrake</span><span class="p">.</span><span class="n">multibody</span><span class="p">.</span><span class="n">parsing</span><span class="p">.</span><span class="n">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="n">AddModels</span><span class="p">(</span>
-  <span class="n">pydrake</span><span class="p">.</span><span class="n">common</span><span class="p">.</span><span class="n">FindResourceOrThrow</span><span class="p">(</span>
-      <span class="s">"drake/examples/pendulum/Pendulum.urdf"</span><span class="p">))</span>
-<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">()</span>
-<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">()</span>
-<span class="n">simulator</span> <span class="o">=</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">analysis</span><span class="p">.</span><span class="n">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
+<span class="n">builder</span> <span class="o">=</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">framework</span><span class="p">.</span><span class="nc">DiagramBuilder</span><span class="p">()</span>
+<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">multibody</span><span class="p">.</span><span class="n">plant</span><span class="p">.</span><span class="nc">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">pydrake</span><span class="p">.</span><span class="n">multibody</span><span class="p">.</span><span class="n">parsing</span><span class="p">.</span><span class="nc">Parser</span><span class="p">(</span><span class="n">builder</span><span class="p">).</span><span class="nc">AddModels</span><span class="p">(</span>
+  <span class="n">pydrake</span><span class="p">.</span><span class="n">common</span><span class="p">.</span><span class="nc">FindResourceOrThrow</span><span class="p">(</span>
+      <span class="sh">"</span><span class="s">drake/examples/pendulum/Pendulum.urdf</span><span class="sh">"</span><span class="p">))</span>
+<span class="n">plant</span><span class="p">.</span><span class="nc">Finalize</span><span class="p">()</span>
+<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="nc">Build</span><span class="p">()</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">analysis</span><span class="p">.</span><span class="nc">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
 </code></pre></div>  </div>
 
   <h2 id="differences-with-c-api">Differences with C++ API</h2>
@@ -365,19 +365,19 @@ use <code class="language-plaintext highlighter-rouge">Adder_[T]</code>.</p>
   <p>To illustrate, you can print out the string representations of <code class="language-plaintext highlighter-rouge">Adder</code>,
 <code class="language-plaintext highlighter-rouge">Adder_</code>, and some of its instantiations in Python:</p>
 
-  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pydrake.systems.primitives</span> <span class="kn">import</span> <span class="n">Adder</span><span class="p">,</span> <span class="n">Adder_</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">Adder</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣float𝓤</span><span class="s">'&gt;
-&gt;&gt;&gt; print(Adder_)
-&lt;TemplateClass pydrake.systems.primitives.Adder_&gt;
-&gt;&gt;&gt; from pydrake.autodiffutils import AutoDiffXd
-&gt;&gt;&gt; from pydrake.symbolic import Expression
-&gt;&gt;&gt; print(Adder_[float])
-&lt;class '</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣float𝓤</span><span class="s">'&gt;
-&gt;&gt;&gt; print(Adder_[AutoDiffXd])
-&lt;class '</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣AutoDiffXd𝓤</span><span class="s">'&gt;
-&gt;&gt;&gt; print(Adder_[Expression])
-&lt;class '</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣Expression𝓤</span><span class="s">'&gt;
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">pydrake.systems.primitives</span> <span class="kn">import</span> <span class="n">Adder</span><span class="p">,</span> <span class="n">Adder_</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">Adder</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣float𝓤</span><span class="sh">'</span><span class="s">&gt;
+</span><span class="gp">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">TemplateClass</span> <span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">pydrake.autodiffutils</span> <span class="kn">import</span> <span class="n">AutoDiffXd</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="n">pydrake.symbolic</span> <span class="kn">import</span> <span class="n">Expression</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣float𝓤</span><span class="sh">'</span><span class="s">&gt;
+</span><span class="gp">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">[</span><span class="n">AutoDiffXd</span><span class="p">])</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣AutoDiffXd𝓤</span><span class="sh">'</span><span class="s">&gt;
+</span><span class="gp">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">[</span><span class="n">Expression</span><span class="p">])</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣Expression𝓤</span><span class="sh">'</span><span class="s">&gt;
 </span></code></pre></div>  </div>
 
   <p>In debugging output like the class <code class="language-plaintext highlighter-rouge">repr</code> shown above, you might encounter the
@@ -390,12 +390,12 @@ a <code class="language-plaintext highlighter-rouge">𝓬</code> stands for a co
   <p>Additionally, you may convert an instance (if the conversion is available) using
 <code class="language-plaintext highlighter-rouge">System_[T].ToAutoDiffXd</code> and <code class="language-plaintext highlighter-rouge">System_[T].ToSymbolic</code>:</p>
 
-  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">adder</span> <span class="o">=</span> <span class="n">Adder</span><span class="p">(</span><span class="n">num_inputs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="p">)</span>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">adder</span> <span class="o">=</span> <span class="nc">Adder</span><span class="p">(</span><span class="n">num_inputs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">adder</span><span class="p">)</span>
 <span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣float𝓤</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="p">.</span><span class="n">ToAutoDiffXd</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">adder</span><span class="p">.</span><span class="nc">ToAutoDiffXd</span><span class="p">())</span>
 <span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣AutoDiffXd𝓤</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="p">.</span><span class="n">ToSymbolic</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="n">adder</span><span class="p">.</span><span class="nc">ToSymbolic</span><span class="p">())</span>
 <span class="o">&lt;</span><span class="n">pydrake</span><span class="p">.</span><span class="n">systems</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">Adder_𝓣Expression𝓤</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="p">...</span><span class="o">&gt;</span>
 </code></pre></div>  </div>
 
@@ -423,9 +423,9 @@ MultibodyPlant&lt;T&gt;::AddFrame&lt;FrameType&gt;(args...)
 
   <p>will become the following in Python:</p>
 
-  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DiagramBuilder_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">SystemType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">...))</span>
-<span class="n">MultibodyPlant_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="n">AddJoint</span><span class="p">(</span><span class="n">JointType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">...))</span>
-<span class="n">MultibodyPlant_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="n">AddFrame</span><span class="p">(</span><span class="n">FrameType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">...))</span>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DiagramBuilder_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="nc">AddSystem</span><span class="p">(</span><span class="nc">SystemType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">...))</span>
+<span class="n">MultibodyPlant_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="nc">AddJoint</span><span class="p">(</span><span class="nc">JointType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">...))</span>
+<span class="n">MultibodyPlant_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="nc">AddFrame</span><span class="p">(</span><span class="nc">FrameType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">...))</span>
 </code></pre></div>  </div>
 
   <p>where the <code class="language-plaintext highlighter-rouge">*Type</code> tokens are replaced with the concrete type in question
@@ -439,8 +439,8 @@ GeometryProperties::AddProperty&lt;ValueType&gt;(group_name, name, value)
 
   <p>will become the following in Python:</p>
 
-  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">InputPort_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="n">Eval</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
-<span class="n">GeometryProperties</span><span class="p">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">InputPort_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="nc">Eval</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+<span class="n">GeometryProperties</span><span class="p">.</span><span class="nc">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </code></pre></div>  </div>
 
   <h2 id="debugging-with-the-python-bindings">Debugging with the Python Bindings</h2>
@@ -454,35 +454,35 @@ have a <code class="language-plaintext highlighter-rouge">if __name__ == "__main
 trace. As an example:</p>
 
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">reexecute_if_unbuffered</span><span class="p">():</span>
-    <span class="s">"""Ensures that output is immediately flushed (e.g. for segfaults).
+    <span class="sh">"""</span><span class="s">Ensures that output is immediately flushed (e.g. for segfaults).
     ONLY use this at your entrypoint. Otherwise, you may have code be
-    re-executed that will clutter your console."""</span>
-    <span class="kn">import</span> <span class="nn">os</span>
-    <span class="kn">import</span> <span class="nn">shlex</span>
-    <span class="kn">import</span> <span class="nn">sys</span>
-    <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"PYTHONUNBUFFERED"</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">""</span><span class="p">):</span>
-        <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">"PYTHONUNBUFFERED"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"1"</span>
-        <span class="n">argv</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">)</span>
+    re-executed that will clutter your console.</span><span class="sh">"""</span>
+    <span class="kn">import</span> <span class="n">os</span>
+    <span class="kn">import</span> <span class="n">shlex</span>
+    <span class="kn">import</span> <span class="n">sys</span>
+    <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">PYTHONUNBUFFERED</span><span class="sh">"</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="sh">""</span><span class="p">):</span>
+        <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="sh">"</span><span class="s">PYTHONUNBUFFERED</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">1</span><span class="sh">"</span>
+        <span class="n">argv</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">sys</span><span class="p">.</span><span class="n">executable</span><span class="p">:</span>
-            <span class="n">argv</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sys</span><span class="p">.</span><span class="n">executable</span><span class="p">)</span>
-        <span class="n">cmd</span> <span class="o">=</span> <span class="s">" "</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="n">shlex</span><span class="p">.</span><span class="n">quote</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">argv</span><span class="p">])</span>
-        <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">flush</span><span class="p">()</span>
-        <span class="n">os</span><span class="p">.</span><span class="n">execv</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">argv</span><span class="p">)</span>
+            <span class="n">argv</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sys</span><span class="p">.</span><span class="n">executable</span><span class="p">)</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="sh">"</span><span class="s"> </span><span class="sh">"</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="n">shlex</span><span class="p">.</span><span class="nf">quote</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">argv</span><span class="p">])</span>
+        <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="nf">flush</span><span class="p">()</span>
+        <span class="n">os</span><span class="p">.</span><span class="nf">execv</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">argv</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">traced</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">ignoredirs</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="s">"""Decorates func such that its execution is traced, but filters out any
-     Python code outside of the system prefix."""</span>
-    <span class="kn">import</span> <span class="nn">functools</span>
-    <span class="kn">import</span> <span class="nn">sys</span>
-    <span class="kn">import</span> <span class="nn">trace</span>
+    <span class="sh">"""</span><span class="s">Decorates func such that its execution is traced, but filters out any
+     Python code outside of the system prefix.</span><span class="sh">"""</span>
+    <span class="kn">import</span> <span class="n">functools</span>
+    <span class="kn">import</span> <span class="n">sys</span>
+    <span class="kn">import</span> <span class="n">trace</span>
     <span class="k">if</span> <span class="n">ignoredirs</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="n">ignoredirs</span> <span class="o">=</span> <span class="p">[</span><span class="s">"/usr"</span><span class="p">,</span> <span class="n">sys</span><span class="p">.</span><span class="n">prefix</span><span class="p">]</span>
-    <span class="n">tracer</span> <span class="o">=</span> <span class="n">trace</span><span class="p">.</span><span class="n">Trace</span><span class="p">(</span><span class="n">trace</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignoredirs</span><span class="o">=</span><span class="n">ignoredirs</span><span class="p">)</span>
+        <span class="n">ignoredirs</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">/usr</span><span class="sh">"</span><span class="p">,</span> <span class="n">sys</span><span class="p">.</span><span class="n">prefix</span><span class="p">]</span>
+    <span class="n">tracer</span> <span class="o">=</span> <span class="n">trace</span><span class="p">.</span><span class="nc">Trace</span><span class="p">(</span><span class="n">trace</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignoredirs</span><span class="o">=</span><span class="n">ignoredirs</span><span class="p">)</span>
 
-    <span class="o">@</span><span class="n">functools</span><span class="p">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="nd">@functools.wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">tracer</span><span class="p">.</span><span class="n">runfunc</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tracer</span><span class="p">.</span><span class="nf">runfunc</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">wrapped</span>
 
@@ -491,14 +491,14 @@ trace. As an example:</p>
 # single function, then you can just decorate it with this. If you're
 # decorating a class method, then be sure to declare these functions above
 # it.
-</span><span class="o">@</span><span class="n">traced</span>
+</span><span class="nd">@traced</span>
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">insert_awesome_code_here</span><span class="p">()</span>
+    <span class="nf">insert_awesome_code_here</span><span class="p">()</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
-    <span class="n">reexecute_if_unbuffered</span><span class="p">()</span>
-    <span class="n">main</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="nf">reexecute_if_unbuffered</span><span class="p">()</span>
+    <span class="nf">main</span><span class="p">()</span>
 </code></pre></div>  </div>
 
   <div class="note">
@@ -511,15 +511,15 @@ trace. As an example:</p>
 you can get a REPL (which works in a terminal or in a Jupyter notebook) to
 actively inspect the context (like <code class="language-plaintext highlighter-rouge">dbstop if error</code> in MATLAB).</p>
 
-  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
-<span class="kn">import</span> <span class="nn">pdb</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">traceback</span>
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">import</span> <span class="n">pdb</span>
+<span class="kn">import</span> <span class="n">sys</span>
+<span class="kn">import</span> <span class="n">traceback</span>
 
 
-<span class="o">@</span><span class="n">contextmanager</span>
+<span class="nd">@contextmanager</span>
 <span class="k">def</span> <span class="nf">launch_pdb_on_exception</span><span class="p">():</span>
-    <span class="s">"""
+    <span class="sh">"""</span><span class="s">
     Provides a context that will launch interactive pdb console automatically
     if an exception is raised.
 
@@ -532,22 +532,22 @@ actively inspect the context (like <code class="language-plaintext highlighter-r
 
         my_bad_function()
         # Should bring up debugger at `assert` statement.
-    """</span>
+    </span><span class="sh">"""</span>
     <span class="c1"># Adapted from:
 </span>    <span class="c1"># https://github.com/gotcha/ipdb/blob/fc83b4f5f/ipdb/__main__.py#L219-L232
 </span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">yield</span>
     <span class="k">except</span> <span class="nb">Exception</span><span class="p">:</span>
-        <span class="n">traceback</span><span class="p">.</span><span class="n">print_exc</span><span class="p">()</span>
-        <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">tb</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">exc_info</span><span class="p">()</span>
-        <span class="n">pdb</span><span class="p">.</span><span class="n">post_mortem</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
+        <span class="n">traceback</span><span class="p">.</span><span class="nf">print_exc</span><span class="p">()</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">tb</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="nf">exc_info</span><span class="p">()</span>
+        <span class="n">pdb</span><span class="p">.</span><span class="nf">post_mortem</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
         <span class="c1"># Resume original execution.
 </span>        <span class="k">raise</span>
 
 
 <span class="c1"># Mirror `@ipdb.iex` decorator. See docs for `launch_pdb_on_exception()`.
-</span><span class="n">iex</span> <span class="o">=</span> <span class="n">launch_pdb_on_exception</span><span class="p">()</span>
+</span><span class="n">iex</span> <span class="o">=</span> <span class="nf">launch_pdb_on_exception</span><span class="p">()</span>
 </code></pre></div>  </div>
 
   <p>This generally should help you trace where the code is dying. However, if you

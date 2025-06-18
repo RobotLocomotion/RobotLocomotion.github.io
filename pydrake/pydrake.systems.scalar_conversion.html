@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.systems.scalar_conversion &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=6b576c25" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7f41d439"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -60,7 +63,11 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pydrake
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pydrake
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -127,9 +134,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
-      <li>pydrake.systems.scalar_conversion</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pydrake.systems.html">pydrake.systems</a></li>
+      <li class="breadcrumb-item active">pydrake.systems.scalar_conversion</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -139,12 +146,12 @@
            <div itemprop="articleBody">
              
   <section id="module-pydrake.systems.scalar_conversion">
-<span id="pydrake-systems-scalar-conversion"></span><h1>pydrake.systems.scalar_conversion<a class="headerlink" href="#module-pydrake.systems.scalar_conversion" title="Permalink to this headline"></a></h1>
+<span id="pydrake-systems-scalar-conversion"></span><h1>pydrake.systems.scalar_conversion<a class="headerlink" href="#module-pydrake.systems.scalar_conversion" title="Link to this heading"></a></h1>
 <p>Provides utilities to aid in scalar type conversion.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.scalar_conversion.TemplateSystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.scalar_conversion.</span></span><span class="sig-name descname"><span class="pre">TemplateSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_pairs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.scalar_conversion.TemplateSystem" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.common.cpp_template.html#pydrake.common.cpp_template.TemplateClass" title="pydrake.common.cpp_template.TemplateClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.cpp_template.TemplateClass</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">TemplateSystem(name,</span> <span class="pre">T_list=None,</span> <span class="pre">T_pairs=None,</span> <span class="pre">scope=None)</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.cpp_template.TemplateClass</span></code></p>
 <p>Defines templated systems enabling scalar type conversion in Python.</p>
 <p>This differs from <code class="docutils literal notranslate"><span class="pre">TemplateClass</span></code> in that (a) the template must specify
 its parameters at construction time and (b) <cite>.define</cite> is overridden to
@@ -189,11 +196,11 @@ overriding <code class="docutils literal notranslate"><span class="pre">__init__
 positional, since Python2 does not have keyword-only arguments.</p></li>
 </ul>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.scalar_conversion.TemplateSystem.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_pairs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.scalar_conversion.TemplateSystem.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">TemplateSystem.__init__(name,</span> <span class="pre">T_list=None,</span> <span class="pre">T_pairs=None,</span> <span class="pre">scope=None)</span></span></dt>
 <dd><p>Constructs <code class="docutils literal notranslate"><span class="pre">TemplateSystem</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>T_list</strong> – List of T’s that the given system supports. By default, it
 is all types supported by <cite>LeafSystem</cite>.</p></li>
@@ -208,15 +215,15 @@ support.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.scalar_conversion.TemplateSystem.define">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">define</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_pairs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.scalar_conversion.TemplateSystem.define" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">TemplateSystem.define(name,</span> <span class="pre">T_list=None,</span> <span class="pre">T_pairs=None,</span> <span class="pre">*args,</span> <span class="pre">scope=None,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Provides a decorator which can be used define a scalar-type
 convertible System as a template.</p>
 <p>The decorated function must be of the form <code class="docutils literal notranslate"><span class="pre">f(T)</span></code>, which returns a
 class which will be the instantiation for type <code class="docutils literal notranslate"><span class="pre">T</span></code> of the given
 template.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – Name of the system template. This should match the name of
 the object being decorated.</p></li>

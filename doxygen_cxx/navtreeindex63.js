@@ -1,5 +1,7 @@
 var NAVTREEINDEX63 =
 {
+"solver__id_8h.html":[4,0,0,11,55],
+"solver__id_8h.html#a710dbb02b7a2ce05760b1534cd7b32d9":[4,0,0,11,55,4],
 "solver__id_8h.html#a8463238715a273b4709959e9bf23b9af":[4,0,0,11,55,6],
 "solver__id_8h.html#af22da0124afc42f58ae6e42e1a97b724":[4,0,0,11,55,5],
 "solver__interface_8h.html":[4,0,0,11,56],
@@ -247,7 +249,5 @@ var NAVTREEINDEX63 =
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a569a31c7c4345220b5319a602dccfffa":[3,0,0,3,0,6,8],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a79f9607ebbb94dd08b872913cc3429a1":[3,0,0,3,0,6,11],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,0,6,3],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a9ddfac784dce5e9a670c6fd1b40a2f40":[3,0,0,3,0,6,2],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#aa7edeb4bfb76af8314622b337ea7ae59":[3,0,0,3,0,6,10],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,0,6,12]
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a9ddfac784dce5e9a670c6fd1b40a2f40":[3,0,0,3,0,6,2]
 };

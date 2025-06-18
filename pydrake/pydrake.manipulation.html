@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.manipulation &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=6b576c25" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7f41d439"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -60,7 +63,11 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pydrake
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pydrake
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -111,8 +118,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>pydrake.manipulation</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pydrake.manipulation</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -122,10 +129,10 @@
            <div itemprop="articleBody">
              
   <section id="module-pydrake.manipulation">
-<span id="pydrake-manipulation"></span><h1>pydrake.manipulation<a class="headerlink" href="#module-pydrake.manipulation" title="Permalink to this headline"></a></h1>
+<span id="pydrake-manipulation"></span><h1>pydrake.manipulation<a class="headerlink" href="#module-pydrake.manipulation" title="Link to this heading"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.ApplyDriverConfig">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">ApplyDriverConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.ApplyDriverConfig" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ApplyDriverConfig(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>ApplyDriverConfig(driver_config: pydrake.manipulation.IiwaDriver, model_instance_name: str, sim_plant: drake::multibody::MultibodyPlant&lt;double&gt;, models_from_directives: dict[str, pydrake.multibody.parsing.ModelInstanceInfo], lcms: pydrake.systems.lcm.LcmBuses, builder: pydrake.systems.framework.DiagramBuilder) -&gt; None</p></li>
@@ -157,8 +164,8 @@ and testing purposes.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.ApplyDriverConfigs">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">ApplyDriverConfigs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_configs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sim_plant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models_from_directives</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm_buses</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.ApplyDriverConfigs" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ApplyDriverConfigs(*,</span> <span class="pre">driver_configs,</span> <span class="pre">sim_plant,</span> <span class="pre">models_from_directives,</span> <span class="pre">lcm_buses,</span> <span class="pre">builder)</span></span></dt>
 <dd><p>Applies many driver configurations to a model.</p>
 <p>A “driver configuration” helps stack Drake systems between an LCM interface
 subscriber system and the actuation input ports of a MultibodyPlant (to
@@ -172,7 +179,7 @@ in MultibodyPlant (e.g., the WSG belt drive).</p>
 the values in the driver_configs map are defined in the same module as the
 value itself.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>driver_configs</strong> – The configurations to apply, mapping a <code class="docutils literal notranslate"><span class="pre">str</span></code> model
 instance name to some kind of a DriverConfig object (e.g., a
@@ -189,24 +196,24 @@ driver.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.ApplyNamedPositionsAsDefaults">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">ApplyNamedPositionsAsDefaults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">input:</span> <span class="pre">dict[str,</span> <span class="pre">dict[str,</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]],</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.ApplyNamedPositionsAsDefaults" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ApplyNamedPositionsAsDefaults(input:</span> <span class="pre">dict[str,</span> <span class="pre">dict[str,</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]],</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Sets default joint positions in the given <code class="docutils literal notranslate"><span class="pre">plant</span></code> according to the
 given <code class="docutils literal notranslate"><span class="pre">input</span></code> (which specifies joints by their string name). The
 default positions for joints not mentioned will remain unchanged.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if the number of position values in the input and the</strong> – </p></li>
-<li><p><strong>actual number of positions for the intended joint do not match.</strong> – </p></li>
+<li><p><strong>RuntimeError if the number</strong><strong> of </strong><strong>position values in the input and the</strong> – </p></li>
+<li><p><strong>actual number</strong><strong> of </strong><strong>positions for the intended joint do not match.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.BuildIiwaControl">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">BuildIiwaControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.BuildIiwaControl" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BuildIiwaControl(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>BuildIiwaControl(builder: pydrake.systems.framework.DiagramBuilder, lcm: pydrake.lcm.DrakeLcmInterface, plant: drake::multibody::MultibodyPlant&lt;double&gt;, iiwa_instance: pydrake.multibody.tree.ModelInstanceIndex, driver_config: pydrake.manipulation.IiwaDriver, controller_plant: drake::multibody::MultibodyPlant&lt;double&gt;) -&gt; None</p></li>
@@ -236,8 +243,8 @@ removed from Drake on or after 2025-09-01.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.BuildSchunkWsgControl">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">BuildSchunkWsgControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wsg_instance:</span> <span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm:</span> <span class="pre">pydrake.lcm.DrakeLcmInterface</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pid_gains:</span> <span class="pre">Optional[numpy.ndarray[numpy.float64[3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.BuildSchunkWsgControl" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">BuildSchunkWsgControl(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">wsg_instance:</span> <span class="pre">pydrake.multibody.tree.ModelInstanceIndex,</span> <span class="pre">lcm:</span> <span class="pre">pydrake.lcm.DrakeLcmInterface,</span> <span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder,</span> <span class="pre">pid_gains:</span> <span class="pre">Optional[numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Builds (into <code class="docutils literal notranslate"><span class="pre">builder)</span></code> the WSG control and sensing systems for the
 wsg model in <code class="docutils literal notranslate"><span class="pre">plant</span></code> indicated by <code class="docutils literal notranslate"><span class="pre">wsg_instance</span></code>; hooks those
 systems up to <code class="docutils literal notranslate"><span class="pre">lcm</span></code> and the relevant MultibodyPlant ports in the
@@ -246,22 +253,22 @@ gains.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.get_iiwa_max_joint_velocities">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">get_iiwa_max_joint_velocities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.manipulation.get_iiwa_max_joint_velocities" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_iiwa_max_joint_velocities()</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]</span></span></dt>
 <dd><p>Returns the maximum joint velocities (rad/s) provided by Kuka.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.GetSchunkWsgOpenPosition">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">GetSchunkWsgOpenPosition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.manipulation.GetSchunkWsgOpenPosition" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GetSchunkWsgOpenPosition()</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]</span></span></dt>
 <dd><p>Returns the position vector corresponding to the open position of the
 gripper.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandReceiver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">IiwaCommandReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandReceiver" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandReceiver</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>Handles lcmt_iiwa_command message from a LcmSubscriberSystem.</p>
 <p>Note that this system does not actually subscribe to an LCM channel.
 To receive the message, the input of this system should be connected
@@ -281,51 +288,51 @@ method is available to achieve the same effect without using events.
 The “torque” output will be a vector of zeros, and the “time” output
 will be a vector of a single zero.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandReceiver.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.manipulation.IiwaCommandReceiver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_joints:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode</span> <span class="pre">=</span> <span class="pre">&lt;IiwaControlMode.kPositionAndTorque:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandReceiver.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandReceiver.__init__(self:</span> <span class="pre">pydrake.manipulation.IiwaCommandReceiver,</span> <span class="pre">num_joints:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">7,</span> <span class="pre">control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode</span> <span class="pre">=</span> <span class="pre">&lt;IiwaControlMode.kPositionAndTorque:</span> <span class="pre">2&gt;)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandReceiver.get_commanded_position_output_port">
-<span class="sig-name descname"><span class="pre">get_commanded_position_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaCommandReceiver" title="pydrake.manipulation.IiwaCommandReceiver"><span class="pre">pydrake.manipulation.IiwaCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandReceiver.get_commanded_position_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandReceiver.get_commanded_position_output_port(self:</span> <span class="pre">pydrake.manipulation.IiwaCommandReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if control_mode does not include position control.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandReceiver.get_commanded_torque_output_port">
-<span class="sig-name descname"><span class="pre">get_commanded_torque_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaCommandReceiver" title="pydrake.manipulation.IiwaCommandReceiver"><span class="pre">pydrake.manipulation.IiwaCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandReceiver.get_commanded_torque_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandReceiver.get_commanded_torque_output_port(self:</span> <span class="pre">pydrake.manipulation.IiwaCommandReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if control_mode does not include torque control.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandReceiver.get_message_input_port">
-<span class="sig-name descname"><span class="pre">get_message_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaCommandReceiver" title="pydrake.manipulation.IiwaCommandReceiver"><span class="pre">pydrake.manipulation.IiwaCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandReceiver.get_message_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandReceiver.get_message_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaCommandReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandReceiver.get_position_measured_input_port">
-<span class="sig-name descname"><span class="pre">get_position_measured_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaCommandReceiver" title="pydrake.manipulation.IiwaCommandReceiver"><span class="pre">pydrake.manipulation.IiwaCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandReceiver.get_position_measured_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandReceiver.get_position_measured_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaCommandReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandReceiver.get_time_output_port">
-<span class="sig-name descname"><span class="pre">get_time_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaCommandReceiver" title="pydrake.manipulation.IiwaCommandReceiver"><span class="pre">pydrake.manipulation.IiwaCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandReceiver.get_time_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandReceiver.get_time_output_port(self:</span> <span class="pre">pydrake.manipulation.IiwaCommandReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandSender">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">IiwaCommandSender</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandSender" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandSender</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>Creates and outputs lcmt_iiwa_command messages.</p>
 <p>Note that this system does not actually send the message on an LCM
 channel. To send the message, the output of this system should be
@@ -354,30 +361,30 @@ lcmt_iiwa_command.</p>
 <p><code class="docutils literal notranslate"><span class="pre">lcmt_iiwa_command.lcm</span></code> for additional documentation.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandSender.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.manipulation.IiwaCommandSender</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_joints:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode</span> <span class="pre">=</span> <span class="pre">&lt;IiwaControlMode.kPositionAndTorque:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandSender.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandSender.__init__(self:</span> <span class="pre">pydrake.manipulation.IiwaCommandSender,</span> <span class="pre">num_joints:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">7,</span> <span class="pre">control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode</span> <span class="pre">=</span> <span class="pre">&lt;IiwaControlMode.kPositionAndTorque:</span> <span class="pre">2&gt;)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandSender.get_position_input_port">
-<span class="sig-name descname"><span class="pre">get_position_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaCommandSender" title="pydrake.manipulation.IiwaCommandSender"><span class="pre">pydrake.manipulation.IiwaCommandSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandSender.get_position_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandSender.get_position_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaCommandSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandSender.get_time_input_port">
-<span class="sig-name descname"><span class="pre">get_time_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaCommandSender" title="pydrake.manipulation.IiwaCommandSender"><span class="pre">pydrake.manipulation.IiwaCommandSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandSender.get_time_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandSender.get_time_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaCommandSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaCommandSender.get_torque_input_port">
-<span class="sig-name descname"><span class="pre">get_torque_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaCommandSender" title="pydrake.manipulation.IiwaCommandSender"><span class="pre">pydrake.manipulation.IiwaCommandSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaCommandSender.get_torque_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaCommandSender.get_torque_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaCommandSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaControlMode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">IiwaControlMode</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaControlMode" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaControlMode</span></span></dt>
 <dd><p>Enumeration for control modes.</p>
 <p>Members:</p>
 <blockquote>
@@ -386,40 +393,40 @@ lcmt_iiwa_command.</p>
 <p>kPositionAndTorque :</p>
 </div></blockquote>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaControlMode.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaControlMode" title="pydrake.manipulation.IiwaControlMode"><span class="pre">pydrake.manipulation.IiwaControlMode</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaControlMode.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaControlMode.__init__(self:</span> <span class="pre">pydrake.manipulation.IiwaControlMode,</span> <span class="pre">value:</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaControlMode.kPositionAndTorque">
-<span class="sig-name descname"><span class="pre">kPositionAndTorque</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;IiwaControlMode.kPositionAndTorque:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.manipulation.IiwaControlMode.kPositionAndTorque" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaControlMode.kPositionAndTorque</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaControlMode.kPositionOnly">
-<span class="sig-name descname"><span class="pre">kPositionOnly</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;IiwaControlMode.kPositionOnly:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.manipulation.IiwaControlMode.kPositionOnly" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaControlMode.kPositionOnly</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaControlMode.kTorqueOnly">
-<span class="sig-name descname"><span class="pre">kTorqueOnly</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;IiwaControlMode.kTorqueOnly:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.manipulation.IiwaControlMode.kTorqueOnly" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaControlMode.kTorqueOnly</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaControlMode.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaControlMode.name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaControlMode.name</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaControlMode.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaControlMode.value" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaControlMode.value</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">IiwaDriver</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaDriver</span></span></dt>
 <dd><p>This config struct specifies how to wire up Drake systems between an
 LCM interface and the actuation input ports of a MultibodyPlant. This
 simulates the role that driver software and control cabinets would
@@ -427,29 +434,29 @@ take in real life.</p>
 <p>It creates an LCM publisher on the <code class="docutils literal notranslate"><span class="pre">IIWA_STATUS</span></code> channel and an LCM
 subscriber on the <code class="docutils literal notranslate"><span class="pre">IIWA_COMMAND</span></code> channel.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaDriver" title="pydrake.manipulation.IiwaDriver"><span class="pre">pydrake.manipulation.IiwaDriver</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaDriver.__init__(self:</span> <span class="pre">pydrake.manipulation.IiwaDriver,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.arm_child_frame_name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">arm_child_frame_name</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.arm_child_frame_name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaDriver.arm_child_frame_name</span></span></dt>
 <dd><p>Optionally give an alternative frame on the arm model for its weld
 point to the world. If not supplied, the <code class="docutils literal notranslate"><span class="pre">child_frame_name</span></code> in the
 arm’s ModelInstanceInfo will be used.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.control_mode">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">control_mode</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.control_mode" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaDriver.control_mode</span></span></dt>
 <dd><p>The driver’s control mode. Valid options (per ParseIiwaControlMode)
 are: - “position_only” - “position_and_torque” (default) -
 “torque_only”</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.desired_kp_gains">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">desired_kp_gains</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.desired_kp_gains" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaDriver.desired_kp_gains</span></span></dt>
 <dd><p>Optionally pass in gains corresponding to the Iiwa Dof (7) in the
 controller. If no value is passed, the gains derived from hardware
 will be used instead (hardcoded within the implementations of
@@ -458,44 +465,44 @@ functions accepting this struct). These gains must be nullopt if
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.ext_joint_filter_tau">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ext_joint_filter_tau</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.ext_joint_filter_tau" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaDriver.ext_joint_filter_tau</span></span></dt>
 <dd><p>A time constant used to low-pass filter external torque inputs.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.gripper_parent_frame_name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gripper_parent_frame_name</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.gripper_parent_frame_name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaDriver.gripper_parent_frame_name</span></span></dt>
 <dd><p>Optionally give an alternative frame on the arm model for its weld
 point to the gripper. If not supplied, the <code class="docutils literal notranslate"><span class="pre">parent_frame_name</span></code> in
 the gripper’s ModelInstanceInfo will be used.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.hand_model_name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hand_model_name</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.hand_model_name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaDriver.hand_model_name</span></span></dt>
 <dd><p>The name of the model (<code class="docutils literal notranslate"><span class="pre">name</span></code> element of the <code class="docutils literal notranslate"><span class="pre">add_model</span></code>
 directive) in the simulation that the driver will analyze to compute
 end effector inertia for its copy of the arm in inverse dynamics.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.lcm_bus">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lcm_bus</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.lcm_bus" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaDriver.lcm_bus</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaDriver.lcm_status_period">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lcm_status_period</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaDriver.lcm_status_period" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaDriver.lcm_status_period</span></span></dt>
 <dd><p>The period in seconds at which status reports are expected.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusReceiver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">IiwaStatusReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusReceiver" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusReceiver</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>&#64;system name: IiwaStatusReceiver input_ports: - lcmt_iiwa_status
 output_ports: - time_measured - position_commanded - position_measured
 - velocity_estimated - torque_commanded - torque_measured -
@@ -505,51 +512,51 @@ torque_external &#64;endsystem</p>
 <p><code class="docutils literal notranslate"><span class="pre">lcmt_iiwa_status.lcm</span></code> for additional documentation.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusReceiver.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusReceiver" title="pydrake.manipulation.IiwaStatusReceiver"><span class="pre">pydrake.manipulation.IiwaStatusReceiver</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusReceiver.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusReceiver.__init__(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusReceiver,</span> <span class="pre">num_joints:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">7)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusReceiver.get_position_commanded_output_port">
-<span class="sig-name descname"><span class="pre">get_position_commanded_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusReceiver" title="pydrake.manipulation.IiwaStatusReceiver"><span class="pre">pydrake.manipulation.IiwaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusReceiver.get_position_commanded_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusReceiver.get_position_commanded_output_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusReceiver.get_position_measured_output_port">
-<span class="sig-name descname"><span class="pre">get_position_measured_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusReceiver" title="pydrake.manipulation.IiwaStatusReceiver"><span class="pre">pydrake.manipulation.IiwaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusReceiver.get_position_measured_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusReceiver.get_position_measured_output_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusReceiver.get_time_measured_output_port">
-<span class="sig-name descname"><span class="pre">get_time_measured_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusReceiver" title="pydrake.manipulation.IiwaStatusReceiver"><span class="pre">pydrake.manipulation.IiwaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusReceiver.get_time_measured_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusReceiver.get_time_measured_output_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusReceiver.get_torque_commanded_output_port">
-<span class="sig-name descname"><span class="pre">get_torque_commanded_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusReceiver" title="pydrake.manipulation.IiwaStatusReceiver"><span class="pre">pydrake.manipulation.IiwaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusReceiver.get_torque_commanded_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusReceiver.get_torque_commanded_output_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusReceiver.get_torque_external_output_port">
-<span class="sig-name descname"><span class="pre">get_torque_external_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusReceiver" title="pydrake.manipulation.IiwaStatusReceiver"><span class="pre">pydrake.manipulation.IiwaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusReceiver.get_torque_external_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusReceiver.get_torque_external_output_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusReceiver.get_torque_measured_output_port">
-<span class="sig-name descname"><span class="pre">get_torque_measured_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusReceiver" title="pydrake.manipulation.IiwaStatusReceiver"><span class="pre">pydrake.manipulation.IiwaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusReceiver.get_torque_measured_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusReceiver.get_torque_measured_output_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusReceiver.get_velocity_estimated_output_port">
-<span class="sig-name descname"><span class="pre">get_velocity_estimated_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusReceiver" title="pydrake.manipulation.IiwaStatusReceiver"><span class="pre">pydrake.manipulation.IiwaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusReceiver.get_velocity_estimated_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusReceiver.get_velocity_estimated_output_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusSender">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">IiwaStatusSender</span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusSender" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusSender</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>Creates and outputs lcmt_iiwa_status messages.</p>
 <p>Note that this system does not actually send the message an LCM
 channel. To send the message, the output of this system should be
@@ -594,78 +601,78 @@ detailed above.</p>
 <p><code class="docutils literal notranslate"><span class="pre">lcmt_iiwa_status.lcm</span></code> for additional documentation.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusSender.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusSender" title="pydrake.manipulation.IiwaStatusSender"><span class="pre">pydrake.manipulation.IiwaStatusSender</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusSender.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusSender.__init__(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusSender,</span> <span class="pre">num_joints:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">7)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusSender.get_position_commanded_input_port">
-<span class="sig-name descname"><span class="pre">get_position_commanded_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusSender" title="pydrake.manipulation.IiwaStatusSender"><span class="pre">pydrake.manipulation.IiwaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusSender.get_position_commanded_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusSender.get_position_commanded_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusSender.get_position_measured_input_port">
-<span class="sig-name descname"><span class="pre">get_position_measured_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusSender" title="pydrake.manipulation.IiwaStatusSender"><span class="pre">pydrake.manipulation.IiwaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusSender.get_position_measured_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusSender.get_position_measured_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusSender.get_time_measured_input_port">
-<span class="sig-name descname"><span class="pre">get_time_measured_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusSender" title="pydrake.manipulation.IiwaStatusSender"><span class="pre">pydrake.manipulation.IiwaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusSender.get_time_measured_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusSender.get_time_measured_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusSender.get_torque_commanded_input_port">
-<span class="sig-name descname"><span class="pre">get_torque_commanded_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusSender" title="pydrake.manipulation.IiwaStatusSender"><span class="pre">pydrake.manipulation.IiwaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusSender.get_torque_commanded_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusSender.get_torque_commanded_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusSender.get_torque_external_input_port">
-<span class="sig-name descname"><span class="pre">get_torque_external_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusSender" title="pydrake.manipulation.IiwaStatusSender"><span class="pre">pydrake.manipulation.IiwaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusSender.get_torque_external_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusSender.get_torque_external_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusSender.get_torque_measured_input_port">
-<span class="sig-name descname"><span class="pre">get_torque_measured_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusSender" title="pydrake.manipulation.IiwaStatusSender"><span class="pre">pydrake.manipulation.IiwaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusSender.get_torque_measured_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusSender.get_torque_measured_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.IiwaStatusSender.get_velocity_estimated_input_port">
-<span class="sig-name descname"><span class="pre">get_velocity_estimated_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaStatusSender" title="pydrake.manipulation.IiwaStatusSender"><span class="pre">pydrake.manipulation.IiwaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.IiwaStatusSender.get_velocity_estimated_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IiwaStatusSender.get_velocity_estimated_input_port(self:</span> <span class="pre">pydrake.manipulation.IiwaStatusSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.MakeMultibodyForceToWsgForceSystem">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">MakeMultibodyForceToWsgForceSystem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.VectorSystem" title="pydrake.systems.framework.VectorSystem"><span class="pre">pydrake.systems.framework.VectorSystem</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.MakeMultibodyForceToWsgForceSystem" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MakeMultibodyForceToWsgForceSystem()</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.VectorSystem</span></span></dt>
 <dd><p>Helper method to create a MultibodyForceToWsgForceSystem.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.MakeMultibodyStateToWsgStateSystem">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">MakeMultibodyStateToWsgStateSystem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.primitives.html#pydrake.systems.primitives.MatrixGain" title="pydrake.systems.primitives.MatrixGain"><span class="pre">pydrake.systems.primitives.MatrixGain</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.MakeMultibodyStateToWsgStateSystem" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MakeMultibodyStateToWsgStateSystem()</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.primitives.MatrixGain</span></span></dt>
 <dd><p>Extract the distance between the fingers (and its time derivative) out
 of the plant model which pretends the two fingers are independent.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.ParseIiwaControlMode">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">ParseIiwaControlMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">control_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.manipulation.IiwaControlMode" title="pydrake.manipulation.IiwaControlMode"><span class="pre">pydrake.manipulation.IiwaControlMode</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.ParseIiwaControlMode" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ParseIiwaControlMode(control_mode:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.manipulation.IiwaControlMode</span></span></dt>
 <dd><p>Parses control mode with the following mapping: - “position_only”:
 kPositionOnly - “torque_only”: kTorqueOnly - “position_and_torque”:
 kPositionAndTorque</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.position_enabled">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">position_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">control_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaControlMode" title="pydrake.manipulation.IiwaControlMode"><span class="pre">pydrake.manipulation.IiwaControlMode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.manipulation.position_enabled" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">position_enabled(control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
 <dd><p>Reports if the given control <code class="docutils literal notranslate"><span class="pre">mode</span></code> includes positions.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgCommandReceiver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgCommandReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgCommandReceiver" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgCommandReceiver</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>Handles the command for the Schunk WSG gripper from a
 LcmSubscriberSystem.</p>
 <p>It has one input port: “command_message” for lcmt_schunk_wsg_command
@@ -675,8 +682,8 @@ represented as the desired distance between the fingers in meters, and
 one for the commanded force limit. The commanded position and force
 limit are scalars (BasicVector&lt;double&gt; of size 1).</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">command_message&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWsgCommandReceiver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; force_limit</td></tr></table></td></tr></table><dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgCommandReceiver.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgCommandReceiver" title="pydrake.manipulation.SchunkWsgCommandReceiver"><span class="pre">pydrake.manipulation.SchunkWsgCommandReceiver</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.02</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">40.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgCommandReceiver.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgCommandReceiver.__init__(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgCommandReceiver,</span> <span class="pre">initial_position:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.02,</span> <span class="pre">initial_force:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">40.0)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_position</span></code>:</dt><dd><p>the commanded position to output if no LCM message has been
 received yet.</p>
@@ -688,21 +695,21 @@ received yet.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgCommandReceiver.get_force_limit_output_port">
-<span class="sig-name descname"><span class="pre">get_force_limit_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgCommandReceiver" title="pydrake.manipulation.SchunkWsgCommandReceiver"><span class="pre">pydrake.manipulation.SchunkWsgCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgCommandReceiver.get_force_limit_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgCommandReceiver.get_force_limit_output_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgCommandReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgCommandReceiver.get_position_output_port">
-<span class="sig-name descname"><span class="pre">get_position_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgCommandReceiver" title="pydrake.manipulation.SchunkWsgCommandReceiver"><span class="pre">pydrake.manipulation.SchunkWsgCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgCommandReceiver.get_position_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgCommandReceiver.get_position_output_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgCommandReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgCommandSender">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgCommandSender</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgCommandSender" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgCommandSender</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>Send lcmt_schunk_wsg_command messages for a Schunk WSG gripper. Has
 two input ports: one for the commanded finger position represented as
 the desired signed distance between the fingers in meters, and one for
@@ -712,31 +719,31 @@ scalars (BasicVector&lt;double&gt; of size 1).</p>
 the <code class="docutils literal notranslate"><span class="pre">default_force_limit</span></code> value given at construction time will be
 used.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgCommandSender.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgCommandSender" title="pydrake.manipulation.SchunkWsgCommandSender"><span class="pre">pydrake.manipulation.SchunkWsgCommandSender</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_force_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">40.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgCommandSender.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgCommandSender.__init__(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgCommandSender,</span> <span class="pre">default_force_limit:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">40.0)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgCommandSender.get_command_output_port">
-<span class="sig-name descname"><span class="pre">get_command_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgCommandSender" title="pydrake.manipulation.SchunkWsgCommandSender"><span class="pre">pydrake.manipulation.SchunkWsgCommandSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgCommandSender.get_command_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgCommandSender.get_command_output_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgCommandSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgCommandSender.get_force_limit_input_port">
-<span class="sig-name descname"><span class="pre">get_force_limit_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgCommandSender" title="pydrake.manipulation.SchunkWsgCommandSender"><span class="pre">pydrake.manipulation.SchunkWsgCommandSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgCommandSender.get_force_limit_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgCommandSender.get_force_limit_input_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgCommandSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgCommandSender.get_position_input_port">
-<span class="sig-name descname"><span class="pre">get_position_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgCommandSender" title="pydrake.manipulation.SchunkWsgCommandSender"><span class="pre">pydrake.manipulation.SchunkWsgCommandSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgCommandSender.get_position_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgCommandSender.get_position_input_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgCommandSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgController">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgController</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgController" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgController</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></p>
 <p>This class implements a controller for a Schunk WSG gripper. It has
 two input ports: lcmt_schunk_wsg_command message and the current
 state, and an output port which emits the target force for the
@@ -747,15 +754,15 @@ ignored. The internal implementation consists of a PID controller
 with a saturation block (which applies the force control from the
 command message).</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">command_message&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWsgController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; force</td></tr></table></td></tr></table><dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgController.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgController" title="pydrake.manipulation.SchunkWsgController"><span class="pre">pydrake.manipulation.SchunkWsgController</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ki</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgController.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgController.__init__(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgController,</span> <span class="pre">kp:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">2000.0,</span> <span class="pre">ki:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.0,</span> <span class="pre">kd:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">5.0)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgDriver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgDriver</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgDriver" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgDriver</span></span></dt>
 <dd><p>This config struct specifies how to wire up Drake systems between an
 LCM interface and the actuation input ports of a MultibodyPlant. This
 simulates the role that driver software and control cabinets would
@@ -763,18 +770,18 @@ take in real life.</p>
 <p>It creates an LCM publisher on the <code class="docutils literal notranslate"><span class="pre">SCHUNK_WSG_STATUS</span></code> channel and
 an LCM subscriber on the <code class="docutils literal notranslate"><span class="pre">SCHUNK_WSG_COMMAND</span></code> channel.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgDriver.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgDriver" title="pydrake.manipulation.SchunkWsgDriver"><span class="pre">pydrake.manipulation.SchunkWsgDriver</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgDriver.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgDriver.__init__(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgDriver,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgDriver.lcm_bus">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lcm_bus</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgDriver.lcm_bus" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgDriver.lcm_bus</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgDriver.pid_gains">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pid_gains</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgDriver.pid_gains" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgDriver.pid_gains</span></span></dt>
 <dd><p>Gains to apply to the the WSG fingers. The p term corresponds
 approximately to the elastic modulus of the belt, the d term to the
 viscous friction of the geartrain. The i term is nonphysical.</p>
@@ -783,9 +790,9 @@ viscous friction of the geartrain. The i term is nonphysical.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgPositionController">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgPositionController</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgPositionController" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgPositionController</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></p>
 <p>This class implements a controller for a Schunk WSG gripper in
 position control mode adding a discrete-derivative to estimate the
 desired velocity from the desired position commands. It is a thin
@@ -798,8 +805,8 @@ used.</p>
 <p>SchunkWsgPdController</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgPositionController.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgPositionController" title="pydrake.manipulation.SchunkWsgPositionController"><span class="pre">pydrake.manipulation.SchunkWsgPositionController</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kp_command</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">200.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd_command</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kp_constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd_constraint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_force_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">40.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgPositionController.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgPositionController.__init__(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgPositionController,</span> <span class="pre">time_step:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.05,</span> <span class="pre">kp_command:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">200.0,</span> <span class="pre">kd_command:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">5.0,</span> <span class="pre">kp_constraint:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">2000.0,</span> <span class="pre">kd_constraint:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">5.0,</span> <span class="pre">default_force_limit:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">40.0)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Initialize the controller. The default <code class="docutils literal notranslate"><span class="pre">time_step</span></code> is set to match
 the update rate of the wsg firmware. The gain parameters are set based
 limited tuning in simulation with a kuka picking up small objects.</p>
@@ -810,66 +817,66 @@ limited tuning in simulation with a kuka picking up small objects.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgPositionController.get_desired_position_input_port">
-<span class="sig-name descname"><span class="pre">get_desired_position_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgPositionController" title="pydrake.manipulation.SchunkWsgPositionController"><span class="pre">pydrake.manipulation.SchunkWsgPositionController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgPositionController.get_desired_position_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgPositionController.get_desired_position_input_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgPositionController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgPositionController.get_force_limit_input_port">
-<span class="sig-name descname"><span class="pre">get_force_limit_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgPositionController" title="pydrake.manipulation.SchunkWsgPositionController"><span class="pre">pydrake.manipulation.SchunkWsgPositionController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgPositionController.get_force_limit_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgPositionController.get_force_limit_input_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgPositionController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgPositionController.get_generalized_force_output_port">
-<span class="sig-name descname"><span class="pre">get_generalized_force_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgPositionController" title="pydrake.manipulation.SchunkWsgPositionController"><span class="pre">pydrake.manipulation.SchunkWsgPositionController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgPositionController.get_generalized_force_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgPositionController.get_generalized_force_output_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgPositionController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgPositionController.get_grip_force_output_port">
-<span class="sig-name descname"><span class="pre">get_grip_force_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgPositionController" title="pydrake.manipulation.SchunkWsgPositionController"><span class="pre">pydrake.manipulation.SchunkWsgPositionController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgPositionController.get_grip_force_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgPositionController.get_grip_force_output_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgPositionController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgPositionController.get_state_input_port">
-<span class="sig-name descname"><span class="pre">get_state_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgPositionController" title="pydrake.manipulation.SchunkWsgPositionController"><span class="pre">pydrake.manipulation.SchunkWsgPositionController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgPositionController.get_state_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgPositionController.get_state_input_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgPositionController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgStatusReceiver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgStatusReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgStatusReceiver" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgStatusReceiver</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>Handles lcmt_schunk_wsg_status messages from a LcmSubscriberSystem.
 Has two output ports: one for the measured state of the gripper,
 represented as the signed distance between the fingers in meters and
 its corresponding velocity, and one for the measured force.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">lcmt_schunk_wsg_status&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWsgStatusReceiver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; force</td></tr></table></td></tr></table><dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgStatusReceiver.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgStatusReceiver" title="pydrake.manipulation.SchunkWsgStatusReceiver"><span class="pre">pydrake.manipulation.SchunkWsgStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgStatusReceiver.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgStatusReceiver.__init__(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgStatusReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgStatusReceiver.get_force_output_port">
-<span class="sig-name descname"><span class="pre">get_force_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgStatusReceiver" title="pydrake.manipulation.SchunkWsgStatusReceiver"><span class="pre">pydrake.manipulation.SchunkWsgStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgStatusReceiver.get_force_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgStatusReceiver.get_force_output_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgStatusReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgStatusReceiver.get_state_output_port">
-<span class="sig-name descname"><span class="pre">get_state_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgStatusReceiver" title="pydrake.manipulation.SchunkWsgStatusReceiver"><span class="pre">pydrake.manipulation.SchunkWsgStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgStatusReceiver.get_state_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgStatusReceiver.get_state_output_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgStatusReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgStatusReceiver.get_status_input_port">
-<span class="sig-name descname"><span class="pre">get_status_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgStatusReceiver" title="pydrake.manipulation.SchunkWsgStatusReceiver"><span class="pre">pydrake.manipulation.SchunkWsgStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgStatusReceiver.get_status_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgStatusReceiver.get_status_input_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgStatusReceiver)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgStatusSender">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgStatusSender</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgStatusSender" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgStatusSender</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>Sends lcmt_schunk_wsg_status messages for a Schunk WSG. This system
 has one input port for the current state of the WSG, and one optional
 input port for the measured gripping force.</p>
@@ -877,26 +884,26 @@ input port for the measured gripping force.</p>
 position and one velocity – representing the distance between the
 fingers (positive implies non-penetration).</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgStatusSender.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgStatusSender" title="pydrake.manipulation.SchunkWsgStatusSender"><span class="pre">pydrake.manipulation.SchunkWsgStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgStatusSender.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgStatusSender.__init__(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgStatusSender)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgStatusSender.get_force_input_port">
-<span class="sig-name descname"><span class="pre">get_force_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgStatusSender" title="pydrake.manipulation.SchunkWsgStatusSender"><span class="pre">pydrake.manipulation.SchunkWsgStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgStatusSender.get_force_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgStatusSender.get_force_input_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgStatusSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgStatusSender.get_state_input_port">
-<span class="sig-name descname"><span class="pre">get_state_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgStatusSender" title="pydrake.manipulation.SchunkWsgStatusSender"><span class="pre">pydrake.manipulation.SchunkWsgStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgStatusSender.get_state_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgStatusSender.get_state_input_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgStatusSender)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SchunkWsgTrajectoryGenerator</span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgTrajectoryGenerator</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>This system defines input ports for the desired finger position
 represented as the desired distance between the fingers in meters and
 the desired force limit in newtons, and emits target position/velocity
@@ -910,8 +917,8 @@ Port <code class="docutils literal notranslate"><span class="pre">y1</span></cod
 <p>Note that the <code class="docutils literal notranslate"><span class="pre">force_limit</span></code> input port and <code class="docutils literal notranslate"><span class="pre">y1</span></code> output port (max
 force) can be opted-out with a constructor argument.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_force_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgTrajectoryGenerator.__init__(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator,</span> <span class="pre">input_size:</span> <span class="pre">int,</span> <span class="pre">position_index:</span> <span class="pre">int,</span> <span class="pre">use_force_limit:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_size</span></code>:</dt><dd><p>The size of the state input port to create (one reason this may
 vary is passing in the entire state of a rigid body tree vs.
@@ -926,13 +933,13 @@ the actuated finger.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_desired_position_input_port">
-<span class="sig-name descname"><span class="pre">get_desired_position_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_desired_position_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgTrajectoryGenerator.get_desired_position_input_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_force_limit_input_port">
-<span class="sig-name descname"><span class="pre">get_force_limit_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_force_limit_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgTrajectoryGenerator.get_force_limit_input_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>The constructor argument use_force_limit was set to true.</p>
 </dd>
@@ -940,8 +947,8 @@ the actuated finger.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_max_force_output_port">
-<span class="sig-name descname"><span class="pre">get_max_force_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_max_force_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgTrajectoryGenerator.get_max_force_output_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>The constructor argument use_force_limit was set to true.</p>
 </dd>
@@ -949,21 +956,21 @@ the actuated finger.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_state_input_port">
-<span class="sig-name descname"><span class="pre">get_state_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_state_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgTrajectoryGenerator.get_state_input_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_target_output_port">
-<span class="sig-name descname"><span class="pre">get_target_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator" title="pydrake.manipulation.SchunkWsgTrajectoryGenerator"><span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SchunkWsgTrajectoryGenerator.get_target_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SchunkWsgTrajectoryGenerator.get_target_output_port(self:</span> <span class="pre">pydrake.manipulation.SchunkWsgTrajectoryGenerator)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.SimIiwaDriver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">SimIiwaDriver</span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SimIiwaDriver</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></p>
 <p>SimIiwaDriver simulates the IIWA control and status interface using a
 MultibodyPlant.</p>
 <div class="admonition warning">
@@ -977,16 +984,16 @@ connect to the MultibodyPlant’s per-model-instance ports of the same
 name. All other ports are intended to mimic the LCM command and status
 message fields.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SimIiwaDriver.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.manipulation.SimIiwaDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_config:</span> <span class="pre">pydrake.manipulation.IiwaDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SimIiwaDriver.__init__(self:</span> <span class="pre">pydrake.manipulation.SimIiwaDriver,</span> <span class="pre">driver_config:</span> <span class="pre">pydrake.manipulation.IiwaDriver,</span> <span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Constructs a diagram with the given <code class="docutils literal notranslate"><span class="pre">driver_config</span></code>. A reference to
 the <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> is retained by this system, so the
 <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> must outlive <code class="docutils literal notranslate"><span class="pre">this</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.SimIiwaDriver.AddToBuilder">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AddToBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iiwa_instance:</span> <span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_config:</span> <span class="pre">pydrake.manipulation.IiwaDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.SimIiwaDriver.AddToBuilder" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SimIiwaDriver.AddToBuilder(builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder,</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">iiwa_instance:</span> <span class="pre">pydrake.multibody.tree.ModelInstanceIndex,</span> <span class="pre">driver_config:</span> <span class="pre">pydrake.manipulation.IiwaDriver,</span> <span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.System</span></span></dt>
 <dd><p>Given a <code class="docutils literal notranslate"><span class="pre">plant</span></code> (and associated <code class="docutils literal notranslate"><span class="pre">iiwa_instance</span></code>) and a
 <code class="docutils literal notranslate"><span class="pre">builder</span></code>, installs in that builder the <code class="docutils literal notranslate"><span class="pre">SimIiwaDriver</span></code> system to
 control and monitor an iiwa described by <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code>.</p>
@@ -1002,20 +1009,20 @@ a longer lifetime than the Diagram.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.manipulation.torque_enabled">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">torque_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">control_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.IiwaControlMode" title="pydrake.manipulation.IiwaControlMode"><span class="pre">pydrake.manipulation.IiwaControlMode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.manipulation.torque_enabled" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">torque_enabled(control_mode:</span> <span class="pre">pydrake.manipulation.IiwaControlMode)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
 <dd><p>Reports if the given control <code class="docutils literal notranslate"><span class="pre">mode</span></code> includes torques.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.manipulation.ZeroForceDriver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">ZeroForceDriver</span></span><a class="headerlink" href="#pydrake.manipulation.ZeroForceDriver" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ZeroForceDriver</span></span></dt>
 <dd><p>A driver that applies zero actuation to every joint of a model. Useful
 for debugging and testing; useless in reality. No LCM channels are
 created.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.manipulation.ZeroForceDriver.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.ZeroForceDriver" title="pydrake.manipulation.ZeroForceDriver"><span class="pre">pydrake.manipulation.ZeroForceDriver</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.ZeroForceDriver.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ZeroForceDriver.__init__(self:</span> <span class="pre">pydrake.manipulation.ZeroForceDriver,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>

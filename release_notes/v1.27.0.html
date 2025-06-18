@@ -208,7 +208,7 @@ longer tested in CI (<a href="https://github.com/RobotLocomotion/drake/pull/2105
     <ul>
       <li>This particular workflow for using Drake binaries via Bazel is characterized
 by a line like this in your <code class="language-plaintext highlighter-rouge">WORKSPACE</code> file:
-        <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">load</span><span class="p">(</span><span class="s">"@drake_binary//:share/drake/repo.bzl"</span><span class="p">,</span> <span class="s">"drake_repository"</span><span class="p">)</span>
+        <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">load</span><span class="p">(</span><span class="sh">"</span><span class="s">@drake_binary//:share/drake/repo.bzl</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">drake_repository</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div>        </div>
       </li>
       <li>During the deprecation window we will continue to install the code in case

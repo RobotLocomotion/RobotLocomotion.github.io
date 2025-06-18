@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.common.deprecation &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=6b576c25" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7f41d439"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -60,7 +63,11 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pydrake
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pydrake
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -124,9 +131,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="pydrake.common.html">pydrake.common</a> &raquo;</li>
-      <li>pydrake.common.deprecation</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pydrake.common.html">pydrake.common</a></li>
+      <li class="breadcrumb-item active">pydrake.common.deprecation</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -136,7 +143,7 @@
            <div itemprop="articleBody">
              
   <section id="module-pydrake.common.deprecation">
-<span id="pydrake-common-deprecation"></span><h1>pydrake.common.deprecation<a class="headerlink" href="#module-pydrake.common.deprecation" title="Permalink to this headline"></a></h1>
+<span id="pydrake-common-deprecation"></span><h1>pydrake.common.deprecation<a class="headerlink" href="#module-pydrake.common.deprecation" title="Link to this heading"></a></h1>
 <p>Provides deprecation warnings and utilities for triggering warnings.</p>
 <p>By default, this sets all <cite>DrakeDeprecationWarnings</cite> to be shown <cite>“once”</cite>,
 which overrides any <cite>-W</cite> command-line arguments. To change this behavior, you
@@ -149,11 +156,11 @@ can do something like:</p>
 <p>If you would like to disable all Drake-related warnings, you may use the
 <cite>“ignore”</cite> action for <cite>warnings.simplefilter</cite>.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.common.deprecation.deprecated">
-<span class="sig-prename descclassname"><span class="pre">pydrake.common.deprecation.</span></span><span class="sig-name descname"><span class="pre">deprecated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.deprecation.deprecated" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">deprecated(message,</span> <span class="pre">*,</span> <span class="pre">date=None)</span></span></dt>
 <dd><p>Decorator that deprecates a member of a class based on access.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>message</strong> – Warning message when member is accessed.</p></li>
 <li><p><strong>date</strong> – (Optional) String of the form “YYYY-MM-DD”.
@@ -173,8 +180,8 @@ not when the method is called. For other methods, see the examples in
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.common.deprecation.deprecated_callable">
-<span class="sig-prename descclassname"><span class="pre">pydrake.common.deprecation.</span></span><span class="sig-name descname"><span class="pre">deprecated_callable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.deprecation.deprecated_callable" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">deprecated_callable(message,</span> <span class="pre">*,</span> <span class="pre">date=None)</span></span></dt>
 <dd><p>Deprecates a callable (a free function or a type/class object) by
 wrapping its invocation to emit a deprecation.</p>
 <p>When possible, use ModuleShim to ensure that a deprecation warning is
@@ -197,22 +204,22 @@ of <cite>_{module}_extra.py</cite>), you should use this approach.</p>
 </dd></dl>
 
 <dl class="py exception">
-<dt class="sig sig-object py" id="pydrake.common.deprecation.DrakeDeprecationWarning">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.deprecation.</span></span><span class="sig-name descname"><span class="pre">DrakeDeprecationWarning</span></span><a class="headerlink" href="#pydrake.common.deprecation.DrakeDeprecationWarning" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DrakeDeprecationWarning</span></span></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></p>
 <p>Extends <cite>DeprecationWarning</cite> to permit Drake-specific warnings to
 be filtered by default, without having side effects on other libraries.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.common.deprecation.install_numpy_warning_filters">
-<span class="sig-prename descclassname"><span class="pre">pydrake.common.deprecation.</span></span><span class="sig-name descname"><span class="pre">install_numpy_warning_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.deprecation.install_numpy_warning_filters" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">install_numpy_warning_filters(force=False)</span></span></dt>
 <dd><p>Install warnings filters specific to NumPy.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.common.deprecation.ModuleShim">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.deprecation.</span></span><span class="sig-name descname"><span class="pre">ModuleShim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orig_module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.deprecation.ModuleShim" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModuleShim(orig_module,</span> <span class="pre">handler)</span></span></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Provides a shim for automatically resolving extra variables.</p>
 <p>This can be used to deprecate import alias in modules to simplify
@@ -233,8 +240,8 @@ ExecuteExtraPythonCode). Instead, you should rename the module from
 _import_cc_module_vars.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.common.deprecation.ModuleShim.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orig_module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handler</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.deprecation.ModuleShim.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModuleShim.__init__(orig_module,</span> <span class="pre">handler)</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>

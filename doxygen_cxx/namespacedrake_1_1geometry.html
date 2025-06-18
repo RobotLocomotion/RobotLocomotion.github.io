@@ -481,6 +481,12 @@ Functions</h2></td></tr>
 <tr class="separator:a15599d92370af7b991c4a593f6103376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10fa27fe0b9855b1635e8c7aedf28f16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a10fa27fe0b9855b1635e8c7aedf28f16">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS</a> (class <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>)</td></tr>
 <tr class="separator:a10fa27fe0b9855b1635e8c7aedf28f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29a1f48b67c49f27ec19a89f37bd85ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a29a1f48b67c49f27ec19a89f37bd85ae">RefineVolumeMesh</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;mesh)</td></tr>
+<tr class="memdesc:a29a1f48b67c49f27ec19a89f37bd85ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refines a tetrahedral mesh to eliminate problematic simplices.  <a href="#a29a1f48b67c49f27ec19a89f37bd85ae">More...</a><br /></td></tr>
+<tr class="separator:a29a1f48b67c49f27ec19a89f37bd85ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff2aec5a833973780e6a83df356a69c0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#aff2aec5a833973780e6a83df356a69c0">RefineVolumeMeshIntoVtkFileContents</a> (const <a class="el" href="classdrake_1_1geometry_1_1_mesh_source.html">MeshSource</a> &amp;mesh_source)</td></tr>
+<tr class="memdesc:aff2aec5a833973780e6a83df356a69c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refines a tetrahedral mesh to eliminate problematic simplices.  <a href="#aff2aec5a833973780e6a83df356a69c0">More...</a><br /></td></tr>
+<tr class="separator:aff2aec5a833973780e6a83df356a69c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5245b5a993317d0c83f529c74f0838e8"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5245b5a993317d0c83f529c74f0838e8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a5245b5a993317d0c83f529c74f0838e8">ConvertVolumeToSurfaceMesh</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &amp;volume)</td></tr>
 <tr class="memdesc:a5245b5a993317d0c83f529c74f0838e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a tetrahedral volume mesh to a triangulated surface mesh of the boundary surface of the volume.  <a href="#a5245b5a993317d0c83f529c74f0838e8">More...</a><br /></td></tr>
@@ -1700,6 +1706,72 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Variant that allows defining uniform scaling from a single scalar value. </p>
+
+</div>
+</div>
+<a id="a29a1f48b67c49f27ec19a89f37bd85ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29a1f48b67c49f27ec19a89f37bd85ae">&#9670;&nbsp;</a></span>RefineVolumeMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; drake::geometry::RefineVolumeMesh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Refines a tetrahedral mesh to eliminate problematic simplices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>The mesh to refine. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The refined mesh, or a copy of the input mesh if no refinement was needed. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>mesh</code> is not a valid tetrahedral mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff2aec5a833973780e6a83df356a69c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff2aec5a833973780e6a83df356a69c0">&#9670;&nbsp;</a></span>RefineVolumeMeshIntoVtkFileContents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string drake::geometry::RefineVolumeMeshIntoVtkFileContents </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_mesh_source.html">MeshSource</a> &amp;&#160;</td>
+          <td class="paramname"><em>mesh_source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Refines a tetrahedral mesh to eliminate problematic simplices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh_source</td><td>The mesh to refine. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A valid, ASCII VTK file defining the refined tetrahedral mesh. Represents the input mesh if no refinement was needed. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>mesh_source</code> does not reference a valid VTK-formatted tetrahedral mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

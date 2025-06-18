@@ -193,6 +193,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a1717b842ef7560038a1ee8f5076d7721"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">solvers::SolverInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html#a1717b842ef7560038a1ee8f5076d7721">solver</a> {nullptr}</td></tr>
+<tr class="memdesc:a1717b842ef7560038a1ee8f5076d7721"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user can specify a solver to use for the counterexample search program.  <a href="#a1717b842ef7560038a1ee8f5076d7721">More...</a><br /></td></tr>
+<tr class="separator:a1717b842ef7560038a1ee8f5076d7721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a02069c3e43c0097629cb4a6ea6fbbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_common_sampled_iris_options.html">CommonSampledIrisOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html#a6a02069c3e43c0097629cb4a6ea6fbbf">sampled_iris_options</a> {}</td></tr>
 <tr class="memdesc:a6a02069c3e43c0097629cb4a6ea6fbbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options common to IRIS-type algorithms.  <a href="#a6a02069c3e43c0097629cb4a6ea6fbbf">More...</a><br /></td></tr>
 <tr class="separator:a6a02069c3e43c0097629cb4a6ea6fbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -383,6 +386,23 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Options common to IRIS-type algorithms. </p>
+
+</div>
+</div>
+<a id="a1717b842ef7560038a1ee8f5076d7721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1717b842ef7560038a1ee8f5076d7721">&#9670;&nbsp;</a></span>solver</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">solvers::SolverInterface</a>* solver {nullptr}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The user can specify a solver to use for the counterexample search program. </p>
+<p>If nullptr (the default value) is given, then <a class="el" href="namespacedrake_1_1solvers.html#a99ce5167dfbdc1a1f84e2e7cc52cba4e" title="Makes the first available and enabled solver.">solvers::MakeFirstAvailableSolver</a> will be used to pick the solver. </p>
 
 </div>
 </div>

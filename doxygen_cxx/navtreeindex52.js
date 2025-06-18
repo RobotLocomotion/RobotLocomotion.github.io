@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"derivative__trajectory_8h.html#acc360a6680a1dba74dbfe7479fe5674c":[4,0,0,1,5,3,1],
 "desired__state__input_8h.html":[4,0,0,8,10,14],
 "desired__state__input_8h.html#a2e66eb1bf99e66920f74b9c447ac7c08":[4,0,0,8,10,14,0],
 "detail__collision__filter__group__resolver_8h.html":[4,0,0,8,9,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "drake__export_8h.html#a4ee2bff9f11e1bfd6a05cc85d4bc31dc":[4,0,0,1,24,0],
 "drake__kuka__iiwa__robot_8h.html":[4,0,0,8,0,3,0],
 "drake__lcm_8h.html":[4,0,0,5,0],
-"drake__lcm__base_8h.html":[4,0,0,5,1],
-"drake__lcm__interface_8h.html":[4,0,0,5,2]
+"drake__lcm__base_8h.html":[4,0,0,5,1]
 };

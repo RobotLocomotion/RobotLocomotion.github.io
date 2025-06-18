@@ -202,15 +202,15 @@ Python code must no longer assume that the object passed
 <code class="language-plaintext highlighter-rouge">MultibodyPlant.AddForceElement</code> is what gets added to the plant. Instead,
 code should always capture the return value, i.e.:
     <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Good:
-</span><span class="n">joint</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="n">AddJoint</span><span class="p">(</span><span class="n">PrismaticJoint</span><span class="p">(...))</span>
+</span><span class="n">joint</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">AddJoint</span><span class="p">(</span><span class="nc">PrismaticJoint</span><span class="p">(...))</span>
 <span class="c1"># Also okay:
-</span><span class="n">joint</span> <span class="o">=</span> <span class="n">PrismaticJoint</span><span class="p">(...)</span>
-<span class="n">joint</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="n">AddJoint</span><span class="p">(</span><span class="n">joint</span><span class="p">)</span>
+</span><span class="n">joint</span> <span class="o">=</span> <span class="nc">PrismaticJoint</span><span class="p">(...)</span>
+<span class="n">joint</span> <span class="o">=</span> <span class="n">plant</span><span class="p">.</span><span class="nc">AddJoint</span><span class="p">(</span><span class="n">joint</span><span class="p">)</span>
 </code></pre></div>    </div>
     <p>but in this example:</p>
     <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Needs care:
-</span><span class="n">joint</span> <span class="o">=</span> <span class="n">PrismaticJoint</span><span class="p">(...)</span>
-<span class="n">plant</span><span class="p">.</span><span class="n">AddJoint</span><span class="p">(</span><span class="n">joint</span><span class="p">)</span>
+</span><span class="n">joint</span> <span class="o">=</span> <span class="nc">PrismaticJoint</span><span class="p">(...)</span>
+<span class="n">plant</span><span class="p">.</span><span class="nc">AddJoint</span><span class="p">(</span><span class="n">joint</span><span class="p">)</span>
 </code></pre></div>    </div>
     <p>the original <code class="language-plaintext highlighter-rouge">joint</code> reference will NOT necessarily be part of the plant, so
 would probably be a mistake to be used thereafter.</p>

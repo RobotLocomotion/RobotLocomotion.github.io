@@ -2135,7 +2135,7 @@ part of the API).</dd>
                           <span class="n">keys</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span>
                           <span class="n">require_all_keys</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="p">...]]:</span>
-    <span class="s">"""Fetches rows from a Smalltable.
+    <span class="sh">"""</span><span class="s">Fetches rows from a Smalltable.
 
     Retrieves rows pertaining to the given keys from the Table instance
     represented by table_handle.  String keys will be UTF-8 encoded.
@@ -2152,9 +2152,9 @@ part of the API).</dd>
         fetched. Each row is represented as a tuple of strings. For
         example:
 
-        {b'Serak': ('Rigel VII', 'Preparer'),
-         b'Zim': ('Irk', 'Invader'),
-         b'Lrrr': ('Omicron Persei 8', 'Emperor')}
+        {b</span><span class="sh">'</span><span class="s">Serak</span><span class="sh">'</span><span class="s">: (</span><span class="sh">'</span><span class="s">Rigel VII</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="s">Preparer</span><span class="sh">'</span><span class="s">),
+         b</span><span class="sh">'</span><span class="s">Zim</span><span class="sh">'</span><span class="s">: (</span><span class="sh">'</span><span class="s">Irk</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="s">Invader</span><span class="sh">'</span><span class="s">),
+         b</span><span class="sh">'</span><span class="s">Lrrr</span><span class="sh">'</span><span class="s">: (</span><span class="sh">'</span><span class="s">Omicron Persei 8</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="s">Emperor</span><span class="sh">'</span><span class="s">)}
 
         Returned keys are always bytes.  If a key from the keys argument is
         missing from the dictionary, then that row was not found in the
@@ -2162,7 +2162,7 @@ part of the API).</dd>
 
     Raises:
         IOError: An error occurred accessing the smalltable.
-    """</span>
+    </span><span class="sh">"""</span>
 </code></pre></div></div>
 
 <p>Similarly, this variation on <code class="language-plaintext highlighter-rouge">Args:</code> with a line break is also allowed:</p>
@@ -2171,7 +2171,7 @@ part of the API).</dd>
                           <span class="n">keys</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span>
                           <span class="n">require_all_keys</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="p">...]]:</span>
-    <span class="s">"""Fetches rows from a Smalltable.
+    <span class="sh">"""</span><span class="s">Fetches rows from a Smalltable.
 
     Retrieves rows pertaining to the given keys from the Table instance
     represented by table_handle.  String keys will be UTF-8 encoded.
@@ -2190,9 +2190,9 @@ part of the API).</dd>
       fetched. Each row is represented as a tuple of strings. For
       example:
 
-      {b'Serak': ('Rigel VII', 'Preparer'),
-       b'Zim': ('Irk', 'Invader'),
-       b'Lrrr': ('Omicron Persei 8', 'Emperor')}
+      {b</span><span class="sh">'</span><span class="s">Serak</span><span class="sh">'</span><span class="s">: (</span><span class="sh">'</span><span class="s">Rigel VII</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="s">Preparer</span><span class="sh">'</span><span class="s">),
+       b</span><span class="sh">'</span><span class="s">Zim</span><span class="sh">'</span><span class="s">: (</span><span class="sh">'</span><span class="s">Irk</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="s">Invader</span><span class="sh">'</span><span class="s">),
+       b</span><span class="sh">'</span><span class="s">Lrrr</span><span class="sh">'</span><span class="s">: (</span><span class="sh">'</span><span class="s">Omicron Persei 8</span><span class="sh">'</span><span class="s">, </span><span class="sh">'</span><span class="s">Emperor</span><span class="sh">'</span><span class="s">)}
 
       Returned keys are always bytes.  If a key from the keys argument is
       missing from the dictionary, then that row was not found in the
@@ -2200,7 +2200,7 @@ part of the API).</dd>
 
     Raises:
       IOError: An error occurred accessing the smalltable.
-    """</span>
+    </span><span class="sh">"""</span>
 </code></pre></div></div>
 
 <p><span class="drake">
@@ -2226,7 +2226,7 @@ be documented here in an
 <p><span class="drake">Attributes are not always documented for classes.</span></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SampleClass</span><span class="p">:</span>
-    <span class="s">"""Summary of class here.
+    <span class="sh">"""</span><span class="s">Summary of class here.
 
     Longer class information...
     Longer class information...
@@ -2234,15 +2234,15 @@ be documented here in an
     Attributes:
         likes_spam: A boolean indicating if we like SPAM or not.
         eggs: An integer count of the eggs we have laid.
-    """</span>
+    </span><span class="sh">"""</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">likes_spam</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
-        <span class="s">"""Inits SampleClass with blah."""</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">likes_spam</span> <span class="o">=</span> <span class="n">likes_spam</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">eggs</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">likes_spam</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
+        <span class="sh">"""</span><span class="s">Inits SampleClass with blah.</span><span class="sh">"""</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">likes_spam</span> <span class="o">=</span> <span class="n">likes_spam</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">eggs</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">public_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s">"""Performs operation blah."""</span>
+    <span class="k">def</span> <span class="nf">public_method</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="sh">"""</span><span class="s">Performs operation blah.</span><span class="sh">"""</span>
 </code></pre></div></div>
 
 <p>All class docstrings should start with a one-line summary that describes what
@@ -2252,23 +2252,23 @@ it might occur. The class docstring should not repeat unnecessary information,
 such as that the class is a class.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CheeseShopAddress</span><span class="p">:</span>
-  <span class="s">"""The address of a cheese shop.
-
-  ...
-  """</span>
+  <span class="sh">"""</span><span class="s">The address of a cheese shop.
+</span><span class="gp">
+  ...</span>
+  <span class="sh">"""</span>
 
 <span class="k">class</span> <span class="nc">OutOfCheeseError</span><span class="p">(</span><span class="nb">Exception</span><span class="p">):</span>
-  <span class="s">"""No more cheese is available."""</span>
+  <span class="sh">"""</span><span class="s">No more cheese is available.</span><span class="sh">"""</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CheeseShopAddress</span><span class="p">:</span>
-  <span class="s">"""Class that describes the address of a cheese shop.
-
-  ...
-  """</span>
+  <span class="sh">"""</span><span class="s">Class that describes the address of a cheese shop.
+</span><span class="gp">
+  ...</span>
+  <span class="sh">"""</span>
 
 <span class="k">class</span> <span class="nc">OutOfCheeseError</span><span class="p">(</span><span class="nb">Exception</span><span class="p">):</span>
-  <span class="s">"""Raised when no more cheese is available."""</span>
+  <span class="sh">"""</span><span class="s">Raised when no more cheese is available.</span><span class="sh">"""</span>
 </code></pre></div></div>
 
 <!--
@@ -3356,7 +3356,7 @@ specify its type with an annotated assignment - use a colon and type between
 the variable name and value (the same as is done with function arguments
 that have a default value):
 
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">:</span> <span class="n">Foo</span> <span class="o">=</span> <span class="n">SomeUndecoratedFunction</span><span class="p">()</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">:</span> <span class="n">Foo</span> <span class="o">=</span> <span class="nc">SomeUndecoratedFunction</span><span class="p">()</span>
 </code></pre></div>    </div>
   </dd>
   <dt><a id="type-comments"></a></dt>
@@ -3365,7 +3365,7 @@ that have a default value):
 before Python 3.6), do not add any more uses of a <code class="language-plaintext highlighter-rouge"># type: &lt;type name&gt;</code>
 comment on the end of the line:
 
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="n">SomeUndecoratedFunction</span><span class="p">()</span>  <span class="c1"># type: Foo
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="nc">SomeUndecoratedFunction</span><span class="p">()</span>  <span class="c1"># type: Foo
 </span></code></pre></div>    </div>
   </dd>
 </dl>
@@ -3383,7 +3383,7 @@ The latter is commonly used as the return type from a function.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">b</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="p">...]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">c</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">"2"</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">)</span>
+<span class="n">c</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="sh">"</span><span class="s">2</span><span class="sh">"</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p><a id="s3.19.10-typevars"></a>
@@ -3400,16 +3400,16 @@ function <code class="language-plaintext highlighter-rouge">TypeVar</code> is a 
 
 <p>Example:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span>
-<span class="n">_T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">"_T"</span><span class="p">)</span>
-<span class="p">...</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span>
+<span class="n">_T</span> <span class="o">=</span> <span class="nc">TypeVar</span><span class="p">(</span><span class="sh">"</span><span class="s">_T</span><span class="sh">"</span><span class="p">)</span>
+<span class="bp">...</span>
 <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="n">l</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">_T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">_T</span><span class="p">:</span>
-  <span class="k">return</span> <span class="n">l</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+  <span class="k">return</span> <span class="n">l</span><span class="p">.</span><span class="nf">pop</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>A TypeVar can be constrained:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AddableType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">"AddableType"</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AddableType</span> <span class="o">=</span> <span class="nc">TypeVar</span><span class="p">(</span><span class="sh">"</span><span class="s">AddableType</span><span class="sh">"</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">AddableType</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">AddableType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AddableType</span><span class="p">:</span>
   <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </code></pre></div></div>
@@ -3417,11 +3417,11 @@ function <code class="language-plaintext highlighter-rouge">TypeVar</code> is a 
 <p>A common predefined type variable in the <code class="language-plaintext highlighter-rouge">typing</code> module is <code class="language-plaintext highlighter-rouge">AnyStr</code>. Use it for
 multiple annotations that can be <code class="language-plaintext highlighter-rouge">bytes</code> or <code class="language-plaintext highlighter-rouge">str</code> and must all be the same type.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">AnyStr</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">typing</span> <span class="kn">import</span> <span class="n">AnyStr</span>
 <span class="k">def</span> <span class="nf">check_length</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">AnyStr</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AnyStr</span><span class="p">:</span>
-  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">42</span><span class="p">:</span>
+  <span class="k">if</span> <span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">42</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">x</span>
-  <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">()</span>
+  <span class="k">raise</span> <span class="nc">ValueError</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>A TypeVar must have a descriptive name, unless it meets all of the following
@@ -3433,15 +3433,15 @@ criteria:</p>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Yes</span><span class="p">:</span>
-  <span class="n">_T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">"_T"</span><span class="p">)</span>
-  <span class="n">AddableType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">"AddableType"</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
-  <span class="n">AnyFunction</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">"AnyFunction"</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Callable</span><span class="p">)</span>
+  <span class="n">_T</span> <span class="o">=</span> <span class="nc">TypeVar</span><span class="p">(</span><span class="sh">"</span><span class="s">_T</span><span class="sh">"</span><span class="p">)</span>
+  <span class="n">AddableType</span> <span class="o">=</span> <span class="nc">TypeVar</span><span class="p">(</span><span class="sh">"</span><span class="s">AddableType</span><span class="sh">"</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+  <span class="n">AnyFunction</span> <span class="o">=</span> <span class="nc">TypeVar</span><span class="p">(</span><span class="sh">"</span><span class="s">AnyFunction</span><span class="sh">"</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Callable</span><span class="p">)</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">No</span><span class="p">:</span>
-  <span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">"T"</span><span class="p">)</span>
-  <span class="n">_T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">"_T"</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
-  <span class="n">_F</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">"_F"</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Callable</span><span class="p">)</span>
+  <span class="n">T</span> <span class="o">=</span> <span class="nc">TypeVar</span><span class="p">(</span><span class="sh">"</span><span class="s">T</span><span class="sh">"</span><span class="p">)</span>
+  <span class="n">_T</span> <span class="o">=</span> <span class="nc">TypeVar</span><span class="p">(</span><span class="sh">"</span><span class="s">_T</span><span class="sh">"</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+  <span class="n">_F</span> <span class="o">=</span> <span class="nc">TypeVar</span><span class="p">(</span><span class="sh">"</span><span class="s">_F</span><span class="sh">"</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Callable</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p><a id="s3.19.11-string-types"></a>
@@ -3459,9 +3459,9 @@ criteria:</p>
 <code class="language-plaintext highlighter-rouge">bytes</code>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">deals_with_text_data</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-  <span class="p">...</span>
+  <span class="bp">...</span>
 <span class="k">def</span> <span class="nf">deals_with_binary_data</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
-  <span class="p">...</span>
+  <span class="bp">...</span>
 </code></pre></div></div>
 
 <p>If all the string types of a function are always the same, for example if the
@@ -3481,8 +3481,8 @@ common annotations more concise and matches typing practices used around the
 world. You are explicitly allowed to import multiple specific classes on one
 line from the <code class="language-plaintext highlighter-rouge">typing</code> and <code class="language-plaintext highlighter-rouge">collections.abc</code> modules. Ex:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">collections.abc</span> <span class="kn">import</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Sequence</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Union</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">collections.abc</span> <span class="kn">import</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Sequence</span>
+<span class="kn">from</span> <span class="n">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Union</span>
 </code></pre></div></div>
 
 <p>Given that this way of importing adds items to the local namespace, names in
@@ -3490,7 +3490,7 @@ line from the <code class="language-plaintext highlighter-rouge">typing</code> a
 be defined in your Python code, typed or not. If there is a collision between a
 type and an existing name in a module, import it using <code class="language-plaintext highlighter-rouge">import x as y</code>.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span> <span class="k">as</span> <span class="n">AnyType</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">typing</span> <span class="kn">import</span> <span class="n">Any</span> <span class="k">as</span> <span class="n">AnyType</span>
 </code></pre></div></div>
 
 <p><a id="s3.19.13-conditional-imports"></a>
@@ -3517,10 +3517,10 @@ not be imported at runtime.</li>
   <li>The block should be right after all the normal imports.</li>
   <li>There should be no empty lines in the typing imports list.</li>
   <li>Sort this list as if it were a regular imports list.
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">typing</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">typing</span>
 <span class="k">if</span> <span class="n">typing</span><span class="p">.</span><span class="n">TYPE_CHECKING</span><span class="p">:</span>
-  <span class="kn">import</span> <span class="nn">sketch</span>
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="s">"sketch.Sketch"</span><span class="p">):</span> <span class="p">...</span>
+  <span class="kn">import</span> <span class="n">sketch</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="sh">"</span><span class="s">sketch.Sketch</span><span class="sh">"</span><span class="p">):</span> <span class="bp">...</span>
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -3542,13 +3542,13 @@ because each module has to depend on the other.</p>
 this module (any attribute of Any is Any). Alias definitions should be separated
 from the last import by one line.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">typing</span> <span class="kn">import</span> <span class="n">Any</span>
 
 <span class="n">some_mod</span> <span class="o">=</span> <span class="n">Any</span>  <span class="c1"># some_mod.py imports this module.
-</span><span class="p">...</span>
+</span><span class="bp">...</span>
 
-<span class="k">def</span> <span class="nf">my_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">:</span> <span class="s">"some_mod.SomeType"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
-  <span class="p">...</span>
+<span class="k">def</span> <span class="nf">my_method</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">var</span><span class="p">:</span> <span class="sh">"</span><span class="s">some_mod.SomeType</span><span class="sh">"</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+  <span class="bp">...</span>
 </code></pre></div></div>
 
 <p><a id="typing-generics"></a>
@@ -3562,15 +3562,15 @@ from the last import by one line.</p>
 <a href="https://www.python.org/dev/peps/pep-0484/#the-any-type">the generics’ parameters will be assumed to be <code class="language-plaintext highlighter-rouge">Any</code></a>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-  <span class="p">...</span>
+  <span class="bp">...</span>
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># These are both interpreted as get_names(employee_ids: list[Any]) -&gt; dict[Any, Any]
 </span><span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-  <span class="p">...</span>
+  <span class="bp">...</span>
 
 <span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-  <span class="p">...</span>
+  <span class="bp">...</span>
 </code></pre></div></div>
 
 <p>If the best type parameter for a generic is <code class="language-plaintext highlighter-rouge">Any</code>, make it explicit, but
@@ -3578,12 +3578,12 @@ remember that in many cases <a href="#typing-type-var"><code class="language-pla
 appropriate:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
-  <span class="s">"""Returns a mapping from employee ID to employee name for given IDs."""</span>
+  <span class="sh">"""</span><span class="s">Returns a mapping from employee ID to employee name for given IDs.</span><span class="sh">"""</span>
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">_T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">'_T'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">_T</span> <span class="o">=</span> <span class="nc">TypeVar</span><span class="p">(</span><span class="sh">'</span><span class="s">_T</span><span class="sh">'</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">get_names</span><span class="p">(</span><span class="n">employee_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">_T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="n">_T</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
-  <span class="s">"""Returns a mapping from employee ID to employee name for given IDs."""</span>
+  <span class="sh">"""</span><span class="s">Returns a mapping from employee ID to employee name for given IDs.</span><span class="sh">"""</span>
 </code></pre></div></div>
 
 <p><a id="4-parting-words"></a></p>

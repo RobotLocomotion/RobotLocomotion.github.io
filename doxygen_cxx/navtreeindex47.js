@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#a5c3f2803ed5daea8506c6446a2d555cc":[3,0,0,16,0,0,2,2],
 "classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#a5d8747be10687f239b071cd07f369e22":[3,0,0,16,0,0,2,12],
 "classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#a60146a8169c40beeb6a750a4caa56f36":[3,0,0,16,0,0,2,7],
 "classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#a6871d1ec516e871e07ee4fa7a114a43d":[3,0,0,16,0,0,2,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html#af5a9e3012f1d074da15ca9a122d8bd91":[3,0,0,16,5,1,6],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html":[3,0,0,16,6,0],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a08913c7a8969914949fc42c16f7f8567":[3,0,0,16,6,0,0],
-"classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a0d170a7cd24d74b63f39a5cb5bdbdd8c":[3,0,0,16,6,0,1],
-"classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a248ce7b059109187cae1792d1ad3538e":[3,0,0,16,6,0,6]
+"classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a0d170a7cd24d74b63f39a5cb5bdbdd8c":[3,0,0,16,6,0,1]
 };

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.visualization &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=6b576c25" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7f41d439"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -60,7 +63,11 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pydrake
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pydrake
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -115,8 +122,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>pydrake.visualization</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pydrake.visualization</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -126,17 +133,17 @@
            <div itemprop="articleBody">
              
   <section id="pydrake-visualization">
-<h1>pydrake.visualization<a class="headerlink" href="#pydrake-visualization" title="Permalink to this headline"></a></h1>
+<h1>pydrake.visualization<a class="headerlink" href="#pydrake-visualization" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.meldis.html">pydrake.visualization.meldis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.model_visualizer.html">pydrake.visualization.model_visualizer</a></li>
 </ul>
 </div>
-<span class="target" id="module-pydrake.visualization"></span><p>Bindings for Visualization.</p>
+<p id="module-pydrake.visualization">Bindings for Visualization.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.visualization.AddDefaultVisualization">
-<span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">AddDefaultVisualization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.AddDefaultVisualization" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddDefaultVisualization(builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder,</span> <span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat</span> <span class="pre">=</span> <span class="pre">None)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Adds LCM visualization publishers to communicate to Meshcat and/or
 Meldis, using all of the default configuration settings.</p>
 <dl class="simple">
@@ -146,19 +153,19 @@ instance will be created.)</p>
 </dl>
 <p><strong>Example</strong></p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a builder.</span>
-<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
+<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span>
 
 <span class="c1">// Add the MultibodyPlant and SceneGraph.</span>
-<span class="k">const</span><span class="w"> </span><span class="n">MultibodyPlantConfig</span><span class="w"> </span><span class="n">plant_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
-<span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">plant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AddMultibodyPlant</span><span class="p">(</span><span class="n">plant_config</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">MultibodyPlantConfig</span><span class="w"> </span><span class="n">plant_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">plant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AddMultibodyPlant</span><span class="p">(</span><span class="n">plant_config</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
 <span class="c1">// ... populate the plant, e.g., with a Parser, ...</span>
-<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">();</span><span class="w"></span>
+<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">();</span>
 
 <span class="c1">// Add the visualization.</span>
-<span class="n">AddDefaultVisualization</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span><span class="w"></span>
+<span class="n">AddDefaultVisualization</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
 
 <span class="c1">// Simulate.</span>
-<span class="n">Simulator</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">simulator</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">());</span><span class="w"></span>
+<span class="n">Simulator</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">simulator</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">());</span>
 <span class="c1">// ... etc ...</span>
 </pre></div>
 </div>
@@ -181,8 +188,8 @@ as in <code class="docutils literal notranslate"><span class="pre">plant.Finaliz
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.visualization.AddFrameTriadIllustration">
-<span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">AddFrameTriadIllustration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scene_graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.FrameIndex" title="pydrake.multibody.tree.FrameIndex"><span class="pre">pydrake.multibody.tree.FrameIndex</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.FrameId" title="pydrake.geometry.FrameId"><span class="pre">pydrake.geometry.FrameId</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_FT</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.AddFrameTriadIllustration" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">AddFrameTriadIllustration(*,</span> <span class="pre">scene_graph:</span> <span class="pre">~pydrake.geometry.SceneGraph,</span> <span class="pre">body:</span> <span class="pre">~pydrake.multibody.tree.RigidBody</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">frame:</span> <span class="pre">~pydrake.multibody.tree.Frame</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">frame_index:</span> <span class="pre">~pydrake.multibody.tree.FrameIndex</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">frame_id:</span> <span class="pre">~pydrake.geometry.FrameId</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">plant:</span> <span class="pre">~pydrake.multibody.plant.MultibodyPlant</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">name:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">length:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.3,</span> <span class="pre">radius:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.005,</span> <span class="pre">opacity:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.9,</span> <span class="pre">X_FT:</span> <span class="pre">~pydrake.math.RigidTransform</span> <span class="pre">=</span> <span class="pre">None)</span></span></dt>
 <dd><p>Adds illustration geometry representing the given frame using an RGB triad,
 with the x-axis drawn in red, the y-axis in green and the z-axis in blue.
 The given frame can be either a geometry FrameId, a multibody RigidBody,
@@ -192,7 +199,7 @@ provided.</p>
 <p>Note: body frames and frames fixed to bodies are colored differently (body
 frames are brighter).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>scene_graph</strong> – the SceneGraph where geometry will be added.</p></li>
 <li><p><strong>body</strong> – when provided, illustrates the frame of the given body.</p></li>
@@ -214,33 +221,33 @@ frame F (the given body=, frame=, or frame_id=  frame); when None, X_FT
 is the identity transform and therefore the triad will depict F.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The newly-added geometry ids for (x, y, z) respectively.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.visualization.ApplyVisualizationConfig">
-<span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">ApplyVisualizationConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.VisualizationConfig" title="pydrake.visualization.VisualizationConfig"><span class="pre">pydrake.visualization.VisualizationConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder" title="pydrake.systems.framework.DiagramBuilder"><span class="pre">pydrake.systems.framework.DiagramBuilder</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm_buses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.lcm.html#pydrake.systems.lcm.LcmBuses" title="pydrake.systems.lcm.LcmBuses"><span class="pre">pydrake.systems.lcm.LcmBuses</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scene_graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.SceneGraph" title="pydrake.geometry.SceneGraph"><span class="pre">pydrake.geometry.SceneGraph</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.lcm.html#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.ApplyVisualizationConfig" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ApplyVisualizationConfig(config:</span> <span class="pre">pydrake.visualization.VisualizationConfig,</span> <span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder,</span> <span class="pre">lcm_buses:</span> <span class="pre">pydrake.systems.lcm.LcmBuses</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">plant:</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">scene_graph:</span> <span class="pre">pydrake.geometry.SceneGraph</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">lcm:</span> <span class="pre">pydrake.lcm.DrakeLcmInterface</span> <span class="pre">=</span> <span class="pre">None)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Adds LCM visualization publishers to communicate to Meshcat and/or
 Meldis.</p>
 <p><strong>Example</strong></p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a builder.</span>
-<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span><span class="w"></span>
+<span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">;</span>
 
 <span class="c1">// Add the MultibodyPlant and SceneGraph.</span>
-<span class="k">const</span><span class="w"> </span><span class="n">MultibodyPlantConfig</span><span class="w"> </span><span class="n">plant_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
-<span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">plant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AddMultibodyPlant</span><span class="p">(</span><span class="n">plant_config</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">MultibodyPlantConfig</span><span class="w"> </span><span class="n">plant_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">plant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AddMultibodyPlant</span><span class="p">(</span><span class="n">plant_config</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
 <span class="c1">// ... populate the plant, e.g., with a Parser, ...</span>
-<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">();</span><span class="w"></span>
+<span class="n">plant</span><span class="p">.</span><span class="n">Finalize</span><span class="p">();</span>
 
 <span class="c1">// Add the visualization.</span>
-<span class="k">const</span><span class="w"> </span><span class="n">VisualizationConfig</span><span class="w"> </span><span class="n">vis_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
-<span class="n">ApplyVisualizationConfig</span><span class="p">(</span><span class="n">vis_config</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span><span class="w"></span>
+<span class="k">const</span><span class="w"> </span><span class="n">VisualizationConfig</span><span class="w"> </span><span class="n">vis_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="n">ApplyVisualizationConfig</span><span class="p">(</span><span class="n">vis_config</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
 
 <span class="c1">// Simulate.</span>
-<span class="n">Simulator</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">simulator</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">());</span><span class="w"></span>
+<span class="n">Simulator</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">simulator</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">());</span>
 <span class="c1">// ... etc ...</span>
 </pre></div>
 </div>
@@ -310,9 +317,9 @@ named “plant” or else the provided <code class="docutils literal notranslate
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.visualization.ColorizeDepthImage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">ColorizeDepthImage</span></span><a class="headerlink" href="#pydrake.visualization.ColorizeDepthImage" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ColorizeDepthImage</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>ColorizeDepthImage converts a depth image, either 32F or 16U, to a
 color image. One input port, and only one, must be connected.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">depth_image_32f&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">depth_image_16u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ColorizeDepthImage</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr></table></td></tr></table><p>Depth measurements are linearly mapped to a grayscale palette, with
@@ -328,14 +335,14 @@ future work.</p>
 <p>For the special depth pixel values “too close” or “too far”, the color
 pixel will use the <code class="docutils literal notranslate"><span class="pre">invalid_color</span></code> property (by default, a dim red).</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ColorizeDepthImage.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.ColorizeDepthImage" title="pydrake.visualization.ColorizeDepthImage"><span class="pre">pydrake.visualization.ColorizeDepthImage</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.ColorizeDepthImage.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ColorizeDepthImage.__init__(self:</span> <span class="pre">pydrake.visualization.ColorizeDepthImage)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Creates a ColorizeDepthImage system.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ColorizeDepthImage.Calc">
-<span class="sig-name descname"><span class="pre">Calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ColorizeDepthImage.Calc" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ColorizeDepthImage.Calc(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>Calc(self: pydrake.visualization.ColorizeDepthImage, arg0: pydrake.systems.sensors.Image[PixelType.kDepth32F], arg1: pydrake.systems.sensors.Image[PixelType.kRgba8U]) -&gt; None</p></li>
@@ -350,17 +357,17 @@ conections nor any Context.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.ColorizeDepthImage.invalid_color">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">invalid_color</span></span><a class="headerlink" href="#pydrake.visualization.ColorizeDepthImage.invalid_color" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ColorizeDepthImage.invalid_color</span></span></dt>
 <dd><p>The color used for pixels with too-near or too-far depth.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.visualization.ColorizeLabelImage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">ColorizeLabelImage</span></span><a class="headerlink" href="#pydrake.visualization.ColorizeLabelImage" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ColorizeLabelImage</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>ColorizeLabelImage converts a label image to a color image.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">label_image&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ColorizeLabelImage</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr></table></td></tr></table><p>Labels are mapped to colors with a built-in, fixed palette. The
 palette has fewer elements than all possible labels, so not all labels
@@ -369,20 +376,20 @@ that do not represent a label (“don’t care”, “empty”, “unspecified�
 etc.), the color pixel will use the <code class="docutils literal notranslate"><span class="pre">background_color</span></code> property (by
 default, black with 0% alpha).</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ColorizeLabelImage.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.ColorizeLabelImage" title="pydrake.visualization.ColorizeLabelImage"><span class="pre">pydrake.visualization.ColorizeLabelImage</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.ColorizeLabelImage.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ColorizeLabelImage.__init__(self:</span> <span class="pre">pydrake.visualization.ColorizeLabelImage)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Creates a ColorizeLabelImage system.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.ColorizeLabelImage.background_color">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">background_color</span></span><a class="headerlink" href="#pydrake.visualization.ColorizeLabelImage.background_color" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ColorizeLabelImage.background_color</span></span></dt>
 <dd><p>The color used for pixels with no label.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ColorizeLabelImage.Calc">
-<span class="sig-name descname"><span class="pre">Calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.ColorizeLabelImage" title="pydrake.visualization.ColorizeLabelImage"><span class="pre">pydrake.visualization.ColorizeLabelImage</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.sensors.html#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><span class="pre">PixelType.kLabel16I</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.sensors.html#pydrake.systems.sensors.Image" title="pydrake.systems.sensors.Image"><span class="pre">pydrake.systems.sensors.Image</span></a><span class="p"><span class="pre">[</span></span><span class="pre">PixelType.kRgba8U</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.ColorizeLabelImage.Calc" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ColorizeLabelImage.Calc(self:</span> <span class="pre">pydrake.visualization.ColorizeLabelImage,</span> <span class="pre">arg0:</span> <span class="pre">pydrake.systems.sensors.Image[PixelType.kLabel16I],</span> <span class="pre">arg1:</span> <span class="pre">pydrake.systems.sensors.Image[PixelType.kRgba8U])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Colorizes the <code class="docutils literal notranslate"><span class="pre">input</span></code> into <code class="docutils literal notranslate"><span class="pre">output</span></code>, without using any System port
 conections nor any Context.</p>
 </dd></dl>
@@ -390,9 +397,9 @@ conections nor any Context.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.visualization.ConcatenateImages">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">ConcatenateImages</span></span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ConcatenateImages</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>ConcatenateImages stacks multiple input images into a single output
 image.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">color_image_r0_c0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">color_image_r0_c1&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ConcatenateImages</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr></table></td></tr></table><p>All inputs must be of type ImageRgba8U.</p>
@@ -401,8 +408,8 @@ interpreted as zero-sized image.</p>
 <p>In case of non-uniform image sizes, any gaps between images will be
 filled with all-zero pixels (i.e., with 0% alpha).</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ConcatenateImages.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.ConcatenateImages" title="pydrake.visualization.ConcatenateImages"><span class="pre">pydrake.visualization.ConcatenateImages</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ConcatenateImages.__init__(self:</span> <span class="pre">pydrake.visualization.ConcatenateImages,</span> <span class="pre">*,</span> <span class="pre">rows:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">cols:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Constructs a ConcatenateImages system.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt><dd><p>Number of images to stack vertically.</p>
@@ -413,8 +420,8 @@ filled with all-zero pixels (i.e., with 0% alpha).</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ConcatenateImages.get_input_port">
-<span class="sig-name descname"><span class="pre">get_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.ConcatenateImages" title="pydrake.visualization.ConcatenateImages"><span class="pre">pydrake.visualization.ConcatenateImages</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.visualization.ConcatenateImages.get_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ConcatenateImages.get_input_port(self:</span> <span class="pre">pydrake.visualization.ConcatenateImages,</span> <span class="pre">*,</span> <span class="pre">row:</span> <span class="pre">int,</span> <span class="pre">col:</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><p>Returns the InputPort for the given (row, col) image. Rows and columns
 are 0-indexed, i.e., we have <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">row</span> <span class="pre">&lt;</span> <span class="pre">rows</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">col</span> <span class="pre">&lt;</span>
 <span class="pre">cols</span></code>.</p>
@@ -423,8 +430,8 @@ are 0-indexed, i.e., we have <code class="docutils literal notranslate"><span cl
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.visualization.Meldis">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">Meldis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat_host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.MeshcatParams" title="pydrake.geometry.MeshcatParams"><span class="pre">pydrake.geometry.MeshcatParams</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.Meldis" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Meldis(*,</span> <span class="pre">meshcat_host:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">meshcat_port:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">meshcat_params:</span> <span class="pre">~pydrake.geometry.MeshcatParams</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">environment_map:</span> <span class="pre">~pathlib.Path</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None)</span></span></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>MeshCat LCM Display Server (MeLDiS)</p>
 <p>Offers a MeshCat visualization server that listens for and draws Drake’s
@@ -433,16 +440,16 @@ legacy LCM visualization messages.</p>
 default.</p>
 <p>Refer to the pydrake.visualization.meldis module docs for details.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.Meldis.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat_host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.MeshcatParams" title="pydrake.geometry.MeshcatParams"><span class="pre">pydrake.geometry.MeshcatParams</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.Meldis.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Meldis.__init__(*,</span> <span class="pre">meshcat_host:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">meshcat_port:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">meshcat_params:</span> <span class="pre">~pydrake.geometry.MeshcatParams</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">environment_map:</span> <span class="pre">~pathlib.Path</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None)</span></span></dt>
 <dd><p>Constructs a new Meldis instance. The meshcat_host (when given)
 takes precedence over meshcat_params.host. The meshcat_post (when
 given) takes precedence over meshcat_params.port.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.Meldis.serve_forever">
-<span class="sig-name descname"><span class="pre">serve_forever</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idle_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.Meldis.serve_forever" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Meldis.serve_forever(*,</span> <span class="pre">idle_timeout=None)</span></span></dt>
 <dd><p>Runs indefinitely, forwarding LCM =&gt; MeshCat messages.</p>
 <p>If provided, the optional idle_timeout must be strictly positive and
 this loop will sys.exit after that many seconds without any websocket
@@ -452,9 +459,9 @@ connections.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">MeshcatPoseSliders</span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MeshcatPoseSliders</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>MeshcatPoseSliders adds slider bars to the MeshCat control panel for
 the roll, pitch, yaw, x, y, z control of a pose. These might be useful
 for interactive or teleoperation demos. The abstract-value pose is
@@ -471,12 +478,12 @@ systems::ZeroOrderHold system between the sliders and downstream
 calculations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This class is templated; see <a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders_" title="pydrake.visualization.MeshcatPoseSliders_"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshcatPoseSliders_</span></code></a>
+<p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshcatPoseSliders_</span></code>
 for the list of instantiations.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders" title="pydrake.visualization.MeshcatPoseSliders"><span class="pre">pydrake.visualization.MeshcatPoseSliders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_pose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">RigidTransform(R=RotationMatrix([[1.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0],</span> <span class="pre">[0.0,</span> <span class="pre">1.0,</span> <span class="pre">0.0],</span> <span class="pre">[0.0,</span> <span class="pre">0.0,</span> <span class="pre">1.0]]),</span> <span class="pre">p=[0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([-</span> <span class="pre">3.14159265,</span> <span class="pre">-</span> <span class="pre">3.14159265,</span> <span class="pre">-</span> <span class="pre">3.14159265,</span> <span class="pre">-</span> <span class="pre">1.,</span> <span class="pre">-</span> <span class="pre">1.,</span> <span class="pre">-</span> <span class="pre">1.])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([3.14159265,</span> <span class="pre">3.14159265,</span> <span class="pre">3.14159265,</span> <span class="pre">1.,</span> <span class="pre">1.,</span> <span class="pre">1.])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decrement_keycodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">['KeyQ',</span> <span class="pre">'KeyS',</span> <span class="pre">'KeyA',</span> <span class="pre">'KeyJ',</span> <span class="pre">'KeyK',</span> <span class="pre">'KeyU']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_keycodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">['KeyE',</span> <span class="pre">'KeyW',</span> <span class="pre">'KeyD',</span> <span class="pre">'KeyL',</span> <span class="pre">'KeyI',</span> <span class="pre">'KeyO']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True])</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MeshcatPoseSliders.__init__(self:</span> <span class="pre">pydrake.visualization.MeshcatPoseSliders,</span> <span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat,</span> <span class="pre">initial_pose:</span> <span class="pre">pydrake.math.RigidTransform</span> <span class="pre">=</span> <span class="pre">RigidTransform(</span> <span class="pre">R=RotationMatrix([</span> <span class="pre">[1.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0],</span> <span class="pre">[0.0,</span> <span class="pre">1.0,</span> <span class="pre">0.0],</span> <span class="pre">[0.0,</span> <span class="pre">0.0,</span> <span class="pre">1.0],</span> <span class="pre">]),</span> <span class="pre">p=[0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0],</span> <span class="pre">),</span> <span class="pre">lower_limit:</span> <span class="pre">numpy.ndarray[numpy.float64[6,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([-3.14159265,</span> <span class="pre">-3.14159265,</span> <span class="pre">-3.14159265,</span> <span class="pre">-1.</span> <span class="pre">,</span> <span class="pre">-1.</span> <span class="pre">,</span> <span class="pre">-1.</span> <span class="pre">]),</span> <span class="pre">upper_limit:</span> <span class="pre">numpy.ndarray[numpy.float64[6,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([3.14159265,</span> <span class="pre">3.14159265,</span> <span class="pre">3.14159265,</span> <span class="pre">1.</span> <span class="pre">,</span> <span class="pre">1.</span> <span class="pre">,</span> <span class="pre">1.</span> <span class="pre">]),</span> <span class="pre">step:</span> <span class="pre">numpy.ndarray[numpy.float64[6,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01]),</span> <span class="pre">decrement_keycodes:</span> <span class="pre">list[str]</span> <span class="pre">=</span> <span class="pre">['KeyQ',</span> <span class="pre">'KeyS',</span> <span class="pre">'KeyA',</span> <span class="pre">'KeyJ',</span> <span class="pre">'KeyK',</span> <span class="pre">'KeyU'],</span> <span class="pre">increment_keycodes:</span> <span class="pre">list[str]</span> <span class="pre">=</span> <span class="pre">['KeyE',</span> <span class="pre">'KeyW',</span> <span class="pre">'KeyD',</span> <span class="pre">'KeyL',</span> <span class="pre">'KeyI',</span> <span class="pre">'KeyO'],</span> <span class="pre">prefix:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'',</span> <span class="pre">visible:</span> <span class="pre">numpy.ndarray[bool[6,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True]))</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Creates MeshCat sliders for a roll-pitch-yaw-x-y-z parameterization of
 a pose (aka RigidTransform).</p>
 <dl class="simple">
@@ -515,21 +522,21 @@ be useful, for instance, if one only wants to control the pose in
 </dd>
 </dl>
 <p>The default keycodes provide the following keyboard mapping:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌───────┬┬───────┬┬───────┐        ┌───────┬┬───────┬┬───────┐
-│   Q   ││   W   ││   E   │        │   U   ││   I   ││   O   │
-│ roll- ││ pitch+││ roll+ │        │   z-  ││   y+  ││   z+  │
-├───────┼┼───────┼┼───────┤        ├───────┼┼───────┼┼───────┤
-├───────┼┼───────┼┼───────┤        ├───────┼┼───────┼┼───────┤
-│   A   ││   S   ││   D   │        │   J   ││   K   ││   L   │
-│  yaw- ││ pitch-││  yaw+ │        │   x-  ││   y-  ││   x+  │
-└───────┴┴───────┴┴───────┘        └───────┴┴───────┴┴───────┘
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="err">┌───────┬┬───────┬┬───────┐</span><span class="w">        </span><span class="err">┌───────┬┬───────┬┬───────┐</span>
+<span class="err">│</span><span class="w">   </span><span class="n">Q</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">W</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">E</span><span class="w">   </span><span class="err">│</span><span class="w">        </span><span class="err">│</span><span class="w">   </span><span class="n">U</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">I</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">O</span><span class="w">   </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">roll</span><span class="o">-</span><span class="w"> </span><span class="err">││</span><span class="w"> </span><span class="n">pitch</span><span class="o">+</span><span class="err">││</span><span class="w"> </span><span class="n">roll</span><span class="o">+</span><span class="w"> </span><span class="err">│</span><span class="w">        </span><span class="err">│</span><span class="w">   </span><span class="n">z</span><span class="o">-</span><span class="w">  </span><span class="err">││</span><span class="w">   </span><span class="n">y</span><span class="o">+</span><span class="w">  </span><span class="err">││</span><span class="w">   </span><span class="n">z</span><span class="o">+</span><span class="w">  </span><span class="err">│</span>
+<span class="err">├───────┼┼───────┼┼───────┤</span><span class="w">        </span><span class="err">├───────┼┼───────┼┼───────┤</span>
+<span class="err">├───────┼┼───────┼┼───────┤</span><span class="w">        </span><span class="err">├───────┼┼───────┼┼───────┤</span>
+<span class="err">│</span><span class="w">   </span><span class="n">A</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">S</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">D</span><span class="w">   </span><span class="err">│</span><span class="w">        </span><span class="err">│</span><span class="w">   </span><span class="n">J</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">K</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">L</span><span class="w">   </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="n">yaw</span><span class="o">-</span><span class="w"> </span><span class="err">││</span><span class="w"> </span><span class="n">pitch</span><span class="o">-</span><span class="err">││</span><span class="w">  </span><span class="n">yaw</span><span class="o">+</span><span class="w"> </span><span class="err">│</span><span class="w">        </span><span class="err">│</span><span class="w">   </span><span class="n">x</span><span class="o">-</span><span class="w">  </span><span class="err">││</span><span class="w">   </span><span class="n">y</span><span class="o">-</span><span class="w">  </span><span class="err">││</span><span class="w">   </span><span class="n">x</span><span class="o">+</span><span class="w">  </span><span class="err">│</span>
+<span class="err">└───────┴┴───────┴┴───────┘</span><span class="w">        </span><span class="err">└───────┴┴───────┴┴───────┘</span>
 </pre></div>
 </div>
 </details></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders.Delete">
-<span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders" title="pydrake.visualization.MeshcatPoseSliders"><span class="pre">pydrake.visualization.MeshcatPoseSliders</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders.Delete" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MeshcatPoseSliders.Delete(self:</span> <span class="pre">pydrake.visualization.MeshcatPoseSliders)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Removes our sliders from the associated meshcat instance.</p>
 <p>From this point on, our output port produces the initial_value from
 the constructor, not any slider values.</p>
@@ -541,8 +548,8 @@ on this instance concurrently on another thread.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders.Run">
-<span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders" title="pydrake.visualization.MeshcatPoseSliders"><span class="pre">pydrake.visualization.MeshcatPoseSliders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_button_keycode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Escape'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders.Run" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MeshcatPoseSliders.Run(self:</span> <span class="pre">pydrake.visualization.MeshcatPoseSliders,</span> <span class="pre">system:</span> <span class="pre">pydrake.systems.framework.System,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">timeout:</span> <span class="pre">Optional[float]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">stop_button_keycode:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'Escape')</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.math.RigidTransform</span></span></dt>
 <dd><p>Publishes the given systems::System (typically, a Diagram including
 visualizers, to cause it to be visualized) whenever our sliders’
 values change. Blocks until the user clicks a “Stop” button in the
@@ -561,7 +568,7 @@ details. $*Default:* “Escape”.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the most recently output pose.</p>
 </dd>
 </dl>
@@ -574,8 +581,8 @@ MeshcatPoseSliders system.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders.SetPose">
-<span class="sig-name descname"><span class="pre">SetPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders" title="pydrake.visualization.MeshcatPoseSliders"><span class="pre">pydrake.visualization.MeshcatPoseSliders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders.SetPose" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MeshcatPoseSliders.SetPose(self:</span> <span class="pre">pydrake.visualization.MeshcatPoseSliders,</span> <span class="pre">pose:</span> <span class="pre">pydrake.math.RigidTransform)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Sets the pose to <code class="docutils literal notranslate"><span class="pre">X</span></code>. The MeshCat sliders will have their value
 updated. Additionally, the “initial pose” tracked by this instance
 will be updated to <code class="docutils literal notranslate"><span class="pre">X</span></code>. This “initial pose” update will persist even
@@ -585,15 +592,15 @@ if sliders are removed (e.g., via Delete).</p>
 </dd></dl>
 
 <dl class="py template">
-<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_">
-<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">MeshcatPoseSliders_</span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_" title="Permalink to this definition"></a></dt>
-<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshcatPoseSliders_[float]</span></code>, <a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd" title="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeshcatPoseSliders_[AutoDiffXd]</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MeshcatPoseSliders_</span></span></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshcatPoseSliders_[float]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">MeshcatPoseSliders_[AutoDiffXd]</span></code></p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd">
-<span id="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd]"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">MeshcatPoseSliders_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MeshcatPoseSliders_[AutoDiffXd]</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></p>
 <p>MeshcatPoseSliders adds slider bars to the MeshCat control panel for
 the roll, pitch, yaw, x, y, z control of a pose. These might be useful
 for interactive or teleoperation demos. The abstract-value pose is
@@ -609,8 +616,8 @@ have a synchronized view of the slider data, place a
 systems::ZeroOrderHold system between the sliders and downstream
 calculations.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.__init__">
-<span id="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd].__init__"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders_" title="pydrake.visualization.MeshcatPoseSliders_"><span class="pre">pydrake.visualization.MeshcatPoseSliders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_pose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">RigidTransform(R=RotationMatrix([[1.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0],</span> <span class="pre">[0.0,</span> <span class="pre">1.0,</span> <span class="pre">0.0],</span> <span class="pre">[0.0,</span> <span class="pre">0.0,</span> <span class="pre">1.0]]),</span> <span class="pre">p=[0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([-</span> <span class="pre">3.14159265,</span> <span class="pre">-</span> <span class="pre">3.14159265,</span> <span class="pre">-</span> <span class="pre">3.14159265,</span> <span class="pre">-</span> <span class="pre">1.,</span> <span class="pre">-</span> <span class="pre">1.,</span> <span class="pre">-</span> <span class="pre">1.])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([3.14159265,</span> <span class="pre">3.14159265,</span> <span class="pre">3.14159265,</span> <span class="pre">1.,</span> <span class="pre">1.,</span> <span class="pre">1.])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decrement_keycodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">['KeyQ',</span> <span class="pre">'KeyS',</span> <span class="pre">'KeyA',</span> <span class="pre">'KeyJ',</span> <span class="pre">'KeyK',</span> <span class="pre">'KeyU']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_keycodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">['KeyE',</span> <span class="pre">'KeyW',</span> <span class="pre">'KeyD',</span> <span class="pre">'KeyL',</span> <span class="pre">'KeyI',</span> <span class="pre">'KeyO']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">6</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True])</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MeshcatPoseSliders_[AutoDiffXd].__init__(self:</span> <span class="pre">pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd],</span> <span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat,</span> <span class="pre">initial_pose:</span> <span class="pre">pydrake.math.RigidTransform</span> <span class="pre">=</span> <span class="pre">RigidTransform(</span> <span class="pre">R=RotationMatrix([</span> <span class="pre">[1.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0],</span> <span class="pre">[0.0,</span> <span class="pre">1.0,</span> <span class="pre">0.0],</span> <span class="pre">[0.0,</span> <span class="pre">0.0,</span> <span class="pre">1.0],</span> <span class="pre">]),</span> <span class="pre">p=[0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0],</span> <span class="pre">),</span> <span class="pre">lower_limit:</span> <span class="pre">numpy.ndarray[numpy.float64[6,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([-3.14159265,</span> <span class="pre">-3.14159265,</span> <span class="pre">-3.14159265,</span> <span class="pre">-1.</span> <span class="pre">,</span> <span class="pre">-1.</span> <span class="pre">,</span> <span class="pre">-1.</span> <span class="pre">]),</span> <span class="pre">upper_limit:</span> <span class="pre">numpy.ndarray[numpy.float64[6,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([3.14159265,</span> <span class="pre">3.14159265,</span> <span class="pre">3.14159265,</span> <span class="pre">1.</span> <span class="pre">,</span> <span class="pre">1.</span> <span class="pre">,</span> <span class="pre">1.</span> <span class="pre">]),</span> <span class="pre">step:</span> <span class="pre">numpy.ndarray[numpy.float64[6,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01,</span> <span class="pre">0.01]),</span> <span class="pre">decrement_keycodes:</span> <span class="pre">list[str]</span> <span class="pre">=</span> <span class="pre">['KeyQ',</span> <span class="pre">'KeyS',</span> <span class="pre">'KeyA',</span> <span class="pre">'KeyJ',</span> <span class="pre">'KeyK',</span> <span class="pre">'KeyU'],</span> <span class="pre">increment_keycodes:</span> <span class="pre">list[str]</span> <span class="pre">=</span> <span class="pre">['KeyE',</span> <span class="pre">'KeyW',</span> <span class="pre">'KeyD',</span> <span class="pre">'KeyL',</span> <span class="pre">'KeyI',</span> <span class="pre">'KeyO'],</span> <span class="pre">prefix:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'',</span> <span class="pre">visible:</span> <span class="pre">numpy.ndarray[bool[6,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True,</span> <span class="pre">True]))</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Creates MeshCat sliders for a roll-pitch-yaw-x-y-z parameterization of
 a pose (aka RigidTransform).</p>
 <dl class="simple">
@@ -649,21 +656,21 @@ be useful, for instance, if one only wants to control the pose in
 </dd>
 </dl>
 <p>The default keycodes provide the following keyboard mapping:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>┌───────┬┬───────┬┬───────┐        ┌───────┬┬───────┬┬───────┐
-│   Q   ││   W   ││   E   │        │   U   ││   I   ││   O   │
-│ roll- ││ pitch+││ roll+ │        │   z-  ││   y+  ││   z+  │
-├───────┼┼───────┼┼───────┤        ├───────┼┼───────┼┼───────┤
-├───────┼┼───────┼┼───────┤        ├───────┼┼───────┼┼───────┤
-│   A   ││   S   ││   D   │        │   J   ││   K   ││   L   │
-│  yaw- ││ pitch-││  yaw+ │        │   x-  ││   y-  ││   x+  │
-└───────┴┴───────┴┴───────┘        └───────┴┴───────┴┴───────┘
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="err">┌───────┬┬───────┬┬───────┐</span><span class="w">        </span><span class="err">┌───────┬┬───────┬┬───────┐</span>
+<span class="err">│</span><span class="w">   </span><span class="n">Q</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">W</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">E</span><span class="w">   </span><span class="err">│</span><span class="w">        </span><span class="err">│</span><span class="w">   </span><span class="n">U</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">I</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">O</span><span class="w">   </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">roll</span><span class="o">-</span><span class="w"> </span><span class="err">││</span><span class="w"> </span><span class="n">pitch</span><span class="o">+</span><span class="err">││</span><span class="w"> </span><span class="n">roll</span><span class="o">+</span><span class="w"> </span><span class="err">│</span><span class="w">        </span><span class="err">│</span><span class="w">   </span><span class="n">z</span><span class="o">-</span><span class="w">  </span><span class="err">││</span><span class="w">   </span><span class="n">y</span><span class="o">+</span><span class="w">  </span><span class="err">││</span><span class="w">   </span><span class="n">z</span><span class="o">+</span><span class="w">  </span><span class="err">│</span>
+<span class="err">├───────┼┼───────┼┼───────┤</span><span class="w">        </span><span class="err">├───────┼┼───────┼┼───────┤</span>
+<span class="err">├───────┼┼───────┼┼───────┤</span><span class="w">        </span><span class="err">├───────┼┼───────┼┼───────┤</span>
+<span class="err">│</span><span class="w">   </span><span class="n">A</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">S</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">D</span><span class="w">   </span><span class="err">│</span><span class="w">        </span><span class="err">│</span><span class="w">   </span><span class="n">J</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">K</span><span class="w">   </span><span class="err">││</span><span class="w">   </span><span class="n">L</span><span class="w">   </span><span class="err">│</span>
+<span class="err">│</span><span class="w">  </span><span class="n">yaw</span><span class="o">-</span><span class="w"> </span><span class="err">││</span><span class="w"> </span><span class="n">pitch</span><span class="o">-</span><span class="err">││</span><span class="w">  </span><span class="n">yaw</span><span class="o">+</span><span class="w"> </span><span class="err">│</span><span class="w">        </span><span class="err">│</span><span class="w">   </span><span class="n">x</span><span class="o">-</span><span class="w">  </span><span class="err">││</span><span class="w">   </span><span class="n">y</span><span class="o">-</span><span class="w">  </span><span class="err">││</span><span class="w">   </span><span class="n">x</span><span class="o">+</span><span class="w">  </span><span class="err">│</span>
+<span class="err">└───────┴┴───────┴┴───────┘</span><span class="w">        </span><span class="err">└───────┴┴───────┴┴───────┘</span>
 </pre></div>
 </div>
 </details></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.Delete">
-<span id="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd].Delete"></span><span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders_" title="pydrake.visualization.MeshcatPoseSliders_"><span class="pre">pydrake.visualization.MeshcatPoseSliders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.Delete" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MeshcatPoseSliders_[AutoDiffXd].Delete(self:</span> <span class="pre">pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Removes our sliders from the associated meshcat instance.</p>
 <p>From this point on, our output port produces the initial_value from
 the constructor, not any slider values.</p>
@@ -675,8 +682,8 @@ on this instance concurrently on another thread.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.Run">
-<span id="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd].Run"></span><span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders_" title="pydrake.visualization.MeshcatPoseSliders_"><span class="pre">pydrake.visualization.MeshcatPoseSliders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System_" title="pydrake.systems.framework.System_"><span class="pre">pydrake.systems.framework.System_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context_" title="pydrake.systems.framework.Context_"><span class="pre">pydrake.systems.framework.Context_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_button_keycode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Escape'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.Run" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MeshcatPoseSliders_[AutoDiffXd].Run(self:</span> <span class="pre">pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd],</span> <span class="pre">system:</span> <span class="pre">pydrake.systems.framework.System_[AutoDiffXd],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[AutoDiffXd],</span> <span class="pre">timeout:</span> <span class="pre">Optional[float]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">stop_button_keycode:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'Escape')</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.math.RigidTransform</span></span></dt>
 <dd><p>Publishes the given systems::System (typically, a Diagram including
 visualizers, to cause it to be visualized) whenever our sliders’
 values change. Blocks until the user clicks a “Stop” button in the
@@ -695,7 +702,7 @@ details. $*Default:* “Escape”.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the most recently output pose.</p>
 </dd>
 </dl>
@@ -708,8 +715,8 @@ MeshcatPoseSliders system.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.SetPose">
-<span id="pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd].SetPose"></span><span class="sig-name descname"><span class="pre">SetPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.MeshcatPoseSliders_" title="pydrake.visualization.MeshcatPoseSliders_"><span class="pre">pydrake.visualization.MeshcatPoseSliders_</span></a><span class="p"><span class="pre">[</span></span><span class="pre">AutoDiffXd</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.MeshcatPoseSliders_-AutoDiffXd-.SetPose" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MeshcatPoseSliders_[AutoDiffXd].SetPose(self:</span> <span class="pre">pydrake.visualization.MeshcatPoseSliders_[AutoDiffXd],</span> <span class="pre">pose:</span> <span class="pre">pydrake.math.RigidTransform)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Sets the pose to <code class="docutils literal notranslate"><span class="pre">X</span></code>. The MeshCat sliders will have their value
 updated. Additionally, the “initial pose” tracked by this instance
 will be updated to <code class="docutils literal notranslate"><span class="pre">X</span></code>. This “initial pose” update will persist even
@@ -719,8 +726,8 @@ if sliders are removed (e.g., via Delete).</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">ModelVisualizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visualize_frames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triad_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triad_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triad_opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_contacts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_rgbd_sensor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">browser_new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pyplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">PosixPath('.')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compliance_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'undefined'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelVisualizer(*,</span> <span class="pre">visualize_frames=False,</span> <span class="pre">triad_length=0.3,</span> <span class="pre">triad_radius=0.005,</span> <span class="pre">triad_opacity=0.9,</span> <span class="pre">publish_contacts=True,</span> <span class="pre">show_rgbd_sensor=False,</span> <span class="pre">browser_new=False,</span> <span class="pre">pyplot=False,</span> <span class="pre">meshcat=None,</span> <span class="pre">environment_map:</span> <span class="pre">~pathlib.Path</span> <span class="pre">=</span> <span class="pre">PosixPath('.'),</span> <span class="pre">compliance_type:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'undefined')</span></span></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Visualizes models from a file or string buffer in MeshCat or Meldis.</p>
 <p>To use this class to visualize model(s), create an instance with
@@ -739,11 +746,11 @@ Parser handling, e.g. adding a model from a string:</p>
 <code class="docutils literal notranslate"><span class="pre">pydrake.visualization.model_visualizer</span></code> script, or via
 <code class="docutils literal notranslate"><span class="pre">bazel</span> <span class="pre">run</span> <span class="pre">//tools:model_visualizer</span></code>.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visualize_frames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triad_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triad_radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triad_opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_contacts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_rgbd_sensor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">browser_new</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pyplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">PosixPath('.')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compliance_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'undefined'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelVisualizer.__init__(*,</span> <span class="pre">visualize_frames=False,</span> <span class="pre">triad_length=0.3,</span> <span class="pre">triad_radius=0.005,</span> <span class="pre">triad_opacity=0.9,</span> <span class="pre">publish_contacts=True,</span> <span class="pre">show_rgbd_sensor=False,</span> <span class="pre">browser_new=False,</span> <span class="pre">pyplot=False,</span> <span class="pre">meshcat=None,</span> <span class="pre">environment_map:</span> <span class="pre">~pathlib.Path</span> <span class="pre">=</span> <span class="pre">PosixPath('.'),</span> <span class="pre">compliance_type:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'undefined')</span></span></dt>
 <dd><p>Initializes a ModelVisualizer.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>visualize_frames</strong> – a flag that visualizes frames as triads for all
 links.</p></li>
@@ -776,12 +783,12 @@ a new instance. Useful in, e.g., Python notebooks.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer.AddModels">
-<span class="sig-name descname"><span class="pre">AddModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.AddModels" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelVisualizer.AddModels(filename:</span> <span class="pre">~pathlib.Path</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">*,</span> <span class="pre">url:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">None)</span></span></dt>
 <dd><p>Adds all models found in an input file (or url).</p>
 <p>This can be called multiple times, until the object is finalized.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> – the name of a file containing one or more models.</p></li>
 <li><p><strong>url</strong> – the package:// URL containing one or more models.</p></li>
@@ -792,12 +799,12 @@ a new instance. Useful in, e.g., Python notebooks.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer.Finalize">
-<span class="sig-name descname"><span class="pre">Finalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.Finalize" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelVisualizer.Finalize(position=None)</span></span></dt>
 <dd><p>Finalizes the object and sets up the visualization using the provided
 options once models have been added.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>position</strong> – a list of slider positions for the model(s); must match
 the number of positions in all model(s), including the 7 positions
 corresponding to any model bases that aren’t welded to the world.</p>
@@ -806,23 +813,23 @@ corresponding to any model bases that aren’t welded to the world.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer.meshcat">
-<span class="sig-name descname"><span class="pre">meshcat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.meshcat" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelVisualizer.meshcat()</span></span></dt>
 <dd><p>Returns the Meshcat object this visualizer is plugged into.
 If none was provided in the constructor, this creates one on demand.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer.package_map">
-<span class="sig-name descname"><span class="pre">package_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.package_map" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelVisualizer.package_map()</span></span></dt>
 <dd><p>Returns the PackageMap being used during parsing. Users should add
 entries here to be able to load models from non-Drake packages.</p>
 <p>This method cannot be used after Finalize is called.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer.parser">
-<span class="sig-name descname"><span class="pre">parser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.parser" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelVisualizer.parser()</span></span></dt>
 <dd><p>(Advanced) Returns a Parser that will load models into this visualizer.</p>
 <p>Prefer to use package_map() and AddModels() to load models, instead of
 this method.</p>
@@ -832,14 +839,14 @@ because we can no longer determine the scope of what to reload.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.ModelVisualizer.Run">
-<span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop_once</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.ModelVisualizer.Run" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ModelVisualizer.Run(position=None,</span> <span class="pre">loop_once=False)</span></span></dt>
 <dd><p>Runs the model. If Finalize() hasn’t already been explicitly called
 then the object will be finalized first.</p>
 <p>Will iterate once and exit if <cite>loop_once</cite> is True, otherwise will
 loop until the user quits.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>position</strong> – an ndarray-like list of slider positions for the model(s);
 must match the number of positions in all model(s), including the
@@ -854,11 +861,11 @@ the world.</p></li>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.visualization.plot_sublevelset_expression">
-<span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">plot_sublevelset_expression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">51</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.plot_sublevelset_expression" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">plot_sublevelset_expression(ax,</span> <span class="pre">e,</span> <span class="pre">vertices=51,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Plots the 2D sub-level set e(x) &lt;= 1, which must contain the origin.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ax</strong> – the matplotlib axis to receive the plot</p></li>
 <li><p><strong>e</strong> – a symbolic expression in two variables</p></li>
@@ -866,19 +873,19 @@ the world.</p></li>
 <li><p><strong>kwargs</strong> – are passed to the matplotlib fill method</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the return values from matplotlib’s fill command.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.visualization.plot_sublevelset_quadratic">
-<span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">plot_sublevelset_quadratic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">51</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.plot_sublevelset_quadratic" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">plot_sublevelset_quadratic(ax,</span> <span class="pre">A,</span> <span class="pre">b=[0,</span> <span class="pre">0],</span> <span class="pre">c=0,</span> <span class="pre">vertices=51,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Plots the 2D ellipse representing x’Ax + b’x + c &lt;= 1, e.g.
 the one sub-level set of a quadratic form.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ax</strong> – the matplotlib axis to receive the plot</p></li>
 <li><p><strong>A</strong> – an 2x2 PSD numpy array.</p></li>
@@ -888,16 +895,16 @@ the one sub-level set of a quadratic form.</p>
 <li><p><strong>kwargs</strong> – are passed to the matplotlib fill method</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the return values from matplotlib’s fill command.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.visualization.VideoWriter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">VideoWriter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PIL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fourcc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.VideoWriter" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VideoWriter(*,</span> <span class="pre">filename,</span> <span class="pre">fps=16.0,</span> <span class="pre">backend='PIL',</span> <span class="pre">fourcc=None)</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>Publishes RgbdSensor output to a video file.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">color_image&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VideoWriter</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The video will contain recorded images from the color_image input port.</p>
 <p>The methods AddToBuilder() or ConnectToRgbdSensor() make it easy to record
@@ -919,13 +926,13 @@ choose is available in your environment. Drake neither bundles nor
 depends on either one.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.VideoWriter.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PIL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fourcc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.VideoWriter.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VideoWriter.__init__(*,</span> <span class="pre">filename,</span> <span class="pre">fps=16.0,</span> <span class="pre">backend='PIL',</span> <span class="pre">fourcc=None)</span></span></dt>
 <dd><p>Constructs a VideoWriter system.</p>
 <p>In many cases, the AddToBuilder() or ConnectRgbdSensor() methods might
 be easier to use than this constructor.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> – filename to write, e.g., <code class="docutils literal notranslate"><span class="pre">&quot;output.gif&quot;</span></code> or
 <code class="docutils literal notranslate"><span class="pre">&quot;output.mp4&quot;</span></code></p></li>
@@ -940,14 +947,14 @@ refer to the OpenCV documentation for details.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.VideoWriter.AddToBuilder">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AddToBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor_pose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">320</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">240</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fov_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5235987755982988</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">near</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">far</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kinds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PIL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fourcc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.VideoWriter.AddToBuilder" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VideoWriter.AddToBuilder(*,</span> <span class="pre">filename,</span> <span class="pre">builder,</span> <span class="pre">sensor_pose,</span> <span class="pre">fps=16.0,</span> <span class="pre">width=320,</span> <span class="pre">height=240,</span> <span class="pre">fov_y=0.5235987755982988,</span> <span class="pre">near=0.01,</span> <span class="pre">far=10.0,</span> <span class="pre">kinds=None,</span> <span class="pre">backend='PIL',</span> <span class="pre">fourcc=None)</span></span></dt>
 <dd><p>Adds a RgbdSensor and VideoWriter system to the given builder, using
 a world-fixed pose. Returns the VideoWriter system.</p>
 <p>See also ConnectRgbdSensor() in case you want to attach a VideoWriter
 to an already existing RgbdSensor (e.g., on attached to a robot).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filename</strong> – filename to write, e.g., <code class="docutils literal notranslate"><span class="pre">&quot;output.gif&quot;</span></code> or
 <code class="docutils literal notranslate"><span class="pre">&quot;output.mp4&quot;</span></code></p></li>
@@ -976,14 +983,14 @@ refer to the OpenCV documentation for details.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.VideoWriter.ConnectRgbdSensor">
-<span class="sig-name descname"><span class="pre">ConnectRgbdSensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kinds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.VideoWriter.ConnectRgbdSensor" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VideoWriter.ConnectRgbdSensor(*,</span> <span class="pre">builder,</span> <span class="pre">sensor,</span> <span class="pre">kinds=None)</span></span></dt>
 <dd><p>Adds a VideoWriter system to the given builder and connects it to
 the given RgbdSensor. Returns the VideoWriter system.</p>
 <p>See also AddToBuilder() in case you want to record video from a world-
 fixed pose by creating a new sensor.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>builder</strong> – the DiagramBuilder</p></li>
 <li><p><strong>kinds</strong> – which image kind(s) to include in the video; valid
@@ -1000,8 +1007,8 @@ when set to <code class="docutils literal notranslate"><span class="pre">None</s
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.VideoWriter.Save">
-<span class="sig-name descname"><span class="pre">Save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.VideoWriter.Save" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VideoWriter.Save()</span></span></dt>
 <dd><p>Flushes all images to the video file and closes the file.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1013,68 +1020,68 @@ overwrite the prior video with a new one.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.visualization.</span></span><span class="sig-name descname"><span class="pre">VisualizationConfig</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig</span></span></dt>
 <dd><p>Settings for what MultibodyPlant and SceneGraph should send to Meshcat
 and/or Meldis.</p>
 <p>See ApplyVisualizationConfig() for how to enact this configuration.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.visualization.VisualizationConfig" title="pydrake.visualization.VisualizationConfig"><span class="pre">pydrake.visualization.VisualizationConfig</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.__init__(self:</span> <span class="pre">pydrake.visualization.VisualizationConfig,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.default_illustration_color">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_illustration_color</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.default_illustration_color" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.default_illustration_color</span></span></dt>
 <dd><p>The color to apply to any illustration geometry that hasn’t defined
 one. The vector must be of size three (rgb) or four (rgba).</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.default_proximity_color">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_proximity_color</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.default_proximity_color" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.default_proximity_color</span></span></dt>
 <dd><p>The color to apply to any proximity geometry that hasn’t defined one.
 The vector must be of size three (rgb) or four (rgba).</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.delete_on_initialization_event">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_on_initialization_event</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.delete_on_initialization_event" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.delete_on_initialization_event</span></span></dt>
 <dd><p>Determines whether to send a Meshcat::Delete() messages to the Meshcat
 object (if any) on an initialization event to remove any
 visualizations, e.g., from a previous simulation.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.enable_alpha_sliders">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enable_alpha_sliders</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.enable_alpha_sliders" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.enable_alpha_sliders</span></span></dt>
 <dd><p>Determines whether to enable alpha sliders for geometry display.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.enable_meshcat_creation">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enable_meshcat_creation</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.enable_meshcat_creation" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.enable_meshcat_creation</span></span></dt>
 <dd><p>Whether to create a Meshcat object if needed.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.initial_proximity_alpha">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_proximity_alpha</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.initial_proximity_alpha" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.initial_proximity_alpha</span></span></dt>
 <dd><p>the effective
 transparency of the proximity geometry is the slider value multiplied
 by the alpha value of <code class="docutils literal notranslate"><span class="pre">default_proximity_color</span></code>. To have access to
 the full range of opacity, the color’s alpha value should be one and
 the slider should be used to change it.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The initial value of the proximity alpha slider. Note</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.lcm_bus">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lcm_bus</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.lcm_bus" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.lcm_bus</span></span></dt>
 <dd><p>Which LCM URL to use.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1083,26 +1090,26 @@ the slider should be used to change it.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.publish_contacts">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish_contacts</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.publish_contacts" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.publish_contacts</span></span></dt>
 <dd><p>Whether to show contact forces.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.publish_illustration">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish_illustration</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.publish_illustration" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.publish_illustration</span></span></dt>
 <dd><p>Whether to show illustration geometry.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.publish_inertia">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish_inertia</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.publish_inertia" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.publish_inertia</span></span></dt>
 <dd><p>Whether to show body inertia.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.publish_period">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish_period</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.publish_period" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.publish_period</span></span></dt>
 <dd><p>The duration (in seconds) between published LCM messages that update
 visualization. (To help avoid small simulation time steps, we use a
 default period that has an exact representation in binary floating
@@ -1110,8 +1117,8 @@ point; see drake#15021 for details.)</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.visualization.VisualizationConfig.publish_proximity">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish_proximity</span></span><a class="headerlink" href="#pydrake.visualization.VisualizationConfig.publish_proximity" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">VisualizationConfig.publish_proximity</span></span></dt>
 <dd><p>Whether to show proximity geometry.</p>
 </dd></dl>
 

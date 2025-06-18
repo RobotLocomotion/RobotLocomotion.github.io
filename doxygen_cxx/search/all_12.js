@@ -61,6 +61,8 @@ var searchData=
   ['ref_5fcycle_5fpybind_2eh',['ref_cycle_pybind.h',['../ref__cycle__pybind_8h.html',1,'']]],
   ['reference_5fdirection',['reference_direction',['../structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html#a5515d4ab78b4b7db0f63e1a38959451f',1,'drake::multibody::SpatialVelocityConstraint::AngularVelocityBounds']]],
   ['reference_5fpositions',['reference_positions',['../classdrake_1_1multibody_1_1_deformable_body.html#a24ac4c600790cb8116ba24d0f9a3c30b',1,'drake::multibody::DeformableBody']]],
+  ['refinevolumemesh',['RefineVolumeMesh',['../namespacedrake_1_1geometry.html#a29a1f48b67c49f27ec19a89f37bd85ae',1,'drake::geometry']]],
+  ['refinevolumemeshintovtkfilecontents',['RefineVolumeMeshIntoVtkFileContents',['../namespacedrake_1_1geometry.html#aff2aec5a833973780e6a83df356a69c0',1,'drake::geometry']]],
   ['reftype',['RefType',['../classdrake_1_1_eigen_ptr.html#aec06038f7c3c38b96aa8e4f26fe386d4',1,'drake::EigenPtr']]],
   ['region_5fof_5fattraction_2eh',['region_of_attraction.h',['../region__of__attraction_8h.html',1,'']]],
   ['regionofattraction',['RegionOfAttraction',['../group__analysis.html#gaafb17ca05a19fe7365d28f8a105cff76',1,'drake::systems::analysis']]],

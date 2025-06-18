@@ -92,6 +92,7 @@ var searchData=
   ['definegeometryhydro',['DefineGeometryHydro',['../namespacedrake_1_1pydrake.html#aeeb190e42e2f696d5ed3f8d319db6459',1,'drake::pydrake']]],
   ['definegeometrymeshes',['DefineGeometryMeshes',['../namespacedrake_1_1pydrake.html#a486ee6b32b3daf0b9c433f6a4242174e',1,'drake::pydrake']]],
   ['definegeometryoptimization',['DefineGeometryOptimization',['../namespacedrake_1_1pydrake.html#a1e2a66cb1a4fec05d8ec8f5d2dd7b6de',1,'drake::pydrake']]],
+  ['definegeometryrefine',['DefineGeometryRefine',['../namespacedrake_1_1pydrake.html#a22884cc26e8f99e78567d4e07a74627e',1,'drake::pydrake']]],
   ['definegeometryrender',['DefineGeometryRender',['../namespacedrake_1_1pydrake.html#ad3fdf83dabca18e8bee66c72ce462fdc',1,'drake::pydrake']]],
   ['definegeometryscenegraph',['DefineGeometrySceneGraph',['../namespacedrake_1_1pydrake.html#a1e766f9fb38d0bcd69a4d11f7fc2efb3',1,'drake::pydrake']]],
   ['definegeometryvisualizers',['DefineGeometryVisualizers',['../namespacedrake_1_1pydrake.html#af1dd02f74528f84556c55239d82ab9b3',1,'drake::pydrake']]],

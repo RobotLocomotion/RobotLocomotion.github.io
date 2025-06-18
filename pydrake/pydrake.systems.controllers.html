@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>pydrake.systems.controllers &mdash; pydrake  documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=6b576c25" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=7f41d439"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -61,7 +64,11 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pydrake
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pydrake
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -128,9 +135,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
-      <li>pydrake.systems.controllers</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pydrake.systems.html">pydrake.systems</a></li>
+      <li class="breadcrumb-item active">pydrake.systems.controllers</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -140,10 +147,10 @@
            <div itemprop="articleBody">
              
   <section id="module-pydrake.systems.controllers">
-<span id="pydrake-systems-controllers"></span><h1>pydrake.systems.controllers<a class="headerlink" href="#module-pydrake.systems.controllers" title="Permalink to this headline"></a></h1>
+<span id="pydrake-systems-controllers"></span><h1>pydrake.systems.controllers<a class="headerlink" href="#module-pydrake.systems.controllers" title="Link to this heading"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DiscreteTimeLinearQuadraticRegulator">
-<span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">DiscreteTimeLinearQuadraticRegulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([],</span> <span class="pre">shape=(0,</span> <span class="pre">0),</span> <span class="pre">dtype=float64)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.controllers.DiscreteTimeLinearQuadraticRegulator" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DiscreteTimeLinearQuadraticRegulator(A:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">B:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">Q:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">R:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">N:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous]</span> <span class="pre">=</span> <span class="pre">array([],</span> <span class="pre">shape=(0,</span> <span class="pre">0),</span> <span class="pre">dtype=float64))</span> <span class="pre">-&gt;</span> <span class="pre">tuple[numpy.ndarray[numpy.float64[m,</span> <span class="pre">n]],</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n]]]</span></span></dt>
 <dd><p>Computes the optimal feedback controller, u=-Kx, and the optimal
 cost-to-go J = x’Sx for the problem:</p>
 <div class="math notranslate nohighlight">
@@ -166,11 +173,11 @@ will be treated as a num_states x num_inputs zero matrix.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A structure that contains the optimal feedback gain K and the
 quadratic cost term S. The optimal feedback control is u = -Kx;</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if R is not positive definite</strong><strong> or </strong><strong>if</strong><strong> [</strong><strong>Q N; N' R</strong><strong>] </strong><strong>is</strong> – </p></li>
 <li><p><strong>not positive semi-definite.</strong> – </p></li>
@@ -180,18 +187,18 @@ quadratic cost term S. The optimal feedback control is u = -Kx;</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">DynamicProgrammingOptions</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions</span></span></dt>
 <dd><p>Consolidates the many possible options to be passed to the dynamic
 programming algorithms.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.DynamicProgrammingOptions" title="pydrake.systems.controllers.DynamicProgrammingOptions"><span class="pre">pydrake.systems.controllers.DynamicProgrammingOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.__init__(self:</span> <span class="pre">pydrake.systems.controllers.DynamicProgrammingOptions)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.assume_non_continuous_states_are_fixed">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">assume_non_continuous_states_are_fixed</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.assume_non_continuous_states_are_fixed" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.assume_non_continuous_states_are_fixed</span></span></dt>
 <dd><p>(Advanced) Boolean which, if true, allows this algorithm to optimize
 without considering the dynamics of any non-continuous states. This is
 helpful for optimizing systems that might have some additional
@@ -201,16 +208,16 @@ dynamics of the continuous states. $*Default:* false.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.convergence_tol">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convergence_tol</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.convergence_tol" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.convergence_tol</span></span></dt>
 <dd><p>Value iteration methods converge when the value function stops
 changing (typically evaluated with the l∞ norm). This value sets that
 threshold.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.discount_factor">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">discount_factor</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.discount_factor" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.discount_factor</span></span></dt>
 <dd><p>A value between (0,1] that discounts future rewards.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -219,8 +226,8 @@ threshold.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.input_port_index">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_port_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.input_port_index" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.input_port_index</span></span></dt>
 <dd><p>For systems with multiple input ports, we must specify which input
 port is being used in the control design.</p>
 <div class="admonition seealso">
@@ -230,43 +237,43 @@ port is being used in the control design.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.periodic_boundary_conditions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">periodic_boundary_conditions</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.periodic_boundary_conditions" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.periodic_boundary_conditions</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PeriodicBoundaryCondition</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.PeriodicBoundaryCondition</span></span></dt>
 <dd><p>For algorithms that rely on approximations of the state-dynamics (as
 in FittedValueIteration), this is a list of state dimensions for which
 the state space maximum value should be “wrapped around” to ensure
 that all values are in the range [low, high). The classic example is
 for angles that are wrapped around at 2π.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition" title="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition"><span class="pre">pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.PeriodicBoundaryCondition.__init__(self:</span> <span class="pre">pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition,</span> <span class="pre">state_index:</span> <span class="pre">int,</span> <span class="pre">low:</span> <span class="pre">float,</span> <span class="pre">high:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.high">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">high</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.high" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.PeriodicBoundaryCondition.high</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.low">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">low</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.low" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.PeriodicBoundaryCondition.low</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.state_index">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition.state_index" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.PeriodicBoundaryCondition.state_index</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.DynamicProgrammingOptions.visualization_callback">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">visualization_callback</span></span><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.visualization_callback" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DynamicProgrammingOptions.visualization_callback</span></span></dt>
 <dd><p>If callable, this method is invoked during each major iteration of the
 dynamic programming algorithm, in order to facilitate e.g. graphical
 inspection/debugging of the results.</p>
@@ -280,8 +287,8 @@ has run once), not zero.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulator">
-<span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">t0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions" title="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions"><span class="pre">pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions(Qf=None,</span> <span class="pre">N=None,</span> <span class="pre">input_port_index=InputPortSelection.kUseFirstInputIfItExists,</span> <span class="pre">use_square_root_method=False,</span> <span class="pre">simulator_config=SimulatorConfig(integration_scheme='runge_kutta3',</span> <span class="pre">max_step_size=0.1,</span> <span class="pre">accuracy=0.0001,</span> <span class="pre">use_error_control=True,</span> <span class="pre">start_time=0.0,</span> <span class="pre">target_realtime_rate=0.0,</span> <span class="pre">publish_every_time_step=False))</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult" title="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult"><span class="pre">pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulator" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulator(system:</span> <span class="pre">pydrake.systems.framework.System,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">t0:</span> <span class="pre">float,</span> <span class="pre">tf:</span> <span class="pre">float,</span> <span class="pre">Q:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">R:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">options:</span> <span class="pre">pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions</span> <span class="pre">=</span> <span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions(Qf=None,</span> <span class="pre">N=None,</span> <span class="pre">input_port_index=InputPortSelection.kUseFirstInputIfItExists,</span> <span class="pre">use_square_root_method=False,</span> <span class="pre">simulator_config=SimulatorConfig(integration_scheme='runge_kutta3',</span> <span class="pre">max_step_size=0.1,</span> <span class="pre">accuracy=0.0001,</span> <span class="pre">use_error_control=True,</span> <span class="pre">start_time=0.0,</span> <span class="pre">target_realtime_rate=0.0,</span> <span class="pre">publish_every_time_step=False)))</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult</span></span></dt>
 <dd><p>If <code class="docutils literal notranslate"><span class="pre">system</span></code> is a continuous-time system, then solves the
 differential Riccati equation to compute the optimal controller and
 optimal cost-to-go for the continuous-time finite-horizon linear
@@ -336,7 +343,7 @@ state and/or input trajectories.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>FiniteHorizonLinearQuadraticRegulatorResult representing a
 continuous-time or a discrete-time finite-horizon LQR.</p>
 </dd>
@@ -356,18 +363,18 @@ listed in the code as TODOs).</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions</span></span></dt>
 <dd><p>A structure to facilitate passing the myriad of optional arguments to
 the FiniteHorizonLinearQuadraticRegulator algorithms.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions" title="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions"><span class="pre">pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions.__init__(self:</span> <span class="pre">pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.input_port_index">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_port_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.input_port_index" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions.input_port_index</span></span></dt>
 <dd><p>For systems with multiple input ports, we must specify which input
 port is being used in the control design.</p>
 <div class="admonition seealso">
@@ -377,24 +384,24 @@ port is being used in the control design.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.N">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">N</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.N" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions.N</span></span></dt>
 <dd><p>A num_states x num_inputs matrix that describes the running cost
 2(x-xd(t))’N(u-ud(t)). If unset, then N will be set to the zero
 matrix.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.Qf">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Qf</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.Qf" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions.Qf</span></span></dt>
 <dd><p>A num_states x num_states positive semi-definite matrix which
 specified the cost at the final time. If unset, then Qf will be set to
 the zero matrix.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.simulator_config">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">simulator_config</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.simulator_config" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions.simulator_config</span></span></dt>
 <dd><p>For continuous-time finite-horizon LQR, the Riccati differential
 equation is solved by the Simulator (running backwards in time). Use
 this parameter to configure the simulator (e.g. choose non-default
@@ -402,8 +409,8 @@ integrator or integrator parameters).</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.u0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">u0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.u0" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions.u0</span></span></dt>
 <dd><p>A nominal input trajectory. The system is linearized about this
 trajectory. u0 must be defined over the entire interval [t0, tf] for
 the continuous-time case, or at least over the sample times for the
@@ -413,16 +420,16 @@ LQR method).</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.ud">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ud</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.ud" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions.ud</span></span></dt>
 <dd><p>A desired input trajectory. The objective is to regulate to this
 trajectory – the input component of the quadratic running cost is
 (u-ud(t))’<a href="#id1"><span class="problematic" id="id2">*</span></a>R*(u-ud(t)). If null, then ud(t) = u0(t).</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.use_square_root_method">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_square_root_method</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.use_square_root_method" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions.use_square_root_method</span></span></dt>
 <dd><p>Enables the “square-root” method solution to the Riccati equation.
 This is slightly more expensive and potentially less numerically
 accurate (errors are bounded on the square root), but is more
@@ -431,8 +438,8 @@ definite and symmetric) Qf in this options struct.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.x0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.x0" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions.x0</span></span></dt>
 <dd><p>A nominal state trajectory. The system is linearized about this
 trajectory. x0 must be defined over the entire interval [t0, tf] for
 the continuous-time case, or at least over the sample times for the
@@ -442,8 +449,8 @@ LQR method).</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.xd">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xd</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.xd" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions.xd</span></span></dt>
 <dd><p>A desired state trajectory. The objective is to regulate to this
 trajectory – the state component of the quadratic running cost is
 (x-xd(t))’<a href="#id3"><span class="problematic" id="id4">*</span></a>Q*(x-xd(t)) and the final cost is (x-xd(t))’Qf(x-xd(t)). If
@@ -453,8 +460,8 @@ null, then xd(t) = x0(t).</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult</span></span></dt>
 <dd><p>A structure that contains the basic
 FiniteHorizonLinearQuadraticRegulator results.</p>
 <p>The continuous-time finite-horizon cost-to-go is given by
@@ -466,56 +473,56 @@ overlook the factor of 2 in front of the sₓ(t) term.</p>
 controller is given by u−u₀[n] = −K[n] (x−x₀[n]) − k₀[n]. Please don’t
 overlook the factor of 2 in front of the sₓ[n] term.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.K">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">K</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.K" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult.K</span></span></dt>
 <dd><p>This K is the K_x term in the derivation notes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Note</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.k0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">k0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.k0" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult.k0</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.S">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">S</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.S" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult.S</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.s0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">s0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.s0" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult.s0</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.sx">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sx</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.sx" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult.sx</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.u0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">u0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.u0" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult.u0</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.x0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x0</span></span><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.x0" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FiniteHorizonLinearQuadraticRegulatorResult.x0</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.FittedValueIteration">
-<span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">FittedValueIteration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.analysis.html#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg5</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.DynamicProgrammingOptions" title="pydrake.systems.controllers.DynamicProgrammingOptions"><span class="pre">pydrake.systems.controllers.DynamicProgrammingOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.primitives.html#pydrake.systems.primitives.BarycentricMeshSystem" title="pydrake.systems.primitives.BarycentricMeshSystem"><span class="pre">pydrake.systems.primitives.BarycentricMeshSystem</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.controllers.FittedValueIteration" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">FittedValueIteration(arg0:</span> <span class="pre">pydrake.systems.analysis.Simulator,</span> <span class="pre">arg1:</span> <span class="pre">Callable[[pydrake.systems.framework.Context],</span> <span class="pre">float],</span> <span class="pre">arg2:</span> <span class="pre">list[set[float]],</span> <span class="pre">arg3:</span> <span class="pre">list[set[float]],</span> <span class="pre">arg4:</span> <span class="pre">float,</span> <span class="pre">arg5:</span> <span class="pre">pydrake.systems.controllers.DynamicProgrammingOptions)</span> <span class="pre">-&gt;</span> <span class="pre">tuple[pydrake.systems.primitives.BarycentricMeshSystem,</span> <span class="pre">numpy.ndarray[numpy.float64[1,</span> <span class="pre">n]]]</span></span></dt>
 <dd><p>Implements Fitted Value Iteration on a (triangulated) Barycentric
 Mesh, which designs a state-feedback policy to minimize the
 infinite-horizon cost ∑ γⁿ g(x[n],u[n]), where γ is the discount
@@ -550,7 +557,7 @@ update.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a std::pair containing the resulting policy, implemented as a
 BarycentricMeshSystem, and the RowVectorXd J that defines the
 expected cost-to-go on a BarycentricMesh using <code class="docutils literal notranslate"><span class="pre">state_grid</span></code>. The
@@ -563,16 +570,16 @@ output (which is the input of the system passed in through
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">InverseDynamics</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>Solves inverse dynamics with no consideration for joint actuator force
 limits.</p>
 <p>Computes the generalized force <code class="docutils literal notranslate"><span class="pre">τ_id</span></code> that needs to be applied so
 that the multibody system undergoes a desired acceleration <code class="docutils literal notranslate"><span class="pre">vd_d</span></code>.
 That is, <code class="docutils literal notranslate"><span class="pre">τ_id</span></code> is the result of an inverse dynamics computation
 according to:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">τ_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">vd_d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="n">v</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">τ_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">τ_app</span><span class="w"></span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">τ_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">vd_d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="n">v</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">τ_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">τ_app</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the mass matrix, <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is the bias term
@@ -583,7 +590,7 @@ include damping, springs, etc. See
 MultibodyPlant::CalcForceElementsContribution()).</p>
 <p>The system also provides a pure gravity compensation mode via an
 option in the constructor. In this case, the output is simply</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">τ_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">τ_g</span><span class="p">(</span><span class="n">q</span><span class="p">).</span><span class="w"></span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">τ_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">τ_g</span><span class="p">(</span><span class="n">q</span><span class="p">).</span>
 </pre></div>
 </div>
 </details><div class="admonition note">
@@ -601,8 +608,8 @@ this class directly if desired acceleration is computed differently.</p>
 style=”color:gray”&gt;gray&lt;/span&gt; is only present when the <code class="docutils literal notranslate"><span class="pre">mode</span></code> at
 construction is not <code class="docutils literal notranslate"><span class="pre">kGravityCompensation</span></code>.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant:</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode:</span> <span class="pre">pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode</span> <span class="pre">=</span> <span class="pre">&lt;InverseDynamicsMode.kInverseDynamics:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant_context:</span> <span class="pre">pydrake.systems.framework.Context</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.__init__(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamics,</span> <span class="pre">plant:</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant,</span> <span class="pre">mode:</span> <span class="pre">pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode</span> <span class="pre">=</span> <span class="pre">&lt;InverseDynamicsMode.kInverseDynamics:</span> <span class="pre">0&gt;,</span> <span class="pre">plant_context:</span> <span class="pre">pydrake.systems.framework.Context</span> <span class="pre">=</span> <span class="pre">None)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Constructs the InverseDynamics system.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>Pointer to the multibody plant model. The life span of <code class="docutils literal notranslate"><span class="pre">plant</span></code>
@@ -626,87 +633,87 @@ compatible with <code class="docutils literal notranslate"><span class="pre">pla
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.get_input_port_desired_acceleration">
-<span class="sig-name descname"><span class="pre">get_input_port_desired_acceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamics" title="pydrake.systems.controllers.InverseDynamics"><span class="pre">pydrake.systems.controllers.InverseDynamics</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.get_input_port_desired_acceleration" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.get_input_port_desired_acceleration(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamics)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><p>Returns the input port for the desired acceleration.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.get_input_port_estimated_state">
-<span class="sig-name descname"><span class="pre">get_input_port_estimated_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamics" title="pydrake.systems.controllers.InverseDynamics"><span class="pre">pydrake.systems.controllers.InverseDynamics</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.get_input_port_estimated_state" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.get_input_port_estimated_state(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamics)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><p>Returns the input port for the estimated state.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.get_output_port_generalized_force">
-<span class="sig-name descname"><span class="pre">get_output_port_generalized_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamics" title="pydrake.systems.controllers.InverseDynamics"><span class="pre">pydrake.systems.controllers.InverseDynamics</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.get_output_port_generalized_force" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.get_output_port_generalized_force(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamics)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd><p>Returns the output port for the generalized forces that realize the
 desired acceleration. The dimension of that force vector will be
 identical to the dimensionality of the generalized velocities.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InverseDynamicsMode</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.InverseDynamicsMode</span></span></dt>
 <dd><p>Members:</p>
 <p>kInverseDynamics :</p>
 <p>kGravityCompensation : Purely gravity compensation mode.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode" title="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode"><span class="pre">pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.InverseDynamicsMode.__init__(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode,</span> <span class="pre">value:</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.kGravityCompensation">
-<span class="sig-name descname"><span class="pre">kGravityCompensation</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;InverseDynamicsMode.kGravityCompensation:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.kGravityCompensation" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.InverseDynamicsMode.kGravityCompensation</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.kInverseDynamics">
-<span class="sig-name descname"><span class="pre">kInverseDynamics</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;InverseDynamicsMode.kInverseDynamics:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.kInverseDynamics" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.InverseDynamicsMode.kInverseDynamics</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.InverseDynamicsMode.name</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.value" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.InverseDynamicsMode.value</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.is_pure_gravity_compensation">
-<span class="sig-name descname"><span class="pre">is_pure_gravity_compensation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamics" title="pydrake.systems.controllers.InverseDynamics"><span class="pre">pydrake.systems.controllers.InverseDynamics</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.is_pure_gravity_compensation" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.is_pure_gravity_compensation(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamics)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.kGravityCompensation">
-<span class="sig-name descname"><span class="pre">kGravityCompensation</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;InverseDynamicsMode.kGravityCompensation:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.kGravityCompensation" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.kGravityCompensation</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamics.kInverseDynamics">
-<span class="sig-name descname"><span class="pre">kInverseDynamics</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;InverseDynamicsMode.kInverseDynamics:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.kInverseDynamics" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamics.kInverseDynamics</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamicsController">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">InverseDynamicsController</span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamicsController</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></p>
 <p>A state feedback controller that uses a PidController to generate
 desired accelerations, which are then converted into MultibodyPlant
 actuation inputs using InverseDynamics (with <code class="docutils literal notranslate"><span class="pre">mode</span> <span class="pre">=</span></code>
 InverseDynamics::kInverseDynamics). More specifically, the output of
 this controller is:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>actuation = B⁻¹ generalized_force, and
-  generalized_force = inverse_dynamics(q, v, vd_command), where
-  vd_command = kp(q_d - q) + kd(v_d - v) + ki int(q_d - q) + vd_d.
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">actuation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="err">⁻</span><span class="n">¹</span><span class="w"> </span><span class="n">generalized_force</span><span class="p">,</span><span class="w"> </span><span class="k">and</span>
+<span class="w">  </span><span class="n">generalized_force</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inverse_dynamics</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">vd_command</span><span class="p">),</span><span class="w"> </span><span class="n">where</span>
+<span class="w">  </span><span class="n">vd_command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kp</span><span class="p">(</span><span class="n">q_d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kd</span><span class="p">(</span><span class="n">v_d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ki</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">q_d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vd_d</span><span class="p">.</span>
 </pre></div>
 </div>
 </details><p>Here <code class="docutils literal notranslate"><span class="pre">q</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> stand for the generalized position and velocity,
@@ -730,8 +737,8 @@ recommended.</p>
 the inverse dynamics computation.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamicsController.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamicsController" title="pydrake.systems.controllers.InverseDynamicsController"><span class="pre">pydrake.systems.controllers.InverseDynamicsController</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ki</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_reference_acceleration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant_context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamicsController.__init__(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamicsController,</span> <span class="pre">robot:</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant,</span> <span class="pre">kp:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">ki:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">kd:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">has_reference_acceleration:</span> <span class="pre">bool,</span> <span class="pre">plant_context:</span> <span class="pre">pydrake.systems.framework.Context</span> <span class="pre">=</span> <span class="pre">None)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Constructs an inverse dynamics controller for the given <code class="docutils literal notranslate"><span class="pre">plant</span></code>
 model. The InverseDynamicsController holds an internal, non-owned
 reference to the MultibodyPlant object so you must ensure that
@@ -760,58 +767,58 @@ compatible.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if - The plant is not finalized</strong><strong> (</strong><strong>see</strong> – </p></li>
-<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong>)</strong><strong> - The plant is not compatible with</strong> – </p></li>
-<li><p><strong>the plant context. - The number of generalized velocities is not</strong> – </p></li>
-<li><p><strong>equal to the number of generalized positions. - The model is not</strong> – </p></li>
+<li><p><strong>MultibodyPlant::Finalize</strong><strong>(</strong><strong>)</strong><strong>)</strong><strong>. - The plant is not compatible with</strong> – </p></li>
+<li><p><strong>the plant context. - The number</strong><strong> of </strong><strong>generalized velocities is not</strong> – </p></li>
+<li><p><strong>equal to the number</strong><strong> of </strong><strong>generalized positions. - The model is not</strong> – </p></li>
 <li><p><strong>fully actuated. - Vector kp</strong><strong>, </strong><strong>ki and kd do not all have the same</strong> – </p></li>
-<li><p><strong>size equal to the number of generalized positions.</strong> – </p></li>
+<li><p><strong>size equal to the number</strong><strong> of </strong><strong>generalized positions.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamicsController.get_input_port_desired_acceleration">
-<span class="sig-name descname"><span class="pre">get_input_port_desired_acceleration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamicsController" title="pydrake.systems.controllers.InverseDynamicsController"><span class="pre">pydrake.systems.controllers.InverseDynamicsController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.get_input_port_desired_acceleration" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamicsController.get_input_port_desired_acceleration(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamicsController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><p>Returns the input port for the reference acceleration.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamicsController.get_input_port_desired_state">
-<span class="sig-name descname"><span class="pre">get_input_port_desired_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamicsController" title="pydrake.systems.controllers.InverseDynamicsController"><span class="pre">pydrake.systems.controllers.InverseDynamicsController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.get_input_port_desired_state" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamicsController.get_input_port_desired_state(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamicsController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><p>Returns the input port for the desired state.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamicsController.get_input_port_estimated_state">
-<span class="sig-name descname"><span class="pre">get_input_port_estimated_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamicsController" title="pydrake.systems.controllers.InverseDynamicsController"><span class="pre">pydrake.systems.controllers.InverseDynamicsController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.get_input_port_estimated_state" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamicsController.get_input_port_estimated_state(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamicsController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><p>Returns the input port for the estimated state.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamicsController.get_multibody_plant_for_control">
-<span class="sig-name descname"><span class="pre">get_multibody_plant_for_control</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamicsController" title="pydrake.systems.controllers.InverseDynamicsController"><span class="pre">pydrake.systems.controllers.InverseDynamicsController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.get_multibody_plant_for_control" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamicsController.get_multibody_plant_for_control(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamicsController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant</span></span></dt>
 <dd><p>Returns a constant pointer to the MultibodyPlant used for control.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamicsController.get_output_port_control">
-<span class="sig-name descname"><span class="pre">get_output_port_control</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamicsController" title="pydrake.systems.controllers.InverseDynamicsController"><span class="pre">pydrake.systems.controllers.InverseDynamicsController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.get_output_port_control" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamicsController.get_output_port_control(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamicsController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd><p>Returns the output port for computed actuation/control.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamicsController.get_output_port_generalized_force">
-<span class="sig-name descname"><span class="pre">get_output_port_generalized_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamicsController" title="pydrake.systems.controllers.InverseDynamicsController"><span class="pre">pydrake.systems.controllers.InverseDynamicsController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.get_output_port_generalized_force" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamicsController.get_output_port_generalized_force(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamicsController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd><p>Returns the output port for computed generalized_force.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.InverseDynamicsController.set_integral_value">
-<span class="sig-name descname"><span class="pre">set_integral_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.InverseDynamicsController" title="pydrake.systems.controllers.InverseDynamicsController"><span class="pre">pydrake.systems.controllers.InverseDynamicsController</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.set_integral_value" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">InverseDynamicsController.set_integral_value(self:</span> <span class="pre">pydrake.systems.controllers.InverseDynamicsController,</span> <span class="pre">arg0:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">arg1:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Sets the integral part of the PidController to <code class="docutils literal notranslate"><span class="pre">value</span></code>. <code class="docutils literal notranslate"><span class="pre">value</span></code>
 must be a column vector of the appropriate size.</p>
 </dd></dl>
@@ -819,11 +826,11 @@ must be a column vector of the appropriate size.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">JointStiffnessController</span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">JointStiffnessController</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>Implements a joint-space stiffness controller of the form</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>τ_control = B⁻¹[−τ_g(q) − τ_app + kp⊙(q_d − q) + kd⊙(v_d − v)]
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">τ_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="err">⁻</span><span class="n">¹</span><span class="p">[</span><span class="err">−</span><span class="n">τ_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="err">−</span><span class="w"> </span><span class="n">τ_app</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kp</span><span class="err">⊙</span><span class="p">(</span><span class="n">q_d</span><span class="w"> </span><span class="err">−</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kd</span><span class="err">⊙</span><span class="p">(</span><span class="n">v_d</span><span class="w"> </span><span class="err">−</span><span class="w"> </span><span class="n">v</span><span class="p">)]</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">Kp</span></code> and <code class="docutils literal notranslate"><span class="pre">Kd</span></code> are the joint stiffness and damping
@@ -837,7 +844,7 @@ velocities, respectively. <code class="docutils literal notranslate"><span class
 ⊙ represents elementwise multiplication.</p>
 <p>The goal of this controller is to produce a closed-loop dynamics that
 resembles a spring-damper dynamics at the joints around the setpoint:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>M(q)v̇ + C(q,v)v + kp⊙(q - q_d) + kd⊙(v - v_d) = τ_ext,
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v</span><span class="err">̇</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">v</span><span class="p">)</span><span class="n">v</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kp</span><span class="err">⊙</span><span class="p">(</span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">q_d</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kd</span><span class="err">⊙</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_d</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">τ_ext</span><span class="p">,</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">M(q)v̇</span> <span class="pre">+</span> <span class="pre">C(q,v)v</span></code> are the original multibody mass and
@@ -862,8 +869,8 @@ terms need to be accounted for when computing effort limits). To
 model PD controlled actuators, refer to mbp_actuation “Actuation”.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.JointStiffnessController" title="pydrake.systems.controllers.JointStiffnessController"><span class="pre">pydrake.systems.controllers.JointStiffnessController</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">JointStiffnessController.__init__(self:</span> <span class="pre">pydrake.systems.controllers.JointStiffnessController,</span> <span class="pre">plant:</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant,</span> <span class="pre">kp:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">kd:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Constructs the JointStiffnessController system.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt><dd><p>Reference to the multibody plant model. The life span of <code class="docutils literal notranslate"><span class="pre">plant</span></code>
@@ -881,26 +888,26 @@ plant.num_actuated_dofs() == kp.size() == kd.size()</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController.get_input_port_desired_state">
-<span class="sig-name descname"><span class="pre">get_input_port_desired_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.JointStiffnessController" title="pydrake.systems.controllers.JointStiffnessController"><span class="pre">pydrake.systems.controllers.JointStiffnessController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.get_input_port_desired_state" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">JointStiffnessController.get_input_port_desired_state(self:</span> <span class="pre">pydrake.systems.controllers.JointStiffnessController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><p>Returns the input port for the desired state.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController.get_input_port_estimated_state">
-<span class="sig-name descname"><span class="pre">get_input_port_estimated_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.JointStiffnessController" title="pydrake.systems.controllers.JointStiffnessController"><span class="pre">pydrake.systems.controllers.JointStiffnessController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.get_input_port_estimated_state" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">JointStiffnessController.get_input_port_estimated_state(self:</span> <span class="pre">pydrake.systems.controllers.JointStiffnessController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><p>Returns the input port for the estimated state.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController.get_multibody_plant">
-<span class="sig-name descname"><span class="pre">get_multibody_plant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.JointStiffnessController" title="pydrake.systems.controllers.JointStiffnessController"><span class="pre">pydrake.systems.controllers.JointStiffnessController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.get_multibody_plant" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">JointStiffnessController.get_multibody_plant(self:</span> <span class="pre">pydrake.systems.controllers.JointStiffnessController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant</span></span></dt>
 <dd><p>Returns a constant pointer to the MultibodyPlant used for control.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.JointStiffnessController.get_output_port_actuation">
-<span class="sig-name descname"><span class="pre">get_output_port_actuation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.JointStiffnessController" title="pydrake.systems.controllers.JointStiffnessController"><span class="pre">pydrake.systems.controllers.JointStiffnessController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.JointStiffnessController.get_output_port_actuation" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">JointStiffnessController.get_output_port_actuation(self:</span> <span class="pre">pydrake.systems.controllers.JointStiffnessController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd><p>Returns the output port implementing the control in the form (and
 order) expected for the plant’s actuation input port.</p>
 </dd></dl>
@@ -908,8 +915,8 @@ order) expected for the plant’s actuation input port.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.LinearProgrammingApproximateDynamicProgramming">
-<span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">LinearProgrammingApproximateDynamicProgramming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.analysis.html#pydrake.systems.analysis.Simulator" title="pydrake.systems.analysis.Simulator"><span class="pre">pydrake.systems.analysis.Simulator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg5</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg6</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg7</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.DynamicProgrammingOptions" title="pydrake.systems.controllers.DynamicProgrammingOptions"><span class="pre">pydrake.systems.controllers.DynamicProgrammingOptions</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.controllers.LinearProgrammingApproximateDynamicProgramming" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">LinearProgrammingApproximateDynamicProgramming(arg0:</span> <span class="pre">pydrake.systems.analysis.Simulator,</span> <span class="pre">arg1:</span> <span class="pre">Callable[[pydrake.systems.framework.Context],</span> <span class="pre">float],</span> <span class="pre">arg2:</span> <span class="pre">Callable[[numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">numpy.ndarray[object[m,</span> <span class="pre">1]]],</span> <span class="pre">pydrake.symbolic.Expression],</span> <span class="pre">arg3:</span> <span class="pre">int,</span> <span class="pre">arg4:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">arg5:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">arg6:</span> <span class="pre">float,</span> <span class="pre">arg7:</span> <span class="pre">pydrake.systems.controllers.DynamicProgrammingOptions)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]</span></span></dt>
 <dd><p>Implements the Linear Programming approach to approximate dynamic
 programming. It optimizes the linear program</p>
 <p>maximize ∑ Jₚ(x). subject to ∀x, ∀u, Jₚ(x) ≤ g(x,u) + γJₚ(f(x,u)),</p>
@@ -952,7 +959,7 @@ sample point</em>.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>params the VectorXd of parameters that optimizes the supplied
 cost-to-go function.</p>
 </dd>
@@ -960,8 +967,8 @@ cost-to-go function.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.LinearQuadraticRegulator">
-<span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">LinearQuadraticRegulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.controllers.LinearQuadraticRegulator" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">LinearQuadraticRegulator(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>LinearQuadraticRegulator(A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], B: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], N: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous] = array([], shape=(0, 0), dtype=float64), F: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous] = array([], shape=(0, 0), dtype=float64)) -&gt; tuple[numpy.ndarray[numpy.float64[m, n]], numpy.ndarray[numpy.float64[m, n]]]</p></li>
@@ -994,11 +1001,11 @@ num_states zero matrix.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A structure that contains the optimal feedback gain K and the
 quadratic cost term S. The optimal feedback control is u = -Kx;</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>RuntimeError if R is not positive definite.</strong> – </p>
 </dd>
 </dl>
@@ -1035,11 +1042,11 @@ num_inputs.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A system implementing the optimal controller in the original
 system coordinates.</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>RuntimeError if R is not positive definite.</strong> – </p>
 </dd>
 </dl>
@@ -1083,11 +1090,11 @@ matrix.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A system implementing the optimal controller in the original
 system coordinates.</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>RuntimeError if R is not positive definite. $See also</strong> – </p>
 </dd>
 </dl>
@@ -1095,8 +1102,8 @@ system coordinates.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.MakeFiniteHorizonLinearQuadraticRegulator">
-<span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">MakeFiniteHorizonLinearQuadraticRegulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">t0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions" title="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions"><span class="pre">pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions(Qf=None,</span> <span class="pre">N=None,</span> <span class="pre">input_port_index=InputPortSelection.kUseFirstInputIfItExists,</span> <span class="pre">use_square_root_method=False,</span> <span class="pre">simulator_config=SimulatorConfig(integration_scheme='runge_kutta3',</span> <span class="pre">max_step_size=0.1,</span> <span class="pre">accuracy=0.0001,</span> <span class="pre">use_error_control=True,</span> <span class="pre">start_time=0.0,</span> <span class="pre">target_realtime_rate=0.0,</span> <span class="pre">publish_every_time_step=False))</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.System" title="pydrake.systems.framework.System"><span class="pre">pydrake.systems.framework.System</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.MakeFiniteHorizonLinearQuadraticRegulator" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MakeFiniteHorizonLinearQuadraticRegulator(system:</span> <span class="pre">pydrake.systems.framework.System,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">t0:</span> <span class="pre">float,</span> <span class="pre">tf:</span> <span class="pre">float,</span> <span class="pre">Q:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">R:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">options:</span> <span class="pre">pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions</span> <span class="pre">=</span> <span class="pre">FiniteHorizonLinearQuadraticRegulatorOptions(Qf=None,</span> <span class="pre">N=None,</span> <span class="pre">input_port_index=InputPortSelection.kUseFirstInputIfItExists,</span> <span class="pre">use_square_root_method=False,</span> <span class="pre">simulator_config=SimulatorConfig(integration_scheme='runge_kutta3',</span> <span class="pre">max_step_size=0.1,</span> <span class="pre">accuracy=0.0001,</span> <span class="pre">use_error_control=True,</span> <span class="pre">start_time=0.0,</span> <span class="pre">target_realtime_rate=0.0,</span> <span class="pre">publish_every_time_step=False)))</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.System</span></span></dt>
 <dd><p>Variant of FiniteHorizonLinearQuadraticRegulator that returns a System
 implementing the regulator (controller) as a System, with a single
 “plant_state” input for the estimated plant state, and a single
@@ -1118,39 +1125,39 @@ DiscreteTimeTrajectory documentation.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PeriodicBoundaryCondition">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">PeriodicBoundaryCondition</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PeriodicBoundaryCondition</span></span></dt>
 <dd><p>For algorithms that rely on approximations of the state-dynamics (as
 in FittedValueIteration), this is a list of state dimensions for which
 the state space maximum value should be “wrapped around” to ensure
 that all values are in the range [low, high). The classic example is
 for angles that are wrapped around at 2π.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PeriodicBoundaryCondition.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition" title="pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition"><span class="pre">pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PeriodicBoundaryCondition.__init__(self:</span> <span class="pre">pydrake.systems.controllers.DynamicProgrammingOptions.PeriodicBoundaryCondition,</span> <span class="pre">state_index:</span> <span class="pre">int,</span> <span class="pre">low:</span> <span class="pre">float,</span> <span class="pre">high:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PeriodicBoundaryCondition.high">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">high</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.high" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PeriodicBoundaryCondition.high</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PeriodicBoundaryCondition.low">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">low</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.low" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PeriodicBoundaryCondition.low</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PeriodicBoundaryCondition.state_index">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_index</span></span><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.state_index" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PeriodicBoundaryCondition.state_index</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidControlledSystem">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">PidControlledSystem</span></span><a class="headerlink" href="#pydrake.systems.controllers.PidControlledSystem" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidControlledSystem</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></p>
 <p>A system that encapsulates a PidController and a controlled System
 (a.k.a the “plant”).</p>
 <p>The passed in plant must meet the following properties:</p>
@@ -1186,8 +1193,8 @@ everywhere else. <code class="docutils literal notranslate"><span class="pre">S<
 desired state (size 2 * U), <code class="docutils literal notranslate"><span class="pre">S</span></code> is used to compute the state error
 as <code class="docutils literal notranslate"><span class="pre">x_err</span> <span class="pre">=</span> <span class="pre">S</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">x_d</span></code>.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">feedforward_control&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PidControlledSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; (exported output port of plant, with same name)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; (exported output port of plant, with same name)</td></tr></table></td></tr></table><dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidControlledSystem.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.controllers.PidControlledSystem.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidControlledSystem.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.systems.controllers.PidControlledSystem, plant: pydrake.systems.framework.System, kp: float, ki: float, kd: float, state_output_port_index: int = 0, plant_input_port_index: int = 0) -&gt; None</p></li>
@@ -1311,42 +1318,42 @@ re-used outside of the <code class="docutils literal notranslate"><span class="p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidControlledSystem.get_control_input_port">
-<span class="sig-name descname"><span class="pre">get_control_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.PidControlledSystem" title="pydrake.systems.controllers.PidControlledSystem"><span class="pre">pydrake.systems.controllers.PidControlledSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.PidControlledSystem.get_control_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidControlledSystem.get_control_input_port(self:</span> <span class="pre">pydrake.systems.controllers.PidControlledSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the input port for the feed forward control input.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidControlledSystem.get_state_input_port">
-<span class="sig-name descname"><span class="pre">get_state_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.PidControlledSystem" title="pydrake.systems.controllers.PidControlledSystem"><span class="pre">pydrake.systems.controllers.PidControlledSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.PidControlledSystem.get_state_input_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidControlledSystem.get_state_input_port(self:</span> <span class="pre">pydrake.systems.controllers.PidControlledSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the input port for the desired position/velocity state.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidControlledSystem.get_state_output_port">
-<span class="sig-name descname"><span class="pre">get_state_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.PidControlledSystem" title="pydrake.systems.controllers.PidControlledSystem"><span class="pre">pydrake.systems.controllers.PidControlledSystem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.PidControlledSystem.get_state_output_port" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidControlledSystem.get_state_output_port(self:</span> <span class="pre">pydrake.systems.controllers.PidControlledSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidController">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.controllers.</span></span><span class="sig-name descname"><span class="pre">PidController</span></span><a class="headerlink" href="#pydrake.systems.controllers.PidController" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidController</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>Implements the PID controller. Given estimated state <code class="docutils literal notranslate"><span class="pre">x_in</span> <span class="pre">=</span> <span class="pre">(q_in,</span>
 <span class="pre">v_in)</span></code>, the controlled state <code class="docutils literal notranslate"><span class="pre">x_c</span> <span class="pre">=</span> <span class="pre">(q_c,</span> <span class="pre">v_c)</span></code> is computed by
 <code class="docutils literal notranslate"><span class="pre">x_c</span> <span class="pre">=</span> <span class="pre">P_x</span> <span class="pre">*</span> <span class="pre">x_in</span></code>, where <code class="docutils literal notranslate"><span class="pre">P_x</span></code> is a state projection matrix. The
 desired state <code class="docutils literal notranslate"><span class="pre">x_d</span> <span class="pre">=</span> <span class="pre">(q_d,</span> <span class="pre">v_d)</span></code>, is in the same space as <code class="docutils literal notranslate"><span class="pre">x_c</span></code>.
 The output of this controller is:</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P_y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">kp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">q_d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">q_c</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">v_d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_c</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ki</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">integral</span><span class="p">(</span><span class="n">q_d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">q_c</span><span class="p">)),</span><span class="w"></span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P_y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">kp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">q_d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">q_c</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">v_d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v_c</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ki</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">integral</span><span class="p">(</span><span class="n">q_d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">q_c</span><span class="p">)),</span>
 </pre></div>
 </div>
 </details><p>where <code class="docutils literal notranslate"><span class="pre">P_y</span></code> is the output projection matrix.</p>
@@ -1357,8 +1364,8 @@ state <code class="docutils literal notranslate"><span class="pre">x_d</span></c
 have to equal to <code class="docutils literal notranslate"><span class="pre">|q_d|</span></code>. One typical use case for non-identity
 <code class="docutils literal notranslate"><span class="pre">P_x</span></code> and <code class="docutils literal notranslate"><span class="pre">P_y</span></code> is to select a subset of state for feedback.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidController.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.controllers.PidController.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidController.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.systems.controllers.PidController, kp: numpy.ndarray[numpy.float64[m, 1]], ki: numpy.ndarray[numpy.float64[m, 1]], kd: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
@@ -1375,7 +1382,7 @@ of proper sizes. The estimated and desired state inputs are 2 *
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if kp</strong><strong>, </strong><strong>ki and kd have different</strong> – </p></li>
 <li><p><strong>dimensions.</strong> – </p></li>
@@ -1398,7 +1405,7 @@ output projection matrix <code class="docutils literal notranslate"><span class=
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if kp</strong><strong>, </strong><strong>ki and kd have different</strong> – </p></li>
 <li><p><strong>dimensions</strong><strong> or </strong><strong>`P_x.row</strong><strong>(</strong><strong>) </strong><strong>!= 2 * kp'.</strong> – </p></li>
@@ -1409,11 +1416,11 @@ output projection matrix <code class="docutils literal notranslate"><span class=
 <li><p>__init__(self: pydrake.systems.controllers.PidController, state_projection: numpy.ndarray[numpy.float64[m, n]], output_projection: numpy.ndarray[numpy.float64[m, n]], kp: numpy.ndarray[numpy.float64[m, 1]], ki: numpy.ndarray[numpy.float64[m, 1]], kd: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</p></li>
 </ol>
 <p>Constructs a PID controller. This assumes that</p>
-<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span><span class="w"> </span><span class="o">|</span><span class="n">kp</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">|</span><span class="n">kd</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">|</span><span class="n">ki</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">|</span><span class="n">q_d</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">|</span><span class="n">v_d</span><span class="o">|</span><span class="w"></span>
-<span class="w">  </span><span class="mf">2.</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">|</span><span class="n">q_d</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P_x</span><span class="p">.</span><span class="n">rows</span><span class="w"></span>
-<span class="w">  </span><span class="mf">3.</span><span class="w"> </span><span class="o">|</span><span class="n">x_in</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P_x</span><span class="p">.</span><span class="n">cols</span><span class="w"></span>
-<span class="w">  </span><span class="mf">4.</span><span class="w"> </span><span class="o">|</span><span class="n">y</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P_y</span><span class="p">.</span><span class="n">rows</span><span class="w"></span>
-<span class="w">  </span><span class="mf">4.</span><span class="w"> </span><span class="o">|</span><span class="n">q_d</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P_y</span><span class="p">.</span><span class="n">cols</span><span class="w"></span>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span><span class="w"> </span><span class="o">|</span><span class="n">kp</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">|</span><span class="n">kd</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">|</span><span class="n">ki</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">|</span><span class="n">q_d</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">|</span><span class="n">v_d</span><span class="o">|</span>
+<span class="w">  </span><span class="mf">2.</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">|</span><span class="n">q_d</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P_x</span><span class="p">.</span><span class="n">rows</span>
+<span class="w">  </span><span class="mf">3.</span><span class="w"> </span><span class="o">|</span><span class="n">x_in</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P_x</span><span class="p">.</span><span class="n">cols</span>
+<span class="w">  </span><span class="mf">4.</span><span class="w"> </span><span class="o">|</span><span class="n">y</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P_y</span><span class="p">.</span><span class="n">rows</span>
+<span class="w">  </span><span class="mf">4.</span><span class="w"> </span><span class="o">|</span><span class="n">q_d</span><span class="o">|</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P_y</span><span class="p">.</span><span class="n">cols</span>
 </pre></div>
 </div>
 </details><dl class="simple">
@@ -1429,45 +1436,45 @@ output projection matrix <code class="docutils literal notranslate"><span class=
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if any assumption is violated.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidController.get_input_port_desired_state">
-<span class="sig-name descname"><span class="pre">get_input_port_desired_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.PidController" title="pydrake.systems.controllers.PidController"><span class="pre">pydrake.systems.controllers.PidController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.PidController.get_input_port_desired_state" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidController.get_input_port_desired_state(self:</span> <span class="pre">pydrake.systems.controllers.PidController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><p>Returns the input port for the desired state.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidController.get_input_port_estimated_state">
-<span class="sig-name descname"><span class="pre">get_input_port_estimated_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.PidController" title="pydrake.systems.controllers.PidController"><span class="pre">pydrake.systems.controllers.PidController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.PidController.get_input_port_estimated_state" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidController.get_input_port_estimated_state(self:</span> <span class="pre">pydrake.systems.controllers.PidController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
 <dd><p>Returns the input port for the estimated state.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidController.get_Kd_vector">
-<span class="sig-name descname"><span class="pre">get_Kd_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.PidController" title="pydrake.systems.controllers.PidController"><span class="pre">pydrake.systems.controllers.PidController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.controllers.PidController.get_Kd_vector" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidController.get_Kd_vector(self:</span> <span class="pre">pydrake.systems.controllers.PidController)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]</span></span></dt>
 <dd><p>Returns the derivative gain vector.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidController.get_Ki_vector">
-<span class="sig-name descname"><span class="pre">get_Ki_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.PidController" title="pydrake.systems.controllers.PidController"><span class="pre">pydrake.systems.controllers.PidController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.controllers.PidController.get_Ki_vector" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidController.get_Ki_vector(self:</span> <span class="pre">pydrake.systems.controllers.PidController)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]</span></span></dt>
 <dd><p>Returns the integral gain vector.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidController.get_Kp_vector">
-<span class="sig-name descname"><span class="pre">get_Kp_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.PidController" title="pydrake.systems.controllers.PidController"><span class="pre">pydrake.systems.controllers.PidController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.systems.controllers.PidController.get_Kp_vector" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidController.get_Kp_vector(self:</span> <span class="pre">pydrake.systems.controllers.PidController)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]</span></span></dt>
 <dd><p>Returns the proportional gain vector.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.systems.controllers.PidController.get_output_port_control">
-<span class="sig-name descname"><span class="pre">get_output_port_control</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.systems.controllers.PidController" title="pydrake.systems.controllers.PidController"><span class="pre">pydrake.systems.controllers.PidController</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.systems.controllers.PidController.get_output_port_control" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PidController.get_output_port_control(self:</span> <span class="pre">pydrake.systems.controllers.PidController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
 <dd><p>Returns the output port for computed control.</p>
 </dd></dl>
 
