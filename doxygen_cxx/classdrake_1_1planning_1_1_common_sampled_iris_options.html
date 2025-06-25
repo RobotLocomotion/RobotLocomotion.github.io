@@ -231,12 +231,18 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a49f1367efbb0c0efddaec6ed273e8bb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_common_sampled_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7">relative_termination_threshold</a> {1e-3}</td></tr>
 <tr class="memdesc:a49f1367efbb0c0efddaec6ed273e8bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this percent of the previous best volume.  <a href="#a49f1367efbb0c0efddaec6ed273e8bb7">More...</a><br /></td></tr>
 <tr class="separator:a49f1367efbb0c0efddaec6ed273e8bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee2200b9b87fb1c11f98a3c8627d6f65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_common_sampled_iris_options.html#aee2200b9b87fb1c11f98a3c8627d6f65">remove_all_collisions_possible</a> {true}</td></tr>
+<tr class="memdesc:aee2200b9b87fb1c11f98a3c8627d6f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">A region may satisfy the user-requested fraction in-collision, but still have some of the samples drawn be in-collision.  <a href="#aee2200b9b87fb1c11f98a3c8627d6f65">More...</a><br /></td></tr>
+<tr class="separator:aee2200b9b87fb1c11f98a3c8627d6f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9059bc845096b2f05414a66c836b4ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_common_sampled_iris_options.html#ad9059bc845096b2f05414a66c836b4ee">random_seed</a> {1234}</td></tr>
 <tr class="memdesc:ad9059bc845096b2f05414a66c836b4ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">This option sets the random seed for random sampling throughout the algorithm.  <a href="#ad9059bc845096b2f05414a66c836b4ee">More...</a><br /></td></tr>
 <tr class="separator:ad9059bc845096b2f05414a66c836b4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a111e7545f0a4fcae1b8a52fec666594a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_common_sampled_iris_options.html#a111e7545f0a4fcae1b8a52fec666594a">mixing_steps</a> {50}</td></tr>
 <tr class="memdesc:a111e7545f0a4fcae1b8a52fec666594a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of mixing steps used for hit-and-run sampling.  <a href="#a111e7545f0a4fcae1b8a52fec666594a">More...</a><br /></td></tr>
 <tr class="separator:a111e7545f0a4fcae1b8a52fec666594a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fdf17311fa6dd33bb98cf7ead3dcdbd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_common_sampled_iris_options.html#a1fdf17311fa6dd33bb98cf7ead3dcdbd">sample_particles_in_parallel</a> {false}</td></tr>
+<tr class="memdesc:a1fdf17311fa6dd33bb98cf7ead3dcdbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the hit-and-run procedure is run in parallel to quickly draw all the samples necessary.  <a href="#a1fdf17311fa6dd33bb98cf7ead3dcdbd">More...</a><br /></td></tr>
+<tr class="separator:a1fdf17311fa6dd33bb98cf7ead3dcdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48d3f3fe2646745a5ac6eea6e3692c1c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_common_sampled_iris_options.html#a48d3f3fe2646745a5ac6eea6e3692c1c">meshcat</a> {}</td></tr>
 <tr class="memdesc:a48d3f3fe2646745a5ac6eea6e3692c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passing a meshcat instance may enable debugging visualizations when the configuration space is &lt;= 3 dimensional.  <a href="#a48d3f3fe2646745a5ac6eea6e3692c1c">More...</a><br /></td></tr>
 <tr class="separator:a48d3f3fe2646745a5ac6eea6e3692c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -631,6 +637,23 @@ Internally, these constraints are checked after collisions checking is performed
 
 </div>
 </div>
+<a id="aee2200b9b87fb1c11f98a3c8627d6f65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee2200b9b87fb1c11f98a3c8627d6f65">&#9670;&nbsp;</a></span>remove_all_collisions_possible</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool remove_all_collisions_possible {true}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A region may satisfy the user-requested fraction in-collision, but still have some of the samples drawn be in-collision. </p>
+<p>If this flag is true, those samples will also be used to produce hyperplanes. This produces slightly smaller regions with more faces, but the region will beat the user-requested fraction in-collision by a larger margin. </p>
+
+</div>
+</div>
 <a id="a20906a34b629e819d5d8a8df41638c2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20906a34b629e819d5d8a8df41638c2d">&#9670;&nbsp;</a></span>require_sample_point_is_contained</h2>
 
@@ -644,6 +667,23 @@ Internally, these constraints are checked after collisions checking is performed
 </div><div class="memdoc">
 
 <p>The initial polytope is guaranteed to contain the point if that point is collision-free. </p>
+
+</div>
+</div>
+<a id="a1fdf17311fa6dd33bb98cf7ead3dcdbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fdf17311fa6dd33bb98cf7ead3dcdbd">&#9670;&nbsp;</a></span>sample_particles_in_parallel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sample_particles_in_parallel {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If true, the hit-and-run procedure is run in parallel to quickly draw all the samples necessary. </p>
+<p>When the statistical test requires many samples (e.g. due to constructing regions with a very low fraction in collision with very high probability), the process of drawing the samples may become a major time cost. Drawing the samples in parallel can lead to a major speedup, at the cost of a sampling from a distribution that's slightly further from a uniform distribution (due to the lower cumulative mixing time). </p>
 
 </div>
 </div>

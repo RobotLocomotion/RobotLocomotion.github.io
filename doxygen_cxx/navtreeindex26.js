@@ -1,5 +1,7 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#aa8a95dfcc825536f039b08f1b12c9f0a":[3,0,0,11,16,9],
+"classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#abc8a90327e579ad6a2b52df3e5656a8b":[3,0,0,11,16,5],
 "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#ac4ff1ae758b28437ec294252e0fff250":[3,0,0,11,16,8],
 "classdrake_1_1planning_1_1_robot_clearance.html":[1,4,2,2,5],
 "classdrake_1_1planning_1_1_robot_clearance.html#a06281900a335995918a2f8da41e8b3d5":[1,4,2,2,5,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a753c0c124aa5a790f2a4418ea8599607":[3,0,0,11,2,3,1,19],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a761332e0bc3697a2391606f3dc174804":[3,0,0,11,2,3,1,17],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a86490898d05aa2f43822780ba93a0956":[3,0,0,11,2,3,1,20],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a946bfce15380ca699f5f6c191b4dfc80":[3,0,0,11,2,3,1,31],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a9f886e6ef274f450d24dd134729d1f99":[3,0,0,11,2,3,1,22],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#aa69be52668ec461d59f91ad7eaca3a89":[3,0,0,11,2,3,1,34]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization_1_1_subgraph.html#a946bfce15380ca699f5f6c191b4dfc80":[3,0,0,11,2,3,1,31]
 };

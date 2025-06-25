@@ -1201,6 +1201,34 @@ more details on the parameters in options.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GlobalInverseKinematics.AddJointLimitConstraint(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.GlobalInverseKinematics,</span> <span class="pre">body_index:</span> <span class="pre">pydrake.multibody.tree.BodyIndex,</span> <span class="pre">joint_lower_bound:</span> <span class="pre">float,</span> <span class="pre">joint_upper_bound:</span> <span class="pre">float,</span> <span class="pre">linear_constraint_approximation:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Adds joint limits on a specified joint.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is called from the constructor.</p>
+</div>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_index</span></code>:</dt><dd><p>The joint connecting the parent link to this body will be
+constrained.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">joint_lower_bound</span></code>:</dt><dd><p>The lower bound for the joint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">joint_upper_bound</span></code>:</dt><dd><p>The upper bound for the joint.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">linear_constraint_approximation</span></code>:</dt><dd><p>If true, joint limits are approximated as linear constraints on
+parent and child link orientations, otherwise they are imposed as
+Lorentz cone constraints. With the Lorentz cone formulation, the
+joint limit constraint would be tight if our mixed-integer
+constraint on SO(3) were tight. By enforcing the joint limits as
+linear constraint, the original inverse kinematics problem is
+further relaxed, on top of SO(3) relaxation, but potentially with
+faster computation. $*Default:* is false.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">GlobalInverseKinematics.AddPostureCost(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.GlobalInverseKinematics,</span> <span class="pre">q_desired:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">body_position_cost:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">body_orientation_cost:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Penalizes the deviation to the desired posture.</p>
 <p>For each body (except the world) in the kinematic tree, we add the
@@ -1408,6 +1436,80 @@ and thus not a decision variable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GlobalInverseKinematics.BodyPointInOneOfRegions(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.GlobalInverseKinematics,</span> <span class="pre">body_index:</span> <span class="pre">pydrake.multibody.tree.BodyIndex,</span> <span class="pre">p_BQ:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]],</span> <span class="pre">region_vertices:</span> <span class="pre">list[numpy.ndarray[numpy.float64[3,</span> <span class="pre">n]]])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[object[m,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Constrain the point <code class="docutils literal notranslate"><span class="pre">Q</span></code> lying within one of the convex polytopes.
+Each convex polytope Pᵢ is represented by its vertices as Pᵢ =
+ConvexHull(v_i1, v_i2, … v_in). Mathematically we want to impose the
+constraint that the p_WQ, i.e., the position of point <code class="docutils literal notranslate"><span class="pre">Q</span></code> in world
+frame <code class="docutils literal notranslate"><span class="pre">W</span></code>, satisfies</p>
+<p>p_WQ ∈ Pᵢ for one i. To impose this constraint, we consider to
+introduce binary variable zᵢ, and continuous variables w_i1, w_i2,
+…, w_in for each vertex of Pᵢ, with the following constraints</p>
+<p>p_WQ = sum_i (w_i1 * v_i1 + w_i2 * v_i2 + … + w_in * v_in) w_ij &gt;=
+0, ∀i,j w_i1 + w_i2 + … + w_in = zᵢ sum_i zᵢ = 1 zᵢ ∈ {0, 1} Notice
+that if zᵢ = 0, then w_i1 * v_i1 + w_i2 * v_i2 + … + w_in * v_in is
+just 0. This function can be used for collision avoidance, where each
+region Pᵢ is a free space region. It can also be used for grasping,
+where each region Pᵢ is a surface patch on the grasped object. Note
+this approach also works if the region Pᵢ overlaps with each other.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_index</span></code>:</dt><dd><p>The index of the body to on which point <code class="docutils literal notranslate"><span class="pre">Q</span></code> is attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt><dd><p>The position of point <code class="docutils literal notranslate"><span class="pre">Q</span></code> in the body frame <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">region_vertices</span></code>:</dt><dd><p>region_vertices[i] is the vertices for the i’th region.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">z</span></code>:</dt><dd><p>The newly added binary variables. If point <code class="docutils literal notranslate"><span class="pre">Q</span></code> is in the i’th
+region, z(i) = 1.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>region_vertices[i] has at least 3 columns. Throw a RuntimeError if
+the precondition is not satisfied.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GlobalInverseKinematics.BodySphereInOneOfPolytopes(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.GlobalInverseKinematics,</span> <span class="pre">body_index:</span> <span class="pre">pydrake.multibody.tree.BodyIndex,</span> <span class="pre">p_BQ:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]],</span> <span class="pre">radius:</span> <span class="pre">float,</span> <span class="pre">polytopes:</span> <span class="pre">list[pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Polytope3D])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[object[m,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Adds the constraint that a sphere rigidly attached to a body has to be
+within at least one of the given bounded polytopes. If the polytopes
+don’t intersect, then the sphere is in one and only one polytope.
+Otherwise the sphere is in at least one of the polytopes (could be in
+the intersection of multiple polytopes.) If the i’th polytope is
+described as</p>
+<p>Aᵢ * x ≤ bᵢ where Aᵢ ∈ ℝⁿ ˣ ³, bᵢ ∈ ℝⁿ. Then a sphere with center
+position p_WQ and radius r is within the i’th polytope, if</p>
+<p>Aᵢ * p_WQ ≤ bᵢ - aᵢr where aᵢ(j) = Aᵢ.row(j).norm() To constrain that
+the sphere is in one of the n polytopes, we introduce the binary
+variable z ∈{0, 1}ⁿ, together with continuous variables yᵢ ∈ ℝ³, i =
+1, …, n, such that p_WQ = y₁ + … + yₙ Aᵢ * yᵢ ≤ (bᵢ - aᵢr)zᵢ z₁ +
+… +zₙ = 1 Notice that when zᵢ = 0, Aᵢ * yᵢ ≤ 0 implies that yᵢ = 0.
+This is due to the boundedness of the polytope. If Aᵢ * yᵢ ≤ 0 has a
+non-zero solution y̅, that y̅ ≠ 0 and Aᵢ * y̅ ≤ 0. Then for any point
+x̂ in the polytope satisfying Aᵢ * x̂ ≤ bᵢ, we know the ray x̂ + ty̅,
+∀ t ≥ 0 also satisfies Aᵢ * (x̂ + ty̅) ≤ bᵢ, thus the ray is within
+the polytope, violating the boundedness assumption.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body_index</span></code>:</dt><dd><p>The index of the body to which the sphere is attached.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt><dd><p>The position of the sphere center in the body frame B.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">radius</span></code>:</dt><dd><p>The radius of the sphere.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">polytopes</span></code>:</dt><dd><p>polytopes[i] = (Aᵢ, bᵢ). We assume that Aᵢx≤ bᵢ is a bounded
+polytope. It is the user’s responsibility to guarantee the
+boundedness.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">z</span></code>:</dt><dd><p>The newly added binary variables. If z(i) = 1, then the sphere is
+in the i’th polytope. If two or more polytopes are intersecting,
+and the sphere is in the intersection region, then it is up to the
+solver to choose one of z(i) to be 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">GlobalInverseKinematics.get_mutable_prog(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.GlobalInverseKinematics)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.solvers.MathematicalProgram</span></span></dt>
 <dd></dd></dl>
 
@@ -1442,6 +1544,28 @@ nonlinear constraints.</p>
 <dl class="py property">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">GlobalInverseKinematics.Options.num_intervals_per_half_axis</span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GlobalInverseKinematics.Polytope3D</span></span></dt>
+<dd><p>Describes a polytope in 3D as 𝐀 * 𝐱 ≤ 𝐛 (a set of half-spaces), where
+𝐀 ∈ ℝⁿˣ³, 𝐱 ∈ ℝ³, 𝐛 ∈ ℝⁿ.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GlobalInverseKinematics.Polytope3D.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.GlobalInverseKinematics.Polytope3D,</span> <span class="pre">A:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">3],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">b:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GlobalInverseKinematics.Polytope3D.A</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GlobalInverseKinematics.Polytope3D.b</span></span></dt>
 <dd></dd></dl>
 
 </dd></dl>

@@ -1765,9 +1765,32 @@ setting to a negative value.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">CommonSampledIrisOptions.remove_all_collisions_possible</span></span></dt>
+<dd><p>A region may satisfy the user-requested fraction in-collision, but
+still have some of the samples drawn be in-collision. If this flag is
+true, those samples will also be used to produce hyperplanes. This
+produces slightly smaller regions with more faces, but the region will
+beat the user-requested fraction in-collision by a larger margin.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">CommonSampledIrisOptions.require_sample_point_is_contained</span></span></dt>
 <dd><p>The initial polytope is guaranteed to contain the point if that point
 is collision-free.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">CommonSampledIrisOptions.sample_particles_in_parallel</span></span></dt>
+<dd><p>If true, the hit-and-run procedure is run in parallel to quickly draw
+all the samples necessary. When the statistical test requires many
+samples (e.g. due to constructing regions with a very low fraction in
+collision with very high probability), the process of drawing the
+samples may become a major time cost. Drawing the samples in parallel
+can lead to a major speedup, at the cost of a sampling from a
+distribution that’s slightly further from a uniform distribution (due
+to the lower cumulative mixing time).</p>
 </dd></dl>
 
 <dl class="py property">
@@ -3911,7 +3934,7 @@ problem.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">IrisNp2(checker:</span> <span class="pre">pydrake.planning.SceneGraphCollisionChecker,</span> <span class="pre">starting_ellipsoid:</span> <span class="pre">pydrake.geometry.optimization.Hyperellipsoid,</span> <span class="pre">domain:</span> <span class="pre">pydrake.geometry.optimization.HPolyhedron,</span> <span class="pre">options:</span> <span class="pre">pydrake.planning.IrisNp2Options</span> <span class="pre">=</span> <span class="pre">IrisNp2Options(sampled_iris_options=CommonSampledIrisOptions(num_particles=1000,</span> <span class="pre">tau=0.5,</span> <span class="pre">delta=0.05,</span> <span class="pre">epsilon=0.01,</span> <span class="pre">max_iterations=3,</span> <span class="pre">max_iterations_separating_planes=20,</span> <span class="pre">max_separating_planes_per_iteration=10,</span> <span class="pre">parallelism=Parallelism(num_threads=16),</span> <span class="pre">verbose=False,</span> <span class="pre">require_sample_point_is_contained=True,</span> <span class="pre">configuration_space_margin=0.01,</span> <span class="pre">termination_threshold=0.02,</span> <span class="pre">relative_termination_threshold=0.001,</span> <span class="pre">random_seed=1234,</span> <span class="pre">mixing_steps=50,</span> <span class="pre">),</span> <span class="pre">))</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.optimization.HPolyhedron</span></span></dt>
+<span class="sig-name descname"><span class="pre">IrisNp2(checker:</span> <span class="pre">pydrake.planning.SceneGraphCollisionChecker,</span> <span class="pre">starting_ellipsoid:</span> <span class="pre">pydrake.geometry.optimization.Hyperellipsoid,</span> <span class="pre">domain:</span> <span class="pre">pydrake.geometry.optimization.HPolyhedron,</span> <span class="pre">options:</span> <span class="pre">pydrake.planning.IrisNp2Options</span> <span class="pre">=</span> <span class="pre">IrisNp2Options(sampled_iris_options=CommonSampledIrisOptions(num_particles=1000,</span> <span class="pre">tau=0.5,</span> <span class="pre">delta=0.05,</span> <span class="pre">epsilon=0.01,</span> <span class="pre">max_iterations=3,</span> <span class="pre">max_iterations_separating_planes=20,</span> <span class="pre">max_separating_planes_per_iteration=10,</span> <span class="pre">parallelism=Parallelism(num_threads=16),</span> <span class="pre">verbose=False,</span> <span class="pre">require_sample_point_is_contained=True,</span> <span class="pre">configuration_space_margin=0.01,</span> <span class="pre">termination_threshold=0.02,</span> <span class="pre">relative_termination_threshold=0.001,</span> <span class="pre">remove_all_collisions_possible=True,</span> <span class="pre">random_seed=1234,</span> <span class="pre">mixing_steps=50,</span> <span class="pre">sample_particles_in_parallel=False,</span> <span class="pre">),</span> <span class="pre">))</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.optimization.HPolyhedron</span></span></dt>
 <dd><p>The IRIS-NP2 (Iterative Regional Inflation by Semidefinite and
 Nonlinear Programming 2) algorithm, as described in</p>
 <p>[Werner et al., 2024] P. Werner, T. Cohn*, R. H. Jiang*, T. Seyde,
@@ -4142,7 +4165,7 @@ is threadsafe.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">IrisZo(checker:</span> <span class="pre">pydrake.planning.CollisionChecker,</span> <span class="pre">starting_ellipsoid:</span> <span class="pre">pydrake.geometry.optimization.Hyperellipsoid,</span> <span class="pre">domain:</span> <span class="pre">pydrake.geometry.optimization.HPolyhedron,</span> <span class="pre">options:</span> <span class="pre">pydrake.planning.IrisZoOptions</span> <span class="pre">=</span> <span class="pre">IrisZoOptions(bisection_steps=10,</span> <span class="pre">sampled_iris_options=CommonSampledIrisOptions(num_particles=1000,</span> <span class="pre">tau=0.5,</span> <span class="pre">delta=0.05,</span> <span class="pre">epsilon=0.01,</span> <span class="pre">max_iterations=3,</span> <span class="pre">max_iterations_separating_planes=20,</span> <span class="pre">max_separating_planes_per_iteration=10,</span> <span class="pre">parallelism=Parallelism(num_threads=16),</span> <span class="pre">verbose=False,</span> <span class="pre">require_sample_point_is_contained=True,</span> <span class="pre">configuration_space_margin=0.01,</span> <span class="pre">termination_threshold=0.02,</span> <span class="pre">relative_termination_threshold=0.001,</span> <span class="pre">random_seed=1234,</span> <span class="pre">mixing_steps=50,</span> <span class="pre">),</span> <span class="pre">))</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.optimization.HPolyhedron</span></span></dt>
+<span class="sig-name descname"><span class="pre">IrisZo(checker:</span> <span class="pre">pydrake.planning.CollisionChecker,</span> <span class="pre">starting_ellipsoid:</span> <span class="pre">pydrake.geometry.optimization.Hyperellipsoid,</span> <span class="pre">domain:</span> <span class="pre">pydrake.geometry.optimization.HPolyhedron,</span> <span class="pre">options:</span> <span class="pre">pydrake.planning.IrisZoOptions</span> <span class="pre">=</span> <span class="pre">IrisZoOptions(bisection_steps=10,</span> <span class="pre">sampled_iris_options=CommonSampledIrisOptions(num_particles=1000,</span> <span class="pre">tau=0.5,</span> <span class="pre">delta=0.05,</span> <span class="pre">epsilon=0.01,</span> <span class="pre">max_iterations=3,</span> <span class="pre">max_iterations_separating_planes=20,</span> <span class="pre">max_separating_planes_per_iteration=10,</span> <span class="pre">parallelism=Parallelism(num_threads=16),</span> <span class="pre">verbose=False,</span> <span class="pre">require_sample_point_is_contained=True,</span> <span class="pre">configuration_space_margin=0.01,</span> <span class="pre">termination_threshold=0.02,</span> <span class="pre">relative_termination_threshold=0.001,</span> <span class="pre">remove_all_collisions_possible=True,</span> <span class="pre">random_seed=1234,</span> <span class="pre">mixing_steps=50,</span> <span class="pre">sample_particles_in_parallel=False,</span> <span class="pre">),</span> <span class="pre">))</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.optimization.HPolyhedron</span></span></dt>
 <dd><p>The IRIS-ZO (Iterative Regional Inflation by Semidefinite programming
 - Zero Order) algorithm, as described in</p>
 <p>P. Werner, T. Cohn*, R. H. Jiang*, T. Seyde, M. Simchowitz, R.

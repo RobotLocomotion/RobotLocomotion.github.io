@@ -20,7 +20,9 @@ var classdrake_1_1planning_1_1_common_sampled_iris_options =
     [ "prog_with_additional_constraints", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2", null ],
     [ "random_seed", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#ad9059bc845096b2f05414a66c836b4ee", null ],
     [ "relative_termination_threshold", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7", null ],
+    [ "remove_all_collisions_possible", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#aee2200b9b87fb1c11f98a3c8627d6f65", null ],
     [ "require_sample_point_is_contained", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#a20906a34b629e819d5d8a8df41638c2d", null ],
+    [ "sample_particles_in_parallel", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#a1fdf17311fa6dd33bb98cf7ead3dcdbd", null ],
     [ "tau", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#ae5f7c26321910a384f6f0d37910858a2", null ],
     [ "termination_threshold", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#a11a479517bfa7e6c3d669c72380924ca", null ],
     [ "verbose", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#ab3f078684998b83967d507d0f453f454", null ]

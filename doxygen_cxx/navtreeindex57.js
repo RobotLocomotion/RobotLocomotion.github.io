@@ -1,5 +1,7 @@
 var NAVTREEINDEX57 =
 {
+"hash_8h.html#a0abcb9a7b5df5dcf6f77d4dd1fa1f05b":[4,0,0,1,40,8],
+"hash_8h.html#a180f010d174a68db7ca96ebb81c1471f":[4,0,0,1,40,9],
 "hash_8h.html#a1db7c5cf9556e82dd4fe8f79321ca8e5":[4,0,0,1,40,12],
 "hash_8h.html#a21afb70384c46b571f72e22c6b158c6c":[4,0,0,1,40,5],
 "hash_8h.html#a323dc8b0cc629c61d4da8feeaa8cd4f5":[4,0,0,1,40,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX57 =
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2":[4,0,0,7,22,0],
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50":[4,0,0,7,22,0,0],
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2af1b493f6e43ce0d1371533ee4f1199d0":[4,0,0,7,22,0,1],
-"kuka__torque__controller_8h.html":[4,0,0,3,8,2],
-"latex_8h.html":[4,0,0,1,3,7],
-"latex_8h.html#a38b1d770b9e21d7e4f36649630b10891":[4,0,0,1,3,7,2]
+"kuka__torque__controller_8h.html":[4,0,0,3,8,2]
 };
