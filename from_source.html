@@ -210,7 +210,7 @@ officially supports when building from source:</p>
       <td>3.12</td>
       <td>8.2</td>
       <td>3.28</td>
-      <td>GCC 13 (default) or Clang 15</td>
+      <td>GCC 13 (default) or Clang 19</td>
       <td>OpenJDK 21</td>
     </tr>
     <tr>
@@ -374,6 +374,10 @@ using a hard-coded and access-controlled download of SNOPT.
     </ul>
   </li>
 </ul>
+
+<p>Important note: when compiling Drake with Clang 17 or newer on Linux, you must
+add <code class="language-plaintext highlighter-rouge">-fno-assume-unique-vtables</code> to your project’s <code class="language-plaintext highlighter-rouge">CXXFLAGS</code>, or else Drake’s
+use of run-time type information and dynamic casts will not work correctly.</p>
 
 <h2 id="cmake-caveats">CMake Caveats</h2>
 
