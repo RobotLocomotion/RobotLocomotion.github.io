@@ -1,5 +1,7 @@
 var hierarchy =
 [
+    [ "Aabb", "classdrake_1_1geometry_1_1_aabb.html", null ],
+    [ "AabbMaker< MeshType >", "classdrake_1_1geometry_1_1_aabb_maker.html", null ],
     [ "AbstractValue", "classdrake_1_1_abstract_value.html", [
       [ "Value< T >", "classdrake_1_1_value.html", null ]
     ] ],
@@ -18,6 +20,7 @@ var hierarchy =
     [ "AddMultibodyPlantSceneGraphResult< T >", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html", null ],
     [ "AddRotationMatrixBoxSphereIntersectionReturn", "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html", null ],
     [ "AddWeld", "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html", null ],
+    [ "AlignedStorage< T >", "structdrake_1_1test_1_1_aligned_storage.html", null ],
     [ "AllegroHandMotionState", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html", null ],
     [ "Rotation::AngleAxis", "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html", null ],
     [ "SpatialVelocityConstraint::AngularVelocityBounds", "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html", null ],
@@ -701,6 +704,9 @@ var hierarchy =
       [ "numeric_limits< drake::symbolic::Expression >", "structstd_1_1numeric__limits_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ]
     ] ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", null ],
+    [ "Obb", "classdrake_1_1geometry_1_1_obb.html", null ],
+    [ "ObbMaker< MeshType >", "classdrake_1_1geometry_1_1_obb_maker.html", null ],
+    [ "ObbMakerTester< MeshType >", "classdrake_1_1geometry_1_1_obb_maker_tester.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
     [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
@@ -834,8 +840,8 @@ var hierarchy =
     [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
-    [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
+    [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
       [ "CspaceFreeBox::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html", null ],
       [ "CspaceFreePolytope::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html", null ]

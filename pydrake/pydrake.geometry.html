@@ -141,6 +141,141 @@
 </ul>
 </div>
 <p id="module-pydrake.geometry">Local bindings for render artifacts found in <cite>drake::geometry</cite> and <cite>drake::geometry::render</cite></p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Aabb</span></span></dt>
+<dd><p>Axis-aligned bounding box. The box is defined in a canonical frame B
+such that it is centered on Bo and its extents are aligned with B’s
+axes. However, the box is posed in a hierarchical frame H. Because
+this is an <em>axis-aligned</em> bounding box, <code class="docutils literal notranslate"><span class="pre">R_HB</span> <span class="pre">=</span> <span class="pre">I</span></code>. Therefore the
+pose of the box is completely captured with p_HoBo_H (see center()).</p>
+<p>Because of this, an instance of Aabb is a frame-dependent quantity and
+should be expressed that way. For example, for a mesh measured and
+expressed in frame M, the bounding boxes on its triangles will be
+measured and expressed in the same frame.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">mesh_M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="n">Aabb</span><span class="w"> </span><span class="n">bv_M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w">  </span><span class="c1">// A bounding volume for mesh_M in the same frame.</span>
+</pre></div>
+</div>
+</details><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Aabb.__init__(self:</span> <span class="pre">pydrake.geometry.Aabb,</span> <span class="pre">p_HoBo:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]],</span> <span class="pre">half_width:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Constructs an axis-aligned bounding box measured and expressed in
+frame H.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_HoBo</span></code>:</dt><dd><p>The position vector from the hierarchy frame’s origin to the box’s
+canonical origin, expressed in frame H. The box is centered on Bo
+and aligned with Bx, By, and Bz.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">half_width</span></code>:</dt><dd><p>The <em>half</em> measures of the box in each of the Bx, By, and Bz
+directions. (Also the half measures in the Hx, Hy, and Hz
+directions because R_HB = I.)</p>
+</dd>
+<dt>Precondition:</dt><dd><p>half_width.x(), half_width.y(), half_width.z() are not negative.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Aabb.CalcVolume(self:</span> <span class="pre">pydrake.geometry.Aabb)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Volume of the bounding box.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Aabb.center(self:</span> <span class="pre">pydrake.geometry.Aabb)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Returns the center of the box – equivalent to the position vector
+from the hierarchy frame’s origin Ho to <code class="docutils literal notranslate"><span class="pre">this</span></code> box’s origin Bo:
+<code class="docutils literal notranslate"><span class="pre">p_HoBo_H</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Aabb.Equal(self:</span> <span class="pre">pydrake.geometry.Aabb,</span> <span class="pre">other:</span> <span class="pre">pydrake.geometry.Aabb)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dd><p>Compares the values of the two Aabb instances for exact equality down
+to the last bit. Assumes that the quantities are measured and
+expressed in the same frame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Aabb.half_width(self:</span> <span class="pre">pydrake.geometry.Aabb)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Returns the half_width.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Aabb.HasOverlap(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>HasOverlap(a_G: pydrake.geometry.Aabb, b_H: pydrake.geometry.Aabb, X_GH: pydrake.math.RigidTransform) -&gt; bool</p></li>
+</ol>
+<p>Reports whether the two axis-aligned bounding boxes <code class="docutils literal notranslate"><span class="pre">a_G</span></code> and
+<code class="docutils literal notranslate"><span class="pre">b_H</span></code> intersect. The poses of <code class="docutils literal notranslate"><span class="pre">a_G</span></code> and <code class="docutils literal notranslate"><span class="pre">b_H</span></code> are defined in
+their corresponding hierarchy frames G and H, respectively.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a_G</span></code>:</dt><dd><p>The first axis-aligned box.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b_H</span></code>:</dt><dd><p>The second axis-aligned box.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_GH</span></code>:</dt><dd><p>The relative pose between hierarchy frame G and hierarchy frame H.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the boxes intersect.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>HasOverlap(aabb_G: pydrake.geometry.Aabb, obb_H: pydrake.geometry.Obb, X_GH: pydrake.math.RigidTransform) -&gt; bool</p></li>
+</ol>
+<p>Reports whether axis-aligned bounding box <code class="docutils literal notranslate"><span class="pre">aabb_G</span></code> intersects the
+given oriented bounding box <code class="docutils literal notranslate"><span class="pre">obb_H</span></code>. The poses of <code class="docutils literal notranslate"><span class="pre">aabb_G</span></code> and
+<code class="docutils literal notranslate"><span class="pre">obb_H</span></code> are defined in their corresponding hierarchy frames G and H,
+respectively.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">aabb_G</span></code>:</dt><dd><p>The axis-aligned box.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">obb_H</span></code>:</dt><dd><p>The oriented box.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_GH</span></code>:</dt><dd><p>The relative pose between the aabb hierarchy frame G and the obb
+hierarchy frame H.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the boxes intersect.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Aabb.lower(self:</span> <span class="pre">pydrake.geometry.Aabb)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>The point on the axis-aligned box with the smallest measures along the
+Bx-, By-, and Bz-directions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Aabb.pose(self:</span> <span class="pre">pydrake.geometry.Aabb)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.math.RigidTransform</span></span></dt>
+<dd><p>Returns the pose X_HB of the box frame B in the hierarchy frame H.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Aabb.upper(self:</span> <span class="pre">pydrake.geometry.Aabb)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>The point on the axis-aligned box with the largest measures along the
+Bx-, By-, and Bz-directions.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">AddCompliantHydroelasticProperties(resolution_hint:</span> <span class="pre">float,</span> <span class="pre">hydroelastic_modulus:</span> <span class="pre">float,</span> <span class="pre">properties:</span> <span class="pre">pydrake.geometry.ProximityProperties)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
@@ -896,6 +1031,30 @@ Whether or not the image is able to be displayed depends on the
 specific render engine and its configuration.</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ComputeAabbForTriangleMesh(mesh_M:</span> <span class="pre">pydrake.geometry.TriangleSurfaceMesh,</span> <span class="pre">vertices:</span> <span class="pre">set[int])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.Aabb</span></span></dt>
+<dd><p>Computes an axis-aligned bounding box for the specified vertices of a TriangleSurfaceMesh.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ComputeAabbForVolumeMesh(mesh_M:</span> <span class="pre">pydrake.geometry.VolumeMesh,</span> <span class="pre">vertices:</span> <span class="pre">set[int])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.Aabb</span></span></dt>
+<dd><p>Computes an axis-aligned bounding box for the specified vertices of a VolumeMesh.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ComputeObbForTriangleMesh(mesh_M:</span> <span class="pre">pydrake.geometry.TriangleSurfaceMesh,</span> <span class="pre">vertices:</span> <span class="pre">set[int])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.Obb</span></span></dt>
+<dd><p>Computes an oriented bounding box for the specified vertices of a TriangleSurfaceMesh.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ComputeObbForVolumeMesh(mesh_M:</span> <span class="pre">pydrake.geometry.VolumeMesh,</span> <span class="pre">vertices:</span> <span class="pre">set[int])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.Obb</span></span></dt>
+<dd><p>Computes an oriented bounding box for the specified vertices of a VolumeMesh.</p>
 </dd></dl>
 
 <dl class="py class">
@@ -6900,6 +7059,138 @@ provided for environment map (and, therefore, no environment map).</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">NullTexture.__init__(self:</span> <span class="pre">pydrake.geometry.NullTexture,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Obb</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Obb.__init__(self:</span> <span class="pre">pydrake.geometry.Obb,</span> <span class="pre">X_HB:</span> <span class="pre">pydrake.math.RigidTransform,</span> <span class="pre">half_width:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Constructs an oriented bounding box measured and expressed in frame H.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_HB</span></code>:</dt><dd><p>The pose of the box in the hierarchy frame H. The box is centered
+on Bo and aligned with Bx, By, and Bz.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">half_width</span></code>:</dt><dd><p>The <em>half</em> measures of the box in each of the Bx, By, and Bz
+directions.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>half_width.x(), half_width.y(), half_width.z() are not negative.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Obb.CalcVolume(self:</span> <span class="pre">pydrake.geometry.Obb)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Volume of the bounding box.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Obb.center(self:</span> <span class="pre">pydrake.geometry.Obb)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Returns the center of the box – equivalent to the position vector
+from the hierarchy frame’s origin Ho to <code class="docutils literal notranslate"><span class="pre">this</span></code> box’s origin Bo:
+<code class="docutils literal notranslate"><span class="pre">p_HoBo_H</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Obb.Equal(self:</span> <span class="pre">pydrake.geometry.Obb,</span> <span class="pre">other:</span> <span class="pre">pydrake.geometry.Obb)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dd><p>Compares the values of the two Obb instances for exact equality down
+to the last bit. Assumes that the quantities are measured and
+expressed in the same frame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Obb.half_width(self:</span> <span class="pre">pydrake.geometry.Obb)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Returns the half_width – equivalent to the position vector from the
+box’s center Bo to the box’s first octant (+,+,+) corner U expressed
+in the box’s frame B: <code class="docutils literal notranslate"><span class="pre">p_BoU_B</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Obb.HasOverlap(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>HasOverlap(a_G: pydrake.geometry.Obb, b_H: pydrake.geometry.Obb, X_GH: pydrake.math.RigidTransform) -&gt; bool</p></li>
+</ol>
+<p>Reports whether the two oriented bounding boxes <code class="docutils literal notranslate"><span class="pre">a_G</span></code> and <code class="docutils literal notranslate"><span class="pre">b_H</span></code>
+intersect. The poses of <code class="docutils literal notranslate"><span class="pre">a_G</span></code> and <code class="docutils literal notranslate"><span class="pre">b_H</span></code> are defined in their
+corresponding hierarchy frames G and H, respectively.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a_G</span></code>:</dt><dd><p>The first oriented box.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b_H</span></code>:</dt><dd><p>The second oriented box.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_GH</span></code>:</dt><dd><p>The relative pose between hierarchy frame G and hierarchy frame H.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the boxes intersect.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>HasOverlap(obb_G: pydrake.geometry.Obb, aabb_H: pydrake.geometry.Aabb, X_GH: pydrake.math.RigidTransform) -&gt; bool</p></li>
+</ol>
+<p>Reports whether oriented bounding box <code class="docutils literal notranslate"><span class="pre">obb_G</span></code> intersects the given
+axis-aligned bounding box <code class="docutils literal notranslate"><span class="pre">aabb_H</span></code>. The poses of <code class="docutils literal notranslate"><span class="pre">obb_G</span></code> and
+<code class="docutils literal notranslate"><span class="pre">aabb_H</span></code> are defined in their corresponding hierarchy frames G and
+H, respectively.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">obb_G</span></code>:</dt><dd><p>The oriented box.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">aabb_H</span></code>:</dt><dd><p>The axis-aligned box.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_GH</span></code>:</dt><dd><p>The relative pose between the obb hierarchy frame G and the aabb
+hierarchy frame H.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the boxes intersect.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li><p>HasOverlap(bv_H: pydrake.geometry.Obb, hs_C: pydrake.geometry.HalfSpace, X_CH: pydrake.math.RigidTransform) -&gt; bool</p></li>
+</ol>
+<p>Checks whether bounding volume <code class="docutils literal notranslate"><span class="pre">bv</span></code> intersects the given half space.
+The bounding volume is centered on its canonical frame B, and B is
+posed in the corresponding hierarchy frame H. The half space is
+defined in its canonical frame C (such that the boundary plane of the
+half space is perpendicular to Cz and Co lies on the boundary plane).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bv_H</span></code>:</dt><dd><p>The bounding box to test.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">hs_C</span></code>:</dt><dd><p>The half space to test against the <code class="docutils literal notranslate"><span class="pre">bv</span></code>. The half space is
+expressed in Frame C, therefore, to evaluate the signed distance
+of a point with respect to it, that point must be measured and
+expressed in C.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_CH</span></code>:</dt><dd><p>The relative pose between the hierarchy frame H and the half space
+canonical frame C.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the half space intersects the box.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Obb.pose(self:</span> <span class="pre">pydrake.geometry.Obb)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.math.RigidTransform</span></span></dt>
+<dd><p>Returns the pose X_HB of the box frame B in the hierarchy frame H</p>
+</dd></dl>
 
 </dd></dl>
 

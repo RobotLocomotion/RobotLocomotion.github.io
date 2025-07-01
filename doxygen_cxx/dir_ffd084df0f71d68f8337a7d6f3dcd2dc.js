@@ -1,6 +1,10 @@
 var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
 [
-    [ "aabb.h", "aabb_8h.html", null ],
+    [ "aabb.h", "aabb_8h.html", [
+      [ "AabbMaker", "classdrake_1_1geometry_1_1_aabb_maker.html", "classdrake_1_1geometry_1_1_aabb_maker" ],
+      [ "Aabb", "classdrake_1_1geometry_1_1_aabb.html", "classdrake_1_1geometry_1_1_aabb" ],
+      [ "AabbMaker", "classdrake_1_1geometry_1_1_aabb_maker.html", "classdrake_1_1geometry_1_1_aabb_maker" ]
+    ] ],
     [ "boxes_overlap.h", "boxes__overlap_8h.html", null ],
     [ "bvh.h", "bvh_8h.html", null ],
     [ "bvh_updater.h", "bvh__updater_8h.html", null ],
@@ -47,7 +51,12 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "mesh_to_vtk.h", "mesh__to__vtk_8h.html", null ],
     [ "mesh_traits.h", "mesh__traits_8h.html", "mesh__traits_8h" ],
     [ "meshing_utilities.h", "meshing__utilities_8h.html", null ],
-    [ "obb.h", "obb_8h.html", null ],
+    [ "obb.h", "obb_8h.html", [
+      [ "ObbMaker", "classdrake_1_1geometry_1_1_obb_maker.html", "classdrake_1_1geometry_1_1_obb_maker" ],
+      [ "Obb", "classdrake_1_1geometry_1_1_obb.html", "classdrake_1_1geometry_1_1_obb" ],
+      [ "ObbMakerTester", "classdrake_1_1geometry_1_1_obb_maker_tester.html", null ],
+      [ "ObbMaker", "classdrake_1_1geometry_1_1_obb_maker.html", "classdrake_1_1geometry_1_1_obb_maker" ]
+    ] ],
     [ "obj_to_surface_mesh.h", "obj__to__surface__mesh_8h.html", "obj__to__surface__mesh_8h" ],
     [ "penetration_as_point_pair_callback.h", "penetration__as__point__pair__callback_8h.html", null ],
     [ "penetration_doxygen.h", "penetration__doxygen_8h.html", null ],
