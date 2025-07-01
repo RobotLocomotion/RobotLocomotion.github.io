@@ -3424,6 +3424,10 @@ constraint is not added into the MathematicalProgram. We return
 </ol>
 <p>Adds a cost function.</p>
 <ol class="arabic simple" start="2">
+<li><p>AddCost(self: pydrake.solvers.MathematicalProgram, binding: pydrake.solvers.Binding[Cost]) -&gt; pydrake.solvers.Binding[Cost]</p></li>
+</ol>
+<p>Adds a generic cost to the optimization program.</p>
+<ol class="arabic simple" start="3">
 <li><p>AddCost(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression) -&gt; pydrake.solvers.Binding[Cost]</p></li>
 </ol>
 <p>Adds a cost in the symbolic form.</p>
@@ -3432,7 +3436,7 @@ constraint is not added into the MathematicalProgram. We return
 <dd class="field-odd"><p>The newly created cost, together with the bound variables.</p>
 </dd>
 </dl>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="4">
 <li><p>AddCost(self: pydrake.solvers.MathematicalProgram, obj: pydrake.solvers.Cost, vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.Binding[Cost]</p></li>
 </ol>
 <p>Adds a cost type to the optimization program.</p>
