@@ -209,9 +209,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4f231b15ec0ee43b435b38322a9b957f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a4f231b15ec0ee43b435b38322a9b957f">SetPositions</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, <a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; &amp;q) const</td></tr>
 <tr class="memdesc:a4f231b15ec0ee43b435b38322a9b957f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertex positions of the deformable body with the given <code>id</code> in the provided <code>context</code>.  <a href="#a4f231b15ec0ee43b435b38322a9b957f">More...</a><br /></td></tr>
 <tr class="separator:a4f231b15ec0ee43b435b38322a9b957f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7092a5227ffe49ae5762ec61792092c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ae7092a5227ffe49ae5762ec61792092c">SetVelocities</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, <a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; &amp;v) const</td></tr>
+<tr class="memdesc:ae7092a5227ffe49ae5762ec61792092c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertex velocities of the deformable body with the given <code>id</code> in the provided <code>context</code>.  <a href="#ae7092a5227ffe49ae5762ec61792092c">More...</a><br /></td></tr>
+<tr class="separator:ae7092a5227ffe49ae5762ec61792092c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c4b71807f8596081b4bf217785abb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ae8c4b71807f8596081b4bf217785abb2">SetPositionsAndVelocities</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, <a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; &amp;q, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; &amp;v) const</td></tr>
+<tr class="memdesc:ae8c4b71807f8596081b4bf217785abb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertex positions and velocities of the deformable body with the given <code>id</code> in the provided <code>context</code>.  <a href="#ae8c4b71807f8596081b4bf217785abb2">More...</a><br /></td></tr>
+<tr class="separator:ae8c4b71807f8596081b4bf217785abb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5e0ebb8bcd41ac6a70c1015e08f132c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#af5e0ebb8bcd41ac6a70c1015e08f132c">GetPositions</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
 <tr class="memdesc:af5e0ebb8bcd41ac6a70c1015e08f132c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix of vertex positions for the deformable body with the given <code>id</code> in the provided <code>context</code>.  <a href="#af5e0ebb8bcd41ac6a70c1015e08f132c">More...</a><br /></td></tr>
 <tr class="separator:af5e0ebb8bcd41ac6a70c1015e08f132c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac19ef54ed3a5d74204601dfcfd044ae3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#ac19ef54ed3a5d74204601dfcfd044ae3">GetVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
+<tr class="memdesc:ac19ef54ed3a5d74204601dfcfd044ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix of vertex velocities for the deformable body with the given <code>id</code> in the provided <code>context</code>.  <a href="#ac19ef54ed3a5d74204601dfcfd044ae3">More...</a><br /></td></tr>
+<tr class="separator:ac19ef54ed3a5d74204601dfcfd044ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3528d1cb189490dd15897d4010287cc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a3528d1cb189490dd15897d4010287cc0">GetPositionsAndVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a> id) const</td></tr>
+<tr class="memdesc:a3528d1cb189490dd15897d4010287cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the matrix of vertex positions and velocities for the deformable body with the given <code>id</code> in the provided <code>context</code>.  <a href="#a3528d1cb189490dd15897d4010287cc0">More...</a><br /></td></tr>
+<tr class="separator:a3528d1cb189490dd15897d4010287cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73071e1b75d3810e07aa18e4f0a0fa5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a73071e1b75d3810e07aa18e4f0a0fa5e">AddExternalForce</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_density_field_base.html">ForceDensityFieldBase</a>&lt; T &gt;&gt; external_force)</td></tr>
 <tr class="memdesc:a73071e1b75d3810e07aa18e4f0a0fa5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an external force density field that applies external force to all deformable bodies.  <a href="#a73071e1b75d3810e07aa18e4f0a0fa5e">More...</a><br /></td></tr>
 <tr class="separator:a73071e1b75d3810e07aa18e4f0a0fa5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1083,6 +1095,56 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
+<a id="a3528d1cb189490dd15897d4010287cc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3528d1cb189490dd15897d4010287cc0">&#9670;&nbsp;</a></span>GetPositionsAndVelocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt;T&gt; GetPositionsAndVelocities </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the matrix of vertex positions and velocities for the deformable body with the given <code>id</code> in the provided <code>context</code>. </p>
+<p>The first N columns are the positions and the next N columns are the velocities.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context associated with the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> that owns this DeformableModel. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>The identifier of the deformable body whose state is being queried. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A 3x2N matrix containing the positions and velocities of all vertices of the body.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any of the following conditions are met:<ol type="1">
+<li><code>context</code> does not belong to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> associated with this DeformableModel.</li>
+<li>No body with the given <code>id</code> is registered.</li>
+<li><code>Finalize()</code> has not been called on the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> that owns this deformable model. </li>
+</ol>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4cb5a3cd9502dc8248660b47e9980cf3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4cb5a3cd9502dc8248660b47e9980cf3">&#9670;&nbsp;</a></span>GetReferencePositions()</h2>
 
@@ -1103,6 +1165,60 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 <p>The reference positions are represented as a VectorX with 3N values where N is the number of vertices. The x-, y-, and z-positions (measured and expressed in the world frame) of the j-th vertex are 3j, 3j + 1, and 3j + 2 in the VectorX. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if no deformable body with the given <code>id</code> has been registered in this model. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac19ef54ed3a5d74204601dfcfd044ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac19ef54ed3a5d74204601dfcfd044ae3">&#9670;&nbsp;</a></span>GetVelocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt;T&gt; GetVelocities </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the matrix of vertex velocities for the deformable body with the given <code>id</code> in the provided <code>context</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context associated with the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> that owns this DeformableModel. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>The identifier of the deformable body whose velocities are being queried. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">v</td><td>A 3×N matrix containing the velocities of all vertices of the body.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any of the following conditions are met:<ol type="1">
+<li><code>context</code> does not belong to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> associated with this DeformableModel.</li>
+<li>No body with the given <code>id</code> is registered.</li>
+<li><code>Finalize()</code> has not been called on the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> that owns this deformable model. </li>
+</ol>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -1357,8 +1473,8 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
-<a id="a6f045b3a39c4d8397fc55b2cb4e48f01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f045b3a39c4d8397fc55b2cb4e48f01">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a68fd2d05f3e8b6982ddb2ab108275688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68fd2d05f3e8b6982ddb2ab108275688">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1369,7 +1485,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1383,8 +1499,8 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 
 </div>
 </div>
-<a id="a68fd2d05f3e8b6982ddb2ab108275688"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68fd2d05f3e8b6982ddb2ab108275688">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a6f045b3a39c4d8397fc55b2cb4e48f01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f045b3a39c4d8397fc55b2cb4e48f01">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1395,7 +1511,7 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1626,6 +1742,129 @@ Finalize() has not been called on <code>plant</code>. </dd></dl>
 <li>No body with the given <code>id</code> is registered.</li>
 <li>The number of columns of <code>q</code> does not match the number of vertices of the body.</li>
 <li><code>q</code> contains non-finite values.</li>
+<li><code>Finalize()</code> has not been called on the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> that owns this deformable model. </li>
+</ol>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae8c4b71807f8596081b4bf217785abb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8c4b71807f8596081b4bf217785abb2">&#9670;&nbsp;</a></span>SetPositionsAndVelocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPositionsAndVelocities </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vertex positions and velocities of the deformable body with the given <code>id</code> in the provided <code>context</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>The context associated with the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> that owns this DeformableModel. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>The identifier of the deformable body whose positions and velocities are being set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">q</td><td>A 3×N matrix of vertex positions. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A 3×N matrix of vertex velocities.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any of the following conditions are met:<ol type="1">
+<li><code>context</code> is nullptr.</li>
+<li><code>context</code> does not belong to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> associated with this DeformableModel.</li>
+<li>No body with the given <code>id</code> is registered.</li>
+<li>The number of columns of <code>q</code> or <code>v</code> does not match the number of vertices of the body.</li>
+<li><code>q</code> or <code>v</code> contains non-finite values.</li>
+<li><code>Finalize()</code> has not been called on the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> that owns this deformable model. </li>
+</ol>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae7092a5227ffe49ae5762ec61792092c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7092a5227ffe49ae5762ec61792092c">&#9670;&nbsp;</a></span>SetVelocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetVelocities </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56">DeformableBodyId</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vertex velocities of the deformable body with the given <code>id</code> in the provided <code>context</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">context</td><td>The context associated with the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> that owns this DeformableModel. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>The identifier of the deformable body whose velocities are being set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A 3×N matrix of vertex velocities.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any of the following conditions are met:<ol type="1">
+<li><code>context</code> is nullptr.</li>
+<li><code>context</code> does not belong to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> associated with this DeformableModel.</li>
+<li>No body with the given <code>id</code> is registered.</li>
+<li>The number of columns of <code>v</code> does not match the number of vertices of the body.</li>
+<li><code>v</code> contains non-finite values.</li>
 <li><code>Finalize()</code> has not been called on the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> that owns this deformable model. </li>
 </ol>
 </td></tr>

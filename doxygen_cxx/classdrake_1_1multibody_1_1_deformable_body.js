@@ -18,6 +18,8 @@ var classdrake_1_1multibody_1_1_deformable_body =
     [ "geometry_id", "classdrake_1_1multibody_1_1_deformable_body.html#a5b4a24e75b4aedbdf350681cea6bdc08", null ],
     [ "get_default_pose", "classdrake_1_1multibody_1_1_deformable_body.html#a0e8fcddd426846249b2d5e6630f8ff84", null ],
     [ "GetPositions", "classdrake_1_1multibody_1_1_deformable_body.html#a6bbe9d9b1b028c15fb1e177fcdda23ac", null ],
+    [ "GetPositionsAndVelocities", "classdrake_1_1multibody_1_1_deformable_body.html#ae3de86cc2121e051a8e90d9c89bb20be", null ],
+    [ "GetVelocities", "classdrake_1_1multibody_1_1_deformable_body.html#aa252635cdf2b6889e149876dd59b9d61", null ],
     [ "has_fixed_constraint", "classdrake_1_1multibody_1_1_deformable_body.html#a817f76f77e9f88cefc6f1096657b2e87", null ],
     [ "index", "classdrake_1_1multibody_1_1_deformable_body.html#a25bef0c9a6139fce146147c18cb10fa7", null ],
     [ "is_enabled", "classdrake_1_1multibody_1_1_deformable_body.html#ac583213d6083b892b653d95fa5e411de", null ],
@@ -31,6 +33,8 @@ var classdrake_1_1multibody_1_1_deformable_body =
     [ "set_default_pose", "classdrake_1_1multibody_1_1_deformable_body.html#a3b7d803aec25983eb6bcbb2e3cebf2db", null ],
     [ "set_parallelism", "classdrake_1_1multibody_1_1_deformable_body.html#a07eaa4e5b20335359ffd850eadb75482", null ],
     [ "SetPositions", "classdrake_1_1multibody_1_1_deformable_body.html#a88cb688daefe08a90a3c2c163ae6445f", null ],
+    [ "SetPositionsAndVelocities", "classdrake_1_1multibody_1_1_deformable_body.html#ae4eb0051b7a99a28a1b8a1249d035e12", null ],
+    [ "SetVelocities", "classdrake_1_1multibody_1_1_deformable_body.html#ad13c2a9db1146df3c2a612798cb033dd", null ],
     [ "SetWallBoundaryCondition", "classdrake_1_1multibody_1_1_deformable_body.html#a67b25a5168fb3b8aaff3facd364b2839", null ],
     [ "DeformableBody", "classdrake_1_1multibody_1_1_deformable_body.html#af1bdb3c05ee08c02361064181e72cad1", null ],
     [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_body.html#a8668cbb69c3c1ed4e0e93608be9d93a1", null ]

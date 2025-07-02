@@ -1085,6 +1085,54 @@ body.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DeformableBody.GetPositionsAndVelocities(self:</span> <span class="pre">pydrake.multibody.tree.DeformableBody,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">n]]</span></span></dt>
+<dd><p>Copies out the matrix of vertex positions and velocities for this
+deformable body in the provided <code class="docutils literal notranslate"><span class="pre">context</span></code>. The first N columns are
+the positions and the next N columns are the velocities.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context associated with the MultibodyPlant that owns this
+body.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A 3x2N matrix containing the positions and velocities of all
+vertices of the body.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if context does not belong to the MultibodyPlant</strong> – </p></li>
+<li><p><strong>that owns this body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DeformableBody.GetVelocities(self:</span> <span class="pre">pydrake.multibody.tree.DeformableBody,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">n]]</span></span></dt>
+<dd><p>Copies out the matrix of vertex velocities for this deformable body in
+the provided <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context associated with the MultibodyPlant that owns this
+body.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt><dd><p>A 3×N matrix containing the velocities of all vertices of the
+body.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if context does not belong to the MultibodyPlant</strong> – </p></li>
+<li><p><strong>that owns this body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">DeformableBody.has_fixed_constraint(self:</span> <span class="pre">pydrake.multibody.tree.DeformableBody)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
 <dd><p>Returns true if this deformable body is under any fixed constraint.</p>
 </dd></dl>
@@ -1192,6 +1240,64 @@ this body.</p>
 <li><p><strong>context` is nullptr. 2. context does not belong to th</strong> – </p></li>
 <li><p><strong>MultibodyPlant that owns this body. 3. The number</strong><strong> of </strong><strong>columns of</strong> – </p></li>
 <li><p><strong>q` does not match the number</strong><strong> of </strong><strong>vertices</strong><strong> of </strong><strong>this body. 4. ``q`</strong> – </p></li>
+<li><p><strong>contains non-finite values.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DeformableBody.SetPositionsAndVelocities(self:</span> <span class="pre">pydrake.multibody.tree.DeformableBody,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">q:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">v:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Sets the vertex positions and velocities of this deformable body in
+the provided <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">out</span></code>:</dt><dd><p>] context The context associated with the MultibodyPlant that owns
+this body.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q</span></code>:</dt><dd><p>A 3×N matrix of vertex positions.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt><dd><p>A 3×N matrix of vertex velocities.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any</strong><strong> of </strong><strong>the following conditions are met</strong> – <ol class="arabic simple">
+<li></li>
+</ol>
+</p></li>
+<li><p><strong>context` is nullptr. 2. context does not belong to th</strong> – </p></li>
+<li><p><strong>MultibodyPlant that owns this body. 3. The number</strong><strong> of </strong><strong>columns of</strong> – </p></li>
+<li><p><strong>q`</strong><strong> or </strong><strong>v does not match the number</strong><strong> of </strong><strong>vertices</strong><strong> of </strong><strong>this body</strong> – </p></li>
+<li><p><strong>4. q</strong><strong> or </strong><strong>v contains non-finite values.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DeformableBody.SetVelocities(self:</span> <span class="pre">pydrake.multibody.tree.DeformableBody,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">v:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Sets the vertex velocities of this deformable body in the provided
+<code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">out</span></code>:</dt><dd><p>] context The context associated with the MultibodyPlant that owns
+this body.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt><dd><p>A 3×N matrix of vertex velocities.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if any</strong><strong> of </strong><strong>the following conditions are met</strong> – <ol class="arabic simple">
+<li></li>
+</ol>
+</p></li>
+<li><p><strong>context` is nullptr. 2. context does not belong to th</strong> – </p></li>
+<li><p><strong>MultibodyPlant that owns this body. 3. The number</strong><strong> of </strong><strong>columns of</strong> – </p></li>
+<li><p><strong>v` does not match the number</strong><strong> of </strong><strong>vertices</strong><strong> of </strong><strong>this body. 4. ``v`</strong> – </p></li>
 <li><p><strong>contains non-finite values.</strong> – </p></li>
 </ul>
 </dd>
@@ -2191,7 +2297,7 @@ method computes the pose <code class="docutils literal notranslate"><span class=
 which this frame is attached. In other words, if the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code>
 frame F in the body frame B is <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>, this method computes the pose
 <code class="docutils literal notranslate"><span class="pre">X_BQ</span></code> of frame Q in the body frame B as <code class="docutils literal notranslate"><span class="pre">X_BQ</span> <span class="pre">=</span> <span class="pre">X_BF</span> <span class="pre">*</span> <span class="pre">X_FQ</span></code>. In
-particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id3"><span class="problematic" id="id4">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
+particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id5"><span class="problematic" id="id6">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
 identity transformation, this method directly returns <code class="docutils literal notranslate"><span class="pre">X_FQ</span></code>.
 Specific frame subclasses can override this method to provide faster
 implementations if needed.</p>
@@ -2833,7 +2939,7 @@ method computes the pose <code class="docutils literal notranslate"><span class=
 which this frame is attached. In other words, if the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code>
 frame F in the body frame B is <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>, this method computes the pose
 <code class="docutils literal notranslate"><span class="pre">X_BQ</span></code> of frame Q in the body frame B as <code class="docutils literal notranslate"><span class="pre">X_BQ</span> <span class="pre">=</span> <span class="pre">X_BF</span> <span class="pre">*</span> <span class="pre">X_FQ</span></code>. In
-particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id5"><span class="problematic" id="id6">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
+particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id7"><span class="problematic" id="id8">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
 identity transformation, this method directly returns <code class="docutils literal notranslate"><span class="pre">X_FQ</span></code>.
 Specific frame subclasses can override this method to provide faster
 implementations if needed.</p>
@@ -3469,7 +3575,7 @@ method computes the pose <code class="docutils literal notranslate"><span class=
 which this frame is attached. In other words, if the pose of <code class="docutils literal notranslate"><span class="pre">this</span></code>
 frame F in the body frame B is <code class="docutils literal notranslate"><span class="pre">X_BF</span></code>, this method computes the pose
 <code class="docutils literal notranslate"><span class="pre">X_BQ</span></code> of frame Q in the body frame B as <code class="docutils literal notranslate"><span class="pre">X_BQ</span> <span class="pre">=</span> <span class="pre">X_BF</span> <span class="pre">*</span> <span class="pre">X_FQ</span></code>. In
-particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id7"><span class="problematic" id="id8">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
+particular, if <code class="docutils literal notranslate"><span class="pre">this</span></code> <a href="#id9"><span class="problematic" id="id10">**</span></a>is**` the body frame B, i.e. <code class="docutils literal notranslate"><span class="pre">X_BF</span></code> is the
 identity transformation, this method directly returns <code class="docutils literal notranslate"><span class="pre">X_FQ</span></code>.
 Specific frame subclasses can override this method to provide faster
 implementations if needed.</p>
@@ -6940,7 +7046,7 @@ demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
 <p>Bushing type | torque constants | force constants
-——————————–<a href="#id45"><span class="problematic" id="id46">|:--------------------|</span></a>:——————
+——————————–<a href="#id47"><span class="problematic" id="id48">|:--------------------|</span></a>:——————
 z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
 | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
 | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
@@ -6978,7 +7084,7 @@ constant dx is by choosing a “reasonably small” settling time tₛ,
 where settling time tₛ is the interval of time for a system to settle
 to within 1% (0.01) of an equilibrium solution). Is tₛ = 0.01 s
 negligible for a robot arm with a 10 s reach maneuver?</p>
-<p><a href="#id15"><span class="problematic" id="id16">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
+<p><a href="#id17"><span class="problematic" id="id18">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
 d₀. The estimate of stiffness k₀ depends on whether you are modeling a
 physical bushing (consider stiffness methods 1 or 2 below) or whether
 you are using a bushing to replace an ideal joint such as a revolute
@@ -7006,7 +7112,7 @@ damping), estimate a characteristic moment of inertia and calculate
 <code class="docutils literal notranslate"><span class="pre">d₀</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">ζ</span> <span class="pre">√(I₀</span> <span class="pre">k₀)</span></code>.</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id17"><span class="problematic" id="id18">**</span></a>** How to choose a force stiffness constant kx or damping constant
+<p><a href="#id19"><span class="problematic" id="id20">**</span></a>** How to choose a force stiffness constant kx or damping constant
 dx. The estimate of stiffness kx depends on whether you are modeling a
 real bushing (consider stiffness methods 1 or 2 below) or whether you
 are using a bushing to replace an ideal joint such as a revolute or
@@ -7033,7 +7139,7 @@ a characteristic mass m and calculate <code class="docutils literal notranslate"
 N*s/m).</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id19"><span class="problematic" id="id20">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
+<p><a href="#id21"><span class="problematic" id="id22">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
 torques” τ relate to 𝐭, it helps to remember that the RollPitchYaw
 class documentation states that a Space-fixed (extrinsic) X-Y-Z
 rotation with roll-pitch-yaw angles [q₀ q₁ q₂] is equivalent to a
@@ -7054,7 +7160,7 @@ w_AC = τ ⋅ q̇.</p>
 <span class="err">⌊</span><span class="w"> </span><span class="n">tz</span><span class="w"> </span><span class="err">⌋</span><span class="w">      </span><span class="err">⌊</span><span class="w"> </span><span class="n">τ₂</span><span class="w"> </span><span class="err">⌋</span><span class="w">            </span><span class="err">⌊</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">q₂</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">q₁</span><span class="p">)</span><span class="w">   </span><span class="n">sin</span><span class="p">(</span><span class="n">q₂</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">q₁</span><span class="p">)</span><span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="err">⌋</span>
 </pre></div>
 </div>
-</details><p><a href="#id21"><span class="problematic" id="id22">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
+</details><p><a href="#id23"><span class="problematic" id="id24">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
 constants. The basics on how to choose bushing stiffness and damping
 constants are at: - Basic_bushing_torque_stiffness_and_damping “How to
 choose torque stiffness and damping constants” -
@@ -7126,7 +7232,7 @@ logarithmic decrement δ = -ln(decay_ratio), calculate damping ratio
 ζ = √(δ² / (4π² + δ²)), then calculate d₀ using d₀ = 2 ζ √(I₀ k₀) or
 d₀ = 2 ζ k₀ / ωₙ. For more information, see
 <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement">https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement</a></p>
-<p><a href="#id23"><span class="problematic" id="id24">**</span></a>** Derivation: Approximate formula for overdamped settling time.
+<p><a href="#id25"><span class="problematic" id="id26">**</span></a>** Derivation: Approximate formula for overdamped settling time.
 Since a literature reference for this formula was not found, the
 derivation below was done at TRI (it has not been peer reviewed). This
 formula results from the “dominant pole” solution in the prototypical
@@ -7502,7 +7608,7 @@ demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
 <p>Bushing type | torque constants | force constants
-——————————–<a href="#id47"><span class="problematic" id="id48">|:--------------------|</span></a>:——————
+——————————–<a href="#id49"><span class="problematic" id="id50">|:--------------------|</span></a>:——————
 z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
 | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
 | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
@@ -7540,7 +7646,7 @@ constant dx is by choosing a “reasonably small” settling time tₛ,
 where settling time tₛ is the interval of time for a system to settle
 to within 1% (0.01) of an equilibrium solution). Is tₛ = 0.01 s
 negligible for a robot arm with a 10 s reach maneuver?</p>
-<p><a href="#id25"><span class="problematic" id="id26">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
+<p><a href="#id27"><span class="problematic" id="id28">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
 d₀. The estimate of stiffness k₀ depends on whether you are modeling a
 physical bushing (consider stiffness methods 1 or 2 below) or whether
 you are using a bushing to replace an ideal joint such as a revolute
@@ -7568,7 +7674,7 @@ damping), estimate a characteristic moment of inertia and calculate
 <code class="docutils literal notranslate"><span class="pre">d₀</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">ζ</span> <span class="pre">√(I₀</span> <span class="pre">k₀)</span></code>.</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id27"><span class="problematic" id="id28">**</span></a>** How to choose a force stiffness constant kx or damping constant
+<p><a href="#id29"><span class="problematic" id="id30">**</span></a>** How to choose a force stiffness constant kx or damping constant
 dx. The estimate of stiffness kx depends on whether you are modeling a
 real bushing (consider stiffness methods 1 or 2 below) or whether you
 are using a bushing to replace an ideal joint such as a revolute or
@@ -7595,7 +7701,7 @@ a characteristic mass m and calculate <code class="docutils literal notranslate"
 N*s/m).</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id29"><span class="problematic" id="id30">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
+<p><a href="#id31"><span class="problematic" id="id32">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
 torques” τ relate to 𝐭, it helps to remember that the RollPitchYaw
 class documentation states that a Space-fixed (extrinsic) X-Y-Z
 rotation with roll-pitch-yaw angles [q₀ q₁ q₂] is equivalent to a
@@ -7616,7 +7722,7 @@ w_AC = τ ⋅ q̇.</p>
 <span class="err">⌊</span><span class="w"> </span><span class="n">tz</span><span class="w"> </span><span class="err">⌋</span><span class="w">      </span><span class="err">⌊</span><span class="w"> </span><span class="n">τ₂</span><span class="w"> </span><span class="err">⌋</span><span class="w">            </span><span class="err">⌊</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">q₂</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">q₁</span><span class="p">)</span><span class="w">   </span><span class="n">sin</span><span class="p">(</span><span class="n">q₂</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">q₁</span><span class="p">)</span><span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="err">⌋</span>
 </pre></div>
 </div>
-</details><p><a href="#id31"><span class="problematic" id="id32">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
+</details><p><a href="#id33"><span class="problematic" id="id34">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
 constants. The basics on how to choose bushing stiffness and damping
 constants are at: - Basic_bushing_torque_stiffness_and_damping “How to
 choose torque stiffness and damping constants” -
@@ -7688,7 +7794,7 @@ logarithmic decrement δ = -ln(decay_ratio), calculate damping ratio
 ζ = √(δ² / (4π² + δ²)), then calculate d₀ using d₀ = 2 ζ √(I₀ k₀) or
 d₀ = 2 ζ k₀ / ωₙ. For more information, see
 <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement">https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement</a></p>
-<p><a href="#id33"><span class="problematic" id="id34">**</span></a>** Derivation: Approximate formula for overdamped settling time.
+<p><a href="#id35"><span class="problematic" id="id36">**</span></a>** Derivation: Approximate formula for overdamped settling time.
 Since a literature reference for this formula was not found, the
 derivation below was done at TRI (it has not been peer reviewed). This
 formula results from the “dominant pole” solution in the prototypical
@@ -8053,7 +8159,7 @@ demonstrate how to model various joints that have a flexible (e.g.,
 rubber) mount. The damping values below with ? may be set to 0 or a
 reasonable positive number.</p>
 <p>Bushing type | torque constants | force constants
-——————————–<a href="#id49"><span class="problematic" id="id50">|:--------------------|</span></a>:——————
+——————————–<a href="#id51"><span class="problematic" id="id52">|:--------------------|</span></a>:——————
 z-axis revolute joint | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">0]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[kx</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^
 | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span> <span class="pre">?]</span></code> | dxyz = <code class="docutils literal notranslate"><span class="pre">[dx</span> <span class="pre">dy</span> <span class="pre">dz]</span></code> x-axis prismatic joint
 | k₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[k₀</span> <span class="pre">k₁</span> <span class="pre">k₂]</span></code> | kxyz = <code class="docutils literal notranslate"><span class="pre">[0</span> <span class="pre">ky</span> <span class="pre">kz]</span></code> ^ | d₀₁₂ = <code class="docutils literal notranslate"><span class="pre">[d₀</span> <span class="pre">d₁</span>
@@ -8091,7 +8197,7 @@ constant dx is by choosing a “reasonably small” settling time tₛ,
 where settling time tₛ is the interval of time for a system to settle
 to within 1% (0.01) of an equilibrium solution). Is tₛ = 0.01 s
 negligible for a robot arm with a 10 s reach maneuver?</p>
-<p><a href="#id35"><span class="problematic" id="id36">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
+<p><a href="#id37"><span class="problematic" id="id38">**</span></a>** How to choose a torque stiffness constant k₀ or damping constant
 d₀. The estimate of stiffness k₀ depends on whether you are modeling a
 physical bushing (consider stiffness methods 1 or 2 below) or whether
 you are using a bushing to replace an ideal joint such as a revolute
@@ -8119,7 +8225,7 @@ damping), estimate a characteristic moment of inertia and calculate
 <code class="docutils literal notranslate"><span class="pre">d₀</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">ζ</span> <span class="pre">√(I₀</span> <span class="pre">k₀)</span></code>.</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id37"><span class="problematic" id="id38">**</span></a>** How to choose a force stiffness constant kx or damping constant
+<p><a href="#id39"><span class="problematic" id="id40">**</span></a>** How to choose a force stiffness constant kx or damping constant
 dx. The estimate of stiffness kx depends on whether you are modeling a
 real bushing (consider stiffness methods 1 or 2 below) or whether you
 are using a bushing to replace an ideal joint such as a revolute or
@@ -8146,7 +8252,7 @@ a characteristic mass m and calculate <code class="docutils literal notranslate"
 N*s/m).</p>
 <p>Refer to Advanced_bushing_stiffness_and_damping “Advanced bushing
 stiffness and damping” for more details.</p>
-<p><a href="#id39"><span class="problematic" id="id40">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
+<p><a href="#id41"><span class="problematic" id="id42">**</span></a>** Advanced: Relationship of 𝐭 to τ. To understand how “gimbal
 torques” τ relate to 𝐭, it helps to remember that the RollPitchYaw
 class documentation states that a Space-fixed (extrinsic) X-Y-Z
 rotation with roll-pitch-yaw angles [q₀ q₁ q₂] is equivalent to a
@@ -8167,7 +8273,7 @@ w_AC = τ ⋅ q̇.</p>
 <span class="err">⌊</span><span class="w"> </span><span class="n">tz</span><span class="w"> </span><span class="err">⌋</span><span class="w">      </span><span class="err">⌊</span><span class="w"> </span><span class="n">τ₂</span><span class="w"> </span><span class="err">⌋</span><span class="w">            </span><span class="err">⌊</span><span class="w"> </span><span class="n">cos</span><span class="p">(</span><span class="n">q₂</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">q₁</span><span class="p">)</span><span class="w">   </span><span class="n">sin</span><span class="p">(</span><span class="n">q₂</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">q₁</span><span class="p">)</span><span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="err">⌋</span>
 </pre></div>
 </div>
-</details><p><a href="#id41"><span class="problematic" id="id42">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
+</details><p><a href="#id43"><span class="problematic" id="id44">**</span></a>** Advanced: More on how to choose bushing stiffness and damping
 constants. The basics on how to choose bushing stiffness and damping
 constants are at: - Basic_bushing_torque_stiffness_and_damping “How to
 choose torque stiffness and damping constants” -
@@ -8239,7 +8345,7 @@ logarithmic decrement δ = -ln(decay_ratio), calculate damping ratio
 ζ = √(δ² / (4π² + δ²)), then calculate d₀ using d₀ = 2 ζ √(I₀ k₀) or
 d₀ = 2 ζ k₀ / ωₙ. For more information, see
 <a class="reference external" href="https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement">https://en.wikipedia.org/wiki/Damping_ratio#Logarithmic_decrement</a></p>
-<p><a href="#id43"><span class="problematic" id="id44">**</span></a>** Derivation: Approximate formula for overdamped settling time.
+<p><a href="#id45"><span class="problematic" id="id46">**</span></a>** Derivation: Approximate formula for overdamped settling time.
 Since a literature reference for this formula was not found, the
 derivation below was done at TRI (it has not been peer reviewed). This
 formula results from the “dominant pole” solution in the prototypical
@@ -13008,6 +13114,10 @@ RevoluteJoint and applies a torque to that joint</p>
 </div>
 </details><p>where θ₀ is the nominal joint position. Note that joint damping exists
 within the RevoluteJoint itself, and so is not included here.</p>
+<p>The k (stiffness) and θ₀ (nominal angle) specified in the constructor
+are kept as default values. These parameters are stored within the
+context and can be accessed and set by context dependent
+getters/setters.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">RevoluteSpring_</span></code>
@@ -13033,18 +13143,103 @@ spring applies no moment.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring.default_nominal_angle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><p>Returns the default spring reference angle θ₀ in radians.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring.default_stiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><p>Returns the default stiffness constant k in N⋅m/rad.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring.GetNominalAngle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><p>Returns the Context dependent nominal angle θ₀ stored as a parameter
+in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">returns</span></code>:</dt><dd><p>the nominal angle θ₀ in radians.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring.GetStiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><p>Returns the Context dependent stiffness coefficient k stored as a
+parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">returns</span></code>:</dt><dd><p>the stiffness k in N⋅m/rad stored within the context.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring.joint(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.RevoluteJoint</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring.nominal_angle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use the ‘default_nominal_angle()’ method instead. This will be
+removed from Drake on or after 2025-09-01.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring.SetNominalAngle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">nominal_angle:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Sets the value of the nominal angle θ₀ for this force element, stored
+as a parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nominal_angle</span></code>:</dt><dd><p>The nominal angle θ₀ in radians stored within the context.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring.SetStiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">stiffness:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Sets the value of the linear stiffness coefficient k for this force
+element, stored as a parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt><dd><p>The stiffness value k with units N⋅m/rad.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if stiffness is negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring.stiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use the ‘default_stiffness()’ method instead. This will be removed
+from Drake on or after 2025-09-01.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -13065,6 +13260,10 @@ RevoluteJoint and applies a torque to that joint</p>
 </div>
 </details><p>where θ₀ is the nominal joint position. Note that joint damping exists
 within the RevoluteJoint itself, and so is not included here.</p>
+<p>The k (stiffness) and θ₀ (nominal angle) specified in the constructor
+are kept as default values. These parameters are stored within the
+context and can be accessed and set by context dependent
+getters/setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring_[AutoDiffXd].__init__(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[AutoDiffXd],</span> <span class="pre">joint:</span> <span class="pre">pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd],</span> <span class="pre">nominal_angle:</span> <span class="pre">float,</span> <span class="pre">stiffness:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
@@ -13085,18 +13284,103 @@ spring applies no moment.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[AutoDiffXd].default_nominal_angle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><p>Returns the default spring reference angle θ₀ in radians.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[AutoDiffXd].default_stiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><p>Returns the default stiffness constant k in N⋅m/rad.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[AutoDiffXd].GetNominalAngle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[AutoDiffXd],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd</span></span></dt>
+<dd><p>Returns the Context dependent nominal angle θ₀ stored as a parameter
+in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">returns</span></code>:</dt><dd><p>the nominal angle θ₀ in radians.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[AutoDiffXd].GetStiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[AutoDiffXd],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd</span></span></dt>
+<dd><p>Returns the Context dependent stiffness coefficient k stored as a
+parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">returns</span></code>:</dt><dd><p>the stiffness k in N⋅m/rad stored within the context.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring_[AutoDiffXd].joint(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd]</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring_[AutoDiffXd].nominal_angle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use the ‘default_nominal_angle()’ method instead. This will be
+removed from Drake on or after 2025-09-01.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[AutoDiffXd].SetNominalAngle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[AutoDiffXd],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[AutoDiffXd],</span> <span class="pre">nominal_angle:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Sets the value of the nominal angle θ₀ for this force element, stored
+as a parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nominal_angle</span></code>:</dt><dd><p>The nominal angle θ₀ in radians stored within the context.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[AutoDiffXd].SetStiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[AutoDiffXd],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[AutoDiffXd],</span> <span class="pre">stiffness:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Sets the value of the linear stiffness coefficient k for this force
+element, stored as a parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt><dd><p>The stiffness value k with units N⋅m/rad.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if stiffness is negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring_[AutoDiffXd].stiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use the ‘default_stiffness()’ method instead. This will be removed
+from Drake on or after 2025-09-01.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -13111,6 +13395,10 @@ RevoluteJoint and applies a torque to that joint</p>
 </div>
 </details><p>where θ₀ is the nominal joint position. Note that joint damping exists
 within the RevoluteJoint itself, and so is not included here.</p>
+<p>The k (stiffness) and θ₀ (nominal angle) specified in the constructor
+are kept as default values. These parameters are stored within the
+context and can be accessed and set by context dependent
+getters/setters.</p>
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring_[Expression].__init__(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[Expression],</span> <span class="pre">joint:</span> <span class="pre">pydrake.multibody.tree.RevoluteJoint_[Expression],</span> <span class="pre">nominal_angle:</span> <span class="pre">float,</span> <span class="pre">stiffness:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
@@ -13131,18 +13419,103 @@ spring applies no moment.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[Expression].default_nominal_angle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><p>Returns the default spring reference angle θ₀ in radians.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[Expression].default_stiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><p>Returns the default stiffness constant k in N⋅m/rad.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[Expression].GetNominalAngle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[Expression],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.symbolic.Expression</span></span></dt>
+<dd><p>Returns the Context dependent nominal angle θ₀ stored as a parameter
+in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">returns</span></code>:</dt><dd><p>the nominal angle θ₀ in radians.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[Expression].GetStiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[Expression],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.symbolic.Expression</span></span></dt>
+<dd><p>Returns the Context dependent stiffness coefficient k stored as a
+parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">returns</span></code>:</dt><dd><p>the stiffness k in N⋅m/rad stored within the context.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring_[Expression].joint(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.RevoluteJoint_[Expression]</span></span></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring_[Expression].nominal_angle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use the ‘default_nominal_angle()’ method instead. This will be
+removed from Drake on or after 2025-09-01.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[Expression].SetNominalAngle(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[Expression],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[Expression],</span> <span class="pre">nominal_angle:</span> <span class="pre">pydrake.symbolic.Expression)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Sets the value of the nominal angle θ₀ for this force element, stored
+as a parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nominal_angle</span></code>:</dt><dd><p>The nominal angle θ₀ in radians stored within the context.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RevoluteSpring_[Expression].SetStiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[Expression],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[Expression],</span> <span class="pre">stiffness:</span> <span class="pre">pydrake.symbolic.Expression)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Sets the value of the linear stiffness coefficient k for this force
+element, stored as a parameter in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context storing the state and parameters for the model to
+which <code class="docutils literal notranslate"><span class="pre">this</span></code> spring belongs.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">stiffness</span></code>:</dt><dd><p>The stiffness value k with units N⋅m/rad.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if stiffness is negative.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring_[Expression].stiffness(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use the ‘default_stiffness()’ method instead. This will be removed
+from Drake on or after 2025-09-01.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
