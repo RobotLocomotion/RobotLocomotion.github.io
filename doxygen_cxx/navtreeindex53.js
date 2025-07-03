@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,11],
 "discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,11,0],
 "discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,11,1],
 "discrete__contact__data_8h.html":[4,0,0,8,10,15],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "expression_2expression_8h.html#a78354ef5dda9c52bbc103d57712c303e":[4,0,0,1,3,0,3,118],
 "expression_2expression_8h.html#a79d98cdd1dd5802fe6c341ecfe9c6cce":[4,0,0,1,3,0,3,22],
 "expression_2expression_8h.html#a8da800513f72f528dffddd89f9263b3a":[4,0,0,1,3,0,3,38],
-"expression_2expression_8h.html#a8dd352ee762ef421653cd8941fa5ce22":[4,0,0,1,3,0,3,72],
-"expression_2expression_8h.html#a8f0355c03127b4d0312e5f761a0f530a":[4,0,0,1,3,0,3,24]
+"expression_2expression_8h.html#a8dd352ee762ef421653cd8941fa5ce22":[4,0,0,1,3,0,3,72]
 };

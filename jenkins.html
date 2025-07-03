@@ -224,17 +224,22 @@ Both provisioned and unprovisioned jobs are listed.</p>
 
 <h2 id="scheduling-builds-via-the-jenkins-user-interface">Scheduling Builds via the Jenkins User Interface</h2>
 
-<p>Alternatively, to schedule a build of an open pull request or arbitrary commit
-in the <code class="language-plaintext highlighter-rouge">RobotLocomotion/drake</code> repository:</p>
+<p>Alternatively, to schedule a build of an open pull request in the
+<code class="language-plaintext highlighter-rouge">RobotLocomotion/drake</code> repository:</p>
 
 <ol>
-  <li><strong>Log in</strong> to <a href="https://drake-jenkins.csail.mit.edu/">Jenkins</a> using GitHub OAuth.
-(Make sure that you see your name the upper-right corner, <em>not</em> the words “Log in”.)</li>
-  <li>Go to the list of <a href="https://drake-jenkins.csail.mit.edu/view/Experimental/">experimental builds</a>.</li>
+  <li><strong>Log in</strong> to <a href="https://drake-jenkins.csail.mit.edu/">Jenkins</a> using GitHub
+OAuth. (Make sure that you see your name the upper-right corner, <em>not</em> the
+words “Log in”.)</li>
+  <li>Go to the list of
+<a href="https://drake-jenkins.csail.mit.edu/view/Experimental/">experimental builds</a>.</li>
   <li>Click on the specific build you want to schedule.</li>
+  <li>Click on “Pull Requests” towards the top, and select your pull request.</li>
   <li>Click on “Build with Parameters” in the left menu.</li>
-  <li>Enter <code class="language-plaintext highlighter-rouge">pr/XYZ/head</code> (HEAD of pull request), <code class="language-plaintext highlighter-rouge">pr/XYZ/merge</code> (pull request
-merged with master), or the desired commit SHA in the <code class="language-plaintext highlighter-rouge">sha1</code> field.</li>
+  <li>(Optional) If you need to test your changes alongside a pull request or
+branch of the <code class="language-plaintext highlighter-rouge">RobotLocomotion/drake-ci</code> repository, enter <code class="language-plaintext highlighter-rouge">pr/XYZ/head</code>
+(HEAD of pull request), <code class="language-plaintext highlighter-rouge">pr/XYZ/merge</code> (pull request merged with master)
+for <code class="language-plaintext highlighter-rouge">ciSha</code>. Otherwise, leave it set to “main.”</li>
   <li>Click <code class="language-plaintext highlighter-rouge">Build</code>.</li>
 </ol>
 
@@ -402,8 +407,10 @@ comment on an open pull request using the following command:</p>
 <p>or follow the <a href="#scheduling-builds-via-the-jenkins-user-interface">instructions above</a>
 to schedule a build of the
 <a href="https://drake-jenkins.csail.mit.edu/view/Linux%20Jammy%20Unprovisioned/job/linux-jammy-unprovisioned-external-examples/">external examples job</a>.
-Note that this job provides parameters for branches of
-drake and drake-external-examples.</p>
+Note that instead of providing a parameter for the branch of
+<code class="language-plaintext highlighter-rouge">RobotLocomotion/drake-ci</code>, this job instead provides one for
+drake-external-examples, which should be used if you need to test your Drake
+changes alongside changes downstream.</p>
 
 <h2 id="github-actions">GitHub Actions</h2>
 

@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"classdrake_1_1trajectories_1_1_discrete_time_trajectory.html#a0797f308c821d7e7af44643693a9badb":[3,0,0,18,4,14],
 "classdrake_1_1trajectories_1_1_discrete_time_trajectory.html#a20a3bd957b27575abb98e0a3239555d2":[3,0,0,18,4,10],
 "classdrake_1_1trajectories_1_1_discrete_time_trajectory.html#a388c60a9f62e9a227fe4f1f001d146bd":[3,0,0,18,4,11],
 "classdrake_1_1trajectories_1_1_discrete_time_trajectory.html#a4124aaba0820662c1d8916aedcd8f6ca":[3,0,0,18,4,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "classdrake_1_1visualization_1_1_concatenate_images.html#a694ac7926701e834ca36db268753a478":[1,2,11,6,5],
 "classdrake_1_1visualization_1_1_concatenate_images.html#a8ea656dc79df76cace8b9610b81f8de3":[1,2,11,6,4],
 "classdrake_1_1visualization_1_1_concatenate_images.html#aa51be17f000d46bed06ece0616b469bb":[1,2,11,6,0],
-"classdrake_1_1visualization_1_1_concatenate_images.html#aaf8b99a6fe41856154a5af0a731be6ec":[1,2,11,6,2],
-"classdrake_1_1visualization_1_1_concatenate_images.html#ab424db4973cded51901239852b4a3443":[1,2,11,6,3]
+"classdrake_1_1visualization_1_1_concatenate_images.html#aaf8b99a6fe41856154a5af0a731be6ec":[1,2,11,6,2]
 };

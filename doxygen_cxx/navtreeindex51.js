@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"classdrake_1_1visualization_1_1_concatenate_images.html#ab424db4973cded51901239852b4a3443":[1,2,11,6,3],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html":[1,2,11,7],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#a35e4757607fba787b9450627f6112166":[1,2,11,7,3],
 "classdrake_1_1visualization_1_1_inertia_visualizer.html#a6b25925ec5f7044f7ed092ee3180f38d":[1,2,11,7,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "decision__variable_8h.html#a8f304c33d467b0bf0ad02e25a2ced143":[4,0,0,11,17,6],
 "decision__variable_8h.html#aa20d09ae94d1e722c2961fbaca37f967":[4,0,0,11,17,4],
 "decision__variable_8h.html#aa708f80d971209e3d46c1e41f05c1393":[4,0,0,11,17,0],
-"decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,11,17,2],
-"decision__variable_8h.html#aca924499b3b011a50d3bd9d051295efa":[4,0,0,11,17,5]
+"decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,11,17,2]
 };

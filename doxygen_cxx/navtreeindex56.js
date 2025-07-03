@@ -1,5 +1,6 @@
 var NAVTREEINDEX56 =
 {
+"generic__polynomial_8h.html#a4e5300a119664e3092e90248af90a376":[4,0,0,1,3,6,9],
 "generic__polynomial_8h.html#a4f60d4b8ada97a4fb724b2d66d273892":[4,0,0,1,3,6,3],
 "generic__polynomial_8h.html#a51133160077bdcba90013d1f21b88410":[4,0,0,1,3,6,30],
 "generic__polynomial_8h.html#a580ca04916246340e08ec69b45276827":[4,0,0,1,3,6,21],
@@ -167,10 +168,10 @@ var NAVTREEINDEX56 =
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[4,0,0,1,15,1],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,15,5],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,6],
-"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,15,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,1],
-"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,5],
+"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,15,0],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,15,4],
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,5],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,15,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,15,3],
@@ -201,8 +202,8 @@ var NAVTREEINDEX56 =
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,18],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,5,5,20],
 "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80":[1,1,1,20],
-"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,19],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,5,5,19],
+"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,1,1,19],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,5,5,17],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,1,1,17],
 "group__geometry__optimization__geodesic__convexity.html":[1,1,1,0],
@@ -213,8 +214,8 @@ var NAVTREEINDEX56 =
 "group__geometry__optimization__geodesic__convexity.html#ga0f945f0d43e169b238695da629d93ff7":[1,5,5,0,5],
 "group__geometry__optimization__geodesic__convexity.html#ga1c6d3fc1c7396ee8eee575958044071b":[1,1,1,0,3],
 "group__geometry__optimization__geodesic__convexity.html#ga1c6d3fc1c7396ee8eee575958044071b":[1,5,5,0,3],
-"group__geometry__optimization__geodesic__convexity.html#ga2e109ef92fec8f68a785b2edbd380021":[1,1,1,0,1],
 "group__geometry__optimization__geodesic__convexity.html#ga2e109ef92fec8f68a785b2edbd380021":[1,5,5,0,1],
+"group__geometry__optimization__geodesic__convexity.html#ga2e109ef92fec8f68a785b2edbd380021":[1,1,1,0,1],
 "group__geometry__optimization__geodesic__convexity.html#ga33ea6cefa0958e76eb228ecab2bbeba5":[1,1,1,0,2],
 "group__geometry__optimization__geodesic__convexity.html#ga33ea6cefa0958e76eb228ecab2bbeba5":[1,5,5,0,2],
 "group__geometry__optimization__geodesic__convexity.html#ga60002c174b2106139e2b219a0e0fb3f0":[1,1,1,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "group__multibody__spatial__algebra.html":[1,0,1,5],
 "group__multibody__spatial__inertia.html":[1,0,1,5,2],
 "group__multibody__spatial__pose.html":[1,0,1,5,0],
-"group__multibody__spatial__vectors.html":[1,0,1,5,1],
-"group__multibody__systems.html":[1,2,7]
+"group__multibody__spatial__vectors.html":[1,0,1,5,1]
 };

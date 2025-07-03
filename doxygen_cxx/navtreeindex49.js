@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a149e06f2677943852d4e59bdadf4e23f":[3,0,0,16,9,7,5],
 "classdrake_1_1systems_1_1sensors_1_1_image.html#a1950eac0081009de55c31671d31a876e":[3,0,0,16,9,7,8],
 "classdrake_1_1systems_1_1sensors_1_1_image.html#a2338c4484ceb8bfeb5461f6b15827432":[3,0,0,16,9,7,3],
 "classdrake_1_1systems_1_1sensors_1_1_image.html#a56bfa8fae91947eb5802d2e208405904":[3,0,0,16,9,7,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "classdrake_1_1trajectories_1_1_derivative_trajectory.html#a6179321a607612fc5869c1b869bd0b4d":[3,0,0,18,3,0],
 "classdrake_1_1trajectories_1_1_derivative_trajectory.html#a655341dee6b153e420bb23b68229a930":[3,0,0,18,3,1],
 "classdrake_1_1trajectories_1_1_derivative_trajectory.html#aa5d99be5008ebc6e7d004d54cf0a713a":[3,0,0,18,3,5],
-"classdrake_1_1trajectories_1_1_discrete_time_trajectory.html":[3,0,0,18,4],
-"classdrake_1_1trajectories_1_1_discrete_time_trajectory.html#a0797f308c821d7e7af44643693a9badb":[3,0,0,18,4,14]
+"classdrake_1_1trajectories_1_1_discrete_time_trajectory.html":[3,0,0,18,4]
 };

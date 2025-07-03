@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a4b2fdb835b8e4f54c55aba0bf765d57f":[1,2,3,0,11],
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a504d3c760694bafb7704956f88e49247":[1,2,3,0,4],
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a53ab5f2f5af54c8ec94fc2c0e35e2f50":[1,2,3,0,12],
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a75f619833e2c15feac6e8acba57fbd8b":[1,2,3,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ac951e9461fe35f8b40719a8ba37acea6":[1,2,4,2,6],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ad43a45a9bfeee26aafe9eef51139485a":[1,2,4,2,5],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ad75f0fc988a8d82c3b45614c4e296ab2":[1,2,4,2,10],
-"classdrake_1_1systems_1_1sensors_1_1_image.html":[3,0,0,16,9,7],
-"classdrake_1_1systems_1_1sensors_1_1_image.html#a149e06f2677943852d4e59bdadf4e23f":[3,0,0,16,9,7,5]
+"classdrake_1_1systems_1_1sensors_1_1_image.html":[3,0,0,16,9,7]
 };

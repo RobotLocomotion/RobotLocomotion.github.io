@@ -75,6 +75,7 @@ var classdrake_1_1solvers_1_1_mathematical_program =
     [ "AddLinearCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a06dbd6c1bf0971fc28366df95ee1bca2", null ],
     [ "AddLinearEqualityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#ac623a8e305d300afa1d9f63bf3f266b8", null ],
     [ "AddLinearEqualityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a4c445bb3c911493f437f119372da5221", null ],
+    [ "AddLinearEqualityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a4484b29040459724524c285b49aa850e", null ],
     [ "AddLinearEqualityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a9164110d10cac0284a50a91b8308bae8", null ],
     [ "AddLinearEqualityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a7c3361c9cd54767f6b0441f3343eec35", null ],
     [ "AddLinearEqualityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#aa4aec5ef573ea5fb0667475c7e5a1914", null ],
