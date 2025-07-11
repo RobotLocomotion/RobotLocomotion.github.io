@@ -11,7 +11,9 @@ var dir_da11cd43e7bab310171e778f62212487 =
       [ "IkCartesianWaypoint", "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html", "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint" ]
     ] ],
     [ "differential_inverse_kinematics.h", "differential__inverse__kinematics_8h.html", "differential__inverse__kinematics_8h" ],
+    [ "differential_inverse_kinematics_controller.h", "differential__inverse__kinematics__controller_8h.html", null ],
     [ "differential_inverse_kinematics_integrator.h", "differential__inverse__kinematics__integrator_8h.html", null ],
+    [ "differential_inverse_kinematics_system.h", "differential__inverse__kinematics__system_8h.html", "differential__inverse__kinematics__system_8h" ],
     [ "distance_constraint.h", "distance__constraint_8h.html", null ],
     [ "distance_constraint_utilities.h", "distance__constraint__utilities_8h.html", null ],
     [ "gaze_target_constraint.h", "gaze__target__constraint_8h.html", null ],

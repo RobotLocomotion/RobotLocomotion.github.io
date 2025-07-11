@@ -40,6 +40,7 @@ var searchData=
   ['leafsystem_3c_20double_20_3e',['LeafSystem&lt; double &gt;',['../classdrake_1_1systems_1_1_leaf_system.html',1,'drake::systems']]],
   ['leafsystem_3c_20element_3a_3adouble_20_3e',['LeafSystem&lt; Element::double &gt;',['../classdrake_1_1systems_1_1_leaf_system.html',1,'drake::systems']]],
   ['leafsystem_3c_20element_3a_3at_20_3e',['LeafSystem&lt; Element::T &gt;',['../classdrake_1_1systems_1_1_leaf_system.html',1,'drake::systems']]],
+  ['leastsquarescost',['LeastSquaresCost',['../classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html',1,'drake::multibody::DifferentialInverseKinematicsSystem']]],
   ['less_3c_20drake_3a_3asolvers_3a_3asolverid_20_3e',['less&lt; drake::solvers::SolverId &gt;',['../structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html',1,'std']]],
   ['less_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['less&lt; drake::symbolic::Expression &gt;',['../structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html',1,'std']]],
   ['less_3c_20drake_3a_3asymbolic_3a_3aformula_20_3e',['less&lt; drake::symbolic::Formula &gt;',['../structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4.html',1,'std']]],

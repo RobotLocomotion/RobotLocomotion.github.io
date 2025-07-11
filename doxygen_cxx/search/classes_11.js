@@ -6,6 +6,7 @@ var searchData=
   ['randomsource',['RandomSource',['../classdrake_1_1systems_1_1_random_source.html',1,'drake::systems']]],
   ['rationalforwardkinematics',['RationalForwardKinematics',['../classdrake_1_1multibody_1_1_rational_forward_kinematics.html',1,'drake::multibody']]],
   ['rationalfunction',['RationalFunction',['../classdrake_1_1symbolic_1_1_rational_function.html',1,'drake::symbolic']]],
+  ['recipe',['Recipe',['../classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html',1,'drake::multibody::DifferentialInverseKinematicsSystem']]],
   ['regionofattractionoptions',['RegionOfAttractionOptions',['../structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html',1,'drake::systems::analysis']]],
   ['relationalformulacell',['RelationalFormulaCell',['../classdrake_1_1symbolic_1_1_relational_formula_cell.html',1,'drake::symbolic']]],
   ['remoteparams',['RemoteParams',['../structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html',1,'drake::multibody::PackageMap']]],

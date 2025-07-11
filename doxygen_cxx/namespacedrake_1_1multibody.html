@@ -256,6 +256,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html" title="DeformableModel implements the interface in PhysicalModel and provides the functionalities to specify...">DeformableModel</a> implements the interface in <a class="el" href="classdrake_1_1multibody_1_1_physical_model.html" title="(Internal) PhysicalModel provides the functionalities to extend the type of physical model of Multibo...">PhysicalModel</a> and provides the functionalities to specify deformable bodies.  <a href="classdrake_1_1multibody_1_1_deformable_model.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_controller.html">DifferentialInverseKinematicsController</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Differential Inverse Kinematics controller that tracks desired poses / velocities for multiple operational points.  <a href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_controller.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html">DifferentialInverseKinematicsIntegrator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A LeafSystem that integrates successive calls to DoDifferentialInverseKinematics (which produces joint velocity commands) to produce joint position commands.  <a href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,6 +266,9 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains parameters for differential inverse kinematics.  <a href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html">DifferentialInverseKinematicsSystem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The DifferentialInverseKinematicsSystem takes as input desired cartesian poses (or cartesian velocities) for an arbitrary number of "goal" frames on the robot, and produces a generalized velocity command as output to move the goal frames toward the desired state.  <a href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_distance_constraint.html">DistanceConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrains the distance between a pair of geometries to be within a range [distance_lower, distance_upper].  <a href="classdrake_1_1multibody_1_1_distance_constraint.html#details">More...</a><br /></td></tr>
@@ -510,6 +516,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:af145b4f8d2579e36e3a1561f9a121a56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#af145b4f8d2579e36e3a1561f9a121a56">SelectDataForCollisionConstraintFunction</a> = std::function&lt; void(const <a class="el" href="classdrake_1_1planning_1_1_dof_mask.html">planning::DofMask</a> &amp;active_dof, const <a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">planning::RobotClearance</a> &amp;robot_clearance, Eigen::VectorXd *dist_out, Eigen::MatrixXd *ddist_dq_out)&gt;</td></tr>
+<tr class="memdesc:af145b4f8d2579e36e3a1561f9a121a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Filters clearance data for defining a collision constraint, as used by <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint.html" title="Constrains the collision clearance around the robot to remain above the safety distance: ∀j ϕₛ ≤ ϕⱼ +...">DifferentialInverseKinematicsSystem::CollisionConstraint</a>.  <a href="#af145b4f8d2579e36e3a1561f9a121a56">More...</a><br /></td></tr>
+<tr class="separator:af145b4f8d2579e36e3a1561f9a121a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#adb169d7f3b447c98cbd02015fba0d6f9">PhysicalModelPointerVariant</a> = std::variant&lt; const <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html">DeformableModel</a>&lt; T &gt; *, std::monostate &gt;</td></tr>
 <tr class="separator:adb169d7f3b447c98cbd02015fba0d6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -887,6 +896,32 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="af145b4f8d2579e36e3a1561f9a121a56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af145b4f8d2579e36e3a1561f9a121a56">&#9670;&nbsp;</a></span>SelectDataForCollisionConstraintFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody.html#af145b4f8d2579e36e3a1561f9a121a56">SelectDataForCollisionConstraintFunction</a> =  std::function&lt;void( const <a class="el" href="classdrake_1_1planning_1_1_dof_mask.html">planning::DofMask</a>&amp; active_dof, const <a class="el" href="classdrake_1_1planning_1_1_robot_clearance.html">planning::RobotClearance</a>&amp; robot_clearance, Eigen::VectorXd* dist_out, Eigen::MatrixXd* ddist_dq_out)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Filters clearance data for defining a collision constraint, as used by <a class="el" href="classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint.html" title="Constrains the collision clearance around the robot to remain above the safety distance: ∀j ϕₛ ≤ ϕⱼ +...">DifferentialInverseKinematicsSystem::CollisionConstraint</a>. </p>
+<p>This provides a mechanism for ignoring certain clearance rows (i.e., collision hazards) in case they are known to be not relevant to the active dofs under control here. (For example, this might be the case when this system is controlling only certain limbs of a robot, but the collision checker contains the whole robot.)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">active_dof</td><td>indicates active degrees of freedom. </td></tr>
+    <tr><td class="paramname">robot_clearance</td><td>the clearance summary for the current robot state. </td></tr>
+    <tr><td class="paramname">dist_out[out]</td><td>On return, contains the distances. If vector zero size on return, no collision constraint will be added. Guaranteed to be non-null on entry. </td></tr>
+    <tr><td class="paramname">ddist_dq_out[out]</td><td>On return, contains motion derivatives. On return, the number of columns must match the number of active degrees of freedom (or may also be zero size when dist_out is zero size). Guaranteed to be non-null on entry. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

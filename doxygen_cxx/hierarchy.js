@@ -73,6 +73,7 @@ var hierarchy =
     [ "CacheEntry", "classdrake_1_1systems_1_1_cache_entry.html", null ],
     [ "CacheEntryValue", "classdrake_1_1systems_1_1_cache_entry_value.html", null ],
     [ "CalcGridPointsOptions", "structdrake_1_1multibody_1_1_calc_grid_points_options.html", null ],
+    [ "DifferentialInverseKinematicsSystem::CallbackDetails", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html", null ],
     [ "CameraConfig", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html", null ],
     [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", null ],
     [ "CartPoleParamsIndices", "structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html", null ],
@@ -116,6 +117,12 @@ var hierarchy =
       [ "LeafCompositeEventCollection< Element::T >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
     ] ],
     [ "ConditionTraits< symbolic::Formula >", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html", null ],
+    [ "DifferentialInverseKinematicsSystem::LeastSquaresCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html", null ],
+    [ "DifferentialInverseKinematicsSystem::JointCenteringCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html", null ],
+    [ "DifferentialInverseKinematicsSystem::CartesianPositionLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_position_limit_constraint_1_1_config.html", null ],
+    [ "DifferentialInverseKinematicsSystem::CartesianVelocityLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_velocity_limit_constraint_1_1_config.html", null ],
+    [ "DifferentialInverseKinematicsSystem::CollisionConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint_1_1_config.html", null ],
+    [ "DifferentialInverseKinematicsSystem::JointVelocityLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html", null ],
     [ "PidControlledSystem< T >::ConnectResult", "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html", null ],
     [ "ConstraintAccelProblemData< T >", "structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html", null ],
     [ "ConstraintRelaxingIk", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html", null ],
@@ -528,6 +535,14 @@ var hierarchy =
     [ "ImplicitGraphOfConvexSets", "classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets.html", [
       [ "ImplicitGraphOfConvexSetsFromExplicit", "classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets_from_explicit.html", null ]
     ] ],
+    [ "DifferentialInverseKinematicsSystem::Ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_ingredient.html", [
+      [ "DifferentialInverseKinematicsSystem::CartesianPositionLimitConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_position_limit_constraint.html", null ],
+      [ "DifferentialInverseKinematicsSystem::CartesianVelocityLimitConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_velocity_limit_constraint.html", null ],
+      [ "DifferentialInverseKinematicsSystem::CollisionConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint.html", null ],
+      [ "DifferentialInverseKinematicsSystem::JointCenteringCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost.html", null ],
+      [ "DifferentialInverseKinematicsSystem::JointVelocityLimitConstraint", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint.html", null ],
+      [ "DifferentialInverseKinematicsSystem::LeastSquaresCost", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html", null ]
+    ] ],
     [ "InitializeParams", "structdrake_1_1systems_1_1_initialize_params.html", null ],
     [ "InitialValueProblem< T >", "classdrake_1_1systems_1_1_initial_value_problem.html", null ],
     [ "InMemoryMesh", "structdrake_1_1geometry_1_1_in_memory_mesh.html", null ],
@@ -708,8 +723,8 @@ var hierarchy =
     [ "ObbMaker< MeshType >", "classdrake_1_1geometry_1_1_obb_maker.html", null ],
     [ "ObbMakerTester< MeshType >", "classdrake_1_1geometry_1_1_obb_maker_tester.html", null ],
     [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
-    [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
+    [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
@@ -773,6 +788,7 @@ var hierarchy =
     [ "RandomSimulationResult", "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html", null ],
     [ "RationalForwardKinematics", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html", null ],
     [ "RationalFunction", "classdrake_1_1symbolic_1_1_rational_function.html", null ],
+    [ "DifferentialInverseKinematicsSystem::Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html", null ],
     [ "RegionOfAttractionOptions", "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html", null ],
     [ "PackageMap::RemoteParams", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html", null ],
     [ "RenderCameraCore", "classdrake_1_1geometry_1_1render_1_1_render_camera_core.html", null ],
@@ -919,6 +935,9 @@ var hierarchy =
     ] ],
     [ "SpatialVector< SpatialMomentum, T >", "classdrake_1_1multibody_1_1_spatial_vector.html", [
       [ "SpatialMomentum< T >", "classdrake_1_1multibody_1_1_spatial_momentum.html", null ]
+    ] ],
+    [ "SpatialVector< SpatialVelocity, double >", "classdrake_1_1multibody_1_1_spatial_vector.html", [
+      [ "SpatialVelocity< double >", "classdrake_1_1multibody_1_1_spatial_velocity.html", null ]
     ] ],
     [ "SpatialVector< SpatialVelocity, T >", "classdrake_1_1multibody_1_1_spatial_vector.html", [
       [ "SpatialVelocity< T >", "classdrake_1_1multibody_1_1_spatial_velocity.html", null ]
@@ -1079,12 +1098,14 @@ var hierarchy =
             [ "SchunkWsgController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_controller.html", null ],
             [ "SchunkWsgPlainController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html", null ],
             [ "SchunkWsgPositionController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html", null ],
+            [ "DifferentialInverseKinematicsController", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_controller.html", null ],
             [ "RgbdSensorDiscrete", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html", null ],
             [ "RobotDiagram< double >", "classdrake_1_1planning_1_1_robot_diagram.html", null ],
             [ "StateInterpolatorWithDiscreteDerivative< double >", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html", null ]
           ] ],
           [ "LeafSystem< double >", "classdrake_1_1systems_1_1_leaf_system.html", [
             [ "DiscreteDerivative< double >", "classdrake_1_1systems_1_1_discrete_derivative.html", null ],
+            [ "DiscreteTimeIntegrator< double >", "classdrake_1_1systems_1_1_discrete_time_integrator.html", null ],
             [ "AcrobotCommandReceiver", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_receiver.html", null ],
             [ "AcrobotCommandSender", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_sender.html", null ],
             [ "AcrobotGeometry", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html", null ],
@@ -1123,6 +1144,7 @@ var hierarchy =
             [ "SchunkWsgTrajectoryGenerator", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html", null ],
             [ "RobotPlanInterpolator", "classdrake_1_1manipulation_1_1util_1_1_robot_plan_interpolator.html", null ],
             [ "DifferentialInverseKinematicsIntegrator", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html", null ],
+            [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html", null ],
             [ "DepthImageToPointCloud", "classdrake_1_1perception_1_1_depth_image_to_point_cloud.html", null ],
             [ "PointCloudToLcm", "classdrake_1_1perception_1_1_point_cloud_to_lcm.html", null ],
             [ "PleidesSystem", "classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html", null ],
@@ -1193,8 +1215,8 @@ var hierarchy =
     ] ],
     [ "TimeStep", "structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html", null ],
     [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html", null ],
-    [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "traits", "classtraits.html", null ],
+    [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "Traits< TrajectorySource >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html", null ],
     [ "Trajectory< T >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "BezierCurve< T >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],

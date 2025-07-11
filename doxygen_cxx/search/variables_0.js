@@ -5,6 +5,7 @@ var searchData=
   ['a_5fsolve',['A_solve',['../structdrake_1_1examples_1_1rod2d_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html#ad9915843c2572471b7f550f257d0546a',1,'drake::examples::rod2d::ConstraintSolver::MlcpToLcpData']]],
   ['abspath',['abspath',['../structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13',1,'drake::RlocationOrError']]],
   ['accuracy',['accuracy',['../structdrake_1_1systems_1_1_simulator_config.html#a6e55b938786bd86846860397d25c10bd',1,'drake::systems::SimulatorConfig']]],
+  ['active_5fdof',['active_dof',['../structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a05f3f5511b47e22966af2f10a7796390',1,'drake::multibody::DifferentialInverseKinematicsSystem::CallbackDetails']]],
   ['actuation',['actuation',['../structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html#a0a83783a7dc99e91cce91c7a6b2400ba',1,'drake::multibody::MultibodyPlant::InputPortIndices::Instance']]],
   ['add_5fcollision_5ffilter_5fgroup',['add_collision_filter_group',['../structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a1795d69bef5da9e944055bb2b383a108',1,'drake::multibody::parsing::ModelDirective']]],
   ['add_5fdirectives',['add_directives',['../structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8faf335eb32cd972ad7ff7bd33d35af3',1,'drake::multibody::parsing::ModelDirective']]],
