@@ -501,6 +501,19 @@ respectively.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">CalcObb(shape:</span> <span class="pre">pydrake.geometry.Shape)</span> <span class="pre">-&gt;</span> <span class="pre">Optional[pydrake.geometry.Obb]</span></span></dt>
+<dd><p>Calculates the oriented bounding box (OBB) for the Shape in its
+canonical frame. Returns <code class="docutils literal notranslate"><span class="pre">std::nullopt</span></code> if the Shape is HalfSpace
+which doesn’t have a bounding box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if a referenced file cannot be opened.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">CalcVolume(shape:</span> <span class="pre">pydrake.geometry.Shape)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
 <dd><p>Calculates the volume (in meters^3) for the Shape. For convex and mesh
 geometries, the algorithm only supports “.obj” files and only produces
@@ -6289,7 +6302,7 @@ meshcat_path “Meshcat paths” for the semantics.</p>
 <p>Definition of a cone. Its point is at the origin, its height extends
 in the direction of the frame’s +z axis. Or, more formally: a finite
 section of a Lorentz cone (aka “second-order cone”), defined by</p>
-<p>sqrt(x²/a² + y²/b²) ≤ z; z ∈ [0, height],</p>
+<p>sqrt(x²/a² + y²/b²) ≤ z/height; z ∈ [0, height],</p>
 <p>where <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are the lengths of the principal semi-axes of
 the horizontal section at <code class="docutils literal notranslate"><span class="pre">z=height()</span></code>.</p>
 <p>This shape is currently only supported by Meshcat. It will not appear
@@ -8190,6 +8203,20 @@ for the list of instantiations.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">QueryObject.ComputeAabbInWorld(self:</span> <span class="pre">pydrake.geometry.QueryObject,</span> <span class="pre">geometry_id:</span> <span class="pre">pydrake.geometry.GeometryId)</span> <span class="pre">-&gt;</span> <span class="pre">Optional[pydrake.geometry.Aabb]</span></span></dt>
+<dd><p>Reports the axis-aligned bounding box of the geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in the world frame. Returns std::nullopt if the
+geometry is not supported for this query. Currently, only deformable
+geometries are supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if the geometry_id is not valid.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">QueryObject.ComputeContactSurfaces(self:</span> <span class="pre">pydrake.geometry.QueryObject,</span> <span class="pre">representation:</span> <span class="pre">pydrake.geometry.HydroelasticContactRepresentation)</span> <span class="pre">-&gt;</span> <span class="pre">list[pydrake.geometry.ContactSurface]</span></span></dt>
 <dd><p>Reports pairwise intersections and characterizes each non-empty
 intersection as a ContactSurface for hydroelastic contact model. The
@@ -8311,6 +8338,26 @@ vector will <em>not</em> be cleared.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">surfaces</span></code> and <code class="docutils literal notranslate"><span class="pre">point_pairs</span></code> are output pointers in C++,
 but are return values in the Python bindings.</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">QueryObject.ComputeObbInWorld(self:</span> <span class="pre">pydrake.geometry.QueryObject,</span> <span class="pre">geometry_id:</span> <span class="pre">pydrake.geometry.GeometryId)</span> <span class="pre">-&gt;</span> <span class="pre">Optional[pydrake.geometry.Obb]</span></span></dt>
+<dd><p>Reports the oriented bounding box of the geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in the world frame. Returns std::nullopt if the
+geometry is an HalfSpace (and doesn’t have a bounding box).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If geometry_id refers to a deformable geometry, the OBB is
+computed using the deformed mesh in the world frame. See
+SceneGraphInspector::GetObbInGeometryFrame() for computing the OBB
+of the reference mesh in its canonical frame.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if the geometry_id is not valid.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -9037,6 +9084,20 @@ and scalars. At that point, the table will simply disappear.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">QueryObject_[AutoDiffXd].ComputeAabbInWorld(self:</span> <span class="pre">pydrake.geometry.QueryObject_[AutoDiffXd],</span> <span class="pre">geometry_id:</span> <span class="pre">pydrake.geometry.GeometryId)</span> <span class="pre">-&gt;</span> <span class="pre">Optional[pydrake.geometry.Aabb]</span></span></dt>
+<dd><p>Reports the axis-aligned bounding box of the geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in the world frame. Returns std::nullopt if the
+geometry is not supported for this query. Currently, only deformable
+geometries are supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if the geometry_id is not valid.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">QueryObject_[AutoDiffXd].ComputeContactSurfaces(self:</span> <span class="pre">pydrake.geometry.QueryObject_[AutoDiffXd],</span> <span class="pre">representation:</span> <span class="pre">pydrake.geometry.HydroelasticContactRepresentation)</span> <span class="pre">-&gt;</span> <span class="pre">list[pydrake.geometry.ContactSurface_[AutoDiffXd]]</span></span></dt>
 <dd><p>Reports pairwise intersections and characterizes each non-empty
 intersection as a ContactSurface for hydroelastic contact model. The
@@ -9158,6 +9219,26 @@ vector will <em>not</em> be cleared.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">surfaces</span></code> and <code class="docutils literal notranslate"><span class="pre">point_pairs</span></code> are output pointers in C++,
 but are return values in the Python bindings.</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">QueryObject_[AutoDiffXd].ComputeObbInWorld(self:</span> <span class="pre">pydrake.geometry.QueryObject_[AutoDiffXd],</span> <span class="pre">geometry_id:</span> <span class="pre">pydrake.geometry.GeometryId)</span> <span class="pre">-&gt;</span> <span class="pre">Optional[pydrake.geometry.Obb]</span></span></dt>
+<dd><p>Reports the oriented bounding box of the geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in the world frame. Returns std::nullopt if the
+geometry is an HalfSpace (and doesn’t have a bounding box).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If geometry_id refers to a deformable geometry, the OBB is
+computed using the deformed mesh in the world frame. See
+SceneGraphInspector::GetObbInGeometryFrame() for computing the OBB
+of the reference mesh in its canonical frame.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if the geometry_id is not valid.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -9874,6 +9955,40 @@ and scalars. At that point, the table will simply disappear.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">QueryObject_[Expression].__init__(self:</span> <span class="pre">pydrake.geometry.QueryObject_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Constructs a default QueryObject (all pointers are null).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">QueryObject_[Expression].ComputeAabbInWorld(self:</span> <span class="pre">pydrake.geometry.QueryObject_[Expression],</span> <span class="pre">geometry_id:</span> <span class="pre">pydrake.geometry.GeometryId)</span> <span class="pre">-&gt;</span> <span class="pre">Optional[pydrake.geometry.Aabb]</span></span></dt>
+<dd><p>Reports the axis-aligned bounding box of the geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in the world frame. Returns std::nullopt if the
+geometry is not supported for this query. Currently, only deformable
+geometries are supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if the geometry_id is not valid.</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">QueryObject_[Expression].ComputeObbInWorld(self:</span> <span class="pre">pydrake.geometry.QueryObject_[Expression],</span> <span class="pre">geometry_id:</span> <span class="pre">pydrake.geometry.GeometryId)</span> <span class="pre">-&gt;</span> <span class="pre">Optional[pydrake.geometry.Obb]</span></span></dt>
+<dd><p>Reports the oriented bounding box of the geometry indicated by
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in the world frame. Returns std::nullopt if the
+geometry is an HalfSpace (and doesn’t have a bounding box).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If geometry_id refers to a deformable geometry, the OBB is
+computed using the deformed mesh in the world frame. See
+SceneGraphInspector::GetObbInGeometryFrame() for computing the OBB
+of the reference mesh in its canonical frame.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError if the geometry_id is not valid.</strong> – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -14905,6 +15020,39 @@ for details).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SceneGraphInspector.GetObbInGeometryFrame(self:</span> <span class="pre">pydrake.geometry.SceneGraphInspector,</span> <span class="pre">geometry_id:</span> <span class="pre">pydrake.geometry.GeometryId)</span> <span class="pre">-&gt;</span> <span class="pre">Optional[pydrake.geometry.Obb]</span></span></dt>
+<dd><p>Returns the oriented bounding box (OBB) associated with the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in the geometry’s frame, G. The OBB is defined in the
+geometry’s canonical frame such that it tightly bounds the geometry.
+For primitive shapes, the OBB is computed analytically. For mesh-based
+shapes (Mesh and Convex), the OBB is computed using the mesh vertices.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The identifier for the queried geometry.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If geometry_id refers to a deformable geometry, the OBB is
+computed using the reference mesh. See
+QueryObject::ComputeObbInWorld() for computing the OBB of the
+deformed mesh in the world frame.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The oriented bounding box (or <code class="docutils literal notranslate"><span class="pre">std::nullopt</span></code> if the geometry is
+an HalfSpace and doesn’t have a bounding box).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
+<li><p><strong>geometry.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">SceneGraphInspector.GetOwningSourceName(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
@@ -15613,6 +15761,39 @@ for details).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SceneGraphInspector_[AutoDiffXd].GetObbInGeometryFrame(self:</span> <span class="pre">pydrake.geometry.SceneGraphInspector_[AutoDiffXd],</span> <span class="pre">geometry_id:</span> <span class="pre">pydrake.geometry.GeometryId)</span> <span class="pre">-&gt;</span> <span class="pre">Optional[pydrake.geometry.Obb]</span></span></dt>
+<dd><p>Returns the oriented bounding box (OBB) associated with the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in the geometry’s frame, G. The OBB is defined in the
+geometry’s canonical frame such that it tightly bounds the geometry.
+For primitive shapes, the OBB is computed analytically. For mesh-based
+shapes (Mesh and Convex), the OBB is computed using the mesh vertices.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The identifier for the queried geometry.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If geometry_id refers to a deformable geometry, the OBB is
+computed using the reference mesh. See
+QueryObject::ComputeObbInWorld() for computing the OBB of the
+deformed mesh in the world frame.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The oriented bounding box (or <code class="docutils literal notranslate"><span class="pre">std::nullopt</span></code> if the geometry is
+an HalfSpace and doesn’t have a bounding box).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
+<li><p><strong>geometry.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">SceneGraphInspector_[AutoDiffXd].GetOwningSourceName(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
@@ -16306,6 +16487,39 @@ for details).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
+<li><p><strong>geometry.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">SceneGraphInspector_[Expression].GetObbInGeometryFrame(self:</span> <span class="pre">pydrake.geometry.SceneGraphInspector_[Expression],</span> <span class="pre">geometry_id:</span> <span class="pre">pydrake.geometry.GeometryId)</span> <span class="pre">-&gt;</span> <span class="pre">Optional[pydrake.geometry.Obb]</span></span></dt>
+<dd><p>Returns the oriented bounding box (OBB) associated with the given
+<code class="docutils literal notranslate"><span class="pre">geometry_id</span></code> in the geometry’s frame, G. The OBB is defined in the
+geometry’s canonical frame such that it tightly bounds the geometry.
+For primitive shapes, the OBB is computed analytically. For mesh-based
+shapes (Mesh and Convex), the OBB is computed using the mesh vertices.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">geometry_id</span></code>:</dt><dd><p>The identifier for the queried geometry.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If geometry_id refers to a deformable geometry, the OBB is
+computed using the reference mesh. See
+QueryObject::ComputeObbInWorld() for computing the OBB of the
+deformed mesh in the world frame.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The oriented bounding box (or <code class="docutils literal notranslate"><span class="pre">std::nullopt</span></code> if the geometry is
+an HalfSpace and doesn’t have a bounding box).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
 <li><p><strong>RuntimeError if geometry_id does not map to a registered</strong> – </p></li>
 <li><p><strong>geometry.</strong> – </p></li>
 </ul>

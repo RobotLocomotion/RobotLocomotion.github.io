@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_meshcat_con
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Definition of a cone. </p>
-<p>Its point is at the origin, its height extends in the direction of the frame's +z axis. Or, more formally: a finite section of a Lorentz cone (aka "second-order cone"), defined by </p><pre class="fragment"> sqrt(x²/a² + y²/b²) ≤ z;  z ∈ [0, height],
+<p>Its point is at the origin, its height extends in the direction of the frame's +z axis. Or, more formally: a finite section of a Lorentz cone (aka "second-order cone"), defined by </p><pre class="fragment"> sqrt(x²/a² + y²/b²) ≤ z/height;  z ∈ [0, height],
 </pre><p>where <code>a</code> and <code>b</code> are the lengths of the principal semi-axes of the horizontal section at <code>z=<a class="el" href="classdrake_1_1geometry_1_1_meshcat_cone.html#a4a7b88988ccd08949b9be2e7de101e8c">height()</a></code>.</p>
 <p>This shape is currently only supported by <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>. It will not appear in any renderings, proximity queries, or other visualizers. </p>
 </div>

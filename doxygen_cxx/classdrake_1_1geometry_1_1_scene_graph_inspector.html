@@ -342,6 +342,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc1f51afc52b8dfd27aafbc8649cc278"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#adc1f51afc52b8dfd27aafbc8649cc278">GetConvexHull</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:adc1f51afc52b8dfd27aafbc8649cc278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the convex hull (a polytope) associated with the given <code>geometry_id</code>, if it exists.  <a href="#adc1f51afc52b8dfd27aafbc8649cc278">More...</a><br /></td></tr>
 <tr class="separator:adc1f51afc52b8dfd27aafbc8649cc278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8395a9b160583952eb22e856df352ccc"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1_obb.html">Obb</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a8395a9b160583952eb22e856df352ccc">GetObbInGeometryFrame</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
+<tr class="memdesc:a8395a9b160583952eb22e856df352ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the oriented bounding box (OBB) associated with the given <code>geometry_id</code> in the geometry's frame, G.  <a href="#a8395a9b160583952eb22e856df352ccc">More...</a><br /></td></tr>
+<tr class="separator:a8395a9b160583952eb22e856df352ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a852fbed1b4f83ddf4c9b3913a772f4bd">CollisionFiltered</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id1, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id2) const</td></tr>
 <tr class="memdesc:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports true if the two geometries with given ids <code>geometry_id1</code> and <code>geometry_id2</code>, define a collision pair that has been filtered out.  <a href="#a852fbed1b4f83ddf4c9b3913a772f4bd">More...</a><br /></td></tr>
 <tr class="separator:a852fbed1b4f83ddf4c9b3913a772f4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1080,6 +1083,40 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a8395a9b160583952eb22e856df352ccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8395a9b160583952eb22e856df352ccc">&#9670;&nbsp;</a></span>GetObbInGeometryFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::optional&lt;<a class="el" href="classdrake_1_1geometry_1_1_obb.html">Obb</a>&gt;&amp; GetObbInGeometryFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the oriented bounding box (OBB) associated with the given <code>geometry_id</code> in the geometry's frame, G. </p>
+<p>The OBB is defined in the geometry's canonical frame such that it tightly bounds the geometry. For primitive shapes, the OBB is computed analytically. For mesh-based shapes (<a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) mesh.">Mesh</a> and <a class="el" href="classdrake_1_1geometry_1_1_convex.html" title="Definition of a convex surface mesh.">Convex</a>), the OBB is computed using the mesh vertices. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">geometry_id</td><td>The identifier for the queried geometry. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If geometry_id refers to a deformable geometry, the OBB is computed using the reference mesh. See <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7cd8d5b82eef9d9239f0d87eaa6f9491" title="Reports the oriented bounding box of the geometry indicated by geometry_id in the world frame.">QueryObject::ComputeObbInWorld()</a> for computing the OBB of the deformed mesh in the world frame. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The oriented bounding box (or <code>std::nullopt</code> if the geometry is an <a class="el" href="classdrake_1_1geometry_1_1_half_space.html" title="Definition of a half space.">HalfSpace</a> and doesn't have a bounding box). </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>geometry_id</code> does not map to a registered geometry. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a23a84671f9c3e47d6edd43b89d517193"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a23a84671f9c3e47d6edd43b89d517193">&#9670;&nbsp;</a></span>GetOwningSourceName() <span class="overload">[1/2]</span></h2>
 
@@ -1638,8 +1675,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b176f170af189d4f31f33371e7d732c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b176f170af189d4f31f33371e7d732c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a9174b38bac2fe383418fa6fa711ee153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9174b38bac2fe383418fa6fa711ee153">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1650,7 +1687,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1664,8 +1701,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a9174b38bac2fe383418fa6fa711ee153"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9174b38bac2fe383418fa6fa711ee153">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a7b176f170af189d4f31f33371e7d732c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b176f170af189d4f31f33371e7d732c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1676,7 +1713,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

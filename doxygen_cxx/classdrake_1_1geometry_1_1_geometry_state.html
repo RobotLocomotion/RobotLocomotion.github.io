@@ -343,6 +343,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec2f2e2842b8d64fbabe13b75574d316"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#aec2f2e2842b8d64fbabe13b75574d316">GetConvexHull</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
 <tr class="memdesc:aec2f2e2842b8d64fbabe13b75574d316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#adc1f51afc52b8dfd27aafbc8649cc278" title="Returns the convex hull (a polytope) associated with the given geometry_id, if it exists.">SceneGraphInspector::GetConvexHull()</a>.  <a href="#aec2f2e2842b8d64fbabe13b75574d316">More...</a><br /></td></tr>
 <tr class="separator:aec2f2e2842b8d64fbabe13b75574d316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6f0e14d46de4d5094f12220a4691d6"><td class="memItemLeft" align="right" valign="top">const std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1_obb.html">Obb</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a8e6f0e14d46de4d5094f12220a4691d6">GetObbInGeometryFrame</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
+<tr class="memdesc:a8e6f0e14d46de4d5094f12220a4691d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a8395a9b160583952eb22e856df352ccc" title="Returns the oriented bounding box (OBB) associated with the given geometry_id in the geometry&#39;s frame...">SceneGraphInspector::GetObbInGeometryFrame()</a>.  <a href="#a8e6f0e14d46de4d5094f12220a4691d6">More...</a><br /></td></tr>
+<tr class="separator:a8e6f0e14d46de4d5094f12220a4691d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4db95ba77c24795f0671d5f9989e83d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#af4db95ba77c24795f0671d5f9989e83d">CollisionFiltered</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id1, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id2) const</td></tr>
 <tr class="memdesc:af4db95ba77c24795f0671d5f9989e83d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a852fbed1b4f83ddf4c9b3913a772f4bd" title="Reports true if the two geometries with given ids geometry_id1 and geometry_id2, define a collision p...">SceneGraphInspector::CollisionFiltered()</a>.  <a href="#af4db95ba77c24795f0671d5f9989e83d">More...</a><br /></td></tr>
 <tr class="separator:af4db95ba77c24795f0671d5f9989e83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -355,6 +358,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a864e454f63ce117772d61d68e194a439"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a864e454f63ce117772d61d68e194a439">get_pose_in_world</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a864e454f63ce117772d61d68e194a439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of QueryObject::GetPoseInWorld(GeometryId).  <a href="#a864e454f63ce117772d61d68e194a439">More...</a><br /></td></tr>
 <tr class="separator:a864e454f63ce117772d61d68e194a439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad9f3e8bb092ff37f49bfb8b2e6ac7b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1_aabb.html">Aabb</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a7ad9f3e8bb092ff37f49bfb8b2e6ac7b">ComputeAabbInWorld</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
+<tr class="memdesc:a7ad9f3e8bb092ff37f49bfb8b2e6ac7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of QueryObject::ComputeAabbInWorld(GeometryId).  <a href="#a7ad9f3e8bb092ff37f49bfb8b2e6ac7b">More...</a><br /></td></tr>
+<tr class="separator:a7ad9f3e8bb092ff37f49bfb8b2e6ac7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd8d5b82eef9d9239f0d87eaa6f9491"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1_obb.html">Obb</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a7cd8d5b82eef9d9239f0d87eaa6f9491">ComputeObbInWorld</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
+<tr class="memdesc:a7cd8d5b82eef9d9239f0d87eaa6f9491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of QueryObject::ComputeObbInWorld(GeometryId).  <a href="#a7cd8d5b82eef9d9239f0d87eaa6f9491">More...</a><br /></td></tr>
+<tr class="separator:a7cd8d5b82eef9d9239f0d87eaa6f9491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8b8b5d86e5586c5cd5d1d88250003dc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ab8b8b5d86e5586c5cd5d1d88250003dc">get_pose_in_parent</a> (<a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id) const</td></tr>
 <tr class="memdesc:ab8b8b5d86e5586c5cd5d1d88250003dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a68254463fc7cb0837ab0eeab307c1195" title="Reports the position of the frame indicated by frame_id relative to its parent frame.">QueryObject::GetPoseInParent()</a>.  <a href="#ab8b8b5d86e5586c5cd5d1d88250003dc">More...</a><br /></td></tr>
 <tr class="separator:ab8b8b5d86e5586c5cd5d1d88250003dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -968,6 +977,26 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a7ad9f3e8bb092ff37f49bfb8b2e6ac7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad9f3e8bb092ff37f49bfb8b2e6ac7b">&#9670;&nbsp;</a></span>ComputeAabbInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1geometry_1_1_aabb.html">Aabb</a>&gt; ComputeAabbInWorld </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementation of QueryObject::ComputeAabbInWorld(GeometryId). </p>
+
+</div>
+</div>
 <a id="ab15e2fff4faa847eb6a7ba82e1d4f035"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab15e2fff4faa847eb6a7ba82e1d4f035">&#9670;&nbsp;</a></span>ComputeContactSurfaces()</h2>
 
@@ -1041,6 +1070,26 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0e8749d9307aa501666ca431ab626ff0" title="Reports contact information among all deformable geometries.">QueryObject::ComputeDeformableContact()</a>. </p>
+
+</div>
+</div>
+<a id="a7cd8d5b82eef9d9239f0d87eaa6f9491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd8d5b82eef9d9239f0d87eaa6f9491">&#9670;&nbsp;</a></span>ComputeObbInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1geometry_1_1_obb.html">Obb</a>&gt; ComputeObbInWorld </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementation of QueryObject::ComputeObbInWorld(GeometryId). </p>
 
 </div>
 </div>
@@ -1758,6 +1807,26 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a832092603067759319cdf2e81c4cb67c" title="Reports the stored, canonical name of the geometry with the given geometry_id (see GeometryInstance f...">SceneGraphInspector::GetName(GeometryId) const</a>. </p>
+
+</div>
+</div>
+<a id="a8e6f0e14d46de4d5094f12220a4691d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6f0e14d46de4d5094f12220a4691d6">&#9670;&nbsp;</a></span>GetObbInGeometryFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::optional&lt;<a class="el" href="classdrake_1_1geometry_1_1_obb.html">Obb</a>&gt;&amp; GetObbInGeometryFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a8395a9b160583952eb22e856df352ccc" title="Returns the oriented bounding box (OBB) associated with the given geometry_id in the geometry&#39;s frame...">SceneGraphInspector::GetObbInGeometryFrame()</a>. </p>
 
 </div>
 </div>

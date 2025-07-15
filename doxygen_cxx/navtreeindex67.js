@@ -1,5 +1,13 @@
 var NAVTREEINDEX67 =
 {
+"structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html#a59b70ea2a772e495426852a17f48a670":[3,0,0,8,5,0],
+"structdrake_1_1math_1_1_gray_codes_matrix.html":[3,0,0,8,6],
+"structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1":[3,0,0,8,6,0],
+"structdrake_1_1math_1_1_mat_grad_mult.html":[3,0,0,8,8],
+"structdrake_1_1math_1_1_mat_grad_mult.html#aace3454f69205e3b95dfe4e1176647ac":[3,0,0,8,8,0],
+"structdrake_1_1math_1_1_mat_grad_mult_mat.html":[3,0,0,8,9],
+"structdrake_1_1math_1_1_mat_grad_mult_mat.html#a21269c8d264a02b47f4bb4da4e41ec3d":[3,0,0,8,9,0],
+"structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html":[3,0,0,9,6],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a01c3e8a16f2e4c2d3ca103b183aa4f0d":[3,0,0,9,6,4],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a22edde1cca11d8d8bfb16621d27aecc4":[3,0,0,9,6,3],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a71ce3810dfddb699a4d17e9b3087e239":[3,0,0,9,6,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX67 =
 "structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html":[1,4,2,2,1,0],
 "structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#a58556183e6b44a317abcf3d0a8e0e2b4":[1,4,2,2,1,0,2],
 "structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#a9444f7e141745392f1b3cd3c5667b41e":[1,4,2,2,1,0,0],
-"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#ab92ffdff0f2d44b618e368df195d3185":[1,4,2,2,1,0,1],
-"structdrake_1_1planning_1_1_collision_checker_params.html":[1,4,2,2,3],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a35dcc56f9ad09e0a13d0bbb111554f32":[1,4,2,2,3,0],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a3a158076de3363e9927786d4732f3197":[1,4,2,2,3,7],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884":[1,4,2,2,3,2],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a97e6971c2938a484343028417a4614c9":[1,4,2,2,3,4],
-"structdrake_1_1planning_1_1_collision_checker_params.html#a9e6dd7347da1885477cd5b895b47ce9a":[1,4,2,2,3,6],
-"structdrake_1_1planning_1_1_collision_checker_params.html#ab8904e304fbe6985bed2bc4edafdb1e2":[1,4,2,2,3,5],
-"structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226":[1,4,2,2,3,3]
+"structdrake_1_1planning_1_1_collision_checker_1_1_added_shape.html#ab92ffdff0f2d44b618e368df195d3185":[1,4,2,2,1,0,1]
 };

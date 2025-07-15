@@ -458,6 +458,51 @@ and Context&lt;AutoDiffXd&gt;, then use this constructor.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsController</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsController.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController,</span> <span class="pre">differential_inverse_kinematics:</span> <span class="pre">object,</span> <span class="pre">planar_rotation_dof_indices:</span> <span class="pre">list[int])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Constructs a DifferentialInverseKinematicsController.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">differential_inverse_kinematics</span></code>:</dt><dd><p>a DifferentialInverseKinematicsSystem leaf system.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">planar_rotation_dof_indices</span></code>:</dt><dd><p>the indices of commanded position output that will be wrapped to
+±π.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>a DifferentialInverseKinematicsSystem leaf system may only be
+added to at most one controller. Multiple controller instances
+cannot share the same leaf system.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsController.differential_inverse_kinematics(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsController.get_mutable_differential_inverse_kinematics(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsController.set_initial_position(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsController,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">value:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Sets the integral part of the DiscreteTimeIntegrator to <code class="docutils literal notranslate"><span class="pre">value</span></code>.
+<cite>value</cite> has the dimension of the full <code class="docutils literal notranslate"><span class="pre">plant.num_positions()</span></code>;
+non-active dofs will be ignored. This in effect sets the initial
+position that is fed to the DifferentialInverseKinematicsSystem leaf
+system.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsIntegrator</span></span></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
 <p>A LeafSystem that integrates successive calls to
@@ -868,6 +913,693 @@ commanded.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
+<p>The DifferentialInverseKinematicsSystem takes as input desired
+cartesian poses (or cartesian velocities) for an arbitrary number of
+“goal” frames on the robot, and produces a generalized velocity
+command as output to move the goal frames toward the desired state.
+This system is stateless, but is intended to be clocked at a known,
+fixed time step Δt by evaluating its output port at integer multiples
+of Δt.</p>
+<p>The velocity command is computed by solving a MathematicalProgram
+optimization problem, consisting of: - one primary objective
+(LeastSquaresCost), - typically a secondary objective
+(JointCenteringCost) to resolve the nullspace within the primary
+objective, and - various optional constraints: -
+CartesianPositionLimitConstraint - CartesianVelocityLimitConstraint -
+CollisionConstraint - JointVelocityLimitConstraint</p>
+<p>In brief, we solve for <code class="docutils literal notranslate"><span class="pre">v_next</span></code> such that <code class="docutils literal notranslate"><span class="pre">Jv_TGs</span> <span class="pre">*</span> <span class="pre">v_next</span></code> is
+close to <code class="docutils literal notranslate"><span class="pre">Vd_TGs</span></code> subject to the constraints, where: - v_next is the
+generalized velocity command on the output port, which has the
+dimension of the number of active degrees of freedom, - Vd_TGs is the
+desired spatial velocities of the goal frames (when desired positions
+are input, the desired velocity is inferred using the difference from
+the current position vs the time step), - Jv_TGs is the jacobian
+relating spatial velocities to generalized velocities, i.e., V_TGs
+(rows) with respect to v_active (cols) – v_active is the subset of
+generalized velocities for the active degrees of freedom.</p>
+<p>For an introduction to differential inverse kinematics via
+optimization, see section 10.6 of:
+<a class="reference external" href="https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints">https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints</a></p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">nominal_posture&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_cartesian_velocities (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_cartesian_poses (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DifferentialInverseKinematicsSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; commanded_velocity</td></tr></table></td></tr></table><p>Port <code class="docutils literal notranslate"><span class="pre">position</span></code> accepts the current generalized position (for the
+full <code class="docutils literal notranslate"><span class="pre">plant</span></code>, not just the active dofs).</p>
+<p>Port <code class="docutils literal notranslate"><span class="pre">desired_cartesian_velocities</span></code> accepts desired cartesian
+velocities, typed as systems::BusValue where key is the name of the
+frame to track and the value is the SpatialVelocity&lt;double&gt; w.r.t the
+task frame. Frame names should be provided as fully-scoped names
+(<code class="docutils literal notranslate"><span class="pre">model_instance::frame</span></code>).</p>
+<p>Port <code class="docutils literal notranslate"><span class="pre">desired_cartesian_poses</span></code> accepts desired cartesian poses,
+typed as systems::BusValue where key is the name of the frame to track
+and the value is the math::RigidTransformd spatial pose w.r.t the task
+frame. Frame names should be provided as fully-scoped names
+(<code class="docutils literal notranslate"><span class="pre">model_instance::frame</span></code>).</p>
+<p>Port <code class="docutils literal notranslate"><span class="pre">nominal_posture</span></code> accepts a generalized position to be used to
+handle nullspace resolution; this has the dimension of the full
+degrees of freedom (not just active dofs). Typical choices for setting
+this input would be to use a constant “home” reference posture, or to
+use a dynamically changing recent posture.</p>
+<p>Port <code class="docutils literal notranslate"><span class="pre">commanded_velocity</span></code> emits generalized velocity that realizes
+the desired cartesian velocities or poses within the constraints. This
+has the dimension of the number of active degrees of freedom.</p>
+<p>Either <code class="docutils literal notranslate"><span class="pre">desired_cartesian_velocities</span></code> or <code class="docutils literal notranslate"><span class="pre">desired_cartesian_poses</span></code>
+must be connected. Connecting both ports will result in an exception.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no consistency check to ensure that the frames being
+tracked are the same across multiple time steps.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This class only works correctly when the plant has v = q̇.</p>
+</div>
+<p>= Notation =</p>
+<p>The implementation uses “monogram notation” abbreviations throughout.
+See
+<a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__multibody__quantities.html">https://drake.mit.edu/doxygen_cxx/group__multibody__quantities.html</a>
+for details. The relevant frame names are: - B: base frame - Gi: the
+i’th goal frame (per the <a href="#id17"><span class="problematic" id="id18">desired_cartesian_</span></a>… input port) - T: task
+frame - W: world frame</p>
+<p>To denote desired spatial velocities, we use a “d” suffix (i.e.,
+“Vd”). Quantities like Vd_TGi (and therefore also Vd_TGlist and
+Vd_TGs) refer to the desired velocity, not the current velocity. Other
+quantities without the “d” subscript (e.g., X_TGi, Jv_TGi, etc.) refer
+to the current kinematics.</p>
+<p>When ‘s’ is used as a suffix (e.g., ‘Vd_TGs’), it refers to the stack
+of all goals one after another, e.g., Vd_TGs refers to the
+concatenation of all Vd_TGi in Vd_TGlist. You can think of the ‘s’
+either as an abbreviation for “stack” or as a plural.</p>
+<p>We also use the letter ‘S’ to refer a “multibody system”, in our case
+the robot portion of the controller plant (not including the
+environment), as defined by the collision_checker. For example, use
+the notation ‘Scm’ to denote the robot’s center of mass.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem,</span> <span class="pre">recipe:</span> <span class="pre">object,</span> <span class="pre">task_frame:</span> <span class="pre">str,</span> <span class="pre">collision_checker:</span> <span class="pre">object,</span> <span class="pre">active_dof:</span> <span class="pre">pydrake.planning.DofMask,</span> <span class="pre">time_step:</span> <span class="pre">float,</span> <span class="pre">K_VX:</span> <span class="pre">float,</span> <span class="pre">Vd_TG_limit:</span> <span class="pre">pydrake.multibody.math.SpatialVelocity)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>(Advanced) Constructs the DifferentialInverseKinematicsSystem with a
+user-provided recipe for the mathematical program formulation.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">recipe</span></code>:</dt><dd><p>Specifies the mathematical formation and its parameters.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">task_frame</span></code>:</dt><dd><p>Specifies the task frame name (i.e., “T”) that cartesian goal
+poses are expressed in. Frame names should be provided as
+fully-scoped names (<code class="docutils literal notranslate"><span class="pre">model_instance::frame</span></code>). This must be a
+frame in <code class="docutils literal notranslate"><span class="pre">collision_checker.plant()</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker</span></code>:</dt><dd><p>Specifies the plant and collision model to use.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">active_dof</span></code>:</dt><dd><p>Specifies which generalized velocities of the plant are commanded
+by this system and appear on the “commanded_velocity” output port.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>Specifies Δt, the time horizon assumed when relating position
+values to velocity values. The output commands from this system
+should be sent to the robot at this period.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">K_VX</span></code>:</dt><dd><p>Specifies a scale factor used to convert
+<code class="docutils literal notranslate"><span class="pre">desired_cartesian_poses</span></code> input to velocities. The i’th desired
+cartesian velocity is computed as: <code class="docutils literal notranslate"><span class="pre">Vd_TGi</span> <span class="pre">=</span> <span class="pre">K_VX</span> <span class="pre">*</span>
+<span class="pre">(X_TGi_requested</span> <span class="pre">-</span> <span class="pre">X_TGi_current)</span> <span class="pre">/</span> <span class="pre">Δt</span></code> A typical value is 1.0 so
+that the desired velocity exactly matches what’s necessary to move
+to the request pose in the next step, but may be tuned smaller
+(e.g., 0.5) to mitigate overshoot. This value is not used when the
+<code class="docutils literal notranslate"><span class="pre">desired_cartesian_velocities</span></code> input port is being used for
+commands.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Vd_TG_limit</span></code>:</dt><dd><p>A clamping limit applied to desired cartesian velocities. All
+desired cartesian velocities (whether specified explicitly on the
+<code class="docutils literal notranslate"><span class="pre">desired_cartesian_velocities</span></code> input port, or inferred from the
+<code class="docutils literal notranslate"><span class="pre">desired_cartesian_poses</span></code> input port) are “clamped”; the
+absolute value of each measure in the clamped spatial velocity
+will be no greater than the corresponding measure in Vd_TG_limit.
+This <em>clamped</em> velocity becomes the input to the optimization
+problem. (NOTE: Clamping for <code class="docutils literal notranslate"><span class="pre">desired_cartesian_velocities</span></code> is
+not yet implemented, but will be soon.) If the
+CartesianVelocityLimitConstraint is in use, typically this value
+should be the same as that ingredient’s V_next_TG_limit.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.active_dof(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.planning.DofMask</span></span></dt>
+<dd><p>Gets the mask of active DOFs in plant() that are being controlled.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<p>Constrains the goal frames to a cartesian bounding box: <code class="docutils literal notranslate"><span class="pre">∀i</span>
+<span class="pre">p_TG_next_lower</span> <span class="pre">≤</span> <span class="pre">p_TGi</span> <span class="pre">+</span> <span class="pre">Jv_TGi[3:6]</span> <span class="pre">*</span> <span class="pre">v_next</span> <span class="pre">*</span> <span class="pre">Δt</span> <span class="pre">≤</span>
+<span class="pre">p_TG_next_upper</span></code> where: - p_TGi is the translation component of the
+i’th goal point w.r.t the task frame.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config.p_TG_next_lower</span></span></dt>
+<dd><p>Lower bound on p_TGi for all i.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config.p_TG_next_upper</span></span></dt>
+<dd><p>Upper bound on p_TGi for all i.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.GetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config</span></span></dt>
+<dd><p>Returns the current config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.SetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianPositionLimitConstraint.Config)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Replaces the config set in the constructor.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<p>Constrains the spatial velocities of the goal frames: <code class="docutils literal notranslate"><span class="pre">∀i,</span> <span class="pre">∀j</span> <span class="pre">∈</span> <span class="pre">[0,</span>
+<span class="pre">5]:</span> <span class="pre">abs(Jv_TGi</span> <span class="pre">*</span> <span class="pre">v_next)[j]</span> <span class="pre">≤</span> <span class="pre">V_next_TG_limit[j]</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config.V_next_TG_limit</span></span></dt>
+<dd><p>This limits the absolute value of the measures of the spatial
+velocities V_next[i] for all goal frames, so must be entry-wise
+non-negative. If the “desired_cartesian_poses” input port to
+DifferentialInverseKinematicsSystem is in use, then typically this
+should be set to the same value as the Vd_TG_limit passed to that
+system’s constructor. The element order is [ωx, ωy, ωz, vx, vy, vz],
+which matches the SpatialVelocity order.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.GetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config</span></span></dt>
+<dd><p>Returns the current config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.SetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CartesianVelocityLimitConstraint.Config)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Replaces the config set in the constructor.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.collision_checker(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.planning.CollisionChecker</span></span></dt>
+<dd><p>Gets the collision checker used by the controller.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CollisionConstraint</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<p>Constrains the collision clearance around the robot to remain above
+the safety distance: <code class="docutils literal notranslate"><span class="pre">∀j</span> <span class="pre">ϕₛ</span> <span class="pre">≤</span> <span class="pre">ϕⱼ</span> <span class="pre">+</span> <span class="pre">∂ϕⱼ/∂q_active</span> <span class="pre">*</span> <span class="pre">v_next</span> <span class="pre">*</span> <span class="pre">Δt</span></code>
+where: - ϕₛ is the safety_distance; - ϕⱼ is the current signed
+distance between the robot and some j’th obstacle; - ∂ϕⱼ/∂q_active is
+the gradient of ϕⱼ with respect to the active dof positions. Obstacles
+beyond the influence distance are ignored. The optional
+select_data_for_collision_constraint may be used to preprocess the
+clearance data prior to adding the constraint (e.g., to ignore some
+parts).</p>
+<p>TODO(jeremy-nimmer) This constraint should account for passive dof
+velocities as well (i.e., v_passive), using the full ∂q (not just
+∂q_active).</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CollisionConstraint.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CollisionConstraint.Config</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CollisionConstraint.Config.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CollisionConstraint.Config.influence_distance</span></span></dt>
+<dd><p>Obstacles beyond the influence distance (in meters) are ignored. Must
+be non-negative.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CollisionConstraint.Config.safety_distance</span></span></dt>
+<dd><p>“ϕₛ” in the class overview (in meters). Must be finite.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CollisionConstraint.GetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config</span></span></dt>
+<dd><p>Returns the current config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CollisionConstraint.SetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint.Config)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Replaces the config set in the constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.CollisionConstraint.SetSelectDataForCollisionConstraintFunction(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.CollisionConstraint,</span> <span class="pre">select_data_for_collision_constraint:</span> <span class="pre">Callable[[pydrake.planning.DofMask,</span> <span class="pre">pydrake.planning.RobotClearance,</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n]]],</span> <span class="pre">None])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>(Advanced) Provides a mechanism for ignoring certain clearance rows.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.get_input_port_desired_cartesian_poses(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dd><p>Returns the input port for the desired cartesian poses (of type
+systems::BusValue containing math::RigidTransformd).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.get_input_port_desired_cartesian_velocities(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dd><p>Returns the input port for the desired cartesian velocities (of type
+systems::BusValue containing SpatialVelocity).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.get_input_port_nominal_posture(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dd><p>Returns the input port for the nominal joint positions to be used to
+handle nullspace resolution. This has the dimension of the full
+<code class="docutils literal notranslate"><span class="pre">plant.num_positions()</span></code>; non-active dofs will be ignored.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.get_input_port_position(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dd><p>Returns the input port for the joint positions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.get_output_port_commanded_velocity(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
+<dd><p>Returns the output port for the generalized velocity command that
+realizes the desired poses within the constraints. The size is equal
+to <code class="docutils literal notranslate"><span class="pre">get_active_dof().count()</span></code>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.Ingredient</span></span></dt>
+<dd><p>(Internal use only) A user-provided set of constraint(s) and/or
+cost(s) for a DifferentialInverseKinematicsSystem recipe, to allow for
+user customization of the mathematical program formulation.</p>
+<p>TODO(jeremy-nimmer) In the future, we should remove “internal use
+only” so that users can officially bake their own recipes for
+DifferentialInverseKinematicsSystem.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.Ingredient.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointCenteringCost</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<p>Provides a secondary minimization objective. There will almost
+inevitably be times when the jacobian <code class="docutils literal notranslate"><span class="pre">Jv_TGs</span></code> is not full rank.
+Sometimes because of current position values and sometimes because
+<code class="docutils literal notranslate"><span class="pre">Jv_TGs</span></code> is rectangular by construction. At those times, there’s no
+longer a single solution and relying on the mathematical program to
+pick a reasonable solution from the large space is unreasonable.</p>
+<p>This cost is intended to work in conjunction with the primary cost
+(e.g., LeastSquaresCost). When <code class="docutils literal notranslate"><span class="pre">Jv_TGs</span></code> is not full rank, this
+provides guidance for selecting a <em>unique</em> velocity from the space of
+possible solutions. If the primary cost produces a space of optimal
+velocities, this secondary cost will select the velocity from that
+space that brings the arm closer to the “nominal posture”:</p>
+<p><a href="#id1"><span class="problematic" id="id2">|</span></a>P⋅(v_next - K⋅(nominal_posture_active - q_active))|²</p>
+<p>where, - <code class="docutils literal notranslate"><span class="pre">K</span></code> is the proportional gain of a joint-space controller
+that pulls toward the nominal posture. - <code class="docutils literal notranslate"><span class="pre">P</span></code> is the linear map from
+generalized velocities to the <em>null space</em> of masked Jacobian <code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">⋅</span>
+<span class="pre">Jv_TGs</span></code>. Mapping to the null space, allows refinement of the velocity
+without changing the primary cost. - S is a block-diagonal matrix of
+axis masks, enabling per-axis tracking.</p>
+<p>Notes: - When combined with a primary cost, the primary cost should be
+weighed far more heavily to keep this secondary cost from interfering.
+A factor of 100X or so is advisable. (See
+LeastSqauresCost::cartesian_qp_weight for tuning the gain on the
+primary objective.) - For this cost to behave as expected, it is
+critical that the null space of <code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">⋅</span> <span class="pre">Jv_TGs</span></code> be a subspace of the
+null space used by the primary cost. The simplest way is to make sure
+both costs receive the same axis masks and jacobian. Failure to do so
+would lead this cost to <em>fight</em> the primary cost instead of
+complementing it.</p>
+<p>For more details on this cost, see:
+<a class="reference external" href="https://manipulation.csail.mit.edu/pick">https://manipulation.csail.mit.edu/pick</a>.html#diff_ik_w_constraints#joint_centering</p>
+<p>TODO(sean.curtis) As with the other costs, this should also have a
+scaling weight (e.g. what <code class="docutils literal notranslate"><span class="pre">G</span></code> is for LeastSquaresCost).</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointCenteringCost.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointCenteringCost.Config</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointCenteringCost.Config.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointCenteringCost.Config.cartesian_axis_masks</span></span></dt>
+<dd><p>Map from fully-scoped frame names to their 6D spatial velocity axis
+mask. Each Vector6d is a binary mask [ωx, ωy, ωz, vx, vy, vz]
+indicating which Cartesian velocity components (angular and
+translational) are being tracked. All elements must be set to either 0
+or 1, and at least one element must be 1.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointCenteringCost.Config.posture_gain</span></span></dt>
+<dd><p>The proportional gain matrix <code class="docutils literal notranslate"><span class="pre">K</span></code> is a diagonal matrix with the
+diagonal set to this value (i.e., all joints use the same
+<code class="docutils literal notranslate"><span class="pre">posture_gain</span></code>). Must be non-negative.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointCenteringCost.GetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config</span></span></dt>
+<dd><p>Returns the current config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointCenteringCost.SetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointCenteringCost.Config)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Replaces the config set in the constructor.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<p>Constrains the generalized velocity to prevent a commanded velocity
+that would push the generalized position outside its limits.</p>
+<p>The configured joint velocity limits are not used directly. When the
+joint position is near a limit, the joint velocity limit may be
+insufficient to constrain <code class="docutils literal notranslate"><span class="pre">v_next</span></code> from pushing the position beyond
+its limits.</p>
+<p>Instead, we use a <em>scaled</em> velocity limit. In simple terms, the closer
+<code class="docutils literal notranslate"><span class="pre">q</span></code> is to its position limit, the more velocity towards that limit
+is constrained. When <code class="docutils literal notranslate"><span class="pre">q</span></code> lies at the limit boundary, the velocity in
+that direction would be zero. However, the configured velocity limit
+should be applied when q is “sufficiently” far away from the position
+limit boundary. So, we compute and apply a scale factor to attenuate
+the “near” velocity limit.</p>
+<p>The constraint is parameterized to define the domain of the
+attenuation; how far away from the near limit boundary should the
+scaled limit be zero and how far should it be restored to its
+configured value? We parameterize those two distances as:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">min_margin</span></code>: the distance at which the velocity limit is scaled to be zero.</p></li>
+</ul>
+<p>Must be non-negative and is typically positive.
+- <code class="docutils literal notranslate"><span class="pre">influence_margin</span></code>: the distance at which the velocity limit is
+restored to its configured value. This value must be
+strictly greater than <code class="docutils literal notranslate"><span class="pre">min_margin</span></code>.</p>
+<p>The velocity limit is only ever attenuated on one boundary.</p>
+<p>If we define <code class="docutils literal notranslate"><span class="pre">distᵢ</span></code> as the distance to the near position limit
+boundary, and <code class="docutils literal notranslate"><span class="pre">near_limit</span></code> as the value of that limit, we can define
+the attenuation as:</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">distᵢ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">qᵢ_current</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">qᵢ_min</span><span class="p">,</span><span class="w"> </span><span class="n">qᵢ_max</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">qᵢ_current</span><span class="p">)</span>
+<span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clamp</span><span class="p">((</span><span class="n">distᵢ</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">min_margin</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">influence_margin</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">min_margin</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="n">scaled_near_limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">near_limit</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">scale</span><span class="p">.</span>
+</pre></div>
+</div>
+</details><p>Implications: - Because we’re <em>attenuating</em> the configured velocity
+limits, an infinite limit value won’t be attenuated. It <em>will</em> be zero
+when <code class="docutils literal notranslate"><span class="pre">distᵢ</span> <span class="pre">≤</span> <span class="pre">min_margin</span></code>. - Position limits define an interval for
+q, which we’ll call P. If <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">-</span> <span class="pre">min_margin</span> <span class="pre">&lt;</span> <span class="pre">influence_margin</span> <span class="pre">-</span>
+<span class="pre">min_margin</span></code> then one limit will <em>always</em> be attenuated to be less
+than its configured value.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config,</span> <span class="pre">joint_limits:</span> <span class="pre">pydrake.planning.JointLimits)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>(Advanced) Constructs the DifferentialInverseKinematicsSystem with a
+user-provided recipe for the mathematical program formulation.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">recipe</span></code>:</dt><dd><p>Specifies the mathematical formation and its parameters.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">task_frame</span></code>:</dt><dd><p>Specifies the task frame name (i.e., “T”) that cartesian goal
+poses are expressed in. Frame names should be provided as
+fully-scoped names (<code class="docutils literal notranslate"><span class="pre">model_instance::frame</span></code>). This must be a
+frame in <code class="docutils literal notranslate"><span class="pre">collision_checker.plant()</span></code>.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_checker</span></code>:</dt><dd><p>Specifies the plant and collision model to use.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">active_dof</span></code>:</dt><dd><p>Specifies which generalized velocities of the plant are commanded
+by this system and appear on the “commanded_velocity” output port.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt><dd><p>Specifies Δt, the time horizon assumed when relating position
+values to velocity values. The output commands from this system
+should be sent to the robot at this period.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">K_VX</span></code>:</dt><dd><p>Specifies a scale factor used to convert
+<code class="docutils literal notranslate"><span class="pre">desired_cartesian_poses</span></code> input to velocities. The i’th desired
+cartesian velocity is computed as: <code class="docutils literal notranslate"><span class="pre">Vd_TGi</span> <span class="pre">=</span> <span class="pre">K_VX</span> <span class="pre">*</span>
+<span class="pre">(X_TGi_requested</span> <span class="pre">-</span> <span class="pre">X_TGi_current)</span> <span class="pre">/</span> <span class="pre">Δt</span></code> A typical value is 1.0 so
+that the desired velocity exactly matches what’s necessary to move
+to the request pose in the next step, but may be tuned smaller
+(e.g., 0.5) to mitigate overshoot. This value is not used when the
+<code class="docutils literal notranslate"><span class="pre">desired_cartesian_velocities</span></code> input port is being used for
+commands.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Vd_TG_limit</span></code>:</dt><dd><p>A clamping limit applied to desired cartesian velocities. All
+desired cartesian velocities (whether specified explicitly on the
+<code class="docutils literal notranslate"><span class="pre">desired_cartesian_velocities</span></code> input port, or inferred from the
+<code class="docutils literal notranslate"><span class="pre">desired_cartesian_poses</span></code> input port) are “clamped”; the
+absolute value of each measure in the clamped spatial velocity
+will be no greater than the corresponding measure in Vd_TG_limit.
+This <em>clamped</em> velocity becomes the input to the optimization
+problem. (NOTE: Clamping for <code class="docutils literal notranslate"><span class="pre">desired_cartesian_velocities</span></code> is
+not yet implemented, but will be soon.) If the
+CartesianVelocityLimitConstraint is in use, typically this value
+should be the same as that ingredient’s V_next_TG_limit.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config.influence_margin</span></span></dt>
+<dd><p>The distance (in each joint’s configuration space) at which the
+velocity limit is restored to its configured value. The units will
+depend on what kind of joint is being limited. This value must be
+strictly greater than <code class="docutils literal notranslate"><span class="pre">min_margin</span></code>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config.min_margin</span></span></dt>
+<dd><p>The distance (in each joint’s configuration space) at which the
+velocity limit is scaled to be zero. Must be non-negative and is
+typically positive. The units will depend on what kind of joint is
+being limited.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.GetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config</span></span></dt>
+<dd><p>Returns the current config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.GetJointLimits(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.planning.JointLimits</span></span></dt>
+<dd><p>Returns the current joint limits.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.SetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.Config)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Replaces the config set in the constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint.SetJointLimits(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.JointVelocityLimitConstraint,</span> <span class="pre">joint_limits:</span> <span class="pre">pydrake.planning.JointLimits)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Replaces the limits set in the constructor.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.LeastSquaresCost</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.inverse_kinematics.Ingredient</span></code></p>
+<p>Provides a primary DifferentialInverseKinematicsSystem objective to
+minimize <code class="docutils literal notranslate"><span class="pre">G*|</span> <span class="pre">S</span> <span class="pre">*</span> <span class="pre">(Vd_TGs</span> <span class="pre">-</span> <span class="pre">Jv_TGs</span> <span class="pre">*</span> <span class="pre">v_next)|²</span></code>, also known as the
+“least squares” formulation.</p>
+<p>Where: - G is <code class="docutils literal notranslate"><span class="pre">cartesian_qp_weight</span></code>; this coefficient can be used to
+balance the relative weight of multiple costs in the mathematical
+program. - S is a block-diagonal selector matrix applying per-frame
+axis masks to filter out components that are not tracked. Mask
+behavior: - Each 6×6 block of <code class="docutils literal notranslate"><span class="pre">S</span></code> corresponds to a goal frame and is
+constructed from the frame’s entry in <code class="docutils literal notranslate"><span class="pre">cartesian_axis_masks</span></code>. If a
+frame is not explicitly listed, all axes are enabled. - Each axis mask
+is a binary Vector6d of the form [ωx, ωy, ωz, vx, vy, vz] ∈ {0, 1}⁶.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.LeastSquaresCost.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.LeastSquaresCost.Config</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.cartesian_axis_masks</span></span></dt>
+<dd><p>Map from fully-scoped frame names to their 6D spatial velocity axis
+mask. Each Vector6d is a binary mask [ωx, ωy, ωz, vx, vy, vz]
+indicating which Cartesian velocity components (angular and
+translational) are being tracked. All elements must be set to either 0
+or 1, and at least one element must be 1.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.cartesian_qp_weight</span></span></dt>
+<dd><p>‘G’ in the class overview. Must be non-negative and finite.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.LeastSquaresCost.Config.use_legacy_implementation</span></span></dt>
+<dd><p>This is a temporary parameter intended for backwards compatibility. Do
+not change this value (unless you really, really know what you’re
+doing)!</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.LeastSquaresCost.GetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config</span></span></dt>
+<dd><p>Returns the current config.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.LeastSquaresCost.SetConfig(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost,</span> <span class="pre">config:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.LeastSquaresCost.Config)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Replaces the config set in the constructor.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.plant(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant</span></span></dt>
+<dd><p>Gets the plant used by the controller.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.Recipe</span></span></dt>
+<dd><p>A recipe collects a list of ingredients for
+DifferentialInverseKinematicsSystem, allowing the user to customize
+the program being solved.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.Recipe.__init__(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Recipe)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.Recipe.AddIngredient(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Recipe,</span> <span class="pre">ingredient:</span> <span class="pre">object)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.task_frame(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.Frame</span></span></dt>
+<dd><p>Gets the frame assumed on the desired_cartesian_poses input port.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.time_step(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><p>Gets the time step used by the controller.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">DistanceConstraint</span></span></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Constraint</span></code></p>
 <p>Constrains the distance between a pair of geometries to be within a
@@ -936,10 +1668,10 @@ joint_centering_gain, - the “additional linear velocity constraints”
 are added via
 DifferentialInverseKinematicsParameters::AddLinearVelocityConstraint().</p>
 <p>Intuitively, this finds a v_next such that J*v_next is in the same
-direction as V, and the difference between <a href="#id9"><span class="problematic" id="id10">|V|</span></a> and <a href="#id11"><span class="problematic" id="id12">|J * v_next|</span></a> is
+direction as V, and the difference between <a href="#id11"><span class="problematic" id="id12">|V|</span></a> and <a href="#id13"><span class="problematic" id="id14">|J * v_next|</span></a> is
 minimized while all constraints in <code class="docutils literal notranslate"><span class="pre">parameters</span></code> are satisfied as
 well. In the nullspace of this objective, we have a secondary
-objective to minimize <a href="#id1"><span class="problematic" id="id2">|</span></a>v_next - N⁺(q)⋅K⋅(q_nominal - q_current)|².</p>
+objective to minimize <a href="#id3"><span class="problematic" id="id4">|</span></a>v_next - N⁺(q)⋅K⋅(q_nominal - q_current)|².</p>
 <p>For more details, see
 <a class="reference external" href="https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints">https://manipulation.csail.mit.edu/pick.html#diff_ik_w_constraints</a> .</p>
 <p>If q_current is a feasible point, then v_next = 0 should always be a
@@ -1236,7 +1968,7 @@ cost</p>
 <p>∑ᵢ body_position_cost(i) * body_position_error(i) +
 body_orientation_cost(i) * body_orientation_error(i) where
 <code class="docutils literal notranslate"><span class="pre">body_position_error(i)</span></code> is computed as the Euclidean distance error
-<a href="#id13"><span class="problematic" id="id14">|p_WBo(i) - p_WBo_desired(i)|</span></a> where - p_WBo(i) : position of body i’th
+<a href="#id15"><span class="problematic" id="id16">|p_WBo(i) - p_WBo_desired(i)|</span></a> where - p_WBo(i) : position of body i’th
 origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>. - p_WBo_desired(i): position
 of body i’th origin <code class="docutils literal notranslate"><span class="pre">Bo</span></code> in the world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>, computed from the
 desired posture <code class="docutils literal notranslate"><span class="pre">q_desired</span></code>.</p>
@@ -1689,7 +2421,7 @@ the steps are:</p>
 </div>
 </details><p>This context will be modified during calling ik.prog.Solve(…). When
 Solve() returns <code class="docutils literal notranslate"><span class="pre">result</span></code>, context will store the optimized posture,
-namely plant.GetPositions(<a href="#id3"><span class="problematic" id="id4">*</span></a>context) will be the same as in
+namely plant.GetPositions(<a href="#id5"><span class="problematic" id="id6">*</span></a>context) will be the same as in
 result.GetSolution(ik.q()). The user could then use this context to
 perform kinematic computation (like computing the position of the
 end-effector etc.).</p>

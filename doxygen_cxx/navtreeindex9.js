@@ -1,5 +1,13 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1geometry_1_1_shape.html#a43c72bdd543f8aead9259092f6f85093":[3,0,0,4,60,0],
+"classdrake_1_1geometry_1_1_shape.html#a7109f29ebaaa3e8c63e158df763d1c1c":[3,0,0,4,60,6],
+"classdrake_1_1geometry_1_1_shape.html#a8240386883c437a5a8015ef4a4e2c47b":[3,0,0,4,60,13],
+"classdrake_1_1geometry_1_1_shape.html#a9606f802f51cf313698b724cd8becfee":[3,0,0,4,60,11],
+"classdrake_1_1geometry_1_1_shape.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,4,60,14],
+"classdrake_1_1geometry_1_1_shape.html#aacba1a4acedc24ab801a3bb35e779e8b":[3,0,0,4,60,15],
+"classdrake_1_1geometry_1_1_shape.html#ab3405ef6f91107a97cb2376987bfbd5b":[3,0,0,4,60,9],
+"classdrake_1_1geometry_1_1_shape.html#ab5e067cf5693982029ff5931bd7d2a98":[3,0,0,4,60,2],
 "classdrake_1_1geometry_1_1_shape.html#ac8211a4a1bd869a777936764b8ee76a3":[3,0,0,4,60,8],
 "classdrake_1_1geometry_1_1_shape.html#ad0275b64bb659963dcf297519fcefdfe":[3,0,0,4,60,4],
 "classdrake_1_1geometry_1_1_shape.html#ad60fe701b675aace3d2ab5b6f0b51871":[3,0,0,4,60,16],
@@ -241,13 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#aecd6b9669e7f9270c679c9354f2381f6":[1,5,5,3,3],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#af8787c96bea07898c336a5a934e0975e":[1,1,1,3,7],
 "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#af8787c96bea07898c336a5a934e0975e":[1,5,5,3,7],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#afcef64d3a17bf3547696e5fbb31612e5":[1,1,1,3,4],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#afcef64d3a17bf3547696e5fbb31612e5":[1,5,5,3,4],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html":[1,1,1,4],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html":[1,5,5,4],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html#a0de7d025738fa9a07d27f62a3ceb70d8":[1,1,1,4,13],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html#a0de7d025738fa9a07d27f62a3ceb70d8":[1,5,5,4,13],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html#a1da25be016086a9c9641527045bbe26d":[1,1,1,4,5],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html#a1da25be016086a9c9641527045bbe26d":[1,5,5,4,5],
-"classdrake_1_1geometry_1_1optimization_1_1_convex_hull.html#a251b707d4b019b65e3d5555e57627290":[1,1,1,4,3]
+"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#afcef64d3a17bf3547696e5fbb31612e5":[1,1,1,3,4]
 };

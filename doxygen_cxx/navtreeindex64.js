@@ -1,5 +1,13 @@
 var NAVTREEINDEX64 =
 {
+"specific__options_8h.html":[4,0,0,11,62],
+"spectrahedron_8h.html":[4,0,0,4,1,23],
+"spgrid_8h.html":[4,0,0,8,7,9],
+"spgrid__flags_8h.html":[4,0,0,8,7,10],
+"spong__controller_8h.html":[4,0,0,3,0,6],
+"spong__controller__params_8h.html":[4,0,0,3,0,7],
+"spring__mass__damper__system_8h.html":[4,0,0,12,0,0,14],
+"spring__mass__system_8h.html":[4,0,0,12,0,0,15],
 "ssize_8h.html":[4,0,0,1,64],
 "ssize_8h.html#a65f207e2f4d5cda4d2bc9da7b8a54256":[4,0,0,1,64,0],
 "ssize_8h.html#a7a5f6f92343ffa2502b5f2345c3d595f":[4,0,0,1,64,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[3,0,0,3,11,7,2],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html":[3,0,0,3,14,2],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,14,2,0],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[3,0,0,3,14,2,3],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,14,2,1],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[3,0,0,3,14,2,2],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html":[3,0,0,3,14,5],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,14,5,0],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f":[3,0,0,3,14,5,1],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,14,5,5],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ab177d17dcf832f3e671e2a3f6535d5c7":[3,0,0,3,14,5,6],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[3,0,0,3,14,5,3]
+"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state_indices.html#a6edfee6c73eda0ba7ee625064c59b1d0":[3,0,0,3,14,2,3]
 };

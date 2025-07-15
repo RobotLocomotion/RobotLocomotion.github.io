@@ -153,7 +153,9 @@ var NAVTREEINDEX0 =
 "calc__distance__and__time__derivative_8h.html#a57577cfb87838e5b949fd703e227acfc":[4,0,0,8,10,1,1],
 "calc__distance__to__surface__mesh_8h.html":[4,0,0,4,2,4],
 "calc__lame__parameters_8h.html":[4,0,0,8,2,1],
-"calc__signed__distance__to__surface__mesh_8h.html":[4,0,0,4,2,5],
+"calc__obb_8h.html":[4,0,0,4,2,5],
+"calc__obb_8h.html#a18419a6e6043ac351125aacc70c891e1":[4,0,0,4,2,5,0],
+"calc__signed__distance__to__surface__mesh_8h.html":[4,0,0,4,2,6],
 "call__python_8h.html":[4,0,0,1,1,0],
 "call__python_8h.html#a861302e6bce6e41acf42b94c21ee5020":[4,0,0,1,1,0,3],
 "call__python_8h.html#ab90532d79bea92048d0ee230ed8d4b59":[4,0,0,1,1,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_manual_timer.html":[3,0,0,37],
 "classdrake_1_1_manual_timer.html#a139b1270ef2287ce5f36f0c20f066e3a":[3,0,0,37,1],
 "classdrake_1_1_manual_timer.html#a2598ab5235c22d2e396986246c67cd1b":[3,0,0,37,4],
-"classdrake_1_1_manual_timer.html#a447e4279fa6b3570d006fd17d9537fb9":[3,0,0,37,0],
-"classdrake_1_1_manual_timer.html#a488df3c1e3ac8c8eb9da98b577da3697":[3,0,0,37,6],
-"classdrake_1_1_manual_timer.html#a48a3e4af06aa4b60a85ad908c9375876":[3,0,0,37,2]
+"classdrake_1_1_manual_timer.html#a447e4279fa6b3570d006fd17d9537fb9":[3,0,0,37,0]
 };

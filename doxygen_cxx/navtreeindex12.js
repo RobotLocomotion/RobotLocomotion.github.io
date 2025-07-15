@@ -1,5 +1,13 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af7add202067720eb1a04fac8f1781c87":[1,1,1,8,19],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af7add202067720eb1a04fac8f1781c87":[1,5,5,8,19],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af994292c5b8d256af40b63f7a125c456":[1,1,1,8,1],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af994292c5b8d256af40b63f7a125c456":[1,5,5,8,1],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html":[1,1,1,9],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html":[1,5,5,9],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a26ba28914aa5a6945a50a2221f053d95":[1,1,1,9,0],
+"classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a26ba28914aa5a6945a50a2221f053d95":[1,5,5,9,0],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a48e40be6382b66a7fd0cdf4ac8aad2a6":[1,1,1,9,7],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a48e40be6382b66a7fd0cdf4ac8aad2a6":[1,5,5,9,7],
 "classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a621852108208d835ec699ee7ba6a0eea":[1,1,1,9,5],
@@ -241,13 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#a4d8e39cd554d816aa7d5998af0389302":[3,0,0,4,2,5,0],
 "classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#a5b1b98cd61199d3750f8b4721c0ab333":[3,0,0,4,2,5,2],
 "classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#a6090298926db05ab95b322e3e5f2a6dc":[3,0,0,4,2,5,9],
-"classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#a69cb58fb294730e33232602690b2b62a":[3,0,0,4,2,5,8],
-"classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#a92a32cf28fba5356fd4b5249cd826f83":[3,0,0,4,2,5,6],
-"classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#ab0bcab0d2ca99cecb0c3222956bcba70":[3,0,0,4,2,5,7],
-"classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#ace93c95f8bd9c73e41aa6f53686b7b72":[3,0,0,4,2,5,3],
-"classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#af20d86320945a8bd7777a04709697a53":[3,0,0,4,2,5,5],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html":[3,0,0,4,2,6],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a0d8ed3640dbe0fda6c09bfed6704ad16":[3,0,0,4,2,6,1],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a0eb46ce8c2c84bc858e56ddcf2a357f2":[3,0,0,4,2,6,32],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a2df94afa6f50029dc60fefe29fa6c0a9":[3,0,0,4,2,6,25]
+"classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#a69cb58fb294730e33232602690b2b62a":[3,0,0,4,2,5,8]
 };

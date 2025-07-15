@@ -1,5 +1,13 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1multibody_1_1_universal_joint.html#af128263676ba2589816a4b4906f6dc07":[3,0,0,9,113,8],
+"classdrake_1_1multibody_1_1_universal_joint.html#af97d689d941b9eade67b31632c84d6bd":[3,0,0,9,113,11],
+"classdrake_1_1multibody_1_1_weld_joint.html":[3,0,0,9,114],
+"classdrake_1_1multibody_1_1_weld_joint.html#a4d111c4fc2a82d94fe15a244da576424":[3,0,0,9,114,10],
+"classdrake_1_1multibody_1_1_weld_joint.html#a503af5e7b7477b89d8920f5ec29582e1":[3,0,0,9,114,11],
+"classdrake_1_1multibody_1_1_weld_joint.html#a5447adfba295ed5c2d135c83bf5b75ce":[3,0,0,9,114,6],
+"classdrake_1_1multibody_1_1_weld_joint.html#a6531922f3e1a02e4cfc1b1902a377fae":[3,0,0,9,114,4],
+"classdrake_1_1multibody_1_1_weld_joint.html#a70c6596c8be1431725a5ab376434ec8d":[3,0,0,9,114,2],
 "classdrake_1_1multibody_1_1_weld_joint.html#a78c0363e81b89f005b383543f2a9cfc0":[3,0,0,9,114,5],
 "classdrake_1_1multibody_1_1_weld_joint.html#a955f9ba613b3309f1c819c7d379f6afd":[3,0,0,9,114,3],
 "classdrake_1_1multibody_1_1_weld_joint.html#a9b78e1282dbe407d7e389ea125515f69":[3,0,0,9,114,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a7b72a389cedd87c311dfe0587de68211":[1,2,11,1,6],
 "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a8d06bab24040ad6f5b74cea2cfc62817":[1,2,11,1,2],
 "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a9fc78a729b6fdd395e1cb7b6b2db3047":[1,2,11,1,0],
-"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ab4cae2915765bb20ab1fec015246ab59":[1,2,11,1,1],
-"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#abf0ba4dc73d12957c13ae22e2a2ef939":[1,2,11,1,8],
-"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ac2e5aab0612d67400354a4fe71278a21":[1,2,11,1,4],
-"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ae46167a57acc0c6fa6019e49e6e6f011":[1,2,11,1,5],
-"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html":[3,0,0,9,4,0],
-"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a000bb9e48a76048e55b45461ccbfb278":[3,0,0,9,4,0,6],
-"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a082b117bd7b1821b3f0f7d84faffc1d6":[3,0,0,9,4,0,10],
-"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a1663364886dc031b13718c5a823d34ef":[3,0,0,9,4,0,5],
-"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a4b145ded140538ae94fbe83a8c96a5a9":[3,0,0,9,4,0,2]
+"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ab4cae2915765bb20ab1fec015246ab59":[1,2,11,1,1]
 };

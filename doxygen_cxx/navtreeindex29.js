@@ -1,5 +1,13 @@
 var NAVTREEINDEX29 =
 {
+"classdrake_1_1solvers_1_1_binding.html#a2d56859532ea054bc76a10ea691746bc":[3,0,0,14,3,13],
+"classdrake_1_1solvers_1_1_binding.html#a38b81cff4aa19f7c4f19a55d095d2213":[3,0,0,14,3,10],
+"classdrake_1_1solvers_1_1_binding.html#a437e49f5ef82c70c9085c8f0c741005a":[3,0,0,14,3,0],
+"classdrake_1_1solvers_1_1_binding.html#a6f319f0d50c3403278af24eb88d8fb61":[3,0,0,14,3,14],
+"classdrake_1_1solvers_1_1_binding.html#a7ef2321debee2bd5b32026388dd3855d":[3,0,0,14,3,2],
+"classdrake_1_1solvers_1_1_binding.html#a865cec724a188ed5afb59dda367fe78c":[3,0,0,14,3,7],
+"classdrake_1_1solvers_1_1_binding.html#a94d0d01fcb647eb14ca2484fbef2595a":[3,0,0,14,3,6],
+"classdrake_1_1solvers_1_1_binding.html#aa3b88f68e741b1f50ad03d13825e1f66":[3,0,0,14,3,9],
 "classdrake_1_1solvers_1_1_binding.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,14,3,12],
 "classdrake_1_1solvers_1_1_binding.html#acca7fb2212fcd0b72b566eb1cc461e67":[3,0,0,14,3,1],
 "classdrake_1_1solvers_1_1_binding.html#aeabaeeea5278d5274171491f34c48dca":[3,0,0,14,3,5],
@@ -241,13 +249,5 @@ var NAVTREEINDEX29 =
 "classdrake_1_1solvers_1_1_l1_norm_cost.html#af07bddc22f2b1e732e919385ef1c3d4d":[1,1,0,41,0],
 "classdrake_1_1solvers_1_1_l1_norm_cost.html#af0e469d5862fcbd74594f47e7c2608bb":[1,1,0,41,14],
 "classdrake_1_1solvers_1_1_l1_norm_cost.html#afd5ade712b02fa2e71e8c26811c9494a":[1,1,0,41,6],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html":[1,1,0,42],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a1c266571ce951e63d66d582a62854908":[1,1,0,42,11],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a2d9b39ef1f63164b8f727d7748603a88":[1,1,0,42,16],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a38e25e75fd44159789b93a0c7f180c39":[1,1,0,42,12],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a4cf3e98daed7e5998c947592c2d7c3e0":[1,1,0,42,13],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc":[1,1,0,42,15],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a5eea9354674efc1c07bf537319628ead":[1,1,0,42,9],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a78d0728758456a66a6723d1cd6d46c93":[1,1,0,42,0],
-"classdrake_1_1solvers_1_1_l2_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,42,7]
+"classdrake_1_1solvers_1_1_l2_norm_cost.html":[1,1,0,42]
 };

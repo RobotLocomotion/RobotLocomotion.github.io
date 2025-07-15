@@ -243,6 +243,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a156d1376f245f1d98f70ae940fffce19"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a156d1376f245f1d98f70ae940fffce19">GetDrivenMeshConfigurationsInWorld</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> deformable_geometry_id, <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a> role) const</td></tr>
 <tr class="memdesc:a156d1376f245f1d98f70ae940fffce19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the configurations of the driven meshes associated with the given role for the deformable geometry indicated by <code>deformable_geometry_id</code> relative to the world frame if the deformable geometry has that role.  <a href="#a156d1376f245f1d98f70ae940fffce19">More...</a><br /></td></tr>
 <tr class="separator:a156d1376f245f1d98f70ae940fffce19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad9f3e8bb092ff37f49bfb8b2e6ac7b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1_aabb.html">Aabb</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7ad9f3e8bb092ff37f49bfb8b2e6ac7b">ComputeAabbInWorld</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
+<tr class="memdesc:a7ad9f3e8bb092ff37f49bfb8b2e6ac7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the axis-aligned bounding box of the geometry indicated by <code>geometry_id</code> in the world frame.  <a href="#a7ad9f3e8bb092ff37f49bfb8b2e6ac7b">More...</a><br /></td></tr>
+<tr class="separator:a7ad9f3e8bb092ff37f49bfb8b2e6ac7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd8d5b82eef9d9239f0d87eaa6f9491"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdrake_1_1geometry_1_1_obb.html">Obb</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a7cd8d5b82eef9d9239f0d87eaa6f9491">ComputeObbInWorld</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
+<tr class="memdesc:a7cd8d5b82eef9d9239f0d87eaa6f9491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the oriented bounding box of the geometry indicated by <code>geometry_id</code> in the world frame.  <a href="#a7cd8d5b82eef9d9239f0d87eaa6f9491">More...</a><br /></td></tr>
+<tr class="separator:a7cd8d5b82eef9d9239f0d87eaa6f9491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Collision Queries</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="collision_queries"></a></p>
 <p>These queries detect <em>collisions</em> between geometry. Two geometries collide if they overlap each other and are not explicitly excluded through <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_collision_filter_manager">collision filtering</a>. These algorithms find those colliding cases, characterize them, and report the essential characteristics of that collision.</p>
@@ -382,6 +388,32 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7ad9f3e8bb092ff37f49bfb8b2e6ac7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad9f3e8bb092ff37f49bfb8b2e6ac7b">&#9670;&nbsp;</a></span>ComputeAabbInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1geometry_1_1_aabb.html">Aabb</a>&gt; ComputeAabbInWorld </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the axis-aligned bounding box of the geometry indicated by <code>geometry_id</code> in the world frame. </p>
+<p>Returns std::nullopt if the geometry is not supported for this query. Currently, only deformable geometries are supported. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the <code>geometry_id</code> is not valid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab15e2fff4faa847eb6a7ba82e1d4f035"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab15e2fff4faa847eb6a7ba82e1d4f035">&#9670;&nbsp;</a></span>ComputeContactSurfaces()</h2>
 
@@ -531,6 +563,33 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>deformable_contact != nullptr. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+
+</div>
+</div>
+<a id="a7cd8d5b82eef9d9239f0d87eaa6f9491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd8d5b82eef9d9239f0d87eaa6f9491">&#9670;&nbsp;</a></span>ComputeObbInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="classdrake_1_1geometry_1_1_obb.html">Obb</a>&gt; ComputeObbInWorld </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the oriented bounding box of the geometry indicated by <code>geometry_id</code> in the world frame. </p>
+<p>Returns std::nullopt if the geometry is an <a class="el" href="classdrake_1_1geometry_1_1_half_space.html" title="Definition of a half space.">HalfSpace</a> (and doesn't have a bounding box). </p><dl class="section note"><dt>Note</dt><dd>If geometry_id refers to a deformable geometry, the OBB is computed using the deformed mesh in the world frame. See <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a8395a9b160583952eb22e856df352ccc" title="Returns the oriented bounding box (OBB) associated with the given geometry_id in the geometry&#39;s frame...">SceneGraphInspector::GetObbInGeometryFrame()</a> for computing the OBB of the reference mesh in its canonical frame. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the <code>geometry_id</code> is not valid. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

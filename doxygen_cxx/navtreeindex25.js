@@ -1,5 +1,13 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#abf0ba4dc73d12957c13ae22e2a2ef939":[1,2,11,1,8],
+"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ac2e5aab0612d67400354a4fe71278a21":[1,2,11,1,4],
+"classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ae46167a57acc0c6fa6019e49e6e6f011":[1,2,11,1,5],
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html":[3,0,0,9,4,0],
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a000bb9e48a76048e55b45461ccbfb278":[3,0,0,9,4,0,6],
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a082b117bd7b1821b3f0f7d84faffc1d6":[3,0,0,9,4,0,10],
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a1663364886dc031b13718c5a823d34ef":[3,0,0,9,4,0,5],
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a4b145ded140538ae94fbe83a8c96a5a9":[3,0,0,9,4,0,2],
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a4b9a364bc7362a8ff9587df8488a8824":[3,0,0,9,4,0,3],
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a54ef649a3a7676a4a374f537f2f9bbbe":[3,0,0,9,4,0,4],
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a825f8af102f87f42e1d44c05c220d8a2":[3,0,0,9,4,0,11],
@@ -241,13 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1planning_1_1_collision_checker.html#acd7c5dd9a903bedc2d984fe12aa5c409":[1,4,2,2,1,18],
 "classdrake_1_1planning_1_1_collision_checker.html#ad30d147b58ed54165a9a11dac4e8f0c0":[1,4,2,2,1,37],
 "classdrake_1_1planning_1_1_collision_checker.html#ad399081b57b1becb847d9a6f77928903":[1,4,2,2,1,81],
-"classdrake_1_1planning_1_1_collision_checker.html#ad9406112c93e430d27b84744b6f5fa77":[1,4,2,2,1,26],
-"classdrake_1_1planning_1_1_collision_checker.html#ad9de25681f79223e3157ee5835ff85da":[1,4,2,2,1,71],
-"classdrake_1_1planning_1_1_collision_checker.html#ada50f47e85f4e372c1e75873731a4c7d":[1,4,2,2,1,40],
-"classdrake_1_1planning_1_1_collision_checker.html#adaa8d8cac0c3193bc48a6fb8229b85e8":[1,4,2,2,1,35],
-"classdrake_1_1planning_1_1_collision_checker.html#adb33fbe45f267be402e5e2a750428044":[1,4,2,2,1,14],
-"classdrake_1_1planning_1_1_collision_checker.html#adbc935f824f1b4601d04346c0cebac63":[1,4,2,2,1,78],
-"classdrake_1_1planning_1_1_collision_checker.html#add86c374f69f86b7ac9feafb127b0738":[1,4,2,2,1,41],
-"classdrake_1_1planning_1_1_collision_checker.html#ae06d7f2e61a9d56deb761d03a216f01b":[1,4,2,2,1,61],
-"classdrake_1_1planning_1_1_collision_checker.html#ae5073981822b962bcc7ca569b399b3db":[1,4,2,2,1,88]
+"classdrake_1_1planning_1_1_collision_checker.html#ad9406112c93e430d27b84744b6f5fa77":[1,4,2,2,1,26]
 };

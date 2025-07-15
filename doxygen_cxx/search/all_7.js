@@ -839,6 +839,7 @@ var searchData=
   ['getnumberofcoefficients',['GetNumberOfCoefficients',['../classdrake_1_1_polynomial.html#a3d04328e0ea4df22f47e1651c706082d',1,'drake::Polynomial']]],
   ['getnumelements',['GetNumElements',['../classdrake_1_1solvers_1_1_binding.html#a865cec724a188ed5afb59dda367fe78c',1,'drake::solvers::Binding']]],
   ['getnumericparameter',['GetNumericParameter',['../classdrake_1_1systems_1_1_leaf_system.html#a4e4a60af942a6a568694334837d19931',1,'drake::systems::LeafSystem']]],
+  ['getobbingeometryframe',['GetObbInGeometryFrame',['../classdrake_1_1geometry_1_1_geometry_state.html#a8e6f0e14d46de4d5094f12220a4691d6',1,'drake::geometry::GeometryState::GetObbInGeometryFrame()'],['../classdrake_1_1geometry_1_1_scene_graph_inspector.html#a8395a9b160583952eb22e856df352ccc',1,'drake::geometry::SceneGraphInspector::GetObbInGeometryFrame()']]],
   ['getoneposition',['GetOnePosition',['../classdrake_1_1multibody_1_1_joint.html#add9135620b29f9786358b2e8aa146827',1,'drake::multibody::Joint']]],
   ['getonevelocity',['GetOneVelocity',['../classdrake_1_1multibody_1_1_joint.html#ab32090578b51c6ab7f0c67de63b08276',1,'drake::multibody::Joint']]],
   ['getoptimalcost',['GetOptimalCost',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a57c1b4cd100b3f6f6b6a22d8e924df4e',1,'drake::solvers::MixedIntegerBranchAndBound']]],
