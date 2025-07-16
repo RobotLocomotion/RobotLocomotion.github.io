@@ -1,5 +1,0 @@
-var namespacedrake_1_1examples_1_1manipulation__station =
-[
-    [ "ManipulationStation", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station" ],
-    [ "ManipulationStationHardwareInterface", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface" ]
-];

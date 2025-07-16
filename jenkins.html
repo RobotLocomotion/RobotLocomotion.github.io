@@ -217,7 +217,7 @@ on pull requests that have not yet been merged, or on arbitrary commits in the
   <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-noble-clang-bazel-experimental-valgrind-memcheck please</code></li>
 </ul>
 
-<p>A list of Jenkins bot commands for experimental builds that cover the full
+<p>A list of Jenkins bot commands for experimental builds that covers the full
 set of continuous and nightly production jobs is available
 <a href="https://github.com/RobotLocomotion/drake/blob/jenkins-jobs-experimental/request-jobs-experimental.txt">here</a>.
 Both provisioned and unprovisioned jobs are listed.</p>
@@ -273,12 +273,11 @@ and <code class="language-plaintext highlighter-rouge">new_release.py</code>). A
 only appear in one of these lists.</p>
 
 <p>When updating prerequisites with these scripts, the normal experimental CI will
-most likely fail. To test new prerequisites on Linux, you should first request an
-unprovisioned experimental build, e.g.:</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot linux-noble-unprovisioned-gcc-bazel-experimental-release please</code></li>
-</ul>
+most likely fail. To test new prerequisites on Linux, you should request
+unprovisioned experimental builds. A list of Jenkins bot commands for
+experimental unprovisioned builds that covers the full set of corresponding
+continuous and nightly production jobs (including provisioned) is available
+<a href="https://github.com/RobotLocomotion/drake/blob/jenkins-jobs-experimental/request-jobs-unprovisioned.txt">here</a>.</p>
 
 <p>Testing changes to the source distribution prerequisites for macOS is a work
 in progress as there are no longer unprovisioned builds.

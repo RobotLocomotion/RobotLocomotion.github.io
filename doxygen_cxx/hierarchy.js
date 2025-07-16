@@ -117,8 +117,8 @@ var hierarchy =
       [ "LeafCompositeEventCollection< Element::T >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
     ] ],
     [ "ConditionTraits< symbolic::Formula >", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html", null ],
-    [ "DifferentialInverseKinematicsSystem::JointCenteringCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::LeastSquaresCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html", null ],
+    [ "DifferentialInverseKinematicsSystem::JointCenteringCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::CartesianPositionLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_position_limit_constraint_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::CartesianVelocityLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_velocity_limit_constraint_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::CollisionConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint_1_1_config.html", null ],
@@ -975,7 +975,6 @@ var hierarchy =
           [ "Diagram< T >", "classdrake_1_1systems_1_1_diagram.html", [
             [ "AcrobotWEncoder< T >", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html", null ],
             [ "KukaTorqueController< T >", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_kuka_torque_controller.html", null ],
-            [ "ManipulationStation< T >", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html", null ],
             [ "SimIiwaDriver< T >", "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_sim_iiwa_driver.html", null ],
             [ "RobotDiagram< T >", "classdrake_1_1planning_1_1_robot_diagram.html", null ],
             [ "InverseDynamicsController< T >", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html", null ],
@@ -1094,7 +1093,6 @@ var hierarchy =
         [ "System< double >", "classdrake_1_1systems_1_1_system.html", [
           [ "Diagram< double >", "classdrake_1_1systems_1_1_diagram.html", [
             [ "LcmPlanInterpolator", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html", null ],
-            [ "ManipulationStationHardwareInterface", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html", null ],
             [ "SchunkWsgController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_controller.html", null ],
             [ "SchunkWsgPlainController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html", null ],
             [ "SchunkWsgPositionController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html", null ],

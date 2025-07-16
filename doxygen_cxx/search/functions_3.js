@@ -74,7 +74,6 @@ var searchData=
   ['default_5fpositions',['default_positions',['../classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2',1,'drake::multibody::Joint']]],
   ['default_5freflected_5finertia',['default_reflected_inertia',['../classdrake_1_1multibody_1_1_joint_actuator.html#a933d2740c848bc263cbf64089066b275',1,'drake::multibody::JointActuator']]],
   ['default_5frender_5flabel',['default_render_label',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#a88a7096a316e3d2340941ddcc0a89832',1,'drake::geometry::render::RenderEngine']]],
-  ['default_5frenderer_5fname',['default_renderer_name',['../classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a850923a2dcc2c5246d3086ed8a6a641f',1,'drake::examples::manipulation_station::ManipulationStation']]],
   ['default_5frotational_5finertia',['default_rotational_inertia',['../classdrake_1_1multibody_1_1_rigid_body.html#adc1fd9af3ddbce7caf44da3ed880c29f',1,'drake::multibody::RigidBody']]],
   ['default_5frotor_5finertia',['default_rotor_inertia',['../classdrake_1_1multibody_1_1_joint_actuator.html#af38616e070c9835a7a902c7d87c4a7b5',1,'drake::multibody::JointActuator']]],
   ['default_5fspatial_5finertia',['default_spatial_inertia',['../classdrake_1_1multibody_1_1_rigid_body.html#ae5899956a3322afd82ae792d6deeb8cb',1,'drake::multibody::RigidBody']]],

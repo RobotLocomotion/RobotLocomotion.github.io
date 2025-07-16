@@ -4054,7 +4054,19 @@ solvers::MakeFirstAvailableSolver will be used to pick the solver.</p>
 <dl class="py class">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">IrisParameterizationFunction</span></span></dt>
-<dd><dl class="py method">
+<dd><p>Ordinarily, IRIS algorithms grow collision free regions in the robot’s
+configuration space C. This allows the user to specify a function
+f:Q→C , and grow the region in Q instead. The function should be a map
+R^m to R^n, where n is the dimension of the plant configuration space
+and m is the input dimension, if specified. If the user provides a
+version of the function for Eigen::VectorX&lt;double&gt;, then the
+parameterization can be used with IrisZo. IrisNp2 requires that the
+user also provies a version of the function for
+Eigen::VectorX&lt;AutoDiffXd&gt;. If not specified, the input dimension is
+assumed to be equal to the output dimension. The user must also
+specify whether or not the parameterization function can be called in
+parallel.</p>
+<dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">IrisParameterizationFunction.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
@@ -4064,23 +4076,24 @@ solvers::MakeFirstAvailableSolver will be used to pick the solver.</p>
 <p>Default constructor – returns the identity mapping, which is
 threadsafe and compatible with any dimension configuration space.</p>
 <ol class="arabic simple" start="2">
-<li><p>__init__(self: pydrake.planning.IrisParameterizationFunction, parameterization: Callable[[numpy.ndarray[numpy.float64[m, 1]]], numpy.ndarray[numpy.float64[m, 1]]], dimension: int) -&gt; None</p></li>
+<li><p>__init__(self: pydrake.planning.IrisParameterizationFunction, parameterization: Callable, dimension: int) -&gt; None</p></li>
 </ol>
-<p>Ordinarily, IRIS algorithms grow collision free regions in the robot’s
-configuration space C. This allows the user to specify a function
-f:Q→C , and grow the region in Q instead. The function should be a map
-R^m to R^n, where n is the dimension of the plant configuration space,
-determined via <code class="docutils literal notranslate"><span class="pre">checker.plant().num_positions()</span></code> and m is
-<code class="docutils literal notranslate"><span class="pre">parameterization_dimension</span></code> if specified. The user must provide
-<code class="docutils literal notranslate"><span class="pre">parameterization</span></code>, which is the function f,
-<code class="docutils literal notranslate"><span class="pre">parameterization_is_threadsafe</span></code>, which is whether or not
-<code class="docutils literal notranslate"><span class="pre">parameterization</span></code> can be called concurrently, and
-<code class="docutils literal notranslate"><span class="pre">parameterization_dimension</span></code>, the dimension of the input space Q.</p>
+<p>Constructor for when the user only provides a version of the
+parameterization function for Eigen::VectorX&lt;double&gt;.
+<code class="docutils literal notranslate"><span class="pre">parameterization_double</span></code> is the function itself,
+<code class="docutils literal notranslate"><span class="pre">parameterization_is_threadsafe</span></code> specifies whether or not its
+threadsafe, and <code class="docutils literal notranslate"><span class="pre">parameterization_dimension</span></code> is the input dimension.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In order to use IrisNp2, the user-provided parameterization function
+must support double and AutoDiffXd. If it does not support AutoDiffXd, then
+only IrisZo can be used.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Due to the GIL, it is inefficient to call a Python function
-concurrently across multiple C++ threads. Therefore, the
-parameterization setter function automatically sets threadsafe to false.</p>
+concurrently across multiple C++ threads. Therefore, the constructor
+automatically sets threadsafe to false.</p>
 </div>
 <ol class="arabic simple" start="3">
 <li><p>__init__(self: pydrake.planning.IrisParameterizationFunction, expression_parameterization: numpy.ndarray[object[m, 1]], variables: numpy.ndarray[object[m, 1]]) -&gt; None</p></li>
@@ -4092,6 +4105,11 @@ provide a vector containing the variables used in
 evaluated. Each <code class="docutils literal notranslate"><span class="pre">Variable</span></code> in <code class="docutils literal notranslate"><span class="pre">variables</span></code> must be used, each
 <code class="docutils literal notranslate"><span class="pre">Variable</span></code> used in <code class="docutils literal notranslate"><span class="pre">expression_parameterization</span></code> must appear in
 <code class="docutils literal notranslate"><span class="pre">variables</span></code>, and there must be no duplicates in <code class="docutils literal notranslate"><span class="pre">variables</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This currently only populates the VectorX&lt;double&gt;
+parameterization.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Expression parameterizations are always threadsafe.</p>
@@ -4118,6 +4136,11 @@ variables, so as to minimize collisions in the <code class="docutils literal not
 RationalForwardKinematics for details.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>This currently only populates the VectorX&lt;double&gt;
+parameterization.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>The user is responsible for ensuring <code class="docutils literal notranslate"><span class="pre">kin</span></code> (and the underlying
 MultibodyPlant it is built on) is kept alive. If that object is
 deleted, then the parameterization can no longer be used.</p>
@@ -4126,16 +4149,24 @@ deleted, then the parameterization can no longer be used.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">IrisParameterizationFunction.get_parameterization(self:</span> <span class="pre">pydrake.planning.IrisParameterizationFunction)</span> <span class="pre">-&gt;</span> <span class="pre">Callable[[numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]],</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span></span></dt>
-<dd><p>Get the parameterization function.</p>
+<span class="sig-name descname"><span class="pre">IrisParameterizationFunction.get_parameterization_autodiff(self:</span> <span class="pre">pydrake.planning.IrisParameterizationFunction)</span> <span class="pre">-&gt;</span> <span class="pre">Callable[[numpy.ndarray[object[m,</span> <span class="pre">1]]],</span> <span class="pre">numpy.ndarray[object[m,</span> <span class="pre">1]]]</span></span></dt>
+<dd><p>Get the Eigen::VectorX&lt;AutoDiffXd&gt; parameterization function.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the user has not specified this with
 <code class="docutils literal notranslate"><span class="pre">set_parameterization()</span></code>, then the default value of
-<code class="docutils literal notranslate"><span class="pre">parameterization_</span></code> is the identity function, indicating that
-the regions should be grown in the full configuration space (in
-the standard coordinate system).</p>
+<code class="docutils literal notranslate"><span class="pre">parameterization_double_</span></code> is the identity function, indicating
+that the regions should be grown in the full configuration space
+(in the standard coordinate system).</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>If the user has specified the VectorX&lt;double&gt; parameterization but</strong> – </p></li>
+<li><p><strong>not the VectorX&lt;AutoDiffXd&gt; parameterization.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -4143,9 +4174,23 @@ the standard coordinate system).</p>
 <span class="sig-name descname"><span class="pre">IrisParameterizationFunction.get_parameterization_dimension(self:</span> <span class="pre">pydrake.planning.IrisParameterizationFunction)</span> <span class="pre">-&gt;</span> <span class="pre">Optional[int]</span></span></dt>
 <dd><p>Returns what the user has specified as the input dimension for the
 parameterization function, or std::nullopt if it has not been set. A
-std::nullopt value indicates that IrisZo should use the ambient
-configuration space dimension as the input dimension to the
-parameterization.</p>
+std::nullopt value indicates that the chosen IRIS algorithm should use
+the ambient configuration space dimension as the input dimension to
+the parameterization.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IrisParameterizationFunction.get_parameterization_double(self:</span> <span class="pre">pydrake.planning.IrisParameterizationFunction)</span> <span class="pre">-&gt;</span> <span class="pre">Callable[[numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]],</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span></span></dt>
+<dd><p>Get the Eigen::VectorX&lt;double&gt; parameterization function.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the user has not specified this with
+<code class="docutils literal notranslate"><span class="pre">set_parameterization()</span></code>, then the default value of
+<code class="docutils literal notranslate"><span class="pre">parameterization_double_</span></code> is the identity function, indicating
+that the regions should be grown in the full configuration space
+(in the standard coordinate system).</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -4155,8 +4200,8 @@ parameterization.</p>
 be threadsafe.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The default <code class="docutils literal notranslate"><span class="pre">parameterization_</span></code> is the identity function, which
-is threadsafe.</p>
+<p>The default parameterization is the identity function, which is
+threadsafe.</p>
 </div>
 </dd></dl>
 

@@ -166,19 +166,27 @@ $(document).ready(function(){initNavTree('classdrake_1_1planning_1_1_iris_parame
 <div class="title">IrisParameterizationFunction Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Ordinarily, IRIS algorithms grow collision free regions in the robot's configuration space C. </p>
+<p>This allows the user to specify a function f:Q→C , and grow the region in Q instead. The function should be a map R^m to R^n, where n is the dimension of the plant configuration space and m is the input dimension, if specified. If the user provides a version of the function for Eigen::VectorX&lt;double&gt;, then the parameterization can be used with IrisZo. IrisNp2 requires that the user also provies a version of the function for Eigen::VectorX&lt;AutoDiffXd&gt;. If not specified, the input dimension is assumed to be equal to the output dimension. The user must also specify whether or not the parameterization function can be called in parallel. </p>
+</div>
 <p><code>#include &lt;drake/planning/iris/iris_common.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a6b49fe87ea09ecac5be69ce6f550d83e"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; Eigen::VectorXd(const Eigen::VectorXd &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a6b49fe87ea09ecac5be69ce6f550d83e">ParameterizationFunction</a></td></tr>
-<tr class="separator:a6b49fe87ea09ecac5be69ce6f550d83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7b89a44d112da782b63e8bfdf5c082"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; Eigen::VectorXd(const Eigen::VectorXd &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#adf7b89a44d112da782b63e8bfdf5c082">ParameterizationFunctionDouble</a></td></tr>
+<tr class="separator:adf7b89a44d112da782b63e8bfdf5c082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f41a4dcdd2155d6ec5eb4ac762c292"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; Eigen::VectorX&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; const Eigen::VectorX&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#ad8f41a4dcdd2155d6ec5eb4ac762c292">ParameterizationFunctionAutodiff</a></td></tr>
+<tr class="separator:ad8f41a4dcdd2155d6ec5eb4ac762c292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a698e9c8ecc8bb0b2c5dfc330d8c230d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a698e9c8ecc8bb0b2c5dfc330d8c230d1">IrisParameterizationFunction</a> (const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a6b49fe87ea09ecac5be69ce6f550d83e">ParameterizationFunction</a> &amp;parameterization, bool parameterization_is_threadsafe, <a class="el" href="classint.html">int</a> parameterization_dimension)</td></tr>
-<tr class="memdesc:a698e9c8ecc8bb0b2c5dfc330d8c230d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordinarily, IRIS algorithms grow collision free regions in the robot's configuration space C.  <a href="#a698e9c8ecc8bb0b2c5dfc330d8c230d1">More...</a><br /></td></tr>
-<tr class="separator:a698e9c8ecc8bb0b2c5dfc330d8c230d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d990fe739e7bbfeb178a16456a6af4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#aa6d990fe739e7bbfeb178a16456a6af4">IrisParameterizationFunction</a> (const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#adf7b89a44d112da782b63e8bfdf5c082">ParameterizationFunctionDouble</a> &amp;parameterization_double, bool parameterization_is_threadsafe, <a class="el" href="classint.html">int</a> parameterization_dimension)</td></tr>
+<tr class="memdesc:aa6d990fe739e7bbfeb178a16456a6af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for when the user only provides a version of the parameterization function for Eigen::VectorX&lt;double&gt;.  <a href="#aa6d990fe739e7bbfeb178a16456a6af4">More...</a><br /></td></tr>
+<tr class="separator:aa6d990fe739e7bbfeb178a16456a6af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71531d35ed2f17a8246cd183abd0f3e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a71531d35ed2f17a8246cd183abd0f3e0">IrisParameterizationFunction</a> (const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#adf7b89a44d112da782b63e8bfdf5c082">ParameterizationFunctionDouble</a> &amp;parameterization_double, const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#ad8f41a4dcdd2155d6ec5eb4ac762c292">ParameterizationFunctionAutodiff</a> &amp;parameterization_autodiff, bool parameterization_is_threadsafe, <a class="el" href="classint.html">int</a> parameterization_dimension)</td></tr>
+<tr class="memdesc:a71531d35ed2f17a8246cd183abd0f3e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for when the user only provides both versions of the parameterization function.  <a href="#a71531d35ed2f17a8246cd183abd0f3e0">More...</a><br /></td></tr>
+<tr class="separator:a71531d35ed2f17a8246cd183abd0f3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42d241c8e69588d040e75fb1d27f8ff2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a42d241c8e69588d040e75fb1d27f8ff2">IrisParameterizationFunction</a> ()=default</td></tr>
 <tr class="memdesc:a42d241c8e69588d040e75fb1d27f8ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor &ndash; returns the identity mapping, which is threadsafe and compatible with any dimension configuration space.  <a href="#a42d241c8e69588d040e75fb1d27f8ff2">More...</a><br /></td></tr>
 <tr class="separator:a42d241c8e69588d040e75fb1d27f8ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,11 +194,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8fe6c9c1224e1ede57508077843f51e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative constructor that allows the user to define the parameterization using a <code>VectorX&lt;Expression&gt;</code>.  <a href="#a8fe6c9c1224e1ede57508077843f51e0">More...</a><br /></td></tr>
 <tr class="separator:a8fe6c9c1224e1ede57508077843f51e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac18b53a2d262620c5495b5324e16bb60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#ac18b53a2d262620c5495b5324e16bb60">IrisParameterizationFunction</a> (const <a class="el" href="classdrake_1_1multibody_1_1_rational_forward_kinematics.html">multibody::RationalForwardKinematics</a> *kin, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;q_star_val)</td></tr>
-<tr class="memdesc:ac18b53a2d262620c5495b5324e16bb60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an instance of <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html">IrisParameterizationFunction</a> that handles a rational kinematic parameterization.  <a href="#ac18b53a2d262620c5495b5324e16bb60">More...</a><br /></td></tr>
+<tr class="memdesc:ac18b53a2d262620c5495b5324e16bb60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an instance of <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html" title="Ordinarily, IRIS algorithms grow collision free regions in the robot&#39;s configuration space C.">IrisParameterizationFunction</a> that handles a rational kinematic parameterization.  <a href="#ac18b53a2d262620c5495b5324e16bb60">More...</a><br /></td></tr>
 <tr class="separator:ac18b53a2d262620c5495b5324e16bb60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62c407d1b530fb47102cc346e309204d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a6b49fe87ea09ecac5be69ce6f550d83e">ParameterizationFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a62c407d1b530fb47102cc346e309204d">get_parameterization</a> () const</td></tr>
-<tr class="memdesc:a62c407d1b530fb47102cc346e309204d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parameterization function.  <a href="#a62c407d1b530fb47102cc346e309204d">More...</a><br /></td></tr>
-<tr class="separator:a62c407d1b530fb47102cc346e309204d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4513e64315b07e961c860a6b0cd0d8bc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#adf7b89a44d112da782b63e8bfdf5c082">ParameterizationFunctionDouble</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a4513e64315b07e961c860a6b0cd0d8bc">get_parameterization_double</a> () const</td></tr>
+<tr class="memdesc:a4513e64315b07e961c860a6b0cd0d8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Eigen::VectorX&lt;double&gt; parameterization function.  <a href="#a4513e64315b07e961c860a6b0cd0d8bc">More...</a><br /></td></tr>
+<tr class="separator:a4513e64315b07e961c860a6b0cd0d8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482a36156e02bb1cf044132be0817c3e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#ad8f41a4dcdd2155d6ec5eb4ac762c292">ParameterizationFunctionAutodiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a482a36156e02bb1cf044132be0817c3e">get_parameterization_autodiff</a> () const</td></tr>
+<tr class="memdesc:a482a36156e02bb1cf044132be0817c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Eigen::VectorX&lt;AutoDiffXd&gt; parameterization function.  <a href="#a482a36156e02bb1cf044132be0817c3e">More...</a><br /></td></tr>
+<tr class="separator:a482a36156e02bb1cf044132be0817c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7138b8cfd258a815441c437a9d738467"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a7138b8cfd258a815441c437a9d738467">get_parameterization_is_threadsafe</a> () const</td></tr>
 <tr class="memdesc:a7138b8cfd258a815441c437a9d738467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not the user has specified the parameterization to be threadsafe.  <a href="#a7138b8cfd258a815441c437a9d738467">More...</a><br /></td></tr>
 <tr class="separator:a7138b8cfd258a815441c437a9d738467"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,14 +219,28 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab3ba178633373995179321ea0f341704"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a6b49fe87ea09ecac5be69ce6f550d83e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b49fe87ea09ecac5be69ce6f550d83e">&#9670;&nbsp;</a></span>ParameterizationFunction</h2>
+<a id="ad8f41a4dcdd2155d6ec5eb4ac762c292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f41a4dcdd2155d6ec5eb4ac762c292">&#9670;&nbsp;</a></span>ParameterizationFunctionAutodiff</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::function&lt;Eigen::VectorXd(const Eigen::VectorXd&amp;)&gt; <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a6b49fe87ea09ecac5be69ce6f550d83e">ParameterizationFunction</a></td>
+          <td class="memname">typedef std::function&lt;Eigen::VectorX&lt;<a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a>&gt; const Eigen::VectorX&lt;<a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a>&gt;&amp;)&gt; <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#ad8f41a4dcdd2155d6ec5eb4ac762c292">ParameterizationFunctionAutodiff</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf7b89a44d112da782b63e8bfdf5c082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7b89a44d112da782b63e8bfdf5c082">&#9670;&nbsp;</a></span>ParameterizationFunctionDouble</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;Eigen::VectorXd(const Eigen::VectorXd&amp;)&gt; <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#adf7b89a44d112da782b63e8bfdf5c082">ParameterizationFunctionDouble</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -224,7 +249,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0a4dd3b7655ae8cff5a03f5ec2bb4d3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a4dd3b7655ae8cff5a03f5ec2bb4d3d">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a4dd3b7655ae8cff5a03f5ec2bb4d3d">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,7 +275,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="abc9d86a24e507464cc4efaea7779a7ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc9d86a24e507464cc4efaea7779a7ce">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[2/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9d86a24e507464cc4efaea7779a7ce">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,8 +300,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a698e9c8ecc8bb0b2c5dfc330d8c230d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a698e9c8ecc8bb0b2c5dfc330d8c230d1">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[3/6]</span></h2>
+<a id="aa6d990fe739e7bbfeb178a16456a6af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6d990fe739e7bbfeb178a16456a6af4">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,8 +309,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html">IrisParameterizationFunction</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a6b49fe87ea09ecac5be69ce6f550d83e">ParameterizationFunction</a> &amp;&#160;</td>
-          <td class="paramname"><em>parameterization</em>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#adf7b89a44d112da782b63e8bfdf5c082">ParameterizationFunctionDouble</a> &amp;&#160;</td>
+          <td class="paramname"><em>parameterization_double</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -307,13 +332,56 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Ordinarily, IRIS algorithms grow collision free regions in the robot's configuration space C. </p>
-<p>This allows the user to specify a function f:Q→C , and grow the region in Q instead. The function should be a map R^m to R^n, where n is the dimension of the plant configuration space, determined via <code>checker.plant().num_positions()</code> and m is <code>parameterization_dimension</code> if specified. The user must provide <code>parameterization</code>, which is the function f, <code>parameterization_is_threadsafe</code>, which is whether or not <code>parameterization</code> can be called concurrently, and <code>parameterization_dimension</code>, the dimension of the input space Q. </p>
+<p>Constructor for when the user only provides a version of the parameterization function for Eigen::VectorX&lt;double&gt;. </p>
+<p><code>parameterization_double</code> is the function itself, <code>parameterization_is_threadsafe</code> specifies whether or not its threadsafe, and <code>parameterization_dimension</code> is the input dimension. </p>
+
+</div>
+</div>
+<a id="a71531d35ed2f17a8246cd183abd0f3e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71531d35ed2f17a8246cd183abd0f3e0">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html">IrisParameterizationFunction</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#adf7b89a44d112da782b63e8bfdf5c082">ParameterizationFunctionDouble</a> &amp;&#160;</td>
+          <td class="paramname"><em>parameterization_double</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#ad8f41a4dcdd2155d6ec5eb4ac762c292">ParameterizationFunctionAutodiff</a> &amp;&#160;</td>
+          <td class="paramname"><em>parameterization_autodiff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>parameterization_is_threadsafe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>parameterization_dimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for when the user only provides both versions of the parameterization function. </p>
+<p><code>parameterization_double</code> is the version for Eigen::VectorX&lt;double&gt;, <code>parameterization_autodiff_</code> is the version for Eigen::VectorX&lt;AutoDiffXd&gt;, <code>parameterization_is_threadsafe</code> specifies whether or not its threadsafe, and <code>parameterization_dimension</code> is the input dimension. </p>
 
 </div>
 </div>
 <a id="a42d241c8e69588d040e75fb1d27f8ff2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42d241c8e69588d040e75fb1d27f8ff2">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d241c8e69588d040e75fb1d27f8ff2">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[5/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,7 +408,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a8fe6c9c1224e1ede57508077843f51e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fe6c9c1224e1ede57508077843f51e0">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe6c9c1224e1ede57508077843f51e0">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,7 +434,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Alternative constructor that allows the user to define the parameterization using a <code>VectorX&lt;Expression&gt;</code>. </p>
-<p>The user must also provide a vector containing the variables used in <code>expression_parameterization</code>, in the order that they should be evaluated. Each <code>Variable</code> in <code>variables</code> must be used, each <code>Variable</code> used in <code>expression_parameterization</code> must appear in <code>variables</code>, and there must be no duplicates in <code>variables</code>. </p><dl class="section note"><dt>Note</dt><dd>Expression parameterizations are always threadsafe. </dd></dl>
+<p>The user must also provide a vector containing the variables used in <code>expression_parameterization</code>, in the order that they should be evaluated. Each <code>Variable</code> in <code>variables</code> must be used, each <code>Variable</code> used in <code>expression_parameterization</code> must appear in <code>variables</code>, and there must be no duplicates in <code>variables</code>. </p><dl class="section note"><dt>Note</dt><dd>This currently only populates the VectorX&lt;double&gt; parameterization. </dd>
+<dd>
+Expression parameterizations are always threadsafe. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">if</td><td>the number of variables used across <code>expression_parameterization</code> does not match <code>ssize(variables)</code>. </td></tr>
@@ -379,7 +449,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="ac18b53a2d262620c5495b5324e16bb60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac18b53a2d262620c5495b5324e16bb60">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac18b53a2d262620c5495b5324e16bb60">&#9670;&nbsp;</a></span>IrisParameterizationFunction() <span class="overload">[7/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -404,20 +474,22 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs an instance of <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html">IrisParameterizationFunction</a> that handles a rational kinematic parameterization. </p>
-<p>Regions are grown in the <code>s</code> variables, so as to minimize collisions in the <code>q</code> variables. See RationalForwardKinematics for details. </p><dl class="section note"><dt>Note</dt><dd>The user is responsible for ensuring <code>kin</code> (and the underlying MultibodyPlant it is built on) is kept alive. If that object is deleted, then the parameterization can no longer be used. </dd></dl>
+<p>Constructs an instance of <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html" title="Ordinarily, IRIS algorithms grow collision free regions in the robot&#39;s configuration space C.">IrisParameterizationFunction</a> that handles a rational kinematic parameterization. </p>
+<p>Regions are grown in the <code>s</code> variables, so as to minimize collisions in the <code>q</code> variables. See RationalForwardKinematics for details. </p><dl class="section note"><dt>Note</dt><dd>This currently only populates the VectorX&lt;double&gt; parameterization. </dd>
+<dd>
+The user is responsible for ensuring <code>kin</code> (and the underlying MultibodyPlant it is built on) is kept alive. If that object is deleted, then the parameterization can no longer be used. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a62c407d1b530fb47102cc346e309204d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62c407d1b530fb47102cc346e309204d">&#9670;&nbsp;</a></span>get_parameterization()</h2>
+<a id="a482a36156e02bb1cf044132be0817c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482a36156e02bb1cf044132be0817c3e">&#9670;&nbsp;</a></span>get_parameterization_autodiff()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#a6b49fe87ea09ecac5be69ce6f550d83e">ParameterizationFunction</a>&amp; get_parameterization </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#ad8f41a4dcdd2155d6ec5eb4ac762c292">ParameterizationFunctionAutodiff</a>&amp; get_parameterization_autodiff </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -425,8 +497,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the parameterization function. </p>
-<dl class="section note"><dt>Note</dt><dd>If the user has not specified this with <code>set_parameterization()</code>, then the default value of <code>parameterization_</code> is the identity function, indicating that the regions should be grown in the full configuration space (in the standard coordinate system). </dd></dl>
+<p>Get the Eigen::VectorX&lt;AutoDiffXd&gt; parameterization function. </p>
+<dl class="section note"><dt>Note</dt><dd>If the user has not specified this with <code>set_parameterization()</code>, then the default value of <code>parameterization_double_</code> is the identity function, indicating that the regions should be grown in the full configuration space (in the standard coordinate system). </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">If</td><td>the user has specified the VectorX&lt;double&gt; parameterization but not the VectorX&lt;AutoDiffXd&gt; parameterization. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -446,7 +524,27 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns what the user has specified as the input dimension for the parameterization function, or std::nullopt if it has not been set. </p>
-<p>A std::nullopt value indicates that IrisZo should use the ambient configuration space dimension as the input dimension to the parameterization. </p>
+<p>A std::nullopt value indicates that the chosen IRIS algorithm should use the ambient configuration space dimension as the input dimension to the parameterization. </p>
+
+</div>
+</div>
+<a id="a4513e64315b07e961c860a6b0cd0d8bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4513e64315b07e961c860a6b0cd0d8bc">&#9670;&nbsp;</a></span>get_parameterization_double()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html#adf7b89a44d112da782b63e8bfdf5c082">ParameterizationFunctionDouble</a>&amp; get_parameterization_double </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Eigen::VectorX&lt;double&gt; parameterization function. </p>
+<dl class="section note"><dt>Note</dt><dd>If the user has not specified this with <code>set_parameterization()</code>, then the default value of <code>parameterization_double_</code> is the identity function, indicating that the regions should be grown in the full configuration space (in the standard coordinate system). </dd></dl>
 
 </div>
 </div>
@@ -466,7 +564,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns whether or not the user has specified the parameterization to be threadsafe. </p>
-<dl class="section note"><dt>Note</dt><dd>The default <code>parameterization_</code> is the identity function, which is threadsafe. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The default parameterization is the identity function, which is threadsafe. </dd></dl>
 
 </div>
 </div>

@@ -38,7 +38,6 @@ var searchData=
   ['lcm',['lcm',['../namespacedrake_1_1lcm.html',1,'drake::lcm'],['../namespacedrake_1_1systems_1_1lcm.html',1,'drake::systems::lcm']]],
   ['logging',['logging',['../namespacedrake_1_1logging.html',1,'drake']]],
   ['manipulation',['manipulation',['../namespacedrake_1_1manipulation.html',1,'drake']]],
-  ['manipulation_5fstation',['manipulation_station',['../namespacedrake_1_1examples_1_1manipulation__station.html',1,'drake::examples']]],
   ['mass_5fspring_5fcloth',['mass_spring_cloth',['../namespacedrake_1_1examples_1_1mass__spring__cloth.html',1,'drake::examples']]],
   ['math',['math',['../namespacedrake_1_1math.html',1,'drake']]],
   ['meshcat',['meshcat',['../namespacedrake_1_1multibody_1_1meshcat.html',1,'drake::multibody']]],
