@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a1f94d1c2b9f9f4bfba53ce45e3ec917e":[1,2,2,4,8],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a2daeb6c0489e788aa3d6df8735ce9464":[1,2,2,4,7],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a4e565ffad315e3a3537ead6663db6203":[1,2,2,4,11],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a58a569e52bd3a03537d3326907f19880":[1,2,2,4,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a2cf60efb957e6713e64fdb2c7ee817e0":[1,2,4,1,9],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a339a93a49733a0a196b08687a1340ef0":[1,2,4,1,3],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a4c9ef6be21e15437cc7451c59dc28468":[1,2,4,1,6],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a5645c21f2752969e24185b05d223b20a":[1,2,4,1,1],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a5e40db520f6aeef75391a33947b244e7":[1,2,4,1,7]
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a5645c21f2752969e24185b05d223b20a":[1,2,4,1,1]
 };

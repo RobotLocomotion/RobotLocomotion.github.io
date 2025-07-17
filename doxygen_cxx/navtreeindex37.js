@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1symbolic_1_1_rational_function.html#ab9871569b35e436ba636cc51b1e29e3c":[3,0,0,15,60,1],
 "classdrake_1_1symbolic_1_1_rational_function.html#ac979ee2875dd307aadcf123b8f3c9250":[3,0,0,15,60,8],
 "classdrake_1_1symbolic_1_1_rational_function.html#ac9d15ee01dce39a2f3e58dabbdbad88e":[3,0,0,15,60,31],
 "classdrake_1_1symbolic_1_1_rational_function.html#aca1b06addf9fc8d26c057aa26d250d57":[3,0,0,15,60,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1_bus_value.html#a2f19a812c2a26ee21b463a31930ecd82":[3,0,0,16,19,6],
 "classdrake_1_1systems_1_1_bus_value.html#a3e813df0366f8a9bde40c8d58f8e93ad":[3,0,0,16,19,4],
 "classdrake_1_1systems_1_1_bus_value.html#a9aff0390ff388655c7476dc72e91d45c":[3,0,0,16,19,10],
-"classdrake_1_1systems_1_1_bus_value.html#a9e2888aae0cedaa5259e4e54d0d9049e":[3,0,0,16,19,1],
-"classdrake_1_1systems_1_1_bus_value.html#aa71d36872f416feaa853788a7a7a7ef8":[3,0,0,16,19,8]
+"classdrake_1_1systems_1_1_bus_value.html#a9e2888aae0cedaa5259e4e54d0d9049e":[3,0,0,16,19,1]
 };

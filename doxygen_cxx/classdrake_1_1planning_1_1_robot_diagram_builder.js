@@ -7,6 +7,7 @@ var classdrake_1_1planning_1_1_robot_diagram_builder =
     [ "Build", "classdrake_1_1planning_1_1_robot_diagram_builder.html#ad56bf8e93cf790fb6af96a2052c4069c", null ],
     [ "builder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#adc75eb5d08543dbab60c9ff58eb96aeb", null ],
     [ "builder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#a418f38f35985db362b3a2183e5078901", null ],
+    [ "BuildForPython", "classdrake_1_1planning_1_1_robot_diagram_builder.html#aecf43a2fb6ffec472ba3a87ba143d446", null ],
     [ "IsDiagramBuilt", "classdrake_1_1planning_1_1_robot_diagram_builder.html#aa303012c41b2b6c417fda78c0197f75f", null ],
     [ "operator=", "classdrake_1_1planning_1_1_robot_diagram_builder.html#a05db50be0e0a71870ea9b69ae2fd8239", null ],
     [ "operator=", "classdrake_1_1planning_1_1_robot_diagram_builder.html#ac01308fa7300bb8824ae7ff2556bbe95", null ],

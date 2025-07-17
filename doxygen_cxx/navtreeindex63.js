@@ -1,5 +1,6 @@
 var NAVTREEINDEX63 =
 {
+"schunk__wsg__driver__functions_8h.html#a4439da2b643292abc0bbb07129cbd324":[4,0,0,6,2,4,0],
 "schunk__wsg__lcm_8h.html":[4,0,0,6,2,5],
 "schunk__wsg__plain__controller_8h.html":[4,0,0,6,2,6],
 "schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcb":[4,0,0,6,2,6,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX63 =
 "standard__operations_8h.html#ab2d5e3ed0dae87a3a9a3ab7671a99021":[4,0,0,1,0,0,2,45],
 "standard__operations_8h.html#ab65f189066e79d8823e1c199ea5f3bf5":[4,0,0,1,0,0,2,29],
 "standard__operations_8h.html#abcb482ba19c98dc61ad2ba12ae9671be":[4,0,0,1,0,0,2,41],
-"standard__operations_8h.html#ac023124b011f56f04b412886e348e809":[4,0,0,1,0,0,2,73],
-"standard__operations_8h.html#ac0a3d7b0b62300064ba6fed28262a878":[4,0,0,1,0,0,2,70]
+"standard__operations_8h.html#ac023124b011f56f04b412886e348e809":[4,0,0,1,0,0,2,73]
 };

@@ -1213,8 +1213,8 @@ var hierarchy =
     ] ],
     [ "TimeStep", "structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html", null ],
     [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html", null ],
-    [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "traits", "classtraits.html", null ],
+    [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "Traits< TrajectorySource >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html", null ],
     [ "Trajectory< T >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "BezierCurve< T >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],

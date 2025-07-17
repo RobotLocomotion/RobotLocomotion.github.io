@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ad7e0abe77b84e16a4224c12492730d30":[3,0,0,16,2,0,4],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html":[3,0,0,16,2,0,0],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a1fbdf8974a433578feee716bd2074060":[3,0,0,16,2,0,0,1],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a2fdb1c59d7e0362407f9784fff99c6ef":[3,0,0,16,2,0,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX69 =
 "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,1,31],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,1,1],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_properties_01_4.html":[3,0,1,2],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[3,0,1,4],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html":[3,0,1,3]
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[3,0,1,4]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"continuous__algebraic__riccati__equation_8h.html#a44ee9a3e4b4fa7d4359e3b05af563979":[4,0,0,7,6,1],
 "continuous__algebraic__riccati__equation_8h.html#a527ab4851f7449ff47374855c79b8413":[4,0,0,7,6,0],
 "continuous__lyapunov__equation_8h.html":[4,0,0,7,7],
 "continuous__lyapunov__equation_8h.html#a781bfc30740843ad1203fa68b7497401":[4,0,0,7,7,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "dir_6b4eff1308767c1c4adf75190a464e09.html":[4,0,0,1,0,0],
 "dir_6c83ef925edcdfdf0a2f376978e93167.html":[4,0,0,6,2],
 "dir_6fa8df7a444ada95958f0256507edcc4.html":[4,0,0,0,0,5],
-"dir_747259117fa90714ed7dadfdb71f4370.html":[4,0,0,0,0,1],
-"dir_758aa030403a70af025108ac41d12d0d.html":[4,0,0,6]
+"dir_747259117fa90714ed7dadfdb71f4370.html":[4,0,0,0,0,1]
 };

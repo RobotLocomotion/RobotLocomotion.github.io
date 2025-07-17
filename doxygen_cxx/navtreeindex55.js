@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"fmt_8h.html#ae46fc519bd6eb9cce38978cf135db800":[4,0,0,1,37,2],
 "fmt__eigen_8h.html":[4,0,0,1,38],
 "fmt__eigen_8h.html#aade4911b7e8d691ef345a2706012a878":[4,0,0,1,38,0],
 "fmt__format__printer_8h.html":[4,0,0,1,4,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "functions_rela_l.html":[3,3,6,10],
 "functions_rela_m.html":[3,3,6,11],
 "functions_rela_o.html":[3,3,6,12],
-"functions_rela_p.html":[3,3,6,13],
-"functions_rela_q.html":[3,3,6,14]
+"functions_rela_p.html":[3,3,6,13]
 };

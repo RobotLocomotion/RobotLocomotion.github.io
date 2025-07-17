@@ -220,6 +220,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad56bf8e93cf790fb6af96a2052c4069c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html">RobotDiagram</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#ad56bf8e93cf790fb6af96a2052c4069c">Build</a> ()</td></tr>
 <tr class="memdesc:ad56bf8e93cf790fb6af96a2052c4069c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the diagram and returns the diagram plus plant and scene graph in a <a class="el" href="classdrake_1_1planning_1_1_robot_diagram.html" title="Storage for a combined diagram, plant, and scene graph.">RobotDiagram</a>.  <a href="#ad56bf8e93cf790fb6af96a2052c4069c">More...</a><br /></td></tr>
 <tr class="separator:ad56bf8e93cf790fb6af96a2052c4069c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf43a2fb6ffec472ba3a87ba143d446"><td class="memItemLeft" align="right" valign="top">internal::BuildResultForPython&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#aecf43a2fb6ffec472ba3a87ba143d446">BuildForPython</a> ()</td></tr>
+<tr class="memdesc:aecf43a2fb6ffec472ba3a87ba143d446"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Performs all the actions of <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#ad56bf8e93cf790fb6af96a2052c4069c" title="Builds the diagram and returns the diagram plus plant and scene graph in a RobotDiagram.">Build()</a>.  <a href="#aecf43a2fb6ffec472ba3a87ba143d446">More...</a><br /></td></tr>
+<tr class="separator:aecf43a2fb6ffec472ba3a87ba143d446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:abc40e743c8d48d2158863064885bb1c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#abc40e743c8d48d2158863064885bb1c7">RobotDiagramBuilder</a> (const <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html">RobotDiagramBuilder</a> &amp;)=delete</td></tr>
 <tr class="separator:abc40e743c8d48d2158863064885bb1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -402,6 +405,31 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets the contained DiagramBuilder (readonly). </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">exception</td><td>when <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#aa303012c41b2b6c417fda78c0197f75f" title="Checks if the diagram has already been built.">IsDiagramBuilt()</a> already. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aecf43a2fb6ffec472ba3a87ba143d446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecf43a2fb6ffec472ba3a87ba143d446">&#9670;&nbsp;</a></span>BuildForPython()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::BuildResultForPython&lt;T&gt; BuildForPython </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Performs all the actions of <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#ad56bf8e93cf790fb6af96a2052c4069c" title="Builds the diagram and returns the diagram plus plant and scene graph in a RobotDiagram.">Build()</a>. </p>
+<p>In addition, transfers ownership of both the built diagram and the internal builder on return. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">exception</td><td>when <a class="el" href="classdrake_1_1planning_1_1_robot_diagram_builder.html#aa303012c41b2b6c417fda78c0197f75f" title="Checks if the diagram has already been built.">IsDiagramBuilt()</a> already. </td></tr>
   </table>
