@@ -446,7 +446,16 @@ T: 3 * ss + 2 * ds, knots: fs[2]
   </dd>
 </dl>
 <p>If nullptr is passed as the <code>max_clique_solver</code>, then max clique will be solved using an instance of MaxCliqueSolverViaGreedy, which is a fast heuristic. If higher quality cliques are desired, consider changing the solver to an instance of MaxCliqueSolverViaMip. Currently, the padding in the collision checker is not forwarded to the algorithm, and therefore the final regions do not necessarily respect this padding. Effectively, this means that the regions are generated as if the padding is set to 0. This behavior may be adjusted in the future at the resolution of #18830.</p>
-<p>Note that MaxCliqueSolverViaMip requires the availability of a Mixed-Integer Linear Programming solver (e.g. Gurobi and/or Mosek). We recommend enabling those solvers if possible because they produce higher quality cliques (<a href="https://drake.mit.edu/bazel.html#proprietary_solvers">https://drake.mit.edu/bazel.html#proprietary_solvers</a>). The method will throw if <code>max_clique_solver</code> cannot solve the max clique problem. </p>
+<dl class="section note"><dt>Note</dt><dd>that MaxCliqueSolverViaMip requires the availability of a Mixed-Integer Linear Programming solver (e.g. Gurobi and/or Mosek). We recommend enabling those solvers if possible because they produce higher quality cliques (<a href="https://drake.mit.edu/bazel.html#proprietary_solvers">https://drake.mit.edu/bazel.html#proprietary_solvers</a>). The method will throw if <code>max_clique_solver</code> cannot solve the max clique problem. </dd>
+<dd>
+If <a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html" title="IrisNp2Options collects all parameters for the IRIS-NP2 algorithm.">IrisNp2Options</a> is used, then the collision checker must be a <a class="el" href="classdrake_1_1planning_1_1_scene_graph_collision_checker.html" title="An implementation of CollisionChecker that uses SceneGraph to provide collision checks.">SceneGraphCollisionChecker</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>Parameterizations are not currently supported for <code>IrisZo</code> and <code>IrisNp2</code> when running <code>IrisFromCliqueCover</code>. This method will throw if options.iris_options is of type <code><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html" title="IrisZoOptions collects all parameters for the IRIS-ZO algorithm.">IrisZoOptions</a></code> or <code><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html" title="IrisNp2Options collects all parameters for the IRIS-NP2 algorithm.">IrisNp2Options</a></code> and specifies a parametrization function. See the documentation of <code><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html" title="IrisZoOptions collects all parameters for the IRIS-ZO algorithm.">IrisZoOptions</a></code> and <code><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html" title="IrisNp2Options collects all parameters for the IRIS-NP2 algorithm.">IrisNp2Options</a></code> for more information about subspace parametrization. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If the options.iris_options.prog_with_additional_constraints is not nullptr i.e. if a prog with additional constraints is provided. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

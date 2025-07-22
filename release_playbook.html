@@ -465,12 +465,12 @@ disruptive changes).</li>
 with your github account; otherwise, the file is read-only).
         <ol>
           <li>For reference, the typical content is thus:
-            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM robotlocomotion/drake:jammy-20250115
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM robotlocomotion/drake:noble-20250612
 
 RUN apt-get -q update &amp;&amp; apt-get -q install -y --no-install-recommends curl nginx-light python3-venv &amp;&amp; apt-get remove -y python3-notebook &amp;&amp; apt-get autoremove -y &amp;&amp; apt-get -q clean
 
 ENV PATH="/opt/drake/bin:${PATH}" \
-  PYTHONPATH="/opt/drake/lib/python3.10/site-packages:${PYTHONPATH}"
+  PYTHONPATH="/opt/drake/lib/python3.12/site-packages:${PYTHONPATH}"
 </code></pre></div>            </div>
           </li>
           <li>If the current content differs by more than just the date from the
@@ -490,14 +490,14 @@ Build.  For example, add <code class="language-plaintext highlighter-rouge">&amp
   <li>For reference (no action required), the
 <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/requirements.txt">requirements.txt</a>
 file should have the following content:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipywidgets==7.7.0
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipywidgets==8.1.7
 
 # We need to repeat drake's wheel dependencies here so that they end up in
 # Deepnote's venv. Deepnote no longer sees the Ubuntu packages in /usr/lib.
-matplotlib==3.5.1
-numpy==1.23
-pydot==1.4.2
-PyYAML==5.3.1
+matplotlib==3.10.3
+numpy==1.26.4
+pydot==4.0.1
+PyYAML==6.0.2
 </code></pre></div>    </div>
   </li>
   <li>Check the initialization notebook at
