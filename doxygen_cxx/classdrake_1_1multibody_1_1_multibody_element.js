@@ -27,7 +27,7 @@ var classdrake_1_1multibody_1_1_multibody_element =
     [ "model_instance", "classdrake_1_1multibody_1_1_multibody_element.html#acd2192bbd60e8c8d2c14763041d66d50", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_multibody_element.html#ac7d3ff54398a47f3c1e9ce9b4fb2e120", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_multibody_element.html#a47e4f9cb97baf94b1cdc26585e2e1e3c", null ],
-    [ "ordinal_impl", "classdrake_1_1multibody_1_1_multibody_element.html#aa6dbd3ba6373213548aabb1b65b388c0", null ],
+    [ "ordinal_impl", "classdrake_1_1multibody_1_1_multibody_element.html#a4e00fa4f13ff51e93bdb20990852e813", null ],
     [ "set_is_ephemeral", "classdrake_1_1multibody_1_1_multibody_element.html#aec74a0672620a8670aaf06ba7c00e1c9", null ],
     [ "SetDefaultParameters", "classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3", null ],
     [ "SetTopology", "classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb", null ],

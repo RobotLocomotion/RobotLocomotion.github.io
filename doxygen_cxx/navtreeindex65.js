@@ -1,5 +1,6 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,3,14,6,1],
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#abbd4e79576559aaa23c51bb71aa0cf3a":[3,0,0,3,14,6,2],
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#afeb620b379f23c1d45f56e28bd5171fe":[3,0,0,3,14,6,6],
 "structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html":[3,0,0,3,15,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX65 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a4f163d1eb4ff9d0900a8f3a7bdcc5232":[3,0,0,4,1,7,8,4],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a5c53151a974d91a6d2da0dc4b33c26f9":[3,0,0,4,1,7,8,3],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#a64cbe7574a9b87347866d8c51f17ec6e":[3,0,0,4,1,7,8,6],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#aa22edceebce91d507158e1e2b688b131":[3,0,0,4,1,7,8,5],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#ac67d27d2dbec3bc7b354ea6232c26c60":[3,0,0,4,1,7,8,8]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html#aa22edceebce91d507158e1e2b688b131":[3,0,0,4,1,7,8,5]
 };

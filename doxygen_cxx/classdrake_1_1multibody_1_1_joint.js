@@ -55,7 +55,7 @@ var classdrake_1_1multibody_1_1_joint =
     [ "num_velocities", "classdrake_1_1multibody_1_1_joint.html#ae0163ac0976659d811e3337647ff0313", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_joint.html#aef0c3fc03c4f63ba216cf67bb7d4ce51", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_joint.html#aeb1b5eb8c9bec9c16bb0b91a56b5e207", null ],
-    [ "ordinal", "classdrake_1_1multibody_1_1_joint.html#af6bd6fa2963762bb878ca4200eae99e2", null ],
+    [ "ordinal", "classdrake_1_1multibody_1_1_joint.html#af3dd9b77a413f356ed246e5bddf56be2", null ],
     [ "parent_body", "classdrake_1_1multibody_1_1_joint.html#af0854302c6beff568c3228fe860e1c61", null ],
     [ "position_lower_limits", "classdrake_1_1multibody_1_1_joint.html#aa36685cdf67af4255bffc827eebb0575", null ],
     [ "position_start", "classdrake_1_1multibody_1_1_joint.html#a0ba1e0f8f4e9c00d58e4bc53e6ff346f", null ],

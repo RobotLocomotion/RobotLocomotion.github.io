@@ -241,9 +241,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aded9a9cca94a35fc5ab0eb794ecfb6f9"><td class="memTemplItemLeft" align="right" valign="top">ElementIndexType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#aded9a9cca94a35fc5ab0eb794ecfb6f9">index_impl</a> () const</td></tr>
 <tr class="memdesc:aded9a9cca94a35fc5ab0eb794ecfb6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this element's unique index.  <a href="#aded9a9cca94a35fc5ab0eb794ecfb6f9">More...</a><br /></td></tr>
 <tr class="separator:aded9a9cca94a35fc5ab0eb794ecfb6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6dbd3ba6373213548aabb1b65b388c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#aa6dbd3ba6373213548aabb1b65b388c0">ordinal_impl</a> () const</td></tr>
-<tr class="memdesc:aa6dbd3ba6373213548aabb1b65b388c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this element's unique ordinal.  <a href="#aa6dbd3ba6373213548aabb1b65b388c0">More...</a><br /></td></tr>
-<tr class="separator:aa6dbd3ba6373213548aabb1b65b388c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e00fa4f13ff51e93bdb20990852e813"><td class="memTemplParams" colspan="2">template&lt;typename ElementOrdinalType  = int64_t&gt; </td></tr>
+<tr class="memitem:a4e00fa4f13ff51e93bdb20990852e813"><td class="memTemplItemLeft" align="right" valign="top">ElementOrdinalType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a4e00fa4f13ff51e93bdb20990852e813">ordinal_impl</a> () const</td></tr>
+<tr class="memdesc:a4e00fa4f13ff51e93bdb20990852e813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this element's unique ordinal.  <a href="#a4e00fa4f13ff51e93bdb20990852e813">More...</a><br /></td></tr>
+<tr class="separator:a4e00fa4f13ff51e93bdb20990852e813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf452ebe0b6b98c3ee73e04b6963feba"><td class="memItemLeft" align="right" valign="top">const internal::MultibodyTree&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#acf452ebe0b6b98c3ee73e04b6963feba">get_parent_tree</a> () const</td></tr>
 <tr class="memdesc:acf452ebe0b6b98c3ee73e04b6963feba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the parent MultibodyTree that owns this element.  <a href="#acf452ebe0b6b98c3ee73e04b6963feba">More...</a><br /></td></tr>
 <tr class="separator:acf452ebe0b6b98c3ee73e04b6963feba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1092,8 +1093,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aa6dbd3ba6373213548aabb1b65b388c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6dbd3ba6373213548aabb1b65b388c0">&#9670;&nbsp;</a></span>ordinal_impl()</h2>
+<a id="a4e00fa4f13ff51e93bdb20990852e813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e00fa4f13ff51e93bdb20990852e813">&#9670;&nbsp;</a></span>ordinal_impl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1102,7 +1103,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classint.html">int</a> ordinal_impl </td>
+          <td class="memname">ElementOrdinalType ordinal_impl </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1116,6 +1117,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns this element's unique ordinal. </p>
+<dl class="section note"><dt>Note</dt><dd>The int64_t default is present for backwards compatibility but you should not use it. Instead, define a ThingOrdinal specialization of <a class="el" href="classdrake_1_1_type_safe_index.html" title="A type-safe non-negative index class.">TypeSafeIndex</a> for any element Thing that has a meaningful ordinal. Then use that type explicitly in Thing's public <code>ordinal()</code> method. </dd></dl>
 
 </div>
 </div>
