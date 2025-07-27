@@ -1,5 +1,6 @@
 var NAVTREEINDEX71 =
 {
+"type__safe__index_8h.html#acbfad204d2aef6ea63d8f6ea5d08199f":[4,0,0,1,73,7],
 "type__safe__index_8h.html#acf601e1a9121a1db796d22c31ce802db":[4,0,0,1,73,4],
 "type__safe__index__pybind_8h.html":[4,0,0,0,0,1,12],
 "type__safe__index__pybind_8h.html#a236143263d0a18d6ec439f707140d7e1":[4,0,0,0,0,1,12,0],

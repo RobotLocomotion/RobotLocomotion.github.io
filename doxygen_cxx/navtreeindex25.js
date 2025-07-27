@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae855057ba808cde3b3615c5e1c4938be":[3,0,0,9,5,0,0],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#af0ac2e6d285796a38d337ebfe9372ef2":[3,0,0,9,5,0,10],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#af7cb053bcbc42d09974cebcd7a1f4c48":[3,0,0,9,5,0,3],
 "classdrake_1_1never__destroyed.html":[3,0,0,40],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1planning_1_1_common_sampled_iris_options.html#a6ba9fd3b985a0c6542c13a2239e836ef":[3,0,0,11,7,4],
 "classdrake_1_1planning_1_1_common_sampled_iris_options.html#a82eead8e5a402b5c5da8b449073bad45":[3,0,0,11,7,10],
 "classdrake_1_1planning_1_1_common_sampled_iris_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,11,7,5],
-"classdrake_1_1planning_1_1_common_sampled_iris_options.html#a9ea1a8f5ef3e6d20b362385e1288c72c":[3,0,0,11,7,8],
-"classdrake_1_1planning_1_1_common_sampled_iris_options.html#aae8c4127673f3ded233ec38b010ef8f4":[3,0,0,11,7,11]
+"classdrake_1_1planning_1_1_common_sampled_iris_options.html#a9ea1a8f5ef3e6d20b362385e1288c72c":[3,0,0,11,7,8]
 };

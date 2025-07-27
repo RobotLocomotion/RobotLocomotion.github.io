@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#ae1ed7863c45788f035096ed919d55238":[3,0,0,9,0,5,7],
 "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#aedd9e5f19cb6e54ee59a0f82059967a6":[3,0,0,9,0,5,0],
 "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#af79bb349e7f805159cc268dba69b847c":[3,0,0,9,0,5,4],
 "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#afa066ebd39d93abd3cb0487769ab2e1d":[3,0,0,9,0,5,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#a96c7c25771960765e62faa13efcce1bc":[3,0,0,9,5,0,9],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#aa31802748296a2a9f3c8ab04a3ab58b0":[3,0,0,9,5,0,4],
 "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#abf1e3c89af40ff48fe33cbffe3f3c025":[3,0,0,9,5,0,8],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae8047523b382903ae29b5187e30cab7b":[3,0,0,9,5,0,1],
-"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae855057ba808cde3b3615c5e1c4938be":[3,0,0,9,5,0,0]
+"classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html#ae8047523b382903ae29b5187e30cab7b":[3,0,0,9,5,0,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#aa76446865e36c6261be8798dbd5b9203":[1,1,0,33,6],
 "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#aa8e1e9254703f4bfe3d3e4d01807f441":[1,1,0,33,10],
 "classdrake_1_1solvers_1_1_linear_constraint.html":[1,1,0,30],
 "classdrake_1_1solvers_1_1_linear_constraint.html#a1188d1e1d043a6687c7a0b4dcff8b0be":[1,1,0,30,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "classdrake_1_1solvers_1_1_mathematical_program.html#a99404b6f3df6bf8650a59215803c5e75":[1,1,2,82],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a99cba841165e2f839e0c16cbe47adc41":[1,1,2,103],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a99f88db5dcc11e612dd1bd10300adaca":[1,1,2,56],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a9cf94f38f3b4c3bbbbb89ce5ef5a66c6":[1,1,2,18],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a9ee00f39c8fbbaab930492dec3e05ffe":[1,1,2,111]
+"classdrake_1_1solvers_1_1_mathematical_program.html#a9cf94f38f3b4c3bbbbb89ce5ef5a66c6":[1,1,2,18]
 };

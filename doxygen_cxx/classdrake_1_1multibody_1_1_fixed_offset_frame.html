@@ -202,6 +202,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85ed93e3f60b6b39558dfcc087442495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab37c950311b422d44019ea551ae5b1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#aab37c950311b422d44019ea551ae5b1e">GetFixedRotationMatrixInBodyFrame</a> () const override</td></tr>
 <tr class="separator:aab37c950311b422d44019ea551ae5b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4374aa340999d5de35249e956b5e005e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a4374aa340999d5de35249e956b5e005e">parent_frame</a> () const</td></tr>
+<tr class="separator:a4374aa340999d5de35249e956b5e005e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a067a77735f18525c71d7928a351aa9c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#a067a77735f18525c71d7928a351aa9c1">FixedOffsetFrame</a> (const <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html">FixedOffsetFrame</a> &amp;)=delete</td></tr>
 <tr class="separator:a067a77735f18525c71d7928a351aa9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -863,8 +865,34 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="abd3d571fb1783d907df5934fb06f3040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3d571fb1783d907df5934fb06f3040">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html">FixedOffsetFrame</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html">FixedOffsetFrame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aac483270050f386a8aa0b04de6f228b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac483270050f386a8aa0b04de6f228b9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aac483270050f386a8aa0b04de6f228b9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -889,29 +917,21 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abd3d571fb1783d907df5934fb06f3040"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd3d571fb1783d907df5934fb06f3040">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a4374aa340999d5de35249e956b5e005e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4374aa340999d5de35249e956b5e005e">&#9670;&nbsp;</a></span>parent_frame()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html">FixedOffsetFrame</a>&amp; operator= </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt;T&gt;&amp; parent_frame </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html">FixedOffsetFrame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The parent frame to which this frame is attached. </dd></dl>
 
 </div>
 </div>

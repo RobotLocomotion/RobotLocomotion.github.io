@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"classdrake_1_1test_1_1_limit_malloc.html#a5f80b3400acbfba343cc4c39c0770ebc":[3,0,0,17,2,8],
 "classdrake_1_1test_1_1_limit_malloc.html#a6c0c47e1e5af49b346ab24c53aaa6ded":[3,0,0,17,2,4],
 "classdrake_1_1test_1_1_limit_malloc.html#a8b0b677bcfc5aadb02adacc95d993b95":[3,0,0,17,2,2],
 "classdrake_1_1test_1_1_limit_malloc.html#a923eedb579481aa1bab9babf206d3ead":[3,0,0,17,2,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aaeabb3c1dcb114550eee132dcebb3a6e":[3,0,0,18,12,10],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#adff893a14b498f0e779c90305602e44d":[3,0,0,18,12,17],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5":[3,0,0,18,12,13],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[3,0,0,18,12,1],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309":[3,0,0,18,12,8]
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[3,0,0,18,12,1]
 };
