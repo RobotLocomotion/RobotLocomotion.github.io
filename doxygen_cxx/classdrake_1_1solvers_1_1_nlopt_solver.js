@@ -11,6 +11,7 @@ var classdrake_1_1solvers_1_1_nlopt_solver =
     [ "is_available", "classdrake_1_1solvers_1_1_nlopt_solver.html#a277134785588d69bb461a4a402877e7a", null ],
     [ "is_enabled", "classdrake_1_1solvers_1_1_nlopt_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd", null ],
     [ "MaxEvalName", "classdrake_1_1solvers_1_1_nlopt_solver.html#acbe005801e7e596d478bb5047324e46a", null ],
+    [ "MaxTimeName", "classdrake_1_1solvers_1_1_nlopt_solver.html#a664b7415711560b9bb37a728e31e7a7a", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_nlopt_solver.html#aced6fff3f0509366118adcdb296beb31", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_nlopt_solver.html#a678d7d58f1fb30841f28442cb0c4d8cc", null ],
     [ "ProgramAttributesSatisfied", "classdrake_1_1solvers_1_1_nlopt_solver.html#a793b4bef71b184ac87f03d80b21c04d2", null ],

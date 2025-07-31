@@ -1,5 +1,6 @@
 var NAVTREEINDEX64 =
 {
+"standard__operations_8h.html#ab65f189066e79d8823e1c199ea5f3bf5":[4,0,0,1,0,0,2,29],
 "standard__operations_8h.html#abcb482ba19c98dc61ad2ba12ae9671be":[4,0,0,1,0,0,2,41],
 "standard__operations_8h.html#ac023124b011f56f04b412886e348e809":[4,0,0,1,0,0,2,73],
 "standard__operations_8h.html#ac0a3d7b0b62300064ba6fed28262a878":[4,0,0,1,0,0,2,70],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html":[3,0,0,3,14,6],
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a156ba06e0e392b0f6291fb2228174470":[3,0,0,3,14,6,7],
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a3f76c6e14000fc4053d666666462094f":[3,0,0,3,14,6,4],
-"structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a499c5571fdb9e317eb6498d5a46a6a0c":[3,0,0,3,14,6,5],
-"structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a4f326f1ded578674c93eeb9a24c02500":[3,0,0,3,14,6,0]
+"structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a499c5571fdb9e317eb6498d5a46a6a0c":[3,0,0,3,14,6,5]
 };

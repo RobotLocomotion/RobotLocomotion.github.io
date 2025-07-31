@@ -1,5 +1,6 @@
 var NAVTREEINDEX69 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[3,0,0,16,2,0,1],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6":[3,0,0,16,2,0,3],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab63f7cdb7cd14bc9cc48c4b9d4a629a5":[3,0,0,16,2,0,6],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ad7e0abe77b84e16a4224c12492730d30":[3,0,0,16,2,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX69 =
 "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[3,0,1,5],
 "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html":[3,0,1,15],
 "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html":[3,0,1,14],
-"structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,1,31],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,1,1]
+"structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,1,31]
 };

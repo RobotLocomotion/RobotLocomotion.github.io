@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a4c9ef6be21e15437cc7451c59dc28468":[1,2,4,1,6],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a5645c21f2752969e24185b05d223b20a":[1,2,4,1,1],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a5e40db520f6aeef75391a33947b244e7":[1,2,4,1,7],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a631d161f2ccaa5a50659a72ebb2c4a0c":[1,2,4,1,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html#aae820b0a25188d53d906c99bf4c59a3b":[3,0,0,17,1,0,4],
 "classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html#ae275b079daa43f86ce3849f3b32e7201":[3,0,0,17,1,0,3],
 "classdrake_1_1test_1_1_limit_malloc.html":[3,0,0,17,2],
-"classdrake_1_1test_1_1_limit_malloc.html#a14d16b667a4d7d25d44e45315f9a7deb":[3,0,0,17,2,6],
-"classdrake_1_1test_1_1_limit_malloc.html#a478ec7cfb497736991907bf0b70d9cc0":[3,0,0,17,2,0]
+"classdrake_1_1test_1_1_limit_malloc.html#a14d16b667a4d7d25d44e45315f9a7deb":[3,0,0,17,2,6]
 };

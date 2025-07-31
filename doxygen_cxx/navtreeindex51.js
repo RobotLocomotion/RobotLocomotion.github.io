@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[3,0,0,18,12,1],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309":[3,0,0,18,12,8],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#afc66a15124c3d9cfce830865935d3013":[3,0,0,18,12,6],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#afcec38847e04c1bb331a306768da20c7":[3,0,0,18,12,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "contact__wrench__evaluator_8h.html":[4,0,0,8,8,2],
 "context_8h.html":[4,0,0,12,3,8],
 "context_8h.html#a1043536ab5a5b5e8a806766c2f2ac3f4":[4,0,0,12,3,8,1],
-"context_8h.html#a28d54aeb4ed10ced064d5b36f5aa8b67":[4,0,0,12,3,8,2],
-"context__base_8h.html":[4,0,0,12,3,9]
+"context_8h.html#a28d54aeb4ed10ced064d5b36f5aa8b67":[4,0,0,12,3,8,2]
 };
