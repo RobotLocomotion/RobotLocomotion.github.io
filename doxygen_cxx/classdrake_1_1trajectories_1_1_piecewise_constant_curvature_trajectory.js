@@ -17,6 +17,6 @@ var classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory =
     [ "length", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a319b1046f6f739132918623ea8aa25d8", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a49c54d6b75561787901ec5de8d831979", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a13775f15ccac8d15b55ebac5232818b4", null ],
-    [ "value", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a6c7298f213adae5ec61e76d94d67d3ae", null ],
+    [ "value", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#ac9c43690dad50a90fa4f1a1999b7e9c7", null ],
     [ "PiecewiseConstantCurvatureTrajectory", "classdrake_1_1trajectories_1_1_piecewise_constant_curvature_trajectory.html#a34eda3a0d1a4264f6c3463af5e457707", null ]
 ];

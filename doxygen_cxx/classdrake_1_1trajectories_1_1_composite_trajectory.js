@@ -8,5 +8,5 @@ var classdrake_1_1trajectories_1_1_composite_trajectory =
     [ "operator=", "classdrake_1_1trajectories_1_1_composite_trajectory.html#a565b401214fc119baca5476097474ebf", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_composite_trajectory.html#a581a015e893005dbcd6883093a04c82c", null ],
     [ "segment", "classdrake_1_1trajectories_1_1_composite_trajectory.html#ad6a459d5e94794486e86aacb53ecfe1b", null ],
-    [ "value", "classdrake_1_1trajectories_1_1_composite_trajectory.html#adca2766204b86212e8ed2b91faa97775", null ]
+    [ "value", "classdrake_1_1trajectories_1_1_composite_trajectory.html#ab73f502bdd3198e6551bf84699614e79", null ]
 ];

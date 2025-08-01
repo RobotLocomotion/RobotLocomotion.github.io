@@ -8,5 +8,5 @@ var classdrake_1_1trajectories_1_1_path_parameterized_trajectory =
     [ "operator=", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#a1d2630303963dbd6257823c89b4164ce", null ],
     [ "path", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#abbe04f8c2fd40cf6b8f22298bdca05f1", null ],
     [ "time_scaling", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#aeaf76c3b69e479e70c002c9e35085f4b", null ],
-    [ "value", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#adca2766204b86212e8ed2b91faa97775", null ]
+    [ "value", "classdrake_1_1trajectories_1_1_path_parameterized_trajectory.html#ab73f502bdd3198e6551bf84699614e79", null ]
 ];

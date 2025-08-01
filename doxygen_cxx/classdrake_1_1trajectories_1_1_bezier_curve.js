@@ -13,5 +13,5 @@ var classdrake_1_1trajectories_1_1_bezier_curve =
     [ "operator=", "classdrake_1_1trajectories_1_1_bezier_curve.html#aabb3eea611e5a4d88dd140ed23b2e3ef", null ],
     [ "operator=", "classdrake_1_1trajectories_1_1_bezier_curve.html#ac710ab3203207dbdd70dd26d52234258", null ],
     [ "order", "classdrake_1_1trajectories_1_1_bezier_curve.html#abcc41a4e499b9ebcdc71c5e213c7c22f", null ],
-    [ "value", "classdrake_1_1trajectories_1_1_bezier_curve.html#adca2766204b86212e8ed2b91faa97775", null ]
+    [ "value", "classdrake_1_1trajectories_1_1_bezier_curve.html#ab73f502bdd3198e6551bf84699614e79", null ]
 ];

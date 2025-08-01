@@ -21,5 +21,5 @@ var classdrake_1_1trajectories_1_1_bspline_trajectory =
     [ "operator=", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#acc1fbdce99e21637c6739f65cdb081c7", null ],
     [ "operator==", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a8ba65f057b09f645ebefbccd5b490fcc", null ],
     [ "Serialize", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a8e8824802dedfbc36776227f7482b6bc", null ],
-    [ "value", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#adca2766204b86212e8ed2b91faa97775", null ]
+    [ "value", "classdrake_1_1trajectories_1_1_bspline_trajectory.html#ab73f502bdd3198e6551bf84699614e79", null ]
 ];

@@ -12,7 +12,7 @@ var classdrake_1_1trajectories_1_1_piecewise_polynomial =
     [ "AppendCubicHermiteSegment", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac93013774f250920857c17c083350b57", null ],
     [ "AppendFirstOrderSegment", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a603a4e747fb099305c01f8762e8cff23", null ],
     [ "Block", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a45001b70f1a92e1d01778b69bb61adf3", null ],
-    [ "cols", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6f3379a2754487a0ec8bf752912a41bf", null ],
+    [ "cols", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad6c1acca5de9ae9bed71bbafb0051de3", null ],
     [ "ConcatenateInTime", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a75d7ffe2f4e1a808aaeb76a871f772e2", null ],
     [ "CubicHermite", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5412c17187dde2f8984dcfb3eb67ca1d", null ],
     [ "CubicHermite", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa77d19bf3de0a1c93d54679d0ba86bef", null ],
@@ -50,7 +50,7 @@ var classdrake_1_1trajectories_1_1_piecewise_polynomial =
     [ "RemoveFinalSegment", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a88e900c12b23dd1cb0bccb6d0357db5f", null ],
     [ "Reshape", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a39001029f6f2e13a8890f233254c4709", null ],
     [ "ReverseTime", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afca7568bb098808d681cb14d7fa09f99", null ],
-    [ "rows", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#abec7b1f5c2c6face018616992476881f", null ],
+    [ "rows", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adcc8b67a7b625544afb0ae19bcf76564", null ],
     [ "scalarValue", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a16274d0c316c76ded4b85111b38ece15", null ],
     [ "ScaleTime", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a923a4ac5ef6f85f444519188d9dbd3e1", null ],
     [ "Serialize", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8e8824802dedfbc36776227f7482b6bc", null ],
@@ -59,7 +59,7 @@ var classdrake_1_1trajectories_1_1_piecewise_polynomial =
     [ "slice", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a28dc60d1015ae4d2e946898a2eec5692", null ],
     [ "SliceByTime", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ab0edf720069e60d0da73fba82dec2fa2", null ],
     [ "Transpose", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f", null ],
-    [ "value", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca2766204b86212e8ed2b91faa97775", null ],
+    [ "value", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ab73f502bdd3198e6551bf84699614e79", null ],
     [ "ZeroOrderHold", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a06278ca4588ba1adb004b84fdfc62f3c", null ],
     [ "ZeroOrderHold", "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a1108c20b0d02730aa202de0115755fb2", null ]
 ];
