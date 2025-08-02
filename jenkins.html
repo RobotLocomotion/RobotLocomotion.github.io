@@ -155,43 +155,7 @@ analysis.
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <p>When a new pull request is opened in the project and the author of the pull
-request is not a member of the RobotLocomotion GitHub organization, the Jenkins
-GitHub Pull Request Builder @drake-jenkins-bot will not automatically schedule
-builds.</p>
-
-<p>To allow the pull request to be tested, a member of the RobotLocomotion
-organization may comment:</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot ok to test</code> to accept this pull request for testing.</li>
-  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot test this please</code> for a one time test run.</li>
-</ul>
-
-<p>If the build fails for other various reasons you can rebuild:</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot retest this please</code> to start a new build.</li>
-</ul>
-
-<p>You can also view the <a href="https://drake-jenkins.csail.mit.edu/">Jenkins UI</a>
-directly.</p>
-
-<h1 id="rebuilding-via-reviewable">Rebuilding via Reviewable</h1>
-
-<p>When posting a <code class="language-plaintext highlighter-rouge">@drake-jenkins-bot ... please</code> comment in Reviewable,
-never use the large green “Publish” button in the upper right corner.</p>
-
-<p>Instead, write the bot comment in the “Review discussion” box immediately below
-the “File Matrix” widget <strong>and</strong> use the “single message send” button to post
-it, in the lower-right corner of the “Review discussion” box.</p>
-
-<p><img src="/images/jenkins_bot_reviewable_comment.png" alt="Jenkins Bot Reviewable Comment" /></p>
-
-<p>(For details, see
-<a href="https://github.com/Reviewable/Reviewable/issues/576">Reviewable#576</a>.)</p>
-
-<h1 id="scheduling-an-on-demand-build">Scheduling an On-Demand Build</h1>
+        <h1 id="scheduling-an-on-demand-build">Scheduling an On-Demand Build</h1>
 
 <p>There are a number of Jenkins builds that do not normally run pre-merge, but do
 run post-merge or nightly. These builds include lower-priority
@@ -222,10 +186,31 @@ set of continuous and nightly production jobs is available
 <a href="https://github.com/RobotLocomotion/drake/blob/jenkins-jobs-experimental/request-jobs-experimental.txt">here</a>.
 Both provisioned and unprovisioned jobs are listed.</p>
 
+<p>To rerun all regular builds on an open pull request (if the previous build(s)
+failed for various reasons), comment:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot retest this please</code></li>
+</ul>
+
+<h2 id="rebuilding-via-reviewable">Rebuilding via Reviewable</h2>
+
+<p>When posting a <code class="language-plaintext highlighter-rouge">@drake-jenkins-bot ... please</code> comment in Reviewable,
+never use the large green “Publish” button in the upper right corner.</p>
+
+<p>Instead, write the bot comment in the “Review discussion” box immediately below
+the “File Matrix” widget <strong>and</strong> use the “single message send” button to post
+it, in the lower-right corner of the “Review discussion” box.</p>
+
+<p><img src="/images/jenkins_bot_reviewable_comment.png" alt="Jenkins Bot Reviewable Comment" /></p>
+
+<p>(For details, see
+<a href="https://github.com/Reviewable/Reviewable/issues/576">Reviewable#576</a>.)</p>
+
 <h2 id="scheduling-builds-via-the-jenkins-user-interface">Scheduling Builds via the Jenkins User Interface</h2>
 
-<p>Alternatively, to schedule a build of an open pull request in the
-<code class="language-plaintext highlighter-rouge">RobotLocomotion/drake</code> repository:</p>
+<p>To schedule a build of an open pull request in the <code class="language-plaintext highlighter-rouge">RobotLocomotion/drake</code>
+repository from the <a href="https://drake-jenkins.csail.mit.edu/">Jenkins UI</a>,</p>
 
 <ol>
   <li><strong>Sign in</strong> to <a href="https://drake-jenkins.csail.mit.edu/">Jenkins</a> using GitHub
@@ -249,6 +234,22 @@ To help identify the on-demand build you want to run, you can consult the lists
 of <a href="https://drake-jenkins.csail.mit.edu/view/Continuous/">continuous</a>, and
 <a href="https://drake-jenkins.csail.mit.edu/view/Nightly/">nightly</a>
 but you should not schedule continuous or nightly builds directly.</p>
+
+<h2 id="testing-pull-requests-from-external-contributors">Testing Pull Requests from External Contributors</h2>
+
+<p>When a new pull request is opened in the project and the author of the pull
+request is not a member of the RobotLocomotion GitHub organization, Jenkins
+will not automatically schedule builds. To test the pull request, a member
+of the RobotLocomotion organization should comment:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot test this please</code> for a one time test run.</li>
+  <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot retest this please</code> to start a new build, if the
+previous build fails for various reasons.</li>
+</ul>
+
+<p>You can also view the <a href="https://drake-jenkins.csail.mit.edu/">Jenkins UI</a>
+directly.</p>
 
 <h2 id="updating-installation-prerequisites">Updating Installation Prerequisites</h2>
 
