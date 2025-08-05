@@ -389,6 +389,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6060c77125050d8c1b479a83d983a569"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a6060c77125050d8c1b479a83d983a569">AddL2NormCostUsingConicConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;vars)</td></tr>
 <tr class="memdesc:a6060c77125050d8c1b479a83d983a569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an L2 norm cost min |Ax+b|₂ as a linear cost min s on the slack variable s, together with a Lorentz cone constraint s ≥ |Ax+b|₂ Many conic optimization solvers (Gurobi, MOSEK<a href="/tm.html">™</a>, SCS, etc) natively prefers this form of linear cost + conic constraints.  <a href="#a6060c77125050d8c1b479a83d983a569">More...</a><br /></td></tr>
 <tr class="separator:a6060c77125050d8c1b479a83d983a569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb72303794bd001aeb839c95016b477a"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#abb72303794bd001aeb839c95016b477a">AddL1NormCostInEpigraphForm</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;vars)</td></tr>
+<tr class="memdesc:abb72303794bd001aeb839c95016b477a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an L1 norm cost min |Ax+b|₁ as a linear cost min Σᵢsᵢ on the slack variables sᵢ, together with the constraints (for each i) sᵢ ≥ (|Ax+b|)ᵢ, which itself is written sᵢ ≥ (Ax+b)ᵢ and sᵢ ≥ -(Ax+b)ᵢ.  <a href="#abb72303794bd001aeb839c95016b477a">More...</a><br /></td></tr>
+<tr class="separator:abb72303794bd001aeb839c95016b477a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14edfab282bd8d3d03bf38bb87a5fe51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_polynomial_cost.html">PolynomialCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a14edfab282bd8d3d03bf38bb87a5fe51">AddPolynomialCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:a14edfab282bd8d3d03bf38bb87a5fe51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost term in the polynomial form.  <a href="#a14edfab282bd8d3d03bf38bb87a5fe51">More...</a><br /></td></tr>
 <tr class="separator:a14edfab282bd8d3d03bf38bb87a5fe51"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2476,6 +2479,43 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 
 </div>
 </div>
+<a id="abb72303794bd001aeb839c95016b477a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb72303794bd001aeb839c95016b477a">&#9670;&nbsp;</a></span>AddL1NormCostInEpigraphForm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a>&gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a>&gt; &gt; AddL1NormCostInEpigraphForm </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vars</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an L1 norm cost min |Ax+b|₁ as a linear cost min Σᵢsᵢ on the slack variables sᵢ, together with the constraints (for each i) sᵢ ≥ (|Ax+b|)ᵢ, which itself is written sᵢ ≥ (Ax+b)ᵢ and sᵢ ≥ -(Ax+b)ᵢ. </p>
+<dl class="section return"><dt>Returns</dt><dd>(s, linear_cost, linear_constraint). <code>s</code> is the vector of slack variables, <code>linear_cost</code> is the cost on <code>s</code>, and <code>linear_constraint</code> is the constraint encoding s ≥ Ax+b and s ≥ -(Ax+b). </dd></dl>
+
+</div>
+</div>
 <a id="ac57dac7a44fa56077931a7998f7069e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac57dac7a44fa56077931a7998f7069e2">&#9670;&nbsp;</a></span>AddL2NormCost() <span class="overload">[1/3]</span></h2>
 
@@ -2509,7 +2549,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div><div class="memdoc">
 
 <p>Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm). </p>
-<dl class="section note"><dt>Note</dt><dd>Currently kL2NormCost is supported by <a class="el" href="classdrake_1_1solvers_1_1_snopt_solver.html" title="An implementation of SolverInterface for the commercially-licensed SNOPT solver (https://ccom....">SnoptSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_ipopt_solver.html" title="A wrapper to call Ipopt using Drake&#39;s MathematicalProgram.">IpoptSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_gurobi_solver.html" title="An implementation of SolverInterface for the commercially-licensed Gurobi solver (https://www....">GurobiSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_mosek_solver.html" title="An implementation of SolverInterface for the commercially-licensed MOSEK (TM) solver (https://www....">MosekSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html" title="An interface to wrap Clarabel https://github.com/oxfordcontrol/Clarabel.cpp.">ClarabelSolver</a>, and SCSSolver. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Currently kL2NormCost is supported by <a class="el" href="classdrake_1_1solvers_1_1_snopt_solver.html" title="An implementation of SolverInterface for the commercially-licensed SNOPT solver (https://ccom....">SnoptSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_ipopt_solver.html" title="A wrapper to call Ipopt using Drake&#39;s MathematicalProgram.">IpoptSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_nlopt_solver.html">NloptSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_gurobi_solver.html" title="An implementation of SolverInterface for the commercially-licensed Gurobi solver (https://www....">GurobiSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_mosek_solver.html" title="An implementation of SolverInterface for the commercially-licensed MOSEK (TM) solver (https://www....">MosekSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_clarabel_solver.html" title="An interface to wrap Clarabel https://github.com/oxfordcontrol/Clarabel.cpp.">ClarabelSolver</a>, and SCSSolver. </dd></dl>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX70 =
 {
+"structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html":[3,0,1,31],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html":[3,0,1,1],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_properties_01_4.html":[3,0,1,2],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[3,0,1,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX70 =
 "type__pack_8h.html#aca2ad496fcfd4aab65f4f9eaf50759cb":[4,0,0,0,0,1,11,8],
 "type__safe__index_8h.html":[4,0,0,1,73],
 "type__safe__index_8h.html#a0ecf596b531ff0044a8365dbb448be80":[4,0,0,1,73,5],
-"type__safe__index_8h.html#a358d8dea3263eecab5691d5781de49b8":[4,0,0,1,73,3],
-"type__safe__index_8h.html#a6d7103ea63800fa4c6ec3b74707c95dc":[4,0,0,1,73,8]
+"type__safe__index_8h.html#a358d8dea3263eecab5691d5781de49b8":[4,0,0,1,73,3]
 };

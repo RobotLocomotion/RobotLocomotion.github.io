@@ -53,6 +53,7 @@ var classdrake_1_1solvers_1_1_mathematical_program =
     [ "AddIndeterminate", "classdrake_1_1solvers_1_1_mathematical_program.html#a100c35ec0287aaded41a390e0fe95e4b", null ],
     [ "AddIndeterminates", "classdrake_1_1solvers_1_1_mathematical_program.html#a1d17877e373279d18488f21836285539", null ],
     [ "AddIndeterminates", "classdrake_1_1solvers_1_1_mathematical_program.html#a4b39856ec07e10a4f9f9980dbc33ef98", null ],
+    [ "AddL1NormCostInEpigraphForm", "classdrake_1_1solvers_1_1_mathematical_program.html#abb72303794bd001aeb839c95016b477a", null ],
     [ "AddL2NormCost", "classdrake_1_1solvers_1_1_mathematical_program.html#ac57dac7a44fa56077931a7998f7069e2", null ],
     [ "AddL2NormCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a7f5853578a7be1dd5279c7e73cd719e6", null ],
     [ "AddL2NormCost", "classdrake_1_1solvers_1_1_mathematical_program.html#ae67df20380ff252b1f22ff6509372987", null ],

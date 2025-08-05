@@ -3590,6 +3590,22 @@ decision variables.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">MathematicalProgram.AddL1NormCostInEpigraphForm(self:</span> <span class="pre">pydrake.solvers.MathematicalProgram,</span> <span class="pre">A:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous],</span> <span class="pre">b:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">vars:</span> <span class="pre">numpy.ndarray[object[m,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">tuple[numpy.ndarray[object[m,</span> <span class="pre">1]],</span> <span class="pre">pydrake.solvers.Binding[LinearCost],</span> <span class="pre">pydrake.solvers.Binding[LinearConstraint]]</span></span></dt>
+<dd><p>Adds an L1 norm cost min <a href="#id55"><span class="problematic" id="id56">|Ax+b|₁ as a linear cost min Σᵢsᵢ on the
+slack variables sᵢ, together with the constraints (for each i) sᵢ ≥
+(|Ax+b|</span></a>)ᵢ, which itself is written sᵢ ≥ (Ax+b)ᵢ and sᵢ ≥ -(Ax+b)ᵢ.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(s, linear_cost, linear_constraint). <code class="docutils literal notranslate"><span class="pre">s</span></code> is the vector of slack
+variables, <code class="docutils literal notranslate"><span class="pre">linear_cost</span></code> is the cost on <code class="docutils literal notranslate"><span class="pre">s</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">linear_constraint</span></code> is the constraint encoding s ≥ Ax+b and s ≥
+-(Ax+b).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">MathematicalProgram.AddL2NormCost(*args,</span> <span class="pre">**kwargs)</span></span></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
@@ -3600,7 +3616,8 @@ we don’t take the square of the L2 norm).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Currently kL2NormCost is supported by SnoptSolver, IpoptSolver,
-GurobiSolver, MosekSolver, ClarabelSolver, and SCSSolver.</p>
+NloptSolver, GurobiSolver, MosekSolver, ClarabelSolver, and
+SCSSolver.</p>
 </div>
 <ol class="arabic simple" start="2">
 <li><p>AddL2NormCost(self: pydrake.solvers.MathematicalProgram, e: pydrake.symbolic.Expression, psd_tol: float = 1e-08, coefficient_tol: float = 1e-08) -&gt; pydrake.solvers.Binding[L2NormCost]</p></li>
@@ -4241,13 +4258,13 @@ X.</p>
 <span class="sig-name descname"><span class="pre">MathematicalProgram.AddPositiveDiagonallyDominantMatrixConstraint(self:</span> <span class="pre">pydrake.solvers.MathematicalProgram,</span> <span class="pre">X:</span> <span class="pre">numpy.ndarray[object[m,</span> <span class="pre">n],</span> <span class="pre">flags.f_contiguous])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[object[m,</span> <span class="pre">n]]</span></span></dt>
 <dd><p>Adds the constraint that a symmetric matrix is diagonally dominant
 with non-negative diagonal entries. A symmetric matrix X is diagonally
-dominant with non-negative diagonal entries if X(i, i) &gt;= ∑ⱼ <a href="#id55"><span class="problematic" id="id56">|X(i, j)|</span></a>
+dominant with non-negative diagonal entries if X(i, i) &gt;= ∑ⱼ <a href="#id57"><span class="problematic" id="id58">|X(i, j)|</span></a>
 ∀ j ≠ i namely in each row, the diagonal entry is larger than the sum
 of the absolute values of all other entries in the same row. A matrix
 being diagonally dominant with non-negative diagonals is a sufficient
 (but not necessary) condition of a matrix being positive semidefinite.
 Internally we will create a matrix Y as slack variables, such that
-Y(i, j) represents the absolute value <a href="#id57"><span class="problematic" id="id58">|X(i, j)|</span></a> ∀ j ≠ i. The diagonal
+Y(i, j) represents the absolute value <a href="#id59"><span class="problematic" id="id60">|X(i, j)|</span></a> ∀ j ≠ i. The diagonal
 entries Y(i, i) = X(i, i) The users can refer to “DSOS and SDSOS
 Optimization: More Tractable Alternatives to Sum of Squares and
 Semidefinite Optimization” by Amir Ali Ahmadi and Anirudha Majumdar,
@@ -4259,7 +4276,7 @@ X.</p>
 </dl>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Y The slack variable. Y(i, j) represents <a href="#id59"><span class="problematic" id="id60">|X(i, j)|</span></a> ∀ j ≠ i, with
+<dd class="field-odd"><p>Y The slack variable. Y(i, j) represents <a href="#id61"><span class="problematic" id="id62">|X(i, j)|</span></a> ∀ j ≠ i, with
 the constraint Y(i, j) &gt;= X(i, j) and Y(i, j) &gt;= -X(i, j). Y is a
 symmetric matrix. The diagonal entries Y(i, i) = X(i, i)</p>
 </dd>
@@ -4308,7 +4325,7 @@ variable M that are also newly added.</p>
 </dd>
 </dl>
 <p>For example, to add a constraint that</p>
-<p>⌈x + 1 2x + 3 x+y⌉ <a href="#id61"><span class="problematic" id="id62">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
+<p>⌈x + 1 2x + 3 x+y⌉ <a href="#id63"><span class="problematic" id="id64">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
 The user could call</p>
 <details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
 <span class="n">Matrix3</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="o">::</span><span class="n">Expression</span><span class="o">&gt;</span><span class="w"> </span><span class="n">e</span>
@@ -6962,12 +6979,12 @@ bilinear product.</p>
 <dl class="py property">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">MixedIntegerRotationConstraintGenerator.ReturnType.B_</span></span></dt>
-<dd><p><a href="#id65"><span class="problematic" id="id66">B_</span></a> contains the new binary variables added to the program. B_`i][j]
+<dd><p><a href="#id67"><span class="problematic" id="id68">B_</span></a> contains the new binary variables added to the program. B_`i][j]
 represents in which interval R(i, j) lies. If we use linear binning,
-then B_[i][j] is of length 2 * <a href="#id67"><span class="problematic" id="id68">num_intervals_per_half_axis_</span></a>. B_[i][j
+then B_[i][j] is of length 2 * <a href="#id69"><span class="problematic" id="id70">num_intervals_per_half_axis_</span></a>. B_[i][j
 &lt;k&gt;`_ = 1 =&gt; φ(k) ≤ R(i, j) ≤ φ(k + 1) B_`i][j &lt;k&gt;`_ = 0 =&gt; R(i, j) ≥
 φ(k + 1) or R(i, j) ≤ φ(k) If we use logarithmic binning, then
-B_[i][j] is of length 1 + log₂(<a href="#id69"><span class="problematic" id="id70">num_intervals_per_half_axis_</span></a>). If
+B_[i][j] is of length 1 + log₂(<a href="#id71"><span class="problematic" id="id72">num_intervals_per_half_axis_</span></a>). If
 B_[i][j] represents integer k in reflected Gray code, then R(i, j) is
 in the interval [φ(k), φ(k+1)].</p>
 </dd></dl>
@@ -6976,7 +6993,7 @@ in the interval [φ(k), φ(k+1)].</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">MixedIntegerRotationConstraintGenerator.ReturnType.lambda_</span></span></dt>
 <dd><p>λ contains part of the new continuous variables added to the program.
-λ_[i][j] is of length 2 * <a href="#id71"><span class="problematic" id="id72">num_intervals_per_half_axis_</span></a> + 1, such that
+λ_[i][j] is of length 2 * <a href="#id73"><span class="problematic" id="id74">num_intervals_per_half_axis_</span></a> + 1, such that
 R(i, j) = φᵀ * λ_[i][j]. Notice that λ_[i][j] satisfies the special
 ordered set of type 2 (SOS2) constraint. Namely at most two entries in
 λ_[i][j] can be strictly positive, and these two entries have to be
@@ -7548,7 +7565,7 @@ constraint respectively.</p>
 <p>kRotatedLorentzConeConstraint : A rotated Lorentz cone constraint.</p>
 <p>kPositiveSemidefiniteConstraint : A positive semidefinite constraint.</p>
 <p>kExponentialConeConstraint : An exponential cone constraint.</p>
-<p>kL2NormCost : An L2 norm <a href="#id63"><span class="problematic" id="id64">|Ax+b|</span></a></p>
+<p>kL2NormCost : An L2 norm <a href="#id65"><span class="problematic" id="id66">|Ax+b|</span></a></p>
 <p>kBinaryVariable : Variable taking binary value {0, 1}.</p>
 <p>kCallback : Supports callback during solving the problem.</p>
 </div></blockquote>
