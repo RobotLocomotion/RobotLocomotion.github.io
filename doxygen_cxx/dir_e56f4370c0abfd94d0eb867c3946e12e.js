@@ -24,8 +24,6 @@ var dir_e56f4370c0abfd94d0eb867c3946e12e =
     [ "detail_tinyxml2_diagnostic.h", "detail__tinyxml2__diagnostic_8h.html", null ],
     [ "detail_urdf_geometry.h", "detail__urdf__geometry_8h.html", null ],
     [ "detail_urdf_parser.h", "detail__urdf__parser_8h.html", null ],
-    [ "detail_usd_geometry.h", "detail__usd__geometry_8h.html", null ],
-    [ "detail_usd_parser.h", "detail__usd__parser_8h.html", null ],
     [ "model_directives.h", "model__directives_8h.html", [
       [ "AddWeld", "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html", "structdrake_1_1multibody_1_1parsing_1_1_add_weld" ],
       [ "AddModel", "structdrake_1_1multibody_1_1parsing_1_1_add_model.html", "structdrake_1_1multibody_1_1parsing_1_1_add_model" ],

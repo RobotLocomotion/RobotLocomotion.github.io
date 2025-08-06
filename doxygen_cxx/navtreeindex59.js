@@ -1,7 +1,5 @@
 var NAVTREEINDEX59 =
 {
-"make__mesh__for__deformable_8h.html":[4,0,0,4,29],
-"make__mesh__from__vtk_8h.html":[4,0,0,4,2,37],
 "make__pendulum__plant_8h.html":[4,0,0,8,0,5,0],
 "make__pendulum__plant_8h.html#a30233325115a0476081c9049714ce476":[4,0,0,8,0,5,0,1],
 "make__sphere__field_8h.html":[4,0,0,4,2,38],
@@ -117,10 +115,10 @@ var NAVTREEINDEX59 =
 "mobilizer__impl_8h.html":[4,0,0,8,14,25],
 "moby__lcp__solver_8h.html":[4,0,0,11,37],
 "mock__sparse__grid_8h.html":[4,0,0,8,7,3],
-"model__directives_8h.html":[4,0,0,8,9,24],
+"model__directives_8h.html":[4,0,0,8,9,22],
 "model__instance_8h.html":[4,0,0,8,14,26],
 "model__instance_8h.html#a53146d5855c7f411182552f0449a7aa4":[4,0,0,8,14,26,0],
-"model__instance__info_8h.html":[4,0,0,8,9,25],
+"model__instance__info_8h.html":[4,0,0,8,9,23],
 "model__values_8h.html":[4,0,0,12,3,30],
 "modules.html":[1],
 "monomial_8h.html":[4,0,0,1,3,8],
@@ -233,10 +231,10 @@ var NAVTREEINDEX59 =
 "named__positions__functions_8h.html#adbec09473da9017710b6e9abfa224fa3":[4,0,0,6,3,4,0],
 "namespacedrake.html":[3,0,0],
 "namespacedrake.html":[2,0,0],
-"namespacedrake_1_1ad.html":[2,0,0,0],
 "namespacedrake_1_1ad.html":[3,0,0,0],
-"namespacedrake_1_1assert.html":[2,0,0,1],
+"namespacedrake_1_1ad.html":[2,0,0,0],
 "namespacedrake_1_1assert.html":[3,0,0,1],
+"namespacedrake_1_1assert.html":[2,0,0,1],
 "namespacedrake_1_1common.html":[2,0,0,2],
 "namespacedrake_1_1common.html":[3,0,0,2],
 "namespacedrake_1_1common_1_1test.html":[2,0,0,2,0],
@@ -244,10 +242,12 @@ var NAVTREEINDEX59 =
 "namespacedrake_1_1examples.html":[2,0,0,3],
 "namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,3,0],
 "namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0],
-"namespacedrake_1_1examples_1_1allegro__hand.html":[3,0,0,3,1],
 "namespacedrake_1_1examples_1_1allegro__hand.html":[2,0,0,3,1],
+"namespacedrake_1_1examples_1_1allegro__hand.html":[3,0,0,3,1],
 "namespacedrake_1_1examples_1_1ball__plate.html":[2,0,0,3,2],
 "namespacedrake_1_1examples_1_1bead__on__a__wire.html":[2,0,0,3,3],
 "namespacedrake_1_1examples_1_1bead__on__a__wire.html":[3,0,0,3,2],
-"namespacedrake_1_1examples_1_1bouncing__ball.html":[2,0,0,3,4]
+"namespacedrake_1_1examples_1_1bouncing__ball.html":[3,0,0,3,3],
+"namespacedrake_1_1examples_1_1bouncing__ball.html":[2,0,0,3,4],
+"namespacedrake_1_1examples_1_1compass__gait.html":[2,0,0,3,5]
 };
