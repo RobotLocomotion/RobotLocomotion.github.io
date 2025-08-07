@@ -148,9 +148,257 @@
   <section id="module-pydrake.systems.sensors">
 <span id="pydrake-systems-sensors"></span><h1>pydrake.systems.sensors<a class="headerlink" href="#module-pydrake.systems.sensors" title="Link to this heading"></a></h1>
 <p>Bindings for the sensors portion of the Systems framework.</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
+<p>Sensor to represent an ideal accelerometer sensor. Currently does not
+represent noise or bias, but this could and should be added at a later
+date. This sensor measures the proper acceleration of a point on a
+given body B. Proper acceleration subtracts gravity from the
+coordinate acceleration a_WS_S. That is, aproper_WS_S = a_WS_S - g_S
+Note that measurement is taken with respect to the world frame, but
+expressed in the coordinates of the local sensor frame S. Sensor frame
+S is rigidly affixed to the given body B. Note, also, the sign of the
+gravity component. For typical settings (e.g. on Earth assuming a
+constant gravitational field), the direction of “-g_S” is “upwards.”</p>
+<p>There are three inputs to this sensor (nominally from a
+MultibodyPlant): 1. A vector of body poses (e.g.
+plant.get_body_poses_output_port()) 2. A vector of spatial velocities
+(e.g. plant.get_body_spatial_velocities_output_port()) 3. A vector of
+spatial accelerations (e.g.
+plant.get_body_spatial_accelerations_output_port())</p>
+<p>This class is therefore defined by: 1. The rigid body to which this
+sensor is rigidly affixed. 2. A rigid transform from the body frame to
+the sensor frame.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">body_poses&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_spatial_velocities&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_spatial_accelerations&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Accelerometer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; measurement</td></tr></table></td></tr></table><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">Accelerometer_</span></code>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer.__init__(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer,</span> <span class="pre">body:</span> <span class="pre">pydrake.multibody.tree.RigidBody,</span> <span class="pre">X_BS:</span> <span class="pre">pydrake.math.RigidTransform,</span> <span class="pre">gravity_vector:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([0.,</span> <span class="pre">0.,</span> <span class="pre">0.]))</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>the body B to which the sensor is affixed</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BS</span></code>:</dt><dd><p>the pose of sensor frame S in body B</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">gravity_vector</span></code>:</dt><dd><p>the constant acceleration due to gravity expressed in world
+coordinates</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer.body_index(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.BodyIndex</span></span></dt>
+<dd><p>Returns the index of the RigidBody that was supplied in the
+constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer.get_body_accelerations_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer.get_body_poses_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer.get_body_velocities_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer.get_measurement_output_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer.gravity_vector(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Returns the gravity vector supplied in the constructor, or zero if
+none.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer.pose(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.math.RigidTransform</span></span></dt>
+<dd><p>Gets X_BS, the pose of sensor frame S in body B</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_</span></span></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">Accelerometer_[float]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Accelerometer_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Accelerometer_[Expression]</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[AutoDiffXd]</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></p>
+<p>Sensor to represent an ideal accelerometer sensor. Currently does not
+represent noise or bias, but this could and should be added at a later
+date. This sensor measures the proper acceleration of a point on a
+given body B. Proper acceleration subtracts gravity from the
+coordinate acceleration a_WS_S. That is, aproper_WS_S = a_WS_S - g_S
+Note that measurement is taken with respect to the world frame, but
+expressed in the coordinates of the local sensor frame S. Sensor frame
+S is rigidly affixed to the given body B. Note, also, the sign of the
+gravity component. For typical settings (e.g. on Earth assuming a
+constant gravitational field), the direction of “-g_S” is “upwards.”</p>
+<p>There are three inputs to this sensor (nominally from a
+MultibodyPlant): 1. A vector of body poses (e.g.
+plant.get_body_poses_output_port()) 2. A vector of spatial velocities
+(e.g. plant.get_body_spatial_velocities_output_port()) 3. A vector of
+spatial accelerations (e.g.
+plant.get_body_spatial_accelerations_output_port())</p>
+<p>This class is therefore defined by: 1. The rigid body to which this
+sensor is rigidly affixed. 2. A rigid transform from the body frame to
+the sensor frame.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">body_poses&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_spatial_velocities&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_spatial_accelerations&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Accelerometer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; measurement</td></tr></table></td></tr></table><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[AutoDiffXd].__init__(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[AutoDiffXd],</span> <span class="pre">body:</span> <span class="pre">pydrake.multibody.tree.RigidBody_[AutoDiffXd],</span> <span class="pre">X_BS:</span> <span class="pre">pydrake.math.RigidTransform,</span> <span class="pre">gravity_vector:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([0.,</span> <span class="pre">0.,</span> <span class="pre">0.]))</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>the body B to which the sensor is affixed</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BS</span></code>:</dt><dd><p>the pose of sensor frame S in body B</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">gravity_vector</span></code>:</dt><dd><p>the constant acceleration due to gravity expressed in world
+coordinates</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[AutoDiffXd].body_index(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.BodyIndex</span></span></dt>
+<dd><p>Returns the index of the RigidBody that was supplied in the
+constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[AutoDiffXd].get_body_accelerations_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[AutoDiffXd]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[AutoDiffXd].get_body_poses_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[AutoDiffXd]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[AutoDiffXd].get_body_velocities_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[AutoDiffXd]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[AutoDiffXd].get_measurement_output_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort_[AutoDiffXd]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[AutoDiffXd].gravity_vector(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Returns the gravity vector supplied in the constructor, or zero if
+none.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[AutoDiffXd].pose(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.math.RigidTransform</span></span></dt>
+<dd><p>Gets X_BS, the pose of sensor frame S in body B</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[Expression]</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></p>
+<p>Sensor to represent an ideal accelerometer sensor. Currently does not
+represent noise or bias, but this could and should be added at a later
+date. This sensor measures the proper acceleration of a point on a
+given body B. Proper acceleration subtracts gravity from the
+coordinate acceleration a_WS_S. That is, aproper_WS_S = a_WS_S - g_S
+Note that measurement is taken with respect to the world frame, but
+expressed in the coordinates of the local sensor frame S. Sensor frame
+S is rigidly affixed to the given body B. Note, also, the sign of the
+gravity component. For typical settings (e.g. on Earth assuming a
+constant gravitational field), the direction of “-g_S” is “upwards.”</p>
+<p>There are three inputs to this sensor (nominally from a
+MultibodyPlant): 1. A vector of body poses (e.g.
+plant.get_body_poses_output_port()) 2. A vector of spatial velocities
+(e.g. plant.get_body_spatial_velocities_output_port()) 3. A vector of
+spatial accelerations (e.g.
+plant.get_body_spatial_accelerations_output_port())</p>
+<p>This class is therefore defined by: 1. The rigid body to which this
+sensor is rigidly affixed. 2. A rigid transform from the body frame to
+the sensor frame.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">body_poses&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_spatial_velocities&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_spatial_accelerations&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Accelerometer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; measurement</td></tr></table></td></tr></table><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[Expression].__init__(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[Expression],</span> <span class="pre">body:</span> <span class="pre">pydrake.multibody.tree.RigidBody_[Expression],</span> <span class="pre">X_BS:</span> <span class="pre">pydrake.math.RigidTransform,</span> <span class="pre">gravity_vector:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span> <span class="pre">=</span> <span class="pre">array([0.,</span> <span class="pre">0.,</span> <span class="pre">0.]))</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>the body B to which the sensor is affixed</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BS</span></code>:</dt><dd><p>the pose of sensor frame S in body B</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">gravity_vector</span></code>:</dt><dd><p>the constant acceleration due to gravity expressed in world
+coordinates</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[Expression].body_index(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.BodyIndex</span></span></dt>
+<dd><p>Returns the index of the RigidBody that was supplied in the
+constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[Expression].get_body_accelerations_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[Expression]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[Expression].get_body_poses_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[Expression]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[Expression].get_body_velocities_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[Expression]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[Expression].get_measurement_output_port(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort_[Expression]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[Expression].gravity_vector(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Returns the gravity vector supplied in the constructor, or zero if
+none.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Accelerometer_[Expression].pose(self:</span> <span class="pre">pydrake.systems.sensors.Accelerometer_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.math.RigidTransform</span></span></dt>
+<dd><p>Gets X_BS, the pose of sensor frame S in body B</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ApplyCameraConfig(config:</span> <span class="pre">pydrake.systems.sensors.CameraConfig,</span> <span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder,</span> <span class="pre">lcm_buses:</span> <span class="pre">pydrake.systems.lcm.LcmBuses</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">scene_graph:</span> <span class="pre">pydrake.geometry.SceneGraph</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">lcm:</span> <span class="pre">Union[pydrake.lcm.DrakeLcmInterface,</span> <span class="pre">pydrake.systems.lcm.LcmInterfaceSystem]</span> <span class="pre">=</span> <span class="pre">None)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<span class="sig-name descname"><span class="pre">ApplyCameraConfig(config:</span> <span class="pre">pydrake.systems.sensors.CameraConfig,</span> <span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder,</span> <span class="pre">lcm_buses:</span> <span class="pre">pydrake.systems.lcm.LcmBuses</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">plant:</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">scene_graph:</span> <span class="pre">pydrake.geometry.SceneGraph</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">lcm:</span> <span class="pre">Union[pydrake.lcm.DrakeLcmInterface,</span> <span class="pre">pydrake.systems.lcm.LcmInterfaceSystem]</span> <span class="pre">=</span> <span class="pre">None)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Constructs a simulated camera sensor (rgbd sensor and publishing
 systems) within <code class="docutils literal notranslate"><span class="pre">builder</span></code>. As specified, the RGB, depth, and/or
 label images from the camera are published via <code class="docutils literal notranslate"><span class="pre">lcm</span></code> on the channel
@@ -1072,6 +1320,209 @@ must lie in the range 0 &lt; center_y &lt; height.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">ConvertDepth32FTo16U(input:</span> <span class="pre">pydrake.systems.sensors.Image[PixelType.kDepth32F],</span> <span class="pre">output:</span> <span class="pre">pydrake.systems.sensors.Image[PixelType.kDepth16U])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
+<p>Sensor to represent an ideal gyroscopic sensor. Currently does not
+represent noise or bias, but this could and should be added at a later
+date. This sensor measures the angular velocity of a given body B
+relative to the world frame. The sensor frame S is rigidly affixed to
+the given body B. The measurement, written w_WS_S, is expressed in the
+coordinates of frame S. Note that, since S is fixed to B, the angular
+velocity of the two frames is identical, w_WS_S = w_WB_S.</p>
+<p>There are two inputs to this sensor (nominally from a MultibodyPlant):
+1. A vector of body poses (e.g. plant.get_body_poses_output_port()),
+2. A vector of spatial velocities, (e.g.
+plant.get_body_spatial_velocities_output_port()).</p>
+<p>This class is therefore defined by: 1. The Body to which this sensor
+is rigidly affixed, 2. The pose of the sensor frame in the body frame.
+Note that the translational component of the transformation is not
+strictly needed by a gyroscope, as the position of the sensor does not
+affect the measurement. However, as a sensor does have a physical
+location, it is included here for completeness and in case it might be
+useful for display or other purposes.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">body_poses&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_spatial_velocities&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Gyroscope</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; measurement</td></tr></table></td></tr></table><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">Gyroscope_</span></code>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope.__init__(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope,</span> <span class="pre">body:</span> <span class="pre">pydrake.multibody.tree.RigidBody,</span> <span class="pre">X_BS:</span> <span class="pre">pydrake.math.RigidTransform)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Constructor for Gyroscope using full transform.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>the body B to which the sensor is affixed</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BS</span></code>:</dt><dd><p>the pose of sensor frame S in body B</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope.body_index(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.BodyIndex</span></span></dt>
+<dd><p>Returns the index of the RigidBody that was supplied in the
+constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope.get_body_poses_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope.get_body_velocities_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope.get_measurement_output_port(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope.pose(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.math.RigidTransform</span></span></dt>
+<dd><p>Gets X_BS, the pose of sensor frame S in body B.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_</span></span></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">Gyroscope_[float]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Gyroscope_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Gyroscope_[Expression]</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[AutoDiffXd]</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></p>
+<p>Sensor to represent an ideal gyroscopic sensor. Currently does not
+represent noise or bias, but this could and should be added at a later
+date. This sensor measures the angular velocity of a given body B
+relative to the world frame. The sensor frame S is rigidly affixed to
+the given body B. The measurement, written w_WS_S, is expressed in the
+coordinates of frame S. Note that, since S is fixed to B, the angular
+velocity of the two frames is identical, w_WS_S = w_WB_S.</p>
+<p>There are two inputs to this sensor (nominally from a MultibodyPlant):
+1. A vector of body poses (e.g. plant.get_body_poses_output_port()),
+2. A vector of spatial velocities, (e.g.
+plant.get_body_spatial_velocities_output_port()).</p>
+<p>This class is therefore defined by: 1. The Body to which this sensor
+is rigidly affixed, 2. The pose of the sensor frame in the body frame.
+Note that the translational component of the transformation is not
+strictly needed by a gyroscope, as the position of the sensor does not
+affect the measurement. However, as a sensor does have a physical
+location, it is included here for completeness and in case it might be
+useful for display or other purposes.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">body_poses&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_spatial_velocities&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Gyroscope</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; measurement</td></tr></table></td></tr></table><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[AutoDiffXd].__init__(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[AutoDiffXd],</span> <span class="pre">body:</span> <span class="pre">pydrake.multibody.tree.RigidBody_[AutoDiffXd],</span> <span class="pre">X_BS:</span> <span class="pre">pydrake.math.RigidTransform)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Constructor for Gyroscope using full transform.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>the body B to which the sensor is affixed</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BS</span></code>:</dt><dd><p>the pose of sensor frame S in body B</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[AutoDiffXd].body_index(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.BodyIndex</span></span></dt>
+<dd><p>Returns the index of the RigidBody that was supplied in the
+constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[AutoDiffXd].get_body_poses_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[AutoDiffXd]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[AutoDiffXd].get_body_velocities_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[AutoDiffXd]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[AutoDiffXd].get_measurement_output_port(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort_[AutoDiffXd]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[AutoDiffXd].pose(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.math.RigidTransform</span></span></dt>
+<dd><p>Gets X_BS, the pose of sensor frame S in body B.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[Expression]</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></p>
+<p>Sensor to represent an ideal gyroscopic sensor. Currently does not
+represent noise or bias, but this could and should be added at a later
+date. This sensor measures the angular velocity of a given body B
+relative to the world frame. The sensor frame S is rigidly affixed to
+the given body B. The measurement, written w_WS_S, is expressed in the
+coordinates of frame S. Note that, since S is fixed to B, the angular
+velocity of the two frames is identical, w_WS_S = w_WB_S.</p>
+<p>There are two inputs to this sensor (nominally from a MultibodyPlant):
+1. A vector of body poses (e.g. plant.get_body_poses_output_port()),
+2. A vector of spatial velocities, (e.g.
+plant.get_body_spatial_velocities_output_port()).</p>
+<p>This class is therefore defined by: 1. The Body to which this sensor
+is rigidly affixed, 2. The pose of the sensor frame in the body frame.
+Note that the translational component of the transformation is not
+strictly needed by a gyroscope, as the position of the sensor does not
+affect the measurement. However, as a sensor does have a physical
+location, it is included here for completeness and in case it might be
+useful for display or other purposes.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">body_poses&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">body_spatial_velocities&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Gyroscope</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; measurement</td></tr></table></td></tr></table><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[Expression].__init__(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[Expression],</span> <span class="pre">body:</span> <span class="pre">pydrake.multibody.tree.RigidBody_[Expression],</span> <span class="pre">X_BS:</span> <span class="pre">pydrake.math.RigidTransform)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Constructor for Gyroscope using full transform.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>the body B to which the sensor is affixed</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_BS</span></code>:</dt><dd><p>the pose of sensor frame S in body B</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[Expression].body_index(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.BodyIndex</span></span></dt>
+<dd><p>Returns the index of the RigidBody that was supplied in the
+constructor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[Expression].get_body_poses_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[Expression]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[Expression].get_body_velocities_input_port(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[Expression]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[Expression].get_measurement_output_port(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.OutputPort_[Expression]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Gyroscope_[Expression].pose(self:</span> <span class="pre">pydrake.systems.sensors.Gyroscope_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.math.RigidTransform</span></span></dt>
+<dd><p>Gets X_BS, the pose of sensor frame S in body B.</p>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="py template">
 <dt class="sig sig-object py">

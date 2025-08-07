@@ -173,6 +173,7 @@ See "Caveats" in drake/doc/README.txt.
       <li><a href="#differences-with-c-api" id="markdown-toc-differences-with-c-api">Differences with C++ API</a></li>
       <li><a href="#scalar-types" id="markdown-toc-scalar-types">Scalar Types</a></li>
       <li><a href="#c-function-and-method-template-instantiations-in-python" id="markdown-toc-c-function-and-method-template-instantiations-in-python">C++ Function and Method Template Instantiations in Python</a></li>
+      <li><a href="#memory-management-with-the-python-bindings" id="markdown-toc-memory-management-with-the-python-bindings">Memory management with the Python Bindings</a></li>
       <li><a href="#debugging-with-the-python-bindings" id="markdown-toc-debugging-with-the-python-bindings">Debugging with the Python Bindings</a></li>
       <li><a href="#for-developers" id="markdown-toc-for-developers">For Developers</a></li>
     </ul>
@@ -442,6 +443,33 @@ GeometryProperties::AddProperty&lt;ValueType&gt;(group_name, name, value)
   <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">InputPort_</span><span class="p">[</span><span class="n">T</span><span class="p">].</span><span class="nc">Eval</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
 <span class="n">GeometryProperties</span><span class="p">.</span><span class="nc">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </code></pre></div>  </div>
+
+  <h2 id="memory-management-with-the-python-bindings">Memory management with the Python Bindings</h2>
+
+  <p>Recent versions (since v1.37.0 or so) of <code class="language-plaintext highlighter-rouge">pydrake</code> have improved memory
+correctness. There should be no use of freed objects (seg-faults, weird
+assertions, etc.) and ever fewer memory leaks.</p>
+
+  <p>The price of the new memory regime is increased reliance on the Python garbage
+collector. For many programs, the default behavior of the garbage collector
+will be adequate. However, for some programs, the garbage collection behavior
+may need to be adjusted.</p>
+
+  <p>The garbage collector uses the number of tracked heap objects as a cheap metric
+of when to run garbage collection. For pure Python, this mostly works well. For
+<code class="language-plaintext highlighter-rouge">pydrake</code> programs, a bound <code class="language-plaintext highlighter-rouge">pydrake</code> object can often own C++ objects with
+a large memory footprint. The C++ objects don’t exist in Python’s tracked heap,
+so they are invisible to the garbage collector’s metric. This can cause garbage
+collection to not run often enough to head off memory trouble.</p>
+
+  <p>Program patterns that may create a lot of memory use include:</p>
+  <ul>
+    <li>using models with large meshes and textures</li>
+    <li>creating diagrams from scratch in a repeating loop</li>
+    <li>using renderers</li>
+  </ul>
+
+  <p>See the <a href="/troubleshooting.html#pydrake-oom">troubleshooting</a> page for what to do.</p>
 
   <h2 id="debugging-with-the-python-bindings">Debugging with the Python Bindings</h2>
 

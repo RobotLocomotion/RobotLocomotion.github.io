@@ -396,6 +396,164 @@ MaterialModel::kCorotated.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase</span></span></dt>
+<dd><p>The ForceDensityFieldBase class is an abstract base class that
+represents a force density field affecting deformable bodies in a
+MultibodyPlant. The force field is described by the member function
+EvaluateAt() which takes as input a position in the world frame and
+returns the force density from the force density field at the given
+location, with unit [N/m³]. To create a concrete ForceDensityFieldBase
+class, inherit from ForceDensityField instead of directly inheriting
+from ForceDensityFieldBase.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_</span></code>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase.Clone(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase.density_type(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityType</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase.EvaluateAt(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">p_WQ:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Evaluates the force density [N/m³] with the given <code class="docutils literal notranslate"><span class="pre">context</span></code> of the
+owning MultibodyPlant and a position in world, <code class="docutils literal notranslate"><span class="pre">p_WQ</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_</span></span></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_[float]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_[Expression]</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[AutoDiffXd]</span></span></dt>
+<dd><p>The ForceDensityFieldBase class is an abstract base class that
+represents a force density field affecting deformable bodies in a
+MultibodyPlant. The force field is described by the member function
+EvaluateAt() which takes as input a position in the world frame and
+returns the force density from the force density field at the given
+location, with unit [N/m³]. To create a concrete ForceDensityFieldBase
+class, inherit from ForceDensityField instead of directly inheriting
+from ForceDensityFieldBase.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[AutoDiffXd].__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[AutoDiffXd].Clone(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[AutoDiffXd]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[AutoDiffXd].density_type(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityType</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[AutoDiffXd].EvaluateAt(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[AutoDiffXd],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[AutoDiffXd],</span> <span class="pre">p_WQ:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Evaluates the force density [N/m³] with the given <code class="docutils literal notranslate"><span class="pre">context</span></code> of the
+owning MultibodyPlant and a position in world, <code class="docutils literal notranslate"><span class="pre">p_WQ</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[Expression]</span></span></dt>
+<dd><p>The ForceDensityFieldBase class is an abstract base class that
+represents a force density field affecting deformable bodies in a
+MultibodyPlant. The force field is described by the member function
+EvaluateAt() which takes as input a position in the world frame and
+returns the force density from the force density field at the given
+location, with unit [N/m³]. To create a concrete ForceDensityFieldBase
+class, inherit from ForceDensityField instead of directly inheriting
+from ForceDensityFieldBase.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[Expression].__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[Expression].Clone(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[Expression]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[Expression].density_type(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityType</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[Expression].EvaluateAt(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[Expression],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[Expression],</span> <span class="pre">p_WQ:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span></span></dt>
+<dd><p>Evaluates the force density [N/m³] with the given <code class="docutils literal notranslate"><span class="pre">context</span></code> of the
+owning MultibodyPlant and a position in world, <code class="docutils literal notranslate"><span class="pre">p_WQ</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityType</span></span></dt>
+<dd><p>(Advanced) Enum for the type of force density in
+ForceDensityFieldBase.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kPerCurrentVolume : ForceDensityFieldBase::EvaluateAt() returns the force per unit of</p>
+</div></blockquote>
+<p><em>current</em> (deformed) configuration volume.</p>
+<blockquote>
+<div><p>kPerReferenceVolume : ForceDensityFieldBase::EvaluateAt() returns the force per unit of</p>
+</div></blockquote>
+<p><em>reference</em> configuration volume where the reference undeformed
+configuration is defined by the input mesh provided by the user.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityType.__init__(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityType,</span> <span class="pre">value:</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityType.kPerCurrentVolume</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityType.kPerReferenceVolume</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityType.name</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityType.value</span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">MaterialModel</span></span></dt>
 <dd><p>Types of material models for the deformable body.</p>
 <p>Members:</p>

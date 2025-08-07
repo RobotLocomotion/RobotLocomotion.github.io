@@ -1042,6 +1042,12 @@ a body which is already enabled has no effect.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DeformableBody.external_forces(self:</span> <span class="pre">pydrake.multibody.tree.DeformableBody)</span> <span class="pre">-&gt;</span> <span class="pre">list[pydrake.multibody.fem.ForceDensityFieldBase]</span></span></dt>
+<dd><p>Returns all the external forces acting on this deformable body.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">DeformableBody.geometry_id(self:</span> <span class="pre">pydrake.multibody.tree.DeformableBody)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.GeometryId</span></span></dt>
 <dd><p>Returns the geometry id of the deformable geometry used to simulate
 this deformable body.</p>
@@ -2033,6 +2039,176 @@ pose in its parent frame P.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PF</span></code>:</dt><dd><p>Rigid transform that characterizes <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s pose
 (orientation and position) in its parent frame P.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase</span></code></p>
+<p>Implementations of the ForceDensityFieldBase class should inherit from
+this class. This class provides the functionality for a force density
+field to depend on context-dependent quantities. It also provides the
+functionality to declare system resources in a MultibodyPlant.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityField_</span></code>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField.__init__(self:</span> <span class="pre">pydrake.multibody.tree.ForceDensityField,</span> <span class="pre">density_type:</span> <span class="pre">pydrake.multibody.fem.ForceDensityType</span> <span class="pre">=</span> <span class="pre">&lt;ForceDensityType.kPerCurrentVolume:</span> <span class="pre">0&gt;)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField.DeclareAbstractInputPort(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">model_value:</span> <span class="pre">pydrake.common.value.AbstractValue)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField.DeclareCacheEntry(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">description:</span> <span class="pre">str,</span> <span class="pre">value_producer:</span> <span class="pre">pydrake.systems.framework.ValueProducer,</span> <span class="pre">prerequisites_of_calc:</span> <span class="pre">set[pydrake.systems.framework.DependencyTicket])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.CacheEntry</span></span></dt>
+<dd><p>Protected LeafSystem methods exposed to declare system resources in a
+MultibodyPlant. DoDeclareCacheEntries() and DoDeclareInputPorts() can
+use these to declare cache entries and input ports.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField.DeclareVectorInputPort(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">model_vector:</span> <span class="pre">pydrake.systems.framework.BasicVector)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField.has_parent_system(self:</span> <span class="pre">pydrake.multibody.tree.ForceDensityField)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dd><p>Returns true iff <code class="docutils literal notranslate"><span class="pre">this</span></code> external force is owned by a MultibodyPlant.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField.parent_system_or_throw(self:</span> <span class="pre">pydrake.multibody.tree.ForceDensityField)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.LeafSystem</span></span></dt>
+<dd><p>Returns the owning MultibodyPlant LeafSystem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this force density field is not owned by any</strong> – </p></li>
+<li><p><strong>system.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_</span></span></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityField_[float]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityField_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityField_[Expression]</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[AutoDiffXd]</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[AutoDiffXd]</span></code></p>
+<p>Implementations of the ForceDensityFieldBase class should inherit from
+this class. This class provides the functionality for a force density
+field to depend on context-dependent quantities. It also provides the
+functionality to declare system resources in a MultibodyPlant.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[AutoDiffXd].__init__(self:</span> <span class="pre">pydrake.multibody.tree.ForceDensityField_[AutoDiffXd],</span> <span class="pre">density_type:</span> <span class="pre">pydrake.multibody.fem.ForceDensityType</span> <span class="pre">=</span> <span class="pre">&lt;ForceDensityType.kPerCurrentVolume:</span> <span class="pre">0&gt;)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[AutoDiffXd].DeclareAbstractInputPort(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;,</span> <span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">model_value:</span> <span class="pre">pydrake.common.value.AbstractValue)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[AutoDiffXd]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[AutoDiffXd].DeclareCacheEntry(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;,</span> <span class="pre">description:</span> <span class="pre">str,</span> <span class="pre">value_producer:</span> <span class="pre">pydrake.systems.framework.ValueProducer,</span> <span class="pre">prerequisites_of_calc:</span> <span class="pre">set[pydrake.systems.framework.DependencyTicket])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.CacheEntry</span></span></dt>
+<dd><p>Protected LeafSystem methods exposed to declare system resources in a
+MultibodyPlant. DoDeclareCacheEntries() and DoDeclareInputPorts() can
+use these to declare cache entries and input ports.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[AutoDiffXd].DeclareVectorInputPort(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double,</span> <span class="pre">-1,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">1&gt;</span> <span class="pre">&gt;</span> <span class="pre">&gt;,</span> <span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">model_vector:</span> <span class="pre">pydrake.systems.framework.BasicVector_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[AutoDiffXd]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[AutoDiffXd].has_parent_system(self:</span> <span class="pre">pydrake.multibody.tree.ForceDensityField_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dd><p>Returns true iff <code class="docutils literal notranslate"><span class="pre">this</span></code> external force is owned by a MultibodyPlant.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[AutoDiffXd].parent_system_or_throw(self:</span> <span class="pre">pydrake.multibody.tree.ForceDensityField_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></span></dt>
+<dd><p>Returns the owning MultibodyPlant LeafSystem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this force density field is not owned by any</strong> – </p></li>
+<li><p><strong>system.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[Expression]</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[Expression]</span></code></p>
+<p>Implementations of the ForceDensityFieldBase class should inherit from
+this class. This class provides the functionality for a force density
+field to depend on context-dependent quantities. It also provides the
+functionality to declare system resources in a MultibodyPlant.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[Expression].__init__(self:</span> <span class="pre">pydrake.multibody.tree.ForceDensityField_[Expression],</span> <span class="pre">density_type:</span> <span class="pre">pydrake.multibody.fem.ForceDensityType</span> <span class="pre">=</span> <span class="pre">&lt;ForceDensityType.kPerCurrentVolume:</span> <span class="pre">0&gt;)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[Expression].DeclareAbstractInputPort(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;drake::symbolic::Expression&gt;,</span> <span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">model_value:</span> <span class="pre">pydrake.common.value.AbstractValue)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[Expression]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[Expression].DeclareCacheEntry(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;drake::symbolic::Expression&gt;,</span> <span class="pre">description:</span> <span class="pre">str,</span> <span class="pre">value_producer:</span> <span class="pre">pydrake.systems.framework.ValueProducer,</span> <span class="pre">prerequisites_of_calc:</span> <span class="pre">set[pydrake.systems.framework.DependencyTicket])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.CacheEntry</span></span></dt>
+<dd><p>Protected LeafSystem methods exposed to declare system resources in a
+MultibodyPlant. DoDeclareCacheEntries() and DoDeclareInputPorts() can
+use these to declare cache entries and input ports.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[Expression].DeclareVectorInputPort(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;drake::symbolic::Expression&gt;,</span> <span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">model_vector:</span> <span class="pre">pydrake.systems.framework.BasicVector_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[Expression]</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[Expression].has_parent_system(self:</span> <span class="pre">pydrake.multibody.tree.ForceDensityField_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dd><p>Returns true iff <code class="docutils literal notranslate"><span class="pre">this</span></code> external force is owned by a MultibodyPlant.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ForceDensityField_[Expression].parent_system_or_throw(self:</span> <span class="pre">pydrake.multibody.tree.ForceDensityField_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></span></dt>
+<dd><p>Returns the owning MultibodyPlant LeafSystem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this force density field is not owned by any</strong> – </p></li>
+<li><p><strong>system.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -4164,6 +4340,74 @@ Debug build.</p>
 <span class="sig-name descname"><span class="pre">FrameIndex.is_valid(self:</span> <span class="pre">pydrake.multibody.tree.FrameIndex)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
 <dd><p>Reports if the index is valid–the only operation on an invalid index
 that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GravityForceField</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.ForceDensityField</span></code></p>
+<p>A uniform gravitational force density field for a uniform density
+object. The force density f [N/m³] is given by the product of mass
+density ρ [kg/m³] and gravity vector g [m/s²].</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">GravityForceField_</span></code>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GravityForceField.__init__(self:</span> <span class="pre">pydrake.multibody.tree.GravityForceField,</span> <span class="pre">gravity_vector:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]],</span> <span class="pre">mass_density:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Constructs a uniform gravitational force density field for a uniform
+density object with the given <code class="docutils literal notranslate"><span class="pre">gravity_vector</span></code> [m/s²] and
+<code class="docutils literal notranslate"><span class="pre">mass_density</span></code> [kg/m³] in the reference (undeformed) configuration
+where the reference (undeformed) configuration is defined by the input
+mesh provided by the user.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GravityForceField_</span></span></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">GravityForceField_[float]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">GravityForceField_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">GravityForceField_[Expression]</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GravityForceField_[AutoDiffXd]</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.ForceDensityField_[AutoDiffXd]</span></code></p>
+<p>A uniform gravitational force density field for a uniform density
+object. The force density f [N/m³] is given by the product of mass
+density ρ [kg/m³] and gravity vector g [m/s²].</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GravityForceField_[AutoDiffXd].__init__(self:</span> <span class="pre">pydrake.multibody.tree.GravityForceField_[AutoDiffXd],</span> <span class="pre">gravity_vector:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]],</span> <span class="pre">mass_density:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Constructs a uniform gravitational force density field for a uniform
+density object with the given <code class="docutils literal notranslate"><span class="pre">gravity_vector</span></code> [m/s²] and
+<code class="docutils literal notranslate"><span class="pre">mass_density</span></code> [kg/m³] in the reference (undeformed) configuration
+where the reference (undeformed) configuration is defined by the input
+mesh provided by the user.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GravityForceField_[Expression]</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.multibody.tree.ForceDensityField_[Expression]</span></code></p>
+<p>A uniform gravitational force density field for a uniform density
+object. The force density f [N/m³] is given by the product of mass
+density ρ [kg/m³] and gravity vector g [m/s²].</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">GravityForceField_[Expression].__init__(self:</span> <span class="pre">pydrake.multibody.tree.GravityForceField_[Expression],</span> <span class="pre">gravity_vector:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]],</span> <span class="pre">mass_density:</span> <span class="pre">pydrake.symbolic.Expression)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Constructs a uniform gravitational force density field for a uniform
+density object with the given <code class="docutils literal notranslate"><span class="pre">gravity_vector</span></code> [m/s²] and
+<code class="docutils literal notranslate"><span class="pre">mass_density</span></code> [kg/m³] in the reference (undeformed) configuration
+where the reference (undeformed) configuration is defined by the input
+mesh provided by the user.</p>
 </dd></dl>
 
 </dd></dl>

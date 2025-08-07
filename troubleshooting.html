@@ -187,6 +187,7 @@ See "Caveats" in drake/doc/README.txt.
       <li><a href="#build-oom" id="markdown-toc-build-oom">Out of memory</a></li>
     </ul>
   </li>
+  <li><a href="#pydrake-oom" id="markdown-toc-pydrake-oom">Pydrake out of memory</a></li>
   <li><a href="#network-configuration" id="markdown-toc-network-configuration">Network Configuration</a>    <ul>
       <li><a href="#lcm-macos" id="markdown-toc-lcm-macos">LCM on macOS</a></li>
     </ul>
@@ -458,6 +459,21 @@ the Drake source tree at <code class="language-plaintext highlighter-rouge">drak
   <p>Note that the concurrency level passed to <code class="language-plaintext highlighter-rouge">make</code> (e.g., <code class="language-plaintext highlighter-rouge">make -j 2</code>) does not
 propagate through to affect the concurrency of most of Drake’s build steps; you
 need to configure the dotfile in order to control the build concurrency.</p>
+
+  <h1 id="pydrake-oom">Pydrake out of memory</h1>
+
+  <p>Pydrake programs often control C++ objects that use a lot of memory, so that
+the default behaviors for running garbage collection don’t effectively control
+memory growth.</p>
+
+  <p>The standard Python <a href="https://docs.python.org/3/library/gc.html">gc</a> module
+offers ways to customize the garbage collector’s behavior. The easiest way is
+to explicitly call <code class="language-plaintext highlighter-rouge">gc.collect()</code> at intervals in your program. This will
+perform a full garbage collection. A more sophisticated method is to use
+<code class="language-plaintext highlighter-rouge">gc.set_threshold()</code> to set custom object count thresholds for your program,
+and thus cause automatic collections to run more often.</p>
+
+  <p>See also: <a href="/python_bindings.html#memory-management-with-the-python-bindings">Memory management with the Python Bindings</a></p>
 
   <h1 id="network-configuration">Network Configuration</h1>
 

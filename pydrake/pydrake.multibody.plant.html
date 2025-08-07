@@ -1352,6 +1352,25 @@ time.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DeformableModel.AddExternalForce(self:</span> <span class="pre">pydrake.multibody.plant.DeformableModel,</span> <span class="pre">external_force:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Registers an external force density field that applies external force
+to all deformable bodies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this DeformableModel is not</strong><strong> of </strong><strong>scalar type</strong> – </p></li>
+<li><p><strong>double.</strong> – </p></li>
+<li><p><strong>RuntimeError if this DeformableModel belongs to a continuous</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+<li><p><strong>RuntimeError if Finalize</strong><strong>(</strong><strong>) </strong><strong>has been called on the multibody plant</strong> – </p></li>
+<li><p><strong>owning this deformable model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">DeformableModel.AddFixedConstraint(self:</span> <span class="pre">pydrake.multibody.plant.DeformableModel,</span> <span class="pre">body_A_id:</span> <span class="pre">pydrake.multibody.tree.DeformableBodyId,</span> <span class="pre">body_B:</span> <span class="pre">pydrake.multibody.tree.RigidBody,</span> <span class="pre">X_BA:</span> <span class="pre">pydrake.math.RigidTransform,</span> <span class="pre">shape_G:</span> <span class="pre">pydrake.geometry.Shape,</span> <span class="pre">X_BG:</span> <span class="pre">pydrake.math.RigidTransform)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.MultibodyConstraintId</span></span></dt>
 <dd><p>Defines a fixed constraint between a deformable body A and a rigid
 body B. Such a fixed constraint is modeled as distance holonomic
@@ -1577,6 +1596,22 @@ registered with the given model instance.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">DeformableModel.GetDiscreteStateIndex(self:</span> <span class="pre">pydrake.multibody.plant.DeformableModel,</span> <span class="pre">id:</span> <span class="pre">pydrake.multibody.tree.DeformableBodyId)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.DiscreteStateIndex</span></span></dt>
 <dd><p>Returns the discrete state index of the deformable body identified by
+the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if MultibodyPlant::Finalize</strong><strong>(</strong><strong>) </strong><strong>has not been called</strong> – </p></li>
+<li><p><strong>yet.</strong><strong> or </strong><strong>if no deformable body with the given id has been</strong> – </p></li>
+<li><p><strong>registered in this model.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DeformableModel.GetExternalForces(self:</span> <span class="pre">pydrake.multibody.plant.DeformableModel,</span> <span class="pre">id:</span> <span class="pre">pydrake.multibody.tree.DeformableBodyId)</span> <span class="pre">-&gt;</span> <span class="pre">list[pydrake.multibody.fem.ForceDensityFieldBase]</span></span></dt>
+<dd><p>Returns the force density fields acting on the deformable body with
 the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
