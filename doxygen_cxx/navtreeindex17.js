@@ -1,9 +1,14 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#af4e2d6b1c2cd394f167f83764d2e8f8d":[1,2,2,1,7,7],
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#afb452cc8aa55bb93c80570ad66618f4a":[1,2,2,1,7,3],
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html":[1,2,2,1,8],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a31ff325bf1612efcf799b638cbaf0806":[1,2,2,1,8,5],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a8041f4afa17961f211505df778774c6e":[1,2,2,1,8,3],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9473b86a8de3dcb0722bfd753b6df12b":[1,2,2,1,8,6],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a96802aa489cf766cde1ccefe62c30787":[1,2,2,1,8,7],
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a8149230e7bd3ff7e1c0aeed0c87982c4":[1,2,2,1,8,7],
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9473b86a8de3dcb0722bfd753b6df12b":[1,2,2,1,8,8],
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a96802aa489cf766cde1ccefe62c30787":[1,2,2,1,8,9],
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9b81ac150688c4ad8cd311f4c93fda03":[1,2,2,1,8,6],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9dad4323e480c493d13c8fb45d59c88c":[1,2,2,1,8,0],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9e50799c4aaeca7225a55eb1553d25ea":[1,2,2,1,8,4],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#aa1a711c967479364bbfbeb475e6d7dbf":[1,2,2,1,8,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a491bed91ae956de434888dd68594b7a3":[1,4,2,0,2,3],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a598885fb0868bd7d67fde74776cc2b9e":[1,4,2,0,2,20],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a62ffc93cde9bdefcaffea68960a793ea":[1,4,2,0,2,10],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a67f334d691594767c3ac1f81e96a7b0f":[1,4,2,0,2,0],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a693b3a9627e08ae92d2978b4ca516b3c":[1,4,2,0,2,11],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a7bfec066e251fc2acc3980f272c934aa":[1,4,2,0,2,1],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a7c669013ee2890d3a8c457668541cdba":[1,4,2,0,2,16],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a8a352889e2c30877b432e49e8d191efd":[1,4,2,0,2,4],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a990058faa76c8e80bc47a846385415aa":[1,4,2,0,2,13]
+"classdrake_1_1multibody_1_1_inverse_kinematics.html#a67f334d691594767c3ac1f81e96a7b0f":[1,4,2,0,2,0]
 };

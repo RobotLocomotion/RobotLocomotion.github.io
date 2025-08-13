@@ -382,10 +382,11 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <li>declare the plant's input and output ports,</li>
 <li>declare collision filters to ignore collisions among rigid bodies:<ul>
 <li>between rigid bodies connected by a joint,</li>
-<li>within subgraphs of welded rigid bodies. Note that <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> will <em>not</em> introduce <em>any</em> collision filters on deformable bodies.</li>
+<li>within subgraphs of welded rigid bodies.</li>
 </ul>
 </li>
 </ul>
+<p>Note that <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> will <em>not</em> introduce any automatic collision filters on deformable bodies. Collision filters for deformable bodies can be explicitly applied via <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a41edc1b3c920a1e48f27ad5661584fad" title="Excludes the collision geometries between two given collision filter groups.">ExcludeCollisionGeometriesWithCollisionFilterGroupPair()</a> or during parsing.</p>
 <p><a class="anchor" id="mbp_table_of_contents"></a> <a class="anchor" id="mbp_references"></a></p><h3>References</h3>
 <ul>
 <li>[Featherstone 2008] Featherstone, R., 2008. Rigid body dynamics algorithms. Springer.</li>
@@ -674,7 +675,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac582d6a16a2d6d694f0bd6cc6af3f0e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of GeometryId's identifying the different contact geometries for <code>body</code> previously registered with a SceneGraph.  <a href="#ac582d6a16a2d6d694f0bd6cc6af3f0e4">More...</a><br /></td></tr>
 <tr class="separator:ac582d6a16a2d6d694f0bd6cc6af3f0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41edc1b3c920a1e48f27ad5661584fad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a41edc1b3c920a1e48f27ad5661584fad">ExcludeCollisionGeometriesWithCollisionFilterGroupPair</a> (const std::pair&lt; std::string, <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">geometry::GeometrySet</a> &gt; &amp;collision_filter_group_a, const std::pair&lt; std::string, <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">geometry::GeometrySet</a> &gt; &amp;collision_filter_group_b)</td></tr>
-<tr class="memdesc:a41edc1b3c920a1e48f27ad5661584fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Excludes the rigid collision geometries between two given collision filter groups.  <a href="#a41edc1b3c920a1e48f27ad5661584fad">More...</a><br /></td></tr>
+<tr class="memdesc:a41edc1b3c920a1e48f27ad5661584fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Excludes the collision geometries between two given collision filter groups.  <a href="#a41edc1b3c920a1e48f27ad5661584fad">More...</a><br /></td></tr>
 <tr class="separator:a41edc1b3c920a1e48f27ad5661584fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2822cd320f693cd2191fbcdd6dba2494"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">geometry::GeometrySet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a2822cd320f693cd2191fbcdd6dba2494">CollectRegisteredGeometries</a> (const std::vector&lt; const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; * &gt; &amp;bodies) const</td></tr>
 <tr class="memdesc:a2822cd320f693cd2191fbcdd6dba2494"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each of the provided <code>bodies</code>, collects up all geometries that have been registered to that body.  <a href="#a2822cd320f693cd2191fbcdd6dba2494">More...</a><br /></td></tr>
@@ -4382,8 +4383,8 @@ See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#Jacobia
       </table>
 </div><div class="memdoc">
 
-<p>Excludes the rigid collision geometries between two given collision filter groups. </p>
-<p>Note that collisions involving deformable geometries are not filtered by this function. </p><dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4a6d28ce9c8119bee923e827eb6f02ed" title="Registers this plant to serve as a source for an instance of SceneGraph.">RegisterAsSourceForSceneGraph()</a> has been called. </dd>
+<p>Excludes the collision geometries between two given collision filter groups. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4a6d28ce9c8119bee923e827eb6f02ed" title="Registers this plant to serve as a source for an instance of SceneGraph.">RegisterAsSourceForSceneGraph()</a> has been called. </dd>
 <dd>
 <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> has <em>not</em> been called. </dd></dl>
 

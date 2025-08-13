@@ -20,9 +20,12 @@ var classdrake_1_1multibody_1_1_differential_inverse_kinematics_system =
     [ "get_input_port_nominal_posture", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a456a9371c51d310504de3abe89566e63", null ],
     [ "get_input_port_position", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#af55f56638e61b705bca752e30957ed87", null ],
     [ "get_output_port_commanded_velocity", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#ab615e0a185134a924b0a886ddbc111a6", null ],
+    [ "K_VX", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a1632d67e7fb5e062cf0b5950c63c2cfe", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#ac097ec80806f46cb7c6499d6169444fb", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a0d7b78bae47390bd852e467a61930f25", null ],
     [ "plant", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a5001e433b72f3005d744a7b9b71cc529", null ],
+    [ "recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#ae1d4db91318e5a9a5da0f5148c099089", null ],
     [ "task_frame", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a52c752afcfb77628bb9c0cbdacd504d0", null ],
-    [ "time_step", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a8daceb7a3c384d6ad9f305e42b5fc1c6", null ]
+    [ "time_step", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a8daceb7a3c384d6ad9f305e42b5fc1c6", null ],
+    [ "Vd_TG_limit", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a777f806efc35013c9c4241af71f7e5d2", null ]
 ];

@@ -6,6 +6,8 @@ var classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recip
     [ "~Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a8041f4afa17961f211505df778774c6e", null ],
     [ "AddIngredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9e50799c4aaeca7225a55eb1553d25ea", null ],
     [ "AddToProgram", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a31ff325bf1612efcf799b638cbaf0806", null ],
+    [ "ingredient", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9b81ac150688c4ad8cd311f4c93fda03", null ],
+    [ "num_ingredients", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a8149230e7bd3ff7e1c0aeed0c87982c4", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a9473b86a8de3dcb0722bfd753b6df12b", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a96802aa489cf766cde1ccefe62c30787", null ]
 ];

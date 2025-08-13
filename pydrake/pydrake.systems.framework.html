@@ -3682,6 +3682,18 @@ subsystem provides the same support.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Diagram.AreConnected(self:</span> <span class="pre">pydrake.systems.framework.Diagram,</span> <span class="pre">output:</span> <span class="pre">pydrake.systems.framework.OutputPort,</span> <span class="pre">input:</span> <span class="pre">pydrake.systems.framework.InputPort)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dd><p>Reports if the indicated <code class="docutils literal notranslate"><span class="pre">output</span></code> is connected to the <code class="docutils literal notranslate"><span class="pre">input</span></code>
+port.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the ports belong to systems that are direct children of this
+diagram.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">Diagram.connection_map(self:</span> <span class="pre">pydrake.systems.framework.Diagram)</span> <span class="pre">-&gt;</span> <span class="pre">dict</span></span></dt>
 <dd><p>Returns a reference to the map of connections between Systems.</p>
 </dd></dl>
@@ -3775,6 +3787,18 @@ subsystem provides the same support.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Diagram_[AutoDiffXd].AreConnected(self:</span> <span class="pre">pydrake.systems.framework.Diagram_[AutoDiffXd],</span> <span class="pre">output:</span> <span class="pre">pydrake.systems.framework.OutputPort_[AutoDiffXd],</span> <span class="pre">input:</span> <span class="pre">pydrake.systems.framework.InputPort_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dd><p>Reports if the indicated <code class="docutils literal notranslate"><span class="pre">output</span></code> is connected to the <code class="docutils literal notranslate"><span class="pre">input</span></code>
+port.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the ports belong to systems that are direct children of this
+diagram.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">Diagram_[AutoDiffXd].connection_map(self:</span> <span class="pre">pydrake.systems.framework.Diagram_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">dict</span></span></dt>
 <dd><p>Returns a reference to the map of connections between Systems.</p>
 </dd></dl>
@@ -3858,6 +3882,18 @@ use a DiagramBuilder.</p>
 constructor are obligated to call DiagramBuilder::BuildInto(this).
 Provides scalar- type conversion support only if every contained
 subsystem provides the same support.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Diagram_[Expression].AreConnected(self:</span> <span class="pre">pydrake.systems.framework.Diagram_[Expression],</span> <span class="pre">output:</span> <span class="pre">pydrake.systems.framework.OutputPort_[Expression],</span> <span class="pre">input:</span> <span class="pre">pydrake.systems.framework.InputPort_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dd><p>Reports if the indicated <code class="docutils literal notranslate"><span class="pre">output</span></code> is connected to the <code class="docutils literal notranslate"><span class="pre">input</span></code>
+port.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the ports belong to systems that are direct children of this
+diagram.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

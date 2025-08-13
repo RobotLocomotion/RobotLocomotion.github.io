@@ -1492,6 +1492,13 @@ being limited.</p>
 
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.K_VX(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dd><p>Gets the gain factor used to convert desired cartesian poses to
+velocities.</p>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.LeastSquaresCost</span></span></dt>
@@ -1582,6 +1589,22 @@ the program being solved.</p>
 <span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.Recipe.AddIngredient(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Recipe,</span> <span class="pre">ingredient:</span> <span class="pre">object)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd></dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.Recipe.ingredient(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Recipe,</span> <span class="pre">i:</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Ingredient</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.Recipe.num_ingredients(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Recipe)</span> <span class="pre">-&gt;</span> <span class="pre">int</span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.recipe(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem.Recipe</span></span></dt>
+<dd><p>Gets the mathematical formulation recipe.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1594,6 +1617,13 @@ the program being solved.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.time_step(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
 <dd><p>Gets the time step used by the controller.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">DifferentialInverseKinematicsSystem.Vd_TG_limit(self:</span> <span class="pre">pydrake.multibody.inverse_kinematics.DifferentialInverseKinematicsSystem)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.math.SpatialVelocity</span></span></dt>
+<dd><p>Gets the clamping limit applied to inferred desired cartesian
+velocities.</p>
 </dd></dl>
 
 </dd></dl>

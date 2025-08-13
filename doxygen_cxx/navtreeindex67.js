@@ -1,5 +1,10 @@
 var NAVTREEINDEX67 =
 {
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#af36af3fd58b6b35ae78ad63704fc6190":[1,2,2,1,5,0,2],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html":[1,2,2,1,6,0],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#a29df3e47c1ac94339f7bc8877c64c72c":[1,2,2,1,6,0,1],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc":[1,2,2,1,6,0,0],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#ab19db20e26bd45901b886b6034638e91":[1,2,2,1,6,0,2],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html":[1,2,2,1,7,0],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a23fe1040fae5e4e44c855a278f72c7db":[1,2,2,1,7,0,3],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a6bd5b5c3010df1601e26b47283399d89":[1,2,2,1,7,0,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX67 =
 "structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,49,0],
 "structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[3,0,0,49,1],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html":[3,0,0,13,6,0],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a0f99597eaeadb8f1814c0a27746d7dca":[3,0,0,13,6,0,1],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a1924a4300925ddede3f55cfdd30c1625":[3,0,0,13,6,0,3],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a2c94ff5b5ed6f3d8b4d3e782e8a3566b":[3,0,0,13,6,0,2],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44":[3,0,0,13,6,0,7],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a4932525a5cc773e1fc8e9364a1b6775b":[3,0,0,13,6,0,4],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,13,6,0,6]
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a0f99597eaeadb8f1814c0a27746d7dca":[3,0,0,13,6,0,1]
 };

@@ -3161,8 +3161,12 @@ Build the underlying tree structure of the multibody model, - declare
 the plant’s state, - declare the plant’s input and output ports, -
 declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
-welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
-<em>any</em> collision filters on deformable bodies.</p>
+welded rigid bodies.</p>
+<p>Note that MultibodyPlant will <em>not</em> introduce any automatic collision
+filters on deformable bodies. Collision filters for deformable bodies
+can be explicitly applied via
+ExcludeCollisionGeometriesWithCollisionFilterGroupPair() or during
+parsing.</p>
 <p><a href="#id29"><span class="problematic" id="id30">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
@@ -8895,8 +8899,12 @@ Build the underlying tree structure of the multibody model, - declare
 the plant’s state, - declare the plant’s input and output ports, -
 declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
-welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
-<em>any</em> collision filters on deformable bodies.</p>
+welded rigid bodies.</p>
+<p>Note that MultibodyPlant will <em>not</em> introduce any automatic collision
+filters on deformable bodies. Collision filters for deformable bodies
+can be explicitly applied via
+ExcludeCollisionGeometriesWithCollisionFilterGroupPair() or during
+parsing.</p>
 <p><a href="#id63"><span class="problematic" id="id64">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
@@ -14580,8 +14588,12 @@ Build the underlying tree structure of the multibody model, - declare
 the plant’s state, - declare the plant’s input and output ports, -
 declare collision filters to ignore collisions among rigid bodies: -
 between rigid bodies connected by a joint, - within subgraphs of
-welded rigid bodies. Note that MultibodyPlant will <em>not</em> introduce
-<em>any</em> collision filters on deformable bodies.</p>
+welded rigid bodies.</p>
+<p>Note that MultibodyPlant will <em>not</em> introduce any automatic collision
+filters on deformable bodies. Collision filters for deformable bodies
+can be explicitly applied via
+ExcludeCollisionGeometriesWithCollisionFilterGroupPair() or during
+parsing.</p>
 <p><a href="#id97"><span class="problematic" id="id98">**</span></a>** References</p>
 <ul class="simple">
 <li><p>[Featherstone 2008] Featherstone, R., 2008.</p></li>
