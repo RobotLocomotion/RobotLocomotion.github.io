@@ -4037,7 +4037,6 @@ yet supported.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>if you set options.parameterization.</strong> – </p></li>
 <li><p><strong>if any collision pairs in checker have negative padding.</strong> – </p></li>
 <li><p><strong>if any collision geometries have been been added in checker.</strong> – </p></li>
 </ul>
@@ -4074,8 +4073,28 @@ regions in the ordinary configuration space.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IrisNp2Options.ray_sampler_options</span></span></dt>
+<dd><p>Additional options for kRaySampler. Ignored if kGreedySampler is used.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">IrisNp2Options.sampled_iris_options</span></span></dt>
 <dd><p>Options common to IRIS-type algorithms.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IrisNp2Options.sampling_strategy</span></span></dt>
+<dd><p>Which sampling strategy to use when growing the region. Use “ray” for
+kRaySmpler, and “greedy” for kGreedySampler. kRaySampler finds
+collisions closer to the ellipsoid center in order to achieve more
+efficient hyperplane placement, yielding fewer hyperplanes in the
+resulting region, but may take more runtime than kGreedySampler.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See §5.3 of [Werner et al., 2024] for further details.</p>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -5642,6 +5661,45 @@ time index <code class="docutils literal notranslate"><span class="pre">index</s
 <dd class="field-odd"><p><strong>RuntimeError if time steps are not declared as decision variables.</strong> – </p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RaySamplerOptions</span></span></dt>
+<dd><p>RaySamplerOptions contains settings specific to the kRaySampler
+strategy for drawing the initial samples.</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RaySamplerOptions.__init__(self:</span> <span class="pre">pydrake.planning.RaySamplerOptions)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RaySamplerOptions.num_particles_to_walk_towards</span></span></dt>
+<dd><p>The number of particles to step towards. Ignored if
+only_walk_toward_collisions is true, because we walk toward all
+collisions in that case. Must be at least 1.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RaySamplerOptions.only_walk_toward_collisions</span></span></dt>
+<dd><p>If true, the ray stepping strategy is only applied to samples which
+are initially in collision. If false, it is applied to all samples.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RaySamplerOptions.ray_search_num_steps</span></span></dt>
+<dd><p>The step size for the ray search is defined per-particle, as the
+distance between the current ellipsoid center and the particle,
+divided by this option. A larger number requires more time for
+computing samples, but will lead to the samples in-collision being
+closer to the ellipsoid center, and higher quality hyperplanes. We
+choose a default value to roughly match the results in [Werner et al.,
+2024]. Must be at least 1.</p>
 </dd></dl>
 
 </dd></dl>

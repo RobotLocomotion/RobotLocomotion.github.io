@@ -202,6 +202,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:abc0d5447b03efcbc73d4cfdb20865aa4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html">IrisParameterizationFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html#abc0d5447b03efcbc73d4cfdb20865aa4">parameterization</a> {}</td></tr>
 <tr class="memdesc:abc0d5447b03efcbc73d4cfdb20865aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterization of the subspace along which to grow the region.  <a href="#abc0d5447b03efcbc73d4cfdb20865aa4">More...</a><br /></td></tr>
 <tr class="separator:abc0d5447b03efcbc73d4cfdb20865aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a563c6feff7da2c1e28102c79ee70d2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html#a3a563c6feff7da2c1e28102c79ee70d2">sampling_strategy</a> {&quot;greedy&quot;}</td></tr>
+<tr class="memdesc:a3a563c6feff7da2c1e28102c79ee70d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which sampling strategy to use when growing the region.  <a href="#a3a563c6feff7da2c1e28102c79ee70d2">More...</a><br /></td></tr>
+<tr class="separator:a3a563c6feff7da2c1e28102c79ee70d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c74243889b1835c087d8160272e007a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1planning_1_1_ray_sampler_options.html">RaySamplerOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html#a2c74243889b1835c087d8160272e007a">ray_sampler_options</a></td></tr>
+<tr class="memdesc:a2c74243889b1835c087d8160272e007a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional options for kRaySampler.  <a href="#a2c74243889b1835c087d8160272e007a">More...</a><br /></td></tr>
+<tr class="separator:a2c74243889b1835c087d8160272e007a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a42f7c1751466d9eb02d93695a5b0fd34"></a>
@@ -373,6 +379,23 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a2c74243889b1835c087d8160272e007a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c74243889b1835c087d8160272e007a">&#9670;&nbsp;</a></span>ray_sampler_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1planning_1_1_ray_sampler_options.html">RaySamplerOptions</a> ray_sampler_options</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Additional options for kRaySampler. </p>
+<p>Ignored if kGreedySampler is used. </p>
+
+</div>
+</div>
 <a id="a6a02069c3e43c0097629cb4a6ea6fbbf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6a02069c3e43c0097629cb4a6ea6fbbf">&#9670;&nbsp;</a></span>sampled_iris_options</h2>
 
@@ -386,6 +409,23 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Options common to IRIS-type algorithms. </p>
+
+</div>
+</div>
+<a id="a3a563c6feff7da2c1e28102c79ee70d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a563c6feff7da2c1e28102c79ee70d2">&#9670;&nbsp;</a></span>sampling_strategy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string sampling_strategy {&quot;greedy&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Which sampling strategy to use when growing the region. </p>
+<p>Use "ray" for kRaySmpler, and "greedy" for kGreedySampler. kRaySampler finds collisions closer to the ellipsoid center in order to achieve more efficient hyperplane placement, yielding fewer hyperplanes in the resulting region, but may take more runtime than kGreedySampler. </p><dl class="section note"><dt>Note</dt><dd>See §5.3 of [Werner et al., 2024] for further details. </dd></dl>
 
 </div>
 </div>

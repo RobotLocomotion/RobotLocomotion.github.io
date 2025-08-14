@@ -387,6 +387,13 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_rotor_inertia">drake:rotor_inertia</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_screw_thread_pitch">drake:screw_thread_pitch</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_stiffness_damping">drake:stiffness_damping</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint">drake:tendon_constraint</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_joint">drake:tendon_constraint_joint</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_offset">drake:tendon_constraint_offset</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_lower_limit">drake:tendon_constraint_lower_limit</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_upper_limit">drake:tendon_constraint_upper_limit</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_stiffness">drake:tendon_constraint_stiffness</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_damping">drake:tendon_constraint_damping</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_visual">drake:visual</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_youngs_modulus">drake:youngs_modulus</a></li>
 </ul>
@@ -484,6 +491,82 @@ drake:ball_constraint_p_BQ</h2>
 Semantics</h2>
 <p>The three floating point values (units of meters) are formed into a vector and passed into <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4667f3ff4e3ed344080b8ae16ace4ff5" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a> as the <code>p_BQ</code> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_ball_constraint">drake:ball_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4667f3ff4e3ed344080b8ae16ace4ff5" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_tendon_constraint"></a>
+drake:tendon_constraint</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:tendon_constraint</code></li>
+<li>URDF path: <code>/robot/drake:tendon_constraint</code></li>
+<li>Syntax: Nested elements <a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_joint">drake:tendon_constraint_joint</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_offset">drake:tendon_constraint_offset</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_lower_limit">drake:tendon_constraint_lower_limit</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_upper_limit">drake:tendon_constraint_upper_limit</a>, <a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_stiffness">drake:tendon_constraint_stiffness</a>, and <a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_damping">drake:tendon_constraint_damping</a></li>
+</ul>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_semantics"></a>
+Semantics</h2>
+<p>The element adds a tendon constraint to the model via <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a>.</p>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_joint"></a>
+drake:tendon_constraint_joint</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:tendon_constraint/drake:tendon_constraint_joint</code></li>
+<li>URDF path: <code>/robot/drake:tendon_constraint/drake:tendon_constraint_joint</code></li>
+<li>Syntax: Two attributes <code>name</code> containing a string value and <code>a</code> containing a floating point value.</li>
+</ul>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_joint_semantics"></a>
+Semantics</h2>
+<p>The string names a joint (expected to already be defined by this model and be single-dof) and the float specifies a coefficient to be applied to the joint configuration to determine the tendon length. These will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <code>joints</code> and <code>a</code> parameters, respectively. The tag can be repeated to specify multiple joints.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_offset"></a>
+drake:tendon_constraint_offset</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:tendon_constraint/drake:tendon_constraint_offset</code></li>
+<li>URDF path: <code>/robot/drake:tendon_constraint/drake:tendon_constraint_offset/@value</code></li>
+<li>Syntax: Floating point value.</li>
+</ul>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_offset_semantics"></a>
+Semantics</h2>
+<p>A floating point value specifying the length offset in either [m] or [rad] that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <code>offset</code> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_lower_limit"></a>
+drake:tendon_constraint_lower_limit</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:tendon_constraint/drake:tendon_constraint_lower_limit</code></li>
+<li>URDF path: <code>/robot/drake:tendon_constraint/drake:tendon_constraint_lower_limit/@value</code></li>
+<li>Syntax: Floating point value.</li>
+</ul>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_lower_limit_semantics"></a>
+Semantics</h2>
+<p>A floating point value specifying the lower bound on the constraint in either [m] or [rad] that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <code>lower_bound</code> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_upper_limit"></a>
+drake:tendon_constraint_upper_limit</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:tendon_constraint/drake:tendon_constraint_upper_limit</code></li>
+<li>URDF path: <code>/robot/drake:tendon_constraint/drake:tendon_constraint_upper_limit/@value</code></li>
+<li>Syntax: Floating point value.</li>
+</ul>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_upper_limit_semantics"></a>
+Semantics</h2>
+<p>A floating point value specifying the upper bound on the constraint in either [m] or [rad] that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <code>upper_bound</code> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_stiffness"></a>
+drake:tendon_constraint_stiffness</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:tendon_constraint/drake:tendon_constraint_stiffness</code></li>
+<li>URDF path: <code>/robot/drake:tendon_constraint/drake:tendon_constraint_stiffness/@value</code></li>
+<li>Syntax: Floating point value.</li>
+</ul>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_stiffness_semantics"></a>
+Semantics</h2>
+<p>A floating point value specifying the constraint stiffness in either [N/m] or [N⋅m/rad] that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <code>stiffness</code> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_damping"></a>
+drake:tendon_constraint_damping</h2>
+<ul>
+<li>SDFormat path: <code>//model/drake:tendon_constraint/drake:tendon_constraint_damping</code></li>
+<li>URDF path: <code>/robot/drake:tendon_constraint/drake:tendon_constraint_damping/@value</code></li>
+<li>Syntax: Floating point value.</li>
+</ul>
+<h2><a class="anchor" id="tag_drake_tendon_constraint_damping_semantics"></a>
+Semantics</h2>
+<p>A floating point value specifying the constraint damping in either [N⋅s/m] or [N⋅m⋅rad/s] that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <code>damping</code> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_bushing_force_damping"></a>
 drake:bushing_force_damping</h2>
 <ul>

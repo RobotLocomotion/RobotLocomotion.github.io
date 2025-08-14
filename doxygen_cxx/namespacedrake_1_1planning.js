@@ -17,6 +17,7 @@ var namespacedrake_1_1planning =
     [ "IrisZoOptions", "classdrake_1_1planning_1_1_iris_zo_options.html", "classdrake_1_1planning_1_1_iris_zo_options" ],
     [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html", "classdrake_1_1planning_1_1_joint_limits" ],
     [ "LinearDistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html", "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider" ],
+    [ "RaySamplerOptions", "structdrake_1_1planning_1_1_ray_sampler_options.html", "structdrake_1_1planning_1_1_ray_sampler_options" ],
     [ "RobotClearance", "classdrake_1_1planning_1_1_robot_clearance.html", "classdrake_1_1planning_1_1_robot_clearance" ],
     [ "RobotDiagram", "classdrake_1_1planning_1_1_robot_diagram.html", "classdrake_1_1planning_1_1_robot_diagram" ],
     [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html", "classdrake_1_1planning_1_1_robot_diagram_builder" ],

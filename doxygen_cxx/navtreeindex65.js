@@ -1,5 +1,7 @@
 var NAVTREEINDEX65 =
 {
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#ad03bc5722287da0acf149346388fa1b0":[3,0,0,3,14,2,14],
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d":[3,0,0,3,14,2,20],
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html":[3,0,0,3,14,6],
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a156ba06e0e392b0f6291fb2228174470":[3,0,0,3,14,6,7],
 "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a3f76c6e14000fc4053d666666462094f":[3,0,0,3,14,6,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX65 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#a6a35c03b3fba80f7c251bb744d6e1598":[3,0,0,4,1,7,7,0],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#ab7bffa65ec11e79bbf74fc513d4407c6":[3,0,0,4,1,7,7,6],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#abc181d64361484d0aaa73ac7541b5c87":[3,0,0,4,1,7,7,1],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#adee98cdb6fa31a1d84099c44ce7c52bc":[3,0,0,4,1,7,7,2],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#af4e9428c9a3946859578a2257349dc39":[3,0,0,4,1,7,7,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html":[3,0,0,4,1,7,8]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html#adee98cdb6fa31a1d84099c44ce7c52bc":[3,0,0,4,1,7,7,2]
 };

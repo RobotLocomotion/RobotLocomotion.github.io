@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#acdf7e0b5ab9acb099133124fa05833b8":[1,2,4,0,6],
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ad43a45a9bfeee26aafe9eef51139485a":[1,2,4,0,5],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html":[1,2,4,1],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a0b6e739d0155aa20aec56d2fb7e13505":[1,2,4,1,4],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a20d05d184f723deb7a9d9447114a8b1a":[1,2,4,1,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#ac882842c393ce6a9766754f4bb519685":[3,0,0,17,1,12],
 "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#ad51b5b573600baeee3cfc55edb39482e":[3,0,0,17,1,15],
 "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#ad9be87e8c19668d196357e94f7391541":[3,0,0,17,1,2],
-"classdrake_1_1test_1_1_diagnostic_policy_test_base.html#af7e6479c38091d0a35be77114e0c2269":[3,0,0,17,1,13],
-"classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html":[3,0,0,17,1,0],
-"classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html#a097745b2828249d6e3e415378a32e7e8":[3,0,0,17,1,0,2]
+"classdrake_1_1test_1_1_diagnostic_policy_test_base.html#af7e6479c38091d0a35be77114e0c2269":[3,0,0,17,1,13]
 };

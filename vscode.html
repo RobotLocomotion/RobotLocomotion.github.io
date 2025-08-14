@@ -184,6 +184,54 @@ on code formatting work well. Take note of “Format Document”,
 <code class="language-plaintext highlighter-rouge">C_Cpp: Clang_format_path</code> is set to Drake’s preferred value
 <code class="language-plaintext highlighter-rouge">/path/to/drake/bazel-bin/tools/lint/clang-format</code>.</p>
 
+<h2 id="c-code-semantic-analysis--autocompletion">C++ code semantic analysis / autocompletion</h2>
+<p>VScode relies on the language server <code class="language-plaintext highlighter-rouge">clangd</code> and the json file <a href="https://clang.llvm.org/docs/JSONCompilationDatabase.html">compile_commands.json</a> for code semantic analysis / autocompletion. To enable this feature, take the following steps</p>
+<ol>
+  <li>Install <code class="language-plaintext highlighter-rouge">clangd</code> on your system.
+On Ubuntu, do
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install clangd
+</code></pre></div>    </div>
+    <p>On mac, do</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install llvm
+</code></pre></div>    </div>
+  </li>
+  <li>In VSCode, add <code class="language-plaintext highlighter-rouge">clangd</code> extension. If you have IntelliSense, disable it through
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// .vscode/settings.json
+{
+  "C_Cpp.intelliSenseEngine": "disabled"
+}
+</code></pre></div>    </div>
+  </li>
+  <li>To generate <code class="language-plaintext highlighter-rouge">compile_commands.json</code> file, take the following steps
+    <ul>
+      <li>Checkout this <a href="https://github.com/hongkai-dai/bazel-compile-commands-extractor/tree/enable_drake">branch</a> of <code class="language-plaintext highlighter-rouge">bazel-compile-commands-extractor</code> (the upstream version doesn’t work with Drake)
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone git@github.com:hongkai-dai/bazel-compile-commands-extractor.git
+ $ git checkout enable_drake
+</code></pre></div>        </div>
+      </li>
+      <li>Then add this to your <code class="language-plaintext highlighter-rouge">drake/user.bazelrc</code>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> common --inject_repository=hedron_compile_commands=PATH_TO_BAZEL_COMPILE_COMMANDS_EXTRACTOR
+</code></pre></div>        </div>
+        <p>where <code class="language-plaintext highlighter-rouge">PATH_TO_BAZEL_COMPILE_COMMANDS_EXTRACTOR</code> is the directory where you checked out <code class="language-plaintext highlighter-rouge">bazel-compile-commands-extractor</code>.</p>
+      </li>
+      <li>In <code class="language-plaintext highlighter-rouge">drake</code> folder, run
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ bazel run @hedron_compile_commands//:refresh_all
+</code></pre></div>        </div>
+        <p>You should see a <code class="language-plaintext highlighter-rouge">compile_commands.json</code> file in your <code class="language-plaintext highlighter-rouge">drake</code> folder.
+ Note: this command might take a while (like 5 mins) to run. You probably will see some error messages like</p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> bazel-out/k8-opt/bin/external/+internal_repositories+fcl_internal/drake_hdr/fcl/common/types.h:130:27: error: missing binary operator before token "("
+ 130 | #if EIGEN_VERSION_AT_LEAST(3,2,9)
+</code></pre></div>        </div>
+        <p>you can ignore these error messages.</p>
+      </li>
+    </ul>
+  </li>
+  <li>In VSCode, you should see that you can go to the definition of any C++ object, and the autocompletion is semantic-based.</li>
+  <li>Everytime Drake Bazel build files (including <code class="language-plaintext highlighter-rouge">BUILD.bazel</code>) are changed, you will need to rerun <code class="language-plaintext highlighter-rouge">bazel run @hedron_compile_commands//:refresh_all</code> to update the <code class="language-plaintext highlighter-rouge">compilation_commands.json</code> file.</li>
+</ol>
+
+<p>These instructions are adapted from <a href="https://github.com/hedronvision/bazel-compile-commands-extractor">Hedronvision’s bazel-compile-commands-extractor</a> project.</p>
+
       </article>
     </div>
   </section>

@@ -788,6 +788,7 @@ var hierarchy =
     [ "RandomSimulationResult", "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html", null ],
     [ "RationalForwardKinematics", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html", null ],
     [ "RationalFunction", "classdrake_1_1symbolic_1_1_rational_function.html", null ],
+    [ "RaySamplerOptions", "structdrake_1_1planning_1_1_ray_sampler_options.html", null ],
     [ "DifferentialInverseKinematicsSystem::Recipe", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html", null ],
     [ "RegionOfAttractionOptions", "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html", null ],
     [ "PackageMap::RemoteParams", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html", null ],
