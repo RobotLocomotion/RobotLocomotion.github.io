@@ -374,6 +374,16 @@ env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</s
 <span class="nb">source env</span>/bin/activate
 </code></pre></div></div>
 
+<h1 id="disabling-builds-on-pull-requests">Disabling Builds on Pull Requests</h1>
+
+<p>For draft pull requests that may have frequent updates to the remote branch,
+it can be useful to disable the builds that run automatically. This can be done
+by adding the label <code class="language-plaintext highlighter-rouge">status: defer ci</code>. Jobs will automatically be reported
+back to the pull request as failures, but won’t run the actual build. Since
+these jobs are required to merge, this label will eventually need to be removed.
+Comment <code class="language-plaintext highlighter-rouge">@drake-jenkins-bot retest this please</code> after removing the label to
+trigger a re-run.</p>
+
 <h1 id="testing-via-external-examples">Testing via External Examples</h1>
 
 <p>The examples within Drake’s
