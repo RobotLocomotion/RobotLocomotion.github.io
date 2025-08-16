@@ -163,6 +163,14 @@ analysis.
 
 <ul>
   <li>We’ve added a new tutorial on automatic differentiation basics (<a href="https://github.com/RobotLocomotion/drake/pull/23162">#23162</a>).</li>
+  <li>Wheel packages now depend on Mosek as a PyPI requirement instead of embedding
+it inside the Drake wheel file (<a href="https://github.com/RobotLocomotion/drake/pull/23128">#23128</a>, <a href="https://github.com/RobotLocomotion/drake/pull/23243">#23243</a>).
+    <ul>
+      <li>Mosek packages declare an upper-bound on their supported Python version
+(&lt;3.14); your package manager (e.g., Poetry) might require you to add
+that same bound in your <code class="language-plaintext highlighter-rouge">pyproject.toml</code> as a consequence.</li>
+    </ul>
+  </li>
 </ul>
 
 <h1 id="breaking-changes-since-v1430">Breaking changes since v1.43.0</h1>
