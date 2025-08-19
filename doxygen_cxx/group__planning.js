@@ -4,6 +4,7 @@ var group__planning =
     [ "Trajectories", "group__planning__trajectory.html", "group__planning__trajectory" ],
     [ "Collision checking", "group__planning__collision__checker.html", "group__planning__collision__checker" ],
     [ "Convenience classes", "group__planning__infrastructure.html", "group__planning__infrastructure" ],
+    [ "Iris", "group__planning__iris.html", "group__planning__iris" ],
     [ "StaticEquilibriumProblem", "classdrake_1_1multibody_1_1_static_equilibrium_problem.html", [
       [ "StaticEquilibriumProblem", "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a801fa077979a700420e65001bede392d", null ],
       [ "StaticEquilibriumProblem", "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ad23bfbe321eba0ecfded8e1a4c62da0a", null ],

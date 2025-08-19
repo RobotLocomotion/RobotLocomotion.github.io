@@ -54,7 +54,7 @@ var searchData=
   ['makegltfstream',['MakeGltfStream',['../classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_vtk_gltf_uri_loader.html#a2c9cc38d52232296b514cfc8b794df1b',1,'drake::geometry::DRAKE_NO_EXPORT::VtkGltfUriLoader']]],
   ['makehpolyhedron',['MakeHPolyhedron',['../classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html#a81d2c6f97c9bf2239759c056d36a7251',1,'drake::geometry::optimization::Hyperrectangle']]],
   ['makehypersphere',['MakeHypersphere',['../classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a07d8fa8b6d642e20a04f2e89813403be',1,'drake::geometry::optimization::AffineBall::MakeHypersphere()'],['../classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#aaeda19ebf3b289e78f7bc3740dbd4275',1,'drake::geometry::optimization::Hyperellipsoid::MakeHypersphere()']]],
-  ['makeirisobstacles',['MakeIrisObstacles',['../group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af',1,'drake::geometry::optimization']]],
+  ['makeirisobstacles',['MakeIrisObstacles',['../group__planning__iris.html#gad54a224f37c1a0dc86eaec300ef874af',1,'drake::geometry::optimization']]],
   ['makeisgeometryseparableprogram',['MakeIsGeometrySeparableProgram',['../classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#ae417fca5b178312659359521cc8105e7',1,'drake::geometry::optimization::CspaceFreePolytope']]],
   ['makekukaiiwamodel',['MakeKukaIiwaModel',['../namespacedrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot.html#a66fad1fe086f2c9719c25a140d257f59',1,'drake::multibody::benchmarks::kuka_iiwa_robot']]],
   ['makel1ball',['MakeL1Ball',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a20de73193ff05f0d332edba9e48a4aee',1,'drake::geometry::optimization::HPolyhedron']]],

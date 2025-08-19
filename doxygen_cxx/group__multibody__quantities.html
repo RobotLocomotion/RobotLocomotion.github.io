@@ -175,58 +175,60 @@ $(document).ready(function(){initNavTree('group__multibody__quantities.html','')
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Rotation matrix  </td><td class="markdownTableBodyCenter">R  </td><td class="markdownTableBodyCenter">\(^BR^C\)  </td><td class="markdownTableBodyCenter"><code>R_BC</code>  </td><td class="markdownTableBodyNone">Frame C's orientation in frame B   </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Rotation quaternion  </td><td class="markdownTableBodyCenter">q  </td><td class="markdownTableBodyCenter">\(^Bq^C\)  </td><td class="markdownTableBodyCenter"><code>q_BC</code>  </td><td class="markdownTableBodyNone">Frame C's orientation in frame B   </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Position vector  </td><td class="markdownTableBodyCenter">p  </td><td class="markdownTableBodyCenter">\(^Bp^C\)  </td><td class="markdownTableBodyCenter"><code>p_BC</code>  </td><td class="markdownTableBodyNone">Position vector from Bo (frame B's origin) to Co (frame C's origin), expressed in frame B (implied).   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Position vector  </td><td class="markdownTableBodyCenter">p  </td><td class="markdownTableBodyCenter">\([^Pp^Q]_E\)  </td><td class="markdownTableBodyCenter"><code>p_PQ_E</code>  </td><td class="markdownTableBodyNone">Position vector from point P to point Q, expressed in frame E.   </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Transform/pose  </td><td class="markdownTableBodyCenter">X  </td><td class="markdownTableBodyCenter">\(^BX^C\)  </td><td class="markdownTableBodyCenter"><code>X_BC</code>  </td><td class="markdownTableBodyNone">Frame C's <em>rigid</em> transform (pose) in frame B   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">General Transform  </td><td class="markdownTableBodyCenter">T  </td><td class="markdownTableBodyCenter">\(^BT^C\)  </td><td class="markdownTableBodyCenter"><code>T_BC</code>  </td><td class="markdownTableBodyNone">The relationship between two spaces &ndash; it may be affine, projective, isometric, etc. Every X_AB can be written as T_AB, but not every T_AB can be written as X_AB.   </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Angular velocity  </td><td class="markdownTableBodyCenter">w  </td><td class="markdownTableBodyCenter">\(^B\omega^C\)  </td><td class="markdownTableBodyCenter"><code>w_BC</code>  </td><td class="markdownTableBodyNone">Frame C's angular velocity in frame Bᵃ   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Velocity  </td><td class="markdownTableBodyCenter">v  </td><td class="markdownTableBodyCenter">\(^Bv^Q\)  </td><td class="markdownTableBodyCenter"><code>v_BQ</code>  </td><td class="markdownTableBodyNone">Point Q's translational velocity in frame B   </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Relative velocity  </td><td class="markdownTableBodyCenter">v  </td><td class="markdownTableBodyCenter">\(^Bv^{Q/P}\)  </td><td class="markdownTableBodyCenter"><code>v_B_PQ</code>  </td><td class="markdownTableBodyNone">Point Q's translational velocity relative to point P in frame B   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Spatial velocity  </td><td class="markdownTableBodyCenter">V  </td><td class="markdownTableBodyCenter">\(^BV^{C}\)  </td><td class="markdownTableBodyCenter"><code>V_BC</code>  </td><td class="markdownTableBodyNone">Frame C's spatial velocity in frame B (for point Co)ᵇ   </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Relative spatial velocity  </td><td class="markdownTableBodyCenter">V  </td><td class="markdownTableBodyCenter">\(^BV^{C/D}\)  </td><td class="markdownTableBodyCenter"><code>V_B_DC</code>  </td><td class="markdownTableBodyNone">Frame C's spatial velocity relative to frame D in frame B   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Angular acceleration  </td><td class="markdownTableBodyCenter">alpha  </td><td class="markdownTableBodyCenter">\(^B\alpha^C\)  </td><td class="markdownTableBodyCenter"><code>alpha_BC</code>  </td><td class="markdownTableBodyNone">Frame C's angular acceleration in frame B   </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Acceleration  </td><td class="markdownTableBodyCenter">a  </td><td class="markdownTableBodyCenter">\(^Ba^Q\)  </td><td class="markdownTableBodyCenter"><code>a_BQ</code>  </td><td class="markdownTableBodyNone">Point Q's translational acceleration in frame B   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Relative acceleration  </td><td class="markdownTableBodyCenter">a  </td><td class="markdownTableBodyCenter">\(^Ba^{Q/P}\)  </td><td class="markdownTableBodyCenter"><code>a_B_PQ</code>  </td><td class="markdownTableBodyNone">Point Q's translational acceleration relative to point P in frame B   </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Spatial acceleration  </td><td class="markdownTableBodyCenter">A  </td><td class="markdownTableBodyCenter">\(^BA^{C}\)  </td><td class="markdownTableBodyCenter"><code>A_BC</code>  </td><td class="markdownTableBodyNone">Frame C's spatial acceleration in frame B (for point Co)ᵇ   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Relative spatial acceleration  </td><td class="markdownTableBodyCenter">A  </td><td class="markdownTableBodyCenter">\(^BA^{C/D}\)  </td><td class="markdownTableBodyCenter"><code>A_B_DC</code>  </td><td class="markdownTableBodyNone">Frame C's spatial acceleration relative to frame D in frame B   </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Torque  </td><td class="markdownTableBodyCenter">t  </td><td class="markdownTableBodyCenter">\(\tau^{B}\)  </td><td class="markdownTableBodyCenter"><code>t_B</code>  </td><td class="markdownTableBodyNone">Torque on a body (or frame) B   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Force  </td><td class="markdownTableBodyCenter">f  </td><td class="markdownTableBodyCenter">\(f^{P}\)  </td><td class="markdownTableBodyCenter"><code>f_P</code>  </td><td class="markdownTableBodyNone">Force on a point P   </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Spatial force  </td><td class="markdownTableBodyCenter">F  </td><td class="markdownTableBodyCenter">\(F^{B}\)  </td><td class="markdownTableBodyCenter"><code>F_B</code>  </td><td class="markdownTableBodyNone">Spatial force (torque/force) on a body (or frame) Bᶜ   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Inertia matrix  </td><td class="markdownTableBodyCenter">I  </td><td class="markdownTableBodyCenter">\(I^{B/Bo}\)  </td><td class="markdownTableBodyCenter"><code>I_BBo</code>  </td><td class="markdownTableBodyNone">Body B's inertia matrix about Bo   </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Spatial inertia  </td><td class="markdownTableBodyCenter">M  </td><td class="markdownTableBodyCenter">\(M^{B/Bo}\)  </td><td class="markdownTableBodyCenter"><code>M_BBo</code>  </td><td class="markdownTableBodyNone">Body B's spatial inertia about Boᵃ   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Spatial momentum  </td><td class="markdownTableBodyCenter">L  </td><td class="markdownTableBodyCenter">\(^BL^{S/P}\)  </td><td class="markdownTableBodyCenter"><code>L_BSP</code>  </td><td class="markdownTableBodyNone">System S's spatial momentum about point P in frame B   </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Spatial momentum  </td><td class="markdownTableBodyCenter">L  </td><td class="markdownTableBodyCenter">\(^BL^{S/Scm}\)  </td><td class="markdownTableBodyCenter"><code>L_BScm</code>  </td><td class="markdownTableBodyNone">System S's spatial momentum about point Scm in frame B   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Kinetic energy  </td><td class="markdownTableBodyCenter">K  </td><td class="markdownTableBodyCenter">\(^BK^S\)  </td><td class="markdownTableBodyCenter"><code>K_BS</code>  </td><td class="markdownTableBodyNone">System S's kinetic energy in frame B   </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Jacobian wrt qᵈ  </td><td class="markdownTableBodyCenter">Jq  </td><td class="markdownTableBodyCenter">\([J_{q}^{{}^Pp^Q}]_E\)  </td><td class="markdownTableBodyCenter"><code>Jq_p_PQ_E</code>  </td><td class="markdownTableBodyNone">Point Q's position Jacobian from point P <b>in</b> frame E wrt q <small>(<b>in</b> means both measured-in and expressed-in)</small>   </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Jacobian wrt q̇  </td><td class="markdownTableBodyCenter">Jqdot  </td><td class="markdownTableBodyCenter">\(J_{q̇}^{{}^Bv^Q}\)  </td><td class="markdownTableBodyCenter"><code>Jqdot_v_BQ</code>  </td><td class="markdownTableBodyNone">Point Q's translational velocity Jacobian in frame B wrt q̇   </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Jacobian wrt v  </td><td class="markdownTableBodyCenter">Jv  </td><td class="markdownTableBodyCenter">\(J_{v}^{{}^Bv^Q}\)  </td><td class="markdownTableBodyCenter"><code>Jv_v_BQ</code>  </td><td class="markdownTableBodyNone">Point Q's translational velocity Jacobian in frame B wrt v   </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Jacobian wrt v  </td><td class="markdownTableBodyCenter">Jv  </td><td class="markdownTableBodyCenter">\(J_{v}^{{}^B\omega^C}\)  </td><td class="markdownTableBodyCenter"><code>Jv_w_BC</code>  </td><td class="markdownTableBodyNone">Frame C's angular velocity Jacobian in frame B wrt v   </td></tr>
+<td class="markdownTableBodyNone">Jacobian wrt v  </td><td class="markdownTableBodyCenter">Jv  </td><td class="markdownTableBodyCenter">\(J_{v}^{{}^Bv^Q}\)  </td><td class="markdownTableBodyCenter"><code>Jv_v_BQ</code>  </td><td class="markdownTableBodyNone">Point Q's translational velocity Jacobian in frame B wrt v   </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Jacobian wrt v  </td><td class="markdownTableBodyCenter">Jv  </td><td class="markdownTableBodyCenter">\(J_{v}^{{}^B\omega^C}\)  </td><td class="markdownTableBodyCenter"><code>Jv_w_BC</code>  </td><td class="markdownTableBodyNone">Frame C's angular velocity Jacobian in frame B wrt v   </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Ez measure of vector v  </td><td class="markdownTableBodyCenter">v  </td><td class="markdownTableBodyCenter">\([v]_{Ez}\)  </td><td class="markdownTableBodyCenter"><code>v_Ez</code>  </td><td class="markdownTableBodyNone">Ez scalar component of vector v, i.e., v • Ez, where Ez is frame E's z-direction unit vector.   </td></tr>
 </table>
 <p>ᵃ In code, a vector has an expressed-in-frame which appears after the quantity. <br />

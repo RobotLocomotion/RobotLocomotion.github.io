@@ -1,0 +1,711 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Iris</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/%2Findex.ipynb">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__planning__iris.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Iris<div class="ingroups"><a class="el" href="group__algorithms.html">Algorithms</a> &raquo; <a class="el" href="group__planning.html">Planning</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>These algorithms help construct regions of configuration space that are collision free. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html">CIrisCollisionGeometry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class contains the necessary information about the collision geometry used in C-IRIS.  <a href="classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html">CspaceFreeBox</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class tries to find large axis-aligned bounding boxes in the configuration space, such that all configurations in the boxes are collision free.  <a href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html">CspaceFreePolytope</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class tries to find large convex polytopes in the tangential-configuration space, such that all configurations in the convex polytopes is collision free.  <a href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html">CspaceFreePolytopeBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This virtual class is the base of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html" title="This class tries to find large convex polytopes in the tangential-configuration space,...">CspaceFreePolytope</a> and <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html" title="This class tries to find large axis-aligned bounding boxes in the configuration space,...">CspaceFreeBox</a>.  <a href="classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration options for the IRIS algorithm.  <a href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_common_sampled_iris_options.html">CommonSampledIrisOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Various options which are common to the sampling-based algorithms IrisNp2 and IrisZo for generating collision free polytopes in configuration space.  <a href="classdrake_1_1planning_1_1_common_sampled_iris_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html">IrisParameterizationFunction</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordinarily, IRIS algorithms grow collision free regions in the robot's configuration space C.  <a href="classdrake_1_1planning_1_1_iris_parameterization_function.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1planning_1_1_ray_sampler_options.html">RaySamplerOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structdrake_1_1planning_1_1_ray_sampler_options.html" title="RaySamplerOptions contains settings specific to the kRaySampler strategy for drawing the initial samp...">RaySamplerOptions</a> contains settings specific to the kRaySampler strategy for drawing the initial samples.  <a href="structdrake_1_1planning_1_1_ray_sampler_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html">IrisNp2Options</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html" title="IrisNp2Options collects all parameters for the IRIS-NP2 algorithm.">IrisNp2Options</a> collects all parameters for the IRIS-NP2 algorithm.  <a href="classdrake_1_1planning_1_1_iris_np2_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html" title="IrisZoOptions collects all parameters for the IRIS-ZO algorithm.">IrisZoOptions</a> collects all parameters for the IRIS-ZO algorithm.  <a href="classdrake_1_1planning_1_1_iris_zo_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga10b0e0579060ac0afdf6344627ffabd2"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#ga10b0e0579060ac0afdf6344627ffabd2">IrisRegions</a></td></tr>
+<tr class="memdesc:ga10b0e0579060ac0afdf6344627ffabd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a standardized representation for (named) IrisRegions, which can be serialized in both C++ and Python.  <a href="group__planning__iris.html#ga10b0e0579060ac0afdf6344627ffabd2">More...</a><br /></td></tr>
+<tr class="separator:ga10b0e0579060ac0afdf6344627ffabd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gafd8111a93cb3461e05bec3477ee736f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#gafd8111a93cb3461e05bec3477ee736f6">Iris</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;obstacles, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;sample, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;domain, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
+<tr class="memdesc:gafd8111a93cb3461e05bec3477ee736f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in.  <a href="group__planning__iris.html#gafd8111a93cb3461e05bec3477ee736f6">More...</a><br /></td></tr>
+<tr class="separator:gafd8111a93cb3461e05bec3477ee736f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad54a224f37c1a0dc86eaec300ef874af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#gad54a224f37c1a0dc86eaec300ef874af">MakeIrisObstacles</a> (const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;query_object, std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; reference_frame=std::nullopt)</td></tr>
+<tr class="memdesc:gad54a224f37c1a0dc86eaec300ef874af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> representations of obstacles for IRIS in 3D using the geometry from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.  <a href="group__planning__iris.html#gad54a224f37c1a0dc86eaec300ef874af">More...</a><br /></td></tr>
+<tr class="separator:gad54a224f37c1a0dc86eaec300ef874af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a3a8f2dcb01cc40c95f4e3afe7fed01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#ga3a3a8f2dcb01cc40c95f4e3afe7fed01">IrisNp</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
+<tr class="memdesc:ga3a3a8f2dcb01cc40c95f4e3afe7fed01"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variation of the Iris (Iterative Region Inflation by Semidefinite programming) algorithm which finds collision-free regions in the <em>configuration space</em> of <code>plant</code>.  <a href="group__planning__iris.html#ga3a3a8f2dcb01cc40c95f4e3afe7fed01">More...</a><br /></td></tr>
+<tr class="separator:ga3a3a8f2dcb01cc40c95f4e3afe7fed01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80">SetEdgeContainmentTerminationCondition</a> (<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> *iris_options, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_1, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_2, const <a class="el" href="classdouble.html">double</a> epsilon=1e-3, const double tol=1e-6)</td></tr>
+<tr class="memdesc:ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies the <code>iris_options</code> to facilitate finding a region that contains the edge between x_1 and x_2.  <a href="group__planning__iris.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80">More...</a><br /></td></tr>
+<tr class="separator:ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace53f3f8045d8eb96867bcd6eda63ed0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#gace53f3f8045d8eb96867bcd6eda63ed0">IrisInConfigurationSpaceFromCliqueCover</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;checker, const <a class="el" href="structdrake_1_1planning_1_1_iris_from_clique_cover_options.html">IrisFromCliqueCoverOptions</a> &amp;options, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator, std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &gt; *sets, const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">planning::graph_algorithms::MaxCliqueSolverBase</a> *max_clique_solver=nullptr)</td></tr>
+<tr class="memdesc:gace53f3f8045d8eb96867bcd6eda63ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cover the configuration space in Iris regions using the Visibility Clique Cover Algorithm as described in.  <a href="group__planning__iris.html#gace53f3f8045d8eb96867bcd6eda63ed0">More...</a><br /></td></tr>
+<tr class="separator:gace53f3f8045d8eb96867bcd6eda63ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c3446677c07e407740e6afe95d20f9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#ga4c3446677c07e407740e6afe95d20f9a">IrisNp2</a> (const <a class="el" href="classdrake_1_1planning_1_1_scene_graph_collision_checker.html">SceneGraphCollisionChecker</a> &amp;checker, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">geometry::optimization::Hyperellipsoid</a> &amp;starting_ellipsoid, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &amp;domain, const <a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html">IrisNp2Options</a> &amp;options=<a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html">IrisNp2Options</a>())</td></tr>
+<tr class="memdesc:ga4c3446677c07e407740e6afe95d20f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IRIS-NP2 (Iterative Regional Inflation by Semidefinite and Nonlinear Programming 2) algorithm, as described in.  <a href="group__planning__iris.html#ga4c3446677c07e407740e6afe95d20f9a">More...</a><br /></td></tr>
+<tr class="separator:ga4c3446677c07e407740e6afe95d20f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a0dc24bc708c206708b8af86c38baff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#ga7a0dc24bc708c206708b8af86c38baff">IrisZo</a> (const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;checker, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">geometry::optimization::Hyperellipsoid</a> &amp;starting_ellipsoid, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &amp;domain, const <a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a> &amp;options=<a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a>())</td></tr>
+<tr class="memdesc:ga7a0dc24bc708c206708b8af86c38baff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IRIS-ZO (Iterative Regional Inflation by Semidefinite programming - Zero Order) algorithm, as described in.  <a href="group__planning__iris.html#ga7a0dc24bc708c206708b8af86c38baff">More...</a><br /></td></tr>
+<tr class="separator:ga7a0dc24bc708c206708b8af86c38baff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:gae1b0dda8a6f7a3ed77c6e247018c0008"><td class="memItemLeft" align="right" valign="top">std::variant&lt; <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">geometry::optimization::IrisOptions</a>, <a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html">IrisNp2Options</a>, <a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#gae1b0dda8a6f7a3ed77c6e247018c0008">iris_options</a> {<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">geometry::optimization::IrisOptions</a>{.<a class="el" href="structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72">iteration_limit</a> = 1}}</td></tr>
+<tr class="memdesc:gae1b0dda8a6f7a3ed77c6e247018c0008"><td class="mdescLeft">&#160;</td><td class="mdescRight">The options used on internal calls to Iris.  <a href="#gae1b0dda8a6f7a3ed77c6e247018c0008">More...</a><br /></td></tr>
+<tr class="separator:gae1b0dda8a6f7a3ed77c6e247018c0008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga10b0e0579060ac0afdf6344627ffabd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10b0e0579060ac0afdf6344627ffabd2">&#9670;&nbsp;</a></span>IrisRegions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::map&lt;std::string, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&gt; <a class="el" href="group__planning__iris.html#ga10b0e0579060ac0afdf6344627ffabd2">IrisRegions</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines a standardized representation for (named) IrisRegions, which can be serialized in both C++ and Python. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gafd8111a93cb3461e05bec3477ee736f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd8111a93cb3461e05bec3477ee736f6">&#9670;&nbsp;</a></span>Iris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> drake::geometry::optimization::Iris </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>obstacles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;&#160;</td>
+          <td class="paramname"><em>domain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in. </p>
+<p>R. L. H. Deits and R. Tedrake, “Computing large convex regions of obstacle-free space through semidefinite programming,” Workshop on the Algorithmic Fundamentals of Robotics, Istanbul, Aug. 2014. <a href="http://groups.csail.mit.edu/robotics-center/public_papers/Deits14.pdf">http://groups.csail.mit.edu/robotics-center/public_papers/Deits14.pdf</a></p>
+<p>This algorithm attempts to locally maximize the volume of a convex polytope representing obstacle-free space given a sample point and list of convex obstacles. Rather than compute the volume of the polytope directly, the algorithm maximizes the volume of an inscribed ellipsoid. It alternates between finding separating hyperplanes between the ellipsoid and the obstacles and then finding a new maximum-volume inscribed ellipsoid.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obstacles</td><td>is a vector of convex sets representing the occupied space. </td></tr>
+    <tr><td class="paramname">sample</td><td>provides a point in the space; the algorithm is initialized using a tiny sphere around this point. The algorithm is only guaranteed to succeed if this sample point is collision free (outside of all obstacles), but in practice the algorithm can often escape bad initialization (assuming the require_sample_point_is_contained option is false). </td></tr>
+    <tr><td class="paramname">domain</td><td>describes the total region of interest; computed IRIS regions will be inside this domain. It must be bounded, and is typically a simple bounding box (e.g. from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a90a3c53754fc20d77419aae25ed1b1c1" title="Constructs a polyhedron as an axis-aligned box from the lower and upper corners.">HPolyhedron::MakeBox</a>).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>obstacles</code>, <code>sample</code>, and the <code>domain</code> must describe elements in the same ambient dimension (but that dimension can be any positive integer).</p>
+<dl class="section note"><dt>Note</dt><dd>Some members of <code>options</code> are only applicable to IrisNp. The members relevant for this function are starting_ellipse, termination_func, bounding_region, verify_domain_boundedness, require_sample_point_is_contained, iteration_limit, termination_threshold, relative_termination_threshold. </dd></dl>
+
+</div>
+</div>
+<a id="gace53f3f8045d8eb96867bcd6eda63ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace53f3f8045d8eb96867bcd6eda63ed0">&#9670;&nbsp;</a></span>IrisInConfigurationSpaceFromCliqueCover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::planning::IrisInConfigurationSpaceFromCliqueCover </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;&#160;</td>
+          <td class="paramname"><em>checker</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1planning_1_1_iris_from_clique_cover_options.html">IrisFromCliqueCoverOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *&#160;</td>
+          <td class="paramname"><em>generator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &gt; *&#160;</td>
+          <td class="paramname"><em>sets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1graph__algorithms_1_1_max_clique_solver_base.html">planning::graph_algorithms::MaxCliqueSolverBase</a> *&#160;</td>
+          <td class="paramname"><em>max_clique_solver</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cover the configuration space in Iris regions using the Visibility Clique Cover Algorithm as described in. </p>
+<p>P. Werner, A. Amice, T. Marcucci, D. Rus, R. Tedrake "Approximating Robot Configuration Spaces with few Convex Sets using Clique Covers of Visibility Graphs" In 2024 IEEE Internation Conference on Robotics and Automation. <a href="https://arxiv.org/abs/2310.02875">https://arxiv.org/abs/2310.02875</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">checker</td><td>The collision checker containing the plant and its associated scene_graph. </td></tr>
+    <tr><td class="paramname">generator</td><td>There are points in the algorithm requiring randomness. The generator controls this source of randomness. </td></tr>
+    <tr><td class="paramname">sets</td><td>[in/out] initial sets covering the space (potentially empty). The cover is written into this vector. </td></tr>
+    <tr><td class="paramname">max_clique_solver</td><td>The min clique cover problem is approximatley solved by repeatedly solving max clique on the uncovered graph and adding this largest clique to the cover. The max clique problem is solved by this solver. If parallelism is set to allow more than 1 thread, then the solver <b>must</b> be implemented in C++.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If nullptr is passed as the <code>max_clique_solver</code>, then max clique will be solved using an instance of MaxCliqueSolverViaGreedy, which is a fast heuristic. If higher quality cliques are desired, consider changing the solver to an instance of MaxCliqueSolverViaMip. Currently, the padding in the collision checker is not forwarded to the algorithm, and therefore the final regions do not necessarily respect this padding. Effectively, this means that the regions are generated as if the padding is set to 0. This behavior may be adjusted in the future at the resolution of #18830.</p>
+<dl class="section note"><dt>Note</dt><dd>that MaxCliqueSolverViaMip requires the availability of a Mixed-Integer Linear Programming solver (e.g. Gurobi and/or Mosek). We recommend enabling those solvers if possible because they produce higher quality cliques (<a href="https://drake.mit.edu/bazel.html#proprietary_solvers">https://drake.mit.edu/bazel.html#proprietary_solvers</a>). The method will throw if <code>max_clique_solver</code> cannot solve the max clique problem. </dd>
+<dd>
+If <a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html" title="IrisNp2Options collects all parameters for the IRIS-NP2 algorithm.">IrisNp2Options</a> is used, then the collision checker must be a <a class="el" href="classdrake_1_1planning_1_1_scene_graph_collision_checker.html" title="An implementation of CollisionChecker that uses SceneGraph to provide collision checks.">SceneGraphCollisionChecker</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>Parameterizations are not currently supported for <code>IrisZo</code> and <code>IrisNp2</code> when running <code>IrisFromCliqueCover</code>. This method will throw if options.iris_options is of type <code><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html" title="IrisZoOptions collects all parameters for the IRIS-ZO algorithm.">IrisZoOptions</a></code> or <code><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html" title="IrisNp2Options collects all parameters for the IRIS-NP2 algorithm.">IrisNp2Options</a></code> and specifies a parametrization function. See the documentation of <code><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html" title="IrisZoOptions collects all parameters for the IRIS-ZO algorithm.">IrisZoOptions</a></code> and <code><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html" title="IrisNp2Options collects all parameters for the IRIS-NP2 algorithm.">IrisNp2Options</a></code> for more information about subspace parametrization. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If the options.iris_options.prog_with_additional_constraints is not nullptr i.e. if a prog with additional constraints is provided. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3a3a8f2dcb01cc40c95f4e3afe7fed01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a3a8f2dcb01cc40c95f4e3afe7fed01">&#9670;&nbsp;</a></span>IrisNp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> drake::geometry::optimization::IrisNp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A variation of the Iris (Iterative Region Inflation by Semidefinite programming) algorithm which finds collision-free regions in the <em>configuration space</em> of <code>plant</code>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__planning__iris.html#gafd8111a93cb3461e05bec3477ee736f6" title="The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in.">Iris</a> for details on the original algorithm. This variant uses nonlinear <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a> (instead of convex <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a>) to find collisions in configuration space; each potential collision is probabilistically "certified" by restarting the nonlinear <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">optimization</a> from random initial seeds inside the candidate IRIS region until it fails to find a collision in <code>options.num_collision_infeasible_samples</code> consecutive attempts.</dd></dl>
+<p>This method constructs a single Iris region in the configuration space of <code>plant</code>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__planning__iris.html#gace53f3f8045d8eb96867bcd6eda63ed0" title="Cover the configuration space in Iris regions using the Visibility Clique Cover Algorithm as describe...">planning::IrisInConfigurationSpaceFromCliqueCover</a> for a method to automatically cover the configuration space with multiple <a class="el" href="group__planning__iris.html#gafd8111a93cb3461e05bec3477ee736f6" title="The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in.">Iris</a> regions.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plant</td><td>describes the kinematics of configuration space. It must be connected to a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> in a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">systems::Diagram</a>. </td></tr>
+    <tr><td class="paramname">context</td><td>is a context of the <code>plant</code>. The context must have the positions of the plant set to the initialIRIS seed configuration. </td></tr>
+    <tr><td class="paramname">options</td><td>provides additional configuration options. In particular, increasing <code>options.num_collision_infeasible_samples</code> increases the chances that the IRIS regions are collision free but can also significantly increase the run-time of the algorithm. The same goes for <code>options.num_additional_constraints_infeasible_samples</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the sample configuration in <code>context</code> is infeasible. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if termination_func is invalid on the domain. See <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a087724eb9045117415e4d5a93db67ab1" title="A user-defined termination function to determine whether the iterations should stop.">IrisOptions.termination_func</a> for more details. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4c3446677c07e407740e6afe95d20f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c3446677c07e407740e6afe95d20f9a">&#9670;&nbsp;</a></span>IrisNp2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> drake::planning::IrisNp2 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_scene_graph_collision_checker.html">SceneGraphCollisionChecker</a> &amp;&#160;</td>
+          <td class="paramname"><em>checker</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">geometry::optimization::Hyperellipsoid</a> &amp;&#160;</td>
+          <td class="paramname"><em>starting_ellipsoid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &amp;&#160;</td>
+          <td class="paramname"><em>domain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html">IrisNp2Options</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html">IrisNp2Options</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The IRIS-NP2 (Iterative Regional Inflation by Semidefinite and Nonlinear Programming 2) algorithm, as described in. </p>
+<p>[Werner et al., 2024] P. Werner, T. Cohn*, R. H. Jiang*, T. Seyde, M. Simchowitz, R. Tedrake, and D. Rus, "Faster Algorithms for Growing
+Collision-Free Convex Polytopes in Robot Configuration Space," &#160;* Denotes equal contribution.</p>
+<p><a href="https://groups.csail.mit.edu/robotics-center/public_papers/Werner24.pdf">https://groups.csail.mit.edu/robotics-center/public_papers/Werner24.pdf</a></p>
+<p>This algorithm constructs probabilistically collision-free polytopes in robot configuration space using a scene graph collision checker. The sets are constructed by identifying collisions with sampling and nonlinear programming. The produced polytope P is probabilistically collision-free in the sense that one gets to control the probability δ that the fraction of the volume-in-collision is larger than ε</p>
+<p>Pr[λ(P\Cfree)/λ(P) &gt; ε] ≤ δ.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">starting_ellipsoid</td><td>provides the initial ellipsoid around which to grow the region. This is typically a small ball around a collision-free configuration (e.g. Hyperellipsoid::MakeHyperSphere(radius, seed_point)). The center of this ellipsoid is required to be collision-free. </td></tr>
+    <tr><td class="paramname">domain</td><td>describes the total region of interest; computed IRIS regions will be inside this domain. It must be bounded, and is typically a simple bounding box representing joint limits (e.g. from HPolyhedron::MakeBox). </td></tr>
+    <tr><td class="paramname">options</td><td>contains algorithm parameters such as the desired collision-free fraction, confidence level, and various algorithmic settings.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>starting_ellipsoid</code> and <code>domain</code> must describe elements in the same ambient dimension as the configuration space of the robot, unless a parameterization is specified (in which case, they must match <code>options.parameterization_dimension</code>). </p><dl class="section return"><dt>Returns</dt><dd>A HPolyhedron representing the computed collision-free region in configuration space.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the center of <code>starting_ellipsoid</code> is in collision, or violates any of the user-specified constraints in <code>options.prog_with_additional_constraints</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This can be a long running function that needs to solve many QPs. If you have a solver which requires a license, consider acquiring the license before solving this function. See AcquireLicense for more details.</dd></dl>
+<p>IrisNp2 is still in development, so certain features of <a class="el" href="classdrake_1_1planning_1_1_scene_graph_collision_checker.html" title="An implementation of CollisionChecker that uses SceneGraph to provide collision checks.">SceneGraphCollisionChecker</a> and parts of [Werner et al., 2024] are not yet supported.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>any collision pairs in <code>checker</code> have negative padding. </td></tr>
+    <tr><td class="paramname">if</td><td>any collision geometries have been been added in <code>checker</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7a0dc24bc708c206708b8af86c38baff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7a0dc24bc708c206708b8af86c38baff">&#9670;&nbsp;</a></span>IrisZo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> drake::planning::IrisZo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">CollisionChecker</a> &amp;&#160;</td>
+          <td class="paramname"><em>checker</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">geometry::optimization::Hyperellipsoid</a> &amp;&#160;</td>
+          <td class="paramname"><em>starting_ellipsoid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">geometry::optimization::HPolyhedron</a> &amp;&#160;</td>
+          <td class="paramname"><em>domain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The IRIS-ZO (Iterative Regional Inflation by Semidefinite programming - Zero Order) algorithm, as described in. </p>
+<p>P. Werner, T. Cohn*, R. H. Jiang*, T. Seyde, M. Simchowitz, R. Tedrake, and D. Rus, "Faster Algorithms for Growing Collision-Free Convex Polytopes in Robot
+Configuration Space," &#160;* Denotes equal contribution.</p>
+<p><a href="https://groups.csail.mit.edu/robotics-center/public_papers/Werner24.pdf">https://groups.csail.mit.edu/robotics-center/public_papers/Werner24.pdf</a></p>
+<p>This algorithm constructs probabilistically collision-free polytopes in robot configuration space while only relying on a collision checker. The sets are constructed using a simple parallel zero-order optimization strategy. The produced polytope P is probabilistically collision-free in the sense that one gets to control the probability δ that the fraction of the volume-in-collision is larger than ε</p>
+<p>Pr[λ(P\Cfree)/λ(P) &gt; ε] ≤ δ.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">starting_ellipsoid</td><td>provides the initial ellipsoid around which to grow the region. This is typically a small ball around a collision-free configuration (e.g. Hyperellipsoid::MakeHyperSphere(radius, seed_point)). The center of this ellipsoid is required to be collision-free. </td></tr>
+    <tr><td class="paramname">domain</td><td>describes the total region of interest; computed IRIS regions will be inside this domain. It must be bounded, and is typically a simple bounding box representing joint limits (e.g. from HPolyhedron::MakeBox). </td></tr>
+    <tr><td class="paramname">options</td><td>contains algorithm parameters such as the desired collision-free fraction, confidence level, and various algorithmic settings.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>starting_ellipsoid</code> and <code>domain</code> must describe elements in the same ambient dimension as the configuration space of the robot, unless a parameterization is specified (in which case, they must match <code>options.parameterization_dimension</code>). </p><dl class="section return"><dt>Returns</dt><dd>A HPolyhedron representing the computed collision-free region in configuration space.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">if</td><td>the center of <code>starting_ellipsoid</code> is in collision, or violates any of the user-specified constraints in <code>options.prog_with_additional_constraints</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This can be a long running function that needs to solve many QPs. If you have a solver which requires a license, consider acquiring the license before solving this function. See AcquireLicense for more details. </dd></dl>
+
+</div>
+</div>
+<a id="gad54a224f37c1a0dc86eaec300ef874af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad54a224f37c1a0dc86eaec300ef874af">&#9670;&nbsp;</a></span>MakeIrisObstacles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> drake::geometry::optimization::MakeIrisObstacles </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>query_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt;&#160;</td>
+          <td class="paramname"><em>reference_frame</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> representations of obstacles for IRIS in 3D using the geometry from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>. </p>
+<p>All geometry in the scene with a proximity role, both anchored and dynamic, are consider to be <em>fixed</em> obstacles frozen in the poses captured in the context used to create the <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.</p>
+<p>When multiple representations are available for a particular geometry (e.g. a <a class="el" href="classdrake_1_1geometry_1_1_box.html" title="Definition of a box.">Box</a> can be represented as either an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> or a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a>), then this method will prioritize the representation that we expect is most performant for the current implementation of the IRIS algorithm. </p>
+
+</div>
+</div>
+<a id="ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80">&#9670;&nbsp;</a></span>SetEdgeContainmentTerminationCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::geometry::optimization::SetEdgeContainmentTerminationCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> *&#160;</td>
+          <td class="paramname"><em>iris_options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>epsilon</em> = <code>1e-3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1e-6</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifies the <code>iris_options</code> to facilitate finding a region that contains the edge between x_1 and x_2. </p>
+<p>It sets <code>iris_options.starting_ellipse</code> to be a hyperellipsoid that contains the edge, is centered at the midpoint of the edge and extends in other directions by epsilon. It also sets <code>iris_options.termination_func</code> such that IRIS iterations terminate when the edge is no longer contained in the IRIS region with tolerance tol.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if x_1.size() != x_2.size(). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if epsilon &lt;= 0. This is due to the fact that the hyperellipsoid for <code>iris_options.starting_ellipse</code> must have non-zero volume. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="gae1b0dda8a6f7a3ed77c6e247018c0008"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae1b0dda8a6f7a3ed77c6e247018c0008">&#9670;&nbsp;</a></span>iris_options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::variant&lt;<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">geometry::optimization::IrisOptions</a>, <a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html">IrisNp2Options</a>, <a class="el" href="classdrake_1_1planning_1_1_iris_zo_options.html">IrisZoOptions</a>&gt; iris_options {<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">geometry::optimization::IrisOptions</a>{.<a class="el" href="structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72">iteration_limit</a> = 1}}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The options used on internal calls to Iris. </p>
+<p>The type of this option determines which variant of Iris is called. Currently, it is recommended to only run Iris for one iteration when building from a clique so as to avoid discarding the information gained from the clique.</p>
+<p>Note that <code>IrisOptions</code> can optionally include a meshcat instance to provide debugging visualization. If this is provided <code>IrisFromCliqueCover</code> will provide debug visualization in meshcat showing where in configuration space it is drawing from. However, if the parallelism option is set to allow more than 1 thread, then the debug visualizations of internal Iris calls will be disabled. This is due to a limitation of drawing to meshcat from outside the main thread. </p><dl class="section note"><dt>Note</dt><dd>some of these variants specify a parallelism parameter. In IrisInConfigurationSpaceFromCliqueCover, the iris_options.parallelism is ignored and the value of parallelism specified by <code>this.parallelism</code> will be used instead. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

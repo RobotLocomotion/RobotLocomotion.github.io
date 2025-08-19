@@ -18,7 +18,7 @@ var searchData=
   ['inputportindex',['InputPortIndex',['../namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0',1,'drake::systems']]],
   ['inputportlocator',['InputPortLocator',['../classdrake_1_1systems_1_1_diagram.html#a21d7fa5adcb9feb95f3d52d9ab400d02',1,'drake::systems::Diagram::InputPortLocator()'],['../classdrake_1_1systems_1_1_diagram_builder.html#a9bc06cc14ff4029014149ef478301c51',1,'drake::systems::DiagramBuilder::InputPortLocator()']]],
   ['integrablefunction',['IntegrableFunction',['../classdrake_1_1systems_1_1_antiderivative_function.html#aa77b1a0ffd8ec53e3327d467726e08ba',1,'drake::systems::AntiderivativeFunction']]],
-  ['irisregions',['IrisRegions',['../namespacedrake_1_1geometry_1_1optimization.html#a10b0e0579060ac0afdf6344627ffabd2',1,'drake::geometry::optimization']]],
+  ['irisregions',['IrisRegions',['../group__planning__iris.html#ga10b0e0579060ac0afdf6344627ffabd2',1,'drake::geometry::optimization']]],
   ['is_5fcloneable',['is_cloneable',['../namespacedrake.html#a158f68939b94f6c2c5ea353d652919da',1,'drake']]],
   ['isometry3',['Isometry3',['../namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa',1,'drake']]],
   ['iterator',['iterator',['../classdrake_1_1symbolic_1_1_environment.html#a3d26d853ee0e9c78a4fbb44e5a8488e0',1,'drake::symbolic::Environment::iterator()'],['../classdrake_1_1symbolic_1_1_variables.html#a05e36ab8e742176eb11f37b020a5c12c',1,'drake::symbolic::Variables::iterator()']]]

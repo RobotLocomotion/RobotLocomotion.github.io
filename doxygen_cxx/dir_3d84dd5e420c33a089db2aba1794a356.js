@@ -7,7 +7,6 @@ var dir_3d84dd5e420c33a089db2aba1794a356 =
     [ "convex_hull.h", "convex__hull_8h.html", null ],
     [ "convex_set.h", "convex__set_8h.html", "convex__set_8h" ],
     [ "cspace_free_box.h", "cspace__free__box_8h.html", [
-      [ "CspaceFreeBox", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box" ],
       [ "SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians" ],
       [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result" ],
       [ "SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate" ],
@@ -15,7 +14,6 @@ var dir_3d84dd5e420c33a089db2aba1794a356 =
     ] ],
     [ "cspace_free_internal.h", "cspace__free__internal_8h.html", null ],
     [ "cspace_free_polytope.h", "cspace__free__polytope_8h.html", [
-      [ "CspaceFreePolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope" ],
       [ "SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians" ],
       [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result" ],
       [ "SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate" ],
@@ -27,7 +25,6 @@ var dir_3d84dd5e420c33a089db2aba1794a356 =
       [ "BinarySearchOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options" ]
     ] ],
     [ "cspace_free_polytope_base.h", "cspace__free__polytope__base_8h.html", [
-      [ "CspaceFreePolytopeBase", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base" ],
       [ "Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options" ]
     ] ],
     [ "cspace_free_structs.h", "cspace__free__structs_8h.html", [

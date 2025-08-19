@@ -1,5 +1,9 @@
 var NAVTREEINDEX59 =
 {
+"make__convex__mesh_8h.html":[4,0,0,4,2,31],
+"make__cylinder__field_8h.html":[4,0,0,4,2,32],
+"make__cylinder__mesh_8h.html":[4,0,0,4,2,33],
+"make__discrete__update__manager_8h.html":[4,0,0,8,10,30],
 "make__ellipsoid__field_8h.html":[4,0,0,4,2,34],
 "make__ellipsoid__mesh_8h.html":[4,0,0,4,2,35],
 "make__kuka__iiwa__model_8h.html":[4,0,0,8,0,3,1],
@@ -238,16 +242,12 @@ var NAVTREEINDEX59 =
 "named__positions__functions_8h.html#adbec09473da9017710b6e9abfa224fa3":[4,0,0,6,3,4,0],
 "namespacedrake.html":[3,0,0],
 "namespacedrake.html":[2,0,0],
-"namespacedrake_1_1ad.html":[2,0,0,0],
 "namespacedrake_1_1ad.html":[3,0,0,0],
-"namespacedrake_1_1assert.html":[3,0,0,1],
+"namespacedrake_1_1ad.html":[2,0,0,0],
 "namespacedrake_1_1assert.html":[2,0,0,1],
+"namespacedrake_1_1assert.html":[3,0,0,1],
 "namespacedrake_1_1common.html":[3,0,0,2],
 "namespacedrake_1_1common.html":[2,0,0,2],
 "namespacedrake_1_1common_1_1test.html":[2,0,0,2,0],
-"namespacedrake_1_1examples.html":[2,0,0,3],
-"namespacedrake_1_1examples.html":[3,0,0,3],
-"namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0],
-"namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,3,0],
-"namespacedrake_1_1examples_1_1allegro__hand.html":[2,0,0,3,1]
+"namespacedrake_1_1examples.html":[3,0,0,3]
 };

@@ -7965,8 +7965,9 @@ solve.</p>
 <p>Constraint with its evaluator as a Python function</p>
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PyFunctionConstraint.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">PyFunctionConstraint.__init__(self:</span> <span class="pre">pydrake.solvers.PyFunctionConstraint,</span> <span class="pre">num_vars:</span> <span class="pre">int,</span> <span class="pre">func:</span> <span class="pre">Callable,</span> <span class="pre">lb:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">ub:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]],</span> <span class="pre">description:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'')</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Constructs a constraint for a python function <cite>func</cite>, encoding <cite>lb</cite> &lt;= <cite>func</cite> (x) &lt;= <cite>ub</cite>, where x is of size <cite>num_vars</cite>.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
@@ -7984,6 +7985,19 @@ solve.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">PyFunctionConstraint.UpdateUpperBound(self:</span> <span class="pre">pydrake.solvers.PyFunctionConstraint,</span> <span class="pre">new_ub:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
 <dd><p>Update the upper bound of the constraint.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PyFunctionCost</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.Cost</span></code></p>
+<p>Cost with its evaluator as a Python function</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">PyFunctionCost.__init__(self:</span> <span class="pre">pydrake.solvers.PyFunctionCost,</span> <span class="pre">num_vars:</span> <span class="pre">int,</span> <span class="pre">func:</span> <span class="pre">Callable,</span> <span class="pre">description:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'')</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dd><p>Constructs a cost for a python function <cite>func</cite>, applied to <cite>num_vars</cite> variables.</p>
 </dd></dl>
 
 </dd></dl>

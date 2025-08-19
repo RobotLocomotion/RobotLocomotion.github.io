@@ -260,9 +260,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a3c7f9b75df3ac22becb7bb5cb03bf956"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a></td></tr>
 <tr class="memdesc:a3c7f9b75df3ac22becb7bb5cb03bf956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the recommended container for passing a collection of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> instances.  <a href="#a3c7f9b75df3ac22becb7bb5cb03bf956">More...</a><br /></td></tr>
 <tr class="separator:a3c7f9b75df3ac22becb7bb5cb03bf956"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10b0e0579060ac0afdf6344627ffabd2"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a10b0e0579060ac0afdf6344627ffabd2">IrisRegions</a></td></tr>
-<tr class="memdesc:a10b0e0579060ac0afdf6344627ffabd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a standardized representation for (named) IrisRegions, which can be serialized in both C++ and Python.  <a href="#a10b0e0579060ac0afdf6344627ffabd2">More...</a><br /></td></tr>
-<tr class="separator:a10b0e0579060ac0afdf6344627ffabd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10b0e0579060ac0afdf6344627ffabd2"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#ga10b0e0579060ac0afdf6344627ffabd2">IrisRegions</a></td></tr>
+<tr class="memdesc:ga10b0e0579060ac0afdf6344627ffabd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a standardized representation for (named) IrisRegions, which can be serialized in both C++ and Python.  <a href="group__planning__iris.html#ga10b0e0579060ac0afdf6344627ffabd2">More...</a><br /></td></tr>
+<tr class="separator:ga10b0e0579060ac0afdf6344627ffabd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -322,17 +322,20 @@ Functions</h2></td></tr>
 <tr class="memitem:ga60002c174b2106139e2b219a0e0fb3f0"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; std::pair&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="classint.html">int</a> &gt; &gt;, std::vector&lt; Eigen::VectorXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization__geodesic__convexity.html#ga60002c174b2106139e2b219a0e0fb3f0">ComputePairwiseIntersections</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;convex_sets, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;continuous_revolute_joints, const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperrectangle.html">geometry::optimization::Hyperrectangle</a> &gt; &amp;bboxes, <a class="el" href="classdrake_1_1_parallelism.html">Parallelism</a> parallelism=<a class="el" href="classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819">Parallelism::Max</a>())</td></tr>
 <tr class="memdesc:ga60002c174b2106139e2b219a0e0fb3f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of <code>ComputePairwiseIntersections</code> allowing the user to supply axis- aligned bounding boxes if they're known a priori, to save on computation time.  <a href="group__geometry__optimization__geodesic__convexity.html#ga60002c174b2106139e2b219a0e0fb3f0">More...</a><br /></td></tr>
 <tr class="separator:ga60002c174b2106139e2b219a0e0fb3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafd8111a93cb3461e05bec3477ee736f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6">Iris</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;obstacles, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;sample, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;domain, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
-<tr class="memdesc:gafd8111a93cb3461e05bec3477ee736f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in.  <a href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6">More...</a><br /></td></tr>
+<tr class="memitem:gafd8111a93cb3461e05bec3477ee736f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#gafd8111a93cb3461e05bec3477ee736f6">Iris</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;obstacles, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;sample, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;domain, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
+<tr class="memdesc:gafd8111a93cb3461e05bec3477ee736f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in.  <a href="group__planning__iris.html#gafd8111a93cb3461e05bec3477ee736f6">More...</a><br /></td></tr>
 <tr class="separator:gafd8111a93cb3461e05bec3477ee736f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad54a224f37c1a0dc86eaec300ef874af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af">MakeIrisObstacles</a> (const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;query_object, std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; reference_frame=std::nullopt)</td></tr>
-<tr class="memdesc:gad54a224f37c1a0dc86eaec300ef874af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> representations of obstacles for IRIS in 3D using the geometry from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.  <a href="group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af">More...</a><br /></td></tr>
+<tr class="memitem:gad54a224f37c1a0dc86eaec300ef874af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#gad54a224f37c1a0dc86eaec300ef874af">MakeIrisObstacles</a> (const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;query_object, std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; reference_frame=std::nullopt)</td></tr>
+<tr class="memdesc:gad54a224f37c1a0dc86eaec300ef874af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> representations of obstacles for IRIS in 3D using the geometry from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.  <a href="group__planning__iris.html#gad54a224f37c1a0dc86eaec300ef874af">More...</a><br /></td></tr>
 <tr class="separator:gad54a224f37c1a0dc86eaec300ef874af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3a51e0fec449a0abcf498f78a2a390a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8">IrisInConfigurationSpace</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
-<tr class="memdesc:ga3a51e0fec449a0abcf498f78a2a390a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variation of the Iris (Iterative Region Inflation by Semidefinite programming) algorithm which finds collision-free regions in the <em>configuration space</em> of <code>plant</code>.  <a href="group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8">More...</a><br /></td></tr>
-<tr class="separator:ga3a51e0fec449a0abcf498f78a2a390a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80">SetEdgeContainmentTerminationCondition</a> (<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> *iris_options, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_1, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_2, const <a class="el" href="classdouble.html">double</a> epsilon=1e-3, const double tol=1e-6)</td></tr>
-<tr class="memdesc:ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies the <code>iris_options</code> to facilitate finding a region that contains the edge between x_1 and x_2.  <a href="group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80">More...</a><br /></td></tr>
+<tr class="memitem:ga3a3a8f2dcb01cc40c95f4e3afe7fed01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#ga3a3a8f2dcb01cc40c95f4e3afe7fed01">IrisNp</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
+<tr class="memdesc:ga3a3a8f2dcb01cc40c95f4e3afe7fed01"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variation of the Iris (Iterative Region Inflation by Semidefinite programming) algorithm which finds collision-free regions in the <em>configuration space</em> of <code>plant</code>.  <a href="group__planning__iris.html#ga3a3a8f2dcb01cc40c95f4e3afe7fed01">More...</a><br /></td></tr>
+<tr class="separator:ga3a3a8f2dcb01cc40c95f4e3afe7fed01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a51e0fec449a0abcf498f78a2a390a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3a51e0fec449a0abcf498f78a2a390a8">IrisInConfigurationSpace</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
+<tr class="memdesc:a3a51e0fec449a0abcf498f78a2a390a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a3a51e0fec449a0abcf498f78a2a390a8">More...</a><br /></td></tr>
+<tr class="separator:a3a51e0fec449a0abcf498f78a2a390a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80">SetEdgeContainmentTerminationCondition</a> (<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> *iris_options, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_1, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_2, const <a class="el" href="classdouble.html">double</a> epsilon=1e-3, const double tol=1e-6)</td></tr>
+<tr class="memdesc:ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies the <code>iris_options</code> to facilitate finding a region that contains the edge between x_1 and x_2.  <a href="group__planning__iris.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80">More...</a><br /></td></tr>
 <tr class="separator:ga5f3ad49bfffd1b9a968ed7f1bf4d4c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6616542d5536b0f2522beb473f437a06"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a6616542d5536b0f2522beb473f437a06">GetVertices</a> (const <a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a> &amp;convex)</td></tr>
 <tr class="memdesc:a6616542d5536b0f2522beb473f437a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains all the vertices stored in the convex object.  <a href="#a6616542d5536b0f2522beb473f437a06">More...</a><br /></td></tr>
@@ -352,22 +355,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Provides the recommended container for passing a collection of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> instances. </p>
-
-</div>
-</div>
-<a id="a10b0e0579060ac0afdf6344627ffabd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10b0e0579060ac0afdf6344627ffabd2">&#9670;&nbsp;</a></span>IrisRegions</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::map&lt;std::string, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&gt; <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a10b0e0579060ac0afdf6344627ffabd2">IrisRegions</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Defines a standardized representation for (named) IrisRegions, which can be serialized in both C++ and Python. </p>
 
 </div>
 </div>
@@ -602,6 +589,44 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a3a51e0fec449a0abcf498f78a2a390a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a51e0fec449a0abcf498f78a2a390a8">&#9670;&nbsp;</a></span>IrisInConfigurationSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> drake::geometry::optimization::IrisInConfigurationSpace </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Use IrisNp instead. <br />
+ This will be removed from Drake on or after 2025-12-01.</dd></dl>
 
 </div>
 </div>

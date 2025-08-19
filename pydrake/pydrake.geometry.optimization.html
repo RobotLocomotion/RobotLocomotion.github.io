@@ -3948,11 +3948,30 @@ simple bounding box (e.g. from HPolyhedron::MakeBox).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">obstacles</span></code>, <code class="docutils literal notranslate"><span class="pre">sample</span></code>, and the <code class="docutils literal notranslate"><span class="pre">domain</span></code> must describe
 elements in the same ambient dimension (but that dimension can be any
 positive integer).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some members of <code class="docutils literal notranslate"><span class="pre">options</span></code> are only applicable to IrisNp. The
+members relevant for this function are starting_ellipse,
+termination_func, bounding_region, verify_domain_boundedness,
+require_sample_point_is_contained, iteration_limit,
+termination_threshold, relative_termination_threshold.</p>
+</div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">IrisInConfigurationSpace(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.IrisOptions</span> <span class="pre">=</span> <span class="pre">IrisOptions(require_sample_point_is_contained=False,</span> <span class="pre">iteration_limit=100,</span> <span class="pre">termination_threshold=0.02,</span> <span class="pre">relative_termination_threshold=0.001,</span> <span class="pre">configuration_space_margin=0.01,</span> <span class="pre">num_collision_infeasible_samples=5,</span> <span class="pre">configuration_obstacles</span> <span class="pre">[],</span> <span class="pre">prog_with_additional_constraints</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">set,</span> <span class="pre">num_additional_constraint_infeasible_samples=5,</span> <span class="pre">random_seed=1234,</span> <span class="pre">mixing_steps=10))</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.optimization.HPolyhedron</span></span></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use IrisNp instead. This will be removed from Drake on or after
+2025-12-01.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">IrisNp(plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">options:</span> <span class="pre">pydrake.geometry.optimization.IrisOptions</span> <span class="pre">=</span> <span class="pre">IrisOptions(require_sample_point_is_contained=False,</span> <span class="pre">iteration_limit=100,</span> <span class="pre">termination_threshold=0.02,</span> <span class="pre">relative_termination_threshold=0.001,</span> <span class="pre">configuration_space_margin=0.01,</span> <span class="pre">num_collision_infeasible_samples=5,</span> <span class="pre">configuration_obstacles</span> <span class="pre">[],</span> <span class="pre">prog_with_additional_constraints</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">set,</span> <span class="pre">num_additional_constraint_infeasible_samples=5,</span> <span class="pre">random_seed=1234,</span> <span class="pre">mixing_steps=10))</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.geometry.optimization.HPolyhedron</span></span></dt>
 <dd><p>A variation of the Iris (Iterative Region Inflation by Semidefinite
 programming) algorithm which finds collision-free regions in the
 <em>configuration space</em> of <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
@@ -4016,26 +4035,26 @@ goes for
 <dd><p>Optionally allows the caller to restrict the space within which IRIS
 regions are allowed to grow. By default, IRIS regions are bounded by
 the <code class="docutils literal notranslate"><span class="pre">domain</span></code> argument in the case of <code class="docutils literal notranslate"><span class="pre">Iris</span></code> or the joint limits of
-the input <code class="docutils literal notranslate"><span class="pre">plant</span></code> in the case of <code class="docutils literal notranslate"><span class="pre">IrisInConfigurationSpace</span></code>. If
-this option is specified, IRIS regions will be confined to the
-intersection between the domain and <code class="docutils literal notranslate"><span class="pre">bounding_region</span></code></p>
+the input <code class="docutils literal notranslate"><span class="pre">plant</span></code> in the case of <code class="docutils literal notranslate"><span class="pre">IrisNp</span></code>. If this option is
+specified, IRIS regions will be confined to the intersection between
+the domain and <code class="docutils literal notranslate"><span class="pre">bounding_region</span></code>.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">IrisOptions.configuration_obstacles</span></span></dt>
-<dd><p>For IRIS in configuration space, it can be beneficial to not only
-specify task-space obstacles (passed in through the plant) but also
-obstacles that are defined by convex sets in the configuration space.
-This option can be used to pass in such configuration space obstacles.</p>
+<dd><p>For IrisNp, it can be beneficial to not only specify task-space
+obstacles (passed in through the plant) but also obstacles that are
+defined by convex sets in the configuration space. This option can be
+used to pass in such configuration space obstacles.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">IrisOptions.configuration_space_margin</span></span></dt>
-<dd><p>For IRIS in configuration space, we retreat by this margin from each
-C-space obstacle in order to avoid the possibility of requiring an
-infinite number of faces to approximate a curved boundary.</p>
+<dd><p>For IrisNp, we retreat by this margin from each C-space obstacle in
+order to avoid the possibility of requiring an infinite number of
+faces to approximate a curved boundary.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -4079,10 +4098,10 @@ next constraint.</p>
 <dl class="py property">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">IrisOptions.prog_with_additional_constraints</span></span></dt>
-<dd><p>By default, IRIS in configuration space certifies regions for
-collision avoidance constraints and joint limits. This option can be
-used to pass additional constraints that should be satisfied by the
-IRIS region. We accept these in the form of a MathematicalProgram:</p>
+<dd><p>By default, IrisNp certifies regions for collision avoidance
+constraints and joint limits. This option can be used to pass
+additional constraints that should be satisfied by the IRIS region. We
+accept these in the form of a MathematicalProgram:</p>
 <p>find q subject to g(q) ≤ 0.</p>
 <p>The decision_variables() for the program are taken to define <code class="docutils literal notranslate"><span class="pre">q</span></code>.
 IRIS will silently ignore any costs in
@@ -4097,8 +4116,8 @@ into this option.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">IrisOptions.random_seed</span></span></dt>
 <dd><p>The only randomization in IRIS is the random sampling done to find
-counter-examples for the additional constraints using in
-IrisInConfigurationSpace. Use this option to set the initial seed.</p>
+counter-examples for the additional constraints using in IrisNp. Use
+this option to set the initial seed.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -4148,12 +4167,11 @@ termination condition can be disabled by setting to a negative value.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">IrisOptions.verify_domain_boundedness</span></span></dt>
 <dd><p>If the user knows the intersection of bounding_region and the domain
-(for IRIS) or plant joint limits (for IrisInConfigurationSpace) is
-bounded, setting this flag to <code class="docutils literal notranslate"><span class="pre">False</span></code> will skip the boundedness
-check that IRIS and IrisInConfigurationSpace perform (leading to a
-small speedup, as checking boundedness requires solving optimization
-problems). If the intersection turns out to be unbounded, this will
-lead to undefined behavior.</p>
+(for IRIS) or plant joint limits (for IrisNp) is bounded, setting this
+flag to <code class="docutils literal notranslate"><span class="pre">False</span></code> will skip the boundedness check that IRIS and IrisNp
+perform (leading to a small speedup, as checking boundedness requires
+solving optimization problems). If the intersection turns out to be
+unbounded, this will lead to undefined behavior.</p>
 </dd></dl>
 
 </dd></dl>

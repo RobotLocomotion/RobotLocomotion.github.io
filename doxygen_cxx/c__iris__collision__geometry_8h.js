@@ -1,6 +1,5 @@
 var c__iris__collision__geometry_8h =
 [
-    [ "CIrisCollisionGeometry", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry" ],
     [ "CIrisGeometryType", "c__iris__collision__geometry_8h.html#a95690619e9b8d2e9047a607703cfbfff", [
       [ "kSphere", "c__iris__collision__geometry_8h.html#a95690619e9b8d2e9047a607703cfbfffaf88bbd242f1721920aa0eb72a18767a4", null ],
       [ "kPolytope", "c__iris__collision__geometry_8h.html#a95690619e9b8d2e9047a607703cfbfffa4373e4d7d76472e0fe9a1430bf5c9787", null ],

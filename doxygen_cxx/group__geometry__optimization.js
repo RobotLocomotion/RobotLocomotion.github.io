@@ -396,9 +396,5 @@ var group__geometry__optimization =
       [ "ToShapeConvex", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a67e77b56ed66ffabc0e12442c7e4a485", null ],
       [ "vertices", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a893af2ada07d691fd0f87888cc3f9ca4", null ],
       [ "WriteObj", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a8852ee82563dc11b173a57ff08863820", null ]
-    ] ],
-    [ "Iris", "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6", null ],
-    [ "IrisInConfigurationSpace", "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8", null ],
-    [ "MakeIrisObstacles", "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af", null ],
-    [ "SetEdgeContainmentTerminationCondition", "group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80", null ]
+    ] ]
 ];

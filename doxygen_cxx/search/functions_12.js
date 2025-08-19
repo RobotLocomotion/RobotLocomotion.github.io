@@ -374,7 +374,7 @@ var searchData=
   ['setdiscreteupdatemanager',['SetDiscreteUpdateManager',['../classdrake_1_1multibody_1_1_multibody_plant.html#aca600d62fcd45c7fabf7f2ea5c9524f6',1,'drake::multibody::MultibodyPlant']]],
   ['setdistanceandinterpolationprovider',['SetDistanceAndInterpolationProvider',['../classdrake_1_1planning_1_1_collision_checker.html#afef8ab83612978d5deeb7cd6fc413b80',1,'drake::planning::CollisionChecker']]],
   ['setdistanceconstraintparams',['SetDistanceConstraintParams',['../classdrake_1_1multibody_1_1_multibody_plant.html#a6672fc5264442466b21708b7008421fe',1,'drake::multibody::MultibodyPlant']]],
-  ['setedgecontainmentterminationcondition',['SetEdgeContainmentTerminationCondition',['../group__geometry__optimization.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80',1,'drake::geometry::optimization']]],
+  ['setedgecontainmentterminationcondition',['SetEdgeContainmentTerminationCondition',['../group__planning__iris.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80',1,'drake::geometry::optimization']]],
   ['setendeffector',['SetEndEffector',['../classdrake_1_1multibody_1_1_constraint_relaxing_ik.html#a551202a20cbfbac429580010b512f09d',1,'drake::multibody::ConstraintRelaxingIk']]],
   ['setenv',['SetEnv',['../classdrake_1_1test_1_1_set_env.html#a6285258c4f0b75961b0f6b86a7b26224',1,'drake::test::SetEnv']]],
   ['setenvironmentmap',['SetEnvironmentMap',['../classdrake_1_1geometry_1_1_meshcat.html#a4e604b24e8ece3d7d7ac74a8b4fe2783',1,'drake::geometry::Meshcat']]],

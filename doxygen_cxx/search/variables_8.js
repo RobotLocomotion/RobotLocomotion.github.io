@@ -24,7 +24,7 @@ var searchData=
   ['integrator_5f',['integrator_',['../structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#a30adb6d6693854cc7960d38461bbaf1d',1,'drake::systems::analysis_test::GenericIntegratorTest']]],
   ['intensity',['intensity',['../structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a2118076db8e8f8a25c2376e1d4acfb67',1,'drake::geometry::render::LightParameter']]],
   ['interval_5fbinning',['interval_binning',['../structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a70e95748d802a0f66bba15e61dc5fb0e',1,'drake::multibody::GlobalInverseKinematics::Options']]],
-  ['iris_5foptions',['iris_options',['../structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#ae1b0dda8a6f7a3ed77c6e247018c0008',1,'drake::planning::IrisFromCliqueCoverOptions']]],
+  ['iris_5foptions',['iris_options',['../group__planning__iris.html#gae1b0dda8a6f7a3ed77c6e247018c0008',1,'drake::planning::IrisFromCliqueCoverOptions']]],
   ['is_5fbool',['is_bool',['../structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2',1,'drake::scalar_predicate']]],
   ['is_5fdefault_5fscalar',['is_default_scalar',['../group__default__scalars.html#gaf140364db7046208e67d85327722d34a',1,'drake']]],
   ['is_5fvalid',['is_valid',['../structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html#ac40e2f6b16673621ee11f794813446bf',1,'drake::assert::ConditionTraits&lt; symbolic::Formula &gt;']]],
