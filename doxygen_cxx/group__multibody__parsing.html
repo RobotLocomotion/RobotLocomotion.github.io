@@ -395,6 +395,7 @@ Drake Extensions</h1>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_stiffness">drake:tendon_constraint_stiffness</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_tendon_constraint_damping">drake:tendon_constraint_damping</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_visual">drake:visual</a></li>
+<li><a class="el" href="group__multibody__parsing.html#tag_drake_wall_boundary_condition">drake:wall_boundary_condition</a></li>
 <li><a class="el" href="group__multibody__parsing.html#tag_drake_youngs_modulus">drake:youngs_modulus</a></li>
 </ul>
 <h2><a class="anchor" id="tag_drake_acceleration"></a>
@@ -1193,6 +1194,22 @@ Semantics</h3>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_drake_perception_properties">drake:perception_properties</a> </dd>
 <dd>
 <a class="el" href="group__multibody__parsing.html#tag_drake_illustration_properties">drake:illustration_properties</a></dd></dl>
+<h2><a class="anchor" id="tag_drake_wall_boundary_condition"></a>
+drake:wall_boundary_condition</h2>
+<ul>
+<li>SDFormat path: <code>//model/link/drake:wall_boundary_condition</code></li>
+<li>URDF path: n/a</li>
+<li>Syntax: Nested elements <code>drake:point_on_plane</code> and <code>drake:outward_normal</code>.</li>
+</ul>
+<h3><a class="anchor" id="tag_drake_wall_boundary_condition_semantics"></a>
+Semantics</h3>
+<p>If present, this element specifies a wall boundary condition for a deformable body. The wall boundary condition constrains vertices of the deformable body's mesh to have zero displacement if their reference positions are inside a prescribed open half space. The half space is defined by a plane with an outward normal vector.</p>
+<p>The nested elements are:</p><ul>
+<li><code>drake:point_on_plane</code>: Position of a point Q on the plane in the world frame, specified as three space-separated floating point values (x y z coordinates in meters).</li>
+<li><code>drake:outward_normal</code>: Outward normal to the half space expressed in the world frame, specified as three space-separated floating point values (nx ny nz components). The normal vector is automatically normalized to unit length.</li>
+</ul>
+<p>Multiple <code>drake:wall_boundary_condition</code> elements can be specified for a single deformable link to define multiple boundary conditions. This element is only valid for deformable links (those containing a <code>drake:deformable_properties</code> element).</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__multibody__parsing.html#tag_deformable_link_requirements">Deformable link requirements</a>, <a class="el" href="classdrake_1_1multibody_1_1_deformable_model.html#a8e4f2d02a025433b059374ae0023881c" title="Sets wall boundary conditions for the body with the given id.">drake::multibody::DeformableModel::SetWallBoundaryCondition()</a></dd></dl>
 <h2><a class="anchor" id="tag_drake_youngs_modulus"></a>
 drake:youngs_modulus</h2>
 <ul>
