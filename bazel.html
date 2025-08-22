@@ -286,7 +286,8 @@ bazel <span class="nb">test</span> <span class="nt">--config</span> lint //...  
 <ul>
   <li>The “<code class="language-plaintext highlighter-rouge">:</code>” syntax separates target names from the directory path of the
 <code class="language-plaintext highlighter-rouge">BUILD</code> file they appear in. In this case, for example,
-<code class="language-plaintext highlighter-rouge">drake/common/BUILD</code> specifies <code class="language-plaintext highlighter-rouge">drake_cc_test(name = "polynomial_test")</code>.</li>
+<code class="language-plaintext highlighter-rouge">drake/common/BUILD</code> specifies
+<code class="language-plaintext highlighter-rouge">drake_cc_googletest(name = "polynomial_test")</code>.</li>
   <li>Note that the configuration switches (<code class="language-plaintext highlighter-rouge">-c</code> and <code class="language-plaintext highlighter-rouge">--config</code>) influence the
 entire command. For example, running a test in <code class="language-plaintext highlighter-rouge">dbg</code> mode means that its
 prerequisite libraries are also compiled and linked in <code class="language-plaintext highlighter-rouge">dbg</code> mode.</li>
