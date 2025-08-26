@@ -205,9 +205,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ab732700b0814fc1fba1b7b8cd80f9e53"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> = std::variant&lt; <a class="el" href="classdouble.html">double</a>, <a class="el" href="classdrake_1_1schema_1_1_deterministic.html">Deterministic</a>, <a class="el" href="classdrake_1_1schema_1_1_gaussian.html">Gaussian</a>, <a class="el" href="classdrake_1_1schema_1_1_uniform.html">Uniform</a>, <a class="el" href="classdrake_1_1schema_1_1_uniform_discrete.html">UniformDiscrete</a> &gt;</td></tr>
-<tr class="memdesc:ab732700b0814fc1fba1b7b8cd80f9e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant over all kinds of distributions.  <a href="#ab732700b0814fc1fba1b7b8cd80f9e53">More...</a><br /></td></tr>
-<tr class="separator:ab732700b0814fc1fba1b7b8cd80f9e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e2ce226a24d035921a3f34a30c42be"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> = std::variant&lt; <a class="el" href="classdouble.html">double</a>, <a class="el" href="classdrake_1_1schema_1_1_deterministic.html">Deterministic</a>, <a class="el" href="classdrake_1_1schema_1_1_gaussian.html">Gaussian</a>, <a class="el" href="classdrake_1_1schema_1_1_uniform.html">Uniform</a>, <a class="el" href="classdrake_1_1schema_1_1_uniform_discrete.html">UniformDiscrete</a> &gt;</td></tr>
+<tr class="memdesc:ad3e2ce226a24d035921a3f34a30c42be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant over all kinds of distributions.  <a href="#ad3e2ce226a24d035921a3f34a30c42be">More...</a><br /></td></tr>
+<tr class="separator:ad3e2ce226a24d035921a3f34a30c42be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0be9949c22ccf3d9bd836e204fc8523"><td class="memTemplParams" colspan="2">template&lt;int Size&gt; </td></tr>
 <tr class="memitem:ad0be9949c22ccf3d9bd836e204fc8523"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#ad0be9949c22ccf3d9bd836e204fc8523">DistributionVectorVariant</a> = std::variant&lt; <a class="el" href="namespacedrake.html#a01ae662d5635b7c9efe03d15d976f7a8">drake::Vector</a>&lt; <a class="el" href="classdouble.html">double</a>, Size &gt;, <a class="el" href="classdrake_1_1schema_1_1_deterministic_vector.html">DeterministicVector</a>&lt; Size &gt;, <a class="el" href="classdrake_1_1schema_1_1_gaussian_vector.html">GaussianVector</a>&lt; Size &gt;, <a class="el" href="classdrake_1_1schema_1_1_uniform_vector.html">UniformVector</a>&lt; Size &gt;, std::conditional_t&lt;(Size==Eigen::Dynamic||Size==1), <a class="el" href="classdrake_1_1schema_1_1_deterministic.html">Deterministic</a>, internal::InvalidVariantSelection&lt; <a class="el" href="classdrake_1_1schema_1_1_deterministic.html">Deterministic</a> &gt; &gt;, std::conditional_t&lt;(Size==Eigen::Dynamic||Size==1), <a class="el" href="classdrake_1_1schema_1_1_gaussian.html">Gaussian</a>, internal::InvalidVariantSelection&lt; <a class="el" href="classdrake_1_1schema_1_1_gaussian.html">Gaussian</a> &gt; &gt;, std::conditional_t&lt;(Size==Eigen::Dynamic||Size==1), <a class="el" href="classdrake_1_1schema_1_1_uniform.html">Uniform</a>, internal::InvalidVariantSelection&lt; <a class="el" href="classdrake_1_1schema_1_1_uniform.html">Uniform</a> &gt; &gt;&gt;</td></tr>
 <tr class="memdesc:ad0be9949c22ccf3d9bd836e204fc8523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant over all kinds of vector distributions.  <a href="#ad0be9949c22ccf3d9bd836e204fc8523">More...</a><br /></td></tr>
@@ -218,31 +218,31 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2f098a551fbf448099900c3f3c3e13b4"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1schema_1_1_distribution.html">Distribution</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a2f098a551fbf448099900c3f3c3e13b4">ToDistribution</a> (const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;var)</td></tr>
+<tr class="memitem:a2f098a551fbf448099900c3f3c3e13b4"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1schema_1_1_distribution.html">Distribution</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a2f098a551fbf448099900c3f3c3e13b4">ToDistribution</a> (const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;var)</td></tr>
 <tr class="memdesc:a2f098a551fbf448099900c3f3c3e13b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the given variant into a <a class="el" href="classdrake_1_1schema_1_1_distribution.html" title="Base class for a single distribution, to be used with YAML archives.">Distribution</a> base class.  <a href="#a2f098a551fbf448099900c3f3c3e13b4">More...</a><br /></td></tr>
 <tr class="separator:a2f098a551fbf448099900c3f3c3e13b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f95ed0d3b0cb1459ef88fa33e833e5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a4f95ed0d3b0cb1459ef88fa33e833e5e">Sample</a> (const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;var, <a class="el" href="classdrake_1_1_random_generator.html">drake::RandomGenerator</a> *generator)</td></tr>
+<tr class="memitem:a4f95ed0d3b0cb1459ef88fa33e833e5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a4f95ed0d3b0cb1459ef88fa33e833e5e">Sample</a> (const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;var, <a class="el" href="classdrake_1_1_random_generator.html">drake::RandomGenerator</a> *generator)</td></tr>
 <tr class="memdesc:a4f95ed0d3b0cb1459ef88fa33e833e5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classdrake_1_1schema_1_1_distribution.html#ab5a8b55fd572bc105a8346fcc7f3ce93">Distribution::Sample</a>, but on a DistributionVariant instead.  <a href="#a4f95ed0d3b0cb1459ef88fa33e833e5e">More...</a><br /></td></tr>
 <tr class="separator:a4f95ed0d3b0cb1459ef88fa33e833e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57679ebbc3affa5691736cd9fae0173c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a57679ebbc3affa5691736cd9fae0173c">Mean</a> (const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;var)</td></tr>
+<tr class="memitem:a57679ebbc3affa5691736cd9fae0173c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a57679ebbc3affa5691736cd9fae0173c">Mean</a> (const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;var)</td></tr>
 <tr class="memdesc:a57679ebbc3affa5691736cd9fae0173c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classdrake_1_1schema_1_1_distribution.html#a96d061b5d4c9fccae1b7d0f6d3b553f5">Distribution::Mean</a>, but on a DistributionVariant instead.  <a href="#a57679ebbc3affa5691736cd9fae0173c">More...</a><br /></td></tr>
 <tr class="separator:a57679ebbc3affa5691736cd9fae0173c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefc9cc6990399b1828a73e50c2d360ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#aefc9cc6990399b1828a73e50c2d360ee">ToSymbolic</a> (const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;var)</td></tr>
+<tr class="memitem:aefc9cc6990399b1828a73e50c2d360ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#aefc9cc6990399b1828a73e50c2d360ee">ToSymbolic</a> (const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;var)</td></tr>
 <tr class="memdesc:aefc9cc6990399b1828a73e50c2d360ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classdrake_1_1schema_1_1_distribution.html#a392b7d292d59a91db801b2d024238145">Distribution::ToSymbolic</a>, but on a DistributionVariant instead.  <a href="#aefc9cc6990399b1828a73e50c2d360ee">More...</a><br /></td></tr>
 <tr class="separator:aefc9cc6990399b1828a73e50c2d360ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a025af5d6df759f4a5bdb396846dcca74"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a025af5d6df759f4a5bdb396846dcca74">Sample</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &gt; &amp;vec, <a class="el" href="classdrake_1_1_random_generator.html">drake::RandomGenerator</a> *generator)</td></tr>
+<tr class="memitem:a025af5d6df759f4a5bdb396846dcca74"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a025af5d6df759f4a5bdb396846dcca74">Sample</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &gt; &amp;vec, <a class="el" href="classdrake_1_1_random_generator.html">drake::RandomGenerator</a> *generator)</td></tr>
 <tr class="memdesc:a025af5d6df759f4a5bdb396846dcca74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classdrake_1_1schema_1_1_distribution.html#ab5a8b55fd572bc105a8346fcc7f3ce93">Distribution::Sample</a>, but elementwise over a collection of possibly-heterogenous DistributionVariant instead.  <a href="#a025af5d6df759f4a5bdb396846dcca74">More...</a><br /></td></tr>
 <tr class="separator:a025af5d6df759f4a5bdb396846dcca74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a884497545d6076a3763d5e62549b117d"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a884497545d6076a3763d5e62549b117d">Mean</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &gt; &amp;vec)</td></tr>
+<tr class="memitem:a884497545d6076a3763d5e62549b117d"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a884497545d6076a3763d5e62549b117d">Mean</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &gt; &amp;vec)</td></tr>
 <tr class="memdesc:a884497545d6076a3763d5e62549b117d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classdrake_1_1schema_1_1_distribution.html#a96d061b5d4c9fccae1b7d0f6d3b553f5">Distribution::Mean</a>, but elementwise over a collection of possibly-heterogenous DistributionVariant instead.  <a href="#a884497545d6076a3763d5e62549b117d">More...</a><br /></td></tr>
 <tr class="separator:a884497545d6076a3763d5e62549b117d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d1c5da87f4161d4e6a493411c26976a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a0d1c5da87f4161d4e6a493411c26976a">ToSymbolic</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &gt; &amp;vec)</td></tr>
+<tr class="memitem:a0d1c5da87f4161d4e6a493411c26976a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a0d1c5da87f4161d4e6a493411c26976a">ToSymbolic</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &gt; &amp;vec)</td></tr>
 <tr class="memdesc:a0d1c5da87f4161d4e6a493411c26976a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classdrake_1_1schema_1_1_distribution.html#a392b7d292d59a91db801b2d024238145">Distribution::ToSymbolic</a>, but elementwise over a collection of possibly-heterogenous DistributionVariant instead.  <a href="#a0d1c5da87f4161d4e6a493411c26976a">More...</a><br /></td></tr>
 <tr class="separator:a0d1c5da87f4161d4e6a493411c26976a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9db0a3ddbcab1e2ecbb6e6257c03ea3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a9db0a3ddbcab1e2ecbb6e6257c03ea3d">IsDeterministic</a> (const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;var)</td></tr>
+<tr class="memitem:a9db0a3ddbcab1e2ecbb6e6257c03ea3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#a9db0a3ddbcab1e2ecbb6e6257c03ea3d">IsDeterministic</a> (const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;var)</td></tr>
 <tr class="memdesc:a9db0a3ddbcab1e2ecbb6e6257c03ea3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff <code>var</code> is set to a deterministic value.  <a href="#a9db0a3ddbcab1e2ecbb6e6257c03ea3d">More...</a><br /></td></tr>
 <tr class="separator:a9db0a3ddbcab1e2ecbb6e6257c03ea3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3768479f5bd6420a9b9f347c400cf80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#ae3768479f5bd6420a9b9f347c400cf80">GetDeterministicValue</a> (const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;var)</td></tr>
+<tr class="memitem:ae3768479f5bd6420a9b9f347c400cf80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1schema.html#ae3768479f5bd6420a9b9f347c400cf80">GetDeterministicValue</a> (const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;var)</td></tr>
 <tr class="memdesc:ae3768479f5bd6420a9b9f347c400cf80"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <code>var</code> is deterministic, retrieves its value.  <a href="#ae3768479f5bd6420a9b9f347c400cf80">More...</a><br /></td></tr>
 <tr class="separator:ae3768479f5bd6420a9b9f347c400cf80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d8363da077652b8868dcd5f6200358c"><td class="memTemplParams" colspan="2">template&lt;int Size&gt; </td></tr>
@@ -259,14 +259,14 @@ Functions</h2></td></tr>
 <tr class="separator:a4891bbf6ba4372801a10dacfcbbd6172"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="ab732700b0814fc1fba1b7b8cd80f9e53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab732700b0814fc1fba1b7b8cd80f9e53">&#9670;&nbsp;</a></span>DistributionVariant</h2>
+<a id="ad3e2ce226a24d035921a3f34a30c42be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e2ce226a24d035921a3f34a30c42be">&#9670;&nbsp;</a></span>DistributionVariant</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> =  std::variant&lt; <a class="el" href="classdouble.html">double</a>, <a class="el" href="classdrake_1_1schema_1_1_deterministic.html">Deterministic</a>, <a class="el" href="classdrake_1_1schema_1_1_gaussian.html">Gaussian</a>, <a class="el" href="classdrake_1_1schema_1_1_uniform.html">Uniform</a>, <a class="el" href="classdrake_1_1schema_1_1_uniform_discrete.html">UniformDiscrete</a>&gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> =  std::variant&lt;<a class="el" href="classdouble.html">double</a>, <a class="el" href="classdrake_1_1schema_1_1_deterministic.html">Deterministic</a>, <a class="el" href="classdrake_1_1schema_1_1_gaussian.html">Gaussian</a>, <a class="el" href="classdrake_1_1schema_1_1_uniform.html">Uniform</a>, <a class="el" href="classdrake_1_1schema_1_1_uniform_discrete.html">UniformDiscrete</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -324,7 +324,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdouble.html">double</a> drake::schema::GetDeterministicValue </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;&#160;</td>
           <td class="paramname"><em>var</em></td><td>)</td>
           <td></td>
         </tr>
@@ -382,7 +382,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool drake::schema::IsDeterministic </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;&#160;</td>
           <td class="paramname"><em>var</em></td><td>)</td>
           <td></td>
         </tr>
@@ -428,7 +428,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdouble.html">double</a> drake::schema::Mean </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;&#160;</td>
           <td class="paramname"><em>var</em></td><td>)</td>
           <td></td>
         </tr>
@@ -448,7 +448,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">Eigen::VectorXd drake::schema::Mean </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>vec</em></td><td>)</td>
           <td></td>
         </tr>
@@ -468,7 +468,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdouble.html">double</a> drake::schema::Sample </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;&#160;</td>
           <td class="paramname"><em>var</em>, </td>
         </tr>
         <tr>
@@ -498,7 +498,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">Eigen::VectorXd drake::schema::Sample </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>vec</em>, </td>
         </tr>
         <tr>
@@ -528,7 +528,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1schema_1_1_distribution.html">Distribution</a>&gt; drake::schema::ToDistribution </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;&#160;</td>
           <td class="paramname"><em>var</em></td><td>)</td>
           <td></td>
         </tr>
@@ -574,7 +574,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a> drake::schema::ToSymbolic </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &amp;&#160;</td>
           <td class="paramname"><em>var</em></td><td>)</td>
           <td></td>
         </tr>
@@ -594,7 +594,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a>&gt; drake::schema::ToSymbolic </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ab732700b0814fc1fba1b7b8cd80f9e53">DistributionVariant</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1schema.html#ad3e2ce226a24d035921a3f34a30c42be">DistributionVariant</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>vec</em></td><td>)</td>
           <td></td>
         </tr>
