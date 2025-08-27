@@ -193,6 +193,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a94375b8dbcaefb6612fa6ff85ba902f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_revolute_spring.html#a94375b8dbcaefb6612fa6ff85ba902f2">~RevoluteSpring</a> () override</td></tr>
 <tr class="separator:a94375b8dbcaefb6612fa6ff85ba902f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec72adf302d35f0e2d9fb630bb99d4d2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html">RevoluteJoint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_revolute_spring.html#aec72adf302d35f0e2d9fb630bb99d4d2">joint</a> () const</td></tr>
+<tr class="memdesc:aec72adf302d35f0e2d9fb630bb99d4d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the joint associated with this spring.  <a href="#aec72adf302d35f0e2d9fb630bb99d4d2">More...</a><br /></td></tr>
 <tr class="separator:aec72adf302d35f0e2d9fb630bb99d4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b8142c37ce3b3ebc067d2de28ce88a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_revolute_spring.html#a6b8142c37ce3b3ebc067d2de28ce88a0">nominal_angle</a> () const</td></tr>
 <tr class="memdesc:a6b8142c37ce3b3ebc067d2de28ce88a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a6b8142c37ce3b3ebc067d2de28ce88a0">More...</a><br /></td></tr>
@@ -931,6 +932,14 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the joint associated with this spring. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this element is not associated with a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

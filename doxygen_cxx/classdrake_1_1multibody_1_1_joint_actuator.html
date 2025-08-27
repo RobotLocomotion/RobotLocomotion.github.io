@@ -689,6 +689,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Gets the actuation values for <code>this</code> actuator from the actuation vector u for the entire plant model. </p>
 <dl class="section return"><dt>Returns</dt><dd>a reference to a nv-dimensional vector, where nv is the number of velocity variables of <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a54bc3724965cc59e714c64cbeb147b86" title="Returns a reference to the joint actuated by this JointActuator.">joint()</a>. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this element is not associated with a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -792,6 +798,12 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a reference to the joint actuated by this JointActuator. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if this element is not associated with a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -950,6 +962,7 @@ Additional Inherited Members</h2></td></tr>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>u_actuator.size() != this-&gt;<a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a198bf2c564777ff4d7d5acd711e5e349" title="Returns the number of inputs associated with this actuator.">num_inputs()</a></code>. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if u is nullptr. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this element is not associated with a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if <code>u.size() != this-&gt;<a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a2a52d0e7da46a2d5f8e43812c2a0c389" title="Returns the MultibodyPlant that owns this MultibodyElement.">GetParentPlant()</a>.num_actuated_dofs()</code>. </td></tr>
   </table>
   </dd>

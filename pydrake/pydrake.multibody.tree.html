@@ -889,6 +889,8 @@ body B’s frame.</p>
 <li><p><strong>RuntimeError if no constraint is added</strong><strong> (</strong><strong>i.e. no vertex</strong><strong> of </strong><strong>the</strong> – </p></li>
 <li><p><strong>deformable body is inside the given shape with the given</strong> – </p></li>
 <li><p><strong>poses</strong><strong>)</strong><strong>.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -1211,6 +1213,14 @@ expressed in the world frame) of the j-th vertex are 3j, 3j + 1, and
 <span class="sig-name descname"><span class="pre">DeformableBody.scoped_name(self:</span> <span class="pre">pydrake.multibody.tree.DeformableBody)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.ScopedName</span></span></dt>
 <dd><p>Returns scoped name of this body. Neither of the two pieces of the
 name will be empty (the scope name and the element name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -1507,7 +1517,15 @@ the internal DoorHingeConfig.</p>
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">DoorHinge.joint(self:</span> <span class="pre">pydrake.multibody.tree.DoorHinge)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.RevoluteJoint</span></span></dt>
-<dd></dd></dl>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -1616,7 +1634,15 @@ the internal DoorHingeConfig.</p>
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">DoorHinge_[AutoDiffXd].joint(self:</span> <span class="pre">pydrake.multibody.tree.DoorHinge_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd]</span></span></dt>
-<dd></dd></dl>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -1719,7 +1745,15 @@ the internal DoorHingeConfig.</p>
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">DoorHinge_[Expression].joint(self:</span> <span class="pre">pydrake.multibody.tree.DoorHinge_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.RevoluteJoint_[Expression]</span></span></dt>
-<dd></dd></dl>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -3032,6 +3066,14 @@ attached).</p>
 <span class="sig-name descname"><span class="pre">Frame.scoped_name(self:</span> <span class="pre">pydrake.multibody.tree.Frame)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.ScopedName</span></span></dt>
 <dd><p>Returns scoped name of this frame. Neither of the two pieces of the
 name will be empty (the scope name and the element name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -3674,6 +3716,14 @@ attached).</p>
 <span class="sig-name descname"><span class="pre">Frame_[AutoDiffXd].scoped_name(self:</span> <span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.ScopedName</span></span></dt>
 <dd><p>Returns scoped name of this frame. Neither of the two pieces of the
 name will be empty (the scope name and the element name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -4310,6 +4360,14 @@ attached).</p>
 <span class="sig-name descname"><span class="pre">Frame_[Expression].scoped_name(self:</span> <span class="pre">pydrake.multibody.tree.Frame_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.ScopedName</span></span></dt>
 <dd><p>Returns scoped name of this frame. Neither of the two pieces of the
 name will be empty (the scope name and the element name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -4894,6 +4952,8 @@ joint. Refer to default_damping_vector() for details.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if damping.size</strong><strong>(</strong><strong>) </strong><strong>!= num_velocities</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p></li>
 <li><p><strong>RuntimeError if any</strong><strong> of </strong><strong>the damping coefficients is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -5548,6 +5608,8 @@ joint. Refer to default_damping_vector() for details.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if damping.size</strong><strong>(</strong><strong>) </strong><strong>!= num_velocities</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p></li>
 <li><p><strong>RuntimeError if any</strong><strong> of </strong><strong>the damping coefficients is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -6196,6 +6258,8 @@ joint. Refer to default_damping_vector() for details.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if damping.size</strong><strong>(</strong><strong>) </strong><strong>!= num_velocities</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p></li>
 <li><p><strong>RuntimeError if any</strong><strong> of </strong><strong>the damping coefficients is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -6479,6 +6543,12 @@ vector u for the entire plant model.</p>
 <dd class="field-odd"><p>a reference to a nv-dimensional vector, where nv is the number of
 velocity variables of joint().</p>
 </dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
 </dl>
 </dd></dl>
 
@@ -6540,6 +6610,14 @@ within the vector of actuation inputs for the full multibody / system.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">JointActuator.joint(self:</span> <span class="pre">pydrake.multibody.tree.JointActuator)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.Joint</span></span></dt>
 <dd><p>Returns a reference to the joint actuated by this JointActuator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -6595,6 +6673,8 @@ corresponding to this actuator are changed.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if u_actuator.size</strong><strong>(</strong><strong>) </strong><strong>!= this-&gt;num_inputs</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p></li>
 <li><p><strong>RuntimeError if u is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
 <li><p><strong>RuntimeError if ``u.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
 <li><p><strong>this-&gt;GetParentPlant</strong><strong>(</strong><strong>)</strong><strong>.num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
 </ul>
@@ -6728,6 +6808,12 @@ vector u for the entire plant model.</p>
 <dd class="field-odd"><p>a reference to a nv-dimensional vector, where nv is the number of
 velocity variables of joint().</p>
 </dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
 </dl>
 </dd></dl>
 
@@ -6789,6 +6875,14 @@ within the vector of actuation inputs for the full multibody / system.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">JointActuator_[AutoDiffXd].joint(self:</span> <span class="pre">pydrake.multibody.tree.JointActuator_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.Joint_[AutoDiffXd]</span></span></dt>
 <dd><p>Returns a reference to the joint actuated by this JointActuator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -6844,6 +6938,8 @@ corresponding to this actuator are changed.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if u_actuator.size</strong><strong>(</strong><strong>) </strong><strong>!= this-&gt;num_inputs</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p></li>
 <li><p><strong>RuntimeError if u is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
 <li><p><strong>RuntimeError if ``u.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
 <li><p><strong>this-&gt;GetParentPlant</strong><strong>(</strong><strong>)</strong><strong>.num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
 </ul>
@@ -6971,6 +7067,12 @@ vector u for the entire plant model.</p>
 <dd class="field-odd"><p>a reference to a nv-dimensional vector, where nv is the number of
 velocity variables of joint().</p>
 </dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
 </dl>
 </dd></dl>
 
@@ -7032,6 +7134,14 @@ within the vector of actuation inputs for the full multibody / system.</p>
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">JointActuator_[Expression].joint(self:</span> <span class="pre">pydrake.multibody.tree.JointActuator_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.Joint_[Expression]</span></span></dt>
 <dd><p>Returns a reference to the joint actuated by this JointActuator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -7087,6 +7197,8 @@ corresponding to this actuator are changed.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if u_actuator.size</strong><strong>(</strong><strong>) </strong><strong>!= this-&gt;num_inputs</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p></li>
 <li><p><strong>RuntimeError if u is nullptr.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
 <li><p><strong>RuntimeError if ``u.size</strong><strong>(</strong><strong>) </strong><strong>!=</strong> – </p></li>
 <li><p><strong>this-&gt;GetParentPlant</strong><strong>(</strong><strong>)</strong><strong>.num_actuated_dofs</strong><strong>(</strong><strong>)</strong><strong>``.</strong> – </p></li>
 </ul>
@@ -7666,6 +7778,14 @@ choose force stiffness and damping constants” for more details.</p>
 <span class="sig-name descname"><span class="pre">LinearBushingRollPitchYaw.frameA(self:</span> <span class="pre">pydrake.multibody.tree.LinearBushingRollPitchYaw)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.Frame</span></span></dt>
 <dd><p>Returns frame A, which is the frame that is welded to link (body) L0
 and attached to the bushing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -7673,6 +7793,14 @@ and attached to the bushing.</p>
 <span class="sig-name descname"><span class="pre">LinearBushingRollPitchYaw.frameC(self:</span> <span class="pre">pydrake.multibody.tree.LinearBushingRollPitchYaw)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.Frame</span></span></dt>
 <dd><p>Returns frame C, which is the frame that is welded to link (body) L1
 and attached to the bushing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -8223,6 +8351,14 @@ choose force stiffness and damping constants” for more details.</p>
 <span class="sig-name descname"><span class="pre">LinearBushingRollPitchYaw_[AutoDiffXd].frameA(self:</span> <span class="pre">pydrake.multibody.tree.LinearBushingRollPitchYaw_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd]</span></span></dt>
 <dd><p>Returns frame A, which is the frame that is welded to link (body) L0
 and attached to the bushing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -8230,6 +8366,14 @@ and attached to the bushing.</p>
 <span class="sig-name descname"><span class="pre">LinearBushingRollPitchYaw_[AutoDiffXd].frameC(self:</span> <span class="pre">pydrake.multibody.tree.LinearBushingRollPitchYaw_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.Frame_[AutoDiffXd]</span></span></dt>
 <dd><p>Returns frame C, which is the frame that is welded to link (body) L1
 and attached to the bushing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -8774,6 +8918,14 @@ choose force stiffness and damping constants” for more details.</p>
 <span class="sig-name descname"><span class="pre">LinearBushingRollPitchYaw_[Expression].frameA(self:</span> <span class="pre">pydrake.multibody.tree.LinearBushingRollPitchYaw_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.Frame_[Expression]</span></span></dt>
 <dd><p>Returns frame A, which is the frame that is welded to link (body) L0
 and attached to the bushing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -8781,6 +8933,14 @@ and attached to the bushing.</p>
 <span class="sig-name descname"><span class="pre">LinearBushingRollPitchYaw_[Expression].frameC(self:</span> <span class="pre">pydrake.multibody.tree.LinearBushingRollPitchYaw_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.Frame_[Expression]</span></span></dt>
 <dd><p>Returns frame C, which is the frame that is welded to link (body) L1
 and attached to the bushing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -10512,7 +10672,11 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dd><p>Sets the default value of viscous damping for this joint, in N⋅s/m.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if damping is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -10782,7 +10946,11 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dd><p>Sets the default value of viscous damping for this joint, in N⋅s/m.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if damping is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -11046,7 +11214,11 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dd><p>Sets the default value of viscous damping for this joint, in N⋅s/m.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if damping is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -11200,7 +11372,16 @@ generalized position of the prismatic joint.</p>
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">PrismaticSpring.joint(self:</span> <span class="pre">pydrake.multibody.tree.PrismaticSpring)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.PrismaticJoint</span></span></dt>
-<dd></dd></dl>
+<dd><p>Returns the joint associated with this spring.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
@@ -11261,7 +11442,16 @@ generalized position of the prismatic joint.</p>
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">PrismaticSpring_[AutoDiffXd].joint(self:</span> <span class="pre">pydrake.multibody.tree.PrismaticSpring_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.PrismaticJoint_[AutoDiffXd]</span></span></dt>
-<dd></dd></dl>
+<dd><p>Returns the joint associated with this spring.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
@@ -11316,7 +11506,16 @@ generalized position of the prismatic joint.</p>
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">PrismaticSpring_[Expression].joint(self:</span> <span class="pre">pydrake.multibody.tree.PrismaticSpring_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.PrismaticJoint_[Expression]</span></span></dt>
-<dd></dd></dl>
+<dd><p>Returns the joint associated with this spring.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
@@ -12695,7 +12894,11 @@ angle).</p>
 <dd><p>Sets the default value of viscous damping for this joint, in N⋅m⋅s.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if damping is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -13000,7 +13203,11 @@ angle).</p>
 <dd><p>Sets the default value of viscous damping for this joint, in N⋅m⋅s.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if damping is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -13299,7 +13506,11 @@ angle).</p>
 <dd><p>Sets the default value of viscous damping for this joint, in N⋅m⋅s.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if damping is negative.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if damping is negative.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 <dl class="simple">
@@ -13428,7 +13639,16 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring.joint(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.RevoluteJoint</span></span></dt>
-<dd></dd></dl>
+<dd><p>Returns the joint associated with this spring.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
@@ -13569,7 +13789,16 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring_[AutoDiffXd].joint(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.RevoluteJoint_[AutoDiffXd]</span></span></dt>
-<dd></dd></dl>
+<dd><p>Returns the joint associated with this spring.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
@@ -13704,7 +13933,16 @@ which <code class="docutils literal notranslate"><span class="pre">this</span></
 <dl class="py method">
 <dt class="sig sig-object py">
 <span class="sig-name descname"><span class="pre">RevoluteSpring_[Expression].joint(self:</span> <span class="pre">pydrake.multibody.tree.RevoluteSpring_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.RevoluteJoint_[Expression]</span></span></dt>
-<dd></dd></dl>
+<dd><p>Returns the joint associated with this spring.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py">
@@ -14291,6 +14529,14 @@ be empty.</p>
 <span class="sig-name descname"><span class="pre">RigidBody.scoped_name(self:</span> <span class="pre">pydrake.multibody.tree.RigidBody)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.ScopedName</span></span></dt>
 <dd><p>Returns scoped name of this body. Neither of the two pieces of the
 name will be empty (the scope name and the element name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -14920,6 +15166,14 @@ be empty.</p>
 <span class="sig-name descname"><span class="pre">RigidBody_[AutoDiffXd].scoped_name(self:</span> <span class="pre">pydrake.multibody.tree.RigidBody_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.ScopedName</span></span></dt>
 <dd><p>Returns scoped name of this body. Neither of the two pieces of the
 name will be empty (the scope name and the element name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -15543,6 +15797,14 @@ be empty.</p>
 <span class="sig-name descname"><span class="pre">RigidBody_[Expression].scoped_name(self:</span> <span class="pre">pydrake.multibody.tree.RigidBody_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.tree.ScopedName</span></span></dt>
 <dd><p>Returns scoped name of this body. Neither of the two pieces of the
 name will be empty (the scope name and the element name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -22642,7 +22904,11 @@ the world frame W.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the model instance is invalid.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the model instance is invalid.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -22661,6 +22927,8 @@ the world frame W.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if the parent model is finalized.</strong> – </p></li>
 <li><p><strong>RuntimeError if the model instance is invalid.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -22760,7 +23028,11 @@ the world frame W.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the model instance is invalid.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the model instance is invalid.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -22779,6 +23051,8 @@ the world frame W.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if the parent model is finalized.</strong> – </p></li>
 <li><p><strong>RuntimeError if the model instance is invalid.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -22872,7 +23146,11 @@ the world frame W.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the model instance is invalid.</strong> – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if the model instance is invalid.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -22891,6 +23169,8 @@ the world frame W.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>if the parent model is finalized.</strong> – </p></li>
 <li><p><strong>RuntimeError if the model instance is invalid.</strong> – </p></li>
+<li><p><strong>RuntimeError if this element is not associated with a</strong> – </p></li>
+<li><p><strong>MultibodyPlant.</strong> – </p></li>
 </ul>
 </dd>
 </dl>

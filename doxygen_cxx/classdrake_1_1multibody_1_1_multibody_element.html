@@ -880,12 +880,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a constant reference to the parent MultibodyTree that owns this element. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>in debug builds if <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af679af47835138fca8011749414d3bd4" title="Returns true if this multibody element has a parent tree, otherwise false.">has_parent_tree()</a> is false. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>has_parent_tree is true. </dd></dl>
 
 </div>
 </div>
@@ -941,7 +936,7 @@ Friends</h2></td></tr>
 <p>Returns a constant reference to the parent MultibodyTreeSystem that owns the parent MultibodyTree that owns this element. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>in debug builds if <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af679af47835138fca8011749414d3bd4" title="Returns true if this multibody element has a parent tree, otherwise false.">has_parent_tree()</a> is false. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#af679af47835138fca8011749414d3bd4" title="Returns true if this multibody element has a parent tree, otherwise false.">has_parent_tree()</a> is false. </td></tr>
   </table>
   </dd>
 </dl>
