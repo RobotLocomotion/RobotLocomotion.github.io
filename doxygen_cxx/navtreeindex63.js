@@ -1,6 +1,5 @@
 var NAVTREEINDEX63 =
 {
-"schunk__wsg__constants_8h.html":[4,0,0,6,2,1],
 "schunk__wsg__constants_8h.html#a2d50206e40178bb516bf578b4418af0a":[4,0,0,6,2,1,6],
 "schunk__wsg__constants_8h.html#a2fbb9739d01b7281a1633aa49c419d6e":[4,0,0,6,2,1,3],
 "schunk__wsg__constants_8h.html#a6126372efa2dc4a18a1731c2853fdb5d":[4,0,0,6,2,1,7],
@@ -66,7 +65,7 @@ var NAVTREEINDEX63 =
 "signed__distance__to__point_8h.html":[4,0,0,4,3,4],
 "sim__iiwa__driver_8h.html":[4,0,0,6,1,8],
 "sim__rgbd__sensor_8h.html":[4,0,0,12,8,21],
-"simplex__gaussian__quadrature_8h.html":[4,0,0,8,2,31],
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,2,30],
 "simplification_8h.html":[4,0,0,1,3,16],
 "simplification_8h.html#a134e54042165751a5e5369b4631c90eb":[4,0,0,1,3,16,2],
 "simplification_8h.html#a697784ea0eafd05039e3a0c97b7c1415":[4,0,0,1,3,16,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX63 =
 "standard__operations_8h.html#a8925da93374ae283a9fe286654be67f7":[4,0,0,1,0,0,2,58],
 "standard__operations_8h.html#a8a685e87d59d6ebd9a0c34dee4cd1906":[4,0,0,1,0,0,2,53],
 "standard__operations_8h.html#a8f92815f719e1839ee269d8e0f8fc2d2":[4,0,0,1,0,0,2,16],
-"standard__operations_8h.html#a9070ca332f97ab90594e2d815bdc85fa":[4,0,0,1,0,0,2,14]
+"standard__operations_8h.html#a9070ca332f97ab90594e2d815bdc85fa":[4,0,0,1,0,0,2,14],
+"standard__operations_8h.html#a9258dbf61d5505f2cffd61e6bb75443b":[4,0,0,1,0,0,2,38]
 };

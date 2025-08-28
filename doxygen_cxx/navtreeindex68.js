@@ -1,6 +1,5 @@
 var NAVTREEINDEX68 =
 {
-"structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a4b33e20bd1e6ff4f9068837d5cfc8837":[3,0,0,11,1,1,2],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#ad97eac1aabdf303df62851accf84d131":[3,0,0,11,1,1,1],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html":[3,0,0,11,1,2],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#a34d9f563a87f3b1bed1fabd4cae935ed":[3,0,0,11,1,2,6],
@@ -249,5 +248,6 @@ var NAVTREEINDEX68 =
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a47943f73244ca117fa9bf9234cbed317":[3,0,0,16,0,1,6],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a851bc403edb0b8b04e35246843c4524c":[3,0,0,16,0,1,5],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#ab27bfaf29de254557149cb0bafeca4e3":[3,0,0,16,0,1,3],
-"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#ac01d62b0af939b47796b39f4229572b2":[3,0,0,16,0,1,4]
+"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#ac01d62b0af939b47796b39f4229572b2":[3,0,0,16,0,1,4],
+"structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#af1172cb338cfb5f609bf5d636b3cd68d":[3,0,0,16,0,1,2]
 };

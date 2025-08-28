@@ -33,7 +33,6 @@ var dir_2cf971462d0dc9c1092ce69736cd713e =
     [ "matrix_utilities.h", "matrix__utilities_8h.html", null ],
     [ "neohookean_model.h", "neohookean__model_8h.html", null ],
     [ "neohookean_model_data.h", "neohookean__model__data_8h.html", null ],
-    [ "newmark_scheme.h", "newmark__scheme_8h.html", null ],
     [ "quadrature.h", "quadrature_8h.html", null ],
     [ "schur_complement.h", "fem_2schur__complement_8h.html", "fem_2schur__complement_8h" ],
     [ "simplex_gaussian_quadrature.h", "simplex__gaussian__quadrature_8h.html", null ],

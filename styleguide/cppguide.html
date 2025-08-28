@@ -271,7 +271,7 @@ guard:</p>
   to update its #define guard. The known drawbacks of using #pragma once,
   namely the possibility of lack of compiler support and
   compiler-dependent-behavior, is mitigated since Drake has
-  a <a href="http://drake.mit.edu/developers.html#supported-configurations">limited
+  a <a href="/developers.html#supported-configurations">limited
   set of officially supported platform configurations</a> on which correct
   behavior will be
   guaranteed. (<a href="https://github.com/RobotLocomotion/drake/issues/2104">#2104</a>)
@@ -601,7 +601,7 @@ other libraries' headers, your project's
 headers.</p>
 
 <p class="drake">Separate each category of #include statements with a blank
-line. Then, accept whatever clang-format enforces.</p>
+line. Then, run <a href="#clang-format">clang-format</a>.</p>
 
 <p>
 All of a project's header files should be
@@ -1191,7 +1191,7 @@ does not make an observable difference. For example:</p>
   <li>Static variables of custom types: if you require static, constant data of
     a type that you need to define yourself, give the type a trivial destructor
     and a <code>constexpr</code> constructor.</li>
-  <li class="drake"><a href="http://drake.mit.edu/doxygen_cxx/classdrake_1_1never__destroyed.html">drake::never_destroyed&lt;T&gt;</a>:
+  <li class="drake"><a href="/doxygen_cxx/classdrake_1_1never__destroyed.html">drake::never_destroyed&lt;T&gt;</a>:
     types wrapped by this template will effectively be made trivially
     destructible (since their destructors are ignored).</li>
   <li class="nondrake">If all else fails, you can create an object dynamically
@@ -2332,7 +2332,7 @@ C++ that may differ from what you see elsewhere.</p>
     Doxygen.</li>
     <li>If you decide to use Doxygen formatting hints, then those must render
     correctly. For instructions on how to generate the Drake Doxygen website,
-    click <a href="http://drake.mit.edu/documentation_instructions.html#documentation-generation-instructions">here</a>. For
+    click <a href="/documentation_instructions.html#documentation-generation-instructions">here</a>. For
     additional background information,
     see <a href="https://github.com/RobotLocomotion/drake/pull/3584">PR
     #3584.</a></li>
@@ -4553,7 +4553,7 @@ the future.</p>
 </span>
 <span class="drake">
 <p>All Drake hash functions should use the
-<a href="http://drake.mit.edu/doxygen_cxx/group__hash__append.html">hash_append</a>
+<a href="/doxygen_cxx/group__hash__append.html">hash_append</a>
 approach.</p>
 </span>
 
@@ -4628,7 +4628,7 @@ using a new customization mechanism that doesn't have the drawbacks of
 </span>
 <span class="drake">
 <p>All Drake hash functions should use the
-<a href="http://drake.mit.edu/doxygen_cxx/group__hash__append.html">hash_append</a>
+<a href="/doxygen_cxx/group__hash__append.html">hash_append</a>
 approach.  This includes both hashing support added to Drake's data types, and
 any of Drake's custom hash algorithms.</p>
 <p>Define specializations of <code>std::hash</code> only as sugar for
@@ -4918,7 +4918,7 @@ variable names</a>.</p>
   Note that the Drake multibody tree and related types have their own naming
   standard, "Monogram Notation", described
   in <code>drake/multibody/multibody_doxygen.h</code>
-  (<a href="http://drake.mit.edu/doxygen_cxx/group__multibody__notation.html">generated
+  (<a href="/doxygen_cxx/group__multibody__notation.html">generated
   documentation here</a>), that applies to all variables that denote frames
   and transforms between frames.
 </p>
@@ -5734,10 +5734,61 @@ everyone's code easily.</p>
 
 
 
-<div>
+<div class="nondrake">
 <p>To help you format code correctly, we've created a
 <a href="https://raw.githubusercontent.com/google/styleguide/gh-pages/google-c-style.el">
 settings file for emacs</a>.</p>
+</div>
+
+<h3 id="clang-format">clang-format</h3>
+
+<div class="drake">
+<p>Drake requires using <code>clang-format</code> for formatting. Our linter
+checks that all C++ code matches what <code>clang-format</code> would do.</p>
+<p>Refer to <a href="/code_style_tools.html">Drake's documentation</a>
+for instructions on setting it up and running it.</p>
+<p>Our strong preference should be to abide by whatever
+<code>clang-format</code> chooses, but in exceptional cases we might need to
+disable it at certain points. (See the
+<a href="https://clang.llvm.org/docs/ClangFormatStyleOptions.html#disabling-formatting-on-a-piece-of-code">Clang Format docs</a>
+for details.)</p>
+<p>For example, when writing a matrix literal, we should preseve its layout:
+<pre>
+  // clang-format off
+  Eigen::MatrixXd samples(3, 5);
+  samples << 1, 1, 1,
+             2, 2, 2,
+             0, 3, 3,
+            -2, 2, 2,
+             1, 1, 1;
+  // clang-format on
+</pre></p>
+<p>In other cases, we might want to keep the formatting automation alive but
+guide it to a more suitable answer. One trick we sometimes use in this case is
+to add a trailing end-of-line comment to force a line break; we annotate this
+with <code>BR</code> (akin to the HTML <code>&lt;br&gt;</code> element):
+<pre>
+  return std::visit<NodeType>(  // BR
+      overloaded{
+          [](const ScalarData&) {
+            return NodeType::kScalar;
+          },
+          [](const SequenceData&) {
+            return NodeType::kSequence;
+          },
+          [](const MappingData&) {
+            return NodeType::kMapping;
+          },
+      },
+      data_);
+</pre></p>
+<p>In general, our goal is to minimize formatting comments. Oftentimes, you can
+guide the auto-formatter to a better answer by adjusting the code without any
+extra comments (e.g., by extracting a complicated sub-expression into a named
+local variable). If the auto-formatter is struggling to provide a good
+formatting of a block of code, it is likely that a human reader would also
+struggle to comprehend it under any layout, and thus is a signal to consider how
+to re-spell things to be simpler.</p>
 </div>
 
 <h3 id="Line_Length">Line Length</h3>
@@ -5883,6 +5934,12 @@ hit the tab key.</p>
 
 <h3 id="Function_Declarations_and_Definitions">Function Declarations and Definitions</h3>
 
+<div class="drake">
+Drake uses <code>clang-format</code> for formatting.
+See <a href="#clang-format">clang-format</a>.
+</div>
+
+<div class="nondrake">
 <p>Return type on the same line as function name, parameters
 on the same line if they fit. Wrap parameter lists which do
 not fit on a single line as you would wrap arguments in a
@@ -5916,6 +5973,7 @@ not fit on a single line as you would wrap arguments in a
   ...
 }
 </pre>
+</div>
 
 <p>Some points to note:</p>
 
@@ -5924,7 +5982,8 @@ not fit on a single line as you would wrap arguments in a
 
   <li>A parameter name may be omitted only if the parameter is not used in the
   function's definition.</li>
-
+</ul>
+<ul class="nondrake">
   <li>If you cannot fit the return type and the function
   name on a single line, break between them.</li>
 
@@ -5994,14 +6053,23 @@ return type:</p>
 
 <h3 id="Formatting_Lambda_Expressions">Lambda Expressions</h3>
 
+<div class="drake">
+Drake uses <code>clang-format</code> for formatting.
+See <a href="#clang-format">clang-format</a>.
+</div>
+
+<div class="nondrake">
 <p>Format parameters and bodies as for any other function, and capture
 lists like other comma-separated lists.</p>
+</div>
 
+<div class="nondrake">
 <p>For by-reference captures, do not leave a space between the
 ampersand (&amp;) and the variable name.</p>
 <pre>int x = 0;
 auto x_plus_n = [&amp;x](int n) -&gt; int { return x + n; }
 </pre>
+</div>
 <p>Short lambdas may be written inline as function arguments.</p>
 <pre>std::set&lt;int&gt; to_remove = {7, 8, 9};
 std::vector&lt;int&gt; digits = {3, 9, 1, 8, 4, 7, 1};
@@ -6044,6 +6112,11 @@ double d = 1248.0e6;
 
 <h3 id="Function_Calls">Function Calls</h3>
 
+<div class="drake">
+Drake uses <code>clang-format</code> for formatting.
+See <a href="#clang-format">clang-format</a>.
+</div>
+
 <p>Either write the call all on a single line, wrap the
 arguments at the parenthesis, or start the arguments on a new
 line indented by four spaces and continue at that 4 space
@@ -6055,6 +6128,7 @@ on each line where appropriate.</p>
 <pre>bool result = DoSomething(argument1, argument2, argument3);
 </pre>
 
+<div class="nondrake">
 <p>If the arguments do not all fit on one line, they
 should be broken up onto multiple lines, with each
 subsequent line aligned with the first argument. Do not
@@ -6085,6 +6159,7 @@ more readable and simplifies editing of the arguments.
 However, we prioritize for the reader over the ease of
 editing arguments, and most readability problems are
 better addressed with the following techniques.</p>
+</div>
 
 <p>If having multiple arguments in a single line decreases
 readability due to the complexity or confusing nature of the
@@ -6114,8 +6189,20 @@ my_widget.Transform(x1, x2, x3,
                     z1, z2, z3);
 </pre>
 
+<div class="drake">
+In the rare cases where such artisanal whitespace formatting is required for
+readability, you might need to tweak or suppress auto-formatting.
+See <a href="#clang-format">clang-format</a>.
+</div>
+
 <h3 id="Braced_Initializer_List_Format">Braced Initializer List Format</h3>
 
+<div class="drake">
+Drake uses <code>clang-format</code> for formatting.
+See <a href="#clang-format">clang-format</a>.
+</div>
+
+<div class="nondrake">
 <p>Format a braced initializer list exactly like you would format a function
 call in its place.</p>
 
@@ -6150,9 +6237,16 @@ MyType m = {  // Here, you could also break before {.
     {interiorwrappinglist,
      interiorwrappinglist2}};
 </pre>
+</div>
 
 <h3 id="Conditionals">Conditionals</h3>
 
+<div class="drake">
+Drake uses <code>clang-format</code> for formatting.
+See <a href="#clang-format">clang-format</a>.
+</div>
+
+<div class="nondrake">
 <p>In an <code>if</code> statement, including its optional <code>else if</code>
 and <code>else</code> clauses, put one space between the <code>if</code> and the
 opening parenthesis, and between the closing parenthesis and the curly brace (if
@@ -6167,12 +6261,15 @@ if(condition){               // Doubly bad
 
 if (int a = f();a == 10) {   // Bad - space missing after the semicolon
 </pre>
+</div>
 
 <p>Use curly braces for the controlled statements following
-<code>if</code>, <code>else if</code> and <code>else</code>. Break the line
+<code>if</code>, <code>else if</code> and <code>else</code>.
+<span class="nondrake">
+Break the line
 immediately after the opening brace, and immediately before the closing brace. A
 subsequent <code>else</code>, if any, appears on the same line as the preceding
-closing brace, separated by a space.</p>
+closing brace, separated by a space.</span></p>
 
 <pre>if (condition) {                   // no spaces inside parentheses, space before brace
   DoOneThing();                    // two space indent
@@ -6207,6 +6304,12 @@ conditional statements with complex conditions or controlled statements may be
 more readable with curly braces. Some
 projects
 require curly braces always.</p>
+
+<p class="drake">Note in particular that to be able to omit the braces, the
+controlled statement must be at most one <em>physical</em> line, not just a
+single <em>statement</em>. A common mistake is to omit braces on an "if bad then
+throw" error condition, where the exception message being thrown is long enough
+to expand the throw statement to require two physical lines of code.</p>
 
 <p>Finally, these are not permitted:</p>
 
@@ -6333,9 +6436,10 @@ not the variable <em>name</em>. In other words use:</p>
 <pre>const MyClass&amp; foo;</pre>
 <p>instead of</p>
 <pre class="badcode">const MyClass &amp;foo;  // Bad - & in wrong place</pre>
-<p>This is what is enforced
-by <a href="code_style_tools.html#code-style-tools-clang-format"><span>clang-format</span></a>. For additional context, see
-<a href="https://github.com/robotlocomotion/drake/pull/3830#issuecomment-254849776">this comment thread</a>.</p>
+<p>This is what is enforced by <a href="#clang-format">clang-format</a>, unless
+you declare multiple variables with a single statement. (When variables are
+pointers or references, you may not declare them with a single statement, as
+explained later in this section.)</p>
 </div>
 </div>
 
@@ -6358,6 +6462,7 @@ x = r-&gt;y;
    <code>*</code> or <code>&amp;</code>.</li>
 </ul>
 
+<div class="nondrake">
 <p>When referring to a pointer or reference (variable declarations or definitions, arguments,
 return types, template parameters, etc), you may place the space before or after the
 asterisk/ampersand. In the trailing-space style, the space is elided in some cases (template
@@ -6380,6 +6485,7 @@ std::vector&lt;char*&gt;  // Note no space between '*' and '&gt;'
 file.
 When modifying an existing file, use the style in
 that file.</p>
+</div>
 
 It is allowed (if unusual) to declare multiple variables in the same
 declaration, but it is disallowed if any of those have pointer or
@@ -6395,6 +6501,12 @@ const std::string &amp; str;  // Bad - spaces on both sides of &amp;
 
 <h3 id="Boolean_Expressions">Boolean Expressions</h3>
 
+<div class="drake">
+Drake uses <code>clang-format</code> for formatting.
+See <a href="#clang-format">clang-format</a>.
+</div>
+
+<div class="nondrake">
 <p>When you have a boolean expression that is longer than the
 <a href="#Line_Length">standard line length</a>, be
 consistent in how you break up the lines.</p>
@@ -6413,7 +6525,9 @@ the end of the lines:</p>
 the <code>&amp;&amp;</code> logical AND operators are at
 the end of the line. This is more common in Google code,
 though wrapping all operators at the beginning of the
-line is also allowed. Feel free to insert extra
+line is also allowed.</p>
+</div>
+<p>Feel free to insert extra
 parentheses judiciously because they can be very helpful
 in increasing readability when used
 appropriately, but be careful about overuse. Also note that you
@@ -6600,6 +6714,12 @@ needed) is:</p>
 
 <h3 id="Constructor_Initializer_Lists">Constructor Initializer Lists</h3>
 
+<div class="drake">
+Drake uses <code>clang-format</code> for formatting.
+See <a href="#clang-format">clang-format</a>.
+</div>
+
+<div class="nondrake">
 <p>Constructor initializer lists can be all on one line or
 with subsequent lines indented four spaces.</p>
 
@@ -6630,6 +6750,7 @@ MyClass::MyClass(int var)
 MyClass::MyClass(int var)
     : some_var_(var) {}
 </pre>
+</div>
 
 <h3 id="Namespace_Formatting">Namespace Formatting</h3>
 
@@ -6661,13 +6782,14 @@ void foo() {  // Correct.  No extra indentation within namespace.
 
 <h3 id="Horizontal_Whitespace">Horizontal Whitespace</h3>
 
+<div class="drake">
+Drake uses <code>clang-format</code> for formatting.
+See <a href="#clang-format">clang-format</a>.
+</div>
+
+<div class="nondrake">
 <p>Use of horizontal whitespace depends on location. Never put
 trailing whitespace at the end of a line.</p>
-
-<div class="drake">For the pydrake bindings' C++ code (in drake/bindings/...),
-we lint using <tt>clang-format</tt> to enforce uniform formatting locally and
-via Jenkins (our continuous integration tool). The "whitespace style" for
-bindings is whatever the linter says it is.</div>
 
 <h4>General</h4>
 
@@ -6757,6 +6879,7 @@ y = static_cast&lt;char*&gt;(x);
 // Spaces between type and pointer are OK, but be consistent.
 std::vector&lt;char *&gt; x;
 </pre>
+</div>
 
 <h3 id="Vertical_Whitespace">Vertical Whitespace</h3>
 
@@ -6798,10 +6921,14 @@ useful:</p>
   "attach" to the subsequent declaration.</li>
 </ul>
 
-<div class="drake">For the pydrake bindings' C++ code (in drake/bindings/...),
-we lint using <tt>clang-format</tt> to enforce uniform formatting locally and
-via Jenkins (our continuous integration tool). The "whitespace style" for
-bindings is whatever the linter says it is.</div>
+<div class="drake">
+<p>Drake uses <code>clang-format</code> for formatting.
+See <a href="#clang-format">clang-format</a>.</p>
+<p>The auto-formatter may automatically insert or remove vertical whitespace
+for some measure of consistency; when it does so, just leave it alone.
+Note, however, that it will preserve many of your blank-line choices so the
+advice in this section still applies even under <code>clang-format</code>.</p>
+</div>
 
 <h2 id="Exceptions_to_the_Rules">Exceptions to the Rules</h2>
 

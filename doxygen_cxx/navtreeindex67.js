@@ -1,6 +1,5 @@
 var NAVTREEINDEX67 =
 {
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html":[1,2,2,1,0],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a05f3f5511b47e22966af2f10a7796390":[1,2,2,1,0,0],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a086018fbe21aec61cd57e2b06f93804b":[1,2,2,1,0,8],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a0f056c9c4332a35f63a72e3c742c9c70":[1,2,2,1,0,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX67 =
 "structdrake_1_1planning_1_1_zmp_test_traj.html#a84264b35201ad6b9b86380c7142df25a":[3,0,0,11,24,6],
 "structdrake_1_1planning_1_1_zmp_test_traj.html#af689f81883202f31f46ce6687e0414d8":[3,0,0,11,24,2],
 "structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html":[3,0,0,11,1,1],
-"structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a34a4def1d160fae5fda122ba0a5254ea":[3,0,0,11,1,1,0]
+"structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a34a4def1d160fae5fda122ba0a5254ea":[3,0,0,11,1,1,0],
+"structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a4b33e20bd1e6ff4f9068837d5cfc8837":[3,0,0,11,1,1,2]
 };

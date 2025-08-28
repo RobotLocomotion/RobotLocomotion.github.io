@@ -1,6 +1,5 @@
 var NAVTREEINDEX70 =
 {
-"structdrake_1_1type__tag.html":[3,0,0,59],
 "structdrake_1_1type__tag.html#a834c467da58ea1d81821952d3c473b64":[3,0,0,59,0],
 "structdrake_1_1type__visit__with__default.html":[3,0,0,60],
 "structdrake_1_1type__visit__with__default.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54":[3,0,0,60,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX70 =
 "toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d":[4,0,0,8,8,11,1,1],
 "trajectory_8h.html":[4,0,0,1,5,14],
 "trajectory_8h.html#a7276b145ef6c7007c321cd281efbc1ee":[4,0,0,1,5,14,1],
-"trajectory__affine__system_8h.html":[4,0,0,12,6,30]
+"trajectory__affine__system_8h.html":[4,0,0,12,6,30],
+"trajectory__affine__system_8h.html#a3dc38dfe429e69ee8da289e9e402e263":[4,0,0,12,6,30,1]
 };

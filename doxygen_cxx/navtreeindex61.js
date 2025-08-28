@@ -1,6 +1,5 @@
 var NAVTREEINDEX61 =
 {
-"package__map_8h.html":[4,0,0,8,9,24],
 "pages.html":[],
 "parallel__gripper__controller_8h.html":[4,0,0,3,10,2,1],
 "parallelism_8h.html":[4,0,0,1,54],
@@ -246,8 +245,9 @@ var NAVTREEINDEX61 =
 "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,26,0],
 "quadratic__form_8h.html#adc391d10568071dcb57bf6f214675cfe":[4,0,0,7,26,2],
 "quadratic__scalar__system_8h.html":[4,0,0,12,0,0,10],
-"quadrature_8h.html":[4,0,0,8,2,29],
+"quadrature_8h.html":[4,0,0,8,2,28],
 "quadrotor__geometry_8h.html":[4,0,0,3,13,0],
 "quadrotor__plant_8h.html":[4,0,0,3,13,1],
-"quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,13,1,2]
+"quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,13,1,2],
+"quadrotor__plant_8h.html#ae9b5f322b674b5fbab659a7e67533244":[4,0,0,3,13,1,1]
 };
