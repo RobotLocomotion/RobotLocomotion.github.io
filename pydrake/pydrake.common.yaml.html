@@ -145,16 +145,16 @@
   <section id="module-pydrake.common.yaml">
 <span id="pydrake-common-yaml"></span><h1>pydrake.common.yaml<a class="headerlink" href="#module-pydrake.common.yaml" title="Link to this heading"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">yaml_dump(data,</span> <span class="pre">*,</span> <span class="pre">filename=None)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.yaml.yaml_dump">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.yaml.</span></span><span class="sig-name descname"><span class="pre">yaml_dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_dump" title="Link to this definition"></a></dt>
 <dd><p>Dumps a yaml object to a string or <cite>filename</cite> (if specified).</p>
 <p>This is the counterpart to <cite>yaml_load(…, private=True)</cite>, and will permit
 re-expressing the same tagged data.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">yaml_dump_typed(data,</span> <span class="pre">*,</span> <span class="pre">filename=None,</span> <span class="pre">schema=None,</span> <span class="pre">child_name=None,</span> <span class="pre">defaults=None)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.yaml.yaml_dump_typed">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.yaml.</span></span><span class="sig-name descname"><span class="pre">yaml_dump_typed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_dump_typed" title="Link to this definition"></a></dt>
 <dd><p>Dumps an object to a YAML string or <code class="docutils literal notranslate"><span class="pre">filename</span></code> (if specified), using
 the <code class="docutils literal notranslate"><span class="pre">schema</span></code> in order to support non-primitive types.</p>
 <p>This mimics the C++ function <code class="docutils literal notranslate"><span class="pre">drake::common::yaml::SaveYamlFile</span></code>.
@@ -181,8 +181,8 @@ with the <code class="docutils literal notranslate"><span class="pre">data</span
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">yaml_load(*,</span> <span class="pre">data=None,</span> <span class="pre">filename=None,</span> <span class="pre">private=False)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.yaml.yaml_load">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.yaml.</span></span><span class="sig-name descname"><span class="pre">yaml_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">private</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load" title="Link to this definition"></a></dt>
 <dd><p>Loads either a <cite>data</cite> str xor a <cite>filename</cite> (exactly one must be
 specified) and returns the value as a yaml object.</p>
 <p>This is sugar for calling either yaml_load_data or yaml_load_file;
@@ -193,8 +193,8 @@ a schema with defaults, see <code class="docutils literal notranslate"><span cla
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">yaml_load_data(data,</span> <span class="pre">*,</span> <span class="pre">private=False)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.yaml.yaml_load_data">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.yaml.</span></span><span class="sig-name descname"><span class="pre">yaml_load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">private</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load_data" title="Link to this definition"></a></dt>
 <dd><p>Loads and returns the given <cite>data</cite> str as a yaml object, while also
 accounting for variant-like type tags.  Any tags are reported as an
 extra “_tag” field in the returned dictionary.</p>
@@ -208,8 +208,8 @@ a schema with defaults, see <code class="docutils literal notranslate"><span cla
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">yaml_load_file(filename,</span> <span class="pre">*,</span> <span class="pre">private=False)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.yaml.yaml_load_file">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.yaml.</span></span><span class="sig-name descname"><span class="pre">yaml_load_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">private</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load_file" title="Link to this definition"></a></dt>
 <dd><p>Loads and returns the given <cite>filename</cite> as a yaml object, while also
 accounting for variant-like type tags.</p>
 <p>See yaml_load_data for full details; this function differs only by reading
@@ -217,8 +217,8 @@ the yaml data from a file instead of memory.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">yaml_load_typed(*,</span> <span class="pre">schema=None,</span> <span class="pre">data=None,</span> <span class="pre">filename=None,</span> <span class="pre">child_name=None,</span> <span class="pre">defaults=None,</span> <span class="pre">allow_yaml_with_no_schema=False,</span> <span class="pre">allow_schema_with_no_yaml=True,</span> <span class="pre">retain_map_defaults=True)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.yaml.yaml_load_typed">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.yaml.</span></span><span class="sig-name descname"><span class="pre">yaml_load_typed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">child_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_yaml_with_no_schema</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_schema_with_no_yaml</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retain_map_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load_typed" title="Link to this definition"></a></dt>
 <dd><p>Loads either a <code class="docutils literal notranslate"><span class="pre">data</span></code> str or a <code class="docutils literal notranslate"><span class="pre">filename</span></code> against the given
 <code class="docutils literal notranslate"><span class="pre">schema</span></code> type and returns an instance of that type.</p>
 <p>This mimics the C++ function <code class="docutils literal notranslate"><span class="pre">drake::common::yaml::LoadYamlFile</span></code>.

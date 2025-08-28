@@ -195,6 +195,10 @@ line.</li>
 described in <a href="/bazel.html#updating-build-files">Updating BUILD files</a>.</li>
 </ul>
 
+<p>To opt-out of all linting (e.g., when committing vendored copies of third-party
+external files into Drake’s workspace), add <code class="language-plaintext highlighter-rouge">tags = ["nolint"]</code> to the
+<code class="language-plaintext highlighter-rouge">BUILD.bazel</code> rule(s) for the copied code.</p>
+
 <h1 id="manual-style-fixups">Manual style fixups</h1>
 
 <h2 id="cc-clang-format">C/C++: Clang-Format</h2>
@@ -205,19 +209,7 @@ described in <a href="/bazel.html#updating-build-files">Updating BUILD files</a>
 bazel run //tools/lint:clang-format -- -i -style=file [file name]
 </code></pre></div></div>
 
-<p>Using <code class="language-plaintext highlighter-rouge">clang-format</code> will modify the entire file that is specified. As an
-alternative, you can use <code class="language-plaintext highlighter-rouge">git clang-format</code> on Ubuntu to change only the
-portions of a file that you have modified. To run <code class="language-plaintext highlighter-rouge">git clang-format</code>:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Make sure the clang-format program exists at the path we want to use.
-bazel build //tools/lint/...
-
-# For development on Ubuntu: format a file that has been staged in git
-git clang-format --binary=/path/to/drake/bazel-bin/tools/lint/clang-format -- [file name]
-
-# For development on Ubuntu: format a file that has been modified but not staged
-git clang-format --binary=/path/to/drake/bazel-bin/tools/lint/clang-format -f -- [file name]
-</code></pre></div></div>
+<p>Using <code class="language-plaintext highlighter-rouge">clang-format</code> will modify the entire file that is specified.</p>
 
 <h3 id="ide-integration">IDE integration</h3>
 

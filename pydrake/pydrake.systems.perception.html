@@ -148,12 +148,12 @@
   <section id="module-pydrake.systems.perception">
 <span id="pydrake-systems-perception"></span><h1>pydrake.systems.perception<a class="headerlink" href="#module-pydrake.systems.perception" title="Link to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PointCloudConcatenation(id_list,</span> <span class="pre">default_rgb=[255.0,</span> <span class="pre">255.0,</span> <span class="pre">255.0])</span></span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
+<dt class="sig sig-object py" id="pydrake.systems.perception.PointCloudConcatenation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.systems.perception.</span></span><span class="sig-name descname"><span class="pre">PointCloudConcatenation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_rgb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[255.0,</span> <span class="pre">255.0,</span> <span class="pre">255.0]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.perception.PointCloudConcatenation" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">point_cloud_CiSi_id0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">X_FCi_id0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">point_cloud_CiSi_idN&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">X_FCi_idN&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PointCloudConcatenation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; point_cloud_FS</td></tr></table></td></tr></table><dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PointCloudConcatenation.__init__(id_list,</span> <span class="pre">default_rgb=[255.0,</span> <span class="pre">255.0,</span> <span class="pre">255.0])</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.systems.perception.PointCloudConcatenation.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_rgb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[255.0,</span> <span class="pre">255.0,</span> <span class="pre">255.0]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.perception.PointCloudConcatenation.__init__" title="Link to this definition"></a></dt>
 <dd><p>A system that takes in N point clouds of points Si in frame Ci, and N
 RigidTransforms from frame Ci to F, to put each point cloud in a common
 frame F. The system returns one point cloud combining all of the
@@ -171,8 +171,8 @@ real camera.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">PointCloudConcatenation.DoCalcOutput(context,</span> <span class="pre">output)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.systems.perception.PointCloudConcatenation.DoCalcOutput">
+<span class="sig-name descname"><span class="pre">DoCalcOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.perception.PointCloudConcatenation.DoCalcOutput" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

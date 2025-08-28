@@ -157,8 +157,8 @@
 </ul>
 </div>
 <dl class="py class" id="module-pydrake.multibody.benchmarks">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MassDamperSpringAnalyticalSolution</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.benchmarks.</span></span><span class="sig-name descname"><span class="pre">MassDamperSpringAnalyticalSolution</span></span><a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution" title="Link to this definition"></a></dt>
 <dd><p>This class provides an analytical solution to a mass-damper-spring
 system. The system consists of a particle Q of mass m that can only
 move left/right on flat Earth (frame N). Particle Q is connected by an
@@ -177,8 +177,8 @@ rotating system, e.g., having rigid-body inertia, rotational
 damper, rotational spring.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MassDamperSpringAnalyticalSolution.__init__(self:</span> <span class="pre">pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution,</span> <span class="pre">mass:</span> <span class="pre">float,</span> <span class="pre">b:</span> <span class="pre">float,</span> <span class="pre">k:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution" title="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution"><span class="pre">pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.__init__" title="Link to this definition"></a></dt>
 <dd><p>This constructs the aforementioned mass-damper-spring system.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">mass</span></code>:</dt><dd><p>Mass of system (particle Q).</p>
@@ -191,26 +191,26 @@ damper, rotational spring.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MassDamperSpringAnalyticalSolution.get_x(self:</span> <span class="pre">pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution,</span> <span class="pre">t:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_x">
+<span class="sig-name descname"><span class="pre">get_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution" title="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution"><span class="pre">pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_x" title="Link to this definition"></a></dt>
 <dd><p>Returns x (Nx measure of Q’s position from No) at time t.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MassDamperSpringAnalyticalSolution.get_xDt(self:</span> <span class="pre">pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution,</span> <span class="pre">t:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_xDt">
+<span class="sig-name descname"><span class="pre">get_xDt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution" title="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution"><span class="pre">pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_xDt" title="Link to this definition"></a></dt>
 <dd><p>Returns ẋ (Nx measure of Q’s velocity in N) at time t.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MassDamperSpringAnalyticalSolution.get_xDtDt(self:</span> <span class="pre">pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution,</span> <span class="pre">t:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_xDtDt">
+<span class="sig-name descname"><span class="pre">get_xDtDt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution" title="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution"><span class="pre">pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.get_xDtDt" title="Link to this definition"></a></dt>
 <dd><p>Returns ẍ (Nx measure of Q’s acceleration in N) at time t.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MassDamperSpringAnalyticalSolution.SetInitialValue(self:</span> <span class="pre">pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution,</span> <span class="pre">x0:</span> <span class="pre">float,</span> <span class="pre">xDt0:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.SetInitialValue">
+<span class="sig-name descname"><span class="pre">SetInitialValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution" title="pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution"><span class="pre">pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xDt0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.benchmarks.MassDamperSpringAnalyticalSolution.SetInitialValue" title="Link to this definition"></a></dt>
 <dd><p>Sets the initial values of x and ẋ for <code class="docutils literal notranslate"><span class="pre">this</span></code> system.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">x0</span></code>:</dt><dd><p>Initial value of x (value of x at time t = 0).</p>

@@ -146,8 +146,8 @@
 <span id="pydrake-common-cpp-template"></span><h1>pydrake.common.cpp_template<a class="headerlink" href="#module-pydrake.common.cpp_template" title="Link to this heading"></a></h1>
 <p>Provides containers for tracking instantiations of C++ templates.</p>
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">get_or_init(scope,</span> <span class="pre">name,</span> <span class="pre">template_cls,</span> <span class="pre">*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.get_or_init">
+<span class="sig-prename descclassname"><span class="pre">pydrake.common.cpp_template.</span></span><span class="sig-name descname"><span class="pre">get_or_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_cls</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.get_or_init" title="Link to this definition"></a></dt>
 <dd><p>Gets an existing template from a scope if it exists; otherwise, it will
 be created and registered.</p>
 <p>If <cite>scope</cite> does not have the attribute <cite>name</cite>, then it will be created as
@@ -171,14 +171,14 @@ necessarily be the scope of the instantiation).</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateBase(name,</span> <span class="pre">allow_default=True,</span> <span class="pre">scope=None)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.cpp_template.</span></span><span class="sig-name descname"><span class="pre">TemplateBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Provides a mechanism to map parameters (types or literals) to
 instantiations, following C++ mechanics.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateBase.__init__(name,</span> <span class="pre">allow_default=True,</span> <span class="pre">scope=None)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateBase.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.__init__" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -192,8 +192,8 @@ parameters of the instantiation that was first added.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateBase.add_instantiation(param,</span> <span class="pre">instantiation,</span> <span class="pre">skip_rename=False)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateBase.add_instantiation">
+<span class="sig-name descname"><span class="pre">add_instantiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instantiation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_rename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.add_instantiation" title="Link to this definition"></a></dt>
 <dd><p>Adds a unique instantiation.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -202,8 +202,8 @@ parameters of the instantiation that was first added.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateBase.add_instantiations(instantiation_func,</span> <span class="pre">param_list)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateBase.add_instantiations">
+<span class="sig-name descname"><span class="pre">add_instantiations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instantiation_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.add_instantiations" title="Link to this definition"></a></dt>
 <dd><p>Adds a set of instantiations given a function and a list of
 parameter sets.</p>
 <div class="admonition note">
@@ -224,8 +224,8 @@ parameter set for the current instantiation.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateBase.define(name,</span> <span class="pre">param_list,</span> <span class="pre">*args,</span> <span class="pre">scope=None,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateBase.define">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">define</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_list</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.define" title="Link to this definition"></a></dt>
 <dd><p>Provides a decorator for functions that defines a template using
 <cite>name</cite>. The template instantiations are added using
 <cite>add_instantiations</cite>, where the instantiation function is the decorated
@@ -261,8 +261,8 @@ example, <cite>Impl</cite> will be renamed to <cite>MyTemplate[int]</cite> when
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateBase.deprecate_instantiation(param,</span> <span class="pre">message,</span> <span class="pre">*,</span> <span class="pre">date=None)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateBase.deprecate_instantiation">
+<span class="sig-name descname"><span class="pre">deprecate_instantiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.deprecate_instantiation" title="Link to this definition"></a></dt>
 <dd><p>Deprecates an instantiation for the given set of parameters.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -287,8 +287,8 @@ itself.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateBase.get_instantiation(param=None,</span> <span class="pre">throw_error=True)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateBase.get_instantiation">
+<span class="sig-name descname"><span class="pre">get_instantiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">throw_error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.get_instantiation" title="Link to this definition"></a></dt>
 <dd><p>Gets the instantiation for the given parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -303,8 +303,8 @@ parameters.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateBase.get_module_name()</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateBase.get_module_name">
+<span class="sig-name descname"><span class="pre">get_module_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.get_module_name" title="Link to this definition"></a></dt>
 <dd><p>Returns module name for this object’s parent scope.</p>
 <p class="rubric">Example</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pydrake</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">Value</span><span class="o">.</span><span class="n">get_module_name</span><span class="p">()</span>
@@ -314,8 +314,8 @@ parameters.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateBase.get_param_set(instantiation)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateBase.get_param_set">
+<span class="sig-name descname"><span class="pre">get_param_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instantiation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.get_param_set" title="Link to this definition"></a></dt>
 <dd><p>Returns all parameters for a given <cite>instantiation</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -325,21 +325,21 @@ parameters.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateBase.is_instantiation(obj)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateBase.is_instantiation">
+<span class="sig-name descname"><span class="pre">is_instantiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.is_instantiation" title="Link to this definition"></a></dt>
 <dd><p>Determines if an object is an instantion of the given template.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateClass(name,</span> <span class="pre">*,</span> <span class="pre">scope=None,</span> <span class="pre">**kwargs)</span></span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></p>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateClass">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.cpp_template.</span></span><span class="sig-name descname"><span class="pre">TemplateClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateClass" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
 <p>Extension of <cite>TemplateBase</cite> for classes.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateClass.__init__(name,</span> <span class="pre">*,</span> <span class="pre">scope=None,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateClass.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateClass.__init__" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -353,8 +353,8 @@ parameters of the instantiation that was first added.</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateClass.is_subclass_of_instantiation(obj)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateClass.is_subclass_of_instantiation">
+<span class="sig-name descname"><span class="pre">is_subclass_of_instantiation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateClass.is_subclass_of_instantiation" title="Link to this definition"></a></dt>
 <dd><p>Determines if <cite>obj</cite> is a subclass of one of the instantiations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -366,20 +366,20 @@ parameters of the instantiation that was first added.</p></li>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateFunction(name,</span> <span class="pre">allow_default=True,</span> <span class="pre">scope=None)</span></span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></p>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateFunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.cpp_template.</span></span><span class="sig-name descname"><span class="pre">TemplateFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateFunction" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
 <p>Extension of <cite>TemplateBase</cite> for functions.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateMethod(name,</span> <span class="pre">cls,</span> <span class="pre">scope=None,</span> <span class="pre">**kwargs)</span></span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></p>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.common.cpp_template.</span></span><span class="sig-name descname"><span class="pre">TemplateMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateMethod" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
 <p>Extension of <cite>TemplateBase</cite> for class methods.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">TemplateMethod.__init__(name,</span> <span class="pre">cls,</span> <span class="pre">scope=None,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.common.cpp_template.TemplateMethod.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateMethod.__init__" title="Link to this definition"></a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">

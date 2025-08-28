@@ -131,8 +131,8 @@
   <section id="module-pydrake.polynomial">
 <span id="pydrake-polynomial"></span><h1>pydrake.polynomial<a class="headerlink" href="#module-pydrake.polynomial" title="Link to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.polynomial.</span></span><span class="sig-name descname"><span class="pre">Polynomial</span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial" title="Link to this definition"></a></dt>
 <dd><p>A scalar multi-variate polynomial, modeled after the msspoly in
 spotless.</p>
 <p>Polynomial represents a list of additive Monomials, each one of which
@@ -153,12 +153,12 @@ divided by scalars (of T) because Polynomials are not closed under
 division.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">Polynomial_</span></code>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.polynomial.Polynomial_" title="pydrake.polynomial.Polynomial_"><code class="xref py py-class docutils literal notranslate"><span class="pre">Polynomial_</span></code></a>
 for the list of instantiations.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.polynomial.Polynomial.__init__" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.polynomial.Polynomial) -&gt; None</p></li>
@@ -177,8 +177,8 @@ are always added, even if a coefficient is zero.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial.CoefficientsAlmostEqual(self:</span> <span class="pre">pydrake.polynomial.Polynomial,</span> <span class="pre">other:</span> <span class="pre">pydrake.polynomial.Polynomial,</span> <span class="pre">tol:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.0,</span> <span class="pre">tol_type:</span> <span class="pre">pydrake.common.ToleranceType</span> <span class="pre">=</span> <span class="pre">&lt;ToleranceType.kAbsolute:</span> <span class="pre">0&gt;)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial.CoefficientsAlmostEqual">
+<span class="sig-name descname"><span class="pre">CoefficientsAlmostEqual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">pydrake.polynomial.Polynomial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other:</span> <span class="pre">pydrake.polynomial.Polynomial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol_type:</span> <span class="pre">pydrake.common.ToleranceType</span> <span class="pre">=</span> <span class="pre">&lt;ToleranceType.kAbsolute:</span> <span class="pre">0&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial.CoefficientsAlmostEqual" title="Link to this definition"></a></dt>
 <dd><p>Checks if a Polynomial is approximately equal to this one.</p>
 <p>Checks that every coefficient of <code class="docutils literal notranslate"><span class="pre">other</span></code> is within <code class="docutils literal notranslate"><span class="pre">tol</span></code> of the
 corresponding coefficient of this Polynomial.</p>
@@ -190,8 +190,8 @@ coefficients less than <code class="docutils literal notranslate"><span class="p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial.Derivative(self:</span> <span class="pre">pydrake.polynomial.Polynomial,</span> <span class="pre">derivative_order:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.polynomial.Polynomial</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial.Derivative">
+<span class="sig-name descname"><span class="pre">Derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial" title="pydrake.polynomial.Polynomial"><span class="pre">pydrake.polynomial.Polynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.polynomial.Polynomial" title="pydrake.polynomial.Polynomial"><span class="pre">pydrake.polynomial.Polynomial</span></a></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial.Derivative" title="Link to this definition"></a></dt>
 <dd><p>Takes the derivative of this (univariate) Polynomial.</p>
 <p>Returns a new Polynomial that is the derivative of this one in its
 sole variable.</p>
@@ -205,8 +205,8 @@ Polynomial.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial.EvaluateUnivariate(self:</span> <span class="pre">pydrake.polynomial.Polynomial,</span> <span class="pre">x:</span> <span class="pre">float,</span> <span class="pre">derivative_order:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial.EvaluateUnivariate">
+<span class="sig-name descname"><span class="pre">EvaluateUnivariate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial" title="pydrake.polynomial.Polynomial"><span class="pre">pydrake.polynomial.Polynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial.EvaluateUnivariate" title="Link to this definition"></a></dt>
 <dd><p>Evaluate a univariate Polynomial at a specific point.</p>
 <p>Evaluates a univariate Polynomial at the given x.</p>
 <dl class="field-list simple">
@@ -228,8 +228,8 @@ derivative, etc.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial.GetCoefficients(self:</span> <span class="pre">pydrake.polynomial.Polynomial)</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial.GetCoefficients">
+<span class="sig-name descname"><span class="pre">GetCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial" title="pydrake.polynomial.Polynomial"><span class="pre">pydrake.polynomial.Polynomial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial.GetCoefficients" title="Link to this definition"></a></dt>
 <dd><p>Returns the vector of the coefficients of the polynomial in the order
 of powers of the variable - the [i]th element is the coefficient of
 the variable raised to the ith power.</p>
@@ -241,23 +241,23 @@ the variable raised to the ith power.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial.GetDegree(self:</span> <span class="pre">pydrake.polynomial.Polynomial)</span> <span class="pre">-&gt;</span> <span class="pre">int</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial.GetDegree">
+<span class="sig-name descname"><span class="pre">GetDegree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial" title="pydrake.polynomial.Polynomial"><span class="pre">pydrake.polynomial.Polynomial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial.GetDegree" title="Link to this definition"></a></dt>
 <dd><p>Returns the highest degree of any Monomial in this Polynomial.</p>
 <p>The degree of a multivariate Monomial is the product of the degrees of
 each of its terms.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial.GetNumberOfCoefficients(self:</span> <span class="pre">pydrake.polynomial.Polynomial)</span> <span class="pre">-&gt;</span> <span class="pre">int</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial.GetNumberOfCoefficients">
+<span class="sig-name descname"><span class="pre">GetNumberOfCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial" title="pydrake.polynomial.Polynomial"><span class="pre">pydrake.polynomial.Polynomial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial.GetNumberOfCoefficients" title="Link to this definition"></a></dt>
 <dd><p>Returns the number of unique Monomials (and thus the number of
 coefficients) in this Polynomial.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial.Integral(self:</span> <span class="pre">pydrake.polynomial.Polynomial,</span> <span class="pre">integration_constant:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.0)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.polynomial.Polynomial</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial.Integral">
+<span class="sig-name descname"><span class="pre">Integral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial" title="pydrake.polynomial.Polynomial"><span class="pre">pydrake.polynomial.Polynomial</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">integration_constant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.polynomial.Polynomial" title="pydrake.polynomial.Polynomial"><span class="pre">pydrake.polynomial.Polynomial</span></a></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial.Integral" title="Link to this definition"></a></dt>
 <dd><p>Takes the integral of this (univariate, non-constant) Polynomial.</p>
 <p>Returns a new Polynomial that is the indefinite integral of this one
 in its sole variable.</p>
@@ -274,22 +274,22 @@ term (zeroth-order coefficient) of the resulting Polynomial.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial.IsAffine(self:</span> <span class="pre">pydrake.polynomial.Polynomial)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial.IsAffine">
+<span class="sig-name descname"><span class="pre">IsAffine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.polynomial.Polynomial" title="pydrake.polynomial.Polynomial"><span class="pre">pydrake.polynomial.Polynomial</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial.IsAffine" title="Link to this definition"></a></dt>
 <dd><p>Returns true iff this is a sum of terms of degree 1, plus a constant.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py template">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_</span></span></dt>
-<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">Polynomial_[float]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Polynomial_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Polynomial_[Expression]</span></code></p>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.polynomial.</span></span><span class="sig-name descname"><span class="pre">Polynomial_</span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_" title="Link to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">Polynomial_[float]</span></code>, <a class="reference internal" href="#pydrake.polynomial.Polynomial_-AutoDiffXd" title="pydrake.polynomial.Polynomial_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Polynomial_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.polynomial.Polynomial_-Expression" title="pydrake.polynomial.Polynomial_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Polynomial_[Expression]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[AutoDiffXd]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.polynomial.</span></span><span class="sig-name descname"><span class="pre">Polynomial_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>A scalar multi-variate polynomial, modeled after the msspoly in
 spotless.</p>
 <p>Polynomial represents a list of additive Monomials, each one of which
@@ -309,8 +309,8 @@ will be reduced to (4.5 * b * a**2) internally after construction.</p>
 divided by scalars (of T) because Polynomials are not closed under
 division.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[AutoDiffXd].__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.polynomial.Polynomial_[AutoDiffXd]) -&gt; None</p></li>
@@ -329,8 +329,8 @@ are always added, even if a coefficient is zero.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[AutoDiffXd].CoefficientsAlmostEqual(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd],</span> <span class="pre">other:</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd],</span> <span class="pre">tol:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd</span> <span class="pre">=</span> <span class="pre">0.0,</span> <span class="pre">tol_type:</span> <span class="pre">pydrake.common.ToleranceType</span> <span class="pre">=</span> <span class="pre">&lt;ToleranceType.kAbsolute:</span> <span class="pre">0&gt;)</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd-.CoefficientsAlmostEqual">
+<span class="sig-name descname"><span class="pre">CoefficientsAlmostEqual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd],</span> <span class="pre">other:</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd],</span> <span class="pre">tol:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd</span> <span class="pre">=</span> <span class="pre">0.0,</span> <span class="pre">tol_type:</span> <span class="pre">pydrake.common.ToleranceType</span> <span class="pre">=</span> <span class="pre">&lt;ToleranceType.kAbsolute:</span> <span class="pre">0&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd-.CoefficientsAlmostEqual" title="Link to this definition"></a></dt>
 <dd><p>Checks if a Polynomial is approximately equal to this one.</p>
 <p>Checks that every coefficient of <code class="docutils literal notranslate"><span class="pre">other</span></code> is within <code class="docutils literal notranslate"><span class="pre">tol</span></code> of the
 corresponding coefficient of this Polynomial.</p>
@@ -342,8 +342,8 @@ coefficients less than <code class="docutils literal notranslate"><span class="p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[AutoDiffXd].Derivative(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd],</span> <span class="pre">derivative_order:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd-.Derivative">
+<span class="sig-name descname"><span class="pre">Derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd-.Derivative" title="Link to this definition"></a></dt>
 <dd><p>Takes the derivative of this (univariate) Polynomial.</p>
 <p>Returns a new Polynomial that is the derivative of this one in its
 sole variable.</p>
@@ -357,8 +357,8 @@ Polynomial.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[AutoDiffXd].EvaluateUnivariate(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd],</span> <span class="pre">x:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd,</span> <span class="pre">derivative_order:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd-.EvaluateUnivariate">
+<span class="sig-name descname"><span class="pre">EvaluateUnivariate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd-.EvaluateUnivariate" title="Link to this definition"></a></dt>
 <dd><p>Evaluate a univariate Polynomial at a specific point.</p>
 <p>Evaluates a univariate Polynomial at the given x.</p>
 <dl class="field-list simple">
@@ -380,8 +380,8 @@ derivative, etc.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[AutoDiffXd].GetCoefficients(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[object[m,</span> <span class="pre">1]]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd-.GetCoefficients">
+<span class="sig-name descname"><span class="pre">GetCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd-.GetCoefficients" title="Link to this definition"></a></dt>
 <dd><p>Returns the vector of the coefficients of the polynomial in the order
 of powers of the variable - the [i]th element is the coefficient of
 the variable raised to the ith power.</p>
@@ -393,23 +393,23 @@ the variable raised to the ith power.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[AutoDiffXd].GetDegree(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">int</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd-.GetDegree">
+<span class="sig-name descname"><span class="pre">GetDegree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd-.GetDegree" title="Link to this definition"></a></dt>
 <dd><p>Returns the highest degree of any Monomial in this Polynomial.</p>
 <p>The degree of a multivariate Monomial is the product of the degrees of
 each of its terms.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[AutoDiffXd].GetNumberOfCoefficients(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">int</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd-.GetNumberOfCoefficients">
+<span class="sig-name descname"><span class="pre">GetNumberOfCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd-.GetNumberOfCoefficients" title="Link to this definition"></a></dt>
 <dd><p>Returns the number of unique Monomials (and thus the number of
 coefficients) in this Polynomial.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[AutoDiffXd].Integral(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd],</span> <span class="pre">integration_constant:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd</span> <span class="pre">=</span> <span class="pre">0.0)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd-.Integral">
+<span class="sig-name descname"><span class="pre">Integral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integration_constant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd-.Integral" title="Link to this definition"></a></dt>
 <dd><p>Takes the integral of this (univariate, non-constant) Polynomial.</p>
 <p>Returns a new Polynomial that is the indefinite integral of this one
 in its sole variable.</p>
@@ -426,16 +426,16 @@ term (zeroth-order coefficient) of the resulting Polynomial.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[AutoDiffXd].IsAffine(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-AutoDiffXd-.IsAffine">
+<span class="sig-name descname"><span class="pre">IsAffine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-AutoDiffXd-.IsAffine" title="Link to this definition"></a></dt>
 <dd><p>Returns true iff this is a sum of terms of degree 1, plus a constant.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[Expression]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-Expression">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.polynomial.</span></span><span class="sig-name descname"><span class="pre">Polynomial_[Expression]</span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-Expression" title="Link to this definition"></a></dt>
 <dd><p>A scalar multi-variate polynomial, modeled after the msspoly in
 spotless.</p>
 <p>Polynomial represents a list of additive Monomials, each one of which
@@ -455,8 +455,8 @@ will be reduced to (4.5 * b * a**2) internally after construction.</p>
 divided by scalars (of T) because Polynomials are not closed under
 division.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[Expression].__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-Expression-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-Expression-.__init__" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>__init__(self: pydrake.polynomial.Polynomial_[Expression]) -&gt; None</p></li>
@@ -475,8 +475,8 @@ are always added, even if a coefficient is zero.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[Expression].CoefficientsAlmostEqual(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression],</span> <span class="pre">other:</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression],</span> <span class="pre">tol:</span> <span class="pre">pydrake.symbolic.Expression</span> <span class="pre">=</span> <span class="pre">0.0,</span> <span class="pre">tol_type:</span> <span class="pre">pydrake.common.ToleranceType</span> <span class="pre">=</span> <span class="pre">&lt;ToleranceType.kAbsolute:</span> <span class="pre">0&gt;)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.symbolic.Formula</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-Expression-.CoefficientsAlmostEqual">
+<span class="sig-name descname"><span class="pre">CoefficientsAlmostEqual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression],</span> <span class="pre">other:</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression],</span> <span class="pre">tol:</span> <span class="pre">pydrake.symbolic.Expression</span> <span class="pre">=</span> <span class="pre">0.0,</span> <span class="pre">tol_type:</span> <span class="pre">pydrake.common.ToleranceType</span> <span class="pre">=</span> <span class="pre">&lt;ToleranceType.kAbsolute:</span> <span class="pre">0&gt;</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Formula" title="pydrake.symbolic.Formula"><span class="pre">pydrake.symbolic.Formula</span></a></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-Expression-.CoefficientsAlmostEqual" title="Link to this definition"></a></dt>
 <dd><p>Checks if a Polynomial is approximately equal to this one.</p>
 <p>Checks that every coefficient of <code class="docutils literal notranslate"><span class="pre">other</span></code> is within <code class="docutils literal notranslate"><span class="pre">tol</span></code> of the
 corresponding coefficient of this Polynomial.</p>
@@ -488,8 +488,8 @@ coefficients less than <code class="docutils literal notranslate"><span class="p
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[Expression].Derivative(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression],</span> <span class="pre">derivative_order:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">1)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-Expression-.Derivative">
+<span class="sig-name descname"><span class="pre">Derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-Expression-.Derivative" title="Link to this definition"></a></dt>
 <dd><p>Takes the derivative of this (univariate) Polynomial.</p>
 <p>Returns a new Polynomial that is the derivative of this one in its
 sole variable.</p>
@@ -503,8 +503,8 @@ Polynomial.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[Expression].EvaluateUnivariate(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression],</span> <span class="pre">x:</span> <span class="pre">pydrake.symbolic.Expression,</span> <span class="pre">derivative_order:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.symbolic.Expression</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-Expression-.EvaluateUnivariate">
+<span class="sig-name descname"><span class="pre">EvaluateUnivariate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-Expression-.EvaluateUnivariate" title="Link to this definition"></a></dt>
 <dd><p>Evaluate a univariate Polynomial at a specific point.</p>
 <p>Evaluates a univariate Polynomial at the given x.</p>
 <dl class="field-list simple">
@@ -526,8 +526,8 @@ derivative, etc.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[Expression].GetCoefficients(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[object[m,</span> <span class="pre">1]]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-Expression-.GetCoefficients">
+<span class="sig-name descname"><span class="pre">GetCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-Expression-.GetCoefficients" title="Link to this definition"></a></dt>
 <dd><p>Returns the vector of the coefficients of the polynomial in the order
 of powers of the variable - the [i]th element is the coefficient of
 the variable raised to the ith power.</p>
@@ -539,23 +539,23 @@ the variable raised to the ith power.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[Expression].GetDegree(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">int</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-Expression-.GetDegree">
+<span class="sig-name descname"><span class="pre">GetDegree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-Expression-.GetDegree" title="Link to this definition"></a></dt>
 <dd><p>Returns the highest degree of any Monomial in this Polynomial.</p>
 <p>The degree of a multivariate Monomial is the product of the degrees of
 each of its terms.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[Expression].GetNumberOfCoefficients(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">int</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-Expression-.GetNumberOfCoefficients">
+<span class="sig-name descname"><span class="pre">GetNumberOfCoefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-Expression-.GetNumberOfCoefficients" title="Link to this definition"></a></dt>
 <dd><p>Returns the number of unique Monomials (and thus the number of
 coefficients) in this Polynomial.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[Expression].Integral(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression],</span> <span class="pre">integration_constant:</span> <span class="pre">pydrake.symbolic.Expression</span> <span class="pre">=</span> <span class="pre">0.0)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-Expression-.Integral">
+<span class="sig-name descname"><span class="pre">Integral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integration_constant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">pydrake.symbolic.Expression</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-Expression-.Integral" title="Link to this definition"></a></dt>
 <dd><p>Takes the integral of this (univariate, non-constant) Polynomial.</p>
 <p>Returns a new Polynomial that is the indefinite integral of this one
 in its sole variable.</p>
@@ -572,8 +572,8 @@ term (zeroth-order coefficient) of the resulting Polynomial.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">Polynomial_[Expression].IsAffine(self:</span> <span class="pre">pydrake.polynomial.Polynomial_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">bool</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.polynomial.Polynomial_-Expression-.IsAffine">
+<span class="sig-name descname"><span class="pre">IsAffine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.polynomial.Polynomial_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.polynomial.Polynomial_-Expression-.IsAffine" title="Link to this definition"></a></dt>
 <dd><p>Returns true iff this is a sum of terms of degree 1, plus a constant.</p>
 </dd></dl>
 

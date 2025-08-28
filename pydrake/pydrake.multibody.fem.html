@@ -148,8 +148,8 @@
 <span id="pydrake-multibody-fem"></span><h1>pydrake.multibody.fem<a class="headerlink" href="#module-pydrake.multibody.fem" title="Link to this heading"></a></h1>
 <p>Bindings for multibody fem.</p>
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.fem.</span></span><span class="sig-name descname"><span class="pre">DeformableBodyConfig</span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig" title="Link to this definition"></a></dt>
 <dd><p>DeformableBodyConfig stores the physical parameters for a deformable
 body. A default constructed configuration approximately represents a
 hard rubber material (density, elasticity, and poisson’s ratio)
@@ -174,41 +174,41 @@ relationship of the body, see MaterialModel. Default to
 MaterialModel::kCorotated.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">DeformableBodyConfig_</span></code>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig_" title="pydrake.multibody.fem.DeformableBodyConfig_"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeformableBodyConfig_</span></code></a>
 for the list of instantiations.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.__init__(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.mass_damping_coefficient(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.mass_damping_coefficient">
+<span class="sig-name descname"><span class="pre">mass_damping_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.mass_damping_coefficient" title="Link to this definition"></a></dt>
 <dd><p>Returns the mass damping coefficient. See DampingModel.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.mass_density(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.mass_density">
+<span class="sig-name descname"><span class="pre">mass_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.mass_density" title="Link to this definition"></a></dt>
 <dd><p>Returns the mass density, with unit of kg/m³.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.material_model(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.MaterialModel</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.material_model">
+<span class="sig-name descname"><span class="pre">material_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.fem.MaterialModel" title="pydrake.multibody.fem.MaterialModel"><span class="pre">pydrake.multibody.fem.MaterialModel</span></a></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.material_model" title="Link to this definition"></a></dt>
 <dd><p>Returns the constitutive model of the material.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.poissons_ratio(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.poissons_ratio">
+<span class="sig-name descname"><span class="pre">poissons_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.poissons_ratio" title="Link to this definition"></a></dt>
 <dd><p>Returns the Poisson’s ratio, unitless.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.set_mass_damping_coefficient(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig,</span> <span class="pre">mass_damping_coefficient:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.set_mass_damping_coefficient">
+<span class="sig-name descname"><span class="pre">set_mass_damping_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass_damping_coefficient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.set_mass_damping_coefficient" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>mass_damping_coefficient &gt;= 0.</p>
 </dd>
@@ -216,8 +216,8 @@ for the list of instantiations.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.set_mass_density(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig,</span> <span class="pre">mass_density:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.set_mass_density">
+<span class="sig-name descname"><span class="pre">set_mass_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass_density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.set_mass_density" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>mass_density &gt; 0.</p>
 </dd>
@@ -225,13 +225,13 @@ for the list of instantiations.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.set_material_model(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig,</span> <span class="pre">material_model:</span> <span class="pre">pydrake.multibody.fem.MaterialModel)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.set_material_model">
+<span class="sig-name descname"><span class="pre">set_material_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">material_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.MaterialModel" title="pydrake.multibody.fem.MaterialModel"><span class="pre">pydrake.multibody.fem.MaterialModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.set_material_model" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.set_poissons_ratio(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig,</span> <span class="pre">poissons_ratio:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.set_poissons_ratio">
+<span class="sig-name descname"><span class="pre">set_poissons_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">poissons_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.set_poissons_ratio" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>-1 &lt; poissons_ratio &lt; 0.5.</p>
 </dd>
@@ -239,8 +239,8 @@ for the list of instantiations.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.set_stiffness_damping_coefficient(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig,</span> <span class="pre">stiffness_damping_coefficient:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.set_stiffness_damping_coefficient">
+<span class="sig-name descname"><span class="pre">set_stiffness_damping_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">stiffness_damping_coefficient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.set_stiffness_damping_coefficient" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>stiffness_damping_coefficient &gt;= 0.</p>
 </dd>
@@ -248,8 +248,8 @@ for the list of instantiations.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.set_youngs_modulus(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig,</span> <span class="pre">youngs_modulus:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.set_youngs_modulus">
+<span class="sig-name descname"><span class="pre">set_youngs_modulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">youngs_modulus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.set_youngs_modulus" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>youngs_modulus &gt; 0.</p>
 </dd>
@@ -257,28 +257,28 @@ for the list of instantiations.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.stiffness_damping_coefficient(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.stiffness_damping_coefficient">
+<span class="sig-name descname"><span class="pre">stiffness_damping_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.stiffness_damping_coefficient" title="Link to this definition"></a></dt>
 <dd><p>Returns the stiffness damping coefficient. See DampingModel.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig.youngs_modulus(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig)</span> <span class="pre">-&gt;</span> <span class="pre">float</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig.youngs_modulus">
+<span class="sig-name descname"><span class="pre">youngs_modulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig" title="pydrake.multibody.fem.DeformableBodyConfig"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig.youngs_modulus" title="Link to this definition"></a></dt>
 <dd><p>Returns the Young’s modulus, with unit of N/m².</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py template">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_</span></span></dt>
-<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">DeformableBodyConfig_[float]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeformableBodyConfig_[AutoDiffXd]</span></code></p>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.fem.</span></span><span class="sig-name descname"><span class="pre">DeformableBodyConfig_</span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_" title="Link to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">DeformableBodyConfig_[float]</span></code>, <a class="reference internal" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd" title="pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeformableBodyConfig_[AutoDiffXd]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.fem.</span></span><span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>DeformableBodyConfig stores the physical parameters for a deformable
 body. A default constructed configuration approximately represents a
 hard rubber material (density, elasticity, and poisson’s ratio)
@@ -302,37 +302,37 @@ has unit s. Must be non-negative. Default to 0. See DampingModel.
 relationship of the body, see MaterialModel. Default to
 MaterialModel::kCorotated.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].__init__(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].mass_damping_coefficient(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.mass_damping_coefficient">
+<span class="sig-name descname"><span class="pre">mass_damping_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.mass_damping_coefficient" title="Link to this definition"></a></dt>
 <dd><p>Returns the mass damping coefficient. See DampingModel.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].mass_density(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.mass_density">
+<span class="sig-name descname"><span class="pre">mass_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.mass_density" title="Link to this definition"></a></dt>
 <dd><p>Returns the mass density, with unit of kg/m³.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].material_model(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.MaterialModel</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.material_model">
+<span class="sig-name descname"><span class="pre">material_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.fem.MaterialModel" title="pydrake.multibody.fem.MaterialModel"><span class="pre">pydrake.multibody.fem.MaterialModel</span></a></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.material_model" title="Link to this definition"></a></dt>
 <dd><p>Returns the constitutive model of the material.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].poissons_ratio(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.poissons_ratio">
+<span class="sig-name descname"><span class="pre">poissons_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.poissons_ratio" title="Link to this definition"></a></dt>
 <dd><p>Returns the Poisson’s ratio, unitless.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].set_mass_damping_coefficient(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd],</span> <span class="pre">mass_damping_coefficient:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_mass_damping_coefficient">
+<span class="sig-name descname"><span class="pre">set_mass_damping_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass_damping_coefficient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_mass_damping_coefficient" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>mass_damping_coefficient &gt;= 0.</p>
 </dd>
@@ -340,8 +340,8 @@ MaterialModel::kCorotated.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].set_mass_density(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd],</span> <span class="pre">mass_density:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_mass_density">
+<span class="sig-name descname"><span class="pre">set_mass_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass_density</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_mass_density" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>mass_density &gt; 0.</p>
 </dd>
@@ -349,13 +349,13 @@ MaterialModel::kCorotated.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].set_material_model(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd],</span> <span class="pre">material_model:</span> <span class="pre">pydrake.multibody.fem.MaterialModel)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_material_model">
+<span class="sig-name descname"><span class="pre">set_material_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">material_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.MaterialModel" title="pydrake.multibody.fem.MaterialModel"><span class="pre">pydrake.multibody.fem.MaterialModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_material_model" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].set_poissons_ratio(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd],</span> <span class="pre">poissons_ratio:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_poissons_ratio">
+<span class="sig-name descname"><span class="pre">set_poissons_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poissons_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_poissons_ratio" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>-1 &lt; poissons_ratio &lt; 0.5.</p>
 </dd>
@@ -363,8 +363,8 @@ MaterialModel::kCorotated.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].set_stiffness_damping_coefficient(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd],</span> <span class="pre">stiffness_damping_coefficient:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_stiffness_damping_coefficient">
+<span class="sig-name descname"><span class="pre">set_stiffness_damping_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stiffness_damping_coefficient</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_stiffness_damping_coefficient" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>stiffness_damping_coefficient &gt;= 0.</p>
 </dd>
@@ -372,8 +372,8 @@ MaterialModel::kCorotated.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].set_youngs_modulus(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd],</span> <span class="pre">youngs_modulus:</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_youngs_modulus">
+<span class="sig-name descname"><span class="pre">set_youngs_modulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">youngs_modulus</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.set_youngs_modulus" title="Link to this definition"></a></dt>
 <dd><dl class="simple">
 <dt>Precondition:</dt><dd><p>youngs_modulus &gt; 0.</p>
 </dd>
@@ -381,22 +381,22 @@ MaterialModel::kCorotated.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].stiffness_damping_coefficient(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.stiffness_damping_coefficient">
+<span class="sig-name descname"><span class="pre">stiffness_damping_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.stiffness_damping_coefficient" title="Link to this definition"></a></dt>
 <dd><p>Returns the stiffness damping coefficient. See DampingModel.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">DeformableBodyConfig_[AutoDiffXd].youngs_modulus(self:</span> <span class="pre">pydrake.multibody.fem.DeformableBodyConfig_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.autodiffutils.AutoDiffXd</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.youngs_modulus">
+<span class="sig-name descname"><span class="pre">youngs_modulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.DeformableBodyConfig_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.multibody.fem.DeformableBodyConfig_-AutoDiffXd-.youngs_modulus" title="Link to this definition"></a></dt>
 <dd><p>Returns the Young’s modulus, with unit of N/m².</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.fem.</span></span><span class="sig-name descname"><span class="pre">ForceDensityFieldBase</span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase" title="Link to this definition"></a></dt>
 <dd><p>The ForceDensityFieldBase class is an abstract base class that
 represents a force density field affecting deformable bodies in a
 MultibodyPlant. The force field is described by the member function
@@ -407,27 +407,27 @@ class, inherit from ForceDensityField instead of directly inheriting
 from ForceDensityFieldBase.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_</span></code>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.fem.ForceDensityFieldBase_" title="pydrake.multibody.fem.ForceDensityFieldBase_"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_</span></code></a>
 for the list of instantiations.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase.__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase.Clone(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase.Clone">
+<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.ForceDensityFieldBase" title="pydrake.multibody.fem.ForceDensityFieldBase"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.fem.ForceDensityFieldBase" title="pydrake.multibody.fem.ForceDensityFieldBase"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase</span></a></span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase.Clone" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase.density_type(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityType</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase.density_type">
+<span class="sig-name descname"><span class="pre">density_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.ForceDensityFieldBase" title="pydrake.multibody.fem.ForceDensityFieldBase"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.fem.ForceDensityType" title="pydrake.multibody.fem.ForceDensityType"><span class="pre">pydrake.multibody.fem.ForceDensityType</span></a></span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase.density_type" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase.EvaluateAt(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase,</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context,</span> <span class="pre">p_WQ:</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[3,</span> <span class="pre">1]]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase.EvaluateAt">
+<span class="sig-name descname"><span class="pre">EvaluateAt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.ForceDensityFieldBase" title="pydrake.multibody.fem.ForceDensityFieldBase"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_WQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase.EvaluateAt" title="Link to this definition"></a></dt>
 <dd><p>Evaluates the force density [N/m³] with the given <code class="docutils literal notranslate"><span class="pre">context</span></code> of the
 owning MultibodyPlant and a position in world, <code class="docutils literal notranslate"><span class="pre">p_WQ</span></code>.</p>
 </dd></dl>
@@ -435,14 +435,14 @@ owning MultibodyPlant and a position in world, <code class="docutils literal not
 </dd></dl>
 
 <dl class="py template">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_</span></span></dt>
-<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_[float]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_[Expression]</span></code></p>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.fem.</span></span><span class="sig-name descname"><span class="pre">ForceDensityFieldBase_</span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase_" title="Link to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_[float]</span></code>, <a class="reference internal" href="#pydrake.multibody.fem.ForceDensityFieldBase_-AutoDiffXd" title="pydrake.multibody.fem.ForceDensityFieldBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.multibody.fem.ForceDensityFieldBase_-Expression" title="pydrake.multibody.fem.ForceDensityFieldBase_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ForceDensityFieldBase_[Expression]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[AutoDiffXd]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase_-AutoDiffXd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.fem.</span></span><span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase_-AutoDiffXd" title="Link to this definition"></a></dt>
 <dd><p>The ForceDensityFieldBase class is an abstract base class that
 represents a force density field affecting deformable bodies in a
 MultibodyPlant. The force field is described by the member function
@@ -452,23 +452,23 @@ location, with unit [N/m³]. To create a concrete ForceDensityFieldBase
 class, inherit from ForceDensityField instead of directly inheriting
 from ForceDensityFieldBase.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[AutoDiffXd].__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase_-AutoDiffXd-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[AutoDiffXd].Clone(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[AutoDiffXd]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase_-AutoDiffXd-.Clone">
+<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase_-AutoDiffXd-.Clone" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[AutoDiffXd].density_type(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityType</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase_-AutoDiffXd-.density_type">
+<span class="sig-name descname"><span class="pre">density_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.fem.ForceDensityType" title="pydrake.multibody.fem.ForceDensityType"><span class="pre">pydrake.multibody.fem.ForceDensityType</span></a></span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase_-AutoDiffXd-.density_type" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[AutoDiffXd].EvaluateAt(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[AutoDiffXd],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[AutoDiffXd],</span> <span class="pre">p_WQ:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase_-AutoDiffXd-.EvaluateAt">
+<span class="sig-name descname"><span class="pre">EvaluateAt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_WQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase_-AutoDiffXd-.EvaluateAt" title="Link to this definition"></a></dt>
 <dd><p>Evaluates the force density [N/m³] with the given <code class="docutils literal notranslate"><span class="pre">context</span></code> of the
 owning MultibodyPlant and a position in world, <code class="docutils literal notranslate"><span class="pre">p_WQ</span></code>.</p>
 </dd></dl>
@@ -476,8 +476,8 @@ owning MultibodyPlant and a position in world, <code class="docutils literal not
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[Expression]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase_-Expression">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.fem.</span></span><span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[Expression]</span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase_-Expression" title="Link to this definition"></a></dt>
 <dd><p>The ForceDensityFieldBase class is an abstract base class that
 represents a force density field affecting deformable bodies in a
 MultibodyPlant. The force field is described by the member function
@@ -487,23 +487,23 @@ location, with unit [N/m³]. To create a concrete ForceDensityFieldBase
 class, inherit from ForceDensityField instead of directly inheriting
 from ForceDensityFieldBase.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[Expression].__init__(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase_-Expression-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase_-Expression-.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[Expression].Clone(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[Expression]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase_-Expression-.Clone">
+<span class="sig-name descname"><span class="pre">Clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase_-Expression-.Clone" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[Expression].density_type(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[Expression])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.multibody.fem.ForceDensityType</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase_-Expression-.density_type">
+<span class="sig-name descname"><span class="pre">density_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.multibody.fem.ForceDensityType" title="pydrake.multibody.fem.ForceDensityType"><span class="pre">pydrake.multibody.fem.ForceDensityType</span></a></span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase_-Expression-.density_type" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityFieldBase_[Expression].EvaluateAt(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_[Expression],</span> <span class="pre">context:</span> <span class="pre">pydrake.systems.framework.Context_[Expression],</span> <span class="pre">p_WQ:</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[object[3,</span> <span class="pre">1]]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityFieldBase_-Expression-.EvaluateAt">
+<span class="sig-name descname"><span class="pre">EvaluateAt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.fem.ForceDensityFieldBase_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_WQ</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityFieldBase_-Expression-.EvaluateAt" title="Link to this definition"></a></dt>
 <dd><p>Evaluates the force density [N/m³] with the given <code class="docutils literal notranslate"><span class="pre">context</span></code> of the
 owning MultibodyPlant and a position in world, <code class="docutils literal notranslate"><span class="pre">p_WQ</span></code>.</p>
 </dd></dl>
@@ -511,8 +511,8 @@ owning MultibodyPlant and a position in world, <code class="docutils literal not
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityType</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.fem.</span></span><span class="sig-name descname"><span class="pre">ForceDensityType</span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityType" title="Link to this definition"></a></dt>
 <dd><p>(Advanced) Enum for the type of force density in
 ForceDensityFieldBase.</p>
 <p>Members:</p>
@@ -526,35 +526,35 @@ ForceDensityFieldBase.</p>
 <p><em>reference</em> configuration volume where the reference undeformed
 configuration is defined by the input mesh provided by the user.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityType.__init__(self:</span> <span class="pre">pydrake.multibody.fem.ForceDensityType,</span> <span class="pre">value:</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityType.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.ForceDensityType" title="pydrake.multibody.fem.ForceDensityType"><span class="pre">pydrake.multibody.fem.ForceDensityType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityType.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityType.kPerCurrentVolume</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityType.kPerCurrentVolume">
+<span class="sig-name descname"><span class="pre">kPerCurrentVolume</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ForceDensityType.kPerCurrentVolume:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityType.kPerCurrentVolume" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityType.kPerReferenceVolume</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityType.kPerReferenceVolume">
+<span class="sig-name descname"><span class="pre">kPerReferenceVolume</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ForceDensityType.kPerReferenceVolume:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityType.kPerReferenceVolume" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityType.name</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityType.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityType.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ForceDensityType.value</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.ForceDensityType.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.multibody.fem.ForceDensityType.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MaterialModel</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.MaterialModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.fem.</span></span><span class="sig-name descname"><span class="pre">MaterialModel</span></span><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel" title="Link to this definition"></a></dt>
 <dd><p>Types of material models for the deformable body.</p>
 <p>Members:</p>
 <blockquote>
@@ -590,38 +590,38 @@ Graphics (TOG) 37.2 (2018): 1-15.</p>
 <p>than other models but leads to artifacts when large rotational
 deformations occur.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MaterialModel.__init__(self:</span> <span class="pre">pydrake.multibody.fem.MaterialModel,</span> <span class="pre">value:</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.MaterialModel.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.fem.MaterialModel" title="pydrake.multibody.fem.MaterialModel"><span class="pre">pydrake.multibody.fem.MaterialModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MaterialModel.kCorotated</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.MaterialModel.kCorotated">
+<span class="sig-name descname"><span class="pre">kCorotated</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MaterialModel.kCorotated:</span> <span class="pre">1&gt;</span></em><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.kCorotated" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MaterialModel.kLinear</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.MaterialModel.kLinear">
+<span class="sig-name descname"><span class="pre">kLinear</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MaterialModel.kLinear:</span> <span class="pre">3&gt;</span></em><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.kLinear" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MaterialModel.kLinearCorotated</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.MaterialModel.kLinearCorotated">
+<span class="sig-name descname"><span class="pre">kLinearCorotated</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MaterialModel.kLinearCorotated:</span> <span class="pre">0&gt;</span></em><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.kLinearCorotated" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MaterialModel.kNeoHookean</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.MaterialModel.kNeoHookean">
+<span class="sig-name descname"><span class="pre">kNeoHookean</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;MaterialModel.kNeoHookean:</span> <span class="pre">2&gt;</span></em><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.kNeoHookean" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MaterialModel.name</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.MaterialModel.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.name" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">MaterialModel.value</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.fem.MaterialModel.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#pydrake.multibody.fem.MaterialModel.value" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

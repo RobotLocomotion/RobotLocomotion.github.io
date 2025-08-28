@@ -131,21 +131,21 @@
   <section id="module-pydrake.forwarddiff">
 <span id="pydrake-forwarddiff"></span><h1>pydrake.forwarddiff<a class="headerlink" href="#module-pydrake.forwarddiff" title="Link to this heading"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">cos(x)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.forwarddiff.cos">
+<span class="sig-prename descclassname"><span class="pre">pydrake.forwarddiff.</span></span><span class="sig-name descname"><span class="pre">cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.forwarddiff.cos" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">derivative(function,</span> <span class="pre">x)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.forwarddiff.derivative">
+<span class="sig-prename descclassname"><span class="pre">pydrake.forwarddiff.</span></span><span class="sig-name descname"><span class="pre">derivative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.forwarddiff.derivative" title="Link to this definition"></a></dt>
 <dd><p>Compute the derivative of the function evaluated at the scalar input x
 using Eigen’s automatic differentiation.</p>
 <p>The function should be scalar-input and scalar-output.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">gradient(function,</span> <span class="pre">x)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.forwarddiff.gradient">
+<span class="sig-prename descclassname"><span class="pre">pydrake.forwarddiff.</span></span><span class="sig-name descname"><span class="pre">gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.forwarddiff.gradient" title="Link to this definition"></a></dt>
 <dd><p>Compute the gradient of the function evaluated at the vector input x
 using Eigen’s automatic differentiation.</p>
 <p><code class="docutils literal notranslate"><span class="pre">function</span></code> should be vector-input and be either a scalar output or a
@@ -153,8 +153,8 @@ vector of size 1, where the element must be of type AutoDiffXd.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">jacobian(function,</span> <span class="pre">x)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.forwarddiff.jacobian">
+<span class="sig-prename descclassname"><span class="pre">pydrake.forwarddiff.</span></span><span class="sig-name descname"><span class="pre">jacobian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.forwarddiff.jacobian" title="Link to this definition"></a></dt>
 <dd><p>Compute the jacobian of the function evaluated at the vector input x
 using Eigen’s automatic differentiation. The dimension of the jacobian will
 be one more than the output of <code class="docutils literal notranslate"><span class="pre">function</span></code>.</p>
@@ -163,8 +163,8 @@ must return an array with AutoDiffXd elements.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">sin(x)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.forwarddiff.sin">
+<span class="sig-prename descclassname"><span class="pre">pydrake.forwarddiff.</span></span><span class="sig-name descname"><span class="pre">sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.forwarddiff.sin" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </section>

@@ -148,9 +148,9 @@
 <span id="pydrake-multibody-meshcat"></span><h1>pydrake.multibody.meshcat<a class="headerlink" href="#module-pydrake.multibody.meshcat" title="Link to this heading"></a></h1>
 <p>Interface code for Meshcat-based visualization</p>
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer</span></span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.meshcat.</span></span><span class="sig-name descname"><span class="pre">ContactVisualizer</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
 <p>ContactVisualizer is a system that publishes a ContactResults to
 geometry::Meshcat; For point contact results, it draws double-sided
 arrows at the location of the contact force with length scaled by the
@@ -172,18 +172,18 @@ may generalize this in the future.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">ContactVisualizer_</span></code>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizer_" title="pydrake.multibody.meshcat.ContactVisualizer_"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContactVisualizer_</span></code></a>
 for the list of instantiations.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer.__init__(self:</span> <span class="pre">pydrake.multibody.meshcat.ContactVisualizer,</span> <span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat,</span> <span class="pre">params:</span> <span class="pre">pydrake.multibody.meshcat.ContactVisualizerParams</span> <span class="pre">=</span> <span class="pre">ContactVisualizerParams(publish_period=0.03125,</span> <span class="pre">color=Rgba(r=0.0,</span> <span class="pre">g=1.0,</span> <span class="pre">b=0.0,</span> <span class="pre">a=1.0),</span> <span class="pre">hydro_force_color=Rgba(r=1.0,</span> <span class="pre">g=0.0,</span> <span class="pre">b=0.0,</span> <span class="pre">a=1.0),</span> <span class="pre">hydro_moment_color=Rgba(r=0.0,</span> <span class="pre">g=0.0,</span> <span class="pre">b=1.0,</span> <span class="pre">a=1.0),</span> <span class="pre">prefix='contact_forces',</span> <span class="pre">delete_on_initialization_event=True,</span> <span class="pre">force_threshold=0.01,</span> <span class="pre">moment_threshold=0.01,</span> <span class="pre">newtons_per_meter=10.0,</span> <span class="pre">newton_meters_per_meter=3.0,</span> <span class="pre">radius=0.002))</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizer" title="pydrake.multibody.meshcat.ContactVisualizer"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizerParams" title="pydrake.multibody.meshcat.ContactVisualizerParams"><span class="pre">pydrake.multibody.meshcat.ContactVisualizerParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">ContactVisualizerParams(publish_period=0.03125,</span> <span class="pre">color=Rgba(r=0.0,</span> <span class="pre">g=1.0,</span> <span class="pre">b=0.0,</span> <span class="pre">a=1.0),</span> <span class="pre">hydro_force_color=Rgba(r=1.0,</span> <span class="pre">g=0.0,</span> <span class="pre">b=0.0,</span> <span class="pre">a=1.0),</span> <span class="pre">hydro_moment_color=Rgba(r=0.0,</span> <span class="pre">g=0.0,</span> <span class="pre">b=1.0,</span> <span class="pre">a=1.0),</span> <span class="pre">prefix='contact_forces',</span> <span class="pre">delete_on_initialization_event=True,</span> <span class="pre">force_threshold=0.01,</span> <span class="pre">moment_threshold=0.01,</span> <span class="pre">newtons_per_meter=10.0,</span> <span class="pre">newton_meters_per_meter=3.0,</span> <span class="pre">radius=0.002)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer.__init__" title="Link to this definition"></a></dt>
 <dd><p>Creates an instance of ContactVisualizer</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer.AddToBuilder(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer.AddToBuilder">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AddToBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer.AddToBuilder" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder, plant: pydrake.multibody.plant.MultibodyPlant, meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0), prefix=’contact_forces’, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01, newtons_per_meter=10.0, newton_meters_per_meter=3.0, radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer</p></li>
@@ -217,8 +217,8 @@ names in the visualizer.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer.contact_results_input_port(self:</span> <span class="pre">pydrake.multibody.meshcat.ContactVisualizer)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer.contact_results_input_port">
+<span class="sig-name descname"><span class="pre">contact_results_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizer" title="pydrake.multibody.meshcat.ContactVisualizer"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer.contact_results_input_port" title="Link to this definition"></a></dt>
 <dd><p>Returns the multibody::ContactResults-valued input port. It should be
 connected to MultibodyPlant’s multibody::ContactResults-valued output
 port. Failure to do so will cause a runtime error when attempting to
@@ -226,8 +226,8 @@ broadcast messages.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer.Delete(self:</span> <span class="pre">pydrake.multibody.meshcat.ContactVisualizer)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer.Delete">
+<span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizer" title="pydrake.multibody.meshcat.ContactVisualizer"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer.Delete" title="Link to this definition"></a></dt>
 <dd><p>Calls geometry::Meshcat::Delete(std::string_view path), with the path
 set to <code class="docutils literal notranslate"><span class="pre">prefix</span></code>. Since this visualizer will only ever add geometry
 under this prefix, this will remove all geometry/transforms added by
@@ -238,8 +238,8 @@ initialization.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer.query_object_input_port(self:</span> <span class="pre">pydrake.multibody.meshcat.ContactVisualizer)</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer.query_object_input_port">
+<span class="sig-name descname"><span class="pre">query_object_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizer" title="pydrake.multibody.meshcat.ContactVisualizer"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer.query_object_input_port" title="Link to this definition"></a></dt>
 <dd><p>Returns the geometry::QueryObject-valued input port. It should be
 (optionally) connected to SceneGraph’s get_query_output_port().
 Failure to do so will prevent the display from showing names for the
@@ -249,15 +249,15 @@ geometry.</p>
 </dd></dl>
 
 <dl class="py template">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer_</span></span></dt>
-<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">ContactVisualizer_[float]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ContactVisualizer_[AutoDiffXd]</span></code></p>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.meshcat.</span></span><span class="sig-name descname"><span class="pre">ContactVisualizer_</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_" title="Link to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">ContactVisualizer_[float]</span></code>, <a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd" title="pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ContactVisualizer_[AutoDiffXd]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer_[AutoDiffXd]</span></span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></p>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.meshcat.</span></span><span class="sig-name descname"><span class="pre">ContactVisualizer_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>ContactVisualizer is a system that publishes a ContactResults to
 geometry::Meshcat; For point contact results, it draws double-sided
 arrows at the location of the contact force with length scaled by the
@@ -278,14 +278,14 @@ using the same ContactVisualizer instance is not yet supported. We
 may generalize this in the future.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer_[AutoDiffXd].__init__(self:</span> <span class="pre">pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd],</span> <span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat,</span> <span class="pre">params:</span> <span class="pre">pydrake.multibody.meshcat.ContactVisualizerParams</span> <span class="pre">=</span> <span class="pre">ContactVisualizerParams(publish_period=0.03125,</span> <span class="pre">color=Rgba(r=0.0,</span> <span class="pre">g=1.0,</span> <span class="pre">b=0.0,</span> <span class="pre">a=1.0),</span> <span class="pre">hydro_force_color=Rgba(r=1.0,</span> <span class="pre">g=0.0,</span> <span class="pre">b=0.0,</span> <span class="pre">a=1.0),</span> <span class="pre">hydro_moment_color=Rgba(r=0.0,</span> <span class="pre">g=0.0,</span> <span class="pre">b=1.0,</span> <span class="pre">a=1.0),</span> <span class="pre">prefix='contact_forces',</span> <span class="pre">delete_on_initialization_event=True,</span> <span class="pre">force_threshold=0.01,</span> <span class="pre">moment_threshold=0.01,</span> <span class="pre">newtons_per_meter=10.0,</span> <span class="pre">newton_meters_per_meter=3.0,</span> <span class="pre">radius=0.002))</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizerParams" title="pydrake.multibody.meshcat.ContactVisualizerParams"><span class="pre">pydrake.multibody.meshcat.ContactVisualizerParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">ContactVisualizerParams(publish_period=0.03125,</span> <span class="pre">color=Rgba(r=0.0,</span> <span class="pre">g=1.0,</span> <span class="pre">b=0.0,</span> <span class="pre">a=1.0),</span> <span class="pre">hydro_force_color=Rgba(r=1.0,</span> <span class="pre">g=0.0,</span> <span class="pre">b=0.0,</span> <span class="pre">a=1.0),</span> <span class="pre">hydro_moment_color=Rgba(r=0.0,</span> <span class="pre">g=0.0,</span> <span class="pre">b=1.0,</span> <span class="pre">a=1.0),</span> <span class="pre">prefix='contact_forces',</span> <span class="pre">delete_on_initialization_event=True,</span> <span class="pre">force_threshold=0.01,</span> <span class="pre">moment_threshold=0.01,</span> <span class="pre">newtons_per_meter=10.0,</span> <span class="pre">newton_meters_per_meter=3.0,</span> <span class="pre">radius=0.002)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
 <dd><p>Creates an instance of ContactVisualizer</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer_[AutoDiffXd].AddToBuilder(*args,</span> <span class="pre">**kwargs)</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.AddToBuilder">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AddToBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.AddToBuilder" title="Link to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li><p>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0), prefix=’contact_forces’, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01, newtons_per_meter=10.0, newton_meters_per_meter=3.0, radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</p></li>
@@ -319,8 +319,8 @@ names in the visualizer.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer_[AutoDiffXd].contact_results_input_port(self:</span> <span class="pre">pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[AutoDiffXd]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.contact_results_input_port">
+<span class="sig-name descname"><span class="pre">contact_results_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.InputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.contact_results_input_port" title="Link to this definition"></a></dt>
 <dd><p>Returns the multibody::ContactResults-valued input port. It should be
 connected to MultibodyPlant’s multibody::ContactResults-valued output
 port. Failure to do so will cause a runtime error when attempting to
@@ -328,8 +328,8 @@ broadcast messages.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer_[AutoDiffXd].Delete(self:</span> <span class="pre">pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.Delete">
+<span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.Delete" title="Link to this definition"></a></dt>
 <dd><p>Calls geometry::Meshcat::Delete(std::string_view path), with the path
 set to <code class="docutils literal notranslate"><span class="pre">prefix</span></code>. Since this visualizer will only ever add geometry
 under this prefix, this will remove all geometry/transforms added by
@@ -340,8 +340,8 @@ initialization.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizer_[AutoDiffXd].query_object_input_port(self:</span> <span class="pre">pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">pydrake.systems.framework.InputPort_[AutoDiffXd]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.query_object_input_port">
+<span class="sig-name descname"><span class="pre">query_object_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.meshcat.ContactVisualizer_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.systems.framework.InputPort_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_-AutoDiffXd-.query_object_input_port" title="Link to this definition"></a></dt>
 <dd><p>Returns the geometry::QueryObject-valued input port. It should be
 (optionally) connected to SceneGraph’s get_query_output_port().
 Failure to do so will prevent the display from showing names for the
@@ -351,23 +351,23 @@ geometry.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.meshcat.</span></span><span class="sig-name descname"><span class="pre">ContactVisualizerParams</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams" title="Link to this definition"></a></dt>
 <dd><p>The set of parameters for configuring ContactVisualizer.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.__init__(self:</span> <span class="pre">pydrake.multibody.meshcat.ContactVisualizerParams,</span> <span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.ContactVisualizerParams" title="pydrake.multibody.meshcat.ContactVisualizerParams"><span class="pre">pydrake.multibody.meshcat.ContactVisualizerParams</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.__init__" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.color</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.color" title="Link to this definition"></a></dt>
 <dd><p>The color used to draw the point contact force arrows.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.delete_on_initialization_event</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.delete_on_initialization_event">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_on_initialization_event</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.delete_on_initialization_event" title="Link to this definition"></a></dt>
 <dd><p>Determines whether to send a Meshcat::Delete(prefix) message on an
 initialization event to remove any visualizations e.g. from a previous
 simulation. See declare_initialization_events “Declare initialization
@@ -375,8 +375,8 @@ events” for more information.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.force_threshold</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.force_threshold">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">force_threshold</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.force_threshold" title="Link to this definition"></a></dt>
 <dd><p>The threshold (in N) below which forces will no longer be drawn. The
 ContactVisualizer constructor enforces that this must be strictly
 positive; zero forces do not have a meaningful direction and cannot be
@@ -384,20 +384,20 @@ visualized.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.hydro_force_color</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.hydro_force_color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hydro_force_color</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.hydro_force_color" title="Link to this definition"></a></dt>
 <dd><p>The color used to draw the hydroelastic contact force arrows.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.hydro_moment_color</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.hydro_moment_color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hydro_moment_color</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.hydro_moment_color" title="Link to this definition"></a></dt>
 <dd><p>The color used to draw the hydroelastic contact moment arrows.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.moment_threshold</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.moment_threshold">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">moment_threshold</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.moment_threshold" title="Link to this definition"></a></dt>
 <dd><p>The threshold (in N⋅m) below which moments will no longer be drawn.
 The ContactVisualizer constructor enforces that this must be strictly
 positive; zero moments do not have a meaningful direction and cannot
@@ -405,20 +405,20 @@ be visualized.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.newton_meters_per_meter</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.newton_meters_per_meter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">newton_meters_per_meter</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.newton_meters_per_meter" title="Link to this definition"></a></dt>
 <dd><p>Sets the length scale of the moment vectors.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.newtons_per_meter</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.newtons_per_meter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">newtons_per_meter</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.newtons_per_meter" title="Link to this definition"></a></dt>
 <dd><p>Sets the length scale of the force vectors.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.prefix</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.prefix">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prefix</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.prefix" title="Link to this definition"></a></dt>
 <dd><p>A prefix to add to the path for all objects and transforms curated by
 the ContactVisualizer. It can be an absolute path or relative path. If
 relative, this <code class="docutils literal notranslate"><span class="pre">prefix</span></code> will be appended to the geometry::Meshcat
@@ -427,8 +427,8 @@ meshcat_path “Meshcat paths” for details.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.publish_period</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.publish_period">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">publish_period</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.publish_period" title="Link to this definition"></a></dt>
 <dd><p>The duration (in simulation seconds) between attempts to update poses
 in the visualizer. (To help avoid small simulation time steps, we use
 a default period that has an exact representation in binary floating
@@ -436,17 +436,17 @@ point; see drake#15021 for details.)</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">ContactVisualizerParams.radius</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.ContactVisualizerParams.radius">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">radius</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.radius" title="Link to this definition"></a></dt>
 <dd><p>The radius of cylinder geometry used in the force/moment vector.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">JointSliders</span></span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></p>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.meshcat.</span></span><span class="sig-name descname"><span class="pre">JointSliders</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
 <p>JointSliders adds slider bars to the Meshcat control panel for the
 joints of a MultibodyPlant. These might be useful for interactive or
 teleoperation demos. The sliders’ current values are available on the
@@ -461,12 +461,12 @@ systems::ZeroOrderHold system between the sliders and downstream
 calculations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This class is templated; see <code class="xref py py-class docutils literal notranslate"><span class="pre">JointSliders_</span></code>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.multibody.meshcat.JointSliders_" title="pydrake.multibody.meshcat.JointSliders_"><code class="xref py py-class docutils literal notranslate"><span class="pre">JointSliders_</span></code></a>
 for the list of instantiations.</p>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">JointSliders.__init__(self:</span> <span class="pre">pydrake.multibody.meshcat.JointSliders,</span> <span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat,</span> <span class="pre">plant:</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant,</span> <span class="pre">initial_value:</span> <span class="pre">Optional[numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">lower_limit:</span> <span class="pre">Union[None,</span> <span class="pre">float,</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">upper_limit:</span> <span class="pre">Union[None,</span> <span class="pre">float,</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">step:</span> <span class="pre">Union[None,</span> <span class="pre">float,</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">decrement_keycodes:</span> <span class="pre">list[str]</span> <span class="pre">=</span> <span class="pre">[],</span> <span class="pre">increment_keycodes:</span> <span class="pre">list[str]</span> <span class="pre">=</span> <span class="pre">[])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.JointSliders" title="pydrake.multibody.meshcat.JointSliders"><span class="pre">pydrake.multibody.meshcat.JointSliders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decrement_keycodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_keycodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders.__init__" title="Link to this definition"></a></dt>
 <dd><p>Creates a meshcat slider for each joint in the given plant.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt><dd><p>The Meshcat instance where the sliders will be added.</p>
@@ -505,8 +505,8 @@ See Meshcat::AddSlider for more details.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">JointSliders.Delete(self:</span> <span class="pre">pydrake.multibody.meshcat.JointSliders)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders.Delete">
+<span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.JointSliders" title="pydrake.multibody.meshcat.JointSliders"><span class="pre">pydrake.multibody.meshcat.JointSliders</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders.Delete" title="Link to this definition"></a></dt>
 <dd><p>Removes our sliders from the associated meshcat instance.</p>
 <p>From this point on, our output port produces the initial_value from
 the constructor, not any slider values.</p>
@@ -518,8 +518,8 @@ on this instance concurrently on another thread.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">JointSliders.Run(self:</span> <span class="pre">pydrake.multibody.meshcat.JointSliders,</span> <span class="pre">diagram:</span> <span class="pre">pydrake.systems.framework.Diagram,</span> <span class="pre">timeout:</span> <span class="pre">Optional[float]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">stop_button_keycode:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'Escape')</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders.Run">
+<span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.JointSliders" title="pydrake.multibody.meshcat.JointSliders"><span class="pre">pydrake.multibody.meshcat.JointSliders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram" title="pydrake.systems.framework.Diagram"><span class="pre">pydrake.systems.framework.Diagram</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_button_keycode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Escape'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders.Run" title="Link to this definition"></a></dt>
 <dd><p>Publishes the given Diagram (typically, to cause it to be visualized)
 whenever our sliders’ values change. Blocks until the user clicks a
 “Stop” button in the MeshCat control panel, or if the timeout limit is
@@ -557,8 +557,8 @@ the slider values change.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">JointSliders.SetPositions(self:</span> <span class="pre">pydrake.multibody.meshcat.JointSliders,</span> <span class="pre">q:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders.SetPositions">
+<span class="sig-name descname"><span class="pre">SetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.meshcat.JointSliders" title="pydrake.multibody.meshcat.JointSliders"><span class="pre">pydrake.multibody.meshcat.JointSliders</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders.SetPositions" title="Link to this definition"></a></dt>
 <dd><p>Sets our meshcat sliders to the values in <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
 <p>Additionally, the “initial state” vector of positions tracked by this
 instance will be updated to the values in <code class="docutils literal notranslate"><span class="pre">q</span></code>. This “initial state”
@@ -574,15 +574,15 @@ MultibodyPlant::num_positions().</p>
 </dd></dl>
 
 <dl class="py template">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">JointSliders_</span></span></dt>
-<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">JointSliders_[float]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">JointSliders_[AutoDiffXd]</span></code></p>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.meshcat.</span></span><span class="sig-name descname"><span class="pre">JointSliders_</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_" title="Link to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">JointSliders_[float]</span></code>, <a class="reference internal" href="#pydrake.multibody.meshcat.JointSliders_-AutoDiffXd" title="pydrake.multibody.meshcat.JointSliders_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">JointSliders_[AutoDiffXd]</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">JointSliders_[AutoDiffXd]</span></span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></p>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders_-AutoDiffXd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.meshcat.</span></span><span class="sig-name descname"><span class="pre">JointSliders_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_-AutoDiffXd" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_-AutoDiffXd" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>JointSliders adds slider bars to the Meshcat control panel for the
 joints of a MultibodyPlant. These might be useful for interactive or
 teleoperation demos. The sliders’ current values are available on the
@@ -596,8 +596,8 @@ have a synchronized view of the slider data, place a
 systems::ZeroOrderHold system between the sliders and downstream
 calculations.</p>
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">JointSliders_[AutoDiffXd].__init__(self:</span> <span class="pre">pydrake.multibody.meshcat.JointSliders_[AutoDiffXd],</span> <span class="pre">meshcat:</span> <span class="pre">pydrake.geometry.Meshcat,</span> <span class="pre">plant:</span> <span class="pre">pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd],</span> <span class="pre">initial_value:</span> <span class="pre">Optional[numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">lower_limit:</span> <span class="pre">Union[None,</span> <span class="pre">float,</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">upper_limit:</span> <span class="pre">Union[None,</span> <span class="pre">float,</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">step:</span> <span class="pre">Union[None,</span> <span class="pre">float,</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">decrement_keycodes:</span> <span class="pre">list[str]</span> <span class="pre">=</span> <span class="pre">[],</span> <span class="pre">increment_keycodes:</span> <span class="pre">list[str]</span> <span class="pre">=</span> <span class="pre">[])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders_-AutoDiffXd-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.meshcat.JointSliders_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshcat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.geometry.html#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decrement_keycodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increment_keycodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
 <dd><p>Creates a meshcat slider for each joint in the given plant.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">meshcat</span></code>:</dt><dd><p>The Meshcat instance where the sliders will be added.</p>
@@ -636,8 +636,8 @@ See Meshcat::AddSlider for more details.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">JointSliders_[AutoDiffXd].Delete(self:</span> <span class="pre">pydrake.multibody.meshcat.JointSliders_[AutoDiffXd])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders_-AutoDiffXd-.Delete">
+<span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.meshcat.JointSliders_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_-AutoDiffXd-.Delete" title="Link to this definition"></a></dt>
 <dd><p>Removes our sliders from the associated meshcat instance.</p>
 <p>From this point on, our output port produces the initial_value from
 the constructor, not any slider values.</p>
@@ -649,8 +649,8 @@ on this instance concurrently on another thread.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">JointSliders_[AutoDiffXd].Run(self:</span> <span class="pre">pydrake.multibody.meshcat.JointSliders_[AutoDiffXd],</span> <span class="pre">diagram:</span> <span class="pre">pydrake.systems.framework.Diagram_[AutoDiffXd],</span> <span class="pre">timeout:</span> <span class="pre">Optional[float]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">stop_button_keycode:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'Escape')</span> <span class="pre">-&gt;</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]]</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders_-AutoDiffXd-.Run">
+<span class="sig-name descname"><span class="pre">Run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.meshcat.JointSliders_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Diagram_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_button_keycode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Escape'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_-AutoDiffXd-.Run" title="Link to this definition"></a></dt>
 <dd><p>Publishes the given Diagram (typically, to cause it to be visualized)
 whenever our sliders’ values change. Blocks until the user clicks a
 “Stop” button in the MeshCat control panel, or if the timeout limit is
@@ -688,8 +688,8 @@ the slider values change.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">JointSliders_[AutoDiffXd].SetPositions(self:</span> <span class="pre">pydrake.multibody.meshcat.JointSliders_[AutoDiffXd],</span> <span class="pre">q:</span> <span class="pre">numpy.ndarray[numpy.float64[m,</span> <span class="pre">1]])</span> <span class="pre">-&gt;</span> <span class="pre">None</span></span></dt>
+<dt class="sig sig-object py" id="pydrake.multibody.meshcat.JointSliders_-AutoDiffXd-.SetPositions">
+<span class="sig-name descname"><span class="pre">SetPositions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.meshcat.JointSliders_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_-AutoDiffXd-.SetPositions" title="Link to this definition"></a></dt>
 <dd><p>Sets our meshcat sliders to the values in <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
 <p>Additionally, the “initial state” vector of positions tracked by this
 instance will be updated to the values in <code class="docutils literal notranslate"><span class="pre">q</span></code>. This “initial state”

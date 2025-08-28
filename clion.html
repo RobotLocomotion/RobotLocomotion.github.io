@@ -322,21 +322,12 @@ selected file, make sure that file is “active” by clicking on it. The
 
 <h2 id="formatting-files">Formatting files</h2>
 
-<p>You can use clang format to modify the formatting of your file in the GUI. We’ll
-introduce three variants:</p>
+<p>You can use clang-format to reformat your file in the GUI.</p>
 
-<ul>
-  <li>Apply clang-format to a whole file.</li>
-  <li>Apply clang-format to selected lines.</li>
-  <li>Apply clang-format to correct <code class="language-plaintext highlighter-rouge">#include</code> ordering.</li>
-</ul>
-
-<p>These tools modify the selected file. There is a synchronization issue with
+<p>The formatter modifies the selected file. There is a synchronization issue with
 CLion such that the modification may not be immediately apparent. When in doubt,
 select away from the target file and back; this will cause the file to refresh
 and you can confirm that the file has been modified as expected.</p>
-
-<h3 id="clang-format-selected-file">Clang format selected file</h3>
 
 <p>Open the <code class="language-plaintext highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
 following values for the fields:</p>
@@ -346,39 +337,6 @@ following values for the fields:</p>
   <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Apply clang-format to the active file</code></li>
   <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel</code></li>
   <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run //tools/lint:clang-format -- -i $FilePath$</code></li>
-  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$Projectpath$</code></li>
-  <li><strong>Advanced Options:</strong> Uncheck <code class="language-plaintext highlighter-rouge">Open console for tool output</code></li>
-</ul>
-
-<p>Leave the checkbox options in their default state.</p>
-
-<h3 id="clang-format-selected-lines">Clang format selected lines</h3>
-
-<p>Open the <code class="language-plaintext highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
-following values for the fields:</p>
-
-<ul>
-  <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Clang Format Selected Lines</code></li>
-  <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Apply clang-format to the selected lines</code></li>
-  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel</code></li>
-  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run //tools/lint:clang-format -- -lines $SelectionStartLine$:$SelectionEndLine$ -i $FilePath$</code></li>
-  <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$Projectpath$</code></li>
-  <li><strong>Advanced Options:</strong> Uncheck <code class="language-plaintext highlighter-rouge">Open console for tool output</code></li>
-</ul>
-
-<p>Leave the checkbox options in their default state.</p>
-
-<h3 id="correct-include-ordering">Correct #include ordering</h3>
-
-<p>Open the <code class="language-plaintext highlighter-rouge">Edit Tool</code> for external tools as outlined above and enter the
-following values for the fields:</p>
-
-<ul>
-  <li><strong>Name:</strong> <code class="language-plaintext highlighter-rouge">Clang Format Include Ordering</code></li>
-  <li><strong>Description:</strong> <code class="language-plaintext highlighter-rouge">Runs the clang format for correcting includes on the current
-                file</code></li>
-  <li><strong>Program:</strong> <code class="language-plaintext highlighter-rouge">bazel</code></li>
-  <li><strong>Arguments:</strong> <code class="language-plaintext highlighter-rouge">run //tools/lint:clang-format-includes -- $FilePath$</code></li>
   <li><strong>Working directory:</strong> <code class="language-plaintext highlighter-rouge">$Projectpath$</code></li>
   <li><strong>Advanced Options:</strong> Uncheck <code class="language-plaintext highlighter-rouge">Open console for tool output</code></li>
 </ul>
@@ -453,12 +411,10 @@ following values for the fields:</p>
   <li><strong>Advanced Options:</strong> Confirm <code class="language-plaintext highlighter-rouge">Open console for tool output</code> is checked</li>
 </ul>
 
-<p>In the event of finding a lint problem (e.g., out-of-order include files), the
+<p>In the event of finding a lint problem, the
 CLion output will contain a <em>single</em> clickable link. This link is only the
 <em>first</em> error encountered in the include section; there may be more. The link
-merely provides a hint to the developer to see the problem area. Rather than
-fixing by hand, we strongly recommend executing the <code class="language-plaintext highlighter-rouge">Clang Format Include
-Ordering</code> external tool on the file.</p>
+merely provides a hint to the developer to see the problem area.</p>
 
 <h3 id="alternative-linting-configuration">Alternative linting configuration</h3>
 
