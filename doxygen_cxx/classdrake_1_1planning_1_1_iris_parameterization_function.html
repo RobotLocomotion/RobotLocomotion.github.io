@@ -434,7 +434,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Alternative constructor that allows the user to define the parameterization using a <code>VectorX&lt;Expression&gt;</code>. </p>
-<p>The user must also provide a vector containing the variables used in <code>expression_parameterization</code>, in the order that they should be evaluated. Each <code>Variable</code> in <code>variables</code> must be used, each <code>Variable</code> used in <code>expression_parameterization</code> must appear in <code>variables</code>, and there must be no duplicates in <code>variables</code>. </p><dl class="section note"><dt>Note</dt><dd>This currently only populates the VectorX&lt;double&gt; parameterization. </dd>
+<p>The user must also provide a vector containing the variables used in <code>expression_parameterization</code>, in the order that they should be evaluated. Each <code>Variable</code> in <code>variables</code> must be used, each <code>Variable</code> used in <code>expression_parameterization</code> must appear in <code>variables</code>, and there must be no duplicates in <code>variables</code>. </p><dl class="section note"><dt>Note</dt><dd>This constructor only populates the VectorX&lt;double&gt; parameterization. </dd>
 <dd>
 Expression parameterizations are always threadsafe. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
@@ -475,7 +475,7 @@ Expression parameterizations are always threadsafe. </dd></dl>
 </div><div class="memdoc">
 
 <p>Constructs an instance of <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html" title="Ordinarily, IRIS algorithms grow collision free regions in the robot&#39;s configuration space C.">IrisParameterizationFunction</a> that handles a rational kinematic parameterization. </p>
-<p>Regions are grown in the <code>s</code> variables, so as to minimize collisions in the <code>q</code> variables. See RationalForwardKinematics for details. </p><dl class="section note"><dt>Note</dt><dd>This currently only populates the VectorX&lt;double&gt; parameterization. </dd>
+<p>Regions are grown in the <code>s</code> variables, so as to minimize collisions in the <code>q</code> variables. See RationalForwardKinematics for details. </p><dl class="section note"><dt>Note</dt><dd>This constructor populates the VectorX&lt;double&gt; and VectorX&lt;AutoDiffXd&gt; parameterizations. </dd>
 <dd>
 The user is responsible for ensuring <code>kin</code> (and the underlying MultibodyPlant it is built on) is kept alive. If that object is deleted, then the parameterization can no longer be used. </dd></dl>
 
