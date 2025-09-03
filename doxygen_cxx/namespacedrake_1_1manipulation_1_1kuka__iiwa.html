@@ -206,15 +206,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab4423a6ee96a19abb2ea4901f0b34e08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#ab4423a6ee96a19abb2ea4901f0b34e08">BuildIiwaControl</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">lcm::DrakeLcmInterface</a> *lcm, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> iiwa_instance, const <a class="el" href="structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html">IiwaDriver</a> &amp;driver_config, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;controller_plant)</td></tr>
 <tr class="memdesc:ab4423a6ee96a19abb2ea4901f0b34e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a <code>plant</code> (and associated <code>iiwa_instance</code>) and a<code>builder</code>, installs in that builder the systems necessary to control and monitor an Iiwa described by <code>controller_plant</code> in that plant.  <a href="#ab4423a6ee96a19abb2ea4901f0b34e08">More...</a><br /></td></tr>
 <tr class="separator:ab4423a6ee96a19abb2ea4901f0b34e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3720de284f34533b4dbbaa0710637b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#ad3720de284f34533b4dbbaa0710637b4">BuildIiwaControl</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> iiwa_instance, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;controller_plant, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">lcm::DrakeLcmInterface</a> *lcm, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, <a class="el" href="classdouble.html">double</a> ext_joint_filter_tau=0.01, const std::optional&lt; Eigen::VectorXd &gt; &amp;desired_iiwa_kp_gains=std::nullopt, <a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5">IiwaControlMode</a> control_mode=<a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5a418831c3a400f7c6e099f1109c47b14d">IiwaControlMode::kPositionAndTorque</a>)</td></tr>
-<tr class="memdesc:ad3720de284f34533b4dbbaa0710637b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ad3720de284f34533b4dbbaa0710637b4">More...</a><br /></td></tr>
-<tr class="separator:ad3720de284f34533b4dbbaa0710637b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28acd54fbad19a143743b5967a43d395"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html">IiwaControlPorts</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a28acd54fbad19a143743b5967a43d395">BuildSimplifiedIiwaControl</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> iiwa_instance, const <a class="el" href="structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_driver.html">IiwaDriver</a> &amp;driver_config, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;controller_plant)</td></tr>
 <tr class="memdesc:a28acd54fbad19a143743b5967a43d395"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simplified Iiwa controller builder to construct an InverseDynamicsController without adding LCM I/O systems.  <a href="#a28acd54fbad19a143743b5967a43d395">More...</a><br /></td></tr>
 <tr class="separator:a28acd54fbad19a143743b5967a43d395"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4662f54d834653e1b9af1848f753e32c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html">IiwaControlPorts</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a4662f54d834653e1b9af1848f753e32c">BuildSimplifiedIiwaControl</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> iiwa_instance, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;controller_plant, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, <a class="el" href="classdouble.html">double</a> ext_joint_filter_tau=0.01, const std::optional&lt; Eigen::VectorXd &gt; &amp;desired_iiwa_kp_gains=std::nullopt, <a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5">IiwaControlMode</a> control_mode=<a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5a418831c3a400f7c6e099f1109c47b14d">IiwaControlMode::kPositionAndTorque</a>)</td></tr>
-<tr class="memdesc:a4662f54d834653e1b9af1848f753e32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a4662f54d834653e1b9af1848f753e32c">More...</a><br /></td></tr>
-<tr class="separator:a4662f54d834653e1b9af1848f753e32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa604a09fa622f05945317405b3bb6b79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#aa604a09fa622f05945317405b3bb6b79">get_iiwa_max_joint_velocities</a> ()</td></tr>
 <tr class="memdesc:aa604a09fa622f05945317405b3bb6b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the maximum joint velocities (rad/s) provided by Kuka.  <a href="#aa604a09fa622f05945317405b3bb6b79">More...</a><br /></td></tr>
 <tr class="separator:aa604a09fa622f05945317405b3bb6b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,7 +325,7 @@ driver_config.hand_model_name is in models_from_directives. </dd></dl>
 </div>
 </div>
 <a id="ab4423a6ee96a19abb2ea4901f0b34e08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4423a6ee96a19abb2ea4901f0b34e08">&#9670;&nbsp;</a></span>BuildIiwaControl() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4423a6ee96a19abb2ea4901f0b34e08">&#9670;&nbsp;</a></span>BuildIiwaControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,76 +383,8 @@ driver_config.hand_model_name is in models_from_directives. </dd></dl>
 
 </div>
 </div>
-<a id="ad3720de284f34533b4dbbaa0710637b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3720de284f34533b4dbbaa0710637b4">&#9670;&nbsp;</a></span>BuildIiwaControl() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::manipulation::kuka_iiwa::BuildIiwaControl </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>plant</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a>&#160;</td>
-          <td class="paramname"><em>iiwa_instance</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>controller_plant</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">lcm::DrakeLcmInterface</a> *&#160;</td>
-          <td class="paramname"><em>lcm</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
-          <td class="paramname"><em>builder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>ext_joint_filter_tau</em> = <code>0.01</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::optional&lt; Eigen::VectorXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>desired_iiwa_kp_gains</em> = <code>std::nullopt</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5">IiwaControlMode</a>&#160;</td>
-          <td class="paramname"><em>control_mode</em> = <code><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5a418831c3a400f7c6e099f1109c47b14d">IiwaControlMode::kPositionAndTorque</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Use the overload taking `driver_config` instead. <br />
- This will be removed from Drake on or after 2025-09-01.</dd></dl>
-
-</div>
-</div>
 <a id="a28acd54fbad19a143743b5967a43d395"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28acd54fbad19a143743b5967a43d395">&#9670;&nbsp;</a></span>BuildSimplifiedIiwaControl() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a28acd54fbad19a143743b5967a43d395">&#9670;&nbsp;</a></span>BuildSimplifiedIiwaControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -503,68 +429,6 @@ driver_config.hand_model_name is in models_from_directives. </dd></dl>
 
 <p>A simplified Iiwa controller builder to construct an InverseDynamicsController without adding LCM I/O systems. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#ab4423a6ee96a19abb2ea4901f0b34e08" title="Given a plant (and associated iiwa_instance) and abuilder, installs in that builder the systems neces...">BuildIiwaControl()</a> </dd></dl>
-
-</div>
-</div>
-<a id="a4662f54d834653e1b9af1848f753e32c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4662f54d834653e1b9af1848f753e32c">&#9670;&nbsp;</a></span>BuildSimplifiedIiwaControl() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_control_ports.html">IiwaControlPorts</a> drake::manipulation::kuka_iiwa::BuildSimplifiedIiwaControl </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>plant</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a>&#160;</td>
-          <td class="paramname"><em>iiwa_instance</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>controller_plant</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
-          <td class="paramname"><em>builder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>ext_joint_filter_tau</em> = <code>0.01</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::optional&lt; Eigen::VectorXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>desired_iiwa_kp_gains</em> = <code>std::nullopt</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5">IiwaControlMode</a>&#160;</td>
-          <td class="paramname"><em>control_mode</em> = <code><a class="el" href="namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a9928d513b6bc1764162c83859fe70ad5a418831c3a400f7c6e099f1109c47b14d">IiwaControlMode::kPositionAndTorque</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use the overload taking `driver_config` instead. <br />
- This will be removed from Drake on or after 2025-09-01.</dd></dl>
 
 </div>
 </div>

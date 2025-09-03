@@ -17,11 +17,9 @@ var classdrake_1_1multibody_1_1_revolute_spring =
     [ "GetNominalAngle", "classdrake_1_1multibody_1_1_revolute_spring.html#a84dbb90520ba4d2558d6cb2327d7a37b", null ],
     [ "GetStiffness", "classdrake_1_1multibody_1_1_revolute_spring.html#a51f1fe3e294af86afe05f15bd8f890a7", null ],
     [ "joint", "classdrake_1_1multibody_1_1_revolute_spring.html#aec72adf302d35f0e2d9fb630bb99d4d2", null ],
-    [ "nominal_angle", "classdrake_1_1multibody_1_1_revolute_spring.html#a6b8142c37ce3b3ebc067d2de28ce88a0", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_revolute_spring.html#aaceb05f605500cefe3ca0e57984f6852", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_revolute_spring.html#a66db49960b6012ae313d5f66bf3dd15c", null ],
     [ "SetNominalAngle", "classdrake_1_1multibody_1_1_revolute_spring.html#a34262c06fc7f2005b8929f6df37421f3", null ],
     [ "SetStiffness", "classdrake_1_1multibody_1_1_revolute_spring.html#ae07b43d1452ad55d4e42d0a6565b2b97", null ],
-    [ "stiffness", "classdrake_1_1multibody_1_1_revolute_spring.html#ac8467a9ff79bbea98fa2605ca44b047e", null ],
     [ "RevoluteSpring", "classdrake_1_1multibody_1_1_revolute_spring.html#a863039c18117243374b3411d76fc8b20", null ]
 ];

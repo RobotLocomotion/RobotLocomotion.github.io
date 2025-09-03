@@ -686,15 +686,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4737cb6ed52094f3d292e0ed4ca187da"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a4737cb6ed52094f3d292e0ed4ca187da">solver_options</a> () const</td></tr>
 <tr class="memdesc:a4737cb6ed52094f3d292e0ed4ca187da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the solver options stored inside <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>.  <a href="#a4737cb6ed52094f3d292e0ed4ca187da">More...</a><br /></td></tr>
 <tr class="separator:a4737cb6ed52094f3d292e0ed4ca187da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ceaa241ff3da59bba7c7b238b187ef1"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a0ceaa241ff3da59bba7c7b238b187ef1">GetSolverOptionsDouble</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id) const</td></tr>
-<tr class="memdesc:a0ceaa241ff3da59bba7c7b238b187ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a0ceaa241ff3da59bba7c7b238b187ef1">More...</a><br /></td></tr>
-<tr class="separator:a0ceaa241ff3da59bba7c7b238b187ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a633f007d833807176b9e12632a32bd76"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="classint.html">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a633f007d833807176b9e12632a32bd76">GetSolverOptionsInt</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id) const</td></tr>
-<tr class="memdesc:a633f007d833807176b9e12632a32bd76"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a633f007d833807176b9e12632a32bd76">More...</a><br /></td></tr>
-<tr class="separator:a633f007d833807176b9e12632a32bd76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a356d77ba1fc99214d16837c747463483"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a356d77ba1fc99214d16837c747463483">GetSolverOptionsStr</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id) const</td></tr>
-<tr class="memdesc:a356d77ba1fc99214d16837c747463483"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a356d77ba1fc99214d16837c747463483">More...</a><br /></td></tr>
-<tr class="separator:a356d77ba1fc99214d16837c747463483"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a744f8ed184bc9260b5970f7b8e12812a"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_visualization_callback.html">VisualizationCallback</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a744f8ed184bc9260b5970f7b8e12812a">visualization_callbacks</a> () const</td></tr>
 <tr class="memdesc:a744f8ed184bc9260b5970f7b8e12812a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for all callbacks.  <a href="#a744f8ed184bc9260b5970f7b8e12812a">More...</a><br /></td></tr>
 <tr class="separator:a744f8ed184bc9260b5970f7b8e12812a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6642,72 +6633,6 @@ x+y &gt;= 0
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a0ceaa241ff3da59bba7c7b238b187ef1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ceaa241ff3da59bba7c7b238b187ef1">&#9670;&nbsp;</a></span>GetSolverOptionsDouble()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="classdouble.html">double</a>&gt; GetSolverOptionsDouble </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;&#160;</td>
-          <td class="paramname"><em>solver_id</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use the solver_options() accessor, instead <br />
- This will be removed from Drake on or after 2025-09-01.</dd></dl>
-
-</div>
-</div>
-<a id="a633f007d833807176b9e12632a32bd76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a633f007d833807176b9e12632a32bd76">&#9670;&nbsp;</a></span>GetSolverOptionsInt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="classint.html">int</a>&gt; GetSolverOptionsInt </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;&#160;</td>
-          <td class="paramname"><em>solver_id</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use the solver_options() accessor, instead <br />
- This will be removed from Drake on or after 2025-09-01.</dd></dl>
-
-</div>
-</div>
-<a id="a356d77ba1fc99214d16837c747463483"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a356d77ba1fc99214d16837c747463483">&#9670;&nbsp;</a></span>GetSolverOptionsStr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt;std::string, std::string&gt; GetSolverOptionsStr </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;&#160;</td>
-          <td class="paramname"><em>solver_id</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use the solver_options() accessor, instead <br />
- This will be removed from Drake on or after 2025-09-01.</dd></dl>
 
 </div>
 </div>

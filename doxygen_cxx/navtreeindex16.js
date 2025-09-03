@@ -1,7 +1,5 @@
 var NAVTREEINDEX16 =
 {
-"classdrake_1_1multibody_1_1_curvilinear_joint.html#ae4fa9c904accccf5900c63c3e65ca277":[3,0,0,9,23,27],
-"classdrake_1_1multibody_1_1_curvilinear_joint.html#aea9614ad4bc22801505a7399550293ce":[3,0,0,9,23,9],
 "classdrake_1_1multibody_1_1_curvilinear_joint.html#aff7762ca7021852fcb63a6652053c701":[3,0,0,9,23,23],
 "classdrake_1_1multibody_1_1_deformable_body.html":[3,0,0,9,24],
 "classdrake_1_1multibody_1_1_deformable_body.html#a01df73d3ba90296a66b57c6e25a0a03b":[3,0,0,9,24,26],
@@ -249,5 +247,7 @@ var NAVTREEINDEX16 =
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a689f47c77220076ef7ea210cbfe02da7":[1,2,2,1,7,6],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a7706db180bdd4c17beddc4f493bc5ff6":[1,2,2,1,7,1],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#a8669ba1378f97e45b143c067181e2df8":[1,2,2,1,7,5],
-"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#ad3a3a7b99c061bc1e1523aef57c8cf35":[1,2,2,1,7,9]
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#ad3a3a7b99c061bc1e1523aef57c8cf35":[1,2,2,1,7,9],
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#af4e2d6b1c2cd394f167f83764d2e8f8d":[1,2,2,1,7,7],
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#afb452cc8aa55bb93c80570ad66618f4a":[1,2,2,1,7,3]
 };

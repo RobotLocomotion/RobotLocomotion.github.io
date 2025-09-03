@@ -1,14 +1,5 @@
 var NAVTREEINDEX64 =
 {
-"standard__operations_8h.html#a94d92388334b86a8ebe384f4a862d81e":[4,0,0,1,0,0,2,13],
-"standard__operations_8h.html#a9536d36fa22840ba7a9250a4a69aa4f0":[4,0,0,1,0,0,2,31],
-"standard__operations_8h.html#a9ae989f702245dd67d3f899555e0da5b":[4,0,0,1,0,0,2,19],
-"standard__operations_8h.html#a9c9a390f52aafa89a9fce031952423b5":[4,0,0,1,0,0,2,66],
-"standard__operations_8h.html#aa34b747e9e90813bf0904d5f3ede7982":[4,0,0,1,0,0,2,30],
-"standard__operations_8h.html#aa653335e5d8d09a0c7b44570e36ca17b":[4,0,0,1,0,0,2,63],
-"standard__operations_8h.html#aacbd555db2d620085ff5f044cd0f2e90":[4,0,0,1,0,0,2,50],
-"standard__operations_8h.html#aada179add840ec8de0a6e702f247137a":[4,0,0,1,0,0,2,48],
-"standard__operations_8h.html#ab2d5e3ed0dae87a3a9a3ab7671a99021":[4,0,0,1,0,0,2,45],
 "standard__operations_8h.html#ab65f189066e79d8823e1c199ea5f3bf5":[4,0,0,1,0,0,2,29],
 "standard__operations_8h.html#abcb482ba19c98dc61ad2ba12ae9671be":[4,0,0,1,0,0,2,41],
 "standard__operations_8h.html#ac023124b011f56f04b412886e348e809":[4,0,0,1,0,0,2,73],
@@ -249,5 +240,14 @@ var NAVTREEINDEX64 =
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a7c4a40b91dff8e9d8d5c4d39b3e93df2":[3,0,0,3,14,2,15],
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a7e0a73ed81afb10613aa17eb4902e879":[3,0,0,3,14,2,19],
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a83d22b9ce633cccb2b57d1739e59d94d":[3,0,0,3,14,2,10],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#aa24636f116f235120b6b9c48c083a7e2":[3,0,0,3,14,2,4]
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#aa24636f116f235120b6b9c48c083a7e2":[3,0,0,3,14,2,4],
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#ab3761062bae0c167009fd92d36f460fc":[3,0,0,3,14,2,0],
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#ac3d38d1b83f93e18d5a4633beef4639f":[3,0,0,3,14,2,5],
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#ac6cd0704f982975fb9d4ab32e55750f2":[3,0,0,3,14,2,6],
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#ad03bc5722287da0acf149346388fa1b0":[3,0,0,3,14,2,14],
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d":[3,0,0,3,14,2,20],
+"structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html":[3,0,0,3,14,6],
+"structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a156ba06e0e392b0f6291fb2228174470":[3,0,0,3,14,6,7],
+"structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a3f76c6e14000fc4053d666666462094f":[3,0,0,3,14,6,4],
+"structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html#a499c5571fdb9e317eb6498d5a46a6a0c":[3,0,0,3,14,6,5]
 };

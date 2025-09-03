@@ -1,12 +1,5 @@
 var NAVTREEINDEX48 =
 {
-"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ab0b02ac685587d86faa6220dc640f58e":[1,2,2,3,3],
-"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ab31e6c294928ac7c131675fad3777073":[1,2,2,3,14],
-"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ab57d5be7c9dafb8bfe5807495fe200e5":[1,2,2,3,5],
-"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ac1f946b742285b20a12ed0e0e2ebad9d":[1,2,2,3,7],
-"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ae10ee2e8047baecf8bce8236dd9ff428":[1,2,2,3,4],
-"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ae1296b665521a703cc08e6d98f5b6f64":[1,2,2,3,11],
-"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#aeffde4e51c0d89f2fd83d04032100d1f":[1,2,2,3,2],
 "classdrake_1_1systems_1_1controllers_1_1_joint_impedance_controller.html":[1,2,2,5],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html":[1,2,2,4],
 "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a02ffa2d9b80c4b46003312db5e69e35c":[1,2,2,4,9],
@@ -249,5 +242,12 @@ var NAVTREEINDEX48 =
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac00966c8749aec375110e166e0b7eea2":[1,2,4,0,13],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac0926d674dddedc1dd650f2f5d78bc5a":[1,2,4,0,11],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac65edc397e5ac441462d19a1873c8a07":[1,2,4,0,8],
-"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac951e9461fe35f8b40719a8ba37acea6":[1,2,4,0,7]
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac951e9461fe35f8b40719a8ba37acea6":[1,2,4,0,7],
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#acdf7e0b5ab9acb099133124fa05833b8":[1,2,4,0,6],
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ad43a45a9bfeee26aafe9eef51139485a":[1,2,4,0,5],
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html":[1,2,4,1],
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a0b6e739d0155aa20aec56d2fb7e13505":[1,2,4,1,4],
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a20d05d184f723deb7a9d9447114a8b1a":[1,2,4,1,0],
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a23a62490645a6a4b334b019c6894c597":[1,2,4,1,11],
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a2cf60efb957e6713e64fdb2c7ee817e0":[1,2,4,1,9]
 };

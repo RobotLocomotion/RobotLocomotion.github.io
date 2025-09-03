@@ -213,12 +213,8 @@ default positions for joints not mentioned will remain unchanged.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.manipulation.BuildIiwaControl">
-<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">BuildIiwaControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.BuildIiwaControl" title="Link to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li><p>BuildIiwaControl(builder: pydrake.systems.framework.DiagramBuilder, lcm: pydrake.lcm.DrakeLcmInterface, plant: drake::multibody::MultibodyPlant&lt;double&gt;, iiwa_instance: pydrake.multibody.tree.ModelInstanceIndex, driver_config: pydrake.manipulation.IiwaDriver, controller_plant: drake::multibody::MultibodyPlant&lt;double&gt;) -&gt; None</p></li>
-</ol>
-<p>Given a <code class="docutils literal notranslate"><span class="pre">plant</span></code> (and associated <code class="docutils literal notranslate"><span class="pre">iiwa_instance</span></code>) and a`builder`,
+<span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">BuildIiwaControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder:</span> <span class="pre">pydrake.systems.framework.DiagramBuilder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lcm:</span> <span class="pre">pydrake.lcm.DrakeLcmInterface</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iiwa_instance:</span> <span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driver_config:</span> <span class="pre">pydrake.manipulation.IiwaDriver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">controller_plant:</span> <span class="pre">drake::multibody::MultibodyPlant&lt;double&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.BuildIiwaControl" title="Link to this definition"></a></dt>
+<dd><p>Given a <code class="docutils literal notranslate"><span class="pre">plant</span></code> (and associated <code class="docutils literal notranslate"><span class="pre">iiwa_instance</span></code>) and a`builder`,
 installs in that builder the systems necessary to control and monitor
 an Iiwa described by <code class="docutils literal notranslate"><span class="pre">controller_plant</span></code> in that plant.</p>
 <p>The installed plant will communicate over the LCM interface <code class="docutils literal notranslate"><span class="pre">lcm</span></code>.</p>
@@ -231,15 +227,6 @@ IiwaDriver for more details.</p>
 a longer lifetime than the Diagram.</p>
 <p>The torque values in the published LCM status messages will follow the
 IIWA-specific LCM conventions outlined in manipulation/README.</p>
-<ol class="arabic simple" start="2">
-<li><p>BuildIiwaControl(plant: drake::multibody::MultibodyPlant&lt;double&gt;, iiwa_instance: pydrake.multibody.tree.ModelInstanceIndex, controller_plant: drake::multibody::MultibodyPlant&lt;double&gt;, lcm: pydrake.lcm.DrakeLcmInterface, builder: pydrake.systems.framework.DiagramBuilder, ext_joint_filter_tau: float = 0.01, desired_iiwa_kp_gains: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, control_mode: pydrake.manipulation.IiwaControlMode = &lt;IiwaControlMode.kPositionAndTorque: 2&gt;) -&gt; None</p></li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="simple">
-<dt>Deprecated:</dt><dd><p>Use the overload taking <code class="docutils literal notranslate"><span class="pre">driver_config</span></code> instead. This will be
-removed from Drake on or after 2025-09-01.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py function">

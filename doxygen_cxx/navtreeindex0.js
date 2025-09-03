@@ -124,10 +124,8 @@ var NAVTREEINDEX0 =
 "bspline__trajectory_8h.html#aad47d738640d93161cbbdc21f3e14df7":[4,0,0,1,5,1,1],
 "bspline__weights_8h.html":[4,0,0,8,7,0],
 "build__iiwa__control_8h.html":[4,0,0,6,1,0],
-"build__iiwa__control_8h.html#a28acd54fbad19a143743b5967a43d395":[4,0,0,6,1,0,3],
-"build__iiwa__control_8h.html#a4662f54d834653e1b9af1848f753e32c":[4,0,0,6,1,0,4],
+"build__iiwa__control_8h.html#a28acd54fbad19a143743b5967a43d395":[4,0,0,6,1,0,2],
 "build__iiwa__control_8h.html#ab4423a6ee96a19abb2ea4901f0b34e08":[4,0,0,6,1,0,1],
-"build__iiwa__control_8h.html#ad3720de284f34533b4dbbaa0710637b4":[4,0,0,6,1,0,2],
 "build__schunk__wsg__control_8h.html":[4,0,0,6,2,0],
 "build__schunk__wsg__control_8h.html#a14a60a2f02484fb53b2d71953545c202":[4,0,0,6,2,0,0],
 "builder__life__support__pybind_8h.html":[4,0,0,0,0,10,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_manual_timer.html":[3,0,0,37],
 "classdrake_1_1_manual_timer.html#a139b1270ef2287ce5f36f0c20f066e3a":[3,0,0,37,1],
 "classdrake_1_1_manual_timer.html#a2598ab5235c22d2e396986246c67cd1b":[3,0,0,37,4],
-"classdrake_1_1_manual_timer.html#a447e4279fa6b3570d006fd17d9537fb9":[3,0,0,37,0]
+"classdrake_1_1_manual_timer.html#a447e4279fa6b3570d006fd17d9537fb9":[3,0,0,37,0],
+"classdrake_1_1_manual_timer.html#a488df3c1e3ac8c8eb9da98b577da3697":[3,0,0,37,6],
+"classdrake_1_1_manual_timer.html#a48a3e4af06aa4b60a85ad908c9375876":[3,0,0,37,2]
 };

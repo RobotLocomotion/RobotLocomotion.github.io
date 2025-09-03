@@ -108,7 +108,9 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "solver_interface.h", "solver__interface_8h.html", [
       [ "SolverInterface", "classdrake_1_1solvers_1_1_solver_interface.html", "classdrake_1_1solvers_1_1_solver_interface" ]
     ] ],
-    [ "solver_options.h", "solver__options_8h.html", "solver__options_8h" ],
+    [ "solver_options.h", "solver__options_8h.html", [
+      [ "SolverOptions", "structdrake_1_1solvers_1_1_solver_options.html", "structdrake_1_1solvers_1_1_solver_options" ]
+    ] ],
     [ "solver_type.h", "solver__type_8h.html", "solver__type_8h" ],
     [ "solver_type_converter.h", "solver__type__converter_8h.html", [
       [ "SolverTypeConverter", "classdrake_1_1solvers_1_1_solver_type_converter.html", "classdrake_1_1solvers_1_1_solver_type_converter" ]
