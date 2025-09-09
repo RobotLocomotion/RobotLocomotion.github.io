@@ -259,6 +259,11 @@ maybe require extra setup. See the
 
 <h1 id="building-with-cmake">Building with CMake</h1>
 
+<p>Drake’s build rules are defined using Bazel <code class="language-plaintext highlighter-rouge">BUILD</code> files, but we provide a
+CMake wrapper for installing Drake. While this compiles and installs Drake by
+invoking Bazel under the hood, it does so according to CMake conventions
+and using the options provided via CMake.</p>
+
 <p>For sample projects that show how to import Drake as a CMake external project
 (either by building Drake from source, or by downloading a pre-compiled Drake
 release) please see our gallery of
@@ -282,10 +287,35 @@ make <span class="nb">install</span>
 <p>To change the build options, you can run one of the standard CMake GUIs (e.g.,
 <code class="language-plaintext highlighter-rouge">ccmake</code> or <code class="language-plaintext highlighter-rouge">cmake-gui</code>) or specify command-line options with <code class="language-plaintext highlighter-rouge">-D</code> to <code class="language-plaintext highlighter-rouge">cmake</code>.</p>
 
+<p>Important note: when compiling Drake with Clang 17 or newer on Linux, you must
+add <code class="language-plaintext highlighter-rouge">-fno-assume-unique-vtables</code> to your project’s <code class="language-plaintext highlighter-rouge">CMAKE_CXX_FLAGS</code>, or else
+Drake’s use of run-time type information and dynamic casts will not work correctly.</p>
+
+<h2 id="native-cmake-options-supported-by-drake">Native CMake Options Supported by Drake</h2>
+
+<p>A selection of
+<a href="https://cmake.org/cmake/help/latest/manual/cmake-variables.7.html">CMake variables</a>
+can be specified by the user to be parsed by Drake’s CMake and passed to the
+Bazel build.</p>
+
+<ul>
+  <li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html"><code class="language-plaintext highlighter-rouge">CMAKE_BUILD_TYPE</code></a></li>
+  <li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_LANG_COMPILER.html"><code class="language-plaintext highlighter-rouge">CMAKE_(C|CXX)_COMPILER</code></a></li>
+  <li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html"><code class="language-plaintext highlighter-rouge">CMAKE_INSTALL_PREFIX</code></a></li>
+</ul>
+
+<p>Building and installing Drake also requires a working installation of Python.
+When <code class="language-plaintext highlighter-rouge">Python_EXECUTABLE</code> is specified, it uses the given path to the Python
+interpreter. Otherwise, it uses <code class="language-plaintext highlighter-rouge">find_package(Python)</code> to find the Python
+version supported by Drake on the host platform (falling back to finding any
+Python version at all if needed). See
+<a href="https://cmake.org/cmake/help/latest/module/FindPython.html"><code class="language-plaintext highlighter-rouge">FindPython</code></a>
+for further details.</p>
+
 <h2 id="drake-specific-cmake-options">Drake-specific CMake Options</h2>
 
-<p>These options can be set using <code class="language-plaintext highlighter-rouge">-DFOO=bar</code> on the CMake command line, or in one
-of the CMake GUIs.</p>
+<p>Drake also defines a number of CMake options to control different facets of
+the build.</p>
 
 <p>Adjusting open-source dependencies:</p>
 
@@ -379,9 +409,17 @@ using a hard-coded and access-controlled download of SNOPT.
   </li>
 </ul>
 
-<p>Important note: when compiling Drake with Clang 17 or newer on Linux, you must
-add <code class="language-plaintext highlighter-rouge">-fno-assume-unique-vtables</code> to your project’s <code class="language-plaintext highlighter-rouge">CXXFLAGS</code>, or else Drake’s
-use of run-time type information and dynamic casts will not work correctly.</p>
+<p>Adjusting installation methods (advanced):</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">INSTALL_NAME_TOOL</code>. When specified, uses the path to the
+<code class="language-plaintext highlighter-rouge">install_name_tool</code> program.
+    <ul>
+      <li>This option is only available on macOS.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">INSTALL_STRIP_TOOL</code>. When specified, uses the path to the <code class="language-plaintext highlighter-rouge">strip</code> program.</li>
+</ul>
 
 <h2 id="cmake-caveats">CMake Caveats</h2>
 
