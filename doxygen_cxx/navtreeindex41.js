@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1systems_1_1_gain.html#a640bea4c20e9dc45768055372d5da6c3":[1,2,1,13,4],
 "classdrake_1_1systems_1_1_gain.html#a6547634a042d97bba458c79581eda396":[1,2,1,13,5],
 "classdrake_1_1systems_1_1_gain.html#aa5a644d2798feb7f617066a2499b654d":[1,2,1,13,3],
 "classdrake_1_1systems_1_1_gain.html#ac4a653e320ed14d98e4a262b67e513b8":[1,2,1,13,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1systems_1_1_integrator_base.html#ac04da433607f913e10ee9d485d675fb1":[1,4,0,0,3,63],
 "classdrake_1_1systems_1_1_integrator_base.html#ac19919024e6d4d17453e610f57e53eba":[1,4,0,0,3,26],
 "classdrake_1_1systems_1_1_integrator_base.html#ac1c7b89b9ff697cfe9b208a56c98abb1":[1,4,0,0,3,16],
-"classdrake_1_1systems_1_1_integrator_base.html#ac3152b858f89491817273d05fa518289":[1,4,0,0,3,35],
-"classdrake_1_1systems_1_1_integrator_base.html#ac3ccdda880715d682c035e1264441303":[1,4,0,0,3,29]
+"classdrake_1_1systems_1_1_integrator_base.html#ac3152b858f89491817273d05fa518289":[1,4,0,0,3,35]
 };

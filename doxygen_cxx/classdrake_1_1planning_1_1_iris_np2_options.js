@@ -6,6 +6,7 @@ var classdrake_1_1planning_1_1_iris_np2_options =
     [ "operator=", "classdrake_1_1planning_1_1_iris_np2_options.html#ac971611063027ec525fda61c4e1db952", null ],
     [ "operator=", "classdrake_1_1planning_1_1_iris_np2_options.html#a480904db0a00052e20351ceabfa2fd85", null ],
     [ "Serialize", "classdrake_1_1planning_1_1_iris_np2_options.html#a8e8824802dedfbc36776227f7482b6bc", null ],
+    [ "add_hyperplane_if_solve_fails", "classdrake_1_1planning_1_1_iris_np2_options.html#af74fd19d726d6d33b1d1b5f0ac08d31d", null ],
     [ "parameterization", "classdrake_1_1planning_1_1_iris_np2_options.html#abc0d5447b03efcbc73d4cfdb20865aa4", null ],
     [ "ray_sampler_options", "classdrake_1_1planning_1_1_iris_np2_options.html#a2c74243889b1835c087d8160272e007a", null ],
     [ "sampled_iris_options", "classdrake_1_1planning_1_1_iris_np2_options.html#a6a02069c3e43c0097629cb4a6ea6fbbf", null ],

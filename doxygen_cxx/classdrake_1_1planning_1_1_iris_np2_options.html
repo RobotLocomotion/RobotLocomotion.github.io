@@ -208,6 +208,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2c74243889b1835c087d8160272e007a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1planning_1_1_ray_sampler_options.html">RaySamplerOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html#a2c74243889b1835c087d8160272e007a">ray_sampler_options</a></td></tr>
 <tr class="memdesc:a2c74243889b1835c087d8160272e007a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional options for kRaySampler.  <a href="#a2c74243889b1835c087d8160272e007a">More...</a><br /></td></tr>
 <tr class="separator:a2c74243889b1835c087d8160272e007a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74fd19d726d6d33b1d1b5f0ac08d31d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_iris_np2_options.html#af74fd19d726d6d33b1d1b5f0ac08d31d">add_hyperplane_if_solve_fails</a> {false}</td></tr>
+<tr class="memdesc:af74fd19d726d6d33b1d1b5f0ac08d31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a hyperplane at a particle in collision if the nonlinear solve (initialized at that point) fails.  <a href="#af74fd19d726d6d33b1d1b5f0ac08d31d">More...</a><br /></td></tr>
+<tr class="separator:af74fd19d726d6d33b1d1b5f0ac08d31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a42f7c1751466d9eb02d93695a5b0fd34"></a>
@@ -362,6 +365,23 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="af74fd19d726d6d33b1d1b5f0ac08d31d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af74fd19d726d6d33b1d1b5f0ac08d31d">&#9670;&nbsp;</a></span>add_hyperplane_if_solve_fails</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool add_hyperplane_if_solve_fails {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a hyperplane at a particle in collision if the nonlinear solve (initialized at that point) fails. </p>
+<p>Generally leads to regions with more faces, but helpful for getting the algorithm unstuck if most nonlinear solves are failing. </p>
+
+</div>
+</div>
 <a id="abc0d5447b03efcbc73d4cfdb20865aa4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc0d5447b03efcbc73d4cfdb20865aa4">&#9670;&nbsp;</a></span>parameterization</h2>
 

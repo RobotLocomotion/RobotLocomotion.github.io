@@ -10,6 +10,7 @@ var searchData=
   ['add_5fcollision_5ffilter_5fgroup',['add_collision_filter_group',['../structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a1795d69bef5da9e944055bb2b383a108',1,'drake::multibody::parsing::ModelDirective']]],
   ['add_5fdirectives',['add_directives',['../structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a8faf335eb32cd972ad7ff7bd33d35af3',1,'drake::multibody::parsing::ModelDirective']]],
   ['add_5fframe',['add_frame',['../structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a6255b4003c79e2d88d1c5b233a75a732',1,'drake::multibody::parsing::ModelDirective']]],
+  ['add_5fhyperplane_5fif_5fsolve_5ffails',['add_hyperplane_if_solve_fails',['../classdrake_1_1planning_1_1_iris_np2_options.html#af74fd19d726d6d33b1d1b5f0ac08d31d',1,'drake::planning::IrisNp2Options']]],
   ['add_5fimplied_5flinear_5fconstraints',['add_implied_linear_constraints',['../structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#afcf57444ce2685aa6f70ca6e44b7a783',1,'drake::solvers::SemidefiniteRelaxationOptions']]],
   ['add_5fimplied_5flinear_5fequality_5fconstraints',['add_implied_linear_equality_constraints',['../structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html#a5e07222e141a6d4295e5d0773357d868',1,'drake::solvers::SemidefiniteRelaxationOptions']]],
   ['add_5fmodel',['add_model',['../structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a9d2283c8d505bed192de8c63a98abb43',1,'drake::multibody::parsing::ModelDirective']]],
