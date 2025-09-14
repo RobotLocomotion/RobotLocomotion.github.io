@@ -348,7 +348,11 @@ user-provided <code class="language-plaintext highlighter-rouge">LAPACK::LAPACK<
   </li>
   <li><code class="language-plaintext highlighter-rouge">WITH_USER_GLIB</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, uses <code class="language-plaintext highlighter-rouge">pkg_search_module(GLib
 glib-2.0)</code> to locate a user-provided GLib library instead of building from
-source.</li>
+source.
+    <ul>
+      <li>This option is only available if pkg-config is at least version 1.0.</li>
+    </ul>
+  </li>
   <li><code class="language-plaintext highlighter-rouge">WITH_USER_ZLIB</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, uses <code class="language-plaintext highlighter-rouge">find_package(ZLIB)</code> to
 locate a user-provided <code class="language-plaintext highlighter-rouge">ZLIB::ZLIB</code> library instead of building from source.
     <ul>
