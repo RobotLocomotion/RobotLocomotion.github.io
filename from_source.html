@@ -361,13 +361,26 @@ instead of calling <code class="language-plaintext highlighter-rouge">find_packa
     </ul>
   </li>
   <li><code class="language-plaintext highlighter-rouge">WITH_CLARABEL</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">ClarabelSolver</code>
-in the build.</li>
-  <li><code class="language-plaintext highlighter-rouge">WITH_CLP</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">ClpSolver</code> in the build.</li>
-  <li><code class="language-plaintext highlighter-rouge">WITH_CSDP</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">CsdpSolver</code> in the build.</li>
-  <li><code class="language-plaintext highlighter-rouge">WITH_IPOPT</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">IpoptSolver</code> in the build.</li>
-  <li><code class="language-plaintext highlighter-rouge">WITH_NLOPT</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">NloptSolver</code> in the build.</li>
-  <li><code class="language-plaintext highlighter-rouge">WITH_OSQP</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">OsqpSolver</code> in the build.</li>
-  <li><code class="language-plaintext highlighter-rouge">WITH_SCS</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">ScsSolver</code> in the build.</li>
+in the build. See <code class="language-plaintext highlighter-rouge">ClarabelSolver::available()</code> to retrieve this setting at
+runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_CLP</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">ClpSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">ClpSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_CSDP</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">CsdpSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">CsdpSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_IPOPT</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">IpoptSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">IpoptSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_NLOPT</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">NloptSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">NloptSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_OSQP</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">OsqpSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">OsqpSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_SCS</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">ON</code>, enables the <code class="language-plaintext highlighter-rouge">ScsSolver</code> in the build.
+See <code class="language-plaintext highlighter-rouge">ScsSolver::available()</code> to retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">WITH_LCM_RUNTIME</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, the LGPL-licensed LCM runtime
+library will be not installed alongside Drake. See  <code class="language-plaintext highlighter-rouge">DrakeLcm::available()</code> to
+retrieve this setting at runtime.</li>
+  <li><code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_JAVA</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, does not install Java-based
+tools (currently only the Java lcmtypes). Setting to <code class="language-plaintext highlighter-rouge">OFF</code> might be helpful to
+avoid depending on a JDK during the build.</li>
 </ul>
 
 <p>Adjusting closed-source (commercial) software dependencies:</p>

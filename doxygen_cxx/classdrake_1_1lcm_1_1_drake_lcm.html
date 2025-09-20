@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1lcm_1_1_drake_lcm.html',
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1lcm_1_1_drake_lcm-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -225,6 +226,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7b73a55d48495f81082838dad64bd57e inherit pub_methods_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a437b788f32af8a9b80c59fe729f75865 inherit pub_methods_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a437b788f32af8a9b80c59fe729f75865">operator=</a> (<a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a437b788f32af8a9b80c59fe729f75865 inherit pub_methods_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a98100f2f476b294d430b1a66c9039da1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a98100f2f476b294d430b1a66c9039da1">available</a> ()</td></tr>
+<tr class="memdesc:a98100f2f476b294d430b1a66c9039da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the LCM runtime library is enabled in this build of Drake.  <a href="#a98100f2f476b294d430b1a66c9039da1">More...</a><br /></td></tr>
+<tr class="separator:a98100f2f476b294d430b1a66c9039da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -401,6 +408,34 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a98100f2f476b294d430b1a66c9039da1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98100f2f476b294d430b1a66c9039da1">&#9670;&nbsp;</a></span>available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool available </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the LCM runtime library is enabled in this build of Drake. </p>
+<p>When false, functions that require the runtime (e.g., HandleSubscriptions and Publish) will throw an error. See <code>//tools/flags:with_lcm_runtime</code>. </p>
+
+</div>
+</div>
 <a id="a58ffc29be696f46957f858506550bc75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58ffc29be696f46957f858506550bc75">&#9670;&nbsp;</a></span>get_lcm_url()</h2>
 

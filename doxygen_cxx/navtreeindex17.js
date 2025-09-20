@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#af4e2d6b1c2cd394f167f83764d2e8f8d":[1,2,2,1,7,7],
+"classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost.html#afb452cc8aa55bb93c80570ad66618f4a":[1,2,2,1,7,3],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html":[1,2,2,1,8],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a31ff325bf1612efcf799b638cbaf0806":[1,2,2,1,8,5],
 "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_recipe.html#a8041f4afa17961f211505df778774c6e":[1,2,2,1,8,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a491bed91ae956de434888dd68594b7a3":[1,4,2,0,2,3],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a598885fb0868bd7d67fde74776cc2b9e":[1,4,2,0,2,20],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a62ffc93cde9bdefcaffea68960a793ea":[1,4,2,0,2,10],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a67f334d691594767c3ac1f81e96a7b0f":[1,4,2,0,2,0],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a693b3a9627e08ae92d2978b4ca516b3c":[1,4,2,0,2,11],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a7bfec066e251fc2acc3980f272c934aa":[1,4,2,0,2,1]
+"classdrake_1_1multibody_1_1_inverse_kinematics.html#a67f334d691594767c3ac1f81e96a7b0f":[1,4,2,0,2,0]
 };
