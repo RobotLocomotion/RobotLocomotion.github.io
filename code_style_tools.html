@@ -179,14 +179,21 @@ bazel test --config lint //common/...  # Check common/ and its child subdirector
 
 <ul>
   <li>C/C++: See the cpplint <code class="language-plaintext highlighter-rouge">USAGE</code> string at
-<a href="https://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py">https://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py</a>.
+<a href="https://github.com/cpplint/cpplint/blob/develop/cpplint.py">https://github.com/cpplint/cpplint/blob/develop/cpplint.py</a>.
     <ul>
       <li>In particular, note the <code class="language-plaintext highlighter-rouge">// NOLINT(foo/bar)</code> syntax to disable a warning.</li>
     </ul>
   </li>
-  <li>Python: See the pycodestyle manual at
-<a href="http://pycodestyle.readthedocs.io/en/latest/intro.html">http://pycodestyle.readthedocs.io/en/latest/intro.html</a>.
+  <li>Python:
     <ul>
+      <li>When the call to <code class="language-plaintext highlighter-rouge">add_lint_tests()</code> has <code class="language-plaintext highlighter-rouge">use_ruff = True</code>, we use <code class="language-plaintext highlighter-rouge">ruff</code> as
+the linter. Drake uses both <code class="language-plaintext highlighter-rouge">check</code> mode along with <code class="language-plaintext highlighter-rouge">format --check</code> mode.
+See the ruff manual at
+<a href="https://docs.astral.sh/ruff/linter/#error-suppression">https://docs.astral.sh/ruff/linter/#error-suppression</a>
+and
+<a href="https://docs.astral.sh/ruff/formatter/#format-suppression">https://docs.astral.sh/ruff/formatter/#format-suppression</a>.</li>
+      <li>Otherwise, we use <code class="language-plaintext highlighter-rouge">pycodestyle</code>. See the pycodestyle manual at
+<a href="http://pycodestyle.readthedocs.io/en/latest/intro.html">http://pycodestyle.readthedocs.io/en/latest/intro.html</a>.</li>
       <li>The syntax <code class="language-plaintext highlighter-rouge"># noqa</code> can be used to quiet the warning about an overly-long
 line.</li>
     </ul>
@@ -221,6 +228,14 @@ We have some tips for specific IDEs:</p>
   <li><a href="/emacs.html#c-code-formatting">Emacs</a></li>
   <li><a href="/vscode.html#c-code-formatting">VS Code</a></li>
 </ul>
+
+<h2 id="python-ruff-format">Python: Ruff Format</h2>
+
+<p>To run <code class="language-plaintext highlighter-rouge">ruff</code> auto-formatter:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd drake
+bazel run -- //tools/lint:ruff format path/to/my_file.py
+</code></pre></div></div>
 
       </article>
     </div>

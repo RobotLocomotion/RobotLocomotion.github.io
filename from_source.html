@@ -317,6 +317,23 @@ for further details.</p>
 <p>Drake also defines a number of CMake options to control different facets of
 the build.</p>
 
+<p>Adjusting installation:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_JAVA</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, does not install Java-based
+tools (currently only the Java lcmtypes). Setting to <code class="language-plaintext highlighter-rouge">OFF</code> might be helpful to
+avoid depending on a JDK during the build.</li>
+  <li><code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_PYTHON</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, does not install
+Python-based tools (<code class="language-plaintext highlighter-rouge">pydrake</code>, <code class="language-plaintext highlighter-rouge">pybind11</code> headers, tutorials, and Python
+lcmtypes). Setting to <code class="language-plaintext highlighter-rouge">OFF</code> might be helpful to avoid spending time compiling
+code that’s not needed.
+    <ul>
+      <li>Note that regardless of the <code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_PYTHON</code> option, a working Python
+interpreter is still required to build Drake.</li>
+    </ul>
+  </li>
+</ul>
+
 <p>Adjusting open-source dependencies:</p>
 
 <ul>
@@ -378,9 +395,6 @@ See <code class="language-plaintext highlighter-rouge">ScsSolver::available()</c
   <li><code class="language-plaintext highlighter-rouge">WITH_LCM_RUNTIME</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, the LGPL-licensed LCM runtime
 library will be not installed alongside Drake. See  <code class="language-plaintext highlighter-rouge">DrakeLcm::available()</code> to
 retrieve this setting at runtime.</li>
-  <li><code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_JAVA</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, does not install Java-based
-tools (currently only the Java lcmtypes). Setting to <code class="language-plaintext highlighter-rouge">OFF</code> might be helpful to
-avoid depending on a JDK during the build.</li>
 </ul>
 
 <p>Adjusting closed-source (commercial) software dependencies:</p>
