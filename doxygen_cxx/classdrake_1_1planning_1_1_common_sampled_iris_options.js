@@ -20,6 +20,7 @@ var classdrake_1_1planning_1_1_common_sampled_iris_options =
     [ "prog_with_additional_constraints", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#aafcf4ea1cbea01d087cc559402acddf2", null ],
     [ "random_seed", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#ad9059bc845096b2f05414a66c836b4ee", null ],
     [ "relative_termination_threshold", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7", null ],
+    [ "relax_margin", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#af2c427737107c914f2653e13fb8c30b8", null ],
     [ "remove_all_collisions_possible", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#aee2200b9b87fb1c11f98a3c8627d6f65", null ],
     [ "require_sample_point_is_contained", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#a20906a34b629e819d5d8a8df41638c2d", null ],
     [ "sample_particles_in_parallel", "classdrake_1_1planning_1_1_common_sampled_iris_options.html#a1fdf17311fa6dd33bb98cf7ead3dcdbd", null ],

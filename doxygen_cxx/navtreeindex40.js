@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1systems_1_1_diagram_context.html#a42a606129bc6cff476c88a4cb1f49f8d":[3,0,0,16,36,12],
 "classdrake_1_1systems_1_1_diagram_context.html#a4c1d520131d1547d626f95c6f16477c1":[3,0,0,16,36,3],
 "classdrake_1_1systems_1_1_diagram_context.html#a5f94629b31d977b0645f5c6cbea2546f":[3,0,0,16,36,1],
 "classdrake_1_1systems_1_1_diagram_context.html#a6069931fe723a0b1fcef3c72f8aeaa41":[3,0,0,16,36,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX40 =
 "classdrake_1_1systems_1_1_fixed_input_port_value.html#ab60c724bd992fa4b01bf4c205dafbe37":[3,0,0,16,53,3],
 "classdrake_1_1systems_1_1_fixed_input_port_value.html#ad60f5533dda132709243f41a1c0dc0ed":[3,0,0,16,53,8],
 "classdrake_1_1systems_1_1_fixed_input_port_value.html#ae75a0c643ca43797ef55f6da7c56fc98":[3,0,0,16,53,2],
-"classdrake_1_1systems_1_1_fixed_input_port_value.html#ae932b27dd2aa7cde81dc1fd09113c98d":[3,0,0,16,53,5],
-"classdrake_1_1systems_1_1_gain.html":[1,2,1,13]
+"classdrake_1_1systems_1_1_fixed_input_port_value.html#ae932b27dd2aa7cde81dc1fd09113c98d":[3,0,0,16,53,5]
 };

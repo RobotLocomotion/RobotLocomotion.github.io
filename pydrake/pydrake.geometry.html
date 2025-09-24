@@ -454,10 +454,7 @@ which specify the box’s dimension along the canonical x-, y-, and
 z-axes, respectively.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if width</strong><strong>, </strong><strong>depth</strong><strong> or </strong><strong>height are not strictly</strong> – </p></li>
-<li><p><strong>positive.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if any measure is not finite positive.</strong> – </p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -468,7 +465,7 @@ z-axes, respectively.</p>
 respectively.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the measures are not strictly positive.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if any measure is not finite positive.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -551,10 +548,7 @@ parallel with the frame’s z-axis.</p>
 <p>Constructs a capsule with the given <code class="docutils literal notranslate"><span class="pre">radius</span></code> and <code class="docutils literal notranslate"><span class="pre">length</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length are not strictly</strong> – </p></li>
-<li><p><strong>positive.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if any measure is not finite positive.</strong> – </p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -563,7 +557,7 @@ parallel with the frame’s z-axis.</p>
 <p>Constructs a capsule with a vector of measures: radius and length.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the measures are not strictly positive.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if any measure is not finite positive.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1882,10 +1876,7 @@ the length of the cylinder parallel with the frame’s z-axis.</p>
 <p>Constructs a cylinder with the given <code class="docutils literal notranslate"><span class="pre">radius</span></code> and <code class="docutils literal notranslate"><span class="pre">length</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if radius</strong><strong> or </strong><strong>length are not strictly</strong> – </p></li>
-<li><p><strong>positive.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if any measure is not finite positive.</strong> – </p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -1894,7 +1885,7 @@ the length of the cylinder parallel with the frame’s z-axis.</p>
 <p>Constructs a cylinder with a vector of measures: radius and length.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the measures are not strictly positive.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if any measure is not finite positive.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -2570,7 +2561,7 @@ semi-axes, with a, b, and c measured along the x-, y-, and z- axes of
 the canonical frame, respectively.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if a</strong><strong>, </strong><strong>b</strong><strong>, or </strong><strong>c are not strictly positive.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if any measure is not finite positive.</strong> – </p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -2581,7 +2572,7 @@ principal semi-axes, with a, b, and c measured along the x-, y-, and
 z- axes of the canonical frame, respectively.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the measures are not strictly positive.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if any measure is not finite positive.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -6317,10 +6308,7 @@ in any renderings, proximity queries, or other visualizers.</p>
 <p>Constructs the parameterized cone.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if height</strong><strong>, </strong><strong>a</strong><strong>, or </strong><strong>b are not strictly</strong> – </p></li>
-<li><p><strong>positive.</strong> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>RuntimeError if any measure is not finite positive.</strong> – </p>
 </dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -6330,7 +6318,7 @@ in any renderings, proximity queries, or other visualizers.</p>
 semi-axes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the measures are not strictly positive.</strong> – </p>
+<dd class="field-odd"><p><strong>RuntimeError if any measure is not finite positive.</strong> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -17455,8 +17443,8 @@ given radius.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if radius is negative. Note that a zero radius is</strong> – </p></li>
-<li><p><strong>considered valid.</strong> – </p></li>
+<li><p><strong>RuntimeError if radius is not finite non-negative. Note that</strong> – </p></li>
+<li><p><strong>a zero radius is considered valid.</strong> – </p></li>
 </ul>
 </dd>
 </dl>

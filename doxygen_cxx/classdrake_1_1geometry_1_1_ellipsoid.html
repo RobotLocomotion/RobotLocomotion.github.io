@@ -328,7 +328,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs an ellipsoid with the given lengths of its principal semi-axes, with a, b, and c measured along the x-, y-, and z- axes of the canonical frame, respectively. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>a</code>, <code>b</code>, or <code>c</code> are not strictly positive. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any measure is not finite positive. </td></tr>
   </table>
   </dd>
 </dl>
@@ -362,7 +362,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs an ellipsoid with a vector of measures: the lengths of its principal semi-axes, with a, b, and c measured along the x-, y-, and z- axes of the canonical frame, respectively. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the measures are not strictly positive. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any measure is not finite positive. </td></tr>
   </table>
   </dd>
 </dl>

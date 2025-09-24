@@ -1,5 +1,6 @@
 var NAVTREEINDEX59 =
 {
+"make__discrete__update__manager_8h.html":[4,0,0,8,10,30],
 "make__ellipsoid__field_8h.html":[4,0,0,4,2,34],
 "make__ellipsoid__mesh_8h.html":[4,0,0,4,2,35],
 "make__kuka__iiwa__model_8h.html":[4,0,0,8,0,3,1],
@@ -247,7 +248,6 @@ var NAVTREEINDEX59 =
 "namespacedrake_1_1common_1_1test.html":[2,0,0,2,0],
 "namespacedrake_1_1examples.html":[3,0,0,3],
 "namespacedrake_1_1examples.html":[2,0,0,3],
-"namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0],
 "namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,3,0],
-"namespacedrake_1_1examples_1_1allegro__hand.html":[2,0,0,3,1]
+"namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,3,0]
 };

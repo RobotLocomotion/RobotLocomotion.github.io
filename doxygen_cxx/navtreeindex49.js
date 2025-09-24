@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a0b6e739d0155aa20aec56d2fb7e13505":[1,2,4,1,4],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a20d05d184f723deb7a9d9447114a8b1a":[1,2,4,1,0],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a23a62490645a6a4b334b019c6894c597":[1,2,4,1,11],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a2cf60efb957e6713e64fdb2c7ee817e0":[1,2,4,1,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "classdrake_1_1test_1_1_diagnostic_policy_test_base.html#af7e6479c38091d0a35be77114e0c2269":[3,0,0,17,1,13],
 "classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html":[3,0,0,17,1,0],
 "classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html#a097745b2828249d6e3e415378a32e7e8":[3,0,0,17,1,0,2],
-"classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html#a173557c103f648d82833abdecab8c7fe":[3,0,0,17,1,0,0],
-"classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html#a68e28a9477527e3bcb0e9a5cd53c7436":[3,0,0,17,1,0,1]
+"classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html#a173557c103f648d82833abdecab8c7fe":[3,0,0,17,1,0,0]
 };

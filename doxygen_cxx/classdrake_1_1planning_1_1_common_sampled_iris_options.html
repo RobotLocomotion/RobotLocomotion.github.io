@@ -227,6 +227,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a033befdd75124d17abb45b56c75a71db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_common_sampled_iris_options.html#a033befdd75124d17abb45b56c75a71db">configuration_space_margin</a> {1e-2}</td></tr>
 <tr class="memdesc:a033befdd75124d17abb45b56c75a71db"><td class="mdescLeft">&#160;</td><td class="mdescRight">We retreat by this margin from each C-space obstacle in order to avoid the possibility of requiring an infinite number of faces to approximate a curved boundary.  <a href="#a033befdd75124d17abb45b56c75a71db">More...</a><br /></td></tr>
 <tr class="separator:a033befdd75124d17abb45b56c75a71db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2c427737107c914f2653e13fb8c30b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_common_sampled_iris_options.html#af2c427737107c914f2653e13fb8c30b8">relax_margin</a> {false}</td></tr>
+<tr class="memdesc:af2c427737107c914f2653e13fb8c30b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppose stepping back by configuration_space_margin would cut off the seed point.  <a href="#af2c427737107c914f2653e13fb8c30b8">More...</a><br /></td></tr>
+<tr class="separator:af2c427737107c914f2653e13fb8c30b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11a479517bfa7e6c3d669c72380924ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1planning_1_1_common_sampled_iris_options.html#a11a479517bfa7e6c3d669c72380924ca">termination_threshold</a> {2e-2}</td></tr>
 <tr class="memdesc:a11a479517bfa7e6c3d669c72380924ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this threshold.  <a href="#a11a479517bfa7e6c3d669c72380924ca">More...</a><br /></td></tr>
 <tr class="separator:a11a479517bfa7e6c3d669c72380924ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -636,6 +639,23 @@ Internally, these constraints are checked after collisions checking is performed
 
 <p>IRIS will terminate if the change in the <em>volume</em> of the hyperellipsoid between iterations is less that this percent of the previous best volume. </p>
 <p>This termination condition can be disabled by setting to a negative value. </p>
+
+</div>
+</div>
+<a id="af2c427737107c914f2653e13fb8c30b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2c427737107c914f2653e13fb8c30b8">&#9670;&nbsp;</a></span>relax_margin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool relax_margin {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Suppose stepping back by configuration_space_margin would cut off the seed point. </p>
+<p>If <code>relax_margin</code> is false, we throw an error, and if <code>relax_margin</code> is true, we repeatedly divide configuration_space_margin by two (for that hyperplane only) until the seed point is not cut off. Ignored if the user has provided <code>containment_points</code>. </p>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX58 =
 {
+"implicit__integrator__test_8h.html#aa9eb7d5ae29692cddbbf450dd78807f4":[4,0,0,12,0,0,5,11],
 "implicit__integrator__test_8h.html#ab6fe9bae0a04120809f27f6f2b0a36e0":[4,0,0,12,0,0,5,15],
 "implicit__integrator__test_8h.html#ab7cdc0e4d39ad9447e4ed4c06af5f3fe":[4,0,0,12,0,0,5,7],
 "implicit__integrator__test_8h.html#aba77d383684cc91cebc93a1088a62fc5":[4,0,0,12,0,0,5,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX58 =
 "make__convex__hull__mesh__impl_8h.html":[4,0,0,4,2,30],
 "make__convex__mesh_8h.html":[4,0,0,4,2,31],
 "make__cylinder__field_8h.html":[4,0,0,4,2,32],
-"make__cylinder__mesh_8h.html":[4,0,0,4,2,33],
-"make__discrete__update__manager_8h.html":[4,0,0,8,10,30]
+"make__cylinder__mesh_8h.html":[4,0,0,4,2,33]
 };
