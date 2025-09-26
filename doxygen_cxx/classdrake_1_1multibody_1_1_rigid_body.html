@@ -218,17 +218,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a41b2fbf7771b52e53a28662fec9716f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_type_safe_index.html">internal::MobodIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a41b2fbf7771b52e53a28662fec9716f4">mobod_index</a> () const</td></tr>
 <tr class="memdesc:a41b2fbf7771b52e53a28662fec9716f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the index of the mobilized body ("mobod") in the computational directed forest structure of the owning MultibodyTree to which this RigidBody belongs.  <a href="#a41b2fbf7771b52e53a28662fec9716f4">More...</a><br /></td></tr>
 <tr class="separator:a41b2fbf7771b52e53a28662fec9716f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9045be5f1c764bcd68284096eb4086bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a9045be5f1c764bcd68284096eb4086bc">is_floating_base_body</a> () const</td></tr>
+<tr class="memdesc:a9045be5f1c764bcd68284096eb4086bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns <code>true</code> if this body is a <em>floating base body</em>, meaning it had no explicit joint to a parent body so is mobilized by an automatically-added (ephemeral) floating (6 dof) joint to World.  <a href="#a9045be5f1c764bcd68284096eb4086bc">More...</a><br /></td></tr>
+<tr class="separator:a9045be5f1c764bcd68284096eb4086bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7df065349a370f3007ee52c6ede868d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0">is_floating</a> () const</td></tr>
-<tr class="memdesc:a7df065349a370f3007ee52c6ede868d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns <code>true</code> if this body is granted 6-dofs by a Mobilizer and the parent body of this body's associated 6-dof joint is <code>world</code>.  <a href="#a7df065349a370f3007ee52c6ede868d0">More...</a><br /></td></tr>
+<tr class="memdesc:a7df065349a370f3007ee52c6ede868d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a7df065349a370f3007ee52c6ede868d0">More...</a><br /></td></tr>
 <tr class="separator:a7df065349a370f3007ee52c6ede868d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6cb65d33b350a9ae5f21211c48a9b31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31">has_quaternion_dofs</a> () const</td></tr>
 <tr class="memdesc:ad6cb65d33b350a9ae5f21211c48a9b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) If <code>true</code>, this body's generalized position coordinates q include a quaternion, which occupies the first four elements of q.  <a href="#ad6cb65d33b350a9ae5f21211c48a9b31">More...</a><br /></td></tr>
 <tr class="separator:ad6cb65d33b350a9ae5f21211c48a9b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e98e34e5da5ecfc7e03086b70cf5489"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a8e98e34e5da5ecfc7e03086b70cf5489">floating_positions_start</a> () const</td></tr>
-<tr class="memdesc:a8e98e34e5da5ecfc7e03086b70cf5489"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For floating base bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of this RigidBody's first generalized position in the vector q of generalized position coordinates for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#a8e98e34e5da5ecfc7e03086b70cf5489">More...</a><br /></td></tr>
+<tr class="memdesc:a8e98e34e5da5ecfc7e03086b70cf5489"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For floating base bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a9045be5f1c764bcd68284096eb4086bc" title="(Advanced) Returns true if this body is a floating base body, meaning it had no explicit joint to a p...">is_floating_base_body()</a>), returns the index of this RigidBody's first generalized position in the vector q of generalized position coordinates for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#a8e98e34e5da5ecfc7e03086b70cf5489">More...</a><br /></td></tr>
 <tr class="separator:a8e98e34e5da5ecfc7e03086b70cf5489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02779a5522ffef8547daf6c386ffb47b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a02779a5522ffef8547daf6c386ffb47b">floating_velocities_start_in_v</a> () const</td></tr>
-<tr class="memdesc:a02779a5522ffef8547daf6c386ffb47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For floating base bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of this RigidBody's first generalized velocity in the vector v of generalized velocities for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#a02779a5522ffef8547daf6c386ffb47b">More...</a><br /></td></tr>
+<tr class="memdesc:a02779a5522ffef8547daf6c386ffb47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For floating base bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a9045be5f1c764bcd68284096eb4086bc" title="(Advanced) Returns true if this body is a floating base body, meaning it had no explicit joint to a p...">is_floating_base_body()</a>), returns the index of this RigidBody's first generalized velocity in the vector v of generalized velocities for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#a02779a5522ffef8547daf6c386ffb47b">More...</a><br /></td></tr>
 <tr class="separator:a02779a5522ffef8547daf6c386ffb47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a160c046a3ba58d0ba931096b6bd38b2a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a160c046a3ba58d0ba931096b6bd38b2a">floating_position_suffix</a> (<a class="el" href="classint.html">int</a> position_index_in_body) const</td></tr>
 <tr class="memdesc:a160c046a3ba58d0ba931096b6bd38b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string suffix (e.g.  <a href="#a160c046a3ba58d0ba931096b6bd38b2a">More...</a><br /></td></tr>
@@ -1094,14 +1097,16 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a string suffix (e.g. </p>
-<p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this rigid body.">name()</a>) to identify the <code>k</code>th position in the floating base. <code>position_index_in_body</code> must be in [0, 7) if <code><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body&#39;s generalized position coordinates q include a quaternion,...">has_quaternion_dofs()</a></code> is true, otherwise in [0, 6). </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this rigid body.">name()</a>) to identify the <code>k</code>th position in the floating base body. <code>position_index_in_body</code> must be in [0, 7) if <code><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body&#39;s generalized position coordinates q include a quaternion,...">has_quaternion_dofs()</a></code> is true, otherwise in [0, 6). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>this is a floating base body </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body&#39;s generalized position coordinates q include a quaternion,...">has_quaternion_dofs()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a9045be5f1c764bcd68284096eb4086bc" title="(Advanced) Returns true if this body is a floating base body, meaning it had no explicit joint to a p...">is_floating_base_body()</a>, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body&#39;s generalized position coordinates q include a quaternion,...">has_quaternion_dofs()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a> </dd></dl>
 
 </div>
 </div>
@@ -1120,7 +1125,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) For floating base bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of this RigidBody's first generalized position in the vector q of generalized position coordinates for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
+<p>(Advanced) For floating base bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a9045be5f1c764bcd68284096eb4086bc" title="(Advanced) Returns true if this body is a floating base body, meaning it had no explicit joint to a p...">is_floating_base_body()</a>), returns the index of this RigidBody's first generalized position in the vector q of generalized position coordinates for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
 <p>Positions q for this RigidBody are then contiguous starting at this index. When a floating RigidBody is modeled with quaternion coordinates (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body&#39;s generalized position coordinates q include a quaternion,...">has_quaternion_dofs()</a>), the four consecutive entries in the state starting at this index correspond to the quaternion that parametrizes this RigidBody's orientation. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize </td></tr>
@@ -1128,7 +1133,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>this is a floating base body </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body&#39;s generalized position coordinates q include a quaternion,...">has_quaternion_dofs()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a9045be5f1c764bcd68284096eb4086bc" title="(Advanced) Returns true if this body is a floating base body, meaning it had no explicit joint to a p...">is_floating_base_body()</a>, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body&#39;s generalized position coordinates q include a quaternion,...">has_quaternion_dofs()</a> </dd>
+<dd>
+<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a> </dd></dl>
 
 </div>
 </div>
@@ -1147,7 +1154,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) For floating base bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>) this method returns the index of this RigidBody's first generalized velocity in the vector v of generalized velocities for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
+<p>(Advanced) For floating base bodies (see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a9045be5f1c764bcd68284096eb4086bc" title="(Advanced) Returns true if this body is a floating base body, meaning it had no explicit joint to a p...">is_floating_base_body()</a>), returns the index of this RigidBody's first generalized velocity in the vector v of generalized velocities for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
 <p>Velocities v for this RigidBody are then contiguous starting at this index. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize </td></tr>
@@ -1155,7 +1162,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>this is a floating base body </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a9045be5f1c764bcd68284096eb4086bc" title="(Advanced) Returns true if this body is a floating base body, meaning it had no explicit joint to a p...">is_floating_base_body()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a> </dd></dl>
 
 </div>
 </div>
@@ -1176,14 +1183,14 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a string suffix (e.g. </p>
-<p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this rigid body.">name()</a>) to identify the <code>k</code>th velocity in the floating base. <code>velocity_index_in_body</code> must be in [0,6). </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this rigid body.">name()</a>) to identify the <code>k</code>th velocity in the floating base body. <code>velocity_index_in_body</code> must be in [0,6). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>this is a floating base body </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a9045be5f1c764bcd68284096eb4086bc" title="(Advanced) Returns true if this body is a floating base body, meaning it had no explicit joint to a p...">is_floating_base_body()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a> </dd></dl>
 
 </div>
 </div>
@@ -1554,7 +1561,7 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer and the parent body of this bod...">is_floating()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a9045be5f1c764bcd68284096eb4086bc" title="(Advanced) Returns true if this body is a floating base body, meaning it had no explicit joint to a p...">is_floating_base_body()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a> </dd></dl>
 
 </div>
 </div>
@@ -1592,8 +1599,29 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Returns <code>true</code> if this body is granted 6-dofs by a Mobilizer and the parent body of this body's associated 6-dof joint is <code>world</code>. </p>
-<dl class="section note"><dt>Note</dt><dd>A floating base body is not necessarily modeled with a quaternion mobilizer, see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body&#39;s generalized position coordinates q include a quaternion,...">has_quaternion_dofs()</a>. Alternative options include a roll-pitch-yaw (rpy) parametrization of rotations, see RpyFloatingMobilizer. </dd></dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use is_floating_base_body() instead. <br />
+ This will be removed from Drake on or after 2026-01-01.</dd></dl>
+
+</div>
+</div>
+<a id="a9045be5f1c764bcd68284096eb4086bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9045be5f1c764bcd68284096eb4086bc">&#9670;&nbsp;</a></span>is_floating_base_body()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_floating_base_body </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Returns <code>true</code> if this body is a <em>floating base body</em>, meaning it had no explicit joint to a parent body so is mobilized by an automatically-added (ephemeral) floating (6 dof) joint to World. </p>
+<dl class="section note"><dt>Note</dt><dd>A floating base body is not necessarily modeled with a quaternion mobilizer, see <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body&#39;s generalized position coordinates q include a quaternion,...">has_quaternion_dofs()</a>. Alternative options include a roll-pitch-yaw (rpy) parametrization of rotations, see RpyFloatingMobilizer.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, </td></tr>
@@ -1691,8 +1719,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a8e89cbac803b2c194fdf2df13d53804f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e89cbac803b2c194fdf2df13d53804f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="abaa244e80c13ef3c744373f3bcaec801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaa244e80c13ef3c744373f3bcaec801">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1703,7 +1731,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1717,8 +1745,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="abaa244e80c13ef3c744373f3bcaec801"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abaa244e80c13ef3c744373f3bcaec801">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a8e89cbac803b2c194fdf2df13d53804f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e89cbac803b2c194fdf2df13d53804f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1729,7 +1757,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

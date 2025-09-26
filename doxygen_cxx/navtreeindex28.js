@@ -1,5 +1,12 @@
 var NAVTREEINDEX28 =
 {
+"classdrake_1_1pydrake_1_1_object.html#a10c9c721becb9258cc70cd2ad039e653":[3,0,0,12,1,2],
+"classdrake_1_1pydrake_1_1_object.html#a1191c49f416bc97af24dc08e356756ed":[3,0,0,12,1,8],
+"classdrake_1_1pydrake_1_1_object.html#a20b167c073ba22d5e93817f3669785de":[3,0,0,12,1,6],
+"classdrake_1_1pydrake_1_1_object.html#a2dfeedf3890f6c46f911d9466c5dfb8d":[3,0,0,12,1,5],
+"classdrake_1_1pydrake_1_1_object.html#a3efab0ebe76d7a9134a862c6ef6c4894":[3,0,0,12,1,7],
+"classdrake_1_1pydrake_1_1_object.html#a6b2ca30633c352c35ee83d66bf3fe474":[3,0,0,12,1,3],
+"classdrake_1_1pydrake_1_1_object.html#a9885038a667f7bdbbfb4bccd9d9863e5":[3,0,0,12,1,4],
 "classdrake_1_1pydrake_1_1_object.html#ac596cc26f61676f7825c0d5f350eca0e":[3,0,0,12,1,9],
 "classdrake_1_1pydrake_1_1_object.html#ad97170a7be4b1b9ec11551cb0f457903":[3,0,0,12,1,0],
 "classdrake_1_1pydrake_1_1_object.html#ae2a5c95370a1d983c18c22e525f2a987":[3,0,0,12,1,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX28 =
 "classdrake_1_1solvers_1_1_clarabel_solver.html#abc922a429014ea4a1274a55f519ce4a9":[3,0,0,14,6,0],
 "classdrake_1_1solvers_1_1_clarabel_solver.html#acc0947a1c74f82df3bbd32327ebff7e8":[3,0,0,14,6,2],
 "classdrake_1_1solvers_1_1_clarabel_solver.html#ad04ea738e9f1ebbcb6534fff30b3cd6f":[3,0,0,14,6,3],
-"classdrake_1_1solvers_1_1_clarabel_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,14,6,12],
-"classdrake_1_1solvers_1_1_clarabel_solver.html#af46392f701201c2f9b5a702105d50bd2":[3,0,0,14,6,8],
-"classdrake_1_1solvers_1_1_clp_solver.html":[3,0,0,14,8],
-"classdrake_1_1solvers_1_1_clp_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,14,8,11],
-"classdrake_1_1solvers_1_1_clp_solver.html#a1c59c2b75f70b644a2ae231fc87773a3":[3,0,0,14,8,8],
-"classdrake_1_1solvers_1_1_clp_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,14,8,6],
-"classdrake_1_1solvers_1_1_clp_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[3,0,0,14,8,7],
-"classdrake_1_1solvers_1_1_clp_solver.html#a3faa8470e2f36f85518fa1eb6500fb9b":[3,0,0,14,8,3]
+"classdrake_1_1solvers_1_1_clarabel_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,14,6,12]
 };

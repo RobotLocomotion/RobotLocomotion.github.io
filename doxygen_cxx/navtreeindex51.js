@@ -1,5 +1,12 @@
 var NAVTREEINDEX51 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a3162d0b93cdd9f4259cc7d03b3370e56":[3,0,0,18,12,16],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a326ae949f44158da731ef777bba601ec":[3,0,0,18,12,12],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a43a07ba5dd1adae91520a5c386ee6c1b":[3,0,0,18,12,15],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4c1604e170d921c073e4fba715622507":[3,0,0,18,12,9],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4ff5241db765b5a4de7c88bb996d39a8":[3,0,0,18,12,11],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a65dc25e24cd2903a0861b9589065c897":[3,0,0,18,12,2],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a854d7d9baf86ffadcceca2620d4b347d":[3,0,0,18,12,14],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a8973617cd17ac27655d3fd7d9d970d56":[3,0,0,18,12,7],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426":[3,0,0,18,12,5],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aaeabb3c1dcb114550eee132dcebb3a6e":[3,0,0,18,12,10],
@@ -242,12 +249,5 @@ var NAVTREEINDEX51 =
 "contact__solvers_2schur__complement_8h.html":[4,0,0,8,1,17],
 "contact__surface_8h.html":[4,0,0,4,3,0],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb":[4,0,0,4,3,0,1,1],
-"contact__surface__doxygen_8h.html":[4,0,0,4,2,9],
-"contact__surface__utility_8h.html":[4,0,0,4,2,10],
-"contact__visualizer_8h.html":[4,0,0,8,6,0],
-"contact__visualizer_8h.html#aaef19a49dabf0bd3fe0fd47e32a84706":[4,0,0,8,6,0,1],
-"contact__visualizer_8h.html#aeda3cb2b39722597ea15ade4f40ba3ae":[4,0,0,8,6,0,2],
-"contact__visualizer__params_8h.html":[4,0,0,8,6,1]
+"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0]
 };

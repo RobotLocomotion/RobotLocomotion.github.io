@@ -1,5 +1,12 @@
 var NAVTREEINDEX57 =
 {
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,5],
+"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,15,2],
+"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,15,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,4],
+"group__default__scalars.html#gaf140364db7046208e67d85327722d34a":[1,6,1,7],
+"group__discrete__systems.html":[1,2,9],
 "group__drake__contacts.html":[1,3,0],
 "group__drake__disable__cpu__features.html":[1,6,6,1],
 "group__environment__variables.html":[1,6,6],
@@ -20,12 +27,12 @@ var NAVTREEINDEX57 =
 "group__geometry__infrastructure.html":[1,5,0],
 "group__geometry__optimization.html":[1,1,1],
 "group__geometry__optimization.html":[1,5,5],
-"group__geometry__optimization__geodesic__convexity.html":[1,5,5,0],
 "group__geometry__optimization__geodesic__convexity.html":[1,1,1,0],
+"group__geometry__optimization__geodesic__convexity.html":[1,5,5,0],
 "group__geometry__optimization__geodesic__convexity.html#ga05bd75c8b08787c334065792f8532797":[1,1,1,0,0],
 "group__geometry__optimization__geodesic__convexity.html#ga05bd75c8b08787c334065792f8532797":[1,5,5,0,0],
-"group__geometry__optimization__geodesic__convexity.html#ga0f945f0d43e169b238695da629d93ff7":[1,1,1,0,5],
 "group__geometry__optimization__geodesic__convexity.html#ga0f945f0d43e169b238695da629d93ff7":[1,5,5,0,5],
+"group__geometry__optimization__geodesic__convexity.html#ga0f945f0d43e169b238695da629d93ff7":[1,1,1,0,5],
 "group__geometry__optimization__geodesic__convexity.html#ga1c6d3fc1c7396ee8eee575958044071b":[1,1,1,0,3],
 "group__geometry__optimization__geodesic__convexity.html#ga1c6d3fc1c7396ee8eee575958044071b":[1,5,5,0,3],
 "group__geometry__optimization__geodesic__convexity.html#ga2e109ef92fec8f68a785b2edbd380021":[1,1,1,0,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX57 =
 "implicit__integrator__test_8h.html#a514e263bd993573a6fc3779c8ef898f5":[4,0,0,12,0,0,5,9],
 "implicit__integrator__test_8h.html#a634404f9026fedb81c96589d5e6b411a":[4,0,0,12,0,0,5,25],
 "implicit__integrator__test_8h.html#a6ae35e1b9b7e6f3a355555a54b3aba01":[4,0,0,12,0,0,5,4],
-"implicit__integrator__test_8h.html#a7d81cabe8a6d598f990dc47f228cb0cc":[4,0,0,12,0,0,5,14],
-"implicit__integrator__test_8h.html#a7f6b93be07d871c8ff90c6018a226c5f":[4,0,0,12,0,0,5,1],
-"implicit__integrator__test_8h.html#a7f6b93be07d871c8ff90c6018a226c5fa2cbc28373980e683596d05debaa16d02":[4,0,0,12,0,0,5,1,0],
-"implicit__integrator__test_8h.html#a7f6b93be07d871c8ff90c6018a226c5fa59157a08c563cdbd73eadab048cf7a64":[4,0,0,12,0,0,5,1,1],
-"implicit__integrator__test_8h.html#a8511e05001a8151695c0ba041fa027c8":[4,0,0,12,0,0,5,16],
-"implicit__integrator__test_8h.html#a919bfa810c6635693d36533b8a2f0892":[4,0,0,12,0,0,5,12],
-"implicit__integrator__test_8h.html#a9647e79765ce101661ab0a8b861054c1":[4,0,0,12,0,0,5,2],
-"implicit__integrator__test_8h.html#a9923cdb60fb91ba7226194534eeac159":[4,0,0,12,0,0,5,3]
+"implicit__integrator__test_8h.html#a7d81cabe8a6d598f990dc47f228cb0cc":[4,0,0,12,0,0,5,14]
 };

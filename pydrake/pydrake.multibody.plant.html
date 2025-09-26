@@ -2593,7 +2593,7 @@ Select and parameterize contact models.
 Obtain and manipulate position and velocity state variables.
 - mbp_parameters “Parameters”
 Working with system parameters for various multibody elements.
-- mbp_working_with_free_bodies “Free bodies”:
+- mbp_working_with_free_bodies “Free and floating base bodies”:
 Work conveniently with free (floating) bodies.
 - mbp_kinematic_and_dynamic_computations “Kinematics and dynamics”:
 Perform systems::Context “Context”-dependent kinematic and dynamic
@@ -6038,21 +6038,49 @@ context.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetDefaultFreeBodyPose">
-<span class="sig-name descname"><span class="pre">GetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetDefaultFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Gets the default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code> as set by SetDefaultFreeBodyPose().
-If no pose is specified for the body, returns the identity pose.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetDefaultFloatingBaseBodyPose">
+<span class="sig-name descname"><span class="pre">GetDefaultFloatingBaseBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetDefaultFloatingBaseBodyPose" title="Link to this definition"></a></dt>
+<dd><p>Gets the provisional default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code> as set by
+SetDefaultFloatingBaseBodyPose(). If no pose was specified for
+<code class="docutils literal notranslate"><span class="pre">body</span></code>, returns the identity pose. This may be called pre- or
+post-Finalize().</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value is only meaningful for bodies that turn out to be
+floating base bodies after Finalize(). If called on any other
+body, the result simply echoes whatever provisional pose was set
+in SetDefaultFloatingBaseBodyPose() but has no other effect. Use
+the Joint API to get the default pose for any body that has an
+explicitly-defined joint to its parent body.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Post-Finalize(), a floating base body’s default pose may be set
+either by SetDefaultFloatingBaseBodyPose() or by setting the
+default pose directly through the Joint API applied to the
+automatically-added floating joint.
+GetDefaultFloatingBaseBodyPose() will return the most-recent value
+set by either method.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>RigidBody whose default pose will be retrieved.</p>
 </dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>:</dt><dd><p>The pose of the free body relative to its parent frame.</p>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_WB</span></code>:</dt><dd><p>The default pose of the floating base body B in World. Not
+meaningful if <code class="docutils literal notranslate"><span class="pre">body</span></code> is not a floating base body.</p>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
-</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetDefaultFreeBodyPose">
+<span class="sig-name descname"><span class="pre">GetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetDefaultFreeBodyPose" title="Link to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use GetDefaultFloatingBaseBodyPose() instead. This will be removed
+from Drake on or after 2026-01-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -6145,7 +6173,8 @@ JointActuator::index().</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetFloatingBaseBodies">
 <span class="sig-name descname"><span class="pre">GetFloatingBaseBodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetFloatingBaseBodies" title="Link to this definition"></a></dt>
 <dd><p>Returns the set of body indices corresponding to the floating base
-bodies in the model, in no particular order.</p>
+bodies in the model, in no particular order. See
+mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p>
@@ -6204,19 +6233,25 @@ with a given specified name.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetFreeBodyPose">
 <span class="sig-name descname"><span class="pre">GetFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Gets the pose of a given <code class="docutils literal notranslate"><span class="pre">body</span></code> in the parent frame P.</p>
+<dd><p>For any free body’s 6-dof joint, gets the pose X_JpJc of the child
+frame Jc in its parent frame Jp.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”. To acquire X_WB,
-regardless of what P is, kinematics need to be evaluated by
-calling EvalBodyPoseInWorld().</p>
+<p>Unless <code class="docutils literal notranslate"><span class="pre">body</span></code> is a floating base body, the parent frame Jp is
+not necessarily the World frame W, and the child frame Jc is not
+necessarily the body frame B.</p>
 </div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="simple">
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_JpJc</span></code>:</dt><dd><p>The current pose of child frame Jc in its parent frame Jp. Returns
+X_WB if <code class="docutils literal notranslate"><span class="pre">body</span></code> B is a floating base body.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if body is not a free body in the model.</strong> – </p></li>
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a free body.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -6655,19 +6690,35 @@ render the string, use the Graphviz tool, <code class="docutils literal notransl
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetUniqueFreeBaseBodyOrThrow">
-<span class="sig-name descname"><span class="pre">GetUniqueFreeBaseBodyOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetUniqueFreeBaseBodyOrThrow" title="Link to this definition"></a></dt>
-<dd><p>If there exists a unique base body that belongs to the model given by
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> and that unique base body is free (see
-HasUniqueBaseBody()), return that free body. Throw an exception
-otherwise.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetUniqueFloatingBaseBodyOrThrow">
+<span class="sig-name descname"><span class="pre">GetUniqueFloatingBaseBodyOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetUniqueFloatingBaseBodyOrThrow" title="Link to this definition"></a></dt>
+<dd><p>If there is a single base body in the model given by
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>, and that body is a floating base body, returns
+that floating base body. Otherwise, throws an exception. Use
+HasUniqueFloatingBaseBody() to check first.</p>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
 <li><p><strong>RuntimeError if model_instance is not valid.</strong> – </p></li>
-<li><p><strong>RuntimeError if HasUniqueFreeBaseBody</strong><strong>(</strong><strong>model_instance</strong><strong>) </strong><strong>== false.</strong> – </p></li>
+<li><p><strong>RuntimeError if !HasUniqueFloatingBaseBody</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>HasUniqueFloatingBaseBody(), GetFloatingBaseBodies()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.GetUniqueFreeBaseBodyOrThrow">
+<span class="sig-name descname"><span class="pre">GetUniqueFreeBaseBodyOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.GetUniqueFreeBaseBodyOrThrow" title="Link to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use GetUniqueFloatingBaseBodyOrThrow() instead. This will be
+removed from Drake on or after 2026-01-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -7030,16 +7081,32 @@ model.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.HasUniqueFreeBaseBody">
-<span class="sig-name descname"><span class="pre">HasUniqueFreeBaseBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.HasUniqueFreeBaseBody" title="Link to this definition"></a></dt>
-<dd><p>Return true if there exists a unique base body in the model given by
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> and that unique base body is free.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.HasUniqueFloatingBaseBody">
+<span class="sig-name descname"><span class="pre">HasUniqueFloatingBaseBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.HasUniqueFloatingBaseBody" title="Link to this definition"></a></dt>
+<dd><p>Returns true if there is a single base body in the model given by
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>, and that body is a floating base body.</p>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
 <li><p><strong>RuntimeError if model_instance is not valid.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetUniqueFloatingBaseBodyOrThrow()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.HasUniqueFreeBaseBody">
+<span class="sig-name descname"><span class="pre">HasUniqueFreeBaseBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.HasUniqueFreeBaseBody" title="Link to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use HasUniqueFloatingBaseBody() instead. This will be removed from
+Drake on or after 2026-01-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -7958,21 +8025,44 @@ JointActuator::input_start(). Only values corresponding to
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetDefaultFloatingBaseBodyPose">
+<span class="sig-name descname"><span class="pre">SetDefaultFloatingBaseBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_WB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetDefaultFloatingBaseBodyPose" title="Link to this definition"></a></dt>
+<dd><p>Provisionally records a default World pose for <code class="docutils literal notranslate"><span class="pre">body</span></code>, to be used in
+case <code class="docutils literal notranslate"><span class="pre">body</span></code> turns out to be a floating base body after Finalize().</p>
+<p>This may be called pre- or post-Finalize(). Pre-Finalize() this is the
+only way to set the default pose of a floating base body.
+Post-Finalize(), a floating base body’s default pose may be set either
+by this function or by setting the default pose directly through the
+Joint API applied to the automatically-added floating joint. The most
+recent value set by either method will be used to initialize the
+floating joint’s coordinates in subsequently-created Contexts.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If this is called on a <code class="docutils literal notranslate"><span class="pre">body</span></code> that does <em>not</em> turn out to be a
+floating base body after Finalize(), it will have no effect other
+than to be echoed back in GetDefaultFloatingBaseBodyPose(); in
+particular it will not affect the initial state in a
+subsequently-created Context. Use the Joint API to set the default
+pose for any body that has an explicitly-defined joint to its
+parent body.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>RigidBody whose default pose will be set if it turns out to be a
+floating base body.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WB</span></code>:</dt><dd><p>Default pose of the floating base body in the World frame.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetDefaultFreeBodyPose">
 <span class="sig-name descname"><span class="pre">SetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetDefaultFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Sets the default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code>. If <code class="docutils literal notranslate"><span class="pre">body.is_floating()</span></code> is true,
-this will affect subsequent calls to SetDefaultState(); otherwise, the
-only effect of the call is that the value will be echoed back in
-GetDefaultFreeBodyPose().</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
-</div>
+<dd><p>(Deprecated.)</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>RigidBody whose default pose will be set.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>:</dt><dd><p>Default pose of the body.</p>
+<dt>Deprecated:</dt><dd><p>Use SetDefaultFloatingBaseBodyPose() instead. This will be removed
+from Drake on or after 2026-01-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8055,43 +8145,108 @@ the requested distance constraint.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetFreeBodyPose">
-<span class="sig-name descname"><span class="pre">SetFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the pose <code class="docutils literal notranslate"><span class="pre">X_PB</span></code> of a given <code class="docutils literal notranslate"><span class="pre">body</span></code> B in
-the parent frame P.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetFloatingBaseBodyPoseInAnchoredFrame">
+<span class="sig-name descname"><span class="pre">SetFloatingBaseBodyPoseInAnchoredFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_F</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_FB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetFloatingBaseBodyPoseInAnchoredFrame" title="Link to this definition"></a></dt>
+<dd><p>Updates <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the World-frame pose of floating base
+body B, given its pose <code class="docutils literal notranslate"><span class="pre">X_FB</span></code> in an arbitrary anchored frame F.</p>
+<p>Frame F must be <em>anchored</em>, meaning that it is either on a body which
+is directly welded to a frame on the World body, or more generally,
+that it is on a body for which there is a kinematic path between that
+body and the world body that only includes weld joints.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The World-frame pose is calculated here and stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.
+Moving F subsequently will not change the stored pose unless you
+call this method again.</p>
 </div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if body is not a free body in the model.</strong> – </p></li>
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if frame F is not anchored to the world.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a floating base body.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetFreeBodySpatialVelocity">
-<span class="sig-name descname"><span class="pre">SetFreeBodySpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.math.html#pydrake.multibody.math.SpatialVelocity" title="pydrake.multibody.math.SpatialVelocity"><span class="pre">pydrake.multibody.math.SpatialVelocity</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetFreeBodySpatialVelocity" title="Link to this definition"></a></dt>
-<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the spatial velocity <code class="docutils literal notranslate"><span class="pre">V_PB</span></code> of a given
-<code class="docutils literal notranslate"><span class="pre">body</span></code> B in its parent frame P.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
-</div>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetFloatingBaseBodyPoseInWorldFrame">
+<span class="sig-name descname"><span class="pre">SetFloatingBaseBodyPoseInWorldFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody" title="pydrake.multibody.tree.RigidBody"><span class="pre">pydrake.multibody.tree.RigidBody</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_WB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetFloatingBaseBodyPoseInWorldFrame" title="Link to this definition"></a></dt>
+<dd><p>Updates <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a given floating
+base body B’s body frame in the World frame W.</p>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if body is not a free body in the model.</strong> – </p></li>
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a floating base body.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetFreeBodyPose">
+<span class="sig-name descname"><span class="pre">SetFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetFreeBodyPose" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, body: pydrake.multibody.tree.RigidBody, X_JpJc: pydrake.math.RigidTransform) -&gt; None</p></li>
+</ol>
+<p>For any free body’s 6-dof joint, sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the pose
+X_JpJc of child frame Jc in its parent frame Jp.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless <code class="docutils literal notranslate"><span class="pre">body</span></code> is a floating base body, the parent frame Jp is
+not necessarily the World frame W, and the child frame Jc is not
+necessarily the body frame B. For a floating base body B, this
+method sets X_WB, the pose of body B in World.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a free body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, body: pydrake.multibody.tree.RigidBody, X_PB: pydrake.math.RigidTransform) -&gt; None</p></li>
+</ol>
+<p>X_PB parameter name for SetFreeBodyPose() is deprecated and will be removed 2026-01-01. Use X_JpJc instead.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.SetFreeBodySpatialVelocity">
+<span class="sig-name descname"><span class="pre">SetFreeBodySpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.SetFreeBodySpatialVelocity" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SetFreeBodySpatialVelocity(self: pydrake.multibody.plant.MultibodyPlant, context: pydrake.systems.framework.Context, body: pydrake.multibody.tree.RigidBody, V_JpJc: pydrake.multibody.math.SpatialVelocity) -&gt; None</p></li>
+</ol>
+<p>For any free body’s 6-dof joint, sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the spatial
+velocity V_JpJc of child frame Jc in its parent frame Jp.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless <code class="docutils literal notranslate"><span class="pre">body</span></code> is a floating base body, the parent frame Jp is
+not necessarily the World frame W, and the child frame Jc is not
+necessarily the body frame B. For a floating base body B, this
+method sets V_WB, the spatial velocity of body B in World.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a free body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SetFreeBodySpatialVelocity(self: pydrake.multibody.plant.MultibodyPlant, body: pydrake.multibody.tree.RigidBody, V_PB: pydrake.multibody.math.SpatialVelocity, context: pydrake.systems.framework.Context) -&gt; None</p></li>
+</ol>
+<p>The parameter order and V_PB parameter name for SetFreeBodySpatialVelocity() are deprecated and will be removed 2026-01-01. Use context, body, V_JpJc instead.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -8331,7 +8486,7 @@ Select and parameterize contact models.
 Obtain and manipulate position and velocity state variables.
 - mbp_parameters “Parameters”
 Working with system parameters for various multibody elements.
-- mbp_working_with_free_bodies “Free bodies”:
+- mbp_working_with_free_bodies “Free and floating base bodies”:
 Work conveniently with free (floating) bodies.
 - mbp_kinematic_and_dynamic_computations “Kinematics and dynamics”:
 Perform systems::Context “Context”-dependent kinematic and dynamic
@@ -11771,21 +11926,49 @@ context.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultFreeBodyPose">
-<span class="sig-name descname"><span class="pre">GetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Gets the default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code> as set by SetDefaultFreeBodyPose().
-If no pose is specified for the body, returns the identity pose.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultFloatingBaseBodyPose">
+<span class="sig-name descname"><span class="pre">GetDefaultFloatingBaseBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultFloatingBaseBodyPose" title="Link to this definition"></a></dt>
+<dd><p>Gets the provisional default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code> as set by
+SetDefaultFloatingBaseBodyPose(). If no pose was specified for
+<code class="docutils literal notranslate"><span class="pre">body</span></code>, returns the identity pose. This may be called pre- or
+post-Finalize().</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value is only meaningful for bodies that turn out to be
+floating base bodies after Finalize(). If called on any other
+body, the result simply echoes whatever provisional pose was set
+in SetDefaultFloatingBaseBodyPose() but has no other effect. Use
+the Joint API to get the default pose for any body that has an
+explicitly-defined joint to its parent body.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Post-Finalize(), a floating base body’s default pose may be set
+either by SetDefaultFloatingBaseBodyPose() or by setting the
+default pose directly through the Joint API applied to the
+automatically-added floating joint.
+GetDefaultFloatingBaseBodyPose() will return the most-recent value
+set by either method.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>RigidBody whose default pose will be retrieved.</p>
 </dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>:</dt><dd><p>The pose of the free body relative to its parent frame.</p>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_WB</span></code>:</dt><dd><p>The default pose of the floating base body B in World. Not
+meaningful if <code class="docutils literal notranslate"><span class="pre">body</span></code> is not a floating base body.</p>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
-</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultFreeBodyPose">
+<span class="sig-name descname"><span class="pre">GetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetDefaultFreeBodyPose" title="Link to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use GetDefaultFloatingBaseBodyPose() instead. This will be removed
+from Drake on or after 2026-01-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -11878,7 +12061,8 @@ JointActuator::index().</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetFloatingBaseBodies">
 <span class="sig-name descname"><span class="pre">GetFloatingBaseBodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetFloatingBaseBodies" title="Link to this definition"></a></dt>
 <dd><p>Returns the set of body indices corresponding to the floating base
-bodies in the model, in no particular order.</p>
+bodies in the model, in no particular order. See
+mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p>
@@ -11937,19 +12121,25 @@ with a given specified name.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetFreeBodyPose">
 <span class="sig-name descname"><span class="pre">GetFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.math.RigidTransform_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Gets the pose of a given <code class="docutils literal notranslate"><span class="pre">body</span></code> in the parent frame P.</p>
+<dd><p>For any free body’s 6-dof joint, gets the pose X_JpJc of the child
+frame Jc in its parent frame Jp.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”. To acquire X_WB,
-regardless of what P is, kinematics need to be evaluated by
-calling EvalBodyPoseInWorld().</p>
+<p>Unless <code class="docutils literal notranslate"><span class="pre">body</span></code> is a floating base body, the parent frame Jp is
+not necessarily the World frame W, and the child frame Jc is not
+necessarily the body frame B.</p>
 </div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="simple">
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_JpJc</span></code>:</dt><dd><p>The current pose of child frame Jc in its parent frame Jp. Returns
+X_WB if <code class="docutils literal notranslate"><span class="pre">body</span></code> B is a floating base body.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if body is not a free body in the model.</strong> – </p></li>
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a free body.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -12388,19 +12578,35 @@ render the string, use the Graphviz tool, <code class="docutils literal notransl
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetUniqueFreeBaseBodyOrThrow">
-<span class="sig-name descname"><span class="pre">GetUniqueFreeBaseBodyOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetUniqueFreeBaseBodyOrThrow" title="Link to this definition"></a></dt>
-<dd><p>If there exists a unique base body that belongs to the model given by
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> and that unique base body is free (see
-HasUniqueBaseBody()), return that free body. Throw an exception
-otherwise.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetUniqueFloatingBaseBodyOrThrow">
+<span class="sig-name descname"><span class="pre">GetUniqueFloatingBaseBodyOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetUniqueFloatingBaseBodyOrThrow" title="Link to this definition"></a></dt>
+<dd><p>If there is a single base body in the model given by
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>, and that body is a floating base body, returns
+that floating base body. Otherwise, throws an exception. Use
+HasUniqueFloatingBaseBody() to check first.</p>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
 <li><p><strong>RuntimeError if model_instance is not valid.</strong> – </p></li>
-<li><p><strong>RuntimeError if HasUniqueFreeBaseBody</strong><strong>(</strong><strong>model_instance</strong><strong>) </strong><strong>== false.</strong> – </p></li>
+<li><p><strong>RuntimeError if !HasUniqueFloatingBaseBody</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>HasUniqueFloatingBaseBody(), GetFloatingBaseBodies()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetUniqueFreeBaseBodyOrThrow">
+<span class="sig-name descname"><span class="pre">GetUniqueFreeBaseBodyOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.GetUniqueFreeBaseBodyOrThrow" title="Link to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use GetUniqueFloatingBaseBodyOrThrow() instead. This will be
+removed from Drake on or after 2026-01-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -12763,16 +12969,32 @@ model.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasUniqueFreeBaseBody">
-<span class="sig-name descname"><span class="pre">HasUniqueFreeBaseBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasUniqueFreeBaseBody" title="Link to this definition"></a></dt>
-<dd><p>Return true if there exists a unique base body in the model given by
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> and that unique base body is free.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasUniqueFloatingBaseBody">
+<span class="sig-name descname"><span class="pre">HasUniqueFloatingBaseBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasUniqueFloatingBaseBody" title="Link to this definition"></a></dt>
+<dd><p>Returns true if there is a single base body in the model given by
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>, and that body is a floating base body.</p>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
 <li><p><strong>RuntimeError if model_instance is not valid.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetUniqueFloatingBaseBodyOrThrow()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasUniqueFreeBaseBody">
+<span class="sig-name descname"><span class="pre">HasUniqueFreeBaseBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.HasUniqueFreeBaseBody" title="Link to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use HasUniqueFloatingBaseBody() instead. This will be removed from
+Drake on or after 2026-01-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -13653,21 +13875,44 @@ JointActuator::input_start(). Only values corresponding to
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetDefaultFloatingBaseBodyPose">
+<span class="sig-name descname"><span class="pre">SetDefaultFloatingBaseBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_WB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetDefaultFloatingBaseBodyPose" title="Link to this definition"></a></dt>
+<dd><p>Provisionally records a default World pose for <code class="docutils literal notranslate"><span class="pre">body</span></code>, to be used in
+case <code class="docutils literal notranslate"><span class="pre">body</span></code> turns out to be a floating base body after Finalize().</p>
+<p>This may be called pre- or post-Finalize(). Pre-Finalize() this is the
+only way to set the default pose of a floating base body.
+Post-Finalize(), a floating base body’s default pose may be set either
+by this function or by setting the default pose directly through the
+Joint API applied to the automatically-added floating joint. The most
+recent value set by either method will be used to initialize the
+floating joint’s coordinates in subsequently-created Contexts.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If this is called on a <code class="docutils literal notranslate"><span class="pre">body</span></code> that does <em>not</em> turn out to be a
+floating base body after Finalize(), it will have no effect other
+than to be echoed back in GetDefaultFloatingBaseBodyPose(); in
+particular it will not affect the initial state in a
+subsequently-created Context. Use the Joint API to set the default
+pose for any body that has an explicitly-defined joint to its
+parent body.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>RigidBody whose default pose will be set if it turns out to be a
+floating base body.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WB</span></code>:</dt><dd><p>Default pose of the floating base body in the World frame.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetDefaultFreeBodyPose">
 <span class="sig-name descname"><span class="pre">SetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetDefaultFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Sets the default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code>. If <code class="docutils literal notranslate"><span class="pre">body.is_floating()</span></code> is true,
-this will affect subsequent calls to SetDefaultState(); otherwise, the
-only effect of the call is that the value will be echoed back in
-GetDefaultFreeBodyPose().</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
-</div>
+<dd><p>(Deprecated.)</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>RigidBody whose default pose will be set.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>:</dt><dd><p>Default pose of the body.</p>
+<dt>Deprecated:</dt><dd><p>Use SetDefaultFloatingBaseBodyPose() instead. This will be removed
+from Drake on or after 2026-01-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -13750,43 +13995,108 @@ the requested distance constraint.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFreeBodyPose">
-<span class="sig-name descname"><span class="pre">SetFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.math.RigidTransform_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the pose <code class="docutils literal notranslate"><span class="pre">X_PB</span></code> of a given <code class="docutils literal notranslate"><span class="pre">body</span></code> B in
-the parent frame P.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFloatingBaseBodyPoseInAnchoredFrame">
+<span class="sig-name descname"><span class="pre">SetFloatingBaseBodyPoseInAnchoredFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_F</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_FB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.math.RigidTransform_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFloatingBaseBodyPoseInAnchoredFrame" title="Link to this definition"></a></dt>
+<dd><p>Updates <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the World-frame pose of floating base
+body B, given its pose <code class="docutils literal notranslate"><span class="pre">X_FB</span></code> in an arbitrary anchored frame F.</p>
+<p>Frame F must be <em>anchored</em>, meaning that it is either on a body which
+is directly welded to a frame on the World body, or more generally,
+that it is on a body for which there is a kinematic path between that
+body and the world body that only includes weld joints.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The World-frame pose is calculated here and stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.
+Moving F subsequently will not change the stored pose unless you
+call this method again.</p>
 </div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if body is not a free body in the model.</strong> – </p></li>
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if frame F is not anchored to the world.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a floating base body.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFreeBodySpatialVelocity">
-<span class="sig-name descname"><span class="pre">SetFreeBodySpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.math.SpatialVelocity_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFreeBodySpatialVelocity" title="Link to this definition"></a></dt>
-<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the spatial velocity <code class="docutils literal notranslate"><span class="pre">V_PB</span></code> of a given
-<code class="docutils literal notranslate"><span class="pre">body</span></code> B in its parent frame P.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
-</div>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFloatingBaseBodyPoseInWorldFrame">
+<span class="sig-name descname"><span class="pre">SetFloatingBaseBodyPoseInWorldFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_WB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.math.RigidTransform_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFloatingBaseBodyPoseInWorldFrame" title="Link to this definition"></a></dt>
+<dd><p>Updates <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a given floating
+base body B’s body frame in the World frame W.</p>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if body is not a free body in the model.</strong> – </p></li>
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a floating base body.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFreeBodyPose">
+<span class="sig-name descname"><span class="pre">SetFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFreeBodyPose" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], body: pydrake.multibody.tree.RigidBody_[AutoDiffXd], X_JpJc: pydrake.math.RigidTransform_[AutoDiffXd]) -&gt; None</p></li>
+</ol>
+<p>For any free body’s 6-dof joint, sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the pose
+X_JpJc of child frame Jc in its parent frame Jp.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless <code class="docutils literal notranslate"><span class="pre">body</span></code> is a floating base body, the parent frame Jp is
+not necessarily the World frame W, and the child frame Jc is not
+necessarily the body frame B. For a floating base body B, this
+method sets X_WB, the pose of body B in World.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a free body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], body: pydrake.multibody.tree.RigidBody_[AutoDiffXd], X_PB: pydrake.math.RigidTransform_[AutoDiffXd]) -&gt; None</p></li>
+</ol>
+<p>X_PB parameter name for SetFreeBodyPose() is deprecated and will be removed 2026-01-01. Use X_JpJc instead.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFreeBodySpatialVelocity">
+<span class="sig-name descname"><span class="pre">SetFreeBodySpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.SetFreeBodySpatialVelocity" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SetFreeBodySpatialVelocity(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], body: pydrake.multibody.tree.RigidBody_[AutoDiffXd], V_JpJc: pydrake.multibody.math.SpatialVelocity_[AutoDiffXd]) -&gt; None</p></li>
+</ol>
+<p>For any free body’s 6-dof joint, sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the spatial
+velocity V_JpJc of child frame Jc in its parent frame Jp.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless <code class="docutils literal notranslate"><span class="pre">body</span></code> is a floating base body, the parent frame Jp is
+not necessarily the World frame W, and the child frame Jc is not
+necessarily the body frame B. For a floating base body B, this
+method sets V_WB, the spatial velocity of body B in World.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a free body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SetFreeBodySpatialVelocity(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], body: pydrake.multibody.tree.RigidBody_[AutoDiffXd], V_PB: pydrake.multibody.math.SpatialVelocity_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</p></li>
+</ol>
+<p>The parameter order and V_PB parameter name for SetFreeBodySpatialVelocity() are deprecated and will be removed 2026-01-01. Use context, body, V_JpJc instead.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -14020,7 +14330,7 @@ Select and parameterize contact models.
 Obtain and manipulate position and velocity state variables.
 - mbp_parameters “Parameters”
 Working with system parameters for various multibody elements.
-- mbp_working_with_free_bodies “Free bodies”:
+- mbp_working_with_free_bodies “Free and floating base bodies”:
 Work conveniently with free (floating) bodies.
 - mbp_kinematic_and_dynamic_computations “Kinematics and dynamics”:
 Perform systems::Context “Context”-dependent kinematic and dynamic
@@ -17460,21 +17770,49 @@ context.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultFreeBodyPose">
-<span class="sig-name descname"><span class="pre">GetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Gets the default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code> as set by SetDefaultFreeBodyPose().
-If no pose is specified for the body, returns the identity pose.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultFloatingBaseBodyPose">
+<span class="sig-name descname"><span class="pre">GetDefaultFloatingBaseBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultFloatingBaseBodyPose" title="Link to this definition"></a></dt>
+<dd><p>Gets the provisional default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code> as set by
+SetDefaultFloatingBaseBodyPose(). If no pose was specified for
+<code class="docutils literal notranslate"><span class="pre">body</span></code>, returns the identity pose. This may be called pre- or
+post-Finalize().</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value is only meaningful for bodies that turn out to be
+floating base bodies after Finalize(). If called on any other
+body, the result simply echoes whatever provisional pose was set
+in SetDefaultFloatingBaseBodyPose() but has no other effect. Use
+the Joint API to get the default pose for any body that has an
+explicitly-defined joint to its parent body.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Post-Finalize(), a floating base body’s default pose may be set
+either by SetDefaultFloatingBaseBodyPose() or by setting the
+default pose directly through the Joint API applied to the
+automatically-added floating joint.
+GetDefaultFloatingBaseBodyPose() will return the most-recent value
+set by either method.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>RigidBody whose default pose will be retrieved.</p>
 </dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>:</dt><dd><p>The pose of the free body relative to its parent frame.</p>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_WB</span></code>:</dt><dd><p>The default pose of the floating base body B in World. Not
+meaningful if <code class="docutils literal notranslate"><span class="pre">body</span></code> is not a floating base body.</p>
 </dd>
 </dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
-</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultFreeBodyPose">
+<span class="sig-name descname"><span class="pre">GetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetDefaultFreeBodyPose" title="Link to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use GetDefaultFloatingBaseBodyPose() instead. This will be removed
+from Drake on or after 2026-01-01.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -17567,7 +17905,8 @@ JointActuator::index().</p>
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetFloatingBaseBodies">
 <span class="sig-name descname"><span class="pre">GetFloatingBaseBodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex" title="pydrake.multibody.tree.BodyIndex"><span class="pre">pydrake.multibody.tree.BodyIndex</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetFloatingBaseBodies" title="Link to this definition"></a></dt>
 <dd><p>Returns the set of body indices corresponding to the floating base
-bodies in the model, in no particular order.</p>
+bodies in the model, in no particular order. See
+mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError if called pre-finalize</strong><strong>, </strong><strong>see Finalize</strong><strong>(</strong><strong>)</strong><strong>.</strong> – </p>
@@ -17626,19 +17965,25 @@ with a given specified name.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetFreeBodyPose">
 <span class="sig-name descname"><span class="pre">GetFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.math.RigidTransform_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Gets the pose of a given <code class="docutils literal notranslate"><span class="pre">body</span></code> in the parent frame P.</p>
+<dd><p>For any free body’s 6-dof joint, gets the pose X_JpJc of the child
+frame Jc in its parent frame Jp.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”. To acquire X_WB,
-regardless of what P is, kinematics need to be evaluated by
-calling EvalBodyPoseInWorld().</p>
+<p>Unless <code class="docutils literal notranslate"><span class="pre">body</span></code> is a floating base body, the parent frame Jp is
+not necessarily the World frame W, and the child frame Jc is not
+necessarily the body frame B.</p>
 </div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="simple">
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_JpJc</span></code>:</dt><dd><p>The current pose of child frame Jc in its parent frame Jp. Returns
+X_WB if <code class="docutils literal notranslate"><span class="pre">body</span></code> B is a floating base body.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if body is not a free body in the model.</strong> – </p></li>
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a free body.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -18077,19 +18422,35 @@ render the string, use the Graphviz tool, <code class="docutils literal notransl
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetUniqueFreeBaseBodyOrThrow">
-<span class="sig-name descname"><span class="pre">GetUniqueFreeBaseBodyOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetUniqueFreeBaseBodyOrThrow" title="Link to this definition"></a></dt>
-<dd><p>If there exists a unique base body that belongs to the model given by
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> and that unique base body is free (see
-HasUniqueBaseBody()), return that free body. Throw an exception
-otherwise.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetUniqueFloatingBaseBodyOrThrow">
+<span class="sig-name descname"><span class="pre">GetUniqueFloatingBaseBodyOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetUniqueFloatingBaseBodyOrThrow" title="Link to this definition"></a></dt>
+<dd><p>If there is a single base body in the model given by
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>, and that body is a floating base body, returns
+that floating base body. Otherwise, throws an exception. Use
+HasUniqueFloatingBaseBody() to check first.</p>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
 <li><p><strong>RuntimeError if model_instance is not valid.</strong> – </p></li>
-<li><p><strong>RuntimeError if HasUniqueFreeBaseBody</strong><strong>(</strong><strong>model_instance</strong><strong>) </strong><strong>== false.</strong> – </p></li>
+<li><p><strong>RuntimeError if !HasUniqueFloatingBaseBody</strong><strong>(</strong><strong>model_instance</strong><strong>)</strong><strong>.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>HasUniqueFloatingBaseBody(), GetFloatingBaseBodies()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.GetUniqueFreeBaseBodyOrThrow">
+<span class="sig-name descname"><span class="pre">GetUniqueFreeBaseBodyOrThrow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.GetUniqueFreeBaseBodyOrThrow" title="Link to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use GetUniqueFloatingBaseBodyOrThrow() instead. This will be
+removed from Drake on or after 2026-01-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -18452,16 +18813,32 @@ model.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.HasUniqueFreeBaseBody">
-<span class="sig-name descname"><span class="pre">HasUniqueFreeBaseBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.HasUniqueFreeBaseBody" title="Link to this definition"></a></dt>
-<dd><p>Return true if there exists a unique base body in the model given by
-<code class="docutils literal notranslate"><span class="pre">model_instance</span></code> and that unique base body is free.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.HasUniqueFloatingBaseBody">
+<span class="sig-name descname"><span class="pre">HasUniqueFloatingBaseBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.HasUniqueFloatingBaseBody" title="Link to this definition"></a></dt>
+<dd><p>Returns true if there is a single base body in the model given by
+<code class="docutils literal notranslate"><span class="pre">model_instance</span></code>, and that body is a floating base body.</p>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
 <li><p><strong>RuntimeError if model_instance is not valid.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>GetUniqueFloatingBaseBodyOrThrow()</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.HasUniqueFreeBaseBody">
+<span class="sig-name descname"><span class="pre">HasUniqueFreeBaseBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.ModelInstanceIndex" title="pydrake.multibody.tree.ModelInstanceIndex"><span class="pre">pydrake.multibody.tree.ModelInstanceIndex</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.HasUniqueFreeBaseBody" title="Link to this definition"></a></dt>
+<dd><p>(Deprecated.)</p>
+<dl class="simple">
+<dt>Deprecated:</dt><dd><p>Use HasUniqueFloatingBaseBody() instead. This will be removed from
+Drake on or after 2026-01-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -19342,21 +19719,44 @@ JointActuator::input_start(). Only values corresponding to
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetDefaultFloatingBaseBodyPose">
+<span class="sig-name descname"><span class="pre">SetDefaultFloatingBaseBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_WB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetDefaultFloatingBaseBodyPose" title="Link to this definition"></a></dt>
+<dd><p>Provisionally records a default World pose for <code class="docutils literal notranslate"><span class="pre">body</span></code>, to be used in
+case <code class="docutils literal notranslate"><span class="pre">body</span></code> turns out to be a floating base body after Finalize().</p>
+<p>This may be called pre- or post-Finalize(). Pre-Finalize() this is the
+only way to set the default pose of a floating base body.
+Post-Finalize(), a floating base body’s default pose may be set either
+by this function or by setting the default pose directly through the
+Joint API applied to the automatically-added floating joint. The most
+recent value set by either method will be used to initialize the
+floating joint’s coordinates in subsequently-created Contexts.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If this is called on a <code class="docutils literal notranslate"><span class="pre">body</span></code> that does <em>not</em> turn out to be a
+floating base body after Finalize(), it will have no effect other
+than to be echoed back in GetDefaultFloatingBaseBodyPose(); in
+particular it will not affect the initial state in a
+subsequently-created Context. Use the Joint API to set the default
+pose for any body that has an explicitly-defined joint to its
+parent body.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>RigidBody whose default pose will be set if it turns out to be a
+floating base body.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WB</span></code>:</dt><dd><p>Default pose of the floating base body in the World frame.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetDefaultFreeBodyPose">
 <span class="sig-name descname"><span class="pre">SetDefaultFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RigidTransform" title="pydrake.math.RigidTransform"><span class="pre">pydrake.math.RigidTransform</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetDefaultFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Sets the default pose of <code class="docutils literal notranslate"><span class="pre">body</span></code>. If <code class="docutils literal notranslate"><span class="pre">body.is_floating()</span></code> is true,
-this will affect subsequent calls to SetDefaultState(); otherwise, the
-only effect of the call is that the value will be echoed back in
-GetDefaultFreeBodyPose().</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
-</div>
+<dd><p>(Deprecated.)</p>
 <dl class="simple">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt><dd><p>RigidBody whose default pose will be set.</p>
-</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PB</span></code>:</dt><dd><p>Default pose of the body.</p>
+<dt>Deprecated:</dt><dd><p>Use SetDefaultFloatingBaseBodyPose() instead. This will be removed
+from Drake on or after 2026-01-01.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -19439,43 +19839,108 @@ the requested distance constraint.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFreeBodyPose">
-<span class="sig-name descname"><span class="pre">SetFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.math.RigidTransform_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFreeBodyPose" title="Link to this definition"></a></dt>
-<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the pose <code class="docutils literal notranslate"><span class="pre">X_PB</span></code> of a given <code class="docutils literal notranslate"><span class="pre">body</span></code> B in
-the parent frame P.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFloatingBaseBodyPoseInAnchoredFrame">
+<span class="sig-name descname"><span class="pre">SetFloatingBaseBodyPoseInAnchoredFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_F</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_FB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.math.RigidTransform_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFloatingBaseBodyPoseInAnchoredFrame" title="Link to this definition"></a></dt>
+<dd><p>Updates <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the World-frame pose of floating base
+body B, given its pose <code class="docutils literal notranslate"><span class="pre">X_FB</span></code> in an arbitrary anchored frame F.</p>
+<p>Frame F must be <em>anchored</em>, meaning that it is either on a body which
+is directly welded to a frame on the World body, or more generally,
+that it is on a body for which there is a kinematic path between that
+body and the world body that only includes weld joints.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The World-frame pose is calculated here and stored in <code class="docutils literal notranslate"><span class="pre">context</span></code>.
+Moving F subsequently will not change the stored pose unless you
+call this method again.</p>
 </div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if body is not a free body in the model.</strong> – </p></li>
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if frame F is not anchored to the world.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a floating base body.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFreeBodySpatialVelocity">
-<span class="sig-name descname"><span class="pre">SetFreeBodySpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_PB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.math.SpatialVelocity_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFreeBodySpatialVelocity" title="Link to this definition"></a></dt>
-<dd><p>Sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the spatial velocity <code class="docutils literal notranslate"><span class="pre">V_PB</span></code> of a given
-<code class="docutils literal notranslate"><span class="pre">body</span></code> B in its parent frame P.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The parent frame is not necessarily the world frame. See
-mbp_working_with_free_bodies “above for details”.</p>
-</div>
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFloatingBaseBodyPoseInWorldFrame">
+<span class="sig-name descname"><span class="pre">SetFloatingBaseBodyPoseInWorldFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.RigidBody_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X_WB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.math.RigidTransform_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFloatingBaseBodyPoseInWorldFrame" title="Link to this definition"></a></dt>
+<dd><p>Updates <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the pose <code class="docutils literal notranslate"><span class="pre">X_WB</span></code> of a given floating
+base body B’s body frame in the World frame W.</p>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>RuntimeError if body is not a free body in the model.</strong> – </p></li>
 <li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a floating base body.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFreeBodyPose">
+<span class="sig-name descname"><span class="pre">SetFreeBodyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFreeBodyPose" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], body: pydrake.multibody.tree.RigidBody_[Expression], X_JpJc: pydrake.math.RigidTransform_[Expression]) -&gt; None</p></li>
+</ol>
+<p>For any free body’s 6-dof joint, sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the pose
+X_JpJc of child frame Jc in its parent frame Jp.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless <code class="docutils literal notranslate"><span class="pre">body</span></code> is a floating base body, the parent frame Jp is
+not necessarily the World frame W, and the child frame Jc is not
+necessarily the body frame B. For a floating base body B, this
+method sets X_WB, the pose of body B in World.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a free body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], body: pydrake.multibody.tree.RigidBody_[Expression], X_PB: pydrake.math.RigidTransform_[Expression]) -&gt; None</p></li>
+</ol>
+<p>X_PB parameter name for SetFreeBodyPose() is deprecated and will be removed 2026-01-01. Use X_JpJc instead.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFreeBodySpatialVelocity">
+<span class="sig-name descname"><span class="pre">SetFreeBodySpatialVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.SetFreeBodySpatialVelocity" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SetFreeBodySpatialVelocity(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], body: pydrake.multibody.tree.RigidBody_[Expression], V_JpJc: pydrake.multibody.math.SpatialVelocity_[Expression]) -&gt; None</p></li>
+</ol>
+<p>For any free body’s 6-dof joint, sets <code class="docutils literal notranslate"><span class="pre">context</span></code> to store the spatial
+velocity V_JpJc of child frame Jc in its parent frame Jp.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unless <code class="docutils literal notranslate"><span class="pre">body</span></code> is a floating base body, the parent frame Jp is
+not necessarily the World frame W, and the child frame Jc is not
+necessarily the body frame B. For a floating base body B, this
+method sets V_WB, the spatial velocity of body B in World.</p>
+</div>
+<p>See mbp_working_with_free_bodies “above for details”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if called pre-finalize.</strong> – </p></li>
+<li><p><strong>RuntimeError if body is not a free body.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>SetFreeBodySpatialVelocity(self: pydrake.multibody.plant.MultibodyPlant_[Expression], body: pydrake.multibody.tree.RigidBody_[Expression], V_PB: pydrake.multibody.math.SpatialVelocity_[Expression], context: pydrake.systems.framework.Context_[Expression]) -&gt; None</p></li>
+</ol>
+<p>The parameter order and V_PB parameter name for SetFreeBodySpatialVelocity() are deprecated and will be removed 2026-01-01. Use context, body, V_JpJc instead.</p>
 </dd></dl>
 
 <dl class="py method">

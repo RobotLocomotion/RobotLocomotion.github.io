@@ -1,5 +1,12 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#a8f8ae66a7dc32a53fad92f348f127439":[1,1,2,102],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a9164110d10cac0284a50a91b8308bae8":[1,1,2,73],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a92eb16be90ba1765547a715ec244fe00":[1,1,2,134],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a94ae5d0bd11b05a19cba1123d2399739":[1,1,2,130],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a9684f622903a0e38d1bf1ef8af6fcd51":[1,1,2,86],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a9757b022381ac5841cd389a7e212dfbb":[1,1,2,173],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a9880f907227e7c09b7553f7581351a61":[1,1,2,196],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a99404b6f3df6bf8650a59215803c5e75":[1,1,2,83],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a99cba841165e2f839e0c16cbe47adc41":[1,1,2,104],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a99f88db5dcc11e612dd1bd10300adaca":[1,1,2,57],
@@ -242,12 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,14,44,13],
 "classdrake_1_1solvers_1_1_moby_lcp_solver_id.html":[3,0,0,14,45],
 "classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a42bcf5a2b1cd301746dc0443e9bf6a33":[3,0,0,14,45,1],
-"classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a4dc451b7db72a168d9f0da1746011b45":[3,0,0,14,45,3],
-"classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a4fbe439fa696f39aed9159bb4a4a40fa":[3,0,0,14,45,2],
-"classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a8d50e169e77da2ed6b44cd17fa94056d":[3,0,0,14,45,0],
-"classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a9935b2abbc961a549015d331ba698f66":[3,0,0,14,45,5],
-"classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#ab463a0520b6beeebcfdd71491750b95a":[3,0,0,14,45,4],
-"classdrake_1_1solvers_1_1_mosek_solver.html":[3,0,0,14,46],
-"classdrake_1_1solvers_1_1_mosek_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,14,46,12],
-"classdrake_1_1solvers_1_1_mosek_solver.html#a0259e731ab5d911ef7952d085788bbf4":[3,0,0,14,46,4]
+"classdrake_1_1solvers_1_1_moby_lcp_solver_id.html#a4dc451b7db72a168d9f0da1746011b45":[3,0,0,14,45,3]
 };

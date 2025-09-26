@@ -93,6 +93,7 @@ var searchData=
   ['hassameexponents',['HasSameExponents',['../classdrake_1_1_polynomial_1_1_monomial.html#a35228c76335bc78cf446de909c2bf192',1,'drake::Polynomial::Monomial']]],
   ['hassubscriber',['HasSubscriber',['../classdrake_1_1systems_1_1_dependency_tracker.html#aeaaa3593d6954b14572ab5552ed02019',1,'drake::systems::DependencyTracker']]],
   ['hassubsystemnamed',['HasSubsystemNamed',['../classdrake_1_1systems_1_1_diagram.html#a32f1da9ca2c03b9fea79bb06c27504c2',1,'drake::systems::Diagram::HasSubsystemNamed()'],['../classdrake_1_1systems_1_1_diagram_builder.html#a32f1da9ca2c03b9fea79bb06c27504c2',1,'drake::systems::DiagramBuilder::HasSubsystemNamed()']]],
+  ['hasuniquefloatingbasebody',['HasUniqueFloatingBaseBody',['../classdrake_1_1multibody_1_1_multibody_plant.html#a7f07529f78963c62ca6a651a96619fbe',1,'drake::multibody::MultibodyPlant']]],
   ['hasuniquefreebasebody',['HasUniqueFreeBaseBody',['../classdrake_1_1multibody_1_1_multibody_plant.html#afc9ce98e9025085b7511227e5d12ebf1',1,'drake::multibody::MultibodyPlant']]],
   ['hasunrestrictedupdateevents',['HasUnrestrictedUpdateEvents',['../classdrake_1_1systems_1_1_composite_event_collection.html#ac782ac71ddc07579467afdd4372fa11d',1,'drake::systems::CompositeEventCollection']]],
   ['hasvalue',['HasValue',['../classdrake_1_1systems_1_1_input_port.html#a5536b94a4642fa4cf47164437dc66ae8',1,'drake::systems::InputPort']]],

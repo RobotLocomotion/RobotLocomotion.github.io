@@ -168,7 +168,28 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
  This will be removed from Drake on or after 2025-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1symbolic.html#ad528f8f92173863f5029b979b9c5f36b">drake::symbolic::ExtractAndAppendVariablesFromExpression</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> &amp;e, VectorX&lt; Variable &gt; *vars, std::unordered_map&lt; symbolic::Variable::Id, int &gt; *map_var_to_index)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>Use the overloaded function with std::vector&lt;Variable&gt;  instead of VectorX&lt;Variable&gt; <br />
- This will be removed from Drake on or after 2024-05-01.</dd>
+ This will be removed from Drake on or after 2024-05-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a72b882a412638c133aa49052c63d5534">MultibodyPlant&lt; T &gt;::GetDefaultFreeBodyPose</a>  (const RigidBody&lt; T &gt; &amp;body) const</dt>
+<dd><a class="anchor" id="_deprecated000007"></a>Use GetDefaultFloatingBaseBodyPose() instead. <br />
+ This will be removed from Drake on or after 2026-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5a333d6f704a2f84a691a3648b209e2d">MultibodyPlant&lt; T &gt;::GetUniqueFreeBaseBodyOrThrow</a>  (ModelInstanceIndex model_instance) const</dt>
+<dd><a class="anchor" id="_deprecated000005"></a>Use GetUniqueFloatingBaseBodyOrThrow() instead. <br />
+ This will be removed from Drake on or after 2026-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afc9ce98e9025085b7511227e5d12ebf1">MultibodyPlant&lt; T &gt;::HasUniqueFreeBaseBody</a>  (ModelInstanceIndex model_instance) const</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>Use HasUniqueFloatingBaseBody() instead. <br />
+ This will be removed from Drake on or after 2026-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afd1c4b1852853c9cf02613bfef053d8e">MultibodyPlant&lt; T &gt;::SetDefaultFreeBodyPose</a>  (const RigidBody&lt; T &gt; &amp;body, const math::RigidTransform&lt; double &gt; &amp;X_PB)</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>Use SetDefaultFloatingBaseBodyPose() instead. <br />
+ This will be removed from Drake on or after 2026-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa046883a4c5530d09082bf39638c119a">MultibodyPlant&lt; T &gt;::SetFreeBodyPoseInAnchoredFrame</a>  (systems::Context&lt; T &gt; *context, const Frame&lt; T &gt; &amp;frame_F, const RigidBody&lt; T &gt; &amp;body, const math::RigidTransform&lt; T &gt; &amp;X_FB) const</dt>
+<dd><a class="anchor" id="_deprecated000004"></a>Use SetFloatingBaseBodyPoseInAnchoredFrame() instead. <br />
+ This will be removed from Drake on or after 2026-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a97c0546b4129dad123a33b9b84831157">MultibodyPlant&lt; T &gt;::SetFreeBodyPoseInWorldFrame</a>  (systems::Context&lt; T &gt; *context, const RigidBody&lt; T &gt; &amp;body, const math::RigidTransform&lt; T &gt; &amp;X_WB) const</dt>
+<dd><a class="anchor" id="_deprecated000003"></a>Use SetFloatingBaseBodyPoseInWorldFrame() instead. <br />
+ This will be removed from Drake on or after 2026-01-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a7df065349a370f3007ee52c6ede868d0">RigidBody&lt; T &gt;::is_floating</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000009"></a>Use is_floating_base_body() instead. <br />
+ This will be removed from Drake on or after 2026-01-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
