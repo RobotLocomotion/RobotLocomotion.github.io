@@ -190,12 +190,14 @@ supported on Ubuntu 22.04 (Jammy) and 24.04 (Noble).</p>
 <span class="c"># Speed up the preview by only processing certain tool(s):</span>
 <span class="nv">$ </span>bazel run //doc:pages             <span class="nt">--</span> <span class="nt">--serve</span>  <span class="c"># Only the main site.</span>
 <span class="nv">$ </span>bazel run //doc/doxygen_cxx:build <span class="nt">--</span> <span class="nt">--serve</span>  <span class="c"># Only the C++ API reference.</span>
-<span class="nv">$ </span>bazel run //doc/pydrake:build     <span class="nt">--</span> <span class="nt">--serve</span>  <span class="c"># Only the Python API reference.</span>
+<span class="nv">$ </span>bazel run //bindings/generated_docstrings:regenerate <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="c">#   bazel run //doc/pydrake:build   -- --serve  # Only the Python API reference.</span>
 <span class="nv">$ </span>bazel run //doc/styleguide:build  <span class="nt">--</span> <span class="nt">--serve</span>  <span class="c"># Only the Style Guide.</span>
 
 <span class="c"># Further speed up preview generating only some API modules, e.g., math:</span>
 <span class="nv">$ </span>bazel run //doc/doxygen_cxx:build <span class="nt">--</span> <span class="nt">--serve</span> drake.math            <span class="c"># C++ math API.</span>
-<span class="nv">$ </span>bazel run //doc/pydrake:build     <span class="nt">--</span> <span class="nt">--serve</span> pydrake.math          <span class="c"># Python math API.</span>
+<span class="nv">$ </span>bazel run //bindings/generated_docstrings:regenerate <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nv">$ </span>  bazel run //doc/pydrake:build   <span class="nt">--</span> <span class="nt">--serve</span> pydrake.math          <span class="c"># Python math API.</span>
 <span class="nv">$ </span>bazel run //doc:build             <span class="nt">--</span> <span class="nt">--serve</span> <span class="o">{</span>drake,pydrake<span class="o">}</span>.math  <span class="c"># Both at once.</span>
 
 <span class="c"># Further speed up preview by omitting expensive `dot` graphs (C++ API only):</span>

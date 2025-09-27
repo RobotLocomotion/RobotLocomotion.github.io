@@ -323,6 +323,11 @@ the build.</p>
 <p>Adjusting installation:</p>
 
 <ul>
+  <li><code class="language-plaintext highlighter-rouge">BUILD_SHARED_LIBS</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, installs a static <code class="language-plaintext highlighter-rouge">libdrake.a</code>
+(as opposed to a shared <code class="language-plaintext highlighter-rouge">libdrake.so</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, it changes the default
+values of <code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_PYTHON</code> and <code class="language-plaintext highlighter-rouge">WITH_LCM_RUNTIME</code> to <code class="language-plaintext highlighter-rouge">OFF</code>, since these
+tools are incompatible with the static installation. Explicitly specifying
+incompatible option values will result in an error.</li>
   <li><code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_JAVA</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, does not install Java-based
 tools (currently only the Java lcmtypes). Setting to <code class="language-plaintext highlighter-rouge">OFF</code> might be helpful to
 avoid depending on a JDK during the build.</li>
@@ -333,6 +338,7 @@ code that’s not needed.
     <ul>
       <li>Note that regardless of the <code class="language-plaintext highlighter-rouge">DRAKE_INSTALL_PYTHON</code> option, a working Python
 interpreter is still required to build Drake.</li>
+      <li>This option cannot be <code class="language-plaintext highlighter-rouge">ON</code> with <code class="language-plaintext highlighter-rouge">BUILD_SHARED_LIBS=OFF</code>.</li>
     </ul>
   </li>
 </ul>
@@ -397,7 +403,11 @@ See <code class="language-plaintext highlighter-rouge">OsqpSolver::available()</
 See <code class="language-plaintext highlighter-rouge">ScsSolver::available()</code> to retrieve this setting at runtime.</li>
   <li><code class="language-plaintext highlighter-rouge">WITH_LCM_RUNTIME</code> (default <code class="language-plaintext highlighter-rouge">ON</code>). When <code class="language-plaintext highlighter-rouge">OFF</code>, the LGPL-licensed LCM runtime
 library will be not installed alongside Drake. See  <code class="language-plaintext highlighter-rouge">DrakeLcm::available()</code> to
-retrieve this setting at runtime.</li>
+retrieve this setting at runtime.
+    <ul>
+      <li>This option cannot be <code class="language-plaintext highlighter-rouge">ON</code> with <code class="language-plaintext highlighter-rouge">BUILD_SHARED_LIBS=OFF</code>.</li>
+    </ul>
+  </li>
 </ul>
 
 <p>Adjusting closed-source (commercial) software dependencies:</p>
