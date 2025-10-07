@@ -184,16 +184,12 @@ bazel test --config lint //common/...  # Check common/ and its child subdirector
       <li>In particular, note the <code class="language-plaintext highlighter-rouge">// NOLINT(foo/bar)</code> syntax to disable a warning.</li>
     </ul>
   </li>
-  <li>Python:
-    <ul>
-      <li>When the call to <code class="language-plaintext highlighter-rouge">add_lint_tests()</code> has <code class="language-plaintext highlighter-rouge">use_ruff = True</code>, we use <code class="language-plaintext highlighter-rouge">ruff</code> as
-the linter. Drake uses both <code class="language-plaintext highlighter-rouge">check</code> mode along with <code class="language-plaintext highlighter-rouge">format --check</code> mode.
-See the ruff manual at
+  <li>Python: Drake uses <code class="language-plaintext highlighter-rouge">ruff</code> both for linting (<code class="language-plaintext highlighter-rouge">check</code> mode) and auto-formatting
+(<code class="language-plaintext highlighter-rouge">format --check</code> mode). See the <code class="language-plaintext highlighter-rouge">ruff</code> manual at
 <a href="https://docs.astral.sh/ruff/linter/#error-suppression">https://docs.astral.sh/ruff/linter/#error-suppression</a>
 and
-<a href="https://docs.astral.sh/ruff/formatter/#format-suppression">https://docs.astral.sh/ruff/formatter/#format-suppression</a>.</li>
-      <li>Otherwise, we use <code class="language-plaintext highlighter-rouge">pycodestyle</code>. See the pycodestyle manual at
-<a href="http://pycodestyle.readthedocs.io/en/latest/intro.html">http://pycodestyle.readthedocs.io/en/latest/intro.html</a>.</li>
+<a href="https://docs.astral.sh/ruff/formatter/#format-suppression">https://docs.astral.sh/ruff/formatter/#format-suppression</a>.
+    <ul>
       <li>The syntax <code class="language-plaintext highlighter-rouge"># noqa</code> can be used to quiet the warning about an overly-long
 line.</li>
     </ul>

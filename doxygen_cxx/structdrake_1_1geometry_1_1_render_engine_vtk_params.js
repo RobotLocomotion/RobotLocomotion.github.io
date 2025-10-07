@@ -10,5 +10,6 @@ var structdrake_1_1geometry_1_1_render_engine_vtk_params =
     [ "force_to_pbr", "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a4c5f6afb81ef60312b0a63f17eb62684", null ],
     [ "gltf_extensions", "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8bf916e4d1f76c306700035b58b08842", null ],
     [ "lights", "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a7c649edac2bf38690cac11ff4730c9d5", null ],
-    [ "shadow_map_size", "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a0ed870ed1bf654d8bdce7f9a6e3af3a4", null ]
+    [ "shadow_map_size", "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a0ed870ed1bf654d8bdce7f9a6e3af3a4", null ],
+    [ "ssao", "structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a3074aaa1b4b41a89c7095d648eed47ee", null ]
 ];

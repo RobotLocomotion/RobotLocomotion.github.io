@@ -23,6 +23,8 @@ var searchData=
   ['integrator',['integrator',['../structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a06b4bf90f560eba55ebfe4c6c87092a4',1,'drake::systems::analysis_test::ExplicitErrorControlledIntegratorTest::integrator()'],['../structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html#a06b4bf90f560eba55ebfe4c6c87092a4',1,'drake::systems::analysis_test::PleidesTest::integrator()']]],
   ['integrator_5f',['integrator_',['../structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html#a30adb6d6693854cc7960d38461bbaf1d',1,'drake::systems::analysis_test::GenericIntegratorTest']]],
   ['intensity',['intensity',['../structdrake_1_1geometry_1_1render_1_1_light_parameter.html#a2118076db8e8f8a25c2376e1d4acfb67',1,'drake::geometry::render::LightParameter']]],
+  ['intensity_5fscale',['intensity_scale',['../structdrake_1_1geometry_1_1_ssao_parameter.html#a371c5be4d95a0db3c6cbf12d42602701',1,'drake::geometry::SsaoParameter']]],
+  ['intensity_5fshift',['intensity_shift',['../structdrake_1_1geometry_1_1_ssao_parameter.html#ad951a7c8a17ae566c113082803b97bed',1,'drake::geometry::SsaoParameter']]],
   ['interval_5fbinning',['interval_binning',['../structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a70e95748d802a0f66bba15e61dc5fb0e',1,'drake::multibody::GlobalInverseKinematics::Options']]],
   ['iris_5foptions',['iris_options',['../group__planning__iris.html#gae1b0dda8a6f7a3ed77c6e247018c0008',1,'drake::planning::IrisFromCliqueCoverOptions']]],
   ['is_5fbool',['is_bool',['../structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2',1,'drake::scalar_predicate']]],

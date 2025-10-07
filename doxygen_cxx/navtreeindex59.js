@@ -248,6 +248,6 @@ var NAVTREEINDEX59 =
 "namespacedrake.html":[3,0,0],
 "namespacedrake_1_1ad.html":[3,0,0,0],
 "namespacedrake_1_1ad.html":[2,0,0,0],
-"namespacedrake_1_1assert.html":[3,0,0,1],
-"namespacedrake_1_1assert.html":[2,0,0,1]
+"namespacedrake_1_1assert.html":[2,0,0,1],
+"namespacedrake_1_1assert.html":[3,0,0,1]
 };

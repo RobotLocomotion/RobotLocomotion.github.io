@@ -117,9 +117,9 @@ var hierarchy =
       [ "LeafCompositeEventCollection< Element::T >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
     ] ],
     [ "ConditionTraits< symbolic::Formula >", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html", null ],
-    [ "DifferentialInverseKinematicsSystem::LeastSquaresCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::JointCenteringCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::CartesianPositionLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_position_limit_constraint_1_1_config.html", null ],
+    [ "DifferentialInverseKinematicsSystem::LeastSquaresCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::CartesianVelocityLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_velocity_limit_constraint_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::CollisionConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::JointVelocityLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html", null ],
@@ -944,6 +944,7 @@ var hierarchy =
       [ "SpatialVelocity< T >", "classdrake_1_1multibody_1_1_spatial_velocity.html", null ]
     ] ],
     [ "SpongControllerParamsIndices", "structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html", null ],
+    [ "SsaoParameter", "structdrake_1_1geometry_1_1_ssao_parameter.html", null ],
     [ "State< T >", "classdrake_1_1systems_1_1_state.html", [
       [ "DiagramState< T >", "classdrake_1_1systems_1_1_diagram_state.html", null ]
     ] ],

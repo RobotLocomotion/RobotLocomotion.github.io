@@ -65,6 +65,7 @@ var namespacedrake_1_1geometry =
     [ "SignedDistancePair", "structdrake_1_1geometry_1_1_signed_distance_pair.html", "structdrake_1_1geometry_1_1_signed_distance_pair" ],
     [ "SignedDistanceToPoint", "structdrake_1_1geometry_1_1_signed_distance_to_point.html", "structdrake_1_1geometry_1_1_signed_distance_to_point" ],
     [ "Sphere", "classdrake_1_1geometry_1_1_sphere.html", "classdrake_1_1geometry_1_1_sphere" ],
+    [ "SsaoParameter", "structdrake_1_1geometry_1_1_ssao_parameter.html", "structdrake_1_1geometry_1_1_ssao_parameter" ],
     [ "SurfacePolygon", "classdrake_1_1geometry_1_1_surface_polygon.html", "classdrake_1_1geometry_1_1_surface_polygon" ],
     [ "SurfaceTriangle", "classdrake_1_1geometry_1_1_surface_triangle.html", "classdrake_1_1geometry_1_1_surface_triangle" ],
     [ "TriangleSurfaceMesh", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html", "classdrake_1_1geometry_1_1_triangle_surface_mesh" ],

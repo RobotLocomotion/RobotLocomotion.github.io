@@ -2766,7 +2766,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id30"><span class="problematic" id="id31">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id34"><span class="problematic" id="id35">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -2908,7 +2908,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id32"><span class="problematic" id="id33">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id36"><span class="problematic" id="id37">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -3039,7 +3039,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id34"><span class="problematic" id="id35">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id38"><span class="problematic" id="id39">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -3170,7 +3170,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id36"><span class="problematic" id="id37">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id40"><span class="problematic" id="id41">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -3312,7 +3312,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id38"><span class="problematic" id="id39">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id42"><span class="problematic" id="id43">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -3443,7 +3443,7 @@ containing library. No other values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-————————————-<a href="#id40"><span class="problematic" id="id41">|--------------------------------------------------|</span></a>————-
+————————————-<a href="#id44"><span class="problematic" id="id45">|--------------------------------------------------|</span></a>————-
 FramePoseVector&lt;Scalar&gt; |
 KinematicsVector&lt;FrameId,RigidTransform&lt;Scalar&gt;&gt; |
 double/AutoDiffXd/Expression GeometryConfigurationVector&lt;Scalar&gt; |
@@ -7445,7 +7445,7 @@ being measured and expressed in the mesh’s frame M).</p>
 integers which <em>encodes</em> P polygons. Each polygon can have an
 arbitrary number of vertices. The encoding of the P polygons is as
 follows:</p>
-<p><a href="#id42"><span class="problematic" id="id43">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p><a href="#id46"><span class="problematic" id="id47">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
 <p>Each polygon is defined in sequence. The definition consists of an
 integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
 and cₘ in the illustration above). The next cᵢ integers in the
@@ -7635,7 +7635,7 @@ being measured and expressed in the mesh’s frame M).</p>
 integers which <em>encodes</em> P polygons. Each polygon can have an
 arbitrary number of vertices. The encoding of the P polygons is as
 follows:</p>
-<p><a href="#id44"><span class="problematic" id="id45">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p><a href="#id48"><span class="problematic" id="id49">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
 <p>Each polygon is defined in sequence. The definition consists of an
 integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
 and cₘ in the illustration above). The next cᵢ integers in the
@@ -7915,6 +7915,10 @@ coordinates. M is the frame of the mesh.</p>
 </ul>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt><dd><p>must be either <code class="docutils literal notranslate"><span class="pre">double</span></code> or <code class="docutils literal notranslate"><span class="pre">AutoDiffXd</span></code>.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -8056,6 +8060,10 @@ coordinates. M is the frame of the mesh.</p>
 <li><p><strong>RuntimeError if the field does not have gradients defined and</strong> – </p></li>
 <li><p><strong>the MeshType doesn't support Barycentric coordinates.</strong> – </p></li>
 </ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt><dd><p>must be either <code class="docutils literal notranslate"><span class="pre">double</span></code> or <code class="docutils literal notranslate"><span class="pre">AutoDiffXd</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -8501,7 +8509,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id46"><span class="problematic" id="id47">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id50"><span class="problematic" id="id51">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -8511,7 +8519,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id48"><span class="problematic" id="id49">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id52"><span class="problematic" id="id53">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -8681,8 +8689,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id50"><span class="problematic" id="id51">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id52"><span class="problematic" id="id53">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id54"><span class="problematic" id="id55">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id56"><span class="problematic" id="id57">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -9382,7 +9390,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id54"><span class="problematic" id="id55">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id58"><span class="problematic" id="id59">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -9392,7 +9400,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id56"><span class="problematic" id="id57">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id60"><span class="problematic" id="id61">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -9562,8 +9570,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id58"><span class="problematic" id="id59">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id60"><span class="problematic" id="id61">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id62"><span class="problematic" id="id63">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id64"><span class="problematic" id="id65">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -10132,7 +10140,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id62"><span class="problematic" id="id63">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id66"><span class="problematic" id="id67">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -10142,7 +10150,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id64"><span class="problematic" id="id65">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id68"><span class="problematic" id="id69">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -10312,8 +10320,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id66"><span class="problematic" id="id67">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id68"><span class="problematic" id="id69">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id70"><span class="problematic" id="id71">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id72"><span class="problematic" id="id73">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -10625,7 +10633,7 @@ value.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id76"><span class="problematic" id="id77">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id80"><span class="problematic" id="id81">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">filename</span></code>:</dt><dd><p>A valid file name with absolute path or relative path.</p>
 </dd>
@@ -11235,6 +11243,14 @@ and shadow maps.</p>
 <dd class="field-odd"><p>The size of texture map (in pixels) to use for shadow maps. Note</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.RenderEngineVtkParams.ssao">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ssao</span></span><a class="headerlink" href="#pydrake.geometry.RenderEngineVtkParams.ssao" title="Link to this definition"></a></dt>
+<dd><p>An optional SSAO (screen-space ambient occlusion) parameters set. When
+specified, VTK enables screen-space ambient occlusion configured by
+the given parameters.</p>
 </dd></dl>
 
 </dd></dl>
@@ -17176,7 +17192,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id70"><span class="problematic" id="id71">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id74"><span class="problematic" id="id75">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -17267,7 +17283,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id72"><span class="problematic" id="id73">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id76"><span class="problematic" id="id77">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -17352,7 +17368,7 @@ query point Q, expressed in world frame W.</p>
 <p><code class="docutils literal notranslate"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id74"><span class="problematic" id="id75">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id78"><span class="problematic" id="id79">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -17453,6 +17469,71 @@ given radius.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Sphere.radius">
 <span class="sig-name descname"><span class="pre">radius</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Sphere" title="pydrake.geometry.Sphere"><span class="pre">pydrake.geometry.Sphere</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.Sphere.radius" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.SsaoParameter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">SsaoParameter</span></span><a class="headerlink" href="#pydrake.geometry.SsaoParameter" title="Link to this definition"></a></dt>
+<dd><p>Screen-space ambient occlusion (SSAO) parameters.</p>
+<p>Ambient occlusion is a shading method used to calculate how exposed
+each point in a scene is to ambient lighting. The more occluded a
+point is, the darker it appears. SSAO is an efficient, real-time
+approximation of ambient occlusion that operates in screen space. It
+enhances the depth and realism of a scene by adding subtle shadowing
+effects in creases, holes, and surfaces that are close to each other.
+See <a class="reference external" href="https://www.kitware.com/ssao/">https://www.kitware.com/ssao/</a> for an overview.</p>
+<p>The default parameter values below have been chosen as a best-guess
+effort at producing good quality images. They may not be optimal for
+your particular scene.</p>
+<p>To understand how to tune these parameters, you need a bit of insight
+into how ambient occlusion works generally, and how SSAO works
+specifically. For each pixel, its “occlusion factor” is determined by
+examining a hemispherical area around the pixel’s position in 3D space
+(oriented based on its normal). The fraction of the hemisphere
+contained within geometry is the occlusion factor.</p>
+<p>SSAO produces a discrete approximation of the true occlusion factor.
+It evaluates a discrete number of samples within the hemisphere and
+compares their depths (in the OpenGL-camera sense) with that of the
+pixel being shaded to determine how much of the hemisphere is occupied
+by geometry. As with all discrete approximations, there is a tradeoff
+between fidelity and cost. The parameter documentation below provides
+some guidance on the effect of each parameter on the final rendered
+image.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.SsaoParameter.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.SsaoParameter" title="pydrake.geometry.SsaoParameter"><span class="pre">pydrake.geometry.SsaoParameter</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.SsaoParameter.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.SsaoParameter.bias">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bias</span></span><a class="headerlink" href="#pydrake.geometry.SsaoParameter.bias" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.SsaoParameter.blur">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">blur</span></span><a class="headerlink" href="#pydrake.geometry.SsaoParameter.blur" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.SsaoParameter.intensity_scale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity_scale</span></span><a class="headerlink" href="#pydrake.geometry.SsaoParameter.intensity_scale" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.SsaoParameter.intensity_shift">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity_shift</span></span><a class="headerlink" href="#pydrake.geometry.SsaoParameter.intensity_shift" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.SsaoParameter.radius">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">radius</span></span><a class="headerlink" href="#pydrake.geometry.SsaoParameter.radius" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.geometry.SsaoParameter.sample_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sample_count</span></span><a class="headerlink" href="#pydrake.geometry.SsaoParameter.sample_count" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -17591,7 +17672,7 @@ M.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">t</span></code>:</dt><dd><p>The index of a triangle.</p>
 </dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">b_Q</span></code>:</dt><dd><p>‘ The barycentric coordinates of Q’ (projection of Q onto <cite>t</cite>’s
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">b_Q</span></code>:</dt><dd><p>‘ The barycentric coordinates of Q’ (projection of Q onto <a href="#id30"><span class="problematic" id="id31">``</span></a>t`’s
 plane) relative to triangle t.</p>
 </dd>
 </dl>
@@ -17603,6 +17684,8 @@ negative.</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>t ∈ {0, 1, 2,…, num_triangles()-1}.</p>
+</dd>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt><dd><p>must be either <cite>double`</cite> or <code class="docutils literal notranslate"><span class="pre">AutoDiffXd</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -17797,7 +17880,7 @@ M.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">t</span></code>:</dt><dd><p>The index of a triangle.</p>
 </dd>
-<dt>Returns <code class="docutils literal notranslate"><span class="pre">b_Q</span></code>:</dt><dd><p>‘ The barycentric coordinates of Q’ (projection of Q onto <cite>t</cite>’s
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">b_Q</span></code>:</dt><dd><p>‘ The barycentric coordinates of Q’ (projection of Q onto <a href="#id32"><span class="problematic" id="id33">``</span></a>t`’s
 plane) relative to triangle t.</p>
 </dd>
 </dl>
@@ -17809,6 +17892,8 @@ negative.</p>
 </div>
 <dl class="simple">
 <dt>Precondition:</dt><dd><p>t ∈ {0, 1, 2,…, num_triangles()-1}.</p>
+</dd>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt><dd><p>must be either <cite>double`</cite> or <code class="docutils literal notranslate"><span class="pre">AutoDiffXd</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -18104,6 +18189,10 @@ coordinates. M is the frame of the mesh.</p>
 </ul>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt><dd><p>must be either <code class="docutils literal notranslate"><span class="pre">double</span></code> or <code class="docutils literal notranslate"><span class="pre">AutoDiffXd</span></code>.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -18261,6 +18350,10 @@ coordinates. M is the frame of the mesh.</p>
 </ul>
 </dd>
 </dl>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt><dd><p>must be either <code class="docutils literal notranslate"><span class="pre">double</span></code> or <code class="docutils literal notranslate"><span class="pre">AutoDiffXd</span></code>.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -18364,6 +18457,10 @@ details.</p>
 coordinates (b₀, b₁, b₂, b₃) still satisfy b₀ + b₁ + b₂ + b₃ = 1;
 however, some bᵢ will be negative.</p>
 </div>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt><dd><p>must be either <code class="docutils literal notranslate"><span class="pre">double</span></code> or <code class="docutils literal notranslate"><span class="pre">AutoDiffXd</span></code>.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -18536,6 +18633,10 @@ details.</p>
 coordinates (b₀, b₁, b₂, b₃) still satisfy b₀ + b₁ + b₂ + b₃ = 1;
 however, some bᵢ will be negative.</p>
 </div>
+<dl class="simple">
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">C</span></code>:</dt><dd><p>must be either <code class="docutils literal notranslate"><span class="pre">double</span></code> or <code class="docutils literal notranslate"><span class="pre">AutoDiffXd</span></code>.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

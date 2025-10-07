@@ -1,5 +1,14 @@
 var NAVTREEINDEX70 =
 {
+"structdrake_1_1type__tag.html#a834c467da58ea1d81821952d3c473b64":[3,0,0,59,0],
+"structdrake_1_1type__visit__with__default.html":[3,0,0,60],
+"structdrake_1_1type__visit__with__default.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54":[3,0,0,60,0],
+"structdrake_1_1type__visit__with__tag.html":[3,0,0,61],
+"structdrake_1_1type__visit__with__tag.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54":[3,0,0,61,0],
+"structdrake_1_1uhash.html":[3,0,0,63],
+"structdrake_1_1uhash.html#ac98906b29c4381d0121f715fac155440":[3,0,0,63,1],
+"structdrake_1_1uhash.html#aec09227295d6a2c005ec578d42120039":[3,0,0,63,0],
+"structdrake_1_1visualization_1_1_visualization_config.html":[3,0,0,19,5],
 "structdrake_1_1visualization_1_1_visualization_config.html#a2c434dc8a30fc66fa14527eca76f38b5":[3,0,0,19,5,12],
 "structdrake_1_1visualization_1_1_visualization_config.html#a324b46940b15edda09af1d2d82f5125e":[3,0,0,19,5,6],
 "structdrake_1_1visualization_1_1_visualization_config.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,19,5,11],
@@ -240,14 +249,5 @@ var NAVTREEINDEX70 =
 "trajectory_8h.html":[4,0,0,1,5,14],
 "trajectory_8h.html#a7276b145ef6c7007c321cd281efbc1ee":[4,0,0,1,5,14,1],
 "trajectory__affine__system_8h.html":[4,0,0,12,6,30],
-"trajectory__affine__system_8h.html#a3dc38dfe429e69ee8da289e9e402e263":[4,0,0,12,6,30,1],
-"trajectory__linear__system_8h.html":[4,0,0,12,6,31],
-"trajectory__linear__system_8h.html#a40f29e5352777cff93f1fc7de18213a7":[4,0,0,12,6,31,1],
-"trajectory__source_8h.html":[4,0,0,12,6,32],
-"trajectory__source_8h.html#a02358710fbe413286d647d0185d89d5c":[4,0,0,12,6,32,1],
-"transfer_8h.html":[4,0,0,8,7,11],
-"transfer__function_8h.html":[4,0,0,12,6,33],
-"transform_8h.html":[4,0,0,1,2,2],
-"tree__py_8h.html":[4,0,0,0,0,6,1],
-"triangle__quadrature_8h.html":[4,0,0,8,15,1]
+"trajectory__affine__system_8h.html#a3dc38dfe429e69ee8da289e9e402e263":[4,0,0,12,6,30,1]
 };

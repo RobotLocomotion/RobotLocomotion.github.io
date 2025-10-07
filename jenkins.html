@@ -193,6 +193,13 @@ failed for various reasons), comment:</p>
   <li><code class="language-plaintext highlighter-rouge">@drake-jenkins-bot retest this please</code></li>
 </ul>
 
+<p><strong>Note:</strong> Immediately after opening a pull request, it can take up to 10
+minutes for the branches of all experimental jobs in Jenkins to be created.
+Requesting special build flavors with the <code class="language-plaintext highlighter-rouge">@drake-jenkins-bot ... please</code>
+comments will <em>not</em> work until this occurs. In general, it’s safe to wait until
+the statuses of all required pre-merge jobs change from “expected” to “pending”
+before requesting any additional builds.</p>
+
 <h2 id="rebuilding-via-reviewable">Rebuilding via Reviewable</h2>
 
 <p>When posting a <code class="language-plaintext highlighter-rouge">@drake-jenkins-bot ... please</code> comment in Reviewable,

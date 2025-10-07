@@ -195,6 +195,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8f46a3f6bca32d6f3fea72c1ab7f9c65"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8f46a3f6bca32d6f3fea72c1ab7f9c65">exposure</a> {}</td></tr>
 <tr class="memdesc:a8f46a3f6bca32d6f3fea72c1ab7f9c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exposure is an aspect of "tone mapping" (as described in <a href="https://www.kitware.com/pbrj1/">VTK's description of its PBR capabilities</a>).  <a href="#a8f46a3f6bca32d6f3fea72c1ab7f9c65">More...</a><br /></td></tr>
 <tr class="separator:a8f46a3f6bca32d6f3fea72c1ab7f9c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3074aaa1b4b41a89c7095d648eed47ee"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structdrake_1_1geometry_1_1_ssao_parameter.html">SsaoParameter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a3074aaa1b4b41a89c7095d648eed47ee">ssao</a> {}</td></tr>
+<tr class="memdesc:a3074aaa1b4b41a89c7095d648eed47ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">An optional SSAO (screen-space ambient occlusion) parameters set.  <a href="#a3074aaa1b4b41a89c7095d648eed47ee">More...</a><br /></td></tr>
+<tr class="separator:a3074aaa1b4b41a89c7095d648eed47ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a606a9df3866a52308dad9851d88e2488"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a606a9df3866a52308dad9851d88e2488">cast_shadows</a> {false}</td></tr>
 <tr class="memdesc:a606a9df3866a52308dad9851d88e2488"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <code>true</code>, <em>all</em> lights that are <em>able</em> to cast shadows will do so.  <a href="#a606a9df3866a52308dad9851d88e2488">More...</a><br /></td></tr>
 <tr class="separator:a606a9df3866a52308dad9851d88e2488"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -428,6 +431,23 @@ Public Attributes</h2></td></tr>
 <p>The size of texture map (in pixels) to use for shadow maps. </p>
 <p>Note: this is a <em>global</em> setting. All shadow casting lights will use a map of the same size. Larger map sizes increase GPU memory usage and rendering times but improve shadow fidelity (less obvious pixelation).</p>
 <p>See the note on <code>cast_shadows</code> for the warning on directional lights and shadow maps. </p>
+
+</div>
+</div>
+<a id="a3074aaa1b4b41a89c7095d648eed47ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3074aaa1b4b41a89c7095d648eed47ee">&#9670;&nbsp;</a></span>ssao</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="structdrake_1_1geometry_1_1_ssao_parameter.html">SsaoParameter</a>&gt; ssao {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An optional SSAO (screen-space ambient occlusion) parameters set. </p>
+<p>When specified, VTK enables screen-space ambient occlusion configured by the given parameters. </p>
 
 </div>
 </div>
