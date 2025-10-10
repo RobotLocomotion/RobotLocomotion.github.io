@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a1c465fdede6b5ea8a96275e2b9f1ecb3":[1,4,2,0,0,0,3],
+"structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#ae01adb7e45a3f63fccccf9f06a9eea2f":[1,4,2,0,0,0,2],
 "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#afeff966124fec7399f4a3e1eef5c9a26":[1,4,2,0,0,0,1],
 "structdrake_1_1multibody_1_1_contact_wrench.html":[3,0,0,9,19],
 "structdrake_1_1multibody_1_1_contact_wrench.html#a14e3dc8d6619faa42a65d6ff9d05f61a":[3,0,0,9,19,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#adcdf0a6717afd726d071ce59a6d12c3e":[3,0,0,11,11,8],
 "structdrake_1_1planning_1_1_ray_sampler_options.html":[1,4,2,4,7],
 "structdrake_1_1planning_1_1_ray_sampler_options.html#a578ebb578920ba99fe63bfe00ed55e7e":[1,4,2,4,7,1],
-"structdrake_1_1planning_1_1_ray_sampler_options.html#a8e8824802dedfbc36776227f7482b6bc":[1,4,2,4,7,0],
-"structdrake_1_1planning_1_1_ray_sampler_options.html#a95449371f5f5ad37b24ef3ce6b1a2855":[1,4,2,4,7,2],
-"structdrake_1_1planning_1_1_ray_sampler_options.html#adb766c7372396857005def0f41f99971":[1,4,2,4,7,3]
+"structdrake_1_1planning_1_1_ray_sampler_options.html#a8e8824802dedfbc36776227f7482b6bc":[1,4,2,4,7,0]
 };

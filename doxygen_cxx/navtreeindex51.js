@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a205b86a6552919d515ba544c185c04c3":[3,0,0,18,12,4],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a293c775020a0b5f25770dd398ea14f1d":[3,0,0,18,12,3],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a3162d0b93cdd9f4259cc7d03b3370e56":[3,0,0,18,12,16],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a326ae949f44158da731ef777bba601ec":[3,0,0,18,12,12],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a43a07ba5dd1adae91520a5c386ee6c1b":[3,0,0,18,12,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "contact__solver__results_8h.html#a1b5d23d29a49395a5858645bee86699d":[4,0,0,8,1,8,0],
 "contact__solver__utils_8h.html":[4,0,0,8,1,9],
 "contact__solvers_2schur__complement_8h.html":[4,0,0,8,1,17],
-"contact__surface_8h.html":[4,0,0,4,3,0],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0]
+"contact__surface_8h.html":[4,0,0,4,3,0]
 };

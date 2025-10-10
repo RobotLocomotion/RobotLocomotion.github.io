@@ -1,5 +1,7 @@
 var NAVTREEINDEX55 =
 {
+"find__runfiles_8h.html#a9bdf00a0f32970352a90afbae0f4114a":[4,0,0,1,36,2],
+"finite__horizon__linear__quadratic__regulator_8h.html":[4,0,0,12,1,2],
 "finite__horizon__linear__quadratic__regulator_8h.html#ga2ebe52e849a0597ad54f37ab6e35df8a":[4,0,0,12,1,2,3],
 "finite__horizon__linear__quadratic__regulator_8h.html#ga58307d2135757a498c434e96d7b99853":[4,0,0,12,1,2,2],
 "first__order__low__pass__filter_8h.html":[4,0,0,12,6,11],
@@ -198,8 +200,8 @@ var NAVTREEINDEX55 =
 "free__body_8h.html":[4,0,0,8,0,1,0],
 "function_8h.html":[4,0,0,11,20],
 "function__handle__trajectory_8h.html":[4,0,0,1,5,6],
-"functions.html":[3,3,0,0],
 "functions.html":[3,3,0],
+"functions.html":[3,3,0,0],
 "functions_b.html":[3,3,0,1],
 "functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX55 =
 "functions_p.html":[3,3,0,15],
 "functions_q.html":[3,3,0,16],
 "functions_r.html":[3,3,0,17],
-"functions_rela.html":[3,3,6],
-"functions_rela.html":[3,3,6,0],
-"functions_rela_b.html":[3,3,6,1]
+"functions_rela.html":[3,3,6]
 };
