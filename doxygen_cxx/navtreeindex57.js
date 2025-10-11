@@ -1,12 +1,13 @@
 var NAVTREEINDEX57 =
 {
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,15,0],
-"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,15,4],
+"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,1],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,5],
-"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,15,2],
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,15,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,3],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,4],
+"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,15,2],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,15,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,4],
 "group__default__scalars.html#gaf140364db7046208e67d85327722d34a":[1,6,1,7],
 "group__discrete__systems.html":[1,2,9],
 "group__drake__contacts.html":[1,3,0],
@@ -27,8 +28,8 @@ var NAVTREEINDEX57 =
 "group__geometry.html":[1,5],
 "group__geometry__file__formats.html":[1,5,4],
 "group__geometry__infrastructure.html":[1,5,0],
-"group__geometry__optimization.html":[1,5,5],
 "group__geometry__optimization.html":[1,1,1],
+"group__geometry__optimization.html":[1,5,5],
 "group__geometry__optimization__geodesic__convexity.html":[1,1,1,0],
 "group__geometry__optimization__geodesic__convexity.html":[1,5,5,0],
 "group__geometry__optimization__geodesic__convexity.html#ga05bd75c8b08787c334065792f8532797":[1,1,1,0,0],
@@ -90,8 +91,8 @@ var NAVTREEINDEX57 =
 "group__planning__iris.html#ga7a0dc24bc708c206708b8af86c38baff":[1,4,2,4,15],
 "group__planning__iris.html#gace53f3f8045d8eb96867bcd6eda63ed0":[1,4,2,4,12],
 "group__planning__iris.html#gad54a224f37c1a0dc86eaec300ef874af":[1,4,2,4,16],
-"group__planning__iris.html#gae1b0dda8a6f7a3ed77c6e247018c0008":[3,0,0,11,11,1],
 "group__planning__iris.html#gae1b0dda8a6f7a3ed77c6e247018c0008":[1,4,2,4,18],
+"group__planning__iris.html#gae1b0dda8a6f7a3ed77c6e247018c0008":[3,0,0,11,11,1],
 "group__planning__iris.html#gafd8111a93cb3461e05bec3477ee736f6":[1,4,2,4,11],
 "group__planning__kinematics.html":[1,4,2,0],
 "group__planning__kinematics.html#ga2f16257d707e2329789beaf507b75b2d":[1,4,2,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "implicit__integrator__test_8h.html#a30740466653240d73378df82c5dc8d2c":[4,0,0,12,0,0,5,17],
 "implicit__integrator__test_8h.html#a349ef906c37df861d52273049cbe1b49":[4,0,0,12,0,0,5,23],
 "implicit__integrator__test_8h.html#a504309b53e014748d209ed219cd23cc5":[4,0,0,12,0,0,5,13],
-"implicit__integrator__test_8h.html#a514e263bd993573a6fc3779c8ef898f5":[4,0,0,12,0,0,5,9],
-"implicit__integrator__test_8h.html#a634404f9026fedb81c96589d5e6b411a":[4,0,0,12,0,0,5,25]
+"implicit__integrator__test_8h.html#a514e263bd993573a6fc3779c8ef898f5":[4,0,0,12,0,0,5,9]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX64 =
 {
+"standard__operations_8h.html#a8925da93374ae283a9fe286654be67f7":[4,0,0,1,0,0,2,58],
 "standard__operations_8h.html#a8a685e87d59d6ebd9a0c34dee4cd1906":[4,0,0,1,0,0,2,53],
 "standard__operations_8h.html#a8f92815f719e1839ee269d8e0f8fc2d2":[4,0,0,1,0,0,2,16],
 "standard__operations_8h.html#a9070ca332f97ab90594e2d815bdc85fa":[4,0,0,1,0,0,2,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX64 =
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a29af929fcff5a59a15ac072ebe89d26e":[3,0,0,3,14,2,18],
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a34f9c5615cadcbffa3bfbfd8fe849952":[3,0,0,3,14,2,8],
 "structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a3815aa96e3f447bd132aea97ff48bdb9":[3,0,0,3,14,2,7],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a3cde9da79a1a8aba25ee8aacdb2ffd39":[3,0,0,3,14,2,11],
-"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a613d499d309c4906c2df5db6580dd665":[3,0,0,3,14,2,13]
+"structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#a3cde9da79a1a8aba25ee8aacdb2ffd39":[3,0,0,3,14,2,11]
 };

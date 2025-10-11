@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"overloaded_8h.html":[4,0,0,1,53],
 "pack__value_8h.html":[4,0,0,12,3,0,2],
 "pack__value_8h.html#a630c2f64d295eef980808464e32dd2af":[4,0,0,12,3,0,2,3],
 "pack__value_8h.html#a764f9ec73e3d42fcfc984b5eb4db20f7":[4,0,0,12,3,0,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "pydrake__pybind_8h.html#ad82c192e2b875f6bd19163b69ba9075a":[4,0,0,0,0,16,9],
 "quadratic__form_8h.html":[4,0,0,7,26],
 "quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,26,1],
-"quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,26,0],
-"quadratic__form_8h.html#adc391d10568071dcb57bf6f214675cfe":[4,0,0,7,26,2]
+"quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,26,0]
 };

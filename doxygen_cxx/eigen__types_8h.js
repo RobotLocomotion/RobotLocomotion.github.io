@@ -39,5 +39,6 @@ var eigen__types_8h =
     [ "Vector6d", "eigen__types_8h.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28", null ],
     [ "VectorUpTo6", "eigen__types_8h.html#adfbacdba0566fe8958cfafd659b4373f", null ],
     [ "VectorX", "eigen__types_8h.html#a77dd228fb4dd66a2c17dd3f7f38ffd85", null ],
-    [ "EigenMapView", "eigen__types_8h.html#aeb7f8e1a86b4c2744af4add35ac27a4e", null ]
+    [ "EigenMapView", "eigen__types_8h.html#aeb7f8e1a86b4c2744af4add35ac27a4e", null ],
+    [ "eigen_all", "eigen__types_8h.html#acd67fb791be292c340610dbcbd9b5b8f", null ]
 ];
