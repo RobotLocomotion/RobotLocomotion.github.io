@@ -6593,12 +6593,9 @@ further details.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.input_start">
 <span class="sig-name descname"><span class="pre">input_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.input_start" title="Link to this definition"></a></dt>
 <dd><p>Returns the index to the first element for this joint actuator /
-within the vector of actuation inputs for the full multibody / system.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the MultibodyTree model is not finalized.</strong> – </p>
-</dd>
-</dl>
+within the vector of actuation inputs for the full multibody / system.
+Returns -1 if this JointActuator hasn’t been added to a
+MultibodyPlant.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6634,12 +6631,8 @@ within the vector of actuation inputs for the full multibody / system.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator.num_inputs">
 <span class="sig-name descname"><span class="pre">num_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.tree.JointActuator" title="pydrake.multibody.tree.JointActuator"><span class="pre">pydrake.multibody.tree.JointActuator</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator.num_inputs" title="Link to this definition"></a></dt>
-<dd><p>Returns the number of inputs associated with this actuator.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the MultibodyTree model is not finalized.</strong> – </p>
-</dd>
-</dl>
+<dd><p>Returns the number of inputs associated with this actuator. This is
+always the number of degrees of freedom of the actuated joint.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6858,12 +6851,9 @@ further details.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.input_start">
 <span class="sig-name descname"><span class="pre">input_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.JointActuator_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.input_start" title="Link to this definition"></a></dt>
 <dd><p>Returns the index to the first element for this joint actuator /
-within the vector of actuation inputs for the full multibody / system.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the MultibodyTree model is not finalized.</strong> – </p>
-</dd>
-</dl>
+within the vector of actuation inputs for the full multibody / system.
+Returns -1 if this JointActuator hasn’t been added to a
+MultibodyPlant.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6899,12 +6889,8 @@ within the vector of actuation inputs for the full multibody / system.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-AutoDiffXd-.num_inputs">
 <span class="sig-name descname"><span class="pre">num_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.JointActuator_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-AutoDiffXd-.num_inputs" title="Link to this definition"></a></dt>
-<dd><p>Returns the number of inputs associated with this actuator.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the MultibodyTree model is not finalized.</strong> – </p>
-</dd>
-</dl>
+<dd><p>Returns the number of inputs associated with this actuator. This is
+always the number of degrees of freedom of the actuated joint.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7117,12 +7103,9 @@ further details.</p>
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.input_start">
 <span class="sig-name descname"><span class="pre">input_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.JointActuator_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.input_start" title="Link to this definition"></a></dt>
 <dd><p>Returns the index to the first element for this joint actuator /
-within the vector of actuation inputs for the full multibody / system.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the MultibodyTree model is not finalized.</strong> – </p>
-</dd>
-</dl>
+within the vector of actuation inputs for the full multibody / system.
+Returns -1 if this JointActuator hasn’t been added to a
+MultibodyPlant.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7158,12 +7141,8 @@ within the vector of actuation inputs for the full multibody / system.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pydrake.multibody.tree.JointActuator_-Expression-.num_inputs">
 <span class="sig-name descname"><span class="pre">num_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.JointActuator_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pydrake.multibody.tree.JointActuator_-Expression-.num_inputs" title="Link to this definition"></a></dt>
-<dd><p>Returns the number of inputs associated with this actuator.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>RuntimeError if the MultibodyTree model is not finalized.</strong> – </p>
-</dd>
-</dl>
+<dd><p>Returns the number of inputs associated with this actuator. This is
+always the number of degrees of freedom of the actuated joint.</p>
 </dd></dl>
 
 <dl class="py method">

@@ -251,12 +251,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3df812307c45b93543b2cef9fec2c3be"><td class="memItemLeft" align="right" valign="top">const internal::MultibodyTreeSystem&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a3df812307c45b93543b2cef9fec2c3be">GetParentTreeSystem</a> () const</td></tr>
 <tr class="memdesc:a3df812307c45b93543b2cef9fec2c3be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the parent MultibodyTreeSystem that owns the parent MultibodyTree that owns this element.  <a href="#a3df812307c45b93543b2cef9fec2c3be">More...</a><br /></td></tr>
 <tr class="separator:a3df812307c45b93543b2cef9fec2c3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68e3e034aa4ff8fbfc3ae70b96923ccb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb">SetTopology</a> (const internal::MultibodyTreeTopology &amp;tree)</td></tr>
-<tr class="memdesc:a68e3e034aa4ff8fbfc3ae70b96923ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree::Finalize() is invoked.  <a href="#a68e3e034aa4ff8fbfc3ae70b96923ccb">More...</a><br /></td></tr>
-<tr class="separator:a68e3e034aa4ff8fbfc3ae70b96923ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a5738fd3df2c9ea052b3c8312262071"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7a5738fd3df2c9ea052b3c8312262071">DoSetTopology</a> (const internal::MultibodyTreeTopology &amp;tree)=0</td></tr>
-<tr class="memdesc:a7a5738fd3df2c9ea052b3c8312262071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb" title="Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree...">SetTopology()</a>.  <a href="#a7a5738fd3df2c9ea052b3c8312262071">More...</a><br /></td></tr>
-<tr class="separator:a7a5738fd3df2c9ea052b3c8312262071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f03f5a6d341cb0d918b3d450f6fdb58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a9f03f5a6d341cb0d918b3d450f6fdb58">SetTopology</a> ()</td></tr>
+<tr class="memdesc:a9f03f5a6d341cb0d918b3d450f6fdb58"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Gives MultibodyElement-derived objects the opportunity to set data members that depend on topology and coordinate assignments having been finalized.  <a href="#a9f03f5a6d341cb0d918b3d450f6fdb58">More...</a><br /></td></tr>
+<tr class="separator:a9f03f5a6d341cb0d918b3d450f6fdb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70bdfa6bfed03dc22a8607a477cc1b51"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a70bdfa6bfed03dc22a8607a477cc1b51">DoSetTopology</a> ()=0</td></tr>
+<tr class="memdesc:a70bdfa6bfed03dc22a8607a477cc1b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a9f03f5a6d341cb0d918b3d450f6fdb58" title="(Internal use only) Gives MultibodyElement-derived objects the opportunity to set data members that d...">SetTopology()</a>.  <a href="#a70bdfa6bfed03dc22a8607a477cc1b51">More...</a><br /></td></tr>
+<tr class="separator:a70bdfa6bfed03dc22a8607a477cc1b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81c425ccd8cf5adb6b0d496ad7f4b314"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">DoDeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *)</td></tr>
 <tr class="memdesc:a81c425ccd8cf5adb6b0d496ad7f4b314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>.  <a href="#a81c425ccd8cf5adb6b0d496ad7f4b314">More...</a><br /></td></tr>
 <tr class="separator:a81c425ccd8cf5adb6b0d496ad7f4b314"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -825,8 +825,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a7a5738fd3df2c9ea052b3c8312262071"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a5738fd3df2c9ea052b3c8312262071">&#9670;&nbsp;</a></span>DoSetTopology()</h2>
+<a id="a70bdfa6bfed03dc22a8607a477cc1b51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70bdfa6bfed03dc22a8607a477cc1b51">&#9670;&nbsp;</a></span>DoSetTopology()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -837,8 +837,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">virtual void DoSetTopology </td>
           <td>(</td>
-          <td class="paramtype">const internal::MultibodyTreeTopology &amp;&#160;</td>
-          <td class="paramname"><em>tree</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -849,10 +848,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb" title="Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree...">SetTopology()</a>. </p>
+<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a9f03f5a6d341cb0d918b3d450f6fdb58" title="(Internal use only) Gives MultibodyElement-derived objects the opportunity to set data members that d...">SetTopology()</a>. </p>
 <p>For advanced use only for developers implementing new MultibodyTree components. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a5f268758c7ca361722fd8526b7c32551">Joint&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ab5d1e24719804e61318cfd8aa9023a16">Joint&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -1164,8 +1163,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a68e3e034aa4ff8fbfc3ae70b96923ccb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68e3e034aa4ff8fbfc3ae70b96923ccb">&#9670;&nbsp;</a></span>SetTopology()</h2>
+<a id="a9f03f5a6d341cb0d918b3d450f6fdb58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f03f5a6d341cb0d918b3d450f6fdb58">&#9670;&nbsp;</a></span>SetTopology()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1176,8 +1175,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void SetTopology </td>
           <td>(</td>
-          <td class="paramtype">const internal::MultibodyTreeTopology &amp;&#160;</td>
-          <td class="paramname"><em>tree</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1188,8 +1186,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree::Finalize() is invoked. </p>
-<p>NVI to pure virtual method <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7a5738fd3df2c9ea052b3c8312262071" title="Implementation of the NVI SetTopology().">DoSetTopology()</a>. </p>
+<p>(Internal use only) Gives MultibodyElement-derived objects the opportunity to set data members that depend on topology and coordinate assignments having been finalized. </p>
+<p>This is invoked at the end of MultibodyTree::Finalize(). NVI to pure virtual method <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a70bdfa6bfed03dc22a8607a477cc1b51" title="Implementation of the NVI SetTopology().">DoSetTopology()</a>. </p>
 
 </div>
 </div>

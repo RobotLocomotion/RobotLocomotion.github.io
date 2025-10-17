@@ -17,7 +17,7 @@ var classdrake_1_1multibody_1_1_multibody_element =
     [ "DoDeclareDiscreteState", "classdrake_1_1multibody_1_1_multibody_element.html#a3394b67729adad18156be78ac98281fe", null ],
     [ "DoDeclareParameters", "classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314", null ],
     [ "DoSetDefaultParameters", "classdrake_1_1multibody_1_1_multibody_element.html#ac10aa21a51e7dc4d31f33397cce842a3", null ],
-    [ "DoSetTopology", "classdrake_1_1multibody_1_1_multibody_element.html#a7a5738fd3df2c9ea052b3c8312262071", null ],
+    [ "DoSetTopology", "classdrake_1_1multibody_1_1_multibody_element.html#a70bdfa6bfed03dc22a8607a477cc1b51", null ],
     [ "get_parent_tree", "classdrake_1_1multibody_1_1_multibody_element.html#acf452ebe0b6b98c3ee73e04b6963feba", null ],
     [ "GetParentPlant", "classdrake_1_1multibody_1_1_multibody_element.html#a2a52d0e7da46a2d5f8e43812c2a0c389", null ],
     [ "GetParentTreeSystem", "classdrake_1_1multibody_1_1_multibody_element.html#a3df812307c45b93543b2cef9fec2c3be", null ],
@@ -30,7 +30,7 @@ var classdrake_1_1multibody_1_1_multibody_element =
     [ "ordinal_impl", "classdrake_1_1multibody_1_1_multibody_element.html#a4e00fa4f13ff51e93bdb20990852e813", null ],
     [ "set_is_ephemeral", "classdrake_1_1multibody_1_1_multibody_element.html#aec74a0672620a8670aaf06ba7c00e1c9", null ],
     [ "SetDefaultParameters", "classdrake_1_1multibody_1_1_multibody_element.html#af084609147b7e91add9fb620a12735e3", null ],
-    [ "SetTopology", "classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb", null ],
+    [ "SetTopology", "classdrake_1_1multibody_1_1_multibody_element.html#a9f03f5a6d341cb0d918b3d450f6fdb58", null ],
     [ "DeformableModel< T >", "classdrake_1_1multibody_1_1_multibody_element.html#a8efc4fff636d586125e8b787839853c2", null ],
     [ "internal::MultibodyTree< T >", "classdrake_1_1multibody_1_1_multibody_element.html#a49109966f9505633199c07ad06b0632d", null ],
     [ "MultibodyElementTester", "classdrake_1_1multibody_1_1_multibody_element.html#a59cf1173a305d4864320bf9e1bf60f35", null ]

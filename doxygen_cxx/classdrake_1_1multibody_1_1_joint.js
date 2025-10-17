@@ -30,7 +30,7 @@ var classdrake_1_1multibody_1_1_joint =
     [ "DoGetOnePosition", "classdrake_1_1multibody_1_1_joint.html#a55fbeff7bf8dcabddc072a224f42a8ac", null ],
     [ "DoGetOneVelocity", "classdrake_1_1multibody_1_1_joint.html#a1f44aa73e129b6182670288ecc436e2c", null ],
     [ "DoSetDefaultPosePair", "classdrake_1_1multibody_1_1_joint.html#acdd227553c00c5305fcbb8263eb3955f", null ],
-    [ "DoSetTopology", "classdrake_1_1multibody_1_1_joint.html#a5f268758c7ca361722fd8526b7c32551", null ],
+    [ "DoSetTopology", "classdrake_1_1multibody_1_1_joint.html#ab5d1e24719804e61318cfd8aa9023a16", null ],
     [ "DoShallowClone", "classdrake_1_1multibody_1_1_joint.html#a9c3f4b29ce2967dc0bb185ccee6f2e47", null ],
     [ "frame_on_child", "classdrake_1_1multibody_1_1_joint.html#adeb59e44e49a847f2a338211882d00f6", null ],
     [ "frame_on_parent", "classdrake_1_1multibody_1_1_joint.html#af544171c3e9756dd27830a3b5b4ff781", null ],

@@ -44,7 +44,6 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "multibody_tree.h", "multibody__tree_8h.html", "multibody__tree_8h" ],
     [ "multibody_tree_indexes.h", "multibody__tree__indexes_8h.html", "multibody__tree__indexes_8h" ],
     [ "multibody_tree_system.h", "multibody__tree__system_8h.html", "multibody__tree__system_8h" ],
-    [ "multibody_tree_topology.h", "multibody__tree__topology_8h.html", null ],
     [ "parameter_conversion.h", "parameter__conversion_8h.html", null ],
     [ "planar_joint.h", "planar__joint_8h.html", "planar__joint_8h" ],
     [ "planar_mobilizer.h", "planar__mobilizer_8h.html", "planar__mobilizer_8h" ],

@@ -755,8 +755,8 @@ var hierarchy =
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
     [ "PolygonSurfaceMesh< double >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
     [ "PolygonSurfaceMeshTest< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh_test.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -1215,8 +1215,8 @@ var hierarchy =
     ] ],
     [ "TimeStep", "structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html", null ],
     [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html", null ],
-    [ "traits", "classtraits.html", null ],
     [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
+    [ "traits", "classtraits.html", null ],
     [ "Traits< TrajectorySource >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html", null ],
     [ "Trajectory< T >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "BezierCurve< T >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],

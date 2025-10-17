@@ -1,6 +1,5 @@
 var NAVTREEINDEX63 =
 {
-"scenario_8h.html":[4,0,0,3,6,0],
 "scene__graph_8h.html":[4,0,0,4,50],
 "scene__graph_8h.html#a2cd789e30f5f05458d4bd224d606e24b":[4,0,0,4,50,0],
 "scene__graph__collision__checker_8h.html":[4,0,0,10,20],
@@ -29,15 +28,15 @@ var NAVTREEINDEX63 =
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,2,8],
 "schunk__wsg__trajectory__generator__state__vector_8h.html":[4,0,0,6,2,9],
 "scope__exit_8h.html":[4,0,0,1,60],
-"scoped__name_8h.html":[4,0,0,8,14,51],
+"scoped__name_8h.html":[4,0,0,8,14,50],
 "scoped__names_8h.html":[4,0,0,8,9,28],
 "scoped__names_8h.html#a07eb0d30ef1c7a69a12abe9fe8cd410f":[4,0,0,8,9,28,1],
 "scoped__names_8h.html#a37ec69bcf882465bc248dde89fef3f1c":[4,0,0,8,9,28,0],
 "scoped__singleton_8h.html":[4,0,0,1,61],
-"screw__joint_8h.html":[4,0,0,8,14,52],
-"screw__joint_8h.html#ae9239854b2818d09e23a1a098a646a16":[4,0,0,8,14,52,1],
-"screw__mobilizer_8h.html":[4,0,0,8,14,53],
-"screw__mobilizer_8h.html#a717c9d945a7527836bfeb6de3881f30f":[4,0,0,8,14,53,0],
+"screw__joint_8h.html":[4,0,0,8,14,51],
+"screw__joint_8h.html#ae9239854b2818d09e23a1a098a646a16":[4,0,0,8,14,51,1],
+"screw__mobilizer_8h.html":[4,0,0,8,14,52],
+"screw__mobilizer_8h.html#a717c9d945a7527836bfeb6de3881f30f":[4,0,0,8,14,52,0],
 "scs__clarabel__common_8h.html":[4,0,0,11,46],
 "scs__solver_8h.html":[4,0,0,11,47],
 "sdpa__free__format_8h.html":[4,0,0,11,48],
@@ -192,8 +191,8 @@ var NAVTREEINDEX63 =
 "spatial__derivative_8h.html#afebf465d77636f970101b962f87460af":[4,0,0,8,12,3,0],
 "spatial__force_8h.html":[4,0,0,8,5,2],
 "spatial__force_8h.html#ab01e3bfd2969f7633ec1ab14c3474d59":[4,0,0,8,5,2,2],
-"spatial__inertia_8h.html":[4,0,0,8,14,54],
-"spatial__inertia_8h.html#acfa0fb944ca6f5e790292bf6eacaa811":[4,0,0,8,14,54,2],
+"spatial__inertia_8h.html":[4,0,0,8,14,53],
+"spatial__inertia_8h.html#acfa0fb944ca6f5e790292bf6eacaa811":[4,0,0,8,14,53,2],
 "spatial__kinematics_8h.html":[4,0,0,8,12,4],
 "spatial__momentum_8h.html":[4,0,0,8,5,3],
 "spatial__momentum_8h.html#a656bebe8588828ae235b12c3772e54d8":[4,0,0,8,5,3,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX63 =
 "standard__operations_8h.html#a816394bf5c538b6334bb74b6888bdd75":[4,0,0,1,0,0,2,9],
 "standard__operations_8h.html#a833ebf7a5fa6f8c7201ca07ea5ec049c":[4,0,0,1,0,0,2,18],
 "standard__operations_8h.html#a849557ce3b5be163a80c435081991f29":[4,0,0,1,0,0,2,20],
-"standard__operations_8h.html#a890cc31617539b3f7af96f76a45c8ab1":[4,0,0,1,0,0,2,74]
+"standard__operations_8h.html#a890cc31617539b3f7af96f76a45c8ab1":[4,0,0,1,0,0,2,74],
+"standard__operations_8h.html#a8925da93374ae283a9fe286654be67f7":[4,0,0,1,0,0,2,58]
 };
