@@ -170,7 +170,6 @@ $(document).ready(function(){initNavTree('decompose_8h.html','');});
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="expression_8h.html">drake/common/symbolic/expression.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="symbolic_2polynomial_8h.html">drake/common/symbolic/polynomial.h</a>&quot;</code><br />
@@ -205,9 +204,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a5bfdbf915c3b1d2d0d13fa2110c97066"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a5bfdbf915c3b1d2d0d13fa2110c97066">ExtractAndAppendVariablesFromExpression</a> (const symbolic::Expression &amp;e, std::vector&lt; Variable &gt; *vars, std::unordered_map&lt; symbolic::Variable::Id, <a class="el" href="classint.html">int</a> &gt; *map_var_to_index)</td></tr>
 <tr class="memdesc:a5bfdbf915c3b1d2d0d13fa2110c97066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an expression <code>e</code>, extracts all variables inside <code>e</code>, appends these variables to <code>vars</code> if they are not included in <code>vars</code> yet.  <a href="namespacedrake_1_1symbolic.html#a5bfdbf915c3b1d2d0d13fa2110c97066">More...</a><br /></td></tr>
 <tr class="separator:a5bfdbf915c3b1d2d0d13fa2110c97066"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad528f8f92173863f5029b979b9c5f36b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad528f8f92173863f5029b979b9c5f36b">ExtractAndAppendVariablesFromExpression</a> (const symbolic::Expression &amp;e, VectorX&lt; Variable &gt; *vars, std::unordered_map&lt; symbolic::Variable::Id, <a class="el" href="classint.html">int</a> &gt; *map_var_to_index)</td></tr>
-<tr class="memdesc:ad528f8f92173863f5029b979b9c5f36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1symbolic.html#ad528f8f92173863f5029b979b9c5f36b">More...</a><br /></td></tr>
-<tr class="separator:ad528f8f92173863f5029b979b9c5f36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f9f98ac0c3db06d72227b0502cf8934"><td class="memItemLeft" align="right" valign="top">std::pair&lt; VectorX&lt; Variable &gt;, std::unordered_map&lt; symbolic::Variable::Id, <a class="el" href="classint.html">int</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4f9f98ac0c3db06d72227b0502cf8934">ExtractVariablesFromExpression</a> (const symbolic::Expression &amp;e)</td></tr>
 <tr class="memdesc:a4f9f98ac0c3db06d72227b0502cf8934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an expression <code>e</code>, extracts all variables inside <code>e</code>.  <a href="namespacedrake_1_1symbolic.html#a4f9f98ac0c3db06d72227b0502cf8934">More...</a><br /></td></tr>
 <tr class="separator:a4f9f98ac0c3db06d72227b0502cf8934"><td class="memSeparator" colspan="2">&#160;</td></tr>
