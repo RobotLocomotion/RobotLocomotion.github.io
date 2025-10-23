@@ -184,14 +184,15 @@ $(document).ready(function(){initNavTree('text__logging_8h.html','');});
 </pre><p>The format string syntax is fmtlib; see <a href="https://fmt.dev/latest/syntax.html">https://fmt.dev/latest/syntax.html</a>. (Note that the documentation link provides syntax for the latest version of fmtlib; the version of fmtlib used by Drake might be older.)</p>
 <p>When formatting an Eigen matrix into a string you must wrap the Eigen object with <a class="el" href="namespacedrake.html#aade4911b7e8d691ef345a2706012a878" title="When passing an Eigen::Matrix to fmt, use this wrapper function to instruct fmt to use Drake&#39;s custom...">fmt_eigen()</a>; see its documentation for details. This holds true whether it be for logging, error messages, etc.</p>
 <p>When logging a third-party type whose only affordance for string output is <code>operator&lt;&lt;</code>, use <a class="el" href="namespacedrake.html#ad285f98e4bc5cb78edaeb95800d56726" title="When using fmt &gt;= 9, this is an alias for fmt::streamed.">fmt_streamed()</a>; see its documentation for details. This is very rare (only a couple uses in Drake so far).</p>
-<p>When implementing a string output for a Drake type, eventually this page will demonstrate how to use fmt::formatter&lt;T&gt;. In the meantime, you can implement <code>operator&lt;&lt;</code> and use <a class="el" href="structdrake_1_1ostream__formatter.html" title="When using fmt &gt;= 9, this is an alias for fmt::ostream_formatter.">drake::ostream_formatter</a>, or else use the macro helper <a class="el" href="pixel__types_8h.html#a71e237783020d662652f8ab4fed9bd63">DRAKE_FORMATTER_AS()</a>. Grep around in Drake's existing code to find examples. </p>
+<p>When implementing a string output for a Drake type, eventually this page will demonstrate how to use fmt::formatter&lt;T&gt;. In the meantime, you can implement <code>operator&lt;&lt;</code> and use <a class="el" href="structdrake_1_1ostream__formatter.html" title="When using fmt &gt;= 9, this is an alias for fmt::ostream_formatter.">drake::ostream_formatter</a>, or else use the macro helper <a class="el" href="pixel__types_8h.html#a71e237783020d662652f8ab4fed9bd63">DRAKE_FORMATTER_AS()</a>. Grep around in Drake's existing code to find examples.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This file should only be included from cc files, not header files. Formatting a log messages is necessarily an expensive operation, so does not meet our style guide rules for inline functions. (This is enforced in CI by Drake's linter.) </dd></dl>
 </div><div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="fmt_8h.html">drake/common/fmt.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for text_logging.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="text__logging_8h__incl.svg" width="414" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="text__logging_8h__incl.svg" width="438" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">

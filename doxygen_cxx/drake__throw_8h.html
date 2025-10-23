@@ -158,68 +158,18 @@ $(document).ready(function(){initNavTree('drake__throw_8h.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">drake_throw.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides a convenient wrapper to throw an exception when a condition is unmet. </p>
-<p>This is similar to an assertion, but uses exceptions instead of <code>::abort()</code>, and cannot be disabled. </p>
-</div><div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for drake_throw.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="drake__throw_8h__incl.svg" width="228" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="drake__throw_8h__incl.svg" width="170" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="drake__throw_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a4d9c29b101212c8a886c7f4f1a8b71ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drake__throw_8h.html#a4d9c29b101212c8a886c7f4f1a8b71ca">DRAKE_THROW_UNLESS</a>(condition)</td></tr>
-<tr class="memdesc:a4d9c29b101212c8a886c7f4f1a8b71ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates <code>condition</code> and iff the value is false will throw an exception with a message showing at least the condition text, function name, file, and line.  <a href="#a4d9c29b101212c8a886c7f4f1a8b71ca">More...</a><br /></td></tr>
-<tr class="separator:a4d9c29b101212c8a886c7f4f1a8b71ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a4d9c29b101212c8a886c7f4f1a8b71ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d9c29b101212c8a886c7f4f1a8b71ca">&#9670;&nbsp;</a></span>DRAKE_THROW_UNLESS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DRAKE_THROW_UNLESS</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">condition</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                                                        \</div><div class="line">    typedef ::drake::assert::ConditionTraits&lt;                                 \</div><div class="line">        typename std::remove_cv_t&lt;decltype(condition)&gt;&gt;                       \</div><div class="line">        Trait;                                                                \</div><div class="line">    static_assert(Trait::is_valid, <span class="stringliteral">&quot;Condition should be bool-convertible.&quot;</span>);  \</div><div class="line">    static_assert(                                                            \</div><div class="line">        !std::is_pointer_v&lt;decltype(condition)&gt;,                              \</div><div class="line">        <span class="stringliteral">&quot;When using DRAKE_THROW_UNLESS on a raw pointer, always write out &quot;</span>   \</div><div class="line">        <span class="stringliteral">&quot;DRAKE_THROW_UNLESS(foo != nullptr), do not write DRAKE_THROW_UNLESS&quot;</span> \</div><div class="line">        <span class="stringliteral">&quot;(foo) and rely on implicit pointer-to-bool conversion.&quot;</span>);            \</div><div class="line">    if (!<a class="code" href="namespacedrake_1_1symbolic.html#a71af97c3ebea42d1b33aa8a41b975d0e">Trait::Evaluate</a>(condition)) {                                        \</div><div class="line">      ::drake::internal::Throw(#condition, __func__, __FILE__, __LINE__);     \</div><div class="line">    }                                                                         \</div><div class="line">  } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="namespacedrake_1_1symbolic_html_a71af97c3ebea42d1b33aa8a41b975d0e"><div class="ttname"><a href="namespacedrake_1_1symbolic.html#a71af97c3ebea42d1b33aa8a41b975d0e">drake::symbolic::Evaluate</a></div><div class="ttdeci">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, Expression &gt;, MatrixLikewise&lt; double, Derived &gt; &gt; Evaluate(const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const Environment &amp;env=Environment{}, RandomGenerator *random_generator=nullptr)</div><div class="ttdoc">Evaluates a symbolic matrix m using env and random_generator.</div><div class="ttdef"><b>Definition:</b> expression.h:1592</div></div>
-</div><!-- fragment -->
-<p>Evaluates <code>condition</code> and iff the value is false will throw an exception with a message showing at least the condition text, function name, file, and line. </p>
-<p>The condition must not be a pointer, where we'd implicitly rely on its nullness. Instead, always write out "!= nullptr" to be precise.</p>
-<p>Correct: <code>DRAKE_THROW_UNLESS(foo != nullptr);</code> Incorrect: <code><a class="el" href="drake__throw_8h.html#a4d9c29b101212c8a886c7f4f1a8b71ca" title="Evaluates condition and iff the value is false will throw an exception with a message showing at leas...">DRAKE_THROW_UNLESS(foo)</a>;</code></p>
-<p>Because this macro is intended to provide a useful exception message to users, we should err on the side of extra detail about the failure. The meaning of "foo" isolated within error message text does not make it clear that a null pointer is the proximate cause of the problem. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
 <div class="navpath">

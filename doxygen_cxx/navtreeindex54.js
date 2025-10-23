@@ -1,6 +1,5 @@
 var NAVTREEINDEX54 =
 {
-"event__status_8h.html":[4,0,0,12,3,22],
 "examples__py_8h.html":[4,0,0,0,0,2,0],
 "expect__equal_8h.html":[4,0,0,8,1,0,2],
 "expect__no__throw_8h.html":[4,0,0,1,4,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX54 =
 "find__resource_8h.html#aba46bdc3b7fb82b91593618e5f07f3ef":[4,0,0,1,35,3],
 "find__resource_8h.html#ac72eb43ba982b5a4d188c85aa14e0cc6":[4,0,0,1,35,2],
 "find__runfiles_8h.html":[4,0,0,1,36],
-"find__runfiles_8h.html#a31959859534962fde58709578f0df9b5":[4,0,0,1,36,1]
+"find__runfiles_8h.html#a31959859534962fde58709578f0df9b5":[4,0,0,1,36,1],
+"find__runfiles_8h.html#a9bdf00a0f32970352a90afbae0f4114a":[4,0,0,1,36,2]
 };

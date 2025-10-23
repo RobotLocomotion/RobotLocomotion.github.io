@@ -1,6 +1,5 @@
 var NAVTREEINDEX62 =
 {
-"quadrature_8h.html":[4,0,0,8,2,28],
 "quadrotor__geometry_8h.html":[4,0,0,3,13,0],
 "quadrotor__plant_8h.html":[4,0,0,3,13,1],
 "quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,13,1,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX62 =
 "scalar__view__dense__output_8h.html":[4,0,0,12,0,22],
 "scalar__view__dense__output_8h.html#abcac8e743bd971890eb3d1a7aca8b765":[4,0,0,12,0,22,1],
 "scenario_8h.html":[4,0,0,3,6,0],
-"scene__graph_8h.html":[4,0,0,4,50]
+"scene__graph_8h.html":[4,0,0,4,50],
+"scene__graph_8h.html#a2cd789e30f5f05458d4bd224d606e24b":[4,0,0,4,50,0]
 };

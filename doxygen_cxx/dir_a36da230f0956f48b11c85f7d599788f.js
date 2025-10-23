@@ -31,7 +31,7 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "drake_export.h", "drake__export_8h.html", "drake__export_8h" ],
     [ "drake_marker.h", "drake__marker_8h.html", null ],
     [ "drake_path.h", "drake__path_8h.html", "drake__path_8h" ],
-    [ "drake_throw.h", "drake__throw_8h.html", "drake__throw_8h" ],
+    [ "drake_throw.h", "drake__throw_8h.html", null ],
     [ "dummy_value.h", "dummy__value_8h.html", [
       [ "dummy_value", "structdrake_1_1dummy__value.html", "structdrake_1_1dummy__value" ],
       [ "dummy_value< int >", "structdrake_1_1dummy__value_3_01int_01_4.html", "structdrake_1_1dummy__value_3_01int_01_4" ]
