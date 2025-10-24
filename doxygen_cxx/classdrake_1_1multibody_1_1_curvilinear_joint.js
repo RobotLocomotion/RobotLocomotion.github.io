@@ -15,7 +15,7 @@ var classdrake_1_1multibody_1_1_curvilinear_joint =
     [ "get_default_distance", "classdrake_1_1multibody_1_1_curvilinear_joint.html#acdd77dfbc0e080359ecef4bdb5ddbc94", null ],
     [ "get_distance", "classdrake_1_1multibody_1_1_curvilinear_joint.html#a3bd796887f7a35ca20d5f63f54d94008", null ],
     [ "get_tangential_velocity", "classdrake_1_1multibody_1_1_curvilinear_joint.html#a500d0368970be2975daf66f79e0ece12", null ],
-    [ "get_trajectory", "classdrake_1_1multibody_1_1_curvilinear_joint.html#a127650d9753130b416ad9e43270696b6", null ],
+    [ "get_trajectory", "classdrake_1_1multibody_1_1_curvilinear_joint.html#a42d5c83da290219b8f1aa7861f7d1010", null ],
     [ "GetDamping", "classdrake_1_1multibody_1_1_curvilinear_joint.html#ac38f375c4ccf6b967a9dd6f58e6fa18e", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_curvilinear_joint.html#ae28f1226a0f1a739f0cf4ca370670c63", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_curvilinear_joint.html#ab2f6b9aac21f6df281ec46e170fc9da2", null ],
