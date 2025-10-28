@@ -490,16 +490,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ab2260cf3ba667393b29c3660bc26f29d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#ab2260cf3ba667393b29c3660bc26f29d">ReadObjToTriangleSurfaceMesh</a> (const <a class="el" href="classdrake_1_1geometry_1_1_mesh_source.html">MeshSource</a> &amp;mesh_source, <a class="el" href="classdouble.html">double</a> scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={})</td></tr>
 <tr class="memdesc:ab2260cf3ba667393b29c3660bc26f29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant that allows defining uniform scaling from a single scalar value.  <a href="#ab2260cf3ba667393b29c3660bc26f29d">More...</a><br /></td></tr>
 <tr class="separator:ab2260cf3ba667393b29c3660bc26f29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28568bada64f8cb591afdd11c12ccc72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a28568bada64f8cb591afdd11c12ccc72">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS</a> (class <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>)</td></tr>
-<tr class="separator:a28568bada64f8cb591afdd11c12ccc72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b6e179f892df67543be3028eae06fb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a1b6e179f892df67543be3028eae06fb9">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS</a> (class <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>)</td></tr>
-<tr class="separator:a1b6e179f892df67543be3028eae06fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2134db5f8753db883df9439aa2c38814"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a2134db5f8753db883df9439aa2c38814">operator==</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &amp;e1, const <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &amp;e2)</td></tr>
 <tr class="separator:a2134db5f8753db883df9439aa2c38814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15599d92370af7b991c4a593f6103376"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a15599d92370af7b991c4a593f6103376">operator!=</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &amp;e1, const <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &amp;e2)</td></tr>
 <tr class="separator:a15599d92370af7b991c4a593f6103376"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10fa27fe0b9855b1635e8c7aedf28f16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a10fa27fe0b9855b1635e8c7aedf28f16">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS</a> (class <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>)</td></tr>
-<tr class="separator:a10fa27fe0b9855b1635e8c7aedf28f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29a1f48b67c49f27ec19a89f37bd85ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a29a1f48b67c49f27ec19a89f37bd85ae">RefineVolumeMesh</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;mesh)</td></tr>
 <tr class="memdesc:a29a1f48b67c49f27ec19a89f37bd85ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refines a tetrahedral mesh to eliminate problematic simplices.  <a href="#a29a1f48b67c49f27ec19a89f37bd85ae">More...</a><br /></td></tr>
 <tr class="separator:a29a1f48b67c49f27ec19a89f37bd85ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1120,7 +1114,7 @@ Variables</h2></td></tr>
 <p>These are the properties required by the default point contact model. However, other contact models can opt to use these properties as well. Only the parameters that carry values will be added to the given set of <code>properties</code>; no default values will be provided. Downstream consumers of the contact materials can optionally provide defaults for missing properties.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <code>dissipation</code> is negative, <code>point_stiffness</code> is not positive, of any of the contact material properties have already been defined in `<code>properties</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>dissipation</code> is negative, <code>point_stiffness</code> is not positive, of any of the contact material properties have already been defined in <code>properties</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1278,60 +1272,6 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a28568bada64f8cb591afdd11c12ccc72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28568bada64f8cb591afdd11c12ccc72">&#9670;&nbsp;</a></span>DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">drake::geometry::DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS </td>
-          <td>(</td>
-          <td class="paramtype">class <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a10fa27fe0b9855b1635e8c7aedf28f16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10fa27fe0b9855b1635e8c7aedf28f16">&#9670;&nbsp;</a></span>DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">drake::geometry::DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS </td>
-          <td>(</td>
-          <td class="paramtype">class <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1b6e179f892df67543be3028eae06fb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b6e179f892df67543be3028eae06fb9">&#9670;&nbsp;</a></span>DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">drake::geometry::DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS </td>
-          <td>(</td>
-          <td class="paramtype">class <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

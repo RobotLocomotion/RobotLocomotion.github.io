@@ -312,7 +312,7 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 <p>The procedure one uses to formulate and solve this discretization problem is:</p><ol type="1">
 <li>Call <a class="el" href="classdrake_1_1examples_1_1rod2d_1_1_constraint_solver.html#ad8d80dcf394c39513981ef4cdaa16aae" title="Computes the base time-discretization of the system using the problem data, resulting in the MM and q...">ConstructBaseDiscretizedTimeLcp()</a></li>
 <li>Select an integration step size, dt</li>
-<li>Compute &lsquo;kᴺ&rsquo; and <code>kᴸ</code> in the problem data, accounting for dt as necessary</li>
+<li>Compute <code>kᴺ</code> and <code>kᴸ</code> in the problem data, accounting for dt as necessary</li>
 <li>Call <a class="el" href="classdrake_1_1examples_1_1rod2d_1_1_constraint_solver.html#a0c511f00c3492f83f243a4e211d3f97f" title="Updates the time-discretization of the LCP initially computed in ConstructBaseDiscretizedTimeLcp() us...">UpdateDiscretizedTimeLcp()</a>, obtaining MM and qq that encode the linear complementarity problem</li>
 <li>Solve the linear complementarity problem</li>
 <li>If LCP solved, quit.</li>

@@ -1,4 +1,0 @@
-var sine_8h =
-[
-    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "sine_8h.html#a4c8cea86f92f57f77cd87de30f53096f", null ]
-];

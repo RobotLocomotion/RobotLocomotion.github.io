@@ -9,6 +9,5 @@ var system__constraint_8h =
     [ "SystemConstraintType", "system__constraint_8h.html#aae3110b50a7cad6f8b6d2842f2177e0f", [
       [ "kEquality", "system__constraint_8h.html#aae3110b50a7cad6f8b6d2842f2177e0fa24f3db88d378f692d6d4de3357ccfce7", null ],
       [ "kInequality", "system__constraint_8h.html#aae3110b50a7cad6f8b6d2842f2177e0faad3bf38271b2a03f735e67b88923c432", null ]
-    ] ],
-    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "system__constraint_8h.html#ad97e0b61b78e2f875122a004e0c8bb8a", null ]
+    ] ]
 ];

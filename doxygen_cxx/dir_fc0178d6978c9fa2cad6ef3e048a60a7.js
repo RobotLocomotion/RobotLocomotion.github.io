@@ -36,8 +36,15 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
     [ "quadratic_form.h", "quadratic__form_8h.html", "quadratic__form_8h" ],
     [ "quaternion.h", "quaternion_8h.html", "quaternion_8h" ],
     [ "random_rotation.h", "random__rotation_8h.html", "random__rotation_8h" ],
-    [ "rigid_transform.h", "rigid__transform_8h.html", "rigid__transform_8h" ],
-    [ "roll_pitch_yaw.h", "roll__pitch__yaw_8h.html", "roll__pitch__yaw_8h" ],
+    [ "rigid_transform.h", "rigid__transform_8h.html", [
+      [ "RigidTransform", "classdrake_1_1math_1_1_rigid_transform.html", "classdrake_1_1math_1_1_rigid_transform" ],
+      [ "formatter< drake::math::RigidTransform< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html", null ]
+    ] ],
+    [ "roll_pitch_yaw.h", "roll__pitch__yaw_8h.html", [
+      [ "RotationMatrix", "classdrake_1_1math_1_1_rotation_matrix.html", "classdrake_1_1math_1_1_rotation_matrix" ],
+      [ "RollPitchYaw", "classdrake_1_1math_1_1_roll_pitch_yaw.html", "classdrake_1_1math_1_1_roll_pitch_yaw" ],
+      [ "formatter< drake::math::RollPitchYaw< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ]
+    ] ],
     [ "rotation_conversion_gradient.h", "rotation__conversion__gradient_8h.html", "rotation__conversion__gradient_8h" ],
     [ "rotation_matrix.h", "rotation__matrix_8h.html", "rotation__matrix_8h" ],
     [ "soft_min_max.h", "soft__min__max_8h.html", "soft__min__max_8h" ],

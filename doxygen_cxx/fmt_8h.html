@@ -282,10 +282,10 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">TEMPLATE_ARGS</td><td>The optional first argument <code>TEMPLATE_ARGS</code> can be used in case the <code>TYPE</code> is templated, e.g., it might commonly be set to <code>typename T</code>. It should be left empty when the TYPE is not templated. In case <code>TYPE</code> has multiple template arguments, note that macros will fight with commas so you should use <code>typename... Ts</code> instead of writing them all out.</td></tr>
-    <tr><td class="paramname">NAMESPACE</td><td>The namespace that encloses the <code>TYPE</code> being formatted. Cannot be empty. For nested namespaces, use intemediate colons, e.g., <code>drake::common</code>. Do not place <em>leading</em> colons on the <code>NAMESPACE</code>.</td></tr>
+    <tr><td class="paramname">NAMESPACE</td><td>The namespace that encloses the <code>TYPE</code> being formatted. Cannot be empty. For nested namespaces, use intermediate colons, e.g., <code>drake::common</code>. Do not place <em>leading</em> colons on the <code>NAMESPACE</code>.</td></tr>
     <tr><td class="paramname">TYPE</td><td>The class name (or struct name, or enum name, etc.) being formatted. Do not place <em>leading</em> double-colons on the <code>TYPE</code>. If the type is templated, use the template arguments here, e.g., <code>MyOptional&lt;T&gt;</code> if <code>TEMPLATE_ARGS</code> was chosen as <code>typename T</code>.</td></tr>
     <tr><td class="paramname">ARG</td><td>A placeholder variable name to use for the value (i.e., object) being formatted within the <code>EXPR</code> expression.</td></tr>
-    <tr><td class="paramname">EXPR</td><td>An expression to <code>return</code> from the format_as function; it can refer to the given <code>ARG</code> name which will be of type <code>const TYPE&amp; ARG</code>.</td></tr>
+    <tr><td class="paramname">EXPR</td><td>An expression to <code>return</code> from the format_as function; it can refer to the given <code>ARG</code> name which will be of type <code>const TYPE&amp; ARG</code>. The evaluated expression can only ever throw exceptions that <code>std::string</code>'s default allocator might throw (i.e., <code>std::bad_alloc</code>).</td></tr>
   </table>
   </dd>
 </dl>

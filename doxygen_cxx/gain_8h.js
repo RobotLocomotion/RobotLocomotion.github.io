@@ -1,4 +1,0 @@
-var gain_8h =
-[
-    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "gain_8h.html#ab54d8521ad36fefbb35d9bb1947f91c5", null ]
-];

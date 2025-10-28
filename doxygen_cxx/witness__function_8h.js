@@ -7,6 +7,5 @@ var witness__function_8h =
       [ "kPositiveThenNonPositive", "witness__function_8h.html#afe8fe136944074e97f02b7e3835347b3acf58431ee9a2c159a03fbfb7721eebd7", null ],
       [ "kNegativeThenNonNegative", "witness__function_8h.html#afe8fe136944074e97f02b7e3835347b3a6ccaf3b73e3536490f4d0145731c89d0", null ],
       [ "kCrossesZero", "witness__function_8h.html#afe8fe136944074e97f02b7e3835347b3ae2ea39b7ef80705cf65b9c6497eb2705", null ]
-    ] ],
-    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "witness__function_8h.html#af981a98336579483286f5cbc198cafde", null ]
+    ] ]
 ];

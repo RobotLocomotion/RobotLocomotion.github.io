@@ -12882,7 +12882,18 @@ we do not provide operator*= function for this class, since operator*= would ret
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">y</td><td>The bilinear product between <code>x</code> and <code>y</code> will be replaced by the corresponding term in <code>W. @throws std::exception if</code>y` contains duplicate entries. </td></tr>
+    <tr><td class="paramname">y</td><td>The bilinear product between <code>x</code> and <code>y</code> will be replaced by the corresponding term in <code>W</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>y</code> contains duplicate entries. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramname">W</td><td>Bilinear product term x(i) * y(j) will be replaced by W(i, j). If W(i,j) is not a single variable, but an expression, then this expression cannot contain a variable in either x or y. </td></tr>
   </table>
   </dd>
@@ -13822,7 +13833,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 </div><div class="memdoc">
 
 <p>Calls visitor object <code>v</code> with a symbolic-expression <code>e</code>, and arguments <code>args</code>. </p>
-<p>Visitor object is expected to implement the following methods which take <code>f</code> and <code>args:</code> <code>VisitConstant</code>, <code>VisitVariable</code>, <code>VisitAddition</code>, <code>VisitMultiplication</code>, <code>VisitDivision</code>, <code>VisitLog</code>, <code>VisitAbs</code>, <code>VisitExp</code>, <code>VisitSqrt</code>, <code>VisitPow</code>, <code>VisitSin</code>, <code>VisitCos</code>, <code>VisitTan</code>, <code>VisitAsin</code>, <code>VisitAtan</code>, <code>VisitAtan2</code>, <code>VisitSinh</code>, <code>VisitCosh</code>, <code>VisitTanh</code>, <code>VisitMin</code>, <code>VisitMax</code>, <code>VisitCeil</code>, <code>VisitFloor</code>, <code>VisitIfThenElse</code>, `VisitUninterpretedFunction.</p>
+<p>Visitor object is expected to implement the following methods which take <code>f</code> and <code>args:</code> <code>VisitConstant</code>, <code>VisitVariable</code>, <code>VisitAddition</code>, <code>VisitMultiplication</code>, <code>VisitDivision</code>, <code>VisitLog</code>, <code>VisitAbs</code>, <code>VisitExp</code>, <code>VisitSqrt</code>, <code>VisitPow</code>, <code>VisitSin</code>, <code>VisitCos</code>, <code>VisitTan</code>, <code>VisitAsin</code>, <code>VisitAtan</code>, <code>VisitAtan2</code>, <code>VisitSinh</code>, <code>VisitCosh</code>, <code>VisitTanh</code>, <code>VisitMin</code>, <code>VisitMax</code>, <code>VisitCeil</code>, <code>VisitFloor</code>, <code>VisitIfThenElse</code>, <code>VisitUninterpretedFunction</code>.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if NaN is detected during a visit. </td></tr>

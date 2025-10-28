@@ -5,6 +5,5 @@ var force__density__field__base_8h =
     [ "ForceDensityType", "force__density__field__base_8h.html#a0f77dfd6828c43977a6b9f8aa6bccdba", [
       [ "kPerCurrentVolume", "force__density__field__base_8h.html#a0f77dfd6828c43977a6b9f8aa6bccdbaa4ccd18823739ddc388e14df7c3386dcd", null ],
       [ "kPerReferenceVolume", "force__density__field__base_8h.html#a0f77dfd6828c43977a6b9f8aa6bccdbaa6cdc8cc6c28d212d5a0000e6b3f20d4c", null ]
-    ] ],
-    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "force__density__field__base_8h.html#a8476ce01b8ed9e2c8748ef246cb1ddd8", null ]
+    ] ]
 ];

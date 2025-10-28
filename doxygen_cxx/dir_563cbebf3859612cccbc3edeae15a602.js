@@ -18,8 +18,8 @@ var dir_563cbebf3859612cccbc3edeae15a602 =
     [ "sap_limit_constraint.h", "sap__limit__constraint_8h.html", null ],
     [ "sap_model.h", "sap__model_8h.html", null ],
     [ "sap_pd_controller_constraint.h", "sap__pd__controller__constraint_8h.html", null ],
-    [ "sap_solver.h", "sap__solver_8h.html", "sap__solver_8h" ],
-    [ "sap_solver_results.h", "sap__solver__results_8h.html", "sap__solver__results_8h" ],
+    [ "sap_solver.h", "sap__solver_8h.html", null ],
+    [ "sap_solver_results.h", "sap__solver__results_8h.html", null ],
     [ "sap_tendon_constraint.h", "sap__tendon__constraint_8h.html", null ],
     [ "sap_weld_constraint.h", "sap__weld__constraint_8h.html", null ],
     [ "validate_constraint_gradients.h", "validate__constraint__gradients_8h.html", null ]

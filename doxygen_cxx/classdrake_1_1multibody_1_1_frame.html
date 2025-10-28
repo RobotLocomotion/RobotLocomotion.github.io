@@ -645,7 +645,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Given the offset pose <code>X_FQ</code> of a frame Q in <code>this</code> frame F, this method computes the pose <code>X_BQ</code> of frame Q in the body frame B to which this frame is attached. </p>
-<p>In other words, if the pose of <code>this</code> frame F in the body frame B is <code>X_BF</code>, this method computes the pose <code>X_BQ</code> of frame Q in the body frame B as <code>X_BQ = X_BF * X_FQ</code>. In particular, if <code>this</code> <b>is</b><code>the body frame B, i.e.</code>X_BF<code>is the identity transformation, this method directly returns</code>X_FQ`. Specific frame subclasses can override this method to provide faster implementations if needed. </p>
+<p>In other words, if the pose of <code>this</code> frame F in the body frame B is <code>X_BF</code>, this method computes the pose <code>X_BQ</code> of frame Q in the body frame B as <code>X_BQ = X_BF * X_FQ</code>. In particular, if <code>this</code> <b>is</b> the body frame B, i.e. <code>X_BF</code> is the identity transformation, this method directly returns <code>X_FQ</code>. Specific frame subclasses can override this method to provide faster implementations if needed. </p>
 
 </div>
 </div>

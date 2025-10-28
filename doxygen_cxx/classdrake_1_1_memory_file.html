@@ -192,7 +192,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8a9f91a7db6a15fc542f14aa08c8e563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the checksum of <code>this</code> instance's <code><a class="el" href="classdrake_1_1_memory_file.html#aac55a4c9da45bab272bb34692d583206" title="Returns the file&#39;s contents.">contents()</a></code>.  <a href="#a8a9f91a7db6a15fc542f14aa08c8e563">More...</a><br /></td></tr>
 <tr class="separator:a8a9f91a7db6a15fc542f14aa08c8e563"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5354f0e22967b675dd8623cecde51f5b"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_memory_file.html#a5354f0e22967b675dd8623cecde51f5b">filename_hint</a> () const</td></tr>
-<tr class="memdesc:a5354f0e22967b675dd8623cecde51f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the notional "filename" for this file`.  <a href="#a5354f0e22967b675dd8623cecde51f5b">More...</a><br /></td></tr>
+<tr class="memdesc:a5354f0e22967b675dd8623cecde51f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the notional "filename" for this <code>file</code>.  <a href="#a5354f0e22967b675dd8623cecde51f5b">More...</a><br /></td></tr>
 <tr class="separator:a5354f0e22967b675dd8623cecde51f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad337b3f5cb6821e21e26c3696144faaa"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_memory_file.html#ad337b3f5cb6821e21e26c3696144faaa">to_string</a> (<a class="el" href="classint.html">int</a> contents_limit=100) const</td></tr>
 <tr class="memdesc:ad337b3f5cb6821e21e26c3696144faaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation.  <a href="#ad337b3f5cb6821e21e26c3696144faaa">More...</a><br /></td></tr>
@@ -414,7 +414,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the notional "filename" for this file`. </p>
+<p>Returns the notional "filename" for this <code>file</code>. </p>
 
 </div>
 </div>
@@ -443,7 +443,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates an instance of MemoryFile from the file located at the given <code>path</code>. </p>
-<p>The <a class="el" href="classdrake_1_1_memory_file.html#a5354f0e22967b675dd8623cecde51f5b" title="Returns the notional &quot;filename&quot; for this file`.">filename_hint()</a> will be the stringified path. Making a MemoryFile computes the hash of its contents. If all you want is the contents, use <a class="el" href="namespacedrake.html#aba46bdc3b7fb82b91593618e5f07f3ef" title="Returns the content of the file at the given path, or nullopt if it cannot be read.">drake::ReadFile()</a> or <a class="el" href="namespacedrake.html#a58e6a26a245fb8e4ea4fcf6c21f67f96" title="Returns the content of the file at the given path, or throws if it cannot be read.">drake::ReadFileOrThrow()</a> instead. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>The <a class="el" href="classdrake_1_1_memory_file.html#a5354f0e22967b675dd8623cecde51f5b" title="Returns the notional &quot;filename&quot; for this file.">filename_hint()</a> will be the stringified path. Making a MemoryFile computes the hash of its contents. If all you want is the contents, use <a class="el" href="namespacedrake.html#aba46bdc3b7fb82b91593618e5f07f3ef" title="Returns the content of the file at the given path, or nullopt if it cannot be read.">drake::ReadFile()</a> or <a class="el" href="namespacedrake.html#a58e6a26a245fb8e4ea4fcf6c21f67f96" title="Returns the content of the file at the given path, or throws if it cannot be read.">drake::ReadFileOrThrow()</a> instead. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the file at <code>path</code> cannot be read. </td></tr>
   </table>

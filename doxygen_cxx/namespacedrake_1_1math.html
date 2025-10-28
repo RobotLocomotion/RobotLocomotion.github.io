@@ -2916,7 +2916,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </p>
 <p> (f: R^n*m -&gt; R^p*q) can be extracted. </p>
 <p>The derivative vector for each AutoDiffScalar in the output contains the derivatives with respect to all components of the argument \( x \).</p>
-<p>The return type of this function is a matrix with the &lsquo;best&rsquo; possible AutoDiffScalar scalar type, in the following sense:</p><ul>
+<p>The return type of this function is a matrix with the 'best' possible AutoDiffScalar scalar type, in the following sense:</p><ul>
 <li>If the number of derivatives can be determined at compile time, the AutoDiffScalar derivative vector will have that fixed size.</li>
 <li>If the maximum number of derivatives can be determined at compile time, the AutoDiffScalar derivative vector will have that maximum fixed size.</li>
 <li>If neither the number, nor the maximum number of derivatives can be determined at compile time, the output AutoDiffScalar derivative vector will be dynamically sized.</li>
