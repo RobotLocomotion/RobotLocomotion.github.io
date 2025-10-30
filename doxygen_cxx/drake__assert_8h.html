@@ -165,13 +165,27 @@ $(document).ready(function(){initNavTree('drake__assert_8h.html','');});
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides Drake's assertion implementation. </p>
-<p>This is intended to be used both within Drake and by other software. Drake's asserts can be armed and disarmed independently from the system-wide asserts. </p>
-</div><div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
+<div class="textblock"><p>Provides Drake's assertion mechanics. </p>
+<p>They come in two flavors:</p><ul>
+<li>Double checking developer assumptions<ul>
+<li>DRAKE_ASSERT can be armed or disarmed independently from the system-wide asserts.</li>
+<li>DRAKE_DEMAND is similar to DRAKE_ASSERT but is always armed.</li>
+</ul>
+</li>
+<li>Testing user inputs<ul>
+<li>DRAKE_THROW_UNLESS is similar to DRAKE_DEMAND, but uses exceptions instead of <code>::abort()</code>. These are intended to be used both within Drake and by other software. </li>
+</ul>
+</li>
+</ul>
+</div><div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for drake_assert.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="drake__assert_8h__incl.svg" width="170" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="drake__assert_8h__incl.svg" width="430" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">

@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1benchmarks_
 <div class="textblock"><p>The purpose of the FreeBody class is to provide the data (initial values and gravity) and methods for calculating the exact analytical solution for the translational and rotational motion of a torque-free rigid body B with axially symmetric inertia, in a Newtonian frame (World) N. </p>
 <p>Examples of bodies with axially symmetric inertia include cylinders, rods or bars with a circular or square cross section and spinning tops. Since the only external forces on B are uniform gravitational forces, there exists an exact closed-form analytical solution for B's motion. The closed- form rotational solution is available since B is "torque-free", i.e., the moment of all forces about B's mass center is zero. This class calculates the body B's quaternion, angular velocity and angular acceleration expressed in B (body-frame) as well as the position, velocity, acceleration of Bcm (B's center of mass) in N (World). Algorithm from [Kane, 1983] Sections 1.13 and 3.1, Pages 60-62 and 159-169.</p>
 <ul>
-<li>[Kane, 1983] "Spacecraft Dynamics," McGraw-Hill Book Co., New York, 1983. (with P. W. Likins and D. A. Levinson). Available for free .pdf download: <a href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a> </li>
+<li>[Kane, 1983] "Spacecraft Dynamics," McGraw-Hill Book Co., New York, 1983 (with P. W. Likins and D. A. Levinson). Available for free .pdf download: <a href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a> </li>
 </ul>
 </div>
 <p><code>#include &lt;drake/multibody/benchmarks/free_body/free_body.h&gt;</code></p>
@@ -383,10 +383,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns angular rates associated with spin <code>s</code> and precession <code>p</code> from the analytical solution [Kane, 1983] for rotational motion (angular velocity and quaternion) for torque-free motion of an axis-symmetric rigid body B in a Newtonian frame (World). </p>
 <p>Kane's solution for B's angular velocity <code>wx*Bx + wy*By + wz*Bz</code> is in terms of initial values wx0, wy0, wz0 as wx = wx0 * cos(s * t) + wy0 * sin(s * t) wy = -wx0 * sin(s * t) + wy0 * cos(s * t) wz = wz0 For more information, see [Kane, 1983] Pages 60-62 and 159-169. </p><dl class="section note"><dt>Note</dt><dd>the return value of <code>s</code> may be negative, zero, or positive, whereas the return value of <code>p</code> is nonnegative. The values of <code>s</code> and <code>p</code> are returned in units of radian/second.</dd></dl>
 <ul>
-<li>[Kane, 1983] "Spacecraft Dynamics," McGraw-Hill Book Co., New York,<ol type="1">
-<li>(with P. W. Likins and D. A. Levinson). Available for free .pdf download: <a href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a> </li>
-</ol>
-</li>
+<li>[Kane, 1983] "Spacecraft Dynamics," McGraw-Hill Book Co., New York, 1983 (with P. W. Likins and D. A. Levinson). Available for free .pdf download: <a href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a> </li>
 </ul>
 
 </div>
@@ -454,16 +451,19 @@ Public Member Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This function allows for initial misalignment of Nx, Ny, Nz and Bx, By, Bz.</dd></dl>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">std::tuple  </th><th class="markdownTableHeadNone">Description   </th></tr>
+<th class="markdownTableHeadNone">Return values  </th><th class="markdownTableHeadNone">Description   </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">quat_NB  </td><td class="markdownTableBodyNone">Quaternion relating frame N to frame B: [e0, e1, e2, e3]   </td></tr>
+<td class="markdownTableBodyNone">quat_NB  </td><td class="markdownTableBodyNone">Quaternion [e0, e1, e2, e3] relating frame N to frame B.   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">quatDt  </td><td class="markdownTableBodyNone">Time-derivative of quat_NB, i.e., [ė0, ė1, ė2, ė3].   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">w_NB_B  </td><td class="markdownTableBodyNone">B's angular velocity in N, expressed in B.   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">alpha_NB_B  </td><td class="markdownTableBodyNone">B's angular acceleration in N, expressed in B.   </td></tr>
 </table>
-<p>| Note: quat_NB is analogous to the rotation matrix R_NB. quatDt | Time-derivative of <code>quat_NB</code>, i.e., [ė0, ė1, ė2, ė3]. w_NB_B | B's angular velocity in N, expressed in B. alpha_NB_B | B's angular acceleration in N, expressed in B.</p>
+<p>Note: quat_NB is analogous to the rotation matrix R_NB.</p>
 <ul>
-<li>[Kane, 1983] "Spacecraft Dynamics," McGraw-Hill Book Co., New York,<ol type="1">
-<li>(with P. W. Likins and D. A. Levinson). Available for free .pdf download: <a href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a> </li>
-</ol>
-</li>
+<li>[Kane, 1983] "Spacecraft Dynamics," McGraw-Hill Book Co., New York, 1983 (with P. W. Likins and D. A. Levinson). Available for free .pdf download: <a href="https://ecommons.cornell.edu/handle/1813/637">https://ecommons.cornell.edu/handle/1813/637</a> </li>
 </ul>
 
 </div>
