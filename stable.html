@@ -404,15 +404,30 @@ details.</p>
 on an ongoing basis. That generally means that your OS must be no more than
 ~2-4 years old for Ubuntu, or ~2 years old for macOS.</p>
 
-<p>On Ubuntu, Drake only intends to support Ubuntu’s default version of Python (at
-<code class="language-plaintext highlighter-rouge">/usr/bin/python3</code>), except when installing from pip in which case any newer
-version is also intended to be supported. This is consistent with
-<a href="https://numpy.org/neps/nep-0029-deprecation_policy.html">NEP-29</a>.</p>
+<p>Refer to <a href="/installation.html">Installation and Quickstart</a> for the current
+details, and <a href="/release_notes/end_of_support.html">End of support releases</a>
+for historical details.</p>
 
-<p>On macOS, Drake only intends to support the one newest version of Python
-available via Homebrew.
-See <a href="https://github.com/RobotLocomotion/drake/issues/18791">#18791</a> for a
-discussion of possible improvements.</p>
+<h1 id="python-support">Python support</h1>
+
+<p>On Ubuntu when installing from PyPI, Drake intends to support many versions of
+Python, up to and including the most recent version at the time of our release.
+The <em>oldest</em> version of Python we intend to support is the penultimate Ubuntu
+LTS’s default Python version at the time of our release. This is consistent with
+<a href="https://numpy.org/neps/nep-0029-deprecation_policy.html">NEP-29</a>. We hope that
+our <code class="language-plaintext highlighter-rouge">manylinux</code> wheels are able to install and run on non-Ubuntu Linux, but it
+is not tested (and thus, unsupported).</p>
+
+<p>On Ubuntu when installing a binary package (<code class="language-plaintext highlighter-rouge">*.tar.gz</code>), Drake intends to
+support only Ubuntu’s default version of Python (at <code class="language-plaintext highlighter-rouge">/usr/bin/python3</code>).</p>
+
+<p>On macOS when installing from PyPI, Drake intends to support the most recent two
+versions Python at the time of our release. This range is shorter than NEP-29’s
+recommended window, but is the best we can do for now. (This may improve once
+<a href="https://github.com/RobotLocomotion/drake/issues/23683">#23683</a> is finished.)</p>
+
+<p>On macOS when installing a binary package (<code class="language-plaintext highlighter-rouge">*.tar.gz</code>), Drake intends to
+support only Homebrew’s newest version of Python at the time of our release.</p>
 
 <p>Refer to <a href="/installation.html">Installation and Quickstart</a> for the current
 details, and <a href="/release_notes/end_of_support.html">End of support releases</a>

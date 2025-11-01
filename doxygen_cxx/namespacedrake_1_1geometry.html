@@ -556,6 +556,12 @@ Variables</h2></td></tr>
 <tr class="memitem:a6a949953d76af52d6dd1b13417cb556a"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a6a949953d76af52d6dd1b13417cb556a">kHasRenderEngineGl</a></td></tr>
 <tr class="memdesc:a6a949953d76af52d6dd1b13417cb556a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the availability of the RenderEngineGl implementation.  <a href="#a6a949953d76af52d6dd1b13417cb556a">More...</a><br /></td></tr>
 <tr class="separator:a6a949953d76af52d6dd1b13417cb556a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd7e8fb90454c8f7fa6e5dad3afbb59"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a7cd7e8fb90454c8f7fa6e5dad3afbb59">kHasRenderEngineGltfClient</a></td></tr>
+<tr class="memdesc:a7cd7e8fb90454c8f7fa6e5dad3afbb59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the availability of the RenderEngineGltfClient implementation.  <a href="#a7cd7e8fb90454c8f7fa6e5dad3afbb59">More...</a><br /></td></tr>
+<tr class="separator:a7cd7e8fb90454c8f7fa6e5dad3afbb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a8c891d80ef7ca189d701d976d65d1f"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a8a8c891d80ef7ca189d701d976d65d1f">kHasRenderEngineVtk</a></td></tr>
+<tr class="memdesc:a8a8c891d80ef7ca189d701d976d65d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the availability of the RenderEngineVtk implementation.  <a href="#a8a8c891d80ef7ca189d701d976d65d1f">More...</a><br /></td></tr>
+<tr class="separator:a8a8c891d80ef7ca189d701d976d65d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="acbab8995daa433cebfc335ffe8ae8fd0"></a>
@@ -1371,9 +1377,15 @@ Variables</h2></td></tr>
 <ol type="1">
 <li>See <a class="el" href="group__allow__network.html">DRAKE_ALLOW_NETWORK</a> for an environment variable option to deny remote rendering entirely.</li>
 <li>If you intend to have your rendering take place in a threaded context, you <b>must</b> instantiate this RenderEngine via MakeRenderEngineGltfClient from the main thread <b>before</b> spawning your threaded workers. As soon as one of these RenderEngine instances has been constructed, libcurl will have been initialized. <div class="fragment"><div class="line"><span class="comment">// Setup your server information and create the RenderEngine.  This must</span></div><div class="line"><span class="comment">// be done in a non-threaded context (e.g., at the program start).</span></div><div class="line">RenderEngineGltfClientParams params;</div><div class="line">params.base_url = <span class="stringliteral">&quot;http://some-server.url&quot;</span>;</div><div class="line"><span class="keyword">auto</span> render_engine = <a class="code" href="namespacedrake_1_1geometry.html#a99ba06b63779a45d0b347f3b6321ac43">MakeRenderEngineGltfClient</a>(params);</div><div class="line"></div><div class="line"><span class="comment">// After MakeRenderEngineGltfClient() function call, libcurl has been</span></div><div class="line"><span class="comment">// initialized and you may now create threads if desired.</span></div></div><!-- fragment --></li>
-<li>If you need to use a different initialization strategy for libcurl in your application, you should first create the RenderEngine using MakeRenderEngineGltfClient, then manually call <a href="https://curl.se/libcurl/c/curl_global_cleanup.html"><code>curl_global_cleanup()</code></a>, followed by manually calling <a href="https://curl.se/libcurl/c/curl_global_init.html"><code>curl_global_init(...)</code></a> with your desired flags. In general, this scenario is <b>atypical</b> and you should not need to worry about this. Applications with specialized libcurl needs, though, must understand the construction and initialization order to be able to modify the behavior to suit their needs. <div class="fragment"><div class="line"><span class="comment">// Follow the steps above to construct the RenderEngine given the</span></div><div class="line"><span class="comment">// specified RenderEngineGltfClientParams.</span></div><div class="line"></div><div class="line"><span class="comment">// Libcurl has been initialized at this point, so your application needs</span></div><div class="line"><span class="comment">// to reset and re-initialize curl again.</span></div><div class="line">curl_global_cleanup();</div><div class="line">curl_global_init(...);  <span class="comment">// &lt;&lt;&lt; your custom flags here</span></div><div class="line"></div><div class="line"><span class="comment">// Now that libcurl has been re-initialized to suit your application&#39;s</span></div><div class="line"><span class="comment">// needs, you may now create threads if desired.</span></div></div><!-- fragment --> </li>
+<li>If you need to use a different initialization strategy for libcurl in your application, you should first create the RenderEngine using MakeRenderEngineGltfClient, then manually call <a href="https://curl.se/libcurl/c/curl_global_cleanup.html"><code>curl_global_cleanup()</code></a>, followed by manually calling <a href="https://curl.se/libcurl/c/curl_global_init.html"><code>curl_global_init(...)</code></a> with your desired flags. In general, this scenario is <b>atypical</b> and you should not need to worry about this. Applications with specialized libcurl needs, though, must understand the construction and initialization order to be able to modify the behavior to suit their needs. <div class="fragment"><div class="line"><span class="comment">// Follow the steps above to construct the RenderEngine given the</span></div><div class="line"><span class="comment">// specified RenderEngineGltfClientParams.</span></div><div class="line"></div><div class="line"><span class="comment">// Libcurl has been initialized at this point, so your application needs</span></div><div class="line"><span class="comment">// to reset and re-initialize curl again.</span></div><div class="line">curl_global_cleanup();</div><div class="line">curl_global_init(...);  <span class="comment">// &lt;&lt;&lt; your custom flags here</span></div><div class="line"></div><div class="line"><span class="comment">// Now that libcurl has been re-initialized to suit your application&#39;s</span></div><div class="line"><span class="comment">// needs, you may now create threads if desired.</span></div></div><!-- fragment --></li>
 </ol>
 </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if kHasRenderEngineGltfClient is false, or if disabled via the environment variable DRAKE_ALLOW_NETWORK. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1426,7 +1438,13 @@ Variables</h2></td></tr>
 </table>
 <p>⁵ When the label property is not set, RenderEngineVtk uses a default render label of RenderLabel::kDontCare.</p>
 <h3>Geometries accepted by RenderEngineVtk</h3>
-<p>As documented in RenderEngine::RegisterVisual(), a RenderEngine implementation can use the properties found in the <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html" title="The set of properties for geometry used in a &quot;perception&quot; role.">PerceptionProperties</a> to determine whether it <em>accepts</em> a shape provided for registration. RenderEngineVtk makes use of defaults to accept <em>all</em> geometries (assuming the properties pass validation, e.g., render label validation). </p>
+<p>As documented in RenderEngine::RegisterVisual(), a RenderEngine implementation can use the properties found in the <a class="el" href="classdrake_1_1geometry_1_1_perception_properties.html" title="The set of properties for geometry used in a &quot;perception&quot; role.">PerceptionProperties</a> to determine whether it <em>accepts</em> a shape provided for registration. RenderEngineVtk makes use of defaults to accept <em>all</em> geometries (assuming the properties pass validation, e.g., render label validation).</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if kHasRenderEngineVtk is false. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1793,6 +1811,38 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reports the availability of the RenderEngineGl implementation. </p>
+
+</div>
+</div>
+<a id="a7cd7e8fb90454c8f7fa6e5dad3afbb59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd7e8fb90454c8f7fa6e5dad3afbb59">&#9670;&nbsp;</a></span>kHasRenderEngineGltfClient</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kHasRenderEngineGltfClient</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the availability of the RenderEngineGltfClient implementation. </p>
+
+</div>
+</div>
+<a id="a8a8c891d80ef7ca189d701d976d65d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a8c891d80ef7ca189d701d976d65d1f">&#9670;&nbsp;</a></span>kHasRenderEngineVtk</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kHasRenderEngineVtk</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the availability of the RenderEngineVtk implementation. </p>
 
 </div>
 </div>

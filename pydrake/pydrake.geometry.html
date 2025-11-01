@@ -4601,7 +4601,15 @@ the behavior to suit their needs.</p>
 <span class="c1">// needs, you may now create threads if desired.</span>
 </pre></div>
 </div>
-</details><p>[libcurl]: <a class="reference external" href="https://curl.se/libcurl/">https://curl.se/libcurl/</a> [libcurl_threadsafe]:
+</details><dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if kHasRenderEngineGltfClient is false</strong><strong>, or </strong><strong>if</strong> – </p></li>
+<li><p><strong>disabled via the environment variable DRAKE_ALLOW_NETWORK.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>[libcurl]: <a class="reference external" href="https://curl.se/libcurl/">https://curl.se/libcurl/</a> [libcurl_threadsafe]:
 <a class="reference external" href="https://curl.se/libcurl/c/threadsafe.html">https://curl.se/libcurl/c/threadsafe.html</a> [libcurl_init]:
 <a class="reference external" href="https://curl.se/libcurl/c/curl_global_init.html">https://curl.se/libcurl/c/curl_global_init.html</a> [libcurl_cleanup]:
 <a class="reference external" href="https://curl.se/libcurl/c/curl_global_cleanup.html">https://curl.se/libcurl/c/curl_global_cleanup.html</a></p>
@@ -4678,6 +4686,10 @@ PerceptionProperties to determine whether it <em>accepts</em> a shape
 provided for registration. RenderEngineVtk makes use of defaults to
 accept <em>all</em> geometries (assuming the properties pass validation,
 e.g., render label validation).</p>
+<dl class="field-list simple">
+<dt class="field-odd">raises RuntimeError if kHasRenderEngineVtk is false.<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
 </section>
 </dd></dl>
 
