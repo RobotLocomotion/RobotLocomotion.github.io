@@ -6170,8 +6170,7 @@ solution.</p>
 <span class="w">   </span><span class="n">GurobiSolver</span><span class="w"> </span><span class="n">solver</span><span class="p">;</span>
 <span class="w">   </span><span class="c1">// Explicitly tell the solver to compute the dual solution for Lorentz</span>
 <span class="w">   </span><span class="c1">// cone or rotated Lorentz cone constraint, check</span>
-<span class="w">   </span><span class="c1">//</span>
-<span class="nl">https</span><span class="p">:</span><span class="c1">//docs.gurobi.com/projects/optimizer/en/12.0/reference/parameters.html#qcpdual</span>
+<span class="w">   </span><span class="c1">// https://docs.gurobi.com/projects/optimizer/en/12.0/reference/parameters.html#qcpdual</span>
 <span class="w">   </span><span class="c1">// for more information.</span>
 <span class="w">   </span><span class="n">SolverOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
 <span class="w">   </span><span class="n">options</span><span class="p">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">GurobiSolver</span><span class="o">::</span><span class="n">id</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;QCPDual&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
