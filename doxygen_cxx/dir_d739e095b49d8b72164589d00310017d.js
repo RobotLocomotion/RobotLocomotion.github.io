@@ -8,7 +8,6 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "render_gl", "dir_8ce7b658333a2b1019abe8473e52e1ec.html", "dir_8ce7b658333a2b1019abe8473e52e1ec" ],
     [ "render_gltf_client", "dir_ea36fc3ba6e4e5252c7024e61ca2d4a4.html", "dir_ea36fc3ba6e4e5252c7024e61ca2d4a4" ],
     [ "render_vtk", "dir_c2c73694fc1dad1370cb0183cda0d1ac.html", "dir_c2c73694fc1dad1370cb0183cda0d1ac" ],
-    [ "test_utilities", "dir_dd40e4ced6d50249f5b665722b0662c5.html", "dir_dd40e4ced6d50249f5b665722b0662c5" ],
     [ "collision_filter_declaration.h", "collision__filter__declaration_8h.html", "collision__filter__declaration_8h" ],
     [ "collision_filter_manager.h", "collision__filter__manager_8h.html", [
       [ "GeometryState", "classdrake_1_1geometry_1_1_geometry_state.html", "classdrake_1_1geometry_1_1_geometry_state" ],
@@ -64,14 +63,11 @@ var dir_d739e095b49d8b72164589d00310017d =
     ] ],
     [ "meshcat_file_storage_internal.h", "meshcat__file__storage__internal_8h.html", null ],
     [ "meshcat_graphviz.h", "meshcat__graphviz_8h.html", null ],
-    [ "meshcat_internal.h", "meshcat__internal_8h.html", null ],
     [ "meshcat_params.h", "meshcat__params_8h.html", [
       [ "MeshcatParams", "structdrake_1_1geometry_1_1_meshcat_params.html", "structdrake_1_1geometry_1_1_meshcat_params" ],
       [ "PropertyTuple", "structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple.html", "structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple" ]
     ] ],
     [ "meshcat_point_cloud_visualizer.h", "meshcat__point__cloud__visualizer_8h.html", "meshcat__point__cloud__visualizer_8h" ],
-    [ "meshcat_recording_internal.h", "meshcat__recording__internal_8h.html", null ],
-    [ "meshcat_types_internal.h", "meshcat__types__internal_8h.html", "meshcat__types__internal_8h" ],
     [ "meshcat_visualizer.h", "meshcat__visualizer_8h.html", "meshcat__visualizer_8h" ],
     [ "meshcat_visualizer_params.h", "meshcat__visualizer__params_8h.html", [
       [ "MeshcatVisualizerParams", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html", "structdrake_1_1geometry_1_1_meshcat_visualizer_params" ]
@@ -98,8 +94,5 @@ var dir_d739e095b49d8b72164589d00310017d =
       [ "SceneGraphInspector", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", "classdrake_1_1geometry_1_1_scene_graph_inspector" ]
     ] ],
     [ "shape_specification.h", "shape__specification_8h.html", "shape__specification_8h" ],
-    [ "utilities.h", "utilities_8h.html", null ],
-    [ "vtk_gltf_uri_loader.h", "vtk__gltf__uri__loader_8h.html", [
-      [ "VtkGltfUriLoader", "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_vtk_gltf_uri_loader.html", "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_vtk_gltf_uri_loader" ]
-    ] ]
+    [ "utilities.h", "utilities_8h.html", null ]
 ];

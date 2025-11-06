@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['x',['x',['../classdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector.html#ad0bd962a702d18fa55e1a95435b1a39e',1,'drake::examples::rod2d::Rod2dStateVector::x()'],['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f',1,'drake::geometry::optimization::GraphOfConvexSets::Vertex::x()'],['../classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766',1,'drake::geometry::optimization::Point::x()']]],
+  ['x',['x',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f',1,'drake::geometry::optimization::GraphOfConvexSets::Vertex::x()'],['../classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766',1,'drake::geometry::optimization::Point::x()']]],
   ['x_5fbg',['X_BG',['../classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#ad1a29f5c9188a3eef88a3c7f8fbb9baf',1,'drake::geometry::optimization::CIrisCollisionGeometry']]],
   ['x_5ffm',['X_FM',['../classdrake_1_1multibody_1_1_weld_joint.html#afeb8c8bfec14a1952a54971827058949',1,'drake::multibody::WeldJoint']]],
   ['x_5flo',['x_lo',['../classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#aab9edba21b7a369d72b0334c04bad28e',1,'drake::solvers::AugmentedLagrangianNonsmooth::x_lo()'],['../classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#aab9edba21b7a369d72b0334c04bad28e',1,'drake::solvers::AugmentedLagrangianSmooth::x_lo()']]],
   ['x_5fup',['x_up',['../classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#a1c89886a59dfaa4862b55712c37b876b',1,'drake::solvers::AugmentedLagrangianNonsmooth::x_up()'],['../classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html#a1c89886a59dfaa4862b55712c37b876b',1,'drake::solvers::AugmentedLagrangianSmooth::x_up()']]],
   ['x_5fvars',['x_vars',['../classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a2bba238b83d8a4a8cfc34e763937a0b7',1,'drake::planning::trajectory_optimization::MultipleShooting']]],
-  ['x_5fwgripper',['X_WGripper',['../namespacedrake_1_1examples_1_1planar__gripper.html#aac827d36be5bbdcf57001c67fde0c969',1,'drake::examples::planar_gripper']]],
   ['xa_5fticket',['xa_ticket',['../classdrake_1_1systems_1_1_system_base.html#a19842775d11b50e5ae56abcc6d38ccc4',1,'drake::systems::SystemBase']]],
   ['xabsolutetolerancename',['XAbsoluteToleranceName',['../classdrake_1_1solvers_1_1_nlopt_solver.html#abc5ac406da08694840aacd7b374b127a',1,'drake::solvers::NloptSolver']]],
   ['xc0',['xc0',['../classdrake_1_1systems_1_1_witness_triggered_event_data.html#aef7c55391ae2a9db556ad98420557713',1,'drake::systems::WitnessTriggeredEventData']]],
@@ -15,7 +14,6 @@ var searchData=
   ['xcf',['xcf',['../classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa220cd3808a2ef7b27dcc1715589c77c',1,'drake::systems::WitnessTriggeredEventData']]],
   ['xd_5fticket',['xd_ticket',['../classdrake_1_1systems_1_1_system_base.html#a64938d044107c8eedc97f89aaf0e4a32',1,'drake::systems::SystemBase']]],
   ['xd_5funique_5fperiodic_5fupdate_5fticket',['xd_unique_periodic_update_ticket',['../classdrake_1_1systems_1_1_system_base.html#a5cf3c0c47d4d7a5b2a28a8c0e76a4811',1,'drake::systems::SystemBase']]],
-  ['xdot',['xdot',['../classdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector.html#aaebf553648450077b26ae3964c6f36b0',1,'drake::examples::rod2d::Rod2dStateVector']]],
   ['xrelativetolerancename',['XRelativeToleranceName',['../classdrake_1_1solvers_1_1_nlopt_solver.html#ae7ee35ef18027156f5cb7b485de8d574',1,'drake::solvers::NloptSolver']]],
   ['xu',['xu',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],
   ['xv',['xv',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],

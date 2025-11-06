@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['edge_5fstep_5fsize',['edge_step_size',['../structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884',1,'drake::planning::CollisionCheckerParams::edge_step_size()'],['../structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#a34a4def1d160fae5fda122ba0a5254ea',1,'drake::planning::test::CollisionCheckerConstructionParams::edge_step_size()']]],
-  ['edges',['edges',['../structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html#abca9b631eac11dd0dd1ad1c69e05bf31',1,'drake::planning::test::CollisionCheckerTestConfigurationData']]],
+  ['edge_5fstep_5fsize',['edge_step_size',['../structdrake_1_1planning_1_1_collision_checker_params.html#a669492214e210900f93b70a27be26884',1,'drake::planning::CollisionCheckerParams']]],
   ['eigen_5fall',['eigen_all',['../namespacedrake.html#acd67fb791be292c340610dbcbd9b5b8f',1,'drake']]],
   ['ellipsoid_5fmargin_5fcost',['ellipsoid_margin_cost',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#a0845096282a9a709315f3fe6cdb0fdfc',1,'drake::geometry::optimization::CspaceFreePolytope::FindPolytopeGivenLagrangianOptions']]],
   ['ellipsoid_5fmargin_5fepsilon',['ellipsoid_margin_epsilon',['../structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html#adfbc0ec5326fc2132aa538699f74281a',1,'drake::geometry::optimization::CspaceFreePolytope::FindPolytopeGivenLagrangianOptions']]],
@@ -10,12 +9,10 @@ var searchData=
   ['enable_5falpha_5fsliders',['enable_alpha_sliders',['../structdrake_1_1visualization_1_1_visualization_config.html#a5d44e8cac1128d4f529473b3cd0526cf',1,'drake::visualization::VisualizationConfig']]],
   ['enable_5fmeshcat_5fcreation',['enable_meshcat_creation',['../structdrake_1_1visualization_1_1_visualization_config.html#a6cc253079efa6db9739c1cea2ded8862',1,'drake::visualization::VisualizationConfig']]],
   ['env_5fcollision_5fpadding',['env_collision_padding',['../structdrake_1_1planning_1_1_collision_checker_params.html#aba8ff17381c2ecbb2add791b7c97c226',1,'drake::planning::CollisionCheckerParams']]],
-  ['env_5fpadding',['env_padding',['../structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html#ad97eac1aabdf303df62851accf84d131',1,'drake::planning::test::CollisionCheckerConstructionParams']]],
   ['environment_5fmap',['environment_map',['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#ad84a8836b437a560f61b53e899a80fc4',1,'drake::geometry::RenderEngineVtkParams']]],
   ['epsilon',['epsilon',['../classdrake_1_1planning_1_1_common_sampled_iris_options.html#a4904cc82627458fdf6672ccc0b2802c7',1,'drake::planning::CommonSampledIrisOptions']]],
   ['error',['error',['../structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685',1,'drake::RlocationOrError']]],
   ['error_5fcode',['error_code',['../structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78',1,'drake::solvers::GurobiSolverDetails']]],
-  ['error_5frecords_5f',['error_records_',['../classdrake_1_1test_1_1_diagnostic_policy_test_base.html#ad51b5b573600baeee3cfc55edb39482e',1,'drake::test::DiagnosticPolicyTestBase']]],
   ['explored_5fnode_5fcount',['explored_node_count',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
   ['exposure',['exposure',['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a8f46a3f6bca32d6f3fea72c1ab7f9c65',1,'drake::geometry::RenderEngineVtkParams']]],
   ['expressed_5fbody',['expressed_body',['../structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#afd86df5b24b52893bd68bad2bf91fbaa',1,'drake::geometry::optimization::CSpaceSeparatingPlane']]],

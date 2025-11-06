@@ -1,4 +1,0 @@
-var classdrake_1_1examples_1_1planar__gripper_1_1_brick_static_equilibrium_nonlinear_constraint =
-[
-    [ "BrickStaticEquilibriumNonlinearConstraint", "classdrake_1_1examples_1_1planar__gripper_1_1_brick_static_equilibrium_nonlinear_constraint.html#ad9768818d24c027c9ef9e8fbd96358cb", null ]
-];

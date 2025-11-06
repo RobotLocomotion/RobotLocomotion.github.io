@@ -5,7 +5,6 @@ var dir_41feb80e12a36dca7cd3992ad22e20a8 =
       [ "AcrobotInputIndices", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_input_indices.html", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_input_indices" ],
       [ "AcrobotInput", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_input" ]
     ] ],
-    [ "acrobot_lcm.h", "acrobot__lcm_8h.html", null ],
     [ "acrobot_params.h", "acrobot__params_8h.html", [
       [ "AcrobotParamsIndices", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices" ],
       [ "AcrobotParams", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_params.html", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_params" ]

@@ -730,6 +730,8 @@ boxes.</p>
 <li><p><strong>ambient_dimension is the ambient dimension</strong><strong> of </strong><strong>the convex sets in</strong> – </p></li>
 <li><p><strong>convex_sets_A` and convex_sets_B</strong> – </p></li>
 <li><p><strong>if convex_sets_A</strong><strong> or </strong><strong>convex_sets_B are empty.</strong> – </p></li>
+<li><p><strong>if any entry</strong><strong> of </strong><strong>convex_sets_A</strong><strong> or </strong><strong>convex_sets_B is a</strong> – </p></li>
+<li><p><strong>nullptr.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -761,6 +763,8 @@ indeed the AABBs corresponding to the sets in <code class="docutils literal notr
 <li><p><strong>if convex_sets_B.size</strong><strong>(</strong><strong>) </strong><strong>!= bboxes_B.size</strong><strong>(</strong><strong>)</strong> – </p></li>
 <li><p><strong>if not all entries</strong><strong> of </strong><strong>convex_sets_A</strong><strong>, </strong><strong>convex_sets_B</strong><strong>,</strong> – </p></li>
 <li><p><strong>bboxes_A`</strong><strong>, </strong><strong>and bboxes_B have the same ambient dimension</strong> – </p></li>
+<li><p><strong>if any entry</strong><strong> of </strong><strong>convex_sets_A</strong><strong> or </strong><strong>convex_sets_B is a</strong> – </p></li>
+<li><p><strong>nullptr.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -794,6 +798,7 @@ without needing to solve an optimization problem.</p>
 <li><p><strong>ambient_dimension is the ambient dimension</strong><strong> of </strong><strong>the convex sets in</strong> – </p></li>
 <li><p><strong>convex_sets`</strong> – </p></li>
 <li><p><strong>if convex_sets is empty.</strong> – </p></li>
+<li><p><strong>if any entry</strong><strong> of </strong><strong>convex_sets is a nullptr.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -820,6 +825,7 @@ corresponding to the sets in <code class="docutils literal notranslate"><span cl
 <li><p><strong>if convex_sets.size</strong><strong>(</strong><strong>) </strong><strong>!= bboxes.size</strong><strong>(</strong><strong>)</strong> – </p></li>
 <li><p><strong>if not all entries</strong><strong> of </strong><strong>convex_sets and bboxes have the same</strong> – </p></li>
 <li><p><strong>ambient dimension.</strong> – </p></li>
+<li><p><strong>if any entry</strong><strong> of </strong><strong>convex_sets is a nullptr.</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -4311,6 +4317,7 @@ num_positions, and unique.</p>
 <li><p><strong>corresponding to continuous revolute joints.</strong> – </p></li>
 <li><p><strong>RuntimeError if continuous_revolute_joints has repeated entries</strong><strong>,</strong> – </p></li>
 <li><p><strong>or if any entry is outside the interval</strong><strong> [</strong><strong>0</strong><strong>, </strong><strong>ambient_dimension</strong><strong>)</strong><strong>.</strong> – </p></li>
+<li><p><strong>if any entry</strong><strong> of </strong><strong>convex_sets is a nullptr.</strong> – </p></li>
 </ul>
 </dd>
 </dl>

@@ -364,14 +364,6 @@ Functions</h2></td></tr>
 <tr class="separator:aeee61963e066e7ce017d584fe2123c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a266fb9c71cff0c0c0039862c33d7298a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a266fb9c71cff0c0c0039862c33d7298a">to_string</a> (<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792">PixelScalar</a>)</td></tr>
 <tr class="separator:a266fb9c71cff0c0c0039862c33d7298a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c0ee55c2dc89cda02e127140982598d"><td class="memTemplParams" colspan="2">template&lt;PixelType kPixelType&gt; </td></tr>
-<tr class="memitem:a8c0ee55c2dc89cda02e127140982598d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a8c0ee55c2dc89cda02e127140982598d">PrintTo</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; &amp;image, std::ostream *os)</td></tr>
-<tr class="memdesc:a8c0ee55c2dc89cda02e127140982598d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds googletest support for printing EXPECT_EQ(Image, Image) failures.  <a href="#a8c0ee55c2dc89cda02e127140982598d">More...</a><br /></td></tr>
-<tr class="separator:a8c0ee55c2dc89cda02e127140982598d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a88e99a5cb9ce01f74ec1de70f4495d"><td class="memTemplParams" colspan="2">template&lt;PixelType kPixelType&gt; </td></tr>
-<tr class="memitem:a4a88e99a5cb9ce01f74ec1de70f4495d"><td class="memTemplItemLeft" align="right" valign="top">::testing::AssertionResult&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a4a88e99a5cb9ce01f74ec1de70f4495d">LoadImage</a> (const std::filesystem::path &amp;filename, <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; *image)</td></tr>
-<tr class="memdesc:a4a88e99a5cb9ce01f74ec1de70f4495d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the PNG or TIFF image from <code>filename</code> into the <code>image</code> output.  <a href="#a4a88e99a5cb9ce01f74ec1de70f4495d">More...</a><br /></td></tr>
-<tr class="separator:a4a88e99a5cb9ce01f74ec1de70f4495d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Utility functions for writing common image types to disk.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Given a fully-specified path to the file to write and corresponding image data, these functions will <em>attempt</em> to write the image data to the file.</p>
 <p>The functions assume that the path is valid and writable. These functions will attempt to write the image to the given file path. The file format will be that indicated by the function name, but the extension will be whatever is provided as input.</p>
@@ -826,67 +818,6 @@ Either the given <code>builder</code> contains a SceneGraph system named "scene_
 
 <p>Converts a single channel 32-bit float depth image with depths in meters to a single channel 16-bit unsigned int depth image with depths in millimeters. </p>
 <p>Note that pixels that are not kTooFar in the input image may saturate to be kTooFar in the output image due to the smaller representable range. </p>
-
-</div>
-</div>
-<a id="a4a88e99a5cb9ce01f74ec1de70f4495d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a88e99a5cb9ce01f74ec1de70f4495d">&#9670;&nbsp;</a></span>LoadImage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">::testing::AssertionResult drake::systems::sensors::LoadImage </td>
-          <td>(</td>
-          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
-          <td class="paramname"><em>filename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; *&#160;</td>
-          <td class="paramname"><em>image</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Loads the PNG or TIFF image from <code>filename</code> into the <code>image</code> output. </p>
-
-</div>
-</div>
-<a id="a8c0ee55c2dc89cda02e127140982598d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c0ee55c2dc89cda02e127140982598d">&#9670;&nbsp;</a></span>PrintTo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::systems::sensors::PrintTo </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image.html">Image</a>&lt; kPixelType &gt; &amp;&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::ostream *&#160;</td>
-          <td class="paramname"><em>os</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds googletest support for printing EXPECT_EQ(Image, Image) failures. </p>
-<p>Small images print all pixel data. Large images only print a summary. </p>
 
 </div>
 </div>

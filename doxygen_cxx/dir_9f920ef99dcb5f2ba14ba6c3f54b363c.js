@@ -1,6 +1,5 @@
 var dir_9f920ef99dcb5f2ba14ba6c3f54b363c =
 [
-    [ "test_utilities", "dir_d8973131f51b66669fc427ecaef4c4db.html", "dir_d8973131f51b66669fc427ecaef4c4db" ],
     [ "antiderivative_function.h", "antiderivative__function_8h.html", [
       [ "AntiderivativeFunction", "classdrake_1_1systems_1_1_antiderivative_function.html", "classdrake_1_1systems_1_1_antiderivative_function" ]
     ] ],
@@ -47,9 +46,7 @@ var dir_9f920ef99dcb5f2ba14ba6c3f54b363c =
       [ "SimulatorConfig", "structdrake_1_1systems_1_1_simulator_config.html", "structdrake_1_1systems_1_1_simulator_config" ]
     ] ],
     [ "simulator_config_functions.h", "simulator__config__functions_8h.html", "simulator__config__functions_8h" ],
-    [ "simulator_gflags.h", "simulator__gflags_8h.html", "simulator__gflags_8h" ],
     [ "simulator_print_stats.h", "simulator__print__stats_8h.html", "simulator__print__stats_8h" ],
-    [ "simulator_python_internal.h", "simulator__python__internal_8h.html", null ],
     [ "simulator_status.h", "simulator__status_8h.html", [
       [ "SimulatorStatus", "classdrake_1_1systems_1_1_simulator_status.html", "classdrake_1_1systems_1_1_simulator_status" ]
     ] ],

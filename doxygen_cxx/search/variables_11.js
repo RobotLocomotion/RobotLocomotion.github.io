@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['r',['r',['../structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d',1,'drake::examples::rod2d::ConstraintAccelProblemData::r()'],['../structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d',1,'drake::examples::rod2d::ConstraintVelProblemData::r()']]],
   ['radius',['radius',['../structdrake_1_1geometry_1_1_ssao_parameter.html#a3f67c53b80389c5f53961936edba04c9',1,'drake::geometry::SsaoParameter::radius()'],['../structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3f67c53b80389c5f53961936edba04c9',1,'drake::multibody::meshcat::ContactVisualizerParams::radius()']]],
   ['random_5fseed',['random_seed',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee',1,'drake::geometry::optimization::IrisOptions::random_seed()'],['../classdrake_1_1planning_1_1_common_sampled_iris_options.html#ad9059bc845096b2f05414a66c836b4ee',1,'drake::planning::CommonSampledIrisOptions::random_seed()']]],
   ['rank_5ftol_5ffor_5fminimum_5fvolume_5fcircumscribed_5fellipsoid',['rank_tol_for_minimum_volume_circumscribed_ellipsoid',['../structdrake_1_1planning_1_1_iris_from_clique_cover_options.html#adcdf0a6717afd726d071ce59a6d12c3e',1,'drake::planning::IrisFromCliqueCoverOptions']]],

@@ -11,8 +11,8 @@ var searchData=
   ['vectorbase_3c_20autodiffxd_20_3e',['VectorBase&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_vector_base.html',1,'drake::systems']]],
   ['vectorbase_3c_20double_20_3e',['VectorBase&lt; double &gt;',['../classdrake_1_1systems_1_1_vector_base.html',1,'drake::systems']]],
   ['vectorbase_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['VectorBase&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1systems_1_1_vector_base.html',1,'drake::systems']]],
-  ['vectorbase_3c_20element_3a_3adouble_20_3e',['VectorBase&lt; Element::double &gt;',['../classdrake_1_1systems_1_1_vector_base.html',1,'drake::systems']]],
   ['vectorbase_3c_20element_3a_3aelement_3a_3adouble_20_3e',['VectorBase&lt; Element::Element::double &gt;',['../classdrake_1_1systems_1_1_vector_base.html',1,'drake::systems']]],
+  ['vectorbase_3c_20element_3a_3aelement_3a_3at_20_3e',['VectorBase&lt; Element::Element::T &gt;',['../classdrake_1_1systems_1_1_vector_base.html',1,'drake::systems']]],
   ['vectorbase_3c_20element_3a_3at_20_3e',['VectorBase&lt; Element::T &gt;',['../classdrake_1_1systems_1_1_vector_base.html',1,'drake::systems']]],
   ['vectorlog',['VectorLog',['../classdrake_1_1systems_1_1_vector_log.html',1,'drake::systems']]],
   ['vectorlogsink',['VectorLogSink',['../classdrake_1_1systems_1_1_vector_log_sink.html',1,'drake::systems']]],
@@ -25,8 +25,5 @@ var searchData=
   ['volumemesh',['VolumeMesh',['../classdrake_1_1geometry_1_1_volume_mesh.html',1,'drake::geometry']]],
   ['volumemesh_3c_20double_20_3e',['VolumeMesh&lt; double &gt;',['../classdrake_1_1geometry_1_1_volume_mesh.html',1,'drake::geometry']]],
   ['volumemeshtester',['VolumeMeshTester',['../classdrake_1_1geometry_1_1_volume_mesh_tester.html',1,'drake::geometry']]],
-  ['vpolytope',['VPolytope',['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html',1,'drake::geometry::optimization']]],
-  ['vtkcommand',['vtkCommand',['../classvtk_command.html',1,'']]],
-  ['vtkgltfuriloader',['VtkGltfUriLoader',['../classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_vtk_gltf_uri_loader.html',1,'drake::geometry::DRAKE_NO_EXPORT']]],
-  ['vtkuriloader',['vtkURILoader',['../classvtk_u_r_i_loader.html',1,'']]]
+  ['vpolytope',['VPolytope',['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html',1,'drake::geometry::optimization']]]
 ];

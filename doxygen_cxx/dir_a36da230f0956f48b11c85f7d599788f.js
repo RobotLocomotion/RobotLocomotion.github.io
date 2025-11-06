@@ -1,10 +1,8 @@
 var dir_a36da230f0956f48b11c85f7d599788f =
 [
-    [ "ad", "dir_a1f72b1e53a5842fc3b6b3072554bf94.html", "dir_a1f72b1e53a5842fc3b6b3072554bf94" ],
     [ "proto", "dir_48e4d4a473e039105b12a2118c672ffe.html", "dir_48e4d4a473e039105b12a2118c672ffe" ],
     [ "schema", "dir_a361a47504c6f179d0e8aaa8b79dec3e.html", "dir_a361a47504c6f179d0e8aaa8b79dec3e" ],
     [ "symbolic", "dir_66d630ac47407fe11bcb76d9e7e25510.html", "dir_66d630ac47407fe11bcb76d9e7e25510" ],
-    [ "test_utilities", "dir_0d10be3e24b4d05732d552ad443cc60a.html", "dir_0d10be3e24b4d05732d552ad443cc60a" ],
     [ "trajectories", "dir_5f7a2023092b91a1e02609fa2c012f50.html", "dir_5f7a2023092b91a1e02609fa2c012f50" ],
     [ "yaml", "dir_a475b9d7562d90f72dfa4821e049558f.html", "dir_a475b9d7562d90f72dfa4821e049558f" ],
     [ "autodiff.h", "common_2autodiff_8h.html", "common_2autodiff_8h" ],
@@ -19,17 +17,16 @@ var dir_a36da230f0956f48b11c85f7d599788f =
       [ "copyable_unique_ptr", "classdrake_1_1copyable__unique__ptr.html", "classdrake_1_1copyable__unique__ptr" ]
     ] ],
     [ "cpu_capabilities.h", "cpu__capabilities_8h.html", null ],
+    [ "cxx_doxygen.h", "cxx__doxygen_8h.html", null ],
     [ "default_scalars.h", "default__scalars_8h.html", "default__scalars_8h" ],
     [ "diagnostic_policy.h", "diagnostic__policy_8h.html", null ],
     [ "double_overloads.h", "double__overloads_8h.html", "double__overloads_8h" ],
-    [ "doxygen_cxx.h", "doxygen__cxx_8h.html", null ],
     [ "drake_assert.h", "drake__assert_8h.html", "drake__assert_8h" ],
     [ "drake_assertion_error.h", "drake__assertion__error_8h.html", null ],
     [ "drake_bool.h", "drake__bool_8h.html", "drake__bool_8h" ],
     [ "drake_copyable.h", "drake__copyable_8h.html", "drake__copyable_8h" ],
     [ "drake_deprecated.h", "drake__deprecated_8h.html", "drake__deprecated_8h" ],
     [ "drake_export.h", "drake__export_8h.html", "drake__export_8h" ],
-    [ "drake_marker.h", "drake__marker_8h.html", null ],
     [ "drake_path.h", "drake__path_8h.html", "drake__path_8h" ],
     [ "drake_throw.h", "drake__throw_8h.html", null ],
     [ "dummy_value.h", "dummy__value_8h.html", [
@@ -40,7 +37,6 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "eigen_types.h", "eigen__types_8h.html", "eigen__types_8h" ],
     [ "extract_double.h", "extract__double_8h.html", "extract__double_8h" ],
     [ "file_source.h", "file__source_8h.html", "file__source_8h" ],
-    [ "find_cache.h", "find__cache_8h.html", null ],
     [ "find_loaded_library.h", "find__loaded__library_8h.html", "find__loaded__library_8h" ],
     [ "find_resource.h", "find__resource_8h.html", "find__resource_8h" ],
     [ "find_runfiles.h", "find__runfiles_8h.html", "find__runfiles_8h" ],
@@ -48,8 +44,6 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "fmt_eigen.h", "fmt__eigen_8h.html", "fmt__eigen_8h" ],
     [ "fmt_ostream.h", "fmt__ostream_8h.html", "fmt__ostream_8h" ],
     [ "hash.h", "hash_8h.html", "hash_8h" ],
-    [ "hwy_dynamic.h", "hwy__dynamic_8h.html", null ],
-    [ "hwy_dynamic_impl.h", "hwy__dynamic__impl_8h.html", null ],
     [ "identifier.h", "identifier_8h.html", "identifier_8h" ],
     [ "is_approx_equal_abstol.h", "is__approx__equal__abstol_8h.html", "is__approx__equal__abstol_8h" ],
     [ "is_cloneable.h", "is__cloneable_8h.html", "is__cloneable_8h" ],
@@ -65,7 +59,6 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "nice_type_name.h", "nice__type__name_8h.html", [
       [ "NiceTypeName", "classdrake_1_1_nice_type_name.html", "classdrake_1_1_nice_type_name" ]
     ] ],
-    [ "nice_type_name_override.h", "nice__type__name__override_8h.html", null ],
     [ "overloaded.h", "overloaded_8h.html", null ],
     [ "parallelism.h", "parallelism_8h.html", [
       [ "Parallelism", "classdrake_1_1_parallelism.html", "classdrake_1_1_parallelism" ]

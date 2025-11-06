@@ -37,8 +37,5 @@ var annotated_dup =
       [ "uniform_real_distribution< drake::symbolic::Expression >", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4" ]
     ] ],
     [ "generic_product_impl_base", "classgeneric__product__impl__base.html", null ],
-    [ "process_attribute_default", "classprocess__attribute__default.html", null ],
-    [ "traits", "classtraits.html", null ],
-    [ "vtkCommand", "classvtk_command.html", null ],
-    [ "vtkURILoader", "classvtk_u_r_i_loader.html", null ]
+    [ "traits", "classtraits.html", null ]
 ];

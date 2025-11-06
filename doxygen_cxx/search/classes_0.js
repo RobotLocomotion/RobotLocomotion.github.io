@@ -6,8 +6,6 @@ var searchData=
   ['abstractvalues',['AbstractValues',['../classdrake_1_1systems_1_1_abstract_values.html',1,'drake::systems']]],
   ['accelerometer',['Accelerometer',['../classdrake_1_1systems_1_1sensors_1_1_accelerometer.html',1,'drake::systems::sensors']]],
   ['acrobot',['Acrobot',['../classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html',1,'drake::multibody::benchmarks']]],
-  ['acrobotcommandreceiver',['AcrobotCommandReceiver',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_receiver.html',1,'drake::examples::acrobot']]],
-  ['acrobotcommandsender',['AcrobotCommandSender',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_sender.html',1,'drake::examples::acrobot']]],
   ['acrobotgeometry',['AcrobotGeometry',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html',1,'drake::examples::acrobot']]],
   ['acrobotinput',['AcrobotInput',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html',1,'drake::examples::acrobot']]],
   ['acrobotinputindices',['AcrobotInputIndices',['../structdrake_1_1examples_1_1acrobot_1_1_acrobot_input_indices.html',1,'drake::examples::acrobot']]],
@@ -18,8 +16,6 @@ var searchData=
   ['acrobotspongcontroller',['AcrobotSpongController',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_spong_controller.html',1,'drake::examples::acrobot']]],
   ['acrobotstate',['AcrobotState',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_state.html',1,'drake::examples::acrobot']]],
   ['acrobotstateindices',['AcrobotStateIndices',['../structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html',1,'drake::examples::acrobot']]],
-  ['acrobotstatereceiver',['AcrobotStateReceiver',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_receiver.html',1,'drake::examples::acrobot']]],
-  ['acrobotstatesender',['AcrobotStateSender',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_sender.html',1,'drake::examples::acrobot']]],
   ['acrobotwencoder',['AcrobotWEncoder',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html',1,'drake::examples::acrobot']]],
   ['addcollisionfiltergroup',['AddCollisionFilterGroup',['../structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html',1,'drake::multibody::parsing']]],
   ['adddirectives',['AddDirectives',['../structdrake_1_1multibody_1_1parsing_1_1_add_directives.html',1,'drake::multibody::parsing']]],
@@ -34,10 +30,6 @@ var searchData=
   ['affineball',['AffineBall',['../classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html',1,'drake::geometry::optimization']]],
   ['affinesubspace',['AffineSubspace',['../classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html',1,'drake::geometry::optimization']]],
   ['affinesystem',['AffineSystem',['../classdrake_1_1systems_1_1_affine_system.html',1,'drake::systems']]],
-  ['alignedstorage',['AlignedStorage',['../structdrake_1_1test_1_1_aligned_storage.html',1,'drake::test']]],
-  ['allegrocommandreceiver',['AllegroCommandReceiver',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_command_receiver.html',1,'drake::examples::allegro_hand']]],
-  ['allegrohandmotionstate',['AllegroHandMotionState',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html',1,'drake::examples::allegro_hand']]],
-  ['allegrostatussender',['AllegroStatusSender',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html',1,'drake::examples::allegro_hand']]],
   ['angleaxis',['AngleAxis',['../structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html',1,'drake::schema::Rotation']]],
   ['anglebetweenvectorsconstraint',['AngleBetweenVectorsConstraint',['../classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html',1,'drake::multibody']]],
   ['anglebetweenvectorscost',['AngleBetweenVectorsCost',['../classdrake_1_1multibody_1_1_angle_between_vectors_cost.html',1,'drake::multibody']]],
@@ -45,7 +37,5 @@ var searchData=
   ['antiderivativefunction',['AntiderivativeFunction',['../classdrake_1_1systems_1_1_antiderivative_function.html',1,'drake::systems']]],
   ['articulatedbodyinertia',['ArticulatedBodyInertia',['../classdrake_1_1multibody_1_1_articulated_body_inertia.html',1,'drake::multibody']]],
   ['augmentedlagrangiannonsmooth',['AugmentedLagrangianNonsmooth',['../classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html',1,'drake::solvers']]],
-  ['augmentedlagrangiansmooth',['AugmentedLagrangianSmooth',['../classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html',1,'drake::solvers']]],
-  ['autodiff',['AutoDiff',['../classdrake_1_1ad_1_1_auto_diff.html',1,'drake::ad']]],
-  ['axiallysymmetricfreebodyplant',['AxiallySymmetricFreeBodyPlant',['../classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html',1,'drake::multibody::test']]]
+  ['augmentedlagrangiansmooth',['AugmentedLagrangianSmooth',['../classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html',1,'drake::solvers']]]
 ];

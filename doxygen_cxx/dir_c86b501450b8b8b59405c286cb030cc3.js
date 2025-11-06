@@ -1,6 +1,5 @@
 var dir_c86b501450b8b8b59405c286cb030cc3 =
 [
-    [ "test_utilities", "dir_3e1bf9ce46085c0e3ff6de174f1555d7.html", "dir_3e1bf9ce46085c0e3ff6de174f1555d7" ],
     [ "aggregate_costs_constraints.h", "aggregate__costs__constraints_8h.html", "aggregate__costs__constraints_8h" ],
     [ "augmented_lagrangian.h", "augmented__lagrangian_8h.html", [
       [ "AugmentedLagrangianNonsmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth" ],
@@ -26,13 +25,10 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "cost.h", "cost_8h.html", "cost_8h" ],
     [ "create_constraint.h", "create__constraint_8h.html", null ],
     [ "create_cost.h", "create__cost_8h.html", null ],
-    [ "csdp_cpp_wrapper.h", "csdp__cpp__wrapper_8h.html", null ],
     [ "csdp_solver.h", "csdp__solver_8h.html", [
       [ "CsdpSolverDetails", "structdrake_1_1solvers_1_1_csdp_solver_details.html", "structdrake_1_1solvers_1_1_csdp_solver_details" ],
       [ "CsdpSolver", "classdrake_1_1solvers_1_1_csdp_solver.html", "classdrake_1_1solvers_1_1_csdp_solver" ]
     ] ],
-    [ "csdp_solver_error_handling.h", "csdp__solver__error__handling_8h.html", null ],
-    [ "csdp_solver_internal.h", "csdp__solver__internal_8h.html", null ],
     [ "decision_variable.h", "decision__variable_8h.html", "decision__variable_8h" ],
     [ "equality_constrained_qp_solver.h", "equality__constrained__qp__solver_8h.html", [
       [ "EqualityConstrainedQPSolver", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver" ]
@@ -45,7 +41,6 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "GurobiSolver", "classdrake_1_1solvers_1_1_gurobi_solver.html", "classdrake_1_1solvers_1_1_gurobi_solver" ],
       [ "SolveStatusInfo", "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html", "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info" ]
     ] ],
-    [ "gurobi_solver_internal.h", "gurobi__solver__internal_8h.html", null ],
     [ "indeterminate.h", "indeterminate_8h.html", "indeterminate_8h" ],
     [ "integer_inequality_solver.h", "integer__inequality__solver_8h.html", "integer__inequality__solver_8h" ],
     [ "integer_optimization_util.h", "integer__optimization__util_8h.html", "integer__optimization__util_8h" ],
@@ -53,7 +48,6 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "IpoptSolverDetails", "structdrake_1_1solvers_1_1_ipopt_solver_details.html", "structdrake_1_1solvers_1_1_ipopt_solver_details" ],
       [ "IpoptSolver", "classdrake_1_1solvers_1_1_ipopt_solver.html", "classdrake_1_1solvers_1_1_ipopt_solver" ]
     ] ],
-    [ "ipopt_solver_internal.h", "ipopt__solver__internal_8h.html", null ],
     [ "linear_system_solver.h", "linear__system__solver_8h.html", [
       [ "LinearSystemSolver", "classdrake_1_1solvers_1_1_linear_system_solver.html", "classdrake_1_1solvers_1_1_linear_system_solver" ]
     ] ],
@@ -72,7 +66,6 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", "structdrake_1_1solvers_1_1_mosek_solver_details" ],
       [ "MosekSolver", "classdrake_1_1solvers_1_1_mosek_solver.html", "classdrake_1_1solvers_1_1_mosek_solver" ]
     ] ],
-    [ "mosek_solver_internal.h", "mosek__solver__internal_8h.html", null ],
     [ "nlopt_solver.h", "nlopt__solver_8h.html", [
       [ "NloptSolverDetails", "structdrake_1_1solvers_1_1_nlopt_solver_details.html", "structdrake_1_1solvers_1_1_nlopt_solver_details" ],
       [ "NloptSolver", "classdrake_1_1solvers_1_1_nlopt_solver.html", "classdrake_1_1solvers_1_1_nlopt_solver" ]

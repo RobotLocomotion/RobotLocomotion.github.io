@@ -177,7 +177,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_differenti
 </ul>
 <p>The velocity limit is only ever attenuated on one boundary.</p>
 <p>If we define <code>distᵢ</code> as the distance to the near position limit boundary, and <code>near_limit</code> as the value of that limit, we can define the attenuation as:</p>
-<div class="fragment"><div class="line">distᵢ = <a class="code" href="namespacedrake_1_1ad.html#a849557ce3b5be163a80c435081991f29">min</a>(qᵢ_current - qᵢ_min, qᵢ_max - qᵢ_current)</div><div class="line">scale = <a class="code" href="namespacedrake_1_1symbolic.html#a5470db9b5571df2d904addff09a2b98e">clamp</a>((distᵢ - min_margin) / (influence_margin - min_margin), 0, 1)</div><div class="line">scaled_near_limit = near_limit * scale.</div></div><!-- fragment --><p>Implications:</p><ul>
+<div class="fragment"><div class="line">distᵢ = <a class="code" href="namespacedrake_1_1symbolic.html#a368c7616ccd2ce8d1587aa7343575d52">min</a>(qᵢ_current - qᵢ_min, qᵢ_max - qᵢ_current)</div><div class="line">scale = <a class="code" href="namespacedrake_1_1symbolic.html#a5470db9b5571df2d904addff09a2b98e">clamp</a>((distᵢ - min_margin) / (influence_margin - min_margin), 0, 1)</div><div class="line">scaled_near_limit = near_limit * scale.</div></div><!-- fragment --><p>Implications:</p><ul>
 <li>Because we're <em>attenuating</em> the configured velocity limits, an infinite limit value won't be attenuated. It <em>will</em> be zero when <code>distᵢ ≤ min_margin</code>.</li>
 <li>Position limits define an interval for q, which we'll call P. If <code>P / 2 - min_margin &lt; influence_margin - min_margin</code> then one limit will <em>always</em> be attenuated to be less than its configured value. </li>
 </ul>

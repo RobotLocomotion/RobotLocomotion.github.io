@@ -1,6 +1,5 @@
 var namespacedrake_1_1geometry =
 [
-    [ "DRAKE_NO_EXPORT", "namespacedrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t.html", "namespacedrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t" ],
     [ "optimization", "namespacedrake_1_1geometry_1_1optimization.html", "namespacedrake_1_1geometry_1_1optimization" ],
     [ "render", "namespacedrake_1_1geometry_1_1render.html", "namespacedrake_1_1geometry_1_1render" ],
     [ "Aabb", "classdrake_1_1geometry_1_1_aabb.html", "classdrake_1_1geometry_1_1_aabb" ],
@@ -24,7 +23,6 @@ var namespacedrake_1_1geometry =
     [ "GeometryInstance", "classdrake_1_1geometry_1_1_geometry_instance.html", "classdrake_1_1geometry_1_1_geometry_instance" ],
     [ "GeometryProperties", "classdrake_1_1geometry_1_1_geometry_properties.html", "classdrake_1_1geometry_1_1_geometry_properties" ],
     [ "GeometrySet", "classdrake_1_1geometry_1_1_geometry_set.html", "classdrake_1_1geometry_1_1_geometry_set" ],
-    [ "GeometrySetTester", "classdrake_1_1geometry_1_1_geometry_set_tester.html", "classdrake_1_1geometry_1_1_geometry_set_tester" ],
     [ "GeometryState", "classdrake_1_1geometry_1_1_geometry_state.html", "classdrake_1_1geometry_1_1_geometry_state" ],
     [ "GeometryVersion", "classdrake_1_1geometry_1_1_geometry_version.html", "classdrake_1_1geometry_1_1_geometry_version" ],
     [ "GltfExtension", "structdrake_1_1geometry_1_1_gltf_extension.html", "structdrake_1_1geometry_1_1_gltf_extension" ],

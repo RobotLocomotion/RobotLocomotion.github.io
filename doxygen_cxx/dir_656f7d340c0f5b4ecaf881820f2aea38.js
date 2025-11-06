@@ -1,13 +1,11 @@
 var dir_656f7d340c0f5b4ecaf881820f2aea38 =
 [
-    [ "test_utilities", "dir_652567ca0f7e786d5ffa3ef8ea9e7fa7.html", "dir_652567ca0f7e786d5ffa3ef8ea9e7fa7" ],
     [ "calc_distance_and_time_derivative.h", "calc__distance__and__time__derivative_8h.html", "calc__distance__and__time__derivative_8h" ],
     [ "compliant_contact_manager.h", "compliant__contact__manager_8h.html", null ],
     [ "constraint_specs.h", "constraint__specs_8h.html", null ],
     [ "contact_defaults_doxygen.h", "contact__defaults__doxygen_8h.html", null ],
     [ "contact_jacobians.h", "contact__jacobians_8h.html", null ],
     [ "contact_model_doxygen.h", "contact__model__doxygen_8h.html", null ],
-    [ "contact_properties.h", "contact__properties_8h.html", null ],
     [ "contact_results.h", "contact__results_8h.html", [
       [ "ContactResults", "classdrake_1_1multibody_1_1_contact_results.html", "classdrake_1_1multibody_1_1_contact_results" ]
     ] ],
@@ -43,8 +41,6 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
       [ "HydroelasticContactInfo< symbolic::Expression >", "classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html", "classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4" ]
     ] ],
     [ "hydroelastic_parameters_doxygen.h", "hydroelastic__parameters__doxygen_8h.html", null ],
-    [ "hydroelastic_quadrature_point_data.h", "hydroelastic__quadrature__point__data_8h.html", null ],
-    [ "hydroelastic_traction_calculator.h", "hydroelastic__traction__calculator_8h.html", null ],
     [ "internal_geometry_names.h", "internal__geometry__names_8h.html", null ],
     [ "make_discrete_update_manager.h", "make__discrete__update__manager_8h.html", null ],
     [ "multibody_plant.h", "multibody__plant_8h.html", "multibody__plant_8h" ],

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['value_5ftype',['value_type',['../classdrake_1_1_name_value.html#a265a253612b46abed17c61b0a5e5ce30',1,'drake::NameValue::value_type()'],['../classdrake_1_1symbolic_1_1_environment.html#aec1384fa2e672145cb41f57b168de55b',1,'drake::symbolic::Environment::value_type()'],['../classdrake_1_1systems_1_1_bus_value.html#aea845f741e4349987ac8f8b49039b580',1,'drake::systems::BusValue::value_type()'],['../classdrake_1_1systems_1_1_bus_value_1_1_iterator.html#ae033741df2acc684dc6b2ca111941990',1,'drake::systems::BusValue::Iterator::value_type()']]],
-  ['valuetype',['ValueType',['../classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html#aee6f666577d2d4330049382fd0e4fd01',1,'drake::geometry::DRAKE_NO_EXPORT::EncodedData::ValueType()'],['../classdrake_1_1geometry_1_1render_1_1_render_label.html#ab552a96bb39383157f123f0c25dfe54a',1,'drake::geometry::render::RenderLabel::ValueType()']]],
+  ['valuetype',['ValueType',['../classdrake_1_1geometry_1_1render_1_1_render_label.html#ab552a96bb39383157f123f0c25dfe54a',1,'drake::geometry::render::RenderLabel']]],
   ['variablereflist',['VariableRefList',['../namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b',1,'drake::solvers']]],
   ['variableselectfun',['VariableSelectFun',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a726cca20e3cf59eed49574ee8abd61d3',1,'drake::solvers::MixedIntegerBranchAndBound']]],
   ['variant',['Variant',['../classdrake_1_1schema_1_1_rotation.html#acab27a4275d2d3afd6700c892f3c5edb',1,'drake::schema::Rotation']]],
@@ -12,7 +12,6 @@ var searchData=
   ['vector1',['Vector1',['../namespacedrake.html#af359dfdb84d6c13b606bb3ed7b821e23',1,'drake']]],
   ['vector1d',['Vector1d',['../namespacedrake.html#a6d923e79e6e92c2556edd86520145077',1,'drake']]],
   ['vector2',['Vector2',['../namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e',1,'drake']]],
-  ['vector2d',['Vector2d',['../namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a',1,'drake::systems::analysis::test']]],
   ['vector3',['Vector3',['../namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2',1,'drake']]],
   ['vector4',['Vector4',['../namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3',1,'drake']]],
   ['vector6',['Vector6',['../namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3',1,'drake']]],

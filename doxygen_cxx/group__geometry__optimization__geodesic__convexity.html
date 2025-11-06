@@ -289,6 +289,7 @@ Functions</h2></td></tr>
   <table class="exception">
     <tr><td class="paramname">if</td><td><code>continuous_revolute_joints</code> has repeated entries, or if any entry is outside the interval [0, ambient_dimension), where ambient_dimension is the ambient dimension of the convex sets in <code>convex_sets_A</code> and <code>convex_sets_B</code>. </td></tr>
     <tr><td class="paramname">if</td><td><code>convex_sets_A</code> or <code>convex_sets_B</code> are empty. </td></tr>
+    <tr><td class="paramname">if</td><td>any entry of <code>convex_sets_A</code> or <code>convex_sets_B</code> is a nullptr. </td></tr>
   </table>
   </dd>
 </dl>
@@ -359,6 +360,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">if</td><td><code>convex_sets_A.size() != bboxes_A.size()</code> </td></tr>
     <tr><td class="paramname">if</td><td><code>convex_sets_B.size() != bboxes_B.size()</code> </td></tr>
     <tr><td class="paramname">if</td><td>not all entries of <code>convex_sets_A</code>, <code>convex_sets_B</code>, <code>bboxes_A</code>, and <code>bboxes_B</code> have the same ambient dimension. </td></tr>
+    <tr><td class="paramname">if</td><td>any entry of <code>convex_sets_A</code> or <code>convex_sets_B</code> is a nullptr. </td></tr>
   </table>
   </dd>
 </dl>
@@ -418,6 +420,7 @@ Functions</h2></td></tr>
   <table class="exception">
     <tr><td class="paramname">if</td><td><code>continuous_revolute_joints</code> has repeated entries, or if any entry is outside the interval [0, ambient_dimension), where ambient_dimension is the ambient dimension of the convex sets in <code>convex_sets</code>. </td></tr>
     <tr><td class="paramname">if</td><td><code>convex_sets</code> is empty. </td></tr>
+    <tr><td class="paramname">if</td><td>any entry of <code>convex_sets</code> is a nullptr. </td></tr>
   </table>
   </dd>
 </dl>
@@ -474,6 +477,7 @@ Functions</h2></td></tr>
   <table class="exception">
     <tr><td class="paramname">if</td><td><code>convex_sets.size() != bboxes.size()</code> </td></tr>
     <tr><td class="paramname">if</td><td>not all entries of <code>convex_sets</code> and <code>bboxes</code> have the same ambient dimension. </td></tr>
+    <tr><td class="paramname">if</td><td>any entry of <code>convex_sets</code> is a nullptr. </td></tr>
   </table>
   </dd>
 </dl>
@@ -570,6 +574,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">std::exception</td><td>if ϵ &lt;= 0 or ϵ &gt;= π. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if any input convex set is unbounded along dimensions corresponding to continuous revolute joints. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if continuous_revolute_joints has repeated entries, or if any entry is outside the interval [0, ambient_dimension). </td></tr>
+    <tr><td class="paramname">if</td><td>any entry of <code>convex_sets</code> is a nullptr. </td></tr>
   </table>
   </dd>
 </dl>

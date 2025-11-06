@@ -9,18 +9,6 @@ var group__acrobot__systems =
       [ "operator=", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#a4dd2977c27d577ecf7ca6e4a2b069fd4", null ],
       [ "operator=", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#a7612586d91997ed7aebd92832466adaa", null ]
     ] ],
-    [ "AcrobotStateReceiver", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_receiver.html", [
-      [ "AcrobotStateReceiver", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_receiver.html#aa4666beaafd49a7ceea50f4503e6554e", null ]
-    ] ],
-    [ "AcrobotCommandSender", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_sender.html", [
-      [ "AcrobotCommandSender", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_sender.html#aa23449b4f225e9db9a8a31b9d7a2be45", null ]
-    ] ],
-    [ "AcrobotCommandReceiver", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_receiver.html", [
-      [ "AcrobotCommandReceiver", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_receiver.html#af52dd2558c6ca372982f412e3d83cb9b", null ]
-    ] ],
-    [ "AcrobotStateSender", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_sender.html", [
-      [ "AcrobotStateSender", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_sender.html#afa052a2c08364f30e4c0560d02469527", null ]
-    ] ],
     [ "AcrobotPlant", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html", [
       [ "AcrobotPlant", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a81116c526cf1e5ec864235fbb19b3780", null ],
       [ "AcrobotPlant", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a322f85e342d1736a49b76c4ca5de47ef", null ],

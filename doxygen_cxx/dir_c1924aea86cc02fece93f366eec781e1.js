@@ -3,7 +3,6 @@ var dir_c1924aea86cc02fece93f366eec781e1 =
     [ "graph_algorithms", "dir_ec4ca5ddfa488e52be8d9e11dbbf950b.html", "dir_ec4ca5ddfa488e52be8d9e11dbbf950b" ],
     [ "iris", "dir_2b9112ffbf5858921a491006bc40f45b.html", "dir_2b9112ffbf5858921a491006bc40f45b" ],
     [ "locomotion", "dir_cd41079f4e81772820f3642b36300e35.html", "dir_cd41079f4e81772820f3642b36300e35" ],
-    [ "test_utilities", "dir_6902f0bfef501365a3845194d27e0ad3.html", "dir_6902f0bfef501365a3845194d27e0ad3" ],
     [ "trajectory_optimization", "dir_d3b9c8c863d1cf0f0e483ccaf53b793e.html", "dir_d3b9c8c863d1cf0f0e483ccaf53b793e" ],
     [ "body_shape_description.h", "body__shape__description_8h.html", "body__shape__description_8h" ],
     [ "collision_avoidance.h", "collision__avoidance_8h.html", null ],

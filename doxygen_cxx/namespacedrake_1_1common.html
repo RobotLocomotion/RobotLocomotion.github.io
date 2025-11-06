@@ -159,18 +159,12 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1common.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::common Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacedrake_1_1common_1_1test"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1common_1_1test.html">test</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae2e692a250b25ee6892bd538b071a88d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1common.html#ae2e692a250b25ee6892bd538b071a88d">CallPythonInit</a> (const std::string &amp;filename)</td></tr>
@@ -191,9 +185,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a650cbe453cd80d0752cc0c91e857789a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1common.html#a650cbe453cd80d0752cc0c91e857789a">GetRpcPipeTempDirectory</a> ()</td></tr>
 <tr class="memdesc:a650cbe453cd80d0752cc0c91e857789a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a directory location suitable for temporary files for the call_* clients and libraries.  <a href="#a650cbe453cd80d0752cc0c91e857789a">More...</a><br /></td></tr>
 <tr class="separator:a650cbe453cd80d0752cc0c91e857789a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a031cebefea54dfd268d026598a3de5b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1common.html#a031cebefea54dfd268d026598a3de5b0">MaybePauseForUser</a> (std::string_view message={})</td></tr>
-<tr class="memdesc:a031cebefea54dfd268d026598a3de5b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses execution for the user to examine visualization output, for use within bazel unit tests.  <a href="#a031cebefea54dfd268d026598a3de5b0">More...</a><br /></td></tr>
-<tr class="separator:a031cebefea54dfd268d026598a3de5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ab90532d79bea92048d0ee230ed8d4b59"></a>
@@ -276,42 +267,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a031cebefea54dfd268d026598a3de5b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a031cebefea54dfd268d026598a3de5b0">&#9670;&nbsp;</a></span>MaybePauseForUser()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::common::MaybePauseForUser </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view&#160;</td>
-          <td class="paramname"><em>message</em> = <code>{}</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pauses execution for the user to examine visualization output, for use within bazel unit tests. </p>
-<p>This function will not pause execution when running as a bazel test, but when running as a command-line executable, it will enable users to see the visualization outputs.</p>
-<p>The caller can provide additional user instructions in <code>message</code>. The message will only be written to the console if the pause is actually enabled.</p>
-<p>The complete behavior is somewhat more subtle, depending on the bazel rules used to build the program, and the way it is invoked:</p>
-<ul>
-<li>built with a bazel test rule<ul>
-<li>invoked with "bazel test" &ndash; does not pause</li>
-<li>invoked with "bazel run" &ndash; does not pause</li>
-<li>invoked directly ("bazel/bin/[PROGRAM]") &ndash; does pause</li>
-</ul>
-</li>
-<li>built with a bazel binary rule<ul>
-<li>invoked with "bazel run" &ndash; does pause</li>
-<li>invoked directly ("bazel/bin/[PROGRAM]") &ndash; does pause </li>
-</ul>
-</li>
-</ul>
 
 </div>
 </div>

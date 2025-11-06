@@ -20,16 +20,12 @@ var hierarchy =
     [ "AddMultibodyPlantSceneGraphResult< T >", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html", null ],
     [ "AddRotationMatrixBoxSphereIntersectionReturn", "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html", null ],
     [ "AddWeld", "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html", null ],
-    [ "AlignedStorage< T >", "structdrake_1_1test_1_1_aligned_storage.html", null ],
-    [ "AllegroHandMotionState", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html", null ],
     [ "Rotation::AngleAxis", "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html", null ],
     [ "SpatialVelocityConstraint::AngularVelocityBounds", "structdrake_1_1multibody_1_1_spatial_velocity_constraint_1_1_angular_velocity_bounds.html", null ],
     [ "AntiderivativeFunction< T >", "classdrake_1_1systems_1_1_antiderivative_function.html", null ],
     [ "ArticulatedBodyInertia< T >", "classdrake_1_1multibody_1_1_articulated_body_inertia.html", null ],
     [ "AugmentedLagrangianNonsmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html", null ],
     [ "AugmentedLagrangianSmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html", null ],
-    [ "AutoDiff", "classdrake_1_1ad_1_1_auto_diff.html", null ],
-    [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html", null ],
     [ "BarycentricMesh< T >", "classdrake_1_1math_1_1_barycentric_mesh.html", null ],
     [ "BasisElementGradedReverseLexOrder< VariableOrder, BasisElement >", "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html", null ],
     [ "BeamModelParamsIndices", "structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html", null ],
@@ -62,7 +58,6 @@ var hierarchy =
       [ "is_eigen_vector_expression_double_pair< DerivedV, DerivedB >", "structdrake_1_1is__eigen__vector__expression__double__pair.html", null ],
       [ "is_eigen_vector_of< Derived, Scalar >", "structdrake_1_1is__eigen__vector__of.html", null ]
     ] ],
-    [ "BouncingBallVectorIndices", "structdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector_indices.html", null ],
     [ "Bound", "structdrake_1_1solvers_1_1_bound.html", null ],
     [ "BsplineBasis< T >", "classdrake_1_1math_1_1_bspline_basis.html", null ],
     [ "BsplineBasis< double >", "classdrake_1_1math_1_1_bspline_basis.html", null ],
@@ -76,23 +71,18 @@ var hierarchy =
     [ "DifferentialInverseKinematicsSystem::CallbackDetails", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html", null ],
     [ "CameraConfig", "structdrake_1_1systems_1_1sensors_1_1_camera_config.html", null ],
     [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", null ],
-    [ "CartPoleParamsIndices", "structdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params_indices.html", null ],
     [ "ChebyshevPolynomial", "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html", null ],
     [ "CIrisCollisionGeometry", "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html", null ],
     [ "ClarabelSolverDetails", "structdrake_1_1solvers_1_1_clarabel_solver_details.html", null ],
     [ "ClippingRange", "classdrake_1_1geometry_1_1render_1_1_clipping_range.html", null ],
-    [ "ClothSpringModelParamsIndices", "structdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params_indices.html", null ],
     [ "ClpSolverDetails", "structdrake_1_1solvers_1_1_clp_solver_details.html", null ],
     [ "CodeGenVisitor", "classdrake_1_1symbolic_1_1_code_gen_visitor.html", null ],
     [ "CollisionChecker", "classdrake_1_1planning_1_1_collision_checker.html", [
       [ "SceneGraphCollisionChecker", "classdrake_1_1planning_1_1_scene_graph_collision_checker.html", null ],
       [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html", null ]
     ] ],
-    [ "CollisionCheckerConstructionParams", "structdrake_1_1planning_1_1test_1_1_collision_checker_construction_params.html", null ],
     [ "CollisionCheckerContext", "classdrake_1_1planning_1_1_collision_checker_context.html", null ],
     [ "CollisionCheckerParams", "structdrake_1_1planning_1_1_collision_checker_params.html", null ],
-    [ "CollisionCheckerTestConfigurationData", "structdrake_1_1planning_1_1test_1_1_collision_checker_test_configuration_data.html", null ],
-    [ "CollisionCheckerTestParams", "structdrake_1_1planning_1_1test_1_1_collision_checker_test_params.html", null ],
     [ "CollisionFilterDeclaration", "classdrake_1_1geometry_1_1_collision_filter_declaration.html", null ],
     [ "CollisionFilterGroups", "classdrake_1_1multibody_1_1_collision_filter_groups.html", null ],
     [ "CollisionFilterManager", "classdrake_1_1geometry_1_1_collision_filter_manager.html", null ],
@@ -110,24 +100,18 @@ var hierarchy =
     [ "CompositeEventCollection< double >", "classdrake_1_1systems_1_1_composite_event_collection.html", [
       [ "LeafCompositeEventCollection< double >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
     ] ],
-    [ "CompositeEventCollection< Element::double >", "classdrake_1_1systems_1_1_composite_event_collection.html", [
-      [ "LeafCompositeEventCollection< Element::double >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
-    ] ],
     [ "CompositeEventCollection< Element::T >", "classdrake_1_1systems_1_1_composite_event_collection.html", [
       [ "LeafCompositeEventCollection< Element::T >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
     ] ],
     [ "ConditionTraits< symbolic::Formula >", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html", null ],
+    [ "DifferentialInverseKinematicsSystem::LeastSquaresCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::JointCenteringCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::CartesianPositionLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_position_limit_constraint_1_1_config.html", null ],
-    [ "DifferentialInverseKinematicsSystem::LeastSquaresCost::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::CartesianVelocityLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_cartesian_velocity_limit_constraint_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::CollisionConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint_1_1_config.html", null ],
     [ "DifferentialInverseKinematicsSystem::JointVelocityLimitConstraint::Config", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html", null ],
     [ "PidControlledSystem< T >::ConnectResult", "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html", null ],
-    [ "ConstraintAccelProblemData< T >", "structdrake_1_1examples_1_1rod2d_1_1_constraint_accel_problem_data.html", null ],
     [ "ConstraintRelaxingIk", "classdrake_1_1multibody_1_1_constraint_relaxing_ik.html", null ],
-    [ "ConstraintSolver< T >", "classdrake_1_1examples_1_1rod2d_1_1_constraint_solver.html", null ],
-    [ "ConstraintVelProblemData< T >", "structdrake_1_1examples_1_1rod2d_1_1_constraint_vel_problem_data.html", null ],
     [ "ContactResults< T >", "classdrake_1_1multibody_1_1_contact_results.html", null ],
     [ "ContactSurface< T >", "classdrake_1_1geometry_1_1_contact_surface.html", null ],
     [ "ContactVisualizerParams", "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html", null ],
@@ -149,7 +133,6 @@ var hierarchy =
       [ "DiagramContinuousState< T >", "classdrake_1_1systems_1_1_diagram_continuous_state.html", null ]
     ] ],
     [ "ContinuousState< AutoDiffXd >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
-    [ "ContinuousState< double >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< Element::T >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", [
@@ -203,7 +186,6 @@ var hierarchy =
     [ "DiscreteValues< AutoDiffXd >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "DiscreteValues< double >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "DiscreteValues< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
-    [ "DiscreteValues< Element::double >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "DiscreteValues< Element::Element::double >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "DiscreteValues< Element::T >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "DistanceAndInterpolationProvider", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html", [
@@ -223,7 +205,6 @@ var hierarchy =
     ] ],
     [ "DofMask", "classdrake_1_1planning_1_1_dof_mask.html", null ],
     [ "DoorHingeConfig", "structdrake_1_1multibody_1_1_door_hinge_config.html", null ],
-    [ "DrakeKukaIIwaRobot< T >", "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html", null ],
     [ "DrakeLcmInterface", "classdrake_1_1lcm_1_1_drake_lcm_interface.html", [
       [ "DrakeLcm", "classdrake_1_1lcm_1_1_drake_lcm.html", null ],
       [ "DrakeLcmBase", "classdrake_1_1lcm_1_1_drake_lcm_base.html", null ],
@@ -244,7 +225,6 @@ var hierarchy =
     [ "EigenPtr< PlainObjectType >", "classdrake_1_1_eigen_ptr.html", null ],
     [ "EigenPtr< const MatrixX< T > >", "classdrake_1_1_eigen_ptr.html", null ],
     [ "EigenPtr< const VectorX< T > >", "classdrake_1_1_eigen_ptr.html", null ],
-    [ "EncodedData", "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_encoded_data.html", null ],
     [ "Environment", "classdrake_1_1symbolic_1_1_environment.html", null ],
     [ "EnvironmentMap", "structdrake_1_1geometry_1_1_environment_map.html", null ],
     [ "equal_to< drake::symbolic::Expression >", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
@@ -256,7 +236,6 @@ var hierarchy =
         [ "ContactWrenchFromForceInWorldFrameEvaluator", "classdrake_1_1multibody_1_1_contact_wrench_from_force_in_world_frame_evaluator.html", null ]
       ] ],
       [ "Constraint", "classdrake_1_1solvers_1_1_constraint.html", [
-        [ "BrickStaticEquilibriumNonlinearConstraint", "classdrake_1_1examples_1_1planar__gripper_1_1_brick_static_equilibrium_nonlinear_constraint.html", null ],
         [ "AngleBetweenVectorsConstraint", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html", null ],
         [ "CentroidalMomentumConstraint", "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html", null ],
         [ "ComInPolyhedronConstraint", "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html", null ],
@@ -323,7 +302,6 @@ var hierarchy =
       [ "PublishEvent< T >", "classdrake_1_1systems_1_1_publish_event.html", null ],
       [ "UnrestrictedUpdateEvent< T >", "classdrake_1_1systems_1_1_unrestricted_update_event.html", null ]
     ] ],
-    [ "Event< double >", "classdrake_1_1systems_1_1_event.html", null ],
     [ "EventCollection< EventType >", "classdrake_1_1systems_1_1_event_collection.html", [
       [ "DiagramEventCollection< EventType >", "classdrake_1_1systems_1_1_diagram_event_collection.html", null ],
       [ "LeafEventCollection< EventType >", "classdrake_1_1systems_1_1_leaf_event_collection.html", null ]
@@ -331,19 +309,16 @@ var hierarchy =
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< AutoDiffXd > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< drake::symbolic::Expression > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
-    [ "EventCollection< drake::systems::DiscreteUpdateEvent< Element::double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< Element::T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< AutoDiffXd > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< drake::symbolic::Expression > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
-    [ "EventCollection< drake::systems::PublishEvent< Element::double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< Element::T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< AutoDiffXd > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< drake::symbolic::Expression > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
-    [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< Element::double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< Element::T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventStatus", "classdrake_1_1systems_1_1_event_status.html", null ],
@@ -402,9 +377,6 @@ var hierarchy =
     [ "ForceDensityFieldBase< T >", "classdrake_1_1multibody_1_1_force_density_field_base.html", [
       [ "ForceDensityField< T >", "classdrake_1_1multibody_1_1_force_density_field.html", [
         [ "GravityForceField< T >", "classdrake_1_1multibody_1_1_gravity_force_field.html", null ]
-      ] ],
-      [ "ForceDensityField< double >", "classdrake_1_1multibody_1_1_force_density_field.html", [
-        [ "PointSourceForceField", "classdrake_1_1examples_1_1deformable_1_1_point_source_force_field.html", null ]
       ] ]
     ] ],
     [ "formatter", null, [
@@ -484,7 +456,6 @@ var hierarchy =
       [ "ProximityProperties", "classdrake_1_1geometry_1_1_proximity_properties.html", null ]
     ] ],
     [ "GeometrySet", "classdrake_1_1geometry_1_1_geometry_set.html", null ],
-    [ "GeometrySetTester", "classdrake_1_1geometry_1_1_geometry_set_tester.html", null ],
     [ "GeometryState< T >", "classdrake_1_1geometry_1_1_geometry_state.html", null ],
     [ "GeometryState< AutoDiffXd >", "classdrake_1_1geometry_1_1_geometry_state.html", null ],
     [ "GeometryState< Element::double >", "classdrake_1_1geometry_1_1_geometry_state.html", null ],
@@ -501,8 +472,6 @@ var hierarchy =
     [ "SystemBase::GraphvizFragment", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html", null ],
     [ "SystemBase::GraphvizFragmentParams", "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html", null ],
     [ "GrayCodesMatrix< NumDigits >", "structdrake_1_1math_1_1_gray_codes_matrix.html", null ],
-    [ "GripperBrickHelper< T >", "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html", null ],
-    [ "GripperBrickHelper< double >", "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html", null ],
     [ "GurobiSolverDetails", "structdrake_1_1solvers_1_1_gurobi_solver_details.html", null ],
     [ "hash< drake::geometry::GeometryId >", "structstd_1_1hash_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ],
     [ "hash< drake::Sha256 >", "structstd_1_1hash_3_01drake_1_1_sha256_01_4.html", null ],
@@ -567,7 +536,6 @@ var hierarchy =
       [ "SemiExplicitEulerIntegrator< T >", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html", null ]
     ] ],
     [ "IntegratorBase< AutoDiffXd >", "classdrake_1_1systems_1_1_integrator_base.html", null ],
-    [ "IntegratorBase< double >", "classdrake_1_1systems_1_1_integrator_base.html", null ],
     [ "InverseKinematics", "classdrake_1_1multibody_1_1_inverse_kinematics.html", null ],
     [ "IpoptSolverDetails", "structdrake_1_1solvers_1_1_ipopt_solver_details.html", null ],
     [ "IrisFromCliqueCoverOptions", "structdrake_1_1planning_1_1_iris_from_clique_cover_options.html", null ],
@@ -584,7 +552,6 @@ var hierarchy =
     [ "JointLimits", "classdrake_1_1planning_1_1_joint_limits.html", null ],
     [ "KinematicsVector< Id, KinematicsValue >", "classdrake_1_1geometry_1_1_kinematics_vector.html", null ],
     [ "KinematicTrajectoryOptimization", "classdrake_1_1planning_1_1trajectory__optimization_1_1_kinematic_trajectory_optimization.html", null ],
-    [ "KukaRobotJointReactionForces< T >", "structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html", null ],
     [ "LcmBuses", "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html", null ],
     [ "LcmImageTraits< PixelType >", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits.html", null ],
     [ "LcmImageTraits< PixelType::kBgr8U >", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html", null ],
@@ -608,8 +575,6 @@ var hierarchy =
     [ "less< drake::symbolic::Formula >", "structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4.html", null ],
     [ "less< drake::symbolic::Variable >", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
     [ "LightParameter", "structdrake_1_1geometry_1_1render_1_1_light_parameter.html", null ],
-    [ "LimitMalloc", "classdrake_1_1test_1_1_limit_malloc.html", null ],
-    [ "LimitMallocParams", "structdrake_1_1test_1_1_limit_malloc_params.html", null ],
     [ "LinearQuadraticRegulatorResult", "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html", null ],
     [ "LinearSolver< LinearSolverType, DerivedA >", "classdrake_1_1math_1_1_linear_solver.html", null ],
     [ "LoadYamlOptions", "structdrake_1_1yaml_1_1_load_yaml_options.html", null ],
@@ -637,7 +602,6 @@ var hierarchy =
     [ "MixedIntegerBranchAndBound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html", null ],
     [ "MixedIntegerBranchAndBoundNode", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html", null ],
     [ "MixedIntegerRotationConstraintGenerator", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html", null ],
-    [ "ConstraintSolver< T >::MlcpToLcpData", "structdrake_1_1examples_1_1rod2d_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html", null ],
     [ "MobyLcpSolverId", "classdrake_1_1solvers_1_1_moby_lcp_solver_id.html", null ],
     [ "ModelDirective", "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html", null ],
     [ "ModelDirectives", "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html", null ],
@@ -684,7 +648,6 @@ var hierarchy =
     ] ],
     [ "MultibodyForces< T >", "classdrake_1_1multibody_1_1_multibody_forces.html", null ],
     [ "MultibodyPlantConfig", "structdrake_1_1multibody_1_1_multibody_plant_config.html", null ],
-    [ "MultibodyPlantTester", "classdrake_1_1multibody_1_1_multibody_plant_tester.html", null ],
     [ "MultipleShooting", "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html", [
       [ "DirectCollocation", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html", null ],
       [ "DirectTranscription", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html", null ]
@@ -722,15 +685,13 @@ var hierarchy =
     [ "Obb", "classdrake_1_1geometry_1_1_obb.html", null ],
     [ "ObbMaker< MeshType >", "classdrake_1_1geometry_1_1_obb_maker.html", null ],
     [ "ObbMakerTester< MeshType >", "classdrake_1_1geometry_1_1_obb_maker_tester.html", null ],
-    [ "Object", "classdrake_1_1pydrake_1_1_object.html", null ],
-    [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
     [ "MixedIntegerBranchAndBound::Options", "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html", null ],
+    [ "CspaceFreePolytopeBase::Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", null ],
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "Meshcat::OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", null ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
     [ "SelectorParams::OutputPortParams", "structdrake_1_1systems_1_1_selector_params_1_1_output_port_params.html", null ],
     [ "SelectorParams::OutputSelection", "structdrake_1_1systems_1_1_selector_params_1_1_output_selection.html", null ],
-    [ "overload_cast_impl< Return, Args >", "structdrake_1_1pydrake_1_1overload__cast__impl.html", null ],
     [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html", null ],
     [ "Parallelism", "classdrake_1_1_parallelism.html", null ],
     [ "Parameters< T >", "classdrake_1_1systems_1_1_parameters.html", null ],
@@ -755,8 +716,8 @@ var hierarchy =
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
     [ "PolygonSurfaceMesh< double >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
     [ "PolygonSurfaceMeshTest< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh_test.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -778,7 +739,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "RationalForwardKinematics::Pose< T >", "structdrake_1_1multibody_1_1_rational_forward_kinematics_1_1_pose.html", null ],
-    [ "process_attribute_default", "classprocess__attribute__default.html", null ],
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
@@ -820,9 +780,6 @@ var hierarchy =
     [ "RlocationOrError", "structdrake_1_1_rlocation_or_error.html", null ],
     [ "RobotClearance", "classdrake_1_1planning_1_1_robot_clearance.html", null ],
     [ "RobotDiagramBuilder< T >", "classdrake_1_1planning_1_1_robot_diagram_builder.html", null ],
-    [ "RobotModel< T >", "classdrake_1_1multibody_1_1test_1_1_robot_model.html", null ],
-    [ "RobotModelConfig", "structdrake_1_1multibody_1_1test_1_1_robot_model_config.html", null ],
-    [ "Rod2dStateVectorIndices", "structdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector_indices.html", null ],
     [ "RollPitchYaw< T >", "classdrake_1_1math_1_1_roll_pitch_yaw.html", null ],
     [ "Rotation", "classdrake_1_1schema_1_1_rotation.html", null ],
     [ "RotationalInertia< T >", "classdrake_1_1multibody_1_1_rotational_inertia.html", [
@@ -849,7 +806,6 @@ var hierarchy =
     [ "SchunkWsgDriver", "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_driver.html", null ],
     [ "SchunkWsgTrajectoryGeneratorStateVectorIndices", "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html", null ],
     [ "ScopedName", "classdrake_1_1multibody_1_1_scoped_name.html", null ],
-    [ "DiagnosticPolicyTestBase::ScopedTrace", "classdrake_1_1test_1_1_diagnostic_policy_test_base_1_1_scoped_trace.html", null ],
     [ "ScopeExit", "classdrake_1_1_scope_exit.html", null ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
     [ "CspaceFreePolytope::SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", null ],
@@ -857,8 +813,8 @@ var hierarchy =
     [ "SemidefiniteRelaxationOptions", "structdrake_1_1solvers_1_1_semidefinite_relaxation_options.html", null ],
     [ "CspaceFreeBox::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", null ],
     [ "CspaceFreePolytope::SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", null ],
-    [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "CspaceFreePolytope::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", null ],
+    [ "CspaceFreeBox::SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", null ],
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", [
       [ "CspaceFreeBox::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html", null ],
       [ "CspaceFreePolytope::SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html", null ]
@@ -870,7 +826,6 @@ var hierarchy =
     [ "SerializerInterface", "classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html", [
       [ "Serializer< LcmMessage >", "classdrake_1_1systems_1_1lcm_1_1_serializer.html", null ]
     ] ],
-    [ "SetEnv", "classdrake_1_1test_1_1_set_env.html", null ],
     [ "Sha256", "classdrake_1_1_sha256.html", null ],
     [ "Shape", "classdrake_1_1geometry_1_1_shape.html", [
       [ "Box", "classdrake_1_1geometry_1_1_box.html", null ],
@@ -890,7 +845,6 @@ var hierarchy =
     [ "SignedDistanceToPoint< T >", "structdrake_1_1geometry_1_1_signed_distance_to_point.html", null ],
     [ "SignedDistanceWithTimeDerivative", "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html", null ],
     [ "Simulator< T >", "classdrake_1_1systems_1_1_simulator.html", null ],
-    [ "Simulator< double >", "classdrake_1_1systems_1_1_simulator.html", null ],
     [ "SimulatorConfig", "structdrake_1_1systems_1_1_simulator_config.html", null ],
     [ "SimulatorStatus", "classdrake_1_1systems_1_1_simulator_status.html", null ],
     [ "SinCos", "structdrake_1_1symbolic_1_1_sin_cos.html", null ],
@@ -923,7 +877,6 @@ var hierarchy =
     [ "SortedPair< drake::TypeSafeIndex >", "structdrake_1_1_sorted_pair.html", null ],
     [ "SpatialInertia< T >", "classdrake_1_1multibody_1_1_spatial_inertia.html", null ],
     [ "SpatialInertia< double >", "classdrake_1_1multibody_1_1_spatial_inertia.html", null ],
-    [ "SpatialKinematicsPVA< T >", "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html", null ],
     [ "SpatialVector< SV, T >", "classdrake_1_1multibody_1_1_spatial_vector.html", null ],
     [ "SpatialVector< SpatialAcceleration, T >", "classdrake_1_1multibody_1_1_spatial_vector.html", [
       [ "SpatialAcceleration< T >", "classdrake_1_1multibody_1_1_spatial_acceleration.html", null ]
@@ -948,9 +901,7 @@ var hierarchy =
     [ "State< T >", "classdrake_1_1systems_1_1_state.html", [
       [ "DiagramState< T >", "classdrake_1_1systems_1_1_diagram_state.html", null ]
     ] ],
-    [ "State< double >", "classdrake_1_1systems_1_1_state.html", null ],
     [ "StateFeedbackControllerInterface< T >", "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html", [
-      [ "KukaTorqueController< T >", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_kuka_torque_controller.html", null ],
       [ "InverseDynamicsController< T >", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html", null ],
       [ "PidController< T >", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html", null ]
     ] ],
@@ -967,7 +918,6 @@ var hierarchy =
     [ "SystemConstraint< AutoDiffXd >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraint< double >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraint< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
-    [ "SystemConstraint< Element::double >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraint< Element::T >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraintAdapter", "classdrake_1_1systems_1_1_system_constraint_adapter.html", null ],
     [ "SystemConstraintBounds", "classdrake_1_1systems_1_1_system_constraint_bounds.html", null ],
@@ -976,27 +926,19 @@ var hierarchy =
         [ "System< T >", "classdrake_1_1systems_1_1_system.html", [
           [ "Diagram< T >", "classdrake_1_1systems_1_1_diagram.html", [
             [ "AcrobotWEncoder< T >", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html", null ],
-            [ "KukaTorqueController< T >", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_kuka_torque_controller.html", null ],
             [ "SimIiwaDriver< T >", "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_sim_iiwa_driver.html", null ],
             [ "RobotDiagram< T >", "classdrake_1_1planning_1_1_robot_diagram.html", null ],
             [ "InverseDynamicsController< T >", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html", null ],
             [ "PidControlledSystem< T >", "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html", null ],
-            [ "PidControlledSpringMassSystem< T >", "classdrake_1_1systems_1_1_pid_controlled_spring_mass_system.html", null ],
             [ "StateInterpolatorWithDiscreteDerivative< T >", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html", null ]
           ] ],
           [ "LeafSystem< T >", "classdrake_1_1systems_1_1_leaf_system.html", [
             [ "AcrobotPlant< T >", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html", null ],
             [ "AcrobotSpongController< T >", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_spong_controller.html", null ],
-            [ "BeadOnAWire< T >", "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html", null ],
-            [ "BouncingBall< T >", "classdrake_1_1examples_1_1bouncing__ball_1_1_bouncing_ball.html", null ],
             [ "CompassGait< T >", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html", null ],
-            [ "ClothSpringModel< T >", "classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model.html", null ],
             [ "PendulumPlant< T >", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html", null ],
             [ "QuadrotorPlant< T >", "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html", null ],
             [ "RimlessWheel< T >", "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html", null ],
-            [ "Rod2D< T >", "classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html", null ],
-            [ "BouncingBallPlant< T >", "classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html", null ],
-            [ "SolarSystem< T >", "classdrake_1_1examples_1_1solar__system_1_1_solar_system.html", null ],
             [ "VanDerPolOscillator< T >", "classdrake_1_1examples_1_1van__der__pol_1_1_van_der_pol_oscillator.html", null ],
             [ "DrakeVisualizer< T >", "classdrake_1_1geometry_1_1_drake_visualizer.html", null ],
             [ "MeshcatPointCloudVisualizer< T >", "classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer.html", null ],
@@ -1014,11 +956,6 @@ var hierarchy =
             [ "Propeller< T >", "classdrake_1_1multibody_1_1_propeller.html", null ],
             [ "Wing< T >", "classdrake_1_1multibody_1_1_wing.html", null ],
             [ "Adder< T >", "classdrake_1_1systems_1_1_adder.html", null ],
-            [ "RobertsonSystem< T >", "classdrake_1_1systems_1_1analysis_1_1test_1_1_robertson_system.html", null ],
-            [ "StiffDoubleMassSpringSystem< T >", "classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html", null ],
-            [ "LogisticSystem< T >", "classdrake_1_1systems_1_1analysis__test_1_1_logistic_system.html", null ],
-            [ "StatelessSystem< T >", "classdrake_1_1systems_1_1analysis__test_1_1_stateless_system.html", null ],
-            [ "StationarySystem< T >", "classdrake_1_1systems_1_1analysis__test_1_1_stationary_system.html", null ],
             [ "BusCreator< T >", "classdrake_1_1systems_1_1_bus_creator.html", null ],
             [ "BusSelector< T >", "classdrake_1_1systems_1_1_bus_selector.html", null ],
             [ "ConstantValueSource< T >", "classdrake_1_1systems_1_1_constant_value_source.html", null ],
@@ -1030,8 +967,6 @@ var hierarchy =
             [ "DiscreteTimeDelay< T >", "classdrake_1_1systems_1_1_discrete_time_delay.html", null ],
             [ "DiscreteTimeIntegrator< T >", "classdrake_1_1systems_1_1_discrete_time_integrator.html", null ],
             [ "LuenbergerObserver< T >", "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html", null ],
-            [ "StochasticLinearSystem< T >", "classdrake_1_1systems_1_1estimators__test_1_1_stochastic_linear_system.html", null ],
-            [ "SumMatrixColumnsSystem< T >", "classdrake_1_1systems_1_1estimators__test_1_1_sum_matrix_columns_system.html", null ],
             [ "LinearTransformDensity< T >", "classdrake_1_1systems_1_1_linear_transform_density.html", null ],
             [ "MultilayerPerceptron< T >", "classdrake_1_1systems_1_1_multilayer_perceptron.html", null ],
             [ "Multiplexer< T >", "classdrake_1_1systems_1_1_multiplexer.html", null ],
@@ -1051,12 +986,6 @@ var hierarchy =
               [ "TrajectorySource< T >", "classdrake_1_1systems_1_1_trajectory_source.html", null ]
             ] ],
             [ "SparseMatrixGain< T >", "classdrake_1_1systems_1_1_sparse_matrix_gain.html", null ],
-            [ "SpringMassSystem< T >", "classdrake_1_1systems_1_1_spring_mass_system.html", [
-              [ "MySpringMassSystem< T >", "classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html", null ],
-              [ "SpringMassDamperSystem< T >", "classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html", [
-                [ "DiscontinuousSpringMassDamperSystem< T >", "classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html", null ]
-              ] ]
-            ] ],
             [ "SymbolicVectorSystem< T >", "classdrake_1_1systems_1_1_symbolic_vector_system.html", null ],
             [ "TimeVaryingAffineSystem< T >", "classdrake_1_1systems_1_1_time_varying_affine_system.html", [
               [ "AffineSystem< T >", "classdrake_1_1systems_1_1_affine_system.html", [
@@ -1094,7 +1023,6 @@ var hierarchy =
         ] ],
         [ "System< double >", "classdrake_1_1systems_1_1_system.html", [
           [ "Diagram< double >", "classdrake_1_1systems_1_1_diagram.html", [
-            [ "LcmPlanInterpolator", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html", null ],
             [ "SchunkWsgController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_controller.html", null ],
             [ "SchunkWsgPlainController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html", null ],
             [ "SchunkWsgPositionController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html", null ],
@@ -1106,28 +1034,11 @@ var hierarchy =
           [ "LeafSystem< double >", "classdrake_1_1systems_1_1_leaf_system.html", [
             [ "DiscreteDerivative< double >", "classdrake_1_1systems_1_1_discrete_derivative.html", null ],
             [ "DiscreteTimeIntegrator< double >", "classdrake_1_1systems_1_1_discrete_time_integrator.html", null ],
-            [ "AcrobotCommandReceiver", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_receiver.html", null ],
-            [ "AcrobotCommandSender", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_sender.html", null ],
             [ "AcrobotGeometry", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html", null ],
-            [ "AcrobotStateReceiver", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_receiver.html", null ],
-            [ "AcrobotStateSender", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_sender.html", null ],
-            [ "AllegroCommandReceiver", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_command_receiver.html", null ],
-            [ "AllegroStatusSender", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html", null ],
             [ "CompassGaitGeometry", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html", null ],
-            [ "ParallelGripperController", "classdrake_1_1examples_1_1deformable_1_1_parallel_gripper_controller.html", null ],
-            [ "SuctionCupController", "classdrake_1_1examples_1_1deformable_1_1_suction_cup_controller.html", null ],
-            [ "FibonacciDifferenceEquation", "classdrake_1_1examples_1_1fibonacci_1_1_fibonacci_difference_equation.html", null ],
-            [ "ClothSpringModelGeometry", "classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_geometry.html", null ],
             [ "PendulumGeometry", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_geometry.html", null ],
-            [ "GripperCommandDecoder", "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_command_decoder.html", null ],
-            [ "GripperCommandEncoder", "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_command_encoder.html", null ],
-            [ "GripperStatusDecoder", "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_decoder.html", null ],
-            [ "GripperStatusEncoder", "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_encoder.html", null ],
-            [ "PlanarManipulandStatusDecoder", "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_decoder.html", null ],
-            [ "PlanarManipulandStatusEncoder", "classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html", null ],
             [ "QuadrotorGeometry", "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html", null ],
             [ "RimlessWheelGeometry", "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_geometry.html", null ],
-            [ "Rod2dGeometry", "classdrake_1_1examples_1_1rod2d_1_1_rod2d_geometry.html", null ],
             [ "JacoCommandReceiver", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html", null ],
             [ "JacoCommandSender", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html", null ],
             [ "JacoStatusReceiver", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html", null ],
@@ -1147,13 +1058,6 @@ var hierarchy =
             [ "DifferentialInverseKinematicsSystem", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html", null ],
             [ "DepthImageToPointCloud", "classdrake_1_1perception_1_1_depth_image_to_point_cloud.html", null ],
             [ "PointCloudToLcm", "classdrake_1_1perception_1_1_point_cloud_to_lcm.html", null ],
-            [ "PleidesSystem", "classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html", null ],
-            [ "CubicScalarSystem", "classdrake_1_1systems_1_1analysis__test_1_1_cubic_scalar_system.html", null ],
-            [ "LinearScalarSystem", "classdrake_1_1systems_1_1analysis__test_1_1_linear_scalar_system.html", null ],
-            [ "QuadraticScalarSystem", "classdrake_1_1systems_1_1analysis__test_1_1_quadratic_scalar_system.html", null ],
-            [ "QuarticScalarSystem", "classdrake_1_1systems_1_1analysis__test_1_1_quartic_scalar_system.html", null ],
-            [ "QuinticScalarSystem", "classdrake_1_1systems_1_1analysis__test_1_1_quintic_scalar_system.html", null ],
-            [ "InitializationTestSystem", "classdrake_1_1systems_1_1_initialization_test_system.html", null ],
             [ "LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html", null ],
             [ "LcmLogPlaybackSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html", null ],
             [ "LcmPublisherSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html", null ],
@@ -1164,20 +1068,10 @@ var hierarchy =
             [ "LcmImageArrayToImages", "classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html", null ],
             [ "RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html", null ],
             [ "RgbdSensorAsync", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html", null ],
-            [ "SceneGraph< double >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
-            [ "SpringMassSystem< double >", "classdrake_1_1systems_1_1_spring_mass_system.html", [
-              [ "MySpringMassSystem< double >", "classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html", null ],
-              [ "SpringMassDamperSystem< double >", "classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html", [
-                [ "DiscontinuousSpringMassDamperSystem< double >", "classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html", null ]
-              ] ]
-            ] ],
-            [ "StiffDoubleMassSpringSystem< double >", "classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html", null ]
+            [ "SceneGraph< double >", "classdrake_1_1geometry_1_1_scene_graph.html", null ]
           ] ]
         ] ],
         [ "System< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_system.html", null ],
-        [ "System< Element::double >", "classdrake_1_1systems_1_1_system.html", [
-          [ "LeafSystem< Element::double >", "classdrake_1_1systems_1_1_leaf_system.html", null ]
-        ] ],
         [ "System< Element::T >", "classdrake_1_1systems_1_1_system.html", [
           [ "LeafSystem< Element::T >", "classdrake_1_1systems_1_1_leaf_system.html", null ]
         ] ]
@@ -1196,27 +1090,15 @@ var hierarchy =
     [ "TamsiSolver< T >", "classdrake_1_1multibody_1_1_tamsi_solver.html", null ],
     [ "TamsiSolverIterationStats", "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html", null ],
     [ "TamsiSolverParameters", "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html", null ],
-    [ "template_single_tag< Tpl >", "structdrake_1_1template__single__tag.html", null ],
     [ "Polynomial< T >::Term", "classdrake_1_1_polynomial_1_1_term.html", null ],
-    [ "Test", null, [
-      [ "MultibodyPlantRemodeling", "classdrake_1_1multibody_1_1_multibody_plant_remodeling.html", null ],
-      [ "ExplicitErrorControlledIntegratorTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html", null ],
-      [ "GenericIntegratorTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_generic_integrator_test.html", null ],
-      [ "ImplicitIntegratorTest< IntegratorType >", "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html", null ],
-      [ "PleidesTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html", null ],
-      [ "DiagnosticPolicyTestBase", "classdrake_1_1test_1_1_diagnostic_policy_test_base.html", null ]
-    ] ],
-    [ "TestWithParam", null, [
-      [ "CollisionCheckerAbstractTestSuite", "classdrake_1_1planning_1_1test_1_1_collision_checker_abstract_test_suite.html", null ]
-    ] ],
     [ "Timer", "classdrake_1_1_timer.html", [
       [ "ManualTimer", "classdrake_1_1_manual_timer.html", null ],
       [ "SteadyTimer", "classdrake_1_1_steady_timer.html", null ]
     ] ],
     [ "TimeStep", "structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html", null ],
     [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html", null ],
-    [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "traits", "classtraits.html", null ],
+    [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "Traits< TrajectorySource >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html", null ],
     [ "Trajectory< T >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "BezierCurve< T >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],
@@ -1258,12 +1140,6 @@ var hierarchy =
     [ "TriangleSurfaceMesh< T >", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html", null ],
     [ "TriangleSurfaceMeshTester< T >", "classdrake_1_1geometry_1_1_triangle_surface_mesh_tester.html", null ],
     [ "tuple_element< Index, drake::SortedPair< T > >", "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ],
-    [ "type_at< I, Ts >", "structdrake_1_1type__at.html", null ],
-    [ "type_check_different_from< T >", "structdrake_1_1type__check__different__from.html", null ],
-    [ "type_pack< Ts >", "structdrake_1_1type__pack.html", null ],
-    [ "type_tag< T >", "structdrake_1_1type__tag.html", null ],
-    [ "type_visit_with_default", "structdrake_1_1type__visit__with__default.html", null ],
-    [ "type_visit_with_tag< Tag >", "structdrake_1_1type__visit__with__tag.html", null ],
     [ "TypeSafeIndex< Tag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class AbstractParameterTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class AbstractStateTag >", "classdrake_1_1_type_safe_index.html", null ],
@@ -1337,19 +1213,13 @@ var hierarchy =
         [ "SpongControllerParams< T >", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html", null ],
         [ "CompassGaitContinuousState< T >", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_continuous_state.html", null ],
         [ "CompassGaitParams< T >", "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_params.html", null ],
-        [ "ClothSpringModelParams< T >", "classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_params.html", null ],
-        [ "CartPoleParams< T >", "classdrake_1_1examples_1_1multibody_1_1cart__pole_1_1_cart_pole_params.html", null ],
         [ "PendulumInput< T >", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html", null ],
         [ "PendulumParams< T >", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html", null ],
         [ "PendulumState< T >", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_state.html", null ],
         [ "RimlessWheelContinuousState< T >", "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_continuous_state.html", null ],
         [ "RimlessWheelParams< T >", "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params.html", null ],
-        [ "Rod2dStateVector< T >", "classdrake_1_1examples_1_1rod2d_1_1_rod2d_state_vector.html", null ],
-        [ "BouncingBallVector< T >", "classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_vector.html", null ],
         [ "SchunkWsgTrajectoryGeneratorStateVector< T >", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector.html", null ],
-        [ "MyVector< T, N >", "classdrake_1_1systems_1_1_my_vector.html", null ],
-        [ "BeamModelParams< T >", "classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html", null ],
-        [ "SpringMassStateVector< T >", "classdrake_1_1systems_1_1_spring_mass_state_vector.html", null ]
+        [ "BeamModelParams< T >", "classdrake_1_1systems_1_1sensors_1_1_beam_model_params.html", null ]
       ] ],
       [ "Subvector< T >", "classdrake_1_1systems_1_1_subvector.html", null ],
       [ "Supervector< T >", "classdrake_1_1systems_1_1_supervector.html", null ]
@@ -1363,12 +1233,10 @@ var hierarchy =
     [ "VectorBase< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_vector_base.html", [
       [ "BasicVector< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
     ] ],
-    [ "VectorBase< Element::double >", "classdrake_1_1systems_1_1_vector_base.html", [
-      [ "BasicVector< Element::double >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
-    ] ],
     [ "VectorBase< Element::Element::double >", "classdrake_1_1systems_1_1_vector_base.html", [
       [ "BasicVector< Element::Element::double >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
     ] ],
+    [ "VectorBase< Element::Element::T >", "classdrake_1_1systems_1_1_vector_base.html", null ],
     [ "VectorBase< Element::T >", "classdrake_1_1systems_1_1_vector_base.html", [
       [ "BasicVector< Element::T >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
     ] ],
@@ -1379,23 +1247,14 @@ var hierarchy =
     [ "VolumeMesh< T >", "classdrake_1_1geometry_1_1_volume_mesh.html", null ],
     [ "VolumeMesh< double >", "classdrake_1_1geometry_1_1_volume_mesh.html", null ],
     [ "VolumeMeshTester< T >", "classdrake_1_1geometry_1_1_volume_mesh_tester.html", null ],
-    [ "vtkCommand", "classvtk_command.html", null ],
-    [ "vtkURILoader", "classvtk_u_r_i_loader.html", [
-      [ "VtkGltfUriLoader", "classdrake_1_1geometry_1_1_d_r_a_k_e___n_o___e_x_p_o_r_t_1_1_vtk_gltf_uri_loader.html", null ]
-    ] ],
     [ "Warn", "structdrake_1_1logging_1_1_warn.html", null ],
     [ "WitnessFunction< T >", "classdrake_1_1systems_1_1_witness_function.html", null ],
-    [ "WitnessFunction< double >", "classdrake_1_1systems_1_1_witness_function.html", null ],
     [ "WitnessTriggeredEventData< T >", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", null ],
-    [ "wrap_arg_default< T >", "structdrake_1_1pydrake_1_1wrap__arg__default.html", null ],
     [ "ZeroForceDriver", "structdrake_1_1manipulation_1_1_zero_force_driver.html", null ],
     [ "ZmpPlanner", "classdrake_1_1planning_1_1_zmp_planner.html", null ],
-    [ "ZmpTestTraj", "structdrake_1_1planning_1_1_zmp_test_traj.html", null ],
     [ "const ContextConstraintCalc< double >", "classconst_01_context_constraint_calc_3_01double_01_4.html", null ],
-    [ "const ContextConstraintCalc< Element::double >", "classconst_01_context_constraint_calc_3_01_element_1_1double_01_4.html", null ],
     [ "const ContextConstraintCalc< Element::T >", "classconst_01_context_constraint_calc_3_01_element_1_1_t_01_4.html", null ],
     [ "const SystemConstraintCalc< double >", "classconst_01_system_constraint_calc_3_01double_01_4.html", null ],
-    [ "const SystemConstraintCalc< Element::double >", "classconst_01_system_constraint_calc_3_01_element_1_1double_01_4.html", null ],
     [ "const SystemConstraintCalc< Element::T >", "classconst_01_system_constraint_calc_3_01_element_1_1_t_01_4.html", null ],
     [ "double", "classdouble.html", null ],
     [ "InputPortLocator", "class_input_port_locator.html", null ],
@@ -1405,6 +1264,5 @@ var hierarchy =
     [ "Vector3< Element::T >", "class_vector3_3_01_element_1_1_t_01_4.html", null ],
     [ "Vector6< T >", "class_vector6_3_01_t_01_4.html", null ],
     [ "VectorX< double >", "class_vector_x_3_01double_01_4.html", null ],
-    [ "VectorX< Element::double >", "class_vector_x_3_01_element_1_1double_01_4.html", null ],
     [ "VectorX< Element::T >", "class_vector_x_3_01_element_1_1_t_01_4.html", null ]
 ];
