@@ -1,10 +1,6 @@
 var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
 [
-    [ "aabb.h", "aabb_8h.html", [
-      [ "AabbMaker", "classdrake_1_1geometry_1_1_aabb_maker.html", "classdrake_1_1geometry_1_1_aabb_maker" ],
-      [ "Aabb", "classdrake_1_1geometry_1_1_aabb.html", "classdrake_1_1geometry_1_1_aabb" ],
-      [ "AabbMaker", "classdrake_1_1geometry_1_1_aabb_maker.html", "classdrake_1_1geometry_1_1_aabb_maker" ]
-    ] ],
+    [ "aabb.h", "aabb_8h.html", "aabb_8h" ],
     [ "boxes_overlap.h", "boxes__overlap_8h.html", null ],
     [ "bvh.h", "bvh_8h.html", null ],
     [ "bvh_updater.h", "bvh__updater_8h.html", null ],
@@ -42,32 +38,18 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "mesh_to_vtk.h", "mesh__to__vtk_8h.html", null ],
     [ "mesh_traits.h", "mesh__traits_8h.html", "mesh__traits_8h" ],
     [ "meshing_utilities.h", "meshing__utilities_8h.html", null ],
-    [ "obb.h", "obb_8h.html", [
-      [ "ObbMaker", "classdrake_1_1geometry_1_1_obb_maker.html", "classdrake_1_1geometry_1_1_obb_maker" ],
-      [ "Obb", "classdrake_1_1geometry_1_1_obb.html", "classdrake_1_1geometry_1_1_obb" ],
-      [ "ObbMakerTester", "classdrake_1_1geometry_1_1_obb_maker_tester.html", null ],
-      [ "ObbMaker", "classdrake_1_1geometry_1_1_obb_maker.html", "classdrake_1_1geometry_1_1_obb_maker" ]
-    ] ],
+    [ "obb.h", "obb_8h.html", "obb_8h" ],
     [ "obj_to_surface_mesh.h", "obj__to__surface__mesh_8h.html", "obj__to__surface__mesh_8h" ],
     [ "penetration_doxygen.h", "penetration__doxygen_8h.html", null ],
     [ "plane.h", "plane_8h.html", null ],
-    [ "polygon_surface_mesh.h", "polygon__surface__mesh_8h.html", [
-      [ "PolygonSurfaceMesh", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", "classdrake_1_1geometry_1_1_polygon_surface_mesh" ],
-      [ "PolygonSurfaceMeshTest", "classdrake_1_1geometry_1_1_polygon_surface_mesh_test.html", null ],
-      [ "SurfacePolygon", "classdrake_1_1geometry_1_1_surface_polygon.html", "classdrake_1_1geometry_1_1_surface_polygon" ],
-      [ "PolygonSurfaceMesh", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", "classdrake_1_1geometry_1_1_polygon_surface_mesh" ]
-    ] ],
+    [ "polygon_surface_mesh.h", "polygon__surface__mesh_8h.html", "polygon__surface__mesh_8h" ],
     [ "polygon_surface_mesh_field.h", "polygon__surface__mesh__field_8h.html", "polygon__surface__mesh__field_8h" ],
     [ "polygon_to_triangle_mesh.h", "polygon__to__triangle__mesh_8h.html", null ],
     [ "posed_half_space.h", "posed__half__space_8h.html", null ],
     [ "proximity_doxygen.h", "proximity__doxygen_8h.html", null ],
     [ "sorted_triplet.h", "sorted__triplet_8h.html", null ],
     [ "tessellation_strategy.h", "tessellation__strategy_8h.html", null ],
-    [ "triangle_surface_mesh.h", "triangle__surface__mesh_8h.html", [
-      [ "SurfaceTriangle", "classdrake_1_1geometry_1_1_surface_triangle.html", "classdrake_1_1geometry_1_1_surface_triangle" ],
-      [ "TriangleSurfaceMeshTester", "classdrake_1_1geometry_1_1_triangle_surface_mesh_tester.html", null ],
-      [ "TriangleSurfaceMesh", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html", "classdrake_1_1geometry_1_1_triangle_surface_mesh" ]
-    ] ],
+    [ "triangle_surface_mesh.h", "triangle__surface__mesh_8h.html", "triangle__surface__mesh_8h" ],
     [ "triangle_surface_mesh_field.h", "triangle__surface__mesh__field_8h.html", "triangle__surface__mesh__field_8h" ],
     [ "volume_mesh.h", "volume__mesh_8h.html", "volume__mesh_8h" ],
     [ "volume_mesh_field.h", "volume__mesh__field_8h.html", "volume__mesh__field_8h" ],

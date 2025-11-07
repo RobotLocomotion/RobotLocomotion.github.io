@@ -9,8 +9,8 @@ var classdrake_1_1solvers_1_1_snopt_solver =
     [ "is_available", "classdrake_1_1solvers_1_1_snopt_solver.html#a277134785588d69bb461a4a402877e7a", null ],
     [ "is_bounded_lp_broken", "classdrake_1_1solvers_1_1_snopt_solver.html#ae7b168841903928112d244606c8a98ce", null ],
     [ "is_enabled", "classdrake_1_1solvers_1_1_snopt_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_snopt_solver.html#af55c098444747d9fcd222f70476ffbb0", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_snopt_solver.html#aed5bafb5f6829b3fdc28ce129890b1de", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_snopt_solver.html#a1f70dd26c06e99e0cec335bf8d817f1e", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_snopt_solver.html#a9b30e8bb72ad6a9c11b828c39c64812c", null ],
     [ "ProgramAttributesSatisfied", "classdrake_1_1solvers_1_1_snopt_solver.html#a793b4bef71b184ac87f03d80b21c04d2", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_snopt_solver.html#af2ff6a250a78bb79ef64f7527c51b01c", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_snopt_solver.html#a00b55f8b4c1c4f19b45621a84deed66c", null ]

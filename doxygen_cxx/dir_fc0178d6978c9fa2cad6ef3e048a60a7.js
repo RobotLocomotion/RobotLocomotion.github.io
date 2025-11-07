@@ -2,13 +2,9 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
 [
     [ "autodiff.h", "math_2autodiff_8h.html", "math_2autodiff_8h" ],
     [ "autodiff_gradient.h", "autodiff__gradient_8h.html", "autodiff__gradient_8h" ],
-    [ "barycentric.h", "barycentric_8h.html", [
-      [ "BarycentricMesh", "classdrake_1_1math_1_1_barycentric_mesh.html", "classdrake_1_1math_1_1_barycentric_mesh" ]
-    ] ],
+    [ "barycentric.h", "barycentric_8h.html", "barycentric_8h" ],
     [ "binomial_coefficient.h", "binomial__coefficient_8h.html", "binomial__coefficient_8h" ],
-    [ "bspline_basis.h", "bspline__basis_8h.html", [
-      [ "BsplineBasis", "classdrake_1_1math_1_1_bspline_basis.html", "classdrake_1_1math_1_1_bspline_basis" ]
-    ] ],
+    [ "bspline_basis.h", "bspline__basis_8h.html", "bspline__basis_8h" ],
     [ "compute_numerical_gradient.h", "compute__numerical__gradient_8h.html", "compute__numerical__gradient_8h" ],
     [ "continuous_algebraic_riccati_equation.h", "continuous__algebraic__riccati__equation_8h.html", "continuous__algebraic__riccati__equation_8h" ],
     [ "continuous_lyapunov_equation.h", "continuous__lyapunov__equation_8h.html", "continuous__lyapunov__equation_8h" ],
@@ -21,10 +17,7 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
     [ "evenly_distributed_pts_on_sphere.h", "evenly__distributed__pts__on__sphere_8h.html", "evenly__distributed__pts__on__sphere_8h" ],
     [ "fast_pose_composition_functions.h", "fast__pose__composition__functions_8h.html", null ],
     [ "fourth_order_tensor.h", "fourth__order__tensor_8h.html", null ],
-    [ "gradient.h", "gradient_8h.html", [
-      [ "Gradient", "structdrake_1_1math_1_1_gradient.html", "structdrake_1_1math_1_1_gradient" ],
-      [ "Gradient< Derived, nq, 1 >", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4" ]
-    ] ],
+    [ "gradient.h", "gradient_8h.html", "gradient_8h" ],
     [ "gradient_util.h", "gradient__util_8h.html", "gradient__util_8h" ],
     [ "gray_code.h", "gray__code_8h.html", "gray__code_8h" ],
     [ "hopf_coordinate.h", "hopf__coordinate_8h.html", "hopf__coordinate_8h" ],
@@ -36,15 +29,8 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
     [ "quadratic_form.h", "quadratic__form_8h.html", "quadratic__form_8h" ],
     [ "quaternion.h", "quaternion_8h.html", "quaternion_8h" ],
     [ "random_rotation.h", "random__rotation_8h.html", "random__rotation_8h" ],
-    [ "rigid_transform.h", "rigid__transform_8h.html", [
-      [ "RigidTransform", "classdrake_1_1math_1_1_rigid_transform.html", "classdrake_1_1math_1_1_rigid_transform" ],
-      [ "formatter< drake::math::RigidTransform< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html", null ]
-    ] ],
-    [ "roll_pitch_yaw.h", "roll__pitch__yaw_8h.html", [
-      [ "RotationMatrix", "classdrake_1_1math_1_1_rotation_matrix.html", "classdrake_1_1math_1_1_rotation_matrix" ],
-      [ "RollPitchYaw", "classdrake_1_1math_1_1_roll_pitch_yaw.html", "classdrake_1_1math_1_1_roll_pitch_yaw" ],
-      [ "formatter< drake::math::RollPitchYaw< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ]
-    ] ],
+    [ "rigid_transform.h", "rigid__transform_8h.html", "rigid__transform_8h" ],
+    [ "roll_pitch_yaw.h", "roll__pitch__yaw_8h.html", "roll__pitch__yaw_8h" ],
     [ "rotation_conversion_gradient.h", "rotation__conversion__gradient_8h.html", "rotation__conversion__gradient_8h" ],
     [ "rotation_matrix.h", "rotation__matrix_8h.html", "rotation__matrix_8h" ],
     [ "soft_min_max.h", "soft__min__max_8h.html", "soft__min__max_8h" ],

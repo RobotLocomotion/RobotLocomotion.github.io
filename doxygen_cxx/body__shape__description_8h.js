@@ -1,4 +1,4 @@
 var body__shape__description_8h =
 [
-    [ "MakeBodyShapeDescription", "body__shape__description_8h.html#a85bb1b7b473700a759d1eb836fb6e536", null ]
+    [ "drake::planning::MakeBodyShapeDescription", "namespacedrake_1_1planning.html#a22cba108af272c1e117879176577ccc3", null ]
 ];

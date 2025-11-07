@@ -1,5 +1,5 @@
 var vector__log__sink_8h =
 [
-    [ "LogVectorOutput", "vector__log__sink_8h.html#af2f7dd25823e78194ea36eabbd525cea", null ],
-    [ "LogVectorOutput", "vector__log__sink_8h.html#a91a3fea6ce8db9489e5329587daa11b3", null ]
+    [ "drake::systems::LogVectorOutput", "namespacedrake_1_1systems.html#a90b8c9c3926a54a2e9b6eb79b8ef021e", null ],
+    [ "drake::systems::LogVectorOutput", "namespacedrake_1_1systems.html#a7ff25bee1ef9f902b1102792f6ff3eb2", null ]
 ];

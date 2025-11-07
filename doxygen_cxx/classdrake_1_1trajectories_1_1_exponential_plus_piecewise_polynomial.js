@@ -7,7 +7,7 @@ var classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial =
     [ "ExponentialPlusPiecewisePolynomial", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afb48be114e596b51430d94200ca3b821", null ],
     [ "~ExponentialPlusPiecewisePolynomial", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#af63939a5197628c5693f211d3ff3b583", null ],
     [ "derivative", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afd774c050097f45948fa77e181ec8a19", null ],
-    [ "operator=", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#ab72583d843169e9123e0aa7b87439bda", null ],
-    [ "operator=", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a1b0dc2e082a27d735c084f0c39c47bad", null ],
+    [ "operator=", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a3c00a33dee871b4f9158dcfcadf9c30e", null ],
+    [ "operator=", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#ac619cf6b49f13679e0de7a8076ed041c", null ],
     [ "shiftRight", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#ae7aaaebd7e27434069ba5af047713628", null ]
 ];

@@ -1,10 +1,10 @@
 var group__geometry__optimization__geodesic__convexity =
 [
-    [ "CheckIfSatisfiesConvexityRadius", "group__geometry__optimization__geodesic__convexity.html#ga05bd75c8b08787c334065792f8532797", null ],
-    [ "ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga2e109ef92fec8f68a785b2edbd380021", null ],
-    [ "ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga33ea6cefa0958e76eb228ecab2bbeba5", null ],
-    [ "ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga1c6d3fc1c7396ee8eee575958044071b", null ],
-    [ "ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga60002c174b2106139e2b219a0e0fb3f0", null ],
-    [ "PartitionConvexSet", "group__geometry__optimization__geodesic__convexity.html#ga0f945f0d43e169b238695da629d93ff7", null ],
-    [ "PartitionConvexSet", "group__geometry__optimization__geodesic__convexity.html#gaeab8ca89c6e95c43cf9ec8c6284f395f", null ]
+    [ "drake::geometry::optimization::CheckIfSatisfiesConvexityRadius", "group__geometry__optimization__geodesic__convexity.html#ga80f9e107223dafa631c82a743f5ee64f", null ],
+    [ "drake::geometry::optimization::ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga509c29f785727d4dbc7291a25a7da515", null ],
+    [ "drake::geometry::optimization::ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga377049edc6e3731c7695c876af7a7fc6", null ],
+    [ "drake::geometry::optimization::ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga6fbf6cf1ac5a9ea873bac401fc705117", null ],
+    [ "drake::geometry::optimization::ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga8f0d035a7345f68adf751858f6b37a90", null ],
+    [ "drake::geometry::optimization::PartitionConvexSet", "group__geometry__optimization__geodesic__convexity.html#ga4cc1511a0a4979afa70ee7d5964bc0d5", null ],
+    [ "drake::geometry::optimization::PartitionConvexSet", "group__geometry__optimization__geodesic__convexity.html#ga40707ecfcee3ff6cc60fdf7cd0956166", null ]
 ];

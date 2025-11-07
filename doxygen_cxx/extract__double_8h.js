@@ -1,6 +1,6 @@
 var extract__double_8h =
 [
-    [ "ExtractDoubleOrThrow", "extract__double_8h.html#acffe42a683dd67544fb4d499d082b16d", null ],
-    [ "ExtractDoubleOrThrow", "extract__double_8h.html#aed7ea46c6e18cce6d2d5ecb7000b8033", null ],
-    [ "ExtractDoubleOrThrow", "extract__double_8h.html#aa25d21a232067d56c472d508b45d90cf", null ]
+    [ "drake::ExtractDoubleOrThrow", "namespacedrake.html#a3a84c0102427116efee16d9170058116", null ],
+    [ "drake::ExtractDoubleOrThrow", "namespacedrake.html#a327205de415417316eb87214fbb1b469", null ],
+    [ "drake::ExtractDoubleOrThrow", "namespacedrake.html#aa4436e37f057bca66547eabb27b3243a", null ]
 ];

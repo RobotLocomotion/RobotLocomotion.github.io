@@ -1,6 +1,6 @@
 var structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices =
 [
-    [ "GetCoordinateNames", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a4f326f1ded578674c93eeb9a24c02500", null ],
+    [ "GetCoordinateNames", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b", null ],
     [ "kNumCoordinates", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aacb5b00cc0c596da1dca6a4126032222", null ],
     [ "kTheta1", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a5d0e7d91df6b1a261375b231fc678acd", null ],
     [ "kTheta1dot", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a574197988c880f73533a3b3c68fd0067", null ],

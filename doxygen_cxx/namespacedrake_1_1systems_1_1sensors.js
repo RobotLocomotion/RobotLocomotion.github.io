@@ -41,5 +41,56 @@ var namespacedrake_1_1systems_1_1sensors =
     [ "RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor" ],
     [ "RgbdSensorAsync", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_async" ],
     [ "RgbdSensorDiscrete", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete" ],
-    [ "RotaryEncoders", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders" ]
+    [ "RotaryEncoders", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders" ],
+    [ "ImageAny", "namespacedrake_1_1systems_1_1sensors.html#ad248b3921cd89da8d3b620cf40211807", null ],
+    [ "ImageBgr8U", "namespacedrake_1_1systems_1_1sensors.html#ad6764dabff337ef74ed1871b8a2c2ffd", null ],
+    [ "ImageBgra8U", "namespacedrake_1_1systems_1_1sensors.html#a746567d80e8e7ae22cae20c9dbe78f3b", null ],
+    [ "ImageDepth16U", "namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8", null ],
+    [ "ImageDepth32F", "namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b", null ],
+    [ "ImageGrey8U", "namespacedrake_1_1systems_1_1sensors.html#a1d38997213d63bf974b9ea19fc5abf0d", null ],
+    [ "ImageLabel16I", "namespacedrake_1_1systems_1_1sensors.html#af9f2ff2c09bd6626d594951724ed1d9a", null ],
+    [ "ImageRgb8U", "namespacedrake_1_1systems_1_1sensors.html#a48e75e9f3da7e6ca9cc886086e177d2a", null ],
+    [ "ImageRgba8U", "namespacedrake_1_1systems_1_1sensors.html#af5afae0f791341ac7ad11eb6bcb092bd", null ],
+    [ "ImageFileFormat", "namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3", [
+      [ "kJpeg", "namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3a56fb481831bf55c2dcf25f84e0b41401", null ],
+      [ "kPng", "namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3aed86cf85de32aa0a6ded67ee8944c34f", null ],
+      [ "kTiff", "namespacedrake_1_1systems_1_1sensors.html#aec0f265ffb95497b48b9e1989da0f7e3a2a303d92441e04d26d330b18576a48af", null ]
+    ] ],
+    [ "PixelFormat", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072a", [
+      [ "kRgb", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aa79c7503f0e2c40a13957e8aac9ac9f7b", null ],
+      [ "kBgr", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aaa604150389917b572788fdd3138143b8", null ],
+      [ "kRgba", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aaeec9741abc081cf5a144d85d2be07fc0", null ],
+      [ "kBgra", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aaf34c9bbc14fec59d55cb4a75ec163294", null ],
+      [ "kGrey", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aa40cd0e65ffc5f6da4b0de71c32a1849c", null ],
+      [ "kDepth", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aa89dae440fb2c3bab9f2dd5e05cad3643", null ],
+      [ "kLabel", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aa6608e709edce0bfd1bb1eb49eb5f8bea", null ]
+    ] ],
+    [ "PixelScalar", "namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792", [
+      [ "k8U", "namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a01f5fa4aac9e911952ef4bfac3d864ab", null ],
+      [ "k16I", "namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a00582391087709af581a9e896ef882ef", null ],
+      [ "k16U", "namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a9368b1a6dc329fd741e75949a4c8b99a", null ],
+      [ "k32F", "namespacedrake_1_1systems_1_1sensors.html#aa27964439659a0be90e567d865ffb792a0e8d8cf2ebb8164d8a669d983eca5276", null ]
+    ] ],
+    [ "PixelType", "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3d", [
+      [ "kRgb8U", "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3daeee66110e8b7e5d4ffd4f739ba15f5f6", null ],
+      [ "kBgr8U", "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da0326c4bed4ffb3b2f430e119a147b530", null ],
+      [ "kRgba8U", "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dab2ba7d59e9ac2edec71ea18cc201b478", null ],
+      [ "kBgra8U", "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dad9ccb61d94c4349b5471a40a5b5c7ea8", null ],
+      [ "kGrey8U", "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da3798842b1f11a731f5e11d9744c29774", null ],
+      [ "kDepth16U", "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3daf85535e7c32140b6d5a5544342787ced", null ],
+      [ "kDepth32F", "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da238a889ea664dc69a583c89712b4f96c", null ],
+      [ "kLabel16I", "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da2a67266021c4dc63b8ed214bff50abec", null ]
+    ] ],
+    [ "ApplyCameraConfig", "namespacedrake_1_1systems_1_1sensors.html#a8fe46c452e5a5266fa0f267b360a87c7", null ],
+    [ "ConvertDepth16UTo32F", "namespacedrake_1_1systems_1_1sensors.html#ac9c1e04fcb1c49ba844238a98cb6341f", null ],
+    [ "ConvertDepth32FTo16U", "namespacedrake_1_1systems_1_1sensors.html#a138136e1054cece31f0a757b1803c094", null ],
+    [ "SaveToPng", "namespacedrake_1_1systems_1_1sensors.html#a826f23cc357ee7ff30bb106e57c46e49", null ],
+    [ "SaveToPng", "namespacedrake_1_1systems_1_1sensors.html#aeb0d675cb8e79da72b117a8ca8bdbf8d", null ],
+    [ "SaveToPng", "namespacedrake_1_1systems_1_1sensors.html#a17eae479873aa81177a8791a5e9414ba", null ],
+    [ "SaveToPng", "namespacedrake_1_1systems_1_1sensors.html#a29bd196cbf701b14b87cc1b67d1b78f9", null ],
+    [ "SaveToTiff", "namespacedrake_1_1systems_1_1sensors.html#ab8f031c6417b11f78aaa98d106762245", null ],
+    [ "to_string", "namespacedrake_1_1systems_1_1sensors.html#a2dfe38f8e53a5f1e11e0da1bb0c91b56", null ],
+    [ "to_string", "namespacedrake_1_1systems_1_1sensors.html#a300174b3450b177406a904b5d21d6318", null ],
+    [ "to_string", "namespacedrake_1_1systems_1_1sensors.html#ab6714adba4d60b90e26eccca83238481", null ],
+    [ "to_string", "namespacedrake_1_1systems_1_1sensors.html#a7e59381887b12bec1146f2f2ea716678", null ]
 ];

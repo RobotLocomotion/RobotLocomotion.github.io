@@ -1,4 +1,4 @@
 var calc__obb_8h =
 [
-    [ "CalcObb", "calc__obb_8h.html#a18419a6e6043ac351125aacc70c891e1", null ]
+    [ "drake::geometry::CalcObb", "namespacedrake_1_1geometry.html#a1b02fd98506fd3eaa665e6aea5964675", null ]
 ];

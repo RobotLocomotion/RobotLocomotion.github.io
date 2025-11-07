@@ -1,6 +1,6 @@
 var structdrake_1_1solvers_1_1_ipopt_solver_details =
 [
-    [ "ConvertStatusToString", "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6df89ba323770f788f15768d8e278d1c", null ],
+    [ "ConvertStatusToString", "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a50d80fc2fa1bc0a5bed2f060591aa6c5", null ],
     [ "g", "structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4", null ],
     [ "lambda", "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a1377097022dfdec89312e47c9ae9dfc8", null ],
     [ "status", "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00", null ],

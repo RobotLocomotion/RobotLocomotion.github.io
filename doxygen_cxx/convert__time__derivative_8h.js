@@ -1,4 +1,4 @@
 var convert__time__derivative_8h =
 [
-    [ "ConvertTimeDerivativeToOtherFrame", "convert__time__derivative_8h.html#a7ad7ab2561d0c05591eb9720adccc7d5", null ]
+    [ "drake::math::ConvertTimeDerivativeToOtherFrame", "namespacedrake_1_1math.html#a178c2116d7750bdd9ab8647b69e51a9d", null ]
 ];

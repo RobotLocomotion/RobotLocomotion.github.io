@@ -1,5 +1,5 @@
 var string__set_8h =
 [
-    [ "string_multiset", "string__set_8h.html#accb8b7f9037ecf74ea4906a96fd775d1", null ],
-    [ "string_set", "string__set_8h.html#a634b3a51a11fe7326bdf6cc85a121380", null ]
+    [ "drake::string_multiset", "namespacedrake.html#a66eb3331428a0a762d12c6130ae0fdcb", null ],
+    [ "drake::string_set", "namespacedrake.html#abaab955b1414eeecd13a7fe3d79b6422", null ]
 ];

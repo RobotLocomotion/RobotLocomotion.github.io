@@ -12,11 +12,11 @@ var classdrake_1_1solvers_1_1_nlopt_solver =
     [ "is_enabled", "classdrake_1_1solvers_1_1_nlopt_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd", null ],
     [ "MaxEvalName", "classdrake_1_1solvers_1_1_nlopt_solver.html#acbe005801e7e596d478bb5047324e46a", null ],
     [ "MaxTimeName", "classdrake_1_1solvers_1_1_nlopt_solver.html#a664b7415711560b9bb37a728e31e7a7a", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_nlopt_solver.html#aced6fff3f0509366118adcdb296beb31", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_nlopt_solver.html#a678d7d58f1fb30841f28442cb0c4d8cc", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_nlopt_solver.html#ab61a141b30cfd5551f2d5e227e88215a", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_nlopt_solver.html#a566ef9c0b144ccdfd217aeae812e76ea", null ],
     [ "ProgramAttributesSatisfied", "classdrake_1_1solvers_1_1_nlopt_solver.html#a793b4bef71b184ac87f03d80b21c04d2", null ],
-    [ "Solve", "classdrake_1_1solvers_1_1_nlopt_solver.html#a00b55f8b4c1c4f19b45621a84deed66c", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_nlopt_solver.html#af2ff6a250a78bb79ef64f7527c51b01c", null ],
+    [ "Solve", "classdrake_1_1solvers_1_1_nlopt_solver.html#a00b55f8b4c1c4f19b45621a84deed66c", null ],
     [ "XAbsoluteToleranceName", "classdrake_1_1solvers_1_1_nlopt_solver.html#abc5ac406da08694840aacd7b374b127a", null ],
     [ "XRelativeToleranceName", "classdrake_1_1solvers_1_1_nlopt_solver.html#ae7ee35ef18027156f5cb7b485de8d574", null ]
 ];

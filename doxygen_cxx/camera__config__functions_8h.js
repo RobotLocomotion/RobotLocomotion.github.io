@@ -1,4 +1,4 @@
 var camera__config__functions_8h =
 [
-    [ "ApplyCameraConfig", "camera__config__functions_8h.html#aa3ab5841aed63bd66db330dc9486be95", null ]
+    [ "drake::systems::sensors::ApplyCameraConfig", "namespacedrake_1_1systems_1_1sensors.html#a8fe46c452e5a5266fa0f267b360a87c7", null ]
 ];

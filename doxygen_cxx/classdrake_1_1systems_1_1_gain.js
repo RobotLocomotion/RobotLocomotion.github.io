@@ -6,7 +6,7 @@ var classdrake_1_1systems_1_1_gain =
     [ "Gain", "classdrake_1_1systems_1_1_gain.html#aa5a644d2798feb7f617066a2499b654d", null ],
     [ "Gain", "classdrake_1_1systems_1_1_gain.html#a640bea4c20e9dc45768055372d5da6c3", null ],
     [ "get_gain", "classdrake_1_1systems_1_1_gain.html#a6547634a042d97bba458c79581eda396", null ],
-    [ "get_gain_vector", "classdrake_1_1systems_1_1_gain.html#a17e23771b3533be49532ff5300c68ca6", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_gain.html#a502392b4db76ae3cbc434199c49e3ba0", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_gain.html#afe615074c3490a5ac381273515110abf", null ]
+    [ "get_gain_vector", "classdrake_1_1systems_1_1_gain.html#a98f074058ffcc4493d7ede7b629489e3", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_gain.html#a826683bfba03f79827d6ad615d785c50", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_gain.html#a8f1e898c314fc98ab1a34318d01c2b7e", null ]
 ];

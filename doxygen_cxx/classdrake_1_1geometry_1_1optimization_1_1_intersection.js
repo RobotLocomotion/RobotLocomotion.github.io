@@ -7,9 +7,9 @@ var classdrake_1_1geometry_1_1optimization_1_1_intersection =
     [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a2a3f4bf8aea1252265f088592342060a", null ],
     [ "~Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#ae68336f6101d2c47cee1a1eb7dc926f6", null ],
     [ "CalcVolume", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a7a2847efc4f87e996464d9d71159e27b", null ],
-    [ "element", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a06cf8fec3d41afb4398baccb7d9ce347", null ],
+    [ "element", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a61cdc5c7594564796422ec5dc71bf858", null ],
     [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a92797706c9c2adb6329f1dce4c672d59", null ],
     [ "num_elements", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a98f8a4ac27c2c8008728ae504e8e68bc", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a7b576c6ef0a29307ea834724937fef6b", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#abe5efeb5bbc62b365d01c7c4b09e9686", null ]
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a0d358aca80976f2d6553008569400f29", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a7bdc604f5c2ad22915d2ea816916e9bc", null ]
 ];

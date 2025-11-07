@@ -1,4 +1,4 @@
 var unit__quaternion__constraint_8h =
 [
-    [ "AddUnitQuaternionConstraintOnPlant", "unit__quaternion__constraint_8h.html#a6b628f5e0da2fa821a5db041e4075212", null ]
+    [ "drake::multibody::AddUnitQuaternionConstraintOnPlant", "namespacedrake_1_1multibody.html#a952bef6a5e1ea79d3f3425b9340f990d", null ]
 ];

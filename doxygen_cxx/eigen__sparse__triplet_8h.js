@@ -1,5 +1,5 @@
 var eigen__sparse__triplet_8h =
 [
-    [ "SparseMatrixToRowColumnValueVectors", "eigen__sparse__triplet_8h.html#a9681555f84d48a48d09601d913246934", null ],
-    [ "SparseMatrixToTriplets", "eigen__sparse__triplet_8h.html#a731362436a359883cbac2c59abf95168", null ]
+    [ "drake::math::SparseMatrixToRowColumnValueVectors", "namespacedrake_1_1math.html#a55e8440aa53d7db2a614142ae4e27941", null ],
+    [ "drake::math::SparseMatrixToTriplets", "namespacedrake_1_1math.html#ad55de6b340513cdc1351d509dc9d99e6", null ]
 ];

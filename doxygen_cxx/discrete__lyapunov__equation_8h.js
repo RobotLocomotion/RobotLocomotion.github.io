@@ -1,4 +1,4 @@
 var discrete__lyapunov__equation_8h =
 [
-    [ "RealDiscreteLyapunovEquation", "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7", null ]
+    [ "drake::math::RealDiscreteLyapunovEquation", "namespacedrake_1_1math.html#a1d907fb507b2003b9da9558489e48e44", null ]
 ];

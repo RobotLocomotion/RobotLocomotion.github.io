@@ -1,4 +1,4 @@
 var iris__zo_8h =
 [
-    [ "IrisZo", "iris__zo_8h.html#ga7a0dc24bc708c206708b8af86c38baff", null ]
+    [ "drake::planning::IrisZo", "group__planning__iris.html#ga9b44245010bfdc8163645f0c62f9e9ab", null ]
 ];

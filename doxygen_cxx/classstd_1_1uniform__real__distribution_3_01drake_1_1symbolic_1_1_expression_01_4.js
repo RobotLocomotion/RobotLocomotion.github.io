@@ -12,8 +12,8 @@ var classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression
     [ "min", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45", null ],
     [ "operator()", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aaaead712fe7dc29c1799e7d8f77d1cfb", null ],
     [ "operator()", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9", null ],
-    [ "operator=", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab128d4795c1161bafae531dd5c37e4f1", null ],
-    [ "operator=", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03fe2fcbb54b17038f831ae97017f9a3", null ],
+    [ "operator=", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a0c721eeefeda9d4147d85b68182190f6", null ],
+    [ "operator=", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a565479fd1d9d03ed7fd55e0d2ece047f", null ],
     [ "reset", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad20897c5c8bd47f5d4005989bead0e55", null ],
     [ "operator==", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2e58e3553fbff5f9ba05acba0daa7753", null ]
 ];

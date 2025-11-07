@@ -7,6 +7,6 @@ var classdrake_1_1multibody_1_1_position_constraint =
     [ "PositionConstraint", "classdrake_1_1multibody_1_1_position_constraint.html#a77c84f856baa565bfd6865e01b3cc9e5", null ],
     [ "PositionConstraint", "classdrake_1_1multibody_1_1_position_constraint.html#ab62e91d74ed7c1d89ac7898f3fdb832f", null ],
     [ "~PositionConstraint", "classdrake_1_1multibody_1_1_position_constraint.html#a2ea90fb3e5889e774d8538071f1a1be9", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_position_constraint.html#a98426350d6161bba3747119038010018", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_position_constraint.html#a8dce53e06df016444d9dd50d00a63154", null ]
+    [ "operator=", "classdrake_1_1multibody_1_1_position_constraint.html#aa81d17384cada4923119fce976b15401", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_position_constraint.html#a36d7ad938fd23859e435c85fa90b5e2d", null ]
 ];

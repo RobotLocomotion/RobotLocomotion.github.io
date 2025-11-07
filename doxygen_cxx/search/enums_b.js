@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['materialmodel',['MaterialModel',['../namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a',1,'drake::multibody::fem']]],
-  ['meshgradientmode',['MeshGradientMode',['../namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4eca',1,'drake::geometry']]]
+  ['materialmodel_0',['MaterialModel',['../namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a',1,'drake::multibody::fem']]],
+  ['meshgradientmode_1',['MeshGradientMode',['../namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4eca',1,'drake::geometry']]]
 ];

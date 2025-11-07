@@ -13,10 +13,7 @@ var dir_66d630ac47407fe11bcb76d9e7e25510 =
     [ "monomial_util.h", "monomial__util_8h.html", "monomial__util_8h" ],
     [ "polynomial.h", "symbolic_2polynomial_8h.html", "symbolic_2polynomial_8h" ],
     [ "polynomial_basis.h", "polynomial__basis_8h.html", "polynomial__basis_8h" ],
-    [ "polynomial_basis_element.h", "polynomial__basis__element_8h.html", [
-      [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", "classdrake_1_1symbolic_1_1_polynomial_basis_element" ],
-      [ "BasisElementGradedReverseLexOrder", "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html", "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order" ]
-    ] ],
+    [ "polynomial_basis_element.h", "polynomial__basis__element_8h.html", "polynomial__basis__element_8h" ],
     [ "rational_function.h", "rational__function_8h.html", "rational__function_8h" ],
     [ "replace_bilinear_terms.h", "replace__bilinear__terms_8h.html", "replace__bilinear__terms_8h" ],
     [ "simplification.h", "simplification_8h.html", "simplification_8h" ],

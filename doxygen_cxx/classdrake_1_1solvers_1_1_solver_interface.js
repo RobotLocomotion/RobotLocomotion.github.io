@@ -8,8 +8,8 @@ var classdrake_1_1solvers_1_1_solver_interface =
     [ "available", "classdrake_1_1solvers_1_1_solver_interface.html#a1e8fcd942e045810b3847510fd0528fa", null ],
     [ "enabled", "classdrake_1_1solvers_1_1_solver_interface.html#ac90e60f81a12700b6f94e534d625ba25", null ],
     [ "ExplainUnsatisfiedProgramAttributes", "classdrake_1_1solvers_1_1_solver_interface.html#a180bffcbef22cd7657ac5036a3e25074", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_solver_interface.html#a18aa508724ac803ce5f8ee66e358af99", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_solver_interface.html#ad1e8a72fc26766f97bb9a3ab312b0921", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_solver_interface.html#a1c13d92bfd97bfc6825f7de8cde8997b", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_solver_interface.html#a6ba09528abf019780b730111507c3ae8", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec", null ],
     [ "solver_id", "classdrake_1_1solvers_1_1_solver_interface.html#a97e6e96f4fdf50c424c68b6583f33023", null ]
 ];

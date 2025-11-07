@@ -1,11 +1,11 @@
 var linear__system_8h =
 [
-    [ "ControllabilityMatrix", "linear__system_8h.html#gaedff9f0a8ddce5d29888ed611ce8bee2", null ],
-    [ "FirstOrderTaylorApproximation", "linear__system_8h.html#ga14e2725af4ae2110baaf69555a49b591", null ],
-    [ "IsControllable", "linear__system_8h.html#ga8bc6169b50b1b127ed5f1b70afcb64ca", null ],
-    [ "IsDetectable", "linear__system_8h.html#gafef1c264968026046996e35551b7155e", null ],
-    [ "IsObservable", "linear__system_8h.html#ga9bb685faf49982e65d0e4bbf2c1d460b", null ],
-    [ "IsStabilizable", "linear__system_8h.html#gae9c9e47b54eef5d69f3575c9054547af", null ],
-    [ "Linearize", "linear__system_8h.html#ga80a6af98e4258a474416aae6ab3abdd8", null ],
-    [ "ObservabilityMatrix", "linear__system_8h.html#gaa15831763ec42b356a75c6bb616a6531", null ]
+    [ "drake::systems::ControllabilityMatrix", "group__control__systems.html#gad5c16fd8af9a341bac4e7630656b9ec3", null ],
+    [ "drake::systems::FirstOrderTaylorApproximation", "group__primitive__systems.html#ga271d19287ded7d3c33471e0e9528cbf8", null ],
+    [ "drake::systems::IsControllable", "group__control__systems.html#ga4cfcf8e42ad6b308e48ab2caee8f59a1", null ],
+    [ "drake::systems::IsDetectable", "group__estimator__systems.html#ga91157160b8062abd65e387a9979d6f66", null ],
+    [ "drake::systems::IsObservable", "group__estimator__systems.html#ga47879e22e3537eb5895bbe220dcc7270", null ],
+    [ "drake::systems::IsStabilizable", "group__control__systems.html#ga4bfc88bc2502b7fd6b6566a39b594932", null ],
+    [ "drake::systems::Linearize", "group__primitive__systems.html#ga7c66291c5e9eafd1cfc9f025665d0041", null ],
+    [ "drake::systems::ObservabilityMatrix", "group__estimator__systems.html#ga920d151f292938f73dc3f6dab92114a4", null ]
 ];

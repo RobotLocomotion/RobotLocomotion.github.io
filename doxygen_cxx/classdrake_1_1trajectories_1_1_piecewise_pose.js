@@ -5,14 +5,14 @@ var classdrake_1_1trajectories_1_1_piecewise_pose =
     [ "PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a3e8a6ff52ba38aeedc2104d69acb7057", null ],
     [ "PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#abe9bbc905bd05580ba6943a89d530b4b", null ],
     [ "~PiecewisePose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a1708a0b0ada4aa6ab01b1af40745c5fe", null ],
-    [ "get_orientation_trajectory", "classdrake_1_1trajectories_1_1_piecewise_pose.html#ac80c5bfd4c7165e52988d167dc3f24dc", null ],
-    [ "get_position_trajectory", "classdrake_1_1trajectories_1_1_piecewise_pose.html#af3ed665c279c199edc05b05413deb70b", null ],
-    [ "GetAcceleration", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a6002daeeb77b73b37291f8b8ef9d36c5", null ],
-    [ "GetPose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a0738d795ce884dad03ad5ff5184d886b", null ],
-    [ "GetVelocity", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a5e7be149ba17c2caee73b6823184fd2e", null ],
+    [ "get_orientation_trajectory", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a2c1260591babc82c7c67c0e65c44b5e7", null ],
+    [ "get_position_trajectory", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a45357fd586f3f9d6f66ed68eb80e9fb5", null ],
+    [ "GetAcceleration", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a417517673e54ad81ea0538668bfcd204", null ],
+    [ "GetPose", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a28a1caa7cc51ca889c0a5cf55d0e283f", null ],
+    [ "GetVelocity", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a05bef666aadc01af7ba1ac7a2e1b768c", null ],
     [ "IsApprox", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a220c40e5653537ed8456542adcb14b89", null ],
-    [ "MakeCubicLinearWithEndLinearVelocity", "classdrake_1_1trajectories_1_1_piecewise_pose.html#ae2f8a49b642aecb5c19ef3625be5e61d", null ],
-    [ "MakeLinear", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a5200b41e6c52f4bc8cbc0c0e75cb4d79", null ],
-    [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_pose.html#af33e9a993aeb52079b4310e7fd43638e", null ],
-    [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a4f39af106df0162d8c0029cfa72e5c04", null ]
+    [ "MakeCubicLinearWithEndLinearVelocity", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a9e84044482dcc856c909afcf194d0d02", null ],
+    [ "MakeLinear", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a7ba189e48a1693e5a5bcda8fe8ff8182", null ],
+    [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_pose.html#afc1ed8998217f1689fe89cbcdcae7fb1", null ],
+    [ "operator=", "classdrake_1_1trajectories_1_1_piecewise_pose.html#a8d35bf8a67625c5c5a754ae69a5f7bf9", null ]
 ];

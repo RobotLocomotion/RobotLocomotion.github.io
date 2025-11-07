@@ -1,9 +1,9 @@
 var group__simulator__configuration =
 [
-    [ "ApplySimulatorConfig", "group__simulator__configuration.html#ga6875fa2f1e9eb22cee800a29b0ca61b9", null ],
-    [ "CreateIntegratorFromConfig", "group__simulator__configuration.html#gaaf4e6ced63bc542a51f1ee61d864480f", null ],
-    [ "ExtractSimulatorConfig", "group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6", null ],
-    [ "GetIntegrationSchemes", "group__simulator__configuration.html#ga5d1fc9d510c450590826170fca172e5a", null ],
-    [ "IsScalarTypeSupportedByIntegrator", "group__simulator__configuration.html#ga1de5476f115ca0e4e00424c001f63ef7", null ],
-    [ "ResetIntegratorFromFlags", "group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b", null ]
+    [ "drake::systems::ApplySimulatorConfig", "group__simulator__configuration.html#ga38ef389a0aba42050d7242d501003e6e", null ],
+    [ "drake::systems::CreateIntegratorFromConfig", "group__simulator__configuration.html#ga79de54f7dbe4a3503bf4b22b931556a4", null ],
+    [ "drake::systems::ExtractSimulatorConfig", "group__simulator__configuration.html#gab307b02825aa94d52bc2314dfe1d337d", null ],
+    [ "drake::systems::GetIntegrationSchemes", "group__simulator__configuration.html#ga2fcc33c4b58a2fb714468a9cdb5272b8", null ],
+    [ "drake::systems::IsScalarTypeSupportedByIntegrator", "group__simulator__configuration.html#ga924053cd3d6a97cbab0c2a06019968eb", null ],
+    [ "drake::systems::ResetIntegratorFromFlags", "group__simulator__configuration.html#ga031277905b97b7c7dcf8025dadc696e4", null ]
 ];

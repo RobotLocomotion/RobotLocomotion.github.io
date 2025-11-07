@@ -9,7 +9,7 @@ var classdrake_1_1systems_1_1_event_collection =
     [ "Clear", "classdrake_1_1systems_1_1_event_collection.html#aa5b31c976cc6734003d9950e731dfed3", null ],
     [ "DoAddToEnd", "classdrake_1_1systems_1_1_event_collection.html#acc00fb518bea279685c8c0af09cef984", null ],
     [ "HasEvents", "classdrake_1_1systems_1_1_event_collection.html#af025a9d6b00f00183fde53dd4f31662c", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_event_collection.html#a6c6982fa09cc2d8465596d59fb66f50f", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_event_collection.html#a9ed599235f4eebf74477f75738cbbf1c", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_event_collection.html#a3f71c46375cb39ecf29a71da7f5c0ff6", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_event_collection.html#a3fc9fada18d8d02c077615a79da6d7d5", null ],
     [ "SetFrom", "classdrake_1_1systems_1_1_event_collection.html#a9ce0ab57962f71dd5a55eb801142203d", null ]
 ];

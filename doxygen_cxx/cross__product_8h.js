@@ -1,4 +1,4 @@
 var cross__product_8h =
 [
-    [ "VectorToSkewSymmetric", "cross__product_8h.html#a2d78f6f294270fdc03dcb68de424536a", null ]
+    [ "drake::math::VectorToSkewSymmetric", "namespacedrake_1_1math.html#a788977a35ad438eaac0c38b2885813b6", null ]
 ];

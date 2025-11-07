@@ -9,8 +9,8 @@ var classdrake_1_1symbolic_1_1_expression_add_factory =
     [ "Add", "classdrake_1_1symbolic_1_1_expression_add_factory.html#ae0df3821668c7d207f4b01f457b4de94", null ],
     [ "AddExpression", "classdrake_1_1symbolic_1_1_expression_add_factory.html#a3696f2dede9b63b0171069b5fc888b0f", null ],
     [ "GetExpression", "classdrake_1_1symbolic_1_1_expression_add_factory.html#af68eff8236d3a36fee3ea41718074cf0", null ],
-    [ "Negate", "classdrake_1_1symbolic_1_1_expression_add_factory.html#a9d9ba69c9982040818393d6a94779f69", null ],
-    [ "operator=", "classdrake_1_1symbolic_1_1_expression_add_factory.html#a139908581ad5f26cd51585ccecfaf628", null ],
-    [ "operator=", "classdrake_1_1symbolic_1_1_expression_add_factory.html#aa9076c4acb7121f4a9790f1520038d5c", null ],
-    [ "operator=", "classdrake_1_1symbolic_1_1_expression_add_factory.html#a082ffdb431a1990a9ef1d89c5e563d35", null ]
+    [ "Negate", "classdrake_1_1symbolic_1_1_expression_add_factory.html#aba9ed041f0914381c2bac63c27885b72", null ],
+    [ "operator=", "classdrake_1_1symbolic_1_1_expression_add_factory.html#a4ec1d82def18eeb167ad7cb2465cf66d", null ],
+    [ "operator=", "classdrake_1_1symbolic_1_1_expression_add_factory.html#ae5a9053be54f017188cf48e808de71a0", null ],
+    [ "operator=", "classdrake_1_1symbolic_1_1_expression_add_factory.html#a8e7417a14be6913deefed56089d5e359", null ]
 ];

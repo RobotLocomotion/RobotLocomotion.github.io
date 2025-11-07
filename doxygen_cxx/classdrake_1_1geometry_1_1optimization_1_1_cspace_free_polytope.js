@@ -9,7 +9,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope =
     [ "SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate" ],
     [ "SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program" ],
     [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result" ],
-    [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a409fd33166e0e4d6bf8967bac91676df", null ],
+    [ "IgnoredCollisionPairs", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a8631e5c8ad686615881ea8296431d67d", null ],
     [ "EllipsoidMarginCost", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a2b784126cf7c688a069445fb7663b2fe", [
       [ "kSum", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a2b784126cf7c688a069445fb7663b2fea4c891b645e16772c94b9ac57032c6e61", null ],
       [ "kGeometricMean", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a2b784126cf7c688a069445fb7663b2fea73514c28b87c972ede3822ca61d2171a", null ]
@@ -19,13 +19,13 @@ var classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope =
     [ "CspaceFreePolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#ae20d0541a965cdc1c28944bc2fb4229a", null ],
     [ "~CspaceFreePolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a951c05eca049028edbbedb7a101897cb", null ],
     [ "AddCspacePolytopeContainment", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a44a0b245038e87ad8626f38a15a2f2c1", null ],
-    [ "BinarySearch", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a19da3edfe4a7542ce54e7ff1d44468f0", null ],
+    [ "BinarySearch", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#af046bc6aae42d94c3422ac3c0cee75bc", null ],
     [ "FindSeparationCertificateGivenPolytope", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a6ef170719d3fadd87796728deb31d571", null ],
-    [ "InitializePolytopeSearchProgram", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#ac4925f5852f656b5f8c219615d5ffe7c", null ],
+    [ "InitializePolytopeSearchProgram", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a1343bd3c291c3b606982a8a3017e31cc", null ],
     [ "MakeIsGeometrySeparableProgram", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#ae417fca5b178312659359521cc8105e7", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a849f120485f1d428fd22ddc15a967eb3", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#ab8caaab53f521b9908ca78ded8d1d5c6", null ],
-    [ "SearchWithBilinearAlternation", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a618851ee850c914a9bbec8051390e374", null ],
-    [ "SolveSeparationCertificateProgram", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#aeac518a954784e6ab038fe0ea0b31c10", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#ae5100c4e19ba668e98667dc602d50c12", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a2399bd0adb10027814e7359511a6628d", null ],
+    [ "SearchWithBilinearAlternation", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a7d441dd1d820c35ca07e706580a3d0c8", null ],
+    [ "SolveSeparationCertificateProgram", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#a7845cf0f1220edefdd5a5a287dcfa078", null ],
     [ "CspaceFreePolytopeTester", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope.html#aa65d053d1747dc4762143c36bc00f93e", null ]
 ];

@@ -7,15 +7,15 @@ var classdrake_1_1geometry_1_1optimization_1_1_affine_subspace =
     [ "AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a86446bbe39292a07cc425b5802a0c5ff", null ],
     [ "~AffineSubspace", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a9fe2f6653e76b4db7c02a2ba9c8e35cd", null ],
     [ "AffineDimension", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a941a95906ac84cc920167e46af9fc2dd", null ],
-    [ "basis", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a2e517d5b78e2fa08bdc06aea97a0d3b6", null ],
+    [ "basis", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a6dfaec9b6081e09d98d144574961bbf9", null ],
     [ "ContainedIn", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#acc52b1cf2090f143dfeda40221474fb3", null ],
     [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a92797706c9c2adb6329f1dce4c672d59", null ],
     [ "IsNearlyEqualTo", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a5d6c9e843c1772c0cade2a7ae80f3773", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#aec46116411b87b5a8824ff5aa0d7e194", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a9ef622cde6496d9c85941241b4f061a6", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#aca06c7c7fb0dcf07b2b5f41b7b81381d", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#aef1b03d811be2218a34c7da179ede7d6", null ],
     [ "OrthogonalComplementBasis", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a767c3fafb6cb988dcad2dc3eef77d183", null ],
     [ "Serialize", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a8e8824802dedfbc36776227f7482b6bc", null ],
     [ "ToGlobalCoordinates", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a8959fcff6a1314155423f57f82302119", null ],
     [ "ToLocalCoordinates", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a3d1925b7f2c88852aafd90b2bfb6e51c", null ],
-    [ "translation", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a4bf2b12f9c8ea0ce42173abdf5816d1b", null ]
+    [ "translation", "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#a05eb6731be6e0777ba797090300869e3", null ]
 ];

@@ -1,18 +1,18 @@
 var mixed__integer__optimization__util_8h =
 [
-    [ "LogarithmicSos2NewBinaryVariables", "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html", "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables" ],
-    [ "IntervalBinning", "mixed__integer__optimization__util_8h.html#a6297509967536d29159910e5c51fd285", [
-      [ "kLogarithmic", "mixed__integer__optimization__util_8h.html#a6297509967536d29159910e5c51fd285a5bff8e60dc42878e194fb2d87460ed29", null ],
-      [ "kLinear", "mixed__integer__optimization__util_8h.html#a6297509967536d29159910e5c51fd285aac97f0008bcf7c7fe4f2ff94160e1385", null ]
+    [ "LogarithmicSos2NewBinaryVariables< NumLambda >", "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html", "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables" ],
+    [ "drake::solvers::IntervalBinning", "namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285", [
+      [ "drake::solvers::IntervalBinning::kLogarithmic", "namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285a5bff8e60dc42878e194fb2d87460ed29", null ],
+      [ "drake::solvers::IntervalBinning::kLinear", "namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285aac97f0008bcf7c7fe4f2ff94160e1385", null ]
     ] ],
-    [ "AddBilinearProductMcCormickEnvelopeMultipleChoice", "mixed__integer__optimization__util_8h.html#a81f7d44186352e1090de1343d468cad2", null ],
-    [ "AddBilinearProductMcCormickEnvelopeSos2", "mixed__integer__optimization__util_8h.html#a1c2dee1da65ed555024f9d2f7ba82141", null ],
-    [ "AddLogarithmicSos1Constraint", "mixed__integer__optimization__util_8h.html#ab3dd262dc400586c539cd57b1bb311ed", null ],
-    [ "AddLogarithmicSos1Constraint", "mixed__integer__optimization__util_8h.html#a6a8dc4e6bf90d7180583c31a7c06381b", null ],
-    [ "AddLogarithmicSos2Constraint", "mixed__integer__optimization__util_8h.html#a5cbd203e51076aa08e497620f11187b4", null ],
-    [ "AddLogarithmicSos2Constraint", "mixed__integer__optimization__util_8h.html#af49d99f80f15d8e6bdd6a6c2d2fdcc23", null ],
-    [ "AddSos2Constraint", "mixed__integer__optimization__util_8h.html#ab46c83406ebd077e9c93b5ea05946ee2", null ],
-    [ "CeilLog2", "mixed__integer__optimization__util_8h.html#a2f7d6f23d494612f72e8efc99b87143c", null ],
-    [ "operator<<", "mixed__integer__optimization__util_8h.html#a6c59daf7e576403f76128d2063303e9b", null ],
-    [ "to_string", "mixed__integer__optimization__util_8h.html#afc62e1bcb70d02de2cb87f7bea20bc77", null ]
+    [ "drake::solvers::AddBilinearProductMcCormickEnvelopeMultipleChoice", "namespacedrake_1_1solvers.html#ae57ef09daad0923021d5b9441b2e4c74", null ],
+    [ "drake::solvers::AddBilinearProductMcCormickEnvelopeSos2", "namespacedrake_1_1solvers.html#a8a6ea06a7818854322ead4066cdbc815", null ],
+    [ "drake::solvers::AddLogarithmicSos1Constraint", "namespacedrake_1_1solvers.html#a1eb095f3eb55a66d0625b746c6e2ff54", null ],
+    [ "drake::solvers::AddLogarithmicSos1Constraint", "namespacedrake_1_1solvers.html#aac1e6cc7ceae3d88c75cf675f70ba229", null ],
+    [ "drake::solvers::AddLogarithmicSos2Constraint", "namespacedrake_1_1solvers.html#ae65777c55a38a561dcb1daa020f8349c", null ],
+    [ "drake::solvers::AddLogarithmicSos2Constraint", "namespacedrake_1_1solvers.html#a5ff27667ee8e19ab9af9f4134a5213bd", null ],
+    [ "drake::solvers::AddSos2Constraint", "namespacedrake_1_1solvers.html#ada666e00bb20bccef0f87e0a56712c57", null ],
+    [ "drake::solvers::CeilLog2", "namespacedrake_1_1solvers.html#a394e6ba5988e7a7f9f5800798ecf47c8", null ],
+    [ "drake::solvers::operator<<", "namespacedrake_1_1solvers.html#a7471708f3def1afd274533854146795e", null ],
+    [ "drake::solvers::to_string", "namespacedrake_1_1solvers.html#a77cbff4245bea6ae4ca666c62547ff28", null ]
 ];

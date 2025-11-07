@@ -1,21 +1,8 @@
 var dir_dc85ca307a056e878fb7cdf32e7a9a8e =
 [
-    [ "pendulum_geometry.h", "pendulum__geometry_8h.html", [
-      [ "PendulumGeometry", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_geometry.html", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_geometry" ]
-    ] ],
-    [ "pendulum_input.h", "pendulum__input_8h.html", [
-      [ "PendulumInputIndices", "structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices.html", "structdrake_1_1examples_1_1pendulum_1_1_pendulum_input_indices" ],
-      [ "PendulumInput", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_input" ]
-    ] ],
-    [ "pendulum_params.h", "pendulum__params_8h.html", [
-      [ "PendulumParamsIndices", "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices.html", "structdrake_1_1examples_1_1pendulum_1_1_pendulum_params_indices" ],
-      [ "PendulumParams", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params" ]
-    ] ],
-    [ "pendulum_plant.h", "pendulum__plant_8h.html", [
-      [ "PendulumPlant", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant" ]
-    ] ],
-    [ "pendulum_state.h", "pendulum__state_8h.html", [
-      [ "PendulumStateIndices", "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices.html", "structdrake_1_1examples_1_1pendulum_1_1_pendulum_state_indices" ],
-      [ "PendulumState", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_state.html", "classdrake_1_1examples_1_1pendulum_1_1_pendulum_state" ]
-    ] ]
+    [ "pendulum_geometry.h", "pendulum__geometry_8h.html", "pendulum__geometry_8h" ],
+    [ "pendulum_input.h", "pendulum__input_8h.html", "pendulum__input_8h" ],
+    [ "pendulum_params.h", "pendulum__params_8h.html", "pendulum__params_8h" ],
+    [ "pendulum_plant.h", "pendulum__plant_8h.html", "pendulum__plant_8h" ],
+    [ "pendulum_state.h", "pendulum__state_8h.html", "pendulum__state_8h" ]
 ];

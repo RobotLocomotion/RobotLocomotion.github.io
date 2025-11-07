@@ -9,8 +9,8 @@ var classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum =
     [ "~MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#ab329d54101a6da1d831312618012bf8f", null ],
     [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a92797706c9c2adb6329f1dce4c672d59", null ],
     [ "num_terms", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a7ffbc0928c59ef6d1ed744bcfea6be0b", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aeb9d125fc472d3d8b44a2f410f3ffb18", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a939869561d2b6d2a404bf1f48d513d5f", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a9e1f1d67c117357adddbd93b2949590b", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#ad4ee960500fce9043e02fc6137b6ba65", null ],
     [ "PointInSet", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aa7a4d7c125954dfde3c15238c852eeed", null ],
-    [ "term", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a66c0758e1fb9ac2f946857bdeae490fc", null ]
+    [ "term", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#ac6df59bcfd3b5719237cd5c10e2e2659", null ]
 ];

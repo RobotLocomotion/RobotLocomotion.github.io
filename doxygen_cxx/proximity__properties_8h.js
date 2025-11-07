@@ -1,8 +1,8 @@
 var proximity__properties_8h =
 [
-    [ "AddCompliantHydroelasticProperties", "proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe", null ],
-    [ "AddCompliantHydroelasticPropertiesForHalfSpace", "proximity__properties_8h.html#a331f457a6ce0d146213faa844725dcda", null ],
-    [ "AddContactMaterial", "proximity__properties_8h.html#a524d11f70b0594572404257e3f8640ee", null ],
-    [ "AddRigidHydroelasticProperties", "proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00", null ],
-    [ "AddRigidHydroelasticProperties", "proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2", null ]
+    [ "drake::geometry::AddCompliantHydroelasticProperties", "namespacedrake_1_1geometry.html#a7cccbced57eb9c31f3e5e9ad26099257", null ],
+    [ "drake::geometry::AddCompliantHydroelasticPropertiesForHalfSpace", "namespacedrake_1_1geometry.html#ac8718ed182e7a34c228c3f00d1ad1a23", null ],
+    [ "drake::geometry::AddContactMaterial", "namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d", null ],
+    [ "drake::geometry::AddRigidHydroelasticProperties", "namespacedrake_1_1geometry.html#a6c74afc9942060de51e7c6a65f0ade08", null ],
+    [ "drake::geometry::AddRigidHydroelasticProperties", "namespacedrake_1_1geometry.html#a9f348bc35f08089e23f075a72a72c683", null ]
 ];

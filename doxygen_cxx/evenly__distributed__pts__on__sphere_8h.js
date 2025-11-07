@@ -1,4 +1,4 @@
 var evenly__distributed__pts__on__sphere_8h =
 [
-    [ "UniformPtsOnSphereFibonacci", "evenly__distributed__pts__on__sphere_8h.html#a33baecb77517d26dcea8ab1fb880fcbe", null ]
+    [ "drake::math::UniformPtsOnSphereFibonacci", "namespacedrake_1_1math.html#adba688f2a2db17563f2ef13e199816d9", null ]
 ];

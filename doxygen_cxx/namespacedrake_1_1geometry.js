@@ -1,7 +1,10 @@
 var namespacedrake_1_1geometry =
 [
     [ "optimization", "namespacedrake_1_1geometry_1_1optimization.html", "namespacedrake_1_1geometry_1_1optimization" ],
+    [ "proximity", "namespacedrake_1_1geometry_1_1proximity.html", null ],
     [ "render", "namespacedrake_1_1geometry_1_1render.html", "namespacedrake_1_1geometry_1_1render" ],
+    [ "render_gltf_client", "namespacedrake_1_1geometry_1_1render__gltf__client.html", null ],
+    [ "render_vtk", "namespacedrake_1_1geometry_1_1render__vtk.html", null ],
     [ "Aabb", "classdrake_1_1geometry_1_1_aabb.html", "classdrake_1_1geometry_1_1_aabb" ],
     [ "AabbMaker", "classdrake_1_1geometry_1_1_aabb_maker.html", "classdrake_1_1geometry_1_1_aabb_maker" ],
     [ "Box", "classdrake_1_1geometry_1_1_box.html", "classdrake_1_1geometry_1_1_box" ],
@@ -70,5 +73,68 @@ var namespacedrake_1_1geometry =
     [ "TriangleSurfaceMeshTester", "classdrake_1_1geometry_1_1_triangle_surface_mesh_tester.html", null ],
     [ "VolumeElement", "classdrake_1_1geometry_1_1_volume_element.html", "classdrake_1_1geometry_1_1_volume_element" ],
     [ "VolumeMesh", "classdrake_1_1geometry_1_1_volume_mesh.html", "classdrake_1_1geometry_1_1_volume_mesh" ],
-    [ "VolumeMeshTester", "classdrake_1_1geometry_1_1_volume_mesh_tester.html", null ]
+    [ "VolumeMeshTester", "classdrake_1_1geometry_1_1_volume_mesh_tester.html", null ],
+    [ "DrakeVisualizerd", "namespacedrake_1_1geometry.html#acbab8995daa433cebfc335ffe8ae8fd0", null ],
+    [ "FilterId", "namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56", null ],
+    [ "FrameId", "namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb", null ],
+    [ "FrameIdSet", "namespacedrake_1_1geometry.html#a3a71d18e80aa6fba962ddd8a33aecb05", null ],
+    [ "FramePoseVector", "namespacedrake_1_1geometry.html#a0f8e11a5858131e3e05d6d07fd4cceeb", null ],
+    [ "GeometryConfigurationVector", "namespacedrake_1_1geometry.html#ab9c4c9d66418bb333c14d48e05aac617", null ],
+    [ "GeometryIdSet", "namespacedrake_1_1geometry.html#ae17f078345eeccd086fdb02c198d5b7d", null ],
+    [ "MeshcatPointCloudVisualizerd", "namespacedrake_1_1geometry.html#a13b4d36d0491327603af75e4f6d0c52a", null ],
+    [ "MeshcatVisualizerd", "namespacedrake_1_1geometry.html#acfc5928f9ddabb01ca8a0f2cdabbffa3", null ],
+    [ "PolygonSurfaceMeshFieldLinear", "namespacedrake_1_1geometry.html#a70187c16ea14553f92a3bec4402ae490", null ],
+    [ "promoted_numerical_t", "namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772", null ],
+    [ "SourceId", "namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf", null ],
+    [ "TriangleSurfaceMeshFieldLinear", "namespacedrake_1_1geometry.html#afb1cea0cef695099b2d920680d24050f", null ],
+    [ "VolumeMeshFieldLinear", "namespacedrake_1_1geometry.html#aee6c99359ac348f38b4d470329ec1851", null ],
+    [ "CollisionFilterScope", "namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253", [
+      [ "kAll", "namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253a34bdbffdb1c0e1b603f58fc0d49548b6", null ],
+      [ "kOmitDeformable", "namespacedrake_1_1geometry.html#ad580d9f8e007396af59694d605245253add0cbaa458a6d1a39dfc809377ad2be8", null ]
+    ] ],
+    [ "HydroelasticContactRepresentation", "namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979", [
+      [ "kTriangle", "namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1", null ],
+      [ "kPolygon", "namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb", null ]
+    ] ],
+    [ "MeshGradientMode", "namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4eca", [
+      [ "kNone", "namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa35c3ace1970663a16e5c65baa5941b13", null ],
+      [ "kOkOrMarkDegenerate", "namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa5543e81cb3b8f1409b593cc1ebce1752", null ],
+      [ "kOkOrThrow", "namespacedrake_1_1geometry.html#aa480f7d5d485f556225ed73538dd4ecaa26940490086ffcdf0616b678df54e7f8", null ]
+    ] ],
+    [ "Role", "namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951", [
+      [ "kUnassigned", "namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951a41ba12ed492ce20c3ff503a553ae85ea", null ],
+      [ "kProximity", "namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951ad909c44a5dea6ebbdb3a95e4cb701521", null ],
+      [ "kIllustration", "namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951aac28e5ab68fbe5dc23f550aa18255c07", null ],
+      [ "kPerception", "namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951ac1f9a0ba01987bd1d23d1c4ea605df2b", null ]
+    ] ],
+    [ "RoleAssign", "namespacedrake_1_1geometry.html#a52f8cb466b0827379bc8815f0d58aac3", [
+      [ "kNew", "namespacedrake_1_1geometry.html#a52f8cb466b0827379bc8815f0d58aac3aaf1adf7ec3673b4f5765cfbc5d43b7dc", null ],
+      [ "kReplace", "namespacedrake_1_1geometry.html#a52f8cb466b0827379bc8815f0d58aac3a8ba1782ca7c04c255b3d69d6d2411d90", null ]
+    ] ],
+    [ "AddCompliantHydroelasticProperties", "namespacedrake_1_1geometry.html#a7cccbced57eb9c31f3e5e9ad26099257", null ],
+    [ "AddCompliantHydroelasticPropertiesForHalfSpace", "namespacedrake_1_1geometry.html#ac8718ed182e7a34c228c3f00d1ad1a23", null ],
+    [ "AddContactMaterial", "namespacedrake_1_1geometry.html#a172a6c0e9c7f29a07c1e5437f17c6d9d", null ],
+    [ "AddRigidHydroelasticProperties", "namespacedrake_1_1geometry.html#a6c74afc9942060de51e7c6a65f0ade08", null ],
+    [ "AddRigidHydroelasticProperties", "namespacedrake_1_1geometry.html#a9f348bc35f08089e23f075a72a72c683", null ],
+    [ "CalcObb", "namespacedrake_1_1geometry.html#a1b02fd98506fd3eaa665e6aea5964675", null ],
+    [ "CalcVolume", "namespacedrake_1_1geometry.html#ac677ae9aff90aba0a891854f4287a643", null ],
+    [ "ConvertVolumeToSurfaceMesh", "namespacedrake_1_1geometry.html#a75a53812378833c4ceabcde98a841e89", null ],
+    [ "MakePhongIllustrationProperties", "namespacedrake_1_1geometry.html#ac6e7ff65cee87fead2192eae91ca0b28", null ],
+    [ "MakeRenderEngineGl", "namespacedrake_1_1geometry.html#abb99e00d0f295497d9b250d9bf03a0a2", null ],
+    [ "MakeRenderEngineGltfClient", "namespacedrake_1_1geometry.html#a004a8b7a49c0b7a4bc2f8860af26591b", null ],
+    [ "MakeRenderEngineVtk", "namespacedrake_1_1geometry.html#a8d8e28336b380bccf83c9e5611689e2b", null ],
+    [ "operator!=", "namespacedrake_1_1geometry.html#a7fa229f9c0cc6e132f7f4d2a149bb864", null ],
+    [ "operator<<", "namespacedrake_1_1geometry.html#a968488524d6041456c69fae448e35270", null ],
+    [ "operator==", "namespacedrake_1_1geometry.html#a5e63dda63c412c981364dec694ed3d16", null ],
+    [ "ReadGltfToMemory", "namespacedrake_1_1geometry.html#ab2ba2dbf3b19bdec9eabe6ae62099169", null ],
+    [ "ReadObjToTriangleSurfaceMesh", "namespacedrake_1_1geometry.html#a81c676132d054d87c5c47ff786a7d42c", null ],
+    [ "ReadObjToTriangleSurfaceMesh", "namespacedrake_1_1geometry.html#ab353abd55dd1c9955e09e40c1a491475", null ],
+    [ "ReadObjToTriangleSurfaceMesh", "namespacedrake_1_1geometry.html#aca214fb7e658fbafe777562b609ba572", null ],
+    [ "ReadObjToTriangleSurfaceMesh", "namespacedrake_1_1geometry.html#a6247d94deb29805e3995bfd786ecd03a", null ],
+    [ "RefineVolumeMesh", "namespacedrake_1_1geometry.html#af9d172ba9808493bb6d98dc9da32e875", null ],
+    [ "RefineVolumeMeshIntoVtkFileContents", "namespacedrake_1_1geometry.html#acd7c2cc9566b924539ebcd75590f48c1", null ],
+    [ "to_string", "namespacedrake_1_1geometry.html#a97f9f12fdd336553a58b605abd5a9563", null ],
+    [ "kHasRenderEngineGl", "namespacedrake_1_1geometry.html#a6a949953d76af52d6dd1b13417cb556a", null ],
+    [ "kHasRenderEngineGltfClient", "namespacedrake_1_1geometry.html#a7cd7e8fb90454c8f7fa6e5dad3afbb59", null ],
+    [ "kHasRenderEngineVtk", "namespacedrake_1_1geometry.html#a8a8c891d80ef7ca189d701d976d65d1f", null ]
 ];

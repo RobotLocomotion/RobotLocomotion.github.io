@@ -2,8 +2,8 @@ var drake__lcm__interface_8h =
 [
     [ "DrakeLcmInterface", "classdrake_1_1lcm_1_1_drake_lcm_interface.html", "classdrake_1_1lcm_1_1_drake_lcm_interface" ],
     [ "DrakeSubscriptionInterface", "classdrake_1_1lcm_1_1_drake_subscription_interface.html", "classdrake_1_1lcm_1_1_drake_subscription_interface" ],
-    [ "Subscriber", "classdrake_1_1lcm_1_1_subscriber.html", "classdrake_1_1lcm_1_1_subscriber" ],
-    [ "LcmHandleSubscriptionsUntil", "drake__lcm__interface_8h.html#a6db1a743c5ddeef2341da48dbf5ab027", null ],
-    [ "Publish", "drake__lcm__interface_8h.html#a7f10e39fd5048940095d76f21bdf760d", null ],
-    [ "Subscribe", "drake__lcm__interface_8h.html#ac0dd1948e81c44942a67677e6cc43d07", null ]
+    [ "Subscriber< Message >", "classdrake_1_1lcm_1_1_subscriber.html", "classdrake_1_1lcm_1_1_subscriber" ],
+    [ "drake::lcm::LcmHandleSubscriptionsUntil", "namespacedrake_1_1lcm.html#a8219826b212e289a1abe9610535560fc", null ],
+    [ "drake::lcm::Publish", "namespacedrake_1_1lcm.html#abd3a5c8deb82470ae07c6746c39e1378", null ],
+    [ "drake::lcm::Subscribe", "namespacedrake_1_1lcm.html#a00c100ad590b286e85dfbf72028ffb5c", null ]
 ];

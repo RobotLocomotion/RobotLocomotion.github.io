@@ -105,6 +105,7 @@ var namespacedrake_1_1systems =
     [ "Subvector", "classdrake_1_1systems_1_1_subvector.html", "classdrake_1_1systems_1_1_subvector" ],
     [ "Supervector", "classdrake_1_1systems_1_1_supervector.html", "classdrake_1_1systems_1_1_supervector" ],
     [ "SymbolicVectorSystem", "classdrake_1_1systems_1_1_symbolic_vector_system.html", "classdrake_1_1systems_1_1_symbolic_vector_system" ],
+    [ "SymbolicVectorSystemBuilder", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html", "classdrake_1_1systems_1_1_symbolic_vector_system_builder" ],
     [ "System", "classdrake_1_1systems_1_1_system.html", "classdrake_1_1systems_1_1_system" ],
     [ "SystemBase", "classdrake_1_1systems_1_1_system_base.html", "classdrake_1_1systems_1_1_system_base" ],
     [ "SystemConstraint", "classdrake_1_1systems_1_1_system_constraint.html", "classdrake_1_1systems_1_1_system_constraint" ],
@@ -133,5 +134,87 @@ var namespacedrake_1_1systems =
     [ "WitnessFunction", "classdrake_1_1systems_1_1_witness_function.html", "classdrake_1_1systems_1_1_witness_function" ],
     [ "WitnessTriggeredEventData", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", "classdrake_1_1systems_1_1_witness_triggered_event_data" ],
     [ "WrapToSystem", "classdrake_1_1systems_1_1_wrap_to_system.html", "classdrake_1_1systems_1_1_wrap_to_system" ],
-    [ "ZeroOrderHold", "classdrake_1_1systems_1_1_zero_order_hold.html", "classdrake_1_1systems_1_1_zero_order_hold" ]
+    [ "ZeroOrderHold", "classdrake_1_1systems_1_1_zero_order_hold.html", "classdrake_1_1systems_1_1_zero_order_hold" ],
+    [ "AbstractParameterIndex", "namespacedrake_1_1systems.html#a86b350169906f6d5e07e9db46e36d57a", null ],
+    [ "AbstractStateIndex", "namespacedrake_1_1systems.html#a8c3a27f43e356726f770159944adb929", null ],
+    [ "CacheIndex", "namespacedrake_1_1systems.html#a06ac9ad764b14ccff79b6feb393be498", null ],
+    [ "ContextConstraintCalc", "namespacedrake_1_1systems.html#a9a1d7728b8d33bc29446f3443b34b57f", null ],
+    [ "ContinuousStateIndex", "namespacedrake_1_1systems.html#a180dfb39dc60232f4dacf555d1ed2582", null ],
+    [ "DependencyTicket", "namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee", null ],
+    [ "DiscreteStateIndex", "namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7", null ],
+    [ "InputPortIndex", "namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0", null ],
+    [ "NumericParameterIndex", "namespacedrake_1_1systems.html#af11369a06c5bfd3fa18acb79f85777df", null ],
+    [ "OutputPortIndex", "namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa", null ],
+    [ "Radau1Integrator", "namespacedrake_1_1systems.html#af6af6956e79bb6e0b6fa6afe861fd91a", null ],
+    [ "Radau3Integrator", "namespacedrake_1_1systems.html#a0ef69bdb57d87753b8f827a134371822", null ],
+    [ "SubsystemIndex", "namespacedrake_1_1systems.html#a72b9d4d169dbb0f1f740e1b25697e65e", null ],
+    [ "SystemConstraintCalc", "namespacedrake_1_1systems.html#a298dbb221d509b21c68d9d3f67a3d3f5", null ],
+    [ "SystemConstraintIndex", "namespacedrake_1_1systems.html#a69608eb99ec6982ed17d1ac6d3d6dce1", null ],
+    [ "TriggerTypeSet", "namespacedrake_1_1systems.html#ac84c84e9fbb652ce19106e2f2e1f3d15", null ],
+    [ "UpdateContextFromDecisionVariablesFunction", "namespacedrake_1_1systems.html#aa4f94baba93308add0c6853f5354557e", null ],
+    [ "InputPortSelection", "namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9", [
+      [ "kNoInput", "namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9a757e9aed460a5351e83462b6ac3e8627", null ],
+      [ "kUseFirstInputIfItExists", "namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9ae969b88961b5a19a96fee66796e8d713", null ]
+    ] ],
+    [ "OutputPortSelection", "namespacedrake_1_1systems.html#a00432489001229d1f63cb6d373403a6e", [
+      [ "kNoOutput", "namespacedrake_1_1systems.html#a00432489001229d1f63cb6d373403a6ea04b33f9fae5ed24fc651a8d4be9d9041", null ],
+      [ "kUseFirstOutputIfItExists", "namespacedrake_1_1systems.html#a00432489001229d1f63cb6d373403a6ea2e0016ab225d09e0af0e4648992d8be5", null ]
+    ] ],
+    [ "PerceptronActivationType", "namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0", [
+      [ "kIdentity", "namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0ad4f1ba5b64f241750117f22a6d63618c", null ],
+      [ "kReLU", "namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0aaf7b6001c9a71950fb6858250e78f0fc", null ],
+      [ "kTanh", "namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0ab8f0b26c641a7ec61d715a2ebeb4734d", null ]
+    ] ],
+    [ "PortDataType", "namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbe", [
+      [ "kVectorValued", "namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbea8224a2a2efb09b6189f8fd5a42c8ce52", null ],
+      [ "kAbstractValued", "namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbeaf2203e0344f142b8e294a1bf4546a94e", null ]
+    ] ],
+    [ "SystemConstraintType", "namespacedrake_1_1systems.html#aae3110b50a7cad6f8b6d2842f2177e0f", [
+      [ "kEquality", "namespacedrake_1_1systems.html#aae3110b50a7cad6f8b6d2842f2177e0fa24f3db88d378f692d6d4de3357ccfce7", null ],
+      [ "kInequality", "namespacedrake_1_1systems.html#aae3110b50a7cad6f8b6d2842f2177e0faad3bf38271b2a03f735e67b88923c432", null ]
+    ] ],
+    [ "TriggerType", "namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9", [
+      [ "kUnknown", "namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390", null ],
+      [ "kInitialization", "namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a1800fd44ac807b793ceba2dd9cef1e25", null ],
+      [ "kForced", "namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9af8ece195be5dd5e820bdeee7ad21a4bf", null ],
+      [ "kTimed", "namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a4ee52a6184757eae288c6bfaca2b3cc8", null ],
+      [ "kPeriodic", "namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9aa4dadcf41a1fb6841557aad7688dc1a4", null ],
+      [ "kPerStep", "namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a04a6eca450c24af0269212fb90c57d9f", null ],
+      [ "kWitness", "namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a74e1dac7f98f52df26d510f93c36ae34", null ]
+    ] ],
+    [ "WitnessFunctionDirection", "namespacedrake_1_1systems.html#afe8fe136944074e97f02b7e3835347b3", [
+      [ "kNone", "namespacedrake_1_1systems.html#afe8fe136944074e97f02b7e3835347b3a35c3ace1970663a16e5c65baa5941b13", null ],
+      [ "kPositiveThenNonPositive", "namespacedrake_1_1systems.html#afe8fe136944074e97f02b7e3835347b3acf58431ee9a2c159a03fbfb7721eebd7", null ],
+      [ "kNegativeThenNonNegative", "namespacedrake_1_1systems.html#afe8fe136944074e97f02b7e3835347b3a6ccaf3b73e3536490f4d0145731c89d0", null ],
+      [ "kCrossesZero", "namespacedrake_1_1systems.html#afe8fe136944074e97f02b7e3835347b3ae2ea39b7ef80705cf65b9c6497eb2705", null ]
+    ] ],
+    [ "AddRandomInputs", "namespacedrake_1_1systems.html#a6927bc2509cc8b86f2d9152e6d2ca3ce", null ],
+    [ "ApplySimulatorConfig", "group__simulator__configuration.html#ga38ef389a0aba42050d7242d501003e6e", null ],
+    [ "BatchEvalTimeDerivatives", "namespacedrake_1_1systems.html#a9bbfb3fbf0e3c139e11fcbe99cfbb825", null ],
+    [ "BatchEvalUniquePeriodicDiscreteUpdate", "namespacedrake_1_1systems.html#ad8972abc5e9551f0127a6c9e73b2cc8d", null ],
+    [ "ControllabilityMatrix", "group__control__systems.html#gad5c16fd8af9a341bac4e7630656b9ec3", null ],
+    [ "CreateIntegratorFromConfig", "group__simulator__configuration.html#ga79de54f7dbe4a3503bf4b22b931556a4", null ],
+    [ "DiscreteTimeApproximation", "group__analysis.html#gaf8909e134530f169368f3dd17053d427", null ],
+    [ "DiscreteTimeApproximation", "group__analysis.html#ga235dadbbb0fa017348f63b631d461a71", null ],
+    [ "DiscreteTimeApproximation", "group__analysis.html#gaa8163caadd583fdd8bd34f02473e0a20", null ],
+    [ "DiscreteTimeApproximation", "group__analysis.html#ga8aff0c0ef9f5366a496d9d062d19ad35", null ],
+    [ "DiscreteTimeApproximation", "namespacedrake_1_1systems.html#a802bb4f0be9441b57b4712b87ff633d0", null ],
+    [ "ExtractSimulatorConfig", "group__simulator__configuration.html#gab307b02825aa94d52bc2314dfe1d337d", null ],
+    [ "FirstOrderTaylorApproximation", "group__primitive__systems.html#ga271d19287ded7d3c33471e0e9528cbf8", null ],
+    [ "GetIntegrationSchemes", "group__simulator__configuration.html#ga2fcc33c4b58a2fb714468a9cdb5272b8", null ],
+    [ "IsControllable", "group__control__systems.html#ga4cfcf8e42ad6b308e48ab2caee8f59a1", null ],
+    [ "IsDetectable", "group__estimator__systems.html#ga91157160b8062abd65e387a9979d6f66", null ],
+    [ "IsObservable", "group__estimator__systems.html#ga47879e22e3537eb5895bbe220dcc7270", null ],
+    [ "IsScalarTypeSupportedByIntegrator", "group__simulator__configuration.html#ga924053cd3d6a97cbab0c2a06019968eb", null ],
+    [ "IsStabilizable", "group__control__systems.html#ga4bfc88bc2502b7fd6b6566a39b594932", null ],
+    [ "Linearize", "group__primitive__systems.html#ga7c66291c5e9eafd1cfc9f025665d0041", null ],
+    [ "LogVectorOutput", "namespacedrake_1_1systems.html#a90b8c9c3926a54a2e9b6eb79b8ef021e", null ],
+    [ "LogVectorOutput", "namespacedrake_1_1systems.html#a7ff25bee1ef9f902b1102792f6ff3eb2", null ],
+    [ "ObservabilityMatrix", "group__estimator__systems.html#ga920d151f292938f73dc3f6dab92114a4", null ],
+    [ "operator<<", "namespacedrake_1_1systems.html#ada40290057654d64dbb8f11b4b06a528", null ],
+    [ "operator<<", "namespacedrake_1_1systems.html#a8850ede6b2e5b67f6b3f51709a1661c6", null ],
+    [ "operator==", "namespacedrake_1_1systems.html#a975e1f012415123b7e39a9c1528746b7", null ],
+    [ "PrintSimulatorStatistics", "namespacedrake_1_1systems.html#ac27d2923c7b9807c5e18e860a5d14a5c", null ],
+    [ "ResetIntegratorFromFlags", "group__simulator__configuration.html#ga031277905b97b7c7dcf8025dadc696e4", null ],
+    [ "kUseDefaultName", "namespacedrake_1_1systems.html#a399dec16d9f072ee3a256c35ba3379fa", null ]
 ];

@@ -5,6 +5,6 @@ var classdrake_1_1multibody_1_1_angle_between_vectors_constraint =
     [ "AngleBetweenVectorsConstraint", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a0b7d46ac767f2268ee98b417dfebe34a", null ],
     [ "AngleBetweenVectorsConstraint", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a9a29c3df53244b679800b206a5949f2b", null ],
     [ "~AngleBetweenVectorsConstraint", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a2cf9c73e6f4c40795e1a8bd64ea29e62", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a98fb2abd442bf1476402c2bc628828af", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#ae0935336292ab087cb230d04dbf329e5", null ]
+    [ "operator=", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#ac155f6c894fa0944457a8e8bf9b673a9", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a84588627936698f4f99368bc55afa52e", null ]
 ];

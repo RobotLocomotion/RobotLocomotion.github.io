@@ -12,8 +12,8 @@ var classdrake_1_1systems_1_1sensors_1_1_camera_info =
     [ "fov_x", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abf26f8c02fcada355b0278b7934b5321", null ],
     [ "fov_y", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abc9ba081bfe31e8224d9e40b96f0f717", null ],
     [ "height", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad3774f6419003470f54fd495124ef51f", null ],
-    [ "intrinsic_matrix", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aca5377a1606d0d69d2a9365fafd51476", null ],
-    [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a91be32204a8f6bb1a73d2cebccac0035", null ],
-    [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abb1027925f543f3d11d45ee908a6fbad", null ],
+    [ "intrinsic_matrix", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#acee65a06d7278739ab91d5d7b8c84859", null ],
+    [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a6d2eeb082cbba55ee37f6c76b6f8996a", null ],
+    [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aeb9a9be614e6b24f3030e14d1eff942c", null ],
     [ "width", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad72663daf610f2a0833a2fc3d78e4fdf", null ]
 ];

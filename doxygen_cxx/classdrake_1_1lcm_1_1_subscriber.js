@@ -4,10 +4,10 @@ var classdrake_1_1lcm_1_1_subscriber =
     [ "Subscriber", "classdrake_1_1lcm_1_1_subscriber.html#aaaccfbbb39adad66c631de0c0c6293e3", null ],
     [ "Subscriber", "classdrake_1_1lcm_1_1_subscriber.html#aa60a28d678cc655573ba1fb411467e86", null ],
     [ "clear", "classdrake_1_1lcm_1_1_subscriber.html#ac8bb3912a3ce86b15842e79d0b421204", null ],
+    [ "count", "classdrake_1_1lcm_1_1_subscriber.html#aafa4a2e9badd785a1b6ed5604526be8e", null ],
     [ "count", "classdrake_1_1lcm_1_1_subscriber.html#ab375e6d238626437a2c5398b2dd0aeca", null ],
-    [ "count", "classdrake_1_1lcm_1_1_subscriber.html#a361b1c7f6ecf8c70a8d867b96583b1c3", null ],
-    [ "message", "classdrake_1_1lcm_1_1_subscriber.html#a98d9c60d19f950a9eab8dcdafd1b5c8b", null ],
-    [ "message", "classdrake_1_1lcm_1_1_subscriber.html#a14dd9c16ea06cf5ecf380fec3fc31d40", null ],
-    [ "operator=", "classdrake_1_1lcm_1_1_subscriber.html#a3ea2ced420106e08700676e94eec98be", null ],
-    [ "operator=", "classdrake_1_1lcm_1_1_subscriber.html#aff871e6fe97086a46415d06515414580", null ]
+    [ "message", "classdrake_1_1lcm_1_1_subscriber.html#a295e0f98eedda4cb49b37a118ab6b722", null ],
+    [ "message", "classdrake_1_1lcm_1_1_subscriber.html#af69fb78706b3925cd8c783d8d2c4981c", null ],
+    [ "operator=", "classdrake_1_1lcm_1_1_subscriber.html#ad6ad75f1d1138c57d3fb7956f3aeef7f", null ],
+    [ "operator=", "classdrake_1_1lcm_1_1_subscriber.html#ac1874e13c9790ac2864e8975585b5d0f", null ]
 ];

@@ -1,4 +1,4 @@
 var continuous__lyapunov__equation_8h =
 [
-    [ "RealContinuousLyapunovEquation", "continuous__lyapunov__equation_8h.html#a781bfc30740843ad1203fa68b7497401", null ]
+    [ "drake::math::RealContinuousLyapunovEquation", "namespacedrake_1_1math.html#a87898df1c0be39d4073b61d033390502", null ]
 ];

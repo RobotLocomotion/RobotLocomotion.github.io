@@ -1,7 +1,7 @@
 var obj__to__surface__mesh_8h =
 [
-    [ "ReadObjToTriangleSurfaceMesh", "obj__to__surface__mesh_8h.html#a0402af96aa4e123754f98fdb957faeb3", null ],
-    [ "ReadObjToTriangleSurfaceMesh", "obj__to__surface__mesh_8h.html#a16053550736c40512cb94e1ee525a189", null ],
-    [ "ReadObjToTriangleSurfaceMesh", "obj__to__surface__mesh_8h.html#a2ac1ade83a132db8330f435762ea8aae", null ],
-    [ "ReadObjToTriangleSurfaceMesh", "obj__to__surface__mesh_8h.html#ab2260cf3ba667393b29c3660bc26f29d", null ]
+    [ "drake::geometry::ReadObjToTriangleSurfaceMesh", "namespacedrake_1_1geometry.html#a81c676132d054d87c5c47ff786a7d42c", null ],
+    [ "drake::geometry::ReadObjToTriangleSurfaceMesh", "namespacedrake_1_1geometry.html#ab353abd55dd1c9955e09e40c1a491475", null ],
+    [ "drake::geometry::ReadObjToTriangleSurfaceMesh", "namespacedrake_1_1geometry.html#aca214fb7e658fbafe777562b609ba572", null ],
+    [ "drake::geometry::ReadObjToTriangleSurfaceMesh", "namespacedrake_1_1geometry.html#a6247d94deb29805e3995bfd786ecd03a", null ]
 ];

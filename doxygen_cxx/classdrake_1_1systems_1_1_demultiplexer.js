@@ -5,7 +5,7 @@ var classdrake_1_1systems_1_1_demultiplexer =
     [ "Demultiplexer", "classdrake_1_1systems_1_1_demultiplexer.html#a32f49fa511b864f9b167b98a94a08e92", null ],
     [ "Demultiplexer", "classdrake_1_1systems_1_1_demultiplexer.html#ad01ccbe1782a83e0ce7a1a69234ddd57", null ],
     [ "Demultiplexer", "classdrake_1_1systems_1_1_demultiplexer.html#a71309c5cdd82219503744dea1016c9a4", null ],
-    [ "get_output_ports_sizes", "classdrake_1_1systems_1_1_demultiplexer.html#a12f80a32502008138b77ad790d0be9cc", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_demultiplexer.html#afca5440d08ac02013afdd404ab35f5c3", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_demultiplexer.html#a2dfcdc26002e3b7e4d3d6c1bcec42b66", null ]
+    [ "get_output_ports_sizes", "classdrake_1_1systems_1_1_demultiplexer.html#a3eb0ccc79e1b0ed7e1c41b86b870bb4f", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_demultiplexer.html#ae3930bd18828d63a741542f44b77fda3", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_demultiplexer.html#aa505bd2a516d823073fe0b9800ca20ff", null ]
 ];

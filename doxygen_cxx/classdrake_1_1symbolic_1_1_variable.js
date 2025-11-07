@@ -22,9 +22,9 @@ var classdrake_1_1symbolic_1_1_variable =
     [ "get_type", "classdrake_1_1symbolic_1_1_variable.html#a82aa72996726ed1704227ac05cfcd5e8", null ],
     [ "is_dummy", "classdrake_1_1symbolic_1_1_variable.html#a1ac3dfb9b4ce1004619750db2bb13194", null ],
     [ "less", "classdrake_1_1symbolic_1_1_variable.html#aa30961d840b438f590bf2b29e7f1c502", null ],
-    [ "operator=", "classdrake_1_1symbolic_1_1_variable.html#af10bcef044040e6ad7654a00c35180ca", null ],
-    [ "operator=", "classdrake_1_1symbolic_1_1_variable.html#a166f152a7f35a79c7b4283a174c992fc", null ],
+    [ "operator=", "classdrake_1_1symbolic_1_1_variable.html#a09be6442efc4b94422b1be32058ec268", null ],
+    [ "operator=", "classdrake_1_1symbolic_1_1_variable.html#a459c5581ae83466890bc04affc96c8f9", null ],
     [ "to_string", "classdrake_1_1symbolic_1_1_variable.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ],
     [ "hash_append", "classdrake_1_1symbolic_1_1_variable.html#aa36d7bf3b355c7fcea7ea5cbcf344a2d", null ],
-    [ "operator<<", "classdrake_1_1symbolic_1_1_variable.html#a501b51eeedf7e93b817dc202b14a44a7", null ]
+    [ "operator<<", "classdrake_1_1symbolic_1_1_variable.html#a411e51a0c60278b06088ad1fa084e605", null ]
 ];

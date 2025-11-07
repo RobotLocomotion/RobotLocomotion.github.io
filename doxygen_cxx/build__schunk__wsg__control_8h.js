@@ -1,4 +1,4 @@
 var build__schunk__wsg__control_8h =
 [
-    [ "BuildSchunkWsgControl", "build__schunk__wsg__control_8h.html#a14a60a2f02484fb53b2d71953545c202", null ]
+    [ "drake::manipulation::schunk_wsg::BuildSchunkWsgControl", "namespacedrake_1_1manipulation_1_1schunk__wsg.html#a16849ad98e5f4d87308a76b2d7a5b37e", null ]
 ];

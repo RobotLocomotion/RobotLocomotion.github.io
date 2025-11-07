@@ -1,5 +1,5 @@
 var render__gltf__client_2factory_8h =
 [
-    [ "MakeRenderEngineGltfClient", "render__gltf__client_2factory_8h.html#a99ba06b63779a45d0b347f3b6321ac43", null ],
-    [ "kHasRenderEngineGltfClient", "render__gltf__client_2factory_8h.html#a7cd7e8fb90454c8f7fa6e5dad3afbb59", null ]
+    [ "drake::geometry::MakeRenderEngineGltfClient", "namespacedrake_1_1geometry.html#a004a8b7a49c0b7a4bc2f8860af26591b", null ],
+    [ "drake::geometry::kHasRenderEngineGltfClient", "namespacedrake_1_1geometry.html#a7cd7e8fb90454c8f7fa6e5dad3afbb59", null ]
 ];

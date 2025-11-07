@@ -1,6 +1,6 @@
 var structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices =
 [
-    [ "GetCoordinateNames", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a4f326f1ded578674c93eeb9a24c02500", null ],
+    [ "GetCoordinateNames", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b", null ],
     [ "kB1", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#aebc7e071a27867145a968aea155d99f8", null ],
     [ "kB2", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a9ddfac784dce5e9a670c6fd1b40a2f40", null ],
     [ "kGravity", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a7ea1c5a3874092d7b124a1287c1a839f", null ],

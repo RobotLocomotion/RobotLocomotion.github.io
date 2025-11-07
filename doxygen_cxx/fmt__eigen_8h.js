@@ -1,4 +1,4 @@
 var fmt__eigen_8h =
 [
-    [ "fmt_eigen", "fmt__eigen_8h.html#aade4911b7e8d691ef345a2706012a878", null ]
+    [ "drake::fmt_eigen", "namespacedrake.html#a0655e16a159b287851163900c29d2b4f", null ]
 ];

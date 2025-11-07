@@ -23,13 +23,13 @@ var classdrake_1_1symbolic_1_1_environment =
     [ "end", "classdrake_1_1symbolic_1_1_environment.html#accf9a4bd0c34d4a5f6a7dab66ea10cdc", null ],
     [ "find", "classdrake_1_1symbolic_1_1_environment.html#a9c9766a96c492f3e9e5861d6b4f87387", null ],
     [ "find", "classdrake_1_1symbolic_1_1_environment.html#af2a080484f0b756af6f218c0e6bae306", null ],
+    [ "insert", "classdrake_1_1symbolic_1_1_environment.html#a695d01ed7dc5176315aedcbf2965b654", null ],
     [ "insert", "classdrake_1_1symbolic_1_1_environment.html#a153880e8b1e045676f1b093093fec91c", null ],
-    [ "insert", "classdrake_1_1symbolic_1_1_environment.html#ad1fde034ff21259de810fb2ecbf8214a", null ],
-    [ "operator=", "classdrake_1_1symbolic_1_1_environment.html#a6977fb8930c6c5a154827633c08e00b5", null ],
-    [ "operator=", "classdrake_1_1symbolic_1_1_environment.html#a4b32e107dfb0df05488ec4ec410be075", null ],
-    [ "operator[]", "classdrake_1_1symbolic_1_1_environment.html#aed8a0df9b61494f55f08fd3c7f7189fb", null ],
-    [ "operator[]", "classdrake_1_1symbolic_1_1_environment.html#a228ca65a053b15ce17ff50ccbcc1f878", null ],
+    [ "operator=", "classdrake_1_1symbolic_1_1_environment.html#a4d8b0f2b49091328e38b23987709a09e", null ],
+    [ "operator=", "classdrake_1_1symbolic_1_1_environment.html#ae31236c72fdc6860578ad556e818c2ef", null ],
+    [ "operator[]", "classdrake_1_1symbolic_1_1_environment.html#a7cc8a2be227f99e53efabb3c3a7e750f", null ],
+    [ "operator[]", "classdrake_1_1symbolic_1_1_environment.html#add69b015927bf0042951995df4849fec", null ],
     [ "size", "classdrake_1_1symbolic_1_1_environment.html#a259cb5a711406a8c3e5d937eb9350cca", null ],
     [ "to_string", "classdrake_1_1symbolic_1_1_environment.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ],
-    [ "operator<<", "classdrake_1_1symbolic_1_1_environment.html#af3e85f5f88b525cbc689ad9f916e138c", null ]
+    [ "operator<<", "classdrake_1_1symbolic_1_1_environment.html#a4690027f5a37080d162fbf2b22432994", null ]
 ];

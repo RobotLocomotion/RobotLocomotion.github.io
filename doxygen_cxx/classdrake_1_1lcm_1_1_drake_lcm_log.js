@@ -10,12 +10,12 @@ var classdrake_1_1lcm_1_1_drake_lcm_log =
     [ "GetNextMessageTime", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a66ed18c7aa63c58be2fef656d0e66da1", null ],
     [ "HandleSubscriptions", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a15fc920a34211ee4dfe6a9ccd51b8a02", null ],
     [ "is_write", "classdrake_1_1lcm_1_1_drake_lcm_log.html#aa0eced80d7591ebe55498b3b52657f95", null ],
-    [ "operator=", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a6d9b59b413dd369dcf41af90b0162171", null ],
-    [ "operator=", "classdrake_1_1lcm_1_1_drake_lcm_log.html#aebbce824d150fe159dbeb4fc8fb7be57", null ],
+    [ "operator=", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a1babad79fd2a6e8f2d084807a16a4e9c", null ],
+    [ "operator=", "classdrake_1_1lcm_1_1_drake_lcm_log.html#ab0c71f61cb22a223b18cd28131ba2760", null ],
     [ "Publish", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a4dd0220f8edd30974a57455051032abd", null ],
     [ "second_to_timestamp", "classdrake_1_1lcm_1_1_drake_lcm_log.html#abae47b0fd77178782bad6dbf241d7477", null ],
-    [ "Subscribe", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a16db47193b9958a05c3566ab54f01b76", null ],
-    [ "SubscribeAllChannels", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a85767dac8b9304854190439c7dcdf7b3", null ],
-    [ "SubscribeMultichannel", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a4a5b34d1c453332ce92aad063a22c1f9", null ],
+    [ "Subscribe", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a4c56d2237421349625ead24aa64bb014", null ],
+    [ "SubscribeAllChannels", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a732fa2cb78552a18bd88ba74bee53569", null ],
+    [ "SubscribeMultichannel", "classdrake_1_1lcm_1_1_drake_lcm_log.html#aab6e8037dcf741cbd243a4216fde0ea7", null ],
     [ "timestamp_to_second", "classdrake_1_1lcm_1_1_drake_lcm_log.html#a290743ebfabc452b881ff02106742839", null ]
 ];

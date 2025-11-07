@@ -1,7 +1,7 @@
 var kalman__filter_8h =
 [
-    [ "DiscreteTimeSteadyStateKalmanFilter", "kalman__filter_8h.html#gaa4c925b6356157327fbb15cf94350494", null ],
-    [ "SteadyStateKalmanFilter", "kalman__filter_8h.html#ga483f8a39c210ad058dfc19ae26d93e16", null ],
-    [ "SteadyStateKalmanFilter", "kalman__filter_8h.html#ga7c4307c228661d355148e7f72a6b53dc", null ],
-    [ "SteadyStateKalmanFilter", "kalman__filter_8h.html#ga4fb2e563d9ca3996eed28b0bac18bb67", null ]
+    [ "drake::systems::estimators::DiscreteTimeSteadyStateKalmanFilter", "group__estimation.html#ga3011e8cb9dccbe868dd3d8ed93c30d9d", null ],
+    [ "drake::systems::estimators::SteadyStateKalmanFilter", "group__estimation.html#ga74b71f3ea3317fabd9c08331a3386a20", null ],
+    [ "drake::systems::estimators::SteadyStateKalmanFilter", "group__estimator__systems.html#ga94b93892f242a6b45d5780cc2bb097d0", null ],
+    [ "drake::systems::estimators::SteadyStateKalmanFilter", "group__estimator__systems.html#gad37499a6fdf80148a8957dbf8d845957", null ]
 ];

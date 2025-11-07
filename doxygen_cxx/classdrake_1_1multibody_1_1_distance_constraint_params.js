@@ -8,9 +8,9 @@ var classdrake_1_1multibody_1_1_distance_constraint_params =
     [ "bodyB", "classdrake_1_1multibody_1_1_distance_constraint_params.html#ada13042f2851814bdc21387794f5b254", null ],
     [ "damping", "classdrake_1_1multibody_1_1_distance_constraint_params.html#aad91b55e6b714db4ba96190e6fab07ac", null ],
     [ "distance", "classdrake_1_1multibody_1_1_distance_constraint_params.html#a632f1b28166e024b687b55e71d74dbeb", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_distance_constraint_params.html#a5dfcf0234ed3197a2fc44509eff294bc", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_distance_constraint_params.html#a579c71cd70fd60400ad2bbc62b5b8762", null ],
-    [ "p_AP", "classdrake_1_1multibody_1_1_distance_constraint_params.html#afffb48d660650779291fb4e73558a7be", null ],
-    [ "p_BQ", "classdrake_1_1multibody_1_1_distance_constraint_params.html#abcf315ab69b087e22f6b286c853f108a", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_distance_constraint_params.html#a42886ef0f8236cb9bf93ea88c7d965b7", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_distance_constraint_params.html#a4adedcd6d1fe1a3215c7011a0256eb01", null ],
+    [ "p_AP", "classdrake_1_1multibody_1_1_distance_constraint_params.html#a9df566465cb3a5a6202e44d308671ef0", null ],
+    [ "p_BQ", "classdrake_1_1multibody_1_1_distance_constraint_params.html#a464636138435787626ae3ff22a711975", null ],
     [ "stiffness", "classdrake_1_1multibody_1_1_distance_constraint_params.html#ac8467a9ff79bbea98fa2605ca44b047e", null ]
 ];

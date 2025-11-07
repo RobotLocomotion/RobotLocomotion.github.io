@@ -1,4 +1,4 @@
 var visibility__graph_8h =
 [
-    [ "VisibilityGraph", "visibility__graph_8h.html#ac8bff5baf7217216340dc19e591cca74", null ]
+    [ "drake::planning::VisibilityGraph", "namespacedrake_1_1planning.html#aab44e3709df5b59a0ccf692023cc99ff", null ]
 ];

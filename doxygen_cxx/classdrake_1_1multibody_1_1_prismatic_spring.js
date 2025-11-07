@@ -7,10 +7,10 @@ var classdrake_1_1multibody_1_1_prismatic_spring =
     [ "CalcConservativePower", "classdrake_1_1multibody_1_1_prismatic_spring.html#a2a3b98d7bf6ebbdb80f69b550edc86ab", null ],
     [ "CalcNonConservativePower", "classdrake_1_1multibody_1_1_prismatic_spring.html#a138e6e888ff71dc31cdc64b33f056e68", null ],
     [ "CalcPotentialEnergy", "classdrake_1_1multibody_1_1_prismatic_spring.html#a0fc55c54d954d864281289c0dead6cce", null ],
-    [ "joint", "classdrake_1_1multibody_1_1_prismatic_spring.html#a170bd657cf70af28f58e531b6a8c5608", null ],
+    [ "joint", "classdrake_1_1multibody_1_1_prismatic_spring.html#a2a237c72d7d719159eccb23d97dcd1a6", null ],
     [ "nominal_position", "classdrake_1_1multibody_1_1_prismatic_spring.html#a00881d5c03e5b231d26752f1f236fdc9", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_prismatic_spring.html#a81dd319536d45d3a063c366db5543541", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_prismatic_spring.html#afd645833d7942a6d6927337a3be8d4eb", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_prismatic_spring.html#a5ef0ad219d7c9bd018d57f50a6abecfd", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_prismatic_spring.html#a1f86f104aadc36aa54c079df334bba43", null ],
     [ "stiffness", "classdrake_1_1multibody_1_1_prismatic_spring.html#ac8467a9ff79bbea98fa2605ca44b047e", null ],
     [ "PrismaticSpring", "classdrake_1_1multibody_1_1_prismatic_spring.html#a92dfd7d053dfa0e282432186c76c391c", null ]
 ];

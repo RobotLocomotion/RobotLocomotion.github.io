@@ -2,9 +2,7 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
 [
     [ "adder.h", "adder_8h.html", null ],
     [ "affine_system.h", "affine__system_8h.html", null ],
-    [ "barycentric_system.h", "barycentric__system_8h.html", [
-      [ "BarycentricMeshSystem", "classdrake_1_1systems_1_1_barycentric_mesh_system.html", "classdrake_1_1systems_1_1_barycentric_mesh_system" ]
-    ] ],
+    [ "barycentric_system.h", "barycentric__system_8h.html", "barycentric__system_8h" ],
     [ "bus_creator.h", "bus__creator_8h.html", null ],
     [ "bus_selector.h", "bus__selector_8h.html", null ],
     [ "constant_value_source.h", "constant__value__source_8h.html", null ],
@@ -17,9 +15,7 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
     [ "gain.h", "gain_8h.html", null ],
     [ "integrator.h", "integrator_8h.html", null ],
     [ "linear_system.h", "linear__system_8h.html", "linear__system_8h" ],
-    [ "linear_transform_density.h", "linear__transform__density_8h.html", [
-      [ "Traits< LinearTransformDensity >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html", null ]
-    ] ],
+    [ "linear_transform_density.h", "linear__transform__density_8h.html", "linear__transform__density_8h" ],
     [ "matrix_gain.h", "matrix__gain_8h.html", null ],
     [ "multilayer_perceptron.h", "multilayer__perceptron_8h.html", "multilayer__perceptron_8h" ],
     [ "multiplexer.h", "multiplexer_8h.html", null ],
@@ -27,35 +23,16 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
     [ "port_switch.h", "port__switch_8h.html", null ],
     [ "random_source.h", "random__source_8h.html", "random__source_8h" ],
     [ "saturation.h", "saturation_8h.html", null ],
-    [ "selector.h", "selector_8h.html", [
-      [ "SelectorParams", "structdrake_1_1systems_1_1_selector_params.html", "structdrake_1_1systems_1_1_selector_params" ],
-      [ "InputPortParams", "structdrake_1_1systems_1_1_selector_params_1_1_input_port_params.html", "structdrake_1_1systems_1_1_selector_params_1_1_input_port_params" ],
-      [ "OutputSelection", "structdrake_1_1systems_1_1_selector_params_1_1_output_selection.html", "structdrake_1_1systems_1_1_selector_params_1_1_output_selection" ],
-      [ "OutputPortParams", "structdrake_1_1systems_1_1_selector_params_1_1_output_port_params.html", "structdrake_1_1systems_1_1_selector_params_1_1_output_port_params" ]
-    ] ],
-    [ "shared_pointer_system.h", "shared__pointer__system_8h.html", [
-      [ "SharedPointerSystem", "classdrake_1_1systems_1_1_shared_pointer_system.html", "classdrake_1_1systems_1_1_shared_pointer_system" ]
-    ] ],
+    [ "selector.h", "selector_8h.html", "selector_8h" ],
+    [ "shared_pointer_system.h", "shared__pointer__system_8h.html", "shared__pointer__system_8h" ],
     [ "sine.h", "sine_8h.html", null ],
     [ "sparse_matrix_gain.h", "sparse__matrix__gain_8h.html", null ],
-    [ "symbolic_vector_system.h", "symbolic__vector__system_8h.html", [
-      [ "SymbolicVectorSystem", "classdrake_1_1systems_1_1_symbolic_vector_system.html", "classdrake_1_1systems_1_1_symbolic_vector_system" ]
-    ] ],
-    [ "trajectory_affine_system.h", "trajectory__affine__system_8h.html", [
-      [ "Traits< TrajectoryAffineSystem >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html", null ]
-    ] ],
-    [ "trajectory_linear_system.h", "trajectory__linear__system_8h.html", [
-      [ "Traits< TrajectoryLinearSystem >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html", null ]
-    ] ],
-    [ "trajectory_source.h", "trajectory__source_8h.html", [
-      [ "Traits< TrajectorySource >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4" ]
-    ] ],
-    [ "transfer_function.h", "transfer__function_8h.html", [
-      [ "TransferFunction", "classdrake_1_1systems_1_1_transfer_function.html", "classdrake_1_1systems_1_1_transfer_function" ]
-    ] ],
-    [ "vector_log.h", "vector__log_8h.html", [
-      [ "VectorLog", "classdrake_1_1systems_1_1_vector_log.html", "classdrake_1_1systems_1_1_vector_log" ]
-    ] ],
+    [ "symbolic_vector_system.h", "symbolic__vector__system_8h.html", "symbolic__vector__system_8h" ],
+    [ "trajectory_affine_system.h", "trajectory__affine__system_8h.html", "trajectory__affine__system_8h" ],
+    [ "trajectory_linear_system.h", "trajectory__linear__system_8h.html", "trajectory__linear__system_8h" ],
+    [ "trajectory_source.h", "trajectory__source_8h.html", "trajectory__source_8h" ],
+    [ "transfer_function.h", "transfer__function_8h.html", "transfer__function_8h" ],
+    [ "vector_log.h", "vector__log_8h.html", "vector__log_8h" ],
     [ "vector_log_sink.h", "vector__log__sink_8h.html", "vector__log__sink_8h" ],
     [ "wrap_to_system.h", "wrap__to__system_8h.html", null ],
     [ "zero_order_hold.h", "zero__order__hold_8h.html", null ]

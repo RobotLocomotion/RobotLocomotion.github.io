@@ -5,6 +5,6 @@ var classdrake_1_1_scope_exit =
     [ "ScopeExit", "classdrake_1_1_scope_exit.html#af4103acef5f9c3a666c01cdcad4c58c4", null ],
     [ "~ScopeExit", "classdrake_1_1_scope_exit.html#a79e115721c27b70df7123efa70744bd9", null ],
     [ "Disarm", "classdrake_1_1_scope_exit.html#acc5cc8fcbe8fcfbe300f079a202fa273", null ],
-    [ "operator=", "classdrake_1_1_scope_exit.html#ac0d386cb69d99db274184215d63a4ad7", null ],
-    [ "operator=", "classdrake_1_1_scope_exit.html#a7e6b030953eba9e0cebd78bce465d3be", null ]
+    [ "operator=", "classdrake_1_1_scope_exit.html#a87bf375c230637e40844a1da7e0deeec", null ],
+    [ "operator=", "classdrake_1_1_scope_exit.html#a0a4c873c3119aa5dfce35e5659a6cbc3", null ]
 ];

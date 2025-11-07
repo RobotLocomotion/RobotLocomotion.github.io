@@ -8,6 +8,6 @@ var classdrake_1_1_parallelism =
     [ "Max", "classdrake_1_1_parallelism.html#a5f5d962dfeec6e675996074f913df819", null ],
     [ "None", "classdrake_1_1_parallelism.html#a7eba2010dfc9482ef2ae0bb0539a3083", null ],
     [ "num_threads", "classdrake_1_1_parallelism.html#ab3c45da58cb1363920de72ba6209652f", null ],
-    [ "operator=", "classdrake_1_1_parallelism.html#ab2a82791591646555174b9fbba2b3c09", null ],
-    [ "operator=", "classdrake_1_1_parallelism.html#a8a7afad97a1d315b49e6d012f9cfde89", null ]
+    [ "operator=", "classdrake_1_1_parallelism.html#a1c555d1f965d74288f0296f918aa970f", null ],
+    [ "operator=", "classdrake_1_1_parallelism.html#a129f7e46e664d72e40e86c06c925ae9f", null ]
 ];

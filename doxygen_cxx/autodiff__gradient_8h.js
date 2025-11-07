@@ -1,10 +1,10 @@
 var autodiff__gradient_8h =
 [
-    [ "AreAutoDiffVecXdEqual", "autodiff__gradient_8h.html#a976484fe9828ee6c1a463980cf6a3732", null ],
-    [ "DiscardZeroGradient", "autodiff__gradient_8h.html#afe3277d7c068b3f82ccb6b025d44ab11", null ],
-    [ "ExtractGradient", "autodiff__gradient_8h.html#a50b619aa4ca1ade89a02b935a81a2a4e", null ],
-    [ "ExtractGradient", "autodiff__gradient_8h.html#a099a62886c181d6f9b917f0215a1a947", null ],
-    [ "GetDerivativeSize", "autodiff__gradient_8h.html#a4360e58bcb10c6b20aa3e28fed7297fb", null ],
-    [ "InitializeAutoDiff", "autodiff__gradient_8h.html#ac01d5aa7f58a485b614ddc46e7be7dd4", null ],
-    [ "InitializeAutoDiff", "autodiff__gradient_8h.html#af23c3981782540c98f8a1cb2abc59627", null ]
+    [ "drake::math::AreAutoDiffVecXdEqual", "namespacedrake_1_1math.html#ab8de94fedb09b1b5dec16c615d68eb23", null ],
+    [ "drake::math::DiscardZeroGradient", "namespacedrake_1_1math.html#aa702a82946411f68e87bb6fb27cfdfa4", null ],
+    [ "drake::math::ExtractGradient", "namespacedrake_1_1math.html#acdad302100e5da633d37a1a996d25acd", null ],
+    [ "drake::math::ExtractGradient", "namespacedrake_1_1math.html#afbd01251fe24c716eca07635c4861b7b", null ],
+    [ "drake::math::GetDerivativeSize", "namespacedrake_1_1math.html#abff94f9cb54675e2c8979f98feb35324", null ],
+    [ "drake::math::InitializeAutoDiff", "namespacedrake_1_1math.html#a00bfe0f878b9f318900d47dd81e6e308", null ],
+    [ "drake::math::InitializeAutoDiff", "namespacedrake_1_1math.html#ab9edc6655caed8198f72f998d6612223", null ]
 ];

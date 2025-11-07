@@ -1,5 +1,5 @@
 var hopf__coordinate_8h =
 [
-    [ "HopfCoordinateToQuaternion", "hopf__coordinate_8h.html#a82d0a7052d08481add2e9086b98144dd", null ],
-    [ "QuaternionToHopfCoordinate", "hopf__coordinate_8h.html#ab948fdacb210871495edea82aa001473", null ]
+    [ "drake::math::HopfCoordinateToQuaternion", "namespacedrake_1_1math.html#a72586b90f00c2e690c2ab071e6585f60", null ],
+    [ "drake::math::QuaternionToHopfCoordinate", "namespacedrake_1_1math.html#add4e7be6e81ac1866c95b80bc8f48719", null ]
 ];

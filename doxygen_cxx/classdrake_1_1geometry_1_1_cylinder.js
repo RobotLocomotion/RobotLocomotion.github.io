@@ -6,7 +6,7 @@ var classdrake_1_1geometry_1_1_cylinder =
     [ "Cylinder", "classdrake_1_1geometry_1_1_cylinder.html#a767ed95fe1f4141b796f975f5a3222ce", null ],
     [ "~Cylinder", "classdrake_1_1geometry_1_1_cylinder.html#a8c6205a5a634260cf6ea48b964671816", null ],
     [ "length", "classdrake_1_1geometry_1_1_cylinder.html#a80401d480f15e1418a3274a2b2b51649", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_cylinder.html#a6483c714a98414ecc3fa0ced03a3639d", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_cylinder.html#afa32301e05c8b887c3ac1d0994c569d3", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_cylinder.html#a510d308815159cf2424ead93b4ccd516", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_cylinder.html#a1444e265c881110041255e6b501d3616", null ],
     [ "radius", "classdrake_1_1geometry_1_1_cylinder.html#a3abcf0571d81409b4c8043ae979fdab1", null ]
 ];

@@ -1,5 +1,5 @@
 var volume__mesh__refiner_8h =
 [
-    [ "RefineVolumeMesh", "volume__mesh__refiner_8h.html#a29a1f48b67c49f27ec19a89f37bd85ae", null ],
-    [ "RefineVolumeMeshIntoVtkFileContents", "volume__mesh__refiner_8h.html#aff2aec5a833973780e6a83df356a69c0", null ]
+    [ "drake::geometry::RefineVolumeMesh", "namespacedrake_1_1geometry.html#af9d172ba9808493bb6d98dc9da32e875", null ],
+    [ "drake::geometry::RefineVolumeMeshIntoVtkFileContents", "namespacedrake_1_1geometry.html#acd7c2cc9566b924539ebcd75590f48c1", null ]
 ];

@@ -4,13 +4,13 @@ var classdrake_1_1multibody_1_1_rational_forward_kinematics =
     [ "RationalForwardKinematics", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ae2f64cf4a62743cda2f74fff57f1c224", null ],
     [ "RationalForwardKinematics", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a377a632079f13b90b216530b0f5767b4", null ],
     [ "RationalForwardKinematics", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#adda199f0e8784ca13c32d2525af89019", null ],
-    [ "CalcBodyPoseAsMultilinearPolynomial", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a3b2e4244a8a8f1a59a720eb1994d7d7b", null ],
-    [ "ComputeQValue", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a6d2714a9f2454037cce36e1bb67f763c", null ],
-    [ "ComputeSValue", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#aadeb582d17d1b40237b7f889b2d5047d", null ],
+    [ "CalcBodyPoseAsMultilinearPolynomial", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a4593ffb7161ecfe82bbedfd1c45f43de", null ],
+    [ "ComputeQValue", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a8dec77a3ad0e90a1d87d2b02944bafd4", null ],
+    [ "ComputeSValue", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#adb1e77e6da85d32459895270610179db", null ],
     [ "ConvertMultilinearPolynomialToRationalFunction", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a1d7bf899c5b65ecbc2169089be5086f3", null ],
-    [ "map_mobilizer_to_s_index", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a0b8069d8a262731933b1bd421ed0adbf", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#af561a8c971a66f869986c5e4429352c3", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ac73a5a06e9d73c1e5c761e7accee6265", null ],
-    [ "plant", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a5001e433b72f3005d744a7b9b71cc529", null ],
-    [ "s", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a851ee363d02555f11f4d45d8056b072a", null ]
+    [ "map_mobilizer_to_s_index", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#abb67874a2566c86e31947e8f8999731d", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#aadc67d8e5acdf010ed4a05d11b7f058a", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#afd5ded3acb4b60c2d1c267dfb996f9f8", null ],
+    [ "plant", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#ac90576e83ddbc188c3ed73fbd2aee942", null ],
+    [ "s", "classdrake_1_1multibody_1_1_rational_forward_kinematics.html#a71a4257a745ec41cebbb7506a908e47d", null ]
 ];

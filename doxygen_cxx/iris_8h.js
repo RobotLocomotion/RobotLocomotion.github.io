@@ -1,9 +1,9 @@
 var iris_8h =
 [
-    [ "IrisRegions", "iris_8h.html#ga10b0e0579060ac0afdf6344627ffabd2", null ],
-    [ "Iris", "iris_8h.html#gafd8111a93cb3461e05bec3477ee736f6", null ],
-    [ "IrisInConfigurationSpace", "iris_8h.html#a3a51e0fec449a0abcf498f78a2a390a8", null ],
-    [ "IrisNp", "iris_8h.html#ga3a3a8f2dcb01cc40c95f4e3afe7fed01", null ],
-    [ "MakeIrisObstacles", "iris_8h.html#gad54a224f37c1a0dc86eaec300ef874af", null ],
-    [ "SetEdgeContainmentTerminationCondition", "iris_8h.html#ga5f3ad49bfffd1b9a968ed7f1bf4d4c80", null ]
+    [ "drake::geometry::optimization::IrisRegions", "group__planning__iris.html#ga10b0e0579060ac0afdf6344627ffabd2", null ],
+    [ "drake::geometry::optimization::Iris", "group__planning__iris.html#ga41ad36e136530c33abb2d19a40f4f5e3", null ],
+    [ "drake::geometry::optimization::IrisInConfigurationSpace", "namespacedrake_1_1geometry_1_1optimization.html#a61652107b80bd2cfb9cd3406146ba613", null ],
+    [ "drake::geometry::optimization::IrisNp", "group__planning__iris.html#ga9a3aba193bc960e38b6ae305e30dd13c", null ],
+    [ "drake::geometry::optimization::MakeIrisObstacles", "group__planning__iris.html#ga1695afcbf10d19b297140421a5a5ade8", null ],
+    [ "drake::geometry::optimization::SetEdgeContainmentTerminationCondition", "group__planning__iris.html#gaece042cde9122f05ca663a27fa7d0ea9", null ]
 ];

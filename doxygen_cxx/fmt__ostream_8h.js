@@ -1,5 +1,5 @@
 var fmt__ostream_8h =
 [
     [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", "structdrake_1_1ostream__formatter" ],
-    [ "fmt_streamed", "fmt__ostream_8h.html#ad285f98e4bc5cb78edaeb95800d56726", null ]
+    [ "drake::fmt_streamed", "namespacedrake.html#a65ba5721a088bacdc594dab652fc7e1c", null ]
 ];

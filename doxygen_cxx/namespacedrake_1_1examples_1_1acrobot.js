@@ -11,5 +11,6 @@ var namespacedrake_1_1examples_1_1acrobot =
     [ "AcrobotStateIndices", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html", "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices" ],
     [ "AcrobotWEncoder", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder" ],
     [ "SpongControllerParams", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html", "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params" ],
-    [ "SpongControllerParamsIndices", "structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html", "structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices" ]
+    [ "SpongControllerParamsIndices", "structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices.html", "structdrake_1_1examples_1_1acrobot_1_1_spong_controller_params_indices" ],
+    [ "BalancingLQRController", "group__acrobot__systems.html#gaf0c82a177b14bf3b7bde207336f9cba1", null ]
 ];

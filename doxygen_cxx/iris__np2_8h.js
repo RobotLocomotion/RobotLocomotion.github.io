@@ -1,4 +1,4 @@
 var iris__np2_8h =
 [
-    [ "IrisNp2", "iris__np2_8h.html#ga4c3446677c07e407740e6afe95d20f9a", null ]
+    [ "drake::planning::IrisNp2", "group__planning__iris.html#gaf5bc571d0ee3753c976d3b521de397c4", null ]
 ];

@@ -1,4 +1,4 @@
 var apply__driver__configs_8h =
 [
-    [ "ApplyDriverConfigs", "apply__driver__configs_8h.html#adb8ec6471d1a13e6fcea69aebb9ee7ab", null ]
+    [ "drake::manipulation::ApplyDriverConfigs", "namespacedrake_1_1manipulation.html#ad8ee106dababbf3319fa04af6b58fcae", null ]
 ];

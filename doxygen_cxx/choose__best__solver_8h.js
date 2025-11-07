@@ -1,8 +1,8 @@
 var choose__best__solver_8h =
 [
-    [ "ChooseBestSolver", "choose__best__solver_8h.html#af2e1d0462e0e3506873f993879d48898", null ],
-    [ "GetAvailableSolvers", "choose__best__solver_8h.html#add46c9926ac1085abe828a7cc987cad1", null ],
-    [ "GetKnownSolvers", "choose__best__solver_8h.html#a55b69ef16f17a627abcbe62dde1d4807", null ],
-    [ "MakeFirstAvailableSolver", "choose__best__solver_8h.html#a99ce5167dfbdc1a1f84e2e7cc52cba4e", null ],
-    [ "MakeSolver", "choose__best__solver_8h.html#ac0a32aadfdc1241e4e39f206479b6000", null ]
+    [ "drake::solvers::ChooseBestSolver", "namespacedrake_1_1solvers.html#a5ad49ccf0a41d8b2ee1ecb197479356e", null ],
+    [ "drake::solvers::GetAvailableSolvers", "namespacedrake_1_1solvers.html#ad0239a4e08f44cc440b9b87b673cc1ca", null ],
+    [ "drake::solvers::GetKnownSolvers", "namespacedrake_1_1solvers.html#ac96894b2d363452c15d82857102ac460", null ],
+    [ "drake::solvers::MakeFirstAvailableSolver", "namespacedrake_1_1solvers.html#af70d41b17760217e0926be91e74c7516", null ],
+    [ "drake::solvers::MakeSolver", "namespacedrake_1_1solvers.html#a0ce0059feaa7226606a4f0dd51d82696", null ]
 ];

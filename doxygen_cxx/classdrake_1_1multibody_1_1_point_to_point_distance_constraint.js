@@ -5,6 +5,6 @@ var classdrake_1_1multibody_1_1_point_to_point_distance_constraint =
     [ "PointToPointDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a1ad15b12e5a3d557247b84851011334d", null ],
     [ "PointToPointDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#aaa0122ae096ef10f65c2fc5593dc9c0b", null ],
     [ "~PointToPointDistanceConstraint", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a55fd03edcd5b6162e5df17463d4a94b9", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#afe04325c25ab5531a0f0ba6978820569", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a5cc87f4dbc7b4b9714bfc446e9a6df71", null ]
+    [ "operator=", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#adce7ac19208d172098eea8ef54047799", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a88e78e9f12a6341a1fd157029d9cf63a", null ]
 ];

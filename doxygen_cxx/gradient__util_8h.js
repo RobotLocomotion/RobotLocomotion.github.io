@@ -1,17 +1,17 @@
 var gradient__util_8h =
 [
-    [ "MatGradMultMat", "structdrake_1_1math_1_1_mat_grad_mult_mat.html", "structdrake_1_1math_1_1_mat_grad_mult_mat" ],
-    [ "MatGradMult", "structdrake_1_1math_1_1_mat_grad_mult.html", "structdrake_1_1math_1_1_mat_grad_mult" ],
-    [ "GetSubMatrixGradientArray", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array" ],
-    [ "GetSubMatrixGradientSingleElement", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element" ],
-    [ "getSubMatrixGradient", "gradient__util_8h.html#a5c5269630d172b12a31b34d6c98b4e64", null ],
-    [ "getSubMatrixGradient", "gradient__util_8h.html#ad4b8fed3ad399a2bd53630c3b5b6d335", null ],
-    [ "getSubMatrixGradient", "gradient__util_8h.html#a259ed4f41a444e8eed6a2a30998af53f", null ],
-    [ "intRange", "gradient__util_8h.html#a6eb0d39dab703d87f0f582cf310c6134", null ],
-    [ "matGradMult", "gradient__util_8h.html#a4805a6b4a327bedeb7793cd1ce11523c", null ],
-    [ "matGradMultMat", "gradient__util_8h.html#a41fb0200e4ab7c796576b2fe17408ec8", null ],
-    [ "setSubMatrixGradient", "gradient__util_8h.html#a30d857f8398886aff22da2ea64bc1113", null ],
-    [ "setSubMatrixGradient", "gradient__util_8h.html#ae748bcfe9270b9ed5dd2fb71df3941b6", null ],
-    [ "setSubMatrixGradient", "gradient__util_8h.html#ab54df9b3b01c7c5509373712fda88ad4", null ],
-    [ "transposeGrad", "gradient__util_8h.html#a20c21cde851510ab3ae5a7527ed62d22", null ]
+    [ "MatGradMultMat< DerivedA, DerivedB, DerivedDA >", "structdrake_1_1math_1_1_mat_grad_mult_mat.html", "structdrake_1_1math_1_1_mat_grad_mult_mat" ],
+    [ "MatGradMult< DerivedDA, DerivedB >", "structdrake_1_1math_1_1_mat_grad_mult.html", "structdrake_1_1math_1_1_mat_grad_mult" ],
+    [ "GetSubMatrixGradientArray< QSubvectorSize, Derived, NRows, NCols >", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array" ],
+    [ "GetSubMatrixGradientSingleElement< QSubvectorSize, Derived >", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element" ],
+    [ "drake::math::getSubMatrixGradient", "namespacedrake_1_1math.html#a308bfb8a42ac830764e3e5420e5123f6", null ],
+    [ "drake::math::getSubMatrixGradient", "namespacedrake_1_1math.html#a050ed765d82aab33969de2bd54ac49e2", null ],
+    [ "drake::math::getSubMatrixGradient", "namespacedrake_1_1math.html#a3e880bbd06a798425a0fea851038109d", null ],
+    [ "drake::math::intRange", "namespacedrake_1_1math.html#a214ceb8aa2e730b212e0b345f8199727", null ],
+    [ "drake::math::matGradMult", "namespacedrake_1_1math.html#a62e57ade46ad4ef8cd2de2fa38986ac3", null ],
+    [ "drake::math::matGradMultMat", "namespacedrake_1_1math.html#ab27fe675e0248787ceda453ff874915d", null ],
+    [ "drake::math::setSubMatrixGradient", "namespacedrake_1_1math.html#a8fa4d6793feb307a2df5ac3f5b5319e9", null ],
+    [ "drake::math::setSubMatrixGradient", "namespacedrake_1_1math.html#ab96376257045e5897019d7ced6537a0a", null ],
+    [ "drake::math::setSubMatrixGradient", "namespacedrake_1_1math.html#a429d2d817112b0e4db22f5309f36f60f", null ],
+    [ "drake::math::transposeGrad", "namespacedrake_1_1math.html#a94e7f89e2f4658e85200497129578c17", null ]
 ];

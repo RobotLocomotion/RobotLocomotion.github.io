@@ -8,6 +8,6 @@ var classdrake_1_1planning_1_1_distance_and_interpolation_provider =
     [ "DoComputeConfigurationDistance", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a98ec00ecfa9fe58e82e0ab2cd2c604a2", null ],
     [ "DoInterpolateBetweenConfigurations", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a17740edbe8630391dc5e5a96bdde2776", null ],
     [ "InterpolateBetweenConfigurations", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a36763a4eee64ee0575b8bec05a51d4a4", null ],
-    [ "operator=", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a3ae09b671936d3fb8e6d3364771a51b2", null ],
-    [ "operator=", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#ac6bc04d65819cd44e330926097d1289c", null ]
+    [ "operator=", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a320b112495029a7712e2788cd923fe62", null ],
+    [ "operator=", "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#aab8abc946efeb23530e01d677a83d533", null ]
 ];

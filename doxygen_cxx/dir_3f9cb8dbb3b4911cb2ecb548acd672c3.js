@@ -2,140 +2,63 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
 [
     [ "acceleration_kinematics_cache.h", "acceleration__kinematics__cache_8h.html", null ],
     [ "articulated_body_force_cache.h", "articulated__body__force__cache_8h.html", null ],
-    [ "articulated_body_inertia.h", "articulated__body__inertia_8h.html", [
-      [ "ArticulatedBodyInertia", "classdrake_1_1multibody_1_1_articulated_body_inertia.html", "classdrake_1_1multibody_1_1_articulated_body_inertia" ]
-    ] ],
+    [ "articulated_body_inertia.h", "articulated__body__inertia_8h.html", "articulated__body__inertia_8h" ],
     [ "articulated_body_inertia_cache.h", "articulated__body__inertia__cache_8h.html", null ],
-    [ "ball_rpy_joint.h", "ball__rpy__joint_8h.html", [
-      [ "BallRpyJoint", "classdrake_1_1multibody_1_1_ball_rpy_joint.html", "classdrake_1_1multibody_1_1_ball_rpy_joint" ]
-    ] ],
+    [ "ball_rpy_joint.h", "ball__rpy__joint_8h.html", "ball__rpy__joint_8h" ],
     [ "block_system_jacobian_cache.h", "block__system__jacobian__cache_8h.html", null ],
     [ "body_node.h", "body__node_8h.html", "body__node_8h" ],
     [ "body_node_impl.h", "body__node__impl_8h.html", "body__node__impl_8h" ],
     [ "body_node_world.h", "body__node__world_8h.html", "body__node__world_8h" ],
-    [ "curvilinear_joint.h", "curvilinear__joint_8h.html", [
-      [ "CurvilinearJoint", "classdrake_1_1multibody_1_1_curvilinear_joint.html", "classdrake_1_1multibody_1_1_curvilinear_joint" ]
-    ] ],
+    [ "curvilinear_joint.h", "curvilinear__joint_8h.html", "curvilinear__joint_8h" ],
     [ "curvilinear_mobilizer.h", "curvilinear__mobilizer_8h.html", null ],
-    [ "deformable_body.h", "deformable__body_8h.html", [
-      [ "DeformableBody", "classdrake_1_1multibody_1_1_deformable_body.html", "classdrake_1_1multibody_1_1_deformable_body" ]
-    ] ],
-    [ "door_hinge.h", "door__hinge_8h.html", [
-      [ "DoorHingeConfig", "structdrake_1_1multibody_1_1_door_hinge_config.html", "structdrake_1_1multibody_1_1_door_hinge_config" ],
-      [ "DoorHinge", "classdrake_1_1multibody_1_1_door_hinge.html", "classdrake_1_1multibody_1_1_door_hinge" ]
-    ] ],
+    [ "deformable_body.h", "deformable__body_8h.html", "deformable__body_8h" ],
+    [ "door_hinge.h", "door__hinge_8h.html", "door__hinge_8h" ],
     [ "element_collection.h", "element__collection_8h.html", null ],
-    [ "fixed_offset_frame.h", "fixed__offset__frame_8h.html", [
-      [ "RigidBodyFrame", "classdrake_1_1multibody_1_1_rigid_body_frame.html", "classdrake_1_1multibody_1_1_rigid_body_frame" ],
-      [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
-      [ "FixedOffsetFrame", "classdrake_1_1multibody_1_1_fixed_offset_frame.html", "classdrake_1_1multibody_1_1_fixed_offset_frame" ]
-    ] ],
-    [ "force_density_field.h", "force__density__field_8h.html", [
-      [ "ForceDensityField", "classdrake_1_1multibody_1_1_force_density_field.html", "classdrake_1_1multibody_1_1_force_density_field" ],
-      [ "GravityForceField", "classdrake_1_1multibody_1_1_gravity_force_field.html", "classdrake_1_1multibody_1_1_gravity_force_field" ]
-    ] ],
-    [ "force_element.h", "force__element_8h.html", [
-      [ "ForceElement", "classdrake_1_1multibody_1_1_force_element.html", "classdrake_1_1multibody_1_1_force_element" ]
-    ] ],
-    [ "frame.h", "frame_8h.html", [
-      [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
-      [ "Frame", "classdrake_1_1multibody_1_1_frame.html", "classdrake_1_1multibody_1_1_frame" ]
-    ] ],
+    [ "fixed_offset_frame.h", "fixed__offset__frame_8h.html", "fixed__offset__frame_8h" ],
+    [ "force_density_field.h", "force__density__field_8h.html", "force__density__field_8h" ],
+    [ "force_element.h", "force__element_8h.html", "force__element_8h" ],
+    [ "frame.h", "frame_8h.html", "frame_8h" ],
     [ "frame_body_pose_cache.h", "frame__body__pose__cache_8h.html", null ],
     [ "geometry_spatial_inertia.h", "geometry__spatial__inertia_8h.html", "geometry__spatial__inertia_8h" ],
-    [ "joint.h", "joint_8h.html", [
-      [ "Joint", "classdrake_1_1multibody_1_1_joint.html", "classdrake_1_1multibody_1_1_joint" ]
-    ] ],
-    [ "joint_actuator.h", "joint__actuator_8h.html", [
-      [ "Joint", "classdrake_1_1multibody_1_1_joint.html", "classdrake_1_1multibody_1_1_joint" ],
-      [ "PdControllerGains", "structdrake_1_1multibody_1_1_pd_controller_gains.html", "structdrake_1_1multibody_1_1_pd_controller_gains" ],
-      [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html", "classdrake_1_1multibody_1_1_joint_actuator" ]
-    ] ],
-    [ "linear_bushing_roll_pitch_yaw.h", "linear__bushing__roll__pitch__yaw_8h.html", [
-      [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
-      [ "LinearBushingRollPitchYaw", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html", "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw" ]
-    ] ],
-    [ "linear_spring_damper.h", "linear__spring__damper_8h.html", [
-      [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
-      [ "LinearSpringDamper", "classdrake_1_1multibody_1_1_linear_spring_damper.html", "classdrake_1_1multibody_1_1_linear_spring_damper" ]
-    ] ],
-    [ "mobilizer.h", "mobilizer_8h.html", [
-      [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ]
-    ] ],
+    [ "joint.h", "joint_8h.html", "joint_8h" ],
+    [ "joint_actuator.h", "joint__actuator_8h.html", "joint__actuator_8h" ],
+    [ "linear_bushing_roll_pitch_yaw.h", "linear__bushing__roll__pitch__yaw_8h.html", "linear__bushing__roll__pitch__yaw_8h" ],
+    [ "linear_spring_damper.h", "linear__spring__damper_8h.html", "linear__spring__damper_8h" ],
+    [ "mobilizer.h", "mobilizer_8h.html", null ],
     [ "mobilizer_impl.h", "mobilizer__impl_8h.html", null ],
     [ "model_instance.h", "model__instance_8h.html", null ],
-    [ "multibody_element.h", "multibody__element_8h.html", [
-      [ "DeformableModel", "classdrake_1_1multibody_1_1_deformable_model.html", "classdrake_1_1multibody_1_1_deformable_model" ],
-      [ "MultibodyElement", "classdrake_1_1multibody_1_1_multibody_element.html", "classdrake_1_1multibody_1_1_multibody_element" ]
-    ] ],
-    [ "multibody_forces.h", "multibody__forces_8h.html", [
-      [ "MultibodyForces", "classdrake_1_1multibody_1_1_multibody_forces.html", "classdrake_1_1multibody_1_1_multibody_forces" ]
-    ] ],
+    [ "multibody_element.h", "multibody__element_8h.html", "multibody__element_8h" ],
+    [ "multibody_forces.h", "multibody__forces_8h.html", "multibody__forces_8h" ],
     [ "multibody_tree-inl.h", "multibody__tree-inl_8h.html", null ],
     [ "multibody_tree.h", "multibody__tree_8h.html", "multibody__tree_8h" ],
     [ "multibody_tree_indexes.h", "multibody__tree__indexes_8h.html", "multibody__tree__indexes_8h" ],
-    [ "multibody_tree_system.h", "multibody__tree__system_8h.html", [
-      [ "MultibodyElement", "classdrake_1_1multibody_1_1_multibody_element.html", "classdrake_1_1multibody_1_1_multibody_element" ],
-      [ "ForceDensityField", "classdrake_1_1multibody_1_1_force_density_field.html", "classdrake_1_1multibody_1_1_force_density_field" ]
-    ] ],
+    [ "multibody_tree_system.h", "multibody__tree__system_8h.html", null ],
     [ "parameter_conversion.h", "parameter__conversion_8h.html", null ],
-    [ "planar_joint.h", "planar__joint_8h.html", [
-      [ "PlanarJoint", "classdrake_1_1multibody_1_1_planar_joint.html", "classdrake_1_1multibody_1_1_planar_joint" ]
-    ] ],
+    [ "planar_joint.h", "planar__joint_8h.html", "planar__joint_8h" ],
     [ "planar_mobilizer.h", "planar__mobilizer_8h.html", null ],
     [ "position_kinematics_cache.h", "position__kinematics__cache_8h.html", null ],
-    [ "prismatic_joint.h", "prismatic__joint_8h.html", [
-      [ "PrismaticJoint", "classdrake_1_1multibody_1_1_prismatic_joint.html", "classdrake_1_1multibody_1_1_prismatic_joint" ]
-    ] ],
+    [ "prismatic_joint.h", "prismatic__joint_8h.html", "prismatic__joint_8h" ],
     [ "prismatic_mobilizer.h", "prismatic__mobilizer_8h.html", "prismatic__mobilizer_8h" ],
-    [ "prismatic_spring.h", "prismatic__spring_8h.html", [
-      [ "PrismaticSpring", "classdrake_1_1multibody_1_1_prismatic_spring.html", "classdrake_1_1multibody_1_1_prismatic_spring" ]
-    ] ],
-    [ "quaternion_floating_joint.h", "quaternion__floating__joint_8h.html", [
-      [ "QuaternionFloatingJoint", "classdrake_1_1multibody_1_1_quaternion_floating_joint.html", "classdrake_1_1multibody_1_1_quaternion_floating_joint" ]
-    ] ],
+    [ "prismatic_spring.h", "prismatic__spring_8h.html", "prismatic__spring_8h" ],
+    [ "quaternion_floating_joint.h", "quaternion__floating__joint_8h.html", "quaternion__floating__joint_8h" ],
     [ "quaternion_floating_mobilizer.h", "quaternion__floating__mobilizer_8h.html", null ],
-    [ "revolute_joint.h", "revolute__joint_8h.html", [
-      [ "RevoluteJoint", "classdrake_1_1multibody_1_1_revolute_joint.html", "classdrake_1_1multibody_1_1_revolute_joint" ]
-    ] ],
+    [ "revolute_joint.h", "revolute__joint_8h.html", "revolute__joint_8h" ],
     [ "revolute_mobilizer.h", "revolute__mobilizer_8h.html", "revolute__mobilizer_8h" ],
-    [ "revolute_spring.h", "revolute__spring_8h.html", [
-      [ "RevoluteSpring", "classdrake_1_1multibody_1_1_revolute_spring.html", "classdrake_1_1multibody_1_1_revolute_spring" ]
-    ] ],
+    [ "revolute_spring.h", "revolute__spring_8h.html", "revolute__spring_8h" ],
     [ "rigid_body.h", "rigid__body_8h.html", "rigid__body_8h" ],
-    [ "rotational_inertia.h", "rotational__inertia_8h.html", [
-      [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html", "classdrake_1_1multibody_1_1_rotational_inertia" ],
-      [ "formatter< drake::multibody::RotationalInertia< T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_rotational_inertia_3_01_t_01_4_01_4.html", null ]
-    ] ],
+    [ "rotational_inertia.h", "rotational__inertia_8h.html", "rotational__inertia_8h" ],
     [ "rpy_ball_mobilizer.h", "rpy__ball__mobilizer_8h.html", null ],
-    [ "rpy_floating_joint.h", "rpy__floating__joint_8h.html", [
-      [ "RpyFloatingJoint", "classdrake_1_1multibody_1_1_rpy_floating_joint.html", "classdrake_1_1multibody_1_1_rpy_floating_joint" ]
-    ] ],
+    [ "rpy_floating_joint.h", "rpy__floating__joint_8h.html", "rpy__floating__joint_8h" ],
     [ "rpy_floating_mobilizer.h", "rpy__floating__mobilizer_8h.html", null ],
-    [ "scoped_name.h", "scoped__name_8h.html", [
-      [ "ScopedName", "classdrake_1_1multibody_1_1_scoped_name.html", "classdrake_1_1multibody_1_1_scoped_name" ]
-    ] ],
-    [ "screw_joint.h", "screw__joint_8h.html", [
-      [ "ScrewJoint", "classdrake_1_1multibody_1_1_screw_joint.html", "classdrake_1_1multibody_1_1_screw_joint" ]
-    ] ],
+    [ "scoped_name.h", "scoped__name_8h.html", "scoped__name_8h" ],
+    [ "screw_joint.h", "screw__joint_8h.html", "screw__joint_8h" ],
     [ "screw_mobilizer.h", "screw__mobilizer_8h.html", null ],
-    [ "spatial_inertia.h", "spatial__inertia_8h.html", [
-      [ "SpatialInertia", "classdrake_1_1multibody_1_1_spatial_inertia.html", "classdrake_1_1multibody_1_1_spatial_inertia" ],
-      [ "formatter< drake::multibody::SpatialInertia< T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_spatial_inertia_3_01_t_01_4_01_4.html", null ]
-    ] ],
-    [ "uniform_gravity_field_element.h", "uniform__gravity__field__element_8h.html", [
-      [ "UniformGravityFieldElement", "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html", "classdrake_1_1multibody_1_1_uniform_gravity_field_element" ]
-    ] ],
-    [ "unit_inertia.h", "unit__inertia_8h.html", [
-      [ "UnitInertia", "classdrake_1_1multibody_1_1_unit_inertia.html", "classdrake_1_1multibody_1_1_unit_inertia" ]
-    ] ],
-    [ "universal_joint.h", "universal__joint_8h.html", [
-      [ "UniversalJoint", "classdrake_1_1multibody_1_1_universal_joint.html", "classdrake_1_1multibody_1_1_universal_joint" ]
-    ] ],
+    [ "spatial_inertia.h", "spatial__inertia_8h.html", "spatial__inertia_8h" ],
+    [ "uniform_gravity_field_element.h", "uniform__gravity__field__element_8h.html", "uniform__gravity__field__element_8h" ],
+    [ "unit_inertia.h", "unit__inertia_8h.html", "unit__inertia_8h" ],
+    [ "universal_joint.h", "universal__joint_8h.html", "universal__joint_8h" ],
     [ "universal_mobilizer.h", "universal__mobilizer_8h.html", null ],
     [ "velocity_kinematics_cache.h", "velocity__kinematics__cache_8h.html", null ],
-    [ "weld_joint.h", "weld__joint_8h.html", [
-      [ "WeldJoint", "classdrake_1_1multibody_1_1_weld_joint.html", "classdrake_1_1multibody_1_1_weld_joint" ]
-    ] ],
+    [ "weld_joint.h", "weld__joint_8h.html", "weld__joint_8h" ],
     [ "weld_mobilizer.h", "weld__mobilizer_8h.html", null ]
 ];

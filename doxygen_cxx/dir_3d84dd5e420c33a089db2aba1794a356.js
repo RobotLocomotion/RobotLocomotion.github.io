@@ -6,47 +6,18 @@ var dir_3d84dd5e420c33a089db2aba1794a356 =
     [ "cartesian_product.h", "cartesian__product_8h.html", null ],
     [ "convex_hull.h", "convex__hull_8h.html", null ],
     [ "convex_set.h", "convex__set_8h.html", "convex__set_8h" ],
-    [ "cspace_free_box.h", "cspace__free__box_8h.html", [
-      [ "SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separating_plane_lagrangians" ],
-      [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result" ],
-      [ "SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate" ],
-      [ "SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program" ]
-    ] ],
+    [ "cspace_free_box.h", "cspace__free__box_8h.html", "cspace__free__box_8h" ],
     [ "cspace_free_internal.h", "cspace__free__internal_8h.html", null ],
-    [ "cspace_free_polytope.h", "cspace__free__polytope_8h.html", [
-      [ "SeparatingPlaneLagrangians", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separating_plane_lagrangians" ],
-      [ "SeparationCertificateResult", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_result" ],
-      [ "SeparationCertificate", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate" ],
-      [ "SeparationCertificateProgram", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_separation_certificate_program" ],
-      [ "FindSeparationCertificateGivenPolytopeOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_separation_certificate_given_polytope_options" ],
-      [ "FindPolytopeGivenLagrangianOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_find_polytope_given_lagrangian_options" ],
-      [ "SearchResult", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result.html", "classdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_search_result" ],
-      [ "BilinearAlternationOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_bilinear_alternation_options" ],
-      [ "BinarySearchOptions", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_1_1_binary_search_options" ]
-    ] ],
-    [ "cspace_free_polytope_base.h", "cspace__free__polytope__base_8h.html", [
-      [ "Options", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options.html", "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_polytope_base_1_1_options" ]
-    ] ],
-    [ "cspace_free_structs.h", "cspace__free__structs_8h.html", [
-      [ "PlaneSeparatesGeometries", "structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html", "structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries" ],
-      [ "FindSeparationCertificateOptions", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options.html", "structdrake_1_1geometry_1_1optimization_1_1_find_separation_certificate_options" ],
-      [ "SeparationCertificateResultBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base" ],
-      [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base" ]
-    ] ],
+    [ "cspace_free_polytope.h", "cspace__free__polytope_8h.html", "cspace__free__polytope_8h" ],
+    [ "cspace_free_polytope_base.h", "cspace__free__polytope__base_8h.html", "cspace__free__polytope__base_8h" ],
+    [ "cspace_free_structs.h", "cspace__free__structs_8h.html", "cspace__free__structs_8h" ],
     [ "cspace_separating_plane.h", "cspace__separating__plane_8h.html", "cspace__separating__plane_8h" ],
     [ "geodesic_convexity.h", "geodesic__convexity_8h.html", "geodesic__convexity_8h" ],
-    [ "graph_of_convex_sets.h", "graph__of__convex__sets_8h.html", [
-      [ "GraphOfConvexSetsOptions", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html", "structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options" ],
-      [ "GcsGraphvizOptions", "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html", "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options" ],
-      [ "Vertex", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex" ],
-      [ "Edge", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge" ]
-    ] ],
+    [ "graph_of_convex_sets.h", "graph__of__convex__sets_8h.html", "graph__of__convex__sets_8h" ],
     [ "hpolyhedron.h", "hpolyhedron_8h.html", null ],
     [ "hyperellipsoid.h", "hyperellipsoid_8h.html", null ],
     [ "hyperrectangle.h", "hyperrectangle_8h.html", null ],
-    [ "implicit_graph_of_convex_sets.h", "implicit__graph__of__convex__sets_8h.html", [
-      [ "ImplicitGraphOfConvexSetsFromExplicit", "classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets_from_explicit.html", "classdrake_1_1geometry_1_1optimization_1_1_implicit_graph_of_convex_sets_from_explicit" ]
-    ] ],
+    [ "implicit_graph_of_convex_sets.h", "implicit__graph__of__convex__sets_8h.html", "implicit__graph__of__convex__sets_8h" ],
     [ "intersection.h", "intersection_8h.html", null ],
     [ "iris.h", "iris_8h.html", "iris_8h" ],
     [ "iris_internal.h", "iris__internal_8h.html", null ],

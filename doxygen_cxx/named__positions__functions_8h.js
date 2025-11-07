@@ -1,5 +1,5 @@
 var named__positions__functions_8h =
 [
-    [ "NamedPositions", "named__positions__functions_8h.html#adbec09473da9017710b6e9abfa224fa3", null ],
-    [ "ApplyNamedPositionsAsDefaults", "named__positions__functions_8h.html#ab3c6951409a72c18ec9b4c4c29caec65", null ]
+    [ "drake::manipulation::NamedPositions", "namespacedrake_1_1manipulation.html#afdc513e8a945f2a95a4b00e6cda9eac6", null ],
+    [ "drake::manipulation::ApplyNamedPositionsAsDefaults", "namespacedrake_1_1manipulation.html#aaeef16699607384fab726563872b64b9", null ]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['notation_20basics',['Notation Basics',['../group__multibody__notation__basics.html',1,'']]]
+  ['kinematics_0',['Inverse kinematics',['../group__planning__kinematics.html',1,'']]],
+  ['kinematics_20and_20dynamics_1',['Multibody Kinematics and Dynamics',['../group__multibody.html',1,'']]]
 ];

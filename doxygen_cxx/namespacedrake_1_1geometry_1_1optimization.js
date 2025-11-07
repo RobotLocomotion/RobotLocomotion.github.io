@@ -28,5 +28,38 @@ var namespacedrake_1_1geometry_1_1optimization =
     [ "SeparationCertificateProgramBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base" ],
     [ "SeparationCertificateResultBase", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html", "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base" ],
     [ "Spectrahedron", "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron.html", "classdrake_1_1geometry_1_1optimization_1_1_spectrahedron" ],
-    [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope" ]
+    [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope" ],
+    [ "ConvexSets", "namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956", null ],
+    [ "IrisRegions", "group__planning__iris.html#ga10b0e0579060ac0afdf6344627ffabd2", null ],
+    [ "CIrisGeometryType", "namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfff", [
+      [ "kSphere", "namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfffaf88bbd242f1721920aa0eb72a18767a4", null ],
+      [ "kPolytope", "namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfffa4373e4d7d76472e0fe9a1430bf5c9787", null ],
+      [ "kCylinder", "namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfffacafcb896846646f8833912fdbfc5318e", null ],
+      [ "kCapsule", "namespacedrake_1_1geometry_1_1optimization.html#a95690619e9b8d2e9047a607703cfbfffaaaccf255c56ba12dfb6ca40c34de64ef", null ]
+    ] ],
+    [ "PlaneSide", "namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fef", [
+      [ "kPositive", "namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefafe449700ac27fbd09863263d74e7735f", null ],
+      [ "kNegative", "namespacedrake_1_1geometry_1_1optimization.html#a4013454f1b2c236ff18e572d12436fefa25b105cbe0fd4622cdb36360c85e89c3", null ]
+    ] ],
+    [ "SeparatingPlaneOrder", "namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089", [
+      [ "kAffine", "namespacedrake_1_1geometry_1_1optimization.html#a6febb8c28b6d49e494dbe16b5ed5b089ac3af1341756d0c5a66c8ea473dc38927", null ]
+    ] ],
+    [ "CalcPlane", "namespacedrake_1_1geometry_1_1optimization.html#aad59bc6c6b7d693acd00e92f540f0507", null ],
+    [ "CheckIfSatisfiesConvexityRadius", "group__geometry__optimization__geodesic__convexity.html#ga80f9e107223dafa631c82a743f5ee64f", null ],
+    [ "ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga509c29f785727d4dbc7291a25a7da515", null ],
+    [ "ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga377049edc6e3731c7695c876af7a7fc6", null ],
+    [ "ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga6fbf6cf1ac5a9ea873bac401fc705117", null ],
+    [ "ComputePairwiseIntersections", "group__geometry__optimization__geodesic__convexity.html#ga8f0d035a7345f68adf751858f6b37a90", null ],
+    [ "DistanceToHalfspace", "namespacedrake_1_1geometry_1_1optimization.html#ab9e60a7f169083177d5688b5710f6062", null ],
+    [ "GetVertices", "namespacedrake_1_1geometry_1_1optimization.html#af1e7e950577ea3c6a0ff39b4c5dd4753", null ],
+    [ "Iris", "group__planning__iris.html#ga41ad36e136530c33abb2d19a40f4f5e3", null ],
+    [ "IrisInConfigurationSpace", "namespacedrake_1_1geometry_1_1optimization.html#a61652107b80bd2cfb9cd3406146ba613", null ],
+    [ "IrisNp", "group__planning__iris.html#ga9a3aba193bc960e38b6ae305e30dd13c", null ],
+    [ "MakeConvexSets", "namespacedrake_1_1geometry_1_1optimization.html#a9d178543ab51c4cf40c6e041afcb7c7b", null ],
+    [ "MakeIrisObstacles", "group__planning__iris.html#ga1695afcbf10d19b297140421a5a5ade8", null ],
+    [ "PartitionConvexSet", "group__geometry__optimization__geodesic__convexity.html#ga4cc1511a0a4979afa70ee7d5964bc0d5", null ],
+    [ "PartitionConvexSet", "group__geometry__optimization__geodesic__convexity.html#ga40707ecfcee3ff6cc60fdf7cd0956166", null ],
+    [ "SetEdgeContainmentTerminationCondition", "group__planning__iris.html#gaece042cde9122f05ca663a27fa7d0ea9", null ],
+    [ "ToPlaneDegree", "namespacedrake_1_1geometry_1_1optimization.html#a5eeacedaa3b34d02439621260eabc202", null ],
+    [ "ToPlaneOrder", "namespacedrake_1_1geometry_1_1optimization.html#aff58cdee5a59717a59f6664638d2d146", null ]
 ];

@@ -8,17 +8,17 @@ var classdrake_1_1geometry_1_1_rgba =
     [ "AlmostEqual", "classdrake_1_1geometry_1_1_rgba.html#a3a4f465549d621827b30f0a7e8e5ffc4", null ],
     [ "b", "classdrake_1_1geometry_1_1_rgba.html#a2bbc76aeadab8a326a08ddab7aae3412", null ],
     [ "g", "classdrake_1_1geometry_1_1_rgba.html#a5d49035285a5d232617b92f664da8dd0", null ],
-    [ "operator *", "classdrake_1_1geometry_1_1_rgba.html#add2e7e9ccd65020da30bd29a789358ec", null ],
     [ "operator!=", "classdrake_1_1geometry_1_1_rgba.html#a3b56194686433cadff14e87b2a01d9dd", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_rgba.html#a4f45ea8a4ed9122f86e726356effe2e3", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_rgba.html#a695cd9bfc290ed9d73a219d958beafdd", null ],
+    [ "operator*", "classdrake_1_1geometry_1_1_rgba.html#ae390cd27b67dbbd7c8e0bb04a47ed223", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_rgba.html#ae3f67a671ce3602112d74cd2ddc90ac2", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_rgba.html#a506756d88e3a1989a05ea33e14251485", null ],
     [ "operator==", "classdrake_1_1geometry_1_1_rgba.html#a492ffea19b46861a1cd76de2f1550aa6", null ],
     [ "r", "classdrake_1_1geometry_1_1_rgba.html#a2158ad8213f28ce9ad6c74b562deecca", null ],
     [ "rgba", "classdrake_1_1geometry_1_1_rgba.html#a9f1f0b5ee9facd312463597fa8dcc7d1", null ],
     [ "scale_rgb", "classdrake_1_1geometry_1_1_rgba.html#a7f9a579a242a1841fe0f75db90b433b6", null ],
     [ "Serialize", "classdrake_1_1geometry_1_1_rgba.html#a8e8824802dedfbc36776227f7482b6bc", null ],
-    [ "set", "classdrake_1_1geometry_1_1_rgba.html#a53cd7ac7d4ddc813802aec6d4d19b75b", null ],
     [ "set", "classdrake_1_1geometry_1_1_rgba.html#ab9d4e5d90891572e8355bf739d5dc242", null ],
+    [ "set", "classdrake_1_1geometry_1_1_rgba.html#a53cd7ac7d4ddc813802aec6d4d19b75b", null ],
     [ "update", "classdrake_1_1geometry_1_1_rgba.html#a159d0bf2911ffc1c08db924ae3eb90ac", null ],
-    [ "operator<<", "classdrake_1_1geometry_1_1_rgba.html#a4ce14c70b9586a290da8d932408cde21", null ]
+    [ "operator<<", "classdrake_1_1geometry_1_1_rgba.html#a91365f3b8232ef18656f48264f6a3596", null ]
 ];

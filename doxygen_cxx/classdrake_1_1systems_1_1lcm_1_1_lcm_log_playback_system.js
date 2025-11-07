@@ -5,6 +5,6 @@ var classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system =
     [ "LcmLogPlaybackSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html#ad076e3606cfe97a8419d17193f13a4b9", null ],
     [ "~LcmLogPlaybackSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html#a019504319572625c773bcc58967db1d8", null ],
     [ "DoCalcNextUpdateTime", "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html#aef25b6bf7f703116ca7188bffdee593c", null ],
-    [ "operator=", "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html#ad491105146af2c38a23615706958e4ba", null ],
-    [ "operator=", "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html#a2f2a5e99b56828a76fb55ebdf5c9cb5b", null ]
+    [ "operator=", "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html#a1fd7e692e73ac4b384a07a7d62553802", null ],
+    [ "operator=", "classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html#aaed75b2ca1452b449a81ea20af0109c2", null ]
 ];

@@ -4,7 +4,7 @@ var solver__id_8h =
     [ "less< drake::solvers::SolverId >", "structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4.html", "structstd_1_1less_3_01drake_1_1solvers_1_1_solver_id_01_4" ],
     [ "hash< drake::solvers::SolverId >", "structstd_1_1hash_3_01drake_1_1solvers_1_1_solver_id_01_4.html", null ],
     [ "formatter< drake::solvers::SolverId >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_id_01_4.html", null ],
-    [ "operator!=", "solver__id_8h.html#a710dbb02b7a2ce05760b1534cd7b32d9", null ],
-    [ "operator<<", "solver__id_8h.html#af22da0124afc42f58ae6e42e1a97b724", null ],
-    [ "operator==", "solver__id_8h.html#a8463238715a273b4709959e9bf23b9af", null ]
+    [ "drake::solvers::operator!=", "namespacedrake_1_1solvers.html#ac86287c7a75cb7c4762de3cb7b214d64", null ],
+    [ "drake::solvers::operator<<", "namespacedrake_1_1solvers.html#aa563e1d6e3e15b8f4cb35bfe48d68600", null ],
+    [ "drake::solvers::operator==", "namespacedrake_1_1solvers.html#ac374be9093bcfabc8fba4b2697b11ad2", null ]
 ];

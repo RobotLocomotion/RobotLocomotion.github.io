@@ -1,7 +1,7 @@
 var random__rotation_8h =
 [
-    [ "UniformlyRandomAngleAxis", "random__rotation_8h.html#ae6aefde593f0fbe2f9ef04f40979827f", null ],
-    [ "UniformlyRandomQuaternion", "random__rotation_8h.html#a6c92561b046b32c1ebe172bd32dc8276", null ],
-    [ "UniformlyRandomRotationMatrix", "random__rotation_8h.html#af27920d083eb816f24f832091a662f28", null ],
-    [ "UniformlyRandomRPY", "random__rotation_8h.html#acc24ae9bbbf0b9d253f3344b97a9f3d4", null ]
+    [ "drake::math::UniformlyRandomAngleAxis", "namespacedrake_1_1math.html#a94c069b2cc98fccfed321d9dbe21ac7c", null ],
+    [ "drake::math::UniformlyRandomQuaternion", "namespacedrake_1_1math.html#a8aa04e5739514a4418de72e3300a60ba", null ],
+    [ "drake::math::UniformlyRandomRotationMatrix", "namespacedrake_1_1math.html#a99a6354b64c8945256e01ea4424ec30d", null ],
+    [ "drake::math::UniformlyRandomRPY", "namespacedrake_1_1math.html#a2d0dc847828b4e1ea981cc1d3425cd7d", null ]
 ];

@@ -1,4 +1,4 @@
 var direct__collocation_8h =
 [
-    [ "AddDirectCollocationConstraint", "direct__collocation_8h.html#adbb6bc996413925c93dca6d2f5e2bb3d", null ]
+    [ "drake::planning::trajectory_optimization::AddDirectCollocationConstraint", "namespacedrake_1_1planning_1_1trajectory__optimization.html#a447f965408ee80392115f6e733e0aa28", null ]
 ];

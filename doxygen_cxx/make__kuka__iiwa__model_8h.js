@@ -1,4 +1,4 @@
 var make__kuka__iiwa__model_8h =
 [
-    [ "MakeKukaIiwaModel", "make__kuka__iiwa__model_8h.html#a66fad1fe086f2c9719c25a140d257f59", null ]
+    [ "drake::multibody::benchmarks::kuka_iiwa_robot::MakeKukaIiwaModel", "namespacedrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot.html#a729b1009f4d391dc6414244a0c1ecf98", null ]
 ];

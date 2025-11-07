@@ -1,13 +1,13 @@
 var matrix__util_8h =
 [
-    [ "EigenToStdVector", "matrix__util_8h.html#aedd054648f2874f8e5a37769758a132b", null ],
-    [ "ExtractPrincipalSubmatrix", "matrix__util_8h.html#ace1aea0ef245e52e5bc2f91d553ef096", null ],
-    [ "GeneratePythonCsc", "matrix__util_8h.html#af68b2a972e142231b7dd1fb0221354e6", null ],
-    [ "IsPositiveDefinite", "matrix__util_8h.html#a8a6d10bc0b3dfc5902d0a06f186dba8f", null ],
-    [ "IsSymmetric", "matrix__util_8h.html#a84760cbea23b50efdbe9a85f3967f098", null ],
-    [ "IsSymmetric", "matrix__util_8h.html#a141ec70804c105e09ab3b0a855152b8b", null ],
-    [ "StdVectorToEigen", "matrix__util_8h.html#aea43911b265b0798f5023e520c4ee005", null ],
-    [ "ToLowerTriangularColumnsFromMatrix", "matrix__util_8h.html#ad043d4eca27f8743d1ad1f95316b0383", null ],
-    [ "ToSymmetricMatrixFromLowerTriangularColumns", "matrix__util_8h.html#a5390bb2dadbe96cd6dfbe26c6891f100", null ],
-    [ "ToSymmetricMatrixFromLowerTriangularColumns", "matrix__util_8h.html#a6d81fb8e0b28f46bad7838ed39bffbce", null ]
+    [ "drake::math::EigenToStdVector", "namespacedrake_1_1math.html#a6d14dacc3ba3d4cdacbf1936fe55c7f0", null ],
+    [ "drake::math::ExtractPrincipalSubmatrix", "namespacedrake_1_1math.html#aa16b8b886b1a84d38cf5de14e0780df0", null ],
+    [ "drake::math::GeneratePythonCsc", "namespacedrake_1_1math.html#a2480fec6f9cfe246f8175e674d45341a", null ],
+    [ "drake::math::IsPositiveDefinite", "namespacedrake_1_1math.html#a84bae8f78403884f4f5fa7ecd41a8846", null ],
+    [ "drake::math::IsSymmetric", "namespacedrake_1_1math.html#a8a6136c699d2e25f7515e8404cb65d79", null ],
+    [ "drake::math::IsSymmetric", "namespacedrake_1_1math.html#a40335d2906e39ebe2a114f1cb6cf5d26", null ],
+    [ "drake::math::StdVectorToEigen", "namespacedrake_1_1math.html#a9cf7a17a246897182cc65ec080840999", null ],
+    [ "drake::math::ToLowerTriangularColumnsFromMatrix", "namespacedrake_1_1math.html#aa824bd31863a762bd2c1860534b7e39d", null ],
+    [ "drake::math::ToSymmetricMatrixFromLowerTriangularColumns", "namespacedrake_1_1math.html#ae4935d457d59fdb0a60b7f1d5cb465bb", null ],
+    [ "drake::math::ToSymmetricMatrixFromLowerTriangularColumns", "namespacedrake_1_1math.html#a0b96f43056135e9ecb62b48421b787f9", null ]
 ];

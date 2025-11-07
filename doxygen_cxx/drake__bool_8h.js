@@ -1,12 +1,12 @@
 var drake__bool_8h =
 [
-    [ "scalar_predicate", "structdrake_1_1scalar__predicate.html", "structdrake_1_1scalar__predicate" ],
-    [ "boolean", "drake__bool_8h.html#a1f1c657c4d2cf400649123a7c2573d5b", null ],
-    [ "all", "drake__bool_8h.html#adcc2d90ce6051e150effadd72fac548c", null ],
-    [ "all_of", "drake__bool_8h.html#ac05a0ff629ccf3c38724b6d7f95e3bce", null ],
-    [ "any", "drake__bool_8h.html#a624916a36af99a1ddfed08a25047cbea", null ],
-    [ "any_of", "drake__bool_8h.html#a66f0ced433e025116cf38c1cf2db6b76", null ],
-    [ "if_then_else", "drake__bool_8h.html#ae4171afca9615cfca42e59dd116d0bfb", null ],
-    [ "none", "drake__bool_8h.html#a01aa931c5cbfd4b09d847cc4d7b4c699", null ],
-    [ "none_of", "drake__bool_8h.html#ab4011b0ee72e60112bfd3aee950765e8", null ]
+    [ "scalar_predicate< T >", "structdrake_1_1scalar__predicate.html", "structdrake_1_1scalar__predicate" ],
+    [ "drake::boolean", "namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b", null ],
+    [ "drake::all", "namespacedrake.html#a6f017505f166d0b60735ba1c4a9b4f23", null ],
+    [ "drake::all_of", "namespacedrake.html#a58bef16b035645d48c9d032a977d7680", null ],
+    [ "drake::any", "namespacedrake.html#a044a99d40c78d36c585451760f6a8513", null ],
+    [ "drake::any_of", "namespacedrake.html#a2cca690674b317f8f5781d064cacf2ed", null ],
+    [ "drake::if_then_else", "namespacedrake.html#a9e802890ec66861781b5204d68fb6ec9", null ],
+    [ "drake::none", "namespacedrake.html#ad43049d1b6ef4ac0baf74355cc5ddfcb", null ],
+    [ "drake::none_of", "namespacedrake.html#a4151f6cb087cd5b1cdc40e43cb1f7284", null ]
 ];

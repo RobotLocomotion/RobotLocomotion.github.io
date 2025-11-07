@@ -1,4 +1,4 @@
 var polygon__surface__mesh__field_8h =
 [
-    [ "PolygonSurfaceMeshFieldLinear", "polygon__surface__mesh__field_8h.html#a28c174a30e183e46f90e66baf17ad992", null ]
+    [ "drake::geometry::PolygonSurfaceMeshFieldLinear", "namespacedrake_1_1geometry.html#a70187c16ea14553f92a3bec4402ae490", null ]
 ];

@@ -7,7 +7,7 @@ var classdrake_1_1planning_1_1_edge_measure =
     [ "alpha_or", "classdrake_1_1planning_1_1_edge_measure.html#ad38190af9206e3dc431eaa864f11371f", null ],
     [ "completely_free", "classdrake_1_1planning_1_1_edge_measure.html#a45f315d76b75857667d9ebb503323e7d", null ],
     [ "distance", "classdrake_1_1planning_1_1_edge_measure.html#a632f1b28166e024b687b55e71d74dbeb", null ],
-    [ "operator=", "classdrake_1_1planning_1_1_edge_measure.html#ae191e468aa6f0164788423837a3cf1c4", null ],
-    [ "operator=", "classdrake_1_1planning_1_1_edge_measure.html#adc39daaf3948c8b33887e7ce25b8e5fd", null ],
+    [ "operator=", "classdrake_1_1planning_1_1_edge_measure.html#a943a2a56794dfdebfa6caad293f66c9f", null ],
+    [ "operator=", "classdrake_1_1planning_1_1_edge_measure.html#a3c8d5ba982c7b4bca65be42267eaabba", null ],
     [ "partially_free", "classdrake_1_1planning_1_1_edge_measure.html#af2a7f93a2f9ab704e82849ba600da879", null ]
 ];

@@ -8,8 +8,8 @@ var classdrake_1_1geometry_1_1_box =
     [ "depth", "classdrake_1_1geometry_1_1_box.html#a0ee2d71abc6aa2af932ff8bb45d4d2fb", null ],
     [ "height", "classdrake_1_1geometry_1_1_box.html#a4a7b88988ccd08949b9be2e7de101e8c", null ],
     [ "MakeCube", "classdrake_1_1geometry_1_1_box.html#aa80d8c904b883919032c448e7d31713b", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_box.html#aa69c7ac656903a021aefd1de808b64ed", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_box.html#a373b8473fbb454f0721ce5c6fe369b1d", null ],
-    [ "size", "classdrake_1_1geometry_1_1_box.html#a7db185001e5acc4b77cfc04b9f937ddc", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_box.html#a205bb0c34c92f30dfc77cef4c6ae673a", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_box.html#a9dde8b4d85cb19644cd4d74286823cac", null ],
+    [ "size", "classdrake_1_1geometry_1_1_box.html#aa6e7d3968a4f9379feff1c854c2ea88f", null ],
     [ "width", "classdrake_1_1geometry_1_1_box.html#a1efc0a0dcb559bb39e916e5d06dea3b7", null ]
 ];

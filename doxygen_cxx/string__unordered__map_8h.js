@@ -1,5 +1,5 @@
 var string__unordered__map_8h =
 [
-    [ "string_unordered_map", "string__unordered__map_8h.html#a3d336683e20c4bce752ae362db010b32", null ],
-    [ "string_unordered_multimap", "string__unordered__map_8h.html#a80e037907928422f6e81d15f9cc79c75", null ]
+    [ "drake::string_unordered_map", "namespacedrake.html#a42ead4ab3ea15652a58208871dde4238", null ],
+    [ "drake::string_unordered_multimap", "namespacedrake.html#adcca06c39e67c5fb9588f30dd77f868c", null ]
 ];

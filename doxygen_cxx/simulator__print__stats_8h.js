@@ -1,4 +1,4 @@
 var simulator__print__stats_8h =
 [
-    [ "PrintSimulatorStatistics", "simulator__print__stats_8h.html#a14e4e6cd73fdedd3dde63af60b3572e4", null ]
+    [ "drake::systems::PrintSimulatorStatistics", "namespacedrake_1_1systems.html#ac27d2923c7b9807c5e18e860a5d14a5c", null ]
 ];

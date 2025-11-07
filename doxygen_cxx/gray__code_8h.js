@@ -1,6 +1,6 @@
 var gray__code_8h =
 [
-    [ "GrayCodesMatrix", "structdrake_1_1math_1_1_gray_codes_matrix.html", "structdrake_1_1math_1_1_gray_codes_matrix" ],
-    [ "CalculateReflectedGrayCodes", "gray__code_8h.html#ad276064dcd8cb5e77d3dc41140840e8c", null ],
-    [ "GrayCodeToInteger", "gray__code_8h.html#ab5390cdccf326541855e43a3dd5c2a9d", null ]
+    [ "GrayCodesMatrix< NumDigits >", "structdrake_1_1math_1_1_gray_codes_matrix.html", "structdrake_1_1math_1_1_gray_codes_matrix" ],
+    [ "drake::math::CalculateReflectedGrayCodes", "namespacedrake_1_1math.html#a1cf0d1e6ddb8878dded6253d7ef6b25d", null ],
+    [ "drake::math::GrayCodeToInteger", "namespacedrake_1_1math.html#a9b836de6a2619d82ebb7793a920e7b67", null ]
 ];

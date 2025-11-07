@@ -10,9 +10,9 @@ var classdrake_1_1solvers_1_1_solver_base =
     [ "DoSolve2", "classdrake_1_1solvers_1_1_solver_base.html#a8350f557f172064cafe074f38fe4a9a2", null ],
     [ "enabled", "classdrake_1_1solvers_1_1_solver_base.html#a4420a962b7baa94708051d493e790797", null ],
     [ "ExplainUnsatisfiedProgramAttributes", "classdrake_1_1solvers_1_1_solver_base.html#a9425d90e072bea5285bd14ff9675a2bc", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_solver_base.html#ae8af6af40ba9b43e572d4b8ece079ff5", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_solver_base.html#a99aef0bbf8c58c1e72542079877188ee", null ],
-    [ "Solve", "classdrake_1_1solvers_1_1_solver_base.html#a00b55f8b4c1c4f19b45621a84deed66c", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_solver_base.html#a642c05c8f046061a888d46243a8e484d", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_solver_base.html#a7b4139c9d760a4de4438d48e979bff5c", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_solver_base.html#af2ff6a250a78bb79ef64f7527c51b01c", null ],
+    [ "Solve", "classdrake_1_1solvers_1_1_solver_base.html#a00b55f8b4c1c4f19b45621a84deed66c", null ],
     [ "solver_id", "classdrake_1_1solvers_1_1_solver_base.html#ac539874b9f15a8ff31c4081a32469452", null ]
 ];

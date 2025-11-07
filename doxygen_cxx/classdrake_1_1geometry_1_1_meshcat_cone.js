@@ -8,6 +8,6 @@ var classdrake_1_1geometry_1_1_meshcat_cone =
     [ "a", "classdrake_1_1geometry_1_1_meshcat_cone.html#a7f0799082988106ce030952a5d2fbb2e", null ],
     [ "b", "classdrake_1_1geometry_1_1_meshcat_cone.html#a2bbc76aeadab8a326a08ddab7aae3412", null ],
     [ "height", "classdrake_1_1geometry_1_1_meshcat_cone.html#a4a7b88988ccd08949b9be2e7de101e8c", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_meshcat_cone.html#a727a151941ee1365b405689950de8ab9", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_meshcat_cone.html#a3d594e1a37f1af67cb63bfe21d47c666", null ]
+    [ "operator=", "classdrake_1_1geometry_1_1_meshcat_cone.html#aee0942a5be0e1428e5e9c6b6571ffb94", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_meshcat_cone.html#adf37456bbf77ff574f48c9022008b1ef", null ]
 ];

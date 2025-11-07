@@ -1,4 +1,4 @@
 var normalize__vector_8h =
 [
-    [ "NormalizeVector", "normalize__vector_8h.html#a48484009086db12d881bea6bcaab2514", null ]
+    [ "drake::math::NormalizeVector", "namespacedrake_1_1math.html#aa61c168d24baf12435cdc8b98a61c6a4", null ]
 ];

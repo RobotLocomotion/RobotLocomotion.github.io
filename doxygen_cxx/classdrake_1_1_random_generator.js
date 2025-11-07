@@ -8,7 +8,7 @@ var classdrake_1_1_random_generator =
     [ "max", "classdrake_1_1_random_generator.html#a91c0b5c3c85db40461bf25037ee5e4cf", null ],
     [ "min", "classdrake_1_1_random_generator.html#ab180b1a9d812ecf803845f4ca551a310", null ],
     [ "operator()", "classdrake_1_1_random_generator.html#aaaead712fe7dc29c1799e7d8f77d1cfb", null ],
-    [ "operator=", "classdrake_1_1_random_generator.html#a8ec6e346ccb31ed4aeaa3ec61fee29d5", null ],
-    [ "operator=", "classdrake_1_1_random_generator.html#add5b0fb7473084eff701cd2144a57438", null ],
+    [ "operator=", "classdrake_1_1_random_generator.html#aeae78495d27b9ac10ebba78cc85606da", null ],
+    [ "operator=", "classdrake_1_1_random_generator.html#ad030547866668d366db47d46468ad5de", null ],
     [ "default_seed", "classdrake_1_1_random_generator.html#ad2d1db10b28d705da531b1508caaf7bf", null ]
 ];

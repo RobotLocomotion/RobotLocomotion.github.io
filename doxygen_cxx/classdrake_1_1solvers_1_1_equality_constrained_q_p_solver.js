@@ -8,8 +8,8 @@ var classdrake_1_1solvers_1_1_equality_constrained_q_p_solver =
     [ "id", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a4dc451b7db72a168d9f0da1746011b45", null ],
     [ "is_available", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a277134785588d69bb461a4a402877e7a", null ],
     [ "is_enabled", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a46e00957032bd0394db7304badcb2134", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a3b0cd2e1b756f4a3ae8b3f54c07c081b", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#af2e24fdbd18ffb381e4b0b066224ce11", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a6b3046c756499193256ed0a27eaa828a", null ],
     [ "ProgramAttributesSatisfied", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a793b4bef71b184ac87f03d80b21c04d2", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#af2ff6a250a78bb79ef64f7527c51b01c", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a00b55f8b4c1c4f19b45621a84deed66c", null ]

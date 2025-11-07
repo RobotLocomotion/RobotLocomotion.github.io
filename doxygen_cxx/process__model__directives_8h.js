@@ -1,9 +1,9 @@
 var process__model__directives_8h =
 [
-    [ "FlattenModelDirectives", "process__model__directives_8h.html#abc86ac1c2971d0d3ca1e2e98d0aa986c", null ],
-    [ "LoadModelDirectives", "process__model__directives_8h.html#ad95665ae6e7f7f23f8acbaf9a08aa8e9", null ],
-    [ "LoadModelDirectivesFromString", "process__model__directives_8h.html#a932e9c2925b098497eec65679db9f4b0", null ],
-    [ "ProcessModelDirectives", "process__model__directives_8h.html#a04c0dda97446d100be2bc1c329c0ccb8", null ],
-    [ "ProcessModelDirectives", "process__model__directives_8h.html#a0f308887c21af1be20293ef44af5425e", null ],
-    [ "ResolveModelDirectiveUri", "process__model__directives_8h.html#a5b399245a1104a5929442541197201cd", null ]
+    [ "drake::multibody::parsing::FlattenModelDirectives", "namespacedrake_1_1multibody_1_1parsing.html#a5c732972f2ddfdcc2217bdffc9b0a7fb", null ],
+    [ "drake::multibody::parsing::LoadModelDirectives", "namespacedrake_1_1multibody_1_1parsing.html#a5942f3568b39ffa8362bf3ec8bdd75ec", null ],
+    [ "drake::multibody::parsing::LoadModelDirectivesFromString", "namespacedrake_1_1multibody_1_1parsing.html#a206dccdada260f64046ab59cc298755e", null ],
+    [ "drake::multibody::parsing::ProcessModelDirectives", "namespacedrake_1_1multibody_1_1parsing.html#ad8d4deba0dc940b7de348e1330a366ac", null ],
+    [ "drake::multibody::parsing::ProcessModelDirectives", "namespacedrake_1_1multibody_1_1parsing.html#a05b18758a36112ada63e0ce2f90dcc15", null ],
+    [ "drake::multibody::parsing::ResolveModelDirectiveUri", "namespacedrake_1_1multibody_1_1parsing.html#a1da36ca4da539d997cfb8123476ff88d", null ]
 ];

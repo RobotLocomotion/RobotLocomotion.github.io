@@ -1,9 +1,9 @@
 var find__resource_8h =
 [
     [ "FindResourceResult", "classdrake_1_1_find_resource_result.html", "classdrake_1_1_find_resource_result" ],
-    [ "FindResource", "find__resource_8h.html#a535bb41fc091d96d7de06b87e68c9afb", null ],
-    [ "FindResourceOrThrow", "find__resource_8h.html#ac72eb43ba982b5a4d188c85aa14e0cc6", null ],
-    [ "ReadFile", "find__resource_8h.html#aba46bdc3b7fb82b91593618e5f07f3ef", null ],
-    [ "ReadFileOrThrow", "find__resource_8h.html#a58e6a26a245fb8e4ea4fcf6c21f67f96", null ],
-    [ "kDrakeResourceRootEnvironmentVariableName", "find__resource_8h.html#aa39127b52b1d34b56cf3e6801cf31045", null ]
+    [ "drake::FindResource", "namespacedrake.html#a6d12a9fa5bded2c0de25138421b0e1d7", null ],
+    [ "drake::FindResourceOrThrow", "namespacedrake.html#ab1402fc7fba316744f96586956e7a752", null ],
+    [ "drake::ReadFile", "namespacedrake.html#a7d08c050b131498e375c5e6bb4ac8523", null ],
+    [ "drake::ReadFileOrThrow", "namespacedrake.html#aaf3c49ca62422759206ccb9c7a7b0bf5", null ],
+    [ "drake::kDrakeResourceRootEnvironmentVariableName", "namespacedrake.html#aa39127b52b1d34b56cf3e6801cf31045", null ]
 ];

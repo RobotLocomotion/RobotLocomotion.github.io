@@ -1,5 +1,5 @@
 var group__estimation =
 [
-    [ "DiscreteTimeSteadyStateKalmanFilter", "group__estimation.html#gaa4c925b6356157327fbb15cf94350494", null ],
-    [ "SteadyStateKalmanFilter", "group__estimation.html#ga483f8a39c210ad058dfc19ae26d93e16", null ]
+    [ "drake::systems::estimators::DiscreteTimeSteadyStateKalmanFilter", "group__estimation.html#ga3011e8cb9dccbe868dd3d8ed93c30d9d", null ],
+    [ "drake::systems::estimators::SteadyStateKalmanFilter", "group__estimation.html#ga74b71f3ea3317fabd9c08331a3386a20", null ]
 ];

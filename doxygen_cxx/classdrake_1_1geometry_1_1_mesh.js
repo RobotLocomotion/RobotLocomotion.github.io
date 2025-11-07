@@ -9,11 +9,11 @@ var classdrake_1_1geometry_1_1_mesh =
     [ "Mesh", "classdrake_1_1geometry_1_1_mesh.html#a5086a0c4a4febc39773bcd1a28db2a56", null ],
     [ "Mesh", "classdrake_1_1geometry_1_1_mesh.html#a740ff53393b2801daa2bf9e4c72246ef", null ],
     [ "~Mesh", "classdrake_1_1geometry_1_1_mesh.html#a400cb114fa04653b48ea257e5dd397e4", null ],
-    [ "extension", "classdrake_1_1geometry_1_1_mesh.html#a5a2ba33fb44bb4a5f4e273a5d9d440ea", null ],
-    [ "GetConvexHull", "classdrake_1_1geometry_1_1_mesh.html#abc7849f0d8f3e992a4f357f17fa6ae45", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_mesh.html#adba4850f9e9a8694f921ac5bab8f32a8", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_mesh.html#a0d3626df50b3182819a2dba3433f8327", null ],
+    [ "extension", "classdrake_1_1geometry_1_1_mesh.html#ab9a98cbffde3881fabff2ed1c7d4c5bc", null ],
+    [ "GetConvexHull", "classdrake_1_1geometry_1_1_mesh.html#ac73e4e796c0bb882447f5f7d64980010", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_mesh.html#a0fc055f29efeedfab97a02e4d5844377", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_mesh.html#a8bf2217d6cedf5610931bcef542bb5bb", null ],
     [ "scale", "classdrake_1_1geometry_1_1_mesh.html#a5109cb042f782c4a77fcb072e4d4bf10", null ],
-    [ "scale3", "classdrake_1_1geometry_1_1_mesh.html#a65c09004291c785ae5b360e7cde60105", null ],
-    [ "source", "classdrake_1_1geometry_1_1_mesh.html#ab63b07aff5ff1812f7b0c3cbcbfc79fa", null ]
+    [ "scale3", "classdrake_1_1geometry_1_1_mesh.html#a9b5c602633de5a79f3ba947617dbd6cc", null ],
+    [ "source", "classdrake_1_1geometry_1_1_mesh.html#a3aed528a3c1f9c77b1d3890f1faffb67", null ]
 ];

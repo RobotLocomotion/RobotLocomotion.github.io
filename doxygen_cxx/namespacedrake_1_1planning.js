@@ -22,5 +22,20 @@ var namespacedrake_1_1planning =
     [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html", "classdrake_1_1planning_1_1_robot_diagram_builder" ],
     [ "SceneGraphCollisionChecker", "classdrake_1_1planning_1_1_scene_graph_collision_checker.html", "classdrake_1_1planning_1_1_scene_graph_collision_checker" ],
     [ "UnimplementedCollisionChecker", "classdrake_1_1planning_1_1_unimplemented_collision_checker.html", "classdrake_1_1planning_1_1_unimplemented_collision_checker" ],
-    [ "ZmpPlanner", "classdrake_1_1planning_1_1_zmp_planner.html", "classdrake_1_1planning_1_1_zmp_planner" ]
+    [ "ZmpPlanner", "classdrake_1_1planning_1_1_zmp_planner.html", "classdrake_1_1planning_1_1_zmp_planner" ],
+    [ "ConfigurationDistanceFunction", "namespacedrake_1_1planning.html#abdbb6a212eb30d6a68643bf0aebe0426", null ],
+    [ "ConfigurationInterpolationFunction", "namespacedrake_1_1planning.html#a51c19bebe45e89327241c79776dad396", null ],
+    [ "RobotCollisionType", "group__planning__collision__checker.html#ga6e884b3a7afc04b1a0c132ce264c14b7", [
+      [ "kNoCollision", "group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7ae9e690a25422e7ed157a6f924b06c20c", null ],
+      [ "kEnvironmentCollision", "group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7ad435a021513720293cbdafd945533b2f", null ],
+      [ "kSelfCollision", "group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7acc814d0e7a27814a2db5ff00d3d84a2e", null ],
+      [ "kEnvironmentAndSelfCollision", "group__planning__collision__checker.html#gga6e884b3a7afc04b1a0c132ce264c14b7abff922fe7fd244bc34f5c20c2a55496f", null ]
+    ] ],
+    [ "IrisInConfigurationSpaceFromCliqueCover", "group__planning__iris.html#ga95b21d4800c09233dd7a489238bced19", null ],
+    [ "IrisNp2", "group__planning__iris.html#gaf5bc571d0ee3753c976d3b521de397c4", null ],
+    [ "IrisZo", "group__planning__iris.html#ga9b44245010bfdc8163645f0c62f9e9ab", null ],
+    [ "MakeBodyShapeDescription", "namespacedrake_1_1planning.html#a22cba108af272c1e117879176577ccc3", null ],
+    [ "SetInEnvironmentCollision", "namespacedrake_1_1planning.html#ad92a5a3ea4a0be45d655ddcb1fb7a55b", null ],
+    [ "SetInSelfCollision", "namespacedrake_1_1planning.html#a7d76070438a414d71cda034e59096199", null ],
+    [ "VisibilityGraph", "namespacedrake_1_1planning.html#aab44e3709df5b59a0ccf692023cc99ff", null ]
 ];

@@ -1,4 +1,4 @@
 var acrobot__plant_8h =
 [
-    [ "BalancingLQRController", "acrobot__plant_8h.html#gafb2ab3ad52a7daf958473b205ceb8877", null ]
+    [ "drake::examples::acrobot::BalancingLQRController", "group__acrobot__systems.html#gaf0c82a177b14bf3b7bde207336f9cba1", null ]
 ];

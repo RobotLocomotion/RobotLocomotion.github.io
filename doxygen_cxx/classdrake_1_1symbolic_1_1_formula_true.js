@@ -2,7 +2,7 @@ var classdrake_1_1symbolic_1_1_formula_true =
 [
     [ "FormulaTrue", "classdrake_1_1symbolic_1_1_formula_true.html#aa35c78ffa149d71a5577273eb30e252d", null ],
     [ "~FormulaTrue", "classdrake_1_1symbolic_1_1_formula_true.html#a32278ac601538f3de0625dac4dd4b257", null ],
-    [ "Display", "classdrake_1_1symbolic_1_1_formula_true.html#ab022b2a7bc26750aab90eeafb49c2d8a", null ],
+    [ "Display", "classdrake_1_1symbolic_1_1_formula_true.html#a7ba737416a6213807a9fec0ec6e036ac", null ],
     [ "EqualTo", "classdrake_1_1symbolic_1_1_formula_true.html#a3660c96e65bec4f7831e74691a14c129", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_formula_true.html#a9dcdd6bf4debc6328cfd48051c2cbcbe", null ],
     [ "GetFreeVariables", "classdrake_1_1symbolic_1_1_formula_true.html#af3366a56a2a8c2942ee6fdd6a2d064b1", null ],

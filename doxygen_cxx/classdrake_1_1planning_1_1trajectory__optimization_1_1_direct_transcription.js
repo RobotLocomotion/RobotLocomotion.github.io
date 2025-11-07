@@ -6,8 +6,8 @@ var classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription 
     [ "DirectTranscription", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#acedcae6424fa55146d8dda1036b04ffc", null ],
     [ "DirectTranscription", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a55db580aa18d76a452aea550515cc8ed", null ],
     [ "~DirectTranscription", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#aae7a39fc88c07d0083ea1a3cccf3e6a9", null ],
-    [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a6c4f7a4cf911fd88036fd474faf8a089", null ],
-    [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a22a7433c13b1c3710731b688e73d6e66", null ],
-    [ "ReconstructInputTrajectory", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a4e0d5526b3c774c0c2d0b743e896078e", null ],
-    [ "ReconstructStateTrajectory", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a167c6e03556d42ea16011cb93061104e", null ]
+    [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#aceff8abc20a07d88b3603bf4eb4b2284", null ],
+    [ "operator=", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a0f368fe44d0a937badb1f3c505e336b4", null ],
+    [ "ReconstructInputTrajectory", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#aae8f71855428d407dea706a6ec165984", null ],
+    [ "ReconstructStateTrajectory", "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a7d54b6fada34832eed086dfbea149e49", null ]
 ];

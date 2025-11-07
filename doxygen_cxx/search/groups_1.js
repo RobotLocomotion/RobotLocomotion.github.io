@@ -1,14 +1,7 @@
 var searchData=
 [
-  ['code_20generation',['Code Generation',['../group__codegen.html',1,'']]],
-  ['controllers',['Controllers',['../group__control__systems.html',1,'']]],
-  ['c_2b_2b_20support_20features',['C++ support features',['../group__cxx.html',1,'']]],
-  ['contact_20modeling_20in_20drake',['Contact Modeling in Drake',['../group__drake__contacts.html',1,'']]],
-  ['continuous_20models_20for_20simulation',['Continuous Models for Simulation',['../group__mbp__continuous.html',1,'']]],
-  ['contact_20surface',['Contact Surface',['../group__module__contact__surface.html',1,'']]],
-  ['collision_20checking',['Collision checking',['../group__planning__collision__checker.html',1,'']]],
-  ['convenience_20classes',['Convenience classes',['../group__planning__infrastructure.html',1,'']]],
-  ['configuring_20distributions',['Configuring distributions',['../group__schema__stochastic.html',1,'']]],
-  ['configuring_20transforms',['Configuring transforms',['../group__schema__transform.html',1,'']]],
-  ['costs_20and_20constraints',['Costs and Constraints',['../group__solver__evaluators.html',1,'']]]
+  ['basics_0',['Notation Basics',['../group__multibody__notation__basics.html',1,'']]],
+  ['benchmarks_1',['Benchmarks',['../group__render__benchmarks.html',1,'Render Benchmarks'],['../group__render__engine__benchmarks.html',1,'Render Engine Benchmarks']]],
+  ['bindings_2',['Python Bindings',['../group__python__bindings.html',1,'']]],
+  ['bodies_3',['Frames and Bodies',['../group__multibody__frames__and__bodies.html',1,'']]]
 ];

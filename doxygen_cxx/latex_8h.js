@@ -1,7 +1,7 @@
 var latex_8h =
 [
-    [ "ToLatex", "latex_8h.html#a50f946a2d656be1b946c8f2f6bf00810", null ],
-    [ "ToLatex", "latex_8h.html#accb78ec8e49199eaff087d9637301041", null ],
-    [ "ToLatex", "latex_8h.html#a38b1d770b9e21d7e4f36649630b10891", null ],
-    [ "ToLatex", "latex_8h.html#aa14d755813030ea14c7207a4e0e71f9f", null ]
+    [ "drake::symbolic::ToLatex", "namespacedrake_1_1symbolic.html#ad07c658dafebaf56057941ccae6f81c4", null ],
+    [ "drake::symbolic::ToLatex", "namespacedrake_1_1symbolic.html#ac98eda5e1ecf8e4ca123d898f2cec6fe", null ],
+    [ "drake::symbolic::ToLatex", "namespacedrake_1_1symbolic.html#a792037568d9fe9ad837351c523146ada", null ],
+    [ "drake::symbolic::ToLatex", "namespacedrake_1_1symbolic.html#a2c784608acef125ad519984e49395059", null ]
 ];

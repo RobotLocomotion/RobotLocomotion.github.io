@@ -11,8 +11,8 @@ var classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_0
     [ "min", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45", null ],
     [ "operator()", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aaaead712fe7dc29c1799e7d8f77d1cfb", null ],
     [ "operator()", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9", null ],
-    [ "operator=", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a46fa4205ca3491f551cd0936632104c5", null ],
-    [ "operator=", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03f87782de17fa3cc06eae968fe10b34", null ],
+    [ "operator=", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a283d51821680ce7e150842faadda3fc9", null ],
+    [ "operator=", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab70797d1d3cb505c30072e28827045bc", null ],
     [ "reset", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad20897c5c8bd47f5d4005989bead0e55", null ],
     [ "operator==", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad909a0d6f40d56faad5e3f60fe0326c5", null ]
 ];

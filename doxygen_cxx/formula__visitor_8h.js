@@ -1,4 +1,4 @@
 var formula__visitor_8h =
 [
-    [ "VisitFormula", "formula__visitor_8h.html#aa2748b5dc34bc17a6c6e98ac1d0cc1ad", null ]
+    [ "drake::symbolic::VisitFormula", "namespacedrake_1_1symbolic.html#a975cce0c245364b8dfea662b296d7eb1", null ]
 ];

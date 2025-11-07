@@ -1,18 +1,18 @@
 var quaternion_8h =
 [
-    [ "AreQuaternionsEqualForOrientation", "quaternion_8h.html#a89206220569d0454a3c5aefe7562df7b", null ],
-    [ "CalculateAngularVelocityExpressedInBFromQuaternionDt", "quaternion_8h.html#a98411a94334e6d40ef2ca10bfc053118", null ],
-    [ "CalculateQuaternionDtConstraintViolation", "quaternion_8h.html#a06541dcb249b4b951ea73d45d2067337", null ],
-    [ "CalculateQuaternionDtFromAngularVelocityExpressedInB", "quaternion_8h.html#ab4bf90f81dcf655d829ed2d718251215", null ],
-    [ "ClosestQuaternion", "quaternion_8h.html#a6a490fce7fb78c13f9af3b650cf36dd5", null ],
-    [ "is_quaternion_in_canonical_form", "quaternion_8h.html#ac76b7fdc13fe823e119b891df82688ae", null ],
-    [ "IsBothQuaternionAndQuaternionDtOK", "quaternion_8h.html#a6dfe7fd8584105c4527a18548abd8550", null ],
-    [ "IsQuaternionAndQuaternionDtEqualAngularVelocityExpressedInB", "quaternion_8h.html#a2e47f892f2417dfc861a095328019361", null ],
-    [ "IsQuaternionValid", "quaternion_8h.html#a3a0adc68819c94157139c9d6c2e9bca6", null ],
-    [ "quatConjugate", "quaternion_8h.html#a7e6bdc00adb60394da9687fc9aa5b0aa", null ],
-    [ "quatDiff", "quaternion_8h.html#ae2ef93ff1fa2dc788507d6eadb4bb78f", null ],
-    [ "quatDiffAxisInvar", "quaternion_8h.html#ad298b049679492bf3e846165c6c7e023", null ],
-    [ "QuaternionToCanonicalForm", "quaternion_8h.html#aad74d3c5baa84fa6ef04b6ada5ffcbe5", null ],
-    [ "quatProduct", "quaternion_8h.html#a29059591a43a840c9a7e2f31a2d55130", null ],
-    [ "quatRotateVec", "quaternion_8h.html#a0fc70ebdc0ea497711e6e7b69eddef2d", null ]
+    [ "drake::math::AreQuaternionsEqualForOrientation", "namespacedrake_1_1math.html#a10aa6236fdaeb467f8734329bf60ec7d", null ],
+    [ "drake::math::CalculateAngularVelocityExpressedInBFromQuaternionDt", "namespacedrake_1_1math.html#add6ac3b937ea1491a1427fa17ab969b9", null ],
+    [ "drake::math::CalculateQuaternionDtConstraintViolation", "namespacedrake_1_1math.html#a57f29f12dcb471da56ebb180929bba17", null ],
+    [ "drake::math::CalculateQuaternionDtFromAngularVelocityExpressedInB", "namespacedrake_1_1math.html#a68c366939df45d3e214806cebb9219ac", null ],
+    [ "drake::math::ClosestQuaternion", "namespacedrake_1_1math.html#a576be6d2ee0da7817d6b2632de99e482", null ],
+    [ "drake::math::is_quaternion_in_canonical_form", "namespacedrake_1_1math.html#a01008fbb23900d05b27e2d9ed5d3ec31", null ],
+    [ "drake::math::IsBothQuaternionAndQuaternionDtOK", "namespacedrake_1_1math.html#afd85f4c3652dc019638f54fba0fe5337", null ],
+    [ "drake::math::IsQuaternionAndQuaternionDtEqualAngularVelocityExpressedInB", "namespacedrake_1_1math.html#a8291c72eca9f98dfd2486c5c09f11fe5", null ],
+    [ "drake::math::IsQuaternionValid", "namespacedrake_1_1math.html#af9716f3d842206c012fe04b4545dc2bc", null ],
+    [ "drake::math::quatConjugate", "namespacedrake_1_1math.html#ae503a800803f4c8e12dafac65d466517", null ],
+    [ "drake::math::quatDiff", "namespacedrake_1_1math.html#ae3952e0b94673dab087b71aae0fe4264", null ],
+    [ "drake::math::quatDiffAxisInvar", "namespacedrake_1_1math.html#a8adec15eca22f51e09e025f5a6ff9171", null ],
+    [ "drake::math::QuaternionToCanonicalForm", "namespacedrake_1_1math.html#aad5d8f41be198f8763008d964f9d596b", null ],
+    [ "drake::math::quatProduct", "namespacedrake_1_1math.html#ab733c30c771e3930286e004dcf7174c0", null ],
+    [ "drake::math::quatRotateVec", "namespacedrake_1_1math.html#a78031a9a3a9ede22a90564dd3297bab2", null ]
 ];

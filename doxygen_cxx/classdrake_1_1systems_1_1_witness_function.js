@@ -4,12 +4,12 @@ var classdrake_1_1systems_1_1_witness_function =
     [ "WitnessFunction", "classdrake_1_1systems_1_1_witness_function.html#a285a95c0242ca9b7a172f6d0c97a1b2c", null ],
     [ "WitnessFunction", "classdrake_1_1systems_1_1_witness_function.html#a42a4db5a8ad2eb9ed478f1d2f20ad50c", null ],
     [ "CalcWitnessValue", "classdrake_1_1systems_1_1_witness_function.html#a99ad09b580175decbf00aa9858a4d450", null ],
-    [ "description", "classdrake_1_1systems_1_1_witness_function.html#a69c497e09fe90969c3f9d46692eb668f", null ],
+    [ "description", "classdrake_1_1systems_1_1_witness_function.html#aa96fc91e0a878caf38caa30ca4bc54ec", null ],
     [ "direction_type", "classdrake_1_1systems_1_1_witness_function.html#a42e6ac7e64f6c610dd24a73ca3bdc249", null ],
-    [ "get_event", "classdrake_1_1systems_1_1_witness_function.html#a677b263497c4e65d9a108e08e838f7f3", null ],
-    [ "get_mutable_event", "classdrake_1_1systems_1_1_witness_function.html#aef95581415f22863a5bce5f9f3f24260", null ],
-    [ "get_system", "classdrake_1_1systems_1_1_witness_function.html#a5c403016877fd5f6291208aeb9a8063c", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_witness_function.html#a43ed565f3efdcb1af08b2ab94bdcf05a", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_witness_function.html#a72944fca0a723894b4a397f786de2e0f", null ],
-    [ "should_trigger", "classdrake_1_1systems_1_1_witness_function.html#ace44961132e96e032f20ea411cdf6736", null ]
+    [ "get_event", "classdrake_1_1systems_1_1_witness_function.html#a2802d37fd182bc704c8ce44faeecd9d9", null ],
+    [ "get_mutable_event", "classdrake_1_1systems_1_1_witness_function.html#aa2b7b28a6511d4a25fd30bbb8a1faa36", null ],
+    [ "get_system", "classdrake_1_1systems_1_1_witness_function.html#ab6175b31bc7d4a8e02470e716aa92a2e", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_witness_function.html#a944b03f77077375a955d10c7c04f510f", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_witness_function.html#a6153e1291a63dba21f609769dd5079ae", null ],
+    [ "should_trigger", "classdrake_1_1systems_1_1_witness_function.html#aca3c4f17c29ddb1555bd53214d475204", null ]
 ];

@@ -1,5 +1,5 @@
 var continuous__algebraic__riccati__equation_8h =
 [
-    [ "ContinuousAlgebraicRiccatiEquation", "continuous__algebraic__riccati__equation_8h.html#a527ab4851f7449ff47374855c79b8413", null ],
-    [ "ContinuousAlgebraicRiccatiEquation", "continuous__algebraic__riccati__equation_8h.html#a44ee9a3e4b4fa7d4359e3b05af563979", null ]
+    [ "drake::math::ContinuousAlgebraicRiccatiEquation", "namespacedrake_1_1math.html#a47d4e4f52f3321536bf570b3a1a23718", null ],
+    [ "drake::math::ContinuousAlgebraicRiccatiEquation", "namespacedrake_1_1math.html#aed596a7b73bd51a9acfa28df7be4214f", null ]
 ];

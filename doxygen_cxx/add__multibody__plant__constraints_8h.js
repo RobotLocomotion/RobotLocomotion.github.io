@@ -1,4 +1,4 @@
 var add__multibody__plant__constraints_8h =
 [
-    [ "AddMultibodyPlantConstraints", "add__multibody__plant__constraints_8h.html#acb93b73473d0cca2054585c7b8b15a84", null ]
+    [ "drake::multibody::AddMultibodyPlantConstraints", "namespacedrake_1_1multibody.html#ac190771ae19f018b68817639354aab61", null ]
 ];

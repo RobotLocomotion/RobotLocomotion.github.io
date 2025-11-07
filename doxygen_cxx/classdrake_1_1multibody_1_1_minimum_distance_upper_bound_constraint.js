@@ -8,6 +8,6 @@ var classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint =
     [ "~MinimumDistanceUpperBoundConstraint", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#a20562b686f3edb1cc56056f761655acf", null ],
     [ "distance_bound", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#afb24cc2e596abc3aff74b12f06910167", null ],
     [ "influence_distance", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#a8f7e944ec487debca7e690ac2496f3f9", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#ae73bc29cb5604136d64a043a2e852368", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#ad7da90590b3a7593385e7a572d5a75e7", null ]
+    [ "operator=", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#a0982779fb7c6ac117410b91a11bddb6b", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#ae62a9bbf283b1b9e28b427e1df17c761", null ]
 ];

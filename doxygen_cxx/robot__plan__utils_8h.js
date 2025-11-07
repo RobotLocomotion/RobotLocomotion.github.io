@@ -1,6 +1,6 @@
 var robot__plan__utils_8h =
 [
-    [ "ApplyJointVelocityLimits", "robot__plan__utils_8h.html#a03defeaacd8e6e4a43260eb910c1913c", null ],
-    [ "EncodeKeyFrames", "robot__plan__utils_8h.html#a34dd83b8c99f86f80129b54cf879beda", null ],
-    [ "GetJointNames", "robot__plan__utils_8h.html#a8cac2550a9a52551ff82e51b3d5b29e3", null ]
+    [ "drake::manipulation::util::ApplyJointVelocityLimits", "namespacedrake_1_1manipulation_1_1util.html#a5b98e824625f6c0bebae2e734c194b2a", null ],
+    [ "drake::manipulation::util::EncodeKeyFrames", "namespacedrake_1_1manipulation_1_1util.html#a81f3580a7046d48a404cee54a3564aab", null ],
+    [ "drake::manipulation::util::GetJointNames", "namespacedrake_1_1manipulation_1_1util.html#a7e0b2db2ee8a48508038bda75eca7c5d", null ]
 ];

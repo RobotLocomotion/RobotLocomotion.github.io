@@ -10,8 +10,8 @@ var classdrake_1_1systems_1_1_bus_value =
     [ "begin", "classdrake_1_1systems_1_1_bus_value.html#a09dd208593b9721a30a83ed978ede577", null ],
     [ "Clear", "classdrake_1_1systems_1_1_bus_value.html#aa71d36872f416feaa853788a7a7a7ef8", null ],
     [ "end", "classdrake_1_1systems_1_1_bus_value.html#a02e88afd3fe20755720963a3b1be0e08", null ],
-    [ "Find", "classdrake_1_1systems_1_1_bus_value.html#a9aff0390ff388655c7476dc72e91d45c", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_bus_value.html#a2c42e604e26fb6320b080905069c704e", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_bus_value.html#ae46d4d7f47eeee97dc224598906b4e49", null ],
+    [ "Find", "classdrake_1_1systems_1_1_bus_value.html#a86fcf772b3c3ee1bbb1ff2dffecc297f", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_bus_value.html#afaaaddb5932719e3cac5927d024d5fb4", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_bus_value.html#a673aa13597817bdddaf4cc342cf4811c", null ],
     [ "Set", "classdrake_1_1systems_1_1_bus_value.html#adae1a0aff8f4867d3ce28072d3c8503d", null ]
 ];

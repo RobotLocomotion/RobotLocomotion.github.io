@@ -6,6 +6,6 @@ var classdrake_1_1systems_1_1_discrete_update_event =
     [ "DiscreteUpdateEvent", "classdrake_1_1systems_1_1_discrete_update_event.html#aa2cade880acf332eef698892a30397d0", null ],
     [ "handle", "classdrake_1_1systems_1_1_discrete_update_event.html#ae32cb14dfb503b2ab5de83c7983ddc62", null ],
     [ "is_discrete_update", "classdrake_1_1systems_1_1_discrete_update_event.html#a6411929eebb98e856021335d43bcb7f4", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_discrete_update_event.html#a3fce47af8425efff0a6c1141c002550a", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_discrete_update_event.html#ac65543aabc8ab1b8c4fcd1bcf1ec48c5", null ]
+    [ "operator=", "classdrake_1_1systems_1_1_discrete_update_event.html#a831b2cd26d9c77341f4cd76f3f9a1f18", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_discrete_update_event.html#a9ede3fe0dfa52f8555e59e471c93b523", null ]
 ];

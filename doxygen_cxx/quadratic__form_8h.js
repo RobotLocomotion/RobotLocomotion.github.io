@@ -1,6 +1,6 @@
 var quadratic__form_8h =
 [
-    [ "BalanceQuadraticForms", "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a", null ],
-    [ "DecomposePositiveQuadraticForm", "quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694", null ],
-    [ "DecomposePSDmatrixIntoXtransposeTimesX", "quadratic__form_8h.html#adc391d10568071dcb57bf6f214675cfe", null ]
+    [ "drake::math::BalanceQuadraticForms", "namespacedrake_1_1math.html#a06e3b6d5de8ddc924a44a200f06d10f0", null ],
+    [ "drake::math::DecomposePositiveQuadraticForm", "namespacedrake_1_1math.html#ac0cb8ebf50f381b19b98f5901b6dea96", null ],
+    [ "drake::math::DecomposePSDmatrixIntoXtransposeTimesX", "namespacedrake_1_1math.html#ac24fd667914c5489bdfed7973a1c7388", null ]
 ];

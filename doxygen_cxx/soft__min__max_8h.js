@@ -1,7 +1,7 @@
 var soft__min__max_8h =
 [
-    [ "SoftOverMax", "soft__min__max_8h.html#ad5dcb8264087a5079e8103b7241ce77d", null ],
-    [ "SoftOverMin", "soft__min__max_8h.html#a2fb9f9a7a842e3d0be47d3c7b7f23f11", null ],
-    [ "SoftUnderMax", "soft__min__max_8h.html#a01c6c47a926e29b798e1901f0b4a1913", null ],
-    [ "SoftUnderMin", "soft__min__max_8h.html#af0fa6ae7f85a3641b2688a7a929a601d", null ]
+    [ "drake::math::SoftOverMax", "namespacedrake_1_1math.html#a758d64dc7109ce2b49d24d1736e2ceb4", null ],
+    [ "drake::math::SoftOverMin", "namespacedrake_1_1math.html#a3c50f7950de875492fd065f398cc8a83", null ],
+    [ "drake::math::SoftUnderMax", "namespacedrake_1_1math.html#a85a1342c2e810987226bdc34fe974ad0", null ],
+    [ "drake::math::SoftUnderMin", "namespacedrake_1_1math.html#a63f9d06b6c78d0ee60a095cd5d84e9aa", null ]
 ];

@@ -8,6 +8,6 @@ var classdrake_1_1geometry_1_1_ellipsoid =
     [ "a", "classdrake_1_1geometry_1_1_ellipsoid.html#a7f0799082988106ce030952a5d2fbb2e", null ],
     [ "b", "classdrake_1_1geometry_1_1_ellipsoid.html#a2bbc76aeadab8a326a08ddab7aae3412", null ],
     [ "c", "classdrake_1_1geometry_1_1_ellipsoid.html#adef0fed0cb1426f67a076769f9867786", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_ellipsoid.html#abd67cfea6ee0f4dedce931d0ac4cbc36", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_ellipsoid.html#ab64947bcfb2ce08d401be072eed716ae", null ]
+    [ "operator=", "classdrake_1_1geometry_1_1_ellipsoid.html#a472e80776587a5f9c2a877081f684ed1", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_ellipsoid.html#a0744272e94e315d8af66cd23eb5a86e2", null ]
 ];

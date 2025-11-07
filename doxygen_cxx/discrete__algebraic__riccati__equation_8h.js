@@ -1,5 +1,5 @@
 var discrete__algebraic__riccati__equation_8h =
 [
-    [ "DiscreteAlgebraicRiccatiEquation", "discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e", null ],
-    [ "DiscreteAlgebraicRiccatiEquation", "discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9", null ]
+    [ "drake::math::DiscreteAlgebraicRiccatiEquation", "namespacedrake_1_1math.html#afcef78b318bd0da2f388b83bc6fafa81", null ],
+    [ "drake::math::DiscreteAlgebraicRiccatiEquation", "namespacedrake_1_1math.html#a6c67bf8aac3624a534979afd09689375", null ]
 ];

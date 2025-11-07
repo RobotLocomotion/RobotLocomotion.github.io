@@ -9,12 +9,12 @@ var classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator =
     [ "MixedIntegerRotationConstraintGenerator", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#afce3b9c40715a21aa37836c53b126c76", null ],
     [ "MixedIntegerRotationConstraintGenerator", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a3a9e65fb6129fbe75fbbc6fcb2d34207", null ],
     [ "MixedIntegerRotationConstraintGenerator", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#afe1238e78ea2779fde9edfa2d2d41c58", null ],
-    [ "AddToProgram", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a3e40d15ffc0b7970ef1da0771760d423", null ],
+    [ "AddToProgram", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a7386e39f04e8071bae4b45961adb6699", null ],
     [ "approach", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#ad48cd766fd69e534747352670b320229", null ],
     [ "interval_binning", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#aa6df5af978129e2a5c7e9cea590ae208", null ],
     [ "num_intervals_per_half_axis", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a99156f31969224847a5514e0f1fd47d0", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a847390df2880e376e2d34e3cb8126d60", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a1f2e7683e1548a784d8683f06b088bd8", null ],
-    [ "phi", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a17d20f4008480f9fbb90668aaa12de15", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#afedcca24ac9352824a2df584468e2e54", null ],
+    [ "operator=", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a25ae75cb524673f53bb79598f15451dd", null ],
+    [ "phi", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a8f51958a9eef3855a1eafee9a06484e5", null ],
     [ "phi_nonnegative", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a5140e062971363cc6f3b55cfef5dd4e0", null ]
 ];

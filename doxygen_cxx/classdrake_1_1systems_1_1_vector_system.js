@@ -8,11 +8,11 @@ var classdrake_1_1systems_1_1_vector_system =
     [ "CalcVectorOutput", "classdrake_1_1systems_1_1_vector_system.html#abdcf055421e02a1bb92b463f4383ff57", null ],
     [ "DeclarePeriodicDiscreteUpdate", "classdrake_1_1systems_1_1_vector_system.html#a461dfc1e50a0637c615c5771bbd84137", null ],
     [ "DoCalcTimeDerivatives", "classdrake_1_1systems_1_1_vector_system.html#a021b8135deba8c945c9deea3cb4ce7a0", null ],
-    [ "DoCalcVectorDiscreteVariableUpdates", "classdrake_1_1systems_1_1_vector_system.html#a83f65743d03c576df8bd30d5d3d8e482", null ],
-    [ "DoCalcVectorOutput", "classdrake_1_1systems_1_1_vector_system.html#aef5d5729502ec9a436205f55de33db81", null ],
-    [ "DoCalcVectorTimeDerivatives", "classdrake_1_1systems_1_1_vector_system.html#ad9f01cddabb2182fd0fcaa6094a94172", null ],
-    [ "EvalVectorInput", "classdrake_1_1systems_1_1_vector_system.html#a1f41f7b104ce103e57d0c461da5a6b31", null ],
-    [ "GetVectorState", "classdrake_1_1systems_1_1_vector_system.html#ae86067d601be871341aa108ce2b4eefe", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_vector_system.html#a15657222d975c52638e0d03e8dddb6c9", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_vector_system.html#a64e5065f46589c0dcafcf358366af0ff", null ]
+    [ "DoCalcVectorDiscreteVariableUpdates", "classdrake_1_1systems_1_1_vector_system.html#a935d2fdc480f82b5c64808351aa0aec9", null ],
+    [ "DoCalcVectorOutput", "classdrake_1_1systems_1_1_vector_system.html#a91e17df4cf516463972543e8fe99f9b2", null ],
+    [ "DoCalcVectorTimeDerivatives", "classdrake_1_1systems_1_1_vector_system.html#a759b9d54a7f3ec3dd044669d68c72cfe", null ],
+    [ "EvalVectorInput", "classdrake_1_1systems_1_1_vector_system.html#a0d040494563c96de7ad6d3d1892e91d9", null ],
+    [ "GetVectorState", "classdrake_1_1systems_1_1_vector_system.html#af1d137495a01ec49bbb499a4afc395c5", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_vector_system.html#a080e8ce6b576d7f6b72d07a34fb79fe6", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_vector_system.html#aad14be5075545a1eab56188ef349a170", null ]
 ];

@@ -1,7 +1,7 @@
 var call__python_8h =
 [
-    [ "CallPython", "call__python_8h.html#ab90532d79bea92048d0ee230ed8d4b59", null ],
-    [ "CallPythonInit", "call__python_8h.html#ae2e692a250b25ee6892bd538b071a88d", null ],
-    [ "ToPythonKwargs", "call__python_8h.html#acc2dfeb366241e44a9cfd8644d48a6de", null ],
-    [ "ToPythonTuple", "call__python_8h.html#a861302e6bce6e41acf42b94c21ee5020", null ]
+    [ "drake::common::CallPython", "namespacedrake_1_1common.html#a5f068ed6d231c575d064166dbfad67d4", null ],
+    [ "drake::common::CallPythonInit", "namespacedrake_1_1common.html#a2365dc31d0f01b93911908bc59919e5f", null ],
+    [ "drake::common::ToPythonKwargs", "namespacedrake_1_1common.html#ae5d0e12f1fbdacee5f18d346843614f5", null ],
+    [ "drake::common::ToPythonTuple", "namespacedrake_1_1common.html#afbec06518e5253706a57b4d98f5360a4", null ]
 ];
