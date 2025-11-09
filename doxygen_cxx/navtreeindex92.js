@@ -1,7 +1,5 @@
 var NAVTREEINDEX92 =
 {
-"rigid__transform_8h.html":[5,0,0,7,29],
-"rimless__wheel_8h.html":[5,0,0,3,4,0],
 "rimless__wheel__continuous__state_8h.html":[5,0,0,3,4,1],
 "rimless__wheel__geometry_8h.html":[5,0,0,3,4,2],
 "rimless__wheel__params_8h.html":[5,0,0,3,4,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX92 =
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a574197988c880f73533a3b3c68fd0067":[3,0,0,2,0,8,3],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a574197988c880f73533a3b3c68fd0067":[4,0,0,1,0,8,3],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a5d0e7d91df6b1a261375b231fc678acd":[3,0,0,2,0,8,2],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a5d0e7d91df6b1a261375b231fc678acd":[4,0,0,1,0,8,2]
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a5d0e7d91df6b1a261375b231fc678acd":[4,0,0,1,0,8,2],
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[3,0,0,2,0,8,0],
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,1,0,8,0]
 };

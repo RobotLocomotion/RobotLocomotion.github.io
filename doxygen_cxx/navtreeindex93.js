@@ -1,7 +1,5 @@
 var NAVTREEINDEX93 =
 {
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[3,0,0,2,0,8,0],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,1,0,8,0],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a99f66380688774b2de4d3fc48d6f1213":[3,0,0,2,0,8,4],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#a99f66380688774b2de4d3fc48d6f1213":[4,0,0,1,0,8,4],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_state_indices.html#aacb5b00cc0c596da1dca6a4126032222":[3,0,0,2,0,8,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX93 =
 "structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple.html#abd0b36292d04faaa728a92e7e2a06d12":[3,0,0,3,37,0,3],
 "structdrake_1_1geometry_1_1_meshcat_params_1_1_property_tuple.html#abd0b36292d04faaa728a92e7e2a06d12":[4,0,0,2,34,0,3],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html":[3,0,0,3,40],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html":[4,0,0,2,37]
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html":[4,0,0,2,37],
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a27471eb356d2510ae691de4053d7aef7":[3,0,0,3,40,4],
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a27471eb356d2510ae691de4053d7aef7":[4,0,0,2,37,4]
 };

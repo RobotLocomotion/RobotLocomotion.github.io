@@ -1,7 +1,5 @@
 var NAVTREEINDEX85 =
 {
-"hopf__coordinate_8h.html":[5,0,0,7,20],
-"hpolyhedron_8h.html":[5,0,0,4,1,14],
 "hydroelastic__contact__forces__continuous__cache__data_8h.html":[5,0,0,8,9,22],
 "hydroelastic__contact__info_8h.html":[5,0,0,8,9,23],
 "hydroelastic__contact__visualizer_8h.html":[5,0,0,8,6,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX85 =
 "namespacedrake.html#a3ad88c2d704ccb2899d475d3ae05de14":[3,0,0,84],
 "namespacedrake.html#a3d362cd0d2c845da2124c3f3914329a0":[3,0,0,120],
 "namespacedrake.html#a3eb9dffa1f3d48e4c5fe406e5a4617fe":[3,0,0,80],
-"namespacedrake.html#a4151f6cb087cd5b1cdc40e43cb1f7284":[3,0,0,160]
+"namespacedrake.html#a4151f6cb087cd5b1cdc40e43cb1f7284":[3,0,0,160],
+"namespacedrake.html#a4156bf453a5b323356d7cc784dfdf084":[3,0,0,79],
+"namespacedrake.html#a42ead4ab3ea15652a58208871dde4238":[3,0,0,91]
 };

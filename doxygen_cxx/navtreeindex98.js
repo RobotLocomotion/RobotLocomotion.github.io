@@ -1,7 +1,5 @@
 var NAVTREEINDEX98 =
 {
-"structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#ac532c4b500b1a85ea22217f2c65a70ed":[4,0,0,7,3,6,0],
-"structdrake_1_1multibody_1_1parsing_1_1_model_directives.html":[3,0,0,8,5,7],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html":[4,0,0,7,3,7],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a21a8a03c07311e67bcc453bb4fb65f27":[3,0,0,8,5,7,2],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directives.html#a21a8a03c07311e67bcc453bb4fb65f27":[4,0,0,7,3,7,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX98 =
 "structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[4,0,0,11,48],
 "structdrake_1_1solvers_1_1_new_variable_names.html":[3,0,0,12,49],
 "structdrake_1_1solvers_1_1_new_variable_names.html":[4,0,0,11,49],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[3,0,0,12,50]
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[3,0,0,12,50],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[4,0,0,11,50],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,12,51]
 };

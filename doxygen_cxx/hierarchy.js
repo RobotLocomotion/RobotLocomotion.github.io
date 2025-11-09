@@ -398,7 +398,6 @@ var hierarchy =
     [ "Meshcat::Gamepad", "structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html", null ],
     [ "GcsGraphvizOptions", "structdrake_1_1geometry_1_1optimization_1_1_gcs_graphviz_options.html", null ],
     [ "GcsTrajectoryOptimization", "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html", null ],
-    [ "generic_product_impl_base", "classgeneric__product__impl__base.html", null ],
     [ "GenericPolynomial< BasisElement >", "classdrake_1_1symbolic_1_1_generic_polynomial.html", null ],
     [ "GeometryFrame", "classdrake_1_1geometry_1_1_geometry_frame.html", null ],
     [ "GeometryInstance", "classdrake_1_1geometry_1_1_geometry_instance.html", null ],
@@ -1026,7 +1025,6 @@ var hierarchy =
     [ "TimeStep", "structdrake_1_1planning_1_1trajectory__optimization_1_1_time_step.html", null ],
     [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html", null ],
     [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
-    [ "traits", "classtraits.html", null ],
     [ "Traits< TrajectorySource >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_source_01_4.html", null ],
     [ "Trajectory< T >", "classdrake_1_1multibody_1_1_trajectory.html", [
       [ "BezierCurve< T >", "classdrake_1_1trajectories_1_1_bezier_curve.html", null ],

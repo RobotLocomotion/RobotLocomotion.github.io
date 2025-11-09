@@ -1,7 +1,5 @@
 var NAVTREEINDEX84 =
 {
-"functions_s.html":[4,3,0,18],
-"functions_t.html":[4,3,0,19],
 "functions_type.html":[4,3,3],
 "functions_u.html":[4,3,0,20],
 "functions_v.html":[4,3,0,21],
@@ -249,5 +247,7 @@ var NAVTREEINDEX84 =
 "gyroscope_8h.html":[5,0,0,12,8,6],
 "hash_8h.html":[5,0,0,1,36],
 "hermitian__dense__output_8h.html":[5,0,0,12,0,6],
-"hierarchy.html":[4,2]
+"hierarchy.html":[4,2],
+"hopf__coordinate_8h.html":[5,0,0,7,20],
+"hpolyhedron_8h.html":[5,0,0,4,1,14]
 };

@@ -1,7 +1,5 @@
 var NAVTREEINDEX88 =
 {
-"namespacedrake_1_1planning.html#a7d76070438a414d71cda034e59096199":[3,0,0,10,31],
-"namespacedrake_1_1planning.html#aab44e3709df5b59a0ccf692023cc99ff":[3,0,0,10,32],
 "namespacedrake_1_1planning.html#abdbb6a212eb30d6a68643bf0aebe0426":[3,0,0,10,23],
 "namespacedrake_1_1planning.html#ad92a5a3ea4a0be45d655ddcb1fb7a55b":[3,0,0,10,30],
 "namespacedrake_1_1planning_1_1graph__algorithms.html":[3,0,0,10,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX88 =
 "namespacedrake_1_1symbolic.html#a1b37f14ce7a17532970ad74b4182267d":[3,0,0,13,456],
 "namespacedrake_1_1symbolic.html#a1c77acbc22041eabb6c243ba5e09ea4a":[3,0,0,13,238],
 "namespacedrake_1_1symbolic.html#a1c7c9095542cd5f4ef70f50bca1aab7c":[3,0,0,13,241],
-"namespacedrake_1_1symbolic.html#a1e385d568eb0ddc41d5b2dac2e081be0":[3,0,0,13,352]
+"namespacedrake_1_1symbolic.html#a1e385d568eb0ddc41d5b2dac2e081be0":[3,0,0,13,352],
+"namespacedrake_1_1symbolic.html#a1e9232608f43a586aad546b2a078aeb0":[3,0,0,13,224],
+"namespacedrake_1_1symbolic.html#a1ef7767ed74e24d55ada8b380bcd22d8":[3,0,0,13,163]
 };

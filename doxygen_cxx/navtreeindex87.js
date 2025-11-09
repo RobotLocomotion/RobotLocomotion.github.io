@@ -1,7 +1,5 @@
 var NAVTREEINDEX87 =
 {
-"namespacedrake_1_1manipulation_1_1kuka__iiwa.html#ae2f308a499ceab296525cfb87a43cc5e":[3,0,0,6,1,12],
-"namespacedrake_1_1manipulation_1_1kuka__iiwa.html#ae6f9b5fa97294838b1b05255e138ed81":[3,0,0,6,1,14],
 "namespacedrake_1_1manipulation_1_1schunk__wsg.html":[3,0,0,6,2],
 "namespacedrake_1_1manipulation_1_1schunk__wsg.html#a16849ad98e5f4d87308a76b2d7a5b37e":[3,0,0,6,2,15],
 "namespacedrake_1_1manipulation_1_1schunk__wsg.html#a2d50206e40178bb516bf578b4418af0a":[3,0,0,6,2,22],
@@ -249,5 +247,7 @@ var NAVTREEINDEX87 =
 "namespacedrake_1_1perception_1_1pc__flags.html#ae4f79d0fdb37718f7b4e09e5db11f8fe":[3,0,0,9,0,5],
 "namespacedrake_1_1planning.html":[3,0,0,10],
 "namespacedrake_1_1planning.html#a22cba108af272c1e117879176577ccc3":[3,0,0,10,29],
-"namespacedrake_1_1planning.html#a51c19bebe45e89327241c79776dad396":[3,0,0,10,24]
+"namespacedrake_1_1planning.html#a51c19bebe45e89327241c79776dad396":[3,0,0,10,24],
+"namespacedrake_1_1planning.html#a7d76070438a414d71cda034e59096199":[3,0,0,10,31],
+"namespacedrake_1_1planning.html#aab44e3709df5b59a0ccf692023cc99ff":[3,0,0,10,32]
 };

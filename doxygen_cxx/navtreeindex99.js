@@ -1,7 +1,5 @@
 var NAVTREEINDEX99 =
 {
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[4,0,0,11,50],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,12,51],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[4,0,0,11,51],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[3,0,0,12,51,0],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[4,0,0,11,51,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX99 =
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#afc6ccda8d28bae6d00dcdff55bfc7e6b":[3,0,0,14,0,0,1],
 "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#afc6ccda8d28bae6d00dcdff55bfc7e6b":[4,0,0,13,0,0,1],
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html":[3,0,0,14,0,1],
-"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html":[4,0,0,13,0,1]
+"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html":[4,0,0,13,0,1],
+"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a01c236fa6e3060a824670259f007511a":[3,0,0,14,0,1,3],
+"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a01c236fa6e3060a824670259f007511a":[4,0,0,13,0,1,3]
 };

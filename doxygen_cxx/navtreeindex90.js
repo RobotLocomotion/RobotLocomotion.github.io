@@ -1,7 +1,5 @@
 var NAVTREEINDEX90 =
 {
-"namespacedrake_1_1symbolic.html#a987c2a9d322549f8617a45997bae8aa6":[3,0,0,13,177],
-"namespacedrake_1_1symbolic.html#a98d9027559c1c3c683711d50fc7ff48f":[3,0,0,13,138],
 "namespacedrake_1_1symbolic.html#a98eba0d5094e9e15c3038815b16159e6":[3,0,0,13,106],
 "namespacedrake_1_1symbolic.html#a9911fd0881ffc66c0c64e8d727399237":[3,0,0,13,423],
 "namespacedrake_1_1symbolic.html#a993b173875967c3a3d57757f554dfab4":[3,0,0,13,440],
@@ -249,5 +247,7 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3d":[3,0,0,14,6,54],
 "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da0326c4bed4ffb3b2f430e119a147b530":[3,0,0,14,6,54,1],
 "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da238a889ea664dc69a583c89712b4f96c":[3,0,0,14,6,54,6],
-"namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da2a67266021c4dc63b8ed214bff50abec":[3,0,0,14,6,54,7]
+"namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da2a67266021c4dc63b8ed214bff50abec":[3,0,0,14,6,54,7],
+"namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da3798842b1f11a731f5e11d9744c29774":[3,0,0,14,6,54,4],
+"namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3dab2ba7d59e9ac2edec71ea18cc201b478":[3,0,0,14,6,54,2]
 };
