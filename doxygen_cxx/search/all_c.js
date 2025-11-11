@@ -224,7 +224,7 @@ var searchData=
   ['maxcontextnumdistances_221',['MaxContextNumDistances',['../classdrake_1_1planning_1_1_collision_checker.html#a23bcd057122f2a90fd8e673a51e9bcd3',1,'drake::planning::CollisionChecker']]],
   ['maxevalname_222',['MaxEvalName',['../classdrake_1_1solvers_1_1_nlopt_solver.html#acbe005801e7e596d478bb5047324e46a',1,'drake::solvers::NloptSolver']]],
   ['maximum_20parallelism_223',['Configuring the process-wide maximum parallelism',['../classdrake_1_1_parallelism.html#DRAKE_NUM_THREADS',1,'']]],
-  ['maximumvolumeinscribedaffinetransformation_224',['MaximumVolumeInscribedAffineTransformation',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a04f14c9b5aa9f7a04bd9aa12185916ce',1,'drake::geometry::optimization::HPolyhedron']]],
+  ['maximumvolumeinscribedaffinetransformation_224',['MaximumVolumeInscribedAffineTransformation',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a0a98ccc6494f15c4e102ab99d3fbfd78',1,'drake::geometry::optimization::HPolyhedron']]],
   ['maximumvolumeinscribedellipsoid_225',['MaximumVolumeInscribedEllipsoid',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a74afcf0235bb70d4d936c093fbb85a5d',1,'drake::geometry::optimization::HPolyhedron']]],
   ['maxiterationsoptionname_226',['MaxIterationsOptionName',['../classdrake_1_1solvers_1_1_projected_gradient_descent_solver.html#aaf44ca821db4add8d764044d6673859c',1,'drake::solvers::ProjectedGradientDescentSolver']]],
   ['maxnumdistances_227',['MaxNumDistances',['../classdrake_1_1planning_1_1_collision_checker.html#acb92e0e060e99a17ea72a57daba72251',1,'drake::planning::CollisionChecker']]],

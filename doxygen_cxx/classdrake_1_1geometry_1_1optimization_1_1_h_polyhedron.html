@@ -198,8 +198,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aff86786a71b7a4f6a0d8c8ad8c9f1eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduces some (not necessarily all) redundant inequalities in the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}...">HPolyhedron</a>.  <br /></td></tr>
 <tr class="memitem:a196e1a9660d75079e2491b6b2492bb84" id="r_a196e1a9660d75079e2491b6b2492bb84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a196e1a9660d75079e2491b6b2492bb84">SimplifyByIncrementalFaceTranslation</a> (<a class="el" href="classdouble.html">double</a> min_volume_ratio=0.1, bool do_affine_transformation=true, int max_iterations=10, const Eigen::MatrixXd &amp;points_to_contain=Eigen::MatrixXd(), const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">drake::geometry::optimization::HPolyhedron</a> &gt; &amp;intersecting_polytopes=std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &gt;(), bool keep_whole_intersection=false, <a class="el" href="classdouble.html">double</a> intersection_padding=1e-4, int random_seed=0) const</td></tr>
 <tr class="memdesc:a196e1a9660d75079e2491b6b2492bb84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an inner approximation of <span class="tt">this</span>, aiming to use fewer faces.  <br /></td></tr>
-<tr class="memitem:a04f14c9b5aa9f7a04bd9aa12185916ce" id="r_a04f14c9b5aa9f7a04bd9aa12185916ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04f14c9b5aa9f7a04bd9aa12185916ce">MaximumVolumeInscribedAffineTransformation</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;circumbody) const</td></tr>
-<tr class="memdesc:a04f14c9b5aa9f7a04bd9aa12185916ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a semi-definite program to compute the maximum-volume affine transformation of <span class="tt">this</span>, subject to being a subset of <span class="tt">circumbody</span>, and subject to the transformation matrix being positive semi-definite.  <br /></td></tr>
+<tr class="memitem:a0a98ccc6494f15c4e102ab99d3fbfd78" id="r_a0a98ccc6494f15c4e102ab99d3fbfd78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a98ccc6494f15c4e102ab99d3fbfd78">MaximumVolumeInscribedAffineTransformation</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;circumbody, bool check_bounded=true) const</td></tr>
+<tr class="memdesc:a0a98ccc6494f15c4e102ab99d3fbfd78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a semi-definite program to compute the maximum-volume affine transformation of <span class="tt">this</span>, subject to being a subset of <span class="tt">circumbody</span>, and subject to the transformation matrix being positive semi-definite.  <br /></td></tr>
 <tr class="memitem:a74afcf0235bb70d4d936c093fbb85a5d" id="r_a74afcf0235bb70d4d936c093fbb85a5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74afcf0235bb70d4d936c093fbb85a5d">MaximumVolumeInscribedEllipsoid</a> () const</td></tr>
 <tr class="memdesc:a74afcf0235bb70d4d936c093fbb85a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a semi-definite program to compute the inscribed ellipsoid.  <br /></td></tr>
 <tr class="memitem:a8f101502c5626e477259a06f4acd97e1" id="r_a8f101502c5626e477259a06f4acd97e1"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f101502c5626e477259a06f4acd97e1">ChebyshevCenter</a> () const</td></tr>
@@ -897,8 +897,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a04f14c9b5aa9f7a04bd9aa12185916ce" name="a04f14c9b5aa9f7a04bd9aa12185916ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04f14c9b5aa9f7a04bd9aa12185916ce">&#9670;&#160;</a></span>MaximumVolumeInscribedAffineTransformation()</h2>
+<a id="a0a98ccc6494f15c4e102ab99d3fbfd78" name="a0a98ccc6494f15c4e102ab99d3fbfd78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a98ccc6494f15c4e102ab99d3fbfd78">&#9670;&#160;</a></span>MaximumVolumeInscribedAffineTransformation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -909,8 +909,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> MaximumVolumeInscribedAffineTransformation </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>circumbody</em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>circumbody</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>check_bounded</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -932,6 +936,7 @@ Encodings for Polytope Containment Problems" by Sadra Sadraddini and Russ Tedrak
   </table>
   </dd>
 </dl>
+<dl class="section pre"><dt>Precondition</dt><dd><span class="tt">this</span> is bounded. If <span class="tt">check_bounded</span> is true, this condition is checked and an exception is thrown if it is not satisfied. If <span class="tt">check_bounded</span> is set to false, then it is the user's responsibility to ensure that <span class="tt">this</span> is bounded and the result is not necessarily to be trusted if the precondition is not satisfied. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the solver fails to solve the problem. </td></tr>
@@ -1214,7 +1219,7 @@ template&lt;typename Archive&gt; </div>
 <p>Proceeds by incrementally translating faces inward and removing other faces that become redundant upon doing so. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">min_volume_ratio</td><td>is a lower bound for the ratio of the volume of the returned inbody and the volume of <span class="tt">this</span>. </td></tr>
-    <tr><td class="paramname">do_affine_transformation</td><td>specifies whether to call <a class="el" href="#a04f14c9b5aa9f7a04bd9aa12185916ce" title="Solves a semi-definite program to compute the maximum-volume affine transformation of this,...">MaximumVolumeInscribedAffineTransformation()</a>, to take an affine transformation of the inner approximation to maximize its volume. The affine transformation is reverted if the resulting inner approximation violates conditions related to <span class="tt">points_to_contain</span> or <span class="tt">intersecting_polytopes</span>. </td></tr>
+    <tr><td class="paramname">do_affine_transformation</td><td>specifies whether to call <a class="el" href="#a0a98ccc6494f15c4e102ab99d3fbfd78" title="Solves a semi-definite program to compute the maximum-volume affine transformation of this,...">MaximumVolumeInscribedAffineTransformation()</a>, to take an affine transformation of the inner approximation to maximize its volume. The affine transformation is reverted if the resulting inner approximation violates conditions related to <span class="tt">points_to_contain</span> or <span class="tt">intersecting_polytopes</span>. </td></tr>
     <tr><td class="paramname">max_iterations</td><td>is the maximum number of times to loop through all faces. </td></tr>
     <tr><td class="paramname">points_to_contain</td><td>is an optional matrix whose columns are points that must be contained in the returned inbody. </td></tr>
     <tr><td class="paramname">intersecting_polytopes</td><td>is an optional list of HPolyhedrons that must intersect with the returned inbody. </td></tr>

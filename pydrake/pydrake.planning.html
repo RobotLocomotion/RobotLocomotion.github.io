@@ -4180,11 +4180,9 @@ threadsafe and compatible with any dimension configuration space.</p>
 <ol class="arabic simple" start="2">
 <li><p>__init__(self: pydrake.planning.IrisParameterizationFunction, parameterization: Callable, dimension: int) -&gt; None</p></li>
 </ol>
-<p>Constructor for when the user only provides a version of the
-parameterization function for Eigen::VectorX&lt;double&gt;.
-<code class="docutils literal notranslate"><span class="pre">parameterization_double</span></code> is the function itself,
-<code class="docutils literal notranslate"><span class="pre">parameterization_is_threadsafe</span></code> specifies whether or not its
-threadsafe, and <code class="docutils literal notranslate"><span class="pre">parameterization_dimension</span></code> is the input dimension.</p>
+<p>Constructor for when the user provides a callable function to be used as the
+parameterization. <code class="docutils literal notranslate"><span class="pre">parameterization</span></code> is the function itself and <code class="docutils literal notranslate"><span class="pre">dimension</span></code>
+is the input dimension.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In order to use IrisNp2, the user-provided parameterization function

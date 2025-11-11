@@ -21,7 +21,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron =
     [ "MakeBox", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a90a3c53754fc20d77419aae25ed1b1c1", null ],
     [ "MakeL1Ball", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a20de73193ff05f0d332edba9e48a4aee", null ],
     [ "MakeUnitBox", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad362319489a2c5507a34d9b5c0a6e696", null ],
-    [ "MaximumVolumeInscribedAffineTransformation", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a04f14c9b5aa9f7a04bd9aa12185916ce", null ],
+    [ "MaximumVolumeInscribedAffineTransformation", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a0a98ccc6494f15c4e102ab99d3fbfd78", null ],
     [ "MaximumVolumeInscribedEllipsoid", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a74afcf0235bb70d4d936c093fbb85a5d", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#afdaaf924da1bceaede324a678bb9eb42", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ac5bf9a97dfab915c64e025727a7f74fa", null ],
