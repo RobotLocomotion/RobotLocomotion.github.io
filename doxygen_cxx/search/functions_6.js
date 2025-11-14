@@ -347,7 +347,7 @@ var searchData=
   ['get_5fnum_5fjacobian_5fevaluations_344',['get_num_jacobian_evaluations',['../classdrake_1_1systems_1_1_implicit_integrator.html#afe3b83b211bb511fcdd4d9f3c08e1093',1,'drake::systems::ImplicitIntegrator']]],
   ['get_5fnum_5fmesh_5fpoints_345',['get_num_mesh_points',['../classdrake_1_1math_1_1_barycentric_mesh.html#a2d6527a00bfe67cbba218d07c0136f6b',1,'drake::math::BarycentricMesh']]],
   ['get_5fnum_5fnewton_5fraphson_5fiterations_346',['get_num_newton_raphson_iterations',['../classdrake_1_1systems_1_1_implicit_integrator.html#ab600f70d0cf55483e5bcb1ea89984384',1,'drake::systems::ImplicitIntegrator']]],
-  ['get_5fnum_5fpivots_347',['get_num_pivots',['../classdrake_1_1solvers_1_1_moby_l_c_p_solver.html#a9f2f977a2be04239fe82e5257f1970a8',1,'drake::solvers::MobyLCPSolver']]],
+  ['get_5fnum_5fpivots_347',['get_num_pivots',['../classdrake_1_1solvers_1_1_moby_lcp_solver.html#a9f2f977a2be04239fe82e5257f1970a8',1,'drake::solvers::MobyLcpSolver']]],
   ['get_5fnum_5fpositions_348',['get_num_positions',['../classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html#a30342f766e5b14049b65f710581f4bd1',1,'drake::multibody::DifferentialInverseKinematicsParameters']]],
   ['get_5fnum_5fpublishes_349',['get_num_publishes',['../classdrake_1_1systems_1_1_simulator.html#a00d02ccfa59f02fe7c9d44067ec83772',1,'drake::systems::Simulator']]],
   ['get_5fnum_5fsources_350',['get_num_sources',['../classdrake_1_1geometry_1_1_geometry_state.html#a0c5131becf8632c7cdf423543d99c0bd',1,'drake::geometry::GeometryState']]],

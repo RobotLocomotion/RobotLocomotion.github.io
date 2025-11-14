@@ -40,7 +40,7 @@ var searchData=
   ['mixedintegerbranchandbound_37',['MixedIntegerBranchAndBound',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html',1,'drake::solvers']]],
   ['mixedintegerbranchandboundnode_38',['MixedIntegerBranchAndBoundNode',['../classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html',1,'drake::solvers']]],
   ['mixedintegerrotationconstraintgenerator_39',['MixedIntegerRotationConstraintGenerator',['../classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html',1,'drake::solvers']]],
-  ['mobylcpsolver_40',['MobyLCPSolver',['../classdrake_1_1solvers_1_1_moby_l_c_p_solver.html',1,'drake::solvers']]],
+  ['mobylcpsolver_40',['MobyLcpSolver',['../classdrake_1_1solvers_1_1_moby_lcp_solver.html',1,'drake::solvers']]],
   ['mobylcpsolverid_41',['MobyLcpSolverId',['../classdrake_1_1solvers_1_1_moby_lcp_solver_id.html',1,'drake::solvers']]],
   ['modeldirective_42',['ModelDirective',['../structdrake_1_1multibody_1_1parsing_1_1_model_directive.html',1,'drake::multibody::parsing']]],
   ['modeldirectives_43',['ModelDirectives',['../structdrake_1_1multibody_1_1parsing_1_1_model_directives.html',1,'drake::multibody::parsing']]],

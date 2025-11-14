@@ -785,7 +785,7 @@ var hierarchy =
         [ "GurobiSolver", "classdrake_1_1solvers_1_1_gurobi_solver.html", null ],
         [ "IpoptSolver", "classdrake_1_1solvers_1_1_ipopt_solver.html", null ],
         [ "LinearSystemSolver", "classdrake_1_1solvers_1_1_linear_system_solver.html", null ],
-        [ "MobyLCPSolver< T >", "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html", null ],
+        [ "MobyLcpSolver", "classdrake_1_1solvers_1_1_moby_lcp_solver.html", null ],
         [ "MosekSolver", "classdrake_1_1solvers_1_1_mosek_solver.html", null ],
         [ "NloptSolver", "classdrake_1_1solvers_1_1_nlopt_solver.html", null ],
         [ "OsqpSolver", "classdrake_1_1solvers_1_1_osqp_solver.html", null ],

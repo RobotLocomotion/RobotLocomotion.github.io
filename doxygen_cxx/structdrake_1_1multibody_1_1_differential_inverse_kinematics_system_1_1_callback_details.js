@@ -2,6 +2,7 @@ var structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_call
 [
     [ "active_dof", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a05f3f5511b47e22966af2f10a7796390", null ],
     [ "collision_checker", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#ab152c65116886b914b6d4af1aa9ad791", null ],
+    [ "collision_checker_context", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a62877c2923dd3e9923089f823341a1fe", null ],
     [ "frame_list", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a332ace838b769fb014be937464810c4c", null ],
     [ "Jv_TGs", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a9907fb690b57090d5540a2437009ab0c", null ],
     [ "mathematical_program", "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a0f056c9c4332a35f63a72e3c742c9c70", null ],

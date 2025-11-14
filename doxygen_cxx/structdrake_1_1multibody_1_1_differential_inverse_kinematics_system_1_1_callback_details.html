@@ -180,6 +180,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a2f8eb62b1524a68104ca65a97b12c2c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A context for the control plant, set to current positions.  <br /></td></tr>
 <tr class="memitem:ab152c65116886b914b6d4af1aa9ad791" id="r_ab152c65116886b914b6d4af1aa9ad791"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_collision_checker.html">planning::CollisionChecker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab152c65116886b914b6d4af1aa9ad791">collision_checker</a></td></tr>
 <tr class="memdesc:ab152c65116886b914b6d4af1aa9ad791"><td class="mdescLeft">&#160;</td><td class="mdescRight">The collision checker for the robot being controlled.  <br /></td></tr>
+<tr class="memitem:a62877c2923dd3e9923089f823341a1fe" id="r_a62877c2923dd3e9923089f823341a1fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">planning::CollisionCheckerContext</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62877c2923dd3e9923089f823341a1fe">collision_checker_context</a></td></tr>
+<tr class="memdesc:a62877c2923dd3e9923089f823341a1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A mutable context for the collision checker.  <br /></td></tr>
 <tr class="memitem:a05f3f5511b47e22966af2f10a7796390" id="r_a05f3f5511b47e22966af2f10a7796390"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1planning_1_1_dof_mask.html">planning::DofMask</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05f3f5511b47e22966af2f10a7796390">active_dof</a></td></tr>
 <tr class="memdesc:a05f3f5511b47e22966af2f10a7796390"><td class="mdescLeft">&#160;</td><td class="mdescRight">The active degrees of freedom in <span class="tt">collision_checker.plant()</span>.  <br /></td></tr>
 <tr class="memitem:ae4a4e5b352e5dc0bc642a7bd230a580b" id="r_ae4a4e5b352e5dc0bc642a7bd230a580b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4a4e5b352e5dc0bc642a7bd230a580b">time_step</a></td></tr>
@@ -226,6 +228,22 @@ Public Attributes</h2></td></tr>
 
 <p>The collision checker for the robot being controlled. </p>
 <p>Note that its robot_model_instances() accessor also partitions which parts of the <span class="tt">plant</span> are the robot model vs its environment. </p>
+
+</div>
+</div>
+<a id="a62877c2923dd3e9923089f823341a1fe" name="a62877c2923dd3e9923089f823341a1fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62877c2923dd3e9923089f823341a1fe">&#9670;&#160;</a></span>collision_checker_context</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1planning_1_1_collision_checker_context.html">planning::CollisionCheckerContext</a>&amp; collision_checker_context</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A mutable context for the collision checker. </p>
 
 </div>
 </div>

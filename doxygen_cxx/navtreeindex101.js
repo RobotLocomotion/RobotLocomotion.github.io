@@ -1,5 +1,6 @@
 var NAVTREEINDEX101 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a8896c45f8aa4ff195d6cc7e9271026af":[3,0,0,14,6,4,1,0],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a8896c45f8aa4ff195d6cc7e9271026af":[4,0,0,13,6,4,1,0],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,14,6,4,1,2],
 "structdrake_1_1systems_1_1sensors_1_1_camera_config_1_1_fov_degrees.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,13,6,4,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX101 =
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[3,0,1,4],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html":[4,0,1,4],
 "structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html":[3,0,1,3],
-"structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html":[4,0,1,3],
-"structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html":[3,0,1,6]
+"structfmt_1_1formatter_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html":[4,0,1,3]
 };

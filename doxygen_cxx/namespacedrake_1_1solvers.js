@@ -44,7 +44,7 @@ var namespacedrake_1_1solvers =
     [ "MixedIntegerBranchAndBound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound" ],
     [ "MixedIntegerBranchAndBoundNode", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node" ],
     [ "MixedIntegerRotationConstraintGenerator", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator" ],
-    [ "MobyLCPSolver", "classdrake_1_1solvers_1_1_moby_l_c_p_solver.html", "classdrake_1_1solvers_1_1_moby_l_c_p_solver" ],
+    [ "MobyLcpSolver", "classdrake_1_1solvers_1_1_moby_lcp_solver.html", "classdrake_1_1solvers_1_1_moby_lcp_solver" ],
     [ "MobyLcpSolverId", "classdrake_1_1solvers_1_1_moby_lcp_solver_id.html", "classdrake_1_1solvers_1_1_moby_lcp_solver_id" ],
     [ "MosekSolver", "classdrake_1_1solvers_1_1_mosek_solver.html", "classdrake_1_1solvers_1_1_mosek_solver" ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", "structdrake_1_1solvers_1_1_mosek_solver_details" ],
