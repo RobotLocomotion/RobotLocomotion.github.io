@@ -178,6 +178,12 @@ var annotated_dup =
         [ "Warn", "structdrake_1_1logging_1_1_warn.html", "structdrake_1_1logging_1_1_warn" ]
       ] ],
       [ "manipulation", "namespacedrake_1_1manipulation.html", [
+        [ "franka_panda", "namespacedrake_1_1manipulation_1_1franka__panda.html", [
+          [ "PandaCommandReceiver", "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_command_receiver.html", "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_command_receiver" ],
+          [ "PandaCommandSender", "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_command_sender.html", "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_command_sender" ],
+          [ "PandaStatusReceiver", "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_status_receiver.html", "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_status_receiver" ],
+          [ "PandaStatusSender", "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_status_sender.html", "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_status_sender" ]
+        ] ],
         [ "kinova_jaco", "namespacedrake_1_1manipulation_1_1kinova__jaco.html", [
           [ "JacoCommandReceiver", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver" ],
           [ "JacoCommandSender", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender" ],

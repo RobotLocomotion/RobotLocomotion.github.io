@@ -642,6 +642,256 @@ detailed above.</p>
 of the plant model which pretends the two fingers are independent.</p>
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandReceiver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">PandaCommandReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandReceiver" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>Handles lcmt_panda_command message from a LcmSubscriberSystem.</p>
+<p>Note that this system does not actually subscribe to an LCM channel.
+To receive the message, the input of this system should be connected
+to a LcmSubscriberSystem::Make&lt;drake::lcmt_panda_command&gt;().</p>
+<p>It has one required input port, “lcmt_panda_command”. It has several
+output ports, each one of size num_joints.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">lcmt_panda_command&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">position_measured&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PandaCommandReceiver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position (*)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; velocity (*)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque   (*)</td></tr></table></td></tr></table><p>(*) Each output port is present iff the control_mode passed to the
+constructor set the corresponding CONTROL_MODE bit.</p>
+<p>Prior to receiving a valid lcmt_panda_command message, the “position”
+output (if present) initially feeds through from the
+“position_measured” input, and both the “velocity” and “torque”
+outputs (if present) are zero.</p>
+<p>If discrete update events are enabled (e.g., during simulation), the
+system latches the “position_measured” input into state during the
+first event, and the “position” output (if present) comes from the
+latched state, not the input.</p>
+<p>The lcmt_panda_command input must match the num_joints and
+control_mode that were passed to the constructor: the message’s
+control_mode_expected must be set to the same value as the
+constructor’s control_mode, and the message’s position, velocity,
+torque vectors must be sized to match the constructor’s num_joint iff
+the corresponding bit of the control_mode is set or must be zero-sized
+otherwise. TODO(jeremy.nimmer) The control_mode_expected is not
+actually validated yet at runtime, but will be in the future (once we
+fix our code to stop setting it incorrectly).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandReceiver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaCommandReceiver" title="pydrake.manipulation.PandaCommandReceiver"><span class="pre">pydrake.manipulation.PandaCommandReceiver</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandReceiver.__init__" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">control_mode</span></code>:</dt><dd><p>is a bitset of one or more control mode constants defined in
+PandaControlModes namespace. Use bitwise OR to combine modes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandReceiver.get_commanded_position_output_port">
+<span class="sig-name descname"><span class="pre">get_commanded_position_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaCommandReceiver" title="pydrake.manipulation.PandaCommandReceiver"><span class="pre">pydrake.manipulation.PandaCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandReceiver.get_commanded_position_output_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandReceiver.get_commanded_torque_output_port">
+<span class="sig-name descname"><span class="pre">get_commanded_torque_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaCommandReceiver" title="pydrake.manipulation.PandaCommandReceiver"><span class="pre">pydrake.manipulation.PandaCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandReceiver.get_commanded_torque_output_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandReceiver.get_commanded_velocity_output_port">
+<span class="sig-name descname"><span class="pre">get_commanded_velocity_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaCommandReceiver" title="pydrake.manipulation.PandaCommandReceiver"><span class="pre">pydrake.manipulation.PandaCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandReceiver.get_commanded_velocity_output_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandReceiver.get_message_input_port">
+<span class="sig-name descname"><span class="pre">get_message_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaCommandReceiver" title="pydrake.manipulation.PandaCommandReceiver"><span class="pre">pydrake.manipulation.PandaCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandReceiver.get_message_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandReceiver.get_position_measured_input_port">
+<span class="sig-name descname"><span class="pre">get_position_measured_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaCommandReceiver" title="pydrake.manipulation.PandaCommandReceiver"><span class="pre">pydrake.manipulation.PandaCommandReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandReceiver.get_position_measured_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandReceiver.LatchInitialPosition">
+<span class="sig-name descname"><span class="pre">LatchInitialPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaCommandReceiver" title="pydrake.manipulation.PandaCommandReceiver"><span class="pre">pydrake.manipulation.PandaCommandReceiver</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandReceiver.LatchInitialPosition" title="Link to this definition"></a></dt>
+<dd><p>(Advanced.) Copies the current “position_measured” input into Context
+state, and changes the behavior of the “position” output to produce
+the latched state if no message has been received yet. The latching
+already happens automatically during the first discrete update event
+(e.g., when using a Simulator); this method exists for use when not
+already using a Simulator or other special cases.</p>
+<dl class="simple">
+<dt>Precondition:</dt><dd><p>the control_mode has the POSITION bit set</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandSender">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">PandaCommandSender</span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandSender" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>Creates and outputs lcmt_panda_command messages.</p>
+<p>Note that this system does not actually send the message an LCM
+channel. To send the message, the output of this system should be
+connected to a LcmPublisherSystem::Make&lt;lcmt_panda_command&gt;().</p>
+<p>This system has vector-valued input ports, each one of size
+num_joints.</p>
+<p>This system has one abstract-valued output port of type
+lcmt_panda_command.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position (*)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">velocity (*)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque (*)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PandaCommandSender</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; lcmt_panda_command</td></tr></table></td></tr></table><p>(*) Each input port is present if it’s relevant to the control_mode
+passed to the constructor.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="docutils literal notranslate"><span class="pre">lcmt_panda_command.lcm</span></code> for additional documentation.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandSender.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaCommandSender" title="pydrake.manipulation.PandaCommandSender"><span class="pre">pydrake.manipulation.PandaCommandSender</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandSender.__init__" title="Link to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">control_mode</span></code>:</dt><dd><p>is a bitset of one or more control mode constants defined in
+PandaControlModes namespace. Use bitwise OR to combine modes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandSender.get_position_input_port">
+<span class="sig-name descname"><span class="pre">get_position_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaCommandSender" title="pydrake.manipulation.PandaCommandSender"><span class="pre">pydrake.manipulation.PandaCommandSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandSender.get_position_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandSender.get_torque_input_port">
+<span class="sig-name descname"><span class="pre">get_torque_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaCommandSender" title="pydrake.manipulation.PandaCommandSender"><span class="pre">pydrake.manipulation.PandaCommandSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandSender.get_torque_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaCommandSender.get_velocity_input_port">
+<span class="sig-name descname"><span class="pre">get_velocity_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaCommandSender" title="pydrake.manipulation.PandaCommandSender"><span class="pre">pydrake.manipulation.PandaCommandSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaCommandSender.get_velocity_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusReceiver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">PandaStatusReceiver</span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusReceiver" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>&#64;system name: PandaStatusReceiver input_ports: - lcmt_panda_status
+output_ports: - position_commanded - position_measured -
+velocity_commanded - velocity_measured - acceleration_commanded -
+torque_commanded - torque_measured - torque_external &#64;endsystem</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="docutils literal notranslate"><span class="pre">lcmt_panda_status.lcm</span></code> for additional documentation.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusReceiver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusReceiver" title="pydrake.manipulation.PandaStatusReceiver"><span class="pre">pydrake.manipulation.PandaStatusReceiver</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusReceiver.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusReceiver.get_acceleration_commanded_output_port">
+<span class="sig-name descname"><span class="pre">get_acceleration_commanded_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusReceiver" title="pydrake.manipulation.PandaStatusReceiver"><span class="pre">pydrake.manipulation.PandaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusReceiver.get_acceleration_commanded_output_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusReceiver.get_position_commanded_output_port">
+<span class="sig-name descname"><span class="pre">get_position_commanded_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusReceiver" title="pydrake.manipulation.PandaStatusReceiver"><span class="pre">pydrake.manipulation.PandaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusReceiver.get_position_commanded_output_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusReceiver.get_position_measured_output_port">
+<span class="sig-name descname"><span class="pre">get_position_measured_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusReceiver" title="pydrake.manipulation.PandaStatusReceiver"><span class="pre">pydrake.manipulation.PandaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusReceiver.get_position_measured_output_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusReceiver.get_torque_commanded_output_port">
+<span class="sig-name descname"><span class="pre">get_torque_commanded_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusReceiver" title="pydrake.manipulation.PandaStatusReceiver"><span class="pre">pydrake.manipulation.PandaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusReceiver.get_torque_commanded_output_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusReceiver.get_torque_external_output_port">
+<span class="sig-name descname"><span class="pre">get_torque_external_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusReceiver" title="pydrake.manipulation.PandaStatusReceiver"><span class="pre">pydrake.manipulation.PandaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusReceiver.get_torque_external_output_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusReceiver.get_torque_measured_output_port">
+<span class="sig-name descname"><span class="pre">get_torque_measured_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusReceiver" title="pydrake.manipulation.PandaStatusReceiver"><span class="pre">pydrake.manipulation.PandaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusReceiver.get_torque_measured_output_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusReceiver.get_velocity_commanded_output_port">
+<span class="sig-name descname"><span class="pre">get_velocity_commanded_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusReceiver" title="pydrake.manipulation.PandaStatusReceiver"><span class="pre">pydrake.manipulation.PandaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusReceiver.get_velocity_commanded_output_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusReceiver.get_velocity_measured_output_port">
+<span class="sig-name descname"><span class="pre">get_velocity_measured_output_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusReceiver" title="pydrake.manipulation.PandaStatusReceiver"><span class="pre">pydrake.manipulation.PandaStatusReceiver</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.OutputPort" title="pydrake.systems.framework.OutputPort"><span class="pre">pydrake.systems.framework.OutputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusReceiver.get_velocity_measured_output_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusSender">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">PandaStatusSender</span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusSender" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem" title="pydrake.systems.framework.LeafSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem</span></code></a></p>
+<p>Creates and outputs lcmt_panda_status messages.</p>
+<p>Note that this system does not actually send the message an LCM
+channel. To send the message, the output of this system should be
+connected to a LcmPublisherSystem::Make&lt;lcmt_panda_status&gt;().</p>
+<p>This system has many vector-valued input ports, each of which has
+exactly num_joints elements.</p>
+<p>This system has one abstract-valued output port of type
+lcmt_panda_status.</p>
+<p>This system is presently only used in simulation. The robot hardware
+drivers publish directly to LCM and do not make use of this system.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position_commanded (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">position_measured&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">velocity_commanded (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">velocity_measured (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">acceleration_commanded (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque_commanded&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque_measured (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque_external (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PandaStatusSender</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; lcmt_panda_status</td></tr></table></td></tr></table><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="docutils literal notranslate"><span class="pre">lcmt_panda_status.lcm</span></code> for additional documentation.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusSender.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusSender" title="pydrake.manipulation.PandaStatusSender"><span class="pre">pydrake.manipulation.PandaStatusSender</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusSender.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusSender.get_acceleration_commanded_input_port">
+<span class="sig-name descname"><span class="pre">get_acceleration_commanded_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusSender" title="pydrake.manipulation.PandaStatusSender"><span class="pre">pydrake.manipulation.PandaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusSender.get_acceleration_commanded_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusSender.get_position_commanded_input_port">
+<span class="sig-name descname"><span class="pre">get_position_commanded_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusSender" title="pydrake.manipulation.PandaStatusSender"><span class="pre">pydrake.manipulation.PandaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusSender.get_position_commanded_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusSender.get_position_measured_input_port">
+<span class="sig-name descname"><span class="pre">get_position_measured_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusSender" title="pydrake.manipulation.PandaStatusSender"><span class="pre">pydrake.manipulation.PandaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusSender.get_position_measured_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusSender.get_torque_commanded_input_port">
+<span class="sig-name descname"><span class="pre">get_torque_commanded_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusSender" title="pydrake.manipulation.PandaStatusSender"><span class="pre">pydrake.manipulation.PandaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusSender.get_torque_commanded_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusSender.get_torque_external_input_port">
+<span class="sig-name descname"><span class="pre">get_torque_external_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusSender" title="pydrake.manipulation.PandaStatusSender"><span class="pre">pydrake.manipulation.PandaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusSender.get_torque_external_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusSender.get_torque_measured_input_port">
+<span class="sig-name descname"><span class="pre">get_torque_measured_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusSender" title="pydrake.manipulation.PandaStatusSender"><span class="pre">pydrake.manipulation.PandaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusSender.get_torque_measured_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusSender.get_velocity_commanded_input_port">
+<span class="sig-name descname"><span class="pre">get_velocity_commanded_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusSender" title="pydrake.manipulation.PandaStatusSender"><span class="pre">pydrake.manipulation.PandaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusSender.get_velocity_commanded_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.manipulation.PandaStatusSender.get_velocity_measured_input_port">
+<span class="sig-name descname"><span class="pre">get_velocity_measured_input_port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.manipulation.PandaStatusSender" title="pydrake.manipulation.PandaStatusSender"><span class="pre">pydrake.manipulation.PandaStatusSender</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort" title="pydrake.systems.framework.InputPort"><span class="pre">pydrake.systems.framework.InputPort</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.PandaStatusSender.get_velocity_measured_input_port" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="pydrake.manipulation.ParseIiwaControlMode">
 <span class="sig-prename descclassname"><span class="pre">pydrake.manipulation.</span></span><span class="sig-name descname"><span class="pre">ParseIiwaControlMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">control_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#pydrake.manipulation.IiwaControlMode" title="pydrake.manipulation.IiwaControlMode"><span class="pre">pydrake.manipulation.IiwaControlMode</span></a></span></span><a class="headerlink" href="#pydrake.manipulation.ParseIiwaControlMode" title="Link to this definition"></a></dt>

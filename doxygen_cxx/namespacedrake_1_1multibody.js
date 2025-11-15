@@ -1,7 +1,7 @@
 var namespacedrake_1_1multibody =
 [
     [ "benchmarks", "namespacedrake_1_1multibody_1_1benchmarks.html", "namespacedrake_1_1multibody_1_1benchmarks" ],
-    [ "contact_solvers", "namespacedrake_1_1multibody_1_1contact__solvers.html", null ],
+    [ "contact_solvers", "namespacedrake_1_1multibody_1_1contact__solvers.html", "namespacedrake_1_1multibody_1_1contact__solvers" ],
     [ "fem", "namespacedrake_1_1multibody_1_1fem.html", "namespacedrake_1_1multibody_1_1fem" ],
     [ "hydroelastics", "namespacedrake_1_1multibody_1_1hydroelastics.html", null ],
     [ "meshcat", "namespacedrake_1_1multibody_1_1meshcat.html", "namespacedrake_1_1multibody_1_1meshcat" ],
