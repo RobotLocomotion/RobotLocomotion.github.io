@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a68e6ac6abb3e05109b2896c3b1a90d4c":[3,0,0,14,3,0,4],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a68e6ac6abb3e05109b2896c3b1a90d4c":[4,0,0,13,3,0,4],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a8ccb608134ad7df031989d8aee5c7a9f":[3,0,0,14,3,0,7],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_buses.html#a8ccb608134ad7df031989d8aee5c7a9f":[4,0,0,13,3,0,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad72663daf610f2a0833a2fc3d78e4fdf":[4,0,0,13,6,5,15],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ae03e1d5e4c7f223bcee8712aba25c40c":[3,0,0,14,6,5,6],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ae03e1d5e4c7f223bcee8712aba25c40c":[4,0,0,13,6,5,6],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aeb9a9be614e6b24f3030e14d1eff942c":[3,0,0,14,6,5,14],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aeb9a9be614e6b24f3030e14d1eff942c":[4,0,0,13,6,5,14]
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aeb9a9be614e6b24f3030e14d1eff942c":[3,0,0,14,6,5,14]
 };

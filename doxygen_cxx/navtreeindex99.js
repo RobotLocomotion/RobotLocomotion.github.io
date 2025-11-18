@@ -1,5 +1,6 @@
 var NAVTREEINDEX99 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a974165bc06a104eab9a0dfa44470fe1e":[4,0,0,10,6,2,4],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5":[3,0,0,11,6,2,6],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5":[4,0,0,10,6,2,6],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html":[3,0,0,11,6,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX99 =
 "structdrake_1_1symbolic_1_1_sin_cos.html":[4,0,0,12,63],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f":[3,0,0,13,63,7],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f":[4,0,0,12,63,7],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd":[3,0,0,13,63,5],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd":[4,0,0,12,63,5]
+"structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd":[3,0,0,13,63,5]
 };

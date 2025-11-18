@@ -1,5 +1,6 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a8acbff0eb102fe9c676bdbe5933a13d8":[4,0,0,7,108,1],
 "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html":[3,0,0,8,2,3],
 "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html":[4,0,0,7,1,3],
 "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#a6566954e5346b9edae63e9a63fa68f20":[3,0,0,8,2,3,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,10,6,2,5],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a930c02328ce977c6e065db4c33b4f768":[3,0,0,11,6,2,3],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a930c02328ce977c6e065db4c33b4f768":[4,0,0,10,6,2,3],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a974165bc06a104eab9a0dfa44470fe1e":[3,0,0,11,6,2,4],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a974165bc06a104eab9a0dfa44470fe1e":[4,0,0,10,6,2,4]
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a974165bc06a104eab9a0dfa44470fe1e":[3,0,0,11,6,2,4]
 };

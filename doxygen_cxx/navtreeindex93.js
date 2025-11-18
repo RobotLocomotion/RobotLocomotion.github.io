@@ -1,5 +1,6 @@
 var NAVTREEINDEX93 =
 {
+"spatial__force_8h.html":[5,0,0,8,5,2],
 "spatial__inertia_8h.html":[5,0,0,8,12,53],
 "spatial__momentum_8h.html":[5,0,0,8,5,3],
 "spatial__vector_8h.html":[5,0,0,8,5,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX93 =
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a22d4299bf05a2a0f59b06b050cbf1e7f":[4,0,0,2,11,2],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a3e38e6cb42b54dab9e928c6166949782":[3,0,0,3,14,3],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a3e38e6cb42b54dab9e928c6166949782":[4,0,0,2,11,3],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e":[3,0,0,3,14,4],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e":[4,0,0,2,11,4]
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e":[3,0,0,3,14,4]
 };

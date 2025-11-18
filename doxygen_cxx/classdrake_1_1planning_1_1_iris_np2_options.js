@@ -11,5 +11,6 @@ var classdrake_1_1planning_1_1_iris_np2_options =
     [ "ray_sampler_options", "classdrake_1_1planning_1_1_iris_np2_options.html#a2c74243889b1835c087d8160272e007a", null ],
     [ "sampled_iris_options", "classdrake_1_1planning_1_1_iris_np2_options.html#a6a02069c3e43c0097629cb4a6ea6fbbf", null ],
     [ "sampling_strategy", "classdrake_1_1planning_1_1_iris_np2_options.html#a3a563c6feff7da2c1e28102c79ee70d2", null ],
-    [ "solver", "classdrake_1_1planning_1_1_iris_np2_options.html#a1717b842ef7560038a1ee8f5076d7721", null ]
+    [ "solver", "classdrake_1_1planning_1_1_iris_np2_options.html#a1717b842ef7560038a1ee8f5076d7721", null ],
+    [ "solver_options", "classdrake_1_1planning_1_1_iris_np2_options.html#aa705e1cce16e5f276d9f1ff95851698e", null ]
 ];

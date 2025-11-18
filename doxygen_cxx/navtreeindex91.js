@@ -1,5 +1,6 @@
 var NAVTREEINDEX91 =
 {
+"namespacedrake_1_1symbolic.html#ae55638160eeaa986a98f80775f603f1a":[3,0,0,13,286],
 "namespacedrake_1_1symbolic.html#ae55ea800cf249789ff0c149ce44affea":[3,0,0,13,288],
 "namespacedrake_1_1symbolic.html#ae5abf0008c6baabf649d608c33114a47":[3,0,0,13,506],
 "namespacedrake_1_1symbolic.html#ae6654fd307d9348f2baa46da2ff3abd3":[3,0,0,13,311],
@@ -248,6 +249,5 @@ var NAVTREEINDEX91 =
 "output__port_8h.html":[5,0,0,12,3,30],
 "output__port__base_8h.html":[5,0,0,12,3,31],
 "overloaded_8h.html":[5,0,0,1,46],
-"package__map_8h.html":[5,0,0,8,8,4],
-"pages.html":[]
+"package__map_8h.html":[5,0,0,8,8,4]
 };

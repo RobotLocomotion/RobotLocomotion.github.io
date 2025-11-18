@@ -3170,7 +3170,7 @@ Labels." by Jason Rennie and Nathan Srebro, Proceedings of IJCAI multidisciplina
 <p>This function first chooses the best solver depending on the availability of the solver and the program formulation; it then constructs that solver and call the Solve function of that solver. The optimization result is stored in the return argument. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">prog</td><td>Contains the formulation of the program, and possibly solver options. </td></tr>
-    <tr><td class="paramname">initial_guess</td><td>The initial guess for the decision variables. </td></tr>
+    <tr><td class="paramname">initial_guess</td><td>The initial guess for the decision variables. If an <code class="param">initial_guess</code> is provided, then the solver uses <code class="param">initial_guess</code> and ignores the initial guess stored in <code class="param">prog</code>. </td></tr>
     <tr><td class="paramname">solver_options</td><td>The options in addition to those stored in <code class="param">prog</code>. For each option entry (like print out), there are 4 ways to set that option, and the priority given to the solver options is as follows (from lowest / least, to highest / most):<ol type="1">
 <li>common option set on the <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> itself</li>
 <li>common option passed as an argument to Solve</li>

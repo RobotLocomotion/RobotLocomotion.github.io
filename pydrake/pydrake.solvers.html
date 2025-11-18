@@ -8713,7 +8713,10 @@ optimization result is stored in the return argument.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt><dd><p>Contains the formulation of the program, and possibly solver
 options.</p>
 </dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_guess</span></code>:</dt><dd><p>The initial guess for the decision variables.</p>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_guess</span></code>:</dt><dd><p>The initial guess for the decision variables. If an
+<code class="docutils literal notranslate"><span class="pre">initial_guess</span></code> is provided, then the solver uses
+<code class="docutils literal notranslate"><span class="pre">initial_guess</span></code> and ignores the initial guess stored in
+<code class="docutils literal notranslate"><span class="pre">prog</span></code>.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">solver_options</span></code>:</dt><dd><p>The options in addition to those stored in <code class="docutils literal notranslate"><span class="pre">prog</span></code>. For each
 option entry (like print out), there are 4 ways to set that
@@ -8893,11 +8896,13 @@ string.</p>
 </ol>
 <p>Solves an optimization program with optional initial guess and solver
 options. Note that these initial guess and solver options are not
-written to <code class="docutils literal notranslate"><span class="pre">prog</span></code>. If the <code class="docutils literal notranslate"><span class="pre">prog</span></code> has set an option for a solver,
-and <code class="docutils literal notranslate"><span class="pre">solver_options</span></code> contains a different value for the same option
-on the same solver, then <code class="docutils literal notranslate"><span class="pre">solver_options</span></code> takes priority. Derived
-implementations of this interface may elect to throw RuntimeError for
-badly formed programs.</p>
+written to <code class="docutils literal notranslate"><span class="pre">prog</span></code>. If the <code class="docutils literal notranslate"><span class="pre">prog</span></code> has set an initial guess, and
+<code class="docutils literal notranslate"><span class="pre">initial_guess</span></code> is set, then <code class="docutils literal notranslate"><span class="pre">initial_guess</span></code> takes priority. If
+the <code class="docutils literal notranslate"><span class="pre">prog</span></code> has set an option for a solver, and <code class="docutils literal notranslate"><span class="pre">solver_options</span></code>
+contains a different value for the same option on the same solver,
+then <code class="docutils literal notranslate"><span class="pre">solver_options</span></code> takes priority. Derived implementations of
+this interface may elect to throw RuntimeError for badly formed
+programs.</p>
 <ol class="arabic simple" start="2">
 <li><p>Solve(self: pydrake.solvers.SolverInterface, prog: pydrake.solvers.MathematicalProgram, initial_guess: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, solver_options: Optional[pydrake.solvers.SolverOptions] = None) -&gt; pydrake.solvers.MathematicalProgramResult</p></li>
 </ol>

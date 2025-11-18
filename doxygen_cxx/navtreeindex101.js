@@ -1,5 +1,6 @@
 var NAVTREEINDEX101 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html":[4,0,0,13,5,8],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_random_source_01_4.html":[3,0,0,14,5,9],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_random_source_01_4.html":[4,0,0,13,5,9],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html":[3,0,0,14,5,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX101 =
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[4,0,0,13,6,18,1],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,14,6,18,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[4,0,0,13,6,18,0],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[3,0,0,14,6,18,3],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[4,0,0,13,6,18,3]
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#af38c722527b26de4a7e90ea5d6b21915":[3,0,0,14,6,18,3]
 };
