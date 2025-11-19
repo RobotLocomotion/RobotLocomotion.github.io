@@ -219,13 +219,13 @@ template&lt;typename Derived&gt; </div>
 <p>Please consider the following example:</p>
 <div class="fragment"><div class="line">Eigen::Matrix&lt;symbolic::Expression, 2, 2, Eigen::ColMajor&gt; M;</div>
 <div class="line">M(0, 0) = 1.0;</div>
-<div class="line">M(1, 0) = 3 + <a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + y;</div>
+<div class="line">M(1, 0) = 3 + <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + y;</div>
 <div class="line">M(0, 1) = 4 * y;</div>
-<div class="line">M(1, 1) = <a class="code hl_function" href="namespacedrake_1_1symbolic.html#af3cd13d5472028f31c2e70f1b0e08b5d">sin</a>(<a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>);</div>
-<div class="line"><a class="code hl_function" href="#gaa11ee8e11a75ed1fa0f970ed7a547add">CodeGen</a>(<span class="stringliteral">&quot;f&quot;</span>, {<a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, y}, M);</div>
+<div class="line">M(1, 1) = <a class="code hl_function" href="namespacedrake_1_1symbolic.html#af3cd13d5472028f31c2e70f1b0e08b5d">sin</a>(<a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>);</div>
+<div class="line"><a class="code hl_function" href="#gaa11ee8e11a75ed1fa0f970ed7a547add">CodeGen</a>(<span class="stringliteral">&quot;f&quot;</span>, {<a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, y}, M);</div>
 <div class="ttc" id="agroup__codegen_html_gaa11ee8e11a75ed1fa0f970ed7a547add"><div class="ttname"><a href="#gaa11ee8e11a75ed1fa0f970ed7a547add">drake::symbolic::CodeGen</a></div><div class="ttdeci">std::string CodeGen(const std::string &amp;function_name, const std::vector&lt; Variable &gt; &amp;parameters, const Expression &amp;e)</div><div class="ttdoc">For a given symbolic expression e, generates two C functions, &lt;function_name&gt; and &lt;function_name&gt;_met...</div></div>
+<div class="ttc" id="alight__parameter_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> light_parameter.h:147</div></div>
 <div class="ttc" id="anamespacedrake_1_1symbolic_html_af3cd13d5472028f31c2e70f1b0e08b5d"><div class="ttname"><a href="namespacedrake_1_1symbolic.html#af3cd13d5472028f31c2e70f1b0e08b5d">drake::symbolic::sin</a></div><div class="ttdeci">Expression sin(const Expression &amp;e)</div></div>
-<div class="ttc" id="apixel__types_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> pixel_types.h:182</div></div>
 </div><!-- fragment --><p>When executed, the last line of the above example generates the following code:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> f(<span class="keyword">const</span> <span class="keywordtype">double</span>* p, <span class="keywordtype">double</span>* m) {</div>
 <div class="line">  m[0] = 1.000000;</div>
@@ -303,7 +303,7 @@ template&lt;typename Derived&gt; </div>
   </dd>
 </dl>
 <div class="fragment"><div class="line">Eigen::SparseMatrix&lt;Expression, Eigen::ColMajor&gt; m(3, 6);</div>
-<div class="line">m.insert(0, 0) = <a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>;</div>
+<div class="line">m.insert(0, 0) = <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>;</div>
 <div class="line">m.insert(0, 4) = z;</div>
 <div class="line">m.insert(1, 2) = y;</div>
 <div class="line">m.insert(2, 3) = y;</div>
@@ -312,7 +312,7 @@ template&lt;typename Derived&gt; </div>
 <div class="line"><span class="comment">// | x  0  0  0  z  0|</span></div>
 <div class="line"><span class="comment">// | 0  0  y  0  0  0|</span></div>
 <div class="line"><span class="comment">// | 0  0  0  y  0  y|</span></div>
-<div class="line"><a class="code hl_function" href="#gaa11ee8e11a75ed1fa0f970ed7a547add">CodeGen</a>(<span class="stringliteral">&quot;f&quot;</span>, {<a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, y, z}, m);</div>
+<div class="line"><a class="code hl_function" href="#gaa11ee8e11a75ed1fa0f970ed7a547add">CodeGen</a>(<span class="stringliteral">&quot;f&quot;</span>, {<a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, y, z}, m);</div>
 </div><!-- fragment --><p>When executed, the last line of the above example generates the following code:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> f(<span class="keyword">const</span> <span class="keywordtype">double</span>* p,</div>
 <div class="line">       <span class="keywordtype">int</span>* outer_indices,</div>

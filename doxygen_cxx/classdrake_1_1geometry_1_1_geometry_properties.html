@@ -185,15 +185,15 @@ $(function(){initNavTree('classdrake_1_1geometry_1_1_geometry_properties.html','
 <div class="line">properties.<a class="code hl_function" href="#a5c36bb4c5566a8316bc8b52601e49d27">AddProperty</a>(group_name, <span class="stringliteral">&quot;count&quot;</span>, 7);     <span class="comment">// int type</span></div>
 <div class="line">properties.<a class="code hl_function" href="#a5c36bb4c5566a8316bc8b52601e49d27">AddProperty</a>(group_name, <span class="stringliteral">&quot;length&quot;</span>, 7.);   <span class="comment">// double type</span></div>
 <div class="line">properties.<a class="code hl_function" href="#a5c36bb4c5566a8316bc8b52601e49d27">AddProperty</a>(group_name, <span class="stringliteral">&quot;name&quot;</span>, <span class="stringliteral">&quot;7&quot;</span>);    <span class="comment">// std::string type</span></div>
-<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_properties_html_a5c36bb4c5566a8316bc8b52601e49d27"><div class="ttname"><a href="#a5c36bb4c5566a8316bc8b52601e49d27">drake::geometry::GeometryProperties::AddProperty</a></div><div class="ttdeci">void AddProperty(const std::string &amp;group_name, const std::string &amp;name, const ValueType &amp;value)</div><div class="ttdoc">Adds the named property (group_name, name) with the given value.</div><div class="ttdef"><b>Definition</b> geometry_properties.h:260</div></div>
-<div class="ttc" id="aclassdrake_1_1geometry_1_1_proximity_properties_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_proximity_properties.html">drake::geometry::ProximityProperties</a></div><div class="ttdoc">The set of properties for geometry used in a proximity role.</div><div class="ttdef"><b>Definition</b> geometry_roles.h:168</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_properties_html_a5c36bb4c5566a8316bc8b52601e49d27"><div class="ttname"><a href="#a5c36bb4c5566a8316bc8b52601e49d27">drake::geometry::GeometryProperties::AddProperty</a></div><div class="ttdeci">void AddProperty(const std::string &amp;group_name, const std::string &amp;name, const ValueType &amp;value)</div><div class="ttdoc">Adds the named property (group_name, name) with the given value.</div><div class="ttdef"><b>Definition</b> geometry_properties.h:264</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_proximity_properties_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_proximity_properties.html">drake::geometry::ProximityProperties</a></div><div class="ttdoc">The set of properties for geometry used in a proximity role.</div><div class="ttdef"><b>Definition</b> geometry_roles.h:171</div></div>
 </div><!-- fragment --><h4>Creating properties in the default group</h4>
 <p>Similar to the previous examples, the properties are added to the default group. Just be aware that if multiple sites in your code add properties to the default group, the possibility that names get repeated increases. Property names <em>must</em> be unique within a single group, including the default group.</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> properties;</div>
 <div class="line">properties.<a class="code hl_function" href="#a5c36bb4c5566a8316bc8b52601e49d27">AddProperty</a>(<a class="code hl_function" href="#a7c9d7d51d987f24034f0949aba25a608">ProximityProperties::default_group_name</a>(), <span class="stringliteral">&quot;count&quot;</span>, 7);</div>
 <div class="line">properties.<a class="code hl_function" href="#a5c36bb4c5566a8316bc8b52601e49d27">AddProperty</a>(<a class="code hl_function" href="#a7c9d7d51d987f24034f0949aba25a608">ProximityProperties::default_group_name</a>(), <span class="stringliteral">&quot;width&quot;</span>, 7.);</div>
 <div class="line">properties.<a class="code hl_function" href="#a5c36bb4c5566a8316bc8b52601e49d27">AddProperty</a>(<a class="code hl_function" href="#a7c9d7d51d987f24034f0949aba25a608">ProximityProperties::default_group_name</a>(), <span class="stringliteral">&quot;name&quot;</span>, <span class="stringliteral">&quot;7&quot;</span>);</div>
-<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_properties_html_a7c9d7d51d987f24034f0949aba25a608"><div class="ttname"><a href="#a7c9d7d51d987f24034f0949aba25a608">drake::geometry::GeometryProperties::default_group_name</a></div><div class="ttdeci">static const std::string &amp; default_group_name()</div><div class="ttdoc">Returns the default group name.</div><div class="ttdef"><b>Definition</b> geometry_properties.h:405</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_properties_html_a7c9d7d51d987f24034f0949aba25a608"><div class="ttname"><a href="#a7c9d7d51d987f24034f0949aba25a608">drake::geometry::GeometryProperties::default_group_name</a></div><div class="ttdeci">static const std::string &amp; default_group_name()</div><div class="ttdoc">Returns the default group name.</div><div class="ttdef"><b>Definition</b> geometry_properties.h:409</div></div>
 </div><!-- fragment --><h4>Aggregate properties in a struct</h4>
 <p>In some cases, there is a set of values that will <em>always</em> be accessed together (specified with coordinated semantics). In these cases, it makes sense to aggregate them into a struct and store that as a single value. This reduces the number of lookups required.</p>
 <p>It's worth noting, that if the data value is a struct, calls to <a class="el" href="#a7b425641c9937dea89f553cabba9b186" title="Retrieves the typed value for the property (group_name, name) from the set of properties (if it exist...">GetPropertyOrDefault()</a> still operate as an "all-or-nothing" basis. If the property <em>struct</em> exists, it will be returned, if it's missing the default struct will be returned. There is no concept of a "partial" struct in which some undefined values in the struct will be replaced with their corresponding values in the default struct.</p>
@@ -231,10 +231,10 @@ $(function(){initNavTree('classdrake_1_1geometry_1_1_geometry_properties.html','
 <div class="line"><span class="comment">// Otherwise acquire value, confident that no exception will be thrown.</span></div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> rgba =</div>
 <div class="line">    properties.<a class="code hl_function" href="#aaaa9388bc0cffeef445272cc5234b087">GetProperty</a>&lt;<a class="code hl_class" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>&gt;(<span class="stringliteral">&quot;MyGroup&quot;</span>, <span class="stringliteral">&quot;rgba&quot;</span>);</div>
-<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_properties_html_aaaa9388bc0cffeef445272cc5234b087"><div class="ttname"><a href="#aaaa9388bc0cffeef445272cc5234b087">drake::geometry::GeometryProperties::GetProperty</a></div><div class="ttdeci">decltype(auto) GetProperty(const std::string &amp;group_name, const std::string &amp;name) const</div><div class="ttdoc">Retrieves the typed value for the property (group_name, name) from this set of properties.</div><div class="ttdef"><b>Definition</b> geometry_properties.h:333</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_properties_html_aaaa9388bc0cffeef445272cc5234b087"><div class="ttname"><a href="#aaaa9388bc0cffeef445272cc5234b087">drake::geometry::GeometryProperties::GetProperty</a></div><div class="ttdeci">decltype(auto) GetProperty(const std::string &amp;group_name, const std::string &amp;name) const</div><div class="ttdoc">Retrieves the typed value for the property (group_name, name) from this set of properties.</div><div class="ttdef"><b>Definition</b> geometry_properties.h:337</div></div>
 <div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_properties_html_ace6a963ab7442bf3f29d9ebacdc849ca"><div class="ttname"><a href="#ace6a963ab7442bf3f29d9ebacdc849ca">drake::geometry::GeometryProperties::HasProperty</a></div><div class="ttdeci">bool HasProperty(const std::string &amp;group_name, const std::string &amp;name) const</div><div class="ttdoc">Reports if the property (group_name, name) exists in the group.</div></div>
-<div class="ttc" id="aclassdrake_1_1geometry_1_1_illustration_properties_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_illustration_properties.html">drake::geometry::IllustrationProperties</a></div><div class="ttdoc">The set of properties for geometry used in an &quot;illustration&quot; role.</div><div class="ttdef"><b>Definition</b> geometry_roles.h:194</div></div>
-<div class="ttc" id="aclassdrake_1_1geometry_1_1_rgba_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_rgba.html">drake::geometry::Rgba</a></div><div class="ttdoc">Defines RGBA (red, green, blue, alpha) values on the range [0, 1].</div><div class="ttdef"><b>Definition</b> rgba.h:15</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_illustration_properties_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_illustration_properties.html">drake::geometry::IllustrationProperties</a></div><div class="ttdoc">The set of properties for geometry used in an &quot;illustration&quot; role.</div><div class="ttdef"><b>Definition</b> geometry_roles.h:197</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_rgba_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_rgba.html">drake::geometry::Rgba</a></div><div class="ttdoc">Defines RGBA (red, green, blue, alpha) values on the range [0, 1].</div><div class="ttdef"><b>Definition</b> rgba.h:21</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>calls to <span class="tt"><a class="el" href="#aaaa9388bc0cffeef445272cc5234b087" title="Retrieves the typed value for the property (group_name, name) from this set of properties.">GetProperty()</a></span> always require the return type template value (e.g., <span class="tt"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html" title="Defines RGBA (red, green, blue, alpha) values on the range [0, 1].">Rgba</a></span>) to be specified in the call.</dd></dl>
 <h4>Look up specific properties with default property values</h4>
 <p>As with the previous case, the consumer is looking for one or more specific properties. However, in this case, the consumer provides a default value to use in case the target property is not defined. In this invocation, the template parameter need not be explicitly declared &ndash; the inferred return type will be the same as the default value.</p>
@@ -243,7 +243,7 @@ $(function(){initNavTree('classdrake_1_1geometry_1_1_geometry_properties.html','
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> default_color{0.9, 0.9, 0.9};</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> rgba =</div>
 <div class="line">    properties.<a class="code hl_function" href="#a7b425641c9937dea89f553cabba9b186">GetPropertyOrDefault</a>(<span class="stringliteral">&quot;MyGroup&quot;</span>, <span class="stringliteral">&quot;rgba&quot;</span>, default_color);</div>
-<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_properties_html_a7b425641c9937dea89f553cabba9b186"><div class="ttname"><a href="#a7b425641c9937dea89f553cabba9b186">drake::geometry::GeometryProperties::GetPropertyOrDefault</a></div><div class="ttdeci">ValueType GetPropertyOrDefault(const std::string &amp;group_name, const std::string &amp;name, ValueType default_value) const</div><div class="ttdoc">Retrieves the typed value for the property (group_name, name) from the set of properties (if it exist...</div><div class="ttdef"><b>Definition</b> geometry_properties.h:381</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_properties_html_a7b425641c9937dea89f553cabba9b186"><div class="ttname"><a href="#a7b425641c9937dea89f553cabba9b186">drake::geometry::GeometryProperties::GetPropertyOrDefault</a></div><div class="ttdeci">ValueType GetPropertyOrDefault(const std::string &amp;group_name, const std::string &amp;name, ValueType default_value) const</div><div class="ttdoc">Retrieves the typed value for the property (group_name, name) from the set of properties (if it exist...</div><div class="ttdef"><b>Definition</b> geometry_properties.h:385</div></div>
 </div><!-- fragment --><p>Alternatively, the default value can be provided in one of the following forms:</p>
 <div class="fragment"><div class="line">properties.<a class="code hl_function" href="#a7b425641c9937dea89f553cabba9b186">GetPropertyOrDefault</a>(<span class="stringliteral">&quot;MyGroup&quot;</span>, <span class="stringliteral">&quot;rgba&quot;</span>,</div>
 <div class="line">    <a class="code hl_class" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>{0.9, 0.9, 0.9});</div>
@@ -306,6 +306,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7b425641c9937dea89f553cabba9b186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the typed value for the property (<span class="tt">group_name</span>, <span class="tt">name</span>) from the set of properties (if it exists), otherwise returns the given default value.  <br /></td></tr>
 <tr class="memitem:a221c35662fe3549e2fd6ca5457d70c0c" id="r_a221c35662fe3549e2fd6ca5457d70c0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a221c35662fe3549e2fd6ca5457d70c0c">RemoveProperty</a> (const std::string &amp;group_name, const std::string &amp;name)</td></tr>
 <tr class="memdesc:a221c35662fe3549e2fd6ca5457d70c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the (<span class="tt">group_name</span>, <span class="tt">name</span>) property (if it exists).  <br /></td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
+<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the <a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html" title="The base class for defining a set of geometry properties.">GeometryProperties</a> to a string representation.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -321,10 +323,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a34a562badbd08d95cee5cd7d453cae3a" id="r_a34a562badbd08d95cee5cd7d453cae3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html">GeometryProperties</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34a562badbd08d95cee5cd7d453cae3a">operator=</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html">GeometryProperties</a> &amp;)=default</td></tr>
 <tr class="memitem:a32edcdb0f6338ecb9342d79d03035bcc" id="r_a32edcdb0f6338ecb9342d79d03035bcc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32edcdb0f6338ecb9342d79d03035bcc">GeometryProperties</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html">GeometryProperties</a> &amp;&amp;)=default</td></tr>
 <tr class="memitem:ab87e5af2da5303047d73bfaa83044a26" id="r_ab87e5af2da5303047d73bfaa83044a26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html">GeometryProperties</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab87e5af2da5303047d73bfaa83044a26">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html">GeometryProperties</a> &amp;&amp;)=default</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:aa078bc1cc37439da0b38aec2b6e2ee1d" id="r_aa078bc1cc37439da0b38aec2b6e2ee1d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa078bc1cc37439da0b38aec2b6e2ee1d">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html">GeometryProperties</a> &amp;props)</td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="ae8d3ca3bf519ceabc12e40a299696adb" name="ae8d3ca3bf519ceabc12e40a299696adb"></a>
@@ -888,6 +886,25 @@ template&lt;typename ValueType&gt; </div>
 
 </div>
 </div>
+<a id="aac993ecccd3d88aafefb6b8e3caa1dee" name="aac993ecccd3d88aafefb6b8e3caa1dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac993ecccd3d88aafefb6b8e3caa1dee">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts the <a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html" title="The base class for defining a set of geometry properties.">GeometryProperties</a> to a string representation. </p>
+
+</div>
+</div>
 <a id="ad519098cc972ba24c36302f3290d2b06" name="ad519098cc972ba24c36302f3290d2b06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad519098cc972ba24c36302f3290d2b06">&#9670;&#160;</a></span>UpdateProperty()</h2>
 
@@ -979,36 +996,6 @@ template&lt;typename ValueType&gt; </div>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="aa078bc1cc37439da0b38aec2b6e2ee1d" name="aa078bc1cc37439da0b38aec2b6e2ee1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa078bc1cc37439da0b38aec2b6e2ee1d">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_properties.html">GeometryProperties</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>props</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

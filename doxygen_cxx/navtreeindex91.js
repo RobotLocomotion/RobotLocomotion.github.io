@@ -1,5 +1,12 @@
 var NAVTREEINDEX91 =
 {
+"namespacedrake_1_1symbolic.html#ae03557c00e4297b310ef75c16f48f3b3":[3,0,0,13,319],
+"namespacedrake_1_1symbolic.html#ae05b78fd26fef2a243bdfe6530c59dc5":[3,0,0,13,146],
+"namespacedrake_1_1symbolic.html#ae1f447c509e16ebf85df16216af97882":[3,0,0,13,114],
+"namespacedrake_1_1symbolic.html#ae28c71d4bee52bfa5e4928605a4ee87d":[3,0,0,13,442],
+"namespacedrake_1_1symbolic.html#ae2e386e89865ff1db9ac93f7a3e79586":[3,0,0,13,235],
+"namespacedrake_1_1symbolic.html#ae31d21987f2a78dacc64786ef86233cd":[3,0,0,13,264],
+"namespacedrake_1_1symbolic.html#ae4af14e85b9784db6c9f6374e7d7ae67":[3,0,0,13,281],
 "namespacedrake_1_1symbolic.html#ae55638160eeaa986a98f80775f603f1a":[3,0,0,13,286],
 "namespacedrake_1_1symbolic.html#ae55ea800cf249789ff0c149ce44affea":[3,0,0,13,288],
 "namespacedrake_1_1symbolic.html#ae5abf0008c6baabf649d608c33114a47":[3,0,0,13,506],
@@ -242,12 +249,5 @@ var NAVTREEINDEX91 =
 "non__convex__optimization__util_8h.html":[5,0,0,11,34],
 "normalize__vector_8h.html":[5,0,0,7,25],
 "obb_8h.html":[5,0,0,4,2,38],
-"obj__to__surface__mesh_8h.html":[5,0,0,4,2,39],
-"orientation__constraint_8h.html":[5,0,0,8,4,18],
-"orientation__cost_8h.html":[5,0,0,8,4,19],
-"osqp__solver_8h.html":[5,0,0,11,35],
-"output__port_8h.html":[5,0,0,12,3,30],
-"output__port__base_8h.html":[5,0,0,12,3,31],
-"overloaded_8h.html":[5,0,0,1,46],
-"package__map_8h.html":[5,0,0,8,8,4]
+"obj__to__surface__mesh_8h.html":[5,0,0,4,2,39]
 };

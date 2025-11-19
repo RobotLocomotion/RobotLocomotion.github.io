@@ -275,13 +275,13 @@ See <a href="https://electronics.stackexchange.com/questions/296567/over-and-cri
 </ul>
 <p><a class="anchor" id="ApproximateOverdampedSettlingTime"></a></p><h3>Derivation: Approximate formula for overdamped settling time.</h3>
 <p>Since a literature reference for this formula was not found, the derivation below was done at TRI (it has not been peer reviewed). This formula results from the "dominant pole" solution in the prototypical constant-coefficient linear 2ⁿᵈ-order ODE. For ẋ(0) = 0, mathematics shows poles p₁ = -ωₙ s₁, p₂ = -ωₙ s₂, where sz = √(ζ² - 1), s₁ = ζ - sz, s₂ = ζ + sz. and </p><pre>
- <a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(t)</a> / <a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a> = p₂/(p₂-p₁) exp(p₁ t) - p₁/(p₂-p₁) exp(p₂ t)
+ <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(t)</a> / <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a> = p₂/(p₂-p₁) exp(p₁ t) - p₁/(p₂-p₁) exp(p₂ t)
              = s₂/(s₂-s₁) exp(p₁ t) - s₁/(s₂-s₁) exp(p₂ t)
              =  k/( k-1 ) exp(p₁ t) -  1/( k-1 ) exp(p₂ t) where k = s₂ / s₁
              ≈  k/( k-1 ) exp(p₁ t)                        since p₁ &gt; p₂
 </pre><p> Note: k = s₂ / s₁ is real, k &gt; 0, s₂ = k s₁, and p₁ &gt; p₂ (p₁ is less negative then p₂), so exp(p₁ t) decays to zero slower than exp(p₂ t) and exp(p₁ t) ≫ exp(p₂ t) for sufficiently large t. Hence we assume exp(p₂ t) ≈ 0 (which is why p₁ is called the "dominant pole"). Next, </p><pre>
   k/(k - 1) = s₂ / s₁ / (s₂/s₁ -1) = s₂ / (s₂ - s₁) = s₂ / (2 sz),  so
-  <a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(t)</a> / <a class="el" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a>  ≈  s₂ / (2 sz) exp(-s₁ ωₙ t),                        hence
+  <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(t)</a> / <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a>  ≈  s₂ / (2 sz) exp(-s₁ ωₙ t),                        hence
   settling_ratio ≈ s₂ / (2 sz) exp(-s₁ ωₙ tₛ),                      finally
   ωₙ ≈ -ln(settling_ratio 2 sz / s₂) / (s₁ tₛ)
 </pre><p> The table below shows that there is little error in this approximate formula for various settling ratios and ζ, particularly for ζ ≥ 1.1. For 1.0 ≤ ζ &lt; 1.1, the critical damping estimates of ωₙ work well. </p><table class="markdownTable">

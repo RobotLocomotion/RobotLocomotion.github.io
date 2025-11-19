@@ -169,10 +169,10 @@ $(function(){initNavTree('classdrake_1_1symbolic_1_1_environment.html','','class
 <p>This class is used when we evaluate symbolic expressions or formulas which include unquantified (free) variables. Here are examples:</p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> var_x{<span class="stringliteral">&quot;x&quot;</span>};</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> var_y{<span class="stringliteral">&quot;y&quot;</span>};</div>
-<div class="line"><span class="keyword">const</span> Expression <a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>{var_x};</div>
+<div class="line"><span class="keyword">const</span> Expression <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>{var_x};</div>
 <div class="line"><span class="keyword">const</span> Expression y{var_x};</div>
-<div class="line"><span class="keyword">const</span> Expression e1{<a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + y};</div>
-<div class="line"><span class="keyword">const</span> Expression e2{<a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> - y};</div>
+<div class="line"><span class="keyword">const</span> Expression e1{<a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + y};</div>
+<div class="line"><span class="keyword">const</span> Expression e2{<a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> - y};</div>
 <div class="line"><span class="keyword">const</span> Formula f{e1 &gt; e2};</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// env maps var_x to 2.0 and var_y to 3.0</span></div>
@@ -183,7 +183,7 @@ $(function(){initNavTree('classdrake_1_1symbolic_1_1_environment.html','','class
 <div class="line"><span class="keyword">const</span> <span class="keywordtype">bool</span> res = f.Evaluate(env);  <span class="comment">// x + y &gt; x - y =&gt; 5.0 &gt;= -1.0 =&gt; True</span></div>
 <div class="ttc" id="aclassdrake_1_1symbolic_1_1_environment_html_a6a7be25f3fe8fac9b3b7353c9b6ddd1f"><div class="ttname"><a href="#a6a7be25f3fe8fac9b3b7353c9b6ddd1f">drake::symbolic::Environment::Environment</a></div><div class="ttdeci">Environment(const Environment &amp;)=default</div></div>
 <div class="ttc" id="aclassdrake_1_1symbolic_1_1_variable_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_variable.html">drake::symbolic::Variable</a></div><div class="ttdoc">Represents a symbolic variable.</div><div class="ttdef"><b>Definition</b> variable.h:34</div></div>
-<div class="ttc" id="apixel__types_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> pixel_types.h:182</div></div>
+<div class="ttc" id="alight__parameter_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> light_parameter.h:147</div></div>
 </div><!-- fragment --> </div>
 <p><code>#include &lt;drake/common/symbolic/expression/environment.h&gt;</code></p>
 <table class="memberdecls">

@@ -412,8 +412,8 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1multibody_1_1_coulomb_friction.html">CoulombFriction&lt;T&gt;</a>&amp; geometry_friction =</div>
 <div class="line">    props-&gt;<a class="code hl_function" href="classdrake_1_1geometry_1_1_geometry_properties.html#aaaa9388bc0cffeef445272cc5234b087">GetProperty</a>&lt;<a class="code hl_class" href="classdrake_1_1multibody_1_1_coulomb_friction.html">CoulombFriction&lt;T&gt;</a>&gt;(<span class="stringliteral">&quot;material&quot;</span>,</div>
 <div class="line">                                           <span class="stringliteral">&quot;coulomb_friction&quot;</span>);</div>
-<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_properties_html_aaaa9388bc0cffeef445272cc5234b087"><div class="ttname"><a href="classdrake_1_1geometry_1_1_geometry_properties.html#aaaa9388bc0cffeef445272cc5234b087">drake::geometry::GeometryProperties::GetProperty</a></div><div class="ttdeci">decltype(auto) GetProperty(const std::string &amp;group_name, const std::string &amp;name) const</div><div class="ttdoc">Retrieves the typed value for the property (group_name, name) from this set of properties.</div><div class="ttdef"><b>Definition</b> geometry_properties.h:333</div></div>
-<div class="ttc" id="aclassdrake_1_1geometry_1_1_proximity_properties_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_proximity_properties.html">drake::geometry::ProximityProperties</a></div><div class="ttdoc">The set of properties for geometry used in a proximity role.</div><div class="ttdef"><b>Definition</b> geometry_roles.h:168</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_geometry_properties_html_aaaa9388bc0cffeef445272cc5234b087"><div class="ttname"><a href="classdrake_1_1geometry_1_1_geometry_properties.html#aaaa9388bc0cffeef445272cc5234b087">drake::geometry::GeometryProperties::GetProperty</a></div><div class="ttdeci">decltype(auto) GetProperty(const std::string &amp;group_name, const std::string &amp;name) const</div><div class="ttdoc">Retrieves the typed value for the property (group_name, name) from this set of properties.</div><div class="ttdef"><b>Definition</b> geometry_properties.h:337</div></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_proximity_properties_html"><div class="ttname"><a href="classdrake_1_1geometry_1_1_proximity_properties.html">drake::geometry::ProximityProperties</a></div><div class="ttdoc">The set of properties for geometry used in a proximity role.</div><div class="ttdef"><b>Definition</b> geometry_roles.h:171</div></div>
 <div class="ttc" id="aclassdrake_1_1geometry_1_1_scene_graph_inspector_html_a83bbb55df1a9753ee5f7ae76821dcdae"><div class="ttname"><a href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a83bbb55df1a9753ee5f7ae76821dcdae">drake::geometry::SceneGraphInspector::GetProximityProperties</a></div><div class="ttdeci">const ProximityProperties * GetProximityProperties(GeometryId geometry_id) const</div><div class="ttdoc">Returns a pointer to the const proximity properties of the geometry with the given geometry_id.</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_coulomb_friction_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_coulomb_friction.html">drake::multibody::CoulombFriction</a></div><div class="ttdoc">Parameters for Coulomb&#39;s Law of Friction, namely:</div><div class="ttdef"><b>Definition</b> coulomb_friction.h:62</div></div>
 </div><!-- fragment --><p><a class="anchor" id="mbp_parameters"></a></p><h3>Working with MultibodyElement parameters</h3>
@@ -5817,7 +5817,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated</a></b></dt><dd>Use GetDefaultFloatingBaseBodyPose() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated</a></b></dt><dd>Use GetDefaultFloatingBaseBodyPose() instead. <br  />
  This will be removed from Drake on or after 2026-01-01. </dd></dl>
 
 </div>
@@ -7062,7 +7062,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated</a></b></dt><dd>Use GetUniqueFloatingBaseBodyOrThrow() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated</a></b></dt><dd>Use GetUniqueFloatingBaseBodyOrThrow() instead. <br  />
  This will be removed from Drake on or after 2026-01-01. </dd></dl>
 
 </div>
@@ -7808,7 +7808,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated</a></b></dt><dd>Use HasUniqueFloatingBaseBody() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated</a></b></dt><dd>Use HasUniqueFloatingBaseBody() instead. <br  />
  This will be removed from Drake on or after 2026-01-01. </dd></dl>
 
 </div>
@@ -9717,7 +9717,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated</a></b></dt><dd>Use SetDefaultFloatingBaseBodyPose() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated</a></b></dt><dd>Use SetDefaultFloatingBaseBodyPose() instead. <br  />
  This will be removed from Drake on or after 2026-01-01. </dd></dl>
 
 </div>
@@ -10093,7 +10093,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInAnchoredFrame() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInAnchoredFrame() instead. <br  />
  This will be removed from Drake on or after 2026-01-01. </dd></dl>
 
 </div>
@@ -10125,7 +10125,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInWorldFrame() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInWorldFrame() instead. <br  />
  This will be removed from Drake on or after 2026-01-01. </dd></dl>
 
 </div>

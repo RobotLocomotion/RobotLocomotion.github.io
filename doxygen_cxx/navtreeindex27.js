@@ -1,7 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#ab54111eab638313c328fc0a0f1b50944":[2,4,2,0,2,24],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#ac000dbc95b163716b1e69c640128a770":[2,4,2,0,2,12],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#ac06bd4343d37875ba75bfee7d014580c":[2,4,2,0,2,5],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#ac91be3995339c8e796a88272d5612b6c":[2,4,2,0,2,21],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#acb88e51c9d18bcf7da15cd6f5da30dde":[2,4,2,0,2,10],
@@ -249,5 +247,7 @@ var NAVTREEINDEX27 =
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a2503ed9d460658d7cc52320153cf75af":[4,0,0,7,54,5],
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a375568d3677e0ce57ca0433982a914b0":[3,0,0,8,56,22],
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a375568d3677e0ce57ca0433982a914b0":[4,0,0,7,54,22],
-"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a391f05a4a3b7ba173d6b4ff2b4784818":[3,0,0,8,56,7]
+"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a391f05a4a3b7ba173d6b4ff2b4784818":[3,0,0,8,56,7],
+"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a391f05a4a3b7ba173d6b4ff2b4784818":[4,0,0,7,54,7],
+"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a3e68617d672d8e03ed51c42c29c898b4":[3,0,0,8,56,19]
 };

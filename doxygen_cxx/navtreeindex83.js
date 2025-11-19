@@ -1,7 +1,5 @@
 var NAVTREEINDEX83 =
 {
-"compass__gait__params_8h.html":[5,0,0,3,1,3],
-"compliant__contact__manager_8h.html":[5,0,0,8,9,1],
 "composite__trajectory_8h.html":[5,0,0,1,3,2],
 "compute__numerical__gradient_8h.html":[5,0,0,7,5],
 "concatenate__images_8h.html":[5,0,0,14,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX83 =
 "expression__cell_8h.html":[5,0,0,1,2,0,4],
 "expression__kind_8h.html":[5,0,0,1,2,0,5],
 "expression__visitor_8h.html":[5,0,0,1,2,0,6],
-"externally__applied__spatial__force_8h.html":[5,0,0,8,9,19]
+"externally__applied__spatial__force_8h.html":[5,0,0,8,9,19],
+"externally__applied__spatial__force__multiplexer_8h.html":[5,0,0,8,9,20],
+"extract__double_8h.html":[5,0,0,1,28]
 };

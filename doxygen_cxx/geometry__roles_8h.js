@@ -3,7 +3,6 @@ var geometry__roles_8h =
     [ "ProximityProperties", "classdrake_1_1geometry_1_1_proximity_properties.html", "classdrake_1_1geometry_1_1_proximity_properties" ],
     [ "PerceptionProperties", "classdrake_1_1geometry_1_1_perception_properties.html", "classdrake_1_1geometry_1_1_perception_properties" ],
     [ "IllustrationProperties", "classdrake_1_1geometry_1_1_illustration_properties.html", "classdrake_1_1geometry_1_1_illustration_properties" ],
-    [ "formatter< drake::geometry::Role >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_role_01_4.html", null ],
     [ "drake::geometry::Role", "namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951", [
       [ "drake::geometry::Role::kUnassigned", "namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951a41ba12ed492ce20c3ff503a553ae85ea", null ],
       [ "drake::geometry::Role::kProximity", "namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951ad909c44a5dea6ebbdb3a95e4cb701521", null ],

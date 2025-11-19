@@ -1,7 +1,5 @@
 var NAVTREEINDEX40 =
 {
-"classdrake_1_1perception_1_1_point_cloud.html#acbd99fc0069bf06e1313458d6ee0c6a4":[3,0,0,9,2,27],
-"classdrake_1_1perception_1_1_point_cloud.html#acbd99fc0069bf06e1313458d6ee0c6a4":[4,0,0,8,2,27],
 "classdrake_1_1perception_1_1_point_cloud.html#acd851b52164045124e94a97332e008f8":[3,0,0,9,2,9],
 "classdrake_1_1perception_1_1_point_cloud.html#acd851b52164045124e94a97332e008f8":[4,0,0,8,2,9],
 "classdrake_1_1perception_1_1_point_cloud.html#acee5db2d53b1b703ab6a50eb836e07b9":[3,0,0,9,2,43],
@@ -249,5 +247,7 @@ var NAVTREEINDEX40 =
 "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a1d783e049011415c69a3f653f71eed5c":[3,0,0,10,7,3],
 "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a1d783e049011415c69a3f653f71eed5c":[4,0,0,9,7,3],
 "classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a320b112495029a7712e2788cd923fe62":[3,0,0,10,7,8],
-"classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a320b112495029a7712e2788cd923fe62":[4,0,0,9,7,8]
+"classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a320b112495029a7712e2788cd923fe62":[4,0,0,9,7,8],
+"classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a36763a4eee64ee0575b8bec05a51d4a4":[3,0,0,10,7,7],
+"classdrake_1_1planning_1_1_distance_and_interpolation_provider.html#a36763a4eee64ee0575b8bec05a51d4a4":[4,0,0,9,7,7]
 };

@@ -1,7 +1,5 @@
 var NAVTREEINDEX85 =
 {
-"group__geometry__optimization__geodesic__convexity.html#ga377049edc6e3731c7695c876af7a7fc6":[2,1,1,0,2],
-"group__geometry__optimization__geodesic__convexity.html#ga377049edc6e3731c7695c876af7a7fc6":[2,5,5,0,2],
 "group__geometry__optimization__geodesic__convexity.html#ga40707ecfcee3ff6cc60fdf7cd0956166":[2,1,1,0,6],
 "group__geometry__optimization__geodesic__convexity.html#ga40707ecfcee3ff6cc60fdf7cd0956166":[2,5,5,0,6],
 "group__geometry__optimization__geodesic__convexity.html#ga4cc1511a0a4979afa70ee7d5964bc0d5":[2,1,1,0,5],
@@ -207,6 +205,9 @@ var NAVTREEINDEX85 =
 "leaf__output__port_8h.html":[5,0,0,12,3,27],
 "leaf__system_8h.html":[5,0,0,12,3,28],
 "light__parameter_8h.html":[5,0,0,4,4,1],
+"light__parameter_8h.html#a102150e6763c0db325ca79bbf1148ffd":[5,0,0,4,4,1,10],
+"light__parameter_8h.html#a3c838f5d3d8d35095e99520afef38cff":[5,0,0,4,4,1,3],
+"light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1":[5,0,0,4,4,1,11],
 "linear__bushing__roll__pitch__yaw_8h.html":[5,0,0,8,12,22],
 "linear__constitutive__model_8h.html":[5,0,0,8,2,20],
 "linear__constitutive__model__data_8h.html":[5,0,0,8,2,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX85 =
 "make__mesh__for__deformable_8h.html":[5,0,0,4,28],
 "make__mesh__from__vtk_8h.html":[5,0,0,4,2,28],
 "make__pendulum__plant_8h.html":[5,0,0,8,0,5,0],
-"make__sphere__field_8h.html":[5,0,0,4,2,29],
-"make__sphere__mesh_8h.html":[5,0,0,4,2,30]
+"make__sphere__field_8h.html":[5,0,0,4,2,29]
 };

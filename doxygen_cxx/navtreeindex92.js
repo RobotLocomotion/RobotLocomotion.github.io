@@ -1,5 +1,12 @@
 var NAVTREEINDEX92 =
 {
+"orientation__constraint_8h.html":[5,0,0,8,4,18],
+"orientation__cost_8h.html":[5,0,0,8,4,19],
+"osqp__solver_8h.html":[5,0,0,11,35],
+"output__port_8h.html":[5,0,0,12,3,30],
+"output__port__base_8h.html":[5,0,0,12,3,31],
+"overloaded_8h.html":[5,0,0,1,46],
+"package__map_8h.html":[5,0,0,8,8,4],
 "pages.html":[],
 "panda__command__receiver_8h.html":[5,0,0,6,0,0],
 "panda__command__sender_8h.html":[5,0,0,6,0,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX92 =
 "spanning__forest_8h.html":[5,0,0,8,11,8],
 "spanning__forest__inlines_8h.html":[5,0,0,8,11,9],
 "spanning__forest__loop__constraint_8h.html":[5,0,0,8,11,10],
-"spanning__forest__mobod_8h.html":[5,0,0,8,11,11],
-"spanning__forest__tree_8h.html":[5,0,0,8,11,12],
-"sparse__and__dense__matrix_8h.html":[5,0,0,11,54],
-"sparse__linear__operator_8h.html":[5,0,0,8,1,19],
-"sparse__matrix__gain_8h.html":[5,0,0,12,6,26],
-"spatial__acceleration_8h.html":[5,0,0,8,5,0],
-"spatial__algebra_8h.html":[5,0,0,8,5,1],
-"spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[5,0,0,8,5,1,0]
+"spanning__forest__mobod_8h.html":[5,0,0,8,11,11]
 };

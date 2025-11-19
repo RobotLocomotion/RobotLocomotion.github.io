@@ -164,13 +164,15 @@ $(function(){initNavTree('light__parameter_8h.html','',''); });
   <div class="headertitle"><div class="title">light_parameter.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;ostream&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
 <code>#include &lt;Eigen/Dense&gt;</code><br />
 <code>#include &lt;fmt/format.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="fmt__ostream_8h.html">drake/common/fmt_ostream.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fmt_8h.html">drake/common/fmt.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="name__value_8h.html">drake/common/name_value.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="rgba_8h.html">drake/geometry/rgba.h</a>&quot;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for light_parameter.h:</div>
 <div class="dyncontent">
@@ -207,15 +209,86 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a09d4d8fd3ad5e1e84bbdfb5e31eb969b" id="r_a09d4d8fd3ad5e1e84bbdfb5e31eb969b"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a09d4d8fd3ad5e1e84bbdfb5e31eb969b">to_string</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638">LightType</a> &amp;t)</td></tr>
+<tr class="memdesc:a09d4d8fd3ad5e1e84bbdfb5e31eb969b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638" title="Specification of the type of light.">LightType</a> as a string.  <br /></td></tr>
 <tr class="memitem:ab4286fe26e5f84e4937e7018bf342b74" id="r_ab4286fe26e5f84e4937e7018bf342b74"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#ab4286fe26e5f84e4937e7018bf342b74">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638">LightType</a> &amp;t)</td></tr>
-<tr class="memdesc:ab4286fe26e5f84e4937e7018bf342b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the <a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638" title="Specification of the type of light.">LightType</a> as a string.  <br /></td></tr>
+<tr class="memdesc:ab4286fe26e5f84e4937e7018bf342b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a9cd75710cadefd7612075c7ff5e4de74" id="r_a9cd75710cadefd7612075c7ff5e4de74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638">LightType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a9cd75710cadefd7612075c7ff5e4de74">light_type_from_string</a> (const std::string &amp;spec)</td></tr>
 <tr class="memdesc:a9cd75710cadefd7612075c7ff5e4de74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a <a class="el" href="namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638" title="Specification of the type of light.">LightType</a> from its string representation.  <br /></td></tr>
-<tr class="memitem:a3a394f2b1b93328024e7f26c6a80a8d2" id="r_a3a394f2b1b93328024e7f26c6a80a8d2"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a3a394f2b1b93328024e7f26c6a80a8d2">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd">LightFrame</a> &amp;t)</td></tr>
-<tr class="memdesc:a3a394f2b1b93328024e7f26c6a80a8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd" title="Specifies the frame in which a light is fixed.">LightFrame</a> as a string.  <br /></td></tr>
+<tr class="memitem:a3cc4132ece34b87fed61a47c998eb7d7" id="r_a3cc4132ece34b87fed61a47c998eb7d7"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a3cc4132ece34b87fed61a47c998eb7d7">to_string</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd">LightFrame</a> &amp;f)</td></tr>
+<tr class="memdesc:a3cc4132ece34b87fed61a47c998eb7d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd" title="Specifies the frame in which a light is fixed.">LightFrame</a> as a string.  <br /></td></tr>
+<tr class="memitem:a3cb4738ac58af518c7792a295314fa5f" id="r_a3cb4738ac58af518c7792a295314fa5f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a3cb4738ac58af518c7792a295314fa5f">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd">LightFrame</a> &amp;f)</td></tr>
+<tr class="memdesc:a3cb4738ac58af518c7792a295314fa5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a2f09658f4b6c0d53904a369a31a596b4" id="r_a2f09658f4b6c0d53904a369a31a596b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd">LightFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a2f09658f4b6c0d53904a369a31a596b4">light_frame_from_string</a> (const std::string &amp;spec)</td></tr>
 <tr class="memdesc:a2f09658f4b6c0d53904a369a31a596b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd" title="Specifies the frame in which a light is fixed.">LightFrame</a> from its string representation.  <br /></td></tr>
+<tr class="memitem:a3c838f5d3d8d35095e99520afef38cff" id="r_a3c838f5d3d8d35095e99520afef38cff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c838f5d3d8d35095e99520afef38cff">DRAKE_FORMATTER_AS</a> (, drake::geometry::render, LightType, <a class="el" href="#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, <a class="el" href="namespacedrake_1_1geometry_1_1render.html#a09d4d8fd3ad5e1e84bbdfb5e31eb969b">drake::geometry::render::to_string</a>(<a class="el" href="#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)) DRAKE_FORMATTER_AS(</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a102150e6763c0db325ca79bbf1148ffd" id="r_a102150e6763c0db325ca79bbf1148ffd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a102150e6763c0db325ca79bbf1148ffd">LightFrame</a></td></tr>
+<tr class="memitem:a9336ebf25087d91c818ee6e9ec29f8c1" id="r_a9336ebf25087d91c818ee6e9ec29f8c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></td></tr>
 </table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a3c838f5d3d8d35095e99520afef38cff" name="a3c838f5d3d8d35095e99520afef38cff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c838f5d3d8d35095e99520afef38cff">&#9670;&#160;</a></span>DRAKE_FORMATTER_AS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DRAKE_FORMATTER_AS </td>
+          <td>(</td>
+          <td class="paramtype">drake::geometry::render</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LightType</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry_1_1render.html#a09d4d8fd3ad5e1e84bbdfb5e31eb969b">drake::geometry::render::to_string</a>(<a class="el" href="#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a102150e6763c0db325ca79bbf1148ffd" name="a102150e6763c0db325ca79bbf1148ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a102150e6763c0db325ca79bbf1148ffd">&#9670;&#160;</a></span>LightFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LightFrame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9336ebf25087d91c818ee6e9ec29f8c1" name="a9336ebf25087d91c818ee6e9ec29f8c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9336ebf25087d91c818ee6e9ec29f8c1">&#9670;&#160;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

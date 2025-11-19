@@ -1,7 +1,5 @@
 var NAVTREEINDEX67 =
 {
-"classdrake_1_1systems_1_1_hermitian_dense_output.html#ac9cc76174728c9aca42e73ffa84944d5":[4,0,0,13,52,11],
-"classdrake_1_1systems_1_1_hermitian_dense_output.html#acff2f52b387212f2b51deb08be7fe968":[3,0,0,14,52,2],
 "classdrake_1_1systems_1_1_hermitian_dense_output.html#acff2f52b387212f2b51deb08be7fe968":[4,0,0,13,52,2],
 "classdrake_1_1systems_1_1_hermitian_dense_output.html#ae1c1646a79fb63e96dc3892b808f027f":[3,0,0,14,52,9],
 "classdrake_1_1systems_1_1_hermitian_dense_output.html#ae1c1646a79fb63e96dc3892b808f027f":[4,0,0,13,52,9],
@@ -249,5 +247,7 @@ var NAVTREEINDEX67 =
 "classdrake_1_1systems_1_1_input_port_base.html#a49c0ee9ab1578488c00f895efaedab3c":[3,0,0,14,58,7],
 "classdrake_1_1systems_1_1_input_port_base.html#a49c0ee9ab1578488c00f895efaedab3c":[4,0,0,13,58,7],
 "classdrake_1_1systems_1_1_input_port_base.html#a4e04dc244638d350d97b3e3da4e12f96":[3,0,0,14,58,3],
-"classdrake_1_1systems_1_1_input_port_base.html#a4e04dc244638d350d97b3e3da4e12f96":[4,0,0,13,58,3]
+"classdrake_1_1systems_1_1_input_port_base.html#a4e04dc244638d350d97b3e3da4e12f96":[4,0,0,13,58,3],
+"classdrake_1_1systems_1_1_input_port_base.html#a50d63bba25b56738448f4442677f9ac8":[3,0,0,14,58,15],
+"classdrake_1_1systems_1_1_input_port_base.html#a50d63bba25b56738448f4442677f9ac8":[4,0,0,13,58,15]
 };

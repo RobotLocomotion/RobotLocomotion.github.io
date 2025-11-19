@@ -1,7 +1,5 @@
 var NAVTREEINDEX32 =
 {
-"classdrake_1_1multibody_1_1_point_to_line_distance_constraint.html#aef8a4d8e2766b2ac1ef64f2dc20a66cc":[2,1,0,9,0],
-"classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html":[2,1,0,10],
 "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a19b58a472f72da80913ea92350878a82":[2,1,0,10,0],
 "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a1ad15b12e5a3d557247b84851011334d":[2,1,0,10,2],
 "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a55fd03edcd5b6162e5df17463d4a94b9":[2,1,0,10,4],
@@ -249,5 +247,7 @@ var NAVTREEINDEX32 =
 "classdrake_1_1multibody_1_1_revolute_joint.html#a29c13dcf8af265098940e45cdc19ba97":[4,0,0,7,86,18],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a42eba815729941f1e70ba5570e81f456":[3,0,0,8,88,17],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a42eba815729941f1e70ba5570e81f456":[4,0,0,7,86,17],
-"classdrake_1_1multibody_1_1_revolute_joint.html#a46c1152817528426d83470b735e91fd9":[3,0,0,8,88,26]
+"classdrake_1_1multibody_1_1_revolute_joint.html#a46c1152817528426d83470b735e91fd9":[3,0,0,8,88,26],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a46c1152817528426d83470b735e91fd9":[4,0,0,7,86,26],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a47733949e40b86ffe8776dea4a154459":[3,0,0,8,88,31]
 };

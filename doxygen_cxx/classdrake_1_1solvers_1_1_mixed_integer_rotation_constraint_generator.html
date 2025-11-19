@@ -169,8 +169,8 @@ $(function(){initNavTree('classdrake_1_1solvers_1_1_mixed_integer_rotation_const
 <p>The formulation of these constraints are described in Global Inverse Kinematics via Mixed-integer Convex Optimization by Hongkai Dai, Gregory Izatt and Russ Tedrake, ISRR, 2017</p>
 <p>The SO(3) constraint on a rotation matrix R = [r₁, r₂, r₃], rᵢ∈ℝ³ is </p><div class="fragment"><div class="line">rᵢᵀrᵢ = 1    (1)</div>
 <div class="line">rᵢᵀrⱼ = 0    (2)</div>
-<div class="line">r₁ <a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> r₂ = r₃ (3)</div>
-<div class="ttc" id="apixel__types_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> pixel_types.h:182</div></div>
+<div class="line">r₁ <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> r₂ = r₃ (3)</div>
+<div class="ttc" id="alight__parameter_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> light_parameter.h:147</div></div>
 </div><!-- fragment --><p> To relax SO(3) constraint on rotation matrix R, we divide the range [-1, 1] (the range of each entry in R) into smaller intervals [φ(i), φ(i+1)], and then relax the SO(3) constraint within each interval. We provide 3 approaches for relaxation</p><ol type="1">
 <li>By replacing each bilinear product in constraint (1), (2) and (3) with a new variable, in the McCormick envelope of the bilinear product w = x * y.</li>
 <li>By considering the intersection region between axis-aligned boxes, and the surface of a unit sphere in 3D.</li>

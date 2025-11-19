@@ -1,7 +1,5 @@
 var NAVTREEINDEX36 =
 {
-"classdrake_1_1multibody_1_1_spatial_vector.html#a26174c3d1395248d9974d24213987300":[4,0,0,7,100,22],
-"classdrake_1_1multibody_1_1_spatial_vector.html#a291c7dfc3c58827956f591bf1a0aab7f":[3,0,0,8,102,10],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a291c7dfc3c58827956f591bf1a0aab7f":[4,0,0,7,100,10],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a354aa1bb32c8995930818789c10bb72e":[3,0,0,8,102,14],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a354aa1bb32c8995930818789c10bb72e":[4,0,0,7,100,14],
@@ -68,11 +66,11 @@ var NAVTREEINDEX36 =
 "classdrake_1_1multibody_1_1_spatial_velocity.html":[4,0,0,7,101],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd":[3,0,0,8,103,4],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd":[4,0,0,7,101,4],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[3,0,0,8,169],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[3,0,0,8,103,12],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[3,0,0,8,169],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[4,0,0,7,101,12],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a363245e06cf23fc8746e5ca3bbfe60ce":[3,0,0,8,173],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a363245e06cf23fc8746e5ca3bbfe60ce":[3,0,0,8,103,13],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a363245e06cf23fc8746e5ca3bbfe60ce":[3,0,0,8,173],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a363245e06cf23fc8746e5ca3bbfe60ce":[4,0,0,7,101,13],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a431d9dc5f9c4167f95dbd158bf9ba5dc":[3,0,0,8,103,8],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a431d9dc5f9c4167f95dbd158bf9ba5dc":[4,0,0,7,101,8],
@@ -249,5 +247,7 @@ var NAVTREEINDEX36 =
 "classdrake_1_1multibody_1_1_trajectory.html#af752fbd39919690fbbe2110639682be7":[4,0,0,7,110,2],
 "classdrake_1_1multibody_1_1_trajectory.html#afa784bdd6fbd1e0ff63450846315a527":[3,0,0,8,112,14],
 "classdrake_1_1multibody_1_1_trajectory.html#afa784bdd6fbd1e0ff63450846315a527":[4,0,0,7,110,14],
-"classdrake_1_1multibody_1_1_triangle_quadrature.html":[3,0,0,8,113]
+"classdrake_1_1multibody_1_1_triangle_quadrature.html":[3,0,0,8,113],
+"classdrake_1_1multibody_1_1_triangle_quadrature.html":[4,0,0,7,111],
+"classdrake_1_1multibody_1_1_triangle_quadrature.html#a6d070afc5572e9a355f4a92276468382":[3,0,0,8,113,0]
 };

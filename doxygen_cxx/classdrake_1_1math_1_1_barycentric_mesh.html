@@ -684,9 +684,9 @@ template&lt;typename T&gt; </div>
 
 <p>Evaluates <code class="param">vector_func</code> at all input mesh points and extracts the mesh value matrix that should be used to approximate the function with this barycentric interpolation. </p>
 <div class="fragment"><div class="line">MatrixXd mesh_values = bary.MeshValuesFrom(</div>
-<div class="line">  [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>) { <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">Vector1d</a>(std::sin(<a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[0])); });</div>
+<div class="line">  [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>) { <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">Vector1d</a>(std::sin(<a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[0])); });</div>
+<div class="ttc" id="alight__parameter_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> light_parameter.h:147</div></div>
 <div class="ttc" id="anamespacedrake_html_a6d923e79e6e92c2556edd86520145077"><div class="ttname"><a href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">drake::Vector1d</a></div><div class="ttdeci">Eigen::Matrix&lt; double, 1, 1 &gt; Vector1d</div><div class="ttdoc">A column vector of size 1 of doubles.</div><div class="ttdef"><b>Definition</b> eigen_types.h:35</div></div>
-<div class="ttc" id="apixel__types_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> pixel_types.h:182</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

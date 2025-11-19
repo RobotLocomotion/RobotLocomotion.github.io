@@ -1,5 +1,12 @@
 var NAVTREEINDEX93 =
 {
+"spanning__forest__tree_8h.html":[5,0,0,8,11,12],
+"sparse__and__dense__matrix_8h.html":[5,0,0,11,54],
+"sparse__linear__operator_8h.html":[5,0,0,8,1,19],
+"sparse__matrix__gain_8h.html":[5,0,0,12,6,26],
+"spatial__acceleration_8h.html":[5,0,0,8,5,0],
+"spatial__algebra_8h.html":[5,0,0,8,5,1],
+"spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[5,0,0,8,5,1,0],
 "spatial__force_8h.html":[5,0,0,8,5,2],
 "spatial__inertia_8h.html":[5,0,0,8,12,53],
 "spatial__momentum_8h.html":[5,0,0,8,5,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX93 =
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ad7178daaf2b128e7576318790394a37f":[3,0,0,2,4,5,2],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ad7178daaf2b128e7576318790394a37f":[4,0,0,1,4,5,2],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html":[3,0,0,3,14],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html":[4,0,0,2,11],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf":[3,0,0,3,14,9],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf":[4,0,0,2,11,9],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a22d4299bf05a2a0f59b06b050cbf1e7f":[3,0,0,3,14,2],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a22d4299bf05a2a0f59b06b050cbf1e7f":[4,0,0,2,11,2],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a3e38e6cb42b54dab9e928c6166949782":[3,0,0,3,14,3],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a3e38e6cb42b54dab9e928c6166949782":[4,0,0,2,11,3],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e":[3,0,0,3,14,4]
+"structdrake_1_1geometry_1_1_default_proximity_properties.html":[4,0,0,2,11]
 };

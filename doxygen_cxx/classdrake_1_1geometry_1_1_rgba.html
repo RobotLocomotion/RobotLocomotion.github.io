@@ -199,6 +199,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae390cd27b67dbbd7c8e0bb04a47ed223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the element-wise product of two rgba colors.  <br /></td></tr>
 <tr class="memitem:a7f9a579a242a1841fe0f75db90b433b6" id="r_a7f9a579a242a1841fe0f75db90b433b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f9a579a242a1841fe0f75db90b433b6">scale_rgb</a> (<a class="el" href="classdouble.html">double</a> scale) const</td></tr>
 <tr class="memdesc:a7f9a579a242a1841fe0f75db90b433b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a new Rgba color by multiplying the color channels (rgb) by the given scalar <span class="tt">scalar</span>.  <br /></td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
+<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the <a class="el" href="classdrake_1_1geometry_1_1_rgba.html" title="Defines RGBA (red, green, blue, alpha) values on the range [0, 1].">Rgba</a> value to a string representation.  <br /></td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc" id="r_a8e8824802dedfbc36776227f7482b6bc"><td class="memTemplParams" colspan="2">template&lt;typename Archive&gt; </td></tr>
 <tr class="memitem:a8e8824802dedfbc36776227f7482b6bc template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e8824802dedfbc36776227f7482b6bc">Serialize</a> (Archive *<a class="el" href="#a7f0799082988106ce030952a5d2fbb2e">a</a>)</td></tr>
 <tr class="memdesc:a8e8824802dedfbc36776227f7482b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes this object to an Archive.  <br /></td></tr>
@@ -207,10 +209,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae3f67a671ce3602112d74cd2ddc90ac2" id="r_ae3f67a671ce3602112d74cd2ddc90ac2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3f67a671ce3602112d74cd2ddc90ac2">operator=</a> (const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;)=default</td></tr>
 <tr class="memitem:a6d8f94f9065747bee9fc8b3da8514610" id="r_a6d8f94f9065747bee9fc8b3da8514610"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d8f94f9065747bee9fc8b3da8514610">Rgba</a> (<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;&amp;)=default</td></tr>
 <tr class="memitem:a506756d88e3a1989a05ea33e14251485" id="r_a506756d88e3a1989a05ea33e14251485"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a506756d88e3a1989a05ea33e14251485">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;&amp;)=default</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a91365f3b8232ef18656f48264f6a3596" id="r_a91365f3b8232ef18656f48264f6a3596"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91365f3b8232ef18656f48264f6a3596">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;<a class="el" href="#a9f1f0b5ee9facd312463597fa8dcc7d1">rgba</a>)</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a80327d2ca2a50e53ba027db3849096a2" name="a80327d2ca2a50e53ba027db3849096a2"></a>
@@ -670,6 +668,25 @@ template&lt;typename Archive&gt; </div>
 
 </div>
 </div>
+<a id="aac993ecccd3d88aafefb6b8e3caa1dee" name="aac993ecccd3d88aafefb6b8e3caa1dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac993ecccd3d88aafefb6b8e3caa1dee">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts the <a class="el" href="classdrake_1_1geometry_1_1_rgba.html" title="Defines RGBA (red, green, blue, alpha) values on the range [0, 1].">Rgba</a> value to a string representation. </p>
+
+</div>
+</div>
 <a id="a159d0bf2911ffc1c08db924ae3eb90ac" name="a159d0bf2911ffc1c08db924ae3eb90ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a159d0bf2911ffc1c08db924ae3eb90ac">&#9670;&#160;</a></span>update()</h2>
 
@@ -706,36 +723,6 @@ template&lt;typename Archive&gt; </div>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="a91365f3b8232ef18656f48264f6a3596" name="a91365f3b8232ef18656f48264f6a3596"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91365f3b8232ef18656f48264f6a3596">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rgba</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

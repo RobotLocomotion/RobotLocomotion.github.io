@@ -226,14 +226,12 @@ The reserved render labels</h2></td></tr>
 <tr class="memitem:a6f83cff1e2c62a99e81cb8620399739e" id="r_a6f83cff1e2c62a99e81cb8620399739e"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="#a07b7796b46bc3bfa2b9e0cd441ab0574">ValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f83cff1e2c62a99e81cb8620399739e">kMaxUnreserved</a></td></tr>
 <tr class="memdesc:a6f83cff1e2c62a99e81cb8620399739e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The largest value that a RenderLabel can be instantiated on.  <br /></td></tr>
 <tr class="memitem:aa773678cbb94f82a77841659bfb4dd6a" id="r_aa773678cbb94f82a77841659bfb4dd6a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa773678cbb94f82a77841659bfb4dd6a">RenderEngine</a></td></tr>
-<tr class="memitem:a5173b615b76e9ee978965a5c68e4732a" id="r_a5173b615b76e9ee978965a5c68e4732a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5173b615b76e9ee978965a5c68e4732a">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;label)</td></tr>
-<tr class="memdesc:a5173b615b76e9ee978965a5c68e4732a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables use of labels with the streaming operator.  <br /></td></tr>
-<tr class="memitem:af63fd9e820f001b3f6bc1a53d24acbeb" id="r_af63fd9e820f001b3f6bc1a53d24acbeb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af63fd9e820f001b3f6bc1a53d24acbeb">to_string</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;label)</td></tr>
-<tr class="memdesc:af63fd9e820f001b3f6bc1a53d24acbeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value to a string representation.  <br /></td></tr>
 <tr class="memitem:a706b3e423598af0494af4d9b0f25c3f3" id="r_a706b3e423598af0494af4d9b0f25c3f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a706b3e423598af0494af4d9b0f25c3f3">is_reserved</a> () const</td></tr>
 <tr class="memdesc:a706b3e423598af0494af4d9b0f25c3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if the label is a reserved label.  <br /></td></tr>
 <tr class="memitem:aadf6998b9f0c89be68f384bc2b7ac308" id="r_aadf6998b9f0c89be68f384bc2b7ac308"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadf6998b9f0c89be68f384bc2b7ac308">operator ValueType</a> () const</td></tr>
 <tr class="memdesc:aadf6998b9f0c89be68f384bc2b7ac308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit conversion to its underlying integer representation.  <br /></td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
+<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value to a string representation.  <br /></td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a07b7796b46bc3bfa2b9e0cd441ab0574" name="a07b7796b46bc3bfa2b9e0cd441ab0574"></a>
@@ -514,6 +512,25 @@ The reserved render labels</h2></td></tr>
 
 </div>
 </div>
+<a id="aac993ecccd3d88aafefb6b8e3caa1dee" name="aac993ecccd3d88aafefb6b8e3caa1dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac993ecccd3d88aafefb6b8e3caa1dee">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value to a string representation. </p>
+
+</div>
+</div>
 <a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
 <a id="aa2060042dfeb0be42ee347018a267acc" name="aa2060042dfeb0be42ee347018a267acc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa2060042dfeb0be42ee347018a267acc">&#9670;&#160;</a></span>hash_append</h2>
@@ -548,37 +565,6 @@ template&lt;class HashAlgorithm&gt; </div>
 
 </div>
 </div>
-<a id="a5173b615b76e9ee978965a5c68e4732a" name="a5173b615b76e9ee978965a5c68e4732a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5173b615b76e9ee978965a5c68e4732a">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>label</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Enables use of labels with the streaming operator. </p>
-
-</div>
-</div>
 <a id="aa773678cbb94f82a77841659bfb4dd6a" name="aa773678cbb94f82a77841659bfb4dd6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa773678cbb94f82a77841659bfb4dd6a">&#9670;&#160;</a></span>RenderEngine</h2>
 
@@ -598,33 +584,6 @@ template&lt;class HashAlgorithm&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="af63fd9e820f001b3f6bc1a53d24acbeb" name="af63fd9e820f001b3f6bc1a53d24acbeb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af63fd9e820f001b3f6bc1a53d24acbeb">&#9670;&#160;</a></span>to_string</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string to_string </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html">RenderLabel</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>label</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Converts the <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value to a string representation. </p>
 
 </div>
 </div>

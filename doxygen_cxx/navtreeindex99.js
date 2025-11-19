@@ -1,5 +1,12 @@
 var NAVTREEINDEX99 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69":[3,0,0,11,6,2,0],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69":[4,0,0,10,6,2,0],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,11,6,2,5],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,10,6,2,5],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a930c02328ce977c6e065db4c33b4f768":[3,0,0,11,6,2,3],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a930c02328ce977c6e065db4c33b4f768":[4,0,0,10,6,2,3],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a974165bc06a104eab9a0dfa44470fe1e":[3,0,0,11,6,2,4],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a974165bc06a104eab9a0dfa44470fe1e":[4,0,0,10,6,2,4],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5":[3,0,0,11,6,2,6],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5":[4,0,0,10,6,2,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX99 =
 "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[3,0,0,13,58,0],
 "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[4,0,0,12,58,0],
 "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#aec810cdd9c5507d3d3c121c9cb3ab269":[3,0,0,13,58,0,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#aec810cdd9c5507d3d3c121c9cb3ab269":[4,0,0,12,58,0,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af3841474533d8bd1db7c131548d0bc27":[3,0,0,13,58,0,1],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af3841474533d8bd1db7c131548d0bc27":[4,0,0,12,58,0,1],
-"structdrake_1_1symbolic_1_1_sin_cos.html":[3,0,0,13,63],
-"structdrake_1_1symbolic_1_1_sin_cos.html":[4,0,0,12,63],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f":[3,0,0,13,63,7],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a06a14e4a94aab4befcf2506ef07dc38f":[4,0,0,12,63,7],
-"structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd":[3,0,0,13,63,5]
+"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#aec810cdd9c5507d3d3c121c9cb3ab269":[4,0,0,12,58,0,0]
 };

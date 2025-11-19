@@ -124,6 +124,8 @@ var namespacedrake_1_1geometry =
     [ "MakeRenderEngineGltfClient", "namespacedrake_1_1geometry.html#a004a8b7a49c0b7a4bc2f8860af26591b", null ],
     [ "MakeRenderEngineVtk", "namespacedrake_1_1geometry.html#a8d8e28336b380bccf83c9e5611689e2b", null ],
     [ "operator!=", "namespacedrake_1_1geometry.html#a7fa229f9c0cc6e132f7f4d2a149bb864", null ],
+    [ "operator<<", "namespacedrake_1_1geometry.html#aa078bc1cc37439da0b38aec2b6e2ee1d", null ],
+    [ "operator<<", "namespacedrake_1_1geometry.html#a91365f3b8232ef18656f48264f6a3596", null ],
     [ "operator<<", "namespacedrake_1_1geometry.html#a968488524d6041456c69fae448e35270", null ],
     [ "operator==", "namespacedrake_1_1geometry.html#a5e63dda63c412c981364dec694ed3d16", null ],
     [ "ReadGltfToMemory", "namespacedrake_1_1geometry.html#ab2ba2dbf3b19bdec9eabe6ae62099169", null ],

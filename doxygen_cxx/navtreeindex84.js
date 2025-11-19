@@ -1,7 +1,5 @@
 var NAVTREEINDEX84 =
 {
-"externally__applied__spatial__force__multiplexer_8h.html":[5,0,0,8,9,20],
-"extract__double_8h.html":[5,0,0,1,28],
 "fast__pose__composition__functions_8h.html":[5,0,0,7,15],
 "fem_2schur__complement_8h.html":[5,0,0,8,2,29],
 "fem__element_8h.html":[5,0,0,8,2,10],
@@ -249,5 +247,7 @@ var NAVTREEINDEX84 =
 "group__geometry__optimization.html":[2,1,1],
 "group__geometry__optimization.html":[2,5,5],
 "group__geometry__optimization__geodesic__convexity.html":[2,1,1,0],
-"group__geometry__optimization__geodesic__convexity.html":[2,5,5,0]
+"group__geometry__optimization__geodesic__convexity.html":[2,5,5,0],
+"group__geometry__optimization__geodesic__convexity.html#ga377049edc6e3731c7695c876af7a7fc6":[2,1,1,0,2],
+"group__geometry__optimization__geodesic__convexity.html#ga377049edc6e3731c7695c876af7a7fc6":[2,5,5,0,2]
 };

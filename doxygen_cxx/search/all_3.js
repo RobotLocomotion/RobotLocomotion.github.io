@@ -667,7 +667,7 @@ var searchData=
   ['drake_5fdisable_5fcpu_5ffeatures_664',['DRAKE_DISABLE_CPU_FEATURES',['../group__drake__disable__cpu__features.html',1,'']]],
   ['drake_5fexport_2eh_665',['drake_export.h',['../drake__export_8h.html',1,'']]],
   ['drake_5ffmt8_5fconst_666',['DRAKE_FMT8_CONST',['../fmt_8h.html#a80dfcf0f454f77a9fb769f3fbeb09e5b',1,'fmt.h']]],
-  ['drake_5fformatter_5fas_667',['DRAKE_FORMATTER_AS',['../fmt_8h.html#a4bc413f041460d4e1af1c1d647a9912f',1,'DRAKE_FORMATTER_AS:&#160;fmt.h'],['../pixel__types_8h.html#a71e237783020d662652f8ab4fed9bd63',1,'DRAKE_FORMATTER_AS(, drake::systems::sensors, PixelType, x, drake::systems::sensors::to_string(x)) DRAKE_FORMATTER_AS(:&#160;pixel_types.h']]],
+  ['drake_5fformatter_5fas_667',['DRAKE_FORMATTER_AS',['../fmt_8h.html#a4bc413f041460d4e1af1c1d647a9912f',1,'DRAKE_FORMATTER_AS:&#160;fmt.h'],['../light__parameter_8h.html#a3c838f5d3d8d35095e99520afef38cff',1,'DRAKE_FORMATTER_AS(, drake::geometry::render, LightType, x, drake::geometry::render::to_string(x)) DRAKE_FORMATTER_AS(:&#160;light_parameter.h'],['../pixel__types_8h.html#a71e237783020d662652f8ab4fed9bd63',1,'DRAKE_FORMATTER_AS(, drake::systems::sensors, PixelType, x, drake::systems::sensors::to_string(x)) DRAKE_FORMATTER_AS(:&#160;pixel_types.h']]],
   ['drake_5flcm_2eh_668',['drake_lcm.h',['../drake__lcm_8h.html',1,'']]],
   ['drake_5flcm_5fbase_2eh_669',['drake_lcm_base.h',['../drake__lcm__base_8h.html',1,'']]],
   ['drake_5flcm_5finterface_2eh_670',['drake_lcm_interface.h',['../drake__lcm__interface_8h.html',1,'']]],

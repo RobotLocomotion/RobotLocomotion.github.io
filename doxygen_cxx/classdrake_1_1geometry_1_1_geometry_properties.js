@@ -19,7 +19,7 @@ var classdrake_1_1geometry_1_1_geometry_properties =
     [ "operator=", "classdrake_1_1geometry_1_1_geometry_properties.html#a34a562badbd08d95cee5cd7d453cae3a", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_geometry_properties.html#ab87e5af2da5303047d73bfaa83044a26", null ],
     [ "RemoveProperty", "classdrake_1_1geometry_1_1_geometry_properties.html#a221c35662fe3549e2fd6ca5457d70c0c", null ],
+    [ "to_string", "classdrake_1_1geometry_1_1_geometry_properties.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ],
     [ "UpdateProperty", "classdrake_1_1geometry_1_1_geometry_properties.html#ad519098cc972ba24c36302f3290d2b06", null ],
-    [ "UpdatePropertyAbstract", "classdrake_1_1geometry_1_1_geometry_properties.html#ad9c4c3542d53e235c4624e4f753692f4", null ],
-    [ "operator<<", "classdrake_1_1geometry_1_1_geometry_properties.html#aa078bc1cc37439da0b38aec2b6e2ee1d", null ]
+    [ "UpdatePropertyAbstract", "classdrake_1_1geometry_1_1_geometry_properties.html#ad9c4c3542d53e235c4624e4f753692f4", null ]
 ];

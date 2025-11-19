@@ -1,7 +1,5 @@
 var NAVTREEINDEX26 =
 {
-"classdrake_1_1multibody_1_1_force_density_field_base.html#aa7aacbeeacf0ca94edcdeb61f2b81dd9":[3,0,0,8,43,9],
-"classdrake_1_1multibody_1_1_force_density_field_base.html#aa7aacbeeacf0ca94edcdeb61f2b81dd9":[4,0,0,7,41,9],
 "classdrake_1_1multibody_1_1_force_density_field_base.html#ab2e1af0e42c9bce925af298da1e099bd":[3,0,0,8,43,1],
 "classdrake_1_1multibody_1_1_force_density_field_base.html#ab2e1af0e42c9bce925af298da1e099bd":[4,0,0,7,41,1],
 "classdrake_1_1multibody_1_1_force_density_field_base.html#ad6d8faf5997f044a3db4f2bb299a304b":[3,0,0,8,43,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX26 =
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a8a352889e2c30877b432e49e8d191efd":[2,4,2,0,2,4],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a9a77ae06ea88d1c5a68025faca73e5dc":[2,4,2,0,2,15],
 "classdrake_1_1multibody_1_1_inverse_kinematics.html#a9d74e7e1c5b7e2f8280ad16d7fe27f59":[2,4,2,0,2,19],
-"classdrake_1_1multibody_1_1_inverse_kinematics.html#a9d9bc4d98911ca9808bec31c2f564560":[2,4,2,0,2,25]
+"classdrake_1_1multibody_1_1_inverse_kinematics.html#a9d9bc4d98911ca9808bec31c2f564560":[2,4,2,0,2,25],
+"classdrake_1_1multibody_1_1_inverse_kinematics.html#ab54111eab638313c328fc0a0f1b50944":[2,4,2,0,2,24],
+"classdrake_1_1multibody_1_1_inverse_kinematics.html#ac000dbc95b163716b1e69c640128a770":[2,4,2,0,2,12]
 };

@@ -540,9 +540,9 @@ template&lt;typename Derived&gt; </div>
 <li>If <span class="tt">m2</span> is smaller than <span class="tt">m1</span>, <span class="tt">psd1.Less(psd2)</span> is false.</li>
 </ul>
 <p>If <span class="tt">m1</span> and <span class="tt">m2</span> are of the same size, we perform element-wise comparison by following column-major order. See the following example:</p>
-<div class="fragment"><div class="line">m1 &lt;&lt; <a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + y, -3.14,</div>
+<div class="fragment"><div class="line">m1 &lt;&lt; <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + y, -3.14,</div>
 <div class="line">      -3.14,     y;</div>
-<div class="line">m2 &lt;&lt; <a class="code hl_variable" href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + y,  3.14,</div>
+<div class="line">m2 &lt;&lt; <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + y,  3.14,</div>
 <div class="line">       3.14,     y;</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> psd1{<a class="code hl_function" href="namespacedrake_1_1symbolic.html#a525eb4ca416c6055765da5ba992b1c9c">positive_semidefinite</a>(m1)};</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> psd2{<a class="code hl_function" href="namespacedrake_1_1symbolic.html#a525eb4ca416c6055765da5ba992b1c9c">positive_semidefinite</a>(m2)};</div>
@@ -550,8 +550,8 @@ template&lt;typename Derived&gt; </div>
 <div class="line">EXPECT_TRUE(psd1.<a class="code hl_function" href="classdrake_1_1symbolic_1_1_formula.html#abd2677c76ddb28c10321b8178cfc6292">Less</a>(psd2));</div>
 <div class="ttc" id="aclassdrake_1_1symbolic_1_1_formula_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_formula.html">drake::symbolic::Formula</a></div><div class="ttdoc">Represents a symbolic form of a first-order logic formula.</div><div class="ttdef"><b>Definition</b> formula.h:114</div></div>
 <div class="ttc" id="aclassdrake_1_1symbolic_1_1_formula_html_abd2677c76ddb28c10321b8178cfc6292"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_formula.html#abd2677c76ddb28c10321b8178cfc6292">drake::symbolic::Formula::Less</a></div><div class="ttdeci">bool Less(const Formula &amp;f) const</div><div class="ttdoc">Checks lexicographical ordering between this and e.</div></div>
+<div class="ttc" id="alight__parameter_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> light_parameter.h:147</div></div>
 <div class="ttc" id="anamespacedrake_1_1symbolic_html_a525eb4ca416c6055765da5ba992b1c9c"><div class="ttname"><a href="namespacedrake_1_1symbolic.html#a525eb4ca416c6055765da5ba992b1c9c">drake::symbolic::positive_semidefinite</a></div><div class="ttdeci">Formula positive_semidefinite(const Eigen::Ref&lt; const MatrixX&lt; Expression &gt; &gt; &amp;m)</div><div class="ttdoc">Returns a symbolic formula constraining m to be a positive-semidefinite matrix.</div></div>
-<div class="ttc" id="apixel__types_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> pixel_types.h:182</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>In the code above, <span class="tt">psd1.Less(psd2)</span> holds because we have</dd></dl>
 <ul>
 <li>m1 in column-major ordering : (x + y) -3.14 -3.14 y_</li>

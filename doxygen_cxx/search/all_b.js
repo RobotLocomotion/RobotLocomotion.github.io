@@ -100,7 +100,7 @@ var searchData=
   ['light_5fframe_5ffrom_5fstring_97',['light_frame_from_string',['../namespacedrake_1_1geometry_1_1render.html#a2f09658f4b6c0d53904a369a31a596b4',1,'drake::geometry::render']]],
   ['light_5fparameter_2eh_98',['light_parameter.h',['../light__parameter_8h.html',1,'']]],
   ['light_5ftype_5ffrom_5fstring_99',['light_type_from_string',['../namespacedrake_1_1geometry_1_1render.html#a9cd75710cadefd7612075c7ff5e4de74',1,'drake::geometry::render']]],
-  ['lightframe_100',['LightFrame',['../namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd',1,'drake::geometry::render']]],
+  ['lightframe_100',['LightFrame',['../namespacedrake_1_1geometry_1_1render.html#a102150e6763c0db325ca79bbf1148ffd',1,'drake::geometry::render::LightFrame'],['../light__parameter_8h.html#a102150e6763c0db325ca79bbf1148ffd',1,'LightFrame:&#160;light_parameter.h']]],
   ['lightparameter_101',['LightParameter',['../structdrake_1_1geometry_1_1render_1_1_light_parameter.html',1,'drake::geometry::render']]],
   ['lights_102',['lights',['../structdrake_1_1geometry_1_1_render_engine_gl_params.html#a7c649edac2bf38690cac11ff4730c9d5',1,'drake::geometry::RenderEngineGlParams::lights'],['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a7c649edac2bf38690cac11ff4730c9d5',1,'drake::geometry::RenderEngineVtkParams::lights']]],
   ['lighttype_103',['LightType',['../namespacedrake_1_1geometry_1_1render.html#adc3ec8293e6a97ebe43f0196b9a7f638',1,'drake::geometry::render']]],
