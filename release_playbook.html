@@ -458,65 +458,92 @@ the email address associated with your github account.</p>
   <li>Post a new slack thread in <code class="language-plaintext highlighter-rouge">#releases</code> saying that you’re beginning the
 tutorials deployment now (so that others are aware of the potentially-
 disruptive changes).</li>
-  <li>Open the tutorials <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/Dockerfile">Dockerfile</a>:
+  <li>Open the tutorials <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/requirements.txt">requirements.txt</a>:
     <ol>
-      <li>Edit the first line to refer to the YYYYMMDD for this release (login
-with your github account; otherwise, the file is read-only).
+      <li>Be sure to login with your github account; otherwise, the file is read-only.</li>
+      <li>Edit the second line to refer to the PyPI version of this release.
         <ol>
-          <li>For reference, the typical content is thus:
-            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM robotlocomotion/drake:noble-20250612
+          <li>For reference, the typical content is thus (varying only by Drake’s
+version number):
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># The current release.
+drake==1.47.0
 
-RUN apt-get -q update &amp;&amp; apt-get -q install -y --no-install-recommends curl nginx-light python3-venv &amp;&amp; apt-get remove -y python3-notebook &amp;&amp; apt-get autoremove -y &amp;&amp; apt-get -q clean
-
-ENV PATH="/opt/drake/bin:${PATH}" \
-  PYTHONPATH="/opt/drake/lib/python3.12/site-packages:${PYTHONPATH}"
+# A version compatible with Deepnote.
+ipywidgets==8.1.7
 </code></pre></div>            </div>
           </li>
-          <li>If the current content differs by more than just the date from the
+          <li>If the current content differs by more than just the version from the
 above template, ask for help on slack in the <code class="language-plaintext highlighter-rouge">#releases</code> channel.</li>
-        </ol>
-      </li>
-      <li>After editing the date, click the “Build” button in the upper right,
-and wait for the build to succeed.
-        <ol>
-          <li>If the build fails due to an infrastructure flake, you’ll need to
-tweak the Dockerfile before Deepnote will allow you to re-run the
-Build.  For example, add <code class="language-plaintext highlighter-rouge">&amp;&amp; true</code> to the end of a RUN line.</li>
         </ol>
       </li>
     </ol>
   </li>
-  <li>For reference (no action required), the
-<a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/requirements.txt">requirements.txt</a>
-file should have the following content:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipywidgets==8.1.7
-
-# We need to repeat drake's wheel dependencies here so that they end up in
-# Deepnote's venv. Deepnote no longer sees the Ubuntu packages in /usr/lib.
-matplotlib==3.10.3
-numpy==1.26.4
-pydot==4.0.1
-PyYAML==6.0.2
-</code></pre></div>    </div>
-  </li>
-  <li>Check the initialization notebook at
+  <li>Run the initialization notebook at
 <a href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/Init%20notebook-5fcfe3fc0bd0403899baab3b6cf37a18">init.ipynb</a>.
     <ol>
-      <li>It has these cells added at the bottom, as a Drake-specific customization:
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import subprocess
-import sys
-subprocess.check_call([sys.executable, "-m", "pip", "check"], cwd="/work")
-</code></pre></div>        </div>
-
+      <li>Confirm that all cells executed successfully. Note that it may take
+5-10 minutes to finish.</li>
+      <li>For reference, the most recent content is thus:
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash
-/opt/drake/share/drake/setup/deepnote/install_nginx
+set -euo pipefail
+# We need to upgrade libc and libstdc++ to Drake's minimum versions, because the
+# base of Deepnote's Docker image is ANCIENT (Debian 11 Bullseye from 2021 OMG).
+# This should be exciting ...
+cat &gt; /etc/apt/sources.list.d/bookworm.sources &lt;&lt;'EOF'
+Types: deb
+URIs: http://deb.debian.org/debian/
+Suites: bookworm
+Components: main
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+EOF
+cat &gt; /etc/apt/preferences.d/bookworm.pref &lt;&lt;'EOF'
+Package: *
+Pin: release n=bookworm
+Pin-Priority: 1
+EOF
+apt-get -q update
+apt-get autoremove -y
+apt-get -q install -t bookworm -y --no-install-recommends libc6 libc6-dev libstdc++6 libstdc++-10-dev
+
+# Rendering needs EGL.
+# The bullseye version is satisfactory.
+apt-get install -y --no-install-recommends libegl1 libgl1-mesa-dri
+
+# We'll also need nginx installed (for websocket proxying).
+# The bullseye version is satisfactory.
+apt-get -q install -y --no-install-recommends nginx-light
+rm -f /etc/nginx/sites-enabled/default
+cat &gt; /etc/nginx/sites-available/deepnote-meshcat-proxy &lt;&lt;'EOF'
+# Deepnote- and MeshCat- specific NginX proxy server configuration.
+#
+# Proxy https://DEEPNOTE_PROJECT_ID:8080/PORT/ to http://127.0.0.1:PORT/ so
+# that multiple notebooks can all be served via Deepnote's only open port.
+#
+# For conf documentation, see https://www.nginx.com/resources/wiki/start/.
+server {
+  listen 8080 default_server;
+  listen [::]:8080 default_server;
+  root /var/www/html;
+  server_name _;
+  location ~ /(7[0-9][0-9][0-9])/(.*) {
+    proxy_pass http://127.0.0.1:$1/$2;
+  }
+  proxy_read_timeout 600;
+  proxy_connect_timeout 600;
+  proxy_send_timeout 600;
+  send_timeout 600;
+}
+EOF
+ln -sf /etc/nginx/sites-available/deepnote-meshcat-proxy /etc/nginx/sites-enabled/
+service nginx start
+
+# Now we can install our Python requirements.
+cd /work
+pip install -r ./requirements.txt
 </code></pre></div>        </div>
-        <p>For Jammy we also needed to add <code class="language-plaintext highlighter-rouge">cd /work</code> atop the stanza that checks
-for <code class="language-plaintext highlighter-rouge">requirements.txt</code> to get it working again.</p>
       </li>
-      <li>Confirm that all cells executed successfully. If the “pip check” cell
-reports dependency errors, then ask for help on slack in the
-<code class="language-plaintext highlighter-rouge">#releases</code> channel.</li>
+      <li>If the current content differs from the above content, ask for help on
+slack in the <code class="language-plaintext highlighter-rouge">#releases</code> channel.</li>
     </ol>
   </li>
   <li>Copy the updated tutorials from the pinned Dockerfile release
@@ -536,12 +563,17 @@ Read all of these instructions before performing any of them.
         <ol>
           <li>Do not run <code class="language-plaintext highlighter-rouge">licensed_solvers_deepnote</code>; you don’t have a license.</li>
           <li>Do not re-run <code class="language-plaintext highlighter-rouge">zzz_for_maintainers</code>; you’ve already done that.</li>
-          <li>The <code class="language-plaintext highlighter-rouge">authoring_multibody_simulation</code> notebook will appear to hang on
-one of the middle cells where it uses JointSliders. It is <em>not</em> hung,
-rather it is waiting for user input. Find the “Meshcat URL” link
-earlier in the notebook, click through to open Meshcat in a new tab,
-click “Open Controls”, then click “Stop JointSliders” repeatedly until
-the option vanishes and the notebook completes.</li>
+          <li>The <code class="language-plaintext highlighter-rouge">authoring_multibody_simulation</code> has gotchas to be mindful of:
+            <ol>
+              <li>Downloading the Drake package map can take 10+ minutes.</li>
+              <li>The notebook will appear to hang on one of the middle cells where it
+uses JointSliders. It is <em>not</em> hung, rather it is waiting for user
+input. Find the “Meshcat URL” link earlier in the notebook, click
+through to open Meshcat in a new tab, click “Open Controls”, then
+click “Stop JointSliders” repeatedly until the option vanishes and
+the notebook completes.</li>
+            </ol>
+          </li>
           <li>The <code class="language-plaintext highlighter-rouge">rendering_multibody_plant</code> sometimes crashes with an interrupted
 error. In that case, click through to the “Environment” gear in the
 left-hand panel, then into the <code class="language-plaintext highlighter-rouge">init.ipynb</code> notebook and re-run the
