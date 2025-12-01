@@ -1,7 +1,7 @@
 var NAVTREEINDEX24 =
 {
-"classdrake_1_1multibody_1_1_deformable_contact_info.html#a6698439b0d9254c7a0c7880b1e6c12da":[4,0,0,7,26,3],
 "classdrake_1_1multibody_1_1_deformable_contact_info.html#a6698439b0d9254c7a0c7880b1e6c12da":[4,0,0,7,25,3],
+"classdrake_1_1multibody_1_1_deformable_contact_info.html#a6698439b0d9254c7a0c7880b1e6c12da":[4,0,0,7,26,3],
 "classdrake_1_1multibody_1_1_deformable_contact_info.html#a69d03e02820eeae5a08d9529226649a1":[3,0,0,8,27,1],
 "classdrake_1_1multibody_1_1_deformable_contact_info.html#a69d03e02820eeae5a08d9529226649a1":[4,0,0,7,25,1],
 "classdrake_1_1multibody_1_1_deformable_contact_info.html#a6ac05bc95e69c0667681ae90ce0ed1e2":[3,0,0,8,27,0],
