@@ -1,6 +1,5 @@
 var NAVTREEINDEX91 =
 {
-"namespacedrake_1_1symbolic.html#ae03557c00e4297b310ef75c16f48f3b3":[3,0,0,13,319],
 "namespacedrake_1_1symbolic.html#ae05b78fd26fef2a243bdfe6530c59dc5":[3,0,0,13,146],
 "namespacedrake_1_1symbolic.html#ae1f447c509e16ebf85df16216af97882":[3,0,0,13,114],
 "namespacedrake_1_1symbolic.html#ae28c71d4bee52bfa5e4928605a4ee87d":[3,0,0,13,442],
@@ -249,5 +248,6 @@ var NAVTREEINDEX91 =
 "non__convex__optimization__util_8h.html":[5,0,0,11,34],
 "normalize__vector_8h.html":[5,0,0,7,25],
 "obb_8h.html":[5,0,0,4,2,38],
-"obj__to__surface__mesh_8h.html":[5,0,0,4,2,39]
+"obj__to__surface__mesh_8h.html":[5,0,0,4,2,39],
+"orientation__constraint_8h.html":[5,0,0,8,4,18]
 };

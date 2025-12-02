@@ -65,6 +65,7 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "string_unordered_set.h", "string__unordered__set_8h.html", "string__unordered__set_8h" ],
     [ "temp_directory.h", "temp__directory_8h.html", "temp__directory_8h" ],
     [ "text_logging.h", "text__logging_8h.html", "text__logging_8h" ],
+    [ "text_logging_spdlog.h", "text__logging__spdlog_8h.html", "text__logging__spdlog_8h" ],
     [ "timer.h", "timer_8h.html", "timer_8h" ],
     [ "type_safe_index.h", "type__safe__index_8h.html", "type__safe__index_8h" ],
     [ "unused.h", "unused_8h.html", "unused_8h" ],

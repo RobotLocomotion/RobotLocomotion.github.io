@@ -53,7 +53,6 @@ var namespacedrake_1_1geometry_1_1optimization =
     [ "DistanceToHalfspace", "namespacedrake_1_1geometry_1_1optimization.html#ab9e60a7f169083177d5688b5710f6062", null ],
     [ "GetVertices", "namespacedrake_1_1geometry_1_1optimization.html#af1e7e950577ea3c6a0ff39b4c5dd4753", null ],
     [ "Iris", "group__planning__iris.html#ga41ad36e136530c33abb2d19a40f4f5e3", null ],
-    [ "IrisInConfigurationSpace", "namespacedrake_1_1geometry_1_1optimization.html#a61652107b80bd2cfb9cd3406146ba613", null ],
     [ "IrisNp", "group__planning__iris.html#ga9a3aba193bc960e38b6ae305e30dd13c", null ],
     [ "MakeConvexSets", "namespacedrake_1_1geometry_1_1optimization.html#a9d178543ab51c4cf40c6e041afcb7c7b", null ],
     [ "MakeIrisObstacles", "group__planning__iris.html#ga1695afcbf10d19b297140421a5a5ade8", null ],

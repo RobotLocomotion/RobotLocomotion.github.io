@@ -280,8 +280,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga1695afcbf10d19b297140421a5a5ade8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> representations of obstacles for IRIS in 3D using the geometry from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.  <br /></td></tr>
 <tr class="memitem:ga9a3aba193bc960e38b6ae305e30dd13c" id="r_ga9a3aba193bc960e38b6ae305e30dd13c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#ga9a3aba193bc960e38b6ae305e30dd13c">IrisNp</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
 <tr class="memdesc:ga9a3aba193bc960e38b6ae305e30dd13c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variation of the Iris (Iterative Region Inflation by Semidefinite programming) algorithm which finds collision-free regions in the <em>configuration space</em> of <code class="param">plant</code>.  <br /></td></tr>
-<tr class="memitem:a61652107b80bd2cfb9cd3406146ba613" id="r_a61652107b80bd2cfb9cd3406146ba613"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61652107b80bd2cfb9cd3406146ba613">IrisInConfigurationSpace</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
-<tr class="memdesc:a61652107b80bd2cfb9cd3406146ba613"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:gaece042cde9122f05ca663a27fa7d0ea9" id="r_gaece042cde9122f05ca663a27fa7d0ea9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning__iris.html#gaece042cde9122f05ca663a27fa7d0ea9">SetEdgeContainmentTerminationCondition</a> (<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> *iris_options, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_1, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_2, const <a class="el" href="classdouble.html">double</a> epsilon=1e-3, const <a class="el" href="classdouble.html">double</a> tol=1e-6)</td></tr>
 <tr class="memdesc:gaece042cde9122f05ca663a27fa7d0ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies the <code class="param">iris_options</code> to facilitate finding a region that contains the edge between x_1 and x_2.  <br /></td></tr>
 <tr class="memitem:af1e7e950577ea3c6a0ff39b4c5dd4753" id="r_af1e7e950577ea3c6a0ff39b4c5dd4753"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1e7e950577ea3c6a0ff39b4c5dd4753">GetVertices</a> (const <a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a> &amp;convex)</td></tr>
@@ -530,36 +528,6 @@ template&lt;typename D, typename S, typename V&gt; </div>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a61652107b80bd2cfb9cd3406146ba613" name="a61652107b80bd2cfb9cd3406146ba613"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61652107b80bd2cfb9cd3406146ba613">&#9670;&#160;</a></span>IrisInConfigurationSpace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> IrisInConfigurationSpace </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plant</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>context</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>()</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated</a></b></dt><dd>Use IrisNp instead. <br  />
- This will be removed from Drake on or after 2025-12-01. </dd></dl>
 
 </div>
 </div>

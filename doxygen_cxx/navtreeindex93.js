@@ -1,6 +1,5 @@
 var NAVTREEINDEX93 =
 {
-"spanning__forest__tree_8h.html":[5,0,0,8,11,12],
 "sparse__and__dense__matrix_8h.html":[5,0,0,11,54],
 "sparse__linear__operator_8h.html":[5,0,0,8,1,19],
 "sparse__matrix__gain_8h.html":[5,0,0,12,6,26],
@@ -249,5 +248,6 @@ var NAVTREEINDEX93 =
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ad7178daaf2b128e7576318790394a37f":[3,0,0,2,4,5,2],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ad7178daaf2b128e7576318790394a37f":[4,0,0,1,4,5,2],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html":[3,0,0,3,14],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html":[4,0,0,2,11]
+"structdrake_1_1geometry_1_1_default_proximity_properties.html":[4,0,0,2,11],
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#a114a86a4dc5c458db9cc50a31ec8fdbf":[3,0,0,3,14,9]
 };

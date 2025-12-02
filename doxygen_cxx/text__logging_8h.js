@@ -2,7 +2,6 @@ var text__logging_8h =
 [
     [ "Warn", "structdrake_1_1logging_1_1_warn.html", "structdrake_1_1logging_1_1_warn" ],
     [ "drake::logging::logger", "namespacedrake_1_1logging.html#a9cae370466ffb304c10aebea42eca26b", null ],
-    [ "drake::logging::get_dist_sink", "namespacedrake_1_1logging.html#a94468e8ec9eb0ece9e44e84fcc94ecd2", null ],
     [ "drake::log", "namespacedrake.html#aa157c1d75c2e52df3370e5f458022ee9", null ],
     [ "drake::logging::set_log_level", "namespacedrake_1_1logging.html#ae4810092d5fdfca56f482a22ba061ce9", null ],
     [ "drake::logging::set_log_pattern", "namespacedrake_1_1logging.html#a4375c78dc51caefbb7ce65fe50098d26", null ],
