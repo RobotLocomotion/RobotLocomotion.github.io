@@ -1,5 +1,8 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#aec810cdd9c5507d3d3c121c9cb3ab269":[3,0,0,13,58,0,0],
+"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#aec810cdd9c5507d3d3c121c9cb3ab269":[4,0,0,12,58,0,0],
+"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af3841474533d8bd1db7c131548d0bc27":[3,0,0,13,58,0,1],
 "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af3841474533d8bd1db7c131548d0bc27":[4,0,0,12,58,0,1],
 "structdrake_1_1symbolic_1_1_sin_cos.html":[3,0,0,13,63],
 "structdrake_1_1symbolic_1_1_sin_cos.html":[4,0,0,12,63],
@@ -236,18 +239,15 @@ var NAVTREEINDEX100 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,2,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,3,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,5,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,4,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,7,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,6,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,8,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,7,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,10,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,9,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,11,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,4,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,12,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,5,9,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[4,0,0,13,5,2,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[4,0,0,13,5,3,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[4,0,0,13,5,4,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[4,0,0,13,5,6,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[4,0,0,13,5,8,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[4,0,0,13,5,7,0]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[4,0,0,13,5,4,0]
 };

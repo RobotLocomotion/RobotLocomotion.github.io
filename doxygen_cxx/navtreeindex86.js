@@ -1,5 +1,8 @@
 var NAVTREEINDEX86 =
 {
+"make__mesh__from__vtk_8h.html":[5,0,0,4,2,28],
+"make__pendulum__plant_8h.html":[5,0,0,8,0,5,0],
+"make__sphere__field_8h.html":[5,0,0,4,2,29],
 "make__sphere__mesh_8h.html":[5,0,0,4,2,30],
 "manipulator__equation__constraint_8h.html":[5,0,0,8,7,3],
 "mass__damper__spring__analytical__solution_8h.html":[5,0,0,8,0,4,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX86 =
 "namespacedrake_1_1geometry.html#a5e63dda63c412c981364dec694ed3d16":[3,0,0,3,109],
 "namespacedrake_1_1geometry.html#a6247d94deb29805e3995bfd786ecd03a":[3,0,0,3,114],
 "namespacedrake_1_1geometry.html#a6a949953d76af52d6dd1b13417cb556a":[3,0,0,3,118],
-"namespacedrake_1_1geometry.html#a6c74afc9942060de51e7c6a65f0ade08":[3,0,0,3,96],
-"namespacedrake_1_1geometry.html#a70187c16ea14553f92a3bec4402ae490":[3,0,0,3,83],
-"namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772":[3,0,0,3,84],
-"namespacedrake_1_1geometry.html#a75a53812378833c4ceabcde98a841e89":[3,0,0,3,100]
+"namespacedrake_1_1geometry.html#a6c74afc9942060de51e7c6a65f0ade08":[3,0,0,3,96]
 };

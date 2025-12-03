@@ -1,5 +1,8 @@
 var NAVTREEINDEX99 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a2b5855cfba3ee924b2dd12eed326deba":[3,0,0,11,6,2,2],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a2b5855cfba3ee924b2dd12eed326deba":[4,0,0,10,6,2,2],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69":[3,0,0,11,6,2,0],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69":[4,0,0,10,6,2,0],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,11,6,2,5],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,10,6,2,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX99 =
 "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,13,54,0],
 "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[4,0,0,12,54,0],
 "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[3,0,0,13,58,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[4,0,0,12,58,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#aec810cdd9c5507d3d3c121c9cb3ab269":[3,0,0,13,58,0,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#aec810cdd9c5507d3d3c121c9cb3ab269":[4,0,0,12,58,0,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html#af3841474533d8bd1db7c131548d0bc27":[3,0,0,13,58,0,1]
+"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[4,0,0,12,58,0]
 };

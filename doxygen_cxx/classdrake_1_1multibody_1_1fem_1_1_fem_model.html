@@ -178,7 +178,7 @@ V(X,t) = ∑ᵢ vᵢ(t)Nᵢ(X)
 A(X,t) = ∑ᵢ aᵢ(t)Nᵢ(X)
 </pre><p>where xᵢ, vᵢ, aᵢ ∈ R³ are nodal values of the spatially discretized position, velocity and acceleration, and Nᵢ(X):Ω⁰ → R are the the basis functions. With this spatial discretization, the PDE is turned into an ODE of the form </p><pre class="fragment">G(x, v, a) = 0,            (1)
 </pre><p>where x, v, a are the stacked xᵢ, vᵢ, aᵢ. FemModel provides methods to query various information about equation (1) and its derivatives given an FEM state (x, v, a).</p>
-<p>We implement FemModel in FemModelImpl that templatizes on the type of FemElement. Many functionalities provided by FemModel (e.g. <a class="el" href="#aff2f3bcebb7e575c8aa83c382eea070c" title="Calculates an approximated tangent matrix evaluated at the given FEM state.">CalcTangentMatrix()</a>) involve evaluating computationally intensive loops over FEM elements, and the overhead caused by virtual methods may be significant. We implement those functions in FemModelImpl templated on the FemElement to avoid the overhead of virtual methods. The type information at compile time also helps eliminate heap allocations.</p>
+<p>We implement FemModel in FemModelImpl that templatizes on the type of FemElement. Many functionalities provided by FemModel (e.g. <a class="el" href="#ad5e8195207bebb0da3d8ffad85f56b90" title="Calculates an approximated tangent matrix evaluated at the given FEM state.">CalcTangentMatrix()</a>) involve evaluating computationally intensive loops over FEM elements, and the overhead caused by virtual methods may be significant. We implement those functions in FemModelImpl templated on the FemElement to avoid the overhead of virtual methods. The type information at compile time also helps eliminate heap allocations.</p>
 <p>Sifakis, Eftychios, and Jernej Barbič. "Finite element method simulation of 3d
 deformable solids." Synthesis Lectures on Visual Computing: Computer Graphics, Animation, Computational Photography, and Imaging 1.1 (2015): 1-69.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -209,16 +209,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aee1189201e89e2facfb770a0c3624374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a default <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html" title="FemState provides access to private workspace FEM state and per-element state-dependent data.">FemState</a> compatible with this model.  <br /></td></tr>
 <tr class="memitem:af0809041ecb2fb849b49b05377d0568c" id="r_af0809041ecb2fb849b49b05377d0568c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0809041ecb2fb849b49b05377d0568c">CalcResidual</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state, const <a class="el" href="structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html">FemPlantData</a>&lt; T &gt; &amp;plant_data, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; residual) const</td></tr>
 <tr class="memdesc:af0809041ecb2fb849b49b05377d0568c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the residual G(x, v, a) (see class doc) evaluated at the given FEM state using the given <span class="tt">plant_data</span>.  <br /></td></tr>
-<tr class="memitem:aff2f3bcebb7e575c8aa83c382eea070c" id="r_aff2f3bcebb7e575c8aa83c382eea070c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff2f3bcebb7e575c8aa83c382eea070c">CalcTangentMatrix</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state, contact_solvers::internal::Block3x3SparseSymmetricMatrix *tangent_matrix) const</td></tr>
-<tr class="memdesc:aff2f3bcebb7e575c8aa83c382eea070c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates an approximated tangent matrix evaluated at the given FEM state.  <br /></td></tr>
+<tr class="memitem:ad5e8195207bebb0da3d8ffad85f56b90" id="r_ad5e8195207bebb0da3d8ffad85f56b90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5e8195207bebb0da3d8ffad85f56b90">CalcTangentMatrix</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state, contact_solvers::internal::BlockSparseSymmetricMatrix3d *tangent_matrix) const</td></tr>
+<tr class="memdesc:ad5e8195207bebb0da3d8ffad85f56b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates an approximated tangent matrix evaluated at the given FEM state.  <br /></td></tr>
 <tr class="memitem:a2bf69cd3c024c52620f8b4bd943b8d26" id="r_a2bf69cd3c024c52620f8b4bd943b8d26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bf69cd3c024c52620f8b4bd943b8d26">CalcCenterOfMassPositionInWorld</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const</td></tr>
 <tr class="memdesc:a2bf69cd3c024c52620f8b4bd943b8d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the position vector from the world origin Wo to the center of mass of all bodies in this <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a> S, expressed in the world frame W.  <br /></td></tr>
 <tr class="memitem:a833cfdbaf2e19c120dcf54d0160d3721" id="r_a833cfdbaf2e19c120dcf54d0160d3721"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a833cfdbaf2e19c120dcf54d0160d3721">CalcCenterOfMassTranslationalVelocityInWorld</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const</td></tr>
 <tr class="memdesc:a833cfdbaf2e19c120dcf54d0160d3721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates system center of mass translational velocity in world frame W.  <br /></td></tr>
 <tr class="memitem:a2ec50c604d68a030d87cd4b6ad51cdbf" id="r_a2ec50c604d68a030d87cd4b6ad51cdbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ec50c604d68a030d87cd4b6ad51cdbf">CalcEffectiveAngularVelocity</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const</td></tr>
 <tr class="memdesc:a2ec50c604d68a030d87cd4b6ad51cdbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Using an angular momentum analogy, calculates an "effective" angular velocity for this <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html" title="FemModel calculates the components of the spatially discretized FEM equations for dynamic elasticity ...">FemModel</a> S, measured and expressed in the world frame W.  <br /></td></tr>
-<tr class="memitem:ab5cea0ea971ad58bda7739363726ab90" id="r_ab5cea0ea971ad58bda7739363726ab90"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; contact_solvers::internal::Block3x3SparseSymmetricMatrix &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5cea0ea971ad58bda7739363726ab90">MakeTangentMatrix</a> () const</td></tr>
-<tr class="memdesc:ab5cea0ea971ad58bda7739363726ab90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a symmetric block sparse matrix that has the sparsity pattern of the tangent matrix of this FEM model.  <br /></td></tr>
+<tr class="memitem:a91a25d6ec28549a5417c3b7c4c975c71" id="r_a91a25d6ec28549a5417c3b7c4c975c71"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; contact_solvers::internal::BlockSparseSymmetricMatrix3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91a25d6ec28549a5417c3b7c4c975c71">MakeTangentMatrix</a> () const</td></tr>
+<tr class="memdesc:a91a25d6ec28549a5417c3b7c4c975c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a symmetric block sparse matrix that has the sparsity pattern of the tangent matrix of this FEM model.  <br /></td></tr>
 <tr class="memitem:a2ee02de44d4dbf0f45954abf319447b9" id="r_a2ee02de44d4dbf0f45954abf319447b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ee02de44d4dbf0f45954abf319447b9">ApplyBoundaryCondition</a> (<a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; *fem_state) const</td></tr>
 <tr class="memdesc:a2ee02de44d4dbf0f45954abf319447b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies boundary condition set for this FemModel to the input <span class="tt">state</span>.  <br /></td></tr>
 <tr class="memitem:afc3ad846cfba540a1eb038ce1b32a8e9" id="r_afc3ad846cfba540a1eb038ce1b32a8e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc3ad846cfba540a1eb038ce1b32a8e9">SetDirichletBoundaryCondition</a> (const internal::DirichletBoundaryCondition&lt; T &gt; &amp;dirichlet_bc)</td></tr>
@@ -254,16 +254,16 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a730261f88f7c2f3d0f16a9602b3cb04a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reference positions of this model.  <br /></td></tr>
 <tr class="memitem:a8f74800c59a29254dba06effaf8508c4" id="r_a8f74800c59a29254dba06effaf8508c4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f74800c59a29254dba06effaf8508c4">DoCalcResidual</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state, const <a class="el" href="structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html">FemPlantData</a>&lt; T &gt; &amp;plant_data, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; residual) const =0</td></tr>
 <tr class="memdesc:a8f74800c59a29254dba06effaf8508c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#af0809041ecb2fb849b49b05377d0568c" title="Calculates the residual G(x, v, a) (see class doc) evaluated at the given FEM state using the given p...">CalcResidual()</a>.  <br /></td></tr>
-<tr class="memitem:af91dcd079621ccc79c3656609cac0839" id="r_af91dcd079621ccc79c3656609cac0839"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af91dcd079621ccc79c3656609cac0839">DoCalcTangentMatrix</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state, contact_solvers::internal::Block3x3SparseSymmetricMatrix *tangent_matrix) const =0</td></tr>
-<tr class="memdesc:af91dcd079621ccc79c3656609cac0839"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#aff2f3bcebb7e575c8aa83c382eea070c" title="Calculates an approximated tangent matrix evaluated at the given FEM state.">CalcTangentMatrix()</a>.  <br /></td></tr>
+<tr class="memitem:a2c15f7f493d22bc9d51b549a27332047" id="r_a2c15f7f493d22bc9d51b549a27332047"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c15f7f493d22bc9d51b549a27332047">DoCalcTangentMatrix</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state, contact_solvers::internal::BlockSparseSymmetricMatrix3d *tangent_matrix) const =0</td></tr>
+<tr class="memdesc:a2c15f7f493d22bc9d51b549a27332047"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#ad5e8195207bebb0da3d8ffad85f56b90" title="Calculates an approximated tangent matrix evaluated at the given FEM state.">CalcTangentMatrix()</a>.  <br /></td></tr>
 <tr class="memitem:a7e181585ab7c7bde0a37c8781a99a01f" id="r_a7e181585ab7c7bde0a37c8781a99a01f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e181585ab7c7bde0a37c8781a99a01f">DoCalcCenterOfMassPositionInWorld</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const =0</td></tr>
 <tr class="memdesc:a7e181585ab7c7bde0a37c8781a99a01f"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#a2bf69cd3c024c52620f8b4bd943b8d26" title="Calculates the position vector from the world origin Wo to the center of mass of all bodies in this F...">CalcCenterOfMassPositionInWorld()</a>.  <br /></td></tr>
 <tr class="memitem:ad4a438ea9f47d61c24c18b8fb1b2f5fe" id="r_ad4a438ea9f47d61c24c18b8fb1b2f5fe"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4a438ea9f47d61c24c18b8fb1b2f5fe">DoCalcCenterOfMassTranslationalVelocityInWorld</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const =0</td></tr>
 <tr class="memdesc:ad4a438ea9f47d61c24c18b8fb1b2f5fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#a833cfdbaf2e19c120dcf54d0160d3721" title="Calculates system center of mass translational velocity in world frame W.">CalcCenterOfMassTranslationalVelocityInWorld()</a>.  <br /></td></tr>
 <tr class="memitem:a4cb22a715d5e89c459d83afea306ecde" id="r_a4cb22a715d5e89c459d83afea306ecde"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cb22a715d5e89c459d83afea306ecde">DoCalcEffectiveAngularVelocity</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const =0</td></tr>
 <tr class="memdesc:a4cb22a715d5e89c459d83afea306ecde"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#a2ec50c604d68a030d87cd4b6ad51cdbf" title="Using an angular momentum analogy, calculates an &quot;effective&quot; angular velocity for this FemModel S,...">CalcEffectiveAngularVelocity()</a>.  <br /></td></tr>
-<tr class="memitem:af365a0a2db9fde15e37ccf8ea64f9162" id="r_af365a0a2db9fde15e37ccf8ea64f9162"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; contact_solvers::internal::Block3x3SparseSymmetricMatrix &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af365a0a2db9fde15e37ccf8ea64f9162">DoMakeTangentMatrix</a> () const =0</td></tr>
-<tr class="memdesc:af365a0a2db9fde15e37ccf8ea64f9162"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#ab5cea0ea971ad58bda7739363726ab90" title="Creates a symmetric block sparse matrix that has the sparsity pattern of the tangent matrix of this F...">MakeTangentMatrix()</a>.  <br /></td></tr>
+<tr class="memitem:ad1f0eb72a64118c49707be10b7fa2767" id="r_ad1f0eb72a64118c49707be10b7fa2767"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; contact_solvers::internal::BlockSparseSymmetricMatrix3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1f0eb72a64118c49707be10b7fa2767">DoMakeTangentMatrix</a> () const =0</td></tr>
+<tr class="memdesc:ad1f0eb72a64118c49707be10b7fa2767"><td class="mdescLeft">&#160;</td><td class="mdescRight">FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#a91a25d6ec28549a5417c3b7c4c975c71" title="Creates a symmetric block sparse matrix that has the sparsity pattern of the tangent matrix of this F...">MakeTangentMatrix()</a>.  <br /></td></tr>
 <tr class="memitem:a7bd928c1298c6e5939d3bd2559e18e71" id="r_a7bd928c1298c6e5939d3bd2559e18e71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bd928c1298c6e5939d3bd2559e18e71">UpdateFemStateSystem</a> ()</td></tr>
 <tr class="memdesc:a7bd928c1298c6e5939d3bd2559e18e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the system that manages the states and the cache entries of this FEM model.  <br /></td></tr>
 <tr class="memitem:a4e0e23b8877740039d58b314565edf8b" id="r_a4e0e23b8877740039d58b314565edf8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e0e23b8877740039d58b314565edf8b">DeclareCacheEntries</a> (internal::FemStateSystem&lt; T &gt; *<a class="el" href="#a4e3b13b061c29887348f61a7bee3fcc7">fem_state_system</a>)=0</td></tr>
@@ -570,8 +570,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="aff2f3bcebb7e575c8aa83c382eea070c" name="aff2f3bcebb7e575c8aa83c382eea070c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff2f3bcebb7e575c8aa83c382eea070c">&#9670;&#160;</a></span>CalcTangentMatrix()</h2>
+<a id="ad5e8195207bebb0da3d8ffad85f56b90" name="ad5e8195207bebb0da3d8ffad85f56b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e8195207bebb0da3d8ffad85f56b90">&#9670;&#160;</a></span>CalcTangentMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -586,7 +586,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">contact_solvers::internal::Block3x3SparseSymmetricMatrix *</td>          <td class="paramname"><span class="paramname"><em>tangent_matrix</em></span>&#160;) const</td>
+          <td class="paramtype">contact_solvers::internal::BlockSparseSymmetricMatrix3d *</td>          <td class="paramname"><span class="paramname"><em>tangent_matrix</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -603,7 +603,7 @@ template&lt;typename T&gt; </div>
 <dd>
 The size of <span class="tt">tangent_matrix</span> is <span class="tt"><a class="el" href="#af4e031e8d885172740f7f66f07234f7f" title="The number of degrees of freedom in this model.">num_dofs()</a></span> * <span class="tt"><a class="el" href="#af4e031e8d885172740f7f66f07234f7f" title="The number of degrees of freedom in this model.">num_dofs()</a></span>. </dd>
 <dd>
-All nonzero entries in the resulting tangent matrix have been allocated. See <a class="el" href="#ab5cea0ea971ad58bda7739363726ab90" title="Creates a symmetric block sparse matrix that has the sparsity pattern of the tangent matrix of this F...">MakeTangentMatrix()</a>. </dd></dl>
+All nonzero entries in the resulting tangent matrix have been allocated. See <a class="el" href="#a91a25d6ec28549a5417c3b7c4c975c71" title="Creates a symmetric block sparse matrix that has the sparsity pattern of the tangent matrix of this F...">MakeTangentMatrix()</a>. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This function sometimes makes simplifying approximations to avoid taking overly complicated derivatives. As such, the resulting tangent matrix may be an approximation of the actual value depending on the constitutive model used. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
@@ -842,8 +842,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="af91dcd079621ccc79c3656609cac0839" name="af91dcd079621ccc79c3656609cac0839"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af91dcd079621ccc79c3656609cac0839">&#9670;&#160;</a></span>DoCalcTangentMatrix()</h2>
+<a id="a2c15f7f493d22bc9d51b549a27332047" name="a2c15f7f493d22bc9d51b549a27332047"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c15f7f493d22bc9d51b549a27332047">&#9670;&#160;</a></span>DoCalcTangentMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -861,7 +861,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">contact_solvers::internal::Block3x3SparseSymmetricMatrix *</td>          <td class="paramname"><span class="paramname"><em>tangent_matrix</em></span>&#160;) const</td>
+          <td class="paramtype">contact_solvers::internal::BlockSparseSymmetricMatrix3d *</td>          <td class="paramname"><span class="paramname"><em>tangent_matrix</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -871,7 +871,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#aff2f3bcebb7e575c8aa83c382eea070c" title="Calculates an approximated tangent matrix evaluated at the given FEM state.">CalcTangentMatrix()</a>. </p>
+<p>FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#ad5e8195207bebb0da3d8ffad85f56b90" title="Calculates an approximated tangent matrix evaluated at the given FEM state.">CalcTangentMatrix()</a>. </p>
 <p>The input <span class="tt">fem_state</span> is guaranteed to be compatible with <span class="tt">this</span> FEM model, and the input <span class="tt">tangent_matrix</span> is guaranteed to be non-null and properly sized. </p>
 
 </div>
@@ -905,8 +905,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="af365a0a2db9fde15e37ccf8ea64f9162" name="af365a0a2db9fde15e37ccf8ea64f9162"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af365a0a2db9fde15e37ccf8ea64f9162">&#9670;&#160;</a></span>DoMakeTangentMatrix()</h2>
+<a id="ad1f0eb72a64118c49707be10b7fa2767" name="ad1f0eb72a64118c49707be10b7fa2767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f0eb72a64118c49707be10b7fa2767">&#9670;&#160;</a></span>DoMakeTangentMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -917,7 +917,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::unique_ptr&lt; contact_solvers::internal::Block3x3SparseSymmetricMatrix &gt; DoMakeTangentMatrix </td>
+          <td class="memname">virtual std::unique_ptr&lt; contact_solvers::internal::BlockSparseSymmetricMatrix3d &gt; DoMakeTangentMatrix </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -930,7 +930,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#ab5cea0ea971ad58bda7739363726ab90" title="Creates a symmetric block sparse matrix that has the sparsity pattern of the tangent matrix of this F...">MakeTangentMatrix()</a>. </p>
+<p>FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="#a91a25d6ec28549a5417c3b7c4c975c71" title="Creates a symmetric block sparse matrix that has the sparsity pattern of the tangent matrix of this F...">MakeTangentMatrix()</a>. </p>
 
 </div>
 </div>
@@ -1076,8 +1076,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="ab5cea0ea971ad58bda7739363726ab90" name="ab5cea0ea971ad58bda7739363726ab90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5cea0ea971ad58bda7739363726ab90">&#9670;&#160;</a></span>MakeTangentMatrix()</h2>
+<a id="a91a25d6ec28549a5417c3b7c4c975c71" name="a91a25d6ec28549a5417c3b7c4c975c71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a25d6ec28549a5417c3b7c4c975c71">&#9670;&#160;</a></span>MakeTangentMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1085,7 +1085,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; contact_solvers::internal::Block3x3SparseSymmetricMatrix &gt; MakeTangentMatrix </td>
+          <td class="memname">std::unique_ptr&lt; contact_solvers::internal::BlockSparseSymmetricMatrix3d &gt; MakeTangentMatrix </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

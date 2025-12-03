@@ -112,7 +112,7 @@ var searchData=
   ['makestandalonemodelcontext_109',['MakeStandaloneModelContext',['../classdrake_1_1planning_1_1_collision_checker.html#afe874e7850ecb2ec51f0c950903d572c',1,'drake::planning::CollisionChecker']]],
   ['makestate_110',['MakeState',['../classdrake_1_1systems_1_1_diagram_context.html#a00d343a57e4d542815e5916c591ae8d6',1,'drake::systems::DiagramContext']]],
   ['makestateselectormatrix_111',['MakeStateSelectorMatrix',['../classdrake_1_1multibody_1_1_multibody_plant.html#ae1c9973e5bec9022fa46dfcedb34df84',1,'drake::multibody::MultibodyPlant']]],
-  ['maketangentmatrix_112',['MakeTangentMatrix',['../classdrake_1_1multibody_1_1fem_1_1_fem_model.html#ab5cea0ea971ad58bda7739363726ab90',1,'drake::multibody::fem::FemModel']]],
+  ['maketangentmatrix_112',['MakeTangentMatrix',['../classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a91a25d6ec28549a5417c3b7c4c975c71',1,'drake::multibody::fem::FemModel']]],
   ['makeunchecked_113',['MakeUnchecked',['../classdrake_1_1math_1_1_rigid_transform.html#adbc14bc43f7b74bdb7df327cc7606c75',1,'drake::math::RigidTransform::MakeUnchecked()'],['../classdrake_1_1math_1_1_rotation_matrix.html#a5613dc2db5b11ef1e0a3675a512511f5',1,'drake::math::RotationMatrix::MakeUnchecked()']]],
   ['makeunitary_114',['MakeUnitary',['../classdrake_1_1multibody_1_1_spatial_inertia.html#a77626e29d3535a4c129fabba2b3ef2f6',1,'drake::multibody::SpatialInertia']]],
   ['makeunitball_115',['MakeUnitBall',['../classdrake_1_1geometry_1_1optimization_1_1_affine_ball.html#a30c80ecf16e7879f121f2df8e3297c5c',1,'drake::geometry::optimization::AffineBall::MakeUnitBall()'],['../classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a84c2ba9e34cf02155736ab87a70342cd',1,'drake::geometry::optimization::Hyperellipsoid::MakeUnitBall()']]],
