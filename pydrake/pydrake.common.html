@@ -178,7 +178,7 @@ multivariate distribution.</p>
 the scalar type, for example CalcProbabilityDensity&lt;double&gt;(…), the
 compiler might have problem to deduce the scalar type automatically.</p>
 <ol class="arabic simple" start="2">
-<li><p>CalcProbabilityDensity(distribution: pydrake.common.RandomDistribution, x: numpy.ndarray[object[m, 1]]) -&gt; Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt;</p></li>
+<li><p>CalcProbabilityDensity(distribution: pydrake.common.RandomDistribution, x: numpy.ndarray[object[m, 1]]) -&gt; pydrake.autodiffutils.AutoDiffXd</p></li>
 </ol>
 <p>Calculates the density (probability density function) of the
 multivariate distribution.</p>
