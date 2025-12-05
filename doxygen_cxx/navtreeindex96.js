@@ -1,5 +1,7 @@
 var NAVTREEINDEX96 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[2,4,2,4,4,3],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[2,1,1,12,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[2,5,5,12,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a087724eb9045117415e4d5a93db67ab1":[2,4,2,4,4,16],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a087724eb9045117415e4d5a93db67ab1":[2,1,1,12,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX96 =
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#aacb5b00cc0c596da1dca6a4126032222":[4,0,0,5,3,12,4],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#ac09f3eaa1a4fbd93e8d5acc459a0e04c":[3,0,0,6,3,12,5],
 "structdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator_state_vector_indices.html#ac09f3eaa1a4fbd93e8d5acc459a0e04c":[4,0,0,5,3,12,5],
-"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html":[3,0,0,7,2],
-"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html":[4,0,0,6,2],
-"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html#a49c4cd96758b9a7158941e142fd156b9":[3,0,0,7,2,0]
+"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html":[3,0,0,7,2]
 };

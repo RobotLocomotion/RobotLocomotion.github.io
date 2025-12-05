@@ -1,5 +1,7 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html":[4,0,0,6,2],
+"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html#a49c4cd96758b9a7158941e142fd156b9":[3,0,0,7,2,0],
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html#a49c4cd96758b9a7158941e142fd156b9":[4,0,0,6,2,0],
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html":[3,0,0,7,3],
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html":[4,0,0,6,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab789f8c5c51c6c3bbd3d2d7737c95b29":[3,0,0,8,109,1],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab789f8c5c51c6c3bbd3d2d7737c95b29":[4,0,0,7,107,1],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acad1162320925e1bba6171c41831504e":[3,0,0,8,109,2],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acad1162320925e1bba6171c41831504e":[4,0,0,7,107,2],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acda4a0a5802babdb809dacb42ae34988":[3,0,0,8,109,4],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acda4a0a5802babdb809dacb42ae34988":[4,0,0,7,107,4]
+"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acad1162320925e1bba6171c41831504e":[4,0,0,7,107,2]
 };

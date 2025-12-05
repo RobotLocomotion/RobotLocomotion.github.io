@@ -1,5 +1,7 @@
 var NAVTREEINDEX93 =
 {
+"spanning__forest_8h.html":[5,0,0,8,11,8],
+"spanning__forest__inlines_8h.html":[5,0,0,8,11,9],
 "spanning__forest__loop__constraint_8h.html":[5,0,0,8,11,10],
 "spanning__forest__mobod_8h.html":[5,0,0,8,11,11],
 "spanning__forest__tree_8h.html":[5,0,0,8,11,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX93 =
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[3,0,0,2,4,5,3],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac0a48f1de78b04b74cda381adcae8d71":[4,0,0,1,4,5,3],
 "structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac7fb7de4cb058013c26c48812a248d90":[3,0,0,2,4,5,4],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac7fb7de4cb058013c26c48812a248d90":[4,0,0,1,4,5,4],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ad7178daaf2b128e7576318790394a37f":[3,0,0,2,4,5,2],
-"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ad7178daaf2b128e7576318790394a37f":[4,0,0,1,4,5,2]
+"structdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_params_indices.html#ac7fb7de4cb058013c26c48812a248d90":[4,0,0,1,4,5,4]
 };

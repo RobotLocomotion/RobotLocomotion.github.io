@@ -1,5 +1,7 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acda4a0a5802babdb809dacb42ae34988":[3,0,0,8,109,4],
+"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acda4a0a5802babdb809dacb42ae34988":[4,0,0,7,107,4],
 "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html":[3,0,0,8,110],
 "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html":[4,0,0,7,108],
 "structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a0f73b758fdc6b763190aa6ea76e014c2":[3,0,0,8,110,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[3,0,0,11,6,1,0],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[4,0,0,10,6,1,0],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[3,0,0,11,6,2],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[4,0,0,10,6,2],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a1c90bdc946c78848a793eb4fc2e9b7e5":[3,0,0,11,6,2,1],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a1c90bdc946c78848a793eb4fc2e9b7e5":[4,0,0,10,6,2,1]
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[4,0,0,10,6,2]
 };

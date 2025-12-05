@@ -1,5 +1,7 @@
 var NAVTREEINDEX92 =
 {
+"non__convex__optimization__util_8h.html":[5,0,0,11,34],
+"normalize__vector_8h.html":[5,0,0,7,25],
 "obb_8h.html":[5,0,0,4,2,38],
 "obj__to__surface__mesh_8h.html":[5,0,0,4,2,39],
 "orientation__constraint_8h.html":[5,0,0,8,4,18],
@@ -247,7 +249,5 @@ var NAVTREEINDEX92 =
 "solver__type__converter_8h.html":[5,0,0,11,52],
 "sorted__pair_8h.html":[5,0,0,1,56],
 "sorted__triplet_8h.html":[5,0,0,4,2,47],
-"sos__basis__generator_8h.html":[5,0,0,11,53],
-"spanning__forest_8h.html":[5,0,0,8,11,8],
-"spanning__forest__inlines_8h.html":[5,0,0,8,11,9]
+"sos__basis__generator_8h.html":[5,0,0,11,53]
 };
