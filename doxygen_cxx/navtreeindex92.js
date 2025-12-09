@@ -1,5 +1,7 @@
 var NAVTREEINDEX92 =
 {
+"nice__type__name_8h.html":[5,0,0,1,45],
+"nlopt__solver_8h.html":[5,0,0,11,33],
 "non__convex__optimization__util_8h.html":[5,0,0,11,34],
 "normalize__vector_8h.html":[5,0,0,7,25],
 "obb_8h.html":[5,0,0,4,2,38],
@@ -247,7 +249,5 @@ var NAVTREEINDEX92 =
 "solver__options_8h.html":[5,0,0,11,50],
 "solver__type_8h.html":[5,0,0,11,51],
 "solver__type__converter_8h.html":[5,0,0,11,52],
-"sorted__pair_8h.html":[5,0,0,1,56],
-"sorted__triplet_8h.html":[5,0,0,4,2,47],
-"sos__basis__generator_8h.html":[5,0,0,11,53]
+"sorted__pair_8h.html":[5,0,0,1,56]
 };

@@ -152,6 +152,8 @@ var NAVTREEINDEX84 =
 "functions_z.html":[4,3,0,25],
 "functions_~.html":[4,3,0,26],
 "gain_8h.html":[5,0,0,12,6,12],
+"gain__constraints__data__pool_8h.html":[5,0,0,8,1,0,3],
+"gain__constraints__pool_8h.html":[5,0,0,8,1,0,4],
 "gaussian__triangle__quadrature__rule_8h.html":[5,0,0,8,13,0],
 "gaze__target__constraint_8h.html":[5,0,0,8,4,12],
 "gcs__trajectory__optimization_8h.html":[5,0,0,10,3,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX84 =
 "group__geometry__file__formats.html":[2,5,4],
 "group__geometry__infrastructure.html":[2,5,0],
 "group__geometry__optimization.html":[2,1,1],
-"group__geometry__optimization.html":[2,5,5],
-"group__geometry__optimization__geodesic__convexity.html":[2,1,1,0],
-"group__geometry__optimization__geodesic__convexity.html":[2,5,5,0]
+"group__geometry__optimization.html":[2,5,5]
 };
