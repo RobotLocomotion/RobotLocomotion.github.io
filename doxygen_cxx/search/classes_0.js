@@ -37,5 +37,6 @@ var searchData=
   ['antiderivativefunction_34',['AntiderivativeFunction',['../classdrake_1_1systems_1_1_antiderivative_function.html',1,'drake::systems']]],
   ['articulatedbodyinertia_35',['ArticulatedBodyInertia',['../classdrake_1_1multibody_1_1_articulated_body_inertia.html',1,'drake::multibody']]],
   ['augmentedlagrangiannonsmooth_36',['AugmentedLagrangianNonsmooth',['../classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html',1,'drake::solvers']]],
-  ['augmentedlagrangiansmooth_37',['AugmentedLagrangianSmooth',['../classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html',1,'drake::solvers']]]
+  ['augmentedlagrangiansmooth_37',['AugmentedLagrangianSmooth',['../classdrake_1_1solvers_1_1_augmented_lagrangian_smooth.html',1,'drake::solvers']]],
+  ['autodiff_38',['AutoDiff',['../classdrake_1_1ad_1_1_auto_diff.html',1,'drake::ad']]]
 ];

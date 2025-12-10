@@ -74,11 +74,12 @@ var searchData=
   ['drake_5flcm_5finterface_2eh_71',['drake_lcm_interface.h',['../drake__lcm__interface_8h.html',1,'']]],
   ['drake_5flcm_5flog_2eh_72',['drake_lcm_log.h',['../drake__lcm__log_8h.html',1,'']]],
   ['drake_5flcm_5fparams_2eh_73',['drake_lcm_params.h',['../drake__lcm__params_8h.html',1,'']]],
-  ['drake_5fpath_2eh_74',['drake_path.h',['../drake__path_8h.html',1,'']]],
-  ['drake_5fthrow_2eh_75',['drake_throw.h',['../drake__throw_8h.html',1,'']]],
-  ['drake_5fvisualizer_2eh_76',['drake_visualizer.h',['../drake__visualizer_8h.html',1,'']]],
-  ['drake_5fvisualizer_5fparams_2eh_77',['drake_visualizer_params.h',['../drake__visualizer__params_8h.html',1,'']]],
-  ['dummy_5fphysical_5fmodel_2eh_78',['dummy_physical_model.h',['../dummy__physical__model_8h.html',1,'']]],
-  ['dummy_5fvalue_2eh_79',['dummy_value.h',['../dummy__value_8h.html',1,'']]],
-  ['dynamic_5fprogramming_2eh_80',['dynamic_programming.h',['../dynamic__programming_8h.html',1,'']]]
+  ['drake_5foperations_2eh_74',['drake_operations.h',['../drake__operations_8h.html',1,'']]],
+  ['drake_5fpath_2eh_75',['drake_path.h',['../drake__path_8h.html',1,'']]],
+  ['drake_5fthrow_2eh_76',['drake_throw.h',['../drake__throw_8h.html',1,'']]],
+  ['drake_5fvisualizer_2eh_77',['drake_visualizer.h',['../drake__visualizer_8h.html',1,'']]],
+  ['drake_5fvisualizer_5fparams_2eh_78',['drake_visualizer_params.h',['../drake__visualizer__params_8h.html',1,'']]],
+  ['dummy_5fphysical_5fmodel_2eh_79',['dummy_physical_model.h',['../dummy__physical__model_8h.html',1,'']]],
+  ['dummy_5fvalue_2eh_80',['dummy_value.h',['../dummy__value_8h.html',1,'']]],
+  ['dynamic_5fprogramming_2eh_81',['dynamic_programming.h',['../dynamic__programming_8h.html',1,'']]]
 ];

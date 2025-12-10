@@ -165,7 +165,7 @@ $(function(){initNavTree('group__system__scalar__conversion.html','',''); });
 </div><!--header-->
 <div class="contents">
 <p>System scalar conversion refers to cloning a System templatized by one scalar type into an identical System that is templatized by a different scalar type. </p>
-<p>For example, a <span class="tt">MySystem&lt;double&gt;</span> could be cloned to create a <span class="tt">MySystem&lt;<a class="el" href="class_auto_diff_xd.html">AutoDiffXd</a>&gt;</span> in order to compute the partial numerical derivatives.</p>
+<p>For example, a <span class="tt">MySystem&lt;double&gt;</span> could be cloned to create a <span class="tt">MySystem&lt;AutoDiffXd&gt;</span> in order to compute the partial numerical derivatives.</p>
 <p>See the <a class="el" href="group__default__scalars.html">default scalars</a> for list of supported types.</p>
 <h2>Example use of system scalar conversion</h2>
 <p>This is a small example to illustrate the concept.</p>
@@ -194,12 +194,11 @@ $(function(){initNavTree('group__system__scalar__conversion.html','',''); });
 <div class="line">    MatrixXd::Identity(kNumDerivatives, kNumDerivatives).col(0);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Compute denergy/dtheta around its initial conditions.</span></div>
-<div class="line"><a class="code hl_class" href="class_auto_diff_xd.html">AutoDiffXd</a> autodiff_energy =</div>
+<div class="line">AutoDiffXd autodiff_energy =</div>
 <div class="line">    autodiff_plant-&gt;CalcTotalEnergy(*autodiff_context);</div>
 <div class="line">ASSERT_NEAR(autodiff_energy.value(), -4.875, 0.001);</div>
 <div class="line">ASSERT_EQ(autodiff_energy.derivatives().size(), 1);</div>
 <div class="line">ASSERT_NEAR(autodiff_energy.derivatives()[0], 0.490, 0.001);</div>
-<div class="ttc" id="aclass_auto_diff_xd_html"><div class="ttname"><a href="class_auto_diff_xd.html">AutoDiffXd</a></div></div>
 </div><!-- fragment --><p>For a more thorough example, refer to the implementation of <a class="el" href="group__primitive__systems.html#ga7c66291c5e9eafd1cfc9f025665d0041" title="Takes the first-order Taylor expansion of a System around a nominal operating point (defined by the C...">drake::systems::Linearize</a>.</p>
 <dl class="section warning"><dt>Warning</dt><dd>The supported method to perform scalar conversion uses the member functions on System, e.g., <span class="tt">System::ToAutoDiffXd</span>. The scalar-converting copy constructor (described below) is intended for internal use only. For example: <div class="fragment"><div class="line">PendulumPlant&lt;double&gt; plant;</div>
 <div class="line"> </div>
@@ -336,7 +335,7 @@ $(function(){initNavTree('group__system__scalar__conversion.html','',''); });
 <div class="line">};</div>
 </div><!-- fragment --><p>Here, <span class="tt">U</span> is the source scalar type (to convert from), and <span class="tt">T</span> the resulting scalar type (to convert into). For example, in the second line of </p><div class="fragment"><div class="line">Foo&lt;double&gt; foo;</div>
 <div class="line">Foo&lt;AutoDiffXd&gt; autodiff_foo{foo};</div>
-</div><!-- fragment --><p> we are calling the constructor <span class="tt">Foo&lt;<a class="el" href="class_auto_diff_xd.html">AutoDiffXd</a>&gt;::Foo(const Foo&lt;double&gt;&amp;)</span> so we have <span class="tt">U = double</span> and <span class="tt">T = <a class="el" href="class_auto_diff_xd.html">AutoDiffXd</a></span>. In other words, we start with a <span class="tt">double</span>-valued object and use it to create an <span class="tt"><a class="el" href="class_auto_diff_xd.html">AutoDiffXd</a></span>-valued object.</p>
+</div><!-- fragment --><p> we are calling the constructor <span class="tt">Foo&lt;AutoDiffXd&gt;::Foo(const Foo&lt;double&gt;&amp;)</span> so we have <span class="tt">U = double</span> and <span class="tt">T = AutoDiffXd</span>. In other words, we start with a <span class="tt">double</span>-valued object and use it to create an <span class="tt">AutoDiffXd</span>-valued object.</p>
 <h3>Delegation</h3>
 <p>In almost all cases, the implementation of the scalar-converting copy constructor should delegate to another regular constructor, rather than re-implementing its logic. For example, in the <span class="tt">VectorSystem</span>-based example above we have: </p><div class="fragment"><div class="line">MySystem() : VectorSystem&lt;T&gt;(SystemTypeTag&lt;MySystem&gt;{}, 1, 1) {}</div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt; <span class="keyword">explicit</span> MySystem(<span class="keyword">const</span> MySystem&lt;U&gt;&amp;) : MySystem&lt;T&gt;() {}</div>
@@ -362,7 +361,7 @@ $(function(){initNavTree('group__system__scalar__conversion.html','',''); });
 <div class="line">  }</div>
 <div class="line">};</div>
 </div><!-- fragment --><p>In this example, <span class="tt">MyDiagram</span> will support the same scalar types as the Integrator. If any sub-system had been added that did not support, e.g., symbolic form, then the Diagram would also not support symbolic form.</p>
-<p>By default, even subclasses of a <span class="tt">Diagram&lt;U&gt;</span> will convert to a <span class="tt">Diagram&lt;T&gt;</span>, discarding the diagram subclass details. For example, in the above sample code, <span class="tt">MyDiagram::ToAutoDiffXd()</span> will return an object of runtime type <span class="tt">Diagram&lt;<a class="el" href="class_auto_diff_xd.html">AutoDiffXd</a>&gt;</span>, not type <span class="tt">MyDiagram&lt;<a class="el" href="class_auto_diff_xd.html">AutoDiffXd</a>&gt;</span>. (There is no such class as <span class="tt">MyDiagram&lt;<a class="el" href="class_auto_diff_xd.html">AutoDiffXd</a>&gt;</span> anyway, because <span class="tt">MyDiagram</span> is not templated.)</p>
+<p>By default, even subclasses of a <span class="tt">Diagram&lt;U&gt;</span> will convert to a <span class="tt">Diagram&lt;T&gt;</span>, discarding the diagram subclass details. For example, in the above sample code, <span class="tt">MyDiagram::ToAutoDiffXd()</span> will return an object of runtime type <span class="tt">Diagram&lt;AutoDiffXd&gt;</span>, not type <span class="tt">MyDiagram&lt;AutoDiffXd&gt;</span>. (There is no such class as <span class="tt">MyDiagram&lt;AutoDiffXd&gt;</span> anyway, because <span class="tt">MyDiagram</span> is not templated.)</p>
 <p>In the unusual case that the Diagram's subclass must be preserved during conversion, a <a class="el" href="structdrake_1_1systems_1_1_system_type_tag.html" title="A tag object that denotes a System subclass S in function signatures.">drake::systems::SystemTypeTag</a> should be used:</p>
 <p>Example using DiagramBuilder::BuildInto along with a <span class="tt">SystemTypeTag</span>: </p><div class="fragment"><div class="line"><span class="keyword">namespace </span>sample {</div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>

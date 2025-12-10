@@ -1,0 +1,415 @@
+<!-- HTML header for doxygen 1.14.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: drake/common/ad/internal/standard_operations.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('standard__operations_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">standard_operations.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;iosfwd&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for standard_operations.h:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="standard__operations_8h__incl.svg" width="284" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="standard__operations_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:drake" id="r_drake"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
+<tr class="memitem:drake_3A_3Aad" id="r_drake_3A_3Aad"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html">drake::ad</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr id="func-members-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Increment and decrement</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a href="https://en.cppreference.com/w/cpp/language/operators#Increment_and_decrement">https://en.cppreference.com/w/cpp/language/operators#Increment_and_decrement</a> </p>
+</div></td></tr>
+<tr class="memitem:a0f990344349b09877c1b7494bb5e50af" id="r_a0f990344349b09877c1b7494bb5e50af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a0f990344349b09877c1b7494bb5e50af">operator++</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a0f990344349b09877c1b7494bb5e50af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard prefix increment operator (i.e., <span class="tt">++x</span>).  <br /></td></tr>
+<tr class="memitem:a59965882a3e25f14ddd10c860666a506" id="r_a59965882a3e25f14ddd10c860666a506"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a59965882a3e25f14ddd10c860666a506">operator++</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, int)</td></tr>
+<tr class="memdesc:a59965882a3e25f14ddd10c860666a506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard postfix increment operator (i.e., <span class="tt">x++</span>).  <br /></td></tr>
+<tr class="memitem:aedf2c0d41e4ea437cb884e2b96a49d88" id="r_aedf2c0d41e4ea437cb884e2b96a49d88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#aedf2c0d41e4ea437cb884e2b96a49d88">operator--</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:aedf2c0d41e4ea437cb884e2b96a49d88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard prefix decrement operator (i.e., <span class="tt">--x</span>).  <br /></td></tr>
+<tr class="memitem:a3e2d45100339c40873b55d861c7340c0" id="r_a3e2d45100339c40873b55d861c7340c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a3e2d45100339c40873b55d861c7340c0">operator--</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, int)</td></tr>
+<tr class="memdesc:a3e2d45100339c40873b55d861c7340c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard postfix decrement operator (i.e., <span class="tt">x--</span>).  <br /></td></tr>
+<tr id="func-members-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Arithmetic operators</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a href="https://en.cppreference.com/w/cpp/language/operators#Binary_arithmetic_operators">https://en.cppreference.com/w/cpp/language/operators#Binary_arithmetic_operators</a> </p>
+</div></td></tr>
+<tr class="memitem:a5c56e5345e6e0f5c95283266e6cdb48d" id="r_a5c56e5345e6e0f5c95283266e6cdb48d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a5c56e5345e6e0f5c95283266e6cdb48d">operator+=</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a5c56e5345e6e0f5c95283266e6cdb48d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound addition and assignment operator.  <br /></td></tr>
+<tr class="memitem:a78a9d162b4fb6324d07607f29e781386" id="r_a78a9d162b4fb6324d07607f29e781386"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a78a9d162b4fb6324d07607f29e781386">operator+=</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a78a9d162b4fb6324d07607f29e781386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound addition and assignment operator.  <br /></td></tr>
+<tr class="memitem:a6cd496aeee6472c2c058177a55e45c30" id="r_a6cd496aeee6472c2c058177a55e45c30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a6cd496aeee6472c2c058177a55e45c30">operator-=</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a6cd496aeee6472c2c058177a55e45c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound subtraction and assignment operator.  <br /></td></tr>
+<tr class="memitem:a72c71fbcd27141d383d8d1c110d7cd67" id="r_a72c71fbcd27141d383d8d1c110d7cd67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a72c71fbcd27141d383d8d1c110d7cd67">operator-=</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a72c71fbcd27141d383d8d1c110d7cd67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound subtraction and assignment operator.  <br /></td></tr>
+<tr class="memitem:a13d327a1d60d7d030da6ea739e3ed4cd" id="r_a13d327a1d60d7d030da6ea739e3ed4cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a13d327a1d60d7d030da6ea739e3ed4cd">operator*=</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a13d327a1d60d7d030da6ea739e3ed4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound multiplication and assignment operator.  <br /></td></tr>
+<tr class="memitem:aea7858af5b9a1b6919a9d3ecfe95b177" id="r_aea7858af5b9a1b6919a9d3ecfe95b177"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#aea7858af5b9a1b6919a9d3ecfe95b177">operator*=</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:aea7858af5b9a1b6919a9d3ecfe95b177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound multiplication and assignment operator.  <br /></td></tr>
+<tr class="memitem:a8b4edf6d2e18abdeb71f3ac69d58e50b" id="r_a8b4edf6d2e18abdeb71f3ac69d58e50b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a8b4edf6d2e18abdeb71f3ac69d58e50b">operator/=</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a8b4edf6d2e18abdeb71f3ac69d58e50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound division and assignment operator.  <br /></td></tr>
+<tr class="memitem:a734405c6d7979056c63229e9087dc902" id="r_a734405c6d7979056c63229e9087dc902"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a734405c6d7979056c63229e9087dc902">operator/=</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a734405c6d7979056c63229e9087dc902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard compound division and assignment operator.  <br /></td></tr>
+<tr class="memitem:af2a53a70ac283ac592da101e5d06edb3" id="r_af2a53a70ac283ac592da101e5d06edb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#af2a53a70ac283ac592da101e5d06edb3">operator+</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:af2a53a70ac283ac592da101e5d06edb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard addition operator.  <br /></td></tr>
+<tr class="memitem:a153ef6ac38f7aaa049ebfa34dd6015a8" id="r_a153ef6ac38f7aaa049ebfa34dd6015a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a153ef6ac38f7aaa049ebfa34dd6015a8">operator+</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a153ef6ac38f7aaa049ebfa34dd6015a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard addition operator.  <br /></td></tr>
+<tr class="memitem:a9e133f6641b161021679495e1c80424d" id="r_a9e133f6641b161021679495e1c80424d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a9e133f6641b161021679495e1c80424d">operator+</a> (<a class="el" href="classdouble.html">double</a> a, <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> b)</td></tr>
+<tr class="memdesc:a9e133f6641b161021679495e1c80424d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard addition operator.  <br /></td></tr>
+<tr class="memitem:a8dee11759090f58e6ce48c9f82e03db5" id="r_a8dee11759090f58e6ce48c9f82e03db5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a8dee11759090f58e6ce48c9f82e03db5">operator+</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a8dee11759090f58e6ce48c9f82e03db5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard unary plus operator.  <br /></td></tr>
+<tr class="memitem:a1086e6d245c7b390aafba56eb6b8cf00" id="r_a1086e6d245c7b390aafba56eb6b8cf00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a1086e6d245c7b390aafba56eb6b8cf00">operator-</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a1086e6d245c7b390aafba56eb6b8cf00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard subtraction operator.  <br /></td></tr>
+<tr class="memitem:a669449cc4ca654c2a1f165bcb7670027" id="r_a669449cc4ca654c2a1f165bcb7670027"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a669449cc4ca654c2a1f165bcb7670027">operator-</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a669449cc4ca654c2a1f165bcb7670027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard subtraction operator.  <br /></td></tr>
+<tr class="memitem:afe7c81b5efeb98e25fa77b08eb1aa92d" id="r_afe7c81b5efeb98e25fa77b08eb1aa92d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#afe7c81b5efeb98e25fa77b08eb1aa92d">operator-</a> (<a class="el" href="classdouble.html">double</a> a, <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> b)</td></tr>
+<tr class="memdesc:afe7c81b5efeb98e25fa77b08eb1aa92d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard subtraction operator.  <br /></td></tr>
+<tr class="memitem:aa7b7eac68607daeea5957baafa3c99c0" id="r_aa7b7eac68607daeea5957baafa3c99c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#aa7b7eac68607daeea5957baafa3c99c0">operator-</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:aa7b7eac68607daeea5957baafa3c99c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard unary minus operator.  <br /></td></tr>
+<tr class="memitem:a3b6f77b0e5c912e540a83ba86ccbdb79" id="r_a3b6f77b0e5c912e540a83ba86ccbdb79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a3b6f77b0e5c912e540a83ba86ccbdb79">operator*</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a3b6f77b0e5c912e540a83ba86ccbdb79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard multiplication operator.  <br /></td></tr>
+<tr class="memitem:ad7290f58f54b1bf839c2b319aca01e47" id="r_ad7290f58f54b1bf839c2b319aca01e47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ad7290f58f54b1bf839c2b319aca01e47">operator*</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:ad7290f58f54b1bf839c2b319aca01e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard multiplication operator.  <br /></td></tr>
+<tr class="memitem:a681e2c0f93343c2eb770ef0660cb52a9" id="r_a681e2c0f93343c2eb770ef0660cb52a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a681e2c0f93343c2eb770ef0660cb52a9">operator*</a> (<a class="el" href="classdouble.html">double</a> a, <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> b)</td></tr>
+<tr class="memdesc:a681e2c0f93343c2eb770ef0660cb52a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard multiplication operator.  <br /></td></tr>
+<tr class="memitem:aa14ee0a7cb246ee962ef0c98d56a87cd" id="r_aa14ee0a7cb246ee962ef0c98d56a87cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#aa14ee0a7cb246ee962ef0c98d56a87cd">operator/</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:aa14ee0a7cb246ee962ef0c98d56a87cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard division operator.  <br /></td></tr>
+<tr class="memitem:a2bb2add60d37ce5be893ec7f8aabae0c" id="r_a2bb2add60d37ce5be893ec7f8aabae0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a2bb2add60d37ce5be893ec7f8aabae0c">operator/</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a2bb2add60d37ce5be893ec7f8aabae0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard division operator.  <br /></td></tr>
+<tr class="memitem:a7ad9922b118c370151ec9b97f8ec626b" id="r_a7ad9922b118c370151ec9b97f8ec626b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a7ad9922b118c370151ec9b97f8ec626b">operator/</a> (<a class="el" href="classdouble.html">double</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a7ad9922b118c370151ec9b97f8ec626b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard division operator.  <br /></td></tr>
+<tr id="func-members-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Comparison operators</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a href="https://en.cppreference.com/w/cpp/language/operators#Comparison_operators">https://en.cppreference.com/w/cpp/language/operators#Comparison_operators</a> </p>
+</div></td></tr>
+<tr class="memitem:a1ea64710ee2a5037ca39623cfa572344" id="r_a1ea64710ee2a5037ca39623cfa572344"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a1ea64710ee2a5037ca39623cfa572344">operator&lt;</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a1ea64710ee2a5037ca39623cfa572344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:a4a05099bfbd494806e1fabdd2e5a5ba5" id="r_a4a05099bfbd494806e1fabdd2e5a5ba5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a4a05099bfbd494806e1fabdd2e5a5ba5">operator&lt;=</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a4a05099bfbd494806e1fabdd2e5a5ba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:a55852daf47f88c82516660e68aa6c70a" id="r_a55852daf47f88c82516660e68aa6c70a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a55852daf47f88c82516660e68aa6c70a">operator&gt;</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a55852daf47f88c82516660e68aa6c70a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:aafb98bce33c77e2defdfddd73789af13" id="r_aafb98bce33c77e2defdfddd73789af13"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#aafb98bce33c77e2defdfddd73789af13">operator&gt;=</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:aafb98bce33c77e2defdfddd73789af13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:a4504f5cebcd7ec350e08326ccfa441de" id="r_a4504f5cebcd7ec350e08326ccfa441de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a4504f5cebcd7ec350e08326ccfa441de">operator==</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a4504f5cebcd7ec350e08326ccfa441de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:ae3bbb6298bf5216744d4d4d0eb4cd7c4" id="r_ae3bbb6298bf5216744d4d4d0eb4cd7c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ae3bbb6298bf5216744d4d4d0eb4cd7c4">operator!=</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:ae3bbb6298bf5216744d4d4d0eb4cd7c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:aebb9f2fd866aef40c54bacbfc2220432" id="r_aebb9f2fd866aef40c54bacbfc2220432"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#aebb9f2fd866aef40c54bacbfc2220432">operator&lt;</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:aebb9f2fd866aef40c54bacbfc2220432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:ad74985c9471b8476b3daf0a644b91544" id="r_ad74985c9471b8476b3daf0a644b91544"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ad74985c9471b8476b3daf0a644b91544">operator&lt;=</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:ad74985c9471b8476b3daf0a644b91544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:a051ff17f103fcbcd6df5db9339765be0" id="r_a051ff17f103fcbcd6df5db9339765be0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a051ff17f103fcbcd6df5db9339765be0">operator&gt;</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a051ff17f103fcbcd6df5db9339765be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:a645951eea2f1bf7151fa86f684ed237d" id="r_a645951eea2f1bf7151fa86f684ed237d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a645951eea2f1bf7151fa86f684ed237d">operator&gt;=</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a645951eea2f1bf7151fa86f684ed237d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:a0d8b096e09bb9037fe0081c8080e18b9" id="r_a0d8b096e09bb9037fe0081c8080e18b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a0d8b096e09bb9037fe0081c8080e18b9">operator==</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a0d8b096e09bb9037fe0081c8080e18b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:a7f038dd3c9e02ab849e87dd3d0ccebf8" id="r_a7f038dd3c9e02ab849e87dd3d0ccebf8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a7f038dd3c9e02ab849e87dd3d0ccebf8">operator!=</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a7f038dd3c9e02ab849e87dd3d0ccebf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:af8d0d328b51cd214ee014242ebf53a51" id="r_af8d0d328b51cd214ee014242ebf53a51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#af8d0d328b51cd214ee014242ebf53a51">operator&lt;</a> (<a class="el" href="classdouble.html">double</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:af8d0d328b51cd214ee014242ebf53a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:a89c0e403afda146075cc21f4c36ac9be" id="r_a89c0e403afda146075cc21f4c36ac9be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a89c0e403afda146075cc21f4c36ac9be">operator&lt;=</a> (<a class="el" href="classdouble.html">double</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a89c0e403afda146075cc21f4c36ac9be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:adfc8d373310be8b495abbc0d7f4cd8fa" id="r_adfc8d373310be8b495abbc0d7f4cd8fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#adfc8d373310be8b495abbc0d7f4cd8fa">operator&gt;</a> (<a class="el" href="classdouble.html">double</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:adfc8d373310be8b495abbc0d7f4cd8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:ab5943df71e3914aec7459ca35cb9c972" id="r_ab5943df71e3914aec7459ca35cb9c972"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ab5943df71e3914aec7459ca35cb9c972">operator&gt;=</a> (<a class="el" href="classdouble.html">double</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:ab5943df71e3914aec7459ca35cb9c972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:a3b50cb8a508eaf0c6a40ce242fb1e204" id="r_a3b50cb8a508eaf0c6a40ce242fb1e204"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a3b50cb8a508eaf0c6a40ce242fb1e204">operator==</a> (<a class="el" href="classdouble.html">double</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a3b50cb8a508eaf0c6a40ce242fb1e204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr class="memitem:a592381219660308b50e05d92e8cb1cfa" id="r_a592381219660308b50e05d92e8cb1cfa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a592381219660308b50e05d92e8cb1cfa">operator!=</a> (<a class="el" href="classdouble.html">double</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a592381219660308b50e05d92e8cb1cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard comparison operator.  <br /></td></tr>
+<tr id="func-members-3" class="groupHeader"><td colspan="2"><div class="groupHeader">Minimum/maximum operations</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a href="https://en.cppreference.com/w/cpp/algorithm#Minimum.2Fmaximum_operations">https://en.cppreference.com/w/cpp/algorithm#Minimum.2Fmaximum_operations</a> </p>
+</div></td></tr>
+<tr class="memitem:a97862ec3c2e3ad61e40f6f130c2a45ac" id="r_a97862ec3c2e3ad61e40f6f130c2a45ac"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a97862ec3c2e3ad61e40f6f130c2a45ac">max</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a97862ec3c2e3ad61e40f6f130c2a45ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::max from <span class="tt">&lt;algorithm&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a6424ce5544e5378ebcb2bdcbc5c9e438" id="r_a6424ce5544e5378ebcb2bdcbc5c9e438"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a6424ce5544e5378ebcb2bdcbc5c9e438">max</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a6424ce5544e5378ebcb2bdcbc5c9e438"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::max from <span class="tt">&lt;algorithm&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a2293c620a9a9c8c5b96006fb34f56108" id="r_a2293c620a9a9c8c5b96006fb34f56108"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a2293c620a9a9c8c5b96006fb34f56108">max</a> (<a class="el" href="classdouble.html">double</a> a, <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> b)</td></tr>
+<tr class="memdesc:a2293c620a9a9c8c5b96006fb34f56108"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::max from <span class="tt">&lt;algorithm&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a3283ea107962daae202a3f4e8989e6be" id="r_a3283ea107962daae202a3f4e8989e6be"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a3283ea107962daae202a3f4e8989e6be">min</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:a3283ea107962daae202a3f4e8989e6be"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::min from <span class="tt">&lt;algorithm&gt;</span>.  <br /></td></tr>
+<tr class="memitem:abe5fe659025ff9c842f29e866f7e91dd" id="r_abe5fe659025ff9c842f29e866f7e91dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#abe5fe659025ff9c842f29e866f7e91dd">min</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:abe5fe659025ff9c842f29e866f7e91dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::min from <span class="tt">&lt;algorithm&gt;</span>.  <br /></td></tr>
+<tr class="memitem:acc21d8370984cf1b023a60b3a5d38650" id="r_acc21d8370984cf1b023a60b3a5d38650"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#acc21d8370984cf1b023a60b3a5d38650">min</a> (<a class="el" href="classdouble.html">double</a> a, <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> b)</td></tr>
+<tr class="memdesc:acc21d8370984cf1b023a60b3a5d38650"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::min from <span class="tt">&lt;algorithm&gt;</span>.  <br /></td></tr>
+<tr id="func-members-4" class="groupHeader"><td colspan="2"><div class="groupHeader">Math functions: Basic operations</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a href="https://en.cppreference.com/w/cpp/numeric/math#Basic_operations">https://en.cppreference.com/w/cpp/numeric/math#Basic_operations</a> </p>
+</div></td></tr>
+<tr class="memitem:ab14990a86637419f6000ad143bf6f71d" id="r_ab14990a86637419f6000ad143bf6f71d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ab14990a86637419f6000ad143bf6f71d">abs</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:ab14990a86637419f6000ad143bf6f71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::abs from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a66b4d3483599fd87ecc649b0c6a865ab" id="r_a66b4d3483599fd87ecc649b0c6a865ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a66b4d3483599fd87ecc649b0c6a865ab">abs2</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a66b4d3483599fd87ecc649b0c6a865ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic Eigen::numext::abs2.  <br /></td></tr>
+<tr id="func-members-5" class="groupHeader"><td colspan="2"><div class="groupHeader">Math functions: Exponential and Power functions</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a href="https://en.cppreference.com/w/cpp/numeric/math#Exponential_functions">https://en.cppreference.com/w/cpp/numeric/math#Exponential_functions</a></p>
+<p><a href="https://en.cppreference.com/w/cpp/numeric/math#Power_functions">https://en.cppreference.com/w/cpp/numeric/math#Power_functions</a> </p>
+</div></td></tr>
+<tr class="memitem:ac288f54ddbdfe01f4dae1eee6f53f242" id="r_ac288f54ddbdfe01f4dae1eee6f53f242"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ac288f54ddbdfe01f4dae1eee6f53f242">exp</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:ac288f54ddbdfe01f4dae1eee6f53f242"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::exp from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a79e2e095ed512ea475ee20fc289b8532" id="r_a79e2e095ed512ea475ee20fc289b8532"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a79e2e095ed512ea475ee20fc289b8532">log</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a79e2e095ed512ea475ee20fc289b8532"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::log from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a50e65325b8341b37b69ebd1b3e402c8e" id="r_a50e65325b8341b37b69ebd1b3e402c8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a50e65325b8341b37b69ebd1b3e402c8e">pow</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> base, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="namespacedrake_1_1ad.html#ac288f54ddbdfe01f4dae1eee6f53f242">exp</a>)</td></tr>
+<tr class="memdesc:a50e65325b8341b37b69ebd1b3e402c8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::pow from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a7e73d76b1737aa8aec85acb213d3b199" id="r_a7e73d76b1737aa8aec85acb213d3b199"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a7e73d76b1737aa8aec85acb213d3b199">pow</a> (<a class="el" href="classdouble.html">double</a> base, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="namespacedrake_1_1ad.html#ac288f54ddbdfe01f4dae1eee6f53f242">exp</a>)</td></tr>
+<tr class="memdesc:a7e73d76b1737aa8aec85acb213d3b199"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::pow from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a1532496cd8464e66e9eb1539d1815875" id="r_a1532496cd8464e66e9eb1539d1815875"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a1532496cd8464e66e9eb1539d1815875">pow</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> base, <a class="el" href="classdouble.html">double</a> <a class="el" href="namespacedrake_1_1ad.html#ac288f54ddbdfe01f4dae1eee6f53f242">exp</a>)</td></tr>
+<tr class="memdesc:a1532496cd8464e66e9eb1539d1815875"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::pow from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a44fd6aa094a4b87f41101708eb5a6f07" id="r_a44fd6aa094a4b87f41101708eb5a6f07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a44fd6aa094a4b87f41101708eb5a6f07">sqrt</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a44fd6aa094a4b87f41101708eb5a6f07"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::sqrt from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr id="func-members-6" class="groupHeader"><td colspan="2"><div class="groupHeader">Math functions: Trigonometric functions</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a href="https://en.cppreference.com/w/cpp/numeric/math#Trigonometric_functions">https://en.cppreference.com/w/cpp/numeric/math#Trigonometric_functions</a> </p>
+</div></td></tr>
+<tr class="memitem:af25aea9f80ba13cac5842a659987efb8" id="r_af25aea9f80ba13cac5842a659987efb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#af25aea9f80ba13cac5842a659987efb8">sin</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:af25aea9f80ba13cac5842a659987efb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::sin from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a7d49b1791b695b60f2b029cb8cc741e5" id="r_a7d49b1791b695b60f2b029cb8cc741e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a7d49b1791b695b60f2b029cb8cc741e5">cos</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a7d49b1791b695b60f2b029cb8cc741e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::cos from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:ae744aaef133a04207e4ff75ce26484cb" id="r_ae744aaef133a04207e4ff75ce26484cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ae744aaef133a04207e4ff75ce26484cb">tan</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:ae744aaef133a04207e4ff75ce26484cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::tan from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a94f7d4e41d72bd56639a28e8856116f0" id="r_a94f7d4e41d72bd56639a28e8856116f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a94f7d4e41d72bd56639a28e8856116f0">asin</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a94f7d4e41d72bd56639a28e8856116f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::asin from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a4098968c6350f07925cb63ffd2e92c8f" id="r_a4098968c6350f07925cb63ffd2e92c8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a4098968c6350f07925cb63ffd2e92c8f">acos</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a4098968c6350f07925cb63ffd2e92c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::acos from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a4e13fb7fcb363bd2bb845af6657e31ff" id="r_a4e13fb7fcb363bd2bb845af6657e31ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a4e13fb7fcb363bd2bb845af6657e31ff">atan</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a4e13fb7fcb363bd2bb845af6657e31ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::atan from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:acd7f52f67e039dbd47ac1238efc05a0b" id="r_acd7f52f67e039dbd47ac1238efc05a0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#acd7f52f67e039dbd47ac1238efc05a0b">atan2</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;b)</td></tr>
+<tr class="memdesc:acd7f52f67e039dbd47ac1238efc05a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::atan2 from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a91b06a0edba37bffd0005d27639f84e6" id="r_a91b06a0edba37bffd0005d27639f84e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a91b06a0edba37bffd0005d27639f84e6">atan2</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> a, <a class="el" href="classdouble.html">double</a> b)</td></tr>
+<tr class="memdesc:a91b06a0edba37bffd0005d27639f84e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::atan2 from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:ad2ffa7e18775db07d32d583e0fffd559" id="r_ad2ffa7e18775db07d32d583e0fffd559"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ad2ffa7e18775db07d32d583e0fffd559">atan2</a> (<a class="el" href="classdouble.html">double</a> a, <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> b)</td></tr>
+<tr class="memdesc:ad2ffa7e18775db07d32d583e0fffd559"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::atan2 from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr id="func-members-7" class="groupHeader"><td colspan="2"><div class="groupHeader">Math functions: Hyperbolic functions</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a href="https://en.cppreference.com/w/cpp/numeric/math#Hyperbolic_functions">https://en.cppreference.com/w/cpp/numeric/math#Hyperbolic_functions</a> </p>
+</div></td></tr>
+<tr class="memitem:a53bd690867671c3ca50791cce3f0ea3a" id="r_a53bd690867671c3ca50791cce3f0ea3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a53bd690867671c3ca50791cce3f0ea3a">sinh</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a53bd690867671c3ca50791cce3f0ea3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::sinh from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a786ecf437477c93407e3f1120840e43a" id="r_a786ecf437477c93407e3f1120840e43a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a786ecf437477c93407e3f1120840e43a">cosh</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a786ecf437477c93407e3f1120840e43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::cosh from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:af184bbfc4ce2cdd724789fe8644cc145" id="r_af184bbfc4ce2cdd724789fe8644cc145"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#af184bbfc4ce2cdd724789fe8644cc145">tanh</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:af184bbfc4ce2cdd724789fe8644cc145"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::tanh from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr id="func-members-8" class="groupHeader"><td colspan="2"><div class="groupHeader">Math functions: Nearest integer floating point operations</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p><a href="https://en.cppreference.com/w/cpp/numeric/math#Nearest_integer_floating_point_operations">https://en.cppreference.com/w/cpp/numeric/math#Nearest_integer_floating_point_operations</a></p>
+<p><a href="https://en.cppreference.com/w/cpp/numeric/math#Floating_point_manipulation_functions">https://en.cppreference.com/w/cpp/numeric/math#Floating_point_manipulation_functions</a> </p>
+</div></td></tr>
+<tr class="memitem:af40332a0fdf53a2e1fb2a8ea7c7d816a" id="r_af40332a0fdf53a2e1fb2a8ea7c7d816a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#af40332a0fdf53a2e1fb2a8ea7c7d816a">ceil</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:af40332a0fdf53a2e1fb2a8ea7c7d816a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::ceil from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:ae00d7ffc2f5bb0b2091d1d2a6f83de37" id="r_ae00d7ffc2f5bb0b2091d1d2a6f83de37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ae00d7ffc2f5bb0b2091d1d2a6f83de37">floor</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:ae00d7ffc2f5bb0b2091d1d2a6f83de37"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::floor from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a008081ab913af26d64ee34a80e4d489e" id="r_a008081ab913af26d64ee34a80e4d489e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a008081ab913af26d64ee34a80e4d489e">round</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a008081ab913af26d64ee34a80e4d489e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::round from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a352049dd8f8a64323ea8846f92e4c509" id="r_a352049dd8f8a64323ea8846f92e4c509"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a352049dd8f8a64323ea8846f92e4c509">nexttoward</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;from, long <a class="el" href="classdouble.html">double</a> to)</td></tr>
+<tr class="memdesc:a352049dd8f8a64323ea8846f92e4c509"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::nexttoward from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:ac919646bf3fad231d9f8e31d3dc1887e" id="r_ac919646bf3fad231d9f8e31d3dc1887e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#ac919646bf3fad231d9f8e31d3dc1887e">copysign</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;mag, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;sgn)</td></tr>
+<tr class="memdesc:ac919646bf3fad231d9f8e31d3dc1887e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::copysign from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:af4d90500a953741a80e8fbbbd8b2ba59" id="r_af4d90500a953741a80e8fbbbd8b2ba59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#af4d90500a953741a80e8fbbbd8b2ba59">isfinite</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:af4d90500a953741a80e8fbbbd8b2ba59"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::isfinite from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:abe09934d686cbbc0a9019ca14692ff3b" id="r_abe09934d686cbbc0a9019ca14692ff3b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#abe09934d686cbbc0a9019ca14692ff3b">isinf</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:abe09934d686cbbc0a9019ca14692ff3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::isinf from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+<tr class="memitem:a2139718378c7a5e5a0ba1e67e30c6d70" id="r_a2139718378c7a5e5a0ba1e67e30c6d70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html#a2139718378c7a5e5a0ba1e67e30c6d70">isnan</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>)</td></tr>
+<tr class="memdesc:a2139718378c7a5e5a0ba1e67e30c6d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADL overload to mimic std::isnan from <span class="tt">&lt;cmath&gt;</span>.  <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a href="dir_a1f72b1e53a5842fc3b6b3072554bf94.html">ad</a></li><li class="navelem"><a href="dir_6b4eff1308767c1c4adf75190a464e09.html">internal</a></li><li class="navelem"><a href="standard__operations_8h.html">standard_operations.h</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

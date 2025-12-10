@@ -287,8 +287,8 @@ Protected Member Functions</h2></td></tr>
 </div></td></tr>
 <tr class="memitem:a28167855937b28ef48da220bc063a16c" id="r_a28167855937b28ef48da220bc063a16c"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28167855937b28ef48da220bc063a16c">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const =0</td></tr>
 <tr class="memdesc:a28167855937b28ef48da220bc063a16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Frame (templated on T) to a frame templated on <span class="tt">double</span>.  <br /></td></tr>
-<tr class="memitem:a4240009b149bca1222ffaa1a615ba345" id="r_a4240009b149bca1222ffaa1a615ba345"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4240009b149bca1222ffaa1a615ba345">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;tree_clone) const =0</td></tr>
-<tr class="memdesc:a4240009b149bca1222ffaa1a615ba345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Frame (templated on T) to a frame templated on <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a>.  <br /></td></tr>
+<tr class="memitem:a4240009b149bca1222ffaa1a615ba345" id="r_a4240009b149bca1222ffaa1a615ba345"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4240009b149bca1222ffaa1a615ba345">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;tree_clone) const =0</td></tr>
+<tr class="memdesc:a4240009b149bca1222ffaa1a615ba345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Frame (templated on T) to a frame templated on <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>.  <br /></td></tr>
 <tr class="memitem:aa58648a850c80fd1cb22eec01326283f" id="r_aa58648a850c80fd1cb22eec01326283f"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa58648a850c80fd1cb22eec01326283f">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const =0</td></tr>
 <tr class="memitem:a85a7cc085e039dc8ebe04a4aaaf6eb4c" id="r_a85a7cc085e039dc8ebe04a4aaaf6eb4c"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85a7cc085e039dc8ebe04a4aaaf6eb4c">DoShallowClone</a> () const</td></tr>
 <tr class="memdesc:a85a7cc085e039dc8ebe04a4aaaf6eb4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI for <a class="el" href="#ab4a78b9f732e3c35f83ced2c8e1ad7c8" title="(Internal use only) Returns a shallow clone (i.e., dependent elements such as bodies are aliased,...">ShallowClone()</a>.  <br /></td></tr>
@@ -1206,9 +1206,9 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt; DoCloneToScalar </td>
+          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt; DoCloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
+          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1219,7 +1219,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Clones this Frame (templated on T) to a frame templated on <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a>. </p>
+<p>Clones this Frame (templated on T) to a frame templated on <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>. </p>
 
 <p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_fixed_offset_frame.html#aa63b57f5254a61e87544cbad7ff1bc8e">FixedOffsetFrame&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_rigid_body_frame.html#aa63b57f5254a61e87544cbad7ff1bc8e">RigidBodyFrame&lt; T &gt;</a>.</p>
 

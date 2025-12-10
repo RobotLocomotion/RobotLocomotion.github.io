@@ -2,9 +2,9 @@ var searchData=
 [
   ['t0_0',['t0',['../classdrake_1_1systems_1_1_witness_triggered_event_data.html#adb663ee1612aa1f42d4c91a1d20585a9',1,'drake::systems::WitnessTriggeredEventData']]],
   ['tamsisolver_1',['TamsiSolver',['../classdrake_1_1multibody_1_1_tamsi_solver.html#ad5d558d0bc7ccbe0202ccd40e1929815',1,'drake::multibody::TamsiSolver::TamsiSolver(const TamsiSolver &amp;)=delete'],['../classdrake_1_1multibody_1_1_tamsi_solver.html#a3b3d2411402ef5b22576cabf83a2072d',1,'drake::multibody::TamsiSolver::TamsiSolver(TamsiSolver &amp;&amp;)=delete'],['../classdrake_1_1multibody_1_1_tamsi_solver.html#a8c6125a41db505a5d9caf8b5d93c591e',1,'drake::multibody::TamsiSolver::TamsiSolver(int nv)']]],
-  ['tan_2',['tan',['../namespacedrake_1_1symbolic.html#a734f5b457c5a0b898ab8b6f247f0ce76',1,'drake::symbolic']]],
+  ['tan_2',['tan',['../namespacedrake_1_1ad.html#ae744aaef133a04207e4ff75ce26484cb',1,'drake::ad::tan()'],['../namespacedrake_1_1symbolic.html#a734f5b457c5a0b898ab8b6f247f0ce76',1,'drake::symbolic::tan()']]],
   ['tangent_5fmatrix_5fweights_3',['tangent_matrix_weights',['../classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a3ca6dfa05e8aebbceb200f77d06fe8cb',1,'drake::multibody::fem::FemModel']]],
-  ['tanh_4',['tanh',['../namespacedrake_1_1symbolic.html#ae96194d93ad39bcb2b7ed22891f44ec7',1,'drake::symbolic']]],
+  ['tanh_4',['tanh',['../namespacedrake_1_1ad.html#af184bbfc4ce2cdd724789fe8644cc145',1,'drake::ad::tanh()'],['../namespacedrake_1_1symbolic.html#ae96194d93ad39bcb2b7ed22891f44ec7',1,'drake::symbolic::tanh()']]],
   ['task_5fframe_5',['task_frame',['../classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a184a365d361b5946239c996aef4e902f',1,'drake::multibody::DifferentialInverseKinematicsSystem']]],
   ['tau_6',['tau',['../classdrake_1_1examples_1_1acrobot_1_1_acrobot_input.html#ae444753c24771b7f636d9b91b89abf47',1,'drake::examples::acrobot::AcrobotInput::tau()'],['../classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#ae444753c24771b7f636d9b91b89abf47',1,'drake::examples::pendulum::PendulumInput::tau()']]],
   ['taylorexpand_7',['TaylorExpand',['../namespacedrake_1_1symbolic.html#abd176811046c1f4fab6d56404b270d66',1,'drake::symbolic']]],

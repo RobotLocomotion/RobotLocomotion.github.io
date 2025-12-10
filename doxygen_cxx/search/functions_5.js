@@ -70,7 +70,7 @@ var searchData=
   ['floating_5fpositions_5fstart_67',['floating_positions_start',['../classdrake_1_1multibody_1_1_rigid_body.html#a8e98e34e5da5ecfc7e03086b70cf5489',1,'drake::multibody::RigidBody']]],
   ['floating_5fvelocities_5fstart_5fin_5fv_68',['floating_velocities_start_in_v',['../classdrake_1_1multibody_1_1_rigid_body.html#a02779a5522ffef8547daf6c386ffb47b',1,'drake::multibody::RigidBody']]],
   ['floating_5fvelocity_5fsuffix_69',['floating_velocity_suffix',['../classdrake_1_1multibody_1_1_rigid_body.html#a4bf67c08cb5fb34309c4c220d9872d29',1,'drake::multibody::RigidBody']]],
-  ['floor_70',['floor',['../namespacedrake_1_1symbolic.html#a08cadfe5adda620a40258a84d87081f4',1,'drake::symbolic']]],
+  ['floor_70',['floor',['../namespacedrake_1_1ad.html#ae00d7ffc2f5bb0b2091d1d2a6f83de37',1,'drake::ad::floor()'],['../namespacedrake_1_1symbolic.html#a08cadfe5adda620a40258a84d87081f4',1,'drake::symbolic::floor()']]],
   ['flush_71',['Flush',['../classdrake_1_1geometry_1_1_meshcat.html#a548a7b441b7900dcbd5481778c7dec9f',1,'drake::geometry::Meshcat']]],
   ['fmt_5fdebug_5fstring_72',['fmt_debug_string',['../namespacedrake.html#afc57f8ba3471c69c959f961a287666ac',1,'drake']]],
   ['fmt_5feigen_73',['fmt_eigen',['../namespacedrake.html#a0655e16a159b287851163900c29d2b4f',1,'drake']]],

@@ -167,6 +167,7 @@ $(function(){initNavTree('namespacedrake.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:ad" id="r_ad"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1ad.html">ad</a></td></tr>
 <tr class="memitem:assert" id="r_assert"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1assert.html">assert</a></td></tr>
 <tr class="memitem:common" id="r_common"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1common.html">common</a></td></tr>
 <tr class="memitem:examples" id="r_examples"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples.html">examples</a></td></tr>
@@ -259,19 +260,19 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a3d6302a0051e9403c9df3ed6808f3854" id="r_a3d6302a0051e9403c9df3ed6808f3854"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> = <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">drake::ad::AutoDiff</a></td></tr>
+<tr class="memdesc:a3d6302a0051e9403c9df3ed6808f3854"><td class="mdescLeft">&#160;</td><td class="mdescRight">A scalar type that performs automatic differentiation.  <br /></td></tr>
+<tr class="memitem:a59eaaaa152841d234e829f38163a9981" id="r_a59eaaaa152841d234e829f38163a9981"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59eaaaa152841d234e829f38163a9981">AutoDiffVecXd</a> = Eigen::Matrix&lt;<a class="el" href="#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a>, Eigen::Dynamic, 1&gt;</td></tr>
+<tr class="memdesc:a59eaaaa152841d234e829f38163a9981"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dynamic-sized vector of autodiff variables.  <br /></td></tr>
 <tr class="memitem:a1f1c657c4d2cf400649123a7c2573d5b" id="r_a1f1c657c4d2cf400649123a7c2573d5b"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a1f1c657c4d2cf400649123a7c2573d5b template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a> = typename <a class="el" href="structdrake_1_1scalar__predicate.html">scalar_predicate</a>&lt;T&gt;::type</td></tr>
 <tr class="memdesc:a1f1c657c4d2cf400649123a7c2573d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">An alias for a boolean-like value, conditioned on the scalar type <span class="tt">T</span>.  <br /></td></tr>
-<tr class="memitem:a35725b277b02aeb79f24fd7f724e6dbc" id="r_a35725b277b02aeb79f24fd7f724e6dbc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> = Eigen::AutoDiffScalar&lt;Eigen::VectorXd&gt;</td></tr>
-<tr class="memdesc:a35725b277b02aeb79f24fd7f724e6dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">An autodiff variable with a dynamic number of partials.  <br /></td></tr>
 <tr class="memitem:a5f4077c4918078fb55bfb6b73968cb0a" id="r_a5f4077c4918078fb55bfb6b73968cb0a"><td class="memTemplParams" colspan="2">template&lt;int num_vars&gt; </td></tr>
 <tr class="memitem:a5f4077c4918078fb55bfb6b73968cb0a template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f4077c4918078fb55bfb6b73968cb0a">AutoDiffd</a> = Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;<a class="el" href="classdouble.html">double</a>, num_vars, 1&gt; &gt;</td></tr>
 <tr class="memdesc:a5f4077c4918078fb55bfb6b73968cb0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">An autodiff variable with <span class="tt">num_vars</span> partials.  <br /></td></tr>
 <tr class="memitem:a790a072a62129732864a20e7a4743298" id="r_a790a072a62129732864a20e7a4743298"><td class="memTemplParams" colspan="2">template&lt;int num_vars, int rows&gt; </td></tr>
 <tr class="memitem:a790a072a62129732864a20e7a4743298 template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a790a072a62129732864a20e7a4743298">AutoDiffVecd</a> = Eigen::Matrix&lt;<a class="el" href="#a5f4077c4918078fb55bfb6b73968cb0a">AutoDiffd</a>&lt;num_vars&gt;, rows, 1&gt;</td></tr>
 <tr class="memdesc:a790a072a62129732864a20e7a4743298"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of <span class="tt">rows</span> autodiff variables, each with <span class="tt">num_vars</span> partials.  <br /></td></tr>
-<tr class="memitem:a7b13142534d668d5d490b829b917fa16" id="r_a7b13142534d668d5d490b829b917fa16"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="#a790a072a62129732864a20e7a4743298">AutoDiffVecd</a>&lt; Eigen::Dynamic, Eigen::Dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a></td></tr>
-<tr class="memdesc:a7b13142534d668d5d490b829b917fa16"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dynamic-sized vector of autodiff variables, each with a dynamic-sized vector of partials.  <br /></td></tr>
 <tr class="memitem:acda0b15d77e4c1701d160b17a2cb2ea8" id="r_acda0b15d77e4c1701d160b17a2cb2ea8"><td class="memTemplParams" colspan="2">template&lt;typename Scalar&gt; </td></tr>
 <tr class="memitem:acda0b15d77e4c1701d160b17a2cb2ea8 template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acda0b15d77e4c1701d160b17a2cb2ea8">Vector0</a> = Eigen::Matrix&lt;Scalar, 0, 1&gt;</td></tr>
 <tr class="memdesc:acda0b15d77e4c1701d160b17a2cb2ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The empty column vector (zero rows, one column), templated on scalar type.  <br /></td></tr>
@@ -414,6 +415,18 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a76aa07d781c1d9b7db80d218dd28b66a" id="r_a76aa07d781c1d9b7db80d218dd28b66a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76aa07d781c1d9b7db80d218dd28b66a">ExtractDoubleOrThrow</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> &amp;scalar)</td></tr>
+<tr class="memdesc:a76aa07d781c1d9b7db80d218dd28b66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the autodiff scalar's value() as a double.  <br /></td></tr>
+<tr class="memitem:af77f42953b424b906077b9b7daa0bdf8" id="r_af77f42953b424b906077b9b7daa0bdf8"><td class="memTemplParams" colspan="2">template&lt;int RowsAtCompileTime, int ColsAtCompileTime, int Options, int MaxRowsAtCompileTime, int MaxColsAtCompileTime&gt; </td></tr>
+<tr class="memitem:af77f42953b424b906077b9b7daa0bdf8 template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af77f42953b424b906077b9b7daa0bdf8">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Eigen::Matrix&lt; <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a>, RowsAtCompileTime, ColsAtCompileTime, Options, MaxRowsAtCompileTime, MaxColsAtCompileTime &gt; &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:af77f42953b424b906077b9b7daa0bdf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <span class="tt">matrix</span> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <span class="tt">matrix</span>.  <br /></td></tr>
+<tr class="memitem:a3e8eeef2d39f7e0d858b79aac4efd952" id="r_a3e8eeef2d39f7e0d858b79aac4efd952"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e8eeef2d39f7e0d858b79aac4efd952">if_then_else</a> (bool f_cond, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> &amp;y)</td></tr>
+<tr class="memdesc:a3e8eeef2d39f7e0d858b79aac4efd952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides if-then-else expression for AutoDiff.  <br /></td></tr>
+<tr class="memitem:a032afe843cdaa8b1e28e99344d84ab9d" id="r_a032afe843cdaa8b1e28e99344d84ab9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a032afe843cdaa8b1e28e99344d84ab9d">cond</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> &amp;e)</td></tr>
+<tr class="memdesc:a032afe843cdaa8b1e28e99344d84ab9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides cond's base case for AutoDiff.  <br /></td></tr>
+<tr class="memitem:a7ac422c010c8ccd5708c43d12459b211" id="r_a7ac422c010c8ccd5708c43d12459b211"><td class="memTemplParams" colspan="2">template&lt;typename... Rest&gt; </td></tr>
+<tr class="memitem:a7ac422c010c8ccd5708c43d12459b211 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ac422c010c8ccd5708c43d12459b211">cond</a> (bool f_cond, const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> &amp;e_then, Rest... rest)</td></tr>
+<tr class="memdesc:a7ac422c010c8ccd5708c43d12459b211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides cond base for AutoDiff.  <br /></td></tr>
 <tr class="memitem:ad0da43c947d3694c1051212d4043d07e" id="r_ad0da43c947d3694c1051212d4043d07e"><td class="memTemplParams" colspan="2">template&lt;typename DerType&gt; </td></tr>
 <tr class="memitem:ad0da43c947d3694c1051212d4043d07e template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0da43c947d3694c1051212d4043d07e">ExtractDoubleOrThrow</a> (const Eigen::AutoDiffScalar&lt; DerType &gt; &amp;scalar)</td></tr>
 <tr class="memdesc:ad0da43c947d3694c1051212d4043d07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the autodiff scalar's value() as a double.  <br /></td></tr>
@@ -695,35 +708,36 @@ template&lt;int num_vars, int rows&gt; </div>
 
 </div>
 </div>
-<a id="a7b13142534d668d5d490b829b917fa16" name="a7b13142534d668d5d490b829b917fa16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b13142534d668d5d490b829b917fa16">&#9670;&#160;</a></span>AutoDiffVecXd</h2>
+<a id="a59eaaaa152841d234e829f38163a9981" name="a59eaaaa152841d234e829f38163a9981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59eaaaa152841d234e829f38163a9981">&#9670;&#160;</a></span>AutoDiffVecXd</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="#a790a072a62129732864a20e7a4743298">AutoDiffVecd</a>&lt;Eigen::Dynamic, Eigen::Dynamic&gt; <a class="el" href="#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a></td>
+          <td class="memname">using <a class="el" href="#a59eaaaa152841d234e829f38163a9981">AutoDiffVecXd</a> = Eigen::Matrix&lt;<a class="el" href="#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a>, Eigen::Dynamic, 1&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>A dynamic-sized vector of autodiff variables, each with a dynamic-sized vector of partials. </p>
+<p>A dynamic-sized vector of autodiff variables. </p>
 
 </div>
 </div>
-<a id="a35725b277b02aeb79f24fd7f724e6dbc" name="a35725b277b02aeb79f24fd7f724e6dbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35725b277b02aeb79f24fd7f724e6dbc">&#9670;&#160;</a></span>AutoDiffXd</h2>
+<a id="a3d6302a0051e9403c9df3ed6808f3854" name="a3d6302a0051e9403c9df3ed6808f3854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d6302a0051e9403c9df3ed6808f3854">&#9670;&#160;</a></span>AutoDiffXd</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> = Eigen::AutoDiffScalar&lt;Eigen::VectorXd&gt;</td>
+          <td class="memname">using <a class="el" href="#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> = <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">drake::ad::AutoDiff</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>An autodiff variable with a dynamic number of partials. </p>
+<p>A scalar type that performs automatic differentiation. </p>
+<p>Always use this <span class="tt"><a class="el" href="#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a></span> alias when referring to the scalar type. </p>
 
 </div>
 </div>
@@ -1792,8 +1806,39 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="a7ac422c010c8ccd5708c43d12459b211" name="a7ac422c010c8ccd5708c43d12459b211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac422c010c8ccd5708c43d12459b211">&#9670;&#160;</a></span>cond() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Rest&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> cond </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>f_cond</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e_then</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rest...</td>          <td class="paramname"><span class="paramname"><em>rest</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides cond base for AutoDiff. </p>
+<p>Overloads <a class="el" href="#a032afe843cdaa8b1e28e99344d84ab9d" title="Provides cond&#39;s base case for AutoDiff.">cond()</a> from <span class="tt"><a class="el" href="double__overloads_8h.html" title="Provides necessary operations on double to have it as a ScalarType in drake.">drake/common/double_overloads.h</a></span>. </p>
+
+</div>
+</div>
 <a id="aa937e4c404b7e9c2c433f4dae17ee783" name="aa937e4c404b7e9c2c433f4dae17ee783"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa937e4c404b7e9c2c433f4dae17ee783">&#9670;&#160;</a></span>cond() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa937e4c404b7e9c2c433f4dae17ee783">&#9670;&#160;</a></span>cond() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1822,8 +1867,28 @@ template&lt;typename DerType, typename... Rest&gt; </div>
 
 </div>
 </div>
+<a id="a032afe843cdaa8b1e28e99344d84ab9d" name="a032afe843cdaa8b1e28e99344d84ab9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032afe843cdaa8b1e28e99344d84ab9d">&#9670;&#160;</a></span>cond() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> cond </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides cond's base case for AutoDiff. </p>
+<p>Overloads <a class="el" href="#a032afe843cdaa8b1e28e99344d84ab9d" title="Provides cond&#39;s base case for AutoDiff.">cond()</a> from <span class="tt"><a class="el" href="double__overloads_8h.html" title="Provides necessary operations on double to have it as a ScalarType in drake.">drake/common/double_overloads.h</a></span>. </p>
+
+</div>
+</div>
 <a id="a94ec7781b1da45c01105982d4ed6f7d9" name="a94ec7781b1da45c01105982d4ed6f7d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94ec7781b1da45c01105982d4ed6f7d9">&#9670;&#160;</a></span>cond() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ec7781b1da45c01105982d4ed6f7d9">&#9670;&#160;</a></span>cond() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1851,7 +1916,7 @@ template&lt;typename ScalarType, typename... Rest&gt; </div>
 </div>
 </div>
 <a id="a39aaec46622357afe980113c771ea19d" name="a39aaec46622357afe980113c771ea19d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39aaec46622357afe980113c771ea19d">&#9670;&#160;</a></span>cond() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a39aaec46622357afe980113c771ea19d">&#9670;&#160;</a></span>cond() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1870,7 +1935,7 @@ template&lt;typename ScalarType&gt; </div>
 </div>
 </div>
 <a id="a898781913e4e5fa4287087afc880fec3" name="a898781913e4e5fa4287087afc880fec3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a898781913e4e5fa4287087afc880fec3">&#9670;&#160;</a></span>cond() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a898781913e4e5fa4287087afc880fec3">&#9670;&#160;</a></span>cond() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2013,8 +2078,28 @@ template&lt;typename Container&gt; </div>
 
 </div>
 </div>
+<a id="a76aa07d781c1d9b7db80d218dd28b66a" name="a76aa07d781c1d9b7db80d218dd28b66a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76aa07d781c1d9b7db80d218dd28b66a">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[1/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> ExtractDoubleOrThrow </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>scalar</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the autodiff scalar's value() as a double. </p>
+<p>Never throws. Overloads <a class="el" href="#a76aa07d781c1d9b7db80d218dd28b66a" title="Returns the autodiff scalar&#39;s value() as a double.">ExtractDoubleOrThrow()</a> from <span class="tt"><a class="el" href="extract__double_8h.html">drake/common/extract_double.h</a></span>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a511506438ea2d8b648ef31f7957f118b" title="Extracts the value() portion from an AutoDiffScalar matrix into a pre-existing matrix (resizing if ne...">math::ExtractValue()</a>, <a class="el" href="namespacedrake_1_1math.html#aa6b853dffb7141874967340f9a18f4eb" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">math::DiscardGradient()</a> </dd></dl>
+
+</div>
+</div>
 <a id="ad0da43c947d3694c1051212d4043d07e" name="ad0da43c947d3694c1051212d4043d07e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0da43c947d3694c1051212d4043d07e">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0da43c947d3694c1051212d4043d07e">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[2/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2036,7 +2121,7 @@ template&lt;typename DerType&gt; </div>
 </div>
 </div>
 <a id="a3a84c0102427116efee16d9170058116" name="a3a84c0102427116efee16d9170058116"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a84c0102427116efee16d9170058116">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[2/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a84c0102427116efee16d9170058116">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[3/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2058,7 +2143,7 @@ template&lt;typename Derived&gt; </div>
 </div>
 </div>
 <a id="a6ebf51d3e031eb0226316624b990d04c" name="a6ebf51d3e031eb0226316624b990d04c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ebf51d3e031eb0226316624b990d04c">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[3/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ebf51d3e031eb0226316624b990d04c">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[4/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2079,8 +2164,30 @@ template&lt;typename Derived&gt; </div>
 
 </div>
 </div>
+<a id="af77f42953b424b906077b9b7daa0bdf8" name="af77f42953b424b906077b9b7daa0bdf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77f42953b424b906077b9b7daa0bdf8">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[5/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int RowsAtCompileTime, int ColsAtCompileTime, int Options, int MaxRowsAtCompileTime, int MaxColsAtCompileTime&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto ExtractDoubleOrThrow </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Eigen::Matrix&lt; <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a>, RowsAtCompileTime, ColsAtCompileTime, Options, MaxRowsAtCompileTime, MaxColsAtCompileTime &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <span class="tt">matrix</span> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <span class="tt">matrix</span>. </p>
+<p>Calls ExtractDoubleOrThrow on each element of the matrix, and therefore throws if any one of the extractions fail. Overloads <a class="el" href="#a76aa07d781c1d9b7db80d218dd28b66a" title="Returns the autodiff scalar&#39;s value() as a double.">ExtractDoubleOrThrow()</a> from <span class="tt"><a class="el" href="extract__double_8h.html">drake/common/extract_double.h</a></span>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a511506438ea2d8b648ef31f7957f118b" title="Extracts the value() portion from an AutoDiffScalar matrix into a pre-existing matrix (resizing if ne...">math::ExtractValue()</a>, <a class="el" href="namespacedrake_1_1math.html#aa6b853dffb7141874967340f9a18f4eb" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">math::DiscardGradient()</a> </dd></dl>
+
+</div>
+</div>
 <a id="a4f91267b864bbde5457e4adac3e417fe" name="a4f91267b864bbde5457e4adac3e417fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f91267b864bbde5457e4adac3e417fe">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[4/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f91267b864bbde5457e4adac3e417fe">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[6/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2102,7 +2209,7 @@ template&lt;typename DerType, int RowsAtCompileTime, int ColsAtCompileTime, int 
 </div>
 </div>
 <a id="a77f0b9085e94fbc8908dc1f99327e28b" name="a77f0b9085e94fbc8908dc1f99327e28b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77f0b9085e94fbc8908dc1f99327e28b">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a77f0b9085e94fbc8908dc1f99327e28b">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[7/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2127,7 +2234,7 @@ template&lt;typename DerType, int RowsAtCompileTime, int ColsAtCompileTime, int 
 </div>
 </div>
 <a id="a327205de415417316eb87214fbb1b469" name="a327205de415417316eb87214fbb1b469"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a327205de415417316eb87214fbb1b469">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[6/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a327205de415417316eb87214fbb1b469">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[8/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2146,7 +2253,7 @@ template&lt;typename DerType, int RowsAtCompileTime, int ColsAtCompileTime, int 
 </div>
 </div>
 <a id="aa4436e37f057bca66547eabb27b3243a" name="aa4436e37f057bca66547eabb27b3243a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4436e37f057bca66547eabb27b3243a">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[7/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4436e37f057bca66547eabb27b3243a">&#9670;&#160;</a></span>ExtractDoubleOrThrow() <span class="overload">[9/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2751,8 +2858,37 @@ pkg:program</span>. </p>
 
 </div>
 </div>
+<a id="a3e8eeef2d39f7e0d858b79aac4efd952" name="a3e8eeef2d39f7e0d858b79aac4efd952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8eeef2d39f7e0d858b79aac4efd952">&#9670;&#160;</a></span>if_then_else() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> if_then_else </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>f_cond</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">ad::AutoDiff</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides if-then-else expression for AutoDiff. </p>
+<p>Overloads <a class="el" href="#a3e8eeef2d39f7e0d858b79aac4efd952" title="Provides if-then-else expression for AutoDiff.">if_then_else()</a> from <span class="tt"><a class="el" href="double__overloads_8h.html" title="Provides necessary operations on double to have it as a ScalarType in drake.">drake/common/double_overloads.h</a></span>. </p>
+
+</div>
+</div>
 <a id="aeb46699dc47883f5ac4d81f95d8756f1" name="aeb46699dc47883f5ac4d81f95d8756f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb46699dc47883f5ac4d81f95d8756f1">&#9670;&#160;</a></span>if_then_else() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb46699dc47883f5ac4d81f95d8756f1">&#9670;&#160;</a></span>if_then_else() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2783,7 +2919,7 @@ template&lt;typename DerType1, typename DerType2&gt; </div>
 </div>
 </div>
 <a id="a64f6df74b46df7d595a8510ba6f3a72d" name="a64f6df74b46df7d595a8510ba6f3a72d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64f6df74b46df7d595a8510ba6f3a72d">&#9670;&#160;</a></span>if_then_else() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f6df74b46df7d595a8510ba6f3a72d">&#9670;&#160;</a></span>if_then_else() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2812,7 +2948,7 @@ template&lt;typename DerType1, typename DerType2&gt; </div>
 </div>
 </div>
 <a id="a9e802890ec66861781b5204d68fb6ec9" name="a9e802890ec66861781b5204d68fb6ec9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e802890ec66861781b5204d68fb6ec9">&#9670;&#160;</a></span>if_then_else() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e802890ec66861781b5204d68fb6ec9">&#9670;&#160;</a></span>if_then_else() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

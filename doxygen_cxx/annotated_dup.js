@@ -1,6 +1,9 @@
 var annotated_dup =
 [
     [ "drake", "namespacedrake.html", [
+      [ "ad", "namespacedrake_1_1ad.html", [
+        [ "AutoDiff", "classdrake_1_1ad_1_1_auto_diff.html", "classdrake_1_1ad_1_1_auto_diff" ]
+      ] ],
       [ "assert", "namespacedrake_1_1assert.html", [
         [ "ConditionTraits< symbolic::Formula >", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4" ]
       ] ],

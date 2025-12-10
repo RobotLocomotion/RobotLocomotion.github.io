@@ -1,0 +1,654 @@
+<!-- HTML header for doxygen 1.14.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: AutoDiff Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1ad_1_1_auto_diff.html','','classdrake_1_1ad_1_1_auto_diff-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AutoDiff Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A scalar type that performs automatic differentiation, similar to <span class="tt">Eigen::AutoDiffScalar&lt;Eigen::VectorXd&gt;</span>. </p>
+<p>Unlike <span class="tt">Eigen::AutoDiffScalar</span>, Drake's <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html" title="A scalar type that performs automatic differentiation, similar to Eigen::AutoDiffScalar&lt;Eigen::Vector...">AutoDiff</a> is not templated; it only supports dynamically-sized derivatives using floating-point doubles.</p>
+<p>At the moment, the features of this class are similar to Eigen::AutoDiffScalar, but in the future Drake will further customize this class to optimize its runtime performance and better integrate it with our optimization tools. </p>
+</div>
+<p><code>#include &lt;drake/common/ad/auto_diff.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a7244535f6c2038f9d8f5f71cd47eec2d" id="r_a7244535f6c2038f9d8f5f71cd47eec2d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7244535f6c2038f9d8f5f71cd47eec2d">DerType</a> = Eigen::VectorXd</td></tr>
+<tr class="memdesc:a7244535f6c2038f9d8f5f71cd47eec2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compatibility alias to mimic Eigen::AutoDiffScalar.  <br /></td></tr>
+<tr class="memitem:a8c2981f3f834be9448a6ab06c28748eb" id="r_a8c2981f3f834be9448a6ab06c28748eb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c2981f3f834be9448a6ab06c28748eb">Scalar</a> = <a class="el" href="classdouble.html">double</a></td></tr>
+<tr class="memdesc:a8c2981f3f834be9448a6ab06c28748eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compatibility alias to mimic Eigen::AutoDiffScalar.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a38b9587521a313455743ad305793bdb1" id="r_a38b9587521a313455743ad305793bdb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38b9587521a313455743ad305793bdb1">AutoDiff</a> ()=default</td></tr>
+<tr class="memdesc:a38b9587521a313455743ad305793bdb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs zero.  <br /></td></tr>
+<tr class="memitem:a735d36bf55293be0681e872c4cbce2a3" id="r_a735d36bf55293be0681e872c4cbce2a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a735d36bf55293be0681e872c4cbce2a3">AutoDiff</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>)</td></tr>
+<tr class="memdesc:a735d36bf55293be0681e872c4cbce2a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a value with empty derivatives.  <br /></td></tr>
+<tr class="memitem:a0c9ea0ca4b6ccf858a8fd161e1701323" id="r_a0c9ea0ca4b6ccf858a8fd161e1701323"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c9ea0ca4b6ccf858a8fd161e1701323">AutoDiff</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>, Eigen::Index size, Eigen::Index offset)</td></tr>
+<tr class="memdesc:a0c9ea0ca4b6ccf858a8fd161e1701323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a value with a single partial derivative of 1.0 at the given <span class="tt">offset</span> in a vector of <span class="tt">size</span> otherwise-zero derivatives.  <br /></td></tr>
+<tr class="memitem:a6805ae23cbaafb2553c0996ac5668da6" id="r_a6805ae23cbaafb2553c0996ac5668da6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6805ae23cbaafb2553c0996ac5668da6">AutoDiff</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="#a0e318c25b1c93b663b23c104323215a2">derivatives</a>)</td></tr>
+<tr class="memdesc:a6805ae23cbaafb2553c0996ac5668da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a value with the given derivatives.  <br /></td></tr>
+<tr class="memitem:af58efe889f2ea8185d3c3b26727de77b" id="r_af58efe889f2ea8185d3c3b26727de77b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af58efe889f2ea8185d3c3b26727de77b">operator=</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a>)</td></tr>
+<tr class="memdesc:af58efe889f2ea8185d3c3b26727de77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a value and clears the derivatives.  <br /></td></tr>
+<tr class="memitem:a701541ece873a57b52e3d7f520094311" id="r_a701541ece873a57b52e3d7f520094311"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a701541ece873a57b52e3d7f520094311">~AutoDiff</a> ()=default</td></tr>
+<tr class="memitem:a374f9f0250d7e270cc4bf301edb46523" id="r_a374f9f0250d7e270cc4bf301edb46523"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a374f9f0250d7e270cc4bf301edb46523">value</a> () const</td></tr>
+<tr class="memdesc:a374f9f0250d7e270cc4bf301edb46523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value part of this AutoDiff (readonly).  <br /></td></tr>
+<tr class="memitem:aac97df8acb32b5e1d9e3ba493ee4aa97" id="r_aac97df8acb32b5e1d9e3ba493ee4aa97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac97df8acb32b5e1d9e3ba493ee4aa97">value</a> ()</td></tr>
+<tr class="memdesc:aac97df8acb32b5e1d9e3ba493ee4aa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the value part of this AutoDiff (mutable).  <br /></td></tr>
+<tr class="memitem:a0e318c25b1c93b663b23c104323215a2" id="r_a0e318c25b1c93b663b23c104323215a2"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e318c25b1c93b663b23c104323215a2">derivatives</a> () const</td></tr>
+<tr class="memdesc:a0e318c25b1c93b663b23c104323215a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a view of the derivatives part of this AutoDiff (readonly).  <br /></td></tr>
+<tr class="memitem:aaee3bb389ddc7a94e23523c38106ae99" id="r_aaee3bb389ddc7a94e23523c38106ae99"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaee3bb389ddc7a94e23523c38106ae99">derivatives</a> ()</td></tr>
+<tr class="memdesc:aaee3bb389ddc7a94e23523c38106ae99"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns a mutable view of the derivatives part of this AutoDiff.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a60cc93ba2c07c34e2f161a82bdc1a870" id="r_a60cc93ba2c07c34e2f161a82bdc1a870"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60cc93ba2c07c34e2f161a82bdc1a870">AutoDiff</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;)=default</td></tr>
+<tr class="memitem:a9f4face312936b2b76d26cefc879bbf0" id="r_a9f4face312936b2b76d26cefc879bbf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f4face312936b2b76d26cefc879bbf0">operator=</a> (const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;)=default</td></tr>
+<tr class="memitem:a032b5ee45f3dc02437c4ae1f24a696ac" id="r_a032b5ee45f3dc02437c4ae1f24a696ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a032b5ee45f3dc02437c4ae1f24a696ac">AutoDiff</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&amp;)=default</td></tr>
+<tr class="memitem:a6661c301ccc8e8e578bd8b4e664c6212" id="r_a6661c301ccc8e8e578bd8b4e664c6212"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6661c301ccc8e8e578bd8b4e664c6212">operator=</a> (<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&amp;)=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Internal use only</h2></td></tr>
+<tr class="memitem:aac22df03f7efeb4731cbf28535148b03" id="r_aac22df03f7efeb4731cbf28535148b03"><td class="memItemLeft" align="right" valign="top">const internal::Partials &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac22df03f7efeb4731cbf28535148b03">partials</a> () const</td></tr>
+<tr class="memdesc:aac22df03f7efeb4731cbf28535148b03"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Users should call <a class="el" href="#aaee3bb389ddc7a94e23523c38106ae99" title="(Advanced) Returns a mutable view of the derivatives part of this AutoDiff.">derivatives()</a> instead.  <br /></td></tr>
+<tr class="memitem:afc6482e6b15e4474d642fb426f4e75fb" id="r_afc6482e6b15e4474d642fb426f4e75fb"><td class="memItemLeft" align="right" valign="top">internal::Partials &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc6482e6b15e4474d642fb426f4e75fb">partials</a> ()</td></tr>
+<tr class="memdesc:afc6482e6b15e4474d642fb426f4e75fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Users should call <a class="el" href="#aaee3bb389ddc7a94e23523c38106ae99" title="(Advanced) Returns a mutable view of the derivatives part of this AutoDiff.">derivatives()</a> instead.  <br /></td></tr>
+</table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="a7244535f6c2038f9d8f5f71cd47eec2d" name="a7244535f6c2038f9d8f5f71cd47eec2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7244535f6c2038f9d8f5f71cd47eec2d">&#9670;&#160;</a></span>DerType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a7244535f6c2038f9d8f5f71cd47eec2d">DerType</a> = Eigen::VectorXd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compatibility alias to mimic Eigen::AutoDiffScalar. </p>
+
+</div>
+</div>
+<a id="a8c2981f3f834be9448a6ab06c28748eb" name="a8c2981f3f834be9448a6ab06c28748eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c2981f3f834be9448a6ab06c28748eb">&#9670;&#160;</a></span>Scalar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a8c2981f3f834be9448a6ab06c28748eb">Scalar</a> = <a class="el" href="classdouble.html">double</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compatibility alias to mimic Eigen::AutoDiffScalar. </p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a60cc93ba2c07c34e2f161a82bdc1a870" name="a60cc93ba2c07c34e2f161a82bdc1a870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60cc93ba2c07c34e2f161a82bdc1a870">&#9670;&#160;</a></span>AutoDiff() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a032b5ee45f3dc02437c4ae1f24a696ac" name="a032b5ee45f3dc02437c4ae1f24a696ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032b5ee45f3dc02437c4ae1f24a696ac">&#9670;&#160;</a></span>AutoDiff() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38b9587521a313455743ad305793bdb1" name="a38b9587521a313455743ad305793bdb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38b9587521a313455743ad305793bdb1">&#9670;&#160;</a></span>AutoDiff() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs zero. </p>
+
+</div>
+</div>
+<a id="a735d36bf55293be0681e872c4cbce2a3" name="a735d36bf55293be0681e872c4cbce2a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735d36bf55293be0681e872c4cbce2a3">&#9670;&#160;</a></span>AutoDiff() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a value with empty derivatives. </p>
+
+</div>
+</div>
+<a id="a0c9ea0ca4b6ccf858a8fd161e1701323" name="a0c9ea0ca4b6ccf858a8fd161e1701323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c9ea0ca4b6ccf858a8fd161e1701323">&#9670;&#160;</a></span>AutoDiff() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Index</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Index</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a value with a single partial derivative of 1.0 at the given <span class="tt">offset</span> in a vector of <span class="tt">size</span> otherwise-zero derivatives. </p>
+
+</div>
+</div>
+<a id="a6805ae23cbaafb2553c0996ac5668da6" name="a6805ae23cbaafb2553c0996ac5668da6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6805ae23cbaafb2553c0996ac5668da6">&#9670;&#160;</a></span>AutoDiff() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>derivatives</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a value with the given derivatives. </p>
+
+</div>
+</div>
+<a id="a701541ece873a57b52e3d7f520094311" name="a701541ece873a57b52e3d7f520094311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a701541ece873a57b52e3d7f520094311">&#9670;&#160;</a></span>~AutoDiff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aaee3bb389ddc7a94e23523c38106ae99" name="aaee3bb389ddc7a94e23523c38106ae99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaee3bb389ddc7a94e23523c38106ae99">&#9670;&#160;</a></span>derivatives() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd &amp; derivatives </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Returns a mutable view of the derivatives part of this AutoDiff. </p>
+<p>Instead of mutating the derivatives after construction, it's generally preferable to set them directly in the constructor if possible.</p>
+<p>Do not presume any specific C++ type for the the return value. It will act like a mutable Eigen column-vector expression (e.g., Eigen::Block&lt;VectorXd&gt;) that also allows for assignment and resizing, but we reserve the right to change the return type for efficiency down the road. </p>
+
+</div>
+</div>
+<a id="a0e318c25b1c93b663b23c104323215a2" name="a0e318c25b1c93b663b23c104323215a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e318c25b1c93b663b23c104323215a2">&#9670;&#160;</a></span>derivatives() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd &amp; derivatives </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a view of the derivatives part of this AutoDiff (readonly). </p>
+<p>Do not presume any specific C++ type for the the return value. It will act like an Eigen column-vector expression (e.g., Eigen::Block&lt;const VectorXd&gt;), but we reserve the right to change the return type for efficiency down the road. </p>
+
+</div>
+</div>
+<a id="a6661c301ccc8e8e578bd8b4e664c6212" name="a6661c301ccc8e8e578bd8b4e664c6212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6661c301ccc8e8e578bd8b4e664c6212">&#9670;&#160;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f4face312936b2b76d26cefc879bbf0" name="a9f4face312936b2b76d26cefc879bbf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f4face312936b2b76d26cefc879bbf0">&#9670;&#160;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af58efe889f2ea8185d3c3b26727de77b" name="af58efe889f2ea8185d3c3b26727de77b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af58efe889f2ea8185d3c3b26727de77b">&#9670;&#160;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assigns a value and clears the derivatives. </p>
+
+</div>
+</div>
+<a id="afc6482e6b15e4474d642fb426f4e75fb" name="afc6482e6b15e4474d642fb426f4e75fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6482e6b15e4474d642fb426f4e75fb">&#9670;&#160;</a></span>partials() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::Partials &amp; partials </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Users should call <a class="el" href="#aaee3bb389ddc7a94e23523c38106ae99" title="(Advanced) Returns a mutable view of the derivatives part of this AutoDiff.">derivatives()</a> instead. </p>
+
+</div>
+</div>
+<a id="aac22df03f7efeb4731cbf28535148b03" name="aac22df03f7efeb4731cbf28535148b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac22df03f7efeb4731cbf28535148b03">&#9670;&#160;</a></span>partials() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const internal::Partials &amp; partials </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Users should call <a class="el" href="#aaee3bb389ddc7a94e23523c38106ae99" title="(Advanced) Returns a mutable view of the derivatives part of this AutoDiff.">derivatives()</a> instead. </p>
+
+</div>
+</div>
+<a id="aac97df8acb32b5e1d9e3ba493ee4aa97" name="aac97df8acb32b5e1d9e3ba493ee4aa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac97df8acb32b5e1d9e3ba493ee4aa97">&#9670;&#160;</a></span>value() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> &amp; value </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Returns the value part of this AutoDiff (mutable). </p>
+<p>Operations on this value will NOT alter the derivatives. </p>
+
+</div>
+</div>
+<a id="a374f9f0250d7e270cc4bf301edb46523" name="a374f9f0250d7e270cc4bf301edb46523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374f9f0250d7e270cc4bf301edb46523">&#9670;&#160;</a></span>value() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> value </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the value part of this AutoDiff (readonly). </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/common/ad/<a class="el" href="auto__diff_8h.html">auto_diff.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1ad.html">ad</a></li><li class="navelem"><a href="classdrake_1_1ad_1_1_auto_diff.html">AutoDiff</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>

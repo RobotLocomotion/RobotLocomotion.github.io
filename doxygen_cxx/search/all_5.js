@@ -109,7 +109,7 @@ var searchData=
   ['floating_5fvelocities_5fstart_5fin_5fv_106',['floating_velocities_start_in_v',['../classdrake_1_1multibody_1_1_rigid_body.html#a02779a5522ffef8547daf6c386ffb47b',1,'drake::multibody::RigidBody']]],
   ['floating_5fvelocity_5fsuffix_107',['floating_velocity_suffix',['../classdrake_1_1multibody_1_1_rigid_body.html#a4bf67c08cb5fb34309c4c220d9872d29',1,'drake::multibody::RigidBody']]],
   ['floor_108',['Floor',['../namespacedrake_1_1symbolic.html#a245f75ee96839b12e22fea09c6f3ec91af3f6d0343d56ce88ce7958170ed05cb3',1,'drake::symbolic']]],
-  ['floor_109',['floor',['../classdrake_1_1symbolic_1_1_expression.html#a08cadfe5adda620a40258a84d87081f4',1,'drake::symbolic::Expression::floor()'],['../namespacedrake_1_1symbolic.html#a08cadfe5adda620a40258a84d87081f4',1,'drake::symbolic::floor()']]],
+  ['floor_109',['floor',['../classdrake_1_1symbolic_1_1_expression.html#a08cadfe5adda620a40258a84d87081f4',1,'drake::symbolic::Expression::floor()'],['../namespacedrake_1_1ad.html#ae00d7ffc2f5bb0b2091d1d2a6f83de37',1,'drake::ad::floor()'],['../namespacedrake_1_1symbolic.html#a08cadfe5adda620a40258a84d87081f4',1,'drake::symbolic::floor()']]],
   ['flow_5ftolerance_110',['flow_tolerance',['../structdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_options.html#aa3fa9cf3c24726cbf70d03c92300b70c',1,'drake::geometry::optimization::GraphOfConvexSetsOptions']]],
   ['flush_111',['Flush',['../classdrake_1_1geometry_1_1_meshcat.html#a548a7b441b7900dcbd5481778c7dec9f',1,'drake::geometry::Meshcat']]],
   ['fmt_112',['fmt',['../namespacefmt.html',1,'']]],

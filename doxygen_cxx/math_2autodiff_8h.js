@@ -1,6 +1,6 @@
 var math_2autodiff_8h =
 [
-    [ "drake::math::AutoDiffMatrixType", "namespacedrake_1_1math.html#a25ae6f07da9dbbdc55d02c5749c6a5b3", null ],
+    [ "drake::math::AutoDiffMatrixType", "namespacedrake_1_1math.html#ab72101d7c1ac556486d484c78ae96332", null ],
     [ "drake::math::DiscardGradient", "namespacedrake_1_1math.html#aa6b853dffb7141874967340f9a18f4eb", null ],
     [ "drake::math::ExtractValue", "namespacedrake_1_1math.html#a483ac3b69e4ce09af0b0d977128ed769", null ],
     [ "drake::math::ExtractValue", "namespacedrake_1_1math.html#a511506438ea2d8b648ef31f7957f118b", null ],

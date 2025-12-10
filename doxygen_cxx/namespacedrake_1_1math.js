@@ -14,7 +14,7 @@ var namespacedrake_1_1math =
     [ "RigidTransform", "classdrake_1_1math_1_1_rigid_transform.html", "classdrake_1_1math_1_1_rigid_transform" ],
     [ "RollPitchYaw", "classdrake_1_1math_1_1_roll_pitch_yaw.html", "classdrake_1_1math_1_1_roll_pitch_yaw" ],
     [ "RotationMatrix", "classdrake_1_1math_1_1_rotation_matrix.html", "classdrake_1_1math_1_1_rotation_matrix" ],
-    [ "AutoDiffMatrixType", "namespacedrake_1_1math.html#a25ae6f07da9dbbdc55d02c5749c6a5b3", null ],
+    [ "AutoDiffMatrixType", "namespacedrake_1_1math.html#ab72101d7c1ac556486d484c78ae96332", null ],
     [ "KnotVectorType", "namespacedrake_1_1math.html#a2dc222f66e0f5092e8cfe879f24874b2", [
       [ "kUniform", "namespacedrake_1_1math.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50", null ],
       [ "kClampedUniform", "namespacedrake_1_1math.html#a2dc222f66e0f5092e8cfe879f24874b2af1b493f6e43ce0d1371533ee4f1199d0", null ]

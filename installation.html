@@ -177,7 +177,7 @@ officially supports:</p>
     <tr>
       <th>Operating System ⁽¹⁾</th>
       <th>Architecture</th>
-      <th>Python ⁽²⁾</th>
+      <th>Python ⁽²⁾ ⁽³⁾</th>
       <th>End of life ⁽⁴⁾</th>
     </tr>
   </thead>
@@ -185,25 +185,25 @@ officially supports:</p>
     <tr>
       <td>Ubuntu 22.04 LTS (Jammy Jellyfish)</td>
       <td>x86_64</td>
-      <td>3.10 ⁽³⁾</td>
+      <td>3.10</td>
       <td>March 2026</td>
     </tr>
     <tr>
       <td>Ubuntu 24.04 LTS (Noble Numbat)</td>
       <td>x86_64</td>
-      <td>3.12 ⁽³⁾</td>
+      <td>3.12</td>
       <td>March 2028</td>
     </tr>
     <tr>
       <td>macOS Sequoia (15)</td>
       <td>arm64</td>
-      <td>3.14 ⁽³⁾</td>
+      <td>3.14</td>
       <td>October 2026</td>
     </tr>
     <tr>
-      <td>macOS Tahoe (26) ⁽⁵⁾</td>
+      <td>macOS Tahoe (26)</td>
       <td>arm64</td>
-      <td>TBD</td>
+      <td>3.14</td>
       <td>October 2027</td>
     </tr>
   </tbody>
@@ -213,7 +213,7 @@ officially supports:</p>
 notice regressions, so if it doesn’t work for you then please file a bug report.</p>
 
 <p>Unofficially, Drake is also likely to be compatible with newer versions of
-Ubuntu or macOS than what are listed, or with Ubuntu 22.04 running on arm64, or
+Ubuntu or macOS than what are listed, or with Ubuntu 24.04 running on arm64, or
 with other versions of Python. However, these are not supported so if it doesn’t
 work for you then please file a pull request with the fix, not a bug report.</p>
 
@@ -228,18 +228,15 @@ that Conda is involved.</p>
 
 <p>⁽³⁾ The Python version shown in the table is supported for all installation
 channels. Additionally, when installing via <code class="language-plaintext highlighter-rouge">pip</code>
-on Ubuntu Python versions 3.10 through 3.14 (inclusive) are supported ⁽⁶⁾ and
-on macOS Python versions 3.13 through 3.14 (inclusive) are supported ⁽⁶⁾.
+on Ubuntu Python versions 3.10 through 3.14 (inclusive) are supported ⁽⁵⁾ and
+on macOS Python versions 3.13 through 3.14 (inclusive) are supported ⁽⁵⁾.
 Refer to <a href="/stable.html#os-support">OS Support</a> for details on our “end of life”
 timeline for changing which Python versions are supported.</p>
 
 <p>⁽⁴⁾ These end-of-life dates are estimates.
 Refer to <a href="/stable.html#os-support">OS Support</a> for details.</p>
 
-<p>⁽⁵⁾ Tahoe support is in development; refer to
-<a href="https://github.com/RobotLocomotion/drake/issues/23439">#23439</a> for details.</p>
-
-<p>⁽⁶⁾ Drake’s published Python 3.14 wheels do not support MOSEK, because MOSEK
+<p>⁽⁵⁾ Drake’s published Python 3.14 wheels do not support MOSEK, because MOSEK
 itself doesn’t yet support Python 3.14.</p>
 
 <p>The following table shows the configurations that <em>must</em> be used when
@@ -272,8 +269,8 @@ Drake’s pre-compiled binaries:</p>
     </tr>
     <tr>
       <td>macOS Tahoe (26)</td>
-      <td>TBD</td>
-      <td>TBD</td>
+      <td>Apple LLVM 17 (Xcode 26.1)</td>
+      <td>C++23</td>
     </tr>
   </tbody>
 </table>

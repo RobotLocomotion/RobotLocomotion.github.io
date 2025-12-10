@@ -401,8 +401,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba077b59ee3574bbe9a0a602c14293c3" id="r_aba077b59ee3574bbe9a0a602c14293c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba077b59ee3574bbe9a0a602c14293c3">RenderLabelImage</a> (const <a class="el" href="classdrake_1_1geometry_1_1render_1_1_color_render_camera.html">render::ColorRenderCamera</a> &amp;camera, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> parent_frame, const math::RigidTransformd &amp;X_PC, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#af9f2ff2c09bd6626d594951724ed1d9a">systems::sensors::ImageLabel16I</a> *label_image_out) const</td></tr>
 <tr class="memdesc:aba077b59ee3574bbe9a0a602c14293c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aba077b59ee3574bbe9a0a602c14293c3" title="Renders a label image for the given camera posed with respect to the indicated parent frame P.">QueryObject::RenderLabelImage()</a>.  <br /></td></tr>
 <tr id="pub-methods-11" class="groupHeader"><td colspan="2"><div class="groupHeader">Scalar conversion</div></td></tr>
-<tr class="memitem:af25d09e9c3c57d339a5cd10e05390edc" id="r_af25d09e9c3c57d339a5cd10e05390edc"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af25d09e9c3c57d339a5cd10e05390edc">ToAutoDiffXd</a> () const</td></tr>
-<tr class="memdesc:af25d09e9c3c57d339a5cd10e05390edc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a deep copy of this state using the <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a> scalar with all scalar values initialized from the current values.  <br /></td></tr>
+<tr class="memitem:af25d09e9c3c57d339a5cd10e05390edc" id="r_af25d09e9c3c57d339a5cd10e05390edc"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af25d09e9c3c57d339a5cd10e05390edc">ToAutoDiffXd</a> () const</td></tr>
+<tr class="memdesc:af25d09e9c3c57d339a5cd10e05390edc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a deep copy of this state using the <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a> scalar with all scalar values initialized from the current values.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
 Default proximity properties</h2></td></tr>
@@ -2871,7 +2871,7 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt; ToAutoDiffXd </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt; ToAutoDiffXd </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2879,8 +2879,8 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a deep copy of this state using the <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a> scalar with all scalar values initialized from the current values. </p>
-<p>If this is invoked on an instance already instantiated on <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a>, it is equivalent to cloning the instance. </p>
+<p>Returns a deep copy of this state using the <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a> scalar with all scalar values initialized from the current values. </p>
+<p>If this is invoked on an instance already instantiated on <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>, it is equivalent to cloning the instance. </p>
 
 </div>
 </div>

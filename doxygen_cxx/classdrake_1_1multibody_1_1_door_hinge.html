@@ -270,8 +270,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a97a2e708e234263ed4edabe99b7b43f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called only from the public non-virtual CalcAndAddForceContributions() which will already have error-checked the parameters so you don't have to.  <br /></td></tr>
 <tr class="memitem:abac55300015badfb4492f0de53226522" id="r_abac55300015badfb4492f0de53226522"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abac55300015badfb4492f0de53226522">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;) const override</td></tr>
 <tr class="memdesc:abac55300015badfb4492f0de53226522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this ForceElement (templated on T) to a mobilizer templated on <span class="tt">double</span>.  <br /></td></tr>
-<tr class="memitem:a6d9ff6f78cc3ab59d31b629fa2ac192f" id="r_a6d9ff6f78cc3ab59d31b629fa2ac192f"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d9ff6f78cc3ab59d31b629fa2ac192f">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;) const override</td></tr>
-<tr class="memdesc:a6d9ff6f78cc3ab59d31b629fa2ac192f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this ForceElement (templated on T) to a mobilizer templated on <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a>.  <br /></td></tr>
+<tr class="memitem:a6d9ff6f78cc3ab59d31b629fa2ac192f" id="r_a6d9ff6f78cc3ab59d31b629fa2ac192f"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d9ff6f78cc3ab59d31b629fa2ac192f">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;) const override</td></tr>
+<tr class="memdesc:a6d9ff6f78cc3ab59d31b629fa2ac192f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this ForceElement (templated on T) to a mobilizer templated on <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>.  <br /></td></tr>
 <tr class="memitem:aa4cc39a0dd2bb13463c033c035a5acef" id="r_aa4cc39a0dd2bb13463c033c035a5acef"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4cc39a0dd2bb13463c033c035a5acef">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const override</td></tr>
 <tr class="memitem:a535325f05d16d9b694f92941281f4520" id="r_a535325f05d16d9b694f92941281f4520"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a535325f05d16d9b694f92941281f4520">DoShallowClone</a> () const override</td></tr>
 <tr class="memdesc:a535325f05d16d9b694f92941281f4520"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI for ShallowClone().  <br /></td></tr>
@@ -771,9 +771,9 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt; DoCloneToScalar </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_force_element.html">ForceElement</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt; DoCloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
+          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -784,7 +784,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Clones this ForceElement (templated on T) to a mobilizer templated on <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a>. </p>
+<p>Clones this ForceElement (templated on T) to a mobilizer templated on <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1multibody_1_1_force_element.html#a0ca1852f91f1257e0adcb5ceb06e892e">ForceElement&lt; T &gt;</a>.</p>
 

@@ -27,8 +27,10 @@ var searchData=
   ['articulated_5fbody_5finertia_2eh_24',['articulated_body_inertia.h',['../articulated__body__inertia_8h.html',1,'']]],
   ['articulated_5fbody_5finertia_5fcache_2eh_25',['articulated_body_inertia_cache.h',['../articulated__body__inertia__cache_8h.html',1,'']]],
   ['augmented_5flagrangian_2eh_26',['augmented_lagrangian.h',['../augmented__lagrangian_8h.html',1,'']]],
-  ['autodiff_2eh_27',['autodiff.h',['../common_2autodiff_8h.html',1,'(Global Namespace)'],['../math_2autodiff_8h.html',1,'(Global Namespace)']]],
-  ['autodiff_5fgradient_2eh_28',['autodiff_gradient.h',['../autodiff__gradient_8h.html',1,'']]],
-  ['autodiff_5foverloads_2eh_29',['autodiff_overloads.h',['../autodiff__overloads_8h.html',1,'']]],
-  ['autodiffxd_2eh_30',['autodiffxd.h',['../autodiffxd_8h.html',1,'']]]
+  ['auto_5fdiff_2eh_27',['auto_diff.h',['../auto__diff_8h.html',1,'']]],
+  ['autodiff_2eh_28',['autodiff.h',['../common_2autodiff_8h.html',1,'(Global Namespace)'],['../math_2autodiff_8h.html',1,'(Global Namespace)']]],
+  ['autodiff_5fconfig_2eh_29',['autodiff_config.h',['../autodiff__config_8h.html',1,'']]],
+  ['autodiff_5fgradient_2eh_30',['autodiff_gradient.h',['../autodiff__gradient_8h.html',1,'']]],
+  ['autodiff_5foverloads_2eh_31',['autodiff_overloads.h',['../autodiff__overloads_8h.html',1,'']]],
+  ['autodiffxd_2eh_32',['autodiffxd.h',['../autodiffxd_8h.html',1,'']]]
 ];

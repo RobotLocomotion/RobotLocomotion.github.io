@@ -322,7 +322,7 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd><span class="tt">grad_W</span> is not well defined everywhere. For example, when computing the distance from a point to a sphere, and the point coincides with the center of the sphere, grad_W is not well defined (as it can be computed as p_GQ / |p_GQ|, but the denominator is 0). When grad_W is not well defined, and we instantiate SignedDistanceToPoint&lt;T&gt; with T being an AutoDiffScalar (like <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a>), the gradient of the query result is not well defined either, so the user should use the gradient in p_GN, distance and grad_W with caution. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><span class="tt">grad_W</span> is not well defined everywhere. For example, when computing the distance from a point to a sphere, and the point coincides with the center of the sphere, grad_W is not well defined (as it can be computed as p_GQ / |p_GQ|, but the denominator is 0). When grad_W is not well defined, and we instantiate SignedDistanceToPoint&lt;T&gt; with T being an AutoDiffScalar (like <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>), the gradient of the query result is not well defined either, so the user should use the gradient in p_GN, distance and grad_W with caution. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>grad_W_in must not contain NaN. </dd></dl>
 
 </div>

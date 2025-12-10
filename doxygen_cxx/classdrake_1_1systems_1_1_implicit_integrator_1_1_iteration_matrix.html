@@ -174,13 +174,13 @@ class drake::systems::ImplicitIntegrator&lt; T &gt;::IterationMatrix</div><p>A c
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4309730e8a9221c2a027c09a128c7b3c" id="r_a4309730e8a9221c2a027c09a128c7b3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4309730e8a9221c2a027c09a128c7b3c">SetAndFactorIterationMatrix</a> (const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &amp;iteration_matrix)</td></tr>
-<tr class="memdesc:a4309730e8a9221c2a027c09a128c7b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factors a dense matrix (the iteration matrix) using LU factorization, which should be faster than the QR factorization used in the specialized template method for <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a> below.  <br /></td></tr>
+<tr class="memdesc:a4309730e8a9221c2a027c09a128c7b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factors a dense matrix (the iteration matrix) using LU factorization, which should be faster than the QR factorization used in the specialized template method for <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a> below.  <br /></td></tr>
 <tr class="memitem:a220c794580291ca1b55410f43b669e30" id="r_a220c794580291ca1b55410f43b669e30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a220c794580291ca1b55410f43b669e30">Solve</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;b) const</td></tr>
 <tr class="memdesc:a220c794580291ca1b55410f43b669e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a linear system Ax = b for x using the iteration matrix (A) factored using LU decomposition.  <br /></td></tr>
 <tr class="memitem:a739eb5a53d29a68514da87bafd7b517f" id="r_a739eb5a53d29a68514da87bafd7b517f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a739eb5a53d29a68514da87bafd7b517f">matrix_factored</a> () const</td></tr>
 <tr class="memdesc:a739eb5a53d29a68514da87bafd7b517f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the iteration matrix has been set and factored.  <br /></td></tr>
-<tr class="memitem:a76ad9c6ef453d55b5fdec02bb4c0c215" id="r_a76ad9c6ef453d55b5fdec02bb4c0c215"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76ad9c6ef453d55b5fdec02bb4c0c215">SetAndFactorIterationMatrix</a> (const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;iteration_matrix)</td></tr>
-<tr class="memitem:af142fa866564fb0a3d5175a183f6a4e8" id="r_af142fa866564fb0a3d5175a183f6a4e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af142fa866564fb0a3d5175a183f6a4e8">Solve</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;b) const</td></tr>
+<tr class="memitem:a76ad9c6ef453d55b5fdec02bb4c0c215" id="r_a76ad9c6ef453d55b5fdec02bb4c0c215"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76ad9c6ef453d55b5fdec02bb4c0c215">SetAndFactorIterationMatrix</a> (const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;iteration_matrix)</td></tr>
+<tr class="memitem:af142fa866564fb0a3d5175a183f6a4e8" id="r_af142fa866564fb0a3d5175a183f6a4e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af142fa866564fb0a3d5175a183f6a4e8">Solve</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;b) const</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a739eb5a53d29a68514da87bafd7b517f" name="a739eb5a53d29a68514da87bafd7b517f"></a>
@@ -213,7 +213,7 @@ template&lt;class T&gt; </div>
         <tr>
           <td class="memname">void SetAndFactorIterationMatrix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>iteration_matrix</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>iteration_matrix</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -238,7 +238,7 @@ template&lt;class T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Factors a dense matrix (the iteration matrix) using LU factorization, which should be faster than the QR factorization used in the specialized template method for <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a> below. </p>
+<p>Factors a dense matrix (the iteration matrix) using LU factorization, which should be faster than the QR factorization used in the specialized template method for <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a> below. </p>
 
 </div>
 </div>
@@ -249,9 +249,9 @@ template&lt;class T&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; Solve </td>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; Solve </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>

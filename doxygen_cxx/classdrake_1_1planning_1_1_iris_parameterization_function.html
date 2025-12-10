@@ -173,7 +173,7 @@ $(function(){initNavTree('classdrake_1_1planning_1_1_iris_parameterization_funct
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:adf7b89a44d112da782b63e8bfdf5c082" id="r_adf7b89a44d112da782b63e8bfdf5c082"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; Eigen::VectorXd(const Eigen::VectorXd &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf7b89a44d112da782b63e8bfdf5c082">ParameterizationFunctionDouble</a></td></tr>
-<tr class="memitem:a90795a2bf923ba9a4cb545586ece211a" id="r_a90795a2bf923ba9a4cb545586ece211a"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; Eigen::VectorX&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;(const Eigen::VectorX&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90795a2bf923ba9a4cb545586ece211a">ParameterizationFunctionAutodiff</a></td></tr>
+<tr class="memitem:a90795a2bf923ba9a4cb545586ece211a" id="r_a90795a2bf923ba9a4cb545586ece211a"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; Eigen::VectorX&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt;(const Eigen::VectorX&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90795a2bf923ba9a4cb545586ece211a">ParameterizationFunctionAutodiff</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -209,7 +209,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::function&lt;Eigen::VectorX&lt;<a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a>&gt;( const Eigen::VectorX&lt;<a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a>&gt;&amp;)&gt; <a class="el" href="#a90795a2bf923ba9a4cb545586ece211a">ParameterizationFunctionAutodiff</a></td>
+          <td class="memname">typedef std::function&lt;Eigen::VectorX&lt;<a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a>&gt;( const Eigen::VectorX&lt;<a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a>&gt;&amp;)&gt; <a class="el" href="#a90795a2bf923ba9a4cb545586ece211a">ParameterizationFunctionAutodiff</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -425,7 +425,7 @@ Expression parameterizations are always threadsafe. </dd></dl>
 </div><div class="memdoc">
 
 <p>Constructs an instance of <a class="el" href="classdrake_1_1planning_1_1_iris_parameterization_function.html" title="Ordinarily, IRIS algorithms grow collision free regions in the robot&#39;s configuration space C.">IrisParameterizationFunction</a> that handles a rational kinematic parameterization. </p>
-<p>Regions are grown in the <span class="tt">s</span> variables, so as to minimize collisions in the <span class="tt">q</span> variables. See RationalForwardKinematics for details. </p><dl class="section note"><dt>Note</dt><dd>This constructor populates the <a class="el" href="class_vector_x_3_01double_01_4.html">VectorX&lt;double&gt;</a> and <a class="el" href="class_vector_x_3_01_auto_diff_xd_01_4.html">VectorX&lt;AutoDiffXd&gt;</a> parameterizations. </dd>
+<p>Regions are grown in the <span class="tt">s</span> variables, so as to minimize collisions in the <span class="tt">q</span> variables. See RationalForwardKinematics for details. </p><dl class="section note"><dt>Note</dt><dd>This constructor populates the <a class="el" href="class_vector_x_3_01double_01_4.html">VectorX&lt;double&gt;</a> and <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85" title="A column vector of any size, templated on scalar type.">VectorX&lt;AutoDiffXd&gt;</a> parameterizations. </dd>
 <dd>
 The user is responsible for ensuring <span class="tt">kin</span> (and the underlying MultibodyPlant it is built on) is kept alive. If that object is deleted, then the parameterization can no longer be used. </dd></dl>
 
@@ -451,7 +451,7 @@ The user is responsible for ensuring <span class="tt">kin</span> (and the underl
 <dl class="section note"><dt>Note</dt><dd>If the user has not specified this with <span class="tt">set_parameterization()</span>, then the default value of <span class="tt">parameterization_double_</span> is the identity function, indicating that the regions should be grown in the full configuration space (in the standard coordinate system). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">If</td><td>the user has specified the <a class="el" href="class_vector_x_3_01double_01_4.html">VectorX&lt;double&gt;</a> parameterization but not the <a class="el" href="class_vector_x_3_01_auto_diff_xd_01_4.html">VectorX&lt;AutoDiffXd&gt;</a> parameterization. </td></tr>
+    <tr><td class="paramname">If</td><td>the user has specified the <a class="el" href="class_vector_x_3_01double_01_4.html">VectorX&lt;double&gt;</a> parameterization but not the <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85" title="A column vector of any size, templated on scalar type.">VectorX&lt;AutoDiffXd&gt;</a> parameterization. </td></tr>
   </table>
   </dd>
 </dl>

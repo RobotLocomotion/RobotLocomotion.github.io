@@ -402,8 +402,8 @@ Protected Member Functions</h2></td></tr>
 <p>Clones this Joint (templated on T) to a joint templated on <span class="tt">double</span>. </p>
 </div></td></tr>
 <tr class="memitem:abf2adfa2084f04575fc98a78bf9d10c0" id="r_abf2adfa2084f04575fc98a78bf9d10c0"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf2adfa2084f04575fc98a78bf9d10c0">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const =0</td></tr>
-<tr class="memitem:a6d783a9727d9ade20ccd4315247eb35a" id="r_a6d783a9727d9ade20ccd4315247eb35a"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d783a9727d9ade20ccd4315247eb35a">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;tree_clone) const =0</td></tr>
-<tr class="memdesc:a6d783a9727d9ade20ccd4315247eb35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Joint (templated on T) to a joint templated on <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a>.  <br /></td></tr>
+<tr class="memitem:a6d783a9727d9ade20ccd4315247eb35a" id="r_a6d783a9727d9ade20ccd4315247eb35a"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d783a9727d9ade20ccd4315247eb35a">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;tree_clone) const =0</td></tr>
+<tr class="memdesc:a6d783a9727d9ade20ccd4315247eb35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Joint (templated on T) to a joint templated on <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>.  <br /></td></tr>
 <tr class="memitem:a26653094ddaee44c5a08b887bdbd4283" id="r_a26653094ddaee44c5a08b887bdbd4283"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26653094ddaee44c5a08b887bdbd4283">DoCloneToScalar</a> (const internal::MultibodyTree&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;) const =0</td></tr>
 <tr class="memitem:adea666cac7be09c0a2d92cf010014bbc" id="r_adea666cac7be09c0a2d92cf010014bbc"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adea666cac7be09c0a2d92cf010014bbc">DoShallowClone</a> () const</td></tr>
 <tr class="memdesc:adea666cac7be09c0a2d92cf010014bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI for ShallowClone().  <br /></td></tr>
@@ -1205,9 +1205,9 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt; DoCloneToScalar </td>
+          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &gt; DoCloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
+          <td class="paramtype">const internal::MultibodyTree&lt; <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">AutoDiffXd</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tree_clone</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1218,7 +1218,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Clones this Joint (templated on T) to a joint templated on <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc" title="An autodiff variable with a dynamic number of partials.">AutoDiffXd</a>. </p>
+<p>Clones this Joint (templated on T) to a joint templated on <a class="el" href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854" title="A scalar type that performs automatic differentiation.">AutoDiffXd</a>. </p>
 
 </div>
 </div>

@@ -1,11 +1,13 @@
 var dir_a36da230f0956f48b11c85f7d599788f =
 [
+    [ "ad", "dir_a1f72b1e53a5842fc3b6b3072554bf94.html", "dir_a1f72b1e53a5842fc3b6b3072554bf94" ],
     [ "proto", "dir_48e4d4a473e039105b12a2118c672ffe.html", "dir_48e4d4a473e039105b12a2118c672ffe" ],
     [ "schema", "dir_a361a47504c6f179d0e8aaa8b79dec3e.html", "dir_a361a47504c6f179d0e8aaa8b79dec3e" ],
     [ "symbolic", "dir_66d630ac47407fe11bcb76d9e7e25510.html", "dir_66d630ac47407fe11bcb76d9e7e25510" ],
     [ "trajectories", "dir_5f7a2023092b91a1e02609fa2c012f50.html", "dir_5f7a2023092b91a1e02609fa2c012f50" ],
     [ "yaml", "dir_a475b9d7562d90f72dfa4821e049558f.html", "dir_a475b9d7562d90f72dfa4821e049558f" ],
     [ "autodiff.h", "common_2autodiff_8h.html", "common_2autodiff_8h" ],
+    [ "autodiff_config.h", "autodiff__config_8h.html", "autodiff__config_8h" ],
     [ "autodiff_overloads.h", "autodiff__overloads_8h.html", "autodiff__overloads_8h" ],
     [ "autodiffxd.h", "autodiffxd_8h.html", "autodiffxd_8h" ],
     [ "bit_cast.h", "bit__cast_8h.html", null ],

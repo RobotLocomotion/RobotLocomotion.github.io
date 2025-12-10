@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['scalar_0',['Scalar',['../classdrake_1_1systems_1_1_system.html#a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc',1,'drake::systems::System']]],
+  ['scalar_0',['Scalar',['../classdrake_1_1ad_1_1_auto_diff.html#a8c2981f3f834be9448a6ab06c28748eb',1,'drake::ad::AutoDiff::Scalar'],['../classdrake_1_1systems_1_1_system.html#a78eaec0a6a2d1c99d2a7eb5eeb1f8bdc',1,'drake::systems::System::Scalar']]],
   ['scalarlossfunction_1',['ScalarLossFunction',['../classdrake_1_1systems_1_1_multilayer_perceptron.html#ab8cd45b3e47ca16f58c1743cb44c6efa',1,'drake::systems::MultilayerPerceptron']]],
   ['scalarodefunction_2',['ScalarOdeFunction',['../classdrake_1_1systems_1_1_scalar_initial_value_problem.html#ad7610f48614ccf8fb01e6345cafff110',1,'drake::systems::ScalarInitialValueProblem']]],
   ['scalarsystemfunction_3',['ScalarSystemFunction',['../namespacedrake_1_1systems_1_1analysis.html#acba2b2630b11f7f987c6924bcdba3c8e',1,'drake::systems::analysis']]],
