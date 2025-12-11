@@ -1,5 +1,7 @@
 var NAVTREEINDEX90 =
 {
+"namespacedrake_1_1symbolic.html#a1474e5a6eadf9c929b552c4a1a774539":[3,0,0,14,330],
+"namespacedrake_1_1symbolic.html#a14bc553c23b60390c291e4a67c40df4d":[3,0,0,14,365],
 "namespacedrake_1_1symbolic.html#a14d18c58b79582620cb6b8ff37ec1e85":[3,0,0,14,231],
 "namespacedrake_1_1symbolic.html#a1546fbcbc705d680d1ae89a5dd5e9c1b":[3,0,0,14,438],
 "namespacedrake_1_1symbolic.html#a160ea247e390cafd990190196c446785":[3,0,0,14,401],
@@ -247,7 +249,5 @@ var NAVTREEINDEX90 =
 "namespacedrake_1_1symbolic.html#a8d78919127ccba2ba24cdb1b0c57613d":[3,0,0,14,90],
 "namespacedrake_1_1symbolic.html#a8e2230c401a3cf25909b4b25cac536be":[3,0,0,14,275],
 "namespacedrake_1_1symbolic.html#a8f71e04c7645cc414e256fd4dd5bb868":[3,0,0,14,333],
-"namespacedrake_1_1symbolic.html#a8f7f698709e6838fff06fe4b668263f0":[3,0,0,14,239],
-"namespacedrake_1_1symbolic.html#a9046d3df24ec467a11723f4d93a2b2b0":[3,0,0,14,221],
-"namespacedrake_1_1symbolic.html#a9074585b52963983223bce6e902efea7":[3,0,0,14,153]
+"namespacedrake_1_1symbolic.html#a8f7f698709e6838fff06fe4b668263f0":[3,0,0,14,239]
 };

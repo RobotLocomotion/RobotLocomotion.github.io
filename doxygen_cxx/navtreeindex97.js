@@ -1,5 +1,7 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a819eeebf41469fa069619868e0fce96d":[4,0,0,3,0,26,4],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a9bcd2beab49aa2bbcc29485e8c15774b":[3,0,0,4,0,26,6],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a9bcd2beab49aa2bbcc29485e8c15774b":[4,0,0,3,0,26,6],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ab3f1efd3efefa056724514d6d247de2f":[3,0,0,4,0,26,10],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#ab3f1efd3efefa056724514d6d247de2f":[4,0,0,3,0,26,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc":[2,2,2,1,7,0,0],
 "structdrake_1_1multibody_1_1_door_hinge_config.html":[3,0,0,9,38],
 "structdrake_1_1multibody_1_1_door_hinge_config.html":[4,0,0,8,36],
-"structdrake_1_1multibody_1_1_door_hinge_config.html#a1a3999d885274e660c1c7415c8dd9062":[3,0,0,9,38,0],
-"structdrake_1_1multibody_1_1_door_hinge_config.html#a1a3999d885274e660c1c7415c8dd9062":[4,0,0,8,36,0],
-"structdrake_1_1multibody_1_1_door_hinge_config.html#a4ce3ff1bdfdd2c1e0789980e855281df":[3,0,0,9,38,9]
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a1a3999d885274e660c1c7415c8dd9062":[3,0,0,9,38,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html":[3,0,0,13,41,0],
+"structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html":[4,0,0,12,41,0],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[3,0,0,13,41,0,0],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[4,0,0,12,41,0,0],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html#a7d164a4c018dfca9cd2bc71c083c8054":[3,0,0,13,41,0,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX100 =
 "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a27aa238f9753bd35e7fc5b8c9d015b6b":[4,0,0,14,107,2,2],
 "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a64b012804e2f584e03341f0d03ce2593":[3,0,0,15,107,2,3],
 "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a64b012804e2f584e03341f0d03ce2593":[4,0,0,14,107,2,3],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a6aac2cea9e3a7eab48aa0569a827edf7":[3,0,0,15,107,2,0],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a6aac2cea9e3a7eab48aa0569a827edf7":[4,0,0,14,107,2,0],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#ac1c5908eb40cf50e444c52cac89b6856":[3,0,0,15,107,2,1]
+"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a6aac2cea9e3a7eab48aa0569a827edf7":[3,0,0,15,107,2,0]
 };

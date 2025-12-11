@@ -1,5 +1,7 @@
 var NAVTREEINDEX87 =
 {
+"namespacedrake.html#ad7cec93e74022e17bba7df5ee54d45d2":[3,0,0,184],
+"namespacedrake.html#adcc62c87e81d1f0042eeb4494e6ce196":[3,0,0,168],
 "namespacedrake.html#adcca06c39e67c5fb9588f30dd77f868c":[3,0,0,93],
 "namespacedrake.html#adfbacdba0566fe8958cfafd659b4373f":[3,0,0,105],
 "namespacedrake.html#ae05268ef42cdcf5bf9eba8c8a9b28e76":[3,0,0,114],
@@ -247,7 +249,5 @@ var NAVTREEINDEX87 =
 "namespacedrake_1_1manipulation_1_1franka__panda_1_1_panda_control_modes.html#a6c73d4bab4a01742ba8afa02b22bd5ec":[3,0,0,7,0,0,1],
 "namespacedrake_1_1manipulation_1_1franka__panda_1_1_panda_control_modes.html#aad29490d45facf1095a8045b38978a9e":[3,0,0,7,0,0,2],
 "namespacedrake_1_1manipulation_1_1franka__panda_1_1_panda_control_modes.html#aee63a4d83426fddefb9b305876c4ea48":[3,0,0,7,0,0,3],
-"namespacedrake_1_1manipulation_1_1kinova__jaco.html":[3,0,0,7,1],
-"namespacedrake_1_1manipulation_1_1kinova__jaco.html#a04639133526c7c4d44d721a97e31587c":[3,0,0,7,1,4],
-"namespacedrake_1_1manipulation_1_1kinova__jaco.html#a688a61fff7d08168bac255b9573991c1":[3,0,0,7,1,7]
+"namespacedrake_1_1manipulation_1_1kinova__jaco.html":[3,0,0,7,1]
 };

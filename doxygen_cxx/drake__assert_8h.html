@@ -198,6 +198,10 @@ Macros</h2></td></tr>
 <tr class="memdesc:a90a6aa22721ddd3bc514c45d8e1d8674"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates <code class="param">condition</code> and iff the value is false will trigger an assertion failure with a message showing at least the condition text, function name, file, and line.  <br /></td></tr>
 <tr class="memitem:aaf9506c208e2a7d09f67d1a9ab84992a" id="r_aaf9506c208e2a7d09f67d1a9ab84992a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf9506c208e2a7d09f67d1a9ab84992a">DRAKE_UNREACHABLE</a>()</td></tr>
 <tr class="memdesc:aaf9506c208e2a7d09f67d1a9ab84992a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Silences a "no return value" compiler warning by calling a function that always raises an exception or aborts (i.e., a function marked noreturn).  <br /></td></tr>
+<tr class="memitem:a740c2a9f2af46168c503379e3bfcba46" id="r_a740c2a9f2af46168c503379e3bfcba46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a740c2a9f2af46168c503379e3bfcba46">DRAKE_THROW_UNLESS</a>(condition, ...)</td></tr>
+<tr class="memdesc:a740c2a9f2af46168c503379e3bfcba46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a convenient wrapper to throw an exception when a condition is unmet.  <br /></td></tr>
+<tr class="memitem:a259299d4c6118640fbdc9865bad44022" id="r_a259299d4c6118640fbdc9865bad44022"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a259299d4c6118640fbdc9865bad44022">DRAKE_DEREF</a>(ptr)</td></tr>
+<tr class="memdesc:a259299d4c6118640fbdc9865bad44022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derferences a pointer, with null checking.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a0d126d5c79d6e74d5f03f8c81e4b3a63" name="a0d126d5c79d6e74d5f03f8c81e4b3a63"></a>
@@ -267,6 +271,73 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Evaluates <code class="param">condition</code> and iff the value is false will trigger an assertion failure with a message showing at least the condition text, function name, file, and line. </p>
+
+</div>
+</div>
+<a id="a259299d4c6118640fbdc9865bad44022" name="a259299d4c6118640fbdc9865bad44022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259299d4c6118640fbdc9865bad44022">&#9670;&#160;</a></span>DRAKE_DEREF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_DEREF</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Derferences a pointer, with null checking. </p>
+<p>If the provided pointer is null, throws an exception. Otherwise, returns a reference to the object being pointed to.</p>
+<p>If the pointer points to a const type, a const reference is returned. If it points to a non-const type, a non-const reference is returned.</p>
+<p>It will typically appear in a class's constructor when it aliases a an input parameter.</p>
+<p>Example usage:</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Foo {</div>
+<div class="line"> <span class="keyword">public</span>:</div>
+<div class="line">  Foo(<span class="keyword">const</span> Bar* bar) : bar_(<a class="code hl_define" href="#a259299d4c6118640fbdc9865bad44022">DRAKE_DEREF</a>(bar)) {}</div>
+<div class="line"> <span class="keyword">private</span>:</div>
+<div class="line">  <span class="keyword">const</span> Bar&amp; bar_;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">@warning The pointer passed must be an l-value; <span class="keywordflow">do</span> not pass in temporaries.</div>
+<div class="line">E.g., <span class="keyword">this</span> includes function calls that <span class="keywordflow">return</span> pointers and pointers to</div>
+<div class="line">arrays (&amp;<a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[0]).</div>
+<div class="ttc" id="adrake__assert_8h_html_a259299d4c6118640fbdc9865bad44022"><div class="ttname"><a href="#a259299d4c6118640fbdc9865bad44022">DRAKE_DEREF</a></div><div class="ttdeci">#define DRAKE_DEREF(ptr)</div><div class="ttdoc">Derferences a pointer, with null checking.</div><div class="ttdef"><b>Definition</b> drake_assert.h:131</div></div>
+<div class="ttc" id="alight__parameter_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> light_parameter.h:147</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a740c2a9f2af46168c503379e3bfcba46" name="a740c2a9f2af46168c503379e3bfcba46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740c2a9f2af46168c503379e3bfcba46">&#9670;&#160;</a></span>DRAKE_THROW_UNLESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_THROW_UNLESS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>condition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides a convenient wrapper to throw an exception when a condition is unmet. </p>
+<p>This is similar to an assertion, but uses exceptions instead of <span class="tt">::abort()</span>, and cannot be disabled.</p>
+<p>Evaluates <span class="tt">condition</span> and iff the value is false will throw an exception with a message showing at least the condition text, function name, file, and line.</p>
+<p>The condition must not be a pointer, where we'd implicitly rely on its nullness. Instead, always write out "!= nullptr" to be precise.</p>
+<p>Correct: <span class="tt">DRAKE_THROW_UNLESS(foo != nullptr);</span> Incorrect: <span class="tt"><a class="el" href="#a740c2a9f2af46168c503379e3bfcba46" title="Provides a convenient wrapper to throw an exception when a condition is unmet.">DRAKE_THROW_UNLESS(foo)</a>;</span></p>
+<p>Because this macro is intended to provide a useful exception message to users, we should err on the side of extra detail about the failure. The meaning of "foo" isolated within error message text does not make it clear that a null pointer is the proximate cause of the problem.</p>
+<p>In addition to the <span class="tt">condition</span>, up to four value expressions can be provided. Each value expression and its value will be included in the error message. For example:</p>
+<p><a class="el" href="#a740c2a9f2af46168c503379e3bfcba46" title="Provides a convenient wrapper to throw an exception when a condition is unmet.">DRAKE_THROW_UNLESS(x &lt; 0, x)</a>;</p>
+<p>Will include the the value of <span class="tt">x</span> in the message. If too many value expressions are specified, this will most likely produce a compiler error referencing "ENCODE_EACH".</p>
+<p>Not all value expression types are supported. This shouldn't be interpreted as <em>the</em> definitive list. If yours isn't supported, feel free to submit a PR to add it (reaching out for help as appropriate). </p>
 
 </div>
 </div>
