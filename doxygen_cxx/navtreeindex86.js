@@ -1,5 +1,6 @@
 var NAVTREEINDEX86 =
 {
+"lcm__publisher__system_8h.html":[5,0,0,12,4,4],
 "lcm__scope__system_8h.html":[5,0,0,12,4,5],
 "lcm__subscriber__system_8h.html":[5,0,0,12,4,6],
 "lcm__system__graphviz_8h.html":[5,0,0,12,4,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX86 =
 "namespacedrake.html#ad0da43c947d3694c1051212d4043d07e":[3,0,0,126],
 "namespacedrake.html#ad0dcb5fec94a56bb5d9cb4496aab181c":[3,0,0,177],
 "namespacedrake.html#ad2c80c0eacf567c675541a92ff161fd0":[3,0,0,144],
-"namespacedrake.html#ad43049d1b6ef4ac0baf74355cc5ddfcb":[3,0,0,165],
-"namespacedrake.html#ad5de4c858064cf0a457d6a18381e837b":[3,0,0,87]
+"namespacedrake.html#ad43049d1b6ef4ac0baf74355cc5ddfcb":[3,0,0,165]
 };

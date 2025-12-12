@@ -1,5 +1,6 @@
 var NAVTREEINDEX91 =
 {
+"namespacedrake_1_1symbolic.html#a8f7f698709e6838fff06fe4b668263f0":[3,0,0,14,239],
 "namespacedrake_1_1symbolic.html#a9046d3df24ec467a11723f4d93a2b2b0":[3,0,0,14,221],
 "namespacedrake_1_1symbolic.html#a9074585b52963983223bce6e902efea7":[3,0,0,14,153],
 "namespacedrake_1_1symbolic.html#a90e045ae61515d2b1a9206abc2ca5412":[3,0,0,14,112],
@@ -248,6 +249,5 @@ var NAVTREEINDEX91 =
 "namespacedrake_1_1systems_1_1analysis.html":[3,0,0,15,0],
 "namespacedrake_1_1systems_1_1analysis.html#a1cc9416d47e29d3a284bc8d4bc3afee0":[3,0,0,15,0,2],
 "namespacedrake_1_1systems_1_1analysis.html#acba2b2630b11f7f987c6924bcdba3c8e":[3,0,0,15,0,3],
-"namespacedrake_1_1systems_1_1controllers.html":[3,0,0,15,1],
-"namespacedrake_1_1systems_1_1estimators.html":[3,0,0,15,2]
+"namespacedrake_1_1systems_1_1controllers.html":[3,0,0,15,1]
 };

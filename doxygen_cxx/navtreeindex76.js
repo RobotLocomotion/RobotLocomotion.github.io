@@ -1,5 +1,6 @@
 var NAVTREEINDEX76 =
 {
+"classdrake_1_1systems_1_1_system_visitor.html#aeb6e3aec74f1487417a5219bb7658765":[3,0,0,15,116,1],
 "classdrake_1_1systems_1_1_system_visitor.html#aeb6e3aec74f1487417a5219bb7658765":[4,0,0,14,116,1],
 "classdrake_1_1systems_1_1_time_varying_affine_system.html":[2,2,1,1],
 "classdrake_1_1systems_1_1_time_varying_affine_system.html#a004de92b1a201d32f3716933c9c164d3":[2,2,1,1,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX76 =
 "classdrake_1_1systems_1_1_vector_base.html#afff83f3bdabe1e99189f58e25f281ba1":[4,0,0,14,126,15],
 "classdrake_1_1systems_1_1_vector_log.html":[3,0,0,15,127],
 "classdrake_1_1systems_1_1_vector_log.html":[4,0,0,14,127],
-"classdrake_1_1systems_1_1_vector_log.html#a0533954b4eb29aa69d4078b0512e518f":[3,0,0,15,127,3],
-"classdrake_1_1systems_1_1_vector_log.html#a0533954b4eb29aa69d4078b0512e518f":[4,0,0,14,127,3]
+"classdrake_1_1systems_1_1_vector_log.html#a0533954b4eb29aa69d4078b0512e518f":[3,0,0,15,127,3]
 };

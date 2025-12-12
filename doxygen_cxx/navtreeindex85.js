@@ -1,5 +1,6 @@
 var NAVTREEINDEX85 =
 {
+"group__codegen.html#gaa11ee8e11a75ed1fa0f970ed7a547add":[2,6,3,2],
 "group__codegen.html#gaeecd86feb47996f0ae2c3f1f40958676":[2,6,3,1],
 "group__compliant__contact.html":[2,3,0,0],
 "group__contact__defaults.html":[2,3,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX85 =
 "lcm__image__traits_8h.html":[5,0,0,12,8,13],
 "lcm__interface__system_8h.html":[5,0,0,12,4,2],
 "lcm__log__playback__system_8h.html":[5,0,0,12,4,3],
-"lcm__messages_8h.html":[5,0,0,5,5],
-"lcm__publisher__system_8h.html":[5,0,0,12,4,4]
+"lcm__messages_8h.html":[5,0,0,5,5]
 };

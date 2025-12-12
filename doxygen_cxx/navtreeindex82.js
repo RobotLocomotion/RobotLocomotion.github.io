@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#aebbc2edad8eb7b44c46a127210e723ad":[4,0,0,15,11,9],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#afc94b4fa6bb4ccc92cf0761a6b2531c0":[3,0,0,16,11,16],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#afc94b4fa6bb4ccc92cf0761a6b2531c0":[4,0,0,15,11,16],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html":[3,0,0,16,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,2,31,9],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[4,0,2,31,9],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3600d2fb47a7b4a9f2fc09c831b53c36":[3,0,2,31,7],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3600d2fb47a7b4a9f2fc09c831b53c36":[4,0,2,31,7],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3c7f8bf042ab4ed8bb90e99f17209f74":[3,0,2,31,4]
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3600d2fb47a7b4a9f2fc09c831b53c36":[4,0,2,31,7]
 };

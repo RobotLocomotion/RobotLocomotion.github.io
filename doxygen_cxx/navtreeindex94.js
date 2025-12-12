@@ -1,5 +1,6 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a569a31c7c4345220b5319a602dccfffa":[4,0,0,2,0,4,8],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[3,0,0,3,0,4,0],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,2,0,4,0],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a79f9607ebbb94dd08b872913cc3429a1":[3,0,0,3,0,4,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#aaf72b1fe5ab339da8e67c2253fa7f92a":[4,0,0,3,31,2,3],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#add1a608db25e8e3befb6775a16867611":[3,0,0,4,34,2,2],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#add1a608db25e8e3befb6775a16867611":[4,0,0,3,31,2,2],
-"structdrake_1_1geometry_1_1_meshcat_params.html":[3,0,0,4,37],
-"structdrake_1_1geometry_1_1_meshcat_params.html":[4,0,0,3,34]
+"structdrake_1_1geometry_1_1_meshcat_params.html":[3,0,0,4,37]
 };

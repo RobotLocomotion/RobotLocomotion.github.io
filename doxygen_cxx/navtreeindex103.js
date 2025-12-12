@@ -1,5 +1,6 @@
 var NAVTREEINDEX103 =
 {
+"structdrake_1_1yaml_1_1_load_yaml_options.html":[4,0,0,17,0],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d":[3,0,0,18,0,3],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d":[4,0,0,17,0,3],
 "structdrake_1_1yaml_1_1_load_yaml_options.html#a38c89699c8b0b11087c8c2b607dd278f":[3,0,0,18,0,0],
