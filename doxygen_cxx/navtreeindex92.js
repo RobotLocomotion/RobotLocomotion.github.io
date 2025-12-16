@@ -160,6 +160,8 @@ var NAVTREEINDEX92 =
 "partial__permutation_8h.html":[5,0,0,8,1,1,2],
 "partials_8h.html":[5,0,0,1,0,0,2],
 "pass__through_8h.html":[5,0,0,12,6,19],
+"patch__constraints__data__pool_8h.html":[5,0,0,8,1,0,10],
+"patch__constraints__pool_8h.html":[5,0,0,8,1,0,11],
 "path__parameterized__trajectory_8h.html":[5,0,0,1,4,7],
 "pendulum__geometry_8h.html":[5,0,0,3,2,0],
 "pendulum__input_8h.html":[5,0,0,3,2,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX92 =
 "read__obj_8h.html":[5,0,0,4,44],
 "realtime__rate__calculator_8h.html":[5,0,0,12,0,14],
 "region__of__attraction_8h.html":[5,0,0,12,0,15],
-"render__benchmark__doxygen_8h.html":[5,0,0,4,0,0],
-"render__camera_8h.html":[5,0,0,4,4,2],
-"render__doxygen_8h.html":[5,0,0,4,4,3]
+"render__benchmark__doxygen_8h.html":[5,0,0,4,0,0]
 };

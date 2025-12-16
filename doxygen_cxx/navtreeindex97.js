@@ -1,5 +1,7 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a7537ffd73509fb56cff43f5effb4a4c3":[3,0,0,4,0,26,3],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a7537ffd73509fb56cff43f5effb4a4c3":[4,0,0,3,0,26,3],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a819eeebf41469fa069619868e0fce96d":[3,0,0,4,0,26,4],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a819eeebf41469fa069619868e0fce96d":[4,0,0,3,0,26,4],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a9bcd2beab49aa2bbcc29485e8c15774b":[3,0,0,4,0,26,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a23fe1040fae5e4e44c855a278f72c7db":[2,2,2,1,7,0,3],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a6bd5b5c3010df1601e26b47283399d89":[2,2,2,1,7,0,2],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a76e35d26d07fbefa7c923b6aac5e3064":[2,2,2,1,7,0,1],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc":[2,2,2,1,7,0,0],
-"structdrake_1_1multibody_1_1_door_hinge_config.html":[3,0,0,9,38],
-"structdrake_1_1multibody_1_1_door_hinge_config.html":[4,0,0,8,36]
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc":[2,2,2,1,7,0,0]
 };

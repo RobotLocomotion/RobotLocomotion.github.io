@@ -9,5 +9,7 @@ var dir_e1d484ad5c2508fd6f676726a75b4a19 =
     [ "icf_model.h", "icf__model_8h.html", null ],
     [ "icf_search_direction_data.h", "icf__search__direction__data_8h.html", null ],
     [ "limit_constraints_data_pool.h", "limit__constraints__data__pool_8h.html", null ],
-    [ "limit_constraints_pool.h", "limit__constraints__pool_8h.html", null ]
+    [ "limit_constraints_pool.h", "limit__constraints__pool_8h.html", null ],
+    [ "patch_constraints_data_pool.h", "patch__constraints__data__pool_8h.html", null ],
+    [ "patch_constraints_pool.h", "patch__constraints__pool_8h.html", null ]
 ];

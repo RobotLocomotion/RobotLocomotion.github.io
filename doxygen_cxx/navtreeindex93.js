@@ -1,5 +1,7 @@
 var NAVTREEINDEX93 =
 {
+"render__camera_8h.html":[5,0,0,4,4,2],
+"render__doxygen_8h.html":[5,0,0,4,4,3],
 "render__engine_8h.html":[5,0,0,4,4,4],
 "render__engine__gl__params_8h.html":[5,0,0,4,5,1],
 "render__engine__gltf__client__params_8h.html":[5,0,0,4,6,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX93 =
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html":[4,0,0,2,0,4],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a13ffcb3765784df37691a53be4495dcc":[3,0,0,3,0,4,9],
 "structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a13ffcb3765784df37691a53be4495dcc":[4,0,0,2,0,4,9],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a3f15ca4376273b0f0017865984081443":[3,0,0,3,0,4,4],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a3f15ca4376273b0f0017865984081443":[4,0,0,2,0,4,4],
-"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a569a31c7c4345220b5319a602dccfffa":[3,0,0,3,0,4,8]
+"structdrake_1_1examples_1_1acrobot_1_1_acrobot_params_indices.html#a3f15ca4376273b0f0017865984081443":[3,0,0,3,0,4,4]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX99 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#ac532c4b500b1a85ea22217f2c65a70ed":[4,0,0,8,3,4,0],
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html":[3,0,0,9,5,5],
 "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html":[4,0,0,8,3,5],
 "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a36dbe2aa2c05a792070d7b44d5c06e87":[3,0,0,9,5,5,3],
 "structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a36dbe2aa2c05a792070d7b44d5c06e87":[4,0,0,8,3,5,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX99 =
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4":[4,0,0,12,25,1],
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html":[3,0,0,13,35],
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html":[4,0,0,12,35],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[3,0,0,13,35,0],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[4,0,0,12,35,0],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[3,0,0,13,35,1]
+"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[3,0,0,13,35,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1multibody_1_1_door_hinge_config.html":[3,0,0,9,38],
+"structdrake_1_1multibody_1_1_door_hinge_config.html":[4,0,0,8,36],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#a1a3999d885274e660c1c7415c8dd9062":[3,0,0,9,38,0],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#a1a3999d885274e660c1c7415c8dd9062":[4,0,0,8,36,0],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#a4ce3ff1bdfdd2c1e0789980e855281df":[3,0,0,9,38,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,8,3,4,1],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,5,4,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a9b45b3e13bd9167aab02e17e08916231":[4,0,0,8,3,4,2],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,5,4,0],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#ac532c4b500b1a85ea22217f2c65a70ed":[4,0,0,8,3,4,0],
-"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html":[3,0,0,9,5,5]
+"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,5,4,0]
 };

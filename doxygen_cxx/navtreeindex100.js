@@ -1,5 +1,7 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[4,0,0,12,35,0],
+"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[3,0,0,13,35,1],
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[4,0,0,12,35,1],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html":[3,0,0,13,41,0],
 "structdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_1_1_options.html":[4,0,0,12,41,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX100 =
 "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html":[3,0,0,15,107,2],
 "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html":[4,0,0,14,107,2],
 "structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a27aa238f9753bd35e7fc5b8c9d015b6b":[3,0,0,15,107,2,2],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a27aa238f9753bd35e7fc5b8c9d015b6b":[4,0,0,14,107,2,2],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a64b012804e2f584e03341f0d03ce2593":[3,0,0,15,107,2,3],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a64b012804e2f584e03341f0d03ce2593":[4,0,0,14,107,2,3]
+"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a27aa238f9753bd35e7fc5b8c9d015b6b":[4,0,0,14,107,2,2]
 };
