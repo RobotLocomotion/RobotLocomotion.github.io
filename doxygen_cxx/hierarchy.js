@@ -152,6 +152,9 @@ var hierarchy =
     [ "DependencyTracker", "classdrake_1_1systems_1_1_dependency_tracker.html", null ],
     [ "DepthRange", "classdrake_1_1geometry_1_1render_1_1_depth_range.html", null ],
     [ "DepthRenderCamera", "classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html", null ],
+    [ "DerivativesConstXprBase", null, [
+      [ "DerivativesConstXpr", "classdrake_1_1ad_1_1_derivatives_const_xpr.html", null ]
+    ] ],
     [ "DescriptorType", "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html", null ],
     [ "DiagramBuilder< T >", "classdrake_1_1systems_1_1_diagram_builder.html", null ],
     [ "DifferentialInverseKinematicsParameters", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_parameters.html", null ],

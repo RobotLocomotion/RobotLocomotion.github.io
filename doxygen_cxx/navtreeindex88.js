@@ -1,5 +1,16 @@
 var NAVTREEINDEX88 =
 {
+"namespacedrake_1_1manipulation.html#ad8ee106dababbf3319fa04af6b58fcae":[3,0,0,7,8],
+"namespacedrake_1_1manipulation.html#afdc513e8a945f2a95a4b00e6cda9eac6":[3,0,0,7,6],
+"namespacedrake_1_1manipulation_1_1franka__panda.html":[3,0,0,7,0],
+"namespacedrake_1_1manipulation_1_1franka__panda.html#a7354fa81740431883600402362b61e7f":[3,0,0,7,0,7],
+"namespacedrake_1_1manipulation_1_1franka__panda.html#aa138c0fd9c5cd9d71f653c586b70f93a":[3,0,0,7,0,6],
+"namespacedrake_1_1manipulation_1_1franka__panda.html#acef64ad9844bb9242a5f4d0bcc8b8ae3":[3,0,0,7,0,5],
+"namespacedrake_1_1manipulation_1_1franka__panda_1_1_panda_control_modes.html":[3,0,0,7,0,0],
+"namespacedrake_1_1manipulation_1_1franka__panda_1_1_panda_control_modes.html#a2541171f1996cfdeadb5d1c013effa96":[3,0,0,7,0,0,0],
+"namespacedrake_1_1manipulation_1_1franka__panda_1_1_panda_control_modes.html#a6c73d4bab4a01742ba8afa02b22bd5ec":[3,0,0,7,0,0,1],
+"namespacedrake_1_1manipulation_1_1franka__panda_1_1_panda_control_modes.html#aad29490d45facf1095a8045b38978a9e":[3,0,0,7,0,0,2],
+"namespacedrake_1_1manipulation_1_1franka__panda_1_1_panda_control_modes.html#aee63a4d83426fddefb9b305876c4ea48":[3,0,0,7,0,0,3],
 "namespacedrake_1_1manipulation_1_1kinova__jaco.html":[3,0,0,7,1],
 "namespacedrake_1_1manipulation_1_1kinova__jaco.html#a04639133526c7c4d44d721a97e31587c":[3,0,0,7,1,4],
 "namespacedrake_1_1manipulation_1_1kinova__jaco.html#a688a61fff7d08168bac255b9573991c1":[3,0,0,7,1,7],
@@ -238,16 +249,5 @@ var NAVTREEINDEX88 =
 "namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7a":[3,0,0,9,2,7],
 "namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aaaa5a0694f9dfb7331467eedc57b9040f":[3,0,0,9,2,7,1],
 "namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aaac97f0008bcf7c7fe4f2ff94160e1385":[3,0,0,9,2,7,3],
-"namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aab46bfc626f096c85ab83f7763ecfeaee":[3,0,0,9,2,7,0],
-"namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aad864bb0ddb640ff5e3cc8dca04dfc111":[3,0,0,9,2,7,2],
-"namespacedrake_1_1multibody_1_1hydroelastics.html":[3,0,0,9,3],
-"namespacedrake_1_1multibody_1_1meshcat.html":[3,0,0,9,4],
-"namespacedrake_1_1multibody_1_1meshcat.html#aaef19a49dabf0bd3fe0fd47e32a84706":[3,0,0,9,4,3],
-"namespacedrake_1_1multibody_1_1parsing.html":[3,0,0,9,5],
-"namespacedrake_1_1multibody_1_1parsing.html#a05b18758a36112ada63e0ce2f90dcc15":[3,0,0,9,5,15],
-"namespacedrake_1_1multibody_1_1parsing.html#a1da36ca4da539d997cfb8123476ff88d":[3,0,0,9,5,16],
-"namespacedrake_1_1multibody_1_1parsing.html#a206dccdada260f64046ab59cc298755e":[3,0,0,9,5,13],
-"namespacedrake_1_1multibody_1_1parsing.html#a37b8da9560db9ed5f1250a99e1947817":[3,0,0,9,5,11],
-"namespacedrake_1_1multibody_1_1parsing.html#a5942f3568b39ffa8362bf3ec8bdd75ec":[3,0,0,9,5,12],
-"namespacedrake_1_1multibody_1_1parsing.html#a5c732972f2ddfdcc2217bdffc9b0a7fb":[3,0,0,9,5,9]
+"namespacedrake_1_1multibody_1_1fem.html#ad0fc09b4ba51af3abea545b9c6220b7aab46bfc626f096c85ab83f7763ecfeaee":[3,0,0,9,2,7,0]
 };

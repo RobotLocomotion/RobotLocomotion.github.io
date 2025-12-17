@@ -1,5 +1,15 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1geometry_1_1_surface_polygon.html#af5b840cd99d12ab4dbe037d719d6d27e":[3,0,0,4,67,2],
+"classdrake_1_1geometry_1_1_surface_polygon.html#af5b840cd99d12ab4dbe037d719d6d27e":[4,0,0,3,64,2],
+"classdrake_1_1geometry_1_1_surface_polygon.html#afaa681c53b3d6f7f1b04b89c720b51de":[3,0,0,4,67,7],
+"classdrake_1_1geometry_1_1_surface_polygon.html#afaa681c53b3d6f7f1b04b89c720b51de":[4,0,0,3,64,7],
+"classdrake_1_1geometry_1_1_surface_triangle.html":[3,0,0,4,68],
+"classdrake_1_1geometry_1_1_surface_triangle.html":[4,0,0,3,65],
+"classdrake_1_1geometry_1_1_surface_triangle.html#a133041089620d0ddd21ccec2c8642e2c":[3,0,0,4,68,6],
+"classdrake_1_1geometry_1_1_surface_triangle.html#a133041089620d0ddd21ccec2c8642e2c":[4,0,0,3,65,6],
+"classdrake_1_1geometry_1_1_surface_triangle.html#a24cc48855af644139e066507739ad145":[3,0,0,4,68,3],
+"classdrake_1_1geometry_1_1_surface_triangle.html#a24cc48855af644139e066507739ad145":[4,0,0,3,65,3],
 "classdrake_1_1geometry_1_1_surface_triangle.html#a319e621fc359dd8daad48247f95b12fa":[3,0,0,4,68,4],
 "classdrake_1_1geometry_1_1_surface_triangle.html#a319e621fc359dd8daad48247f95b12fa":[4,0,0,3,65,4],
 "classdrake_1_1geometry_1_1_surface_triangle.html#a5b3f6d88ca3a706b21c37188e155aefb":[3,0,0,4,68,5],
@@ -239,15 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#ad4c860bb4278ac96c886d215fbd26d87":[2,4,2,4,0,2],
 "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#af2d6113e9e040f77c1cefaf7ed7e36c7":[2,4,2,4,0,11],
 "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#af400a7e2f52b0ca6a37d1d008f6485e7":[2,4,2,4,0,3],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html":[2,1,1,3],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html":[2,5,5,3],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a251de6c17a4bc0152b26a4ad55ddf98b":[2,1,1,3,5],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a251de6c17a4bc0152b26a4ad55ddf98b":[2,5,5,3,5],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a27ef18eef844167c096ed08fbceeeb1a":[2,1,1,3,13],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a27ef18eef844167c096ed08fbceeeb1a":[2,5,5,3,13],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a2c90e1984608b11e2445e216c3617723":[2,1,1,3,1],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a2c90e1984608b11e2445e216c3617723":[2,5,5,3,1],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a3e4b08dc563560e2186dc7c35b92fff3":[2,1,1,3,0],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a3e4b08dc563560e2186dc7c35b92fff3":[2,5,5,3,0],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html#a47d1882872043b7d66dd4fb1437f6ac2":[2,1,1,3,11]
+"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html":[2,1,1,3]
 };

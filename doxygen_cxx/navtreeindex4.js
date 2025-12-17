@@ -1,5 +1,15 @@
 var NAVTREEINDEX4 =
 {
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a2b31f30556dc2663e0cec6297647a4c8":[4,0,0,2,0,10,12],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a45bb0ffc9e4b75fae22cef1d2d95637b":[3,0,0,3,0,10,10],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a45bb0ffc9e4b75fae22cef1d2d95637b":[4,0,0,2,0,10,10],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a5fa822cbcbbae12125675ee4c67fc3c3":[3,0,0,3,0,10,20],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a5fa822cbcbbae12125675ee4c67fc3c3":[4,0,0,2,0,10,20],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a6701a79a48c39c3c0f2932f5a021a5bc":[3,0,0,3,0,10,23],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a6701a79a48c39c3c0f2932f5a021a5bc":[4,0,0,2,0,10,23],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a6c5dc5a59f52cbefc837766443d918e8":[3,0,0,3,0,10,15],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a6c5dc5a59f52cbefc837766443d918e8":[4,0,0,2,0,10,15],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a79ee1493d9f5d641b2aa17c28020480b":[3,0,0,3,0,10,6],
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a79ee1493d9f5d641b2aa17c28020480b":[4,0,0,2,0,10,6],
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a7cb8148f3e0e47f1cbeb6db44cdd1d60":[3,0,0,3,0,10,19],
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a7cb8148f3e0e47f1cbeb6db44cdd1d60":[4,0,0,2,0,10,19],
@@ -239,15 +249,5 @@ var NAVTREEINDEX4 =
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#aeef707d7ea5203ab161bef20bd48eccd":[4,0,0,2,2,1,1],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html":[3,0,0,3,2,3],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html":[4,0,0,2,2,3],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a0f7aec6bbf81de59518b8c55e5b4f8d2":[3,0,0,3,2,3,13],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a0f7aec6bbf81de59518b8c55e5b4f8d2":[4,0,0,2,2,3,13],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a1806c65958ddfc2b52ae245b96e6d6ad":[3,0,0,3,2,3,16],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a1806c65958ddfc2b52ae245b96e6d6ad":[4,0,0,2,2,3,16],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a193a72357cf3fa8b28bc035d5b856ad6":[3,0,0,3,2,3,20],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a193a72357cf3fa8b28bc035d5b856ad6":[4,0,0,2,2,3,20],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a3f7117f0a5e567992391c8b150241b5c":[3,0,0,3,2,3,1],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a3f7117f0a5e567992391c8b150241b5c":[4,0,0,2,2,3,1],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a4f62281a673a79845c950b99d3aa48a1":[3,0,0,3,2,3,22],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a4f62281a673a79845c950b99d3aa48a1":[4,0,0,2,2,3,22],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a62a1d726d1a242fe2dfac212069d7e9f":[3,0,0,3,2,3,12]
+"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a0f7aec6bbf81de59518b8c55e5b4f8d2":[3,0,0,3,2,3,13]
 };

@@ -10,7 +10,7 @@ var classdrake_1_1ad_1_1_auto_diff =
     [ "AutoDiff", "classdrake_1_1ad_1_1_auto_diff.html#a6805ae23cbaafb2553c0996ac5668da6", null ],
     [ "~AutoDiff", "classdrake_1_1ad_1_1_auto_diff.html#a701541ece873a57b52e3d7f520094311", null ],
     [ "derivatives", "classdrake_1_1ad_1_1_auto_diff.html#aaee3bb389ddc7a94e23523c38106ae99", null ],
-    [ "derivatives", "classdrake_1_1ad_1_1_auto_diff.html#a0e318c25b1c93b663b23c104323215a2", null ],
+    [ "derivatives", "classdrake_1_1ad_1_1_auto_diff.html#a88327826c0b7c4cfb29eee1cf19bc197", null ],
     [ "operator=", "classdrake_1_1ad_1_1_auto_diff.html#a6661c301ccc8e8e578bd8b4e664c6212", null ],
     [ "operator=", "classdrake_1_1ad_1_1_auto_diff.html#a9f4face312936b2b76d26cefc879bbf0", null ],
     [ "operator=", "classdrake_1_1ad_1_1_auto_diff.html#af58efe889f2ea8185d3c3b26727de77b", null ],

@@ -1,5 +1,15 @@
 var NAVTREEINDEX83 =
 {
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,2,31,0],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[4,0,2,31,0],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,2,31,11],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[4,0,2,31,11],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2e58e3553fbff5f9ba05acba0daa7753":[3,0,2,31,15],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2e58e3553fbff5f9ba05acba0daa7753":[4,0,2,31,15],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,2,31,9],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[4,0,2,31,9],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3600d2fb47a7b4a9f2fc09c831b53c36":[3,0,2,31,7],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3600d2fb47a7b4a9f2fc09c831b53c36":[4,0,2,31,7],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3c7f8bf042ab4ed8bb90e99f17209f74":[3,0,2,31,4],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3c7f8bf042ab4ed8bb90e99f17209f74":[4,0,2,31,4],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a565479fd1d9d03ed7fd55e0d2ece047f":[3,0,2,31,13],
@@ -123,6 +133,7 @@ var NAVTREEINDEX83 =
 "depth__image__to__point__cloud_8h.html":[5,0,0,9,0],
 "depth__shaders_8h.html":[5,0,0,4,4,0,0],
 "derivative__trajectory_8h.html":[5,0,0,1,4,3],
+"derivatives__xpr_8h.html":[5,0,0,1,0,0,0],
 "desired__state__input_8h.html":[5,0,0,8,9,12],
 "detail__path__utils_8h.html":[5,0,0,8,8,1],
 "detect__zero__simplex_8h.html":[5,0,0,4,2,12],
@@ -238,16 +249,5 @@ var NAVTREEINDEX83 =
 "discrete__values_8h.html":[5,0,0,12,3,18],
 "distance__and__interpolation__provider_8h.html":[5,0,0,10,9],
 "distance__constraint_8h.html":[5,0,0,8,4,10],
-"distance__constraint__params_8h.html":[5,0,0,8,9,17],
-"distance__constraint__utilities_8h.html":[5,0,0,8,4,11],
-"dof__mask_8h.html":[5,0,0,10,10],
-"door__hinge_8h.html":[5,0,0,8,12,12],
-"double__overloads_8h.html":[5,0,0,1,18],
-"doxygen_8h.html":[5,0,0,2,0,0],
-"drake__assert_8h.html":[5,0,0,1,19],
-"drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[5,0,0,1,19,0],
-"drake__assert_8h.html#a259299d4c6118640fbdc9865bad44022":[5,0,0,1,19,3],
-"drake__assert_8h.html#a53797785bb2511ded7061028fcca65c5":[5,0,0,1,19,1],
-"drake__assert_8h.html#a740c2a9f2af46168c503379e3bfcba46":[5,0,0,1,19,4],
-"drake__assert_8h.html#a90a6aa22721ddd3bc514c45d8e1d8674":[5,0,0,1,19,2]
+"distance__constraint__params_8h.html":[5,0,0,8,9,17]
 };

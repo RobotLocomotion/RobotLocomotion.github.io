@@ -1,5 +1,16 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,13,25,3],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[4,0,0,12,25,3],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a727541d7368d1fa14436bfa193f2292c":[3,0,0,13,25,4],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a727541d7368d1fa14436bfa193f2292c":[4,0,0,12,25,4],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[3,0,0,13,25,5],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[4,0,0,12,25,5],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4":[3,0,0,13,25,1],
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4":[4,0,0,12,25,1],
+"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html":[3,0,0,13,35],
+"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html":[4,0,0,12,35],
+"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[3,0,0,13,35,0],
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[4,0,0,12,35,0],
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[3,0,0,13,35,1],
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[4,0,0,12,35,1],
@@ -238,16 +249,5 @@ var NAVTREEINDEX100 =
 "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#ad15f084d2247e61bc20310ab56e457a6":[4,0,0,14,107,0,1],
 "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#af8f29412a52a66576d0ea85108e4d4f9":[3,0,0,15,107,0,7],
 "structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html#af8f29412a52a66576d0ea85108e4d4f9":[4,0,0,14,107,0,7],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html":[3,0,0,15,107,1],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html":[4,0,0,14,107,1],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#a4629709e18f6ad0e9ab7557affc07874":[3,0,0,15,107,1,0],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#a4629709e18f6ad0e9ab7557affc07874":[4,0,0,14,107,1,0],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#a9667554e73dbcbf55ef7e0833d9bc7bc":[3,0,0,15,107,1,1],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#a9667554e73dbcbf55ef7e0833d9bc7bc":[4,0,0,14,107,1,1],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#ad32cf2ca84ebabe72b29786c521ef7b3":[3,0,0,15,107,1,2],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html#ad32cf2ca84ebabe72b29786c521ef7b3":[4,0,0,14,107,1,2],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html":[3,0,0,15,107,2],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html":[4,0,0,14,107,2],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a27aa238f9753bd35e7fc5b8c9d015b6b":[3,0,0,15,107,2,2],
-"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment_params.html#a27aa238f9753bd35e7fc5b8c9d015b6b":[4,0,0,14,107,2,2]
+"structdrake_1_1systems_1_1_system_base_1_1_graphviz_fragment.html":[3,0,0,15,107,1]
 };

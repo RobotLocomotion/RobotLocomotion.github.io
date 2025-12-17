@@ -1,5 +1,15 @@
 var NAVTREEINDEX44 =
 {
+"classdrake_1_1reset__after__move.html#ab8c2e7dc3876319b32f62abdef1e25a2":[4,0,0,43,3],
+"classdrake_1_1reset__after__move.html#abb95b5ad106a6f32e733cd6696aa4c7a":[3,0,0,44,6],
+"classdrake_1_1reset__after__move.html#abb95b5ad106a6f32e733cd6696aa4c7a":[4,0,0,43,6],
+"classdrake_1_1reset__after__move.html#ac8e42fc98481791a8d8ca911b820f728":[3,0,0,44,1],
+"classdrake_1_1reset__after__move.html#ac8e42fc98481791a8d8ca911b820f728":[4,0,0,43,1],
+"classdrake_1_1reset__after__move.html#ad205cd89a7f7bad4df4599fbfa82ed3b":[3,0,0,44,0],
+"classdrake_1_1reset__after__move.html#ad205cd89a7f7bad4df4599fbfa82ed3b":[4,0,0,43,0],
+"classdrake_1_1reset__after__move.html#adaa26c1d337e8225325a3b97d3e5e891":[3,0,0,44,7],
+"classdrake_1_1reset__after__move.html#adaa26c1d337e8225325a3b97d3e5e891":[4,0,0,43,7],
+"classdrake_1_1reset__after__move.html#ae402169a1a094e6dacd59b6986b28eb2":[3,0,0,44,8],
 "classdrake_1_1reset__after__move.html#ae402169a1a094e6dacd59b6986b28eb2":[4,0,0,43,8],
 "classdrake_1_1reset__on__copy.html":[3,0,0,45],
 "classdrake_1_1reset__on__copy.html":[4,0,0,44],
@@ -239,15 +249,5 @@ var NAVTREEINDEX44 =
 "classdrake_1_1schema_1_1_transform.html#ab7e400a7a7b3fdf733f9861285f14742":[4,0,0,11,7,9],
 "classdrake_1_1schema_1_1_transform.html#adb5885c69082fc10bacf2919c7f6a8be":[3,0,0,12,7,0],
 "classdrake_1_1schema_1_1_transform.html#adb5885c69082fc10bacf2919c7f6a8be":[4,0,0,11,7,0],
-"classdrake_1_1schema_1_1_transform.html#ae4b25dc5adde3aa9969caffd3525b661":[3,0,0,12,7,1],
-"classdrake_1_1schema_1_1_transform.html#ae4b25dc5adde3aa9969caffd3525b661":[4,0,0,11,7,1],
-"classdrake_1_1schema_1_1_uniform.html":[3,0,0,12,8],
-"classdrake_1_1schema_1_1_uniform.html":[4,0,0,11,8],
-"classdrake_1_1schema_1_1_uniform.html#a04415c0949f8cc79219386ae0cac1b6b":[3,0,0,12,8,7],
-"classdrake_1_1schema_1_1_uniform.html#a04415c0949f8cc79219386ae0cac1b6b":[4,0,0,11,8,7],
-"classdrake_1_1schema_1_1_uniform.html#a0b0ede69e8156eb97acc579b88e883de":[3,0,0,12,8,11],
-"classdrake_1_1schema_1_1_uniform.html#a0b0ede69e8156eb97acc579b88e883de":[4,0,0,11,8,11],
-"classdrake_1_1schema_1_1_uniform.html#a0b76bedc8aecfd5111207964a8bcf5d4":[3,0,0,12,8,2],
-"classdrake_1_1schema_1_1_uniform.html#a0b76bedc8aecfd5111207964a8bcf5d4":[4,0,0,11,8,2],
-"classdrake_1_1schema_1_1_uniform.html#a13884ab1df4ecb9b600a2af9a2cf7eb9":[3,0,0,12,8,5]
+"classdrake_1_1schema_1_1_transform.html#ae4b25dc5adde3aa9969caffd3525b661":[3,0,0,12,7,1]
 };

@@ -1,5 +1,16 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html":[4,0,0,3,0,26],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a089288eeb5d195cc79f6da0f23cea769":[3,0,0,4,0,26,0],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a089288eeb5d195cc79f6da0f23cea769":[4,0,0,3,0,26,0],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a1155fe07f46b586ad6bf51b9b2f8a496":[3,0,0,4,0,26,9],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a1155fe07f46b586ad6bf51b9b2f8a496":[4,0,0,3,0,26,9],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a152731d5ba3e33738ada7882f0ff650c":[3,0,0,4,0,26,1],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a152731d5ba3e33738ada7882f0ff650c":[4,0,0,3,0,26,1],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a17e04d21a0a53ce5c7047c2c4bd796e9":[3,0,0,4,0,26,7],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a17e04d21a0a53ce5c7047c2c4bd796e9":[4,0,0,3,0,26,7],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a746afa5ed1772820723903386c20143d":[3,0,0,4,0,26,2],
+"structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a746afa5ed1772820723903386c20143d":[4,0,0,3,0,26,2],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a7537ffd73509fb56cff43f5effb4a4c3":[3,0,0,4,0,26,3],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a7537ffd73509fb56cff43f5effb4a4c3":[4,0,0,3,0,26,3],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_result_base.html#a819eeebf41469fa069619868e0fce96d":[3,0,0,4,0,26,4],
@@ -238,16 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc":[2,2,2,1,3,0,0],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_collision_constraint_1_1_config.html#af5e0da9b3fdad1bb08cea5d471f5c2bf":[2,2,2,1,3,0,2],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html":[2,2,2,1,5,0],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#a76e35d26d07fbefa7c923b6aac5e3064":[2,2,2,1,5,0,1],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc":[2,2,2,1,5,0,0],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#af36af3fd58b6b35ae78ad63704fc6190":[2,2,2,1,5,0,2],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html":[2,2,2,1,6,0],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#a29df3e47c1ac94339f7bc8877c64c72c":[2,2,2,1,6,0,1],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc":[2,2,2,1,6,0,0],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#ab19db20e26bd45901b886b6034638e91":[2,2,2,1,6,0,2],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html":[2,2,2,1,7,0],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a23fe1040fae5e4e44c855a278f72c7db":[2,2,2,1,7,0,3],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a6bd5b5c3010df1601e26b47283399d89":[2,2,2,1,7,0,2],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a76e35d26d07fbefa7c923b6aac5e3064":[2,2,2,1,7,0,1],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc":[2,2,2,1,7,0,0]
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#a76e35d26d07fbefa7c923b6aac5e3064":[2,2,2,1,5,0,1]
 };

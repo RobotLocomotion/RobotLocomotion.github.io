@@ -1,5 +1,16 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc":[2,2,2,1,5,0,0],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_centering_cost_1_1_config.html#af36af3fd58b6b35ae78ad63704fc6190":[2,2,2,1,5,0,2],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html":[2,2,2,1,6,0],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#a29df3e47c1ac94339f7bc8877c64c72c":[2,2,2,1,6,0,1],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc":[2,2,2,1,6,0,0],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_joint_velocity_limit_constraint_1_1_config.html#ab19db20e26bd45901b886b6034638e91":[2,2,2,1,6,0,2],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html":[2,2,2,1,7,0],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a23fe1040fae5e4e44c855a278f72c7db":[2,2,2,1,7,0,3],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a6bd5b5c3010df1601e26b47283399d89":[2,2,2,1,7,0,2],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a76e35d26d07fbefa7c923b6aac5e3064":[2,2,2,1,7,0,1],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_least_squares_cost_1_1_config.html#a8e8824802dedfbc36776227f7482b6bc":[2,2,2,1,7,0,0],
 "structdrake_1_1multibody_1_1_door_hinge_config.html":[3,0,0,9,38],
 "structdrake_1_1multibody_1_1_door_hinge_config.html":[4,0,0,8,36],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#a1a3999d885274e660c1c7415c8dd9062":[3,0,0,9,38,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,5,3,5],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html#a9b45b3e13bd9167aab02e17e08916231":[4,0,0,8,3,3,5],
 "structdrake_1_1multibody_1_1parsing_1_1_add_model.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,5,3,0],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#ac532c4b500b1a85ea22217f2c65a70ed":[4,0,0,8,3,3,0],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#ae88fbb6c242a8feeda1597a4462514a7":[3,0,0,9,5,3,3],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#ae88fbb6c242a8feeda1597a4462514a7":[4,0,0,8,3,3,3],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#aefc35c7944eed319c89bc1b399f0eb67":[3,0,0,9,5,3,4],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#aefc35c7944eed319c89bc1b399f0eb67":[4,0,0,8,3,3,4],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html":[3,0,0,9,5,4],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html":[4,0,0,8,3,4],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,5,4,1],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,8,3,4,1],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,9,5,4,2],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a9b45b3e13bd9167aab02e17e08916231":[4,0,0,8,3,4,2],
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,9,5,4,0]
+"structdrake_1_1multibody_1_1parsing_1_1_add_model.html#ac532c4b500b1a85ea22217f2c65a70ed":[4,0,0,8,3,3,0]
 };

@@ -1,5 +1,15 @@
 var NAVTREEINDEX3 =
 {
+"classdrake_1_1copyable__unique__ptr.html#a241c04e3ce86e1fd5a946eb2aa8b1f22":[4,0,0,19,12],
+"classdrake_1_1copyable__unique__ptr.html#a38cdcb23181ad1c554ef0209a29cd768":[3,0,0,20,0],
+"classdrake_1_1copyable__unique__ptr.html#a38cdcb23181ad1c554ef0209a29cd768":[4,0,0,19,0],
+"classdrake_1_1copyable__unique__ptr.html#a3a0a9193c0637e2a9b2813aaf375a014":[3,0,0,20,18],
+"classdrake_1_1copyable__unique__ptr.html#a3a0a9193c0637e2a9b2813aaf375a014":[4,0,0,19,18],
+"classdrake_1_1copyable__unique__ptr.html#a3e46b0304bfb4542ded3f290ec0c05c6":[3,0,0,20,21],
+"classdrake_1_1copyable__unique__ptr.html#a3e46b0304bfb4542ded3f290ec0c05c6":[4,0,0,19,21],
+"classdrake_1_1copyable__unique__ptr.html#a3f534efce0b043d603eb8f5653268e7d":[3,0,0,20,11],
+"classdrake_1_1copyable__unique__ptr.html#a3f534efce0b043d603eb8f5653268e7d":[4,0,0,19,11],
+"classdrake_1_1copyable__unique__ptr.html#a3f6fc5de06a318920d84f3c3742db07f":[3,0,0,20,8],
 "classdrake_1_1copyable__unique__ptr.html#a3f6fc5de06a318920d84f3c3742db07f":[4,0,0,19,8],
 "classdrake_1_1copyable__unique__ptr.html#a5a34341a71b340b3af3ee3d18e9d09bc":[3,0,0,20,6],
 "classdrake_1_1copyable__unique__ptr.html#a5a34341a71b340b3af3ee3d18e9d09bc":[4,0,0,19,6],
@@ -239,15 +249,5 @@ var NAVTREEINDEX3 =
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a0a0018dcf389554e01f62ab39539e24d":[4,0,0,2,0,10,1],
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a202781c5fc4d5bebf63a10a750c56ef9":[3,0,0,3,0,10,5],
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a202781c5fc4d5bebf63a10a750c56ef9":[4,0,0,2,0,10,5],
-"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a2b31f30556dc2663e0cec6297647a4c8":[3,0,0,3,0,10,12],
-"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a2b31f30556dc2663e0cec6297647a4c8":[4,0,0,2,0,10,12],
-"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a45bb0ffc9e4b75fae22cef1d2d95637b":[3,0,0,3,0,10,10],
-"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a45bb0ffc9e4b75fae22cef1d2d95637b":[4,0,0,2,0,10,10],
-"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a5fa822cbcbbae12125675ee4c67fc3c3":[3,0,0,3,0,10,20],
-"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a5fa822cbcbbae12125675ee4c67fc3c3":[4,0,0,2,0,10,20],
-"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a6701a79a48c39c3c0f2932f5a021a5bc":[3,0,0,3,0,10,23],
-"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a6701a79a48c39c3c0f2932f5a021a5bc":[4,0,0,2,0,10,23],
-"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a6c5dc5a59f52cbefc837766443d918e8":[3,0,0,3,0,10,15],
-"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a6c5dc5a59f52cbefc837766443d918e8":[4,0,0,2,0,10,15],
-"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a79ee1493d9f5d641b2aa17c28020480b":[3,0,0,3,0,10,6]
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a2b31f30556dc2663e0cec6297647a4c8":[3,0,0,3,0,10,12]
 };

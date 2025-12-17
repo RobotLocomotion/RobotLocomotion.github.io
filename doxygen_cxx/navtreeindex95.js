@@ -1,5 +1,16 @@
 var NAVTREEINDEX95 =
 {
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a11926af9280d70fd96e47b07c90cf0ed":[3,0,0,4,34,2,1],
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a11926af9280d70fd96e47b07c90cf0ed":[4,0,0,3,31,2,1],
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,34,2,4],
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a3b79efd873843125dabba312ddde65a3":[4,0,0,3,31,2,4],
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,34,2,0],
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,31,2,0],
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a9c59ed4a7b6bdc2b1207e39fabf379a4":[3,0,0,4,34,2,5],
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a9c59ed4a7b6bdc2b1207e39fabf379a4":[4,0,0,3,31,2,5],
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#aaf72b1fe5ab339da8e67c2253fa7f92a":[3,0,0,4,34,2,3],
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#aaf72b1fe5ab339da8e67c2253fa7f92a":[4,0,0,3,31,2,3],
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#add1a608db25e8e3befb6775a16867611":[3,0,0,4,34,2,2],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#add1a608db25e8e3befb6775a16867611":[4,0,0,3,31,2,2],
 "structdrake_1_1geometry_1_1_meshcat_params.html":[3,0,0,4,37],
 "structdrake_1_1geometry_1_1_meshcat_params.html":[4,0,0,3,34],
@@ -238,16 +249,5 @@ var NAVTREEINDEX95 =
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate.html#ad1fe465df1291c8c23b1a50d7a8d27b1":[2,4,2,4,1,1,8],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html":[2,4,2,4,1,2],
 "structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#a4937270237f1ed9a392c04552ef17fc8":[2,4,2,4,1,2,5],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#a6a35c03b3fba80f7c251bb744d6e1598":[2,4,2,4,1,2,0],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#ab7bffa65ec11e79bbf74fc513d4407c6":[2,4,2,4,1,2,6],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#abc181d64361484d0aaa73ac7541b5c87":[2,4,2,4,1,2,1],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#adee98cdb6fa31a1d84099c44ce7c52bc":[2,4,2,4,1,2,2],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#ae170fb731a278a7be13a74053adac3c4":[2,4,2,4,1,2,4],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#af4e9428c9a3946859578a2257349dc39":[2,4,2,4,1,2,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html":[2,4,2,4,1,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a0e0bbab028ef00d55f2629c4eddc6d6e":[2,4,2,4,1,3,2],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a4380dd4d6c777bb260d823e0f776c238":[2,4,2,4,1,3,0],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a5c53151a974d91a6d2da0dc4b33c26f9":[2,4,2,4,1,3,3],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#a993f6f94dc873984bbeedbe40c81bd70":[2,4,2,4,1,3,5],
-"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_result.html#ac3ae0570a846eeb7a9c5ed1e221378e9":[2,4,2,4,1,3,4]
+"structdrake_1_1geometry_1_1optimization_1_1_cspace_free_box_1_1_separation_certificate_program.html#a6a35c03b3fba80f7c251bb744d6e1598":[2,4,2,4,1,2,0]
 };

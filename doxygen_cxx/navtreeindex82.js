@@ -1,5 +1,15 @@
 var NAVTREEINDEX82 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a97e610bb883f37a631873104d8f6209d":[4,0,0,15,11,0],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9efee334e7a31b81c6056b8a0bb2cad1":[3,0,0,16,11,1],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9efee334e7a31b81c6056b8a0bb2cad1":[4,0,0,15,11,1],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#aabaf1a020571c446d83ef99787655ae3":[3,0,0,16,11,3],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#aabaf1a020571c446d83ef99787655ae3":[4,0,0,15,11,3],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#ac03110e30724a82e482df74b303b349a":[3,0,0,16,11,13],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#ac03110e30724a82e482df74b303b349a":[4,0,0,15,11,13],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#addec8b5106ad372e2a7f9abaa3a3686e":[3,0,0,16,11,6],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#addec8b5106ad372e2a7f9abaa3a3686e":[4,0,0,15,11,6],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#aebbc2edad8eb7b44c46a127210e723ad":[3,0,0,16,11,9],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#aebbc2edad8eb7b44c46a127210e723ad":[4,0,0,15,11,9],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#afc94b4fa6bb4ccc92cf0761a6b2531c0":[3,0,0,16,11,16],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#afc94b4fa6bb4ccc92cf0761a6b2531c0":[4,0,0,15,11,16],
@@ -239,15 +249,5 @@ var NAVTREEINDEX82 =
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,2,31],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[4,0,2,31],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a0c721eeefeda9d4147d85b68182190f6":[3,0,2,31,12],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a0c721eeefeda9d4147d85b68182190f6":[4,0,2,31,12],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,2,31,0],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[4,0,2,31,0],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,2,31,11],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[4,0,2,31,11],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2e58e3553fbff5f9ba05acba0daa7753":[3,0,2,31,15],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2e58e3553fbff5f9ba05acba0daa7753":[4,0,2,31,15],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,2,31,9],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[4,0,2,31,9],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3600d2fb47a7b4a9f2fc09c831b53c36":[3,0,2,31,7],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3600d2fb47a7b4a9f2fc09c831b53c36":[4,0,2,31,7]
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a0c721eeefeda9d4147d85b68182190f6":[4,0,2,31,12]
 };
