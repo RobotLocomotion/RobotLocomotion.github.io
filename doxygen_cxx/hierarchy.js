@@ -428,6 +428,7 @@ var hierarchy =
     [ "hash< drake::Sha256 >", "structstd_1_1hash_3_01drake_1_1_sha256_01_4.html", null ],
     [ "HydroelasticContactInfo< T >", "classdrake_1_1multibody_1_1_hydroelastic_contact_info.html", null ],
     [ "HydroelasticContactInfo< symbolic::Expression >", "classdrake_1_1multibody_1_1_hydroelastic_contact_info_3_01symbolic_1_1_expression_01_4.html", null ],
+    [ "IcfSolverParameters", "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html", null ],
     [ "Identifier< Tag >", "classdrake_1_1_identifier.html", null ],
     [ "Identifier< class GeometryTag >", "classdrake_1_1_identifier.html", [
       [ "GeometryId", "classdrake_1_1geometry_1_1_geometry_id.html", null ]
@@ -526,6 +527,9 @@ var hierarchy =
     [ "LinearSolver< LinearSolverType, DerivedA >", "classdrake_1_1math_1_1_linear_solver.html", null ],
     [ "LoadYamlOptions", "structdrake_1_1yaml_1_1_load_yaml_options.html", null ],
     [ "LogarithmicSos2NewBinaryVariables< NumLambda >", "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html", null ],
+    [ "Map", null, [
+      [ "DerivativesMutableXpr", "classdrake_1_1ad_1_1_derivatives_mutable_xpr.html", null ]
+    ] ],
     [ "MassDamperSpringAnalyticalSolution< T >", "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html", null ],
     [ "MatGradMult< DerivedDA, DerivedB >", "structdrake_1_1math_1_1_mat_grad_mult.html", null ],
     [ "MatGradMultMat< DerivedA, DerivedB, DerivedDA >", "structdrake_1_1math_1_1_mat_grad_mult_mat.html", null ],

@@ -11,7 +11,8 @@ var searchData=
   ['lightframe_8',['LightFrame',['../light__parameter_8h.html#a102150e6763c0db325ca79bbf1148ffd',1,'light_parameter.h']]],
   ['lights_9',['lights',['../structdrake_1_1geometry_1_1_render_engine_gl_params.html#a7c649edac2bf38690cac11ff4730c9d5',1,'drake::geometry::RenderEngineGlParams::lights'],['../structdrake_1_1geometry_1_1_render_engine_vtk_params.html#a7c649edac2bf38690cac11ff4730c9d5',1,'drake::geometry::RenderEngineVtkParams::lights']]],
   ['linear_5fconstraint_5fonly_10',['linear_constraint_only',['../structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a12c9ae23f7c0c50dc5417ea2d15dd48b',1,'drake::multibody::GlobalInverseKinematics::Options']]],
-  ['low_11',['low',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9',1,'drake::systems::controllers::DynamicProgrammingOptions::PeriodicBoundaryCondition']]],
-  ['lower_12',['lower',['../structdrake_1_1solvers_1_1_bound.html#abb82b111deb51f3a5917cf8780fee484',1,'drake::solvers::Bound']]],
-  ['lyapunov_5fcandidate_13',['lyapunov_candidate',['../structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#aad8f71d6c3e803538d9917ba719e66d4',1,'drake::systems::analysis::RegionOfAttractionOptions']]]
+  ['linesearch_5ftolerance_11',['linesearch_tolerance',['../structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a4bc83512e3d8b49337d5f355e7b2bd95',1,'drake::multibody::contact_solvers::icf::IcfSolverParameters']]],
+  ['low_12',['low',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9',1,'drake::systems::controllers::DynamicProgrammingOptions::PeriodicBoundaryCondition']]],
+  ['lower_13',['lower',['../structdrake_1_1solvers_1_1_bound.html#abb82b111deb51f3a5917cf8780fee484',1,'drake::solvers::Bound']]],
+  ['lyapunov_5fcandidate_14',['lyapunov_candidate',['../structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#aad8f71d6c3e803538d9917ba719e66d4',1,'drake::systems::analysis::RegionOfAttractionOptions']]]
 ];

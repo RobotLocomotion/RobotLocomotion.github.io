@@ -1,5 +1,17 @@
 var NAVTREEINDEX81 =
 {
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afb48be114e596b51430d94200ca3b821":[4,0,0,15,5,4],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afd774c050097f45948fa77e181ec8a19":[3,0,0,16,5,6],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afd774c050097f45948fa77e181ec8a19":[4,0,0,15,5,6],
+"classdrake_1_1trajectories_1_1_function_handle_trajectory.html":[3,0,0,16,6],
+"classdrake_1_1trajectories_1_1_function_handle_trajectory.html":[4,0,0,15,6],
+"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#a43aeb39c75a161bbe11551e73edcd9ea":[3,0,0,16,6,3],
+"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#a43aeb39c75a161bbe11551e73edcd9ea":[4,0,0,15,6,3],
+"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#aa5b39fa8a919e6eadaaa144a69c6dde6":[3,0,0,16,6,2],
+"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#aa5b39fa8a919e6eadaaa144a69c6dde6":[4,0,0,15,6,2],
+"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#aacc204cf9027ade7e1c227dc6b41bced":[3,0,0,16,6,5],
+"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#aacc204cf9027ade7e1c227dc6b41bced":[4,0,0,15,6,5],
+"classdrake_1_1trajectories_1_1_function_handle_trajectory.html#ac0a9219ab1dbf34bbcc41ae2c6a781fa":[3,0,0,16,6,6],
 "classdrake_1_1trajectories_1_1_function_handle_trajectory.html#ac0a9219ab1dbf34bbcc41ae2c6a781fa":[4,0,0,15,6,6],
 "classdrake_1_1trajectories_1_1_function_handle_trajectory.html#ac5f4a19d0740e9e80e94d23ea2040611":[3,0,0,16,6,4],
 "classdrake_1_1trajectories_1_1_function_handle_trajectory.html#ac5f4a19d0740e9e80e94d23ea2040611":[4,0,0,15,6,4],
@@ -237,17 +249,5 @@ var NAVTREEINDEX81 =
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a304db28f078b7b4e70bcf2f23a660c86":[4,0,0,15,11,4],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a3093825d2725664b6304ae2f31217759":[3,0,0,16,11,11],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a3093825d2725664b6304ae2f31217759":[4,0,0,15,11,11],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a455346a62430ed1814eaf99578a34876":[3,0,0,16,11,17],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a455346a62430ed1814eaf99578a34876":[4,0,0,15,11,17],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a4a93c5b33b420280509114f8a9ac86aa":[3,0,0,16,11,12],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a4a93c5b33b420280509114f8a9ac86aa":[4,0,0,15,11,12],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a568ee528ed340224693c6f6f65829683":[3,0,0,16,11,15],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a568ee528ed340224693c6f6f65829683":[4,0,0,15,11,15],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[3,0,0,16,11,2],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[4,0,0,15,11,2],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a7e0466de7b5422178935bb671b545815":[3,0,0,16,11,8],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a7e0466de7b5422178935bb671b545815":[4,0,0,15,11,8],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[3,0,0,16,11,10],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[4,0,0,15,11,10],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a97e610bb883f37a631873104d8f6209d":[3,0,0,16,11,0]
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a455346a62430ed1814eaf99578a34876":[3,0,0,16,11,17]
 };

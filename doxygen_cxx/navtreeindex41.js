@@ -1,5 +1,17 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1planning_1_1_collision_checker.html#aebf58f4817df47ff85f1e4f3de824382":[2,4,2,2,1,82],
+"classdrake_1_1planning_1_1_collision_checker.html#aee97203e446d54e036ea9093c8c5efec":[2,4,2,2,1,70],
+"classdrake_1_1planning_1_1_collision_checker.html#af1190d81eb661b4151d32b844e86fc5a":[2,4,2,2,1,72],
+"classdrake_1_1planning_1_1_collision_checker.html#af4a3f7ae74cf3f31e5f3a3b840d111a5":[2,4,2,2,1,34],
+"classdrake_1_1planning_1_1_collision_checker.html#af51fe263feb12a3a3734c3aa83569ae8":[2,4,2,2,1,37],
+"classdrake_1_1planning_1_1_collision_checker.html#af8423473a4d7b2c2b37c7f9c8108c7a3":[2,4,2,2,1,85],
+"classdrake_1_1planning_1_1_collision_checker.html#af9df46cf7a999edaee7b5461a38a8e0d":[2,4,2,2,1,84],
+"classdrake_1_1planning_1_1_collision_checker.html#afe874e7850ecb2ec51f0c950903d572c":[2,4,2,2,1,54],
+"classdrake_1_1planning_1_1_collision_checker.html#afef8ab83612978d5deeb7cd6fc413b80":[2,4,2,2,1,83],
+"classdrake_1_1planning_1_1_collision_checker_context.html":[2,4,2,2,2],
+"classdrake_1_1planning_1_1_collision_checker_context.html#a0ba4a9bdde3faa0735323cefb472fcaa":[2,4,2,2,2,11],
+"classdrake_1_1planning_1_1_collision_checker_context.html#a11a849acc59f1ef581ce765023a0bb67":[2,4,2,2,2,5],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a1413099881679899141a853747faa8a7":[2,4,2,2,2,8],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a5e73bbaabad656d62642ec725eee11bd":[2,4,2,2,2,7],
 "classdrake_1_1planning_1_1_collision_checker_context.html#a603fc47f85e30dc1bca900079964f153":[2,4,2,2,2,14],
@@ -237,17 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#abc8a90327e579ad6a2b52df3e5656a8b":[3,0,0,11,15,5],
 "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#abc8a90327e579ad6a2b52df3e5656a8b":[4,0,0,10,15,5],
 "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#ad89a98bbdf59cc746094cb0308a7b045":[3,0,0,11,15,9],
-"classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#ad89a98bbdf59cc746094cb0308a7b045":[4,0,0,10,15,9],
-"classdrake_1_1planning_1_1_robot_clearance.html":[2,4,2,2,5],
-"classdrake_1_1planning_1_1_robot_clearance.html#a06281900a335995918a2f8da41e8b3d5":[2,4,2,2,5,2],
-"classdrake_1_1planning_1_1_robot_clearance.html#a313b7d7dbf0d5db1def5cd446091f3b6":[2,4,2,2,5,12],
-"classdrake_1_1planning_1_1_robot_clearance.html#a3850519b46069f382ce91d1d20981694":[2,4,2,2,5,6],
-"classdrake_1_1planning_1_1_robot_clearance.html#a401263b97aa91720fbc1869951c62ddc":[2,4,2,2,5,0],
-"classdrake_1_1planning_1_1_robot_clearance.html#a409bdc1b0019f9ee9073ef5478c116c0":[2,4,2,2,5,13],
-"classdrake_1_1planning_1_1_robot_clearance.html#a52730525e87627e9b922468e24528ac0":[2,4,2,2,5,10],
-"classdrake_1_1planning_1_1_robot_clearance.html#a63fcd3cf5f2f56f87399a1951641f14b":[2,4,2,2,5,14],
-"classdrake_1_1planning_1_1_robot_clearance.html#a729e9cd587db14316836a7480f6a3ef9":[2,4,2,2,5,3],
-"classdrake_1_1planning_1_1_robot_clearance.html#aa1105d39ce49db224c98e90ef7de3741":[2,4,2,2,5,1],
-"classdrake_1_1planning_1_1_robot_clearance.html#aabd02eb3026c91ba1a4ed943fd9c265d":[2,4,2,2,5,4],
-"classdrake_1_1planning_1_1_robot_clearance.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[2,4,2,2,5,9]
+"classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#ad89a98bbdf59cc746094cb0308a7b045":[4,0,0,10,15,9]
 };

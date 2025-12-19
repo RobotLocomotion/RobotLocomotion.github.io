@@ -1,5 +1,17 @@
 var NAVTREEINDEX59 =
 {
+"classdrake_1_1symbolic_1_1_polynomial.html#a376ec1877fc3946abaeddcefa6bf9a0a":[4,0,0,13,58,46],
+"classdrake_1_1symbolic_1_1_polynomial.html#a3964b57f6f9f9957e6000b10a0383a34":[3,0,0,14,58,7],
+"classdrake_1_1symbolic_1_1_polynomial.html#a3964b57f6f9f9957e6000b10a0383a34":[4,0,0,13,58,7],
+"classdrake_1_1symbolic_1_1_polynomial.html#a3bcb87b0795a0152d3d7db7288868cec":[3,0,0,14,58,8],
+"classdrake_1_1symbolic_1_1_polynomial.html#a3bcb87b0795a0152d3d7db7288868cec":[4,0,0,13,58,8],
+"classdrake_1_1symbolic_1_1_polynomial.html#a3c2344073950451dcc9f2676cd9bf6e8":[3,0,0,14,58,52],
+"classdrake_1_1symbolic_1_1_polynomial.html#a3c2344073950451dcc9f2676cd9bf6e8":[4,0,0,13,58,52],
+"classdrake_1_1symbolic_1_1_polynomial.html#a464c802c8b3157e578c64b7930859242":[3,0,0,14,58,5],
+"classdrake_1_1symbolic_1_1_polynomial.html#a464c802c8b3157e578c64b7930859242":[4,0,0,13,58,5],
+"classdrake_1_1symbolic_1_1_polynomial.html#a48743d012fd5eb6d0eb9c2f2d34ef588":[3,0,0,14,58,26],
+"classdrake_1_1symbolic_1_1_polynomial.html#a48743d012fd5eb6d0eb9c2f2d34ef588":[4,0,0,13,58,26],
+"classdrake_1_1symbolic_1_1_polynomial.html#a5ac4c3133b108cf145ac4610b22e75d7":[3,0,0,14,58,21],
 "classdrake_1_1symbolic_1_1_polynomial.html#a5ac4c3133b108cf145ac4610b22e75d7":[4,0,0,13,58,21],
 "classdrake_1_1symbolic_1_1_polynomial.html#a6ad606c2af3cbfde8ce56a4fa1b93f8f":[3,0,0,14,58,24],
 "classdrake_1_1symbolic_1_1_polynomial.html#a6ad606c2af3cbfde8ce56a4fa1b93f8f":[4,0,0,13,58,24],
@@ -237,17 +249,5 @@ var NAVTREEINDEX59 =
 "classdrake_1_1symbolic_1_1_rewriting_rule.html#a96e9f78299ed9be2d52dca0ad339eee2":[4,0,0,13,62,2],
 "classdrake_1_1symbolic_1_1_rewriting_rule.html#acfb5d92b7ec62a96ff6783973c78a873":[3,0,0,14,62,0],
 "classdrake_1_1symbolic_1_1_rewriting_rule.html#acfb5d92b7ec62a96ff6783973c78a873":[4,0,0,13,62,0],
-"classdrake_1_1symbolic_1_1_rewriting_rule.html#aeb62fc791663c3bcfa7eedafc5b25a9f":[3,0,0,14,62,1],
-"classdrake_1_1symbolic_1_1_rewriting_rule.html#aeb62fc791663c3bcfa7eedafc5b25a9f":[4,0,0,13,62,1],
-"classdrake_1_1symbolic_1_1_unary_expression_cell.html":[3,0,0,14,64],
-"classdrake_1_1symbolic_1_1_unary_expression_cell.html":[4,0,0,13,64],
-"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a05fdc56be2bae58a250b0528b539f0ad":[3,0,0,14,64,6],
-"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a05fdc56be2bae58a250b0528b539f0ad":[4,0,0,13,64,6],
-"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a11c1076642ac67c42128ec9349f6d789":[3,0,0,14,64,2],
-"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a11c1076642ac67c42128ec9349f6d789":[4,0,0,13,64,2],
-"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a17a687a22fc3792625f3e48fff7f0269":[3,0,0,14,64,3],
-"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a17a687a22fc3792625f3e48fff7f0269":[4,0,0,13,64,3],
-"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a1846b343a25f0364bb0468dc20b6a98a":[3,0,0,14,64,1],
-"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a1846b343a25f0364bb0468dc20b6a98a":[4,0,0,13,64,1],
-"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a3ef4381c3fe2cdb5b514865f6e66dcff":[3,0,0,14,64,8]
+"classdrake_1_1symbolic_1_1_rewriting_rule.html#aeb62fc791663c3bcfa7eedafc5b25a9f":[3,0,0,14,62,1]
 };

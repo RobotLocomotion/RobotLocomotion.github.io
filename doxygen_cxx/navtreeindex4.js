@@ -1,5 +1,17 @@
 var NAVTREEINDEX4 =
 {
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a0aebd610c2d28607e24c03859182d05f":[2,2,12,0,2,0],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a83c5a87ef65ff2d736cbe75a21d3e67f":[2,2,12,0,2,1],
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#ac68246da601dfafa36a557b3edbbdb1e":[2,2,12,0,2,2],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html":[3,0,0,3,0,10],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html":[4,0,0,2,0,10],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a0186fe24cbbda2573c1eec0f1a4b9844":[3,0,0,3,0,10,2],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a0186fe24cbbda2573c1eec0f1a4b9844":[4,0,0,2,0,10,2],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a0a0018dcf389554e01f62ab39539e24d":[3,0,0,3,0,10,1],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a0a0018dcf389554e01f62ab39539e24d":[4,0,0,2,0,10,1],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a202781c5fc4d5bebf63a10a750c56ef9":[3,0,0,3,0,10,5],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a202781c5fc4d5bebf63a10a750c56ef9":[4,0,0,2,0,10,5],
+"classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a2b31f30556dc2663e0cec6297647a4c8":[3,0,0,3,0,10,12],
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a2b31f30556dc2663e0cec6297647a4c8":[4,0,0,2,0,10,12],
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a45bb0ffc9e4b75fae22cef1d2d95637b":[3,0,0,3,0,10,10],
 "classdrake_1_1examples_1_1acrobot_1_1_spong_controller_params.html#a45bb0ffc9e4b75fae22cef1d2d95637b":[4,0,0,2,0,10,10],
@@ -237,17 +249,5 @@ var NAVTREEINDEX4 =
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#a96eed245e45686ec9be56df59a43018a":[4,0,0,2,2,1,2],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#ab8045a32f0ae73037ac8d4094e474d10":[3,0,0,3,2,1,0],
 "classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#ab8045a32f0ae73037ac8d4094e474d10":[4,0,0,2,2,1,0],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#ac7c03ed46ae0fdd4ad190ae27deff986":[3,0,0,3,2,1,13],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#ac7c03ed46ae0fdd4ad190ae27deff986":[4,0,0,2,2,1,13],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#ae444753c24771b7f636d9b91b89abf47":[3,0,0,3,2,1,12],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#ae444753c24771b7f636d9b91b89abf47":[4,0,0,2,2,1,12],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#aeb5263b70537ad5cea13c70699829ed2":[3,0,0,3,2,1,3],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#aeb5263b70537ad5cea13c70699829ed2":[4,0,0,2,2,1,3],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#aedd5ed7a58af33945aad455cd7b0872c":[3,0,0,3,2,1,4],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#aedd5ed7a58af33945aad455cd7b0872c":[4,0,0,2,2,1,4],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#aeef707d7ea5203ab161bef20bd48eccd":[3,0,0,3,2,1,1],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#aeef707d7ea5203ab161bef20bd48eccd":[4,0,0,2,2,1,1],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html":[3,0,0,3,2,3],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html":[4,0,0,2,2,3],
-"classdrake_1_1examples_1_1pendulum_1_1_pendulum_params.html#a0f7aec6bbf81de59518b8c55e5b4f8d2":[3,0,0,3,2,3,13]
+"classdrake_1_1examples_1_1pendulum_1_1_pendulum_input.html#ac7c03ed46ae0fdd4ad190ae27deff986":[3,0,0,3,2,1,13]
 };

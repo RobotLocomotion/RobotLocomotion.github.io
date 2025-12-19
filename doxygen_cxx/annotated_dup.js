@@ -3,7 +3,8 @@ var annotated_dup =
     [ "drake", "namespacedrake.html", [
       [ "ad", "namespacedrake_1_1ad.html", [
         [ "AutoDiff", "classdrake_1_1ad_1_1_auto_diff.html", "classdrake_1_1ad_1_1_auto_diff" ],
-        [ "DerivativesConstXpr", "classdrake_1_1ad_1_1_derivatives_const_xpr.html", "classdrake_1_1ad_1_1_derivatives_const_xpr" ]
+        [ "DerivativesConstXpr", "classdrake_1_1ad_1_1_derivatives_const_xpr.html", "classdrake_1_1ad_1_1_derivatives_const_xpr" ],
+        [ "DerivativesMutableXpr", "classdrake_1_1ad_1_1_derivatives_mutable_xpr.html", "classdrake_1_1ad_1_1_derivatives_mutable_xpr" ]
       ] ],
       [ "assert", "namespacedrake_1_1assert.html", [
         [ "ConditionTraits< symbolic::Formula >", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4" ]
@@ -254,6 +255,11 @@ var annotated_dup =
           ] ],
           [ "Acrobot", "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html", "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot" ],
           [ "MassDamperSpringAnalyticalSolution", "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html", "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution" ]
+        ] ],
+        [ "contact_solvers", "namespacedrake_1_1multibody_1_1contact__solvers.html", [
+          [ "icf", "namespacedrake_1_1multibody_1_1contact__solvers_1_1icf.html", [
+            [ "IcfSolverParameters", "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html", "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters" ]
+          ] ]
         ] ],
         [ "fem", "namespacedrake_1_1multibody_1_1fem.html", [
           [ "DampingModel", "classdrake_1_1multibody_1_1fem_1_1_damping_model.html", "classdrake_1_1multibody_1_1fem_1_1_damping_model" ],

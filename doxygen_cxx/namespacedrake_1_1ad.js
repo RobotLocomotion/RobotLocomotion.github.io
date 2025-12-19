@@ -2,6 +2,7 @@ var namespacedrake_1_1ad =
 [
     [ "AutoDiff", "classdrake_1_1ad_1_1_auto_diff.html", "classdrake_1_1ad_1_1_auto_diff" ],
     [ "DerivativesConstXpr", "classdrake_1_1ad_1_1_derivatives_const_xpr.html", "classdrake_1_1ad_1_1_derivatives_const_xpr" ],
+    [ "DerivativesMutableXpr", "classdrake_1_1ad_1_1_derivatives_mutable_xpr.html", "classdrake_1_1ad_1_1_derivatives_mutable_xpr" ],
     [ "abs", "namespacedrake_1_1ad.html#ab14990a86637419f6000ad143bf6f71d", null ],
     [ "abs2", "namespacedrake_1_1ad.html#a66b4d3483599fd87ecc649b0c6a865ab", null ],
     [ "acos", "namespacedrake_1_1ad.html#a4098968c6350f07925cb63ffd2e92c8f", null ],

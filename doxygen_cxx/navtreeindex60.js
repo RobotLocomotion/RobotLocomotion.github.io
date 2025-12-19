@@ -1,5 +1,17 @@
 var NAVTREEINDEX60 =
 {
+"classdrake_1_1symbolic_1_1_rewriting_rule.html#aeb62fc791663c3bcfa7eedafc5b25a9f":[4,0,0,13,62,1],
+"classdrake_1_1symbolic_1_1_unary_expression_cell.html":[3,0,0,14,64],
+"classdrake_1_1symbolic_1_1_unary_expression_cell.html":[4,0,0,13,64],
+"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a05fdc56be2bae58a250b0528b539f0ad":[3,0,0,14,64,6],
+"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a05fdc56be2bae58a250b0528b539f0ad":[4,0,0,13,64,6],
+"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a11c1076642ac67c42128ec9349f6d789":[3,0,0,14,64,2],
+"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a11c1076642ac67c42128ec9349f6d789":[4,0,0,13,64,2],
+"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a17a687a22fc3792625f3e48fff7f0269":[3,0,0,14,64,3],
+"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a17a687a22fc3792625f3e48fff7f0269":[4,0,0,13,64,3],
+"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a1846b343a25f0364bb0468dc20b6a98a":[3,0,0,14,64,1],
+"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a1846b343a25f0364bb0468dc20b6a98a":[4,0,0,13,64,1],
+"classdrake_1_1symbolic_1_1_unary_expression_cell.html#a3ef4381c3fe2cdb5b514865f6e66dcff":[3,0,0,14,64,8],
 "classdrake_1_1symbolic_1_1_unary_expression_cell.html#a3ef4381c3fe2cdb5b514865f6e66dcff":[4,0,0,13,64,8],
 "classdrake_1_1symbolic_1_1_unary_expression_cell.html#a5142aa659ccee8923995daf6883581ec":[3,0,0,14,64,7],
 "classdrake_1_1symbolic_1_1_unary_expression_cell.html#a5142aa659ccee8923995daf6883581ec":[4,0,0,13,64,7],
@@ -237,17 +249,5 @@ var NAVTREEINDEX60 =
 "classdrake_1_1systems_1_1_antiderivative_function.html#ad56726dc5347c325b071e1b28e34aeec":[3,0,0,15,10,6],
 "classdrake_1_1systems_1_1_antiderivative_function.html#ad56726dc5347c325b071e1b28e34aeec":[4,0,0,14,10,6],
 "classdrake_1_1systems_1_1_antiderivative_function.html#adc6c208ef46d4561ac6d112afaa3e337":[3,0,0,15,10,1],
-"classdrake_1_1systems_1_1_antiderivative_function.html#adc6c208ef46d4561ac6d112afaa3e337":[4,0,0,14,10,1],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html":[3,0,0,15,11],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html":[4,0,0,14,11],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a39adad53880e12fddcd8f54099304224":[3,0,0,15,11,4],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a39adad53880e12fddcd8f54099304224":[4,0,0,14,11,4],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a48b4fb72ec74a06c0573889f4b346a66":[3,0,0,15,11,2],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a48b4fb72ec74a06c0573889f4b346a66":[4,0,0,14,11,2],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a4a91a957f8b4d3605b0b50c05121ddc8":[3,0,0,15,11,1],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a4a91a957f8b4d3605b0b50c05121ddc8":[4,0,0,14,11,1],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a8413f59e6ab3174c4983c53212b8e9e7":[3,0,0,15,11,3],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a8413f59e6ab3174c4983c53212b8e9e7":[4,0,0,14,11,3],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a9f2564b84ff2fc1b7ca5875484f1dbcf":[3,0,0,15,11,5],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a9f2564b84ff2fc1b7ca5875484f1dbcf":[4,0,0,14,11,5]
+"classdrake_1_1systems_1_1_antiderivative_function.html#adc6c208ef46d4561ac6d112afaa3e337":[4,0,0,14,10,1]
 };

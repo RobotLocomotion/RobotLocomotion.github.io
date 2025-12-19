@@ -1,5 +1,17 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1geometry_1_1_surface_polygon.html#a319e621fc359dd8daad48247f95b12fa":[3,0,0,4,67,3],
+"classdrake_1_1geometry_1_1_surface_polygon.html#a319e621fc359dd8daad48247f95b12fa":[4,0,0,3,64,3],
+"classdrake_1_1geometry_1_1_surface_polygon.html#a3e0fd3c71ff74446da73887257927a20":[3,0,0,4,67,0],
+"classdrake_1_1geometry_1_1_surface_polygon.html#a3e0fd3c71ff74446da73887257927a20":[4,0,0,3,64,0],
+"classdrake_1_1geometry_1_1_surface_polygon.html#a52d1e1c09cc3b5fbdc51c38be7d832c0":[3,0,0,4,67,1],
+"classdrake_1_1geometry_1_1_surface_polygon.html#a52d1e1c09cc3b5fbdc51c38be7d832c0":[4,0,0,3,64,1],
+"classdrake_1_1geometry_1_1_surface_polygon.html#a7345fe04a0a3bd2267319880b0e26d1e":[3,0,0,4,67,4],
+"classdrake_1_1geometry_1_1_surface_polygon.html#a7345fe04a0a3bd2267319880b0e26d1e":[4,0,0,3,64,4],
+"classdrake_1_1geometry_1_1_surface_polygon.html#abc9f496f717b32bceb3fdeff1a2051b5":[3,0,0,4,67,6],
+"classdrake_1_1geometry_1_1_surface_polygon.html#abc9f496f717b32bceb3fdeff1a2051b5":[4,0,0,3,64,6],
+"classdrake_1_1geometry_1_1_surface_polygon.html#aeb851e13733d8ba77fdac5cea079cf27":[3,0,0,4,67,5],
+"classdrake_1_1geometry_1_1_surface_polygon.html#aeb851e13733d8ba77fdac5cea079cf27":[4,0,0,3,64,5],
 "classdrake_1_1geometry_1_1_surface_polygon.html#af5b840cd99d12ab4dbe037d719d6d27e":[3,0,0,4,67,2],
 "classdrake_1_1geometry_1_1_surface_polygon.html#af5b840cd99d12ab4dbe037d719d6d27e":[4,0,0,3,64,2],
 "classdrake_1_1geometry_1_1_surface_polygon.html#afaa681c53b3d6f7f1b04b89c720b51de":[3,0,0,4,67,7],
@@ -237,17 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#af6154bf89e3d063bb7b29741d1914fd8":[2,1,1,2,3],
 "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#af6154bf89e3d063bb7b29741d1914fd8":[2,5,5,2,3],
 "classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html":[2,4,2,4,0],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#a0bd83ef8ef5f8439ed61f7f11a42a4ea":[2,4,2,4,0,1],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#a246cdcde527e033f2d3e52e54f3fa5ff":[2,4,2,4,0,10],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#a24974d13848480a11d9b573ced2de54a":[2,4,2,4,0,6],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#a363a5de66b0fc3586d980528e3a5b9d9":[2,4,2,4,0,0],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#a54f10bafcb74c293325935badf8e64c8":[2,4,2,4,0,5],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#a780b73a9e31f1801efe5037eef19f538":[2,4,2,4,0,4],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#a98b710069429ceb393ecf5bd2bf8bb48":[2,4,2,4,0,9],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#aa4e072198684b3b69292aaa154063106":[2,4,2,4,0,7],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#ac261b7741d7dd906e2aae588a38dcd9e":[2,4,2,4,0,8],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#ad4c860bb4278ac96c886d215fbd26d87":[2,4,2,4,0,2],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#af2d6113e9e040f77c1cefaf7ed7e36c7":[2,4,2,4,0,11],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#af400a7e2f52b0ca6a37d1d008f6485e7":[2,4,2,4,0,3],
-"classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html":[2,1,1,3]
+"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#a0bd83ef8ef5f8439ed61f7f11a42a4ea":[2,4,2,4,0,1]
 };
