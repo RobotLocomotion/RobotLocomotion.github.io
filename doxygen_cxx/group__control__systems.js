@@ -165,7 +165,7 @@ var group__control__systems =
       [ "time_step", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#a8daceb7a3c384d6ad9f305e42b5fc1c6", null ],
       [ "Vd_TG_limit", "classdrake_1_1multibody_1_1_differential_inverse_kinematics_system.html#ab45c8fb2d3fd1e28be1394fd8906cfd9", null ]
     ] ],
-    [ "InverseDynamics< T >", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html", [
+    [ "InverseDynamics&lt; T &gt;", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html", [
       [ "InverseDynamicsMode", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a39bd80e96eb6f2fe4aeee4e62c04dd8a", [
         [ "kInverseDynamics", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a39bd80e96eb6f2fe4aeee4e62c04dd8aa590c94008feb665db8020f3b53d3f32f", null ],
         [ "kGravityCompensation", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a39bd80e96eb6f2fe4aeee4e62c04dd8aa363239aa366c2133625364645b4bdf25", null ]
@@ -184,7 +184,7 @@ var group__control__systems =
       [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a655b6dd02e13103649777750af2f2db0", null ],
       [ "InverseDynamics", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a8a90c5e3ef0bcec77643392f99e44824", null ]
     ] ],
-    [ "InverseDynamicsController< T >", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html", [
+    [ "InverseDynamicsController&lt; T &gt;", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html", [
       [ "InverseDynamicsController", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a66aa93bf35e68ebadbbd49e3ee740383", null ],
       [ "InverseDynamicsController", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#a2ea5c2a1e475e4872b9c4af8dafe1124", null ],
       [ "InverseDynamicsController", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#aeffde4e51c0d89f2fd83d04032100d1f", null ],
@@ -201,7 +201,7 @@ var group__control__systems =
       [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#abfd2afb171c9994474ebcb9cc03ccefb", null ],
       [ "set_integral_value", "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ada7d6dc8537c671a6b8b2544e571820f", null ]
     ] ],
-    [ "JointStiffnessController< T >", "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html", [
+    [ "JointStiffnessController&lt; T &gt;", "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html", [
       [ "JointStiffnessController", "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#ab4aeebb77f3c69d10583e4e99bc24e17", null ],
       [ "JointStiffnessController", "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a58a569e52bd3a03537d3326907f19880", null ],
       [ "JointStiffnessController", "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#aeb85792421c5767841dae629795701ab", null ],
@@ -217,7 +217,7 @@ var group__control__systems =
       [ "JointStiffnessController", "classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#aa6d468524ab47bb2e702b6025140c701", null ]
     ] ],
     [ "JointImpedanceController", "classdrake_1_1systems_1_1controllers_1_1_joint_impedance_controller.html", null ],
-    [ "PidControlledSystem< T >", "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html", [
+    [ "PidControlledSystem&lt; T &gt;", "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html", [
       [ "ConnectResult", "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html", [
         [ "control_input_port", "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31", null ],
         [ "state_input_port", "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a08e211873bd62f93a57ad06fdc27b3b2", null ]
@@ -240,7 +240,7 @@ var group__control__systems =
       [ "operator=", "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a2324d6df7d1aad85bfa8f11ee747eea2", null ],
       [ "plant", "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a5d7b244a147ad97be5df4bbc9fe9e600", null ]
     ] ],
-    [ "PidController< T >", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html", [
+    [ "PidController&lt; T &gt;", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html", [
       [ "PidController", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a156ea1ba36b533f126071089b8963842", null ],
       [ "PidController", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#afa02d5ace5f5eb4df62c82fe3883bdab", null ],
       [ "PidController", "classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a911f327ea9544feea7dfe7b838b6c804", null ],

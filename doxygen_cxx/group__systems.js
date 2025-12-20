@@ -13,7 +13,7 @@ var group__systems =
     [ "Stochastic Systems", "group__stochastic__systems.html", "group__stochastic__systems" ],
     [ "Visualization", "group__visualization.html", "group__visualization" ],
     [ "Examples", "group__example__systems.html", "group__example__systems" ],
-    [ "SceneGraph< T >", "classdrake_1_1geometry_1_1_scene_graph.html", [
+    [ "SceneGraph&lt; T &gt;", "classdrake_1_1geometry_1_1_scene_graph.html", [
       [ "SceneGraph", "classdrake_1_1geometry_1_1_scene_graph.html#a7df6907a9e82dda25b30e182d68b5d1c", null ],
       [ "SceneGraph", "classdrake_1_1geometry_1_1_scene_graph.html#a331f7bdcffde753165cd98d7081f75d4", null ],
       [ "SceneGraph", "classdrake_1_1geometry_1_1_scene_graph.html#a69b7c400cb9ee0b5ebe0dcb2b86a7f12", null ],
@@ -77,7 +77,7 @@ var group__systems =
       [ "SceneGraph", "classdrake_1_1geometry_1_1_scene_graph.html#a7f408c13e8463078ca2edea35a11abc2", null ],
       [ "SceneGraphTester", "classdrake_1_1geometry_1_1_scene_graph.html#abecd6179d212b5bacfd7ca6c44d17224", null ]
     ] ],
-    [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", [
+    [ "MultibodyPlant&lt; T &gt;", "classdrake_1_1multibody_1_1_multibody_plant.html", [
       [ "MultibodyPlant", "classdrake_1_1multibody_1_1_multibody_plant.html#a3aeb03d90d213da4702f2dc5e484fc86", null ],
       [ "MultibodyPlant", "classdrake_1_1multibody_1_1_multibody_plant.html#a359ae04bf7eabd0461c5f12ab35fee1d", null ],
       [ "MultibodyPlant", "classdrake_1_1multibody_1_1_multibody_plant.html#a3296be9fa9bc35e6639460f54029c4c9", null ],

@@ -1,6 +1,6 @@
 var image_8h =
 [
-    [ "Image< kPixelType >", "classdrake_1_1systems_1_1sensors_1_1_image.html", "classdrake_1_1systems_1_1sensors_1_1_image" ],
+    [ "Image&lt; kPixelType &gt;", "classdrake_1_1systems_1_1sensors_1_1_image.html", "classdrake_1_1systems_1_1sensors_1_1_image" ],
     [ "drake::systems::sensors::ImageAny", "namespacedrake_1_1systems_1_1sensors.html#ad248b3921cd89da8d3b620cf40211807", null ],
     [ "drake::systems::sensors::ImageBgr8U", "namespacedrake_1_1systems_1_1sensors.html#ad6764dabff337ef74ed1871b8a2c2ffd", null ],
     [ "drake::systems::sensors::ImageBgra8U", "namespacedrake_1_1systems_1_1sensors.html#a746567d80e8e7ae22cae20c9dbe78f3b", null ],

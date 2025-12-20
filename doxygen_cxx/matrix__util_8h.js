@@ -8,6 +8,6 @@ var matrix__util_8h =
     [ "drake::math::IsSymmetric", "namespacedrake_1_1math.html#a40335d2906e39ebe2a114f1cb6cf5d26", null ],
     [ "drake::math::StdVectorToEigen", "namespacedrake_1_1math.html#a9cf7a17a246897182cc65ec080840999", null ],
     [ "drake::math::ToLowerTriangularColumnsFromMatrix", "namespacedrake_1_1math.html#aa824bd31863a762bd2c1860534b7e39d", null ],
-    [ "drake::math::ToSymmetricMatrixFromLowerTriangularColumns", "namespacedrake_1_1math.html#ae4935d457d59fdb0a60b7f1d5cb465bb", null ],
-    [ "drake::math::ToSymmetricMatrixFromLowerTriangularColumns", "namespacedrake_1_1math.html#a0b96f43056135e9ecb62b48421b787f9", null ]
+    [ "drake::math::ToSymmetricMatrixFromLowerTriangularColumns", "namespacedrake_1_1math.html#a0b96f43056135e9ecb62b48421b787f9", null ],
+    [ "drake::math::ToSymmetricMatrixFromLowerTriangularColumns", "namespacedrake_1_1math.html#ae4935d457d59fdb0a60b7f1d5cb465bb", null ]
 ];

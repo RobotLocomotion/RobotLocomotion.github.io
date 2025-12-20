@@ -1,7 +1,7 @@
 var variables_8h =
 [
     [ "Variables", "classdrake_1_1symbolic_1_1_variables.html", "classdrake_1_1symbolic_1_1_variables" ],
-    [ "hash< drake::symbolic::Variables >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html", null ],
+    [ "hash&lt; drake::symbolic::Variables &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html", null ],
     [ "drake::symbolic::intersect", "namespacedrake_1_1symbolic.html#adbfb5367e72dfbaf7a778e6896113f64", null ],
     [ "drake::symbolic::operator+", "namespacedrake_1_1symbolic.html#ac56aaa3de6bd181f40290eb9c9ab264e", null ],
     [ "drake::symbolic::operator+", "namespacedrake_1_1symbolic.html#a7d10380477ac001084ccc42d6aa005b6", null ],

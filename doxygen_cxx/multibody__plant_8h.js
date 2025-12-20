@@ -1,8 +1,8 @@
 var multibody__plant_8h =
 [
-    [ "MultibodyPlant< T >::InputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance" ],
-    [ "MultibodyPlant< T >::OutputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance" ],
-    [ "AddMultibodyPlantSceneGraphResult< T >", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result" ],
+    [ "MultibodyPlant&lt; T &gt;::InputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance.html", "structdrake_1_1multibody_1_1_multibody_plant_1_1_input_port_indices_1_1_instance" ],
+    [ "MultibodyPlant&lt; T &gt;::OutputPortIndices::Instance", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance.html", "structdrake_1_1multibody_1_1_multibody_plant_1_1_output_port_indices_1_1_instance" ],
+    [ "AddMultibodyPlantSceneGraphResult&lt; T &gt;", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result" ],
     [ "drake::multibody::BaseBodyJointType", "namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852d", [
       [ "drake::multibody::BaseBodyJointType::kQuaternionFloatingJoint", "namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852da280e7e1407e229994454217707eea0f2", null ],
       [ "drake::multibody::BaseBodyJointType::kRpyFloatingJoint", "namespacedrake_1_1multibody.html#ab69d6cd821353ffa5ba779a02269852dada2f61fd68e95aaecc17b103368756c0", null ],

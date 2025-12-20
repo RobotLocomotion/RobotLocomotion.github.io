@@ -10,7 +10,7 @@ var searchData=
   ['for_20the_20hosted_20meshcat_20page_7',['Parameters for the hosted Meshcat page',['../classdrake_1_1geometry_1_1_meshcat.html#meshcat_url_parameters',1,'']]],
   ['forces_8',['Modeling of Forces',['../group__compliant__contact.html#point_forces_modeling',1,'']]],
   ['formulas_9',['Analytical Formulas',['../group__hydro__params.html#hydro_params_formulas',1,'']]],
-  ['foundation_10',['Foundation',['../group__hydro__params.html#hydro_params_efm_analogy',1,'Hydroelastic Contact and Elastic Foundation'],['../group__hydro__params.html#hydro_params_efm',1,'Winkler's Elastic Foundation']]],
+  ['foundation_10',['Foundation',['../group__hydro__params.html#hydro_params_efm_analogy',1,'Hydroelastic Contact and Elastic Foundation'],['../group__hydro__params.html#hydro_params_efm',1,'Winkler&apos;s Elastic Foundation']]],
   ['friction_11',['Continuous Approximation of Coulomb Friction',['../group__mbp__continuous.html#stribeck_approximation',1,'']]],
   ['frictional_20contact_12',['Simulation of Multibody Systems with Frictional Contact',['../group__multibody__solvers.html#multibody_simulation',1,'']]]
 ];

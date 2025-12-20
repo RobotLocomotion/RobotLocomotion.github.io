@@ -1,5 +1,17 @@
 var NAVTREEINDEX83 =
 {
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a4c7cb2cda263a8eaace8b17ec56f7f29":[3,0,2,27,15],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a4c7cb2cda263a8eaace8b17ec56f7f29":[4,0,2,27,15],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a654ad3ffbfa836060c9b33e158b825b9":[3,0,2,27,7],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a654ad3ffbfa836060c9b33e158b825b9":[4,0,2,27,7],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a932e259476fe792cb9df2d602ab41f66":[3,0,2,27,12],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a932e259476fe792cb9df2d602ab41f66":[4,0,2,27,12],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aaaead712fe7dc29c1799e7d8f77d1cfb":[3,0,2,27,9],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aaaead712fe7dc29c1799e7d8f77d1cfb":[4,0,2,27,9],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aafee06a6c686706c82602adea8bd5343":[3,0,2,27,5],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aafee06a6c686706c82602adea8bd5343":[4,0,2,27,5],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[3,0,2,27,1],
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[4,0,2,27,1],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab9a6b0c878ef6f5de4a6e48430659167":[3,0,2,27,11],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab9a6b0c878ef6f5de4a6e48430659167":[4,0,2,27,11],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ac6b633da6524d9de1afa712a666e1c39":[3,0,2,27,6],
@@ -237,17 +249,5 @@ var NAVTREEINDEX83 =
 "dir_e1d484ad5c2508fd6f676726a75b4a19.html":[5,0,0,8,1,0],
 "dir_e56f4370c0abfd94d0eb867c3946e12e.html":[5,0,0,8,8],
 "dir_e67b9cd7d1b691e5dc83f84c637cb8c7.html":[5,0,0,4,0],
-"dir_ea36fc3ba6e4e5252c7024e61ca2d4a4.html":[5,0,0,4,6],
-"dir_ec4ca5ddfa488e52be8d9e11dbbf950b.html":[5,0,0,10,0],
-"dir_f1666844dc41ec91c14125b680b7be1b.html":[5,0,0],
-"dir_f46c9d8bac432799f621aa951345f12b.html":[5,0,0,6,4],
-"dir_fa973aef359a666fa59c209acc8a7d72.html":[5,0,0,8,0,3],
-"dir_fc0178d6978c9fa2cad6ef3e048a60a7.html":[5,0,0,7],
-"dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html":[5,0,0,4,2],
-"direct__collocation_8h.html":[5,0,0,10,3,0],
-"direct__transcription_8h.html":[5,0,0,10,3,1],
-"dirichlet__boundary__condition_8h.html":[5,0,0,8,2,8],
-"discrete__algebraic__riccati__equation_8h.html":[5,0,0,7,11],
-"discrete__contact__data_8h.html":[5,0,0,8,9,13],
-"discrete__contact__pair_8h.html":[5,0,0,8,9,14]
+"dir_ea36fc3ba6e4e5252c7024e61ca2d4a4.html":[5,0,0,4,6]
 };

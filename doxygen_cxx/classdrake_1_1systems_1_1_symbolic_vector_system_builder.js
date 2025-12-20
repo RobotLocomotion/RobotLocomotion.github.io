@@ -8,6 +8,7 @@ var classdrake_1_1systems_1_1_symbolic_vector_system_builder =
     [ "dynamics", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#adcc2b3adfc77ca4ec2e271d521d3731b", null ],
     [ "dynamics", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#acabb7e21a26f04a50a6a9dbcbef20d08", null ],
     [ "dynamics", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#ae66ca1a871a8b05f854add19bc16528a", null ],
+    [ "dynamics_for_variable", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#af4ad82dcfa277a798e718918115dcb15", null ],
     [ "input", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a9c8f8da0ba79938589219ce6336b3ae6", null ],
     [ "input", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#ac0fcca5af75f1bb2adb6be7559e8421e", null ],
     [ "input", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a3f41e49feb2fdebb7ae240cd7de581d3", null ],
@@ -15,6 +16,7 @@ var classdrake_1_1systems_1_1_symbolic_vector_system_builder =
     [ "LinearizeDynamics", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#aff2a1fc2d36af61cfe99841dc1bebdd7", null ],
     [ "operator=", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a434c777bf071127e8b898638cbf75156", null ],
     [ "operator=", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a6db13057c5488b5864295273870ed5f0", null ],
+    [ "output", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a196796c263fea85e50ddc05b09df80be", null ],
     [ "output", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a962d03124ea6e64ec3eaea80114b8892", null ],
     [ "output", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a177c9abf9dddf2cbf1e768255944468b", null ],
     [ "output", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a9c55e11cb09b5d516d9ce3317927b5e5", null ],
@@ -28,5 +30,6 @@ var classdrake_1_1systems_1_1_symbolic_vector_system_builder =
     [ "state", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a9b00161768036dd2aafb2b6e950268de", null ],
     [ "time", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a98ad25213c5b0360ea8637ec3bbad5f4", null ],
     [ "time", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a207ff1296464f797a0bd02f230802015", null ],
+    [ "time_period", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#a7763ec8fc770efd6f91faf6cafb3db18", null ],
     [ "time_period", "classdrake_1_1systems_1_1_symbolic_vector_system_builder.html#ade9a355fb9f669ef5444991a187daaad", null ]
 ];

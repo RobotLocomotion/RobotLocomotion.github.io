@@ -1,6 +1,6 @@
 var group__planning__infrastructure =
 [
-    [ "RobotDiagram< T >", "classdrake_1_1planning_1_1_robot_diagram.html", [
+    [ "RobotDiagram&lt; T &gt;", "classdrake_1_1planning_1_1_robot_diagram.html", [
       [ "RobotDiagram", "classdrake_1_1planning_1_1_robot_diagram.html#ad78680faa728146164a052da4689eed6", null ],
       [ "RobotDiagram", "classdrake_1_1planning_1_1_robot_diagram.html#af6991618c0f368d894bc81a0c30784bd", null ],
       [ "RobotDiagram", "classdrake_1_1planning_1_1_robot_diagram.html#ac7c6e346d3db2d0d384a3d1967ca9f5a", null ],
@@ -16,7 +16,7 @@ var group__planning__infrastructure =
       [ "scene_graph_context", "classdrake_1_1planning_1_1_robot_diagram.html#a458cf907ff751a5fe2dbd72f587db945", null ],
       [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram.html#a58c7a8659b581dc9d341271c79534987", null ]
     ] ],
-    [ "RobotDiagramBuilder< T >", "classdrake_1_1planning_1_1_robot_diagram_builder.html", [
+    [ "RobotDiagramBuilder&lt; T &gt;", "classdrake_1_1planning_1_1_robot_diagram_builder.html", [
       [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#abc40e743c8d48d2158863064885bb1c7", null ],
       [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#ad4059f303a9d87f9097f8428fd027a5a", null ],
       [ "RobotDiagramBuilder", "classdrake_1_1planning_1_1_robot_diagram_builder.html#a6ca7f3589283581d43b92090905f3c41", null ],

@@ -9,7 +9,7 @@ var group__acrobot__systems =
       [ "operator=", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#a5fa52f240b082a4799eb9586c7eee2b7", null ],
       [ "operator=", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html#a2f31505a8439d4c008c1814706af5a67", null ]
     ] ],
-    [ "AcrobotPlant< T >", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html", [
+    [ "AcrobotPlant&lt; T &gt;", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html", [
       [ "AcrobotPlant", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a81116c526cf1e5ec864235fbb19b3780", null ],
       [ "AcrobotPlant", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a322f85e342d1736a49b76c4ca5de47ef", null ],
       [ "AcrobotPlant", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#aa38177c6a6e64ff8daf64a2cc47137ea", null ],
@@ -27,12 +27,12 @@ var group__acrobot__systems =
       [ "operator=", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a87fe0d094ec0667d2a6b04f2e02928a5", null ],
       [ "SetMitAcrobotParameters", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a902e29f51447261a05d400f845fd2086", null ]
     ] ],
-    [ "AcrobotWEncoder< T >", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html", [
+    [ "AcrobotWEncoder&lt; T &gt;", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html", [
       [ "AcrobotWEncoder", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a0aebd610c2d28607e24c03859182d05f", null ],
       [ "acrobot_plant", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a83c5a87ef65ff2d736cbe75a21d3e67f", null ],
       [ "get_mutable_acrobot_state", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#ac68246da601dfafa36a557b3edbbdb1e", null ]
     ] ],
-    [ "AcrobotSpongController< T >", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_spong_controller.html", [
+    [ "AcrobotSpongController&lt; T &gt;", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_spong_controller.html", [
       [ "AcrobotSpongController", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_spong_controller.html#a569b5fc408c3f10adacb866d9726dd47", null ],
       [ "CalcControlTorque", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_spong_controller.html#a18a995d6702edb062dda625b256b8daa", null ],
       [ "get_mutable_parameters", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_spong_controller.html#acdd09883d5397b2cd5838ab75b4a1ad0", null ],

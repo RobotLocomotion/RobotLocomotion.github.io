@@ -2,7 +2,7 @@ var point__cloud__flags_8h =
 [
     [ "DescriptorType", "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html", "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type" ],
     [ "Fields", "classdrake_1_1perception_1_1pc__flags_1_1_fields.html", "classdrake_1_1perception_1_1pc__flags_1_1_fields" ],
-    [ "formatter< drake::perception::pc_flags::Fields >", "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_fields_01_4.html", null ],
+    [ "formatter&lt; drake::perception::pc_flags::Fields &gt;", "structfmt_1_1formatter_3_01drake_1_1perception_1_1pc__flags_1_1_fields_01_4.html", null ],
     [ "drake::perception::pc_flags::BaseFieldT", "namespacedrake_1_1perception_1_1pc__flags.html#a84b827aabb8c80aa66feec1c385aa6a3", null ],
     [ "drake::perception::pc_flags::BaseField", "namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af", [
       [ "drake::perception::pc_flags::kNone", "namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afa634ee767a8e90ff4d56e140459cca31f", null ],

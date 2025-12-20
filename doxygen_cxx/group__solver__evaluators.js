@@ -299,7 +299,7 @@ var group__solver__evaluators =
       [ "operator=", "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#a3b9457d38f15adf6f4c794b03ad713b0", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
     ] ],
-    [ "EvaluatorConstraint< EvaluatorType >", "classdrake_1_1solvers_1_1_evaluator_constraint.html", [
+    [ "EvaluatorConstraint&lt; EvaluatorType &gt;", "classdrake_1_1solvers_1_1_evaluator_constraint.html", [
       [ "EvaluatorConstraint", "classdrake_1_1solvers_1_1_evaluator_constraint.html#ad84d7b3c1202bc9e275ee8c48606e23f", null ],
       [ "EvaluatorConstraint", "classdrake_1_1solvers_1_1_evaluator_constraint.html#a260a1715b48134fad92a8221882a1076", null ],
       [ "EvaluatorConstraint", "classdrake_1_1solvers_1_1_evaluator_constraint.html#abfb09ce6a7fdc8b8cc04e990290a773a", null ],
@@ -553,7 +553,7 @@ var group__solver__evaluators =
       [ "update_b_entry", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#af0e469d5862fcbd74594f47e7c2608bb", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
     ] ],
-    [ "EvaluatorCost< EvaluatorType >", "classdrake_1_1solvers_1_1_evaluator_cost.html", [
+    [ "EvaluatorCost&lt; EvaluatorType &gt;", "classdrake_1_1solvers_1_1_evaluator_cost.html", [
       [ "EvaluatorCost", "classdrake_1_1solvers_1_1_evaluator_cost.html#a1fdd829cd580b7b4bba065313c9617c2", null ],
       [ "EvaluatorCost", "classdrake_1_1solvers_1_1_evaluator_cost.html#a1e1710b612efa3cf0e80052203983249", null ],
       [ "EvaluatorCost", "classdrake_1_1solvers_1_1_evaluator_cost.html#a670b1f6bcb72ae83f74565088504d58b", null ],

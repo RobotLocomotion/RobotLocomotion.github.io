@@ -1,8 +1,8 @@
 var program__attribute_8h =
 [
-    [ "formatter< drake::solvers::ProgramAttribute >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html", null ],
-    [ "formatter< drake::solvers::ProgramAttributes >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html", null ],
-    [ "formatter< drake::solvers::ProgramType >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html", null ],
+    [ "formatter&lt; drake::solvers::ProgramAttribute &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attribute_01_4.html", null ],
+    [ "formatter&lt; drake::solvers::ProgramAttributes &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html", null ],
+    [ "formatter&lt; drake::solvers::ProgramType &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html", null ],
     [ "drake::solvers::ProgramAttributes", "namespacedrake_1_1solvers.html#a5617ec1dc3b70cd1683d8850fe69585d", null ],
     [ "drake::solvers::ProgramAttribute", "namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95f", [
       [ "drake::solvers::ProgramAttribute::kGenericCost", "namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa597a3cf4953daab8ab5e6ffebeff44d0", null ],

@@ -1,6 +1,6 @@
 var group__multibody__systems =
 [
-    [ "Propeller< T >", "classdrake_1_1multibody_1_1_propeller.html", [
+    [ "Propeller&lt; T &gt;", "classdrake_1_1multibody_1_1_propeller.html", [
       [ "Propeller", "classdrake_1_1multibody_1_1_propeller.html#a928e24a4dfe9a740a39acc21c0e1eb61", null ],
       [ "Propeller", "classdrake_1_1multibody_1_1_propeller.html#a1282a8877c657a710e2f8c154db8575a", null ],
       [ "Propeller", "classdrake_1_1multibody_1_1_propeller.html#a3eef44c7936aab51f7f0ee330892277c", null ],
@@ -15,7 +15,7 @@ var group__multibody__systems =
       [ "operator=", "classdrake_1_1multibody_1_1_propeller.html#a3016070d1ecc9d0017d5736d338747bf", null ],
       [ "Propeller", "classdrake_1_1multibody_1_1_propeller.html#a9801eccb2da5c84c2cd116033e674524", null ]
     ] ],
-    [ "Wing< T >", "classdrake_1_1multibody_1_1_wing.html", [
+    [ "Wing&lt; T &gt;", "classdrake_1_1multibody_1_1_wing.html", [
       [ "Wing", "classdrake_1_1multibody_1_1_wing.html#a1d92c58f0d99595019eeac780c919654", null ],
       [ "Wing", "classdrake_1_1multibody_1_1_wing.html#a30c2af8386010347ab0e75471db8bd5f", null ],
       [ "Wing", "classdrake_1_1multibody_1_1_wing.html#ae6a304621c46494db84d8ca2791cdc7f", null ],

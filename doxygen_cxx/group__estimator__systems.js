@@ -1,6 +1,6 @@
 var group__estimator__systems =
 [
-    [ "LuenbergerObserver< T >", "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html", [
+    [ "LuenbergerObserver&lt; T &gt;", "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html", [
       [ "LuenbergerObserver", "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a75f619833e2c15feac6e8acba57fbd8b", null ],
       [ "LuenbergerObserver", "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#aad627f771b16f15ab12904fde13e5f86", null ],
       [ "LuenbergerObserver", "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a8ff61e643195553d9629e785e3570e39", null ],

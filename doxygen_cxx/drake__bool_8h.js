@@ -1,6 +1,6 @@
 var drake__bool_8h =
 [
-    [ "scalar_predicate< T >", "structdrake_1_1scalar__predicate.html", "structdrake_1_1scalar__predicate" ],
+    [ "scalar_predicate&lt; T &gt;", "structdrake_1_1scalar__predicate.html", "structdrake_1_1scalar__predicate" ],
     [ "drake::boolean", "namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b", null ],
     [ "drake::all", "namespacedrake.html#a6f017505f166d0b60735ba1c4a9b4f23", null ],
     [ "drake::all_of", "namespacedrake.html#a58bef16b035645d48c9d032a977d7680", null ],

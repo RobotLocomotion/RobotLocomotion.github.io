@@ -2,5 +2,5 @@ var package__map_8h =
 [
     [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html", "classdrake_1_1multibody_1_1_package_map" ],
     [ "PackageMap::RemoteParams", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params.html", "structdrake_1_1multibody_1_1_package_map_1_1_remote_params" ],
-    [ "formatter< drake::multibody::PackageMap >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_package_map_01_4.html", null ]
+    [ "formatter&lt; drake::multibody::PackageMap &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_package_map_01_4.html", null ]
 ];

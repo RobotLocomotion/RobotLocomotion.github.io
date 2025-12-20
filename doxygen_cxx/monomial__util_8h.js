@@ -1,6 +1,6 @@
 var monomial__util_8h =
 [
-    [ "GradedReverseLexOrder< VariableOrder >", "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html", "structdrake_1_1symbolic_1_1_graded_reverse_lex_order" ],
+    [ "GradedReverseLexOrder&lt; VariableOrder &gt;", "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html", "structdrake_1_1symbolic_1_1_graded_reverse_lex_order" ],
     [ "drake::symbolic::CalcMonomialBasisOrderUpToOne", "namespacedrake_1_1symbolic.html#ab45e72ece70fdb6eba8afcfc7b773c76", null ],
     [ "drake::symbolic::EvenDegreeMonomialBasis", "namespacedrake_1_1symbolic.html#a88ddd8d42b90d109f5d7312db729a959", null ],
     [ "drake::symbolic::MonomialBasis", "namespacedrake_1_1symbolic.html#aa926fea06c17ca6892965848c0236c9b", null ],

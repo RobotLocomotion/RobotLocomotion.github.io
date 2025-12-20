@@ -1,5 +1,17 @@
 var NAVTREEINDEX95 =
 {
+"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,34,0,0],
+"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,31,0,0],
+"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#aa0de0a897162ef2c7d4a43529b8f25f7":[3,0,0,4,34,0,1],
+"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#aa0de0a897162ef2c7d4a43529b8f25f7":[4,0,0,3,31,0,1],
+"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#ae484f63d5fef688b4c3f438455d6eec9":[3,0,0,4,34,0,3],
+"structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html#ae484f63d5fef688b4c3f438455d6eec9":[4,0,0,3,31,0,3],
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html":[3,0,0,4,34,1],
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html":[4,0,0,3,31,1],
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,4,34,1,1],
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[4,0,0,3,31,1,1],
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,4,34,1,4],
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3":[4,0,0,3,31,1,4],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a4467598fbba812fe1339ab4e83806573":[3,0,0,4,34,1,6],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a4467598fbba812fe1339ab4e83806573":[4,0,0,3,31,1,6],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a5eeeb20fab9ff0f54568882b94d57921":[3,0,0,4,34,1,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX95 =
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a44710291f8cf927c351ffece3d0fc2cf":[3,0,0,4,0,9,5],
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a44710291f8cf927c351ffece3d0fc2cf":[4,0,0,3,0,9,5],
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a64edabe31c7387ccb941ac7f92205cb3":[3,0,0,4,0,9,2],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a64edabe31c7387ccb941ac7f92205cb3":[4,0,0,3,0,9,2],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a7e2b518ae9bdf51607ac6f17ceac7394":[3,0,0,4,0,9,1],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a7e2b518ae9bdf51607ac6f17ceac7394":[4,0,0,3,0,9,1],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a89102b2fc6494a6f69641bc94e8f8a85":[3,0,0,4,0,9,0],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a89102b2fc6494a6f69641bc94e8f8a85":[4,0,0,3,0,9,0],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a9bcd2beab49aa2bbcc29485e8c15774b":[3,0,0,4,0,9,7],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a9bcd2beab49aa2bbcc29485e8c15774b":[4,0,0,3,0,9,7],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#ad2ac218243c411d0d1eaa6d52a91a52d":[3,0,0,4,0,9,9],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#ad2ac218243c411d0d1eaa6d52a91a52d":[4,0,0,3,0,9,9],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#af078825bb0421be73066b141224f5f8a":[3,0,0,4,0,9,4],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#af078825bb0421be73066b141224f5f8a":[4,0,0,3,0,9,4],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#afd86df5b24b52893bd68bad2bf91fbaa":[3,0,0,4,0,9,10],
-"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#afd86df5b24b52893bd68bad2bf91fbaa":[4,0,0,3,0,9,10]
+"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a64edabe31c7387ccb941ac7f92205cb3":[4,0,0,3,0,9,2]
 };

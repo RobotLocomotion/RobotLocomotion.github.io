@@ -1,14 +1,14 @@
 var pixel__types_8h =
 [
-    [ "ImageTraits< PixelType::kRgb8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4" ],
-    [ "ImageTraits< PixelType::kBgr8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4" ],
-    [ "ImageTraits< PixelType::kRgba8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4" ],
-    [ "ImageTraits< PixelType::kBgra8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4" ],
-    [ "ImageTraits< PixelType::kDepth32F >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4" ],
-    [ "ImageTraits< PixelType::kDepth16U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4" ],
-    [ "ImageTraits< PixelType::kLabel16I >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4" ],
-    [ "ImageTraits< PixelType::kGrey8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4" ],
-    [ "hash< drake::systems::sensors::PixelType >", "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ],
+    [ "ImageTraits&lt; PixelType::kRgb8U &gt;", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4" ],
+    [ "ImageTraits&lt; PixelType::kBgr8U &gt;", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4" ],
+    [ "ImageTraits&lt; PixelType::kRgba8U &gt;", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4" ],
+    [ "ImageTraits&lt; PixelType::kBgra8U &gt;", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4" ],
+    [ "ImageTraits&lt; PixelType::kDepth32F &gt;", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4" ],
+    [ "ImageTraits&lt; PixelType::kDepth16U &gt;", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4" ],
+    [ "ImageTraits&lt; PixelType::kLabel16I &gt;", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4" ],
+    [ "ImageTraits&lt; PixelType::kGrey8U &gt;", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4" ],
+    [ "hash&lt; drake::systems::sensors::PixelType &gt;", "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ],
     [ "drake::systems::sensors::PixelFormat", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072a", [
       [ "drake::systems::sensors::PixelFormat::kRgb", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aa79c7503f0e2c40a13957e8aac9ac9f7b", null ],
       [ "drake::systems::sensors::PixelFormat::kBgr", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aaa604150389917b572788fdd3138143b8", null ],

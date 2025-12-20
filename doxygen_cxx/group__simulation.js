@@ -6,7 +6,7 @@ var group__simulation =
       [ "Serialize", "structdrake_1_1systems_1_1_initialize_params.html#a8e8824802dedfbc36776227f7482b6bc", null ],
       [ "suppress_initialization_events", "structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa", null ]
     ] ],
-    [ "Simulator< T >", "classdrake_1_1systems_1_1_simulator.html", [
+    [ "Simulator&lt; T &gt;", "classdrake_1_1systems_1_1_simulator.html", [
       [ "Simulator", "classdrake_1_1systems_1_1_simulator.html#aa33b3ce4aeb5d29ac4a16de084bd307b", null ],
       [ "Simulator", "classdrake_1_1systems_1_1_simulator.html#a12ea7987a4acd8c4f32226f33fe9dbe4", null ],
       [ "Simulator", "classdrake_1_1systems_1_1_simulator.html#a2c5c7ca087a8a32bbe044a074c65cf5a", null ],

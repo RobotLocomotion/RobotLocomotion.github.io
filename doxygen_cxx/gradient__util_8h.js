@@ -1,9 +1,9 @@
 var gradient__util_8h =
 [
-    [ "MatGradMultMat< DerivedA, DerivedB, DerivedDA >", "structdrake_1_1math_1_1_mat_grad_mult_mat.html", "structdrake_1_1math_1_1_mat_grad_mult_mat" ],
-    [ "MatGradMult< DerivedDA, DerivedB >", "structdrake_1_1math_1_1_mat_grad_mult.html", "structdrake_1_1math_1_1_mat_grad_mult" ],
-    [ "GetSubMatrixGradientArray< QSubvectorSize, Derived, NRows, NCols >", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array" ],
-    [ "GetSubMatrixGradientSingleElement< QSubvectorSize, Derived >", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element" ],
+    [ "MatGradMultMat&lt; DerivedA, DerivedB, DerivedDA &gt;", "structdrake_1_1math_1_1_mat_grad_mult_mat.html", "structdrake_1_1math_1_1_mat_grad_mult_mat" ],
+    [ "MatGradMult&lt; DerivedDA, DerivedB &gt;", "structdrake_1_1math_1_1_mat_grad_mult.html", "structdrake_1_1math_1_1_mat_grad_mult" ],
+    [ "GetSubMatrixGradientArray&lt; QSubvectorSize, Derived, NRows, NCols &gt;", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array" ],
+    [ "GetSubMatrixGradientSingleElement&lt; QSubvectorSize, Derived &gt;", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element" ],
     [ "drake::math::getSubMatrixGradient", "namespacedrake_1_1math.html#a308bfb8a42ac830764e3e5420e5123f6", null ],
     [ "drake::math::getSubMatrixGradient", "namespacedrake_1_1math.html#a050ed765d82aab33969de2bd54ac49e2", null ],
     [ "drake::math::getSubMatrixGradient", "namespacedrake_1_1math.html#a3e880bbd06a798425a0fea851038109d", null ],

@@ -2,8 +2,8 @@ var symbolic_2polynomial_8h =
 [
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", "classdrake_1_1symbolic_1_1_polynomial" ],
     [ "Polynomial::SubstituteAndExpandCacheData", "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html", "structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data" ],
-    [ "hash< drake::symbolic::Polynomial >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
-    [ "formatter< drake::symbolic::Polynomial >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
+    [ "hash&lt; drake::symbolic::Polynomial &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
+    [ "formatter&lt; drake::symbolic::Polynomial &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
     [ "DRAKE_COMMON_SYMBOLIC_POLYNOMIAL_H", "symbolic_2polynomial_8h.html#a14031f45c6c7d6bfde87bb3455963fc3", null ],
     [ "drake::symbolic::CalcPolynomialWLowerTriangularPart", "namespacedrake_1_1symbolic.html#a9a564c13b0f2dfdd43264f378f5d5ee1", null ],
     [ "drake::symbolic::Evaluate", "namespacedrake_1_1symbolic.html#ac0307b6ce5db3cdd869f02b790c89d0b", null ],

@@ -1,11 +1,11 @@
 var variable_8h =
 [
     [ "Variable", "classdrake_1_1symbolic_1_1_variable.html", "classdrake_1_1symbolic_1_1_variable" ],
-    [ "hash< drake::symbolic::Variable >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
-    [ "less< drake::symbolic::Variable >", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4" ],
-    [ "equal_to< drake::symbolic::Variable >", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4" ],
-    [ "formatter< drake::symbolic::Variable >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
-    [ "formatter< drake::symbolic::Variable::Type >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html", null ],
+    [ "hash&lt; drake::symbolic::Variable &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
+    [ "less&lt; drake::symbolic::Variable &gt;", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4" ],
+    [ "equal_to&lt; drake::symbolic::Variable &gt;", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4" ],
+    [ "formatter&lt; drake::symbolic::Variable &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
+    [ "formatter&lt; drake::symbolic::Variable::Type &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html", null ],
     [ "drake::symbolic::CheckStructuralEquality", "namespacedrake_1_1symbolic.html#a83d142d09707408089d64c4a15c57ab7", null ],
     [ "drake::symbolic::MakeMatrixBinaryVariable", "namespacedrake_1_1symbolic.html#a2e71bf8f0510b93790216b435d76b990", null ],
     [ "drake::symbolic::MakeMatrixBinaryVariable", "namespacedrake_1_1symbolic.html#ac40449e991943b02a88f4627fd02c872", null ],

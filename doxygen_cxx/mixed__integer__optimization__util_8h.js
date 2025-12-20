@@ -1,6 +1,6 @@
 var mixed__integer__optimization__util_8h =
 [
-    [ "LogarithmicSos2NewBinaryVariables< NumLambda >", "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html", "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables" ],
+    [ "LogarithmicSos2NewBinaryVariables&lt; NumLambda &gt;", "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html", "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables" ],
     [ "drake::solvers::IntervalBinning", "namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285", [
       [ "drake::solvers::IntervalBinning::kLogarithmic", "namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285a5bff8e60dc42878e194fb2d87460ed29", null ],
       [ "drake::solvers::IntervalBinning::kLinear", "namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285aac97f0008bcf7c7fe4f2ff94160e1385", null ]

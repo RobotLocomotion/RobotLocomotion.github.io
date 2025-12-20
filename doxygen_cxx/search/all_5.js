@@ -214,7 +214,7 @@ var searchData=
   ['formulatrue_211',['FormulaTrue',['../classdrake_1_1symbolic_1_1_formula_true.html',1,'FormulaTrue'],['../classdrake_1_1symbolic_1_1_formula_true.html#aa35c78ffa149d71a5577273eb30e252d',1,'drake::symbolic::FormulaTrue::FormulaTrue()']]],
   ['formulavar_212',['FormulaVar',['../classdrake_1_1symbolic_1_1_formula_var.html',1,'FormulaVar'],['../classdrake_1_1symbolic_1_1_formula_var.html#a27060568ba67493abb749d00c46c3ca5',1,'drake::symbolic::FormulaVar::FormulaVar()']]],
   ['forwardkinematics_213',['ForwardKinematics',['../classdrake_1_1multibody_1_1_differential_inverse_kinematics_integrator.html#adb9c056fd315645e92def45ae627b797',1,'drake::multibody::DifferentialInverseKinematicsIntegrator']]],
-  ['foundation_214',['Foundation',['../group__hydro__params.html#hydro_params_efm_analogy',1,'Hydroelastic Contact and Elastic Foundation'],['../group__hydro__params.html#hydro_params_efm',1,'Winkler's Elastic Foundation']]],
+  ['foundation_214',['Foundation',['../group__hydro__params.html#hydro_params_efm_analogy',1,'Hydroelastic Contact and Elastic Foundation'],['../group__hydro__params.html#hydro_params_efm',1,'Winkler&apos;s Elastic Foundation']]],
   ['fourth_5forder_5ftensor_2eh_215',['fourth_order_tensor.h',['../fourth__order__tensor_8h.html',1,'']]],
   ['fov_216',['fov',['../structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#aaf72b1fe5ab339da8e67c2253fa7f92a',1,'drake::geometry::Meshcat::PerspectiveCamera']]],
   ['fov_5fx_217',['fov_x',['../classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abf26f8c02fcada355b0278b7934b5321',1,'drake::systems::sensors::CameraInfo']]],

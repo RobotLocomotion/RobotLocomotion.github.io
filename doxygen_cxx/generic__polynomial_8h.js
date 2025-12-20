@@ -1,8 +1,8 @@
 var generic__polynomial_8h =
 [
-    [ "GenericPolynomial< BasisElement >", "classdrake_1_1symbolic_1_1_generic_polynomial.html", "classdrake_1_1symbolic_1_1_generic_polynomial" ],
-    [ "hash< drake::symbolic::GenericPolynomial< BasisElement > >", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html", null ],
-    [ "formatter< drake::symbolic::GenericPolynomial< BasisElement > >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html", null ],
+    [ "GenericPolynomial&lt; BasisElement &gt;", "classdrake_1_1symbolic_1_1_generic_polynomial.html", "classdrake_1_1symbolic_1_1_generic_polynomial" ],
+    [ "hash&lt; drake::symbolic::GenericPolynomial&lt; BasisElement &gt; &gt;", "structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html", null ],
+    [ "formatter&lt; drake::symbolic::GenericPolynomial&lt; BasisElement &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html", null ],
     [ "drake::symbolic::GenericPolynomialEnable", "namespacedrake_1_1symbolic.html#ab1a5d6781b80333555bde1ed59a38477", null ],
     [ "drake::symbolic::operator*", "namespacedrake_1_1symbolic.html#a6b40dd59bc3bbf7d7d66bc8653a66437", null ],
     [ "drake::symbolic::operator*", "namespacedrake_1_1symbolic.html#ad432e40263668f90f62a421d67c66f5f", null ],

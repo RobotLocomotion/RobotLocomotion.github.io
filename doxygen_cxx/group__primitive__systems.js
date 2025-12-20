@@ -1,6 +1,6 @@
 var group__primitive__systems =
 [
-    [ "Adder< T >", "classdrake_1_1systems_1_1_adder.html", [
+    [ "Adder&lt; T &gt;", "classdrake_1_1systems_1_1_adder.html", [
       [ "Adder", "classdrake_1_1systems_1_1_adder.html#aec5b41fc4e302c6eb57e72965efba1ce", null ],
       [ "Adder", "classdrake_1_1systems_1_1_adder.html#a291a17f60d1b0fdb5fe50df76db46630", null ],
       [ "Adder", "classdrake_1_1systems_1_1_adder.html#aab05db005e882d7fec638b6acff9b873", null ],
@@ -8,7 +8,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_adder.html#a712e5893c165b66464b84edb9fdcf1e0", null ],
       [ "operator=", "classdrake_1_1systems_1_1_adder.html#aeb2bab3a05a1192cfe5f44dfc202f786", null ]
     ] ],
-    [ "TimeVaryingAffineSystem< T >", "classdrake_1_1systems_1_1_time_varying_affine_system.html", [
+    [ "TimeVaryingAffineSystem&lt; T &gt;", "classdrake_1_1systems_1_1_time_varying_affine_system.html", [
       [ "TimeVaryingAffineSystem", "classdrake_1_1systems_1_1_time_varying_affine_system.html#aeaa7d3bfd14c5adbae7c1575781b945b", null ],
       [ "TimeVaryingAffineSystem", "classdrake_1_1systems_1_1_time_varying_affine_system.html#a2726d7c3e552ec50742773d6149c16c0", null ],
       [ "TimeVaryingAffineSystem", "classdrake_1_1systems_1_1_time_varying_affine_system.html#a8c7d00b4d45acc45ba938111b5a8735f", null ],
@@ -38,7 +38,7 @@ var group__primitive__systems =
       [ "y0", "classdrake_1_1systems_1_1_time_varying_affine_system.html#a85c3914202d1beb9987f2a5e11bce151", null ],
       [ "Make_Function_Pointers", "classdrake_1_1systems_1_1_time_varying_affine_system.html#aedb3a4bc9859caa7cc548bb6d315892a", null ]
     ] ],
-    [ "AffineSystem< T >", "classdrake_1_1systems_1_1_affine_system.html", [
+    [ "AffineSystem&lt; T &gt;", "classdrake_1_1systems_1_1_affine_system.html", [
       [ "AffineSystem", "classdrake_1_1systems_1_1_affine_system.html#af75a23cc82e2c8e85534f94ffba09203", null ],
       [ "AffineSystem", "classdrake_1_1systems_1_1_affine_system.html#a350b26ee4a2cb1ab86bf27f71491bb41", null ],
       [ "AffineSystem", "classdrake_1_1systems_1_1_affine_system.html#aeec4db7870070b42a051419fcb01a3eb", null ],
@@ -61,7 +61,7 @@ var group__primitive__systems =
       [ "y0", "classdrake_1_1systems_1_1_affine_system.html#a88d9b23e1990c673d78561451e71782c", null ],
       [ "y0", "classdrake_1_1systems_1_1_affine_system.html#acf9aebf53ab31439037c3603ca96e054", null ]
     ] ],
-    [ "BusCreator< T >", "classdrake_1_1systems_1_1_bus_creator.html", [
+    [ "BusCreator&lt; T &gt;", "classdrake_1_1systems_1_1_bus_creator.html", [
       [ "BusCreator", "classdrake_1_1systems_1_1_bus_creator.html#a10d96e7d2c5c3489c943af241d507972", null ],
       [ "BusCreator", "classdrake_1_1systems_1_1_bus_creator.html#a376d1a76ff541f748ecae72bff4cb74d", null ],
       [ "BusCreator", "classdrake_1_1systems_1_1_bus_creator.html#a1c05117b05ca200caef7c28100879e73", null ],
@@ -73,7 +73,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_bus_creator.html#ad26b2d4e3af833b7052e7481ca08e229", null ],
       [ "BusCreator", "classdrake_1_1systems_1_1_bus_creator.html#aee66995fa97e2ca915307226a137f7cf", null ]
     ] ],
-    [ "BusSelector< T >", "classdrake_1_1systems_1_1_bus_selector.html", [
+    [ "BusSelector&lt; T &gt;", "classdrake_1_1systems_1_1_bus_selector.html", [
       [ "BusSelector", "classdrake_1_1systems_1_1_bus_selector.html#a3657ab9bb28dc2f88554f888b519edea", null ],
       [ "BusSelector", "classdrake_1_1systems_1_1_bus_selector.html#a114341edf7752183fc8289e44c3d658a", null ],
       [ "BusSelector", "classdrake_1_1systems_1_1_bus_selector.html#a0a44017b3eb67ace2c086502f33f21fa", null ],
@@ -85,7 +85,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_bus_selector.html#ac78d6b4021f30063179aa0cccf6729c9", null ],
       [ "BusSelector", "classdrake_1_1systems_1_1_bus_selector.html#afaa66749fffeba0f1b79585f7508d39a", null ]
     ] ],
-    [ "ConstantValueSource< T >", "classdrake_1_1systems_1_1_constant_value_source.html", [
+    [ "ConstantValueSource&lt; T &gt;", "classdrake_1_1systems_1_1_constant_value_source.html", [
       [ "ConstantValueSource", "classdrake_1_1systems_1_1_constant_value_source.html#a190c6b4b8a1910076ac54b7b20538767", null ],
       [ "ConstantValueSource", "classdrake_1_1systems_1_1_constant_value_source.html#a2789f04b9565181ad7787b0968532eef", null ],
       [ "ConstantValueSource", "classdrake_1_1systems_1_1_constant_value_source.html#a191928ddc6dbcf98480281ab974cbc52", null ],
@@ -94,7 +94,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_constant_value_source.html#a66dc108fa5a3d8192fb6d1c375ef68f1", null ],
       [ "ConstantValueSource", "classdrake_1_1systems_1_1_constant_value_source.html#aec078a534b7e75d0c96ae5ff565d24e9", null ]
     ] ],
-    [ "ConstantVectorSource< T >", "classdrake_1_1systems_1_1_constant_vector_source.html", [
+    [ "ConstantVectorSource&lt; T &gt;", "classdrake_1_1systems_1_1_constant_vector_source.html", [
       [ "ConstantVectorSource", "classdrake_1_1systems_1_1_constant_vector_source.html#a0844e0714b129cbec1affce6f20bd4a2", null ],
       [ "ConstantVectorSource", "classdrake_1_1systems_1_1_constant_vector_source.html#a834331ddce1d802100244deb75dad11d", null ],
       [ "ConstantVectorSource", "classdrake_1_1systems_1_1_constant_vector_source.html#a7b6be44a6b3d4777d41baa05fdf8453e", null ],
@@ -108,7 +108,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_constant_vector_source.html#aec9f2f6952d52d86a19f480794c71f0d", null ],
       [ "ConstantVectorSource", "classdrake_1_1systems_1_1_constant_vector_source.html#a7327cfcd0c5189ec70d89ab690f87d62", null ]
     ] ],
-    [ "Demultiplexer< T >", "classdrake_1_1systems_1_1_demultiplexer.html", [
+    [ "Demultiplexer&lt; T &gt;", "classdrake_1_1systems_1_1_demultiplexer.html", [
       [ "Demultiplexer", "classdrake_1_1systems_1_1_demultiplexer.html#a99de4f230144dd7095c00e8249429f83", null ],
       [ "Demultiplexer", "classdrake_1_1systems_1_1_demultiplexer.html#a42cbacdc3954fc22ea35643c0493ddbb", null ],
       [ "Demultiplexer", "classdrake_1_1systems_1_1_demultiplexer.html#a32f49fa511b864f9b167b98a94a08e92", null ],
@@ -118,7 +118,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_demultiplexer.html#ae3930bd18828d63a741542f44b77fda3", null ],
       [ "operator=", "classdrake_1_1systems_1_1_demultiplexer.html#aa505bd2a516d823073fe0b9800ca20ff", null ]
     ] ],
-    [ "DiscreteDerivative< T >", "classdrake_1_1systems_1_1_discrete_derivative.html", [
+    [ "DiscreteDerivative&lt; T &gt;", "classdrake_1_1systems_1_1_discrete_derivative.html", [
       [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#aacb738d28aede718f8d1b86689e831d4", null ],
       [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#aa6b4308bca3ce0b1a016d0eff6f91d5c", null ],
       [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#a723381cd404366ac6794e83b8facb8e4", null ],
@@ -131,7 +131,7 @@ var group__primitive__systems =
       [ "suppress_initial_transient", "classdrake_1_1systems_1_1_discrete_derivative.html#ac0f52a430dc68250ab8de72c3df90b01", null ],
       [ "time_step", "classdrake_1_1systems_1_1_discrete_derivative.html#a8daceb7a3c384d6ad9f305e42b5fc1c6", null ]
     ] ],
-    [ "StateInterpolatorWithDiscreteDerivative< T >", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html", [
+    [ "StateInterpolatorWithDiscreteDerivative&lt; T &gt;", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html", [
       [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#af37b12ca90f8fd9705939855ae554710", null ],
       [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a43992d28865a8a7ffd46830f88dcc568", null ],
       [ "StateInterpolatorWithDiscreteDerivative", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a31f4b6c1551fcb659e94ee4aa8190c9b", null ],
@@ -143,7 +143,7 @@ var group__primitive__systems =
       [ "set_initial_state", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a0b8b7c6fb3c1f9868c3e96920fed7f9a", null ],
       [ "suppress_initial_transient", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#ac0f52a430dc68250ab8de72c3df90b01", null ]
     ] ],
-    [ "DiscreteTimeDelay< T >", "classdrake_1_1systems_1_1_discrete_time_delay.html", [
+    [ "DiscreteTimeDelay&lt; T &gt;", "classdrake_1_1systems_1_1_discrete_time_delay.html", [
       [ "DiscreteTimeDelay", "classdrake_1_1systems_1_1_discrete_time_delay.html#a437d00f1d968eae3215e55d0865d811c", null ],
       [ "DiscreteTimeDelay", "classdrake_1_1systems_1_1_discrete_time_delay.html#afb9e56447e8d22ed8c480eec03a46060", null ],
       [ "DiscreteTimeDelay", "classdrake_1_1systems_1_1_discrete_time_delay.html#a84105a144c15dc0764a2b04b9f5d6e77", null ],
@@ -155,7 +155,7 @@ var group__primitive__systems =
       [ "SaveInputToBuffer", "classdrake_1_1systems_1_1_discrete_time_delay.html#aa852395cf6dfab5140de1bdecf00e888", null ],
       [ "DiscreteTimeDelay", "classdrake_1_1systems_1_1_discrete_time_delay.html#ad76d8c0407a349406ddfcf1e8fb101cd", null ]
     ] ],
-    [ "DiscreteTimeIntegrator< T >", "classdrake_1_1systems_1_1_discrete_time_integrator.html", [
+    [ "DiscreteTimeIntegrator&lt; T &gt;", "classdrake_1_1systems_1_1_discrete_time_integrator.html", [
       [ "DiscreteTimeIntegrator", "classdrake_1_1systems_1_1_discrete_time_integrator.html#a9c981c61792e88c798d6d673add89f8b", null ],
       [ "DiscreteTimeIntegrator", "classdrake_1_1systems_1_1_discrete_time_integrator.html#abb6db497b5e07e7672b306d156b92de3", null ],
       [ "DiscreteTimeIntegrator", "classdrake_1_1systems_1_1_discrete_time_integrator.html#a4c7c0898a45966b804bd5e398a933d12", null ],
@@ -166,7 +166,7 @@ var group__primitive__systems =
       [ "set_integral_value", "classdrake_1_1systems_1_1_discrete_time_integrator.html#ada7d6dc8537c671a6b8b2544e571820f", null ],
       [ "time_step", "classdrake_1_1systems_1_1_discrete_time_integrator.html#a8daceb7a3c384d6ad9f305e42b5fc1c6", null ]
     ] ],
-    [ "FirstOrderLowPassFilter< T >", "classdrake_1_1systems_1_1_first_order_low_pass_filter.html", [
+    [ "FirstOrderLowPassFilter&lt; T &gt;", "classdrake_1_1systems_1_1_first_order_low_pass_filter.html", [
       [ "FirstOrderLowPassFilter", "classdrake_1_1systems_1_1_first_order_low_pass_filter.html#acf3dbc01fd5653f3c28043d911346cd5", null ],
       [ "FirstOrderLowPassFilter", "classdrake_1_1systems_1_1_first_order_low_pass_filter.html#a6ed96892c6f9d96380bb975d87f2b92f", null ],
       [ "FirstOrderLowPassFilter", "classdrake_1_1systems_1_1_first_order_low_pass_filter.html#a45a6fcf4869584853a86de91c0661ab0", null ],
@@ -178,7 +178,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_first_order_low_pass_filter.html#ab669e9e0aa84096c459e969775d53a46", null ],
       [ "set_initial_output_value", "classdrake_1_1systems_1_1_first_order_low_pass_filter.html#af7514e6379c129559b1e755a813acac6", null ]
     ] ],
-    [ "Gain< T >", "classdrake_1_1systems_1_1_gain.html", [
+    [ "Gain&lt; T &gt;", "classdrake_1_1systems_1_1_gain.html", [
       [ "Gain", "classdrake_1_1systems_1_1_gain.html#ac4a653e320ed14d98e4a262b67e513b8", null ],
       [ "Gain", "classdrake_1_1systems_1_1_gain.html#ae72c1c5d25a0f010bba3e798f8a9ca9b", null ],
       [ "Gain", "classdrake_1_1systems_1_1_gain.html#ad451a734b0dd8c8da2f97e6b81672c14", null ],
@@ -189,7 +189,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_gain.html#a826683bfba03f79827d6ad615d785c50", null ],
       [ "operator=", "classdrake_1_1systems_1_1_gain.html#a8f1e898c314fc98ab1a34318d01c2b7e", null ]
     ] ],
-    [ "Integrator< T >", "classdrake_1_1systems_1_1_integrator.html", [
+    [ "Integrator&lt; T &gt;", "classdrake_1_1systems_1_1_integrator.html", [
       [ "Integrator", "classdrake_1_1systems_1_1_integrator.html#ac639858baafaed51f29f41799fe9d866", null ],
       [ "Integrator", "classdrake_1_1systems_1_1_integrator.html#a780cd767bbbe0b92b73c29348a889915", null ],
       [ "Integrator", "classdrake_1_1systems_1_1_integrator.html#a6eebe3ff26133bedbc44a4e9031f85b0", null ],
@@ -202,7 +202,7 @@ var group__primitive__systems =
       [ "set_integral_value", "classdrake_1_1systems_1_1_integrator.html#ada7d6dc8537c671a6b8b2544e571820f", null ],
       [ "Integrator", "classdrake_1_1systems_1_1_integrator.html#a5d1acd32b27220bc30d67f1e154e3674", null ]
     ] ],
-    [ "LinearSystem< T >", "classdrake_1_1systems_1_1_linear_system.html", [
+    [ "LinearSystem&lt; T &gt;", "classdrake_1_1systems_1_1_linear_system.html", [
       [ "LinearSystem", "classdrake_1_1systems_1_1_linear_system.html#ae145dc8b64927588ad2124efb1c46492", null ],
       [ "LinearSystem", "classdrake_1_1systems_1_1_linear_system.html#a08f67e112cbef9c01d92c67990536f03", null ],
       [ "LinearSystem", "classdrake_1_1systems_1_1_linear_system.html#a817479dfc1f9e0196bd90c61d358d3d2", null ],
@@ -212,14 +212,14 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_linear_system.html#af61cdc676801cb94df4740f8049605c3", null ],
       [ "operator=", "classdrake_1_1systems_1_1_linear_system.html#a0dd81384dc23827cb71dff09d70ff459", null ]
     ] ],
-    [ "TimeVaryingLinearSystem< T >", "classdrake_1_1systems_1_1_time_varying_linear_system.html", [
+    [ "TimeVaryingLinearSystem&lt; T &gt;", "classdrake_1_1systems_1_1_time_varying_linear_system.html", [
       [ "TimeVaryingLinearSystem", "classdrake_1_1systems_1_1_time_varying_linear_system.html#ae71a02e204947f866d7a37f931db855a", null ],
       [ "TimeVaryingLinearSystem", "classdrake_1_1systems_1_1_time_varying_linear_system.html#a9897c05efd63b1dd511248dd36031298", null ],
       [ "TimeVaryingLinearSystem", "classdrake_1_1systems_1_1_time_varying_linear_system.html#a0700d256125405a936cdb7e9948e4e7f", null ],
       [ "operator=", "classdrake_1_1systems_1_1_time_varying_linear_system.html#a64414d9df641d1bc726995126622bc84", null ],
       [ "operator=", "classdrake_1_1systems_1_1_time_varying_linear_system.html#af28bc9525929ede6a01862ece14c7210", null ]
     ] ],
-    [ "LinearTransformDensity< T >", "classdrake_1_1systems_1_1_linear_transform_density.html", [
+    [ "LinearTransformDensity&lt; T &gt;", "classdrake_1_1systems_1_1_linear_transform_density.html", [
       [ "LinearTransformDensity", "classdrake_1_1systems_1_1_linear_transform_density.html#ab19a00e16ca27beb0f2bb5f675ed0bec", null ],
       [ "LinearTransformDensity", "classdrake_1_1systems_1_1_linear_transform_density.html#afe984a0b26d77f8ce5c3731559b6e3c0", null ],
       [ "LinearTransformDensity", "classdrake_1_1systems_1_1_linear_transform_density.html#a93b5bd77534754a50796493cd9884e0e", null ],
@@ -236,7 +236,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_linear_transform_density.html#af9171f5e95ebb390d4c9c13bce23f899", null ],
       [ "operator=", "classdrake_1_1systems_1_1_linear_transform_density.html#a868955d78ebcfae502d8576cabf0e9bf", null ]
     ] ],
-    [ "MatrixGain< T >", "classdrake_1_1systems_1_1_matrix_gain.html", [
+    [ "MatrixGain&lt; T &gt;", "classdrake_1_1systems_1_1_matrix_gain.html", [
       [ "MatrixGain", "classdrake_1_1systems_1_1_matrix_gain.html#a3af0b57a7a890abc45d1e2fadd6d7871", null ],
       [ "MatrixGain", "classdrake_1_1systems_1_1_matrix_gain.html#a5656e511d250b599887b5585810141ba", null ],
       [ "MatrixGain", "classdrake_1_1systems_1_1_matrix_gain.html#a555f573bc1c1a0e3da41f1b5bed26b52", null ],
@@ -245,7 +245,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_matrix_gain.html#a44d716b0df5358c5a5f69303649433b0", null ],
       [ "operator=", "classdrake_1_1systems_1_1_matrix_gain.html#acc94258f9824f3c2b33b78e49b199d64", null ]
     ] ],
-    [ "MultilayerPerceptron< T >", "classdrake_1_1systems_1_1_multilayer_perceptron.html", [
+    [ "MultilayerPerceptron&lt; T &gt;", "classdrake_1_1systems_1_1_multilayer_perceptron.html", [
       [ "ScalarLossFunction", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ab8cd45b3e47ca16f58c1743cb44c6efa", null ],
       [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a612b74ebd5fb20e1881d7d3fcd6fed6b", null ],
       [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a25a17b87a402d6813d808f1f189fbc77", null ],
@@ -275,7 +275,7 @@ var group__primitive__systems =
       [ "SetWeights", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a5048aace3b611db8cadb24605b106ef8", null ],
       [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a4203b6254bcd02ce5a385c42adc8a621", null ]
     ] ],
-    [ "Multiplexer< T >", "classdrake_1_1systems_1_1_multiplexer.html", [
+    [ "Multiplexer&lt; T &gt;", "classdrake_1_1systems_1_1_multiplexer.html", [
       [ "Multiplexer", "classdrake_1_1systems_1_1_multiplexer.html#a5d8542ac859a8c65440f39c89f5e5662", null ],
       [ "Multiplexer", "classdrake_1_1systems_1_1_multiplexer.html#a7f3bc0b1d7aeaf996d894415b543be82", null ],
       [ "Multiplexer", "classdrake_1_1systems_1_1_multiplexer.html#a0c8a526baff8c5660a5feaf5ccc39b4e", null ],
@@ -286,7 +286,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_multiplexer.html#aa86e697ea6971e6072fee29a6effdd9c", null ],
       [ "Multiplexer", "classdrake_1_1systems_1_1_multiplexer.html#a4dcb4fb0e76f378b4a7c2802eb5c1dc6", null ]
     ] ],
-    [ "PassThrough< T >", "classdrake_1_1systems_1_1_pass_through.html", [
+    [ "PassThrough&lt; T &gt;", "classdrake_1_1systems_1_1_pass_through.html", [
       [ "PassThrough", "classdrake_1_1systems_1_1_pass_through.html#acfe74cef2ac6b9cd3f46398593ac136a", null ],
       [ "PassThrough", "classdrake_1_1systems_1_1_pass_through.html#ad9c402edfcbf7b925527e5cdd3105f14", null ],
       [ "PassThrough", "classdrake_1_1systems_1_1_pass_through.html#a776f8cfa52930e7546f60587bcd069ba", null ],
@@ -299,7 +299,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_pass_through.html#a1f0858c8ae6e75440a25afe855090773", null ],
       [ "PassThrough", "classdrake_1_1systems_1_1_pass_through.html#ad80e0d0177ca3748e62788055dd2eac1", null ]
     ] ],
-    [ "PortSwitch< T >", "classdrake_1_1systems_1_1_port_switch.html", [
+    [ "PortSwitch&lt; T &gt;", "classdrake_1_1systems_1_1_port_switch.html", [
       [ "PortSwitch", "classdrake_1_1systems_1_1_port_switch.html#abf898974b7089a8af8355c76fce511a5", null ],
       [ "PortSwitch", "classdrake_1_1systems_1_1_port_switch.html#a71f6929a31f52d51b73860df2864a279", null ],
       [ "PortSwitch", "classdrake_1_1systems_1_1_port_switch.html#afa41b6a155c572d9867663fbcb8591a2", null ],
@@ -312,7 +312,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_port_switch.html#a65eae5b557cdd95263fb2f3b755accfa", null ],
       [ "PortSwitch", "classdrake_1_1systems_1_1_port_switch.html#a91084087966ac57838fb20dca1b0eaca", null ]
     ] ],
-    [ "RandomSource< T >", "classdrake_1_1systems_1_1_random_source.html", [
+    [ "RandomSource&lt; T &gt;", "classdrake_1_1systems_1_1_random_source.html", [
       [ "Seed", "classdrake_1_1systems_1_1_random_source.html#af2020f36164c39afda259dabe269dac2", null ],
       [ "RandomSource", "classdrake_1_1systems_1_1_random_source.html#a9abcc8142ced81fb9c8ce69e7194fb2b", null ],
       [ "RandomSource", "classdrake_1_1systems_1_1_random_source.html#a902eb239651a713d1b1ec773126f3a4a", null ],
@@ -327,7 +327,7 @@ var group__primitive__systems =
       [ "set_fixed_seed", "classdrake_1_1systems_1_1_random_source.html#ac8e7991f35420b45b22f3e2afb7b816c", null ],
       [ "RandomSource", "classdrake_1_1systems_1_1_random_source.html#a0c17a580c791415c09f8709e5700280b", null ]
     ] ],
-    [ "Saturation< T >", "classdrake_1_1systems_1_1_saturation.html", [
+    [ "Saturation&lt; T &gt;", "classdrake_1_1systems_1_1_saturation.html", [
       [ "Saturation", "classdrake_1_1systems_1_1_saturation.html#a87198e44c71388d56697531009915e3b", null ],
       [ "Saturation", "classdrake_1_1systems_1_1_saturation.html#aada3471b0f354f15d264e98b0a028255", null ],
       [ "Saturation", "classdrake_1_1systems_1_1_saturation.html#a2f84bb1a9217bcb1a2f464779246b9ed", null ],
@@ -341,7 +341,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_saturation.html#a519e6b4882b67c3628d9b9727fdfa2ec", null ],
       [ "Saturation", "classdrake_1_1systems_1_1_saturation.html#a5175a5f4c61c65df45844e0cdd6f1b58", null ]
     ] ],
-    [ "Selector< T >", "classdrake_1_1systems_1_1_selector.html", [
+    [ "Selector&lt; T &gt;", "classdrake_1_1systems_1_1_selector.html", [
       [ "Selector", "classdrake_1_1systems_1_1_selector.html#a49d86c14c60a68c202a289914a8e5cb6", null ],
       [ "Selector", "classdrake_1_1systems_1_1_selector.html#a1a38edac5e04a83e10b969bb141bb1e6", null ],
       [ "Selector", "classdrake_1_1systems_1_1_selector.html#ad658cdbcd7f6c91fb0207761b9ffba9b", null ],
@@ -351,7 +351,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_selector.html#a989145de0361779e6e38f754b950e199", null ],
       [ "Selector", "classdrake_1_1systems_1_1_selector.html#a98cee8672b705619982f96daf56acc39", null ]
     ] ],
-    [ "Sine< T >", "classdrake_1_1systems_1_1_sine.html", [
+    [ "Sine&lt; T &gt;", "classdrake_1_1systems_1_1_sine.html", [
       [ "Sine", "classdrake_1_1systems_1_1_sine.html#a1825565e674f4eb048cde03a07b6648f", null ],
       [ "Sine", "classdrake_1_1systems_1_1_sine.html#a5b016822f4ea2fcbca40870aabe79bff", null ],
       [ "Sine", "classdrake_1_1systems_1_1_sine.html#ac84e4369573c63583aff734b1ae180d9", null ],
@@ -367,7 +367,7 @@ var group__primitive__systems =
       [ "phase", "classdrake_1_1systems_1_1_sine.html#aea1d7812e603f5c67bae19da90797778", null ],
       [ "phase_vector", "classdrake_1_1systems_1_1_sine.html#a6ccab6a9c46972abbe01019834d0b1af", null ]
     ] ],
-    [ "SparseMatrixGain< T >", "classdrake_1_1systems_1_1_sparse_matrix_gain.html", [
+    [ "SparseMatrixGain&lt; T &gt;", "classdrake_1_1systems_1_1_sparse_matrix_gain.html", [
       [ "SparseMatrixGain", "classdrake_1_1systems_1_1_sparse_matrix_gain.html#a669ff5b4ab11db447db828a6d6016bc8", null ],
       [ "SparseMatrixGain", "classdrake_1_1systems_1_1_sparse_matrix_gain.html#af2a5a7bd7e8befc3fd72710511bf3d83", null ],
       [ "SparseMatrixGain", "classdrake_1_1systems_1_1_sparse_matrix_gain.html#a1f2beed34db4de4574189ac9b5428040", null ],
@@ -378,7 +378,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_sparse_matrix_gain.html#a9c87795144de820ff0a287b992b91a24", null ],
       [ "set_D", "classdrake_1_1systems_1_1_sparse_matrix_gain.html#aa4f83604aec9017672b84425f78e50b4", null ]
     ] ],
-    [ "TrajectoryAffineSystem< T >", "classdrake_1_1systems_1_1_trajectory_affine_system.html", [
+    [ "TrajectoryAffineSystem&lt; T &gt;", "classdrake_1_1systems_1_1_trajectory_affine_system.html", [
       [ "TrajectoryAffineSystem", "classdrake_1_1systems_1_1_trajectory_affine_system.html#a390e76eeefc1417c5bdeccddeebbcc00", null ],
       [ "TrajectoryAffineSystem", "classdrake_1_1systems_1_1_trajectory_affine_system.html#aef9c9f9c119fdd14e8addc3b190b41d2", null ],
       [ "TrajectoryAffineSystem", "classdrake_1_1systems_1_1_trajectory_affine_system.html#a4f6bca0023ceef2aa04f67a887abc7be", null ],
@@ -393,7 +393,7 @@ var group__primitive__systems =
       [ "y0", "classdrake_1_1systems_1_1_trajectory_affine_system.html#a645dbddf6c780c03c3bfdd448b0e3bfd", null ],
       [ "TrajectoryAffineSystem", "classdrake_1_1systems_1_1_trajectory_affine_system.html#a765619415f84359e645e673d149d9c72", null ]
     ] ],
-    [ "TrajectoryLinearSystem< T >", "classdrake_1_1systems_1_1_trajectory_linear_system.html", [
+    [ "TrajectoryLinearSystem&lt; T &gt;", "classdrake_1_1systems_1_1_trajectory_linear_system.html", [
       [ "TrajectoryLinearSystem", "classdrake_1_1systems_1_1_trajectory_linear_system.html#a8f1a2051c444973c346eab2655143b32", null ],
       [ "TrajectoryLinearSystem", "classdrake_1_1systems_1_1_trajectory_linear_system.html#a3ddfe4411a4acd3b65bae5cbce4a1be8", null ],
       [ "TrajectoryLinearSystem", "classdrake_1_1systems_1_1_trajectory_linear_system.html#a45a2578c215aa677979d65353e382cf2", null ],
@@ -406,7 +406,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_trajectory_linear_system.html#aed76b42584bf6becd66c7350ba3499ad", null ],
       [ "TrajectoryLinearSystem", "classdrake_1_1systems_1_1_trajectory_linear_system.html#a86b3ded6f53bfd2386bf6982dbc0f787", null ]
     ] ],
-    [ "TrajectorySource< T >", "classdrake_1_1systems_1_1_trajectory_source.html", [
+    [ "TrajectorySource&lt; T &gt;", "classdrake_1_1systems_1_1_trajectory_source.html", [
       [ "TrajectorySource", "classdrake_1_1systems_1_1_trajectory_source.html#a6952a6c969661b00d9438c3533e1ca09", null ],
       [ "TrajectorySource", "classdrake_1_1systems_1_1_trajectory_source.html#a4fd9f65bfeeff9e00a7a37209baa0505", null ],
       [ "TrajectorySource", "classdrake_1_1systems_1_1_trajectory_source.html#a751e3f6c76a8c1a3b1c6b4335a558a16", null ],
@@ -417,7 +417,7 @@ var group__primitive__systems =
       [ "UpdateTrajectory", "classdrake_1_1systems_1_1_trajectory_source.html#a909c9c40fb0e9ce5cbcc455e3516a473", null ],
       [ "TrajectorySource", "classdrake_1_1systems_1_1_trajectory_source.html#a6acd575d9e855bfe3d813a0c4852edf2", null ]
     ] ],
-    [ "VectorLogSink< T >", "classdrake_1_1systems_1_1_vector_log_sink.html", [
+    [ "VectorLogSink&lt; T &gt;", "classdrake_1_1systems_1_1_vector_log_sink.html", [
       [ "VectorLogSink", "classdrake_1_1systems_1_1_vector_log_sink.html#a4f024aaf2bc04974691b9f3b225d71a3", null ],
       [ "VectorLogSink", "classdrake_1_1systems_1_1_vector_log_sink.html#adbebf78a6b8619cee90d5bffc463dfe5", null ],
       [ "VectorLogSink", "classdrake_1_1systems_1_1_vector_log_sink.html#a0bbb6c5977630907a351671283c2d3ea", null ],
@@ -431,7 +431,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_vector_log_sink.html#ae28b608ef3a9123b699009f8e2d858d7", null ],
       [ "VectorLogSink", "classdrake_1_1systems_1_1_vector_log_sink.html#a75fdac8e950bc94f385eb038c7766308", null ]
     ] ],
-    [ "WrapToSystem< T >", "classdrake_1_1systems_1_1_wrap_to_system.html", [
+    [ "WrapToSystem&lt; T &gt;", "classdrake_1_1systems_1_1_wrap_to_system.html", [
       [ "WrapToSystem", "classdrake_1_1systems_1_1_wrap_to_system.html#a65e0d4f46f5ba8ef6354028859a3283b", null ],
       [ "WrapToSystem", "classdrake_1_1systems_1_1_wrap_to_system.html#a1f97e1da44446079e68078d247231f91", null ],
       [ "WrapToSystem", "classdrake_1_1systems_1_1_wrap_to_system.html#a9faf5ed7e350ab9a7b3873aa3df4c16c", null ],
@@ -440,7 +440,7 @@ var group__primitive__systems =
       [ "operator=", "classdrake_1_1systems_1_1_wrap_to_system.html#a1c503f9e10a1400cedfe6a1352811069", null ],
       [ "set_interval", "classdrake_1_1systems_1_1_wrap_to_system.html#a4bced31ddbcc84104bed479e0ee246d9", null ]
     ] ],
-    [ "ZeroOrderHold< T >", "classdrake_1_1systems_1_1_zero_order_hold.html", [
+    [ "ZeroOrderHold&lt; T &gt;", "classdrake_1_1systems_1_1_zero_order_hold.html", [
       [ "ZeroOrderHold", "classdrake_1_1systems_1_1_zero_order_hold.html#ac5ac23a5e3e4b2717b871236d2844553", null ],
       [ "ZeroOrderHold", "classdrake_1_1systems_1_1_zero_order_hold.html#ac3656d4cf36885d7fc66ec1db0f029e4", null ],
       [ "ZeroOrderHold", "classdrake_1_1systems_1_1_zero_order_hold.html#ac11436f0b43f652005c211738be87c5e", null ],

@@ -1,12 +1,12 @@
 var event_8h =
 [
     [ "PeriodicEventData", "classdrake_1_1systems_1_1_periodic_event_data.html", "classdrake_1_1systems_1_1_periodic_event_data" ],
-    [ "WitnessTriggeredEventData< T >", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", "classdrake_1_1systems_1_1_witness_triggered_event_data" ],
-    [ "Event< T >", "classdrake_1_1systems_1_1_event.html", "classdrake_1_1systems_1_1_event" ],
+    [ "WitnessTriggeredEventData&lt; T &gt;", "classdrake_1_1systems_1_1_witness_triggered_event_data.html", "classdrake_1_1systems_1_1_witness_triggered_event_data" ],
+    [ "Event&lt; T &gt;", "classdrake_1_1systems_1_1_event.html", "classdrake_1_1systems_1_1_event" ],
     [ "PeriodicEventDataComparator", "structdrake_1_1systems_1_1_periodic_event_data_comparator.html", "structdrake_1_1systems_1_1_periodic_event_data_comparator" ],
-    [ "PublishEvent< T >", "classdrake_1_1systems_1_1_publish_event.html", "classdrake_1_1systems_1_1_publish_event" ],
-    [ "DiscreteUpdateEvent< T >", "classdrake_1_1systems_1_1_discrete_update_event.html", "classdrake_1_1systems_1_1_discrete_update_event" ],
-    [ "UnrestrictedUpdateEvent< T >", "classdrake_1_1systems_1_1_unrestricted_update_event.html", "classdrake_1_1systems_1_1_unrestricted_update_event" ],
+    [ "PublishEvent&lt; T &gt;", "classdrake_1_1systems_1_1_publish_event.html", "classdrake_1_1systems_1_1_publish_event" ],
+    [ "DiscreteUpdateEvent&lt; T &gt;", "classdrake_1_1systems_1_1_discrete_update_event.html", "classdrake_1_1systems_1_1_discrete_update_event" ],
+    [ "UnrestrictedUpdateEvent&lt; T &gt;", "classdrake_1_1systems_1_1_unrestricted_update_event.html", "classdrake_1_1systems_1_1_unrestricted_update_event" ],
     [ "drake::systems::TriggerTypeSet", "namespacedrake_1_1systems.html#ac84c84e9fbb652ce19106e2f2e1f3d15", null ],
     [ "drake::systems::TriggerType", "namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9", [
       [ "drake::systems::TriggerType::kUnknown", "namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390", null ],

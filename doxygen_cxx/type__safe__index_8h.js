@@ -1,8 +1,8 @@
 var type__safe__index_8h =
 [
-    [ "TypeSafeIndex< Tag >", "classdrake_1_1_type_safe_index.html", "classdrake_1_1_type_safe_index" ],
-    [ "hash< drake::TypeSafeIndex< Tag > >", "structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
-    [ "formatter< drake::TypeSafeIndex< Tag > >", "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
+    [ "TypeSafeIndex&lt; Tag &gt;", "classdrake_1_1_type_safe_index.html", "classdrake_1_1_type_safe_index" ],
+    [ "hash&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;", "structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
+    [ "formatter&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
     [ "drake::operator!=", "namespacedrake.html#adcc62c87e81d1f0042eeb4494e6ce196", null ],
     [ "drake::operator<", "namespacedrake.html#a384c7fbbef42a1cc6a9de6280859c9c3", null ],
     [ "drake::operator<=", "namespacedrake.html#ab005cf901fa796e6359047cca655109a", null ],

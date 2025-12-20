@@ -1,6 +1,6 @@
 var group__visualization =
 [
-    [ "ContactVisualizer< T >", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html", [
+    [ "ContactVisualizer&lt; T &gt;", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html", [
       [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a9d3709b3681d9f50698dbd9080c827f1", null ],
       [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#aae75b8668056f3231cb82ac04ed73ce9", null ],
       [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#ac9b5cfee1d50590650a48d6b68ceb219", null ],
@@ -16,7 +16,7 @@ var group__visualization =
       [ "query_object_input_port", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a55c3b90e224ec8fb9278a3f9b0535a31", null ],
       [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#ab5736fb85c92c045f489a412701a164a", null ]
     ] ],
-    [ "JointSliders< T >", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html", [
+    [ "JointSliders&lt; T &gt;", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html", [
       [ "JointSliders", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a9fc78a729b6fdd395e1cb7b6b2db3047", null ],
       [ "JointSliders", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ab4cae2915765bb20ab1fec015246ab59", null ],
       [ "JointSliders", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a8d06bab24040ad6f5b74cea2cfc62817", null ],
@@ -27,7 +27,7 @@ var group__visualization =
       [ "Run", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a1039b0af2a065af9a3cd392e774e0c19", null ],
       [ "SetPositions", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#abf0ba4dc73d12957c13ae22e2a2ef939", null ]
     ] ],
-    [ "ContactResultsToLcmSystem< T >", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", [
+    [ "ContactResultsToLcmSystem&lt; T &gt;", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", [
       [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a112929f5c749cb92d963ef345ee24c16", null ],
       [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a36fbe0a2527e058e929d672510516df8", null ],
       [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a6f8acd03fde1b1bb850e8fbd952575b5", null ],
@@ -41,7 +41,7 @@ var group__visualization =
       [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a52e146614b835c3cd67c775437624198", null ],
       [ "ContactResultsToLcmTester", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a262ee4015b7d6ad9197779c7f7443683", null ]
     ] ],
-    [ "MultibodyPositionToGeometryPose< T >", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html", [
+    [ "MultibodyPositionToGeometryPose&lt; T &gt;", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html", [
       [ "MultibodyPositionToGeometryPose", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#ae6accdc02e6e608cb47e7818e236ba0f", null ],
       [ "MultibodyPositionToGeometryPose", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a3e7b10c80993d5689758c27cf5fdf220", null ],
       [ "MultibodyPositionToGeometryPose", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a23186071020bd638fb54e1cc70517a5f", null ],
@@ -52,7 +52,7 @@ var group__visualization =
       [ "operator=", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a7ad0e0776e2792c55891f65cdea7e5b0", null ],
       [ "owns_plant", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#ae44005e3185b2dd4aaab4b94e06a5d2e", null ]
     ] ],
-    [ "ColorizeDepthImage< T >", "classdrake_1_1visualization_1_1_colorize_depth_image.html", [
+    [ "ColorizeDepthImage&lt; T &gt;", "classdrake_1_1visualization_1_1_colorize_depth_image.html", [
       [ "ColorizeDepthImage", "classdrake_1_1visualization_1_1_colorize_depth_image.html#a464b23416d0f90503c911b811b45ca8e", null ],
       [ "ColorizeDepthImage", "classdrake_1_1visualization_1_1_colorize_depth_image.html#aafb8971762a28257598a30f08031b53e", null ],
       [ "ColorizeDepthImage", "classdrake_1_1visualization_1_1_colorize_depth_image.html#a35453e37bd96fa7047e43de7b001b50d", null ],
@@ -64,7 +64,7 @@ var group__visualization =
       [ "operator=", "classdrake_1_1visualization_1_1_colorize_depth_image.html#ac1bb0ca27c02c265279a6210cd4f67fd", null ],
       [ "set_invalid_color", "classdrake_1_1visualization_1_1_colorize_depth_image.html#a2d90d1217dd06d5701b6bab4ec2089c2", null ]
     ] ],
-    [ "ColorizeLabelImage< T >", "classdrake_1_1visualization_1_1_colorize_label_image.html", [
+    [ "ColorizeLabelImage&lt; T &gt;", "classdrake_1_1visualization_1_1_colorize_label_image.html", [
       [ "ColorizeLabelImage", "classdrake_1_1visualization_1_1_colorize_label_image.html#a994bb9c694565c6de7c2ac023aeb8e75", null ],
       [ "ColorizeLabelImage", "classdrake_1_1visualization_1_1_colorize_label_image.html#a81c20a8853f69655d580bf0af1eec313", null ],
       [ "ColorizeLabelImage", "classdrake_1_1visualization_1_1_colorize_label_image.html#a7e915b7642a98e2e3a657d531c40e4ed", null ],
@@ -75,7 +75,7 @@ var group__visualization =
       [ "operator=", "classdrake_1_1visualization_1_1_colorize_label_image.html#a251f1b0229af5e38579758fab5ee8de0", null ],
       [ "set_background_color", "classdrake_1_1visualization_1_1_colorize_label_image.html#abfe0764e04080a30f928a361a7c326a7", null ]
     ] ],
-    [ "ConcatenateImages< T >", "classdrake_1_1visualization_1_1_concatenate_images.html", [
+    [ "ConcatenateImages&lt; T &gt;", "classdrake_1_1visualization_1_1_concatenate_images.html", [
       [ "ConcatenateImages", "classdrake_1_1visualization_1_1_concatenate_images.html#aa51be17f000d46bed06ece0616b469bb", null ],
       [ "ConcatenateImages", "classdrake_1_1visualization_1_1_concatenate_images.html#a0f1225f891e1839cdf92c86b7423b8b8", null ],
       [ "ConcatenateImages", "classdrake_1_1visualization_1_1_concatenate_images.html#aaf8b99a6fe41856154a5af0a731be6ec", null ],
@@ -84,7 +84,7 @@ var group__visualization =
       [ "operator=", "classdrake_1_1visualization_1_1_concatenate_images.html#abce59463a9f450d69d90eeac7bf34479", null ],
       [ "operator=", "classdrake_1_1visualization_1_1_concatenate_images.html#a6c247c32d186a9e6174e43d9dccb21b9", null ]
     ] ],
-    [ "InertiaVisualizer< T >", "classdrake_1_1visualization_1_1_inertia_visualizer.html", [
+    [ "InertiaVisualizer&lt; T &gt;", "classdrake_1_1visualization_1_1_inertia_visualizer.html", [
       [ "InertiaVisualizer", "classdrake_1_1visualization_1_1_inertia_visualizer.html#a920edba4b207049d7ce573d4ff8b96bf", null ],
       [ "InertiaVisualizer", "classdrake_1_1visualization_1_1_inertia_visualizer.html#a73f8cf9a55941586846beae0ef7f94a8", null ],
       [ "InertiaVisualizer", "classdrake_1_1visualization_1_1_inertia_visualizer.html#af5171ca2885a603eb6092e154560a067", null ],
@@ -96,7 +96,7 @@ var group__visualization =
       [ "source_id", "classdrake_1_1visualization_1_1_inertia_visualizer.html#a8b091eb5e79051e855367de4106c9739", null ],
       [ "InertiaVisualizer", "classdrake_1_1visualization_1_1_inertia_visualizer.html#ae24510285abfa6815e8db8fb3d63784f", null ]
     ] ],
-    [ "MeshcatPoseSliders< T >", "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html", [
+    [ "MeshcatPoseSliders&lt; T &gt;", "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html", [
       [ "MeshcatPoseSliders", "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a09d6684491bca73b075869d7301e0f72", null ],
       [ "MeshcatPoseSliders", "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a1bd6cd37495850b786d7ac9896bb86a2", null ],
       [ "MeshcatPoseSliders", "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a866ca190dd782be816bc90723d0778c7", null ],

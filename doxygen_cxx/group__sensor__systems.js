@@ -1,6 +1,6 @@
 var group__sensor__systems =
 [
-    [ "Accelerometer< T >", "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html", [
+    [ "Accelerometer&lt; T &gt;", "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html", [
       [ "Accelerometer", "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a08fa1fe06c423a4a86f8f6b781da1ea6", null ],
       [ "Accelerometer", "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a557f015ddaa0c0fe7db08dd264dbe08e", null ],
       [ "Accelerometer", "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a0ce8a8f0157c4c959bfea7710531fc77", null ],
@@ -16,7 +16,7 @@ var group__sensor__systems =
       [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a87d87746620bc8da0e11f432d61fe738", null ],
       [ "pose", "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#a0df0f2d22378984a87b9c977b1c7baac", null ]
     ] ],
-    [ "BeamModel< T >", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html", [
+    [ "BeamModel&lt; T &gt;", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html", [
       [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a20d05d184f723deb7a9d9447114a8b1a", null ],
       [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a5645c21f2752969e24185b05d223b20a", null ],
       [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a6ff95253bd4a47e6ed4d349ff3290b16", null ],
@@ -31,7 +31,7 @@ var group__sensor__systems =
       [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a072d09a41d74e2496f992269200652a4", null ],
       [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#aa1f295d4aec06849cc7209a1145d94e8", null ]
     ] ],
-    [ "Gyroscope< T >", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html", [
+    [ "Gyroscope&lt; T &gt;", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html", [
       [ "Gyroscope", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ac027638872e51adb5d3fee6cd9203021", null ],
       [ "Gyroscope", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#aacf63e458daa370f3a050109aebc14fb", null ],
       [ "Gyroscope", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a3e230f0151517774b1ff00a0852b6e66", null ],
@@ -94,7 +94,7 @@ var group__sensor__systems =
       [ "sensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a436dce9bdf486c98832485ec86998455", null ],
       [ "kDefaultPeriod", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a79737f07b9834cf08fd55925be76944d", null ]
     ] ],
-    [ "RotaryEncoders< T >", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html", [
+    [ "RotaryEncoders&lt; T &gt;", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html", [
       [ "RotaryEncoders", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#adddc16fb008fab4bdbc6c83e00033c0a", null ],
       [ "RotaryEncoders", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a6222323e48c49f2c425557b79716478d", null ],
       [ "RotaryEncoders", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#ad59feb45c891897205200a1a186b86f1", null ],
