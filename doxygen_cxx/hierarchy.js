@@ -340,7 +340,6 @@ var hierarchy =
       [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
         [ "formatter< T, std::enable_if_t< std::is_base_of_v< drake::solvers::EvaluatorBase, T >, char > >", "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html", null ],
         [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
-        [ "formatter< drake::Identifier< Tag > >", "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html", null ],
         [ "formatter< drake::Polynomial< T > >", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html", null ],
         [ "formatter< drake::Polynomial< double >::Monomial >", "structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html", null ],
         [ "formatter< drake::TypeSafeIndex< Tag > >", "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],

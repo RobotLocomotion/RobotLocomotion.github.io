@@ -905,7 +905,6 @@ var annotated_dup =
     [ "fmt", "namespacefmt.html", [
       [ "formatter&lt; drake::AutoDiffXd &gt;", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
       [ "formatter&lt; drake::geometry::GeometryId &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ],
-      [ "formatter&lt; drake::Identifier&lt; Tag &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html", null ],
       [ "formatter&lt; drake::math::RigidTransform&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html", null ],
       [ "formatter&lt; drake::math::RollPitchYaw&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ],
       [ "formatter&lt; drake::multibody::DifferentialInverseKinematicsStatus &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ],

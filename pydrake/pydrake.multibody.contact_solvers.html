@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pydrake.multibody.mesh_to_model &mdash; pydrake  documentation</title>
+  <title>pydrake.multibody.contact_solvers &mdash; pydrake  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=65885df3" />
@@ -19,8 +19,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="pydrake.multibody.meshcat" href="pydrake.multibody.meshcat.html" />
-    <link rel="prev" title="pydrake.multibody.math" href="pydrake.multibody.math.html" /> 
+    <link rel="next" title="pydrake.multibody.fem" href="pydrake.multibody.fem.html" />
+    <link rel="prev" title="pydrake.multibody.benchmarks.all" href="pydrake.multibody.benchmarks.all.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,12 +96,12 @@
 <li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.contact_solvers.html">pydrake.multibody.contact_solvers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.contact_solvers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.fem.html">pydrake.multibody.fem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.fix_inertia.html">pydrake.multibody.fix_inertia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.math.html">pydrake.multibody.math</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.mesh_to_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.mesh_to_model.html">pydrake.multibody.mesh_to_model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.meshcat.html">pydrake.multibody.meshcat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.optimization.html">pydrake.multibody.optimization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsing.html">pydrake.multibody.parsing</a></li>
@@ -136,7 +136,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="pydrake.multibody.html">pydrake.multibody</a></li>
-      <li class="breadcrumb-item active">pydrake.multibody.mesh_to_model</li>
+      <li class="breadcrumb-item active">pydrake.multibody.contact_solvers</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -145,133 +145,102 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-pydrake.multibody.mesh_to_model">
-<span id="pydrake-multibody-mesh-to-model"></span><h1>pydrake.multibody.mesh_to_model<a class="headerlink" href="#module-pydrake.multibody.mesh_to_model" title="Link to this heading"></a></h1>
-<p>Utility for converting a mesh file into an SDFormat file containing a single
-model.</p>
-<p>Currently only meshes in Wavefront OBJ files are supported. Other geometry
-formats will be supported in the future.</p>
-<p>Preconditions on the OBJ:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>The mesh is “watertight” (no cracks, no openings).</p></li>
-<li><p>The mesh is closed (i.e., no sheets of triangles).</p></li>
-</ul>
-</div></blockquote>
-<p>Properties of the resulting SDFormat file:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>The model contains a single body.</p></li>
-<li><p>The body and model will share a common name.</p></li>
-<li><p>The mass properties are computed based on the volume enclosed by the mesh.
-(If the preconditions are not met, mass properties will nevertheless be
-computed, but they are not guaranteed to be correct).</p></li>
-<li><p>The mesh will be used as both &lt;collision&gt; and &lt;visual&gt; geometries.</p></li>
-</ul>
-</div></blockquote>
-<p><strong>Running</strong>:</p>
-<blockquote>
-<div><p>From a Drake source build, run this as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="o">//</span><span class="n">tools</span><span class="p">:</span><span class="n">mesh_to_model</span> <span class="o">--</span> <span class="o">--</span><span class="n">help</span>
-</pre></div>
-</div>
-<p>From a Drake binary release (including pip releases), run this as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">multibody</span><span class="o">.</span><span class="n">mesh_to_model</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p><strong>Model scale</strong>:</p>
-<blockquote>
-<div><p>Drake uses meters as the unit of length. Modelling packages may frequently
-use other units (e.g. centimeters). This program will <em>assume</em> the units
-are meters. If they are not, provide the scale conversion factor to go from
-mesh units to meters. For example, if your mesh is in centimeters, use 0.01
-for the scale.</p>
-</div></blockquote>
-<p><strong>Configuring mass</strong>:</p>
-<blockquote>
-<div><p>The body’s mass can be configured through one of two ways: specifying the
-_density_ of a homogeneous material which completely fills the enclosed
-volume of the mesh, or specifying the total _mass_ of the body. If neither
-is specified, it is assumed to have the density of water (~1000kg/m³). Only
-one of density and mass can be specified.</p>
-</div></blockquote>
-<p><strong>Geometry frame vs body frame</strong>:</p>
-<blockquote>
-<div><p>The mesh’s vertices are measured and expressed in an arbitrary geometry
-frame G. By default, the body frame B is coincident with G (i.e.,
-X_BG = I). The two frames will always be aligned (R_BG = R_GB = I), but the
-relative positions of the origins (p_GoBo) can be modified. You can either
-request that the body origin be coincident with the computed center of mass
-or specify an arbitrary value for p_GoBo (the body’s origin position
-relative to the mesh’s origin).</p>
-</div></blockquote>
-<p><strong>Packages</strong>:</p>
-<blockquote>
-<div><p>If the mesh is used in a &lt;visual&gt; or &lt;collision&gt; element (see above) the
-mesh must be referenced via some url. The default mesh url is a simple
-relative path assuming the SDFormat file and mesh files are in the same
-directory. There are two alternatives: create/use a package at the mesh
-file location or specify a package.</p>
-<blockquote>
-<div><p>Default behavior:</p>
-<blockquote>
-<div><p>When calling:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh_to_model</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">my_models</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span>
-</pre></div>
-</div>
-<p>the resulting mesh’s &lt;uri&gt; element will look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">uri</span><span class="o">&gt;</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span><span class="o">&lt;/</span><span class="n">uri</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>This uri resolution is not SDFormat standard but is acceptable as a
-Drake parser extension. It is your responsibility to place the mesh
-in the same folder as the sdf.</p>
-</div></blockquote>
-<p>Specify package:</p>
-<blockquote>
-<div><p>When calling:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh_to_model</span> <span class="o">--</span><span class="n">package</span><span class="o">=</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">package</span><span class="o">.</span><span class="n">xml</span> \
-    <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">my_models</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span>
-</pre></div>
-</div>
-<p>the resulting mesh’s &lt;uri&gt; element will look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">uri</span><span class="o">&gt;</span><span class="n">package</span><span class="p">:</span><span class="o">//</span><span class="n">my_package</span><span class="o">/</span><span class="n">my_models</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span><span class="o">&lt;/</span><span class="n">uri</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>This example assumes that the &lt;name&gt; field in the indicated
-package.xml is “my_package”. Errors in reading the file (or the
-package name from the manifest) will cause the program to fail. The
-mesh file must live somewhere underneath the package.xml directory.</p>
-</div></blockquote>
-<p>Create/use package at mesh file location:</p>
-<blockquote>
-<div><p>When calling:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh_to_model</span> <span class="o">--</span><span class="n">package</span><span class="o">=</span><span class="n">auto</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">my_models</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span>
-</pre></div>
-</div>
-<p>the program will look for the existence of
-path/to/my_models/package.xml. If it doesn’t exist, it will be
-created. The resulting mesh’s &lt;uri&gt; element will look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">uri</span><span class="o">&gt;</span><span class="n">package</span><span class="p">:</span><span class="o">//</span><span class="n">my_models</span><span class="o">/</span><span class="n">mesh</span><span class="o">.</span><span class="n">obj</span><span class="o">&lt;/</span><span class="n">uri</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>The package.xml file will be minimally compliant but may contain
-meaningless values (see
-<a class="reference external" href="http://wiki.ros.org/Manifest#catkin.2Fpackage.xml.Required_Tags">http://wiki.ros.org/Manifest#catkin.2Fpackage.xml.Required_Tags</a>).
-Any error in reading or writing the file will cause the program to
-fail.</p>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
+  <section id="module-pydrake.multibody.contact_solvers">
+<span id="pydrake-multibody-contact-solvers"></span><h1>pydrake.multibody.contact_solvers<a class="headerlink" href="#module-pydrake.multibody.contact_solvers" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.multibody.contact_solvers.</span></span><span class="sig-name descname"><span class="pre">IcfSolverParameters</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters" title="Link to this definition"></a></dt>
+<dd><p>(Advanced) Parameters to configure the Irrotational Contact Fields
+(ICF) convex solver.</p>
+<p>For details, see</p>
+<p>[Kurtz and Castro, 2025] Kurtz V. and Castro A., 2025. CENIC: Convex
+Error-controlled Numerical Integration for Contact.
+<a class="reference external" href="https://arxiv.org/abs/2511.08771">https://arxiv.org/abs/2511.08771</a>.</p>
+<p>[Hairer and Wanner, 1996] Hairer E. and Wanner G., 1996. Solving
+Ordinary Differential Equations II: Stiff and Differential-Algebraic
+Problems. Springer Series in Computational Mathematics, Vol. 14.
+Springer-Verlag, Berlin, 2nd edition.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.contact_solvers.IcfSolverParameters" title="pydrake.multibody.contact_solvers.IcfSolverParameters"><span class="pre">pydrake.multibody.contact_solvers.IcfSolverParameters</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.alpha_max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha_max</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.alpha_max" title="Link to this definition"></a></dt>
+<dd><p>Maximum step length for exact linesearch.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.enable_hessian_reuse">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enable_hessian_reuse</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.enable_hessian_reuse" title="Link to this definition"></a></dt>
+<dd><p>Whether hessian reuse between iterations and time steps is enabled.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.hessian_reuse_target_iterations">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hessian_reuse_target_iterations</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.hessian_reuse_target_iterations" title="Link to this definition"></a></dt>
+<dd><p>Target maximum number of iterations for Hessian reuse. The solver
+effectively estimates the number of iterations to convergence. If the
+estimate is larger than this target, the Hessian will be recomputed to
+regain faster Newton-style convergence. See [Hairer and Wanner, 1996],
+Ch. IV.8.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.linesearch_tolerance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">linesearch_tolerance</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.linesearch_tolerance" title="Link to this definition"></a></dt>
+<dd><p>Convergence tolerance for exact linesearch.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.max_iterations">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_iterations</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.max_iterations" title="Link to this definition"></a></dt>
+<dd><p>Maximum number of Newton iterations.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.max_linesearch_iterations">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_linesearch_iterations</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.max_linesearch_iterations" title="Link to this definition"></a></dt>
+<dd><p>Maximum iterations for exact linesearch.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.min_tolerance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_tolerance</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.min_tolerance" title="Link to this definition"></a></dt>
+<dd><p>Minimum tolerance ε for the convergence conditions</p>
+<p>‖D⋅∇ℓ‖ ≤ ε max(1, ‖D⋅r‖), η ‖D⁻¹⋅Δv‖ ≤ ε max(1, ‖D⋅r‖),</p>
+<p>as detailed in Section VI.B of [Kurtz and Castro, 2025].</p>
+<p>This provides a lower bound on the actual tolerance used, which is
+specified explicitly when calling the solver. For instance, CENIC
+passes an adaptive tolerance based on the desired accuracy to the ICF
+solver, see Section VI.B of [Kurtz and Castro, 2025].</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.print_solver_stats">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">print_solver_stats</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.print_solver_stats" title="Link to this definition"></a></dt>
+<dd><p>Whether to print stats to the console at each iteration.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pydrake.multibody.contact_solvers.IcfSolverParameters.use_dense_algebra">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_dense_algebra</span></span><a class="headerlink" href="#pydrake.multibody.contact_solvers.IcfSolverParameters.use_dense_algebra" title="Link to this definition"></a></dt>
+<dd><p>Dense algebra (LDLT) for solving for the search direction H⁻¹⋅g. This
+is primarily useful for debugging and testing: sparse algebra is
+generally much faster.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pydrake.multibody.math.html" class="btn btn-neutral float-left" title="pydrake.multibody.math" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pydrake.multibody.meshcat.html" class="btn btn-neutral float-right" title="pydrake.multibody.meshcat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pydrake.multibody.benchmarks.all.html" class="btn btn-neutral float-left" title="pydrake.multibody.benchmarks.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pydrake.multibody.fem.html" class="btn btn-neutral float-right" title="pydrake.multibody.fem" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

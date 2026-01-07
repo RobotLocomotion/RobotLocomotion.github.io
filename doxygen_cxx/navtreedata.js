@@ -171,7 +171,7 @@ var NAVTREEINDEX =
 "structdrake_1_1systems_1_1_selector_params_1_1_output_port_params.html#a6e523cbe30620206b7b99a00fbc852a7",
 "structdrake_1_1systems_1_1sensors_1_1_beam_model_params_indices.html#a5e24b16376c846326bec28aa1e40924d",
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgr_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf",
-"trigonometric__polynomial_8h.html"
+"uniform__gravity__field__element_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

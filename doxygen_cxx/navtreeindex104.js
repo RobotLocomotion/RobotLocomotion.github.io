@@ -1,7 +1,5 @@
 var NAVTREEINDEX104 =
 {
-"trigonometric__polynomial_8h.html":[5,0,0,1,3,17],
-"type__safe__index_8h.html":[5,0,0,1,69],
 "uniform__gravity__field__element_8h.html":[5,0,0,8,12,54],
 "unimplemented__collision__checker_8h.html":[5,0,0,10,20],
 "unit__inertia_8h.html":[5,0,0,8,12,55],
