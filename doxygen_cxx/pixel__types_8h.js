@@ -9,6 +9,9 @@ var pixel__types_8h =
     [ "ImageTraits&lt; PixelType::kLabel16I &gt;", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4" ],
     [ "ImageTraits&lt; PixelType::kGrey8U &gt;", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4" ],
     [ "hash&lt; drake::systems::sensors::PixelType &gt;", "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ],
+    [ "formatter&lt; drake::systems::sensors::PixelType &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ],
+    [ "formatter&lt; drake::systems::sensors::PixelFormat &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_pixel_format_01_4.html", null ],
+    [ "formatter&lt; drake::systems::sensors::PixelScalar &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_pixel_scalar_01_4.html", null ],
     [ "drake::systems::sensors::PixelFormat", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072a", [
       [ "drake::systems::sensors::PixelFormat::kRgb", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aa79c7503f0e2c40a13957e8aac9ac9f7b", null ],
       [ "drake::systems::sensors::PixelFormat::kBgr", "namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aaa604150389917b572788fdd3138143b8", null ],
@@ -34,11 +37,7 @@ var pixel__types_8h =
       [ "drake::systems::sensors::PixelType::kDepth32F", "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da238a889ea664dc69a583c89712b4f96c", null ],
       [ "drake::systems::sensors::PixelType::kLabel16I", "namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da2a67266021c4dc63b8ed214bff50abec", null ]
     ] ],
-    [ "DRAKE_FORMATTER_AS", "pixel__types_8h.html#a71e237783020d662652f8ab4fed9bd63", null ],
     [ "drake::systems::sensors::to_string", "namespacedrake_1_1systems_1_1sensors.html#a300174b3450b177406a904b5d21d6318", null ],
     [ "drake::systems::sensors::to_string", "namespacedrake_1_1systems_1_1sensors.html#ab6714adba4d60b90e26eccca83238481", null ],
-    [ "drake::systems::sensors::to_string", "namespacedrake_1_1systems_1_1sensors.html#a7e59381887b12bec1146f2f2ea716678", null ],
-    [ "PixelFormat", "pixel__types_8h.html#a60883d4958a60b91661e97027a85072a", null ],
-    [ "PixelScalar", "pixel__types_8h.html#aa27964439659a0be90e567d865ffb792", null ],
-    [ "x", "pixel__types_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1", null ]
+    [ "drake::systems::sensors::to_string", "namespacedrake_1_1systems_1_1sensors.html#a7e59381887b12bec1146f2f2ea716678", null ]
 ];

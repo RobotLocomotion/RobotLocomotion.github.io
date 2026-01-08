@@ -197,7 +197,7 @@ where
   X_GF = |         |    | = |    |    |    |    |
          | 0  0  0 | 1  |   |  0 |  0 |  0 | 1  |
           --------- ----     ---- ---- ---- ----  4×4
-</pre><p> There is a rotation matrix in the upper left 3×3 block (see above), and a position vector in the first 3×1 elements of the rightmost column. Then the bottom row is <span class="tt">[0 0 0 1]</span>. The rightmost column can also be viewed as the homogeneous form of the position vector, <span class="tt">[<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> y z 1]ᵀ</span>. See Drake's documentation for RigidTransform for a detailed discussion.</p>
+</pre><p> There is a rotation matrix in the upper left 3×3 block (see above), and a position vector in the first 3×1 elements of the rightmost column. Then the bottom row is <span class="tt">[0 0 0 1]</span>. The rightmost column can also be viewed as the homogeneous form of the position vector, <span class="tt">[x y z 1]ᵀ</span>. See Drake's documentation for RigidTransform for a detailed discussion.</p>
 <p>A transform may be applied to position vectors to translate the measured-from point to a different frame origin, and to re-express the vector in that frame's basis. For example, if we know the location of a point P measured in and expressed in frame A, we write that <span class="tt">p_AP</span> (or <span class="tt">p_AoP_A</span>) to mean the vector from A's origin Ao to the point P, expressed in A. If we want to know the location of that same point P, but measured in and expressed in frame B, we can write: </p><pre>
     p_BP = X_BA * p_AP.
 </pre><p> The inverse of a transform reverses the superscripts so </p><pre>

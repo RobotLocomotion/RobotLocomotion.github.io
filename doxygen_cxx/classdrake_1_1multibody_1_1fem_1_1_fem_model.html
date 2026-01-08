@@ -170,7 +170,7 @@ class drake::multibody::fem::FemModel&lt; T &gt;</div><p>FemModel calculates the
 <p>Typically, in dynamic elasticity problems, we are interested in the mapping that describes the motion of a material </p><pre class="fragment">ϕ(⋅,t) : Ω⁰ → Ωᵗ,
 </pre><p>where Ω⁰ and Ωᵗ are subsets of R³, along with its first and second derivatives (velocity and acceleration respectively): </p><pre class="fragment">V(⋅,t) = ∂ϕ(⋅,t)/∂t,
 A(⋅,t) = ∂²ϕ(⋅,t)/∂t².
-</pre><p>We call Ω⁰ the reference domain and Ωᵗ the current domain. We use upper case letters to denote states (positions, velocities, and accelerations) in reference domain (X, V, A) and lower case letters to denote their current domain counterparts (x, v, a). In particular, <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(X,t)</a> = ϕ(X,t). The deformation gradient F(X,t) is given by ∂ϕ(X,t)/∂X.</p>
+</pre><p>We call Ω⁰ the reference domain and Ωᵗ the current domain. We use upper case letters to denote states (positions, velocities, and accelerations) in reference domain (X, V, A) and lower case letters to denote their current domain counterparts (x, v, a). In particular, x(X,t) = ϕ(X,t). The deformation gradient F(X,t) is given by ∂ϕ(X,t)/∂X.</p>
 <p>The governing equations of interest are conservation of mass and conservation of momentum: </p><pre class="fragment">R(X,t)J(X,t) = R(X,0),
 R(X,0)A(X,t) = fᵢₙₜ(X,t) + fₑₓₜ(X,t),
 </pre><p>where R is mass density, fᵢₙₜ and fₑₓₜ are internal and external force densities respectively, and J is the determinant of the deformation gradient. Using finite element method to discretize in space, one gets </p><pre class="fragment">ϕ(X,t) = ∑ᵢ xᵢ(t)Nᵢ(X)

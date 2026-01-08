@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"classdrake_1_1symbolic_1_1_rewriting_rule.html#acfb5d92b7ec62a96ff6783973c78a873":[4,0,0,13,62,0],
+"classdrake_1_1symbolic_1_1_rewriting_rule.html#aeb62fc791663c3bcfa7eedafc5b25a9f":[3,0,0,14,62,1],
 "classdrake_1_1symbolic_1_1_rewriting_rule.html#aeb62fc791663c3bcfa7eedafc5b25a9f":[4,0,0,13,62,1],
 "classdrake_1_1symbolic_1_1_unary_expression_cell.html":[3,0,0,14,64],
 "classdrake_1_1symbolic_1_1_unary_expression_cell.html":[4,0,0,13,64],
@@ -29,8 +31,6 @@ var NAVTREEINDEX60 =
 "classdrake_1_1symbolic_1_1_variable.html#a09be6442efc4b94422b1be32058ec268":[4,0,0,13,65,14],
 "classdrake_1_1symbolic_1_1_variable.html#a1ac3dfb9b4ce1004619750db2bb13194":[3,0,0,14,65,12],
 "classdrake_1_1symbolic_1_1_variable.html#a1ac3dfb9b4ce1004619750db2bb13194":[4,0,0,13,65,12],
-"classdrake_1_1symbolic_1_1_variable.html#a411e51a0c60278b06088ad1fa084e605":[3,0,0,14,65,18],
-"classdrake_1_1symbolic_1_1_variable.html#a411e51a0c60278b06088ad1fa084e605":[4,0,0,13,65,18],
 "classdrake_1_1symbolic_1_1_variable.html#a459c5581ae83466890bc04affc96c8f9":[3,0,0,14,65,15],
 "classdrake_1_1symbolic_1_1_variable.html#a459c5581ae83466890bc04affc96c8f9":[4,0,0,13,65,15],
 "classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479":[3,0,0,14,65,1],

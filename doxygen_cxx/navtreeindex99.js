@@ -1,8 +1,5 @@
 var NAVTREEINDEX99 =
 {
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#ae3c085d0521d5da888d23da447ae4328":[3,0,0,9,4,1,3],
-"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#ae3c085d0521d5da888d23da447ae4328":[4,0,0,8,3,1,3],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[3,0,0,9,5,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[4,0,0,8,4,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[3,0,0,9,5,0,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[4,0,0,8,4,0,2],
@@ -249,5 +246,8 @@ var NAVTREEINDEX99 =
 "structdrake_1_1solvers_1_1_clarabel_solver_details.html#a45d6740f91111e3a9fb372c234ca2ac7":[3,0,0,13,7,2],
 "structdrake_1_1solvers_1_1_clarabel_solver_details.html#a45d6740f91111e3a9fb372c234ca2ac7":[4,0,0,12,7,2],
 "structdrake_1_1solvers_1_1_clarabel_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,13,7,1],
-"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[4,0,0,12,7,1]
+"structdrake_1_1solvers_1_1_clarabel_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[4,0,0,12,7,1],
+"structdrake_1_1solvers_1_1_clp_solver_details.html":[3,0,0,13,9],
+"structdrake_1_1solvers_1_1_clp_solver_details.html":[4,0,0,12,9],
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a56ac23a03ae7df25b7cf800be94fa964":[3,0,0,13,9,0]
 };

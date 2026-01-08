@@ -45,7 +45,6 @@ var NAVTREEINDEX0 =
 "bezier__curve_8h.html":[5,0,0,1,4,0],
 "binding_8h.html":[5,0,0,11,2],
 "binomial__coefficient_8h.html":[5,0,0,7,3],
-"bit__cast_8h.html":[5,0,0,1,10],
 "block__3x3__sparse__matrix_8h.html":[5,0,0,8,1,2],
 "block__sparse__cholesky__solver_8h.html":[5,0,0,8,1,3],
 "block__sparse__lower__triangular__or__symmetric__matrix_8h.html":[5,0,0,8,1,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_memory_file.html#a75826baed3eae4f9970b9350dc7707ac":[4,0,0,35,0],
 "classdrake_1_1_memory_file.html#a81daa72dc68344320d26d46e72699489":[3,0,0,36,1],
 "classdrake_1_1_memory_file.html#a81daa72dc68344320d26d46e72699489":[4,0,0,35,1],
-"classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,36,11]
+"classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,36,11],
+"classdrake_1_1_memory_file.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,35,11]
 };

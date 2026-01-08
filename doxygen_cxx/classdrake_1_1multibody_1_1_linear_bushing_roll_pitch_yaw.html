@@ -181,7 +181,7 @@ class drake::multibody::LinearBushingRollPitchYaw&lt; T &gt;</div><p>This <a cla
 As discussed in the Advanced section below, τ is not 𝐭 <span class="tt">(τ ≠ 𝐭)</span>. </dd>
 <dd>
 This is a "linear" bushing model as gimbal torque τ varies linearly with q and q̇ as τ = τᴋ + τᴅ where τᴋ = −K₀₁₂ ⋅ q and τᴅ = −D₀₁₂ ⋅ q̇.</dd></dl>
-<p>The bushing model for the net force 𝐟 on frame C from the bushing depends on scalars x, y, z which are defined so 𝐫 (the position vector from Ao to Co) can be expressed in frame B as <span class="tt">𝐫 ≜ p_AoCo = [<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> y z]ʙ = <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> 𝐁𝐱 + y 𝐁𝐲 + z 𝐁𝐳</span>. The model for 𝐟 uses a diagonal force-stiffness matrix Kxyᴢ, a diagonal force-damping matrix Dxyᴢ, and defines fx, fy, fz so <span class="tt">𝐟 = [fx fy fz]ʙ</span>.</p><pre>
+<p>The bushing model for the net force 𝐟 on frame C from the bushing depends on scalars x, y, z which are defined so 𝐫 (the position vector from Ao to Co) can be expressed in frame B as <span class="tt">𝐫 ≜ p_AoCo = [x y z]ʙ = x 𝐁𝐱 + y 𝐁𝐲 + z 𝐁𝐳</span>. The model for 𝐟 uses a diagonal force-stiffness matrix Kxyᴢ, a diagonal force-damping matrix Dxyᴢ, and defines fx, fy, fz so <span class="tt">𝐟 = [fx fy fz]ʙ</span>.</p><pre>
 ⌈ fx ⌉      ⌈kx    0    0⌉ ⌈ x ⌉     ⌈dx    0    0⌉ ⌈ ẋ ⌉
 | fy | =  − | 0   ky    0| | y |  −  | 0   dy    0| | ẏ |
 ⌊ fz ⌋      ⌊ 0    0   kz⌋ ⌊ z ⌋     ⌊ 0    0   dz⌋ ⌊ ż ⌋ </pre><p> where kx, ky, kz and dx, dy, dz are force stiffness and damping constants and must have non-negative values. </p><dl class="section note"><dt>Note</dt><dd>This is a "linear" bushing model as the force 𝐟 varies linearly with 𝐫 and 𝐫̇̇ as 𝐟 = 𝐟ᴋ + 𝐟ᴅ where 𝐟ᴋ = −Kxyz ⋅ 𝐫 and 𝐟ᴅ = −Dxyz ⋅ 𝐫̇̇.</dd></dl>
@@ -275,13 +275,13 @@ See <a href="https://electronics.stackexchange.com/questions/296567/over-and-cri
 </ul>
 <p><a class="anchor" id="ApproximateOverdampedSettlingTime"></a></p><h3>Derivation: Approximate formula for overdamped settling time.</h3>
 <p>Since a literature reference for this formula was not found, the derivation below was done at TRI (it has not been peer reviewed). This formula results from the "dominant pole" solution in the prototypical constant-coefficient linear 2ⁿᵈ-order ODE. For ẋ(0) = 0, mathematics shows poles p₁ = -ωₙ s₁, p₂ = -ωₙ s₂, where sz = √(ζ² - 1), s₁ = ζ - sz, s₂ = ζ + sz. and </p><pre>
- <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(t)</a> / <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a> = p₂/(p₂-p₁) exp(p₁ t) - p₁/(p₂-p₁) exp(p₂ t)
+ x(t) / x(0) = p₂/(p₂-p₁) exp(p₁ t) - p₁/(p₂-p₁) exp(p₂ t)
              = s₂/(s₂-s₁) exp(p₁ t) - s₁/(s₂-s₁) exp(p₂ t)
              =  k/( k-1 ) exp(p₁ t) -  1/( k-1 ) exp(p₂ t) where k = s₂ / s₁
              ≈  k/( k-1 ) exp(p₁ t)                        since p₁ &gt; p₂
 </pre><p> Note: k = s₂ / s₁ is real, k &gt; 0, s₂ = k s₁, and p₁ &gt; p₂ (p₁ is less negative then p₂), so exp(p₁ t) decays to zero slower than exp(p₂ t) and exp(p₁ t) ≫ exp(p₂ t) for sufficiently large t. Hence we assume exp(p₂ t) ≈ 0 (which is why p₁ is called the "dominant pole"). Next, </p><pre>
   k/(k - 1) = s₂ / s₁ / (s₂/s₁ -1) = s₂ / (s₂ - s₁) = s₂ / (2 sz),  so
-  <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(t)</a> / <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a>  ≈  s₂ / (2 sz) exp(-s₁ ωₙ t),                        hence
+  x(t) / x(0)  ≈  s₂ / (2 sz) exp(-s₁ ωₙ t),                        hence
   settling_ratio ≈ s₂ / (2 sz) exp(-s₁ ωₙ tₛ),                      finally
   ωₙ ≈ -ln(settling_ratio 2 sz / s₂) / (s₁ tₛ)
 </pre><p> The table below shows that there is little error in this approximate formula for various settling ratios and ζ, particularly for ζ ≥ 1.1. For 1.0 ≤ ζ &lt; 1.1, the critical damping estimates of ωₙ work well. </p><table class="markdownTable">
@@ -538,7 +538,7 @@ template&lt;typename T&gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">frameC</td><td>frame C of link (body) L1 that connects to bushing B. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">torque_stiffness_constants</td><td><span class="tt">[k₀ k₁ k₂]</span> multiply the roll-pitch-yaw angles <span class="tt">[q₀ q₁ q₂]</span> to produce the spring portion of the "gimbal" torques τ₀, τ₁, τ₂. The SI units of <span class="tt">k₀, k₁, k₂</span> are N*m/rad. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">torque_damping_constants</td><td><span class="tt">[d₀ d₁ d₂]</span> multiply the roll-pitch-yaw rates <span class="tt">[q̇₀ q̇₁ q̇₂]</span> to produce the damper portion of the "gimbal" torques τ₀, τ₁, τ₂. The SI units of <span class="tt">d₀, d₁, d₂</span> are N*m*s/rad. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">force_stiffness_constants</td><td><span class="tt">[kx ky kz]</span> multiply the bushing displacements <span class="tt">[<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> y z]</span> to form 𝐟ᴋ, the spring portion of the force 𝐟 = [fx fy fz]ʙ. The SI units of <span class="tt">kx, ky, kz</span> are N/m. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">force_stiffness_constants</td><td><span class="tt">[kx ky kz]</span> multiply the bushing displacements <span class="tt">[x y z]</span> to form 𝐟ᴋ, the spring portion of the force 𝐟 = [fx fy fz]ʙ. The SI units of <span class="tt">kx, ky, kz</span> are N/m. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">force_damping_constants</td><td><span class="tt">[dx dy dz]</span> multiply the bushing displacement rates <span class="tt">[ẋ ẏ ż]</span> to form 𝐟ᴅ, the damper portion of the force 𝐟 = [fx fy fz]ʙ. The SI units of <span class="tt">dx, dy, dz</span> are N*s/m. </td></tr>
   </table>
   </dd>

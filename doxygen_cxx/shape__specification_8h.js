@@ -11,5 +11,15 @@ var shape__specification_8h =
     [ "MeshcatCone", "classdrake_1_1geometry_1_1_meshcat_cone.html", "classdrake_1_1geometry_1_1_meshcat_cone" ],
     [ "Sphere", "classdrake_1_1geometry_1_1_sphere.html", "classdrake_1_1geometry_1_1_sphere" ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", "classdrake_1_1geometry_1_1_shape_reifier" ],
+    [ "formatter&lt; drake::geometry::Box &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_box_01_4.html", null ],
+    [ "formatter&lt; drake::geometry::Capsule &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_capsule_01_4.html", null ],
+    [ "formatter&lt; drake::geometry::Convex &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_convex_01_4.html", null ],
+    [ "formatter&lt; drake::geometry::Cylinder &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_cylinder_01_4.html", null ],
+    [ "formatter&lt; drake::geometry::Ellipsoid &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_ellipsoid_01_4.html", null ],
+    [ "formatter&lt; drake::geometry::HalfSpace &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_half_space_01_4.html", null ],
+    [ "formatter&lt; drake::geometry::Mesh &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_mesh_01_4.html", null ],
+    [ "formatter&lt; drake::geometry::MeshcatCone &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_meshcat_cone_01_4.html", null ],
+    [ "formatter&lt; drake::geometry::Shape &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_01_4.html", null ],
+    [ "formatter&lt; drake::geometry::Sphere &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_sphere_01_4.html", null ],
     [ "drake::geometry::CalcVolume", "namespacedrake_1_1geometry.html#ac677ae9aff90aba0a891854f4287a643", null ]
 ];

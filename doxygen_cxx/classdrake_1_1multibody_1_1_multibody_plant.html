@@ -236,13 +236,13 @@ class drake::multibody::MultibodyPlant&lt; T &gt;</div><p>MultibodyPlant is a Dr
 <p>Model instances are frequently defined through SDFormat files (using the <span class="tt">model</span> tag) and are automatically created when SDFormat files are parsed (by <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a>). There are two special <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0" title="Type used to identify model instances by index within a multibody plant.">multibody::ModelInstanceIndex</a> values. The world body is always <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0" title="Type used to identify model instances by index within a multibody plant.">multibody::ModelInstanceIndex</a> 0. <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0" title="Type used to identify model instances by index within a multibody plant.">multibody::ModelInstanceIndex</a> 1 is reserved for all elements with no explicit model instance and is generally only relevant for elements created programmatically (and only when a model instance is not explicitly specified). Note that <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> creates model instances (resulting in a <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0" title="Type used to identify model instances by index within a multibody plant.">multibody::ModelInstanceIndex</a> ≥ 2) as needed.</p>
 <p>See <a class="el" href="#ac89140adb93cb9e507f71c30eb783198" title="Returns the number of model instances in the model.">num_model_instances()</a>, <a class="el" href="#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">num_positions()</a>, <a class="el" href="#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>, <a class="el" href="#ae3fc8de8de8eaf2d37a24c79d6be8e97" title="Returns the total number of actuated degrees of freedom.">num_actuated_dofs()</a>, <a class="el" href="#a4edf1daa65069a26255c903b02bce4c6" title="Creates a new model instance.">AddModelInstance()</a> <a class="el" href="#a61c4037d7f25d2e511f86e9102772290" title="Returns a const vector reference [q; v] to the generalized positions q and generalized velocities v i...">GetPositionsAndVelocities()</a>, <a class="el" href="#a15aab0eeb92b8e9f0a9bfcab8abaca69" title="Returns a const vector reference to the vector of generalized positions q in a given Context.">GetPositions()</a>, <a class="el" href="#a83faa6d43006794cd8f7ee6f851e1d09" title="Returns a const vector reference to the generalized velocities v in a given Context.">GetVelocities()</a>, <a class="el" href="#acdf6af4e5e5e71b55ea7ea3034ac5e90" title="Sets generalized positions q and generalized velocities v in a given Context from a given vector [q; ...">SetPositionsAndVelocities()</a>, <a class="el" href="#a40ecddd72c91e66ee38fe023bc58b3a0" title="Sets the generalized positions q in a given Context from a given vector.">SetPositions()</a>, <a class="el" href="#aa6864e2bce8855ab702b8ea1bb748f00" title="Sets the generalized velocities v in a given Context from a given vector.">SetVelocities()</a>, <a class="el" href="#a5d2ae02e64d4433eb7c5bbebd2a9dd0d" title="Returns a vector of generalized positions for model_instance from a vector q_array of generalized pos...">GetPositionsFromArray()</a>, <a class="el" href="#a52b25b565255d213a7f483b12f18ab68" title="Returns a vector of generalized velocities for model_instance from a vector v of generalized velociti...">GetVelocitiesFromArray()</a>, <a class="el" href="#ab264035a2e8c56b57bd80afb0b6ffb48" title="Sets the vector of generalized positions for model_instance in q using q_instance,...">SetPositionsInArray()</a>, <a class="el" href="#a89105b866dae232e6a9236d50f1fb08c" title="Sets the vector of generalized velocities for model_instance in v using v_instance,...">SetVelocitiesInArray()</a>, <a class="el" href="#a695e24adcadab868d6dd5a57f51953fd" title="Given actuation values u_instance for the actuators in model_instance, this function updates the actu...">SetActuationInArray()</a>, <a class="el" href="#ae12f32b40b7a41c3aa933ed74b2417fb">HasModelInstanceNamed()</a>, <a class="el" href="#a6967a3b13b5d006821d7590945a0c168" title="Returns the name of a model_instance.">GetModelInstanceName()</a>, <a class="el" href="#a3c6b13fba0889c4bb9a88610254a387b" title="Returns a constant reference to the output port for the multibody state x = [q, v] of the model.">get_state_output_port()</a>, <a class="el" href="#a69ef9262ffab02b34bdf20449aab7551" title="Returns a constant reference to the input port for external actuation for all actuated dofs.">get_actuation_input_port()</a>.</p>
 <p><a class="anchor" id="mbp_equations_of_motion"></a></p><h3>System dynamics</h3>
-<p>The state of a multibody system <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> = [q; v]</span> is given by its generalized positions vector q, of size <span class="tt">nq</span> (see <a class="el" href="#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">num_positions()</a>), and by its generalized velocities vector v, of size <span class="tt">nv</span> (see <a class="el" href="#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>).</p>
+<p>The state of a multibody system <span class="tt">x = [q; v]</span> is given by its generalized positions vector q, of size <span class="tt">nq</span> (see <a class="el" href="#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">num_positions()</a>), and by its generalized velocities vector v, of size <span class="tt">nv</span> (see <a class="el" href="#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>).</p>
 <p>A MultibodyPlant can be constructed to be either continuous or discrete. The choice is indicated by the time_step passed to the constructor &ndash; a non-zero time_step indicates a discrete plant, while a zero time_step indicates continuous. A <a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a> will step a discrete plant using the indicated time_step, but will allow a numerical integrator to choose how to advance time for a continuous MultibodyPlant.</p>
 <p>We'll discuss continuous plant dynamics in this section. Discrete dynamics is more complicated and gets its own section below.</p>
 <p>As a Drake <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>, MultibodyPlant implements the governing equations for a multibody dynamical system in the form <span class="tt">ẋ = f(t, x, u)</span> with t being time and u external inputs such as actuation forces. The governing equations for the dynamics of a multibody system modeled with MultibodyPlant are [Featherstone 2008, Jain 2010]: </p><pre>
          q̇ = N(q)v
   (1)    M(q)v̇ + C(q, v)v = τ
-</pre><p> where <span class="tt">M(q)</span> is the mass matrix of the multibody system (including rigid body mass properties and <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#reflected_inertia">reflected inertias</a>), <span class="tt">C(q, v)v</span> contains Coriolis, centripetal, and gyroscopic terms and <span class="tt">N(q)</span> is the kinematic coupling matrix describing the relationship between q̇ (the time derivatives of the generalized positions) and the generalized velocities v, [Seth 2010]. <span class="tt">N(q)</span> is an <span class="tt">nq <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> nv</span> matrix. The vector <span class="tt">τ ∈ ℝⁿᵛ</span> on the right hand side of Eq. (1) is the system's generalized forces. These incorporate gravity, springs, externally applied body forces, constraint forces, and contact forces.</p>
+</pre><p> where <span class="tt">M(q)</span> is the mass matrix of the multibody system (including rigid body mass properties and <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#reflected_inertia">reflected inertias</a>), <span class="tt">C(q, v)v</span> contains Coriolis, centripetal, and gyroscopic terms and <span class="tt">N(q)</span> is the kinematic coupling matrix describing the relationship between q̇ (the time derivatives of the generalized positions) and the generalized velocities v, [Seth 2010]. <span class="tt">N(q)</span> is an <span class="tt">nq x nv</span> matrix. The vector <span class="tt">τ ∈ ℝⁿᵛ</span> on the right hand side of Eq. (1) is the system's generalized forces. These incorporate gravity, springs, externally applied body forces, constraint forces, and contact forces.</p>
 <p><a class="anchor" id="mbp_discrete_dynamics"></a></p><h3>Discrete system dynamics</h3>
 <p>We'll start with the basic difference equation interpretation of a discrete plant and then explain some Drake-specific subtleties.</p>
 <dl class="section note"><dt>Note</dt><dd>We use "kinematics" here to refer to quantities that involve only position or velocity, and "dynamics" to refer to quantities that also involve forces.</dd></dl>
@@ -337,7 +337,7 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <div class="line"><span class="keyword">const</span> std::string url =</div>
 <div class="line">    <span class="stringliteral">&quot;package://drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span>;</div>
 <div class="line">parser.AddModelsFromUrl(url);</div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a47a63154823dffd5838329527aafbd58"><div class="ttname"><a href="#a47a63154823dffd5838329527aafbd58">drake::multibody::MultibodyPlant::MultibodyPlant</a></div><div class="ttdeci">friend class MultibodyPlant</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5782</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a47a63154823dffd5838329527aafbd58"><div class="ttname"><a href="#a47a63154823dffd5838329527aafbd58">drake::multibody::MultibodyPlant::MultibodyPlant</a></div><div class="ttdeci">friend class MultibodyPlant</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5785</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_parser_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a></div><div class="ttdoc">Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.</div><div class="ttdef"><b>Definition</b> parser.h:132</div></div>
 </div><!-- fragment --><p> As in the example above, for models including visual geometry, collision geometry or both, the user must specify a SceneGraph for geometry handling. You can find a full example of the LQR controlled acrobot in examples/multibody/acrobot/run_lqr.cc.</p>
 <p>AddModelFromFile() can be invoked multiple times on the same plant in order to load multiple model instances. Other methods are available on <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses model description input into a MultibodyPlant and (optionally) a SceneGraph.">Parser</a> such as AddModels() which allows creating model instances per each <span class="tt">&lt;model&gt;</span> tag found in the file. Please refer to each of these methods' documentation for further details.</p>
@@ -349,7 +349,7 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <div class="line">    <a class="code hl_function" href="#a8b71553122d35a449d2131789a3f94c2">AddMultibodyPlantSceneGraph</a>(&amp;builder, 0.0 /+ <a class="code hl_function" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> +/);</div>
 <div class="line">plant.DoFoo(...);</div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8b71553122d35a449d2131789a3f94c2"><div class="ttname"><a href="#a8b71553122d35a449d2131789a3f94c2">drake::multibody::MultibodyPlant::AddMultibodyPlantSceneGraph</a></div><div class="ttdeci">AddMultibodyPlantSceneGraphResult&lt; T &gt; AddMultibodyPlantSceneGraph(systems::DiagramBuilder&lt; T &gt; *builder, double time_step, std::unique_ptr&lt; geometry::SceneGraph&lt; T &gt; &gt; scene_graph=nullptr)</div><div class="ttdoc">Makes a new MultibodyPlant with discrete update period time_step and adds it to a diagram builder tog...</div></div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8daceb7a3c384d6ad9f305e42b5fc1c6"><div class="ttname"><a href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">drake::multibody::MultibodyPlant::time_step</a></div><div class="ttdeci">double time_step() const</div><div class="ttdoc">The time step (or period) used to model this plant as a discrete system with periodic updates.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5069</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8daceb7a3c384d6ad9f305e42b5fc1c6"><div class="ttname"><a href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">drake::multibody::MultibodyPlant::time_step</a></div><div class="ttdeci">double time_step() const</div><div class="ttdoc">The time step (or period) used to model this plant as a discrete system with periodic updates.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5072</div></div>
 </div><!-- fragment --><p> This flavor is the simplest, when the SceneGraph is not explicitly needed. (It can always be retrieved later via GetSubsystemByName("scene_graph").)</p>
 <p>Assign to auto, and use the named public fields: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> items = <a class="code hl_function" href="#a8b71553122d35a449d2131789a3f94c2">AddMultibodyPlantSceneGraph</a>(&amp;builder, 0.0 /+ <a class="code hl_function" href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> +/);</div>
 <div class="line">items.plant.DoFoo(...);</div>
@@ -429,7 +429,7 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <div class="line"> </div>
 <div class="line"><span class="comment">// Modify the body parameter for spatial inertia.</span></div>
 <div class="line">body.<a class="code hl_function" href="classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918">SetSpatialInertiaInBodyFrame</a>(&amp;context, M_BBo_B_new);</div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_ad46fb49fc69d22b8a08d4dedc574ee1e"><div class="ttname"><a href="#ad46fb49fc69d22b8a08d4dedc574ee1e">drake::multibody::MultibodyPlant::GetRigidBodyByName</a></div><div class="ttdeci">const RigidBody&lt; T &gt; &amp; GetRigidBodyByName(std::string_view name) const</div><div class="ttdoc">Returns a constant reference to a rigid body that is identified by the string name in this model.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5178</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_ad46fb49fc69d22b8a08d4dedc574ee1e"><div class="ttname"><a href="#ad46fb49fc69d22b8a08d4dedc574ee1e">drake::multibody::MultibodyPlant::GetRigidBodyByName</a></div><div class="ttdeci">const RigidBody&lt; T &gt; &amp; GetRigidBodyByName(std::string_view name) const</div><div class="ttdoc">Returns a constant reference to a rigid body that is identified by the string name in this model.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5181</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_rigid_body_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_rigid_body.html">drake::multibody::RigidBody</a></div><div class="ttdoc">The term rigid body implies that the deformations of the body under consideration are so small that t...</div><div class="ttdef"><b>Definition</b> rigid_body.h:198</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_rigid_body_html_a2e83508afc2db2bda9a1f25ed5201918"><div class="ttname"><a href="classdrake_1_1multibody_1_1_rigid_body.html#a2e83508afc2db2bda9a1f25ed5201918">drake::multibody::RigidBody::SetSpatialInertiaInBodyFrame</a></div><div class="ttdeci">void SetSpatialInertiaInBodyFrame(systems::Context&lt; T &gt; *context, const SpatialInertia&lt; T &gt; &amp;M_Bo_B) const</div><div class="ttdoc">For this RigidBody B, sets its SpatialInertia that is stored in context to M_Bo_B.</div><div class="ttdef"><b>Definition</b> rigid_body.h:628</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_spatial_inertia_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_spatial_inertia.html">drake::multibody::SpatialInertia</a></div><div class="ttdoc">This class represents the physical concept of a Spatial Inertia.</div><div class="ttdef"><b>Definition</b> spatial_inertia.h:113</div></div>
@@ -677,7 +677,7 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keyword">const</span> GeometryId g_id = id_from_some_query;</div>
 <div class="line"><span class="keyword">const</span> FrameId f_id = inspector.GetFrameId(g_id);</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody&lt;T&gt;</a>* body = plant.<a class="code hl_function" href="#a861e318468cd1ce72c9cf94566aac812">GetBodyFromFrameId</a>(f_id);</div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a861e318468cd1ce72c9cf94566aac812"><div class="ttname"><a href="#a861e318468cd1ce72c9cf94566aac812">drake::multibody::MultibodyPlant::GetBodyFromFrameId</a></div><div class="ttdeci">const RigidBody&lt; T &gt; * GetBodyFromFrameId(geometry::FrameId frame_id) const</div><div class="ttdoc">Given a geometry frame identifier, returns a pointer to the body associated with that id (nullptr if ...</div><div class="ttdef"><b>Definition</b> multibody_plant.h:2426</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a861e318468cd1ce72c9cf94566aac812"><div class="ttname"><a href="#a861e318468cd1ce72c9cf94566aac812">drake::multibody::MultibodyPlant::GetBodyFromFrameId</a></div><div class="ttdeci">const RigidBody&lt; T &gt; * GetBodyFromFrameId(geometry::FrameId frame_id) const</div><div class="ttdoc">Given a geometry frame identifier, returns a pointer to the body associated with that id (nullptr if ...</div><div class="ttdef"><b>Definition</b> multibody_plant.h:2429</div></div>
 </div><!-- fragment --><p> See documentation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html" title="The SceneGraphInspector serves as a mechanism to query the topological structure of a SceneGraph inst...">geometry::SceneGraphInspector</a> on where to get an inspector.</p>
 <h4>MultibodyPlant names vs. SceneGraph names</h4>
 <p>In MultibodyPlant, frame names only have to be unique in a single model instance. However, SceneGraph knows nothing of model instances. So, to generate unique names for the corresponding frames in SceneGraph, when MultibodyPlant registers the corresponding SceneGraph frame, it is named with a "scoped name". This is a concatenation of <span class="tt">[model instance name]::[body name]</span>. Searching for a frame with just the name <span class="tt">body name</span> will fail. (See <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a24dcbf29c0d6cd766009a182a6484e3b" title="Gets the name associated with this rigid body.">RigidBody::name()</a> and <a class="el" href="#a6967a3b13b5d006821d7590945a0c168" title="Returns the name of a model_instance.">GetModelInstanceName()</a> for those values.)</p>
@@ -924,7 +924,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a91d9ba2b26eb3887a1e277875a5af127" id="r_a91d9ba2b26eb3887a1e277875a5af127"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91d9ba2b26eb3887a1e277875a5af127">MakeActuatorSelectorMatrix</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">JointActuatorIndex</a> &gt; &amp;user_to_actuator_index_map) const</td></tr>
 <tr class="memdesc:a91d9ba2b26eb3887a1e277875a5af127"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows user to map a vector <span class="tt">uₛ</span> containing the actuation for a set of selected actuators into the vector u containing the actuation values for <span class="tt">this</span> full model.  <br /></td></tr>
 <tr class="memitem:aa4dc238d06e942e23f0d948f96bc3cfb" id="r_aa4dc238d06e942e23f0d948f96bc3cfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4dc238d06e942e23f0d948f96bc3cfb">MakeActuationMatrix</a> () const</td></tr>
-<tr class="memdesc:aa4dc238d06e942e23f0d948f96bc3cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates an actuation matrix B mapping a vector of actuation values u into generalized forces <span class="tt">tau_u = B * u</span>, where B is a matrix of size <span class="tt">nv <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> nu</span> with <span class="tt">nu</span> equal to <a class="el" href="#ae3fc8de8de8eaf2d37a24c79d6be8e97" title="Returns the total number of actuated degrees of freedom.">num_actuated_dofs()</a> and <span class="tt">nv</span> equal to <a class="el" href="#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>.  <br /></td></tr>
+<tr class="memdesc:aa4dc238d06e942e23f0d948f96bc3cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates an actuation matrix B mapping a vector of actuation values u into generalized forces <span class="tt">tau_u = B * u</span>, where B is a matrix of size <span class="tt">nv x nu</span> with <span class="tt">nu</span> equal to <a class="el" href="#ae3fc8de8de8eaf2d37a24c79d6be8e97" title="Returns the total number of actuated degrees of freedom.">num_actuated_dofs()</a> and <span class="tt">nv</span> equal to <a class="el" href="#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>.  <br /></td></tr>
 <tr class="memitem:a5746187726bdac7a915a2435e0cba13e" id="r_a5746187726bdac7a915a2435e0cba13e"><td class="memItemLeft" align="right" valign="top">Eigen::SparseMatrix&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5746187726bdac7a915a2435e0cba13e">MakeActuationMatrixPseudoinverse</a> () const</td></tr>
 <tr class="memdesc:a5746187726bdac7a915a2435e0cba13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the pseudoinverse of the actuation matrix B directly (without requiring an explicit inverse calculation).  <br /></td></tr>
 <tr class="memitem:af90a2eb58b242d1a85176e32435004c9" id="r_af90a2eb58b242d1a85176e32435004c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af90a2eb58b242d1a85176e32435004c9">MakeActuatorSelectorMatrix</a> (const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;user_to_joint_index_map) const</td></tr>
@@ -1143,8 +1143,9 @@ Friends</h2></td></tr>
 <tr class="memitem:a47a63154823dffd5838329527aafbd58" id="r_a47a63154823dffd5838329527aafbd58"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:a47a63154823dffd5838329527aafbd58 template"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47a63154823dffd5838329527aafbd58">MultibodyPlant</a></td></tr>
 <tr class="memitem:a42efef893a4d8eed1d593caff328f599" id="r_a42efef893a4d8eed1d593caff328f599"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42efef893a4d8eed1d593caff328f599">MultibodyPlantTester</a></td></tr>
-<tr class="memitem:a7266290642dbb492700e7ebae2e00a20" id="r_a7266290642dbb492700e7ebae2e00a20"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7266290642dbb492700e7ebae2e00a20">internal::MultibodyPlantModelAttorney&lt; T &gt;</a></td></tr>
 <tr class="memitem:a9bf56e6eda41a6cc82296377a2267479" id="r_a9bf56e6eda41a6cc82296377a2267479"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bf56e6eda41a6cc82296377a2267479">internal::MultibodyPlantDiscreteUpdateManagerAttorney&lt; T &gt;</a></td></tr>
+<tr class="memitem:ae31c5abf29d1134fe77df48a1152980a" id="r_ae31c5abf29d1134fe77df48a1152980a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae31c5abf29d1134fe77df48a1152980a">internal::MultibodyPlantIcfAttorney&lt; T &gt;</a></td></tr>
+<tr class="memitem:a7266290642dbb492700e7ebae2e00a20" id="r_a7266290642dbb492700e7ebae2e00a20"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7266290642dbb492700e7ebae2e00a20">internal::MultibodyPlantModelAttorney&lt; T &gt;</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-related" class="groupheader"><a id="related" name="related"></a>
 Related Symbols</h2></td></tr>
@@ -1701,8 +1702,8 @@ template&lt;template&lt; typename &gt; class JointType, typename... Args&gt; </d
 <div class="line">    body_2,                 <span class="comment">/* child body, the pendulum */</span></div>
 <div class="line">    X_BM,                   <span class="comment">/* pose of frame M in the body frame B */</span></div>
 <div class="line">    Vector3d::UnitZ());     <span class="comment">/* revolute axis in this case */</span></div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a2f347b072b9cdb7b584f7098ba7c451c"><div class="ttname"><a href="#a2f347b072b9cdb7b584f7098ba7c451c">drake::multibody::MultibodyPlant::AddRigidBody</a></div><div class="ttdeci">const RigidBody&lt; T &gt; &amp; AddRigidBody(const std::string &amp;name, ModelInstanceIndex model_instance, const SpatialInertia&lt; double &gt; &amp;M_BBo_B=SpatialInertia&lt; double &gt;::Zero())</div><div class="ttdoc">Creates a rigid body with the provided name and spatial inertia.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1368</div></div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a80c10ac818d74ed590875fd07f477671"><div class="ttname"><a href="#a80c10ac818d74ed590875fd07f477671">drake::multibody::MultibodyPlant::AddJoint</a></div><div class="ttdeci">const JointType&lt; T &gt; &amp; AddJoint(std::unique_ptr&lt; JointType&lt; T &gt; &gt; joint)</div><div class="ttdoc">This method adds a Joint of type JointType between two bodies.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1441</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a2f347b072b9cdb7b584f7098ba7c451c"><div class="ttname"><a href="#a2f347b072b9cdb7b584f7098ba7c451c">drake::multibody::MultibodyPlant::AddRigidBody</a></div><div class="ttdeci">const RigidBody&lt; T &gt; &amp; AddRigidBody(const std::string &amp;name, ModelInstanceIndex model_instance, const SpatialInertia&lt; double &gt; &amp;M_BBo_B=SpatialInertia&lt; double &gt;::Zero())</div><div class="ttdoc">Creates a rigid body with the provided name and spatial inertia.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1371</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a80c10ac818d74ed590875fd07f477671"><div class="ttname"><a href="#a80c10ac818d74ed590875fd07f477671">drake::multibody::MultibodyPlant::AddJoint</a></div><div class="ttdeci">const JointType&lt; T &gt; &amp; AddJoint(std::unique_ptr&lt; JointType&lt; T &gt; &gt; joint)</div><div class="ttdoc">This method adds a Joint of type JointType between two bodies.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1444</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_revolute_joint_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_revolute_joint.html">drake::multibody::RevoluteJoint</a></div><div class="ttdoc">This Joint allows two bodies to rotate relatively to one another around a common axis.</div><div class="ttdef"><b>Definition</b> revolute_joint.h:30</div></div>
 </div><!-- fragment --><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
@@ -1892,7 +1893,7 @@ template&lt;typename T&gt; </div>
 <div class="line"><a class="code hl_typedef" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance = plant.<a class="code hl_function" href="#a4edf1daa65069a26255c903b02bce4c6">AddModelInstance</a>(<span class="stringliteral">&quot;instance&quot;</span>);</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1multibody_1_1_rigid_body.html">RigidBody&lt;T&gt;</a>&amp; body =</div>
 <div class="line">  plant.<a class="code hl_function" href="#a2f347b072b9cdb7b584f7098ba7c451c">AddRigidBody</a>(<span class="stringliteral">&quot;BodyName&quot;</span>, model_instance, spatial_inertia);</div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a4edf1daa65069a26255c903b02bce4c6"><div class="ttname"><a href="#a4edf1daa65069a26255c903b02bce4c6">drake::multibody::MultibodyPlant::AddModelInstance</a></div><div class="ttdeci">ModelInstanceIndex AddModelInstance(const std::string &amp;name)</div><div class="ttdoc">Creates a new model instance.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1667</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a4edf1daa65069a26255c903b02bce4c6"><div class="ttname"><a href="#a4edf1daa65069a26255c903b02bce4c6">drake::multibody::MultibodyPlant::AddModelInstance</a></div><div class="ttdeci">ModelInstanceIndex AddModelInstance(const std::string &amp;name)</div><div class="ttdoc">Creates a new model instance.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:1670</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>A string that identifies the new body to be added to <span class="tt">this</span> model. A std::runtime_error is thrown if a body named <span class="tt">name</span> already is part of <code class="param">model_instance</code>. See <a class="el" href="#a5aa037adf3002834caa1aedd305fa36d">HasBodyNamed()</a>, <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a24dcbf29c0d6cd766009a182a6484e3b" title="Gets the name associated with this rigid body.">RigidBody::name()</a>. </td></tr>
@@ -2332,13 +2333,13 @@ template&lt;typename T&gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Contains the state of the multibody system. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the translational acceleration bias is with respect to 𝑠 = q̇ or 𝑠 = v. Currently, an exception is thrown if with_respect_to is <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The frame on which points Bi are affixed/welded. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">p_BoBi_B</td><td>A position vector or list of p position vectors from Bo (frame_B's origin) to points Bi (regarded as affixed to B), where each position vector is expressed in frame_B. Each column in the <span class="tt">3 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> p</span> matrix p_BoBi_B corresponds to a position vector. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_BoBi_B</td><td>A position vector or list of p position vectors from Bo (frame_B's origin) to points Bi (regarded as affixed to B), where each position vector is expressed in frame_B. Each column in the <span class="tt">3 x p</span> matrix p_BoBi_B corresponds to a position vector. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which a𝑠Bias_ABi is measured. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which a𝑠Bias_ABi is expressed on output. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a𝑠Bias_ABi_E Point Bi's translational acceleration bias in frame A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E. a𝑠Bias_ABi_E is a <span class="tt">3 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> p</span> matrix, where p is the number of points Bi. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a𝑠Bias_ABi_E Point Bi's translational acceleration bias in frame A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E. a𝑠Bias_ABi_E is a <span class="tt">3 x p</span> matrix, where p is the number of points Bi. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a0afc6adf5bda2b9456d67ab2405af076" title="For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi, Bi&#39;s translational velocity Jacob...">CalcJacobianTranslationalVelocity()</a> to compute J𝑠_v_ABi, point Bi's translational velocity Jacobian in frame A with respect to 𝑠. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>p_BoBi_B must have 3 rows. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
@@ -2888,14 +2889,14 @@ template&lt;typename T&gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The frame B in <span class="tt">w_AB</span> (B's angular velocity in A). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame A in <span class="tt">w_AB</span> (B's angular velocity in A). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which <span class="tt">w_AB</span> is expressed on input and the frame in which the Jacobian <span class="tt">J𝑠_w_AB</span> is expressed on output. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">Js_w_AB_E</td><td><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> B's angular velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. The Jacobian is a function of only generalized positions q (which are pulled from the context). The previous definition shows <span class="tt">J𝑠_w_AB_E</span> is a matrix of size <span class="tt">3 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span>, where n is the number of elements in 𝑠. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Js_w_AB_E</td><td><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame) of its underl...">Frame</a> B's angular velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. The Jacobian is a function of only generalized positions q (which are pulled from the context). The previous definition shows <span class="tt">J𝑠_w_AB_E</span> is a matrix of size <span class="tt">3 x n</span>, where n is the number of elements in 𝑠. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd>See <a class="el" href="#Jacobian_functions">Jacobian functions</a> for related functions. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <span class="tt">J𝑠_w_AB_E</span> is nullptr or not of size <span class="tt">3 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">J𝑠_w_AB_E</span> is nullptr or not of size <span class="tt">3 x n</span>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3076,13 +3077,13 @@ template&lt;typename T&gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_BoBi_B</td><td>A position vector or list of k position vectors from Bo (frame_B's origin) to points Bi (Bi is regarded as affixed to B), where each position vector is expressed in frame_B. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which partial derivatives are calculated and the frame in which point Ao is affixed. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which the Jacobian Jq_p_AoBi is expressed on output. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">Jq_p_AoBi_E</td><td>Point Bi's position vector Jacobian in frame A with generalized positions q, expressed in frame E. Jq_p_AoBi_E is a <span class="tt">3*k <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span> matrix, where k is the number of points Bi and n is the number of elements in q. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Jq_p_AoBi_E</td><td>Point Bi's position vector Jacobian in frame A with generalized positions q, expressed in frame E. Jq_p_AoBi_E is a <span class="tt">3*k x n</span> matrix, where k is the number of points Bi and n is the number of elements in q. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if Jq_p_AoBi_E is nullptr or not sized <span class="tt">3*k <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if Jq_p_AoBi_E is nullptr or not sized <span class="tt">3*k x n</span>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3154,11 +3155,11 @@ template&lt;typename T&gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_BoBp_B</td><td>A position vector from Bo (frame_B's origin) to point Bp (regarded as fixed/welded to B), expressed in frame_B. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame that measures <span class="tt">v_ABp</span> (Bp's velocity in A). Note: It is natural to wonder why there is no parameter p_AoAp_A (similar to the parameter p_BoBp_B for frame_B). There is no need for p_AoAp_A because Bp's velocity in A is defined as the derivative in frame A of Bp's position vector from <em>any</em> point fixed to A. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which <span class="tt">v_ABp</span> is expressed on input and the frame in which the Jacobian <span class="tt">J𝑠_V_ABp</span> is expressed on output. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">Js_V_ABp_E</td><td>Point Bp's spatial velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. <span class="tt">J𝑠_V_ABp_E</span> is a <span class="tt">6 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span> matrix, where n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Js_V_ABp_E</td><td>Point Bp's spatial velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. <span class="tt">J𝑠_V_ABp_E</span> is a <span class="tt">6 x n</span> matrix, where n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The returned <span class="tt">6 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span> matrix stores frame B's angular velocity Jacobian in A in rows 1-3 and stores point Bp's translational velocity Jacobian in A in rows 4-6, i.e., <pre>
+<dl class="section note"><dt>Note</dt><dd>The returned <span class="tt">6 x n</span> matrix stores frame B's angular velocity Jacobian in A in rows 1-3 and stores point Bp's translational velocity Jacobian in A in rows 4-6, i.e., <pre>
     J𝑠_w_AB_E = J𝑠_V_ABp_E.topRows&lt;3&gt;();
     J𝑠_v_ABp_E = J𝑠_V_ABp_E.bottomRows&lt;3&gt;();
 </pre> </dd>
@@ -3167,7 +3168,7 @@ Consider <a class="el" href="#a0afc6adf5bda2b9456d67ab2405af076" title="For each
 <dl class="section see"><dt>See also</dt><dd>See <a class="el" href="#Jacobian_functions">Jacobian functions</a> for related functions. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <span class="tt">J𝑠_V_ABp_E</span> is nullptr or not sized <span class="tt">6 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">J𝑠_V_ABp_E</span> is nullptr or not sized <span class="tt">6 x n</span>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3233,13 +3234,13 @@ template&lt;typename T&gt; </div>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_BoBi_B</td><td>A position vector or list of p position vectors from Bo (frame_B's origin) to points Bi (regarded as affixed to B), where each position vector is expressed in frame_B. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame that measures <span class="tt">v_ABi</span> (Bi's velocity in A). Note: It is natural to wonder why there is no parameter p_AoAi_A (similar to the parameter p_BoBi_B for frame_B). There is no need for p_AoAi_A because Bi's velocity in A is defined as the derivative in frame A of Bi's position vector from <em>any</em> point affixed to A. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which <span class="tt">v_ABi</span> is expressed on input and the frame in which the Jacobian <span class="tt">J𝑠_v_ABi</span> is expressed on output. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">Js_v_ABi_E</td><td>Point Bi's velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. <span class="tt">J𝑠_v_ABi_E</span> is a <span class="tt">3*p <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span> matrix, where p is the number of points Bi and n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Js_v_ABi_E</td><td>Point Bi's velocity Jacobian in frame A with respect to speeds 𝑠 (which is either q̇ or v), expressed in frame E. <span class="tt">J𝑠_v_ABi_E</span> is a <span class="tt">3*p x n</span> matrix, where p is the number of points Bi and n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <span class="tt">J𝑠_v_ABi_E</span> is nullptr or not sized <span class="tt">3*p <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">J𝑠_v_ABi_E</span> is nullptr or not sized <span class="tt">3*p x n</span>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4578,8 +4579,8 @@ The desired state input port for a given model instance is not required to be co
 <div class="line"><span class="comment">// As an example, fix values in the context.</span></div>
 <div class="line">plant.<a class="code hl_function" href="#acb103492157aa5e69843c22c394d1de5">get_desired_state_input_port</a>(model_instance).FixValue(</div>
 <div class="line">    &amp;plant_context, model_xd);</div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a14c63996575e6bf19290129d32d079cc"><div class="ttname"><a href="#a14c63996575e6bf19290129d32d079cc">drake::multibody::MultibodyPlant::GetJointActuatorIndices</a></div><div class="ttdeci">const std::vector&lt; JointActuatorIndex &gt; &amp; GetJointActuatorIndices() const</div><div class="ttdoc">Returns a list of all joint actuator indices.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5307</div></div>
-<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8601c026e9807127b4dd41e7585d2cfc"><div class="ttname"><a href="#a8601c026e9807127b4dd41e7585d2cfc">drake::multibody::MultibodyPlant::num_actuators</a></div><div class="ttdeci">int num_actuators() const</div><div class="ttdoc">Returns the number of joint actuators in the model.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5415</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a14c63996575e6bf19290129d32d079cc"><div class="ttname"><a href="#a14c63996575e6bf19290129d32d079cc">drake::multibody::MultibodyPlant::GetJointActuatorIndices</a></div><div class="ttdeci">const std::vector&lt; JointActuatorIndex &gt; &amp; GetJointActuatorIndices() const</div><div class="ttdoc">Returns a list of all joint actuator indices.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5310</div></div>
+<div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8601c026e9807127b4dd41e7585d2cfc"><div class="ttname"><a href="#a8601c026e9807127b4dd41e7585d2cfc">drake::multibody::MultibodyPlant::num_actuators</a></div><div class="ttdeci">int num_actuators() const</div><div class="ttdoc">Returns the number of joint actuators in the model.</div><div class="ttdef"><b>Definition</b> multibody_plant.h:5418</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_a8fee61d7a783cade1a3d07fe86284d27"><div class="ttname"><a href="#a8fee61d7a783cade1a3d07fe86284d27">drake::multibody::MultibodyPlant::Finalize</a></div><div class="ttdeci">void Finalize()</div><div class="ttdoc">This method must be called after all elements in the model (joints, bodies, force elements,...</div></div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_multibody_plant_html_acb103492157aa5e69843c22c394d1de5"><div class="ttname"><a href="#acb103492157aa5e69843c22c394d1de5">drake::multibody::MultibodyPlant::get_desired_state_input_port</a></div><div class="ttdeci">const systems::InputPort&lt; T &gt; &amp; get_desired_state_input_port(ModelInstanceIndex model_instance) const</div><div class="ttdoc">For models with PD controlled joint actuators, returns the port to provide the desired state for the ...</div></div>
 <div class="ttc" id="aclassdrake_1_1systems_1_1_system_html_aa036f873464a74c03fab943bbace8942"><div class="ttname"><a href="classdrake_1_1systems_1_1_system.html#aa036f873464a74c03fab943bbace8942">drake::systems::System::CreateDefaultContext</a></div><div class="ttdeci">std::unique_ptr&lt; Context&lt; T &gt; &gt; CreateDefaultContext() const</div><div class="ttdoc">This convenience method allocates a context using AllocateContext() and sets its default values using...</div></div>
@@ -5817,7 +5818,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated</a></b></dt><dd>Use GetDefaultFloatingBaseBodyPose() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated</a></b></dt><dd>Use GetDefaultFloatingBaseBodyPose() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -7062,7 +7063,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated</a></b></dt><dd>Use GetUniqueFloatingBaseBodyOrThrow() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated</a></b></dt><dd>Use GetUniqueFloatingBaseBodyOrThrow() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -7808,7 +7809,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated</a></b></dt><dd>Use HasUniqueFloatingBaseBody() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated</a></b></dt><dd>Use HasUniqueFloatingBaseBody() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -7928,7 +7929,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>This method creates an actuation matrix B mapping a vector of actuation values u into generalized forces <span class="tt">tau_u = B * u</span>, where B is a matrix of size <span class="tt">nv <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> nu</span> with <span class="tt">nu</span> equal to <a class="el" href="#ae3fc8de8de8eaf2d37a24c79d6be8e97" title="Returns the total number of actuated degrees of freedom.">num_actuated_dofs()</a> and <span class="tt">nv</span> equal to <a class="el" href="#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>. </p>
+<p>This method creates an actuation matrix B mapping a vector of actuation values u into generalized forces <span class="tt">tau_u = B * u</span>, where B is a matrix of size <span class="tt">nv x nu</span> with <span class="tt">nu</span> equal to <a class="el" href="#ae3fc8de8de8eaf2d37a24c79d6be8e97" title="Returns the total number of actuated degrees of freedom.">num_actuated_dofs()</a> and <span class="tt">nv</span> equal to <a class="el" href="#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>. </p>
 <p>The vector u of actuation values is of size <a class="el" href="#ae3fc8de8de8eaf2d37a24c79d6be8e97" title="Returns the total number of actuated degrees of freedom.">num_actuated_dofs()</a>. For a given <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html" title="The JointActuator class is mostly a simple bookkeeping structure to represent an actuator acting on a...">JointActuator</a>, <span class="tt">u[<a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a42d883dde11e65819319f8060b0843b4" title="Returns the index to the first element for this joint actuator / within the vector of actuation input...">JointActuator::input_start()</a>]</span> stores the value for the external actuation corresponding to that actuator. <span class="tt">tau_u</span> on the other hand is indexed by generalized velocity indices according to <span class="tt"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae24835fcef569246252959b18d0027d6" title="Returns the index to the first generalized velocity for this joint within the vector v of generalized...">Joint::velocity_start()</a></span>. </p><dl class="section warning"><dt>Warning</dt><dd>B is a permutation matrix. While making a permutation has <span class="tt">O(n)</span> complexity, making a full B matrix has <span class="tt">O(n²)</span> complexity. For most applications this cost can be neglected but it could become significant for very large systems. </dd></dl>
 
 </div>
@@ -9717,7 +9718,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated</a></b></dt><dd>Use SetDefaultFloatingBaseBodyPose() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated</a></b></dt><dd>Use SetDefaultFloatingBaseBodyPose() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -10093,7 +10094,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInAnchoredFrame() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInAnchoredFrame() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -10125,7 +10126,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInWorldFrame() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInWorldFrame() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -11016,6 +11017,30 @@ template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">friend class internal::MultibodyPlantDiscreteUpdateManagerAttorney&lt; T &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae31c5abf29d1134fe77df48a1152980a" name="ae31c5abf29d1134fe77df48a1152980a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae31c5abf29d1134fe77df48a1152980a">&#9670;&#160;</a></span>internal::MultibodyPlantIcfAttorney&lt; T &gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class internal::MultibodyPlantIcfAttorney&lt; T &gt;</td>
         </tr>
       </table>
   </td>

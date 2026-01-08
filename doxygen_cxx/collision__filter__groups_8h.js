@@ -1,4 +1,5 @@
 var collision__filter__groups_8h =
 [
-    [ "CollisionFilterGroups", "classdrake_1_1multibody_1_1_collision_filter_groups.html", "classdrake_1_1multibody_1_1_collision_filter_groups" ]
+    [ "CollisionFilterGroups", "classdrake_1_1multibody_1_1_collision_filter_groups.html", "classdrake_1_1multibody_1_1_collision_filter_groups" ],
+    [ "formatter&lt; drake::multibody::CollisionFilterGroups &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_collision_filter_groups_01_4.html", null ]
 ];

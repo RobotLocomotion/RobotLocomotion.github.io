@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"classdrake_1_1lcm_1_1_drake_lcm.html#ab89da93f23549481dfbe2463f10c8f7b":[4,0,0,4,0,15],
 "classdrake_1_1lcm_1_1_drake_lcm.html#ad12ebfa1b7ab6ec343cbde2667052991":[3,0,0,5,0,11],
 "classdrake_1_1lcm_1_1_drake_lcm.html#ad12ebfa1b7ab6ec343cbde2667052991":[4,0,0,4,0,11],
 "classdrake_1_1lcm_1_1_drake_lcm_base.html":[3,0,0,5,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_status_sender.html#ac1d7ae54094c55bcbe4f0fccc54a519e":[4,0,0,6,0,3,13],
 "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_status_sender.html#afd77e804d9b2c0e5b486989f9336734e":[3,0,0,7,0,4,8],
 "classdrake_1_1manipulation_1_1franka__panda_1_1_panda_status_sender.html#afd77e804d9b2c0e5b486989f9336734e":[4,0,0,6,0,3,8],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html":[3,0,0,7,1,0],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html":[4,0,0,6,1,0]
+"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html":[3,0,0,7,1,0]
 };

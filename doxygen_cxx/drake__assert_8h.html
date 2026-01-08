@@ -303,9 +303,8 @@ Macros</h2></td></tr>
 <div class="line"> </div>
 <div class="line">@warning The pointer passed must be an l-value; <span class="keywordflow">do</span> not pass in temporaries.</div>
 <div class="line">E.g., <span class="keyword">this</span> includes function calls that <span class="keywordflow">return</span> pointers and pointers to</div>
-<div class="line">arrays (&amp;<a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>[0]).</div>
+<div class="line">arrays (&amp;x[0]).</div>
 <div class="ttc" id="adrake__assert_8h_html_a259299d4c6118640fbdc9865bad44022"><div class="ttname"><a href="#a259299d4c6118640fbdc9865bad44022">DRAKE_DEREF</a></div><div class="ttdeci">#define DRAKE_DEREF(ptr)</div><div class="ttdoc">Derferences a pointer, with null checking.</div><div class="ttdef"><b>Definition</b> drake_assert.h:131</div></div>
-<div class="ttc" id="alight__parameter_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> light_parameter.h:147</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -336,7 +335,7 @@ Macros</h2></td></tr>
 <p>Because this macro is intended to provide a useful exception message to users, we should err on the side of extra detail about the failure. The meaning of "foo" isolated within error message text does not make it clear that a null pointer is the proximate cause of the problem.</p>
 <p>In addition to the <span class="tt">condition</span>, up to four value expressions can be provided. Each value expression and its value will be included in the error message. For example:</p>
 <p><a class="el" href="#a740c2a9f2af46168c503379e3bfcba46" title="Provides a convenient wrapper to throw an exception when a condition is unmet.">DRAKE_THROW_UNLESS(x &lt; 0, x)</a>;</p>
-<p>Will include the the value of <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> in the message. If too many value expressions are specified, this will most likely produce a compiler error referencing "ENCODE_EACH".</p>
+<p>Will include the the value of <span class="tt">x</span> in the message. If too many value expressions are specified, this will most likely produce a compiler error referencing "ENCODE_EACH".</p>
 <p>Not all value expression types are supported. This shouldn't be interpreted as <em>the</em> definitive list. If yours isn't supported, feel free to submit a PR to add it (reaching out for help as appropriate). </p>
 
 </div>

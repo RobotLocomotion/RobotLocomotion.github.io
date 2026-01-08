@@ -1,5 +1,7 @@
 var NAVTREEINDEX36 =
 {
+"classdrake_1_1multibody_1_1_spatial_inertia.html#abc8c44305f0c4a5bd5b86d3125e4d689":[3,0,0,9,100,52],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#abc8c44305f0c4a5bd5b86d3125e4d689":[4,0,0,8,99,52],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#ac46497de66115fa16b9512fc1a43688c":[3,0,0,9,100,12],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#ac46497de66115fa16b9512fc1a43688c":[4,0,0,8,99,12],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#ac46cc6a9a7cb66ed822f8d54070e47e2":[3,0,0,9,100,24],
@@ -45,8 +47,8 @@ var NAVTREEINDEX36 =
 "classdrake_1_1multibody_1_1_spatial_momentum.html#ab5bf8cdf4436a0ede1be7b367896d046":[4,0,0,8,100,2],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#abfec0f0b6049e7a5f0e42bb69a2b5fc8":[3,0,0,9,101,6],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#abfec0f0b6049e7a5f0e42bb69a2b5fc8":[4,0,0,8,100,6],
-"classdrake_1_1multibody_1_1_spatial_momentum.html#ad3ff325ca21d5d06e048aa09efac5ad6":[3,0,0,9,168],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#ad3ff325ca21d5d06e048aa09efac5ad6":[3,0,0,9,101,10],
+"classdrake_1_1multibody_1_1_spatial_momentum.html#ad3ff325ca21d5d06e048aa09efac5ad6":[3,0,0,9,168],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#ad3ff325ca21d5d06e048aa09efac5ad6":[4,0,0,8,100,10],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#af85fa43ed14ddcf419de332609f759cf":[3,0,0,9,101,8],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#af85fa43ed14ddcf419de332609f759cf":[4,0,0,8,100,8],
@@ -72,8 +74,8 @@ var NAVTREEINDEX36 =
 "classdrake_1_1multibody_1_1_spatial_vector.html#a49cceba168b76c123d5da2eca8b2fdd1":[4,0,0,8,101,34],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a4ae7e1f6885eb47c11062cc74e6a6e19":[3,0,0,9,102,7],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a4ae7e1f6885eb47c11062cc74e6a6e19":[4,0,0,8,101,7],
-"classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0":[3,0,0,9,177],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0":[3,0,0,9,102,35],
+"classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0":[3,0,0,9,177],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0":[4,0,0,8,101,35],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a55ef3f82fae301899d9bb544a7ea2de0":[3,0,0,9,102,3],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a55ef3f82fae301899d9bb544a7ea2de0":[4,0,0,8,101,3],
@@ -129,8 +131,8 @@ var NAVTREEINDEX36 =
 "classdrake_1_1multibody_1_1_spatial_velocity.html":[4,0,0,8,102],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd":[3,0,0,9,103,4],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd":[4,0,0,8,102,4],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[3,0,0,9,169],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[3,0,0,9,103,12],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[3,0,0,9,169],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a242b021a24954a1624800f6c96be81d3":[4,0,0,8,102,12],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a363245e06cf23fc8746e5ca3bbfe60ce":[3,0,0,9,103,13],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a363245e06cf23fc8746e5ca3bbfe60ce":[3,0,0,9,173],
@@ -247,7 +249,5 @@ var NAVTREEINDEX36 =
 "classdrake_1_1multibody_1_1_toppra.html#a49d93953e372a44d097d43cb34c1eaee":[2,4,2,1,0,4],
 "classdrake_1_1multibody_1_1_toppra.html#a747143e6a184c4acd231af7438a18e3c":[2,4,2,1,0,7],
 "classdrake_1_1multibody_1_1_toppra.html#a9024708d5314cf3655e2b72c5c138a39":[2,4,2,1,0,2],
-"classdrake_1_1multibody_1_1_toppra.html#aa3e11263d138cbeb9d34f1e96f4165b9":[2,4,2,1,0,14],
-"classdrake_1_1multibody_1_1_toppra.html#aa3f29978767f60f2683fa2dbe3c040be":[2,4,2,1,0,9],
-"classdrake_1_1multibody_1_1_toppra.html#ab640e716a033c0d84482fedbda3616c2":[2,4,2,1,0,11]
+"classdrake_1_1multibody_1_1_toppra.html#aa3e11263d138cbeb9d34f1e96f4165b9":[2,4,2,1,0,14]
 };

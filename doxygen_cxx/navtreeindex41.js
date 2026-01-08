@@ -1,5 +1,7 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1planning_1_1_collision_checker.html#ae73ffb323e76df5b732fa9c6c6e74592":[2,4,2,2,1,38],
+"classdrake_1_1planning_1_1_collision_checker.html#ae76ac66c1677433ebe8cff135f77af58":[2,4,2,2,1,24],
 "classdrake_1_1planning_1_1_collision_checker.html#aebf58f4817df47ff85f1e4f3de824382":[2,4,2,2,1,82],
 "classdrake_1_1planning_1_1_collision_checker.html#aee97203e446d54e036ea9093c8c5efec":[2,4,2,2,1,70],
 "classdrake_1_1planning_1_1_collision_checker.html#af1190d81eb661b4151d32b844e86fc5a":[2,4,2,2,1,72],
@@ -247,7 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#abc05a7cfe199987b3bf448fc51caf4c6":[3,0,0,11,15,6],
 "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#abc05a7cfe199987b3bf448fc51caf4c6":[4,0,0,10,15,6],
 "classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#abc8a90327e579ad6a2b52df3e5656a8b":[3,0,0,11,15,5],
-"classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#abc8a90327e579ad6a2b52df3e5656a8b":[4,0,0,10,15,5],
-"classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#ad89a98bbdf59cc746094cb0308a7b045":[3,0,0,11,15,9],
-"classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#ad89a98bbdf59cc746094cb0308a7b045":[4,0,0,10,15,9]
+"classdrake_1_1planning_1_1_linear_distance_and_interpolation_provider.html#abc8a90327e579ad6a2b52df3e5656a8b":[4,0,0,10,15,5]
 };

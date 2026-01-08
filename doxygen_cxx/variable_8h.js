@@ -27,5 +27,7 @@ var variable_8h =
     [ "drake::symbolic::MakeVectorIntegerVariable", "namespacedrake_1_1symbolic.html#aa67f9414a4674809981130f03d1da9c0", null ],
     [ "drake::symbolic::MakeVectorVariable", "namespacedrake_1_1symbolic.html#a2e7c156277f8c2d91bd0a59c1d498138", null ],
     [ "drake::symbolic::MakeVectorVariable", "namespacedrake_1_1symbolic.html#ae31d21987f2a78dacc64786ef86233cd", null ],
-    [ "drake::symbolic::operator<<", "namespacedrake_1_1symbolic.html#af69250c699b4b8cbcbb54d322570d175", null ]
+    [ "drake::symbolic::operator<<", "namespacedrake_1_1symbolic.html#a411e51a0c60278b06088ad1fa084e605", null ],
+    [ "drake::symbolic::operator<<", "namespacedrake_1_1symbolic.html#af69250c699b4b8cbcbb54d322570d175", null ],
+    [ "drake::symbolic::to_string", "namespacedrake_1_1symbolic.html#ac163e37c2a6109a9a469be234a3382d2", null ]
 ];

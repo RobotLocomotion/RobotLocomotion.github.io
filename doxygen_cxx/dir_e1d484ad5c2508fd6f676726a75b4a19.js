@@ -6,6 +6,8 @@ var dir_e1d484ad5c2508fd6f676726a75b4a19 =
     [ "gain_constraints_data_pool.h", "gain__constraints__data__pool_8h.html", null ],
     [ "gain_constraints_pool.h", "gain__constraints__pool_8h.html", null ],
     [ "icf_data.h", "icf__data_8h.html", null ],
+    [ "icf_external_systems_linearizer.h", "icf__external__systems__linearizer_8h.html", null ],
+    [ "icf_linear_feedback_gains.h", "icf__linear__feedback__gains_8h.html", null ],
     [ "icf_model.h", "icf__model_8h.html", null ],
     [ "icf_search_direction_data.h", "icf__search__direction__data_8h.html", null ],
     [ "icf_solver.h", "icf__solver_8h.html", null ],

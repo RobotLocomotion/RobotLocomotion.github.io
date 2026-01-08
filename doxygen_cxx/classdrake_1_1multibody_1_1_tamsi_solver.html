@@ -758,9 +758,9 @@ template&lt;typename T&gt; </div>
 </pre><p> Refer to this class's documentation for further details on the structure of the problem and the solution strategy. In the documented parameters below, <span class="tt">nv</span> is the number of generalized velocities and <span class="tt">nc</span> is the number of contact points.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>The mass matrix of the system, of size <span class="tt">nv <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> nv</span>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Jn</td><td>The normal separation velocities Jacobian, of size <span class="tt">nc <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> nv</span>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Jt</td><td>The tangential velocities Jacobian, of size <span class="tt">2nc <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>The mass matrix of the system, of size <span class="tt">nv x nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jn</td><td>The normal separation velocities Jacobian, of size <span class="tt">nc x nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jt</td><td>The tangential velocities Jacobian, of size <span class="tt">2nc x nv</span>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_star</td><td>The generalized momentum the system would have at <span class="tt">s + 1</span> if contact forces were zero. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">fn</td><td>A vector of size <span class="tt">nc</span> containing the normal force at each contact point. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mu</td><td>A vector of size <span class="tt">nc</span> containing the friction coefficient at each contact point. The solver makes no distinction between static and dynamic coefficients of friction or, similarly, the solver assumes the static and dynamic coefficients of friction are the same.</td></tr>
@@ -840,9 +840,9 @@ template&lt;typename T&gt; </div>
 </pre><p> Refer to this class's documentation for further details on the structure of the problem and the solution strategy. In the documented parameters below, <span class="tt">nv</span> is the number of generalized velocities and <span class="tt">nc</span> is the number of contact points.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>The mass matrix of the system, of size <span class="tt">nv <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> nv</span>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Jn</td><td>The normal separation velocities Jacobian, of size <span class="tt">nc <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> nv</span>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Jt</td><td>The tangential velocities Jacobian, of size <span class="tt">2nc <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>The mass matrix of the system, of size <span class="tt">nv x nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jn</td><td>The normal separation velocities Jacobian, of size <span class="tt">nc x nv</span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Jt</td><td>The tangential velocities Jacobian, of size <span class="tt">2nc x nv</span>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_star</td><td>The generalized momentum the system would have at <span class="tt">n + 1</span> if contact forces were zero. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">fn0</td><td>Normal force at the previous time step. Always positive since bodies cannot attract each other. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">stiffness</td><td>A vector of size <span class="tt">nc</span> storing at each ith entry the stiffness coefficient for the ith contact pair. </td></tr>

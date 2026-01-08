@@ -1,5 +1,6 @@
 var NAVTREEINDEX28 =
 {
+"classdrake_1_1multibody_1_1_joint_actuator.html#a219373564f27d5532ccc5931708a1638":[4,0,0,8,54,25],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a24dcbf29c0d6cd766009a182a6484e3b":[3,0,0,9,55,17],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a24dcbf29c0d6cd766009a182a6484e3b":[4,0,0,8,54,17],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a2ae9bfe9ff9fa92e86c62acc0179d459":[3,0,0,9,55,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX28 =
 "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html":[2,1,0,6],
 "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#a0982779fb7c6ac117410b91a11bddb6b":[2,1,0,6,8],
 "classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#a20562b686f3edb1cc56056f761655acf":[2,1,0,6,5],
-"classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#a423a62bb6247f6ea30812d1da6444f26":[2,1,0,6,3],
-"classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#a6ff6fb27c48c945d85ca860a063543c9":[2,1,0,6,2]
+"classdrake_1_1multibody_1_1_minimum_distance_upper_bound_constraint.html#a423a62bb6247f6ea30812d1da6444f26":[2,1,0,6,3]
 };

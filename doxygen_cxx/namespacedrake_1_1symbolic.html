@@ -905,7 +905,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a975cce0c245364b8dfea662b296d7eb1" id="r_a975cce0c245364b8dfea662b296d7eb1"><td class="memTemplParams" colspan="2">template&lt;typename Result, typename Visitor, typename... Args&gt; </td></tr>
 <tr class="memitem:a975cce0c245364b8dfea662b296d7eb1 template"><td class="memItemLeft" align="right" valign="top">Result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a975cce0c245364b8dfea662b296d7eb1">VisitFormula</a> (Visitor *v, const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;f, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a975cce0c245364b8dfea662b296d7eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls visitor object <code class="param">v</code> with a symbolic formula <code class="param">f</code>, and arguments <code class="param">args</code>.  <br /></td></tr>
+<tr class="memitem:a411e51a0c60278b06088ad1fa084e605" id="r_a411e51a0c60278b06088ad1fa084e605"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a411e51a0c60278b06088ad1fa084e605">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var)</td></tr>
+<tr class="memdesc:a411e51a0c60278b06088ad1fa084e605"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:af69250c699b4b8cbcbb54d322570d175" id="r_af69250c699b4b8cbcbb54d322570d175"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af69250c699b4b8cbcbb54d322570d175">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479">Variable::Type</a> type)</td></tr>
+<tr class="memdesc:af69250c699b4b8cbcbb54d322570d175"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
+<tr class="memitem:ac163e37c2a6109a9a469be234a3382d2" id="r_ac163e37c2a6109a9a469be234a3382d2"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac163e37c2a6109a9a469be234a3382d2">to_string</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479">Variable::Type</a> &amp;type)</td></tr>
 <tr class="memitem:aaa2767293dcf51a7e6c97ac205f9fb21" id="r_aaa2767293dcf51a7e6c97ac205f9fb21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa2767293dcf51a7e6c97ac205f9fb21">MakeMatrixVariable</a> (int rows, int cols, const std::string &amp;name, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479">Variable::Type</a> type=<a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479ab1fa9dd3af034b3ef4291579aa673c07">Variable::Type::CONTINUOUS</a>)</td></tr>
 <tr class="memdesc:aaa2767293dcf51a7e6c97ac205f9fb21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a dynamically-sized Eigen matrix of symbolic variables.  <br /></td></tr>
 <tr class="memitem:a077c5aa3c1d61b9bf22590e5325af815" id="r_a077c5aa3c1d61b9bf22590e5325af815"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a077c5aa3c1d61b9bf22590e5325af815">MakeMatrixBooleanVariable</a> (int rows, int cols, const std::string &amp;name)</td></tr>
@@ -1078,8 +1082,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a88ddd8d42b90d109f5d7312db729a959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all even degree monomials up to a given degree under the graded reverse lexicographic order.  <br /></td></tr>
 <tr class="memitem:afb92bbabf88873d1766586c031a6f3e2" id="r_afb92bbabf88873d1766586c031a6f3e2"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a>, Eigen::Dynamic, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb92bbabf88873d1766586c031a6f3e2">OddDegreeMonomialBasis</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;vars, int degree)</td></tr>
 <tr class="memdesc:afb92bbabf88873d1766586c031a6f3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all odd degree monomials up to a given degree under the graded reverse lexicographic order.  <br /></td></tr>
-<tr class="memitem:ab45e72ece70fdb6eba8afcfc7b773c76" id="r_ab45e72ece70fdb6eba8afcfc7b773c76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab45e72ece70fdb6eba8afcfc7b773c76">CalcMonomialBasisOrderUpToOne</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, bool sort_monomial=false)</td></tr>
-<tr class="memdesc:ab45e72ece70fdb6eba8afcfc7b773c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all the monomials of <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span>, such that the degree for <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(i)</a> is no larger than 1 for every <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(i)</a> in <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span>.  <br /></td></tr>
+<tr class="memitem:ab45e72ece70fdb6eba8afcfc7b773c76" id="r_ab45e72ece70fdb6eba8afcfc7b773c76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab45e72ece70fdb6eba8afcfc7b773c76">CalcMonomialBasisOrderUpToOne</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;x, bool sort_monomial=false)</td></tr>
+<tr class="memdesc:ab45e72ece70fdb6eba8afcfc7b773c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all the monomials of <span class="tt">x</span>, such that the degree for x(i) is no larger than 1 for every x(i) in <span class="tt">x</span>.  <br /></td></tr>
 <tr class="memitem:af36c077e8377e8f6f79da19b22034a88" id="r_af36c077e8377e8f6f79da19b22034a88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af36c077e8377e8f6f79da19b22034a88">operator-</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p)</td></tr>
 <tr class="memdesc:af36c077e8377e8f6f79da19b22034a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unary minus operation for polynomial.  <br /></td></tr>
 <tr class="memitem:af24522315ccc26ae75f90fe52edf75f8" id="r_af24522315ccc26ae75f90fe52edf75f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af24522315ccc26ae75f90fe52edf75f8">operator+</a> (<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> p1, const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p2)</td></tr>
@@ -1172,8 +1176,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a36162c4bad2ea2acd8b5ca7bad262ce9" id="r_a36162c4bad2ea2acd8b5ca7bad262ce9"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>
 <tr class="memitem:a36162c4bad2ea2acd8b5ca7bad262ce9 template"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a>, MatrixL::RowsAtCompileTime, MatrixR::ColsAtCompileTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36162c4bad2ea2acd8b5ca7bad262ce9">operator*</a> (const MatrixL &amp;lhs, const MatrixR &amp;rhs)</td></tr>
 <tr class="memdesc:a36162c4bad2ea2acd8b5ca7bad262ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the following operations:  <br /></td></tr>
-<tr class="memitem:ac6940f8db0a8eb87213dfb7416e13699" id="r_ac6940f8db0a8eb87213dfb7416e13699"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6940f8db0a8eb87213dfb7416e13699">ReplaceBilinearTerms</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;y, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;W)</td></tr>
-<tr class="memdesc:ac6940f8db0a8eb87213dfb7416e13699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces all the bilinear product terms in the expression <span class="tt">e</span>, with the corresponding terms in <span class="tt">W</span>, where <span class="tt">W</span> represents the matrix x * yᵀ, such that after replacement, <span class="tt">e</span> does not have bilinear terms involving <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> and <span class="tt">y</span>.  <br /></td></tr>
+<tr class="memitem:ac6940f8db0a8eb87213dfb7416e13699" id="r_ac6940f8db0a8eb87213dfb7416e13699"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6940f8db0a8eb87213dfb7416e13699">ReplaceBilinearTerms</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;x, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &amp;y, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &amp;W)</td></tr>
+<tr class="memdesc:ac6940f8db0a8eb87213dfb7416e13699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces all the bilinear product terms in the expression <span class="tt">e</span>, with the corresponding terms in <span class="tt">W</span>, where <span class="tt">W</span> represents the matrix x * yᵀ, such that after replacement, <span class="tt">e</span> does not have bilinear terms involving <span class="tt">x</span> and <span class="tt">y</span>.  <br /></td></tr>
 <tr class="memitem:a327c04af4b8fa510bd365a1bb7dfe6ed" id="r_a327c04af4b8fa510bd365a1bb7dfe6ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a134e54042165751a5e5369b4631c90eb">Rewriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a327c04af4b8fa510bd365a1bb7dfe6ed">MakeRuleRewriter</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_rewriting_rule.html">RewritingRule</a> &amp;r)</td></tr>
 <tr class="memdesc:a327c04af4b8fa510bd365a1bb7dfe6ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a rewriter based on a rewriting rule <code class="param">r</code>.  <br /></td></tr>
 <tr class="memitem:a6c07a8bfb2806c62d5dccd3e5b024786" id="r_a6c07a8bfb2806c62d5dccd3e5b024786"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c07a8bfb2806c62d5dccd3e5b024786">Substitute</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e, const <a class="el" href="#a13c5d9eccfc9643fdd5764d6e72b8faf">SinCosSubstitution</a> &amp;subs)</td></tr>
@@ -1557,7 +1561,7 @@ template&lt;typename BasisElement&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Generates all the monomials of <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span>, such that the degree for <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(i)</a> is no larger than 1 for every <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(i)</a> in <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span>. </p>
+<p>Generates all the monomials of <span class="tt">x</span>, such that the degree for x(i) is no larger than 1 for every x(i) in <span class="tt">x</span>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>The variables whose monomials are generated. </td></tr>
@@ -1832,7 +1836,7 @@ template&lt;int rows, typename BasisElement&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>num_variable. Number of variables in the expression. 2 * <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a> + 3 has 1 variable; 2 * <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a> + 3 * <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(1)</a> - 2 * <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a> has 1 variable, since the <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a> term cancels.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>num_variable. Number of variables in the expression. 2 * x(0) + 3 has 1 variable; 2 * x(0) + 3 * x(1) - 2 * x(0) has 1 variable, since the x(0) term cancels.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the input expression is not affine. </td></tr>
@@ -2081,12 +2085,12 @@ parameter vector", α, which depends only on <code class="param">parameters:</co
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">poly</td><td>Quadratic polynomial to decompose. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">map_var_to_index</td><td>maps variables in <span class="tt">poly.GetVariables()</span> to the index in the vector <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">map_var_to_index</td><td>maps variables in <span class="tt">poly.GetVariables()</span> to the index in the vector <span class="tt">x</span>. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">Q</td><td>The Hessian of the quadratic expression. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>The size of Q should be <span class="tt">num_variables <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> num_variables</span>. Q is a symmetric matrix. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The size of Q should be <span class="tt">num_variables x num_variables</span>. Q is a symmetric matrix. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">b</td><td>linear term of the quadratic expression. </td></tr>
@@ -2262,7 +2266,7 @@ template&lt;typename Derived&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns all even degree monomials up to a given degree under the graded reverse lexicographic order. </p>
-<p>A monomial has an even degree if its total degree is even. So xy is an even degree monomial (degree 2) while x²y is not (degree 3). Note that graded reverse lexicographic order uses the total order among <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> which is based on a variable's unique ID. For example, for a given variable ordering x &gt; y &gt; z, <span class="tt"><a class="el" href="#a88ddd8d42b90d109f5d7312db729a959" title="Returns all even degree monomials up to a given degree under the graded reverse lexicographic order.">EvenDegreeMonomialBasis</a>({<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, y, z}, 2)</span> returns a column vector <span class="tt">[x², xy, y², xz, yz, z², 1]</span>.</p>
+<p>A monomial has an even degree if its total degree is even. So xy is an even degree monomial (degree 2) while x²y is not (degree 3). Note that graded reverse lexicographic order uses the total order among <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> which is based on a variable's unique ID. For example, for a given variable ordering x &gt; y &gt; z, <span class="tt"><a class="el" href="#a88ddd8d42b90d109f5d7312db729a959" title="Returns all even degree monomials up to a given degree under the graded reverse lexicographic order.">EvenDegreeMonomialBasis</a>({x, y, z}, 2)</span> returns a column vector <span class="tt">[x², xy, y², xz, yz, z², 1]</span>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd><code class="param">vars</code> is a non-empty set. </dd>
 <dd>
 <code class="param">degree</code> is a non-negative integer. </dd></dl>
@@ -5912,8 +5916,8 @@ vars.size() == <code class="param">n</code>. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns all monomials up to a given degree under the graded reverse lexicographic order. </p>
-<p>Note that graded reverse lexicographic order uses the total order among <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> which is based on a variable's unique ID. For example, for a given variable ordering x &gt; y &gt; z, <span class="tt"><a class="el" href="#adc6302f8ed7ce764202bffb915277dc2" title="Returns all monomials up to a given degree under the graded reverse lexicographic order.">MonomialBasis</a>({<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, y, z},
-2)</span> returns a column vector <span class="tt">[x^2, xy, y^2, xz, yz, z^2, <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, y, z, 1]</span>.</p>
+<p>Note that graded reverse lexicographic order uses the total order among <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> which is based on a variable's unique ID. For example, for a given variable ordering x &gt; y &gt; z, <span class="tt"><a class="el" href="#adc6302f8ed7ce764202bffb915277dc2" title="Returns all monomials up to a given degree under the graded reverse lexicographic order.">MonomialBasis</a>({x, y, z},
+2)</span> returns a column vector <span class="tt">[x^2, xy, y^2, xz, yz, z^2, x, y, z, 1]</span>.</p>
 <dl class="section pre"><dt>Precondition</dt><dd><code class="param">vars</code> is a non-empty set. </dd>
 <dd>
 <code class="param">degree</code> is a non-negative integer. </dd></dl>
@@ -5969,7 +5973,7 @@ vars.size() == <code class="param">n</code>. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns all odd degree monomials up to a given degree under the graded reverse lexicographic order. </p>
-<p>A monomial has an odd degree if its total degree is odd. So x²y is an odd degree monomial (degree 3) while xy is not (degree 2). Note that graded reverse lexicographic order uses the total order among <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> which is based on a variable's unique ID. For example, for a given variable ordering x &gt; y &gt; z, <span class="tt"><a class="el" href="#afb92bbabf88873d1766586c031a6f3e2" title="Returns all odd degree monomials up to a given degree under the graded reverse lexicographic order.">OddDegreeMonomialBasis</a>({<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, y, z}, 3)</span> returns a column vector <span class="tt">[x³, x²y, xy², y³, x²z, xyz, y²z, xz², yz², z³, <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>,
+<p>A monomial has an odd degree if its total degree is odd. So x²y is an odd degree monomial (degree 3) while xy is not (degree 2). Note that graded reverse lexicographic order uses the total order among <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> which is based on a variable's unique ID. For example, for a given variable ordering x &gt; y &gt; z, <span class="tt"><a class="el" href="#afb92bbabf88873d1766586c031a6f3e2" title="Returns all odd degree monomials up to a given degree under the graded reverse lexicographic order.">OddDegreeMonomialBasis</a>({x, y, z}, 3)</span> returns a column vector <span class="tt">[x³, x²y, xy², y³, x²z, xyz, y²z, xz², yz², z³, x,
 y, z]</span></p>
 <dl class="section pre"><dt>Precondition</dt><dd><code class="param">vars</code> is a non-empty set. </dd>
 <dd>
@@ -9949,7 +9953,7 @@ template&lt;typename ScalarType, typename Derived&gt; </div>
 </div>
 </div>
 <a id="af6ea3eaf1a7e5beed8feb1c401d51bbc" name="af6ea3eaf1a7e5beed8feb1c401d51bbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6ea3eaf1a7e5beed8feb1c401d51bbc">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ea3eaf1a7e5beed8feb1c401d51bbc">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9970,7 +9974,7 @@ template&lt;typename ScalarType, typename Derived&gt; </div>
 </div>
 </div>
 <a id="a96c90655d4fb45b63c8e1bde735e6c47" name="a96c90655d4fb45b63c8e1bde735e6c47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96c90655d4fb45b63c8e1bde735e6c47">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c90655d4fb45b63c8e1bde735e6c47">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9991,7 +9995,7 @@ template&lt;typename ScalarType, typename Derived&gt; </div>
 </div>
 </div>
 <a id="aab36f2eb0e38222af36d1499d0a2f47a" name="aab36f2eb0e38222af36d1499d0a2f47a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab36f2eb0e38222af36d1499d0a2f47a">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aab36f2eb0e38222af36d1499d0a2f47a">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10014,7 +10018,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="ad946994348eafef6d3e20ebc08bfa5d2" name="ad946994348eafef6d3e20ebc08bfa5d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad946994348eafef6d3e20ebc08bfa5d2">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[4/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad946994348eafef6d3e20ebc08bfa5d2">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[4/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10034,8 +10038,33 @@ template&lt;typename BasisElement&gt; </div>
 
 </div>
 </div>
+<a id="a411e51a0c60278b06088ad1fa084e605" name="a411e51a0c60278b06088ad1fa084e605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a411e51a0c60278b06088ad1fa084e605">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[5/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>var</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-05-01. </dd></dl>
+
+</div>
+</div>
 <a id="af69250c699b4b8cbcbb54d322570d175" name="af69250c699b4b8cbcbb54d322570d175"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af69250c699b4b8cbcbb54d322570d175">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[5/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af69250c699b4b8cbcbb54d322570d175">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[6/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10053,10 +10082,14 @@ template&lt;typename BasisElement&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-05-01. </dd></dl>
+
 </div>
 </div>
 <a id="ad33e2289eb5f8ba9d8a286bd6e954001" name="ad33e2289eb5f8ba9d8a286bd6e954001"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad33e2289eb5f8ba9d8a286bd6e954001">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[6/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad33e2289eb5f8ba9d8a286bd6e954001">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[7/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10077,7 +10110,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="ad8ca491b4e798266df4f026a079f4418" name="ad8ca491b4e798266df4f026a079f4418"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8ca491b4e798266df4f026a079f4418">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[7/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8ca491b4e798266df4f026a079f4418">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[8/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10098,7 +10131,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="ada77c9969b0422090c05636a895c0e8e" name="ada77c9969b0422090c05636a895c0e8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada77c9969b0422090c05636a895c0e8e">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[8/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ada77c9969b0422090c05636a895c0e8e">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[9/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10119,7 +10152,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="aebaa1c50ddcd18c8de9ba5ebc01f3989" name="aebaa1c50ddcd18c8de9ba5ebc01f3989"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebaa1c50ddcd18c8de9ba5ebc01f3989">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[9/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aebaa1c50ddcd18c8de9ba5ebc01f3989">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[10/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10304,7 +10337,7 @@ template&lt;typename Derived, typename ScalarType&gt; </div>
 <div class="line">Eigen::Array&lt;Formula, 2, 2&gt; f = (a == 3.5);</div>
 <div class="line"><span class="comment">// Here f = |(x == 3.5)  (y == 3.5)|</span></div>
 <div class="line"><span class="comment">//          |(z == 3.5)  (w == 3.5)|.</span></div>
-<div class="ttc" id="aclassdrake_1_1symbolic_1_1_variable_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_variable.html">drake::symbolic::Variable</a></div><div class="ttdoc">Represents a symbolic variable.</div><div class="ttdef"><b>Definition</b> variable.h:34</div></div>
+<div class="ttc" id="aclassdrake_1_1symbolic_1_1_variable_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_variable.html">drake::symbolic::Variable</a></div><div class="ttdoc">Represents a symbolic variable.</div><div class="ttdef"><b>Definition</b> variable.h:37</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -10391,9 +10424,9 @@ template&lt;typename DerivedA, typename DerivedB&gt; </div>
 <div class="fragment"><div class="line"><span class="comment">// set up v1 = [y x y] and v2 = [1 2 1]</span></div>
 <div class="line"><a class="code hl_typedef" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX&lt;Expression&gt;</a> v1{3};</div>
 <div class="line"><a class="code hl_typedef" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX&lt;Expression&gt;</a> v2{3};</div>
-<div class="line"><span class="keyword">const</span> Variable <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>{<span class="stringliteral">&quot;x&quot;</span>};</div>
+<div class="line"><span class="keyword">const</span> Variable x{<span class="stringliteral">&quot;x&quot;</span>};</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> y{<span class="stringliteral">&quot;y&quot;</span>};</div>
-<div class="line">v1 &lt;&lt; y, <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, y;</div>
+<div class="line">v1 &lt;&lt; y, x, y;</div>
 <div class="line">v2 &lt;&lt; 1, 2, 1;</div>
 <div class="line"><span class="comment">// Here v1_eq_v2 = ((x = 2) ∧ (y = 1))</span></div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> v1_eq_v2{v1 == v2};</div>
@@ -10402,10 +10435,9 @@ template&lt;typename DerivedA, typename DerivedB&gt; </div>
 <div class="line">  std::cerr &lt;&lt; f &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// The outcome of the above loop is:</span></div>
-<div class="line">(<a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> = 2)</div>
+<div class="line">(x = 2)</div>
 <div class="line">(y = 1)</div>
 <div class="ttc" id="aclassdrake_1_1symbolic_1_1_formula_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_formula.html">drake::symbolic::Formula</a></div><div class="ttdoc">Represents a symbolic form of a first-order logic formula.</div><div class="ttdef"><b>Definition</b> formula.h:114</div></div>
-<div class="ttc" id="alight__parameter_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> light_parameter.h:147</div></div>
 <div class="ttc" id="anamespacedrake_1_1symbolic_html_a5a51076f5f4ab9497965268ceb34e82c"><div class="ttname"><a href="#a5a51076f5f4ab9497965268ceb34e82c">drake::symbolic::get_operands</a></div><div class="ttdeci">const std::set&lt; Formula &gt; &amp; get_operands(const Formula &amp;f)</div><div class="ttdoc">Returns the set of formulas in a n-ary formula f.</div></div>
 <div class="ttc" id="anamespacedrake_html_a77dd228fb4dd66a2c17dd3f7f38ffd85"><div class="ttname"><a href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, Eigen::Dynamic, 1 &gt; VectorX</div><div class="ttdoc">A column vector of any size, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:62</div></div>
 </div><!-- fragment --> 
@@ -11167,23 +11199,23 @@ template&lt;typename BasisElement&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Replaces all the bilinear product terms in the expression <span class="tt">e</span>, with the corresponding terms in <span class="tt">W</span>, where <span class="tt">W</span> represents the matrix x * yᵀ, such that after replacement, <span class="tt">e</span> does not have bilinear terms involving <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> and <span class="tt">y</span>. </p>
-<p>For example, if e = <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a>*y(0) + 2 * <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a>*y(1) + <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(1)</a> * y(1) + 3 * <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(1)</a>, <span class="tt">e</span> has bilinear terms <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a>*y(0), <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(0)</a> * y(1) and <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(2)</a> * y(1), if we call ReplaceBilinearTerms(e, x, y, W) where W(i, j) represent the term <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(i)</a> * y(j), then this function returns W(0, 0) + 2 * W(0, 1) + W(1, 1) + 3 * <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(1)</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Replaces all the bilinear product terms in the expression <span class="tt">e</span>, with the corresponding terms in <span class="tt">W</span>, where <span class="tt">W</span> represents the matrix x * yᵀ, such that after replacement, <span class="tt">e</span> does not have bilinear terms involving <span class="tt">x</span> and <span class="tt">y</span>. </p>
+<p>For example, if e = x(0)*y(0) + 2 * x(0)*y(1) + x(1) * y(1) + 3 * x(1), <span class="tt">e</span> has bilinear terms x(0)*y(0), x(0) * y(1) and x(2) * y(1), if we call ReplaceBilinearTerms(e, x, y, W) where W(i, j) represent the term x(i) * y(j), then this function returns W(0, 0) + 2 * W(0, 1) + W(1, 1) + 3 * x(1). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">e</td><td>An expression potentially contains bilinear products between x and y. </td></tr>
-    <tr><td class="paramname">x</td><td>The bilinear product between <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> and <span class="tt">y</span> will be replaced by the corresponding term in <span class="tt">W</span>. </td></tr>
+    <tr><td class="paramname">x</td><td>The bilinear product between <span class="tt">x</span> and <span class="tt">y</span> will be replaced by the corresponding term in <span class="tt">W</span>. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> contains duplicate entries. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">x</span> contains duplicate entries. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">y</td><td>The bilinear product between <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> and <span class="tt">y</span> will be replaced by the corresponding term in <span class="tt">W</span>. </td></tr>
+    <tr><td class="paramname">y</td><td>The bilinear product between <span class="tt">x</span> and <span class="tt">y</span> will be replaced by the corresponding term in <span class="tt">W</span>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -11195,7 +11227,7 @@ template&lt;typename BasisElement&gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">W</td><td>Bilinear product term <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(i)</a> * y(j) will be replaced by W(i, j). If W(i,j) is not a single variable, but an expression, then this expression cannot contain a variable in either x or y. </td></tr>
+    <tr><td class="paramname">W</td><td>Bilinear product term x(i) * y(j) will be replaced by W(i, j). If W(i,j) is not a single variable, but an expression, then this expression cannot contain a variable in either x or y. </td></tr>
   </table>
   </dd>
 </dl>
@@ -11206,7 +11238,7 @@ template&lt;typename BasisElement&gt; </div>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>W.rows() == x.rows() and W.cols() == y.rows(). </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The symbolic expression after replacing <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x(i)</a> * y(j) with W(i, j). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The symbolic expression after replacing x(i) * y(j) with W(i, j). </dd></dl>
 
 </div>
 </div>
@@ -11381,7 +11413,7 @@ template&lt;typename Derived&gt; </div>
   subs.emplace(x, SinCos(sx, cx));
   subs.emplace(y, SinCos(sy, cy));
   Expression e = Substitute(x * sin(x + y), subs);
-</pre><p> will result in the expression <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> * (sx*cy + cx*sy)</span>.</p>
+</pre><p> will result in the expression <span class="tt">x * (sx*cy + cx*sy)</span>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">subs</td><td>When set to one of the half_angle options, then the same workflow replaces instances of sin(q/2) and cos(q/2) in <span class="tt">e</span> will be replaced with <span class="tt">s</span>, and <span class="tt">c</span>. <br  />
@@ -11846,6 +11878,23 @@ template&lt;typename Derived&gt; </div>
 
 <p>Casts <code class="param">f_ptr</code> to <code>shared_ptr&lt;const RelationalFormulaCell&gt;</code>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code>is_relational(*f_ptr)</code> is true. </dd></dl>
+
+</div>
+</div>
+<a id="ac163e37c2a6109a9a469be234a3382d2" name="ac163e37c2a6109a9a469be234a3382d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac163e37c2a6109a9a469be234a3382d2">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a5f787df9cdf370248382504196841479">Variable::Type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -5995,6 +5995,22 @@ server.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Meshcat.StaticZip">
+<span class="sig-name descname"><span class="pre">StaticZip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.StaticZip" title="Link to this definition"></a></dt>
+<dd><p>Like StaticHtml(), returns a standalone snapshot of the visualizer and
+its contents; the return value is a ZIP file containing a thin
+<code class="docutils literal notranslate"><span class="pre">meshcat.html</span></code> page and the assets (meshes, textures, etc.) as
+separate files.</p>
+<p>When you are uploading the unzipped files to a website, this will
+typically be a more efficient representation as compared to
+StaticHtml(). However, it cannot be opened directly by a browser from
+disk. A simple web server like <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">http.server</span></code> is required.</p>
+<p>You can also use your browser to download this file, by typing
+“/download.zip” on the end of the URL (i.e., accessing <code class="docutils literal notranslate"><span class="pre">web_url()</span> <span class="pre">+</span>
+<span class="pre">&quot;/download.zip&quot;</span></code>).</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pydrake.geometry.Meshcat.StopRecording">
 <span class="sig-name descname"><span class="pre">StopRecording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Meshcat" title="pydrake.geometry.Meshcat"><span class="pre">pydrake.geometry.Meshcat</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Meshcat.StopRecording" title="Link to this definition"></a></dt>
 <dd><p>Sets a flag to pause/stop recording. When stopped, publish events will

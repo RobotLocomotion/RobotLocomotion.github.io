@@ -10,7 +10,6 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "autodiff_config.h", "autodiff__config_8h.html", "autodiff__config_8h" ],
     [ "autodiff_overloads.h", "autodiff__overloads_8h.html", "autodiff__overloads_8h" ],
     [ "autodiffxd.h", "autodiffxd_8h.html", "autodiffxd_8h" ],
-    [ "bit_cast.h", "bit__cast_8h.html", null ],
     [ "cond.h", "cond_8h.html", "cond_8h" ],
     [ "constants.h", "constants_8h.html", "constants_8h" ],
     [ "copyable_unique_ptr.h", "copyable__unique__ptr_8h.html", "copyable__unique__ptr_8h" ],

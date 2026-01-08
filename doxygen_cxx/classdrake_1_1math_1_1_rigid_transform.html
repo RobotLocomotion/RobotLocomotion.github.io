@@ -1415,13 +1415,13 @@ template&lt;typename Derived&gt; </div>
 <p>Multiplies <span class="tt">this</span> RigidTransform <span class="tt">X_AB</span> by the n position vectors <span class="tt">p_BoQ1_B</span> ... <span class="tt">p_BoQn_B</span>, where <span class="tt">p_BoQi_B</span> is the iᵗʰ position vector from Bo (frame B's origin) to an arbitrary point Qi, expressed in frame B. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p_BoQ_B</td><td><span class="tt">3 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span> matrix with n position vectors <span class="tt">p_BoQi_B</span> or an expression that resolves to a <span class="tt">3 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span> matrix of position vectors. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_BoQ_B</td><td><span class="tt">3 x n</span> matrix with n position vectors <span class="tt">p_BoQi_B</span> or an expression that resolves to a <span class="tt">3 x n</span> matrix of position vectors. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">p_AoQ_A</td><td><span class="tt">3 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span> matrix with n position vectors <span class="tt">p_AoQi_A</span>, i.e., n position vectors from Ao (frame A's origin) to Qi, expressed in frame A. Specifically, this operator* is defined so that <span class="tt">X_AB * p_BoQ_B</span> returns <span class="tt">p_AoQ_A = p_AoBo_A + R_AB * p_BoQ_B</span>, where <span class="tt">p_AoBo_A</span> is the position vector from Ao to Bo expressed in A and <span class="tt">R_AB</span> is the rotation matrix relating the orientation of frames A and B. </td></tr>
+    <tr><td class="paramname">p_AoQ_A</td><td><span class="tt">3 x n</span> matrix with n position vectors <span class="tt">p_AoQi_A</span>, i.e., n position vectors from Ao (frame A's origin) to Qi, expressed in frame A. Specifically, this operator* is defined so that <span class="tt">X_AB * p_BoQ_B</span> returns <span class="tt">p_AoQ_A = p_AoBo_A + R_AB * p_BoQ_B</span>, where <span class="tt">p_AoBo_A</span> is the position vector from Ao to Bo expressed in A and <span class="tt">R_AB</span> is the rotation matrix relating the orientation of frames A and B. </td></tr>
   </table>
   </dd>
 </dl>

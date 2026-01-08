@@ -213,15 +213,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a70d8f7f9d89ada6b3b0230add0a65420"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mapping from a <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html" title="Represents a monomial, a product of powers of variables with non-negative integer exponents.">Monomial</a> to its corresponding coefficient of this polynomial.  <br /></td></tr>
 <tr class="memitem:a07e43dd6afaaafb0291e1067a4479212" id="r_a07e43dd6afaaafb0291e1067a4479212"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07e43dd6afaaafb0291e1067a4479212">ToExpression</a> () const</td></tr>
 <tr class="memdesc:a07e43dd6afaaafb0291e1067a4479212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an equivalent symbolic expression of this polynomial.  <br /></td></tr>
-<tr class="memitem:a1f0720a278d44bc59ba1f85d03fdf604" id="r_a1f0720a278d44bc59ba1f85d03fdf604"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f0720a278d44bc59ba1f85d03fdf604">Differentiate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>) const</td></tr>
-<tr class="memdesc:a1f0720a278d44bc59ba1f85d03fdf604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Differentiates this polynomial with respect to the variable <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span>.  <br /></td></tr>
+<tr class="memitem:a1f0720a278d44bc59ba1f85d03fdf604" id="r_a1f0720a278d44bc59ba1f85d03fdf604"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f0720a278d44bc59ba1f85d03fdf604">Differentiate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;x) const</td></tr>
+<tr class="memdesc:a1f0720a278d44bc59ba1f85d03fdf604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Differentiates this polynomial with respect to the variable <span class="tt">x</span>.  <br /></td></tr>
 <tr class="memitem:af33fc2dcecef4e9142f0573c0dd63c7a" id="r_af33fc2dcecef4e9142f0573c0dd63c7a"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
 <tr class="memitem:af33fc2dcecef4e9142f0573c0dd63c7a template"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>, 1, Derived::RowsAtCompileTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af33fc2dcecef4e9142f0573c0dd63c7a">Jacobian</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;vars) const</td></tr>
 <tr class="memdesc:af33fc2dcecef4e9142f0573c0dd63c7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Jacobian matrix J of the polynomial with respect to <span class="tt">vars</span>.  <br /></td></tr>
-<tr class="memitem:a6ad606c2af3cbfde8ce56a4fa1b93f8f" id="r_a6ad606c2af3cbfde8ce56a4fa1b93f8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ad606c2af3cbfde8ce56a4fa1b93f8f">Integrate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>) const</td></tr>
-<tr class="memdesc:a6ad606c2af3cbfde8ce56a4fa1b93f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrates this polynomial with respect to an indeterminate <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span>.  <br /></td></tr>
-<tr class="memitem:a9e30f757e2228393f0b85c6c772d537e" id="r_a9e30f757e2228393f0b85c6c772d537e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e30f757e2228393f0b85c6c772d537e">Integrate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, <a class="el" href="classdouble.html">double</a> a, <a class="el" href="classdouble.html">double</a> b) const</td></tr>
-<tr class="memdesc:a9e30f757e2228393f0b85c6c772d537e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the definite integrate of this polynomial with respect to the indeterminate <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> over the domain [a, b].  <br /></td></tr>
+<tr class="memitem:a6ad606c2af3cbfde8ce56a4fa1b93f8f" id="r_a6ad606c2af3cbfde8ce56a4fa1b93f8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ad606c2af3cbfde8ce56a4fa1b93f8f">Integrate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;x) const</td></tr>
+<tr class="memdesc:a6ad606c2af3cbfde8ce56a4fa1b93f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrates this polynomial with respect to an indeterminate <span class="tt">x</span>.  <br /></td></tr>
+<tr class="memitem:a9e30f757e2228393f0b85c6c772d537e" id="r_a9e30f757e2228393f0b85c6c772d537e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e30f757e2228393f0b85c6c772d537e">Integrate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;x, <a class="el" href="classdouble.html">double</a> a, <a class="el" href="classdouble.html">double</a> b) const</td></tr>
+<tr class="memdesc:a9e30f757e2228393f0b85c6c772d537e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the definite integrate of this polynomial with respect to the indeterminate <span class="tt">x</span> over the domain [a, b].  <br /></td></tr>
 <tr class="memitem:acaa87c27bae38b0daed338c482de9a0e" id="r_acaa87c27bae38b0daed338c482de9a0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaa87c27bae38b0daed338c482de9a0e">Evaluate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
 <tr class="memdesc:acaa87c27bae38b0daed338c482de9a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates this polynomial under a given environment <span class="tt">env</span>.  <br /></td></tr>
 <tr class="memitem:aae1961fc948aba3ce3816dcf712140ca" id="r_aae1961fc948aba3ce3816dcf712140ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a1b6d065eee48c77e7ee107f06a046de2">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae1961fc948aba3ce3816dcf712140ca">EvaluatePartial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
@@ -674,8 +674,8 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Differentiates this polynomial with respect to the variable <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span>. </p>
-<p>Note that a variable <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> can be either a decision variable or an indeterminate. </p>
+<p>Differentiates this polynomial with respect to the variable <span class="tt">x</span>. </p>
+<p>Note that a variable <span class="tt">x</span> can be either a decision variable or an indeterminate. </p>
 
 </div>
 </div>
@@ -903,7 +903,7 @@ indeterminates.rows()</span>. </td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the coefficients of this polynomial is not an affine expression of its decision variables. For example, the polynomial (2+sin(a)) * x² + 1 (where <span class="tt">a</span> is a decision variable and <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> is a indeterminate) doesn't have affine expression as its coefficient 2+sin(a). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the coefficients of this polynomial is not an affine expression of its decision variables. For example, the polynomial (2+sin(a)) * x² + 1 (where <span class="tt">a</span> is a decision variable and <span class="tt">x</span> is a indeterminate) doesn't have affine expression as its coefficient 2+sin(a). </td></tr>
   </table>
   </dd>
 </dl>
@@ -988,10 +988,10 @@ indeterminates.rows()</span>. </td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Integrates this polynomial with respect to an indeterminate <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span>. </p>
-<p>Integration with respect to decision variables is not supported yet. If <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> is not an indeterminate nor decision variable, then it will be added to the list of indeterminates. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>Integrates this polynomial with respect to an indeterminate <span class="tt">x</span>. </p>
+<p>Integration with respect to decision variables is not supported yet. If <span class="tt">x</span> is not an indeterminate nor decision variable, then it will be added to the list of indeterminates. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> is a decision variable. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">x</span> is a decision variable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1030,10 +1030,10 @@ indeterminates.rows()</span>. </td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Computes the definite integrate of this polynomial with respect to the indeterminate <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> over the domain [a, b]. </p>
+<p>Computes the definite integrate of this polynomial with respect to the indeterminate <span class="tt">x</span> over the domain [a, b]. </p>
 <p>Integration with respect to decision variables is not supported yet. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> is a decision variable. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <span class="tt">x</span> is a decision variable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1560,7 +1560,7 @@ template&lt;typename Derived&gt; </div>
 
 <p>Sets the indeterminates to <span class="tt">new_indeterminates</span>. </p>
 <p>Changing the indeterminates would change <span class="tt"><a class="el" href="#a70d8f7f9d89ada6b3b0230add0a65420" title="Returns the mapping from a Monomial to its corresponding coefficient of this polynomial.">monomial_to_coefficient_map()</a></span>, and also potentially the degree of the polynomial. Here is an example. </p><div class="fragment"><div class="line"><span class="comment">// p is a quadratic polynomial with x being the indeterminates.</span></div>
-<div class="line"><a class="code hl_class" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> p(a * <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> * <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + b * <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> + c, {<a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>});</div>
+<div class="line"><a class="code hl_class" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> p(a * x * x + b * x + c, {x});</div>
 <div class="line"><span class="comment">// p.monomial_to_coefficient_map() contains {1: c, x: b, x*x:a}.</span></div>
 <div class="line">std::cout &lt;&lt; p.<a class="code hl_function" href="#aaf2a77325f716479b2f8c5b17729a5c6">TotalDegree</a>(); <span class="comment">// prints 2.</span></div>
 <div class="line"><span class="comment">// Now set (a, b, c) to the indeterminates. p becomes a linear</span></div>
@@ -1570,7 +1570,6 @@ template&lt;typename Derived&gt; </div>
 <div class="line">std::cout &lt;&lt; p.TotalDegree(); <span class="comment">// prints 1.</span></div>
 <div class="ttc" id="aclassdrake_1_1symbolic_1_1_polynomial_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_polynomial.html">drake::symbolic::Polynomial</a></div><div class="ttdoc">Represents symbolic polynomials.</div><div class="ttdef"><b>Definition</b> polynomial.h:84</div></div>
 <div class="ttc" id="aclassdrake_1_1symbolic_1_1_polynomial_html_aaf2a77325f716479b2f8c5b17729a5c6"><div class="ttname"><a href="#aaf2a77325f716479b2f8c5b17729a5c6">drake::symbolic::Polynomial::TotalDegree</a></div><div class="ttdeci">int TotalDegree() const</div><div class="ttdoc">Returns the total degree of this polynomial.</div></div>
-<div class="ttc" id="alight__parameter_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> light_parameter.h:147</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

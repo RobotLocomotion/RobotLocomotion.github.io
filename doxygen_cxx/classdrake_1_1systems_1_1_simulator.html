@@ -185,7 +185,7 @@ class drake::systems::Simulator&lt; T &gt;</div><p>A class for advancing the sta
 <li>x⁺(t), the value of x <em>after</em> the discrete update occurs (● markers).</li>
 </ul>
 <p>Thus the value of the <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>, which contains both time and state, advances from {t, x⁻(t)} to {t, x⁺(t)} as a result of the update. While those <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> values are user-visible, the details of stepping here require an intermediate value which we'll denote {t, x*(t)}.</p>
-<p>Recall that Drake's state x is partitioned into continuous, discrete, and abstract partitions xc, xd, and xa, so <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> = { xc, xd, xa }</span>. Within a single step, these are updated in three stages:</p><ol type="1">
+<p>Recall that Drake's state x is partitioned into continuous, discrete, and abstract partitions xc, xd, and xa, so <span class="tt">x = { xc, xd, xa }</span>. Within a single step, these are updated in three stages:</p><ol type="1">
 <li>Unrestricted update (can change x)</li>
 <li>Discrete update (can change only xd)</li>
 <li>Continuous update (changes t and xc)</li>
@@ -203,14 +203,14 @@ class drake::systems::Simulator&lt; T &gt;</div><p>A class for advancing the sta
 <div class="line">procedure Step(tₛ, x⁻(tₛ), tₘₐₓ)</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Update any variables (no restrictions).</span></div>
-<div class="line">  <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>*(tₛ) ← DoAnyUnrestrictedUpdates(tₛ, x⁻(tₛ))</div>
+<div class="line">  x*(tₛ) ← DoAnyUnrestrictedUpdates(tₛ, x⁻(tₛ))</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// ----------------------------------</span></div>
 <div class="line">  <span class="comment">// Time and state are at {tₛ, x*(tₛ)}</span></div>
 <div class="line">  <span class="comment">// ----------------------------------</span></div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Update discrete variables.</span></div>
-<div class="line">  xd⁺(tₛ) ← DoAnyDiscreteUpdates(tₛ, <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>*(tₛ))</div>
+<div class="line">  xd⁺(tₛ) ← DoAnyDiscreteUpdates(tₛ, x*(tₛ))</div>
 <div class="line"> </div>
 <div class="line">  xc⁺(tₛ) ← xc*(tₛ)  <span class="comment">// These values carry over from x*(tₛ).</span></div>
 <div class="line">  xa⁺(tₛ) ← xa*(tₛ)</div>
@@ -238,7 +238,6 @@ class drake::systems::Simulator&lt; T &gt;</div><p>A class for advancing the sta
 <div class="line">  CallMonitor(tₑ, x⁻(tₑ))</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> {tₑ, x⁻(tₑ)}</div>
-<div class="ttc" id="alight__parameter_8h_html_a9336ebf25087d91c818ee6e9ec29f8c1"><div class="ttname"><a href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition</b> light_parameter.h:147</div></div>
 </div><!-- fragment --><p>We can use the notation and pseudocode to flesh out the <a class="el" href="#aba4b04299c9b1d41d9dd85563600012d" title="Advances the System&#39;s trajectory until boundary_time is reached in the Context or some other terminat...">AdvanceTo()</a>, <a class="el" href="#ad8252b9d897ed041c44c301cfcd8c5ce" title="(Advanced) Handles discrete and abstract state update events that are pending from the previous Advan...">AdvancePendingEvents()</a>, and <a class="el" href="#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a> functions. Termination and error conditions detected by event handlers or the monitor are reported as status returns from these methods. </p><div class="fragment"><div class="line"><span class="comment">// Advance the simulation until time tₘₐₓ.</span></div>
 <div class="line">procedure <a class="code hl_function" href="#aba4b04299c9b1d41d9dd85563600012d">AdvanceTo</a>(tₘₐₓ) → status</div>
 <div class="line">  t ← current_time</div>
@@ -252,9 +251,9 @@ class drake::systems::Simulator&lt; T &gt;</div><p>A class for advancing the sta
 <div class="line">procedure <a class="code hl_function" href="#ad8252b9d897ed041c44c301cfcd8c5ce">AdvancePendingEvents</a>() → status</div>
 <div class="line">  t ≜ current_time, x⁻(t) ≜ current_state</div>
 <div class="line">  x⁺(t) ← DoAnyPendingUpdates(t, x⁻(t)) as in Step()</div>
-<div class="line">  <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>(t) ← x⁺(t)  <span class="comment">// No continuous update needed.</span></div>
-<div class="line">  DoAnyPublishes(t, <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>(t))</div>
-<div class="line">  CallMonitor(t, <a class="code hl_variable" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>(t))</div>
+<div class="line">  x(t) ← x⁺(t)  <span class="comment">// No continuous update needed.</span></div>
+<div class="line">  DoAnyPublishes(t, x(t))</div>
+<div class="line">  CallMonitor(t, x(t))</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Update time and state to {t₀, x⁻(t₀)}, which is the starting value of the</span></div>
 <div class="line"><span class="comment">// trajectory, and thus the value the Context should contain at the start of the</span></div>
@@ -955,7 +954,7 @@ template&lt;typename T&gt; </div>
 <p>In order, the sequence of actions taken here is:</p><ul>
 <li>The active integrator's <a class="el" href="#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a> method is invoked.</li>
 <li>Statistics are reset.</li>
-<li>By default, initialization update events are triggered and handled to produce the initial trajectory value <span class="tt">{t₀, <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>(t₀)}</span>. If initialization events are suppressed, it is the caller's responsibility to ensure the desired initial state.</li>
+<li>By default, initialization update events are triggered and handled to produce the initial trajectory value <span class="tt">{t₀, x(t₀)}</span>. If initialization events are suppressed, it is the caller's responsibility to ensure the desired initial state.</li>
 <li>Then that initial value is provided to the handlers for any publish events that have triggered, including initialization events if any, and per-step publish events, periodic or other time-triggered publish events that are scheduled for the initial time t₀, and finally a call to the monitor() function if one has been defined.</li>
 </ul>
 <p>See the class documentation for more information. We recommend calling <a class="el" href="#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a> explicitly prior to beginning a simulation so that error conditions will be discovered early. However, <a class="el" href="#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a> will be called automatically by the first <a class="el" href="#aba4b04299c9b1d41d9dd85563600012d" title="Advances the System&#39;s trajectory until boundary_time is reached in the Context or some other terminat...">AdvanceTo()</a> call if it hasn't already been called.</p>

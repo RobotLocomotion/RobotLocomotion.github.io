@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1geometry_1_1_surface_polygon.html":[4,0,0,3,64],
 "classdrake_1_1geometry_1_1_surface_polygon.html#a319e621fc359dd8daad48247f95b12fa":[3,0,0,4,67,3],
 "classdrake_1_1geometry_1_1_surface_polygon.html#a319e621fc359dd8daad48247f95b12fa":[4,0,0,3,64,3],
 "classdrake_1_1geometry_1_1_surface_polygon.html#a3e0fd3c71ff74446da73887257927a20":[3,0,0,4,67,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#aef1b03d811be2218a34c7da179ede7d6":[2,5,5,2,12],
 "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#af6154bf89e3d063bb7b29741d1914fd8":[2,1,1,2,3],
 "classdrake_1_1geometry_1_1optimization_1_1_affine_subspace.html#af6154bf89e3d063bb7b29741d1914fd8":[2,5,5,2,3],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html":[2,4,2,4,0],
-"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html#a0bd83ef8ef5f8439ed61f7f11a42a4ea":[2,4,2,4,0,1]
+"classdrake_1_1geometry_1_1optimization_1_1_c_iris_collision_geometry.html":[2,4,2,4,0]
 };

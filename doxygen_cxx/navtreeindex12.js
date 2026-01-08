@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"classdrake_1_1geometry_1_1_scene_graph.html#a468b8439e50231c9ee03d33a7c0611cf":[2,2,13,56],
 "classdrake_1_1geometry_1_1_scene_graph.html#a46b7433ff54eba8bae914099283a09cb":[2,2,13,51],
 "classdrake_1_1geometry_1_1_scene_graph.html#a4760eb5aabc3ba69baf1b7e98c630730":[2,2,13,53],
 "classdrake_1_1geometry_1_1_scene_graph.html#a4aa8d7533d957ed2c1382fe44e1e01a1":[2,2,13,32],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "classdrake_1_1geometry_1_1_sphere.html#ace82bb641fd573d97c739a81bfd6d91d":[4,0,0,3,62,0],
 "classdrake_1_1geometry_1_1_sphere.html#ad4eb22638a3841217373d2caee0d6a74":[3,0,0,4,65,2],
 "classdrake_1_1geometry_1_1_sphere.html#ad4eb22638a3841217373d2caee0d6a74":[4,0,0,3,62,2],
-"classdrake_1_1geometry_1_1_surface_polygon.html":[3,0,0,4,67],
-"classdrake_1_1geometry_1_1_surface_polygon.html":[4,0,0,3,64]
+"classdrake_1_1geometry_1_1_surface_polygon.html":[3,0,0,4,67]
 };

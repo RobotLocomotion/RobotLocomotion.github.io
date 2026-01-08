@@ -1,5 +1,7 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1multibody_1_1_universal_joint.html#ac26a6dc0b1e4bced2875df3137eacd8a":[4,0,0,8,117,18],
+"classdrake_1_1multibody_1_1_universal_joint.html#ad9de7dbb1fe2d1861d505e88de936a97":[3,0,0,9,118,19],
 "classdrake_1_1multibody_1_1_universal_joint.html#ad9de7dbb1fe2d1861d505e88de936a97":[4,0,0,8,117,19],
 "classdrake_1_1multibody_1_1_universal_joint.html#ae363e69ea6c6c74a8fbe1045d9f6acc0":[3,0,0,9,118,9],
 "classdrake_1_1multibody_1_1_universal_joint.html#ae363e69ea6c6c74a8fbe1045d9f6acc0":[4,0,0,8,117,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html":[3,0,0,9,2,1],
 "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html":[4,0,0,8,2,1],
 "classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a1afd4700484261c759590b4619f44e1b":[3,0,0,9,2,1,15],
-"classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a1afd4700484261c759590b4619f44e1b":[4,0,0,8,2,1,15],
-"classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a3e314a85282d4f9fb5d43a585b824d66":[3,0,0,9,2,1,12],
-"classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a3e314a85282d4f9fb5d43a585b824d66":[4,0,0,8,2,1,12]
+"classdrake_1_1multibody_1_1fem_1_1_deformable_body_config.html#a1afd4700484261c759590b4619f44e1b":[4,0,0,8,2,1,15]
 };

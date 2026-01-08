@@ -280,7 +280,7 @@ Notes on glTF Camera Specification</h3>
 </ol>
 <ol type="1">
 <li>The <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#reference-node"><span class="tt">"nodes"</span> array</a>, which specifies the camera's global transformation matrix. The <span class="tt">"camera": 0</span> entry refers to the index into the <span class="tt">"cameras"</span> array from (1). Note that this is <b>not</b> the "model view
-   transformation" (rather, its inverse) &ndash; it is the camera's global transformation matrix which places the camera in the world just like any other entry in <span class="tt">"nodes"</span>. Note that the <span class="tt">"matrix"</span> is presented in column-major order, as prescribed by the glTF specification. A sample snippet of the camera node specification in the <span class="tt">"nodes"</span> array that has no rotation (the identity rotation) and a translation vector <span class="tt">[<a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>=0.1, y=0.2, z=0.3]</span> would be provided as: <pre class="fragment"> {
+   transformation" (rather, its inverse) &ndash; it is the camera's global transformation matrix which places the camera in the world just like any other entry in <span class="tt">"nodes"</span>. Note that the <span class="tt">"matrix"</span> is presented in column-major order, as prescribed by the glTF specification. A sample snippet of the camera node specification in the <span class="tt">"nodes"</span> array that has no rotation (the identity rotation) and a translation vector <span class="tt">[x=0.1, y=0.2, z=0.3]</span> would be provided as: <pre class="fragment"> {
    "nodes" :
    [
      {

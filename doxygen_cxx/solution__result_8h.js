@@ -1,5 +1,6 @@
 var solution__result_8h =
 [
+    [ "formatter&lt; drake::solvers::SolutionResult &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solution_result_01_4.html", null ],
     [ "drake::solvers::SolutionResult", "namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f", [
       [ "drake::solvers::kSolutionFound", "namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa15e1c4845b9467d880999c78de6afe45", null ],
       [ "drake::solvers::kInvalidInput", "namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa78cb430cc349315a2ba0f3602ef64b6d", null ],

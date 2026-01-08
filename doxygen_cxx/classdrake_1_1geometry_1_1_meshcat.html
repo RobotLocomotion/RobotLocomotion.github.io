@@ -204,7 +204,7 @@ Parameters for the hosted Meshcat page</h1>
 <li>The controllers can be <em>visualized</em> but currently can't interact with the Drake simulation physically. To visualize the controllers append the additional url parameter <span class="tt">controller=on</span> as in <span class="tt"><a href="http://localhost:7000?webxr=vr">http://localhost:7000?webxr=vr</a>&amp;controller=on</span>.</li>
 </ul>
 <p>If you do not have AR/VR hardware, you can use an emulator in your browser to experiment with the mode. Use an browser plugin like WebXR API Emulator (i.e., for <a href="https://chrome.google.com/webstore/detail/webxr-api-emulator/mjddjgeghkdijejnciaefnkjmkafnnje">Chrome</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/webxr-api-emulator/">Firefox</a>).</p>
-<p>The AR/VR mode is not currently supported in offline mode (i.e., when saving as <a class="el" href="#a8597aabcf1a98187a23fa1db634c9308" title="Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents.">StaticHtml()</a>).</p>
+<p>The AR/VR mode is not currently supported in offline mode (i.e., when saving as <a class="el" href="#a6478e1acbbae4aa0bd81183004d25a49" title="Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents.">StaticHtml()</a>).</p>
 <h1 class="doxsection"><a class="anchor" id="network_access"></a>
 Network access</h1>
 <p>See <a class="el" href="structdrake_1_1geometry_1_1_meshcat_params.html" title="The set of parameters for configuring Meshcat.">MeshcatParams</a> for options to control the hostname and port to bind to.</p>
@@ -347,8 +347,10 @@ Meshcat Controls</h2></td></tr>
 <tr class="memdesc:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all buttons and sliders from the GUI that have been registered by this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> instance.  <br /></td></tr>
 <tr class="memitem:a99102c7b2a8ca0cd1a9f1d55b3819b7d" id="r_a99102c7b2a8ca0cd1a9f1d55b3819b7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_gamepad.html">Gamepad</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99102c7b2a8ca0cd1a9f1d55b3819b7d">GetGamepad</a> () const</td></tr>
 <tr class="memdesc:a99102c7b2a8ca0cd1a9f1d55b3819b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the status from the most recently updated gamepad data in the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a>.  <br /></td></tr>
-<tr class="memitem:a8597aabcf1a98187a23fa1db634c9308" id="r_a8597aabcf1a98187a23fa1db634c9308"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8597aabcf1a98187a23fa1db634c9308">StaticHtml</a> ()</td></tr>
-<tr class="memdesc:a8597aabcf1a98187a23fa1db634c9308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents.  <br /></td></tr>
+<tr class="memitem:a6478e1acbbae4aa0bd81183004d25a49" id="r_a6478e1acbbae4aa0bd81183004d25a49"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6478e1acbbae4aa0bd81183004d25a49">StaticHtml</a> () const</td></tr>
+<tr class="memdesc:a6478e1acbbae4aa0bd81183004d25a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents.  <br /></td></tr>
+<tr class="memitem:ac2a18bbeef6f6df83e5299ac22549e0e" id="r_ac2a18bbeef6f6df83e5299ac22549e0e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2a18bbeef6f6df83e5299ac22549e0e">StaticZip</a> () const</td></tr>
+<tr class="memdesc:ac2a18bbeef6f6df83e5299ac22549e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="#a6478e1acbbae4aa0bd81183004d25a49" title="Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents.">StaticHtml()</a>, returns a standalone snapshot of the visualizer and its contents; the return value is a ZIP file containing a thin <span class="tt">meshcat.html</span> page and the assets (meshes, textures, etc.) as separate files.  <br /></td></tr>
 <tr class="memitem:ab2df060e0ab2e3e6d54ad4c4a847b829" id="r_ab2df060e0ab2e3e6d54ad4c4a847b829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2df060e0ab2e3e6d54ad4c4a847b829">StartRecording</a> (<a class="el" href="classdouble.html">double</a> frames_per_second=64.0, bool set_visualizations_while_recording=true)</td></tr>
 <tr class="memdesc:ab2df060e0ab2e3e6d54ad4c4a847b829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a flag indicating that subsequent calls to SetTransform and SetProperty should also be "recorded" into a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> when their optional time_in_recording argument is supplied.  <br /></td></tr>
 <tr class="memitem:ab4e410341b1ca35649cafd7b099a1819" id="r_ab4e410341b1ca35649cafd7b099a1819"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4e410341b1ca35649cafd7b099a1819">StopRecording</a> ()</td></tr>
@@ -1150,7 +1152,7 @@ Meshcat Controls</h2></td></tr>
 <p>Sets the "object" at <span class="tt">path</span> to be a triangle surface mesh representing a 3D surface, via an API that roughly follows matplotlib's plot_surface() method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">X</td><td>matrix of <span class="tt"><a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a></span> coordinate values defining the vertices of the mesh. </td></tr>
+    <tr><td class="paramname">X</td><td>matrix of <span class="tt">x</span> coordinate values defining the vertices of the mesh. </td></tr>
     <tr><td class="paramname">Y</td><td>matrix of <span class="tt">y</span> coordinate values. </td></tr>
     <tr><td class="paramname">Z</td><td>matrix of <span class="tt">z</span> coordinate values. </td></tr>
     <tr><td class="paramname">rgba</td><td>is the mesh face or wireframe color. </td></tr>
@@ -2098,8 +2100,8 @@ Meshcat Controls</h2></td></tr>
 
 </div>
 </div>
-<a id="a8597aabcf1a98187a23fa1db634c9308" name="a8597aabcf1a98187a23fa1db634c9308"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8597aabcf1a98187a23fa1db634c9308">&#9670;&#160;</a></span>StaticHtml()</h2>
+<a id="a6478e1acbbae4aa0bd81183004d25a49" name="a6478e1acbbae4aa0bd81183004d25a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6478e1acbbae4aa0bd81183004d25a49">&#9670;&#160;</a></span>StaticHtml()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2108,7 +2110,7 @@ Meshcat Controls</h2></td></tr>
           <td class="memname">std::string StaticHtml </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2117,6 +2119,27 @@ Meshcat Controls</h2></td></tr>
 <p>The HTML can be viewed in the browser without any connection to a <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/meshcat-dev/meshcat).">Meshcat</a> "server" (e.g. <span class="tt">this</span>). This is a great way to save and share your 3D content.</p>
 <p>Note that controls (e.g. sliders and buttons) are not included in the HTML output, because their usefulness relies on a connection to the server.</p>
 <p>You can also use your browser to download this file, by typing "/download" on the end of the URL (i.e., accessing <span class="tt"><a class="el" href="#a3dfb466d67a1d1d068c1b8017b2d14c5" title="Returns the hosted http URL.">web_url()</a> + "/download"</span>). </p>
+
+</div>
+</div>
+<a id="ac2a18bbeef6f6df83e5299ac22549e0e" name="ac2a18bbeef6f6df83e5299ac22549e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2a18bbeef6f6df83e5299ac22549e0e">&#9670;&#160;</a></span>StaticZip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string StaticZip </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Like <a class="el" href="#a6478e1acbbae4aa0bd81183004d25a49" title="Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents.">StaticHtml()</a>, returns a standalone snapshot of the visualizer and its contents; the return value is a ZIP file containing a thin <span class="tt">meshcat.html</span> page and the assets (meshes, textures, etc.) as separate files. </p>
+<p>When you are uploading the unzipped files to a website, this will typically be a more efficient representation as compared to <a class="el" href="#a6478e1acbbae4aa0bd81183004d25a49" title="Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents.">StaticHtml()</a>. However, it cannot be opened directly by a browser from disk. A simple web server like <span class="tt">python -m http.server</span> is required.</p>
+<p>You can also use your browser to download this file, by typing "/download.zip" on the end of the URL (i.e., accessing <span class="tt"><a class="el" href="#a3dfb466d67a1d1d068c1b8017b2d14c5" title="Returns the hosted http URL.">web_url()</a> + "/download.zip"</span>). </p>
 
 </div>
 </div>

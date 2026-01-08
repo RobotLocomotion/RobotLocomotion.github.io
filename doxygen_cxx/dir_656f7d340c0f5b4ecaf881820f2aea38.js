@@ -31,6 +31,7 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     [ "multibody_plant_config.h", "multibody__plant__config_8h.html", "multibody__plant__config_8h" ],
     [ "multibody_plant_config_functions.h", "multibody__plant__config__functions_8h.html", "multibody__plant__config__functions_8h" ],
     [ "multibody_plant_discrete_update_manager_attorney.h", "multibody__plant__discrete__update__manager__attorney_8h.html", null ],
+    [ "multibody_plant_icf_attorney.h", "multibody__plant__icf__attorney_8h.html", null ],
     [ "multibody_plant_model_attorney.h", "multibody__plant__model__attorney_8h.html", null ],
     [ "physical_model.h", "physical__model_8h.html", "physical__model_8h" ],
     [ "physical_model_collection.h", "physical__model__collection_8h.html", null ],

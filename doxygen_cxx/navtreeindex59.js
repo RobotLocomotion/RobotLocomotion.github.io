@@ -1,5 +1,7 @@
 var NAVTREEINDEX59 =
 {
+"classdrake_1_1symbolic_1_1_polynomial.html#a36b55001dc20b0197f226a6f9281adb0":[4,0,0,13,58,44],
+"classdrake_1_1symbolic_1_1_polynomial.html#a376ec1877fc3946abaeddcefa6bf9a0a":[3,0,0,14,58,46],
 "classdrake_1_1symbolic_1_1_polynomial.html#a376ec1877fc3946abaeddcefa6bf9a0a":[4,0,0,13,58,46],
 "classdrake_1_1symbolic_1_1_polynomial.html#a3964b57f6f9f9957e6000b10a0383a34":[3,0,0,14,58,7],
 "classdrake_1_1symbolic_1_1_polynomial.html#a3964b57f6f9f9957e6000b10a0383a34":[4,0,0,13,58,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "classdrake_1_1symbolic_1_1_rewriting_rule.html#a71153b0e8bde7866a48cf03b4de0bc4b":[4,0,0,13,62,5],
 "classdrake_1_1symbolic_1_1_rewriting_rule.html#a96e9f78299ed9be2d52dca0ad339eee2":[3,0,0,14,62,2],
 "classdrake_1_1symbolic_1_1_rewriting_rule.html#a96e9f78299ed9be2d52dca0ad339eee2":[4,0,0,13,62,2],
-"classdrake_1_1symbolic_1_1_rewriting_rule.html#acfb5d92b7ec62a96ff6783973c78a873":[3,0,0,14,62,0],
-"classdrake_1_1symbolic_1_1_rewriting_rule.html#acfb5d92b7ec62a96ff6783973c78a873":[4,0,0,13,62,0],
-"classdrake_1_1symbolic_1_1_rewriting_rule.html#aeb62fc791663c3bcfa7eedafc5b25a9f":[3,0,0,14,62,1]
+"classdrake_1_1symbolic_1_1_rewriting_rule.html#acfb5d92b7ec62a96ff6783973c78a873":[3,0,0,14,62,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1math_1_1_numerical_gradient_option.html#a4a865e4411f8c79f280a51d9141d1dd4":[3,0,0,8,10,1],
 "classdrake_1_1math_1_1_numerical_gradient_option.html#a4a865e4411f8c79f280a51d9141d1dd4":[4,0,0,7,10,1],
 "classdrake_1_1math_1_1_rigid_transform.html":[3,0,0,8,11],
 "classdrake_1_1math_1_1_rigid_transform.html":[4,0,0,7,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1math_1_1_rotation_matrix.html#a40dbfac2d91a4e3f8d1a4a8de8af0aad":[3,0,0,8,13,57],
 "classdrake_1_1math_1_1_rotation_matrix.html#a40dbfac2d91a4e3f8d1a4a8de8af0aad":[4,0,0,7,13,57],
 "classdrake_1_1math_1_1_rotation_matrix.html#a4354b4928f8e10dc8a7443f248de5ba2":[3,0,0,8,13,21],
-"classdrake_1_1math_1_1_rotation_matrix.html#a4354b4928f8e10dc8a7443f248de5ba2":[4,0,0,7,13,21],
-"classdrake_1_1math_1_1_rotation_matrix.html#a488e95bc853dfe156d8c9e56a082a13e":[3,0,0,8,13,43]
+"classdrake_1_1math_1_1_rotation_matrix.html#a4354b4928f8e10dc8a7443f248de5ba2":[4,0,0,7,13,21]
 };

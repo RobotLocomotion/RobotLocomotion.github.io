@@ -11,6 +11,7 @@ var expression_2expression_8h =
     [ "dummy_value&lt; symbolic::Expression &gt;", "structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html", "structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4" ],
     [ "is_eigen_nonvector_expression_double_pair&lt; DerivedV, DerivedB &gt;", "structdrake_1_1is__eigen__nonvector__expression__double__pair.html", null ],
     [ "is_eigen_vector_expression_double_pair&lt; DerivedV, DerivedB &gt;", "structdrake_1_1is__eigen__vector__expression__double__pair.html", null ],
+    [ "formatter&lt; drake::symbolic::Expression &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "drake::symbolic::Substitution", "namespacedrake_1_1symbolic.html#acbfe43d34e6c71c503d4de11da53bbb7", null ],
     [ "drake::symbolic::abs", "namespacedrake_1_1symbolic.html#a44e11b5fa4c16951b30b26e43a316569", null ],
     [ "drake::symbolic::acos", "namespacedrake_1_1symbolic.html#a008a73e1d2390dc2325d70175fb5410e", null ],

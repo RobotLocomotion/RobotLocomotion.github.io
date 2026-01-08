@@ -578,7 +578,7 @@ template&lt;typename T&gt; </div>
 <div class="line">     =       R_AB          *        R_BC          *        R_CD</div>
 </div><!-- fragment --> </dd>
 <dd>
-In this discussion, A is the Space frame and D is the Body frame. One way to visualize this rotation sequence is by introducing intermediate frames B and C (useful constructs to understand this rotation sequence). Initially, the frames are aligned so <span class="tt">Di = Ci = Bi = Ai (i = <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a>, y, z)</span>. Then D is subjected to successive right-handed rotations relative to A. <ul>
+In this discussion, A is the Space frame and D is the Body frame. One way to visualize this rotation sequence is by introducing intermediate frames B and C (useful constructs to understand this rotation sequence). Initially, the frames are aligned so <span class="tt">Di = Ci = Bi = Ai (i = x, y, z)</span>. Then D is subjected to successive right-handed rotations relative to A. <ul>
 <li>1st rotation R_CD: Frame D rotates relative to frames C, B, A by a roll angle <span class="tt">r</span> about <span class="tt">Dx = Cx</span>. Note: D and C are no longer aligned. </li>
 <li>2nd rotation R_BC: Frames D, C (collectively &ndash; as if welded together) rotate relative to frame B, A by a pitch angle <span class="tt">p</span> about <span class="tt">Cy = By</span>. Note: C and B are no longer aligned. </li>
 <li>3rd rotation R_AB: Frames D, C, B (collectively &ndash; as if welded) rotate relative to frame A by a roll angle <span class="tt">y</span> about <span class="tt">Bz = Az</span>. Note: B and A are no longer aligned. </li>
@@ -1729,13 +1729,13 @@ template&lt;typename Derived&gt; </div>
 <p>Multiplies <span class="tt">this</span> RotationMatrix <span class="tt">R_AB</span> by the n vectors <span class="tt">v1</span>, ... <span class="tt">vn</span>, where each vector has 3 elements and is expressed in frame B. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">v_B</td><td><span class="tt">3 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span> matrix whose n columns are regarded as arbitrary vectors <span class="tt">v1</span>, ... <span class="tt">vn</span> expressed in frame B. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v_B</td><td><span class="tt">3 x n</span> matrix whose n columns are regarded as arbitrary vectors <span class="tt">v1</span>, ... <span class="tt">vn</span> expressed in frame B. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">v_A</td><td><span class="tt">3 <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x</a> n</span> matrix whose n columns are vectors <span class="tt">v1</span>, ... <span class="tt">vn</span> expressed in frame A. <div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw&lt;double&gt;</a> rpy(0.1, 0.2, 0.3);</div>
+    <tr><td class="paramname">v_A</td><td><span class="tt">3 x n</span> matrix whose n columns are vectors <span class="tt">v1</span>, ... <span class="tt">vn</span> expressed in frame A. <div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw&lt;double&gt;</a> rpy(0.1, 0.2, 0.3);</div>
 <div class="line"><span class="keyword">const</span> <a class="code hl_friend" href="#a876971dbbbcca2807eccb07b068df383">RotationMatrix&lt;double&gt;</a> R_AB(rpy);</div>
 <div class="line">Eigen::Matrix&lt;double, 3, 2&gt; v_B;</div>
 <div class="line">v_B.col(0) = Vector3d(4, 5, 6);</div>

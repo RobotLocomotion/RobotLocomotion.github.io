@@ -183,7 +183,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4b57e5c9a8db4a6127144ac81b63ca9b" id="r_a4b57e5c9a8db4a6127144ac81b63ca9b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b57e5c9a8db4a6127144ac81b63ca9b">set</a> () const</td></tr>
 <tr class="memdesc:a4b57e5c9a8db4a6127144ac81b63ca9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the underlying <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a>.  <br /></td></tr>
 <tr class="memitem:afb03099d0ad226a47a511f1a66dd3c3a" id="r_afb03099d0ad226a47a511f1a66dd3c3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb03099d0ad226a47a511f1a66dd3c3a">AddCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
-<tr class="memdesc:afb03099d0ad226a47a511f1a66dd3c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this vertex, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code class="param">e</code> containing <em>only</em> elements of <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a> as variables.  <br /></td></tr>
+<tr class="memdesc:afb03099d0ad226a47a511f1a66dd3c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this vertex, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code class="param">e</code> containing <em>only</em> elements of <a class="el" href="#aa74b1523fa53a955f8c6d7cdae88b2e6" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> as variables.  <br /></td></tr>
 <tr class="memitem:a0b2131779a1edddb5753b0013c74ed4e" id="r_a0b2131779a1edddb5753b0013c74ed4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b2131779a1edddb5753b0013c74ed4e">AddCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;binding, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
 <tr class="memdesc:a0b2131779a1edddb5753b0013c74ed4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost to this vertex.  <br /></td></tr>
 <tr class="memitem:a2e7fcd986cc2d78e50cb1a5f5bcc1b4d" id="r_a2e7fcd986cc2d78e50cb1a5f5bcc1b4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e7fcd986cc2d78e50cb1a5f5bcc1b4d">AddConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f, const std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5b">Transcription</a> &gt; &amp;use_in_transcription={ <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5ba058f4d93de65b4c9dd778be760beaa90">Transcription::kMIP</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5baf0eaaa21b3713d009fbdbbcfc1f8b9b8">Transcription::kRelaxation</a>, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5b9188d435083bda24dd1cb73a7b5d5bae6e3b13561e5aed0294cf5ca5765dd02">Transcription::kRestriction</a>})</td></tr>
@@ -199,7 +199,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aace475e0f4b8b898982436cd138d6505" id="r_aace475e0f4b8b898982436cd138d6505"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aace475e0f4b8b898982436cd138d6505">GetSolutionCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result, const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">solvers::Cost</a> &gt; &amp;cost) const</td></tr>
 <tr class="memdesc:aace475e0f4b8b898982436cd138d6505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cost associated with the <span class="tt">cost</span> binding on this vertex in <span class="tt">result</span>, or std::nullopt if no solution for this vertex is available.  <br /></td></tr>
 <tr class="memitem:a4d140bb091dd43f18ec4b24572d002fc" id="r_a4d140bb091dd43f18ec4b24572d002fc"><td class="memItemLeft" align="right" valign="top">std::optional&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d140bb091dd43f18ec4b24572d002fc">GetSolution</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
-<tr class="memdesc:a4d140bb091dd43f18ec4b24572d002fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the solution of <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a> in <span class="tt">result</span>, or std::nullopt if no solution for this vertex is available.  <br /></td></tr>
+<tr class="memdesc:a4d140bb091dd43f18ec4b24572d002fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the solution of <a class="el" href="#aa74b1523fa53a955f8c6d7cdae88b2e6" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> in <span class="tt">result</span>, or std::nullopt if no solution for this vertex is available.  <br /></td></tr>
 <tr class="memitem:ace85eb812c2120335b820e972cbff3d3" id="r_ace85eb812c2120335b820e972cbff3d3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace85eb812c2120335b820e972cbff3d3">incoming_edges</a> () const</td></tr>
 <tr class="memitem:a0553ddae03aafaa82214f3f29c5cdc76" id="r_a0553ddae03aafaa82214f3f29c5cdc76"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0553ddae03aafaa82214f3f29c5cdc76">outgoing_edges</a> () const</td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
@@ -303,14 +303,14 @@ Friends</h2></td></tr>
 <p>Adds a constraint to this vertex. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">binding</td><td>must contain <em>only</em> elements of <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a> as variables. </td></tr>
+    <tr><td class="paramname">binding</td><td>must contain <em>only</em> elements of <a class="el" href="#aa74b1523fa53a955f8c6d7cdae88b2e6" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> as variables. </td></tr>
     <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if binding.variables() is not a subset of <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if binding.variables() is not a subset of <a class="el" href="#aa74b1523fa53a955f8c6d7cdae88b2e6" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a>. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if <a class="el" href="#a79ab6fe34900a8391301b23abd29e10e" title="Returns the ambient dimension of the ConvexSet.">ambient_dimension()</a> == 0. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
   </table>
@@ -341,14 +341,14 @@ Friends</h2></td></tr>
 <p>Adds a constraint to this vertex. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">f</td><td>must contain <em>only</em> elements of <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a> as variables. </td></tr>
+    <tr><td class="paramname">f</td><td>must contain <em>only</em> elements of <a class="el" href="#aa74b1523fa53a955f8c6d7cdae88b2e6" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> as variables. </td></tr>
     <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if f.GetFreeVariables() is not a subset of <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if f.GetFreeVariables() is not a subset of <a class="el" href="#aa74b1523fa53a955f8c6d7cdae88b2e6" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a>. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if <a class="el" href="#a79ab6fe34900a8391301b23abd29e10e" title="Returns the ambient dimension of the ConvexSet.">ambient_dimension()</a> == 0. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
   </table>
@@ -377,7 +377,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds a cost to this vertex. </p>
-<p><code class="param">binding</code> must contain <em>only</em> elements of <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a> as variables. For technical reasons relating to being able to "turn-off" the cost on inactive vertices, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x).
+<p><code class="param">binding</code> must contain <em>only</em> elements of <a class="el" href="#aa74b1523fa53a955f8c6d7cdae88b2e6" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> as variables. For technical reasons relating to being able to "turn-off" the cost on inactive vertices, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x).
 </pre><p> You must use <a class="el" href="#a24f71332a71792740a7cbe44a33b784b" title="Returns the sum of the costs associated with this vertex in result, or std::nullopt if no solution fo...">GetSolutionCost()</a> to retrieve the cost of the solution, rather than evaluating the cost directly, in order to get consistent behavior when solving with the different GCS transcriptions. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">use_in_transcription</td><td>specifies the components of the problem to which the constraint should be added. </td></tr>
@@ -388,7 +388,7 @@ Friends</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the added cost, g(x). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if binding.variables() is not a subset of <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if binding.variables() is not a subset of <a class="el" href="#aa74b1523fa53a955f8c6d7cdae88b2e6" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a>. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
   </table>
   </dd>
@@ -415,7 +415,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds a cost to this vertex, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code class="param">e</code> containing <em>only</em> elements of <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a> as variables. </p>
+<p>Adds a cost to this vertex, described by a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> <code class="param">e</code> containing <em>only</em> elements of <a class="el" href="#aa74b1523fa53a955f8c6d7cdae88b2e6" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> as variables. </p>
 <p>For technical reasons relating to being able to "turn-off" the cost on inactive vertices, all costs are eventually implemented with a slack variable and a constraint: </p><pre class="fragment">min g(x) ⇒ min ℓ, s.t. ℓ ≥ g(x).
 </pre><p> You must use <a class="el" href="#a24f71332a71792740a7cbe44a33b784b" title="Returns the sum of the costs associated with this vertex in result, or std::nullopt if no solution fo...">GetSolutionCost()</a> to retrieve the cost of the solution, rather than evaluating the cost directly, in order to get consistent behavior when solving with the different GCS transcriptions. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -427,7 +427,7 @@ Friends</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the added cost, g(x). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if e.GetVariables() is not a subset of <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if e.GetVariables() is not a subset of <a class="el" href="#aa74b1523fa53a955f8c6d7cdae88b2e6" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a>. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if no transcription is specified. </td></tr>
   </table>
   </dd>
@@ -531,7 +531,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the solution of <a class="el" href="light__parameter_8h.html#a9336ebf25087d91c818ee6e9ec29f8c1">x()</a> in <span class="tt">result</span>, or std::nullopt if no solution for this vertex is available. </p>
+<p>Returns the solution of <a class="el" href="#aa74b1523fa53a955f8c6d7cdae88b2e6" title="Returns a decision variable corresponding to an element of the ConvexSet, which can be used for const...">x()</a> in <span class="tt">result</span>, or std::nullopt if no solution for this vertex is available. </p>
 <p>std::nullopt can happen if the vertex is deactivated (e.g. not in the shorest path) in the solution. </p>
 
 </div>

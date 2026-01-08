@@ -376,6 +376,7 @@ var group__systems =
       [ "AddMultibodyPlantSceneGraph", "classdrake_1_1multibody_1_1_multibody_plant.html#a8b71553122d35a449d2131789a3f94c2", null ],
       [ "AddMultibodyPlantSceneGraph", "classdrake_1_1multibody_1_1_multibody_plant.html#abee1730bcdfcda3c985ab6e0c2b4e4b0", null ],
       [ "internal::MultibodyPlantDiscreteUpdateManagerAttorney< T >", "classdrake_1_1multibody_1_1_multibody_plant.html#a9bf56e6eda41a6cc82296377a2267479", null ],
+      [ "internal::MultibodyPlantIcfAttorney< T >", "classdrake_1_1multibody_1_1_multibody_plant.html#ae31c5abf29d1134fe77df48a1152980a", null ],
       [ "internal::MultibodyPlantModelAttorney< T >", "classdrake_1_1multibody_1_1_multibody_plant.html#a7266290642dbb492700e7ebae2e00a20", null ],
       [ "MultibodyPlant", "classdrake_1_1multibody_1_1_multibody_plant.html#a47a63154823dffd5838329527aafbd58", null ],
       [ "MultibodyPlantTester", "classdrake_1_1multibody_1_1_multibody_plant.html#a42efef893a4d8eed1d593caff328f599", null ]
