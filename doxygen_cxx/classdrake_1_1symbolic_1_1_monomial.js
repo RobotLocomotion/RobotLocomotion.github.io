@@ -21,8 +21,8 @@ var classdrake_1_1symbolic_1_1_monomial =
     [ "operator=", "classdrake_1_1symbolic_1_1_monomial.html#ae6b235c3b12f76e624867d0cf600ae2c", null ],
     [ "operator==", "classdrake_1_1symbolic_1_1_monomial.html#a4135d2c26ecd06180456a7ca15e05432", null ],
     [ "pow_in_place", "classdrake_1_1symbolic_1_1_monomial.html#ab04196cce21b48aa0e1ac35d690b0aa3", null ],
+    [ "to_string", "classdrake_1_1symbolic_1_1_monomial.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ],
     [ "ToExpression", "classdrake_1_1symbolic_1_1_monomial.html#a07e43dd6afaaafb0291e1067a4479212", null ],
     [ "total_degree", "classdrake_1_1symbolic_1_1_monomial.html#a7bcf96696763f6adbab969e978ddbcbf", null ],
-    [ "hash_append", "classdrake_1_1symbolic_1_1_monomial.html#aef2cfee1895046689eab46f8c03d0eb2", null ],
-    [ "operator<<", "classdrake_1_1symbolic_1_1_monomial.html#ada77c9969b0422090c05636a895c0e8e", null ]
+    [ "hash_append", "classdrake_1_1symbolic_1_1_monomial.html#aef2cfee1895046689eab46f8c03d0eb2", null ]
 ];

@@ -197,8 +197,6 @@ var namespacedrake =
     [ "pow", "namespacedrake.html#a92c1bc8d793f1a04fa4f4c33a011f4eb", null ],
     [ "ReadFile", "namespacedrake.html#a7d08c050b131498e375c5e6bb4ac8523", null ],
     [ "ReadFileOrThrow", "namespacedrake.html#aaf3c49ca62422759206ccb9c7a7b0bf5", null ],
-    [ "ssize", "namespacedrake.html#ad7cec93e74022e17bba7df5ee54d45d2", null ],
-    [ "ssize", "namespacedrake.html#aa96cc63cce1028b8966d462519fe1e0a", null ],
     [ "static_pointer_cast", "namespacedrake.html#a90397b62328225fe13d52a529dc3335d", null ],
     [ "temp_directory", "namespacedrake.html#a848fb0ead47dfe2676e2ef81b8735e83", null ],
     [ "to_string", "namespacedrake.html#a2cf089de86f2bc6c12794ce67aacad84", null ],

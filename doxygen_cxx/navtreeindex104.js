@@ -1,7 +1,5 @@
 var NAVTREEINDEX104 =
 {
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[4,0,2,17],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[3,0,2,18],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[4,0,2,18],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,2,19],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html":[4,0,2,19],

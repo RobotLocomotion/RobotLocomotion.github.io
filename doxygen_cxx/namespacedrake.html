@@ -591,12 +591,6 @@ requires (!(std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, <a class="el"
 <tr class="memitem:a72635329c414630ebc3e3247b376131b" id="r_a72635329c414630ebc3e3247b376131b"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
 <tr class="memitem:a72635329c414630ebc3e3247b376131b template"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; typename std::decay&lt; T &gt;::type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72635329c414630ebc3e3247b376131b">MakeSortedPair</a> (T &amp;&amp;x, T &amp;&amp;y)</td></tr>
 <tr class="memdesc:a72635329c414630ebc3e3247b376131b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience wrapper for creating a sorted pair from two objects.  <br /></td></tr>
-<tr class="memitem:ad7cec93e74022e17bba7df5ee54d45d2" id="r_ad7cec93e74022e17bba7df5ee54d45d2"><td class="memTemplParams" colspan="2">template&lt;class C&gt; </td></tr>
-<tr class="memitem:ad7cec93e74022e17bba7df5ee54d45d2 template"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7cec93e74022e17bba7df5ee54d45d2">ssize</a> (const C &amp;c) -&gt; std::common_type_t&lt; std::ptrdiff_t, std::make_signed_t&lt; decltype(c.size())&gt; &gt;</td></tr>
-<tr class="memdesc:ad7cec93e74022e17bba7df5ee54d45d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements C++20 std::ssize() for earlier compilers.  <br /></td></tr>
-<tr class="memitem:aa96cc63cce1028b8966d462519fe1e0a" id="r_aa96cc63cce1028b8966d462519fe1e0a"><td class="memTemplParams" colspan="2">template&lt;class T, std::ptrdiff_t N&gt; </td></tr>
-<tr class="memitem:aa96cc63cce1028b8966d462519fe1e0a template"><td class="memItemLeft" align="right" valign="top">constexpr std::ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa96cc63cce1028b8966d462519fe1e0a">ssize</a> (const T(&amp;array)[N]) noexcept</td></tr>
-<tr class="memdesc:aa96cc63cce1028b8966d462519fe1e0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This signature returns the size of built-in (C style) arrays.  <br /></td></tr>
 <tr class="memitem:a898781913e4e5fa4287087afc880fec3" id="r_a898781913e4e5fa4287087afc880fec3"><td class="memTemplParams" colspan="2">template&lt;typename... Rest&gt; </td></tr>
 <tr class="memitem:a898781913e4e5fa4287087afc880fec3 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a898781913e4e5fa4287087afc880fec3">cond</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f_cond, <a class="el" href="classdouble.html">double</a> v_then, Rest... rest)</td></tr>
 <tr class="memdesc:a898781913e4e5fa4287087afc880fec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides specialization of <code>cond</code> function defined in <a class="el" href="cond_8h.html">drake/common/cond.h</a> file.  <br /></td></tr>
@@ -3594,65 +3588,6 @@ template&lt;typename T&gt; </div>
 
 <p>Returns the content of the file at the given path, or throws if it cannot be read. </p>
 <p>Note that the path is a filesystem path, not a <span class="tt">resource_path</span>. </p>
-
-</div>
-</div>
-<a id="ad7cec93e74022e17bba7df5ee54d45d2" name="ad7cec93e74022e17bba7df5ee54d45d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7cec93e74022e17bba7df5ee54d45d2">&#9670;&#160;</a></span>ssize() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class C&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto ssize </td>
-          <td>(</td>
-          <td class="paramtype">const C &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
-          <td>-&gt;std::common_type_t&lt; std::ptrdiff_t, std::make_signed_t&lt; decltype(c.size())&gt; &gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements C++20 std::ssize() for earlier compilers. </p>
-<p>See <a href="https://en.cppreference.com/w/cpp/iterator/size">https://en.cppreference.com/w/cpp/iterator/size</a> for documentation. Will be removed once all Drake-supported platforms offer std::ssize(). </p>
-
-</div>
-</div>
-<a id="aa96cc63cce1028b8966d462519fe1e0a" name="aa96cc63cce1028b8966d462519fe1e0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa96cc63cce1028b8966d462519fe1e0a">&#9670;&#160;</a></span>ssize() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T, std::ptrdiff_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ptrdiff_t ssize </td>
-          <td>(</td>
-          <td class="paramtype">const T(&amp;)</td>          <td class="paramname"><span class="paramname"><em>array</em></span>[N]</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This signature returns the size of built-in (C style) arrays. </p>
 
 </div>
 </div>

@@ -1,7 +1,5 @@
 var NAVTREEINDEX103 =
 {
-"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgra_01_4.html":[4,0,0,14,6,32],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgra_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,15,6,32,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgra_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[4,0,0,14,6,32,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_depth_01_4.html":[3,0,0,15,6,33],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_depth_01_4.html":[4,0,0,14,6,33],
@@ -249,5 +247,7 @@ var NAVTREEINDEX103 =
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[4,0,2,15],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_01_4.html":[3,0,2,16],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_01_4.html":[4,0,2,16],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,2,17]
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,2,17],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[4,0,2,17],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[3,0,2,18]
 };

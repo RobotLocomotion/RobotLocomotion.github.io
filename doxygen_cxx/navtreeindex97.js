@@ -1,7 +1,5 @@
 var NAVTREEINDEX97 =
 {
-"structdrake_1_1geometry_1_1optimization_1_1_sampled_volume.html#a4bb289b389fc2a2d13bdf75b95834022":[3,0,0,4,0,24,1],
-"structdrake_1_1geometry_1_1optimization_1_1_sampled_volume.html#a4bb289b389fc2a2d13bdf75b95834022":[4,0,0,3,0,24,1],
 "structdrake_1_1geometry_1_1optimization_1_1_sampled_volume.html#a8eb3ef4958b442309868039dbab6f0bf":[3,0,0,4,0,24,2],
 "structdrake_1_1geometry_1_1optimization_1_1_sampled_volume.html#a8eb3ef4958b442309868039dbab6f0bf":[4,0,0,3,0,24,2],
 "structdrake_1_1geometry_1_1optimization_1_1_separation_certificate_program_base.html":[3,0,0,4,0,25],
@@ -249,5 +247,7 @@ var NAVTREEINDEX97 =
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_result.html#aaf6a8034fc68445c84db4f8d0fcabc79":[4,0,0,8,32,1],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html":[2,2,2,1,0],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a05f3f5511b47e22966af2f10a7796390":[2,2,2,1,0,0],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a086018fbe21aec61cd57e2b06f93804b":[2,2,2,1,0,9]
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a086018fbe21aec61cd57e2b06f93804b":[2,2,2,1,0,9],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a0f056c9c4332a35f63a72e3c742c9c70":[2,2,2,1,0,5],
+"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a2f8eb62b1524a68104ca65a97b12c2c4":[2,2,2,1,0,7]
 };

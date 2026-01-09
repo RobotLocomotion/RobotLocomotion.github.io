@@ -1,7 +1,5 @@
 var NAVTREEINDEX88 =
 {
-"namespacedrake_1_1geometry_1_1render.html#af63fd9e820f001b3f6bc1a53d24acbeb":[3,0,0,4,2,18],
-"namespacedrake_1_1geometry_1_1render_1_1shaders.html":[3,0,0,4,2,0],
 "namespacedrake_1_1geometry_1_1render_1_1shaders.html#a5a1001f7895bceeeb06a6944b0789691":[3,0,0,4,2,0,1],
 "namespacedrake_1_1geometry_1_1render_1_1shaders.html#a7e1ae93b96cfb8ae4df5ee57a3371be2":[3,0,0,4,2,0,0],
 "namespacedrake_1_1geometry_1_1render__gltf__client.html":[3,0,0,4,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX88 =
 "namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658":[3,0,0,9,140],
 "namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b":[3,0,0,9,140,0],
 "namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a":[3,0,0,9,140,1],
-"namespacedrake_1_1multibody.html#add80e949328b179d78312d1455319868":[3,0,0,9,125]
+"namespacedrake_1_1multibody.html#add80e949328b179d78312d1455319868":[3,0,0,9,125],
+"namespacedrake_1_1multibody.html#ae5d9a636853bba59cfbe03f2cae70be0":[3,0,0,9,178],
+"namespacedrake_1_1multibody.html#ae810ad4b839c5925c285d08b4d269a56":[3,0,0,9,123]
 };

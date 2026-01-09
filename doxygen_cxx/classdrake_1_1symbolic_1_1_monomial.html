@@ -210,6 +210,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae46032857589ed54d0dba0dbd0496a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this monomial multiplied by <span class="tt">m</span>.  <br /></td></tr>
 <tr class="memitem:ab04196cce21b48aa0e1ac35d690b0aa3" id="r_ab04196cce21b48aa0e1ac35d690b0aa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab04196cce21b48aa0e1ac35d690b0aa3">pow_in_place</a> (int p)</td></tr>
 <tr class="memdesc:ab04196cce21b48aa0e1ac35d690b0aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this monomial raised to <span class="tt">p</span>.  <br /></td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
+<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation of this monomial.  <br /></td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:abb8e721f7e727dcb1277145bd6353b5a" id="r_abb8e721f7e727dcb1277145bd6353b5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> (const Monomial &amp;)=default</td></tr>
 <tr class="memitem:aa448bf4ed3b5f9da441471129dee19dc" id="r_aa448bf4ed3b5f9da441471129dee19dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa448bf4ed3b5f9da441471129dee19dc">operator=</a> (const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;)=default</td></tr>
@@ -221,7 +223,6 @@ Friends</h2></td></tr>
 <tr class="memitem:aef2cfee1895046689eab46f8c03d0eb2" id="r_aef2cfee1895046689eab46f8c03d0eb2"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm&gt; </td></tr>
 <tr class="memitem:aef2cfee1895046689eab46f8c03d0eb2 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef2cfee1895046689eab46f8c03d0eb2">hash_append</a> (HashAlgorithm &amp;hasher, const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;item) noexcept</td></tr>
 <tr class="memdesc:aef2cfee1895046689eab46f8c03d0eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept.  <br /></td></tr>
-<tr class="memitem:ada77c9969b0422090c05636a895c0e8e" id="r_ada77c9969b0422090c05636a895c0e8e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada77c9969b0422090c05636a895c0e8e">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;m)</td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abb8e721f7e727dcb1277145bd6353b5a" name="abb8e721f7e727dcb1277145bd6353b5a"></a>
@@ -746,6 +747,25 @@ vars.rows()</span> and <span class="tt">vars_values.cols() == monomial_vals.rows
 
 </div>
 </div>
+<a id="aac993ecccd3d88aafefb6b8e3caa1dee" name="aac993ecccd3d88aafefb6b8e3caa1dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac993ecccd3d88aafefb6b8e3caa1dee">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the string representation of this monomial. </p>
+
+</div>
+</div>
 <a id="a07e43dd6afaaafb0291e1067a4479212" name="a07e43dd6afaaafb0291e1067a4479212"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a07e43dd6afaaafb0291e1067a4479212">&#9670;&#160;</a></span>ToExpression()</h2>
 
@@ -815,35 +835,6 @@ template&lt;class HashAlgorithm&gt; </div>
 </div><div class="memdoc">
 
 <p>Implements the <a class="el" href="group__hash__append.html">hash_append generic hashing</a> concept. </p>
-
-</div>
-</div>
-<a id="ada77c9969b0422090c05636a895c0e8e" name="ada77c9969b0422090c05636a895c0e8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada77c9969b0422090c05636a895c0e8e">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#abb8e721f7e727dcb1277145bd6353b5a">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

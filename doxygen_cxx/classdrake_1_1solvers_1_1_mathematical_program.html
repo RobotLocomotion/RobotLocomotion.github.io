@@ -3399,7 +3399,7 @@ template&lt;int rows&gt; </div>
 <div class="line">b &lt;&lt; 1, 1, 0, 2;</div>
 <div class="line"><span class="comment">// A * [x;y] + b = [x+1; y+1; x; 2]</span></div>
 <div class="line">prog.AddLorentzConeConstraint(A, b, <a class="code hl_typedef" href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">Vector2&lt;symbolic::Variable&gt;</a>(x, y));</div>
-<div class="ttc" id="anamespacedrake_html_ab9f8b7dbd727440c2dd207bf43812f1e"><div class="ttname"><a href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">drake::Vector2</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, 2, 1 &gt; Vector2</div><div class="ttdoc">A column vector of size 2, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:39</div></div>
+<div class="ttc" id="anamespacedrake_html_ab9f8b7dbd727440c2dd207bf43812f1e"><div class="ttname"><a href="namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e">drake::Vector2</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, 2, 1 &gt; Vector2</div><div class="ttdoc">A column vector of size 2, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:44</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -3484,7 +3484,7 @@ template&lt;int rows&gt; </div>
      = sqrt((y+1)²+x²+2²)
 </pre> The user could call <div class="fragment"><div class="line"><a class="code hl_typedef" href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">Vector4&lt;symbolic::Expression&gt;</a> v(x+1, y+1, x, 2.);</div>
 <div class="line">prog.AddLorentzConeConstraint(v);</div>
-<div class="ttc" id="anamespacedrake_html_af7e96394aef85f13f3fc84d3c3c238b3"><div class="ttname"><a href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">drake::Vector4</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, 4, 1 &gt; Vector4</div><div class="ttdoc">A column vector of size 4, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:47</div></div>
+<div class="ttc" id="anamespacedrake_html_af7e96394aef85f13f3fc84d3c3c238b3"><div class="ttname"><a href="namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3">drake::Vector4</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, 4, 1 &gt; Vector4</div><div class="ttdoc">A column vector of size 4, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:52</div></div>
 </div><!-- fragment --> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3957,7 +3957,7 @@ e(i, j) is linear for all i, j</dd></dl>
 <div class="line">     2*x+3,   2,   0,</div>
 <div class="line">     x+y,     0,   x;</div>
 <div class="line">prog.AddPositiveSemidefiniteConstraint(e);</div>
-<div class="ttc" id="anamespacedrake_html_a3922cc0c6264e8ff225a6aa0dd993667"><div class="ttname"><a href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">drake::Matrix3</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, 3, 3 &gt; Matrix3</div><div class="ttdoc">A matrix of 3 rows and 3 columns, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:99</div></div>
+<div class="ttc" id="anamespacedrake_html_a3922cc0c6264e8ff225a6aa0dd993667"><div class="ttname"><a href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">drake::Matrix3</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, 3, 3 &gt; Matrix3</div><div class="ttdoc">A matrix of 3 rows and 3 columns, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:104</div></div>
 </div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>This function will add additional variables and linear equality constraints. Consider calling AddLinearMatrixInequalityConstraint(e), which doesn't introduce new variables or linear equality constraints. </dd></dl>
 
 </div>

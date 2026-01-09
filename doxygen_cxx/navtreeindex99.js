@@ -1,7 +1,5 @@
 var NAVTREEINDEX99 =
 {
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[4,0,0,8,4,0],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[3,0,0,9,5,0,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[4,0,0,8,4,0,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a37624b00959bd2e6080521c344fcfd1e":[3,0,0,9,5,0,4],
 "structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a37624b00959bd2e6080521c344fcfd1e":[4,0,0,8,4,0,4],
@@ -249,5 +247,7 @@ var NAVTREEINDEX99 =
 "structdrake_1_1solvers_1_1_clarabel_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[4,0,0,12,7,1],
 "structdrake_1_1solvers_1_1_clp_solver_details.html":[3,0,0,13,9],
 "structdrake_1_1solvers_1_1_clp_solver_details.html":[4,0,0,12,9],
-"structdrake_1_1solvers_1_1_clp_solver_details.html#a56ac23a03ae7df25b7cf800be94fa964":[3,0,0,13,9,0]
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a56ac23a03ae7df25b7cf800be94fa964":[3,0,0,13,9,0],
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a56ac23a03ae7df25b7cf800be94fa964":[4,0,0,12,9,0],
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,13,9,1]
 };

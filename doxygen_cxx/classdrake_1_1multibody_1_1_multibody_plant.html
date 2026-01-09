@@ -304,7 +304,7 @@ The following snippet shows how per model instance actuation can be set: <div cl
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_joint_html"><div class="ttname"><a href="classdrake_1_1multibody_1_1_joint.html">drake::multibody::Joint</a></div><div class="ttdoc">A Joint models the kinematical relationship which characterizes the possible relative motion between ...</div><div class="ttdef"><b>Definition</b> joint.h:84</div></div>
 <div class="ttc" id="anamespacedrake_1_1multibody_html_acc810ff385ed4dede2e011b0b6fd3f2c"><div class="ttname"><a href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">drake::multibody::JointActuatorIndex</a></div><div class="ttdeci">TypeSafeIndex&lt; class JointActuatorElementTag &gt; JointActuatorIndex</div><div class="ttdoc">Type used to identify actuators by index within a multibody plant.</div><div class="ttdef"><b>Definition</b> multibody_tree_indexes.h:48</div></div>
 <div class="ttc" id="anamespacedrake_1_1multibody_html_af65439a17091283a89eb12f1955c6db0"><div class="ttname"><a href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">drake::multibody::ModelInstanceIndex</a></div><div class="ttdeci">TypeSafeIndex&lt; class ModelInstanceTag &gt; ModelInstanceIndex</div><div class="ttdoc">Type used to identify model instances by index within a multibody plant.</div><div class="ttdef"><b>Definition</b> multibody_tree_indexes.h:54</div></div>
-<div class="ttc" id="anamespacedrake_html_a77dd228fb4dd66a2c17dd3f7f38ffd85"><div class="ttname"><a href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, Eigen::Dynamic, 1 &gt; VectorX</div><div class="ttdoc">A column vector of any size, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:62</div></div>
+<div class="ttc" id="anamespacedrake_html_a77dd228fb4dd66a2c17dd3f7f38ffd85"><div class="ttname"><a href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, Eigen::Dynamic, 1 &gt; VectorX</div><div class="ttdoc">A column vector of any size, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:67</div></div>
 </div><!-- fragment --></dd>
 <dd>
 To inter-operate between the whole plant actuation vector and sets of per-model instance actuation vectors, see <a class="el" href="#a695e24adcadab868d6dd5a57f51953fd" title="Given actuation values u_instance for the actuators in model_instance, this function updates the actu...">SetActuationInArray()</a> to gather the model instance vectors into a whole plant vector and <a class="el" href="#a7a29c9845043cc59458a5a3f3d8fd5f6" title="Returns a vector of actuation values for model_instance from a vector u of actuation values for the e...">GetActuationFromArray()</a> to scatter the whole plant vector into per-model instance vectors.</dd></dl>
@@ -458,9 +458,9 @@ To inter-operate between the whole plant actuation vector and sets of per-model 
 <div class="line">plant_autodiff-&gt;CalcMassMatrix(*context_autodiff, &amp;M_autodiff);</div>
 <div class="ttc" id="aclassdrake_1_1multibody_1_1_rigid_body_html_ad850c57d3a08a7992a9f22cc30e69ef9"><div class="ttname"><a href="classdrake_1_1multibody_1_1_rigid_body.html#ad850c57d3a08a7992a9f22cc30e69ef9">drake::multibody::RigidBody::SetMass</a></div><div class="ttdeci">void SetMass(systems::Context&lt; T &gt; *context, const T &amp;mass) const</div><div class="ttdoc">For this RigidBody B, sets its mass stored in context to mass.</div><div class="ttdef"><b>Definition</b> rigid_body.h:573</div></div>
 <div class="ttc" id="aclassdrake_1_1systems_1_1_system_html_af4283f9cfe4969e5760164a5528b6960"><div class="ttname"><a href="classdrake_1_1systems_1_1_system.html#af4283f9cfe4969e5760164a5528b6960">drake::systems::System::ToAutoDiffXd</a></div><div class="ttdeci">std::unique_ptr&lt; System&lt; AutoDiffXd &gt; &gt; ToAutoDiffXd() const</div><div class="ttdoc">Creates a deep copy of this System, transmogrified to use the autodiff scalar type,...</div></div>
-<div class="ttc" id="anamespacedrake_html_a28c58d881c60e96f48a7a4e32a699b95"><div class="ttname"><a href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">drake::MatrixX</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, Eigen::Dynamic, Eigen::Dynamic &gt; MatrixX</div><div class="ttdoc">A matrix of dynamic size, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:127</div></div>
+<div class="ttc" id="anamespacedrake_html_a28c58d881c60e96f48a7a4e32a699b95"><div class="ttname"><a href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">drake::MatrixX</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, Eigen::Dynamic, Eigen::Dynamic &gt; MatrixX</div><div class="ttdoc">A matrix of dynamic size, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:132</div></div>
 <div class="ttc" id="anamespacedrake_html_a3d6302a0051e9403c9df3ed6808f3854"><div class="ttname"><a href="namespacedrake.html#a3d6302a0051e9403c9df3ed6808f3854">drake::AutoDiffXd</a></div><div class="ttdeci">drake::ad::AutoDiff AutoDiffXd</div><div class="ttdoc">A scalar type that performs automatic differentiation.</div><div class="ttdef"><b>Definition</b> autodiff.h:20</div></div>
-<div class="ttc" id="anamespacedrake_html_a6d923e79e6e92c2556edd86520145077"><div class="ttname"><a href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">drake::Vector1d</a></div><div class="ttdeci">Eigen::Matrix&lt; double, 1, 1 &gt; Vector1d</div><div class="ttdoc">A column vector of size 1 of doubles.</div><div class="ttdef"><b>Definition</b> eigen_types.h:35</div></div>
+<div class="ttc" id="anamespacedrake_html_a6d923e79e6e92c2556edd86520145077"><div class="ttname"><a href="namespacedrake.html#a6d923e79e6e92c2556edd86520145077">drake::Vector1d</a></div><div class="ttdeci">Eigen::Matrix&lt; double, 1, 1 &gt; Vector1d</div><div class="ttdoc">A column vector of size 1 of doubles.</div><div class="ttdef"><b>Definition</b> eigen_types.h:40</div></div>
 </div><!-- fragment --><p><a class="anchor" id="mbp_adding_elements"></a></p><h3>Adding modeling elements</h3>
 <p>Add multibody elements to a MultibodyPlant with methods like:</p>
 <ul>
@@ -5818,7 +5818,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated</a></b></dt><dd>Use GetDefaultFloatingBaseBodyPose() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated</a></b></dt><dd>Use GetDefaultFloatingBaseBodyPose() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -7063,7 +7063,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated</a></b></dt><dd>Use GetUniqueFloatingBaseBodyOrThrow() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated</a></b></dt><dd>Use GetUniqueFloatingBaseBodyOrThrow() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -7809,7 +7809,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated</a></b></dt><dd>Use HasUniqueFloatingBaseBody() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated</a></b></dt><dd>Use HasUniqueFloatingBaseBody() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -9718,7 +9718,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated</a></b></dt><dd>Use SetDefaultFloatingBaseBodyPose() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated</a></b></dt><dd>Use SetDefaultFloatingBaseBodyPose() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -10094,7 +10094,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInAnchoredFrame() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInAnchoredFrame() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
@@ -10126,7 +10126,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInWorldFrame() instead. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated</a></b></dt><dd>Use SetFloatingBaseBodyPoseInWorldFrame() instead. <br  />
  This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>

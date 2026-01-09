@@ -1,7 +1,5 @@
 var NAVTREEINDEX98 =
 {
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a0f056c9c4332a35f63a72e3c742c9c70":[2,2,2,1,0,5],
-"structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a2f8eb62b1524a68104ca65a97b12c2c4":[2,2,2,1,0,7],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a332ace838b769fb014be937464810c4c":[2,2,2,1,0,3],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a62877c2923dd3e9923089f823341a1fe":[2,2,2,1,0,2],
 "structdrake_1_1multibody_1_1_differential_inverse_kinematics_system_1_1_callback_details.html#a79e672570e71dacd8a45708e758691a8":[2,2,2,1,0,11],
@@ -249,5 +247,7 @@ var NAVTREEINDEX98 =
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#abf7bcad233bb525d781901c05545b68e":[4,0,0,8,3,1,5],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#ae3c085d0521d5da888d23da447ae4328":[3,0,0,9,4,1,3],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#ae3c085d0521d5da888d23da447ae4328":[4,0,0,8,3,1,3],
-"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[3,0,0,9,5,0]
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[3,0,0,9,5,0],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html":[4,0,0,8,4,0],
+"structdrake_1_1multibody_1_1parsing_1_1_add_collision_filter_group.html#a1ac4262e3bb2a1be1e29ce90bd7c2377":[3,0,0,9,5,0,2]
 };

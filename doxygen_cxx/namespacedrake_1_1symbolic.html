@@ -1061,6 +1061,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ad07c658dafebaf56057941ccae6f81c4 template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad07c658dafebaf56057941ccae6f81c4">ToLatex</a> (const Eigen::PlainObjectBase&lt; Derived &gt; &amp;M, int precision=3)</td></tr>
 <tr class="memdesc:ad07c658dafebaf56057941ccae6f81c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a LaTeX string representation of <span class="tt">M</span> with floating point coefficients displayed using <span class="tt">precision</span>.  <br /></td></tr>
 <tr class="memitem:ada77c9969b0422090c05636a895c0e8e" id="r_ada77c9969b0422090c05636a895c0e8e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada77c9969b0422090c05636a895c0e8e">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
+<tr class="memdesc:ada77c9969b0422090c05636a895c0e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:ad5eb41b274605738d8049c0f0440c9ec" id="r_ad5eb41b274605738d8049c0f0440c9ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5eb41b274605738d8049c0f0440c9ec">operator*</a> (<a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> m1, const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m2)</td></tr>
 <tr class="memdesc:ad5eb41b274605738d8049c0f0440c9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a multiplication of two monomials, <span class="tt">m1</span> and <span class="tt">m2</span>.  <br /></td></tr>
 <tr class="memitem:ad9fccbdfb814f10727e3b23ef0b6a20f" id="r_ad9fccbdfb814f10727e3b23ef0b6a20f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9fccbdfb814f10727e3b23ef0b6a20f">pow</a> (<a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> m, int p)</td></tr>
@@ -10149,6 +10150,10 @@ template&lt;typename BasisElement&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-05-01. </dd></dl>
+
 </div>
 </div>
 <a id="aebaa1c50ddcd18c8de9ba5ebc01f3989" name="aebaa1c50ddcd18c8de9ba5ebc01f3989"></a>
@@ -10439,7 +10444,7 @@ template&lt;typename DerivedA, typename DerivedB&gt; </div>
 <div class="line">(y = 1)</div>
 <div class="ttc" id="aclassdrake_1_1symbolic_1_1_formula_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_formula.html">drake::symbolic::Formula</a></div><div class="ttdoc">Represents a symbolic form of a first-order logic formula.</div><div class="ttdef"><b>Definition</b> formula.h:114</div></div>
 <div class="ttc" id="anamespacedrake_1_1symbolic_html_a5a51076f5f4ab9497965268ceb34e82c"><div class="ttname"><a href="#a5a51076f5f4ab9497965268ceb34e82c">drake::symbolic::get_operands</a></div><div class="ttdeci">const std::set&lt; Formula &gt; &amp; get_operands(const Formula &amp;f)</div><div class="ttdoc">Returns the set of formulas in a n-ary formula f.</div></div>
-<div class="ttc" id="anamespacedrake_html_a77dd228fb4dd66a2c17dd3f7f38ffd85"><div class="ttname"><a href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, Eigen::Dynamic, 1 &gt; VectorX</div><div class="ttdoc">A column vector of any size, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:62</div></div>
+<div class="ttc" id="anamespacedrake_html_a77dd228fb4dd66a2c17dd3f7f38ffd85"><div class="ttname"><a href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">drake::VectorX</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, Eigen::Dynamic, 1 &gt; VectorX</div><div class="ttdoc">A column vector of any size, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:67</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
