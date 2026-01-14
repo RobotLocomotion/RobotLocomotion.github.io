@@ -41,7 +41,7 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "obb.h", "obb_8h.html", "obb_8h" ],
     [ "obj_to_surface_mesh.h", "obj__to__surface__mesh_8h.html", "obj__to__surface__mesh_8h" ],
     [ "penetration_doxygen.h", "penetration__doxygen_8h.html", null ],
-    [ "plane.h", "plane_8h.html", null ],
+    [ "plane.h", "plane_8h.html", "plane_8h" ],
     [ "polygon_surface_mesh.h", "polygon__surface__mesh_8h.html", "polygon__surface__mesh_8h" ],
     [ "polygon_surface_mesh_field.h", "polygon__surface__mesh__field_8h.html", "polygon__surface__mesh__field_8h" ],
     [ "polygon_to_triangle_mesh.h", "polygon__to__triangle__mesh_8h.html", null ],

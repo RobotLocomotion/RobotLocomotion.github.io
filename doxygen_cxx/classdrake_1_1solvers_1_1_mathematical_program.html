@@ -1395,7 +1395,7 @@ template&lt;typename Derived&gt; </div>
 </div><div class="memdoc">
 
 <p>Adds quadratic constraint. </p>
-<p>The quadratic constraint is of the form lb ≤ .5 xᵀQx + bᵀx ≤ ub where <span class="tt">x</span> might be a subset of the decision variables in this <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>. Notice that if your quadratic constraint is convex, and you intend to solve the problem with a convex solver (like Mosek), then it is better to reformulate it with a second order cone constraint. See <a href="https://docs.mosek.com/11.0/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/11.0/capi/prob-def-quadratic.html#a-recommendation</a> for an explanation. </p>
+<p>The quadratic constraint is of the form lb ≤ .5 xᵀQx + bᵀx ≤ ub where <span class="tt">x</span> might be a subset of the decision variables in this <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>. Notice that if your quadratic constraint is convex, and you intend to solve the problem with a convex solver (like Mosek), then it is better to reformulate it with a second order cone constraint. See <a href="https://docs.mosek.com/11.1/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/11.1/capi/prob-def-quadratic.html#a-recommendation</a> for an explanation. </p>
 
 </div>
 </div>
@@ -4095,7 +4095,7 @@ All values in <span class="tt">minor_indices</span> lie in the range [0, symmetr
 </div><div class="memdoc">
 
 <p>Add the convex quadratic constraint 0.5xᵀQx + bᵀx + c &lt;= 0 as a rotated Lorentz cone constraint [rᵀx+s, 1, Px+q] is in the rotated Lorentz cone. </p>
-<p>When solving the optimization problem using conic solvers (like Mosek, Gurobi, SCS, etc), it is numerically preferable to impose the convex quadratic constraint as rotated Lorentz cone constraint. See <a href="https://docs.mosek.com/11.0/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/11.0/capi/prob-def-quadratic.html#a-recommendation</a> </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>When solving the optimization problem using conic solvers (like Mosek, Gurobi, SCS, etc), it is numerically preferable to impose the convex quadratic constraint as rotated Lorentz cone constraint. See <a href="https://docs.mosek.com/11.1/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/11.1/capi/prob-def-quadratic.html#a-recommendation</a> </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">exception</td><td>if this quadratic constraint is not convex (Q is not positive semidefinite) </td></tr>
   </table>
@@ -4155,7 +4155,7 @@ All values in <span class="tt">minor_indices</span> lie in the range [0, symmetr
 </div><div class="memdoc">
 
 <p>Adds quadratic constraint lb ≤ .5 xᵀQx + bᵀx ≤ ub Notice that if your quadratic constraint is convex, and you intend to solve the problem with a convex solver (like Mosek), then it is better to reformulate it with a second order cone constraint. </p>
-<p>See <a href="https://docs.mosek.com/11.0/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/11.0/capi/prob-def-quadratic.html#a-recommendation</a> for an explanation. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>See <a href="https://docs.mosek.com/11.1/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/11.1/capi/prob-def-quadratic.html#a-recommendation</a> for an explanation. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vars</td><td>x in the documentation above. </td></tr>
     <tr><td class="paramname">hessian_type</td><td>Whether the Hessian is positive semidefinite, negative semidefinite or indefinite. Drake will check the type if hessian_type=std::nullopt. Specifying the hessian type will speed this method up. </td></tr>
@@ -4206,7 +4206,7 @@ All values in <span class="tt">minor_indices</span> lie in the range [0, symmetr
 </div><div class="memdoc">
 
 <p>Adds quadratic constraint lb ≤ .5 xᵀQx + bᵀx ≤ ub Notice that if your quadratic constraint is convex, and you intend to solve the problem with a convex solver (like Mosek), then it is better to reformulate it with a second order cone constraint. </p>
-<p>See <a href="https://docs.mosek.com/11.0/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/11.0/capi/prob-def-quadratic.html#a-recommendation</a> for an explanation. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>See <a href="https://docs.mosek.com/11.1/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/11.1/capi/prob-def-quadratic.html#a-recommendation</a> for an explanation. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vars</td><td>x in the documentation above. </td></tr>
     <tr><td class="paramname">hessian_type</td><td>Whether the Hessian is positive semidefinite, negative semidefinite or indefinite. Drake will check the type if hessian_type=std::nullopt. Specifying the hessian type will speed this method up. </td></tr>
@@ -4247,7 +4247,7 @@ All values in <span class="tt">minor_indices</span> lie in the range [0, symmetr
 </div><div class="memdoc">
 
 <p>Overloads AddQuadraticConstraint, impose lb &lt;= e &lt;= ub where <span class="tt">e</span> is a quadratic expression. </p>
-<p>Notice that if your quadratic constraint is convex, and you intend to solve the problem with a convex solver (like Mosek), then it is better to reformulate it with a second order cone constraint. See <a href="https://docs.mosek.com/11.0/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/11.0/capi/prob-def-quadratic.html#a-recommendation</a> for an explanation. </p>
+<p>Notice that if your quadratic constraint is convex, and you intend to solve the problem with a convex solver (like Mosek), then it is better to reformulate it with a second order cone constraint. See <a href="https://docs.mosek.com/11.1/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/11.1/capi/prob-def-quadratic.html#a-recommendation</a> for an explanation. </p>
 
 </div>
 </div>

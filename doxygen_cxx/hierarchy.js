@@ -695,6 +695,7 @@ var hierarchy =
     [ "PeriodicEventData", "classdrake_1_1systems_1_1_periodic_event_data.html", null ],
     [ "PeriodicEventDataComparator", "structdrake_1_1systems_1_1_periodic_event_data_comparator.html", null ],
     [ "Meshcat::PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", null ],
+    [ "Plane&lt; T &gt;", "classdrake_1_1geometry_1_1_plane.html", null ],
     [ "PlaneSeparatesGeometries", "structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html", null ],
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo&lt; T &gt;", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],

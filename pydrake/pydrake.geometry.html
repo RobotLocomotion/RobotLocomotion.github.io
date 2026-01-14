@@ -7444,6 +7444,211 @@ render::RenderEngineVtk</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Plane</span></span><a class="headerlink" href="#pydrake.geometry.Plane" title="Link to this definition"></a></dt>
+<dd><p>The definition of a plane in ℜ³, posed in an arbitrary frame. The
+plane normal implicitly defines “above” and “below” directions
+relative to the plane. The “height” of a point relative to the plane
+can be queried.</p>
+<p>It is defined with the implicit equation: <code class="docutils literal notranslate"><span class="pre">P(x⃗</span> <span class="pre">=</span> <span class="pre">n̂⋅x⃗-</span> <span class="pre">d</span> <span class="pre">=</span> <span class="pre">0</span></code>. A
+particular instance is measured and expressed in a particular frame,
+such that only points measured and expressed in that same frame can be
+meaningfully compared to the plane. E.g.,</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nhat_F</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_FP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w">  </span><span class="c1">// P is a point on the plane.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Plane</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plane_F</span><span class="p">(</span><span class="n">nhat_F</span><span class="p">,</span><span class="w"> </span><span class="n">p_FP</span><span class="p">);</span><span class="w">  </span><span class="c1">// Plane in frame F.</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">distance_Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plane_F</span><span class="p">.</span><span class="n">CalcHeight</span><span class="p">(</span><span class="n">p_FQ</span><span class="p">);</span><span class="w">  </span><span class="c1">// valid!</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">distance_R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plane_F</span><span class="p">.</span><span class="n">CalcHeight</span><span class="p">(</span><span class="n">p_GR</span><span class="p">);</span><span class="w">  </span><span class="c1">// invalid!</span>
+</pre></div>
+</div>
+</details><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is templated; see <a class="reference internal" href="#pydrake.geometry.Plane_" title="pydrake.geometry.Plane_"><code class="xref py py-class docutils literal notranslate"><span class="pre">Plane_</span></code></a>
+for the list of instantiations.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Plane" title="pydrake.geometry.Plane"><span class="pre">pydrake.geometry.Plane</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_on_plane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">already_normalized</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Plane.__init__" title="Link to this definition"></a></dt>
+<dd><p>Constructs a Plane in frame F which is normal to <code class="docutils literal notranslate"><span class="pre">normal</span></code> and passes
+through the point <code class="docutils literal notranslate"><span class="pre">point_on_plane</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">normal</span></code>:</dt><dd><p>A (possibly unit-length) vector perpendicular to the plane
+expressed in Frame F (the <code class="docutils literal notranslate"><span class="pre">n̂</span></code> in the implicit equation). By
+default, the vector will be normalized before being stored (see
+below), becoming the nhat_F documented above.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">point_on_plane</span></code>:</dt><dd><p>A point on the plane measured and expressed in Frame F, p_FP. The
+<code class="docutils literal notranslate"><span class="pre">d</span></code> in the implicit equation is derived from this quantity.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">already_normalized</span></code>:</dt><dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the <code class="docutils literal notranslate"><span class="pre">normal</span></code> will be treated as if it
+has already been normalized by the caller. It should still
+essentially have unit length. This function reserves the right to
+validate this property in debug build up to an arbitrary
+tolerance. When in doubt, allow the plane to normalize the normal
+vector.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">already_normalized</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, <cite>normal</cite> must have
+magnitude ≥ 1e-10.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane.BoxOverlaps">
+<span class="sig-name descname"><span class="pre">BoxOverlaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Plane" title="pydrake.geometry.Plane"><span class="pre">pydrake.geometry.Plane</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">half_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_center_in_plane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_orientation_in_plane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.Plane.BoxOverlaps" title="Link to this definition"></a></dt>
+<dd><p>Reports if the given box intersects this plane. The plane is specified
+in a frame P (the plane normal is not necessarily aligned with Pz).
+The box is specified in generic terms. It is an box whose axes are
+aligned to frame B, centered on Bo, and posed in the plane’s frame P.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">half_width</span></code>:</dt><dd><p>The half-width extents of the box along its local axes.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">box_center_in_plane</span></code>:</dt><dd><p>The center of the box measured and expressed in the plane’s frame:
+p_PBo.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">box_orientation_in_plane</span></code>:</dt><dd><p>The orientation of the box expressed in the plane’s frame. The ith
+column goes with the ith half width: R_PB.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane.CalcHeight">
+<span class="sig-name descname"><span class="pre">CalcHeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Plane" title="pydrake.geometry.Plane"><span class="pre">pydrake.geometry.Plane</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#pydrake.geometry.Plane.CalcHeight" title="Link to this definition"></a></dt>
+<dd><p>Computes the height of Point Q relative to the plane. A positive
+height indicates the point lies <em>above</em> the plane; negative height
+indicates <em>below</em>. The point must be measured and expressed in the
+same frame as the plane.</p>
+<p>The return type depends on both the plane’s scalar type <code class="docutils literal notranslate"><span class="pre">T</span></code> and the
+given query point’s scalar type <code class="docutils literal notranslate"><span class="pre">U</span></code>. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">point</span></code>:</dt><dd><p>The quantity p_FQ (query point Q measured and expressed in the
+plane’s frame F).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane.reference_point">
+<span class="sig-name descname"><span class="pre">reference_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Plane" title="pydrake.geometry.Plane"><span class="pre">pydrake.geometry.Plane</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.Plane.reference_point" title="Link to this definition"></a></dt>
+<dd><p>Returns a point on the plane, measured and expressed in frame F. This
+is not necessarily the same point used to construct the plane.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane.unit_normal">
+<span class="sig-name descname"><span class="pre">unit_normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.geometry.Plane" title="pydrake.geometry.Plane"><span class="pre">pydrake.geometry.Plane</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.Plane.unit_normal" title="Link to this definition"></a></dt>
+<dd><p>Gets the plane’s unit normal expressed in frame F.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py template">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane_">
+<em class="property"><span class="pre">template</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Plane_</span></span><a class="headerlink" href="#pydrake.geometry.Plane_" title="Link to this definition"></a></dt>
+<dd><p>Instantiations: <code class="xref py py-class docutils literal notranslate"><span class="pre">Plane_[float]</span></code>, <a class="reference internal" href="#pydrake.geometry.Plane_-AutoDiffXd" title="pydrake.geometry.Plane_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Plane_[AutoDiffXd]</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane_-AutoDiffXd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">Plane_[AutoDiffXd]</span></span><a class="headerlink" href="#pydrake.geometry.Plane_-AutoDiffXd" title="Link to this definition"></a></dt>
+<dd><p>The definition of a plane in ℜ³, posed in an arbitrary frame. The
+plane normal implicitly defines “above” and “below” directions
+relative to the plane. The “height” of a point relative to the plane
+can be queried.</p>
+<p>It is defined with the implicit equation: <code class="docutils literal notranslate"><span class="pre">P(x⃗</span> <span class="pre">=</span> <span class="pre">n̂⋅x⃗-</span> <span class="pre">d</span> <span class="pre">=</span> <span class="pre">0</span></code>. A
+particular instance is measured and expressed in a particular frame,
+such that only points measured and expressed in that same frame can be
+meaningfully compared to the plane. E.g.,</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nhat_F</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_FP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w">  </span><span class="c1">// P is a point on the plane.</span>
+<span class="k">const</span><span class="w"> </span><span class="n">Plane</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">plane_F</span><span class="p">(</span><span class="n">nhat_F</span><span class="p">,</span><span class="w"> </span><span class="n">p_FP</span><span class="p">);</span><span class="w">  </span><span class="c1">// Plane in frame F.</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">distance_Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plane_F</span><span class="p">.</span><span class="n">CalcHeight</span><span class="p">(</span><span class="n">p_FQ</span><span class="p">);</span><span class="w">  </span><span class="c1">// valid!</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">distance_R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plane_F</span><span class="p">.</span><span class="n">CalcHeight</span><span class="p">(</span><span class="n">p_GR</span><span class="p">);</span><span class="w">  </span><span class="c1">// invalid!</span>
+</pre></div>
+</div>
+</details><dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane_-AutoDiffXd-.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.Plane_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_on_plane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">already_normalized</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pydrake.geometry.Plane_-AutoDiffXd-.__init__" title="Link to this definition"></a></dt>
+<dd><p>Constructs a Plane in frame F which is normal to <code class="docutils literal notranslate"><span class="pre">normal</span></code> and passes
+through the point <code class="docutils literal notranslate"><span class="pre">point_on_plane</span></code>.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">normal</span></code>:</dt><dd><p>A (possibly unit-length) vector perpendicular to the plane
+expressed in Frame F (the <code class="docutils literal notranslate"><span class="pre">n̂</span></code> in the implicit equation). By
+default, the vector will be normalized before being stored (see
+below), becoming the nhat_F documented above.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">point_on_plane</span></code>:</dt><dd><p>A point on the plane measured and expressed in Frame F, p_FP. The
+<code class="docutils literal notranslate"><span class="pre">d</span></code> in the implicit equation is derived from this quantity.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">already_normalized</span></code>:</dt><dd><p>(Advanced) If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the <code class="docutils literal notranslate"><span class="pre">normal</span></code> will be treated as if it
+has already been normalized by the caller. It should still
+essentially have unit length. This function reserves the right to
+validate this property in debug build up to an arbitrary
+tolerance. When in doubt, allow the plane to normalize the normal
+vector.</p>
+</dd>
+<dt>Precondition:</dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">already_normalized</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, <cite>normal</cite> must have
+magnitude ≥ 1e-10.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane_-AutoDiffXd-.BoxOverlaps">
+<span class="sig-name descname"><span class="pre">BoxOverlaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.Plane_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">half_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_center_in_plane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box_orientation_in_plane</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.math.html#pydrake.math.RotationMatrix" title="pydrake.math.RotationMatrix"><span class="pre">pydrake.math.RotationMatrix</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pydrake.geometry.Plane_-AutoDiffXd-.BoxOverlaps" title="Link to this definition"></a></dt>
+<dd><p>Reports if the given box intersects this plane. The plane is specified
+in a frame P (the plane normal is not necessarily aligned with Pz).
+The box is specified in generic terms. It is an box whose axes are
+aligned to frame B, centered on Bo, and posed in the plane’s frame P.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">half_width</span></code>:</dt><dd><p>The half-width extents of the box along its local axes.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">box_center_in_plane</span></code>:</dt><dd><p>The center of the box measured and expressed in the plane’s frame:
+p_PBo.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">box_orientation_in_plane</span></code>:</dt><dd><p>The orientation of the box expressed in the plane’s frame. The ith
+column goes with the ith half width: R_PB.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane_-AutoDiffXd-.CalcHeight">
+<span class="sig-name descname"><span class="pre">CalcHeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.Plane_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></a></span></span><a class="headerlink" href="#pydrake.geometry.Plane_-AutoDiffXd-.CalcHeight" title="Link to this definition"></a></dt>
+<dd><p>Computes the height of Point Q relative to the plane. A positive
+height indicates the point lies <em>above</em> the plane; negative height
+indicates <em>below</em>. The point must be measured and expressed in the
+same frame as the plane.</p>
+<p>The return type depends on both the plane’s scalar type <code class="docutils literal notranslate"><span class="pre">T</span></code> and the
+given query point’s scalar type <code class="docutils literal notranslate"><span class="pre">U</span></code>. See
+drake::geometry::promoted_numerical “promoted_numerical_t” for
+details.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">point</span></code>:</dt><dd><p>The quantity p_FQ (query point Q measured and expressed in the
+plane’s frame F).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane_-AutoDiffXd-.reference_point">
+<span class="sig-name descname"><span class="pre">reference_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.Plane_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.Plane_-AutoDiffXd-.reference_point" title="Link to this definition"></a></dt>
+<dd><p>Returns a point on the plane, measured and expressed in frame F. This
+is not necessarily the same point used to construct the plane.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.geometry.Plane_-AutoDiffXd-.unit_normal">
+<span class="sig-name descname"><span class="pre">unit_normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.geometry.Plane_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.geometry.Plane_-AutoDiffXd-.unit_normal" title="Link to this definition"></a></dt>
+<dd><p>Gets the plane’s unit normal expressed in frame F.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pydrake.geometry.PolygonSurfaceMesh">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pydrake.geometry.</span></span><span class="sig-name descname"><span class="pre">PolygonSurfaceMesh</span></span><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh" title="Link to this definition"></a></dt>
 <dd><p>PolygonSurfaceMesh represents a surface comprised of <em>polygonal</em>

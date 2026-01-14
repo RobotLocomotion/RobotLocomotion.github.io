@@ -198,8 +198,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae996d43658292894bfaee6504481d474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether the two oriented bounding boxes <span class="tt">a_G</span> and <span class="tt">b_H</span> intersect.  <br /></td></tr>
 <tr class="memitem:a4d3912b25f945c197b83d13db34e75d3" id="r_a4d3912b25f945c197b83d13db34e75d3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d3912b25f945c197b83d13db34e75d3">HasOverlap</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;obb_G, const <a class="el" href="classdrake_1_1geometry_1_1_aabb.html">Aabb</a> &amp;aabb_H, const math::RigidTransformd &amp;X_GH)</td></tr>
 <tr class="memdesc:a4d3912b25f945c197b83d13db34e75d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether oriented bounding box <span class="tt">obb_G</span> intersects the given axis-aligned bounding box <span class="tt">aabb_H</span>.  <br /></td></tr>
-<tr class="memitem:ab41d541b166e8cc53b783869d1ce761c" id="r_ab41d541b166e8cc53b783869d1ce761c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab41d541b166e8cc53b783869d1ce761c">HasOverlap</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;bv_H, const internal::Plane&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plane_P, const math::RigidTransformd &amp;X_PH)</td></tr>
-<tr class="memdesc:ab41d541b166e8cc53b783869d1ce761c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Checks whether bounding volume <span class="tt">bv</span> intersects the given plane.  <br /></td></tr>
+<tr class="memitem:a4bbcf1321d4bcfca50d21e1f6d306fa9" id="r_a4bbcf1321d4bcfca50d21e1f6d306fa9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bbcf1321d4bcfca50d21e1f6d306fa9">HasOverlap</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;bv_H, const <a class="el" href="classdrake_1_1geometry_1_1_plane.html">Plane</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plane_P, const math::RigidTransformd &amp;X_PH)</td></tr>
+<tr class="memdesc:a4bbcf1321d4bcfca50d21e1f6d306fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Checks whether bounding volume <span class="tt">bv</span> intersects the given plane.  <br /></td></tr>
 <tr class="memitem:a69875434869bff85edeee1bcebf34e02" id="r_a69875434869bff85edeee1bcebf34e02"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69875434869bff85edeee1bcebf34e02">HasOverlap</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;bv_H, const <a class="el" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a> &amp;hs_C, const math::RigidTransformd &amp;X_CH)</td></tr>
 <tr class="memdesc:a69875434869bff85edeee1bcebf34e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether bounding volume <span class="tt">bv</span> intersects the given half space.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -477,8 +477,8 @@ template&lt;typename MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ab41d541b166e8cc53b783869d1ce761c" name="ab41d541b166e8cc53b783869d1ce761c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab41d541b166e8cc53b783869d1ce761c">&#9670;&#160;</a></span>HasOverlap() <span class="overload">[3/4]</span></h2>
+<a id="a4bbcf1321d4bcfca50d21e1f6d306fa9" name="a4bbcf1321d4bcfca50d21e1f6d306fa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bbcf1321d4bcfca50d21e1f6d306fa9">&#9670;&#160;</a></span>HasOverlap() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -494,7 +494,7 @@ template&lt;typename MeshType&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const internal::Plane&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plane_P</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_plane.html">Plane</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>plane_P</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

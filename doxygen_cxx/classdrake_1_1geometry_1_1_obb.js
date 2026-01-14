@@ -10,7 +10,7 @@ var classdrake_1_1geometry_1_1_obb =
     [ "half_width", "classdrake_1_1geometry_1_1_obb.html#a255b47a8be377a309aeefab457ba614c", null ],
     [ "HasOverlap", "classdrake_1_1geometry_1_1_obb.html#ae996d43658292894bfaee6504481d474", null ],
     [ "HasOverlap", "classdrake_1_1geometry_1_1_obb.html#a69875434869bff85edeee1bcebf34e02", null ],
-    [ "HasOverlap", "classdrake_1_1geometry_1_1_obb.html#ab41d541b166e8cc53b783869d1ce761c", null ],
+    [ "HasOverlap", "classdrake_1_1geometry_1_1_obb.html#a4bbcf1321d4bcfca50d21e1f6d306fa9", null ],
     [ "HasOverlap", "classdrake_1_1geometry_1_1_obb.html#a4d3912b25f945c197b83d13db34e75d3", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_obb.html#aa15395436058ad4d9d170d2e13d6b647", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_obb.html#a45fd84f3c1b14fda8afd89b1d77febce", null ],

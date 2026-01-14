@@ -1,0 +1,508 @@
+<!-- HTML header for doxygen 1.15.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: Plane&lt; T &gt; Class Template Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/index-753e3c9d261247ba9f0eb1d7868c18c8">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="search_form_cpp" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="q" value="site:drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="search_form" class="wy_form" action="https://google.com/search" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="q" value="site:drake.mit.edu OR site:underactuated.csail.mit.edu OR site:manipulation.csail.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+  <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdrake_1_1geometry_1_1_plane.html','','classdrake_1_1geometry_1_1_plane-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Plane&lt; T &gt; Class Template Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class drake::geometry::Plane&lt; T &gt;</div><p>The definition of a plane in ℜ³, posed in an arbitrary frame. </p>
+<p>The plane normal implicitly defines "above" and "below" directions relative to the plane. The "height" of a point relative to the plane can be queried.</p>
+<p>It is defined with the implicit equation: <span class="tt">P(x⃗ = n̂⋅x⃗- d = 0</span>. A particular instance is measured and expressed in a particular frame, such that only points measured and expressed in that same frame can be meaningfully compared to the plane. E.g.,</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_typedef" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3&lt;T&gt;</a> nhat_F = ...;</div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_typedef" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3&lt;T&gt;</a> p_FP = ...;  <span class="comment">// P is a point on the plane.</span></div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_function" href="#a7c69aec30cd054f8aa813feca4e124e6">Plane&lt;T&gt;</a> plane_F(nhat_F, p_FP);  <span class="comment">// Plane in frame F.</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> distance_Q = plane_F.CalcHeight(p_FQ);  <span class="comment">// valid!</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> distance_R = plane_F.CalcHeight(p_GR);  <span class="comment">// invalid!</span></div>
+<div class="ttc" id="aclassdrake_1_1geometry_1_1_plane_html_a7c69aec30cd054f8aa813feca4e124e6"><div class="ttname"><a href="#a7c69aec30cd054f8aa813feca4e124e6">drake::geometry::Plane::Plane</a></div><div class="ttdeci">Plane(const Plane &amp;)=default</div></div>
+<div class="ttc" id="anamespacedrake_html_a0ad29daab565ce347c4d1c5aae6a76c2"><div class="ttname"><a href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">drake::Vector3</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, 3, 1 &gt; Vector3</div><div class="ttdoc">A column vector of size 3, templated on scalar type.</div><div class="ttdef"><b>Definition</b> eigen_types.h:48</div></div>
+</div><!-- fragment --> </div>
+<p><code>#include &lt;drake/geometry/proximity/plane.h&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af91f58e2b7080a4162be206ba42d85bd" id="r_af91f58e2b7080a4162be206ba42d85bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af91f58e2b7080a4162be206ba42d85bd">Plane</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;normal, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;point_on_plane, bool already_normalized=false)</td></tr>
+<tr class="memdesc:af91f58e2b7080a4162be206ba42d85bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a Plane in frame F which is normal to <span class="tt">normal</span> and passes through the point <span class="tt">point_on_plane</span>.  <br /></td></tr>
+<tr class="memitem:aeebed28ea182e50d59d97c22e358a4a2" id="r_aeebed28ea182e50d59d97c22e358a4a2"><td class="memTemplParams" colspan="2">template&lt;typename U = T&gt; </td></tr>
+<tr class="memitem:aeebed28ea182e50d59d97c22e358a4a2 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; U, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeebed28ea182e50d59d97c22e358a4a2">CalcHeight</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; U &gt; &amp;point) const</td></tr>
+<tr class="memdesc:aeebed28ea182e50d59d97c22e358a4a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the height of Point Q relative to the plane.  <br /></td></tr>
+<tr class="memitem:a3796845f99295b8308aeb5ff8642eb71" id="r_a3796845f99295b8308aeb5ff8642eb71"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3796845f99295b8308aeb5ff8642eb71">unit_normal</a> () const</td></tr>
+<tr class="memdesc:a3796845f99295b8308aeb5ff8642eb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the plane's unit normal expressed in frame F.  <br /></td></tr>
+<tr class="memitem:a60aa1bbab9e9923ef99b2520d4a86bb8" id="r_a60aa1bbab9e9923ef99b2520d4a86bb8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60aa1bbab9e9923ef99b2520d4a86bb8">reference_point</a> () const</td></tr>
+<tr class="memdesc:a60aa1bbab9e9923ef99b2520d4a86bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a point on the plane, measured and expressed in frame F.  <br /></td></tr>
+<tr class="memitem:aa7b5f45fccff6c4f325d2cdb193ed63e" id="r_aa7b5f45fccff6c4f325d2cdb193ed63e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7b5f45fccff6c4f325d2cdb193ed63e">BoxOverlaps</a> (const Eigen::Vector3d &amp;half_width, const Eigen::Vector3d &amp;box_center_in_plane, const math::RotationMatrixd &amp;box_orientation_in_plane) const</td></tr>
+<tr class="memdesc:aa7b5f45fccff6c4f325d2cdb193ed63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if the given box intersects this plane.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a7c69aec30cd054f8aa813feca4e124e6" id="r_a7c69aec30cd054f8aa813feca4e124e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c69aec30cd054f8aa813feca4e124e6">Plane</a> (const Plane &amp;)=default</td></tr>
+<tr class="memitem:a7178409f957b7b7437d8e6f704e2a5b3" id="r_a7178409f957b7b7437d8e6f704e2a5b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7c69aec30cd054f8aa813feca4e124e6">Plane</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7178409f957b7b7437d8e6f704e2a5b3">operator=</a> (const <a class="el" href="#a7c69aec30cd054f8aa813feca4e124e6">Plane</a> &amp;)=default</td></tr>
+<tr class="memitem:a13a26dcb68db1d98edab26f600292dfa" id="r_a13a26dcb68db1d98edab26f600292dfa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13a26dcb68db1d98edab26f600292dfa">Plane</a> (Plane &amp;&amp;)=default</td></tr>
+<tr class="memitem:a8d344a3686ea55ca72b070209d2ee124" id="r_a8d344a3686ea55ca72b070209d2ee124"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7c69aec30cd054f8aa813feca4e124e6">Plane</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d344a3686ea55ca72b070209d2ee124">operator=</a> (<a class="el" href="#a7c69aec30cd054f8aa813feca4e124e6">Plane</a> &amp;&amp;)=default</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7c69aec30cd054f8aa813feca4e124e6" name="a7c69aec30cd054f8aa813feca4e124e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c69aec30cd054f8aa813feca4e124e6">&#9670;&#160;</a></span>Plane() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Plane </td>
+          <td>(</td>
+          <td class="paramtype">const Plane&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13a26dcb68db1d98edab26f600292dfa" name="a13a26dcb68db1d98edab26f600292dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a26dcb68db1d98edab26f600292dfa">&#9670;&#160;</a></span>Plane() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Plane </td>
+          <td>(</td>
+          <td class="paramtype">Plane&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af91f58e2b7080a4162be206ba42d85bd" name="af91f58e2b7080a4162be206ba42d85bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91f58e2b7080a4162be206ba42d85bd">&#9670;&#160;</a></span>Plane() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Plane </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>normal</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>point_on_plane</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>already_normalized</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a Plane in frame F which is normal to <span class="tt">normal</span> and passes through the point <span class="tt">point_on_plane</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">normal</td><td>A (possibly unit-length) vector perpendicular to the plane expressed in Frame F (the <span class="tt">n̂</span> in the implicit equation). By default, the vector will be normalized before being stored (see below), becoming the nhat_F documented above. </td></tr>
+    <tr><td class="paramname">point_on_plane</td><td>A point on the plane measured and expressed in Frame F, p_FP. The <span class="tt">d</span> in the implicit equation is derived from this quantity. </td></tr>
+    <tr><td class="paramname">already_normalized</td><td>(Advanced) If <span class="tt">true</span>, the <span class="tt">normal</span> will be treated as if it has already been normalized by the caller. It should still essentially have unit length. This function reserves the right to validate this property in debug build up to an arbitrary tolerance. When in doubt, allow the plane to normalize the normal vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>If <span class="tt">already_normalized</span> is <span class="tt">false</span>, <span class="tt">normal</span> must have magnitude ≥ 1e-10. </dd></dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aa7b5f45fccff6c4f325d2cdb193ed63e" name="aa7b5f45fccff6c4f325d2cdb193ed63e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7b5f45fccff6c4f325d2cdb193ed63e">&#9670;&#160;</a></span>BoxOverlaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BoxOverlaps </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3d &amp;</td>          <td class="paramname"><span class="paramname"><em>half_width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;</td>          <td class="paramname"><span class="paramname"><em>box_center_in_plane</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RotationMatrixd &amp;</td>          <td class="paramname"><span class="paramname"><em>box_orientation_in_plane</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports if the given box intersects this plane. </p>
+<p>The plane is specified in a frame P (the plane normal is not necessarily aligned with Pz). The box is specified in generic terms. It is an box whose axes are aligned to frame B, centered on Bo, and posed in the plane's frame P.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">half_width</td><td>The half-width extents of the box along its local axes. </td></tr>
+    <tr><td class="paramname">box_center_in_plane</td><td>The center of the box measured and expressed in the plane's frame: p_PBo. </td></tr>
+    <tr><td class="paramname">box_orientation_in_plane</td><td>The orientation of the box expressed in the plane's frame. The ith column goes with the ith half width: R_PB. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeebed28ea182e50d59d97c22e358a4a2" name="aeebed28ea182e50d59d97c22e358a4a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeebed28ea182e50d59d97c22e358a4a2">&#9670;&#160;</a></span>CalcHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename U = T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; U, T &gt; CalcHeight </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; U &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>point</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the height of Point Q relative to the plane. </p>
+<p>A positive height indicates the point lies <em>above</em> the plane; negative height indicates <em>below</em>. The point must be measured and expressed in the same frame as the plane.</p>
+<p>The return type depends on both the plane's scalar type <span class="tt">T</span> and the given query point's scalar type <span class="tt">U</span>. See <a class="el" href="structdrake_1_1geometry_1_1promoted__numerical.html">promoted_numerical_t</a> for details.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>The quantity p_FQ (query point Q measured and expressed in the plane's frame F). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7178409f957b7b7437d8e6f704e2a5b3" name="a7178409f957b7b7437d8e6f704e2a5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7178409f957b7b7437d8e6f704e2a5b3">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7c69aec30cd054f8aa813feca4e124e6">Plane</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a7c69aec30cd054f8aa813feca4e124e6">Plane</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d344a3686ea55ca72b070209d2ee124" name="a8d344a3686ea55ca72b070209d2ee124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d344a3686ea55ca72b070209d2ee124">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7c69aec30cd054f8aa813feca4e124e6">Plane</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a7c69aec30cd054f8aa813feca4e124e6">Plane</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60aa1bbab9e9923ef99b2520d4a86bb8" name="a60aa1bbab9e9923ef99b2520d4a86bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60aa1bbab9e9923ef99b2520d4a86bb8">&#9670;&#160;</a></span>reference_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; reference_point </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a point on the plane, measured and expressed in frame F. </p>
+<p>This is not necessarily the same point used to construct the plane. </p>
+
+</div>
+</div>
+<a id="a3796845f99295b8308aeb5ff8642eb71" name="a3796845f99295b8308aeb5ff8642eb71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3796845f99295b8308aeb5ff8642eb71">&#9670;&#160;</a></span>unit_normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp; unit_normal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the plane's unit normal expressed in frame F. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>drake/geometry/proximity/<a class="el" href="plane_8h.html">plane.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- footer -->
+<div class="navpath">
+  <ul>
+    <li class="navelem"><a href="namespacedrake.html">drake</a></li><li class="navelem"><a href="namespacedrake_1_1geometry.html">geometry</a></li><li class="navelem"><a href="classdrake_1_1geometry_1_1_plane.html">Plane</a></li>
+  </ul>
+</div>
+<footer id="nav-path", class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().placeholder = searchBox.searchLabel;
+searchBox.DOMSearchField().value = '';
+</script>
+</body>
+</html>
