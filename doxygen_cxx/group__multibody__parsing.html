@@ -368,6 +368,14 @@ Drake Extensions</h1>
 <li><a class="el" href="#tag_drake_length">drake:length</a></li>
 <li><a class="el" href="#tag_drake_line_segment">drake:line_segment</a></li>
 <li><a class="el" href="#tag_drake_linear_bushing_rpy">drake:linear_bushing_rpy</a></li>
+<li><a class="el" href="#tag_drake_linear_spring_damper">drake:linear_spring_damper</a></li>
+<li><a class="el" href="#tag_drake_linear_spring_damper_body_A">drake:linear_spring_damper_body_A</a></li>
+<li><a class="el" href="#tag_drake_linear_spring_damper_p_AP">drake:linear_spring_damper_p_AP</a></li>
+<li><a class="el" href="#tag_drake_linear_spring_damper_body_B">drake:linear_spring_damper_body_B</a></li>
+<li><a class="el" href="#tag_drake_linear_spring_damper_p_BQ">drake:linear_spring_damper_p_BQ</a></li>
+<li><a class="el" href="#tag_drake_linear_spring_damper_free_length">drake:linear_spring_damper_free_length</a></li>
+<li><a class="el" href="#tag_drake_linear_spring_damper_stiffness">drake:linear_spring_damper_stiffness</a></li>
+<li><a class="el" href="#tag_drake_linear_spring_damper_damping">drake:linear_spring_damper_damping</a></li>
 <li><a class="el" href="#tag_drake_mass_damping">drake:mass_damping</a></li>
 <li><a class="el" href="#tag_drake_mass_density">drake:mass_density</a></li>
 <li><a class="el" href="#tag_drake_material_model">drake:material_model</a></li>
@@ -447,8 +455,8 @@ drake:ball_constraint</h2>
 <li>URDF path: <span class="tt">/robot/drake:ball_constraint</span></li>
 <li>Syntax: Nested elements <a class="el" href="#tag_drake_ball_constraint_body_A">drake:ball_constraint_body_A</a>, <a class="el" href="#tag_drake_ball_constraint_body_B">drake:ball_constraint_body_B</a>, <a class="el" href="#tag_drake_ball_constraint_p_AP">drake:ball_constraint_p_AP</a>, and <a class="el" href="#tag_drake_ball_constraint_p_BQ">drake:ball_constraint_p_BQ</a></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_semantics"></a>
+Semantics</h3>
 <p>The element adds a ball constraint to the model via <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a04c1fdf7afe469442ca4ceb1392653c7" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a>.</p>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_body_A"></a>
 drake:ball_constraint_body_A</h2>
@@ -457,8 +465,8 @@ drake:ball_constraint_body_A</h2>
 <li>URDF path: <span class="tt">/robot/drake:ball_constraint/drake:ball_constraint_body_A/@name</span></li>
 <li>Syntax: String.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_body_A_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_body_A_semantics"></a>
+Semantics</h3>
 <p>The string names a body (expected to already be defined by this model) that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a04c1fdf7afe469442ca4ceb1392653c7" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a> as the <span class="tt">body_A</span> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_ball_constraint">drake:ball_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a04c1fdf7afe469442ca4ceb1392653c7" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_body_B"></a>
@@ -468,8 +476,8 @@ drake:ball_constraint_body_B</h2>
 <li>URDF path: <span class="tt">/robot/drake:ball_constraint/drake:ball_constraint_body_B/@name</span></li>
 <li>Syntax: String.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_body_B_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_body_B_semantics"></a>
+Semantics</h3>
 <p>The string names a body (expected to already be defined by this model) that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a04c1fdf7afe469442ca4ceb1392653c7" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a> as the <span class="tt">body_B</span> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_ball_constraint">drake:ball_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a04c1fdf7afe469442ca4ceb1392653c7" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_p_AP"></a>
@@ -479,8 +487,8 @@ drake:ball_constraint_p_AP</h2>
 <li>URDF path: <span class="tt">/robot/drake:ball_constraint/drake:ball_constraint_p_AP/@value</span></li>
 <li>Syntax: Three floating point values.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_p_AP_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_p_AP_semantics"></a>
+Semantics</h3>
 <p>The three floating point values (units of meters) are formed into a vector and passed into <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a04c1fdf7afe469442ca4ceb1392653c7" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a> as the <span class="tt">p_AP</span> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_ball_constraint">drake:ball_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a04c1fdf7afe469442ca4ceb1392653c7" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_p_BQ"></a>
@@ -490,8 +498,8 @@ drake:ball_constraint_p_BQ</h2>
 <li>URDF path: <span class="tt">/robot/drake:ball_constraint/drake:ball_constraint_p_BQ/@value</span></li>
 <li>Syntax: Three floating point values.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_p_BQ_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_ball_constraint_p_BQ_semantics"></a>
+Semantics</h3>
 <p>The three floating point values (units of meters) are formed into a vector and passed into <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a04c1fdf7afe469442ca4ceb1392653c7" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a> as the <span class="tt">p_BQ</span> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_ball_constraint">drake:ball_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a04c1fdf7afe469442ca4ceb1392653c7" title="Defines a constraint such that point P affixed to body A is coincident at all times with point Q affi...">drake::multibody::MultibodyPlant::AddBallConstraint()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint"></a>
@@ -501,8 +509,8 @@ drake:tendon_constraint</h2>
 <li>URDF path: <span class="tt">/robot/drake:tendon_constraint</span></li>
 <li>Syntax: Nested elements <a class="el" href="#tag_drake_tendon_constraint_joint">drake:tendon_constraint_joint</a>, <a class="el" href="#tag_drake_tendon_constraint_offset">drake:tendon_constraint_offset</a>, <a class="el" href="#tag_drake_tendon_constraint_lower_limit">drake:tendon_constraint_lower_limit</a>, <a class="el" href="#tag_drake_tendon_constraint_upper_limit">drake:tendon_constraint_upper_limit</a>, <a class="el" href="#tag_drake_tendon_constraint_stiffness">drake:tendon_constraint_stiffness</a>, and <a class="el" href="#tag_drake_tendon_constraint_damping">drake:tendon_constraint_damping</a></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_semantics"></a>
+Semantics</h3>
 <p>The element adds a tendon constraint to the model via <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a>.</p>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_joint"></a>
 drake:tendon_constraint_joint</h2>
@@ -511,8 +519,8 @@ drake:tendon_constraint_joint</h2>
 <li>URDF path: <span class="tt">/robot/drake:tendon_constraint/drake:tendon_constraint_joint</span></li>
 <li>Syntax: Two attributes <span class="tt">name</span> containing a string value and <span class="tt">a</span> containing a floating point value.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_joint_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_joint_semantics"></a>
+Semantics</h3>
 <p>The string names a joint (expected to already be defined by this model and be single-dof) and the float specifies a coefficient to be applied to the joint configuration to determine the tendon length. These will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <span class="tt">joints</span> and <span class="tt">a</span> parameters, respectively. The tag can be repeated to specify multiple joints.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_offset"></a>
@@ -522,8 +530,8 @@ drake:tendon_constraint_offset</h2>
 <li>URDF path: <span class="tt">/robot/drake:tendon_constraint/drake:tendon_constraint_offset/@value</span></li>
 <li>Syntax: Floating point value.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_offset_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_offset_semantics"></a>
+Semantics</h3>
 <p>A floating point value specifying the length offset in either [m] or [rad] that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <span class="tt">offset</span> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_lower_limit"></a>
@@ -533,8 +541,8 @@ drake:tendon_constraint_lower_limit</h2>
 <li>URDF path: <span class="tt">/robot/drake:tendon_constraint/drake:tendon_constraint_lower_limit/@value</span></li>
 <li>Syntax: Floating point value.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_lower_limit_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_lower_limit_semantics"></a>
+Semantics</h3>
 <p>A floating point value specifying the lower bound on the constraint in either [m] or [rad] that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <span class="tt">lower_bound</span> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_upper_limit"></a>
@@ -544,8 +552,8 @@ drake:tendon_constraint_upper_limit</h2>
 <li>URDF path: <span class="tt">/robot/drake:tendon_constraint/drake:tendon_constraint_upper_limit/@value</span></li>
 <li>Syntax: Floating point value.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_upper_limit_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_upper_limit_semantics"></a>
+Semantics</h3>
 <p>A floating point value specifying the upper bound on the constraint in either [m] or [rad] that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <span class="tt">upper_bound</span> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_stiffness"></a>
@@ -555,8 +563,8 @@ drake:tendon_constraint_stiffness</h2>
 <li>URDF path: <span class="tt">/robot/drake:tendon_constraint/drake:tendon_constraint_stiffness/@value</span></li>
 <li>Syntax: Floating point value.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_stiffness_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_stiffness_semantics"></a>
+Semantics</h3>
 <p>A floating point value specifying the constraint stiffness in either [N/m] or [N⋅m/rad] that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <span class="tt">stiffness</span> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_damping"></a>
@@ -566,8 +574,8 @@ drake:tendon_constraint_damping</h2>
 <li>URDF path: <span class="tt">/robot/drake:tendon_constraint/drake:tendon_constraint_damping/@value</span></li>
 <li>Syntax: Floating point value.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_damping_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_tendon_constraint_damping_semantics"></a>
+Semantics</h3>
 <p>A floating point value specifying the constraint damping in either [N⋅s/m] or [N⋅m⋅rad/s] that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a> as the <span class="tt">damping</span> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_tendon_constraint">drake:tendon_constraint</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7639ec04cd9ca90b649e7b712e5b839c" title="Defines a set of unilateral constraints on the length of an abstract tendon defined as:">drake::multibody::MultibodyPlant::AddTendonConstraint()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_bushing_force_damping"></a>
@@ -636,6 +644,93 @@ drake:bushing_torque_stiffness</h2>
 Semantics</h3>
 <p>The three floating point values (units of N⋅m/rad) are formed into a vector and passed to the constructor of <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">drake::multibody::LinearBushingRollPitchYaw</a> as the <span class="tt">torque_stiffness_constants</span> parameter.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_linear_bushing_rpy">drake:linear_bushing_rpy</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html" title="This ForceElement models a massless flexible bushing that connects a frame A of a link (body) L0 to a...">drake::multibody::LinearBushingRollPitchYaw</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#Basic_bushing_torque_stiffness_and_damping">How to choose torque stiffness and damping constants</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper"></a>
+drake:linear_spring_damper</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:linear_spring_damper</span></li>
+<li>URDF path: <span class="tt">/robot/drake:linear_spring_damper</span></li>
+<li>Syntax: Nested elements <a class="el" href="#tag_drake_linear_spring_damper_body_A">drake:linear_spring_damper_body_A</a>, <a class="el" href="#tag_drake_linear_spring_damper_p_AP">drake:linear_spring_damper_p_AP</a>, <a class="el" href="#tag_drake_linear_spring_damper_body_B">drake:linear_spring_damper_body_B</a>, <a class="el" href="#tag_drake_linear_spring_damper_p_BQ">drake:linear_spring_damper_p_BQ</a>, <a class="el" href="#tag_drake_linear_spring_damper_free_length">drake:linear_spring_damper_free_length</a>, <a class="el" href="#tag_drake_linear_spring_damper_stiffness">drake:linear_spring_damper_stiffness</a>, and <a class="el" href="#tag_drake_linear_spring_damper_damping">drake:linear_spring_damper_damping</a></li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_semantics"></a>
+Semantics</h3>
+<p>The element adds a <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper</a> to the model.</p>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_body_A"></a>
+drake:linear_spring_damper_body_A</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:linear_spring_damper/drake:linear_spring_damper_body_A</span></li>
+<li>URDF path: <span class="tt">/robot/drake:linear_spring_damper/drake:linear_spring_damper_body_A/@name</span></li>
+<li>Syntax: String.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_body_A_semantics"></a>
+Semantics</h3>
+<p>The string names a body (expected to already be defined by this model) that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a> as the <span class="tt">body_A</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_linear_spring_damper">drake:linear_spring_damper</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_p_AP"></a>
+drake:linear_spring_damper_p_AP</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:linear_spring_damper/drake:linear_spring_damper_p_AP</span></li>
+<li>URDF path: <span class="tt">/robot/drake:linear_spring_damper/drake:linear_spring_damper_p_AP/@value</span></li>
+<li>Syntax: Three floating point values.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_p_AP_semantics"></a>
+Semantics</h3>
+<p>The three floating point values (units of meters) are formed into a vector and passed into <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a> as the <span class="tt">p_AP</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_linear_spring_damper">drake:linear_spring_damper</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_body_B"></a>
+drake:linear_spring_damper_body_B</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:linear_spring_damper/drake:linear_spring_damper_body_B</span></li>
+<li>URDF path: <span class="tt">/robot/drake:linear_spring_damper/drake:linear_spring_damper_body_B/@name</span></li>
+<li>Syntax: String.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_body_B_semantics"></a>
+Semantics</h3>
+<p>The string names a body (expected to already be defined by this model) that will be passed to <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a> as the <span class="tt">body_B</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_linear_spring_damper">drake:linear_spring_damper</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_p_BQ"></a>
+drake:linear_spring_damper_p_BQ</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:linear_spring_damper/drake:linear_spring_damper_p_BQ</span></li>
+<li>URDF path: <span class="tt">/robot/drake:linear_spring_damper/drake:linear_spring_damper_p_BQ/@value</span></li>
+<li>Syntax: Three floating point values.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_p_BQ_semantics"></a>
+Semantics</h3>
+<p>The three floating point values (units of meters) are formed into a vector and passed into <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a> as the <span class="tt">p_BQ</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_linear_spring_damper">drake:linear_spring_damper</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_free_length"></a>
+drake:linear_spring_damper_free_length</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:linear_spring_damper/drake:linear_spring_damper_free_length</span></li>
+<li>URDF path: <span class="tt">/robot/drake:linear_spring_damper/drake:linear_spring_damper_free_length/@value</span></li>
+<li>Syntax: a strictly positive floating point value.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_free_length_semantics"></a>
+Semantics</h3>
+<p>The floating point value (unit of meters) is passed into <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a> as the <span class="tt">free_length</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_linear_spring_damper">drake:linear_spring_damper</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_stiffness"></a>
+drake:linear_spring_damper_stiffness</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:linear_spring_damper/drake:linear_spring_damper_stiffness</span></li>
+<li>URDF path: <span class="tt">/robot/drake:linear_spring_damper/drake:linear_spring_damper_stiffness/@value</span></li>
+<li>Syntax: a non-negative floating point value.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_stiffness_semantics"></a>
+Semantics</h3>
+<p>The floating point value (unit of N/m) is passed into <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a> as the <span class="tt">stiffness</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_linear_spring_damper">drake:linear_spring_damper</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a></dd></dl>
+<h2 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_damping"></a>
+drake:linear_spring_damper_damping</h2>
+<ul>
+<li>SDFormat path: <span class="tt">//model/drake:linear_spring_damper/drake:linear_spring_damper_damping</span></li>
+<li>URDF path: <span class="tt">/robot/drake:linear_spring_damper/drake:linear_spring_damper_damping/@value</span></li>
+<li>Syntax: a non-negative floating point value.</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_linear_spring_damper_damping_semantics"></a>
+Semantics</h3>
+<p>The floating point value (unit of N⋅s/m) is passed into <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a> as the <span class="tt">damping</span> parameter.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_linear_spring_damper">drake:linear_spring_damper</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_spring_damper.html" title="This ForceElement models a spring-damper attached between two points on two different bodies.">drake::multibody::LinearSpringDamper()</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_capsule"></a>
 drake:capsule</h2>
 <ul>
@@ -704,8 +799,8 @@ drake:controller_gains</h2>
 <li>URDF path: <span class="tt">/robot/joint/actuator/drake:controller_gains</span></li>
 <li>Syntax: Two attributes <span class="tt">p</span> (proportional gain) containing a positive floating point value and <span class="tt">d</span> (derivative gain) containing a non-negative floating point value.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="tag_drake_controller_gains_semantics"></a>
-Semantics</h2>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_controller_gains_semantics"></a>
+Semantics</h3>
 <p>If present, this element provides proportional and derivative gains for a low level PD controller for the <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html" title="The JointActuator class is mostly a simple bookkeeping structure to represent an actuator acting on a...">drake::multibody::JointActuator</a> associated with the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">drake::multibody::Joint</a> the element is defined under. It is stored in a <a class="el" href="structdrake_1_1multibody_1_1_pd_controller_gains.html" title="PD controller gains.">drake::multibody::PdControllerGains</a> object in the <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html" title="The JointActuator class is mostly a simple bookkeeping structure to represent an actuator acting on a...">drake::multibody::JointActuator</a> class. Both attributes <span class="tt">p</span> and <span class="tt">d</span> are required.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_actuation">mbp_actuation</a>, <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#pd_controlled_joint_actuator">pd_controlled_joint_actuator</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_curves"></a>
@@ -1036,6 +1131,9 @@ drake:parent</h2>
 <li>URDF path: N/A</li>
 <li>Syntax: String.</li>
 </ul>
+<h3 class="doxsection"><a class="anchor" id="tag_drake_parent_semantics"></a>
+Semantics</h3>
+<p>The string names a frame (defined elsewhere in the model) that is associated with the parent link of the joint being defined.</p>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_perception_properties"></a>
 drake:perception_properties</h2>
 <ul>
@@ -1049,11 +1147,9 @@ Semantics</h3>
 <p>Note: if a <span class="tt">&lt;visual&gt;</span> tag has disabled both perception properties <em>and</em> illustration properties, a warning will be emitted. Essentially, the model defines a geometry that would be consumed by typical loaders, but it has been completely disabled for Drake. The definition for Drake should <em>refine</em> the more generic model, but it shouldn't consist of an arbitrarily different set of visuals.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_illustration_properties">drake:illustration_properties</a> </dd>
 <dd>
-<a class="el" href="#tag_drake_visual">drake:visual</a></dd></dl>
-<h3 class="doxsection"><a class="anchor" id="tag_drake_parent_semantics"></a>
-Semantics</h3>
-<p>The string names a frame (defined elsewhere in the model) that is associated with the parent link of the joint being defined.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#tag_drake_joint">drake:joint</a></dd></dl>
+<a class="el" href="#tag_drake_visual">drake:visual</a></dd>
+<dd>
+<a class="el" href="#tag_drake_joint">drake:joint</a></dd></dl>
 <h2 class="doxsection"><a class="anchor" id="tag_drake_plane_normal"></a>
 drake:plane_normal</h2>
 <ul>
