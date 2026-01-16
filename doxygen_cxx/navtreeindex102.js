@@ -1,5 +1,10 @@
 var NAVTREEINDEX102 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html":[3,0,0,15,5,10],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html":[4,0,0,14,5,10],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[3,0,0,15,5,14],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[4,0,0,14,5,14],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,15,5,14,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[4,0,0,14,5,14,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html":[3,0,0,15,5,15],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html":[4,0,0,14,5,15],
@@ -244,10 +249,5 @@ var NAVTREEINDEX102 =
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html":[3,0,0,15,6,25],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html":[4,0,0,14,6,25],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,15,6,25,0],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[4,0,0,14,6,25,0],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html":[3,0,0,15,6,26],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html":[4,0,0,14,6,26],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,15,6,26,0],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[4,0,0,14,6,26,0],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html":[3,0,0,15,6,27]
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[4,0,0,14,6,25,0]
 };

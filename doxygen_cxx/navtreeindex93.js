@@ -1,5 +1,10 @@
 var NAVTREEINDEX93 =
 {
+"point__contact__data_8h.html":[5,0,0,8,1,17],
+"point__contact__visualizer_8h.html":[5,0,0,8,6,4],
+"point__pair__contact__info_8h.html":[5,0,0,8,9,35],
+"point__to__line__distance__constraint_8h.html":[5,0,0,8,4,20],
+"point__to__point__distance__constraint_8h.html":[5,0,0,8,4,21],
 "pointer__cast_8h.html":[5,0,0,1,49],
 "poisson__disk_8h.html":[5,0,0,4,39],
 "polygon__surface__mesh_8h.html":[5,0,0,4,2,42],
@@ -244,10 +249,5 @@ var NAVTREEINDEX93 =
 "structdrake_1_1_rlocation_or_error.html":[3,0,0,46],
 "structdrake_1_1_rlocation_or_error.html":[4,0,0,45],
 "structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,46,0],
-"structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[4,0,0,45,0],
-"structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,46,1],
-"structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[4,0,0,45,1],
-"structdrake_1_1_sorted_pair.html":[3,0,0,50],
-"structdrake_1_1_sorted_pair.html":[4,0,0,49],
-"structdrake_1_1_sorted_pair.html#a2fc588ec6d00ca9a86173dcc508a12a9":[3,0,0,50,1]
+"structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[4,0,0,45,0]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a7d54b6fada34832eed086dfbea149e49":[2,4,2,1,3,9],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#aae7a39fc88c07d0083ea1a3cccf3e6a9":[2,4,2,1,3,5],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#aae8f71855428d407dea706a6ec165984":[2,4,2,1,3,8],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#acedcae6424fa55146d8dda1036b04ffc":[2,4,2,1,3,3],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#aceff8abc20a07d88b3603bf4eb4b2284":[2,4,2,1,3,6],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html":[3,0,0,11,1,3],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_gcs_trajectory_optimization.html":[4,0,0,10,1,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX43 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9eb8351c5e1b3a7a35793ae13a35fdd7":[2,4,2,1,5,24],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aa4ad8f150cbe26e0f5d5a7b70af30064":[2,4,2,1,5,47],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aa8265538ee91b3bea382df9849fea710":[2,4,2,1,5,20],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aa9eab650a2088ac13d738970f2b6598a":[2,4,2,1,5,12],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aac65ca251f9eb1b736aee3b1f461fb4e":[2,4,2,1,5,17],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aacc0c26923b19361fd6d4361468d4b02":[2,4,2,1,5,30],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab04db26baaebc4a4bc1890bde831cde2":[2,4,2,1,5,39],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#ab54111eab638313c328fc0a0f1b50944":[2,4,2,1,5,42]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aa9eab650a2088ac13d738970f2b6598a":[2,4,2,1,5,12]
 };

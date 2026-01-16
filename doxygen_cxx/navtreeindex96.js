@@ -1,5 +1,10 @@
 var NAVTREEINDEX96 =
 {
+"structdrake_1_1geometry_1_1_ssao_parameter.html#ad951a7c8a17ae566c113082803b97bed":[3,0,0,4,67,4],
+"structdrake_1_1geometry_1_1_ssao_parameter.html#ad951a7c8a17ae566c113082803b97bed":[4,0,0,3,64,4],
+"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html":[3,0,0,4,0,9],
+"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html":[4,0,0,3,0,9],
+"structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a0a1be7677c032d69cc708310294a8566":[3,0,0,4,0,9,3],
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a0a1be7677c032d69cc708310294a8566":[4,0,0,3,0,9,3],
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a0d3adebc3343af4468bf27a14bba93ae":[3,0,0,4,0,9,13],
 "structdrake_1_1geometry_1_1optimization_1_1_c_space_separating_plane.html#a0d3adebc3343af4468bf27a14bba93ae":[4,0,0,3,0,9,13],
@@ -244,10 +249,5 @@ var NAVTREEINDEX96 =
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[2,5,5,12,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[2,4,2,4,4,11],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[2,1,1,12,11],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[2,5,5,12,11],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[2,4,2,4,4,15],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[2,1,1,12,15],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[2,5,5,12,15],
-"structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html":[3,0,0,4,0,22],
-"structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html":[4,0,0,3,0,22]
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[2,5,5,12,11]
 };

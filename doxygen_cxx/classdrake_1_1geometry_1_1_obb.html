@@ -199,7 +199,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a4d3912b25f945c197b83d13db34e75d3" id="r_a4d3912b25f945c197b83d13db34e75d3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d3912b25f945c197b83d13db34e75d3">HasOverlap</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;obb_G, const <a class="el" href="classdrake_1_1geometry_1_1_aabb.html">Aabb</a> &amp;aabb_H, const math::RigidTransformd &amp;X_GH)</td></tr>
 <tr class="memdesc:a4d3912b25f945c197b83d13db34e75d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports whether oriented bounding box <span class="tt">obb_G</span> intersects the given axis-aligned bounding box <span class="tt">aabb_H</span>.  <br /></td></tr>
 <tr class="memitem:a4bbcf1321d4bcfca50d21e1f6d306fa9" id="r_a4bbcf1321d4bcfca50d21e1f6d306fa9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bbcf1321d4bcfca50d21e1f6d306fa9">HasOverlap</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;bv_H, const <a class="el" href="classdrake_1_1geometry_1_1_plane.html">Plane</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plane_P, const math::RigidTransformd &amp;X_PH)</td></tr>
-<tr class="memdesc:a4bbcf1321d4bcfca50d21e1f6d306fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Checks whether bounding volume <span class="tt">bv</span> intersects the given plane.  <br /></td></tr>
+<tr class="memdesc:a4bbcf1321d4bcfca50d21e1f6d306fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether bounding volume <span class="tt">bv</span> intersects the given plane.  <br /></td></tr>
 <tr class="memitem:a69875434869bff85edeee1bcebf34e02" id="r_a69875434869bff85edeee1bcebf34e02"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69875434869bff85edeee1bcebf34e02">HasOverlap</a> (const <a class="el" href="#a81ec5fb7d3ba652c79d24c3953272658">Obb</a> &amp;bv_H, const <a class="el" href="classdrake_1_1geometry_1_1_half_space.html">HalfSpace</a> &amp;hs_C, const math::RigidTransformd &amp;X_CH)</td></tr>
 <tr class="memdesc:a69875434869bff85edeee1bcebf34e02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether bounding volume <span class="tt">bv</span> intersects the given half space.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -465,6 +465,7 @@ template&lt;typename MeshType&gt; </div>
 
 <p>Checks whether bounding volume <span class="tt">bv</span> intersects the given half space. </p>
 <p>The bounding volume is centered on its canonical frame B, and B is posed in the corresponding hierarchy frame H. The half space is defined in its canonical frame C (such that the boundary plane of the half space is perpendicular to Cz and Co lies on the boundary plane).</p>
+<p>The box and halfspace intersect if <em>any</em> point within the bounding volume has a height less than or equal to zero.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bv_H</td><td>The bounding box to test. </td></tr>
@@ -509,9 +510,9 @@ template&lt;typename MeshType&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>(Internal use only) Checks whether bounding volume <span class="tt">bv</span> intersects the given plane. </p>
+<p>Checks whether bounding volume <span class="tt">bv</span> intersects the given plane. </p>
 <p>The bounding volume is centered on its canonical frame B, and B is posed in the corresponding hierarchy frame H. The plane is defined in frame P.</p>
-<p>The box and plane intersect if <em>any</em> point within the bounding volume has zero height (see CalcHeight()).</p>
+<p>The box and plane intersect if <em>any</em> point within the bounding volume has zero height.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bv_H</td><td>The bounding box to test. </td></tr>

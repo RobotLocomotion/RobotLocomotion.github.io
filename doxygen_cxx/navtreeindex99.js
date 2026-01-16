@@ -1,5 +1,10 @@
 var NAVTREEINDEX99 =
 {
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a2f34a2f66899dfd008ab76f9fee983de":[3,0,0,9,4,1,4],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a2f34a2f66899dfd008ab76f9fee983de":[4,0,0,8,3,1,4],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,9,4,1,10],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[4,0,0,8,3,1,10],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3f67c53b80389c5f53961936edba04c9":[3,0,0,9,4,1,11],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a3f67c53b80389c5f53961936edba04c9":[4,0,0,8,3,1,11],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b":[3,0,0,9,4,1,9],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b":[4,0,0,8,3,1,9],
@@ -244,10 +249,5 @@ var NAVTREEINDEX99 =
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[3,0,0,13,0],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[4,0,0,12,0],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[3,0,0,13,0,1],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[4,0,0,12,0,1],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9":[3,0,0,13,0,3],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9":[4,0,0,12,0,3],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a":[3,0,0,13,0,2],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a":[4,0,0,12,0,2],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aee9e567dff5d8f017d7705118d22d31d":[3,0,0,13,0,0]
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[4,0,0,12,0,1]
 };

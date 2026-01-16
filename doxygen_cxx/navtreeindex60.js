@@ -1,5 +1,9 @@
 var NAVTREEINDEX60 =
 {
+"classdrake_1_1symbolic_1_1_relational_formula_cell.html#aaec4c74402901ea9159b9eac0d6777af":[4,0,0,13,61,11],
+"classdrake_1_1symbolic_1_1_relational_formula_cell.html#acedfc9467a1f4992845d7b07237a63dd":[3,0,0,14,61,2],
+"classdrake_1_1symbolic_1_1_relational_formula_cell.html#acedfc9467a1f4992845d7b07237a63dd":[4,0,0,13,61,2],
+"classdrake_1_1symbolic_1_1_relational_formula_cell.html#aeabbbb6c69ba676155d0965880d6c8dd":[3,0,0,14,61,10],
 "classdrake_1_1symbolic_1_1_relational_formula_cell.html#aeabbbb6c69ba676155d0965880d6c8dd":[4,0,0,13,61,10],
 "classdrake_1_1symbolic_1_1_relational_formula_cell.html#af1a65dfa13fd05a2fcb4a8dfc9bd703b":[3,0,0,14,61,4],
 "classdrake_1_1symbolic_1_1_relational_formula_cell.html#af1a65dfa13fd05a2fcb4a8dfc9bd703b":[4,0,0,13,61,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX60 =
 "classdrake_1_1systems_1_1_affine_system.html#aeec4db7870070b42a051419fcb01a3eb":[2,2,1,2,2],
 "classdrake_1_1systems_1_1_affine_system.html#af0faec70ce5770377a8ace3146cd702a":[2,2,1,2,7],
 "classdrake_1_1systems_1_1_affine_system.html#af3959fa01170bd0d716fc3636998a181":[2,2,1,2,5],
-"classdrake_1_1systems_1_1_affine_system.html#af75a23cc82e2c8e85534f94ffba09203":[2,2,1,2,0],
-"classdrake_1_1systems_1_1_antiderivative_function.html":[3,0,0,15,10],
-"classdrake_1_1systems_1_1_antiderivative_function.html":[4,0,0,14,10],
-"classdrake_1_1systems_1_1_antiderivative_function.html#a083822dff26b307d8d4dd4d7854c1ea1":[3,0,0,15,10,4],
-"classdrake_1_1systems_1_1_antiderivative_function.html#a083822dff26b307d8d4dd4d7854c1ea1":[4,0,0,14,10,4]
+"classdrake_1_1systems_1_1_affine_system.html#af75a23cc82e2c8e85534f94ffba09203":[2,2,1,2,0]
 };

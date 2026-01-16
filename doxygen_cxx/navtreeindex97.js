@@ -1,5 +1,10 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[2,4,2,4,4,15],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[2,1,1,12,15],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[2,5,5,12,15],
+"structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html":[3,0,0,4,0,22],
+"structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html":[4,0,0,3,0,22],
 "structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html#a03e5fab625d4e87ceecc0100d793136a":[3,0,0,4,0,22,6],
 "structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html#a03e5fab625d4e87ceecc0100d793136a":[4,0,0,3,0,22,6],
 "structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html#a0916612f4af7dea1bb841e28284f8926":[3,0,0,4,0,22,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#ae62d09bc52470752b2fd4589c92049f5":[4,0,0,8,12,3],
 "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html":[2,4,2,0,0,0],
 "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a063aefa11fdbf773814f73dbf1fabd64":[2,4,2,0,0,0,0],
-"structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a1c465fdede6b5ea8a96275e2b9f1ecb3":[2,4,2,0,0,0,3],
-"structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#ae01adb7e45a3f63fccccf9f06a9eea2f":[2,4,2,0,0,0,2],
-"structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#afeff966124fec7399f4a3e1eef5c9a26":[2,4,2,0,0,0,1],
-"structdrake_1_1multibody_1_1_contact_wrench.html":[3,0,0,9,21],
-"structdrake_1_1multibody_1_1_contact_wrench.html":[4,0,0,8,20],
-"structdrake_1_1multibody_1_1_contact_wrench.html#a14e3dc8d6619faa42a65d6ff9d05f61a":[3,0,0,9,21,0]
+"structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a1c465fdede6b5ea8a96275e2b9f1ecb3":[2,4,2,0,0,0,3]
 };

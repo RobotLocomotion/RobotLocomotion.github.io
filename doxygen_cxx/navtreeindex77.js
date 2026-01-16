@@ -1,5 +1,9 @@
 var NAVTREEINDEX77 =
 {
+"classdrake_1_1systems_1_1_vector_base.html#a146b52fc4bf3790ed55a6c097ca3e76b":[4,0,0,14,126,3],
+"classdrake_1_1systems_1_1_vector_base.html#a1e6a80b4bd5602e71351fb6aaffcbb58":[3,0,0,15,126,19],
+"classdrake_1_1systems_1_1_vector_base.html#a1e6a80b4bd5602e71351fb6aaffcbb58":[4,0,0,14,126,19],
+"classdrake_1_1systems_1_1_vector_base.html#a2a903f3c569ff0475edf5e7f6d1101d4":[3,0,0,15,126,14],
 "classdrake_1_1systems_1_1_vector_base.html#a2a903f3c569ff0475edf5e7f6d1101d4":[4,0,0,14,126,14],
 "classdrake_1_1systems_1_1_vector_base.html#a2b27117cf6e47e38ba07cb20e1c17a4c":[3,0,0,15,126,6],
 "classdrake_1_1systems_1_1_vector_base.html#a2b27117cf6e47e38ba07cb20e1c17a4c":[4,0,0,14,126,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX77 =
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ada7d6dc8537c671a6b8b2544e571820f":[2,2,2,3,14],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ae10ee2e8047baecf8bce8236dd9ff428":[2,2,2,3,4],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#aeffde4e51c0d89f2fd83d04032100d1f":[2,2,2,3,2],
-"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#affb5ef202c907dc2503c049236654588":[2,2,2,3,10],
-"classdrake_1_1systems_1_1controllers_1_1_joint_impedance_controller.html":[2,2,2,5],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html":[2,2,2,4],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a337854b469c9ae151e5d91ec116e69d8":[2,2,2,4,3],
-"classdrake_1_1systems_1_1controllers_1_1_joint_stiffness_controller.html#a345487ce1ebae0616150b1395370dea0":[2,2,2,4,7]
+"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#affb5ef202c907dc2503c049236654588":[2,2,2,3,10]
 };

@@ -252,6 +252,58 @@ hierarchy frame H.</p>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the boxes intersect.</p>
 </dd>
 </dl>
+<ol class="arabic simple" start="3">
+<li><p>HasOverlap(bv_H: pydrake.geometry.Aabb, hs_C: pydrake.geometry.HalfSpace, X_CH: pydrake.math.RigidTransform) -&gt; bool</p></li>
+</ol>
+<p>Checks whether bounding volume <code class="docutils literal notranslate"><span class="pre">bv</span></code> intersects the given half space.
+The bounding volume is centered on its canonical frame B, and B is
+posed in the corresponding hierarchy frame H. The half space is
+defined in its canonical frame C (such that the boundary plane of the
+half space is perpendicular to Cz and Co lies on the boundary plane).</p>
+<p>The box and halfspace intersect if <em>any</em> point within the bounding
+volume has a height less than or equal to zero.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bv_H</span></code>:</dt><dd><p>The bounding box to test.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">hs_C</span></code>:</dt><dd><p>The half space to test against the <code class="docutils literal notranslate"><span class="pre">bv</span></code>. The half space is
+expressed in Frame C, therefore, to evaluate the signed distance
+of a point with respect to it, that point must be measured and
+expressed in C.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_CH</span></code>:</dt><dd><p>The relative pose between the hierarchy halfspace canonical frame
+C and the box frame B.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the half space intersects the box.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>HasOverlap(bv_H: pydrake.geometry.Aabb, plane_P: pydrake.geometry.Plane, X_PH: pydrake.math.RigidTransform) -&gt; bool</p></li>
+</ol>
+<p>Checks whether bounding volume <code class="docutils literal notranslate"><span class="pre">bv</span></code> intersects the given plane. The
+bounding volume is centered on its canonical frame B, and B is posed
+in the corresponding hierarchy frame H. The plane is defined in frame
+P.</p>
+<p>The box and plane intersect if <em>any</em> point within the bounding volume
+has zero height (see CalcHeight()).</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bv_H</span></code>:</dt><dd><p>The bounding box to test.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plane_P</span></code>:</dt><dd><p>The plane to test against the <code class="docutils literal notranslate"><span class="pre">bv</span></code>. The plane is expressed in
+frame P, therefore, to evaluate the height of a point with respect
+to it, that point must be measured and expressed in P.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PH</span></code>:</dt><dd><p>The relative pose between the hierarchy frame H and the plane
+frame P.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the plane intersects the box.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -7196,6 +7248,8 @@ The bounding volume is centered on its canonical frame B, and B is
 posed in the corresponding hierarchy frame H. The half space is
 defined in its canonical frame C (such that the boundary plane of the
 half space is perpendicular to Cz and Co lies on the boundary plane).</p>
+<p>The box and halfspace intersect if <em>any</em> point within the bounding
+volume has a height less than or equal to zero.</p>
 <dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">bv_H</span></code>:</dt><dd><p>The bounding box to test.</p>
 </dd>
@@ -7211,6 +7265,31 @@ canonical frame C.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the half space intersects the box.</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li><p>HasOverlap(bv_H: pydrake.geometry.Obb, plane_P: pydrake.geometry.Plane, X_PH: pydrake.math.RigidTransform) -&gt; bool</p></li>
+</ol>
+<p>Checks whether bounding volume <code class="docutils literal notranslate"><span class="pre">bv</span></code> intersects the given plane. The
+bounding volume is centered on its canonical frame B, and B is posed
+in the corresponding hierarchy frame H. The plane is defined in frame
+P.</p>
+<p>The box and plane intersect if <em>any</em> point within the bounding volume
+has zero height.</p>
+<dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">bv_H</span></code>:</dt><dd><p>The bounding box to test.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plane_P</span></code>:</dt><dd><p>The plane to test against the <code class="docutils literal notranslate"><span class="pre">bv</span></code>. The plane is expressed in
+frame P, therefore, to evaluate the height of a point with respect
+to it, that point must be measured and expressed in P.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PH</span></code>:</dt><dd><p>The relative pose between the hierarchy frame H and the plane
+frame P.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the plane intersects the box.</p>
 </dd>
 </dl>
 </dd></dl>

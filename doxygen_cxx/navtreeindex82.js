@@ -1,5 +1,9 @@
 var NAVTREEINDEX82 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a28a1caa7cc51ca889c0a5cf55d0e283f":[4,0,0,15,10,8],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a2c1260591babc82c7c67c0e65c44b5e7":[3,0,0,16,10,5],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a2c1260591babc82c7c67c0e65c44b5e7":[4,0,0,15,10,5],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a3e8a6ff52ba38aeedc2104d69acb7057":[3,0,0,16,10,2],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a3e8a6ff52ba38aeedc2104d69acb7057":[4,0,0,15,10,2],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a417517673e54ad81ea0538668bfcd204":[3,0,0,16,10,7],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a417517673e54ad81ea0538668bfcd204":[4,0,0,15,10,7],
@@ -245,9 +249,5 @@ var NAVTREEINDEX82 =
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab2a120b051838aa55cd3cf694a3c75d1":[3,0,2,3,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab2a120b051838aa55cd3cf694a3c75d1":[4,0,2,3,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab70797d1d3cb505c30072e28827045bc":[3,0,2,3,12],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab70797d1d3cb505c30072e28827045bc":[4,0,2,3,12],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[3,0,2,3,1],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[4,0,2,3,1],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ac6b633da6524d9de1afa712a666e1c39":[3,0,2,3,7],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ac6b633da6524d9de1afa712a666e1c39":[4,0,2,3,7]
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab70797d1d3cb505c30072e28827045bc":[4,0,2,3,12]
 };

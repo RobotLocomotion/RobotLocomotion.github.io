@@ -1,5 +1,10 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,46,1],
+"structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[4,0,0,45,1],
+"structdrake_1_1_sorted_pair.html":[3,0,0,50],
+"structdrake_1_1_sorted_pair.html":[4,0,0,49],
+"structdrake_1_1_sorted_pair.html#a2fc588ec6d00ca9a86173dcc508a12a9":[3,0,0,50,1],
 "structdrake_1_1_sorted_pair.html#a2fc588ec6d00ca9a86173dcc508a12a9":[4,0,0,49,1],
 "structdrake_1_1_sorted_pair.html#a32b737917cbeeb58e2b54f4d4225bb6b":[3,0,0,50,2],
 "structdrake_1_1_sorted_pair.html#a32b737917cbeeb58e2b54f4d4225bb6b":[4,0,0,49,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1geometry_1_1_equirectangular_map.html":[3,0,0,4,20],
 "structdrake_1_1geometry_1_1_equirectangular_map.html":[4,0,0,3,17],
 "structdrake_1_1geometry_1_1_equirectangular_map.html#a4d455efceee21e97d8e21ee40e9b4a20":[3,0,0,4,20,1],
-"structdrake_1_1geometry_1_1_equirectangular_map.html#a4d455efceee21e97d8e21ee40e9b4a20":[4,0,0,3,17,1],
-"structdrake_1_1geometry_1_1_equirectangular_map.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,20,0],
-"structdrake_1_1geometry_1_1_equirectangular_map.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,17,0],
-"structdrake_1_1geometry_1_1_gltf_extension.html":[3,0,0,4,28],
-"structdrake_1_1geometry_1_1_gltf_extension.html":[4,0,0,3,25],
-"structdrake_1_1geometry_1_1_gltf_extension.html#a3e06f5125c9d12865c929726ef90f723":[3,0,0,4,28,1]
+"structdrake_1_1geometry_1_1_equirectangular_map.html#a4d455efceee21e97d8e21ee40e9b4a20":[4,0,0,3,17,1]
 };
