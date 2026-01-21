@@ -1,7 +1,7 @@
 var NAVTREEINDEX97 =
 {
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[2,4,2,4,4,15],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[2,1,1,12,15],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[2,4,2,4,4,15],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ae65f515b41261e98fb16dd1e810cba48":[2,5,5,12,15],
 "structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html":[3,0,0,4,0,22],
 "structdrake_1_1geometry_1_1optimization_1_1_plane_separates_geometries.html":[4,0,0,3,0,22],
