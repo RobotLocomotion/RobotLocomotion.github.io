@@ -1,5 +1,9 @@
 var NAVTREEINDEX43 =
 {
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a2257e99613e8e2241db334b2a3a4c6ad":[2,4,2,1,3,1],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a431b9ed6d606d4db1f080f15d4fec5d8":[2,4,2,1,3,2],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a55db580aa18d76a452aea550515cc8ed":[2,4,2,1,3,4],
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a6a25bf3d1414193bdb730ed15125fe67":[2,4,2,1,3,0],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#a7d54b6fada34832eed086dfbea149e49":[2,4,2,1,3,9],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#aae7a39fc88c07d0083ea1a3cccf3e6a9":[2,4,2,1,3,5],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_transcription.html#aae8f71855428d407dea706a6ec165984":[2,4,2,1,3,8],
@@ -245,9 +249,5 @@ var NAVTREEINDEX43 =
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a8bb061da8032bf6c4e1b47560a2f5e0b":[2,4,2,1,5,51],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a8d8fb0f30abf6ae85e40e701c891d60f":[2,4,2,1,5,31],
 "classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a91b3e806042a59210b3b915d7299f03a":[2,4,2,1,5,18],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a94b577cb171362cc5d6756797c7897d1":[2,4,2,1,5,28],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a9eb8351c5e1b3a7a35793ae13a35fdd7":[2,4,2,1,5,24],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aa4ad8f150cbe26e0f5d5a7b70af30064":[2,4,2,1,5,47],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aa8265538ee91b3bea382df9849fea710":[2,4,2,1,5,20],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#aa9eab650a2088ac13d738970f2b6598a":[2,4,2,1,5,12]
+"classdrake_1_1planning_1_1trajectory__optimization_1_1_multiple_shooting.html#a94b577cb171362cc5d6756797c7897d1":[2,4,2,1,5,28]
 };

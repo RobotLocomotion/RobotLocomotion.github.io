@@ -1,5 +1,9 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#a0f75da04ed0e8cc2aee0c5d4c5c19a9f":[2,1,2,160],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a0fd679ea34528e50d76d23f79fcd294f":[2,1,2,191],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a100c35ec0287aaded41a390e0fe95e4b":[2,1,2,46],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a1047c3ed6cd2d49362c46ec044a6cf15":[2,1,2,169],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a11440aef6df9ddedfd6675ce56fe6e16":[2,1,2,64],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a11b78e6a556d483d18fe712ee19d35a2":[2,1,2,51],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a12431081348a404711db4d3bb25c8a76":[2,1,2,193],
@@ -245,9 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1solvers_1_1_mathematical_program_result.html#a5121163587d2a27fc52931410370c40e":[3,0,0,13,38,5],
 "classdrake_1_1solvers_1_1_mathematical_program_result.html#a5121163587d2a27fc52931410370c40e":[4,0,0,12,38,5],
 "classdrake_1_1solvers_1_1_mathematical_program_result.html#a5477c6d7b8af6a3be55e58d0d5e2d768":[3,0,0,13,38,4],
-"classdrake_1_1solvers_1_1_mathematical_program_result.html#a5477c6d7b8af6a3be55e58d0d5e2d768":[4,0,0,12,38,4],
-"classdrake_1_1solvers_1_1_mathematical_program_result.html#a5d0d1bedd09e7efb632e277a09b3fba2":[3,0,0,13,38,34],
-"classdrake_1_1solvers_1_1_mathematical_program_result.html#a5d0d1bedd09e7efb632e277a09b3fba2":[4,0,0,12,38,34],
-"classdrake_1_1solvers_1_1_mathematical_program_result.html#a7095270fe56730c84e35c845c4860090":[3,0,0,13,38,14],
-"classdrake_1_1solvers_1_1_mathematical_program_result.html#a7095270fe56730c84e35c845c4860090":[4,0,0,12,38,14]
+"classdrake_1_1solvers_1_1_mathematical_program_result.html#a5477c6d7b8af6a3be55e58d0d5e2d768":[4,0,0,12,38,4]
 };

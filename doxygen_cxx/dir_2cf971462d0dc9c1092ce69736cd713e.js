@@ -31,6 +31,7 @@ var dir_2cf971462d0dc9c1092ce69736cd713e =
     [ "quadrature.h", "quadrature_8h.html", null ],
     [ "schur_complement.h", "fem_2schur__complement_8h.html", null ],
     [ "simplex_gaussian_quadrature.h", "simplex__gaussian__quadrature_8h.html", null ],
+    [ "tet_subdivision_quadrature.h", "tet__subdivision__quadrature_8h.html", null ],
     [ "velocity_newmark_scheme.h", "velocity__newmark__scheme_8h.html", null ],
     [ "volumetric_element.h", "volumetric__element_8h.html", null ],
     [ "volumetric_model.h", "volumetric__model_8h.html", null ]

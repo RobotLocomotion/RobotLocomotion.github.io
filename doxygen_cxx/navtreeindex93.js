@@ -1,5 +1,9 @@
 var NAVTREEINDEX93 =
 {
+"point_8h.html":[5,0,0,4,1,22],
+"point__cloud_8h.html":[5,0,0,9,1],
+"point__cloud__flags_8h.html":[5,0,0,9,2],
+"point__cloud__to__lcm_8h.html":[5,0,0,9,3],
 "point__contact__data_8h.html":[5,0,0,8,1,17],
 "point__contact__visualizer_8h.html":[5,0,0,8,6,4],
 "point__pair__contact__info_8h.html":[5,0,0,8,9,35],
@@ -245,9 +249,5 @@ var NAVTREEINDEX93 =
 "structdrake_1_1_polynomial_1_1_product.html":[3,0,0,42,1],
 "structdrake_1_1_polynomial_1_1_product.html":[4,0,0,41,1],
 "structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[3,0,0,42,1,0],
-"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[4,0,0,41,1,0],
-"structdrake_1_1_rlocation_or_error.html":[3,0,0,46],
-"structdrake_1_1_rlocation_or_error.html":[4,0,0,45],
-"structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,46,0],
-"structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[4,0,0,45,0]
+"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[4,0,0,41,1,0]
 };

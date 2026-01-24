@@ -1,5 +1,9 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[3,0,0,13,0],
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[4,0,0,12,0],
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[3,0,0,13,0,1],
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[4,0,0,12,0,1],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9":[3,0,0,13,0,3],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9":[4,0,0,12,0,3],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a":[3,0,0,13,0,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX100 =
 "structdrake_1_1systems_1_1_initialize_params.html":[2,4,0,2],
 "structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa":[2,4,0,2,1],
 "structdrake_1_1systems_1_1_initialize_params.html#a8e8824802dedfbc36776227f7482b6bc":[2,4,0,2,0],
-"structdrake_1_1systems_1_1_periodic_event_data_comparator.html":[3,0,0,15,76],
-"structdrake_1_1systems_1_1_periodic_event_data_comparator.html":[4,0,0,14,76],
-"structdrake_1_1systems_1_1_periodic_event_data_comparator.html#a427c5f42d5940b0e40fba4abe2b3111a":[3,0,0,15,76,0],
-"structdrake_1_1systems_1_1_periodic_event_data_comparator.html#a427c5f42d5940b0e40fba4abe2b3111a":[4,0,0,14,76,0],
-"structdrake_1_1systems_1_1_selector_params.html":[3,0,0,15,90]
+"structdrake_1_1systems_1_1_periodic_event_data_comparator.html":[3,0,0,15,76]
 };
