@@ -271,7 +271,7 @@ class drake::systems::Simulator&lt; T &gt;</div><p>A class for advancing the sta
 <div class="line">  CallMonitor(t₀, x⁻(t₀))</div>
 <div class="ttc" id="aclassdrake_1_1systems_1_1_simulator_html_aa1862c2aeab9862e391194d157a96c21"><div class="ttname"><a href="#aa1862c2aeab9862e391194d157a96c21">drake::systems::Simulator::Initialize</a></div><div class="ttdeci">SimulatorStatus Initialize(const InitializeParams &amp;params={})</div><div class="ttdoc">Prepares the Simulator for a simulation.</div></div>
 <div class="ttc" id="aclassdrake_1_1systems_1_1_simulator_html_aba4b04299c9b1d41d9dd85563600012d"><div class="ttname"><a href="#aba4b04299c9b1d41d9dd85563600012d">drake::systems::Simulator::AdvanceTo</a></div><div class="ttdeci">SimulatorStatus AdvanceTo(const T &amp;boundary_time)</div><div class="ttdoc">Advances the System&#39;s trajectory until boundary_time is reached in the Context or some other terminat...</div></div>
-<div class="ttc" id="aclassdrake_1_1systems_1_1_simulator_html_ad8252b9d897ed041c44c301cfcd8c5ce"><div class="ttname"><a href="#ad8252b9d897ed041c44c301cfcd8c5ce">drake::systems::Simulator::AdvancePendingEvents</a></div><div class="ttdeci">SimulatorStatus AdvancePendingEvents()</div><div class="ttdoc">(Advanced) Handles discrete and abstract state update events that are pending from the previous Advan...</div><div class="ttdef"><b>Definition</b> simulator.h:397</div></div>
+<div class="ttc" id="aclassdrake_1_1systems_1_1_simulator_html_ad8252b9d897ed041c44c301cfcd8c5ce"><div class="ttname"><a href="#ad8252b9d897ed041c44c301cfcd8c5ce">drake::systems::Simulator::AdvancePendingEvents</a></div><div class="ttdeci">SimulatorStatus AdvancePendingEvents()</div><div class="ttdoc">(Advanced) Handles discrete and abstract state update events that are pending from the previous Advan...</div><div class="ttdef"><b>Definition</b> simulator.h:398</div></div>
 </div><!-- fragment --><p><a class="el" href="#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a> can be viewed as a "0ᵗʰ step" that occurs before the first Step() call as described above. Like Step(), <a class="el" href="#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a> first performs pending updates (in this case only initialization events can be "pending", and even those may be optionally suppressed). Time doesn't advance so there is no continuous update phase and witnesses cannot trigger. Finally, again like Step(), the initial trajectory point <span class="tt">{t₀, x⁻(t₀)}</span> is provided to the handlers for any triggered publish events. That includes initialization publish events (if not suppressed), per-step publish events, and periodic or timed publish events that trigger at t₀, followed by a call to the monitor() function if one has been defined (a monitor is semantically identical to a per-step publish).</p>
 <p>Optionally, initialization events can be suppressed. This can be useful when reusing the simulator over the same system and time span.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -308,11 +308,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af47ea3591d78251f7a2b3d8c8e942421" id="r_af47ea3591d78251f7a2b3d8c8e942421"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af47ea3591d78251f7a2b3d8c8e942421">get_actual_realtime_rate</a> () const</td></tr>
 <tr class="memdesc:af47ea3591d78251f7a2b3d8c8e942421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the rate that simulated time has progressed relative to real time.  <br /></td></tr>
 <tr class="memitem:aef1dc6aeb821503379ab1dd8c6044562" id="r_aef1dc6aeb821503379ab1dd8c6044562"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef1dc6aeb821503379ab1dd8c6044562">set_publish_every_time_step</a> (bool publish)</td></tr>
-<tr class="memdesc:aef1dc6aeb821503379ab1dd8c6044562"><td class="mdescLeft">&#160;</td><td class="mdescRight">(To be deprecated) Prefer using per-step publish events instead.  <br /></td></tr>
+<tr class="memdesc:aef1dc6aeb821503379ab1dd8c6044562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefer using per-step publish events instead.  <br /></td></tr>
 <tr class="memitem:ac210a235b5e0865efb51fdd27c4b58ae" id="r_ac210a235b5e0865efb51fdd27c4b58ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac210a235b5e0865efb51fdd27c4b58ae">set_publish_at_initialization</a> (bool publish)</td></tr>
-<tr class="memdesc:ac210a235b5e0865efb51fdd27c4b58ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">(To be deprecated) Prefer using initialization or per-step publish events instead.  <br /></td></tr>
+<tr class="memdesc:ac210a235b5e0865efb51fdd27c4b58ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefer using initialization or per-step publish events instead.  <br /></td></tr>
 <tr class="memitem:ae66775683e61fc461dec4f76bb8e5c7a" id="r_ae66775683e61fc461dec4f76bb8e5c7a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66775683e61fc461dec4f76bb8e5c7a">get_publish_every_time_step</a> () const</td></tr>
-<tr class="memdesc:ae66775683e61fc461dec4f76bb8e5c7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="#aef1dc6aeb821503379ab1dd8c6044562" title="(To be deprecated) Prefer using per-step publish events instead.">set_publish_every_time_step()</a> option has been enabled.  <br /></td></tr>
+<tr class="memdesc:ae66775683e61fc461dec4f76bb8e5c7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="#aef1dc6aeb821503379ab1dd8c6044562" title="Prefer using per-step publish events instead.">set_publish_every_time_step()</a> option has been enabled.  <br /></td></tr>
 <tr class="memitem:a5febad6c2edc61891575e64fed4fdb83" id="r_a5febad6c2edc61891575e64fed4fdb83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5febad6c2edc61891575e64fed4fdb83">get_context</a> () const</td></tr>
 <tr class="memdesc:a5febad6c2edc61891575e64fed4fdb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the internally-maintained <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> holding the most recent step in the trajectory.  <br /></td></tr>
 <tr class="memitem:a11994cb76448588e646c3336d2b8c07b" id="r_a11994cb76448588e646c3336d2b8c07b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11994cb76448588e646c3336d2b8c07b">get_mutable_context</a> ()</td></tr>
@@ -828,8 +828,9 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns true if the <a class="el" href="#aef1dc6aeb821503379ab1dd8c6044562" title="(To be deprecated) Prefer using per-step publish events instead.">set_publish_every_time_step()</a> option has been enabled. </p>
-<p>By default, returns false. </p>
+<p>Returns true if the <a class="el" href="#aef1dc6aeb821503379ab1dd8c6044562" title="Prefer using per-step publish events instead.">set_publish_every_time_step()</a> option has been enabled. </p>
+<p>By default, returns false. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated</a></b></dt><dd>See https://drake.mit.edu/troubleshooting.html #force-publishing for help. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>
@@ -1244,13 +1245,15 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>(To be deprecated) Prefer using initialization or per-step publish events instead. </p>
-<p>Sets whether the simulation should trigger a forced-Publish at the end of <a class="el" href="#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a>. See <a class="el" href="#aef1dc6aeb821503379ab1dd8c6044562" title="(To be deprecated) Prefer using per-step publish events instead.">set_publish_every_time_step()</a> documentation for more information.</p>
+<p>Prefer using initialization or per-step publish events instead. </p>
+<p>Sets whether the simulation should trigger a forced-Publish at the end of <a class="el" href="#aa1862c2aeab9862e391194d157a96c21" title="Prepares the Simulator for a simulation.">Initialize()</a>. See <a class="el" href="#aef1dc6aeb821503379ab1dd8c6044562" title="Prefer using per-step publish events instead.">set_publish_every_time_step()</a> documentation for more information.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#aab3136bba7eb6480a84309d019b28d83" title="Declares that a Publish event should occur at initialization and that it should invoke the given even...">LeafSystem::DeclareInitializationPublishEvent()</a> </dd>
 <dd>
 <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a49a07c6bbccc4464d5d6192889c3d2e6" title="Declares that a Publish event should occur at initialization and at the end of every trajectory-advan...">LeafSystem::DeclarePerStepPublishEvent()</a> </dd>
 <dd>
-<a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a79bf931890fb3c7e9e4fd0f2696ca994" title="Declares a function that is called whenever a user directly calls ForcedPublish(const Context&amp;).">LeafSystem::DeclareForcedPublishEvent()</a> </dd></dl>
+<a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a79bf931890fb3c7e9e4fd0f2696ca994" title="Declares a function that is called whenever a user directly calls ForcedPublish(const Context&amp;).">LeafSystem::DeclareForcedPublishEvent()</a> (Deprecated.) </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated</a></b></dt><dd>This is no longer controlled by the Simulator. It must be  be defined in the LeafSystem instead. See  https://drake.mit.edu/troubleshooting.html#force-publishing  for help. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>
@@ -1271,12 +1274,14 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>(To be deprecated) Prefer using per-step publish events instead. </p>
+<p>Prefer using per-step publish events instead. </p>
 <p>Sets whether the simulation should trigger a forced-Publish event on the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> under simulation at the end of every trajectory-advancing step. Specifically, that means the <a class="el" href="classdrake_1_1systems_1_1_system.html#a432d732019c64ca4a869b35d4d63bb3d" title="This method is the public entry point for dispatching all publish event handlers.">System::Publish()</a> event dispatcher will be invoked on each subsystem of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> and passed the current <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> and a forced-publish <a class="el" href="classdrake_1_1systems_1_1_event.html" title="Abstract base class that represents an event.">Event</a>. If a subsystem has declared a forced-publish event handler, that will be called. Otherwise, nothing will happen.</p>
 <p>Enabling this option does not cause a forced-publish to be triggered at initialization; if you want that you should also call <span class="tt">set_publish_at_initialization(true)</span>. If you want a forced-publish at the end of every step, you will usually also want one at the end of initialization, requiring both options to be enabled.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a49a07c6bbccc4464d5d6192889c3d2e6" title="Declares that a Publish event should occur at initialization and at the end of every trajectory-advan...">LeafSystem::DeclarePerStepPublishEvent()</a> </dd>
 <dd>
-<a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a79bf931890fb3c7e9e4fd0f2696ca994" title="Declares a function that is called whenever a user directly calls ForcedPublish(const Context&amp;).">LeafSystem::DeclareForcedPublishEvent()</a> </dd></dl>
+<a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a79bf931890fb3c7e9e4fd0f2696ca994" title="Declares a function that is called whenever a user directly calls ForcedPublish(const Context&amp;).">LeafSystem::DeclareForcedPublishEvent()</a> (Deprecated.) </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated</a></b></dt><dd>This is no longer controlled by the Simulator. It must be  defined in the LeafSystem instead. See  https://drake.mit.edu/troubleshooting.html#force-publishing  for help. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>

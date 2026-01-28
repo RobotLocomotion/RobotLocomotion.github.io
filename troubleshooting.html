@@ -175,6 +175,10 @@ See "Caveats" in drake/doc/README.txt.
       <li><a href="#framework-context-system-mismatch" id="markdown-toc-framework-context-system-mismatch">Context-System mismatch</a></li>
     </ul>
   </li>
+  <li><a href="#simulator" id="markdown-toc-simulator">Simulator</a>    <ul>
+      <li><a href="#force-publishing" id="markdown-toc-force-publishing">Force publishing</a></li>
+    </ul>
+  </li>
   <li><a href="#pypi-pip" id="markdown-toc-pypi-pip">PyPI (pip)</a>    <ul>
       <li><a href="#pip-no-candidate" id="markdown-toc-pip-no-candidate">No candidate version for this platform</a></li>
     </ul>
@@ -379,6 +383,76 @@ The solution is to use either <code class="language-plaintext highlighter-rouge"
 
   <p>See the notes on <a href="https://drake.mit.edu/doxygen_cxx/group__system__compatibility.html">System Compatibility</a> for further discussion.</p>
 
+  <!-- Remove Simulator section (and publish every time step) on 2026-06-01 when
+deprecation is removed. -->
+
+  <h1 id="simulator">Simulator</h1>
+
+  <h2 id="force-publishing">Force publishing</h2>
+
+  <p><code class="language-plaintext highlighter-rouge">Simulator</code> had APIs to exercise its diagram’s <a href="https://drake.mit.edu/doxygen_cxx/namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9af8ece195be5dd5e820bdeee7ad21a4bf">force</a> events.
+This includes</p>
+
+  <ul>
+    <li><a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_simulator.html#aef1dc6aeb821503379ab1dd8c6044562"><code class="language-plaintext highlighter-rouge">Simulator::set_publish_every_time_step()</code></a></li>
+    <li><a href="https://drake.mit.edu/doxygen_cxx/structdrake_1_1systems_1_1_simulator_config.html#af1d9089360c8cd472de8f923ba7df99a"><code class="language-plaintext highlighter-rouge">SimulatorConfig::publish_every_time_step</code></a></li>
+    <li>The optional command-line parameter <code class="language-plaintext highlighter-rouge">simulator_publish_every_time_step</code></li>
+    <li><a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_simulator.html#ac210a235b5e0865efb51fdd27c4b58ae"><code class="language-plaintext highlighter-rouge">Simulator::set_publish_at_initialization()</code></a></li>
+  </ul>
+
+  <p>These have all been deprecated (for removal on 2026-06-01). We don’t expect this
+will generally impact users. This guide will help those who may rely on this
+functionality transition into the recommended mechanisms.</p>
+
+  <p>Rather than configuring an <em>entire</em> diagram to publish at initialization or
+at each time step, each <code class="language-plaintext highlighter-rouge">LeafSystem</code> articulates independently whether it has
+work that should be done at initialization or at each time step. This is done
+by declaring <a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_event.html">events</a> in each <code class="language-plaintext highlighter-rouge">LeafSystem</code>’s constructor.</p>
+
+  <h3 id="simulatorsetpublisheverytimestep"><code class="language-plaintext highlighter-rouge">Simulator::set_publish_every_time_step()</code></h3>
+
+  <p>To configure a LeafSystem to publish at every time step, use
+<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_leaf_system.html#a49a07c6bbccc4464d5d6192889c3d2e6"><code class="language-plaintext highlighter-rouge">LeafSystem::DeclarePerStepPublishEvent()</code></a> in
+the system’s constructor.</p>
+
+  <p>This will most likely be defined for some form of system introspection: e.g.,
+logging system state, broadcasting state to an external process. Less likely
+would be visualization because an appropriate visualization rate is typically at
+a lower frequency than that of simulation steps. Furthermore, well articulated
+logging systems will typically be parameterized to control their publication
+rate.</p>
+
+  <p>Note: introducing a per-step publish event implicitly includes publishing at
+initialization.</p>
+
+  <p>There is also a deprecated <a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_simulator.html#ae66775683e61fc461dec4f76bb8e5c7a"><code class="language-plaintext highlighter-rouge">Simulator::get_publish_every_time_step()</code></a>, the
+getter for this <code class="language-plaintext highlighter-rouge">Simulator</code> parameter. This will need to be evaluated on a per-leaf-system basis.</p>
+
+  <h3 id="simulatorconfigpublisheverytimestep"><code class="language-plaintext highlighter-rouge">SimulatorConfig::publish_every_time_step</code></h3>
+
+  <p>This flag value was simply passed to <code class="language-plaintext highlighter-rouge">Simulator::set_publish_every_time_step()</code>.
+If you find you actually have a leaf system that may need to publish at each
+time step and that determination needs to be made at runtime, you’ll have to
+find an alternative means to configure it. You can create your own configuration
+struct and include it in your scene configuration yaml.</p>
+
+  <h3 id="command-line-parameter-simulatorpublisheverytimestep">Command-line parameter <code class="language-plaintext highlighter-rouge">simulator_publish_every_time_step</code></h3>
+
+  <p>This command-line flag simply set the value of
+<code class="language-plaintext highlighter-rouge">SimulatorConfig::publish_every_time_step</code>. Please refer to the previous section
+for guidance.</p>
+
+  <h3 id="simulatorsetpublishatinitialization"><code class="language-plaintext highlighter-rouge">Simulator::set_publish_at_initialization()</code></h3>
+
+  <p>To configure a LeafSystem to publish at every time step, use
+<a href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_leaf_system.html#aab3136bba7eb6480a84309d019b28d83"><code class="language-plaintext highlighter-rouge">LeafSystem::DeclareInitializationPublishEvent()</code></a>
+in the system’s constructor.</p>
+
+  <p>Note: if your leaf system already includes a per-step publish event, you won’t
+also need an initialization publish event. Initialization is included in
+per-step events.
+<!-- 2026-06-01 End of block to delete. --></p>
+
   <h1 id="pypi-pip">PyPI (pip)</h1>
 
   <h2 id="pip-no-candidate">No candidate version for this platform</h2>
@@ -514,7 +588,12 @@ sudo route -nv add -net 224.0.0.0/4 -interface lo0
 
   <!-- drake/multibody/plant -->
 
+  <!-- drake/system -->
+
   <!-- drake/systems/framework -->
+
+  <!-- Links to be removed upon 2026-06-01 deprecation removal. -->
+  <!-- End of links to be removed.  -->
 </article>
 
     </div>

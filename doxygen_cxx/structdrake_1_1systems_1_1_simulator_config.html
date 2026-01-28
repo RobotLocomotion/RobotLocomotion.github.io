@@ -185,7 +185,7 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a00b0c9b1c3ea8bb73a7fc8b53a3961fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting time of the simulation.  <br /></td></tr>
 <tr class="memitem:a18b1f02b49adcc233f5e23845b8c90fe" id="r_a18b1f02b49adcc233f5e23845b8c90fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18b1f02b49adcc233f5e23845b8c90fe">target_realtime_rate</a> {0.0}</td></tr>
 <tr class="memitem:af1d9089360c8cd472de8f923ba7df99a" id="r_af1d9089360c8cd472de8f923ba7df99a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1d9089360c8cd472de8f923ba7df99a">publish_every_time_step</a> {false}</td></tr>
-<tr class="memdesc:af1d9089360c8cd472de8f923ba7df99a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <a class="el" href="classdrake_1_1systems_1_1_simulator.html#ac210a235b5e0865efb51fdd27c4b58ae" title="(To be deprecated) Prefer using initialization or per-step publish events instead.">Simulator::set_publish_at_initialization()</a> in addition to <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aef1dc6aeb821503379ab1dd8c6044562" title="(To be deprecated) Prefer using per-step publish events instead.">Simulator::set_publish_every_time_step()</a> when applied by <a class="el" href="group__simulator__configuration.html#ga38ef389a0aba42050d7242d501003e6e" title="Modifies the simulator based on the given config.">ApplySimulatorConfig()</a>.  <br /></td></tr>
+<tr class="memdesc:af1d9089360c8cd472de8f923ba7df99a"><td class="mdescLeft">&#160;</td><td class="mdescRight">DEPRECATED: removal date: 2026-06-01.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8e8824802dedfbc36776227f7482b6bc" name="a8e8824802dedfbc36776227f7482b6bc"></a>
@@ -265,7 +265,8 @@ template&lt;typename Archive&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Sets <a class="el" href="classdrake_1_1systems_1_1_simulator.html#ac210a235b5e0865efb51fdd27c4b58ae" title="(To be deprecated) Prefer using initialization or per-step publish events instead.">Simulator::set_publish_at_initialization()</a> in addition to <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aef1dc6aeb821503379ab1dd8c6044562" title="(To be deprecated) Prefer using per-step publish events instead.">Simulator::set_publish_every_time_step()</a> when applied by <a class="el" href="group__simulator__configuration.html#ga38ef389a0aba42050d7242d501003e6e" title="Modifies the simulator based on the given config.">ApplySimulatorConfig()</a>. </p>
+<p>DEPRECATED: removal date: 2026-06-01. </p>
+<p>See <a href="https://drake.mit.edu/troubleshooting.html#force-publishing">https://drake.mit.edu/troubleshooting.html#force-publishing</a> for guidance. Sets <a class="el" href="classdrake_1_1systems_1_1_simulator.html#ac210a235b5e0865efb51fdd27c4b58ae" title="Prefer using initialization or per-step publish events instead.">Simulator::set_publish_at_initialization()</a> in addition to <a class="el" href="classdrake_1_1systems_1_1_simulator.html#aef1dc6aeb821503379ab1dd8c6044562" title="Prefer using per-step publish events instead.">Simulator::set_publish_every_time_step()</a> when applied by <a class="el" href="group__simulator__configuration.html#ga38ef389a0aba42050d7242d501003e6e" title="Modifies the simulator based on the given config.">ApplySimulatorConfig()</a>. </p>
 
 </div>
 </div>
