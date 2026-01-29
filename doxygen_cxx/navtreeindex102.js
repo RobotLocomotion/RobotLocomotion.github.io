@@ -1,5 +1,6 @@
 var NAVTREEINDEX102 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html":[4,0,0,14,5,5],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_point_cloud_visualizer_01_4.html":[3,0,0,15,5,6],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_point_cloud_visualizer_01_4.html":[4,0,0,14,5,6],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html":[3,0,0,15,5,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX102 =
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgra8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[4,0,0,14,6,23,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html":[3,0,0,15,6,24],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html":[4,0,0,14,6,24],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,15,6,24,0],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[4,0,0,14,6,24,0]
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,15,6,24,0]
 };

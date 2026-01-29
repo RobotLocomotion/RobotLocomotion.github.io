@@ -1,5 +1,6 @@
 var NAVTREEINDEX103 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[4,0,0,14,6,24,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html":[3,0,0,15,6,25],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html":[4,0,0,14,6,25],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[3,0,0,15,6,25,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX103 =
 "structstd_1_1hash_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html":[4,0,2,6],
 "structstd_1_1hash_3_01drake_1_1_sha256_01_4.html":[3,0,2,7],
 "structstd_1_1hash_3_01drake_1_1_sha256_01_4.html":[4,0,2,7],
-"structstd_1_1hash_3_01drake_1_1_sha256_01_4.html#a8090b5272b556f1a7a236663e1de13fa":[3,0,2,7,0],
-"structstd_1_1hash_3_01drake_1_1_sha256_01_4.html#a8090b5272b556f1a7a236663e1de13fa":[4,0,2,7,0]
+"structstd_1_1hash_3_01drake_1_1_sha256_01_4.html#a8090b5272b556f1a7a236663e1de13fa":[3,0,2,7,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1multibody_1_1_calc_grid_points_options.html#ae62d09bc52470752b2fd4589c92049f5":[3,0,0,9,13,3],
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#ae62d09bc52470752b2fd4589c92049f5":[4,0,0,8,12,3],
 "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html":[2,4,2,0,0,0],
 "structdrake_1_1multibody_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a063aefa11fdbf773814f73dbf1fabd64":[2,4,2,0,0,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#ac87157413f0a2d84777f310d76313344":[4,0,0,8,2,3,5],
 "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#ae3174bed19bebd5b397337ccb86f8783":[3,0,0,9,2,3,2],
 "structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#ae3174bed19bebd5b397337ccb86f8783":[4,0,0,8,2,3,2],
-"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#af011eceae0e4754b8958932f80523918":[3,0,0,9,2,3,0],
-"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#af011eceae0e4754b8958932f80523918":[4,0,0,8,2,3,0]
+"structdrake_1_1multibody_1_1fem_1_1_fem_plant_data.html#af011eceae0e4754b8958932f80523918":[3,0,0,9,2,3,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX97 =
 {
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[2,1,1,12,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[2,5,5,12,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[2,4,2,4,4,11],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ad9059bc845096b2f05414a66c836b4ee":[2,1,1,12,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX97 =
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#a53380b3b14c20bdfcb3bc9970c421231":[3,0,0,9,13,2],
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#a53380b3b14c20bdfcb3bc9970c421231":[4,0,0,8,12,2],
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,9,13,0],
-"structdrake_1_1multibody_1_1_calc_grid_points_options.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,8,12,0],
-"structdrake_1_1multibody_1_1_calc_grid_points_options.html#ae62d09bc52470752b2fd4589c92049f5":[3,0,0,9,13,3]
+"structdrake_1_1multibody_1_1_calc_grid_points_options.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,8,12,0]
 };

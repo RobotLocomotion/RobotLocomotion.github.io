@@ -1,5 +1,6 @@
 var NAVTREEINDEX94 =
 {
+"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[4,0,0,41,1,0],
 "structdrake_1_1_rlocation_or_error.html":[3,0,0,46],
 "structdrake_1_1_rlocation_or_error.html":[4,0,0,45],
 "structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,46,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1geometry_1_1_environment_map.html#a2219ced5556859c62efc2d1f2fff2f26":[4,0,0,3,16,2],
 "structdrake_1_1geometry_1_1_environment_map.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,19,0],
 "structdrake_1_1geometry_1_1_environment_map.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,16,0],
-"structdrake_1_1geometry_1_1_environment_map.html#ae23ac8769253350f41ba92594f9bb0b5":[3,0,0,4,19,1],
-"structdrake_1_1geometry_1_1_environment_map.html#ae23ac8769253350f41ba92594f9bb0b5":[4,0,0,3,16,1]
+"structdrake_1_1geometry_1_1_environment_map.html#ae23ac8769253350f41ba92594f9bb0b5":[3,0,0,4,19,1]
 };

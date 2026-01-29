@@ -50,5 +50,6 @@ var symbolic_2polynomial_8h =
     [ "drake::symbolic::operator/", "namespacedrake_1_1symbolic.html#ab8141e1f59b8161bf1c985ecaf485b0f", null ],
     [ "drake::symbolic::operator/", "namespacedrake_1_1symbolic.html#a05b3624316b66d6957ab849780f51a5a", null ],
     [ "drake::symbolic::operator<<", "namespacedrake_1_1symbolic.html#ad946994348eafef6d3e20ebc08bfa5d2", null ],
-    [ "drake::symbolic::pow", "namespacedrake_1_1symbolic.html#a2996d1aeb389e57074bef357b2db3585", null ]
+    [ "drake::symbolic::pow", "namespacedrake_1_1symbolic.html#a2996d1aeb389e57074bef357b2db3585", null ],
+    [ "drake::symbolic::to_string", "namespacedrake_1_1symbolic.html#a3bc94e9465444b70978c2250c37722f5", null ]
 ];

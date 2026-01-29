@@ -1,5 +1,6 @@
 var NAVTREEINDEX93 =
 {
+"planning__doxygen_8h.html":[5,0,0,10,14],
 "point_8h.html":[5,0,0,4,1,22],
 "point__cloud_8h.html":[5,0,0,9,1],
 "point__cloud__flags_8h.html":[5,0,0,9,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX93 =
 "structdrake_1_1_delegating_hasher.html#ab03f097f6c3d31eb2fcdcf71a49d072a":[4,0,0,20,2],
 "structdrake_1_1_polynomial_1_1_product.html":[3,0,0,42,1],
 "structdrake_1_1_polynomial_1_1_product.html":[4,0,0,41,1],
-"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[3,0,0,42,1,0],
-"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[4,0,0,41,1,0]
+"structdrake_1_1_polynomial_1_1_product.html#adcaac2b0ff36e4e5db2d6b09f54877a4":[3,0,0,42,1,0]
 };

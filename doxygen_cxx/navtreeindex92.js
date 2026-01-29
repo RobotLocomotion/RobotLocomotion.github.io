@@ -1,5 +1,6 @@
 var NAVTREEINDEX92 =
 {
+"namespacedrake_1_1symbolic.html#afbbcd3f16b91bba700239675e5826a81":[3,0,0,14,199],
 "namespacedrake_1_1symbolic.html#afd02ba28125fcb30762312b0361e0790":[3,0,0,14,456],
 "namespacedrake_1_1symbolic.html#afd43f36981591cbe9f45910e46c041a9":[3,0,0,14,418],
 "namespacedrake_1_1symbolic.html#afe3877f48503b37c421e051962900121":[3,0,0,14,411],
@@ -248,6 +249,5 @@ var NAVTREEINDEX92 =
 "pixel__types_8h.html":[5,0,0,12,8,14],
 "planar__joint_8h.html":[5,0,0,8,12,34],
 "planar__mobilizer_8h.html":[5,0,0,8,12,35],
-"plane_8h.html":[5,0,0,4,2,41],
-"planning__doxygen_8h.html":[5,0,0,10,14]
+"plane_8h.html":[5,0,0,4,2,41]
 };

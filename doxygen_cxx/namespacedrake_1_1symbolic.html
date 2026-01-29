@@ -1129,7 +1129,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a7366e0c649e02fd21e85f3f3748fb5fb" id="r_a7366e0c649e02fd21e85f3f3748fb5fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7366e0c649e02fd21e85f3f3748fb5fb">operator/</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
 <tr class="memitem:a2996d1aeb389e57074bef357b2db3585" id="r_a2996d1aeb389e57074bef357b2db3585"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2996d1aeb389e57074bef357b2db3585">pow</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p, int n)</td></tr>
 <tr class="memdesc:a2996d1aeb389e57074bef357b2db3585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns polynomial <span class="tt">p</span> raised to <span class="tt">n</span>.  <br /></td></tr>
+<tr class="memitem:a3bc94e9465444b70978c2250c37722f5" id="r_a3bc94e9465444b70978c2250c37722f5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bc94e9465444b70978c2250c37722f5">to_string</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p)</td></tr>
 <tr class="memitem:ad946994348eafef6d3e20ebc08bfa5d2" id="r_ad946994348eafef6d3e20ebc08bfa5d2"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad946994348eafef6d3e20ebc08bfa5d2">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p)</td></tr>
+<tr class="memdesc:ad946994348eafef6d3e20ebc08bfa5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:ab12259a0866a3cbc6a8883ec0b8009b1" id="r_ab12259a0866a3cbc6a8883ec0b8009b1"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>
 <tr class="memitem:ab12259a0866a3cbc6a8883ec0b8009b1 template"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>, MatrixL::RowsAtCompileTime, MatrixR::ColsAtCompileTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab12259a0866a3cbc6a8883ec0b8009b1">operator*</a> (const MatrixL &amp;lhs, const MatrixR &amp;rhs)</td></tr>
 <tr class="memdesc:ab12259a0866a3cbc6a8883ec0b8009b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the following matrix operations:  <br /></td></tr>
@@ -10037,6 +10039,10 @@ template&lt;typename BasisElement&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-05-01. </dd></dl>
+
 </div>
 </div>
 <a id="a411e51a0c60278b06088ad1fa084e605" name="a411e51a0c60278b06088ad1fa084e605"></a>
@@ -11886,8 +11892,25 @@ template&lt;typename Derived&gt; </div>
 
 </div>
 </div>
+<a id="a3bc94e9465444b70978c2250c37722f5" name="a3bc94e9465444b70978c2250c37722f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc94e9465444b70978c2250c37722f5">&#9670;&#160;</a></span>to_string() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac163e37c2a6109a9a469be234a3382d2" name="ac163e37c2a6109a9a469be234a3382d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac163e37c2a6109a9a469be234a3382d2">&#9670;&#160;</a></span>to_string()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac163e37c2a6109a9a469be234a3382d2">&#9670;&#160;</a></span>to_string() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
