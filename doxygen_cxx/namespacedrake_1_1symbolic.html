@@ -1049,8 +1049,11 @@ Functions</h2></td></tr>
 <tr class="memitem:aa790991ea69175051e7324d12302ad52" id="r_aa790991ea69175051e7324d12302ad52"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement&gt; </td></tr>
 <tr class="memitem:aa790991ea69175051e7324d12302ad52 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab1a5d6781b80333555bde1ed59a38477">GenericPolynomialEnable</a>&lt; BasisElement &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa790991ea69175051e7324d12302ad52">pow</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p, int n)</td></tr>
 <tr class="memdesc:aa790991ea69175051e7324d12302ad52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns polynomial <code class="param">raised</code> to <code class="param">n</code>.  <br /></td></tr>
+<tr class="memitem:a36547d6c95341875bc899be1bd1c27d1" id="r_a36547d6c95341875bc899be1bd1c27d1"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement&gt; </td></tr>
+<tr class="memitem:a36547d6c95341875bc899be1bd1c27d1 template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36547d6c95341875bc899be1bd1c27d1">to_string</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p)</td></tr>
 <tr class="memitem:aab36f2eb0e38222af36d1499d0a2f47a" id="r_aab36f2eb0e38222af36d1499d0a2f47a"><td class="memTemplParams" colspan="2">template&lt;typename BasisElement&gt; </td></tr>
 <tr class="memitem:aab36f2eb0e38222af36d1499d0a2f47a template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab36f2eb0e38222af36d1499d0a2f47a">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;p)</td></tr>
+<tr class="memdesc:aab36f2eb0e38222af36d1499d0a2f47a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:ac98eda5e1ecf8e4ca123d898f2cec6fe" id="r_ac98eda5e1ecf8e4ca123d898f2cec6fe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac98eda5e1ecf8e4ca123d898f2cec6fe">ToLatex</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e, int precision=3)</td></tr>
 <tr class="memdesc:ac98eda5e1ecf8e4ca123d898f2cec6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a LaTeX string representation of <span class="tt">e</span> with floating point coefficients displayed using <span class="tt">precision</span>.  <br /></td></tr>
 <tr class="memitem:a792037568d9fe9ad837351c523146ada" id="r_a792037568d9fe9ad837351c523146ada"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a792037568d9fe9ad837351c523146ada">ToLatex</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;f, int precision=3)</td></tr>
@@ -1208,7 +1211,7 @@ template&lt;typename BasisElement&gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line"> </div>
 <div class="line">    std::enable_if_t&lt;std::is_base_of_v&lt;PolynomialBasisElement, BasisElement&gt;,</div>
 <div class="line">                     <a class="code hl_class" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial&lt;BasisElement&gt;</a>&gt;</div>
-<div class="ttc" id="aclassdrake_1_1symbolic_1_1_generic_polynomial_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_generic_polynomial.html">drake::symbolic::GenericPolynomial</a></div><div class="ttdoc">Represents symbolic generic polynomials using a given basis (for example, monomial basis,...</div><div class="ttdef"><b>Definition</b> generic_polynomial.h:35</div></div>
+<div class="ttc" id="aclassdrake_1_1symbolic_1_1_generic_polynomial_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_generic_polynomial.html">drake::symbolic::GenericPolynomial</a></div><div class="ttdoc">Represents symbolic generic polynomials using a given basis (for example, monomial basis,...</div><div class="ttdef"><b>Definition</b> generic_polynomial.h:38</div></div>
 </div><!-- fragment -->
 <p>Defines an explicit SFINAE alias for use with return types to dissuade CTAD from trying to instantiate an invalid GenericElement&lt;&gt; for operator overloads, (if that's actually the case). </p>
 <p>See discussion for more info: <a href="https://github.com/robotlocomotion/drake/pull/14053#pullrequestreview-488744679">https://github.com/robotlocomotion/drake/pull/14053#pullrequestreview-488744679</a> </p>
@@ -10018,6 +10021,10 @@ template&lt;typename BasisElement&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-05-01. </dd></dl>
+
 </div>
 </div>
 <a id="ad946994348eafef6d3e20ebc08bfa5d2" name="ad946994348eafef6d3e20ebc08bfa5d2"></a>
@@ -10040,7 +10047,7 @@ template&lt;typename BasisElement&gt; </div>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
  This will be removed from Drake on or after 2026-05-01. </dd></dl>
 
 </div>
@@ -11892,8 +11899,27 @@ template&lt;typename Derived&gt; </div>
 
 </div>
 </div>
+<a id="a36547d6c95341875bc899be1bd1c27d1" name="a36547d6c95341875bc899be1bd1c27d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36547d6c95341875bc899be1bd1c27d1">&#9670;&#160;</a></span>to_string() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BasisElement&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_generic_polynomial.html">GenericPolynomial</a>&lt; BasisElement &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3bc94e9465444b70978c2250c37722f5" name="a3bc94e9465444b70978c2250c37722f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bc94e9465444b70978c2250c37722f5">&#9670;&#160;</a></span>to_string() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc94e9465444b70978c2250c37722f5">&#9670;&#160;</a></span>to_string() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11910,7 +11936,7 @@ template&lt;typename Derived&gt; </div>
 </div>
 </div>
 <a id="ac163e37c2a6109a9a469be234a3382d2" name="ac163e37c2a6109a9a469be234a3382d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac163e37c2a6109a9a469be234a3382d2">&#9670;&#160;</a></span>to_string() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac163e37c2a6109a9a469be234a3382d2">&#9670;&#160;</a></span>to_string() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

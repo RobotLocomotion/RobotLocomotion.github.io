@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1_contact_surface.html#a3c4c114c452d2aecee2b06bc801b5f7c":[4,0,0,3,8,6],
 "classdrake_1_1geometry_1_1_contact_surface.html#a3cbee02880449dd0437777333068674b":[3,0,0,4,11,5],
 "classdrake_1_1geometry_1_1_contact_surface.html#a3cbee02880449dd0437777333068674b":[4,0,0,3,8,5],
 "classdrake_1_1geometry_1_1_contact_surface.html#a3ce6dff23938e9e43de4095f038af23c":[3,0,0,4,11,25],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1_geometry_properties.html#a7b425641c9937dea89f553cabba9b186":[4,0,0,3,21,12],
 "classdrake_1_1geometry_1_1_geometry_properties.html#a7c9d7d51d987f24034f0949aba25a608":[3,0,0,4,24,7],
 "classdrake_1_1geometry_1_1_geometry_properties.html#a7c9d7d51d987f24034f0949aba25a608":[4,0,0,3,21,7],
-"classdrake_1_1geometry_1_1_geometry_properties.html#a985605d92e6d5ae06e51f2b3ad109c14":[3,0,0,4,24,3],
-"classdrake_1_1geometry_1_1_geometry_properties.html#a985605d92e6d5ae06e51f2b3ad109c14":[4,0,0,3,21,3]
+"classdrake_1_1geometry_1_1_geometry_properties.html#a985605d92e6d5ae06e51f2b3ad109c14":[3,0,0,4,24,3]
 };

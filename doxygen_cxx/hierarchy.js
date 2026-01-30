@@ -359,7 +359,6 @@ var hierarchy =
         [ "formatter< drake::solvers::SolverId >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_id_01_4.html", null ],
         [ "formatter< drake::symbolic::ChebyshevBasisElement >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html", null ],
         [ "formatter< drake::symbolic::ChebyshevPolynomial >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html", null ],
-        [ "formatter< drake::symbolic::GenericPolynomial< BasisElement > >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html", null ],
         [ "formatter< drake::symbolic::MonomialBasisElement >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html", null ],
         [ "formatter< drake::symbolic::RationalFunction >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html", null ],
         [ "formatter< drake::systems::VectorBase< T > >", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html", null ],
@@ -400,6 +399,7 @@ var hierarchy =
     [ "formatter&lt; drake::symbolic::Environment &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Expression &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Formula &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_formula_01_4.html", null ],
+    [ "formatter&lt; drake::symbolic::GenericPolynomial&lt; BasisElement &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Polynomial &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_polynomial_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variable &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Variable::Type &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_variable_1_1_type_01_4.html", null ],
@@ -508,6 +508,7 @@ var hierarchy =
     ] ],
     [ "HermitianDenseOutput&lt; T &gt;::IntegrationStep", "classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html", null ],
     [ "IntegratorBase&lt; T &gt;", "classdrake_1_1systems_1_1_integrator_base.html", [
+      [ "CenicIntegrator< T >", "classdrake_1_1multibody_1_1_cenic_integrator.html", null ],
       [ "BogackiShampine3Integrator< T >", "classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html", null ],
       [ "ExplicitEulerIntegrator< T >", "classdrake_1_1systems_1_1_explicit_euler_integrator.html", null ],
       [ "ImplicitIntegrator< T >", "classdrake_1_1systems_1_1_implicit_integrator.html", [

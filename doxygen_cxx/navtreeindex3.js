@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"classdrake_1_1ad_1_1_derivatives_mutable_xpr.html#afaa5e775b1388321f03a14272e94fa0d":[4,0,0,0,2,0],
 "classdrake_1_1copyable__unique__ptr.html":[3,0,0,20],
 "classdrake_1_1copyable__unique__ptr.html":[4,0,0,19],
 "classdrake_1_1copyable__unique__ptr.html#a05eb6db51f59f531a9ffcadd3361436e":[3,0,0,20,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state.html#af35f8dba1f26edf45742e7f37e61fd28":[4,0,0,2,0,7,12],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state.html#af60758a31c7bab0fca953edebc84a475":[3,0,0,3,0,7,3],
 "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state.html#af60758a31c7bab0fca953edebc84a475":[4,0,0,2,0,7,3],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html":[2,2,12,0,2],
-"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html#a0aebd610c2d28607e24c03859182d05f":[2,2,12,0,2,0]
+"classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html":[2,2,12,0,2]
 };

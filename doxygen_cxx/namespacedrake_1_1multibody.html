@@ -191,6 +191,8 @@ Classes</h2></td></tr>
 <tr class="memitem:BoundingBoxConstraint" id="r_BoundingBoxConstraint"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a constraint of the form \( lb &lt;= x &lt;= ub \).  <a href="classdrake_1_1multibody_1_1_bounding_box_constraint.html#details">More...</a><br /></td></tr>
 <tr class="memitem:CalcGridPointsOptions" id="r_CalcGridPointsOptions"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_calc_grid_points_options.html">CalcGridPointsOptions</a></td></tr>
+<tr class="memitem:CenicIntegrator" id="r_CenicIntegrator"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_cenic_integrator.html">CenicIntegrator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convex Error-controlled Numerical Integration for Contact (CENIC) is a specialized error-controlled implicit integrator for contact-rich robotics simulations [Kurtz and Castro, 2025].  <a href="classdrake_1_1multibody_1_1_cenic_integrator.html#details">More...</a><br /></td></tr>
 <tr class="memitem:CentroidalMomentumConstraint" id="r_CentroidalMomentumConstraint"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html">CentroidalMomentumConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Impose the constraint CentroidalMomentum(q, v) - h_WC = 0 with decision variables [q;v;h_WC] or CentroidalAngularMomentum(q, v) - k_WC = 0 with decision variables [q; v; k_WC] h_WC is the 6D spatial momentum (linear and angular momentum about the center of mass C) expressed in the world frame (W).  <a href="classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#details">More...</a><br /></td></tr>
 <tr class="memitem:CollisionFilterGroups" id="r_CollisionFilterGroups"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_collision_filter_groups.html">CollisionFilterGroups</a></td></tr>
@@ -483,6 +485,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ac8e3bd988af3b494bf1318559a96c155" id="r_ac8e3bd988af3b494bf1318559a96c155"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:ac8e3bd988af3b494bf1318559a96c155 template"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">systems::IntegratorBase</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8e3bd988af3b494bf1318559a96c155">MakeCenicIntegrator</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt; &amp;system, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context=nullptr)</td></tr>
+<tr class="memdesc:ac8e3bd988af3b494bf1318559a96c155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_cenic_integrator.html" title="Convex Error-controlled Numerical Integration for Contact (CENIC) is a specialized error-controlled i...">CenicIntegrator</a>.  <br /></td></tr>
 <tr class="memitem:ac190771ae19f018b68817639354aab61" id="r_ac190771ae19f018b68817639354aab61"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac190771ae19f018b68817639354aab61">AddMultibodyPlantConstraints</a> (const std::shared_ptr&lt; const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;plant, const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &amp;q, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant_context=nullptr)</td></tr>
 <tr class="memdesc:ac190771ae19f018b68817639354aab61"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all kinematic constraints associated with <span class="tt">plant</span> adds a corresponding solver::Constraint to <span class="tt">prog</span>, using decision variables <span class="tt">q</span> to represent the generalized positions of the plant.  <br /></td></tr>
 <tr class="memitem:a2deab3edb360ec1284fde7bcb3076cb1" id="r_a2deab3edb360ec1284fde7bcb3076cb1"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2deab3edb360ec1284fde7bcb3076cb1">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="#a3e26d472253fc2fe452f8b4bb2d1bcdc">DifferentialInverseKinematicsStatus</a> value)</td></tr>
@@ -1529,6 +1534,44 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns the model instance which contains all tree elements with no explicit model instance specified. </p>
+
+</div>
+</div>
+<a id="ac8e3bd988af3b494bf1318559a96c155" name="ac8e3bd988af3b494bf1318559a96c155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e3bd988af3b494bf1318559a96c155">&#9670;&#160;</a></span>MakeCenicIntegrator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">systems::IntegratorBase</a>&lt; T &gt; &gt; MakeCenicIntegrator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">systems::System</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>system</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *</td>          <td class="paramname"><span class="paramname"><em>context</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classdrake_1_1multibody_1_1_cenic_integrator.html" title="Convex Error-controlled Numerical Integration for Contact (CENIC) is a specialized error-controlled i...">CenicIntegrator</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>The overall Diagram to simulate. Must include a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and associated SceneGraph, with the plant found as a direct child of the <span class="tt">system</span> diagram using the subsystem name <span class="tt">"plant"</span>. This system is aliased by this object so must remain alive longer than the integrator. </td></tr>
+    <tr><td class="paramname">context</td><td>Context for <span class="tt">system</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

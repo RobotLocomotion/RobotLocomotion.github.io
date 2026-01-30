@@ -1322,7 +1322,7 @@ template&lt;typename BasisElement&gt; </div>
 <div class="line">p.SetIndeterminates({a, b, c});</div>
 <div class="line"><span class="comment">// p.basis_element_to_coefficient_map() now is {a: x * x, b: x, c: 1}.</span></div>
 <div class="line">std::cout &lt;&lt; p.TotalDegree(); <span class="comment">// prints 1.</span></div>
-<div class="ttc" id="aclassdrake_1_1symbolic_1_1_generic_polynomial_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_generic_polynomial.html">drake::symbolic::GenericPolynomial</a></div><div class="ttdoc">Represents symbolic generic polynomials using a given basis (for example, monomial basis,...</div><div class="ttdef"><b>Definition</b> generic_polynomial.h:35</div></div>
+<div class="ttc" id="aclassdrake_1_1symbolic_1_1_generic_polynomial_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_generic_polynomial.html">drake::symbolic::GenericPolynomial</a></div><div class="ttdoc">Represents symbolic generic polynomials using a given basis (for example, monomial basis,...</div><div class="ttdef"><b>Definition</b> generic_polynomial.h:38</div></div>
 <div class="ttc" id="aclassdrake_1_1symbolic_1_1_generic_polynomial_html_aaf2a77325f716479b2f8c5b17729a5c6"><div class="ttname"><a href="#aaf2a77325f716479b2f8c5b17729a5c6">drake::symbolic::GenericPolynomial::TotalDegree</a></div><div class="ttdeci">int TotalDegree() const</div><div class="ttdoc">Returns the total degree of this generic polynomial.</div></div>
 </div><!-- fragment --><p> This function can be expensive, as it potentially reconstructs the polynomial (using the new indeterminates) from the expression. </p>
 

@@ -293,6 +293,7 @@ var annotated_dup =
         [ "Binding", "classdrake_1_1multibody_1_1_binding.html", "classdrake_1_1multibody_1_1_binding" ],
         [ "BoundingBoxConstraint", "classdrake_1_1multibody_1_1_bounding_box_constraint.html", "classdrake_1_1multibody_1_1_bounding_box_constraint" ],
         [ "CalcGridPointsOptions", "structdrake_1_1multibody_1_1_calc_grid_points_options.html", "structdrake_1_1multibody_1_1_calc_grid_points_options" ],
+        [ "CenicIntegrator", "classdrake_1_1multibody_1_1_cenic_integrator.html", "classdrake_1_1multibody_1_1_cenic_integrator" ],
         [ "CentroidalMomentumConstraint", "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html", "classdrake_1_1multibody_1_1_centroidal_momentum_constraint" ],
         [ "CollisionFilterGroups", "classdrake_1_1multibody_1_1_collision_filter_groups.html", "classdrake_1_1multibody_1_1_collision_filter_groups" ],
         [ "ComInPolyhedronConstraint", "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html", "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint" ],

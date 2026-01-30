@@ -36,5 +36,6 @@ var generic__polynomial_8h =
     [ "drake::symbolic::operator-", "namespacedrake_1_1symbolic.html#a3f3c47a396ac8d468bf5f2f45e230de3", null ],
     [ "drake::symbolic::operator/", "namespacedrake_1_1symbolic.html#afe3877f48503b37c421e051962900121", null ],
     [ "drake::symbolic::operator<<", "namespacedrake_1_1symbolic.html#aab36f2eb0e38222af36d1499d0a2f47a", null ],
-    [ "drake::symbolic::pow", "namespacedrake_1_1symbolic.html#aa790991ea69175051e7324d12302ad52", null ]
+    [ "drake::symbolic::pow", "namespacedrake_1_1symbolic.html#aa790991ea69175051e7324d12302ad52", null ],
+    [ "drake::symbolic::to_string", "namespacedrake_1_1symbolic.html#a36547d6c95341875bc899be1bd1c27d1", null ]
 ];
