@@ -1,5 +1,6 @@
 var NAVTREEINDEX94 =
 {
+"state_8h.html":[5,0,0,12,3,36],
 "state__feedback__controller__interface_8h.html":[5,0,0,12,1,8],
 "static__equilibrium__constraint_8h.html":[5,0,0,8,8,7],
 "static__equilibrium__problem_8h.html":[5,0,0,8,8,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#ac5e331dc922e5fcf0083aafe07e3ac0c":[4,0,0,3,11,1],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#ad4cce1d859d70cf4b5b9620ea36b7a42":[3,0,0,4,14,11],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#ad4cce1d859d70cf4b5b9620ea36b7a42":[4,0,0,3,11,11],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#ad67da500a161dc406336020e2f3be598":[3,0,0,4,14,5],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#ad67da500a161dc406336020e2f3be598":[4,0,0,3,11,5]
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#ad67da500a161dc406336020e2f3be598":[3,0,0,4,14,5]
 };
