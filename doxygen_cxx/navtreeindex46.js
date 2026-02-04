@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"classdrake_1_1solvers_1_1_clarabel_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[3,0,0,13,6,7],
 "classdrake_1_1solvers_1_1_clarabel_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[4,0,0,12,6,7],
 "classdrake_1_1solvers_1_1_clarabel_solver.html#a3f3fbf3ab237647f11a0be506e3cf4b4":[3,0,0,13,6,1],
 "classdrake_1_1solvers_1_1_clarabel_solver.html#a3f3fbf3ab237647f11a0be506e3cf4b4":[4,0,0,12,6,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "classdrake_1_1solvers_1_1_expression_cost.html#ae24f1381d3e4d579dd511df8b9f74970":[2,1,0,47,3],
 "classdrake_1_1solvers_1_1_expression_cost.html#ae5bdad389f165ca4af5a16cd97a82897":[2,1,0,47,8],
 "classdrake_1_1solvers_1_1_function_evaluator.html":[3,0,0,13,21],
-"classdrake_1_1solvers_1_1_function_evaluator.html":[4,0,0,12,21],
-"classdrake_1_1solvers_1_1_function_evaluator.html#a178d19e5bc9f02ff074623de63d2b4ff":[3,0,0,13,21,5]
+"classdrake_1_1solvers_1_1_function_evaluator.html":[4,0,0,12,21]
 };

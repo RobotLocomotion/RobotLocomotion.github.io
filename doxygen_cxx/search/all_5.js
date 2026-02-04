@@ -117,7 +117,7 @@ var searchData=
   ['fmt_5fdebug_5fstring_114',['fmt_debug_string',['../namespacedrake.html#afc57f8ba3471c69c959f961a287666ac',1,'drake']]],
   ['fmt_5feigen_115',['fmt_eigen',['../namespacedrake.html#a0655e16a159b287851163900c29d2b4f',1,'drake']]],
   ['fmt_5feigen_2eh_116',['fmt_eigen.h',['../fmt__eigen_8h.html',1,'']]],
-  ['fmt_5ffloating_5fpoint_117',['fmt_floating_point',['../namespacedrake.html#a78ab22f7a42b8921faafd7b6ffb341fd',1,'drake::fmt_floating_point(T x)'],['../namespacedrake.html#a1f33c2c0ca328c1634325992f2017db8',1,'drake::fmt_floating_point(T x)']]],
+  ['fmt_5ffloating_5fpoint_117',['fmt_floating_point',['../namespacedrake.html#a78ab22f7a42b8921faafd7b6ffb341fd',1,'drake']]],
   ['fmt_5fostream_2eh_118',['fmt_ostream.h',['../fmt__ostream_8h.html',1,'']]],
   ['fmt_5fruntime_119',['fmt_runtime',['../namespacedrake.html#af432bd3fe5b5d4786e7473b3a26cd877',1,'drake']]],
   ['fmt_5fstreamed_120',['fmt_streamed',['../namespacedrake.html#a65ba5721a088bacdc594dab652fc7e1c',1,'drake']]],

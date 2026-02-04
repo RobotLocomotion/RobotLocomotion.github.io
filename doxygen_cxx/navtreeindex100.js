@@ -1,5 +1,10 @@
 var NAVTREEINDEX100 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[3,0,0,12,6,1,0],
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[4,0,0,11,6,1,0],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[3,0,0,12,6,2],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[4,0,0,11,6,2],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a1c90bdc946c78848a793eb4fc2e9b7e5":[3,0,0,12,6,2,1],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a1c90bdc946c78848a793eb4fc2e9b7e5":[4,0,0,11,6,2,1],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a2b5855cfba3ee924b2dd12eed326deba":[3,0,0,12,6,2,2],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a2b5855cfba3ee924b2dd12eed326deba":[4,0,0,11,6,2,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX100 =
 "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html":[3,0,0,14,0],
 "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html":[4,0,0,13,0],
 "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html#a27f28cb60a97c16b3dd9b30cb72b2a8f":[3,0,0,14,0,0],
-"structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html#a27f28cb60a97c16b3dd9b30cb72b2a8f":[4,0,0,13,0,0],
-"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html":[3,0,0,14,54],
-"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html":[4,0,0,13,54],
-"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,14,54,0],
-"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[4,0,0,13,54,0],
-"structdrake_1_1symbolic_1_1_polynomial_1_1_substitute_and_expand_cache_data.html":[3,0,0,14,58,0]
+"structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html#a27f28cb60a97c16b3dd9b30cb72b2a8f":[4,0,0,13,0,0]
 };

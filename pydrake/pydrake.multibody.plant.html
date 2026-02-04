@@ -4681,7 +4681,19 @@ expressed in a frame B, this method computes the positions
 <code class="docutils literal notranslate"><span class="pre">p_AQi(q)</span></code> of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> in the set as measured and expressed
 in another frame A, as a function of the generalized positions q of
 the model.</p>
-<dl class="simple">
+<p>Example of usage: Given two points Q0 and Q1 that are fixed to a frame
+B, the code below calculates their positions from the world frame
+origin, expressed in the world frame W.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.3</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">-9.8</span><span class="p">,</span><span class="w"> </span><span class="mf">7.6</span><span class="p">,</span><span class="w"> </span><span class="mf">-5.43</span><span class="p">);</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_WQi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Frame</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">frame_W</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">world_frame</span><span class="p">();</span>
+<span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcPointsPositions</span><span class="p">(</span><span class="o">*</span><span class="n">context_</span><span class="p">,</span><span class="w"> </span><span class="n">frame_B</span><span class="p">,</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">,</span><span class="w"> </span><span class="n">frame_W</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">p_WQi</span><span class="p">);</span>
+</pre></div>
+</div>
+</details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context containing the state of the model. It stores the
 generalized positions q of the model.</p>
 </dd>
@@ -4689,9 +4701,12 @@ generalized positions q of the model.</p>
 <code class="docutils literal notranslate"><span class="pre">Qi</span></code> are given.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code>:</dt><dd><p>The input positions of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> in frame B. <code class="docutils literal notranslate"><span class="pre">p_BQi</span> <span class="pre">∈</span>
-<span class="pre">ℝ³ˣⁿᵖ</span></code> with <code class="docutils literal notranslate"><span class="pre">np</span></code> the number of points in the set. Each column
-of <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> corresponds to a vector in ℝ³ holding the position of
-one of the points in the set as measured and expressed in frame B.</p>
+<span class="pre">ℝ³ˣⁿ</span></code> with <code class="docutils literal notranslate"><span class="pre">n</span></code> the number of points in the set. Each column of
+<code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> corresponds to a vector in ℝ³ holding the position of
+one of the points in the set as measured and expressed in frame B.
+Each column of p_BQi is a position vector associated with one
+point Qi, and the number of columns in p_BQi is the number n of
+points.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A in which it is desired to compute the positions
 <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> in the set.</p>
@@ -4699,7 +4714,9 @@ one of the points in the set as measured and expressed in frame B.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code>:</dt><dd><p>The output positions of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> now computed as measured
 and expressed in frame A. The output <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> <strong>must</strong> have the
 same size as the input <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> or otherwise this method aborts.
-That is <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> <strong>must</strong> be in <code class="docutils literal notranslate"><span class="pre">ℝ³ˣⁿᵖ</span></code>.</p>
+That is <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> <strong>must</strong> be in <code class="docutils literal notranslate"><span class="pre">ℝ³ˣⁿ</span></code>. Each column of p_AQi is
+a position vector associated with one point Qi, and the number of
+columns in p_BQi is the number n of points.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -4709,6 +4726,59 @@ method will throw a RuntimeError. This method also throws a
 RuntimeError if <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> and <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> differ in the number of
 columns.</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant.CalcPointsVelocities">
+<span class="sig-name descname"><span class="pre">CalcPointsVelocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pydrake.multibody.plant.MultibodyPlant" title="pydrake.multibody.plant.MultibodyPlant"><span class="pre">pydrake.multibody.plant.MultibodyPlant</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Context" title="pydrake.systems.framework.Context"><span class="pre">pydrake.systems.framework.Context</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BQi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame" title="pydrake.multibody.tree.Frame"><span class="pre">pydrake.multibody.tree.Frame</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.float64</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant.CalcPointsVelocities" title="Link to this definition"></a></dt>
+<dd><p>For a set of n points Qi (i = 0, … n-1) that are regarded as fixed
+on a frame B, calculates the velocities v_AQi_E of Qi measured in a
+frame A and expressed in a frame E.</p>
+<p>Example of usage: Given two points Q0 and Q1 that are fixed to a frame
+B, the code below calculates their velocities measured and expressed
+in the world frame W.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.3</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">-9.8</span><span class="p">,</span><span class="w"> </span><span class="mf">7.6</span><span class="p">,</span><span class="w"> </span><span class="mf">-5.43</span><span class="p">);</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_WQi_W</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Frame</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">frame_W</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">world_frame</span><span class="p">();</span>
+<span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcPointsVelocities</span><span class="p">(</span><span class="o">*</span><span class="n">context_</span><span class="p">,</span><span class="w"> </span><span class="n">frame_B</span><span class="p">,</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">,</span><span class="w"> </span><span class="n">frame_W</span><span class="p">,</span><span class="w"> </span><span class="n">frame_W</span><span class="p">,</span>
+<span class="w">                            </span><span class="o">&amp;</span><span class="n">v_WQi_W</span><span class="p">);</span>
+</pre></div>
+</div>
+</details><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the state of the multibody system, including the
+generalized positions q and the generalized velocities v.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame B in which each point Qi is fixed and whose frame origin
+Bo is the starting point for position vectors in p_BQi. frame_B is
+also the expressed-in-frame for position vectors p_BQi.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code>:</dt><dd><p>Position vectors from Bo (frame B’s origin) to each point Qi (i =
+0, … n-1), expressed in frame B. Each column of p_BQi is a
+position vector associated with one point Qi, and the number of
+columns in p_BQi is the number n of points.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which the velocities are to be measured.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the velocities are to be expressed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_AQi_E</span></code>:</dt><dd><p>The velocities of each point Qi (i = 0, … n-1) measured in frame
+A and expressed in frame E. Each column of v_AQi_E is a
+translational velocity vector associated with one point Qi, and
+the number of columns in v_AQi_E is the number n of points.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if p_BQi and v_AQi_E do not have three rows</strong><strong> (</strong><strong>are not</strong> – </p></li>
+<li><p><strong>3 element vectors</strong><strong>) or </strong><strong>do not have the same number</strong><strong> (</strong><strong>n &gt; 0</strong><strong>) </strong><strong>of</strong> – </p></li>
+<li><p><strong>columns.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -10569,7 +10639,19 @@ expressed in a frame B, this method computes the positions
 <code class="docutils literal notranslate"><span class="pre">p_AQi(q)</span></code> of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> in the set as measured and expressed
 in another frame A, as a function of the generalized positions q of
 the model.</p>
-<dl class="simple">
+<p>Example of usage: Given two points Q0 and Q1 that are fixed to a frame
+B, the code below calculates their positions from the world frame
+origin, expressed in the world frame W.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.3</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">-9.8</span><span class="p">,</span><span class="w"> </span><span class="mf">7.6</span><span class="p">,</span><span class="w"> </span><span class="mf">-5.43</span><span class="p">);</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_WQi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Frame</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">frame_W</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">world_frame</span><span class="p">();</span>
+<span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcPointsPositions</span><span class="p">(</span><span class="o">*</span><span class="n">context_</span><span class="p">,</span><span class="w"> </span><span class="n">frame_B</span><span class="p">,</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">,</span><span class="w"> </span><span class="n">frame_W</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">p_WQi</span><span class="p">);</span>
+</pre></div>
+</div>
+</details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context containing the state of the model. It stores the
 generalized positions q of the model.</p>
 </dd>
@@ -10577,9 +10659,12 @@ generalized positions q of the model.</p>
 <code class="docutils literal notranslate"><span class="pre">Qi</span></code> are given.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code>:</dt><dd><p>The input positions of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> in frame B. <code class="docutils literal notranslate"><span class="pre">p_BQi</span> <span class="pre">∈</span>
-<span class="pre">ℝ³ˣⁿᵖ</span></code> with <code class="docutils literal notranslate"><span class="pre">np</span></code> the number of points in the set. Each column
-of <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> corresponds to a vector in ℝ³ holding the position of
-one of the points in the set as measured and expressed in frame B.</p>
+<span class="pre">ℝ³ˣⁿ</span></code> with <code class="docutils literal notranslate"><span class="pre">n</span></code> the number of points in the set. Each column of
+<code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> corresponds to a vector in ℝ³ holding the position of
+one of the points in the set as measured and expressed in frame B.
+Each column of p_BQi is a position vector associated with one
+point Qi, and the number of columns in p_BQi is the number n of
+points.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A in which it is desired to compute the positions
 <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> in the set.</p>
@@ -10587,7 +10672,9 @@ one of the points in the set as measured and expressed in frame B.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code>:</dt><dd><p>The output positions of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> now computed as measured
 and expressed in frame A. The output <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> <strong>must</strong> have the
 same size as the input <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> or otherwise this method aborts.
-That is <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> <strong>must</strong> be in <code class="docutils literal notranslate"><span class="pre">ℝ³ˣⁿᵖ</span></code>.</p>
+That is <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> <strong>must</strong> be in <code class="docutils literal notranslate"><span class="pre">ℝ³ˣⁿ</span></code>. Each column of p_AQi is
+a position vector associated with one point Qi, and the number of
+columns in p_BQi is the number n of points.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -10597,6 +10684,59 @@ method will throw a RuntimeError. This method also throws a
 RuntimeError if <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> and <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> differ in the number of
 columns.</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcPointsVelocities">
+<span class="sig-name descname"><span class="pre">CalcPointsVelocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BQi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd" title="pydrake.autodiffutils.AutoDiffXd"><span class="pre">AutoDiffXd</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-AutoDiffXd-.CalcPointsVelocities" title="Link to this definition"></a></dt>
+<dd><p>For a set of n points Qi (i = 0, … n-1) that are regarded as fixed
+on a frame B, calculates the velocities v_AQi_E of Qi measured in a
+frame A and expressed in a frame E.</p>
+<p>Example of usage: Given two points Q0 and Q1 that are fixed to a frame
+B, the code below calculates their velocities measured and expressed
+in the world frame W.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.3</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">-9.8</span><span class="p">,</span><span class="w"> </span><span class="mf">7.6</span><span class="p">,</span><span class="w"> </span><span class="mf">-5.43</span><span class="p">);</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_WQi_W</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Frame</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">frame_W</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">world_frame</span><span class="p">();</span>
+<span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcPointsVelocities</span><span class="p">(</span><span class="o">*</span><span class="n">context_</span><span class="p">,</span><span class="w"> </span><span class="n">frame_B</span><span class="p">,</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">,</span><span class="w"> </span><span class="n">frame_W</span><span class="p">,</span><span class="w"> </span><span class="n">frame_W</span><span class="p">,</span>
+<span class="w">                            </span><span class="o">&amp;</span><span class="n">v_WQi_W</span><span class="p">);</span>
+</pre></div>
+</div>
+</details><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the state of the multibody system, including the
+generalized positions q and the generalized velocities v.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame B in which each point Qi is fixed and whose frame origin
+Bo is the starting point for position vectors in p_BQi. frame_B is
+also the expressed-in-frame for position vectors p_BQi.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code>:</dt><dd><p>Position vectors from Bo (frame B’s origin) to each point Qi (i =
+0, … n-1), expressed in frame B. Each column of p_BQi is a
+position vector associated with one point Qi, and the number of
+columns in p_BQi is the number n of points.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which the velocities are to be measured.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the velocities are to be expressed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_AQi_E</span></code>:</dt><dd><p>The velocities of each point Qi (i = 0, … n-1) measured in frame
+A and expressed in frame E. Each column of v_AQi_E is a
+translational velocity vector associated with one point Qi, and
+the number of columns in v_AQi_E is the number n of points.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if p_BQi and v_AQi_E do not have three rows</strong><strong> (</strong><strong>are not</strong> – </p></li>
+<li><p><strong>3 element vectors</strong><strong>) or </strong><strong>do not have the same number</strong><strong> (</strong><strong>n &gt; 0</strong><strong>) </strong><strong>of</strong> – </p></li>
+<li><p><strong>columns.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -16413,7 +16553,19 @@ expressed in a frame B, this method computes the positions
 <code class="docutils literal notranslate"><span class="pre">p_AQi(q)</span></code> of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> in the set as measured and expressed
 in another frame A, as a function of the generalized positions q of
 the model.</p>
-<dl class="simple">
+<p>Example of usage: Given two points Q0 and Q1 that are fixed to a frame
+B, the code below calculates their positions from the world frame
+origin, expressed in the world frame W.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.3</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">-9.8</span><span class="p">,</span><span class="w"> </span><span class="mf">7.6</span><span class="p">,</span><span class="w"> </span><span class="mf">-5.43</span><span class="p">);</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_WQi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Frame</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">frame_W</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">world_frame</span><span class="p">();</span>
+<span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcPointsPositions</span><span class="p">(</span><span class="o">*</span><span class="n">context_</span><span class="p">,</span><span class="w"> </span><span class="n">frame_B</span><span class="p">,</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">,</span><span class="w"> </span><span class="n">frame_W</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">p_WQi</span><span class="p">);</span>
+</pre></div>
+</div>
+</details><dl class="simple">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>The context containing the state of the model. It stores the
 generalized positions q of the model.</p>
 </dd>
@@ -16421,9 +16573,12 @@ generalized positions q of the model.</p>
 <code class="docutils literal notranslate"><span class="pre">Qi</span></code> are given.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code>:</dt><dd><p>The input positions of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> in frame B. <code class="docutils literal notranslate"><span class="pre">p_BQi</span> <span class="pre">∈</span>
-<span class="pre">ℝ³ˣⁿᵖ</span></code> with <code class="docutils literal notranslate"><span class="pre">np</span></code> the number of points in the set. Each column
-of <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> corresponds to a vector in ℝ³ holding the position of
-one of the points in the set as measured and expressed in frame B.</p>
+<span class="pre">ℝ³ˣⁿ</span></code> with <code class="docutils literal notranslate"><span class="pre">n</span></code> the number of points in the set. Each column of
+<code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> corresponds to a vector in ℝ³ holding the position of
+one of the points in the set as measured and expressed in frame B.
+Each column of p_BQi is a position vector associated with one
+point Qi, and the number of columns in p_BQi is the number n of
+points.</p>
 </dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame A in which it is desired to compute the positions
 <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> in the set.</p>
@@ -16431,7 +16586,9 @@ one of the points in the set as measured and expressed in frame B.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code>:</dt><dd><p>The output positions of each point <code class="docutils literal notranslate"><span class="pre">Qi</span></code> now computed as measured
 and expressed in frame A. The output <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> <strong>must</strong> have the
 same size as the input <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> or otherwise this method aborts.
-That is <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> <strong>must</strong> be in <code class="docutils literal notranslate"><span class="pre">ℝ³ˣⁿᵖ</span></code>.</p>
+That is <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> <strong>must</strong> be in <code class="docutils literal notranslate"><span class="pre">ℝ³ˣⁿ</span></code>. Each column of p_AQi is
+a position vector associated with one point Qi, and the number of
+columns in p_BQi is the number n of points.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -16441,6 +16598,59 @@ method will throw a RuntimeError. This method also throws a
 RuntimeError if <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code> and <code class="docutils literal notranslate"><span class="pre">p_AQi</span></code> differ in the number of
 columns.</p>
 </div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcPointsVelocities">
+<span class="sig-name descname"><span class="pre">CalcPointsVelocities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.plant.MultibodyPlant_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.systems.framework.Context_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_B</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_BQi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">flags.f_contiguous</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_E</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pydrake.multibody.tree.Frame_</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="pydrake.symbolic.html#pydrake.symbolic.Expression" title="pydrake.symbolic.Expression"><span class="pre">Expression</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">object</span><span class="p"><span class="pre">[</span></span><span class="pre">m</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">n</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_-Expression-.CalcPointsVelocities" title="Link to this definition"></a></dt>
+<dd><p>For a set of n points Qi (i = 0, … n-1) that are regarded as fixed
+on a frame B, calculates the velocities v_AQi_E of Qi measured in a
+frame A and expressed in a frame E.</p>
+<p>Example of usage: Given two points Q0 and Q1 that are fixed to a frame
+B, the code below calculates their velocities measured and expressed
+in the world frame W.</p>
+<details><summary>Click to expand C++ code...</summary><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.3</span><span class="p">);</span>
+<span class="w"> </span><span class="n">p_BQi</span><span class="p">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">-9.8</span><span class="p">,</span><span class="w"> </span><span class="mf">7.6</span><span class="p">,</span><span class="w"> </span><span class="mf">-5.43</span><span class="p">);</span>
+<span class="w"> </span><span class="n">MatrixX</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v_WQi_W</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">num_position_vectors</span><span class="p">);</span>
+<span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Frame</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">frame_W</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">world_frame</span><span class="p">();</span>
+<span class="w"> </span><span class="n">plant</span><span class="p">.</span><span class="n">CalcPointsVelocities</span><span class="p">(</span><span class="o">*</span><span class="n">context_</span><span class="p">,</span><span class="w"> </span><span class="n">frame_B</span><span class="p">,</span><span class="w"> </span><span class="n">p_BQi</span><span class="p">,</span><span class="w"> </span><span class="n">frame_W</span><span class="p">,</span><span class="w"> </span><span class="n">frame_W</span><span class="p">,</span>
+<span class="w">                            </span><span class="o">&amp;</span><span class="n">v_WQi_W</span><span class="p">);</span>
+</pre></div>
+</div>
+</details><dl class="simple">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt><dd><p>Contains the state of the multibody system, including the
+generalized positions q and the generalized velocities v.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_B</span></code>:</dt><dd><p>The frame B in which each point Qi is fixed and whose frame origin
+Bo is the starting point for position vectors in p_BQi. frame_B is
+also the expressed-in-frame for position vectors p_BQi.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQi</span></code>:</dt><dd><p>Position vectors from Bo (frame B’s origin) to each point Qi (i =
+0, … n-1), expressed in frame B. Each column of p_BQi is a
+position vector associated with one point Qi, and the number of
+columns in p_BQi is the number n of points.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_A</span></code>:</dt><dd><p>The frame in which the velocities are to be measured.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt><dd><p>The frame in which the velocities are to be expressed.</p>
+</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_AQi_E</span></code>:</dt><dd><p>The velocities of each point Qi (i = 0, … n-1) measured in frame
+A and expressed in frame E. Each column of v_AQi_E is a
+translational velocity vector associated with one point Qi, and
+the number of columns in v_AQi_E is the number n of points.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>RuntimeError if p_BQi and v_AQi_E do not have three rows</strong><strong> (</strong><strong>are not</strong> – </p></li>
+<li><p><strong>3 element vectors</strong><strong>) or </strong><strong>do not have the same number</strong><strong> (</strong><strong>n &gt; 0</strong><strong>) </strong><strong>of</strong> – </p></li>
+<li><p><strong>columns.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

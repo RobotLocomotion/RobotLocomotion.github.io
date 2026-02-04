@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1never__destroyed.html":[4,0,0,37],
 "classdrake_1_1never__destroyed.html#a1928fdb6c0c2253e0aa891b213721673":[3,0,0,38,1],
 "classdrake_1_1never__destroyed.html#a1928fdb6c0c2253e0aa891b213721673":[4,0,0,37,1],
 "classdrake_1_1never__destroyed.html#a27fa859355b10542c0cdbf991a8c3a66":[3,0,0,38,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX40 =
 "classdrake_1_1planning_1_1_collision_checker.html#a5741d217236e45f7aed61d7a28c23d39":[2,4,2,2,1,80],
 "classdrake_1_1planning_1_1_collision_checker.html#a57903558264bcd6cb91e68f8e49d20a1":[2,4,2,2,1,52],
 "classdrake_1_1planning_1_1_collision_checker.html#a5a8b62cb6805a9d647e8ea0c783bb47d":[2,4,2,2,1,64],
-"classdrake_1_1planning_1_1_collision_checker.html#a5b27629aa14a86079b45f9bc76234863":[2,4,2,2,1,63],
-"classdrake_1_1planning_1_1_collision_checker.html#a5c07f13becacf1aacae6bff5cfff24cd":[2,4,2,2,1,28]
+"classdrake_1_1planning_1_1_collision_checker.html#a5b27629aa14a86079b45f9bc76234863":[2,4,2,2,1,63]
 };

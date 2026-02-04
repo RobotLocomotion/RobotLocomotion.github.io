@@ -1179,6 +1179,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9f7de309c1619f81c94cfa294e5a9065" id="r_a9f7de309c1619f81c94cfa294e5a9065"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f7de309c1619f81c94cfa294e5a9065">operator/</a> (<a class="el" href="classdouble.html">double</a> c, const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;f)</td></tr>
 <tr class="memitem:a2395a6ba4fad53d7c3daa2f792269d99" id="r_a2395a6ba4fad53d7c3daa2f792269d99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2395a6ba4fad53d7c3daa2f792269d99">operator/</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m, <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> f)</td></tr>
 <tr class="memitem:a19aa5481bd2bb69b6e4df135231e21f6" id="r_a19aa5481bd2bb69b6e4df135231e21f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19aa5481bd2bb69b6e4df135231e21f6">operator/</a> (<a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> f, const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
+<tr class="memitem:ab0bc13bb742ac53358559066848dfa9f" id="r_ab0bc13bb742ac53358559066848dfa9f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0bc13bb742ac53358559066848dfa9f">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;f)</td></tr>
+<tr class="memdesc:ab0bc13bb742ac53358559066848dfa9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
+<tr class="memitem:aefc48865f4a78fceaa3527e94d420bdb" id="r_aefc48865f4a78fceaa3527e94d420bdb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefc48865f4a78fceaa3527e94d420bdb">to_string</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;f)</td></tr>
 <tr class="memitem:a1689f9845acfae35173fede790537df9" id="r_a1689f9845acfae35173fede790537df9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1689f9845acfae35173fede790537df9">pow</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;f, int n)</td></tr>
 <tr class="memdesc:a1689f9845acfae35173fede790537df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rational function <code class="param">f</code> raised to <code class="param">n</code>.  <br /></td></tr>
 <tr class="memitem:a36162c4bad2ea2acd8b5ca7bad262ce9" id="r_a36162c4bad2ea2acd8b5ca7bad262ce9"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>
@@ -9960,8 +9963,33 @@ template&lt;typename ScalarType, typename Derived&gt; </div>
 
 </div>
 </div>
+<a id="ab0bc13bb742ac53358559066848dfa9f" name="ab0bc13bb742ac53358559066848dfa9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0bc13bb742ac53358559066848dfa9f">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
+
+</div>
+</div>
 <a id="af6ea3eaf1a7e5beed8feb1c401d51bbc" name="af6ea3eaf1a7e5beed8feb1c401d51bbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6ea3eaf1a7e5beed8feb1c401d51bbc">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ea3eaf1a7e5beed8feb1c401d51bbc">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9982,7 +10010,7 @@ template&lt;typename ScalarType, typename Derived&gt; </div>
 </div>
 </div>
 <a id="a96c90655d4fb45b63c8e1bde735e6c47" name="a96c90655d4fb45b63c8e1bde735e6c47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96c90655d4fb45b63c8e1bde735e6c47">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c90655d4fb45b63c8e1bde735e6c47">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10003,7 +10031,7 @@ template&lt;typename ScalarType, typename Derived&gt; </div>
 </div>
 </div>
 <a id="aab36f2eb0e38222af36d1499d0a2f47a" name="aab36f2eb0e38222af36d1499d0a2f47a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab36f2eb0e38222af36d1499d0a2f47a">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aab36f2eb0e38222af36d1499d0a2f47a">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[4/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10030,7 +10058,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="ad946994348eafef6d3e20ebc08bfa5d2" name="ad946994348eafef6d3e20ebc08bfa5d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad946994348eafef6d3e20ebc08bfa5d2">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[4/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad946994348eafef6d3e20ebc08bfa5d2">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[5/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10055,7 +10083,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="a411e51a0c60278b06088ad1fa084e605" name="a411e51a0c60278b06088ad1fa084e605"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a411e51a0c60278b06088ad1fa084e605">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[5/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a411e51a0c60278b06088ad1fa084e605">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[6/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10080,7 +10108,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="af69250c699b4b8cbcbb54d322570d175" name="af69250c699b4b8cbcbb54d322570d175"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af69250c699b4b8cbcbb54d322570d175">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[6/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af69250c699b4b8cbcbb54d322570d175">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[7/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10105,7 +10133,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="ad33e2289eb5f8ba9d8a286bd6e954001" name="ad33e2289eb5f8ba9d8a286bd6e954001"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad33e2289eb5f8ba9d8a286bd6e954001">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[7/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad33e2289eb5f8ba9d8a286bd6e954001">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[8/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10126,7 +10154,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="ad8ca491b4e798266df4f026a079f4418" name="ad8ca491b4e798266df4f026a079f4418"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8ca491b4e798266df4f026a079f4418">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[8/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8ca491b4e798266df4f026a079f4418">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[9/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10147,7 +10175,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="ada77c9969b0422090c05636a895c0e8e" name="ada77c9969b0422090c05636a895c0e8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada77c9969b0422090c05636a895c0e8e">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[9/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ada77c9969b0422090c05636a895c0e8e">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[10/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10172,7 +10200,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="aebaa1c50ddcd18c8de9ba5ebc01f3989" name="aebaa1c50ddcd18c8de9ba5ebc01f3989"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebaa1c50ddcd18c8de9ba5ebc01f3989">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[10/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aebaa1c50ddcd18c8de9ba5ebc01f3989">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[11/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11906,7 +11934,7 @@ template&lt;typename Derived&gt; </div>
 </div>
 </div>
 <a id="a36547d6c95341875bc899be1bd1c27d1" name="a36547d6c95341875bc899be1bd1c27d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36547d6c95341875bc899be1bd1c27d1">&#9670;&#160;</a></span>to_string() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a36547d6c95341875bc899be1bd1c27d1">&#9670;&#160;</a></span>to_string() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11925,7 +11953,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="af3dc291b1ebd331cf320000abb9817cc" name="af3dc291b1ebd331cf320000abb9817cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3dc291b1ebd331cf320000abb9817cc">&#9670;&#160;</a></span>to_string() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af3dc291b1ebd331cf320000abb9817cc">&#9670;&#160;</a></span>to_string() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11942,7 +11970,7 @@ template&lt;typename BasisElement&gt; </div>
 </div>
 </div>
 <a id="a3bc94e9465444b70978c2250c37722f5" name="a3bc94e9465444b70978c2250c37722f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bc94e9465444b70978c2250c37722f5">&#9670;&#160;</a></span>to_string() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc94e9465444b70978c2250c37722f5">&#9670;&#160;</a></span>to_string() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11958,8 +11986,25 @@ template&lt;typename BasisElement&gt; </div>
 
 </div>
 </div>
+<a id="aefc48865f4a78fceaa3527e94d420bdb" name="aefc48865f4a78fceaa3527e94d420bdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefc48865f4a78fceaa3527e94d420bdb">&#9670;&#160;</a></span>to_string() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac163e37c2a6109a9a469be234a3382d2" name="ac163e37c2a6109a9a469be234a3382d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac163e37c2a6109a9a469be234a3382d2">&#9670;&#160;</a></span>to_string() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac163e37c2a6109a9a469be234a3382d2">&#9670;&#160;</a></span>to_string() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

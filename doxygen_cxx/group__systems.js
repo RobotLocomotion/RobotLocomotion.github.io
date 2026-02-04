@@ -122,6 +122,7 @@ var group__systems =
       [ "CalcMassMatrix", "classdrake_1_1multibody_1_1_multibody_plant.html#a1ba9332d8937729be136b54c8adc8b19", null ],
       [ "CalcMassMatrixViaInverseDynamics", "classdrake_1_1multibody_1_1_multibody_plant.html#a42ee709a2ac50e2ae6c6a4cb153ea2e8", null ],
       [ "CalcPointsPositions", "classdrake_1_1multibody_1_1_multibody_plant.html#a201bed53cf6c1b61a65df508469423fc", null ],
+      [ "CalcPointsVelocities", "classdrake_1_1multibody_1_1_multibody_plant.html#a253d10a3004a2ac72cee5404b6192644", null ],
       [ "CalcRelativeRotationMatrix", "classdrake_1_1multibody_1_1_multibody_plant.html#a370093b8df7b283bd4257493246c9082", null ],
       [ "CalcRelativeTransform", "classdrake_1_1multibody_1_1_multibody_plant.html#a69e023f53fef5fc02b278a1c8a7b78e5", null ],
       [ "CalcSpatialAccelerationsFromVdot", "classdrake_1_1multibody_1_1_multibody_plant.html#a963cde13572c10429e85ba8de00d39e8", null ],

@@ -388,6 +388,8 @@ current_time</span> will be strictly satisfied. The integrator will never automa
 <tr class="memdesc:abec4f2df9432897c463e101646f37b76"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the largest step taken since the last <a class="el" href="#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a> or <a class="el" href="#a64a01ac56f8a0086cc6ed335ee9e5caa" title="Forget accumulated statistics.">ResetStatistics()</a> call.  <br /></td></tr>
 <tr class="memitem:a215741958afe19af17a62470f883878b" id="r_a215741958afe19af17a62470f883878b"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a215741958afe19af17a62470f883878b">get_num_steps_taken</a> () const</td></tr>
 <tr class="memdesc:a215741958afe19af17a62470f883878b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of integration steps taken since the last <a class="el" href="#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a> or <a class="el" href="#a64a01ac56f8a0086cc6ed335ee9e5caa" title="Forget accumulated statistics.">ResetStatistics()</a> call.  <br /></td></tr>
+<tr class="memitem:ab50b9536b4fdaf55a65f956c780cc7b5" id="r_ab50b9536b4fdaf55a65f956c780cc7b5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1systems.html#a2d45e0b7f5cf17c5d790d2cf780f22a3">NamedStatistic</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab50b9536b4fdaf55a65f956c780cc7b5">GetStatisticsSummary</a> () const</td></tr>
+<tr class="memdesc:ab50b9536b4fdaf55a65f956c780cc7b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all integrator statistics as a single collection.  <br /></td></tr>
 <tr class="memitem:a644f18faa19a24bd106100bd575e1934" id="r_a644f18faa19a24bd106100bd575e1934"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a644f18faa19a24bd106100bd575e1934">add_derivative_evaluations</a> (<a class="el" href="classdouble.html">double</a> evals)</td></tr>
 <tr class="memdesc:a644f18faa19a24bd106100bd575e1934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually increments the statistic for the number of ODE evaluations.  <br /></td></tr>
 <tr class="memitem:a5febad6c2edc61891575e64fed4fdb83" id="r_a5febad6c2edc61891575e64fed4fdb83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5febad6c2edc61891575e64fed4fdb83">get_context</a> () const</td></tr>
@@ -423,6 +425,8 @@ Methods for cloning</h2></td></tr>
 <tr class="memdesc:aea26ed3984a0356a5ad9a2b259ec473b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this integrator with reset statistics, reinitialized internal integrator states, and a cloned system context.  <br /></td></tr>
 <tr class="memitem:ac5f5259be2ac9352879b53f559cbd567" id="r_ac5f5259be2ac9352879b53f559cbd567"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5f5259be2ac9352879b53f559cbd567">DoResetStatistics</a> ()</td></tr>
 <tr class="memdesc:ac5f5259be2ac9352879b53f559cbd567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets any statistics particular to a specific integrator.  <br /></td></tr>
+<tr class="memitem:a224b979a153f12410dbedf6c91b5aa06" id="r_a224b979a153f12410dbedf6c91b5aa06"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="namespacedrake_1_1systems.html#a2d45e0b7f5cf17c5d790d2cf780f22a3">NamedStatistic</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a224b979a153f12410dbedf6c91b5aa06">DoGetStatisticsSummary</a> () const</td></tr>
+<tr class="memdesc:a224b979a153f12410dbedf6c91b5aa06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns statistics particular to a specific integrator, in service of <a class="el" href="#ab50b9536b4fdaf55a65f956c780cc7b5" title="Returns all integrator statistics as a single collection.">GetStatisticsSummary()</a>.  <br /></td></tr>
 <tr class="memitem:a292084d64056c43eeb8af93dbc9a5ce9" id="r_a292084d64056c43eeb8af93dbc9a5ce9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html">ContinuousState</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a292084d64056c43eeb8af93dbc9a5ce9">EvalTimeDerivatives</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context)</td></tr>
 <tr class="memdesc:a292084d64056c43eeb8af93dbc9a5ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the derivative function and updates call statistics.  <br /></td></tr>
 <tr class="memitem:aaa3101a0f9d8116dc8d07e0a73c51aef" id="r_aaa3101a0f9d8116dc8d07e0a73c51aef"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
@@ -799,6 +803,38 @@ template&lt;class T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if successful, <span class="tt">false</span> if either the integrator was unable to take a single step of size <code class="param">h</code> or to advance its dense output an equal step. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a896ef63038c6eb979ed9b5e3fbc4a16f" title="Derived classes must implement this method to (1) integrate the continuous portion of this system for...">DoStep()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a224b979a153f12410dbedf6c91b5aa06" name="a224b979a153f12410dbedf6c91b5aa06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a224b979a153f12410dbedf6c91b5aa06">&#9670;&#160;</a></span>DoGetStatisticsSummary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; <a class="el" href="namespacedrake_1_1systems.html#a2d45e0b7f5cf17c5d790d2cf780f22a3">NamedStatistic</a> &gt; DoGetStatisticsSummary </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns statistics particular to a specific integrator, in service of <a class="el" href="#ab50b9536b4fdaf55a65f956c780cc7b5" title="Returns all integrator statistics as a single collection.">GetStatisticsSummary()</a>. </p>
+<p>The default implementation of this function does nothing. If your integrator collects its own statistics, you should re-implement this method and return them there. </p>
+
+<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_implicit_integrator.html#aa30b15c77089f66aa092d5a6ef6bcec7">ImplicitIntegrator&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -1705,6 +1741,28 @@ template&lt;class T&gt; </div>
 
 <p>Gets the current value of the working minimum step size <span class="tt">h_work(t)</span> for this integrator, which may vary with the current time t as stored in the integrator's context. </p>
 <p>See <a class="el" href="#integrator-minstep">this section</a> for more detail. </p>
+
+</div>
+</div>
+<a id="ab50b9536b4fdaf55a65f956c780cc7b5" name="ab50b9536b4fdaf55a65f956c780cc7b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50b9536b4fdaf55a65f956c780cc7b5">&#9670;&#160;</a></span>GetStatisticsSummary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="namespacedrake_1_1systems.html#a2d45e0b7f5cf17c5d790d2cf780f22a3">NamedStatistic</a> &gt; GetStatisticsSummary </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns all integrator statistics as a single collection. </p>
+<p>The data is organized as a list of (key, value) pairs. The types allowed by the <span class="tt">variant</span> may grow over time; be sure to use <span class="tt">std::visit</span> for access. </p>
 
 </div>
 </div>

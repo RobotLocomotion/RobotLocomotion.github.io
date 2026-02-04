@@ -34,6 +34,5 @@ var classdrake_1_1symbolic_1_1_rational_function =
     [ "operator==", "classdrake_1_1symbolic_1_1_rational_function.html#ac9d15ee01dce39a2f3e58dabbdbad88e", null ],
     [ "SetIndeterminates", "classdrake_1_1symbolic_1_1_rational_function.html#aa49a7f8176f9d9693aac96f527b3afa2", null ],
     [ "ToExpression", "classdrake_1_1symbolic_1_1_rational_function.html#a07e43dd6afaaafb0291e1067a4479212", null ],
-    [ "operator-", "classdrake_1_1symbolic_1_1_rational_function.html#a5d9d907364da3c18f9f763ea935dcfb0", null ],
-    [ "operator<<", "classdrake_1_1symbolic_1_1_rational_function.html#ab0bc13bb742ac53358559066848dfa9f", null ]
+    [ "operator-", "classdrake_1_1symbolic_1_1_rational_function.html#a5d9d907364da3c18f9f763ea935dcfb0", null ]
 ];

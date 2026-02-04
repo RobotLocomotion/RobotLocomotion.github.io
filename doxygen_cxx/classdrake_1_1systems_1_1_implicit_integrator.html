@@ -330,6 +330,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abec4f2df9432897c463e101646f37b76 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of the largest step taken since the last <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a> or <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a64a01ac56f8a0086cc6ed335ee9e5caa" title="Forget accumulated statistics.">ResetStatistics()</a> call.  <br /></td></tr>
 <tr class="memitem:a215741958afe19af17a62470f883878b inherit pub_methods_classdrake_1_1systems_1_1_integrator_base" id="r_a215741958afe19af17a62470f883878b"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a215741958afe19af17a62470f883878b">get_num_steps_taken</a> () const</td></tr>
 <tr class="memdesc:a215741958afe19af17a62470f883878b inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of integration steps taken since the last <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a> or <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a64a01ac56f8a0086cc6ed335ee9e5caa" title="Forget accumulated statistics.">ResetStatistics()</a> call.  <br /></td></tr>
+<tr class="memitem:ab50b9536b4fdaf55a65f956c780cc7b5 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base" id="r_ab50b9536b4fdaf55a65f956c780cc7b5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1systems.html#a2d45e0b7f5cf17c5d790d2cf780f22a3">NamedStatistic</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#ab50b9536b4fdaf55a65f956c780cc7b5">GetStatisticsSummary</a> () const</td></tr>
+<tr class="memdesc:ab50b9536b4fdaf55a65f956c780cc7b5 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all integrator statistics as a single collection.  <br /></td></tr>
 <tr class="memitem:a644f18faa19a24bd106100bd575e1934 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base" id="r_a644f18faa19a24bd106100bd575e1934"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a644f18faa19a24bd106100bd575e1934">add_derivative_evaluations</a> (<a class="el" href="classdouble.html">double</a> evals)</td></tr>
 <tr class="memdesc:a644f18faa19a24bd106100bd575e1934 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually increments the statistic for the number of ODE evaluations.  <br /></td></tr>
 <tr class="memitem:a5febad6c2edc61891575e64fed4fdb83 inherit pub_methods_classdrake_1_1systems_1_1_integrator_base" id="r_a5febad6c2edc61891575e64fed4fdb83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a5febad6c2edc61891575e64fed4fdb83">get_context</a> () const</td></tr>
@@ -393,6 +395,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a20be7c06944cd16e0bd40d0addac127c" id="r_a20be7c06944cd16e0bd40d0addac127c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20be7c06944cd16e0bd40d0addac127c">get_mutable_jacobian</a> ()</td></tr>
 <tr class="memitem:a70de1ab086cb5b5b3e6f2281b1cf7f82" id="r_a70de1ab086cb5b5b3e6f2281b1cf7f82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70de1ab086cb5b5b3e6f2281b1cf7f82">DoResetStatistics</a> () override</td></tr>
 <tr class="memdesc:a70de1ab086cb5b5b3e6f2281b1cf7f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets any statistics particular to a specific integrator.  <br /></td></tr>
+<tr class="memitem:aa30b15c77089f66aa092d5a6ef6bcec7" id="r_aa30b15c77089f66aa092d5a6ef6bcec7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1systems.html#a2d45e0b7f5cf17c5d790d2cf780f22a3">NamedStatistic</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa30b15c77089f66aa092d5a6ef6bcec7">DoGetStatisticsSummary</a> () const override</td></tr>
+<tr class="memdesc:aa30b15c77089f66aa092d5a6ef6bcec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns statistics particular to a specific integrator, in service of <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#ab50b9536b4fdaf55a65f956c780cc7b5" title="Returns all integrator statistics as a single collection.">GetStatisticsSummary()</a>.  <br /></td></tr>
 <tr class="memitem:ad517b4fc0abf71c5f437fc349befd0ee" id="r_ad517b4fc0abf71c5f437fc349befd0ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad517b4fc0abf71c5f437fc349befd0ee">DoReset</a> () final</td></tr>
 <tr class="memdesc:ad517b4fc0abf71c5f437fc349befd0ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived classes can override this method to perform routines when <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a372de693ad40b3f42839c8ec6ac845f4" title="Resets the integrator to initial values, i.e., default construction values.">Reset()</a> is called.  <br /></td></tr>
 <tr class="memitem:ad23f09ab8ec7b39944ebc20131743db4" id="r_ad23f09ab8ec7b39944ebc20131743db4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad23f09ab8ec7b39944ebc20131743db4">CalcJacobian</a> (const T &amp;t, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;x)</td></tr>
@@ -1015,6 +1019,38 @@ template&lt;class T&gt; </div>
 </div><div class="memdoc">
 
 <p>Derived classes can override this method to change the number of Newton-Raphson iterations (10 by default) to take before the Newton-Raphson process decides that convergence will not be attained. </p>
+
+</div>
+</div>
+<a id="aa30b15c77089f66aa092d5a6ef6bcec7" name="aa30b15c77089f66aa092d5a6ef6bcec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa30b15c77089f66aa092d5a6ef6bcec7">&#9670;&#160;</a></span>DoGetStatisticsSummary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="namespacedrake_1_1systems.html#a2d45e0b7f5cf17c5d790d2cf780f22a3">NamedStatistic</a> &gt; DoGetStatisticsSummary </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns statistics particular to a specific integrator, in service of <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#ab50b9536b4fdaf55a65f956c780cc7b5" title="Returns all integrator statistics as a single collection.">GetStatisticsSummary()</a>. </p>
+<p>The default implementation of this function does nothing. If your integrator collects its own statistics, you should re-implement this method and return them there. </p>
+
+<p>Reimplemented from <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a224b979a153f12410dbedf6c91b5aa06">IntegratorBase&lt; T &gt;</a>.</p>
 
 </div>
 </div>

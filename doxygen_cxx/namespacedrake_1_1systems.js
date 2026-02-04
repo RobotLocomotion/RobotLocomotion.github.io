@@ -143,6 +143,7 @@ var namespacedrake_1_1systems =
     [ "DependencyTicket", "namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee", null ],
     [ "DiscreteStateIndex", "namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7", null ],
     [ "InputPortIndex", "namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0", null ],
+    [ "NamedStatistic", "namespacedrake_1_1systems.html#a2d45e0b7f5cf17c5d790d2cf780f22a3", null ],
     [ "NumericParameterIndex", "namespacedrake_1_1systems.html#af11369a06c5bfd3fa18acb79f85777df", null ],
     [ "OutputPortIndex", "namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa", null ],
     [ "Radau1Integrator", "namespacedrake_1_1systems.html#af6af6956e79bb6e0b6fa6afe861fd91a", null ],

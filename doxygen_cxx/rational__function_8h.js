@@ -31,5 +31,7 @@ var rational__function_8h =
     [ "drake::symbolic::operator/", "namespacedrake_1_1symbolic.html#a6f0bea506f1ba735c18adec70cc049a1", null ],
     [ "drake::symbolic::operator/", "namespacedrake_1_1symbolic.html#aeffbde3ace1b49b7df5ec9eb9aa8f956", null ],
     [ "drake::symbolic::operator/", "namespacedrake_1_1symbolic.html#aedd63e0afe919c6474d0da57593d8d5f", null ],
-    [ "drake::symbolic::pow", "namespacedrake_1_1symbolic.html#a1689f9845acfae35173fede790537df9", null ]
+    [ "drake::symbolic::operator<<", "namespacedrake_1_1symbolic.html#ab0bc13bb742ac53358559066848dfa9f", null ],
+    [ "drake::symbolic::pow", "namespacedrake_1_1symbolic.html#a1689f9845acfae35173fede790537df9", null ],
+    [ "drake::symbolic::to_string", "namespacedrake_1_1symbolic.html#aefc48865f4a78fceaa3527e94d420bdb", null ]
 ];

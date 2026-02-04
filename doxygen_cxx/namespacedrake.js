@@ -152,7 +152,6 @@ var namespacedrake =
     [ "FindRunfile", "namespacedrake.html#ae7b592b35122cdfc472bd8bf9d35df7a", null ],
     [ "fmt_debug_string", "namespacedrake.html#afc57f8ba3471c69c959f961a287666ac", null ],
     [ "fmt_eigen", "namespacedrake.html#a0655e16a159b287851163900c29d2b4f", null ],
-    [ "fmt_floating_point", "namespacedrake.html#a1f33c2c0ca328c1634325992f2017db8", null ],
     [ "fmt_floating_point", "namespacedrake.html#a78ab22f7a42b8921faafd7b6ffb341fd", null ],
     [ "fmt_runtime", "namespacedrake.html#af432bd3fe5b5d4786e7473b3a26cd877", null ],
     [ "fmt_streamed", "namespacedrake.html#a65ba5721a088bacdc594dab652fc7e1c", null ],

@@ -164,9 +164,11 @@ $(function(){initNavTree('rational__function_8h.html','',''); });
   <div class="headertitle"><div class="title">rational_function.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;ostream&gt;</code><br />
-<code>#include &quot;<a class="el" href="fmt__ostream_8h.html">drake/common/fmt_ostream.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fmt_8h.html">drake/common/fmt.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="symbolic_2polynomial_8h.html">drake/common/symbolic/polynomial.h</a>&quot;</code><br />
+<code>#include &lt;ostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for rational_function.h:</div>
 <div class="dyncontent">
@@ -183,6 +185,7 @@ Classes</h2></td></tr>
 <tr class="memitem:RationalFunction" id="r_RationalFunction"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents symbolic rational function.  <a href="classdrake_1_1symbolic_1_1_rational_function.html#details">More...</a><br /></td></tr>
 <tr class="memitem:formatter_3C_20drake_3A_3Asymbolic_3A_3ARationalFunction_20_3E" id="r_formatter_3C_20drake_3A_3Asymbolic_3A_3ARationalFunction_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html">formatter&lt; drake::symbolic::RationalFunction &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specializes the fmt::formatter&lt;&gt; class template for <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html" title="Represents symbolic rational function.">drake::symbolic::RationalFunction</a>.  <a href="structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_rational_function_01_4.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -220,6 +223,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9f7de309c1619f81c94cfa294e5a9065" id="r_a9f7de309c1619f81c94cfa294e5a9065"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a9f7de309c1619f81c94cfa294e5a9065">operator/</a> (<a class="el" href="classdouble.html">double</a> c, const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;f)</td></tr>
 <tr class="memitem:a2395a6ba4fad53d7c3daa2f792269d99" id="r_a2395a6ba4fad53d7c3daa2f792269d99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2395a6ba4fad53d7c3daa2f792269d99">operator/</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m, <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> f)</td></tr>
 <tr class="memitem:a19aa5481bd2bb69b6e4df135231e21f6" id="r_a19aa5481bd2bb69b6e4df135231e21f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a19aa5481bd2bb69b6e4df135231e21f6">operator/</a> (<a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> f, const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
+<tr class="memitem:ab0bc13bb742ac53358559066848dfa9f" id="r_ab0bc13bb742ac53358559066848dfa9f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ab0bc13bb742ac53358559066848dfa9f">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;f)</td></tr>
+<tr class="memdesc:ab0bc13bb742ac53358559066848dfa9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
+<tr class="memitem:aefc48865f4a78fceaa3527e94d420bdb" id="r_aefc48865f4a78fceaa3527e94d420bdb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aefc48865f4a78fceaa3527e94d420bdb">to_string</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;f)</td></tr>
 <tr class="memitem:a1689f9845acfae35173fede790537df9" id="r_a1689f9845acfae35173fede790537df9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1689f9845acfae35173fede790537df9">pow</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;f, int n)</td></tr>
 <tr class="memdesc:a1689f9845acfae35173fede790537df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rational function <code class="param">f</code> raised to <code class="param">n</code>.  <br /></td></tr>
 <tr class="memitem:a36162c4bad2ea2acd8b5ca7bad262ce9" id="r_a36162c4bad2ea2acd8b5ca7bad262ce9"><td class="memTemplParams" colspan="2">template&lt;typename MatrixL, typename MatrixR&gt; </td></tr>

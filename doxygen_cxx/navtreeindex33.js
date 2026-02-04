@@ -1,5 +1,6 @@
 var NAVTREEINDEX33 =
 {
+"classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#a1dc674f939579109e1d47c637e1837d8":[2,1,0,18,3],
 "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#a22b45ff1ea4ae8ae009c81a4e067b3a9":[2,1,0,18,7],
 "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#a2e4cf647abe66a1d212813c51ff4c3e4":[2,1,0,18,2],
 "classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#a39854d082251d0cd2c03bad2d38354ce":[2,1,0,18,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX33 =
 "classdrake_1_1multibody_1_1_rigid_body.html#a3fb9d377594ec373e512901b23cab9ef":[3,0,0,9,91,1],
 "classdrake_1_1multibody_1_1_rigid_body.html#a3fb9d377594ec373e512901b23cab9ef":[4,0,0,8,90,1],
 "classdrake_1_1multibody_1_1_rigid_body.html#a41b2fbf7771b52e53a28662fec9716f4":[3,0,0,9,91,42],
-"classdrake_1_1multibody_1_1_rigid_body.html#a41b2fbf7771b52e53a28662fec9716f4":[4,0,0,8,90,42],
-"classdrake_1_1multibody_1_1_rigid_body.html#a42cd421a2f04298b8896fbd68a04df54":[3,0,0,9,91,3]
+"classdrake_1_1multibody_1_1_rigid_body.html#a41b2fbf7771b52e53a28662fec9716f4":[4,0,0,8,90,42]
 };

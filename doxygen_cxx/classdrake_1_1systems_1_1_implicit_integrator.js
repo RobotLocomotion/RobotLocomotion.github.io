@@ -26,6 +26,7 @@ var classdrake_1_1systems_1_1_implicit_integrator =
     [ "do_get_num_error_estimator_newton_raphson_iterations", "classdrake_1_1systems_1_1_implicit_integrator.html#a13ddd222c5687f162ff35c982c4cac87", null ],
     [ "do_get_num_newton_raphson_iterations", "classdrake_1_1systems_1_1_implicit_integrator.html#aa0ad96385997c3cc8d63d625ccd74615", null ],
     [ "do_max_newton_raphson_iterations", "classdrake_1_1systems_1_1_implicit_integrator.html#a96135fce772e7841dfcac85def67ef9e", null ],
+    [ "DoGetStatisticsSummary", "classdrake_1_1systems_1_1_implicit_integrator.html#aa30b15c77089f66aa092d5a6ef6bcec7", null ],
     [ "DoImplicitIntegratorClone", "classdrake_1_1systems_1_1_implicit_integrator.html#a9a9ad72aa4455ef4b4d19289aae2696c", null ],
     [ "DoImplicitIntegratorReset", "classdrake_1_1systems_1_1_implicit_integrator.html#a6071e575b3a65d7c71d873e00df80afa", null ],
     [ "DoImplicitIntegratorStep", "classdrake_1_1systems_1_1_implicit_integrator.html#a627b9d2a2be784e0a7bd8f79baeea4c6", null ],

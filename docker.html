@@ -63,8 +63,6 @@ analysis.
             
               <a href="/from_binary.html" class="site-menu-item">Binary Download</a>
             
-              <a href="/docker.html" class="site-menu-item">Docker Hub</a>
-            
               <a href="/from_source.html" class="site-menu-item">Build From Source</a>
             
             </div>
@@ -157,6 +155,15 @@ analysis.
       <article class="markdown-body">
         <h1 id="docker-hub">Docker Hub</h1>
 
+<div class="warning">
+  <p><strong>Drake’s published Docker images are deprecated and will no longer receive
+updates after 2026-06-01.</strong></p>
+
+  <p>For users who want to run Drake in Docker, you can fork the current Dockerfile
+and customize it your needs. Or, can switch to a simple <code class="language-plaintext highlighter-rouge">pip install drake</code>
+(or uv, etc.), or <code class="language-plaintext highlighter-rouge">apt install drake-dev</code>, etc.</p>
+</div>
+
 <p>Drake publishes pre-compiled binaries as Docker images on
 <a href="https://hub.docker.com/r/robotlocomotion/drake">Docker Hub</a>. Refer to
 <a href="/installation.html#supported-configurations">Supported Configurations</a>
@@ -174,12 +181,17 @@ for additional compatibility details.</p>
 Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
 
 <div class="note">
-  <p>Drake’s docker images do not support the Gurobi solver. To use
+  <p>Drake’s Docker images do not support the Gurobi solver. To use
 Gurobi, you will need to build Drake from source following the instructions
 in <a href="/from_source.html">Source Installation</a>.</p>
 </div>
 
 <h2 id="stable-releases">Stable Releases</h2>
+
+<div class="warning">
+  <p><strong>Drake’s published Docker images are deprecated and will no longer receive
+updates after 2026-06-01.</strong></p>
+</div>
 
 <p>The latest stable image can be pulled from
 <a href="https://hub.docker.com/r/robotlocomotion/drake">Docker Hub</a>
@@ -191,7 +203,7 @@ as follows:</p>
 <p>Refer to <a href="/release_notes/release_notes.html">Release Notes</a> for a list of
 published X.Y.Z version numbers.</p>
 
-<p>The docker tags for Drake’s stable releases are spelled like:</p>
+<p>The Docker tags for Drake’s stable releases are spelled like:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">jammy-X.Y.Z</code> for the Ubuntu 22.04 image of Drake vX.Y.Z.</li>
@@ -203,6 +215,11 @@ published X.Y.Z version numbers.</p>
 
 <h2 id="nightly-releases">Nightly Releases</h2>
 
+<div class="warning">
+  <p><strong>Drake’s published Docker images are deprecated and will no longer receive
+updates after 2026-06-01.</strong></p>
+</div>
+
 <p>The latest nightly image can be pulled from
 <a href="https://hub.docker.com/r/robotlocomotion/drake">Docker Hub</a>
 as follows:</p>
@@ -210,7 +227,7 @@ as follows:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull robotlocomotion/drake:latest
 </code></pre></div></div>
 
-<p>The docker tags for Drake’s nightly releases are spelled like:</p>
+<p>The Docker tags for Drake’s nightly releases are spelled like:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">jammy-YYYYMMDD</code> for the Ubuntu 22.04 image of Drake as of date YYYY-MM-DD.</li>

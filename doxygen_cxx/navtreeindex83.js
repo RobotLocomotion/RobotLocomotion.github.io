@@ -1,5 +1,8 @@
 var NAVTREEINDEX83 =
 {
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a5b105f79c5373211b8c4afff4276da4f":[2,2,11,8,6],
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a866ca190dd782be816bc90723d0778c7":[2,2,11,8,2],
+"classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#a87b644f91479935ab6f674550c53f1dc":[2,2,11,8,3],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#ac2e5aab0612d67400354a4fe71278a21":[2,2,11,8,4],
 "classdrake_1_1visualization_1_1_meshcat_pose_sliders.html#aca9ba45197d6ac4debf48940331b6c85":[2,2,11,8,5],
 "classes.html":[4,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX83 =
 "dir_47be7cb145c8f2c349a22ea5364e6acd.html":[5,0,0,3,1],
 "dir_48e4d4a473e039105b12a2118c672ffe.html":[5,0,0,1,1],
 "dir_4c496d2360378cdad57abc2aec0d63ce.html":[5,0,0,8,11],
-"dir_4e7f59081b2683f4314b7e1101ce9a3e.html":[5,0,0,8,7],
-"dir_55f8630d5466d97e74952e939680a0a0.html":[5,0,0,12,6],
-"dir_563cbebf3859612cccbc3edeae15a602.html":[5,0,0,8,2,1],
-"dir_5d8dbe7a82c2c188fa06f6391bb290bd.html":[5,0,0,8,0]
+"dir_4e7f59081b2683f4314b7e1101ce9a3e.html":[5,0,0,8,7]
 };
