@@ -1,5 +1,7 @@
 var NAVTREEINDEX94 =
 {
+"specific__options_8h.html":[5,0,0,11,55],
+"spectrahedron_8h.html":[5,0,0,4,1,23],
 "spong__controller_8h.html":[5,0,0,3,0,5],
 "spong__controller__params_8h.html":[5,0,0,3,0,6],
 "ssize_8h.html":[5,0,0,1,58],
@@ -247,7 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a724e701eb8bbecc4fbf5bb77227a5ab7":[3,0,0,4,14,7],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a724e701eb8bbecc4fbf5bb77227a5ab7":[4,0,0,3,11,7],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,4,14,0],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,11,0],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#ab464f1343904abb84d2b27e78dac2a69":[3,0,0,4,14,10],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#ab464f1343904abb84d2b27e78dac2a69":[4,0,0,3,11,10]
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#a8e8824802dedfbc36776227f7482b6bc":[4,0,0,3,11,0]
 };

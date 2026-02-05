@@ -1,5 +1,7 @@
 var NAVTREEINDEX98 =
 {
+"structdrake_1_1math_1_1_gray_codes_matrix.html":[4,0,0,7,6],
+"structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1":[3,0,0,8,6,0],
 "structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1":[4,0,0,7,6,0],
 "structdrake_1_1math_1_1_mat_grad_mult.html":[3,0,0,8,8],
 "structdrake_1_1math_1_1_mat_grad_mult.html":[4,0,0,7,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX98 =
 "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html":[3,0,0,9,1,0,0],
 "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html":[4,0,0,8,1,0,0],
 "structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a2c2c47bcfc82bef2397f62a4c8550973":[3,0,0,9,1,0,0,1],
-"structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a2c2c47bcfc82bef2397f62a4c8550973":[4,0,0,8,1,0,0,1],
-"structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a368fdf4463c12424b187e8779dc48003":[3,0,0,9,1,0,0,3],
-"structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a368fdf4463c12424b187e8779dc48003":[4,0,0,8,1,0,0,3]
+"structdrake_1_1multibody_1_1contact__solvers_1_1icf_1_1_icf_solver_parameters.html#a2c2c47bcfc82bef2397f62a4c8550973":[4,0,0,8,1,0,0,1]
 };

@@ -165,8 +165,11 @@ $(function(){initNavTree('chebyshev__basis__element_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;map&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fmt_8h.html">drake/common/fmt.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fmt__ostream_8h.html">drake/common/fmt_ostream.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="hash_8h.html">drake/common/hash.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="polynomial__basis__element_8h.html">drake/common/symbolic/polynomial_basis_element.h</a>&quot;</code><br />
@@ -187,6 +190,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_basis_element.html" title="ChebyshevBasisElement represents an element of Chebyshev polynomial basis, written as the product of ...">ChebyshevBasisElement</a> represents an element of Chebyshev polynomial basis, written as the product of Chebyshev polynomials, in the form Tₚ₀(x₀)Tₚ₁(x₁)...Tₚₙ(xₙ), where each Tₚᵢ(xᵢ) is a (univariate) Chebyshev polynomial of degree pᵢ.  <a href="classdrake_1_1symbolic_1_1_chebyshev_basis_element.html#details">More...</a><br /></td></tr>
 <tr class="memitem:hash_3C_20drake_3A_3Asymbolic_3A_3AChebyshevBasisElement_20_3E" id="r_hash_3C_20drake_3A_3Asymbolic_3A_3AChebyshevBasisElement_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html">hash&lt; drake::symbolic::ChebyshevBasisElement &gt;</a></td></tr>
 <tr class="memitem:formatter_3C_20drake_3A_3Asymbolic_3A_3AChebyshevBasisElement_20_3E" id="r_formatter_3C_20drake_3A_3Asymbolic_3A_3AChebyshevBasisElement_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html">formatter&lt; drake::symbolic::ChebyshevBasisElement &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specializes the fmt::formatter&lt;&gt; class template for <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_basis_element.html" title="ChebyshevBasisElement represents an element of Chebyshev polynomial basis, written as the product of ...">drake::symbolic::ChebyshevBasisElement</a>.  <a href="structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -200,7 +204,9 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a3c8de394d55df1f6646d10a5ae89d078" id="r_a3c8de394d55df1f6646d10a5ae89d078"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_basis_element.html">ChebyshevBasisElement</a>, <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a3c8de394d55df1f6646d10a5ae89d078">operator*</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_basis_element.html">ChebyshevBasisElement</a> &amp;a, const <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_basis_element.html">ChebyshevBasisElement</a> &amp;b)</td></tr>
 <tr class="memdesc:a3c8de394d55df1f6646d10a5ae89d078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the product of two Chebyshev basis elements.  <br /></td></tr>
+<tr class="memitem:a84f10ab6930f1ff4b45b06ca3fcd195f" id="r_a84f10ab6930f1ff4b45b06ca3fcd195f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a84f10ab6930f1ff4b45b06ca3fcd195f">to_string</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_basis_element.html">ChebyshevBasisElement</a> &amp;m)</td></tr>
 <tr class="memitem:ad33e2289eb5f8ba9d8a286bd6e954001" id="r_ad33e2289eb5f8ba9d8a286bd6e954001"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad33e2289eb5f8ba9d8a286bd6e954001">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_basis_element.html">ChebyshevBasisElement</a> &amp;m)</td></tr>
+<tr class="memdesc:ad33e2289eb5f8ba9d8a286bd6e954001"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

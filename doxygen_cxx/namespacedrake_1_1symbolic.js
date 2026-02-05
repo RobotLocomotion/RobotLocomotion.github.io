@@ -547,6 +547,8 @@ var namespacedrake_1_1symbolic =
     [ "to_not_equal_to", "namespacedrake_1_1symbolic.html#a7c497ffa47a786ac3368318ced96bf59", null ],
     [ "to_positive_semidefinite", "namespacedrake_1_1symbolic.html#ac61b44814f737e4b79d59fe7fa448495", null ],
     [ "to_relational", "namespacedrake_1_1symbolic.html#a35d0b8206340d13c1a3c2fd3108ad6f5", null ],
+    [ "to_string", "namespacedrake_1_1symbolic.html#a84f10ab6930f1ff4b45b06ca3fcd195f", null ],
+    [ "to_string", "namespacedrake_1_1symbolic.html#a86cb7ce14b898914868a96cf815611fb", null ],
     [ "to_string", "namespacedrake_1_1symbolic.html#a36547d6c95341875bc899be1bd1c27d1", null ],
     [ "to_string", "namespacedrake_1_1symbolic.html#af3dc291b1ebd331cf320000abb9817cc", null ],
     [ "to_string", "namespacedrake_1_1symbolic.html#a3bc94e9465444b70978c2250c37722f5", null ],

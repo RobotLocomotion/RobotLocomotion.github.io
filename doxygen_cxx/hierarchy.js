@@ -357,8 +357,6 @@ var hierarchy =
         [ "formatter< drake::solvers::ProgramAttributes >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html", null ],
         [ "formatter< drake::solvers::ProgramType >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html", null ],
         [ "formatter< drake::solvers::SolverId >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_id_01_4.html", null ],
-        [ "formatter< drake::symbolic::ChebyshevBasisElement >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html", null ],
-        [ "formatter< drake::symbolic::ChebyshevPolynomial >", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html", null ],
         [ "formatter< drake::systems::VectorBase< T > >", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html", null ],
         [ "formatter< drake::yaml::LoadYamlOptions >", "structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html", null ]
       ] ],
@@ -394,6 +392,8 @@ var hierarchy =
     [ "formatter&lt; drake::solvers::RemoveFreeVariableMethod &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_remove_free_variable_method_01_4.html", null ],
     [ "formatter&lt; drake::solvers::SolutionResult &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solution_result_01_4.html", null ],
     [ "formatter&lt; drake::solvers::SolverOptions &gt;", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_options_01_4.html", null ],
+    [ "formatter&lt; drake::symbolic::ChebyshevBasisElement &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html", null ],
+    [ "formatter&lt; drake::symbolic::ChebyshevPolynomial &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Environment &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_environment_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Expression &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "formatter&lt; drake::symbolic::Formula &gt;", "structfmt_1_1formatter_3_01drake_1_1symbolic_1_1_formula_01_4.html", null ],
