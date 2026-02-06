@@ -561,8 +561,15 @@ requires (std::is_same_v&lt;T, float&gt; || std::is_same_v&lt;T, <a class="el" h
 <tr class="memitem:a92c1bc8d793f1a04fa4f4c33a011f4eb" id="r_a92c1bc8d793f1a04fa4f4c33a011f4eb"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a92c1bc8d793f1a04fa4f4c33a011f4eb template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92c1bc8d793f1a04fa4f4c33a011f4eb">pow</a> (const <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt; &amp;base, typename <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;::PowerType exponent)</td></tr>
 <tr class="memdesc:a92c1bc8d793f1a04fa4f4c33a011f4eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides power function for <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>.  <br /></td></tr>
+<tr class="memitem:a24d3bbc3fbb363dfb7cdc7ff5c71c850" id="r_a24d3bbc3fbb363dfb7cdc7ff5c71c850"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a24d3bbc3fbb363dfb7cdc7ff5c71c850 template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24d3bbc3fbb363dfb7cdc7ff5c71c850">operator&lt;&lt;</a> (std::ostream &amp;os, const typename <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;::Monomial &amp;m)</td></tr>
+<tr class="memdesc:a24d3bbc3fbb363dfb7cdc7ff5c71c850"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
+<tr class="memitem:a6349afb82c0796366e318e99f25c3e5f" id="r_a6349afb82c0796366e318e99f25c3e5f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a6349afb82c0796366e318e99f25c3e5f template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6349afb82c0796366e318e99f25c3e5f">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt; &amp;poly)</td></tr>
+<tr class="memdesc:a6349afb82c0796366e318e99f25c3e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a8db300eaec345b10d2e808b900239b8e" id="r_a8db300eaec345b10d2e808b900239b8e"><td class="memTemplParams" colspan="2">template&lt;typename T, int Rows, int Cols&gt; </td></tr>
 <tr class="memitem:a8db300eaec345b10d2e808b900239b8e template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8db300eaec345b10d2e808b900239b8e">operator&lt;&lt;</a> (std::ostream &amp;os, const Eigen::Matrix&lt; <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;, Rows, Cols &gt; &amp;poly_mat)</td></tr>
+<tr class="memdesc:a8db300eaec345b10d2e808b900239b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:ae05268ef42cdcf5bf9eba8c8a9b28e76" id="r_ae05268ef42cdcf5bf9eba8c8a9b28e76"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ae05268ef42cdcf5bf9eba8c8a9b28e76 template"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae05268ef42cdcf5bf9eba8c8a9b28e76">CalcProbabilityDensity</a> (<a class="el" href="#a72383be4710d27584d0821effc6506a5">RandomDistribution</a> distribution, const Eigen::Ref&lt; const <a class="el" href="#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; &amp;x)</td></tr>
 <tr class="memdesc:ae05268ef42cdcf5bf9eba8c8a9b28e76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the density (probability density function) of the multivariate distribution.  <br /></td></tr>
@@ -3280,7 +3287,7 @@ template&lt;typename Tag, typename U&gt; </div>
 </div>
 </div>
 <a id="a8db300eaec345b10d2e808b900239b8e" name="a8db300eaec345b10d2e808b900239b8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8db300eaec345b10d2e808b900239b8e">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8db300eaec345b10d2e808b900239b8e">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3299,6 +3306,64 @@ template&lt;typename T, int Rows, int Cols&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated</a></b></dt><dd>Wrap Eigen objects M with fmt_eigen() to format Eigen data into fmt  strings e.g., fmt::to_string(fmt_eigen(M)),  fmt::format(\M = {}\, fmt_eigen(M)). You'll need to  #include \drake/common/fmt_eigen.h\ to access that function.  Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
+
+</div>
+</div>
+<a id="a6349afb82c0796366e318e99f25c3e5f" name="a6349afb82c0796366e318e99f25c3e5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6349afb82c0796366e318e99f25c3e5f">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>poly</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
+
+</div>
+</div>
+<a id="a24d3bbc3fbb363dfb7cdc7ff5c71c850" name="a24d3bbc3fbb363dfb7cdc7ff5c71c850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d3bbc3fbb363dfb7cdc7ff5c71c850">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;::Monomial &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>

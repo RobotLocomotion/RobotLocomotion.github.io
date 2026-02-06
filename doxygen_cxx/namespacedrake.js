@@ -185,6 +185,8 @@ var namespacedrake =
     [ "operator<", "namespacedrake.html#a384c7fbbef42a1cc6a9de6280859c9c3", null ],
     [ "operator<<", "classdrake_1_1_identifier.html#a6f77603aea6d719b71744d902e66a84d", null ],
     [ "operator<<", "namespacedrake.html#a8db300eaec345b10d2e808b900239b8e", null ],
+    [ "operator<<", "namespacedrake.html#a6349afb82c0796366e318e99f25c3e5f", null ],
+    [ "operator<<", "namespacedrake.html#a24d3bbc3fbb363dfb7cdc7ff5c71c850", null ],
     [ "operator<=", "namespacedrake.html#a2a304872c147b8718725ee5aec091838", null ],
     [ "operator<=", "namespacedrake.html#ab005cf901fa796e6359047cca655109a", null ],
     [ "operator==", "namespacedrake.html#a7bb300fa310dc3a00fc8d7b353892de5", null ],

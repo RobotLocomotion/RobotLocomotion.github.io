@@ -7,6 +7,7 @@ var classdrake_1_1_polynomial_1_1_monomial =
     [ "HasVariable", "classdrake_1_1_polynomial_1_1_monomial.html#aa13862903d5f48177be04d2a293e2e17", null ],
     [ "operator<", "classdrake_1_1_polynomial_1_1_monomial.html#a8e7b10a07a1df37f95789d09cfe0e831", null ],
     [ "operator==", "classdrake_1_1_polynomial_1_1_monomial.html#a88e2ca1fa7efb383c5d61833fdae264c", null ],
+    [ "to_string", "classdrake_1_1_polynomial_1_1_monomial.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ],
     [ "coefficient", "classdrake_1_1_polynomial_1_1_monomial.html#accdf0d016bac585ac8deb1ad2dcad4b1", null ],
     [ "terms", "classdrake_1_1_polynomial_1_1_monomial.html#a50db1dbc4ba83abeeaa830f4c8442bf1", null ]
 ];

@@ -268,6 +268,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7f7703398f420e19d121b92c13e2b416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the roots of this (univariate) <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>.  <br /></td></tr>
 <tr class="memitem:ad96f76c37313cb0d62582faccf358345" id="r_ad96f76c37313cb0d62582faccf358345"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad96f76c37313cb0d62582faccf358345">CoefficientsAlmostEqual</a> (const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a>&lt; T &gt; &amp;other, const <a class="el" href="#a48c24f8f3b4b14f7e4bb9fbde3748fe8">RealScalar</a> &amp;tol=0.0, const <a class="el" href="namespacedrake.html#af8777bc10296f9d39d52753861110e26">ToleranceType</a> &amp;tol_type=<a class="el" href="namespacedrake.html#af8777bc10296f9d39d52753861110e26abab0767e88027de9944aa55c24c8387a">ToleranceType::kAbsolute</a>) const</td></tr>
 <tr class="memdesc:ad96f76c37313cb0d62582faccf358345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> is approximately equal to this one.  <br /></td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee" id="r_aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
 <tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:ad4fc8f2e6a67575f78cb74e9163fd5e3" id="r_ad4fc8f2e6a67575f78cb74e9163fd5e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a> (const Polynomial &amp;)=default</td></tr>
 <tr class="memitem:a964d6ac2b576fb2d6963cd7e19109114" id="r_a964d6ac2b576fb2d6963cd7e19109114"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a964d6ac2b576fb2d6963cd7e19109114">operator=</a> (const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a> &amp;)=default</td></tr>
@@ -291,8 +292,6 @@ Friends</h2></td></tr>
 <tr class="memitem:a30d861d1bfde004747d8a90c6e61e728" id="r_a30d861d1bfde004747d8a90c6e61e728"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30d861d1bfde004747d8a90c6e61e728">operator-</a> (const T &amp;scalar, const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a> &amp;p)</td></tr>
 <tr class="memitem:aee29171ff87a19fb6b13351d3f23084f" id="r_aee29171ff87a19fb6b13351d3f23084f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee29171ff87a19fb6b13351d3f23084f">operator*</a> (const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a> &amp;p, const T &amp;scalar)</td></tr>
 <tr class="memitem:aebc58e51a6b249b2891f431682ad0749" id="r_aebc58e51a6b249b2891f431682ad0749"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebc58e51a6b249b2891f431682ad0749">operator*</a> (const T &amp;scalar, const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a> &amp;p)</td></tr>
-<tr class="memitem:a93e519d9bfea0acb12d5d2f1c3286376" id="r_a93e519d9bfea0acb12d5d2f1c3286376"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93e519d9bfea0acb12d5d2f1c3286376">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
-<tr class="memitem:ace0b0cde1243dd665c4415999faec5fd" id="r_ace0b0cde1243dd665c4415999faec5fd"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace0b0cde1243dd665c4415999faec5fd">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a> &amp;poly)</td></tr>
 <tr class="memitem:abacc19a0640ec7027ded784410817053" id="r_abacc19a0640ec7027ded784410817053"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:abacc19a0640ec7027ded784410817053 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a>&lt; U &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abacc19a0640ec7027ded784410817053">pow</a> (const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a>&lt; U &gt; &amp;p, typename <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a>&lt; U &gt;<a class="el" href="#a6b2fc1d3e138053b9dc8864815059fe0">::PowerType</a> n)</td></tr>
 </table>
@@ -1489,6 +1488,25 @@ template&lt;typename T = double&gt; </div>
 
 </div>
 </div>
+<a id="aac993ecccd3d88aafefb6b8e3caa1dee" name="aac993ecccd3d88aafefb6b8e3caa1dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac993ecccd3d88aafefb6b8e3caa1dee">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T = double&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aeaeacfff3d087ad400147e605269ad3c" name="aeaeacfff3d087ad400147e605269ad3c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeaeacfff3d087ad400147e605269ad3c">&#9670;&#160;</a></span>VariableNameToId()</h2>
 
@@ -1696,68 +1714,6 @@ template&lt;typename T = double&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a93e519d9bfea0acb12d5d2f1c3286376" name="a93e519d9bfea0acb12d5d2f1c3286376"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93e519d9bfea0acb12d5d2f1c3286376">&#9670;&#160;</a></span>operator&lt;&lt; <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T = double&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html">Monomial</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ace0b0cde1243dd665c4415999faec5fd" name="ace0b0cde1243dd665c4415999faec5fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace0b0cde1243dd665c4415999faec5fd">&#9670;&#160;</a></span>operator&lt;&lt; <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T = double&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="#ad4fc8f2e6a67575f78cb74e9163fd5e3">Polynomial</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>poly</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

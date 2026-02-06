@@ -173,11 +173,13 @@ $(function(){initNavTree('polynomial_8h.html','',''); });
 <code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;Eigen/Core&gt;</code><br />
+<code>#include &lt;fmt/format.h&gt;</code><br />
 <code>#include &lt;unsupported/Eigen/Polynomials&gt;</code><br />
 <code>#include &quot;<a class="el" href="common_2autodiff_8h.html">drake/common/autodiff.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="default__scalars_8h.html">drake/common/default_scalars.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="fmt__ostream_8h.html">drake/common/fmt_ostream.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fmt_8h.html">drake/common/fmt.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="expression_8h.html">drake/common/symbolic/expression.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for polynomial.h:</div>
@@ -200,7 +202,9 @@ Classes</h2></td></tr>
 <tr class="memitem:Polynomial_3C_20T_20_3E_3A_3AMonomial" id="r_Polynomial_3C_20T_20_3E_3A_3AMonomial"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html">Polynomial&lt; T &gt;::Monomial</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An additive atom of a <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>: The product of any number of Terms and a coefficient.  <a href="classdrake_1_1_polynomial_1_1_monomial.html#details">More...</a><br /></td></tr>
 <tr class="memitem:formatter_3C_20drake_3A_3APolynomial_3C_20T_20_3E_20_3E" id="r_formatter_3C_20drake_3A_3APolynomial_3C_20T_20_3E_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html">formatter&lt; drake::Polynomial&lt; T &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specializes the fmt::formatter&lt;&gt; class template for <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">drake::Polynomial&lt;T&gt;</a>.  <a href="structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01_t_01_4_01_4.html#details">More...</a><br /></td></tr>
 <tr class="memitem:formatter_3C_20drake_3A_3APolynomial_3C_20double_20_3E_3A_3AMonomial_20_3E" id="r_formatter_3C_20drake_3A_3APolynomial_3C_20double_20_3E_3A_3AMonomial_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html">formatter&lt; drake::Polynomial&lt; double &gt;::Monomial &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specializes the fmt::formatter&lt;&gt; class template for <a class="el" href="classdrake_1_1_polynomial_1_1_monomial.html" title="An additive atom of a Polynomial: The product of any number of Terms and a coefficient.">drake::Polynomial&lt;double&gt;::Monomial</a>.  <a href="structfmt_1_1formatter_3_01drake_1_1_polynomial_3_01double_01_4_1_1_monomial_01_4.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -218,8 +222,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a92c1bc8d793f1a04fa4f4c33a011f4eb" id="r_a92c1bc8d793f1a04fa4f4c33a011f4eb"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a92c1bc8d793f1a04fa4f4c33a011f4eb template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a92c1bc8d793f1a04fa4f4c33a011f4eb">pow</a> (const <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt; &amp;base, typename <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;::PowerType exponent)</td></tr>
 <tr class="memdesc:a92c1bc8d793f1a04fa4f4c33a011f4eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides power function for <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a>.  <br /></td></tr>
+<tr class="memitem:a24d3bbc3fbb363dfb7cdc7ff5c71c850" id="r_a24d3bbc3fbb363dfb7cdc7ff5c71c850"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a24d3bbc3fbb363dfb7cdc7ff5c71c850 template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a24d3bbc3fbb363dfb7cdc7ff5c71c850">operator&lt;&lt;</a> (std::ostream &amp;os, const typename <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;::Monomial &amp;m)</td></tr>
+<tr class="memdesc:a24d3bbc3fbb363dfb7cdc7ff5c71c850"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
+<tr class="memitem:a6349afb82c0796366e318e99f25c3e5f" id="r_a6349afb82c0796366e318e99f25c3e5f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a6349afb82c0796366e318e99f25c3e5f template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a6349afb82c0796366e318e99f25c3e5f">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt; &amp;poly)</td></tr>
+<tr class="memdesc:a6349afb82c0796366e318e99f25c3e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 <tr class="memitem:a8db300eaec345b10d2e808b900239b8e" id="r_a8db300eaec345b10d2e808b900239b8e"><td class="memTemplParams" colspan="2">template&lt;typename T, int Rows, int Cols&gt; </td></tr>
 <tr class="memitem:a8db300eaec345b10d2e808b900239b8e template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a8db300eaec345b10d2e808b900239b8e">operator&lt;&lt;</a> (std::ostream &amp;os, const Eigen::Matrix&lt; <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;, Rows, Cols &gt; &amp;poly_mat)</td></tr>
+<tr class="memdesc:a8db300eaec345b10d2e808b900239b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

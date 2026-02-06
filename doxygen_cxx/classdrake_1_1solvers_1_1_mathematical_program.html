@@ -3565,7 +3565,7 @@ template&lt;int rows&gt; </div>
  y = R * x + d
 </pre><p> while (R, d) satisfies y'*y = x'*Q*x + b'*x + a For example, to add the Lorentz cone constraint </p><pre class="fragment">x+1 &gt;= sqrt(y² + 2y + x² + 4),
 </pre><p> the user could call </p><div class="fragment"><div class="line">prog.AddLorentzConeConstraint(x+1, <a class="code hl_function" href="namespacedrake.html#a92c1bc8d793f1a04fa4f4c33a011f4eb">pow</a>(y, 2) + 2 * y + <a class="code hl_function" href="namespacedrake.html#a92c1bc8d793f1a04fa4f4c33a011f4eb">pow</a>(x, 2) + 4);</div>
-<div class="ttc" id="anamespacedrake_html_a92c1bc8d793f1a04fa4f4c33a011f4eb"><div class="ttname"><a href="namespacedrake.html#a92c1bc8d793f1a04fa4f4c33a011f4eb">drake::pow</a></div><div class="ttdeci">Polynomial&lt; T &gt; pow(const Polynomial&lt; T &gt; &amp;base, typename Polynomial&lt; T &gt;::PowerType exponent)</div><div class="ttdoc">Provides power function for Polynomial.</div><div class="ttdef"><b>Definition</b> polynomial.h:487</div></div>
+<div class="ttc" id="anamespacedrake_html_a92c1bc8d793f1a04fa4f4c33a011f4eb"><div class="ttname"><a href="namespacedrake.html#a92c1bc8d793f1a04fa4f4c33a011f4eb">drake::pow</a></div><div class="ttdeci">Polynomial&lt; T &gt; pow(const Polynomial&lt; T &gt; &amp;base, typename Polynomial&lt; T &gt;::PowerType exponent)</div><div class="ttdoc">Provides power function for Polynomial.</div><div class="ttdef"><b>Definition</b> polynomial.h:448</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
