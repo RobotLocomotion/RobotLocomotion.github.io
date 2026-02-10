@@ -161,12 +161,14 @@ var NAVTREEINDEX92 =
 "namespacedrake_1_1visualization.html#a2611bfc997016fdb2bd4129a93efcfe3":[3,0,0,17,7],
 "namespacedrake_1_1visualization.html#a851259fd997a44d4b42f0816c01f9e4a":[3,0,0,17,6],
 "namespacedrake_1_1yaml.html":[3,0,0,18],
+"namespacedrake_1_1yaml.html#a38c89699c8b0b11087c8c2b607dd278f":[3,0,0,18,3],
 "namespacedrake_1_1yaml.html#a43b0aad3a987a2b97f89a68d934fb982":[3,0,0,18,1],
-"namespacedrake_1_1yaml.html#a75754963d64a398bb7a3c47120559033":[3,0,0,18,4],
-"namespacedrake_1_1yaml.html#aaf418985a2d3d598d6191b2dc7576e4a":[3,0,0,18,6],
-"namespacedrake_1_1yaml.html#ab3b6d04d37236596751e626ed6aa3b5e":[3,0,0,18,5],
-"namespacedrake_1_1yaml.html#ac67b5225cdcfc369f84d1910dbd2313e":[3,0,0,18,3],
+"namespacedrake_1_1yaml.html#a75754963d64a398bb7a3c47120559033":[3,0,0,18,5],
+"namespacedrake_1_1yaml.html#aaf418985a2d3d598d6191b2dc7576e4a":[3,0,0,18,7],
+"namespacedrake_1_1yaml.html#ab3b6d04d37236596751e626ed6aa3b5e":[3,0,0,18,6],
+"namespacedrake_1_1yaml.html#ac67b5225cdcfc369f84d1910dbd2313e":[3,0,0,18,4],
 "namespacedrake_1_1yaml.html#ad38f7b06115765153b8434cff70a597f":[3,0,0,18,2],
+"namespacedrake_1_1yaml.html#ad678d776e94530f4ca4435370543d4a6":[3,0,0,18,8],
 "namespacefmt.html":[3,0,1],
 "namespacemembers.html":[3,1,0],
 "namespacemembers.html":[3,1,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX92 =
 "output__port__base_8h.html":[5,0,0,12,3,31],
 "overloaded_8h.html":[5,0,0,1,47],
 "package__map_8h.html":[5,0,0,8,9,4],
-"pages.html":[],
-"panda__command__receiver_8h.html":[5,0,0,6,0,0],
-"panda__command__sender_8h.html":[5,0,0,6,0,1]
+"pages.html":[]
 };

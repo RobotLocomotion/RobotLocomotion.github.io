@@ -190,6 +190,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a75754963d64a398bb7a3c47120559033" id="r_a75754963d64a398bb7a3c47120559033"><td class="memTemplParams" colspan="2">template&lt;typename Serializable&gt; </td></tr>
 <tr class="memitem:a75754963d64a398bb7a3c47120559033 template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75754963d64a398bb7a3c47120559033">SaveJsonString</a> (const Serializable &amp;data)</td></tr>
 <tr class="memdesc:a75754963d64a398bb7a3c47120559033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a JSON-formatted string.  <br /></td></tr>
+<tr class="memitem:ad678d776e94530f4ca4435370543d4a6" id="r_ad678d776e94530f4ca4435370543d4a6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad678d776e94530f4ca4435370543d4a6">to_string</a> (const <a class="el" href="structdrake_1_1yaml_1_1_load_yaml_options.html">LoadYamlOptions</a> &amp;options)</td></tr>
+<tr class="memitem:a38c89699c8b0b11087c8c2b607dd278f" id="r_a38c89699c8b0b11087c8c2b607dd278f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38c89699c8b0b11087c8c2b607dd278f">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="structdrake_1_1yaml_1_1_load_yaml_options.html">LoadYamlOptions</a> &amp;)</td></tr>
+<tr class="memdesc:a38c89699c8b0b11087c8c2b607dd278f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a43b0aad3a987a2b97f89a68d934fb982" name="a43b0aad3a987a2b97f89a68d934fb982"></a>
@@ -309,6 +312,31 @@ template&lt;typename Serializable&gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a38c89699c8b0b11087c8c2b607dd278f" name="a38c89699c8b0b11087c8c2b607dd278f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c89699c8b0b11087c8c2b607dd278f">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1yaml_1_1_load_yaml_options.html">LoadYamlOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated</a></b></dt><dd>Use fmt functions instead (e.g., fmt::format(), fmt::to_string(),  fmt::print()). Refer to GitHub issue #17742 for more information. <br  />
+ This will be removed from Drake on or after 2026-06-01. </dd></dl>
 
 </div>
 </div>
@@ -484,6 +512,23 @@ template&lt;typename Serializable&gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad678d776e94530f4ca4435370543d4a6" name="ad678d776e94530f4ca4435370543d4a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad678d776e94530f4ca4435370543d4a6">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1yaml_1_1_load_yaml_options.html">LoadYamlOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

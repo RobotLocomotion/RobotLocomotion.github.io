@@ -1,5 +1,7 @@
 var NAVTREEINDEX94 =
 {
+"spatial__momentum_8h.html":[5,0,0,8,6,3],
+"spatial__vector_8h.html":[5,0,0,8,6,4],
 "spatial__velocity_8h.html":[5,0,0,8,6,5],
 "spatial__velocity__constraint_8h.html":[5,0,0,8,8,6],
 "specific__options_8h.html":[5,0,0,11,55],
@@ -247,7 +249,5 @@ var NAVTREEINDEX94 =
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a3e38e6cb42b54dab9e928c6166949782":[3,0,0,4,14,3],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a3e38e6cb42b54dab9e928c6166949782":[4,0,0,3,11,3],
 "structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e":[3,0,0,4,14,4],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e":[4,0,0,3,11,4],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a724e701eb8bbecc4fbf5bb77227a5ab7":[3,0,0,4,14,7],
-"structdrake_1_1geometry_1_1_default_proximity_properties.html#a724e701eb8bbecc4fbf5bb77227a5ab7":[4,0,0,3,11,7]
+"structdrake_1_1geometry_1_1_default_proximity_properties.html#a42fb9f60338529459fa05fee8d4c4d2e":[4,0,0,3,11,4]
 };

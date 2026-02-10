@@ -340,7 +340,6 @@ var hierarchy =
       [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
         [ "formatter< T, std::enable_if_t< std::is_base_of_v< drake::solvers::EvaluatorBase, T >, char > >", "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html", null ],
         [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
-        [ "formatter< drake::TypeSafeIndex< Tag > >", "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
         [ "formatter< drake::math::RigidTransform< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html", null ],
         [ "formatter< drake::math::RollPitchYaw< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ],
         [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ],
@@ -355,8 +354,7 @@ var hierarchy =
         [ "formatter< drake::solvers::ProgramAttributes >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_attributes_01_4.html", null ],
         [ "formatter< drake::solvers::ProgramType >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_program_type_01_4.html", null ],
         [ "formatter< drake::solvers::SolverId >", "structfmt_1_1formatter_3_01drake_1_1solvers_1_1_solver_id_01_4.html", null ],
-        [ "formatter< drake::systems::VectorBase< T > >", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html", null ],
-        [ "formatter< drake::yaml::LoadYamlOptions >", "structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html", null ]
+        [ "formatter< drake::systems::VectorBase< T > >", "structfmt_1_1formatter_3_01drake_1_1systems_1_1_vector_base_3_01_t_01_4_01_4.html", null ]
       ] ],
       [ "formatter< drake::geometry::GeometryId >", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_geometry_id_01_4.html", null ]
     ] ],
@@ -409,6 +407,8 @@ var hierarchy =
     [ "formatter&lt; drake::systems::sensors::PixelFormat &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_pixel_format_01_4.html", null ],
     [ "formatter&lt; drake::systems::sensors::PixelScalar &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_pixel_scalar_01_4.html", null ],
     [ "formatter&lt; drake::systems::sensors::PixelType &gt;", "structfmt_1_1formatter_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ],
+    [ "formatter&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html", null ],
+    [ "formatter&lt; drake::yaml::LoadYamlOptions &gt;", "structfmt_1_1formatter_3_01drake_1_1yaml_1_1_load_yaml_options_01_4.html", null ],
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html", null ],
     [ "FormulaCell", "classdrake_1_1symbolic_1_1_formula_cell.html", [
       [ "FormulaFalse", "classdrake_1_1symbolic_1_1_formula_false.html", null ],
