@@ -40,5 +40,6 @@ var classdrake_1_1math_1_1_roll_pitch_yaw =
     [ "yaw_angle", "classdrake_1_1math_1_1_roll_pitch_yaw.html#aaa0df00643b1c60f59e3cc82e7c1e5b8", null ],
     [ "hash_append", "classdrake_1_1math_1_1_roll_pitch_yaw.html#a9def8efe29252cfb96e1d49ba4bfb952", null ],
     [ "operator<<", "classdrake_1_1math_1_1_roll_pitch_yaw.html#acc4f1cfde399c340eb155031eed2a485", null ],
-    [ "RollPitchYawd", "classdrake_1_1math_1_1_roll_pitch_yaw.html#a752cee7d06a108142e5a63947d7431fe", null ]
+    [ "RollPitchYawd", "classdrake_1_1math_1_1_roll_pitch_yaw.html#a752cee7d06a108142e5a63947d7431fe", null ],
+    [ "to_string", "classdrake_1_1math_1_1_roll_pitch_yaw.html#a11d82684694b95e5a98bc866d8cba9c0", null ]
 ];

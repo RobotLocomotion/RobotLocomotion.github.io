@@ -1,5 +1,8 @@
 var NAVTREEINDEX85 =
 {
+"functions_rela_w.html":[4,3,6,20],
+"functions_rela_z.html":[4,3,6,21],
+"functions_s.html":[4,3,0,18],
 "functions_t.html":[4,3,0,19],
 "functions_type.html":[4,3,3],
 "functions_u.html":[4,3,0,20],
@@ -246,8 +249,5 @@ var NAVTREEINDEX85 =
 "group__visualization.html#gaefdc2e92950ccfb018cd4d08681386dc":[2,2,11,9],
 "group__yaml__serialization.html":[2,6,4],
 "gurobi__solver_8h.html":[5,0,0,11,18],
-"gyroscope_8h.html":[5,0,0,12,8,6],
-"hash_8h.html":[5,0,0,1,37],
-"hermitian__dense__output_8h.html":[5,0,0,12,0,6],
-"hierarchy.html":[4,2]
+"gyroscope_8h.html":[5,0,0,12,8,6]
 };

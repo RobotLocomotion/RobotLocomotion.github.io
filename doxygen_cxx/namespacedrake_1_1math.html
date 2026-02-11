@@ -410,6 +410,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a2d0dc847828b4e1ea981cc1d3425cd7d" id="r_a2d0dc847828b4e1ea981cc1d3425cd7d"><td class="memTemplParams" colspan="2">template&lt;typename T = double, class Generator = RandomGenerator&gt; </td></tr>
 <tr class="memitem:a2d0dc847828b4e1ea981cc1d3425cd7d template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d0dc847828b4e1ea981cc1d3425cd7d">UniformlyRandomRPY</a> (Generator *generator)</td></tr>
 <tr class="memdesc:a2d0dc847828b4e1ea981cc1d3425cd7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a rotation (in the roll-pitch-yaw representation) that rotates a point on the unit sphere to another point on the unit sphere with a uniform distribution over the sphere.  <br /></td></tr>
+<tr class="memitem:a2139b3a3bd26f433237df5ef0e2c78b9" id="r_a2139b3a3bd26f433237df5ef0e2c78b9"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a2139b3a3bd26f433237df5ef0e2c78b9 template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2139b3a3bd26f433237df5ef0e2c78b9">to_string</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;X)</td></tr>
 <tr class="memitem:a133e7401303c1191fd2363fa630a5aeb" id="r_a133e7401303c1191fd2363fa630a5aeb"><td class="memTemplParams" colspan="2">template&lt;typename Derived&gt; </td></tr>
 <tr class="memitem:a133e7401303c1191fd2363fa630a5aeb template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Eigen::Matrix&lt; typenameDerived::Scalar, 3, 3 &gt;, 4 &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a133e7401303c1191fd2363fa630a5aeb">dquat2rotmat</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;quaternion)</td></tr>
 <tr class="memdesc:a133e7401303c1191fd2363fa630a5aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the gradient of the function that converts a unit length quaternion to a rotation matrix.  <br /></td></tr>
@@ -442,6 +444,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acc4f1cfde399c340eb155031eed2a485" id="r_acc4f1cfde399c340eb155031eed2a485"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:acc4f1cfde399c340eb155031eed2a485 template"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#acc4f1cfde399c340eb155031eed2a485">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>&lt; T &gt; &amp;rpy)</td></tr>
 <tr class="memdesc:acc4f1cfde399c340eb155031eed2a485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream insertion operator to write an instance of <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a> into a <span class="tt">std::ostream</span>.  <br /></td></tr>
+<tr class="memitem:a11d82684694b95e5a98bc866d8cba9c0" id="r_a11d82684694b95e5a98bc866d8cba9c0"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a11d82684694b95e5a98bc866d8cba9c0 template"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a11d82684694b95e5a98bc866d8cba9c0">to_string</a> (const <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>&lt; T &gt; &amp;rpy)</td></tr>
+<tr class="memdesc:a11d82684694b95e5a98bc866d8cba9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a> object as a string.  <br /></td></tr>
 <tr id="func-members-0" class="groupHeader"><td colspan="2"><div class="groupHeader">solve linear system of equations with a given solver.</div></td></tr>
 <tr><td colspan="2" class="ititle"><div class="groupText"><p><a class="anchor" id="linear_solve_given_solver"></a> Solve linear system of equations A * x = b.</p>
 <p>Where A is an Eigen matrix of double/AutoDiffScalar/symbolic::Expression, and b is an Eigen matrix of double/AutoDiffScalar/symbolic::Expression. Notice that if either A or b contains <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, then the other has to contain <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. This 3-argument version allows the user to re-use <code class="param">linear_solver</code> when <code class="param">b</code> changes or the gradient of <code class="param">A</code> changes. When either A or b contains AutoDiffScalar, we use implicit function theorem to find the gradient in x as ∂x/∂zᵢ = A⁻¹(∂b/∂zᵢ - ∂A/∂zᵢ * x) where z is the variable we take gradient with.</p>
@@ -3772,6 +3777,25 @@ template&lt;typename T&gt; </div>
 
 <p>Converts a std::vector&lt;MatrixX&lt;T&gt;&gt; into a <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95" title="A matrix of dynamic size, templated on scalar type.">MatrixX&lt;T&gt;</a>, composing each element of <span class="tt">vec</span> into a column of the returned matrix. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>all elements of <span class="tt">vec</span> must have one column and the same number of rows. </dd></dl>
+
+</div>
+</div>
+<a id="a2139b3a3bd26f433237df5ef0e2c78b9" name="a2139b3a3bd26f433237df5ef0e2c78b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2139b3a3bd26f433237df5ef0e2c78b9">&#9670;&#160;</a></span>to_string() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>X</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

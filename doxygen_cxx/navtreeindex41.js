@@ -1,5 +1,8 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1planning_1_1_collision_checker.html#a57903558264bcd6cb91e68f8e49d20a1":[2,4,2,2,1,52],
+"classdrake_1_1planning_1_1_collision_checker.html#a5a8b62cb6805a9d647e8ea0c783bb47d":[2,4,2,2,1,64],
+"classdrake_1_1planning_1_1_collision_checker.html#a5b27629aa14a86079b45f9bc76234863":[2,4,2,2,1,63],
 "classdrake_1_1planning_1_1_collision_checker.html#a5c07f13becacf1aacae6bff5cfff24cd":[2,4,2,2,1,28],
 "classdrake_1_1planning_1_1_collision_checker.html#a5c936a3e9f8ae2750cb5ce8c18985d0a":[2,4,2,2,1,73],
 "classdrake_1_1planning_1_1_collision_checker.html#a5d11d679e9525d2a51454c2c1fffad72":[2,4,2,2,1,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1planning_1_1_joint_limits.html#a5cf1aa552564299498067336dbd4aa4d":[4,0,0,10,14,9],
 "classdrake_1_1planning_1_1_joint_limits.html#a5d78b47297a41d3808969bbc58e625a1":[3,0,0,11,14,4],
 "classdrake_1_1planning_1_1_joint_limits.html#a5d78b47297a41d3808969bbc58e625a1":[4,0,0,10,14,4],
-"classdrake_1_1planning_1_1_joint_limits.html#a5f442d2f0895707de9ea222f9f9616b7":[3,0,0,11,14,1],
-"classdrake_1_1planning_1_1_joint_limits.html#a5f442d2f0895707de9ea222f9f9616b7":[4,0,0,10,14,1],
-"classdrake_1_1planning_1_1_joint_limits.html#a6a262f42214d106b31158ceb36515cd0":[3,0,0,11,14,7],
-"classdrake_1_1planning_1_1_joint_limits.html#a6a262f42214d106b31158ceb36515cd0":[4,0,0,10,14,7]
+"classdrake_1_1planning_1_1_joint_limits.html#a5f442d2f0895707de9ea222f9f9616b7":[3,0,0,11,14,1]
 };

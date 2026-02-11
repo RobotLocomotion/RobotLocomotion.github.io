@@ -1,5 +1,8 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1planning_1_1_joint_limits.html#a5f442d2f0895707de9ea222f9f9616b7":[4,0,0,10,14,1],
+"classdrake_1_1planning_1_1_joint_limits.html#a6a262f42214d106b31158ceb36515cd0":[3,0,0,11,14,7],
+"classdrake_1_1planning_1_1_joint_limits.html#a6a262f42214d106b31158ceb36515cd0":[4,0,0,10,14,7],
 "classdrake_1_1planning_1_1_joint_limits.html#a73d651163f4d1fe92e635aaaf3e9a701":[3,0,0,11,14,5],
 "classdrake_1_1planning_1_1_joint_limits.html#a73d651163f4d1fe92e635aaaf3e9a701":[4,0,0,10,14,5],
 "classdrake_1_1planning_1_1_joint_limits.html#a7420cf34bcac4a8916de0c93655bb3ad":[3,0,0,11,14,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#ada7d90e1d30769255efb0e2e34e4ce8c":[3,0,0,11,0,4,5],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#ada7d90e1d30769255efb0e2e34e4ce8c":[4,0,0,10,0,4,5],
 "classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#aec7198f346abeb875d1d927c4cc8f9b8":[3,0,0,11,0,4,1],
-"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#aec7198f346abeb875d1d927c4cc8f9b8":[4,0,0,10,0,4,1],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html":[2,4,2,1,2],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a24c71d2668554bacbd6f4912fa0a2240":[2,4,2,1,2,5],
-"classdrake_1_1planning_1_1trajectory__optimization_1_1_direct_collocation.html#a4e7e2451f0e6ee53d4bd8444a5e368f2":[2,4,2,1,2,1]
+"classdrake_1_1planning_1_1graph__algorithms_1_1_min_clique_cover_solver_via_greedy.html#aec7198f346abeb875d1d927c4cc8f9b8":[4,0,0,10,0,4,1]
 };

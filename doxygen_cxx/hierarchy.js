@@ -340,8 +340,6 @@ var hierarchy =
       [ "ostream_formatter", "structdrake_1_1ostream__formatter.html", [
         [ "formatter< T, std::enable_if_t< std::is_base_of_v< drake::solvers::EvaluatorBase, T >, char > >", "structfmt_1_1formatter_3_01_t_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01drake_1_12b85009adc7d5953d070359a51d8a68c.html", null ],
         [ "formatter< drake::AutoDiffXd >", "structfmt_1_1formatter_3_01drake_1_1_auto_diff_xd_01_4.html", null ],
-        [ "formatter< drake::math::RigidTransform< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html", null ],
-        [ "formatter< drake::math::RollPitchYaw< T > >", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ],
         [ "formatter< drake::multibody::DifferentialInverseKinematicsStatus >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_differential_inverse_kinematics_status_01_4.html", null ],
         [ "formatter< drake::multibody::PackageMap >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_package_map_01_4.html", null ],
         [ "formatter< drake::multibody::RotationalInertia< T > >", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_rotational_inertia_3_01_t_01_4_01_4.html", null ],
@@ -379,6 +377,8 @@ var hierarchy =
     [ "formatter&lt; drake::geometry::Shape &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_shape_01_4.html", null ],
     [ "formatter&lt; drake::geometry::Sphere &gt;", "structfmt_1_1formatter_3_01drake_1_1geometry_1_1_sphere_01_4.html", null ],
     [ "formatter&lt; drake::Identifier&lt; Tag &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html", null ],
+    [ "formatter&lt; drake::math::RigidTransform&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1math_1_1_rigid_transform_3_01_t_01_4_01_4.html", null ],
+    [ "formatter&lt; drake::math::RollPitchYaw&lt; T &gt; &gt;", "structfmt_1_1formatter_3_01drake_1_1math_1_1_roll_pitch_yaw_3_01_t_01_4_01_4.html", null ],
     [ "formatter&lt; drake::MemoryFile &gt;", "structfmt_1_1formatter_3_01drake_1_1_memory_file_01_4.html", null ],
     [ "formatter&lt; drake::multibody::CollisionFilterGroups &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_collision_filter_groups_01_4.html", null ],
     [ "formatter&lt; drake::multibody::ScopedName &gt;", "structfmt_1_1formatter_3_01drake_1_1multibody_1_1_scoped_name_01_4.html", null ],

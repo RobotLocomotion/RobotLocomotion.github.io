@@ -1,5 +1,8 @@
 var NAVTREEINDEX23 =
 {
+"classdrake_1_1multibody_1_1_bounding_box_constraint.html#a91d1628fa18821ce288f5e1e9aa6b434":[3,0,0,9,12,4],
+"classdrake_1_1multibody_1_1_bounding_box_constraint.html#a91d1628fa18821ce288f5e1e9aa6b434":[4,0,0,8,11,4],
+"classdrake_1_1multibody_1_1_bounding_box_constraint.html#aa1ffdd02b02109e8f3b444a4d8f14579":[3,0,0,9,12,3],
 "classdrake_1_1multibody_1_1_bounding_box_constraint.html#aa1ffdd02b02109e8f3b444a4d8f14579":[4,0,0,8,11,3],
 "classdrake_1_1multibody_1_1_bounding_box_constraint.html#aa33053fdacdcccdf8920b543b5dd5e07":[3,0,0,9,12,5],
 "classdrake_1_1multibody_1_1_bounding_box_constraint.html#aa33053fdacdcccdf8920b543b5dd5e07":[4,0,0,8,11,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX23 =
 "classdrake_1_1multibody_1_1_curvilinear_joint.html#abfd0eba87edfca3b02cfc44475f06c4c":[3,0,0,9,26,6],
 "classdrake_1_1multibody_1_1_curvilinear_joint.html#abfd0eba87edfca3b02cfc44475f06c4c":[4,0,0,8,25,6],
 "classdrake_1_1multibody_1_1_curvilinear_joint.html#ac29ca0ee759d2862539406a971f95169":[3,0,0,9,26,7],
-"classdrake_1_1multibody_1_1_curvilinear_joint.html#ac29ca0ee759d2862539406a971f95169":[4,0,0,8,25,7],
-"classdrake_1_1multibody_1_1_curvilinear_joint.html#acdd77dfbc0e080359ecef4bdb5ddbc94":[3,0,0,9,26,12],
-"classdrake_1_1multibody_1_1_curvilinear_joint.html#acdd77dfbc0e080359ecef4bdb5ddbc94":[4,0,0,8,25,12],
-"classdrake_1_1multibody_1_1_curvilinear_joint.html#ad19911f0d4594fe2b4e7e8642c6daa46":[3,0,0,9,26,23]
+"classdrake_1_1multibody_1_1_curvilinear_joint.html#ac29ca0ee759d2862539406a971f95169":[4,0,0,8,25,7]
 };

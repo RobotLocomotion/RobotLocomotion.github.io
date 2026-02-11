@@ -166,6 +166,7 @@ $(function(){initNavTree('group__yaml__serialization.html','',''); });
 <div class="contents">
 <h2>Overview</h2>
 <p>Drake provides infrastructure for reading YAML files into C++ structs, and writing C++ structs into YAML files. These functions are often used to read or write configuration data, but may also be used to serialize runtime data such as Diagram connections or OutputPort traces. Any C++ struct to be serialized must provide a <a class="el" href="#implementing_serialize">Serialize()</a> function to enumerate its fields.</p>
+<p>Identical functionality is provided in Python via <a href="/pydrake/pydrake.common.yaml.html">pydrake.common.yaml</a>.</p>
 <h2>Examples</h2>
 <p>Given a struct definition:</p>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>MyData {</div>
@@ -370,7 +371,8 @@ $(function(){initNavTree('group__yaml__serialization.html','',''); });
 <div class="line">bar4:</div>
 <div class="line">  value: !Foo</div>
 <div class="line">    data: hello</div>
-</div><!-- fragment --> </div><!-- contents -->
+</div><!-- fragment --><p>Take particular note that the first type declared in the variant is a special case: when no tag is given in the YAML, then the scalar is read into the first type in the variant. For primitive types like <span class="tt">std::filesystem::path</span> that don't have a corresponding <span class="tt">!!tag</span> defined in the YAML specification, there is no way to load them into a variant unless they are the first type in the variant. </p>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

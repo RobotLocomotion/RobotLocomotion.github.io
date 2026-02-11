@@ -108,6 +108,8 @@ var namespacedrake_1_1math =
     [ "SparseMatrixToRowColumnValueVectors", "namespacedrake_1_1math.html#a55e8440aa53d7db2a614142ae4e27941", null ],
     [ "SparseMatrixToTriplets", "namespacedrake_1_1math.html#ad55de6b340513cdc1351d509dc9d99e6", null ],
     [ "StdVectorToEigen", "namespacedrake_1_1math.html#a9cf7a17a246897182cc65ec080840999", null ],
+    [ "to_string", "classdrake_1_1math_1_1_roll_pitch_yaw.html#a11d82684694b95e5a98bc866d8cba9c0", null ],
+    [ "to_string", "namespacedrake_1_1math.html#a2139b3a3bd26f433237df5ef0e2c78b9", null ],
     [ "ToLowerTriangularColumnsFromMatrix", "namespacedrake_1_1math.html#aa824bd31863a762bd2c1860534b7e39d", null ],
     [ "ToSymmetricMatrixFromLowerTriangularColumns", "namespacedrake_1_1math.html#a0b96f43056135e9ecb62b48421b787f9", null ],
     [ "ToSymmetricMatrixFromLowerTriangularColumns", "namespacedrake_1_1math.html#ae4935d457d59fdb0a60b7f1d5cb465bb", null ],
